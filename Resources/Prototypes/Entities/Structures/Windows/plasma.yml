@@ -5,9 +5,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/plasma_window.rsi # Frontier
+    sprite: Structures/Windows/plasma_window.rsi
   - type: Icon
-    sprite: _NF/Structures/Windows/plasma_window.rsi # Frontier
+    sprite: Structures/Windows/plasma_window.rsi
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Glass
@@ -120,7 +120,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/plasma_diagonal.rsi # Frontier
+    sprite: Structures/Windows/plasma_diagonal.rsi
     state: state0
   - type: Tag
     tags:
@@ -130,7 +130,7 @@
     key: walls # Frontier: windows<walls
     base: state
   - type: Icon
-    sprite: _NF/Structures/Windows/plasma_diagonal.rsi # Frontier
+    sprite: Structures/Windows/plasma_diagonal.rsi
     state: state0
   - type: Fixtures
     fixtures:
