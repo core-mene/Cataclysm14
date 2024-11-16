@@ -294,3 +294,6 @@ ui-options-speech-bubble-background-opacity = Speech bubble background opacity
 ## Admin menu
 
 ui-options-enable-classic-overlay = Revert antag overlay to classic mode
+
+## Shitmed Change
+ui-options-header-targeting = Targeting
