@@ -3,14 +3,12 @@ using Content.Shared.Body.Components;
 using Content.Shared.Body.Events;
 using Content.Shared.Body.Organ;
 using Content.Shared.Body.Part;
-using Content.Shared.Damage; // Shitmed Change
 using Robust.Shared.Containers;
 
 // Shitmed Change
 
 using Content.Shared.Damage;
 using Content.Shared._Shitmed.BodyEffects;
-using Content.Shared._Shitmed.Body.Events;
 using Content.Shared._Shitmed.Body.Organ;
 
 namespace Content.Shared.Body.Systems;
@@ -44,7 +42,7 @@ public partial class SharedBodySystem
 
         if (organEnt.Comp.Body is not null)
         {
-            // Shitmed Change Start
+        // Shitmed Change Start
             var addedInBodyEv = new OrganAddedToBodyEvent(bodyUid, parentPartUid);
             RaiseLocalEvent(organEnt, ref addedInBodyEv);
             var organEnabledEv = new OrganEnableChangedEvent(true);
@@ -92,6 +90,7 @@ public partial class SharedBodySystem
         // Shitmed Change: Don't throw when a slot already exists
         if (parentEnt.Comp.Organs.TryGetValue(slotId, out var existing))
             return existing;
+
         var slot = new OrganSlot(slotId);
         parentEnt.Comp.Organs.Add(slotId, slot);
         return slot;
