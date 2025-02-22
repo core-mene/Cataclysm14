@@ -302,9 +302,10 @@ public abstract class SharedWieldableSystem : EntitySystem
         var othersMessage = Loc.GetString("wieldable-component-successful-wield-other", ("user", Identity.Entity(user, EntityManager)), ("item", used));
         _popup.PopupPredicted(selfMessage, othersMessage, user, user);
 
-        var ev = new ItemWieldedEvent(user);
-        RaiseLocalEvent(used, ref ev);
+        var targEv = new ItemWieldedEvent(user); // Goob edit
+        RaiseLocalEvent(used, ref targEv);
 
+        Dirty(used, component);
         return true;
     }
 
