@@ -4,6 +4,8 @@ shuttle-pilot-end = Stopped piloting
 shuttle-console-in-ftl = Currently in FTL
 shuttle-console-mass = Too large to FTL
 shuttle-console-prevent = Unable to pilot this ship
+shuttle-console-no-powered-ftl-drive = No FTL drive detected
+shuttle-console-ftl-drive-unpowered = FTL drive detected but not powered
 
 # NAV
 

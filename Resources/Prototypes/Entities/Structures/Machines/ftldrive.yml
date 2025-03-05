@@ -1,0 +1,37 @@
+- type: entity
+  id: MachineFTLDrive
+  parent: BaseMachinePowered
+  name: FTL Drive
+  description: A FTL drive that enhances a ship's FTL range.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: Transform
+      anchored: true
+    - type: Physics
+      bodyType: Static
+    - type: Sprite
+      sprite: Structures/Power/Generation/ame.rsi
+      snapCardinals: true
+      layers:
+      - state: control
+      - state: control_on
+        map: ["enum.PowerDeviceVisualLayers.Powered"]
+        visible: false
+    - type: FTLDrive
+    - type: ApcPowerReceiver
+      powerLoad: 200
+    - type: ExtensionCableReceiver
+    - type: Appearance
+    - type: AmbientOnPowered
+    - type: AmbientSound
+      volume: -9
+      range: 5
+      sound:
+        path: /Audio/Ambience/Objects/server_fans.ogg
+    - type: GenericVisualizer
+      visuals:
+        enum.PowerDeviceVisuals.Powered:
+          enum.PowerDeviceVisualLayers.Powered:
+            True: { visible: true }
+            False: { visible: false }
