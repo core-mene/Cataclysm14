@@ -137,6 +137,9 @@
   # End Frontier
   - type: SurgeryTarget
   - type: Sanitized # Mono
+  - type: CollectiveMind
+    hearAll: true
+    seeAllNames: true
 
 # proto for player ghosts specifically
 - type: entity

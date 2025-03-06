@@ -22,7 +22,7 @@ namespace Content.Shared.Chat
     ///     Represents chat channels that the player can filter chat tabs by.
     /// </summary>
     [Flags]
-    public enum ChatChannel : ushort
+    public enum ChatChannel : uint // Goobstation - Starlight collective mind port // surely changing the ushort to uint won't break anything :clueless:
     {
         None = 0,
 
@@ -98,6 +98,7 @@ namespace Content.Shared.Chat
         /// </summary>
         AdminChat = 1 << 13,
 
+        // Goobstation - Starlight collective mind port
         /// <summary>
         ///     Collective mind channel for entities who have comp.
         /// </summary>
