@@ -1,6 +1,6 @@
 - type: entity
   name: Annie
-  parent: WeaponRifleAk
+  parent: [BaseC2ContrabandUnredeemable, BaseWeaponRifle] # Mono - C2 contra
   id: WeaponRifleAnnie
   description: A beast designed to shoulder the weight of impossible missions. Uses .30 rifle ammo.
   components:
@@ -11,6 +11,8 @@
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/annie.rsi
   - type: Gun
     availableModes:
     - FullAuto
@@ -22,10 +24,41 @@
     projectileSpeed: 35
     soundGunshot:
       path: /Audio/_Goobstation/Weapons/Guns/Gunshots/thock.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
 
 - type: entity
   name: WSPR
-  parent: WeaponRifleAk
+  parent: [BaseC3PirateContraband, BaseWeaponRifle] # Mono - C3
   id: WeaponRifleWSPR
   description: A cutting-edge rifle from Cybersun, versatile, reliable, and Syndicate-approved. Uses .30 rifle subsonic ammo.
   components:
@@ -36,6 +69,8 @@
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/wspr.rsi
   - type: Gun
     availableModes:
     - FullAuto
@@ -43,8 +78,7 @@
     selectedMode: Burst
     burstFireRate: 16
     burstCooldown: 0.5
-    fireRate: 8
-    projectileSpeed: 15
+    projectileSpeed: 20
     soundGunshot:
       path: /Audio/_Goobstation/Weapons/Guns/Gunshots/bwuh.ogg
   - type: ItemSlots
@@ -66,3 +100,8 @@
         whitelist:
           tags:
             - CartridgeLightRifleSubsonic
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
