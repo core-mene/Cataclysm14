@@ -7,6 +7,8 @@ using Robust.Shared.Map;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Map.Components;
 using Content.Shared.Damage;
+using Content.Shared.Buckle.Components;
+using Content.Shared.Mobs.Components;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -73,6 +75,40 @@ public sealed partial class ShuttleSystem
         var volume = MathF.Min(10f, 1f * MathF.Pow(jungleDiff, 0.5f) - 5f);
         var audioParams = AudioParams.Default.WithVariation(SharedContentAudioSystem.DefaultVariation).WithVolume(volume);
         _audio.PlayPvs(_shuttleImpactSound, coordinates, audioParams);
+        
+        // Knockdown unbuckled entities on both grids
+        KnockdownEntitiesOnGrid(uid);
+        KnockdownEntitiesOnGrid(args.OtherEntity);
+    }
+
+    /// <summary>
+    /// Knocks down all unbuckled entities on the specified grid.
+    /// </summary>
+    private void KnockdownEntitiesOnGrid(EntityUid gridUid)
+    {
+        if (!TryComp<MapGridComponent>(gridUid, out var grid))
+            return;
+            
+        // Find all entities on the grid
+        var buckleQuery = GetEntityQuery<BuckleComponent>();
+        var knockdownTime = TimeSpan.FromSeconds(5);
+        
+        // Get all entities with MobState component on the grid
+        var query = EntityQueryEnumerator<MobStateComponent, TransformComponent>();
+        
+        while (query.MoveNext(out var uid, out var mobState, out var xform))
+        {
+            // Skip entities not on this grid
+            if (xform.GridUid != gridUid)
+                continue;
+                
+            // If entity has a buckle component and is buckled, skip it
+            if (buckleQuery.TryGetComponent(uid, out var buckle) && buckle.Buckled)
+                continue;
+                
+            // Apply knockdown to unbuckled entities
+            _stuns.TryKnockdown(uid, knockdownTime, true);
+        }
     }
 
     private void ProcessTile(EntityUid uid, MapGridComponent grid, Vector2i tile, float energy, Vector2 dir)
