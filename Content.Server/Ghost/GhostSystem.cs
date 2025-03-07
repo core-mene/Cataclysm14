@@ -539,6 +539,10 @@ namespace Content.Server.Ghost
             if (!_mind.TryGetSession(mindId, out var session))
                 return;
 
+            // Only apply admin OOC color if the player is actually an admin
+            if (!_admin.IsAdmin(session))
+                return;
+
             if (!_preferencesManager.TryGetCachedPreferences(session.UserId, out var prefs))
                 return;
 
