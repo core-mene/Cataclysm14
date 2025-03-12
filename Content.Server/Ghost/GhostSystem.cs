@@ -552,7 +552,6 @@ namespace Content.Server.Ghost
 
             // Make the color slightly transparent for ghosts
             var ghostColor = prefs.AdminOOCColor;
-            ghostColor.A = 0.8f;
 
             if (TryComp<GhostComponent>(ghostEntity, out var ghostComp))
             {
