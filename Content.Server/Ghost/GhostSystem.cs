@@ -534,7 +534,7 @@ namespace Content.Server.Ghost
         /// </summary>
         /// <param name="ghostEntity">The ghost entity to apply the color to</param>
         /// <param name="mindId">The mind ID of the player</param>
-        public void ApplyAdminOOCColor(EntityUid ghostEntity, EntityUid mindId)
+        public void ApplyAdminOOCColor(EntityUid ghostEntity, EntityUid mindId) // Mono
         {
             if (!_mind.TryGetSession(mindId, out var session))
                 return;
