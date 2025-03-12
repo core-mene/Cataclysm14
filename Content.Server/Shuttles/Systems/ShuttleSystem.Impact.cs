@@ -7,6 +7,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Map.Components;
 using Content.Shared.Damage;
+using Content.Shared._Mono.ShipShield;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -82,6 +83,10 @@ public sealed partial class ShuttleSystem
 
         foreach (EntityUid localUid in _lookup.GetLocalEntitiesIntersecting(uid, tile, gridComp: grid))
         {
+            // Skip entities protected by grid shields
+            if (HasComp<GridShieldProtectedEntityComponent>(localUid))
+                continue;
+                
             _damageSys.TryChangeDamage(localUid, damage);
 
             TransformComponent form = Transform(localUid);
