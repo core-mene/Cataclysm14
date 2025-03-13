@@ -11,6 +11,10 @@
   fallbacks:
   - PirateJumpsuit
   - PirateJumpskirt
+  subgroups: # mono
+  - MercenaryJumpsuit
+  - ContractorJumpsuit
+  - PilotJumpsuit
 
 - type: loadoutGroup
   id: PiratePDA
@@ -31,6 +35,9 @@
   - ContractorClothingMaskGas
   fallbacks:
   - ContractorClothingMaskBreath
+  subgroups: # mono
+  - MercenaryFace
+  - PilotFace
 
 - type: loadoutGroup
   id: PirateShoes
@@ -40,6 +47,10 @@
   - PirateClothingShoesBootsPirateLuffy
   fallbacks:
   - PirateClothingShoesBootsLaceup
+  subgroups: # mono
+  - MercenaryShoes
+  - ContractorShoes
+  - PilotShoes
 
 - type: loadoutGroup
   id: PirateHead
@@ -52,6 +63,10 @@
   - PirateClothingHeadBandRed
   fallbacks:
   - PirateClothingHeadBandBlack
+  subgroups: # mono
+  - MercenaryHead
+  - ContractorHead
+  - PilotHead
 
 - type: loadoutGroup
   id: PirateTrinkets
@@ -74,6 +89,10 @@
   - PirateClothingHeadHatPirateLuffy
   fallbacks:
   - PirateClothingHeadHatPirate
+  subgroups: # mono
+  - MercenaryHead
+  - ContractorHead
+  - PilotHead
 
 - type: loadoutGroup
   id: PirateCaptainOuterClothing
@@ -83,6 +102,10 @@
   - PirateCaptainClothingOuterCoatPirate
   fallbacks:
   - PirateCaptainClothingOuterCoatPirate
+  subgroups: # mono
+  - ContractorOuterClothing
+  - MercenaryOuterClothing
+  - PilotOuterClothing
 
 - type: loadoutGroup
   id: PirateCaptainPDA
@@ -114,6 +137,10 @@
   - PirateClothingHeadHatPirateLuffy
   fallbacks:
   - PirateClothingHeadHatPirateTricord
+  subgroups: # mono
+  - MercenaryHead
+  - ContractorHead
+  - PilotHead
 
 - type: loadoutGroup
   id: PirateFirstMateOuterClothing
@@ -122,6 +149,10 @@
   - PirateFirstMateClothingOuterCoatGentle
   fallbacks:
   - PirateFirstMateClothingOuterCoatGentle
+  subgroups: # mono
+  - MercenaryOuterClothing
+  - ContractorOuterClothing
+  - PilotOuterClothing
 
 - type: loadoutGroup
   id: PirateFirstMatePDA

@@ -5,11 +5,11 @@
   playTimeTracker: JobPirateCaptain
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 172800 # 48 hours
+      time: 32400 # 9 hours - mono
     - !type:RoleTimeRequirement
-      role: JobSeniorOfficer
+      role: JobPirateFirstMate # mono
       time: 10800 # 3 hours
-  whitelisted: true
+  #whitelisted: true # mono
   startingGear: PirateCaptainNFGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
@@ -42,7 +42,7 @@
   id: PirateCaptainNFGear
   equipment:
     ears: ClothingHeadsetAltFreelancer
-    belt: ClothingBeltUtility
+    #belt: ClothingBeltUtility # mono
     pocket1: BasePirateUplinkRadioPirateCaptain
     pocket2: EnergyCutlass
   storage:

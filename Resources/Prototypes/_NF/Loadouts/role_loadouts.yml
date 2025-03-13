@@ -440,26 +440,28 @@
   id: JobPirate
   groups:
   - PirateHead
-#  - PirateNeck
+  - ContractorNeck # mono - uncomments
   - PirateJumpsuit
-#  - PirateGloves
-  - ContractorBackpack
+  - MercenaryGloves # mono - uncomments
+  - MercenaryBackpack # mono
+  - MercenaryOuterClothing # mono
   - PirateShoes
   - PirateFace
   - ContractorBoxSurvival
   - PiratePDA
   - NFSpeciesSpecific
   - PirateTrinkets
+  - MercenaryBelt # mono
   canCustomizeName: true # pseudonym?
 
 - type: roleLoadout
   id: JobPirateFirstMate
   groups:
   - PirateFirstMateHead
-#  - PirateNeck
+  - ContractorNeck # mono - uncomments
   - PirateJumpsuit
-#  - PirateGloves
-  - ContractorBackpack
+  - MercenaryGloves # mono - uncomments
+  - MercenaryBackpack # mono
   - PirateFirstMateOuterClothing
   - PirateShoes
   - PirateFace
@@ -467,16 +469,17 @@
   - PirateFirstMatePDA
   - NFSpeciesSpecific
   - PirateTrinkets
+  - MercenaryBelt # mono
   canCustomizeName: true # pseudonym?
 
 - type: roleLoadout
   id: JobPirateCaptain
   groups:
   - PirateCaptainHead
-#  - PirateNeck
+  - ContractorNeck # mono - uncomments
   - PirateJumpsuit
-#  - PirateGloves
-  - ContractorBackpack
+  - MercenaryGloves # mono - uncomments
+  - MercenaryBackpack # mono
   - PirateCaptainOuterClothing
   - PirateShoes
   - PirateFace
@@ -484,6 +487,7 @@
   - PirateCaptainPDA
   - NFSpeciesSpecific
   - PirateCaptainTrinkets
+  - MercenaryBelt # mono
   canCustomizeName: true # pseudonym?
 
 # Prisoner

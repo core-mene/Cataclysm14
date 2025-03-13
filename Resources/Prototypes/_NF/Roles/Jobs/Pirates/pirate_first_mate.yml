@@ -5,11 +5,11 @@
   playTimeTracker: JobPirateFirstMate
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 129600 # 36 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
+      time: 21600 # 6 hours # mono
+    - !type:RoleTimeRequirement # mono
+      role: JobPirate # mono
       time: 10800 # 3 hours
-  whitelisted: true
+  #whitelisted: true # mono
   startingGear: PirateFirstMateNFGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
@@ -42,6 +42,6 @@
   id: PirateFirstMateNFGear
   equipment:
     ears: ClothingHeadsetAltFreelancer
-    belt: ClothingBeltUtility
+    #belt: ClothingBeltUtility # mono
     pocket1: BasePirateUplinkPirateCrew
     pocket2: AppraisalTool
