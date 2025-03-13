@@ -25,7 +25,8 @@ using Robust.Shared.Containers;
 using Content.Shared.Interaction; // Frontier
 using Content.Shared.Examine; // Frontier
 using Content.Server.Power.Components;
-using Content.Shared.Power; // Frontier
+using Content.Shared.Power;
+using Robust.Shared.Physics.Components; // Frontier
 
 namespace Content.Server.Weapons.Ranged.Systems;
 
@@ -100,7 +101,13 @@ public sealed partial class GunSystem : SharedGunSystem
         // Update shot based on the recoil
         toMap = fromMap.Position + angle.ToVec() * mapDirection.Length();
         mapDirection = toMap - fromMap.Position;
+
+        // Get gun's velocity and also account for grid's velocity if firing from a grid-mounted weapon
         var gunVelocity = Physics.GetMapLinearVelocity(fromEnt);
+        if (gridUid != null && gridUid != EntityUid.Invalid && TryComp<PhysicsComponent>(gridUid, out var gridPhysics))
+        {
+            gunVelocity += gridPhysics.LinearVelocity;
+        }
 
         // I must be high because this was getting tripped even when true.
         // DebugTools.Assert(direction != Vector2.Zero);

@@ -56,7 +56,7 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
             return;
 
         if (apc is { Powered: true } || battery?.CurrentCharge >= component.PowerUseActive)
-            TryFireArtillery(uid, component);
+            TryFireArtillery(uid, Transform(uid), component);
         else
             OnMalfunction(uid, component);
     }
@@ -88,9 +88,12 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
         }
     }
 
-    private void TryFireArtillery(EntityUid uid, SpaceArtilleryComponent component)
+    private void TryFireArtillery(EntityUid uid, TransformComponent xform, SpaceArtilleryComponent component)
     {
-        var xform = Transform(uid);
+        if (xform.GridUid == null && !xform.MapUid.HasValue)
+        {
+            return;
+        }
 
         if (!_gun.TryGetGun(uid, out var gunUid, out var gun))
         {
@@ -103,10 +106,17 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
         var worldRot = _xform.GetWorldRotation(uid) + Math.PI;
         var targetSpot = new Vector2(worldPosX - DISTANCE * (float) Math.Sin(worldRot), worldPosY + DISTANCE * (float) Math.Cos(worldRot));
 
-        EntityCoordinates targetCordinates;
-        targetCordinates = new EntityCoordinates(xform.MapUid!.Value, targetSpot);
+        // Create coordinates for the target and source positions
+        var sourceCoordinates = xform.Coordinates;
+        var targetCoordinates = new EntityCoordinates(xform.MapUid!.Value, targetSpot);
 
-        _gun.AttemptShoot(uid, gunUid, gun, targetCordinates);
+        // We need to set the ShootCoordinates for the gun component
+        // This is important to ensure it uses the proper calculations in SharedGunSystem
+        gun.ShootCoordinates = targetCoordinates;
+        
+        // Call AttemptShoot with the correct signature that includes target coordinates
+        // This will eventually call GunSystem.Shoot which correctly handles grid velocity
+        _gun.AttemptShoot(uid, gunUid, gun, targetCoordinates);
     }
 
     private void OnShotEvent(EntityUid uid, SpaceArtilleryComponent component, AmmoShotEvent args)
