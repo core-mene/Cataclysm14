@@ -1,14 +1,14 @@
 <Document>
-  # ARGENT-CLASS CARGO TRANSPORT
+  # SABINE-CLASS SALVAGE SHUTTLE
   <Box>
   <GuideEntityEmbed Entity="SalvageTechfabNF"/>
-  <GuideEntityEmbed Entity="WeaponTurretL85Autocannon"/>
-  <GuideEntityEmbed Entity="ConveyorBelt"/>
-  <GuideEntityEmbed Entity="CrateTradeSecureNormal"/>
+  <GuideEntityEmbed Entity="OreProcessor"/>
+  <GuideEntityEmbed Entity="LockerSalvageSpecialistFilledHardsuit"/>
+  <GuideEntityEmbed Entity="ComputerWallmountAdvancedRadar"/>
   </Box>
-    [color=#a4885c]Ship Size:[/color] Medium
+    [color=#a4885c]Ship Size:[/color] Small
 
-	[color=#a4885c]Recommended Crew:[/color] 1-3
+	[color=#a4885c]Recommended Crew:[/color] 1-2
 
 	[color=#a4885c]Power Gen Type:[/color] Uranium
 
@@ -16,7 +16,7 @@
 
 	[color=#a4885c]IFF Console:[/color] None
 
-  "Argent-class cargo transports are surplus frigates overhauled for mass cargo transport."
+  "A small, light, 2 seater salvage shuttle for light mining operations. Usually found as part of a fleet or carrier group."
 
   # PREFLIGHT CHECKLIST
 
@@ -32,10 +32,8 @@
   - Check that the S.U.P.E.R.P.A.C.M.A.N. generator unit is anchored to the floor.
   - Check that the SMES unit is anchored to the floor.
   - Check that the substation unit is anchored to the floor.
-  - Check that the rear APC unit's Main Breaker is toggled on.
-  - Check the APC units current Load* (W).
-  - Check that the front APC unit's Main Breaker is toggled on.
-  - Check the APC units' current Load* (W).
+  - Check that the main APC unit's Main Breaker is toggled on.
+  - Check the APC unit's current Load* (W).
 
   ## 1.2. S.U.P.E.R.P.A.C.M.A.N. generator unit.
   <Box>
@@ -46,7 +44,7 @@
   - Check that the generator unit is properly anchored.
   - Check that the generator unit is connected to the cable terminal of your SMES via HV.
   - Check the fuel remaining of the generator unit.
-  - Set the generator unit output power to 43 kW.
+  - Set the generator unit output power to 22 kW.
   - Enable Injection.
 
   ## 2. Atmospherics
@@ -59,11 +57,9 @@
   <GuideEntityEmbed Entity="GasPressurePump"/>
   </Box>
 
-  - Check that the O2 canister is anchored to the BLUE connector port.
-  - Check that the N2 canister is anchored to the RED connector port.
-  - Check that the gas mixer is set to the correct mixing ratio (~22% Oxygen, ~78% Nitrogen).
-  - Check that the gas mixer is set to 101.325kPa.
-  - Enable gas mixer.
+  - Ensure that a air canister is wrenched to the connector port.
+  - Check that the air canister is of a suitable atmos mixture (~22% oxygen, ~78% nitrogen).
+  - Enable the gas pump into the distribution system.
 
   ## 2.2. Waste Loop
   <Box>
@@ -84,6 +80,6 @@
 
   ## Sidenotes
 
-  * - Argent-class transport ships are equipped with two APC units that can be used to appraise the ship's total power consumption. Unmodified Argent-class ship requires ~42.5 kW of power to remain operational.
+  * - Sabine-class salvage shuttles are equipped with one APC unit that can be used to appraise the ship's total power consumption. Unmodified Sabine-class ship requires ~21.25 kW of power to remain operational.
 
 </Document>

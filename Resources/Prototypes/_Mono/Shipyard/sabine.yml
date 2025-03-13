@@ -1,0 +1,40 @@
+# Author Info
+# GitHub: starch70
+# Discord: _starch_
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Sabine
+  parent: BaseVessel
+  name: NT Sabine
+  description: Light salvage and mining shuttle. Requires 2 crewmen to utilize gunnery and pilot console at the same time effectively.
+  price: 26000
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/_Mono/Shuttles/sabine.yml
+  guidebookPage: ShipyardSabine
+  class:
+  - Salvage
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Sabine
+  mapName: 'NT Sabine'
+  mapPath: /Maps/_Mono/Shuttles/comet.yml
+  minPlayers: 0
+  stations:
+    Sabine:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Sabine {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
