@@ -35,6 +35,8 @@
     powerChargeRate: 150
     powerUsePassive: 100
   - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 50
   - type: Actions
   - type: CombatMode
     isInCombatMode: true
@@ -80,6 +82,9 @@
   - type: SpaceArtillery
     powerChargeRate: 250
     powerUsePassive: 200
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 45
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: 90mmBulletArmorPiercing
@@ -120,6 +125,9 @@
   - type: SpaceArtillery
     powerChargeRate: 250
     powerUsePassive: 200
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 350
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMediumPlasmaProjectile
@@ -204,6 +212,8 @@
     deviceNetId: Wireless
     receiveFrequencyId: BasicDevice
   - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 100
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
