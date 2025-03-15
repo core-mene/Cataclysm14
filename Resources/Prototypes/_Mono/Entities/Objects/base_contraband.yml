@@ -1,7 +1,7 @@
 - type: entity
-  id: BaseC2ContrabandMercenary
+  id: BaseC1ContrabandMercenary
   abstract: true
   components:
   - type: Contraband
-    severity: Class2
+    severity: Class1
     allowedDepartments: [ PMC, Security, Command, CentralCommand ]

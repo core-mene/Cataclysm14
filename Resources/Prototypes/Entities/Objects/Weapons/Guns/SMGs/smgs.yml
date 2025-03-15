@@ -21,7 +21,7 @@
     fireRate: 8
     burstFireRate: 8
     angleIncrease: 3
-    angleDecay: 16  
+    angleDecay: 16
     selectedMode: FullAuto
     availableModes:
     - SemiAuto
@@ -80,6 +80,8 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: StaticPrice # Mono
+    price: 2000
 
 - type: entity
   name: C-20r submachine gun
@@ -118,6 +120,8 @@
     steps: 6
     zeroVisible: true
   - type: Appearance
+  - type: StaticPrice # Mono
+    price: 625
 
 - type: entity
   name: Drozd
@@ -176,6 +180,8 @@
       steps: 1
       zeroVisible: true
     - type: Appearance
+    - type: StaticPrice # Mono
+      price: 525
 
 - type: entity
   name: WT550
@@ -205,7 +211,7 @@
     minAngle: 1
     maxAngle: 6
     angleIncrease: 1.5
-    angleDecay: 6  
+    angleDecay: 6
     selectedMode: FullAuto
     shotsPerBurst: 5
     burstCooldown: 0.2
@@ -238,3 +244,5 @@
     steps: 6
     zeroVisible: true
   - type: Appearance
+  - type: StaticPrice # Mono
+    price: 1000

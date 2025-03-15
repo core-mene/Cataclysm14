@@ -66,7 +66,7 @@
     zeroVisible: true
   - type: Appearance
   - type: StaticPrice
-    price: 500
+    price: 100 # mono
 
 - type: entity
   name: viper
@@ -100,8 +100,8 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
-  - type: StaticPrice # Frontier 500<1000
-    price: 1000
+  - type: StaticPrice # Mono - 200 from frontier 1k
+    price: 200
 
 - type: entity
   name: echis

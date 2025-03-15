@@ -50,39 +50,39 @@
   description: A generic black jumpsuit with no rank markings.
   suffix: Military
   components:
-  - type: Sprite
+  - type: Sprite # mono - look inside Black Jumpsuit - its white
     sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
     layers:
     - state: icon-base-bottom
-      color: "#fff4e2"
+      color: "#424242"
     - state: icon-base-top-jumpsuit
-      color: "#fff4e2"
+      color: "#424242"
     - state: icon-decor-contractor
       color: "#3e3e48"
-  - type: Item
+  - type: Item # mono - look inside Black Jumpsuit - its white
     inhandVisuals:
       left:
       - state: inhand-left-base-bottom
-        color: "#fff4e2"
+        color: "#424242"
       - state: inhand-left-base-top-jumpsuit
-        color: "#fff4e2"
+        color: "#424242"
       - state: inhand-left-decor-contractor
         color: "#3e3e48"
       right:
       - state: inhand-right-base-bottom
-        color: "#fff4e2"
+        color: "#424242"
       - state: inhand-right-base-top-jumpsuit
-        color: "#fff4e2"
+        color: "#424242"
       - state: inhand-right-decor-contractor
         color: "#3e3e48"
-  - type: Clothing
+  - type: Clothing # mono - look inside Black Jumpsuit - its white
     sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
     clothingVisuals:
       jumpsuit:
       - state: equipped-base-bottom
-        color: "#fff4e2"
+        color: "#424242"
       - state: equipped-base-top-jumpsuit
-        color: "#fff4e2"
+        color: "#424242"
       - state: equipped-decor-contractor
         color: "#3e3e48"
 
@@ -662,7 +662,7 @@
     - state: icon-base-top-jumpsuit
       color: "#3e3e48"
     - state: icon-decor-contractor
-      color: "#fff4e2"
+      color: "#424242" # mono
   - type: Item
     inhandVisuals:
       left:
@@ -671,14 +671,14 @@
       - state: inhand-left-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-left-decor-contractor
-        color: "#fff4e2"
+        color: "#424242" # mono
       right:
       - state: inhand-right-base-bottom
         color: "#3e3e48"
       - state: inhand-right-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-right-decor-contractor
-        color: "#fff4e2"
+        color: "#424242" # mono
   - type: Clothing
     sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
     clothingVisuals:
@@ -688,7 +688,7 @@
       - state: equipped-base-top-jumpsuit
         color: "#3e3e48"
       - state: equipped-decor-contractor
-        color: "#fff4e2"
+        color: "#424242" # mono
 
 - type: entity
   parent: ClothingUniformBase
@@ -705,7 +705,7 @@
     - state: icon-base-top-jumpsuit
       color: "#3e3e48"
     - state: icon-decor-contractor-tac
-      color: "#fff4e2"
+      color: "#424242" # mono
   - type: Item
     inhandVisuals:
       left:
@@ -714,14 +714,14 @@
       - state: inhand-left-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-left-decor-contractor-tac
-        color: "#fff4e2"
+        color: "#424242" # mono
       right:
       - state: inhand-right-base-bottom
         color: "#3e3e48"
       - state: inhand-right-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-right-decor-contractor-tac
-        color: "#fff4e2"
+        color: "#424242" # mono
   - type: Clothing
     sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
     clothingVisuals:
@@ -731,7 +731,7 @@
       - state: equipped-base-top-jumpsuit-tac
         color: "#3e3e48"
       - state: equipped-decor-contractor-tac
-        color: "#fff4e2"
+        color: "#424242" # mono
 
 ## COMMAND
 - type: entity
@@ -1548,7 +1548,7 @@
     - state: icon-base-top-jumpsuit
       color: "#3e3e48"
     - state: icon-decor-department
-      color: "#fff4e2"
+      color: "#424242" # mono
   - type: Item
     inhandVisuals:
       left:
@@ -1557,14 +1557,14 @@
       - state: inhand-left-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-left-decor-department
-        color: "#fff4e2"
+        color: "#424242" # mono
       right:
       - state: inhand-right-base-bottom
         color: "#3e3e48"
       - state: inhand-right-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-right-decor-department
-        color: "#fff4e2"
+        color: "#424242" # mono
   - type: Clothing
     sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
     clothingVisuals:
@@ -1574,7 +1574,7 @@
       - state: equipped-base-top-jumpsuit
         color: "#3e3e48"
       - state: equipped-decor-department
-        color: "#fff4e2"
+        color: "#424242" # mono
 
 - type: entity
   parent: ClothingUniformJumpsuitHydroponics
