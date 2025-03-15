@@ -5,31 +5,31 @@
 # Shuttle Notes:
 #
 - type: vessel
-  id: Argent
+  id: Iapetus
   parent: BaseVessel
-  name: NT-SFS Argent
-  description: A retired TSFMC frigate gutted out and refurbished for cargo transport.
-  price: 48500
-  category: Medium
+  name: NT-SFS Iapetus
+  description: A basic artifact research ship, with minimal armament.
+  price: 36200
+  category: Small
   group: Shipyard
-  shuttlePath: /Maps/_Mono/Shuttles/argent.yml
-  guidebookPage: ShipyardArgent
+  shuttlePath: /Maps/_Mono/Shuttles/iapetus.yml
+  guidebookPage: null
   class:
-  - Cargo
+  - Science
   engine:
-  - Uranium
+  - Plasma
 
 - type: gameMap
-  id: Argent
-  mapName: 'NT-SFS Argent'
-  mapPath: /Maps/_Mono/Shuttles/argent.yml
+  id: Iapetus
+  mapName: 'NT-SFS Iapetus'
+  mapPath: /Maps/_Mono/Shuttles/iapetus.yml
   minPlayers: 0
   stations:
-    Argent:
+    Iapetus:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Argent {1}'
+          mapNameTemplate: 'Iapetus {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
