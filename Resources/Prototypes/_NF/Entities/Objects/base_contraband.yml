@@ -31,7 +31,7 @@
   - type: Contraband
     severity: Class2
     # Security and heads only (finally, shotgun traffic controller)
-    allowedDepartments: [ PMC, Security, Command ] # Mono - Add PMC
+    allowedDepartments: [ Security, Command ]
 
 - type: entity
   parent: BaseC2ContrabandUnredeemable
