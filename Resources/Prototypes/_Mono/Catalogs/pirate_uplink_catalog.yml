@@ -103,7 +103,7 @@
   name:  uplink-pirate-bulldog-ammo-name
   description: uplink-pirate-bulldog-ammo-desc
   productEntity: MagazineShotgun
-  icon: { sprite: Objects/Weapons/Guns/Magazine/Shotgun/m12.rsi, state: pellets }
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi, state: pellets }
   cost:
     Doubloon: 1
   categories:
@@ -119,7 +119,7 @@
   name:  uplink-pirate-smg-magazine-name
   description: uplink-pirate-smg-magazine-desc
   productEntity: MagazinePistolSubMachineGun
-  icon: { sprite: Objects/Weapons/Guns/Magazine/Pistol/smg_mag.rsi, state: pellets }
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: pellets }
   cost:
     Doubloon: 1
   categories:
@@ -206,7 +206,7 @@
   name:  uplink-pirate-webvest-name
   description: uplink-pirate-webvest-desc
   productEntity: ClothingOuterVestWeb
-  icon: { sprite: Clothing/OuterClothing/vests/webvest.rsi, state: icon }
+  icon: { sprite: Clothing/OuterClothing/Vests/webvest.rsi, state: icon }
   cost:
     Doubloon: 3
   categories:
