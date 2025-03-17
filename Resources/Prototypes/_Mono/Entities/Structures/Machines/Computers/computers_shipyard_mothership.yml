@@ -1,0 +1,45 @@
+- type: entity
+  id: BaseCarrierComputer
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyard]
+  suffix: Carrier
+  description: Used on carriers to purchase and sell ships without returning to a station.
+  abstract: true
+  components:
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Custom
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Custom:
+        type: ShipyardConsoleBoundUserInterface
+  - type: ShipyardListing
+
+# EXAMPLE LISTING - DO NOT UNCOMMENT
+#- type: entity
+#  id: ExampleCarrierComputer
+#  parent: BaseCarrierComputer
+#  name: example shipyard console
+#  components:
+#  - type: ShipyardListing # use the ship ID
+#    shuttles:
+#    - Ship1
+#    - Ship2
+#    - Ship3
+
+
+- type: entity
+  id: PirateCarrierComputer
+  parent: BaseCarrierComputer
+  name: pirate carrier console
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Veska
+
+- type: entity
+  id: MiningCarrierComputer
+  parent: BaseCarrierComputer
+  name: mining carrier console
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Ample
