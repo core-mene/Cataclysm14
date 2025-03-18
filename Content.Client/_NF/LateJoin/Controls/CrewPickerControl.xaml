@@ -9,7 +9,7 @@
         <PanelContainer VerticalExpand="True" SetWidth="380">
             <PanelContainer.PanelOverride>
                 <!-- Using PanelBackgroundLight adds padding left and right, so we manually set background color -->
-                <graphics:StyleBoxFlat BackgroundColor="#2F2F3B" />
+                <graphics:StyleBoxFlat BackgroundColor="#303030" />
             </PanelContainer.PanelOverride>
             <BoxContainer Orientation="Vertical"
                           VerticalExpand="True"
@@ -28,7 +28,7 @@
 
         <PanelContainer VerticalExpand="True" HorizontalExpand="True">
             <PanelContainer.PanelOverride>
-                <graphics:StyleBoxFlat BackgroundColor="#25252a" />
+                <graphics:StyleBoxFlat BackgroundColor="#303030" />
             </PanelContainer.PanelOverride>
             <BoxContainer Orientation="Vertical"
                           VerticalExpand="True"

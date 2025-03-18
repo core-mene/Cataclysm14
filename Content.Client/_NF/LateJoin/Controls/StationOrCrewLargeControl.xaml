@@ -9,7 +9,7 @@
                            VerticalExpand="True">
     <PanelContainer.PanelOverride>
         <!-- Using PanelBackgroundLight adds padding left and right, so we manually set background color -->
-        <graphics:StyleBoxFlat BackgroundColor="#2F2F3B"/>
+        <graphics:StyleBoxFlat BackgroundColor="#303030"/>
     </PanelContainer.PanelOverride>
     <BoxContainer Orientation="Vertical" VerticalExpand="True" Margin="8">
 
@@ -37,14 +37,14 @@
                                  MaxSize="30 30"
                                  Stretch="KeepAspectCentered" />
                 </BoxContainer>
-                <customControls:HSeparator SeparatorColor="#A3875A" StyleClasses="LowDivider" Margin="0 0 36 0" />
+                <customControls:HSeparator SeparatorColor="#BABABA" StyleClasses="LowDivider" Margin="0 0 36 0" />
 
                 <RichTextLabel Text="{Loc 'frontier-lobby-station-subtext'}" />
 
                 <Label Name="NoStationsAvailableLabel"
                        Text="{Loc 'frontier-lobby-no-stations-available'}"
                        Margin="0 4 0 4"
-                       FontColorOverride="{xNamespace:Static maths:Color.OrangeRed}" />
+                       FontColorOverride="{xNamespace:Static maths:Color.Red}" />
             </BoxContainer>
         </Button>
 
@@ -72,14 +72,14 @@
                                  MaxSize="30 30"
                                  Stretch="KeepAspectCentered" />
                 </BoxContainer>
-                <customControls:HSeparator SeparatorColor="#A3875A" StyleClasses="LowDivider" Margin="0 0 36 0" />
+                <customControls:HSeparator SeparatorColor="#BABABA" StyleClasses="LowDivider" Margin="0 0 36 0" />
 
                 <RichTextLabel Text="{Loc 'frontier-lobby-crew-subtext'}" />
 
                 <Label Name="NoCrewsAvailableLabel"
                        Text="{Loc 'frontier-lobby-no-crews-available'}"
                        Margin="0 4 0 4"
-                       FontColorOverride="{xNamespace:Static maths:Color.OrangeRed}" />
+                       FontColorOverride="{xNamespace:Static maths:Color.Red}" />
             </BoxContainer>
         </Button>
     </BoxContainer>
