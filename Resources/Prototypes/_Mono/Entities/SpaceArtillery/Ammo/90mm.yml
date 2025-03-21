@@ -26,16 +26,16 @@
   - type: Projectile
     damage:
       types:
-        Structural: 250
+        Structural: 175
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
     - state: base-projectile
   - type: Explosive
-    maxIntensity: 10
-    intensitySlope: 5
-    totalIntensity: 10
-    maxTileBreak: 3
+    maxIntensity: 3
+    intensitySlope: 2
+    totalIntensity: 5
+    maxTileBreak: 1
   - type: PointLight
     color: orange
 
