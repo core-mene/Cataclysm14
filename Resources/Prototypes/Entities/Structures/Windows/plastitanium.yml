@@ -43,9 +43,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/plastitanium_window.rsi
+    sprite: _NF/Structures/Windows/plastitanium_window.rsi # Frontier
   - type: Icon
-    sprite: Structures/Windows/plastitanium_window.rsi
+    sprite: _NF/Structures/Windows/plastitanium_window.rsi # Frontier
     state: full
   - type: IconSmooth
     key: walls # Frontier: windows<walls
@@ -69,7 +69,7 @@
   # Frontier: colored indestructible windows
   description: Skub knows this window is too hard to destroy.
   components:
-  - type: Sprite
+  - type: Sprite 
     color: "#cdf3cd"
   # End Frontier
 
@@ -130,13 +130,13 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/plastitanium_window_diagonal.rsi
+    sprite: _NF/Structures/Windows/plastitanium_window_diagonal.rsi # Frontier
     state: state0
   - type: Tag
     tags:
     - Diagonal
   - type: Icon
-    sprite: Structures/Windows/plastitanium_window_diagonal.rsi
+    sprite: _NF/Structures/Windows/plastitanium_window_diagonal.rsi # Frontier
     state: state0
   - type: IconSmooth
     mode: Diagonal
@@ -169,7 +169,7 @@
   # Frontier: colored indestructible windows
   description: Skub knows this window is too hard to destroy.
   components:
-  - type: Sprite
+  - type: Sprite 
     color: "#cdf3cd"
   # End Frontier
 

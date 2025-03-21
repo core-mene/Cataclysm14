@@ -26,7 +26,7 @@
   - type: Pullable
   - type: Transform
     anchored: true
-    # noRot: true # Mono
+    noRot: true
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallicStrong
@@ -45,6 +45,5 @@
   - type: Construction
     graph: Airlock
     node: assembly
-  - type: Rotatable # Mono
   placement:
     mode: SnapgridCenter
