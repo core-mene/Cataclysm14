@@ -1,15 +1,15 @@
 ﻿- type: entity
   id: ShipMediumPlasmaProjectile
   name: plasma projectile
-  parent: BaseBullet
+  parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
     - type: Projectile
       damage:
         types:
-          Caustic: 50
-          Structural: 350
-          Heat: 150
+          Caustic: 100
+          Structural: 700
+          Heat: 225
           Radiation: 20
           Ion: 40
     - type: Sprite
@@ -20,10 +20,18 @@
       muzzleFlash: null
     - type: ShipWeaponProjectile
     - type: RadarBlip
-      scale: 0.5
+      scale: 2.5
       requireNoGrid: true
       shape: triangle
     - type: TimedDespawn
       lifetime: 60
     - type: PointLight
       color: "#FB00FF"
+    - type: ExplodeOnTrigger
+    - type: Explosive
+      explosionType: Cryo
+      maxIntensity: 65
+      intensitySlope: 3
+      totalIntensity: 25
+      maxTileBreak: 1
+
