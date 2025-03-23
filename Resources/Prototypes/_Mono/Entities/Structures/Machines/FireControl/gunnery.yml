@@ -61,5 +61,6 @@
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
   - type: RadarConsole
+    maxRange: 512
   - type: WorldLoader
-    radius: 256
+    radius: 512
