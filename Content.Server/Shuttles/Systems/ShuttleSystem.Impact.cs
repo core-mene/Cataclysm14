@@ -28,22 +28,22 @@ public sealed partial class ShuttleSystem
     /// <summary>
     /// Minimum velocity difference between 2 bodies for a shuttle "impact" to occur.
     /// </summary>
-    private const int MinimumImpactVelocity = 10;
+    private const int MinimumImpactVelocity = 15;
 
     /// <summary>
     /// Kinetic energy required to dismantle a single tile
     /// </summary>
-    private const float TileBreakEnergy = 5000;
+    private const float TileBreakEnergy = 10000;
 
     /// <summary>
     /// Kinetic energy required to spawn sparks
     /// </summary>
-    private const float SparkEnergy = 7000;
+    private const float SparkEnergy = 14000;
 
     /// <summary>
     /// Maximum impact radius in tiles
     /// </summary>
-    private const int MaxImpactRadius = 3;
+    private const int MaxImpactRadius = 1;
 
     private readonly SoundCollectionSpecifier _shuttleImpactSound = new("ShuttleImpactSound");
 
