@@ -6,7 +6,7 @@ on:
 
 env:
   GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
-  CHANGELOG_DIR: Resources/Changelog/Frontier.yml # Frontier: Changelog.yml<Frontier.yml
+  CHANGELOG_DIR: Resources/Changelog/Monolith.yml # Mono
   PR_NUMBER: ${{ github.event.number }}
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.BOT_TOKEN }}
-          ref: master
+          ref: "${{ vars.CHANGELOG_BRANCH }}"
 
       - name: Setup Git
         run: |
@@ -47,9 +47,9 @@ jobs:
 
       - name: Commit Changelog
         run: |
-          git pull origin master
+          git pull origin main
           git add *.yml
-          git commit -m "${{ vars.CHANGELOG_MESSAGE }} (#${{ env.PR_NUMBER }})"
+          git commit -m "Automated Changelog (#${{ env.PR_NUMBER }})"
           git push
         shell: bash
         continue-on-error: true

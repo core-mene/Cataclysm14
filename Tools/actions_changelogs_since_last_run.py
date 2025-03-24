@@ -21,7 +21,7 @@ GITHUB_TOKEN      = os.environ["GITHUB_TOKEN"]
 DISCORD_SPLIT_LIMIT = 2000
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 
-CHANGELOG_FILE = "Resources/Changelog/Frontier.yml" # Frontier: Changelog.yml<Frontier.yml
+CHANGELOG_FILE = "Resources/Changelog/Monolith.yml" # Mono
 
 TYPES_TO_EMOJI = {
     "Fix":    "🐛",

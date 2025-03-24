@@ -503,6 +503,24 @@ namespace Content.Client.Lobby.UI
                 return;
             }
 
+            // Dictionary to store category buttons - moved up before it's used
+            Dictionary<string, TraitCategoryButton> categoryButtons = new();
+
+            // Add expand/collapse all buttons
+            var expandCollapseButtons = new TraitExpandCollapseButtons();
+            expandCollapseButtons.OnExpandCollapseAll += expanded =>
+            {
+                // Set the static dictionary state
+                TraitCategoryButton.SetAllExpanded(expanded);
+
+                // Update all visible category buttons
+                foreach (var button in categoryButtons.Values)
+                {
+                    button.SetExpanded(expanded);
+                }
+            };
+            TraitsList.AddChild(expandCollapseButtons);
+
             // Setup model
             Dictionary<string, List<string>> traitGroups = new();
             List<string> defaultTraits = new();
@@ -526,23 +544,34 @@ namespace Content.Client.Lobby.UI
             // Create UI view from model
             foreach (var (categoryId, categoryTraits) in traitGroups)
             {
+                // Skip the default category if it has no traits
+                if (categoryId == TraitCategoryPrototype.Default && categoryTraits.Count == 0)
+                    continue;
+
                 TraitCategoryPrototype? category = null;
+                string categoryName;
+                int? maxTraitPoints = null;
 
                 if (categoryId != TraitCategoryPrototype.Default)
                 {
                     category = _prototypeManager.Index<TraitCategoryPrototype>(categoryId);
-                    // Label
-                    TraitsList.AddChild(new Label
-                    {
-                        Text = Loc.GetString(category.Name),
-                        Margin = new Thickness(0, 10, 0, 0),
-                        StyleClasses = { StyleBase.StyleClassLabelHeading },
-                    });
+                    categoryName = Loc.GetString(category.Name);
+                    maxTraitPoints = category.MaxTraitPoints;
                 }
+                else
+                {
+                    categoryName = Loc.GetString("humanoid-profile-editor-traits-default-category");
+                }
+
+                // Create category button
+                var categoryButton = new TraitCategoryButton(categoryName);
+                categoryButtons[categoryId] = categoryButton;
+                TraitsList.AddChild(categoryButton);
 
                 List<TraitPreferenceSelector?> selectors = new();
                 var selectionCount = 0;
 
+                // First pass: calculate current points and create selectors
                 foreach (var traitProto in categoryTraits)
                 {
                     var trait = _prototypeManager.Index<TraitPrototype>(traitProto);
@@ -556,7 +585,38 @@ namespace Content.Client.Lobby.UI
                     {
                         if (preference)
                         {
+                            // Calculate current points for this category before adding the new trait
+                            var currentPoints = 0;
+                            if (category != null && category.MaxTraitPoints >= 0)
+                            {
+                                foreach (var existingTraitId in Profile?.TraitPreferences ?? new HashSet<ProtoId<TraitPrototype>>())
+                                {
+                                    if (!_prototypeManager.TryIndex<TraitPrototype>(existingTraitId, out var existingProto))
+                                        continue;
+
+                                    if (existingProto.Category == categoryId)
+                                        currentPoints += existingProto.Cost;
+                                }
+
+                                // Check if adding this trait would exceed the maximum points
+                                if (currentPoints + trait.Cost > category.MaxTraitPoints)
+                                {
+                                    // Reset the selection without triggering the event
+                                    selector.Preference = false;
+                                    return;
+                                }
+                            }
+
+                            var oldProfile = Profile;
                             Profile = Profile?.WithTraitPreference(trait.ID, _prototypeManager);
+
+                            // If the profile didn't change, it means the trait couldn't be added (e.g., due to point limits)
+                            if (Profile == oldProfile)
+                            {
+                                // Reset the selection without triggering the event
+                                selector.Preference = false;
+                                return;
+                            }
                         }
                         else
                         {
@@ -564,7 +624,33 @@ namespace Content.Client.Lobby.UI
                         }
 
                         SetDirty();
-                        RefreshTraits(); // If too many traits are selected, they will be reset to the real value.
+
+                        // Instead of refreshing the entire UI, just update the point counter if needed
+                        if (category is { MaxTraitPoints: >= 0 })
+                        {
+                            // Recalculate points for this category
+                            var currentPoints = 0;
+                            foreach (var traitId in Profile?.TraitPreferences ?? new HashSet<ProtoId<TraitPrototype>>())
+                            {
+                                if (!_prototypeManager.TryIndex<TraitPrototype>(traitId, out var proto))
+                                    continue;
+
+                                if (proto.Category == category.ID)
+                                    currentPoints += proto.Cost;
+                            }
+
+                            // Find and update the point counter label
+                            if (categoryButton.TraitsContainer.ChildCount > 0 &&
+                                categoryButton.TraitsContainer.GetChild(0) is Label pointsLabel)
+                            {
+                                pointsLabel.Text = Loc.GetString("humanoid-profile-editor-trait-count-hint",
+                                    ("current", currentPoints),
+                                    ("max", category.MaxTraitPoints));
+                            }
+
+                            // Update all trait colors based on the new point total
+                            RefreshTraitColors(categoryButton, category, currentPoints);
+                        }
                     };
                     selectors.Add(selector);
                 }
@@ -572,25 +658,72 @@ namespace Content.Client.Lobby.UI
                 // Selection counter
                 if (category is { MaxTraitPoints: >= 0 })
                 {
-                    TraitsList.AddChild(new Label
+                    categoryButton.AddTrait(new Label
                     {
-                        Text = Loc.GetString("humanoid-profile-editor-trait-count-hint", ("current", selectionCount) ,("max", category.MaxTraitPoints)),
+                        Text = Loc.GetString("humanoid-profile-editor-trait-count-hint", ("current", selectionCount), ("max", category.MaxTraitPoints)),
                         FontColorOverride = Color.Gray
                     });
                 }
 
+                // Second pass: add selectors to UI with appropriate colors
                 foreach (var selector in selectors)
                 {
                     if (selector == null)
                         continue;
 
-                    if (category is { MaxTraitPoints: >= 0 } &&
-                        selector.Cost + selectionCount > category.MaxTraitPoints)
+                    // Color traits red if they would exceed the point limit
+                    if (category is { MaxTraitPoints: >= 0 })
                     {
-                        selector.Checkbox.Label.FontColorOverride = Color.Red;
+                        // If this trait would exceed the limit by itself
+                        if (selector.Cost > category.MaxTraitPoints)
+                        {
+                            selector.SetUnavailable(true);
+                        }
+                        // If this trait would exceed the limit when added to current selection
+                        else if (!selector.Preference && selector.Cost + selectionCount > category.MaxTraitPoints)
+                        {
+                            selector.SetUnavailable(true);
+                        }
+                        // If this trait is already selected but would exceed the limit if added now
+                        else if (selector.Preference && selectionCount - selector.Cost + selector.Cost > category.MaxTraitPoints)
+                        {
+                            // This shouldn't happen normally, but just in case
+                            selector.SetUnavailable(true);
+                        }
                     }
 
-                    TraitsList.AddChild(selector);
+                    categoryButton.AddTrait(selector);
+                }
+            }
+        }
+
+        // Helper method to refresh trait colors when points change
+        private void RefreshTraitColors(TraitCategoryButton categoryButton, TraitCategoryPrototype category, int currentPoints)
+        {
+            // Skip the first child which is the points label
+            for (int i = 1; i < categoryButton.TraitsContainer.ChildCount; i++)
+            {
+                if (categoryButton.TraitsContainer.GetChild(i) is TraitPreferenceSelector selector)
+                {
+                    // Reset color
+                    selector.TraitButton.ModulateSelfOverride = null;
+                    selector.SetUnavailable(false);
+
+                    // If this trait would exceed the limit by itself
+                    if (selector.Cost > category.MaxTraitPoints)
+                    {
+                        selector.SetUnavailable(true);
+                    }
+                    // If this trait would exceed the limit when added to current selection
+                    else if (!selector.Preference && selector.Cost + currentPoints > category.MaxTraitPoints)
+                    {
+                        selector.SetUnavailable(true);
+                    }
+                    // Enable traits that can now be selected
+                    else if (!selector.Preference && selector.Cost + currentPoints <= category.MaxTraitPoints)
+                    {
+                        selector.SetUnavailable(false);
+                    }
                 }
             }
         }
