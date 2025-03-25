@@ -273,7 +273,7 @@
   - type: Pullable
   - type: Rotatable
     rotateWhilePulling: false
-    rotateWhileAnchored: true
+    rotateWhileAnchored: false
     increment: 45
   - type: DeviceLinkSink
     ports:
