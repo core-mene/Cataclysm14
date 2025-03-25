@@ -27,3 +27,13 @@ Entries:
       message: Ported over the Resomi species!
   id: 4
   time: '2025-03-25T03:03:48.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Remove
+      message: Removed rotating anchored ship weapons
+    - type: Tweak
+      message: All ship weapon projectiles have had their speed decreased (fix related)
+    - type: Fix
+      message: Ship weapon projectiles shouldnt bypass walls anymore
+  id: 5
+  time: '2025-03-25T13:47:59.0000000+00:00'

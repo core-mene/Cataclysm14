@@ -26,7 +26,7 @@
     - Toggle
   - type: Gun
     fireRate: 6
-    projectileSpeed: 175
+    projectileSpeed: 60
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/uaf_57mm.ogg
     soundEmpty:
@@ -117,7 +117,7 @@
     range: 500
   - type: Gun
     fireRate: 0.25
-    projectileSpeed: 150
+    projectileSpeed: 40
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
     soundEmpty:
@@ -179,7 +179,7 @@
     range: 500
   - type: Gun
     fireRate: 0.05
-    projectileSpeed: 175 # i was gonna make this faster, but the engine really hates fast moving projectiles and collisions
+    projectileSpeed: 110 # i was gonna make this faster, but the engine really hates fast moving projectiles and collisions
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/uaf_tona_iv_608.ogg
     soundEmpty:
@@ -273,7 +273,7 @@
   - type: Pullable
   - type: Rotatable
     rotateWhilePulling: false
-    rotateWhileAnchored: true
+    rotateWhileAnchored: false
     increment: 45
   - type: DeviceLinkSink
     ports:
