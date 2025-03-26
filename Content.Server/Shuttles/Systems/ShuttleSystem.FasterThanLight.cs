@@ -28,6 +28,7 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
 using FTLMapComponent = Content.Shared.Shuttles.Components.FTLMapComponent;
+using Content.Server.Salvage.Expeditions;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -247,6 +248,15 @@ public sealed partial class ShuttleSystem
         if (HasComp<PreventPilotComponent>(shuttleUid))
         {
             reason = Loc.GetString("shuttle-console-prevent");
+            return false;
+        }
+
+        // Check if the shuttle is in an expedition
+        if (TryComp<TransformComponent>(shuttleUid, out var xform) &&
+            xform.MapUid != null &&
+            HasComp<SalvageExpeditionComponent>(xform.MapUid))
+        {
+            reason = Loc.GetString("shuttle-console-in-expedition");
             return false;
         }
 
