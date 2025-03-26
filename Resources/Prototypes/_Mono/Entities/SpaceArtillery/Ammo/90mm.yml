@@ -34,45 +34,10 @@
   - type: Explosive
     maxIntensity: 3
     intensitySlope: 2
-    totalIntensity: 5
+    totalIntensity: 1
     maxTileBreak: 1
   - type: PointLight
     color: orange
-
-# 90mm Shells
-
-- type: entity
-  id: 90mmShellBase
-  abstract: true
-  parent: BaseItem
-  components:
-  - type: Tag
-    tags:
-    - CartridgeShell
-    - Cartridge
-  - type: Item
-    size: Normal
-  - type: CartridgeAmmo
-    deleteOnSpawn: true
-    muzzleFlash: null
-  - type: Sprite
-    layers:
-    - state: base
-      map: [ "enum.AmmoVisualLayers.Base" ]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: SpaceGarbage
-
-- type: entity
-  id: 90mmShellArmorPiercing
-  name: 90mm depleted uranium shell
-  parent: 90mmShellBase
-  description: An artillery shell with a depleted uranium tip.
-  components:
-  - type: CartridgeAmmo
-    proto: 90mmBulletArmorPiercing
-  - type: Sprite
-    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
 
 - type: entity
   id: 90mmBulletExplosiveBase

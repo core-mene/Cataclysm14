@@ -181,9 +181,6 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition
-    whitelist:
-    - PirateCaptain
 
 - type: listing
   id: UplinkPirateEliteHardsuit
@@ -200,6 +197,23 @@
     whitelist:
       tags:
       - PirateUplink
+
+- type: listing
+  id: UplinkPirateCombatHardsuit
+  name:  uplink-pirate-combat-hardsuit-name
+  description: uplink-pirate-combat-hardsuit-desc
+  productEntity: ClothingBackpackDuffelSyndicateHardsuitBundle
+  icon: { sprite: Clothing/OuterClothing/Hardsuits/syndicate.rsi, state: icon }
+  cost:
+    Doubloon: 6
+  categories:
+  - UplinkPirateHardsuits
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
 
 - type: listing
   id: UplinkPirateWebVest

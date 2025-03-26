@@ -16,7 +16,7 @@ uplink-pirate-access-breaker-name = Authentication Disruptor
 uplink-pirate-access-breaker-desc = A device that overrides the access reader on a machine or door, letting you access it freely.
 
 uplink-pirate-jaws-name = Syndicate Jaws of Life
-uplink-pirate-jaws-desc = A JOL illegally modified past restrictions, capable of opening doors 2x as fast as normal JOL.
+uplink-pirate-jaws-desc = A normal jaws-of-life illegally modified past restrictions, capable of opening doors 2x as fast as normal JOL.
 
 # weapons
 
@@ -37,10 +37,13 @@ uplink-pirate-smg-magazine-desc = A 30 round magazine of .35 auto. Compatible wi
 # equipment
 
 uplink-pirate-commander-hardsuit-name = Commander Hardsuit
-uplink-pirate-commander-hardsuit-desc = A hardsuit purchased from Gorlex Marauder's surplus, with great ballistic protection.
+uplink-pirate-commander-hardsuit-desc = A hardsuit purchased from the Gorlex Marauder's surplus, with great ballistic protection.
 
 uplink-pirate-elite-hardsuit-name = Elite Hardsuit
-uplink-pirate-elite-hardsuit-desc = A hardsuit purchased from Gorlex Marauder's surplus, with great heat protection.
+uplink-pirate-elite-hardsuit-desc = A hardsuit purchased from the Gorlex Marauder's surplus, with great heat protection.
+
+uplink-pirate-combat-hardsuit-name = Combat Hardsuit
+uplink-pirate-combat-hardsuit-desc = A hardsuit purchased from the Gorlex Marauder's surplus, with good overall protection.
 
 uplink-pirate-webvest-name = Syndicate Webvest
 uplink-pirate-webvest-desc = A webvest smuggled into the sector that hasn't been downgraded like ones utilized by contractors. Great pierce resist, poor heat resist.
