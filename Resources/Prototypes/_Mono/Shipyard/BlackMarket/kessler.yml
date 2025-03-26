@@ -1,0 +1,32 @@
+- type: vessel
+  id: Kessler
+  parent: BaseVesselAntag
+  name: Kessler
+  description: A small pirate vessel with a more standard loadout.
+  price: 34520
+  category: Small
+  group: BlackMarket
+  shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/kessler.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Kessler
+  mapName: 'Kessler'
+  mapPath: /Maps/_Mono/Shuttles/BlackMarket/kessler.yml
+  minPlayers: 0
+  stations:
+    Kessler:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Kessler {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Pirate: [ 0, 0 ]
