@@ -1,4 +1,4 @@
-ghost-gui-return-to-body-button = Return to body
+ghost-gui-return-to-body-button = Return to Body
 ghost-gui-ghost-warp-button = Ghost Warp
 ghost-gui-ghost-roles-button = Ghost Roles ({$count})
 ghost-gui-toggle-ghost-visibility-popup-on = Enabled visibility of ghosts.
@@ -8,7 +8,7 @@ ghost-gui-toggle-lighting-manager-popup-personal-light = Enabled personal light.
 ghost-gui-toggle-lighting-manager-popup-fullbright = Fullbright mode.
 ghost-gui-toggle-fov-popup = Toggled field-of-view.
 ghost-gui-respawn = Respawn
-ghost-gui-uncryo = Un-cryo
+ghost-gui-uncryo = Cryo
 
 ghost-gui-toggle-hearing-popup-on = You can now hear all messages.
 ghost-gui-toggle-hearing-popup-off = You can now only hear radio and nearby messages.
