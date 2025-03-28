@@ -11,13 +11,14 @@
     - type: Physics
       bodyType: Static
     - type: Sprite
-      sprite: Structures/Power/Generation/ame.rsi
+      sprite: _Mono/Structures/ShuttleComponents/drive.rsi
       snapCardinals: true
       layers:
       - state: control
       - state: control_on
         map: ["enum.PowerDeviceVisualLayers.Powered"]
         visible: false
+        shader: unshaded
     - type: FTLDrive
     - type: ApcPowerReceiver
       powerLoad: 200
@@ -28,7 +29,7 @@
       volume: -9
       range: 5
       sound:
-        path: /Audio/Ambience/Objects/server_fans.ogg
+        path: /Audio/Ambience/Objects/anomaly_generator.ogg
     - type: GenericVisualizer
       visuals:
         enum.PowerDeviceVisuals.Powered:

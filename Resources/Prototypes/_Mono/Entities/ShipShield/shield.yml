@@ -18,26 +18,17 @@
   - type: InteractionOutline
   - type: Anchorable
   - type: Sprite
-    sprite: Structures/Power/Generation/Singularity/containment.rsi
-    state: icon
-    noRot: true
+    sprite: _Mono/Structures/ShuttleComponents/shield.rsi
+    snapCardinals: true
     layers:
-      - state: icon
-      - state: p1
-        map: ["powerLight"]
-        visible: false
-        shader: unshaded
-      - state: a1
-        map: ["fieldLight"]
-        visible: false
-        shader: unshaded
-      - state: on
-        map: ["connectedLight"]
+      - state: control
+      - state: control_on
+        map: ["enum.PowerDeviceVisualLayers.Powered"]
         visible: false
         shader: unshaded
   - type: Icon
-    sprite: Structures/Power/Generation/Singularity/containment.rsi
-    state: icon
+    sprite: _Mono/Structures/ShuttleComponents/shield.rsi
+    state: control
   - type: GridShieldGenerator
     createdField: "GridShieldField"
   - type: ApcPowerReceiver
@@ -47,29 +38,23 @@
     priority: 1
   - type: PointLight
     enabled: false
-    color: "#4080FF"
+    color: "#FF0040"
     radius: 2.0
     energy: 1.5
   - type: LitOnPowered
   - type: Appearance
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -9
+    range: 5
+    sound:
+      path: /Audio/Ambience/Objects/anomaly_generator.ogg
   - type: GenericVisualizer
     visuals:
-      enum.ContainmentFieldGeneratorVisuals.PowerLight:
-        powerLight:
-          NoPower: {visible: false}
-          LowPower: {visible: true, state: p1}
-          MediumPower: {visible: true, state: p3}
-          HighPower: {visible: true, state: p6}
-      enum.ContainmentFieldGeneratorVisuals.FieldLight:
-        fieldLight:
-          NoLevel: {visible: false}
-          On: {visible: true, state: a1}
-          OneField: {visible: true, state: a2}
-          MultipleFields: {visible: true, state: a3}
-      enum.ContainmentFieldGeneratorVisuals.OnLight:
-        connectedLight:
-          True: { visible: true }
-          False: { visible: false }
+      enum.PowerDeviceVisuals.Powered:
+         enum.PowerDeviceVisualLayers.Powered:
+           True: { visible: true }
+           False: { visible: false }
 
 - type: entity
   parent: BaseWall
