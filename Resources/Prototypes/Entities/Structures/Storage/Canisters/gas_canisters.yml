@@ -72,7 +72,7 @@
         fix1:
           shape:
             !type:PhysShapeAabb
-            bounds: "-0.25,-0.25,0.25,0.25"
+            bounds: "-0.2,-0.2,0.2,0.2" # mono
           density: 190
           mask:
           - SmallMobMask #this is so they can go under plastic flaps
