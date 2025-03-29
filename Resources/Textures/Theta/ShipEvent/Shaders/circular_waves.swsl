@@ -1,0 +1,66 @@
+uniform highp float SPEED;
+uniform highp float BRIGHTNESS;
+uniform highp float FREQUENCY;
+uniform highp vec2 CENTER;
+uniform highp vec3 BASE_COLOR;
+uniform highp float RING_WIDTH = 0.1; // Controls the width of the ring (0.1 = 10% of radius)
+uniform highp float EDGE_SMOOTHNESS = 0.02; // Controls how smooth the edge transition is
+uniform highp float SCREEN_RADIUS = 100.0; // Shield radius in screen coordinates
+
+void fragment()
+{
+    // Calculate normalized distance from center
+    highp vec2 delta = FRAGCOORD.xy - CENTER;
+    highp float dist = length(delta);
+
+    // Normalize the distance by the actual shield radius
+    highp float normalizedDist = dist / SCREEN_RADIUS;
+
+    // Only discard if we're way outside the shield radius
+    if (normalizedDist > 1.1) {
+        discard;
+    }
+
+    // Create inner and outer ring edges
+    highp float innerEdge = 0.85 - (RING_WIDTH / 2.0);
+    highp float outerEdge = 0.85 + (RING_WIDTH / 2.0);
+
+    // Calculate ring mask - value between 0 and 1 based on distance from ideal ring
+    highp float ringMask = 0.0;
+
+    // If inside the inner edge, fade from 0 to 1
+    if (normalizedDist < innerEdge) {
+        ringMask = smoothstep(innerEdge - EDGE_SMOOTHNESS, innerEdge, normalizedDist);
+    }
+    // If outside the outer edge, fade from 1 to 0
+    else if (normalizedDist > outerEdge) {
+        ringMask = 1.0 - smoothstep(outerEdge, outerEdge + EDGE_SMOOTHNESS, normalizedDist);
+    }
+    // If between inner and outer edge, fully visible
+    else {
+        ringMask = 1.0;
+    }
+
+    // Calculate angle from center for effects
+    highp float angle = atan(delta.y, delta.x);
+
+    // Calculate a more dynamic wave effect based on distance and time
+    // Use angle to create variation around the circle
+    highp float waveEffect = sin(dist * FREQUENCY - SPEED * TIME) * 0.5 +
+                           sin(angle * 6.0 + TIME * SPEED * 0.5) * 0.2 +
+                           0.7; // Base brightness
+
+    // Apply the ring mask to the wave effect
+    COLOR.xyz = BASE_COLOR;
+    COLOR.w = waveEffect * ringMask;
+
+    // Fade out alpha near the join point to avoid visible seam
+    // This assumes angles are in the range [-π, π]
+    highp float angleNormalized = angle / 3.14159; // Normalize to [-1, 1]
+
+    // Subtle fade near the seam - only for full circles with angle near ±π
+    if (abs(angleNormalized) > 0.97) {
+        // Apply a more subtle alpha reduction at the seam
+        COLOR.w *= 0.95;
+    }
+}

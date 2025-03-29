@@ -7,7 +7,6 @@ using Robust.Shared.Map;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Map.Components;
 using Content.Shared.Damage;
-using Content.Shared._Mono.ShipShield;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Slippery;
@@ -166,7 +165,7 @@ public sealed partial class ShuttleSystem
         }
     }
 
-    /// <summary>
+    /*/// <summary>
     /// Checks if a grid has any entities with GridShieldProtectedEntityComponent on it
     /// </summary>
     private bool IsGridProtected(EntityUid gridUid)
@@ -188,16 +187,16 @@ public sealed partial class ShuttleSystem
         }
 
         return false;
-    }
+    }*/
 
     /// <summary>
     /// Processes a zone of tiles around the impact point
     /// </summary>
     private void ProcessImpactZone(EntityUid uid, MapGridComponent grid, Vector2i centerTile, float energy, Vector2 dir, int radius)
     {
-        // Skip processing if this grid has entities protected by grid shields
-        if (IsGridProtected(uid))
-            return;
+        // // Skip processing if this grid has entities protected by grid shields
+        // if (IsGridProtected(uid))
+        //     return;
 
         // Create damage object for entities
         DamageSpecifier damage = new();
@@ -222,7 +221,7 @@ public sealed partial class ShuttleSystem
                 foreach (EntityUid localUid in _lookup.GetLocalEntitiesIntersecting(uid, tile, gridComp: grid))
                 {
                     // Skip entities protected by grid shields or entities that no longer exist
-                    if (!Exists(localUid) || HasComp<GridShieldProtectedEntityComponent>(localUid))
+                    if (!Exists(localUid))
                         continue;
 
                     // Scale damage based on distance from center
