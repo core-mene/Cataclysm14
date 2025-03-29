@@ -111,3 +111,25 @@ Entries:
       message: Now only selected ship guns have a line drawn to your cursor.
   id: 14
   time: '2025-03-29T00:29:23.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added FTL drives and/or shield generators to Kessler, Marauder, Polaris,
+        Archon, Anura, Argent, and M-Class.
+    - type: Tweak
+      message: FTL drive buffed from 512m to 2500m
+    - type: Fix
+      message: Shield generators can be unanchored now
+    - type: Fix
+      message: The Argent has had its LV cable bugs fixed.
+  id: 15
+  time: '2025-03-29T01:54:37.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        The Iapetus now runs off of uranium instead of plasma (it can run at
+        idle power stock now).
+  id: 16
+  time: '2025-03-29T02:32:26.0000000+00:00'
