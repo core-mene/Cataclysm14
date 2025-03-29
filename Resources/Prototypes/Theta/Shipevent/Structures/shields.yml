@@ -43,7 +43,7 @@
   suffix: Theta
   components:
     - type: CircularShield
-      consumptionPerM2: 1
+      consumptionPerM2: 0.35 # too much at 1
       maxWidth: 360
       maxRadius: 50
       color: "#00DEFE"
