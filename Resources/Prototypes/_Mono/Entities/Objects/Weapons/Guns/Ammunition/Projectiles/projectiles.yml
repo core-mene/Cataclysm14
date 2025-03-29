@@ -82,9 +82,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 300
-        Blunt: 100
-        Heat: 100
+        Structural: 100
+        Blunt: 50
+        Heat: 50
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
@@ -105,9 +105,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 75
+    totalIntensity: 25
     intensitySlope: 5
-    maxIntensity: 10
+    maxIntensity: 5
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
