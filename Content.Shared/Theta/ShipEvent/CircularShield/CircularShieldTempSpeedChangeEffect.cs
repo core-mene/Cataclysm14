@@ -1,6 +1,8 @@
 using Content.Shared.Projectiles;
 using Content.Shared.Theta.ShipEvent.Components;
 using Robust.Shared.Physics.Systems;
+using System.Collections.Concurrent;
+using System.Linq;
 
 namespace Content.Shared.Theta.ShipEvent.CircularShield;
 
@@ -23,12 +25,15 @@ public sealed partial class CircularShieldTempSpeedChangeEffect : CircularShield
     [DataField("destroyProjectiles"), ViewVariables(VVAccess.ReadWrite)]
     public bool DestroyProjectiles = true;
 
-    private HashSet<EntityUid> _trackedUids = new();
+    // Changed from HashSet to ConcurrentHashSet for thread safety
+    private readonly ConcurrentDictionary<EntityUid, byte> _trackedUids = new();
 
     // These public properties allow systems to check which entities should phase
     public EntityUid ShieldEntity { get; private set; }
     public CircularShieldComponent? ShieldComponent { get; private set; }
-    public HashSet<EntityUid> TrackedProjectiles => _trackedUids;
+
+    // Expose a thread-safe collection interface to check tracked projectiles
+    public ICollection<EntityUid> TrackedProjectiles => _trackedUids.Keys;
 
     public override void OnShieldInit(EntityUid uid, CircularShieldComponent shield)
     {
@@ -43,9 +48,9 @@ public sealed partial class CircularShieldTempSpeedChangeEffect : CircularShield
 
     public override void OnShieldShutdown(EntityUid uid, CircularShieldComponent shield)
     {
-        foreach (EntityUid id in _trackedUids)
+        foreach (var id in _trackedUids.Keys)
         {
-            RestoreVelocity(uid);
+            RestoreVelocity(id);
         }
 
         _trackedUids.Clear();
@@ -55,21 +60,24 @@ public sealed partial class CircularShieldTempSpeedChangeEffect : CircularShield
     public override void OnShieldUpdate(EntityUid uid, CircularShieldComponent shield, float time)
     {
         base.OnShieldUpdate(uid, shield, time);
-        if (_trackedUids.Count == 0)
+        if (_trackedUids.IsEmpty)
             return;
 
-        foreach (EntityUid trackedUid in _trackedUids)
+        // Create a copy of keys to avoid collection modification issues during iteration
+        var keysToProcess = _trackedUids.Keys.ToArray();
+
+        foreach (var trackedUid in keysToProcess)
         {
             if (!_entMan.EntityExists(trackedUid))
             {
-                _trackedUids.Remove(trackedUid);
+                _trackedUids.TryRemove(trackedUid, out _);
                 continue;
             }
 
             if (!_shieldSys.EntityInShield(uid, shield, trackedUid, _formSys))
             {
                 RestoreVelocity(trackedUid);
-                _trackedUids.Remove(trackedUid);
+                _trackedUids.TryRemove(trackedUid, out _);
             }
         }
     }
@@ -160,7 +168,7 @@ public sealed partial class CircularShieldTempSpeedChangeEffect : CircularShield
                 // Only track projectiles for phasing if they should be affected and we're not destroying them
                 if (ProjectilePhasing)
                 {
-                    _trackedUids.Add(uid);
+                    _trackedUids.TryAdd(uid, 0); // Value is not used, just a placeholder for the concurrent dictionary
                 }
 
                 // Apply speed change if entity is in the shield and should be affected

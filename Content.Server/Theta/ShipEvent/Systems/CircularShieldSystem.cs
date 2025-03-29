@@ -1,22 +1,13 @@
-using System;
 using System.Linq;
 using System.Numerics;
-using Content.Server.Communications;
-using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Systems;
-using Content.Server.Spawners.Components;
-using Content.Server.Theta.ShipEvent.Components;
 using Content.Shared.Physics;
 using Content.Shared.Theta.ShipEvent.CircularShield;
 using Robust.Server.GameObjects;
-using Robust.Shared.GameObjects;
-using Robust.Shared.IoC;
-using Robust.Shared.Physics;
 using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Dynamics;
 using Robust.Shared.Physics.Systems;
-using Content.Server._Mono.Radar;
 using Content.Server.Power.Components;
 using Content.Shared.DeviceLinking;
 using Content.Shared.DeviceLinking.Events;
@@ -29,7 +20,7 @@ using Content.Shared.Theta.ShipEvent.UI;
 using Content.Shared.UserInterface;
 using Robust.Server.GameStates;
 using Robust.Shared.Physics.Events;
-using Robust.Shared.Physics.Collision;
+using Robust.Shared.Threading;
 
 namespace Content.Server.Theta.ShipEvent.Systems;
 
@@ -41,6 +32,7 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
     [Dependency] private readonly TransformSystem _formSys = default!;
     [Dependency] private readonly ShuttleConsoleSystem _shuttleConsole = default!;
     [Dependency] private readonly PvsOverrideSystem _pvsIgnoreSys = default!;
+    [Dependency] private readonly IParallelManager _parallel = default!;
 
     private const string ShieldFixtureId = "ShieldFixture";
 
@@ -62,17 +54,43 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
     public override void Update(float time)
     {
         base.Update(time);
-        var query = EntityManager.EntityQueryEnumerator<CircularShieldComponent>();
-        while (query.MoveNext(out EntityUid uid, out CircularShieldComponent? shield))
-        {
-            // Update shield effects
-            foreach (CircularShieldEffect effect in shield.Effects)
-            {
-                effect.OnShieldUpdate(uid, shield, time);
-            }
 
-            // Update power surge dissipation
-            UpdateDamageSurge(uid, shield, time);
+        // Get all shields
+        var shields = new List<(EntityUid Uid, CircularShieldComponent Shield)>();
+        var query = EntityManager.EntityQueryEnumerator<CircularShieldComponent>();
+        while (query.MoveNext(out var uid, out var shield))
+        {
+            shields.Add((uid, shield));
+        }
+
+        // If there are enough shields to benefit from parallelization
+        if (shields.Count > 4)
+        {
+            // Create parallel job for updating shields
+            var job = new ShieldUpdateJob
+            {
+                System = this,
+                Time = time,
+                Shields = shields
+            };
+
+            // Process shield updates in parallel
+            _parallel.ProcessNow(job, shields.Count);
+        }
+        else
+        {
+            // Sequential update for small number of shields
+            foreach (var (uid, shield) in shields)
+            {
+                // Update shield effects
+                foreach (CircularShieldEffect effect in shield.Effects)
+                {
+                    effect.OnShieldUpdate(uid, shield, time);
+                }
+
+                // Update power surge dissipation
+                UpdateDamageSurge(uid, shield, time);
+            }
         }
     }
 
@@ -373,6 +391,34 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         else if (shield.DesiredDraw > 0)
         {
             shield.Powered = false;
+        }
+    }
+
+    private class ShieldUpdateJob : IParallelRobustJob
+    {
+        public CircularShieldSystem System = default!;
+        public float Time;
+        public List<(EntityUid Uid, CircularShieldComponent Shield)> Shields = default!;
+
+        // Process shields in batches for better performance
+        public int BatchSize => 4;
+        public int MinimumBatchParallel => 2;
+
+        public void Execute(int index)
+        {
+            if (index >= Shields.Count)
+                return;
+
+            var (uid, shield) = Shields[index];
+
+            // Update shield effects
+            foreach (CircularShieldEffect effect in shield.Effects)
+            {
+                effect.OnShieldUpdate(uid, shield, Time);
+            }
+
+            // Update power surge dissipation
+            System.UpdateDamageSurge(uid, shield, Time);
         }
     }
 }
