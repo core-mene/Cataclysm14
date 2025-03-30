@@ -1,14 +1,14 @@
 - type: gameMap
   id: NFDev
   mapName: NFDev
-  mapPath: /Maps/_NF/Test/dev_map.yml
+  mapPath: /Maps/_Mono/Test/dev_map.yml # Mono
   minPlayers: 0
   stations:
     NFDev:
       stationProto: StandardFrontierStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: "NFDev"
+          mapNameTemplate: "MonoDev"
         - type: StationJobs
           availableJobs:
             Contractor: [ -1, -1 ]

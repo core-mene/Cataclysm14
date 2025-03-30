@@ -42,6 +42,10 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
+  - type: Climbable # mono
+  - type: FootstepModifier # mono
+    footstepSoundCollection:
+      collection: FootstepHull
 
 - type: entity
   abstract: true
@@ -72,6 +76,10 @@
     - machine_board
   - type: LightningTarget
     priority: 1
+  - type: Climbable # mono
+  - type: FootstepModifier # mono
+    footstepSoundCollection:
+      collection: FootstepHull
 
 - type: entity
   abstract: true

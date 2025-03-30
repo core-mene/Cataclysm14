@@ -64,7 +64,6 @@ public sealed partial class ClimbSystem : VirtualController
         SubscribeLocalEvent<ClimbingComponent, BuckledEvent>(OnBuckled);
 
         SubscribeLocalEvent<ClimbableComponent, CanDropTargetEvent>(OnCanDragDropOn);
-        SubscribeLocalEvent<ClimbableComponent, GetVerbsEvent<AlternativeVerb>>(AddClimbableVerb);
         SubscribeLocalEvent<ClimbableComponent, DragDropTargetEvent>(OnClimbableDragDrop);
 
         SubscribeLocalEvent<GlassTableComponent, ClimbedOnEvent>(OnGlassClimbed);
@@ -165,22 +164,6 @@ public sealed partial class ClimbSystem : VirtualController
             args.CanDrop = false;
 
         args.Handled = true;
-    }
-
-    private void AddClimbableVerb(EntityUid uid, ClimbableComponent component, GetVerbsEvent<AlternativeVerb> args)
-    {
-        if (!args.CanAccess || !args.CanInteract || !_actionBlockerSystem.CanMove(args.User))
-            return;
-
-        if (!TryComp(args.User, out ClimbingComponent? climbingComponent) || climbingComponent.IsClimbing || !climbingComponent.CanClimb)
-            return;
-
-        // TODO VERBS ICON add a climbing icon?
-        args.Verbs.Add(new AlternativeVerb
-        {
-            Act = () => TryClimb(args.User, args.User, args.Target, out _, component),
-            Text = Loc.GetString("comp-climbable-verb-climb")
-        });
     }
 
     private void OnClimbableDragDrop(EntityUid uid, ClimbableComponent component, ref DragDropTargetEvent args)

@@ -92,18 +92,3 @@
   isSpace: true
   itemDrop: PartRodMetal1
   heatCapacity: 10000
-
-# Mono
-- type: tile
-  id: ShieldLattice
-  name: tiles-lattice-shield
-  sprite: /Textures/_Mono/Tiles/space.png
-  baseTurf: Space
-  isSubfloor: true
-  weather: true
-  footstepSounds:
-    collection: FootstepPlating
-  friction: 0.3
-  isSpace: true
-  heatCapacity: 10000
-  indestructible: true

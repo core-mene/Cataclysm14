@@ -72,7 +72,7 @@
         fix1:
           shape:
             !type:PhysShapeAabb
-            bounds: "-0.25,-0.25,0.25,0.25"
+            bounds: "-0.3,-0.3,0.3,0.3" # mono
           density: 190
           mask:
           - SmallMobMask #this is so they can go under plastic flaps
@@ -111,6 +111,10 @@
     - type: GuideHelp
       guides:
       - GasCanisters
+    - type: Climbable # mono
+    - type: FootstepModifier # mono
+      footstepSoundCollection:
+        collection: FootstepHull
 
 - type: entity
   parent: GasCanister

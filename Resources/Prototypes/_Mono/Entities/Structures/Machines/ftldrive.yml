@@ -1,0 +1,45 @@
+- type: entity
+  id: MachineFTLDrive
+  parent: BaseMachinePowered
+  name: CTLA-25 bluespace drive
+  description: A FTL drive that enhances a ship's FTL range by ~2.5 kilometers.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: Transform
+      anchored: true
+    - type: Physics
+      bodyType: Static
+    - type: Sprite
+      sprite: _Mono/Structures/ShuttleComponents/drive.rsi
+      snapCardinals: true
+      layers:
+      - state: control
+      - state: control_on
+        map: ["enum.PowerDeviceVisualLayers.Powered"]
+        visible: false
+        shader: unshaded
+    - type: FTLDrive
+      range: 2500
+    - type: ApcPowerReceiver
+      powerLoad: 2000
+    - type: PointLight
+      enabled: false
+      color: "#349BEB" # beb color
+      radius: 2.0
+      energy: 1.5
+    - type: LitOnPowered
+    - type: ExtensionCableReceiver
+    - type: Appearance
+    - type: AmbientOnPowered
+    - type: AmbientSound
+      volume: -9
+      range: 5
+      sound:
+        path: /Audio/Ambience/Objects/anomaly_generator.ogg
+    - type: GenericVisualizer
+      visuals:
+        enum.PowerDeviceVisuals.Powered:
+          enum.PowerDeviceVisualLayers.Powered:
+            True: { visible: true }
+            False: { visible: false }

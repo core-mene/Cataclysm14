@@ -1,9 +1,5 @@
 name: Build & Publish Docfx
 
-on:
-  schedule:
-    - cron: "0 0 * * 0"
-
 jobs:
   docfx:
    runs-on: ubuntu-latest

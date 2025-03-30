@@ -29,7 +29,7 @@
       color: "#FB00FF"
     - type: ExplodeOnTrigger
     - type: Explosive
-      explosionType: Cryo
+      explosionType: Default
       maxIntensity: 65
       intensitySlope: 3
       totalIntensity: 25
@@ -64,12 +64,56 @@
     color: "#19AFFF"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Cryo
-    maxIntensity: 1600
-    intensitySlope: 3
+    explosionType: Default
+    maxIntensity: 200
+    intensitySlope: 6
     totalIntensity: 1200
     maxTileBreak: 50
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
 
+- type: entity
+  id: ShipMissileASM302
+  name: ASM-302 missile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 100
+        Blunt: 50
+        Heat: 50
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: frag
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 1
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 60
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 25
+    intensitySlope: 5
+    maxIntensity: 5
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+  - type: TargetSeeking
+    acceleration: 20
+    detectionRange: 400
+    scanArc: 45
+    launchSpeed: 25
+    maxSpeed: 80

@@ -8,7 +8,7 @@ public sealed partial class RadarBlipsSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedTransformSystem _xform = default!;
-    
+
     private TimeSpan _lastUpdatedTime;
     private List<(NetEntity? Grid, Vector2 Position, float Scale, Color Color, RadarBlipShape Shape)> _blips = new();
 
@@ -29,7 +29,7 @@ public sealed partial class RadarBlipsSystem : EntitySystem
         // Only request if we have a valid console
         if (!Exists(console))
             return;
-            
+
         var netConsole = GetNetEntity(console);
 
         var ev = new RequestBlipsEvent(netConsole);
@@ -48,7 +48,7 @@ public sealed partial class RadarBlipsSystem : EntitySystem
             return new List<(Vector2, float, Color, RadarBlipShape)>();
 
         var result = new List<(Vector2, float, Color, RadarBlipShape)>(_blips.Count);
-        
+
         foreach (var blip in _blips)
         {
             // If no grid, position is already in world coordinates
@@ -57,18 +57,18 @@ public sealed partial class RadarBlipsSystem : EntitySystem
                 result.Add((blip.Position, blip.Scale, blip.Color, blip.Shape));
                 continue;
             }
-            
+
             // If grid exists, transform from grid-local to world coordinates
             if (TryGetEntity(blip.Grid, out var gridEntity))
             {
                 // Transform the grid-local position to world position
                 var worldPos = _xform.GetWorldPosition(gridEntity.Value);
                 var gridRot = _xform.GetWorldRotation(gridEntity.Value);
-                
+
                 // Rotate the local position by grid rotation and add grid position
                 var rotatedLocalPos = gridRot.RotateVec(blip.Position);
                 var finalWorldPos = worldPos + rotatedLocalPos;
-                
+
                 result.Add((finalWorldPos, blip.Scale, blip.Color, blip.Shape));
             }
             else
@@ -77,10 +77,10 @@ public sealed partial class RadarBlipsSystem : EntitySystem
                 continue;
             }
         }
-        
+
         return result;
     }
-    
+
     /// <summary>
     /// Gets the raw blips data which includes grid information for more accurate rendering.
     /// </summary>
@@ -88,7 +88,7 @@ public sealed partial class RadarBlipsSystem : EntitySystem
     {
         if (_timing.CurTime.TotalSeconds - _lastUpdatedTime.TotalSeconds > 1)
             return new List<(NetEntity? Grid, Vector2 Position, float Scale, Color Color, RadarBlipShape Shape)>();
-            
+
         return _blips;
     }
-} 
+}
