@@ -1,7 +1,7 @@
-# 57mm Cal Base
+# 20mm Cal Base
 
 - type: entity
-  id: 57mmBulletBase
+  id: 20mmBulletBase
   parent: BaseBullet
   abstract: true
   categories: [ HideSpawnMenu ]
@@ -19,12 +19,12 @@
     requireNoGrid: true
     shape: triangle
 
-# 57mm Cal AP
+# 20mm Cal AP
 
 - type: entity
-  id: 57mmBulletArmorPiercing
-  name: 57mm AP bullet
-  parent: 57mmBulletBase
+  id: 20mmBulletArmorPiercing
+  name: 20mm AP bullet
+  parent: 20mmBulletBase
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile

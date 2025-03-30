@@ -1,10 +1,10 @@
-# 57mm
+# 20mm
 
 - type: entity
   id: WeaponTurretL85Autocannon
-  name: L85 57mm autocannon
+  name: L85 20mm autocannon
   parent: BallisticArtillery
-  description: A old, but not outdated 57mm autocannon. Links up to a central GCS, and is not automated like PD turrets.
+  description: A old, but not outdated 20mm autocannon. Links up to a central GCS, and is not automated like PD turrets.
   components:
   - type: StaticPrice
     price: 250
@@ -25,7 +25,7 @@
     ports:
     - Toggle
   - type: Gun
-    fireRate: 6
+    fireRate: 12
     projectileSpeed: 60
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/uaf_57mm.ogg
@@ -42,7 +42,7 @@
     isInCombatMode: true
   - type: Airtight
   - type: ProjectileBatteryAmmoProvider
-    proto: 57mmBulletArmorPiercing
+    proto: 20mmBulletArmorPiercing
     fireCost: 15
   - type: RadiationBlocker
     resistance: 8
