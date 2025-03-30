@@ -1,0 +1,57 @@
+<Document>
+  # Ship Warfare
+
+Warfare on the frontier is usually done via the means of [color=orange]ship gunnery[/color].
+
+  <Box>
+    <GuideEntityEmbed Entity="WeaponTurretL85Autocannon"/>
+    <GuideEntityEmbed Entity="GunneryServer"/>
+  </Box>
+
+There are 3 types of ship weaponry available:
+  * [color=gold]Ballistics[/color], which are weapons like autocannons, railguns, and all other unguided chemical-propellant weapons.
+  * [color=MediumVioletRed]Energy[/color], which are weapons like plasma weaponry, lasers, and other similar non-chemical based weapons.
+  * [color=GreenYellow]Missiles[/color], which are all guided munitions. It explains itself.
+
+Ship weapons all need a [color=orange]gunnery control console[/color] and a [color=indigo]gunnery control server[/color] to function. They will be abbreviated to [color=orange]GCC[/color] and [color=indigo]GCS[/color] in most instances.
+
+Ship weapons only fire if they are selected and if your cursor on the [color=orange]GCC[/color] is in the FOV of the turret.
+
+  <Box>
+    <GuideEntityEmbed Entity="ShipMissileASM302"/>
+    <GuideEntityEmbed Entity="WeaponTurretVanyk"/>
+  </Box>
+
+Missiles performance can vary per missile!
+For example,  ASM-302 for example has
+  - a acceleration of [color=khaki][bold]20 m/s[/bold][/color]
+  - a detection and tracking range of 800m
+  - a scanning arc of 65 degrees
+  - a launch speed of [color=khaki][bold]60 m/s[/bold][/color]
+  - a max speed of [color=khaki][bold]140 m/s[/bold][/color].
+
+## Shield Generators
+
+Some ships are equipped with [color=cyan]shield generators[/color]. These absorb all incoming impacts, and add power draw for every projectile absorbed.
+
+  <Box>
+    <GuideEntityEmbed Entity="CircularShieldConsole"/>
+    <GuideEntityEmbed Entity="CircularShieldBase"/>
+  </Box>
+
+Due to the rarity of these, they are unable to be looted, and must be scavenged if you wish to outfit your ship with them.
+The most popular shield system for example, the [bold][color=cyan]MS-225[/color][/bold], adds [bold][color=coral]500w[/color][/bold] to the power usage for every impact absorbed.
+After [bold]10 seconds[/bold], this power surge will start to dissipate. However there is a base power draw, and it is calculated via the following equation.
+  Radius^2 * Shield Width * 0.5 * Power/m^2.
+
+  ## Bluespace Drives
+
+  Many large, expedition, and combat ships are equipped with a [color=dodgerblue]Bluespace Drive[/color].
+
+  <Box>
+    <GuideEntityEmbed Entity="MachineFTLDrive"/>
+  </Box>
+
+These increase the ship's FTL range by a certain amount if powered. For the [color=dodgerblue][bold]CTLA-25[/bold][/color], this range is [bold]2500m[/bold]
+
+</Document>
