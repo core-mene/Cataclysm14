@@ -328,24 +328,7 @@ public sealed partial class GunSystem : SharedGunSystem
         var ent = Spawn(message.Prototype, coordinates);
         TransformSystem.SetWorldRotationNoLerp(ent, message.Angle);
 
-        // For gunnery consoles - determine if the player entity is the one who fired this weapon
-        // We just want to avoid attaching effects to the player when they're remotely firing
-        bool isRemotelyFired = false;
-
-        // Compare user with local player entity
-        // If they match and the gun isn't held by them, it's remotely fired
-        if (user != null && _player.LocalEntity == user)
-        {
-            // Check if the gun is not held directly by the player
-            // This is a rough approximation to detect remote-controlled weapons
-            if (Transform(gunUid).ParentUid != user)
-            {
-                isRemotelyFired = true;
-            }
-        }
-
-        // Only add tracking if the weapon isn't being remotely fired
-        if (user != null && !isRemotelyFired)
+        if (user != null)
         {
             var track = EnsureComp<TrackUserComponent>(ent);
             track.User = user;
