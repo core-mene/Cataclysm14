@@ -6,8 +6,11 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 64800 # 18 hours # mono
+    - !type:DepartmentTimeRequirement # mono
+      department: Security
+      time: 21600 # 6 hrs
    # - !type:RoleTimeRequirement # mono
-   #   role: JobPirate # mono
+   #   role: JobPirate
    #   time: 10800 # 3 hours
   #whitelisted: true # mono - comment out
   startingGear: PirateFirstMateNFGear
