@@ -34,10 +34,12 @@ public sealed class ProjectileSystem : SharedProjectileSystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<ProjectileComponent, StartCollideEvent>(OnStartCollide);
+        // This is already subscribed in the base class (SharedProjectileSystem)
+        // SubscribeLocalEvent<ProjectileComponent, StartCollideEvent>(OnStartCollide);
     }
 
-    private void OnStartCollide(EntityUid uid, ProjectileComponent component, ref StartCollideEvent args)
+    // Renamed method to clarify it's the server-specific logic but it won't be called directly
+    private void ServerOnStartCollide(EntityUid uid, ProjectileComponent component, ref StartCollideEvent args)
     {
         // This is so entities that shouldn't get a collision are ignored.
         if (args.OurFixtureId != ProjectileFixture || !args.OtherFixture.Hard
