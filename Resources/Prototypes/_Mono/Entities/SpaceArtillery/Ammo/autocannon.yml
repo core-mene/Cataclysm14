@@ -6,8 +6,6 @@
   abstract: true
   categories: [ HideSpawnMenu ]
   components:
-  - type: Projectile
-    ignoreWeaponGrid: true
   - type: ShipWeaponProjectile
   - type: TimedDespawn
     lifetime: 60
