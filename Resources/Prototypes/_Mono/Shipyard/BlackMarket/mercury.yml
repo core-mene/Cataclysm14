@@ -1,0 +1,32 @@
+- type: vessel
+  id: Mercury
+  parent: BaseVesselAntag
+  name: Mercury
+  description: A pirate ship fit for up-close brawls. Equipped with 4x ASM-302 and 4x AK-570.
+  price: 78520
+  category: Medium
+  group: BlackMarket
+  shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/mercury.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  engine:
+  - AME
+
+- type: gameMap
+  id: Mercury
+  mapName: 'Mercury'
+  mapPath: /Maps/_Mono/Shuttles/BlackMarket/mercury.yml
+  minPlayers: 0
+  stations:
+    Mercury:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Mercury {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Pirate: [ 0, 0 ]
