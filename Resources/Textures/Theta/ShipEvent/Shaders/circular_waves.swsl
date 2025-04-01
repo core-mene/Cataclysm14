@@ -41,24 +41,26 @@ void fragment()
         ringMask = 1.0;
     }
 
-    // Calculate angle from center for effects
+    // Calculate angle for directional effects
     highp float angle = atan(delta.y, delta.x);
-
-    // Calculate a more dynamic wave effect based on distance and time
-    // Use angle to create variation around the circle
-    highp float waveEffect = sin(dist * FREQUENCY - SPEED * TIME) * 0.5 +
-                           sin(angle * 6.0 + TIME * SPEED * 0.5) * 0.2 +
-                           0.7; // Base brightness
-
-    // Apply the ring mask to the wave effect
-    COLOR.xyz = BASE_COLOR;
-    COLOR.w = waveEffect * ringMask;
-
-    // Fade out alpha near the join point to avoid visible seam
-    // This assumes angles are in the range [-π, π]
     highp float angleNormalized = angle / 3.14159; // Normalize to [-1, 1]
 
-    // Subtle fade near the seam - only for full circles with angle near ±π
+    // Mix between white and the base color more prominently for better visibility
+    highp vec3 colorMix = mix(vec3(1.0, 1.0, 1.0), BASE_COLOR, 0.7);
+
+    // Add a subtle radial pattern to simulate shield grid pattern
+    highp float patternFactor = 0.05 * sin(normalizedDist * 30.0) + 0.05 * sin(angleNormalized * 15.0);
+
+    // Apply the ring mask and color
+    COLOR.xyz = colorMix + vec3(patternFactor);
+    COLOR.w = BRIGHTNESS * ringMask;
+
+    // Add subtle highlight at the edges for better definition
+    if (abs(normalizedDist - innerEdge) < 0.01 || abs(normalizedDist - outerEdge) < 0.01) {
+        COLOR.xyz += vec3(0.1);
+    }
+
+    // Fade out alpha near the join point to avoid visible seam
     if (abs(angleNormalized) > 0.97) {
         // Apply a more subtle alpha reduction at the seam
         COLOR.w *= 0.95;
