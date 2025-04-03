@@ -695,3 +695,28 @@
     Plastic: 1000
     Plasma: 500
     Glass: 500
+
+# mono changes start
+
+- type: latheRecipe
+  parent: BaseEmptyAmmoRecipe
+  id: MagazineDMREmpty
+  result: MagazineDMREmpty
+  materials:
+    Steel: 30
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineDMR
+  result: MagazineDMR
+  materials:
+    Steel: 650
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineBoxDMR
+  result: MagazineBoxDMR
+  materials:
+    Steel: 1200
+
+# mono changes end

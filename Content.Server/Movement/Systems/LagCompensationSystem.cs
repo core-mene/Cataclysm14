@@ -1,4 +1,5 @@
 using Content.Server.Movement.Components;
+using Robust.Server.Player;
 using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
@@ -69,7 +70,7 @@ public sealed class LagCompensationSystem : EntitySystem
 
         var angle = Angle.Zero;
         var coordinates = EntityCoordinates.Invalid;
-        var ping = pSession.Channel.Ping;
+        var ping = pSession.Ping;
         // Use 1.5 due to the trip buffer.
         var sentTime = _timing.CurTime - TimeSpan.FromMilliseconds(ping * 1.5);
 

@@ -1,3 +1,6 @@
+// Copyright Rane (elijahrane@gmail.com) 2025
+// All rights reserved. Relicensed under AGPL with permission
+
 using Content.Shared._Mono.FireControl;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;

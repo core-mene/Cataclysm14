@@ -31,7 +31,6 @@ using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
-using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
@@ -144,32 +143,6 @@ public abstract partial class SharedGunSystem : EntitySystem
         gun.ShootCoordinates = GetCoordinates(msg.Coordinates);
         gun.Target = GetEntity(msg.Target);
         AttemptShoot(user.Value, ent, gun);
-    }
-
-    /// <summary>
-    /// Method to handle shooting requests from prediction systems.
-    /// </summary>
-    /// <param name="gunUid">The gun entity to shoot</param>
-    /// <param name="coordinates">Target coordinates to shoot at</param>
-    /// <param name="target">Optional target entity to shoot at</param>
-    /// <param name="shots">Optional list of shot IDs for ammo tracking</param>
-    /// <param name="session">The session requesting the shot</param>
-    public virtual void ShootRequested(EntityUid gunUid, EntityCoordinates coordinates, EntityUid? target, List<int>? shots, ICommonSession? session)
-    {
-        // If no session attached, we can't get the user
-        if (session?.AttachedEntity is not { } user)
-            return;
-
-        // Must be able to get the gun component
-        if (!TryComp<GunComponent>(gunUid, out var gun))
-            return;
-
-        // Set the target coordinates and entity
-        gun.ShootCoordinates = coordinates;
-        gun.Target = target;
-
-        // Attempt to shoot the gun
-        AttemptShoot(user, gunUid, gun);
     }
 
     private void OnStopShootRequest(RequestStopShootEvent ev, EntitySessionEventArgs args)
@@ -458,7 +431,7 @@ public abstract partial class SharedGunSystem : EntitySystem
         EntityUid? user = null,
         bool throwItems = false);
 
-    public virtual void ShootProjectile(EntityUid uid, Vector2 direction, Vector2 gunVelocity, EntityUid gunUid, EntityUid? user = null, float speed = 20f)
+    public void ShootProjectile(EntityUid uid, Vector2 direction, Vector2 gunVelocity, EntityUid gunUid, EntityUid? user = null, float speed = 20f)
     {
         var physics = EnsureComp<PhysicsComponent>(uid);
         Physics.SetBodyStatus(uid, physics, BodyStatus.InAir);

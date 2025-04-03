@@ -1,11 +1,11 @@
 - type: entity
-  name: MR-8A AR
+  name: MR-8C DMR
   parent: [BaseWeaponRifle, BaseGunWieldable, BaseC3Contraband]
-  id: WeaponRifleMR8
-  description: An advanced military firearm, firing .30 rifle with astonishing accuracy compared to other rifles.
+  id: WeaponRifleMR8C
+  description: The DMR variant of the MR-8 series, firing with incredible accuracy. Chambered in 8x65mm DMR.
   components:
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Rifles/mr8.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/mr8c.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
@@ -13,17 +13,17 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
     minAngle: -21
-    maxAngle: -46.5
+    maxAngle: -47
   - type: Gun
     minAngle: 21
     maxAngle: 48
     angleIncrease: 6
     angleDecay: 24
-    fireRate: 5 # 300 rpm
-    selectedMode: FullAuto
+    fireRate: 2.5 # 150 rpm
+    selectedMode: SemiAuto
     availableModes:
     - SemiAuto
-    - FullAuto
+    - Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/batrifle.ogg
   - type: ChamberMagazineAmmoProvider
@@ -31,21 +31,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifle
+        startingItem: MagazineDMR
         insertSound: /Audio/Weapons/Guns/MagIn/sfrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/hpistol_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifle
+            - MagazineDMR
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle
+        startingItem: CartridgeDMR
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - CartridgeDMR
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -58,4 +58,11 @@
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/Rifles/mr8.rsi
   - type: StaticPrice
-    price: 1300
+    price: 1750
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 5
+    pvsIncrease: 0.5

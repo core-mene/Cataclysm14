@@ -104,10 +104,4 @@ public sealed partial class ProjectileComponent : Component
     /// </summary>
     [DataField]
     public float RandomBlindChance { get; set; } = 0;
-
-    /// <summary>
-    ///     Whether this projectile has already damaged an entity.
-    /// </summary>
-    [DataField, AutoNetworkedField]
-    public bool DamagedEntity;
 }

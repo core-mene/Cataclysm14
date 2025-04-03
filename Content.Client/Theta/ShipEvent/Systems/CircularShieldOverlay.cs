@@ -19,11 +19,9 @@ public sealed class CircularShieldOverlay : Overlay
     private ShaderInstance _shader;
 
     // Shield visual settings
-    private const float FixedThicknessInPixels = 10.0f; // Constant thickness in screen pixels
+    private const float FixedThicknessInPixels = 10.0f;
     private const float EdgeSmoothness = 0.03f;
-    private const float AnimationSpeed = 10.0f;
-    private const float Brightness = 0.5f;
-    private const float WaveFrequency = 0.50f;
+    private const float Brightness = 0.8f;
 
     public override OverlaySpace Space => OverlaySpace.WorldSpace;
 
@@ -36,9 +34,7 @@ public sealed class CircularShieldOverlay : Overlay
         _shader = IoCManager.Resolve<IPrototypeManager>().Index<ShaderPrototype>("ShieldOverlay").InstanceUnique();
 
         // Initialize shader with default values
-        _shader.SetParameter("SPEED", AnimationSpeed);
         _shader.SetParameter("BRIGHTNESS", Brightness);
-        _shader.SetParameter("FREQUENCY", WaveFrequency);
         // RING_WIDTH will be calculated dynamically based on radius
         _shader.SetParameter("EDGE_SMOOTHNESS", EdgeSmoothness);
     }

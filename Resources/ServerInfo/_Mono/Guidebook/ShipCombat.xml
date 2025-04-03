@@ -22,17 +22,11 @@ Ship weapons only fire if they are selected and if your cursor on the [color=ora
     <GuideEntityEmbed Entity="WeaponTurretVanyk"/>
   </Box>
 
-Missiles performance varies per missile quite a bit!
-For example, the ASM-302 has
-  - an acceleration of [color=khaki][bold]20 m/s[/bold][/color]
-  - a detection and tracking range of [color=khaki][bold]800 meters[/bold][/color]
-  - a scanning arc of [color=khaki][bold]65 degrees[/bold][/color]
-  - a launch speed of [color=khaki][bold]60 m/s[/bold][/color]
-  - a max speed of [color=khaki][bold]140 m/s[/bold][/color].
+Missiles will only track grids with a shuttle console, and are immediately pointed towards their tracked target upon firing. Take into account the detection angle of your missiles, you can fire a lot farther than what the FOV of your turrets will allow if you do.
 
 ## Shield Generators
 
-Some ships are equipped with [color=cyan]shield generators[/color]. These absorb all incoming impacts, and add power draw for every projectile absorbed.
+Some ships are equipped with [color=cyan]shield generators[/color]. These absorb all incoming impacts, and add power draw for every projectile absorbed. Shields will NOT block beam or hitscan weapons, such as [color=red][bold]lasers[/bold][/color], and the effects of [color=teal][bold]EMPs[/color][/bold] will still go through.
 
   <Box>
     <GuideEntityEmbed Entity="CircularShieldConsole"/>

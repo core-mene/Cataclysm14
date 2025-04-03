@@ -373,7 +373,7 @@
     # Weapons
     - id: WeaponRifleGestio
       prob: 0.9
-    - id: WeaponRifleMR8 # mono
+    - id: WeaponRifleMR8C # mono
       prob: 0.05
     # Armor
     # Items
@@ -419,6 +419,10 @@
     - id: Tourniquet
       prob: 0.4
     - id: MagazineBoxLightRifleBig
+      prob: 0.2
+    - id: MagazineBoxDMR # mono
+      prob: 0.2
+    - id: MagazineDMR # mono
       prob: 0.2
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
@@ -474,8 +478,8 @@
     # Weapons
     - id: WeaponSniperRepeaterExpedition
       prob: 0.9
-    - id: WeaponRifleMR8 # mono
-      prob: 0.15
+    - id: WeaponRifleMR8C # mono
+      prob: 0.05
     # Armor
     - id: ClothingOuterArmorBulletproof
       prob: 0.4

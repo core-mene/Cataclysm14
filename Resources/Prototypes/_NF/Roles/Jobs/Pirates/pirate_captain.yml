@@ -5,7 +5,7 @@
   playTimeTracker: JobPirateCaptain
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 32400 # 9 hours - mono
+      time: 86400 # 24 hours - mono
     - !type:RoleTimeRequirement
       role: JobPirateFirstMate # mono
       time: 10800 # 3 hours

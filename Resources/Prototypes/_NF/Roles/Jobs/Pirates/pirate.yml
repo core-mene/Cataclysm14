@@ -5,7 +5,7 @@
   playTimeTracker: JobPirate
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 10800 # 3 hrs - mono
+      time: 54000 # 15 hrs - mono
     - !type:DepartmentTimeRequirement # mono - comments it out
       department: Security
       time: 10800 # 3 hrs

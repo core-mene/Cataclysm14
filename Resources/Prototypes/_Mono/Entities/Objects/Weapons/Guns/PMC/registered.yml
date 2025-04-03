@@ -3,15 +3,6 @@
 - type: entity
   parent:
   - BaseC2ContrabandMercenary
-  - WeaponSubMachineGunAtreides
-  categories: [ HideSpawnMenu ]
-  name: PMC Atreides
-  id: WeaponSubMachineGunAtreidesPMC
-  description: An Atreides that has been properly registered for private security and mercenary use.
-
-- type: entity
-  parent:
-  - BaseC2ContrabandMercenary
   - WeaponSubMachineGunWt550
   categories: [ HideSpawnMenu ]
   name: PMC WT-550
@@ -35,17 +26,6 @@
   name: PMC C-20r
   id: WeaponSubMachineGunC20rPMC
   description: A C-20r that has been properly registered for private security and mercenary use.
-
-# AMRs/snipers
-
-- type: entity
-  parent:
-  - BaseC2ContrabandMercenary
-  - WeaponSniperHristov
-  categories: [ HideSpawnMenu ]
-  name: PMC Hristov
-  id: WeaponSniperHristovPMC
-  description: A Hristov that has been properly registered for private security and mercenary use.
 
 # Rifles
 

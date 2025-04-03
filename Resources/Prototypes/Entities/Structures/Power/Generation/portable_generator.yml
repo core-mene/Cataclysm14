@@ -169,7 +169,7 @@
       fuelMaterial: FuelGradePlasma # Frontier: Plasma<FuelGradePlasma
       multiplier: 0.01
     - type: MaterialStorage
-      storageLimit: 3000
+      storageLimit: 5000 # mono
       materialWhiteList: [Plasma, FuelGradePlasma] # Frontier: add FuelGradePlasma
     - type: PortableGenerator
       startChance: 0.8
@@ -238,7 +238,7 @@
       fuelMaterial: FuelGradeUranium # Frontier: Uranium<FuelGradeUranium
       multiplier: 0.01
     - type: MaterialStorage
-      storageLimit: 3000
+      storageLimit: 5000 # mono
       materialWhiteList: [Uranium, FuelGradeUranium] # Frontier: add FuelGradeUranium
     - type: PortableGenerator
     - type: UpgradePowerSupplier
