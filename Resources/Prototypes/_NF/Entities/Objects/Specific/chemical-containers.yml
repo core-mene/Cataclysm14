@@ -202,7 +202,7 @@
   id: FuelPlasma
   name: fuel-grade plasma
   description: A rod made of desaturated plasma, suitable for fuel.
-  suffix: 20
+  suffix: 25 # mono
   components:
   - type: Material
   - type: PhysicalComposition
@@ -216,10 +216,10 @@
   - type: Appearance
   - type: StaticPrice
     price: 0
-    vendPrice: 1200
+    vendPrice: 1500 # mono
   - type: Stack
     stackType: FuelPlasma
-    count: 20
+    count: 25 # mono
 
 - type: entity
   parent: FuelPlasma
@@ -236,7 +236,7 @@
   id: FuelUranium
   name: fuel-grade uranium
   description: A rod made of semi-processed uranium, suitable for fuel.
-  suffix: 20
+  suffix: 25 # mono
   components:
   - type: Material
   - type: PhysicalComposition
@@ -250,10 +250,10 @@
   - type: Appearance
   - type: StaticPrice
     price: 0
-    vendPrice: 2500
+    vendPrice: 3125 # mono
   - type: Stack
     stackType: FuelUranium
-    count: 20
+    count: 25 # mono
 
 - type: entity
   parent: FuelUranium
@@ -270,7 +270,7 @@
   id: FuelBananium
   name: fuel-grade bananium
   description: A rod made from pressed bananium peels, suitable for fuel.
-  suffix: 20
+  suffix: 25 # mono
   components:
   - type: Material
   - type: PhysicalComposition
@@ -284,10 +284,10 @@
   - type: Appearance
   - type: StaticPrice
     price: 0
-    vendPrice: 5000
+    vendPrice: 6250 # mono
   - type: Stack
     stackType: FuelBananium
-    count: 20
+    count: 25 # mono
 
 - type: entity
   parent: FuelBananium
