@@ -151,6 +151,7 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         {
             Coordinates = GetNetCoordinates(_formSys.GetMoverCoordinates(console.BoundShield.Value, transform)),
             Powered = shield.Powered,
+            Enabled = shield.Enabled,
             Angle = shield.Angle,
             Width = shield.Width,
             MaxWidth = shield.MaxWidth,
@@ -342,7 +343,7 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
 
     private void UpdateShieldFixture(EntityUid uid, CircularShieldComponent shield)
     {
-        shield.Radius = Math.Max(shield.Radius, 1);
+        shield.Radius = Math.Max(shield.Radius, 0);
         shield.Width = Math.Max(shield.Width, Angle.FromDegrees(10));
 
         // Get the shield's transform and grid

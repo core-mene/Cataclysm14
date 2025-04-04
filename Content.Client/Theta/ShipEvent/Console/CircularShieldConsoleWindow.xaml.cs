@@ -32,6 +32,7 @@ public sealed partial class CircularShieldConsoleWindow : DefaultWindow
         var state = shieldState.Shield;
 
         ShieldPowerStatusLabel.SetMarkup(Loc.GetString(state.Powered ? "shipevent-shieldconsole-powered" : "shipevent-shieldconsole-nopower"));
+        ShieldActiveStatusLabel.SetMarkup(Loc.GetString(state.Enabled ? "shipevent-shieldconsole-active" : "shipevent-shieldconsole-inactive"));
         ShieldRadiusSlider.SetValueWithoutEvent(state.Radius);
         ShieldRadiusSlider.MaxValue = state.MaxRadius;
 

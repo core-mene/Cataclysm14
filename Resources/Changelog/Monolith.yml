@@ -333,3 +333,17 @@ Entries:
         certain play named Abductor_Agent ;)
   id: 39
   time: '2025-04-03T01:45:07.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: Xeno elimination expeditions should generate now.
+  id: 40
+  time: '2025-04-03T18:29:46.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: Shields now display whether they are active or not in their console!
+    - type: Fix
+      message: Shield radius should no longer start at 1 instead of 0 in the console.
+  id: 41
+  time: '2025-04-03T20:50:33.0000000+00:00'

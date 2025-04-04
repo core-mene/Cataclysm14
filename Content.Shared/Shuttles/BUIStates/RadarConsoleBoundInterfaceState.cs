@@ -64,6 +64,7 @@ public sealed class ShieldInterfaceState
 {
     public NetCoordinates Coordinates;
     public bool Powered;
+    public bool Enabled;
     public Angle Angle;
     public Angle Width;
     public Angle MaxWidth;
