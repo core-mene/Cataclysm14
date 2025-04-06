@@ -7,9 +7,9 @@
   name: autodoc
   description: An advanced medical machine for healing the critically wounded.
   components:
-  - type: Sprite
-    sprite: _Shitmed/Structures/Machines/autodoc.rsi
-    state: autodoc
+  #- type: Sprite
+  #  sprite: _Shitmed/Structures/Machines/autodoc.rsi
+  #  state: autodoc
   - type: Machine
     board: AutodocCircuitboard
 
@@ -19,5 +19,5 @@
   name: syndicate autodoc
   description: An advanced medical machine for healing the critically wounded. This one has a suspicious red paint job.
   components:
-  - type: Sprite
-    state: autodoc-syndie 
+  #- type: Sprite
+  #  state: autodoc-syndie
