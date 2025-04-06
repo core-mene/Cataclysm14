@@ -1,4 +1,3 @@
-using System.Threading;
 using Content.Server.Administration.Logs;
 using Content.Server.GameTicking;
 using Content.Shared.Bed.Sleep;
@@ -8,14 +7,12 @@ using Content.Shared.Mind;
 using Content.Shared._NF.CCVar;
 using Content.Shared.GameTicking;
 using Content.Shared.Players;
-using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 
 namespace Content.Server._NF.CryoSleep;
 
 public sealed partial class CryoSleepSystem
 {
-    [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
 
     private void InitReturning()

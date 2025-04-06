@@ -6,7 +6,10 @@ using Content.Server.Interaction;
 using Content.Server.Mind;
 using Content.Server.Popups;
 using Content.Server._NF.Shipyard.Systems;
+using Content.Server.Radio.EntitySystems;
+using Content.Server.Roles.Jobs;
 using Content.Shared.ActionBlocker;
+using Content.Shared.Chat;
 using Content.Shared.Climbing.Systems;
 using Content.Shared._NF.CryoSleep;
 using Content.Shared.Destructible;
@@ -20,13 +23,16 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared._NF.CCVar;
 using Content.Shared.Popups;
+using Content.Shared.Radio;
 using Content.Shared.Verbs;
 using Robust.Server.Containers;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.Enums;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Content.Server.Ghost;
 
@@ -49,6 +55,10 @@ public sealed partial class CryoSleepSystem : SharedCryoSleepSystem
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly ShipyardSystem _shipyard = default!; // For the FoundOrganics method
     [Dependency] private readonly GhostSystem _ghost = default!;
+    [Dependency] private readonly RadioSystem _radioSystem = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private readonly IConfigurationManager _configurationManager = default!;
+    [Dependency] private readonly JobSystem _jobs = default!;
 
     private readonly Dictionary<NetUserId, StoredBody?> _storedBodies = new();
     private EntityUid? _storageMap;
@@ -263,6 +273,9 @@ public sealed partial class CryoSleepSystem : SharedCryoSleepSystem
             return;
 
         NetUserId? id = null;
+        var characterName = "Unknown";
+        string? jobTitle = null;
+
         if (_mind.TryGetMind(bodyId, out var mindEntity, out var mind) && mind.CurrentEntity is { Valid : true } body)
         {
             var argMind = mind;
@@ -272,6 +285,16 @@ public sealed partial class CryoSleepSystem : SharedCryoSleepSystem
             id = mind.UserId;
             if (id != null)
                 _storedBodies[id.Value] = new StoredBody() { Body = body, Cryopod = cryopod };
+
+            if (mind.CharacterName != null)
+                characterName = mind.CharacterName;
+
+            // Get the job title if available
+            jobTitle = _jobs.MindTryGetJobName(mindEntity);
+        }
+        else if (TryComp<MetaDataComponent>(bodyId, out var metadata))
+        {
+            characterName = metadata.EntityName;
         }
 
         var storage = GetStorageMap();
@@ -283,6 +306,58 @@ public sealed partial class CryoSleepSystem : SharedCryoSleepSystem
 
         if (cryo.CryosleepDoAfter != null && _doAfter.GetStatus(cryo.CryosleepDoAfter) == DoAfterStatus.Running)
             _doAfter.Cancel(cryo.CryosleepDoAfter);
+
+        // Get the pod's location information for the radio message
+        string message;
+        var podTransform = Transform(cryopod);
+        var coordinates = _entityManager.GetComponent<TransformComponent>(cryopod).Coordinates;
+        var mapPos = coordinates.ToMap(_entityManager, EntityManager.System<SharedTransformSystem>());
+
+        // Check if it's at a named location (like a station or outpost)
+        if (podTransform.GridUid != null && _entityManager.TryGetComponent<MetaDataComponent>(podTransform.GridUid.Value, out var gridMetadata))
+        {
+            message = Loc.GetString("cryopod-radio-location",
+                ("character", characterName),
+                ("location", gridMetadata.EntityName),
+                ("x", Math.Round(mapPos.Position.X)),
+                ("y", Math.Round(mapPos.Position.Y)));
+        }
+        else
+        {
+            // If not at a named location, use coordinates
+            message = Loc.GetString("cryopod-radio-coordinates",
+                ("character", characterName),
+                ("x", Math.Round(mapPos.Position.X)),
+                ("y", Math.Round(mapPos.Position.Y)));
+        }
+
+        // Check if character is a pirate, and if so, use Freelancer radio instead of Common
+        bool isPirate = false;
+        if (jobTitle != null)
+        {
+            // Check if job is one of the pirate jobs
+            isPirate = jobTitle.Equals(Loc.GetString("job-name-pirate"), StringComparison.OrdinalIgnoreCase) ||
+                       jobTitle.Equals(Loc.GetString("job-name-pirate-captain"), StringComparison.OrdinalIgnoreCase) ||
+                       jobTitle.Equals(Loc.GetString("job-name-pirate-first-mate"), StringComparison.OrdinalIgnoreCase);
+        }
+
+        // Send radio message on appropriate channel
+        if (isPirate)
+        {
+            // Use Freelancer channel for pirates
+            if (_prototypeManager.TryIndex<RadioChannelPrototype>("Freelance", out var freelanceChannel))
+            {
+                _radioSystem.SendRadioMessage(cryopod, message, freelanceChannel, cryopod);
+            }
+        }
+        else
+        {
+            // Use Common channel for everyone else
+            if (_prototypeManager.TryIndex<RadioChannelPrototype>(SharedChatSystem.CommonChannel, out var commonChannel))
+            {
+                _radioSystem.SendRadioMessage(cryopod, message, commonChannel, cryopod);
+            }
+        }
 
         // Start a timer. When it ends, the body needs to be deleted.
         Timer.Spawn(TimeSpan.FromSeconds(_configurationManager.GetCVar(NFCCVars.CryoExpirationTime)), () =>

@@ -20,3 +20,7 @@ cryopod-refuse-dead = The {$cryopod} refuses to accept dead patients.
 cryopod-refuse-organic = The {$cryopod} detected multiple sentients! Remove {$name}.
 
 cryopod-wake-up = {$entity} returns from cryosleep!
+
+# Mono
+cryopod-radio-location = {$character} has entered cryosleep at {$location} ({$x}, {$y}).
+cryopod-radio-coordinates = {$character} has entered cryosleep at coordinates ({$x}, {$y}).

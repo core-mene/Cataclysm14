@@ -2,13 +2,15 @@
   id: Mercury
   parent: BaseVesselAntag
   name: Mercury
-  description: A pirate ship fit for up-close brawls. Equipped with 4x ASM-302 and 4x AK-570.
-  price: 78520
-  category: Medium
+  description: A light sub-capital missile corvette, equipped with 8x ASM-302 pods and 4x L85 20mms.
+  price: 105820
+  category: Large
   group: BlackMarket
+  access: Pirate
   shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/mercury.yml
   guidebookPage: Null
   class:
+  - Capital
   - Pirate
   engine:
   - AME

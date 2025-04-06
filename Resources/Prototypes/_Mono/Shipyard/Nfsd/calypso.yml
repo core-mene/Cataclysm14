@@ -1,0 +1,32 @@
+- type: vessel
+  id: Calypso
+  parent: BaseVessel
+  name: AGS Calypso
+  description: A heavily-armed corvette with multiple weapon platforms for brawls.
+  price: 98450
+  category: Large
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_Mono/Shuttles/Nfsd/calypso.yml
+  guidebookPage: Null
+  class:
+  - Pursuit
+  engine:
+  - AME
+
+- type: gameMap
+  id: Calypso
+  mapName: 'Calypso'
+  mapPath: /Maps/_Mono/Shuttles/Nfsd/calypso.yml
+  minPlayers: 0
+  stations:
+    Calypso:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Calypso {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs: {}
