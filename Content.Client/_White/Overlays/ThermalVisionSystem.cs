@@ -23,13 +23,15 @@ public sealed class ThermalVisionSystem : EquipmentHudSystem<ThermalVisionCompon
         _overlay = new BaseSwitchableOverlay<ThermalVisionComponent>();
     }
 
-    protected override void OnRefreshComponentHud(Entity<ThermalVisionComponent> ent, ref RefreshEquipmentHudEvent<ThermalVisionComponent> args)
+    protected override void OnRefreshComponentHud(Entity<ThermalVisionComponent> ent,
+        ref RefreshEquipmentHudEvent<ThermalVisionComponent> args)
     {
         if (!ent.Comp.IsEquipment)
             base.OnRefreshComponentHud(ent, ref args);
     }
 
-    protected override void OnRefreshEquipmentHud(Entity<ThermalVisionComponent> ent, ref InventoryRelayedEvent<RefreshEquipmentHudEvent<ThermalVisionComponent>> args)
+    protected override void OnRefreshEquipmentHud(Entity<ThermalVisionComponent> ent,
+        ref InventoryRelayedEvent<RefreshEquipmentHudEvent<ThermalVisionComponent>> args)
     {
         if (ent.Comp.IsEquipment)
             base.OnRefreshEquipmentHud(ent, ref args);
@@ -37,18 +39,7 @@ public sealed class ThermalVisionSystem : EquipmentHudSystem<ThermalVisionCompon
 
     private void OnToggle(Entity<ThermalVisionComponent> ent, ref SwitchableOverlayToggledEvent args)
     {
-        RefreshOverlay(args.User);
-    }
-
-    private void RefreshOverlay(EntityUid user)
-    {
-        var ev = new RefreshEquipmentHudEvent<ThermalVisionComponent>(TargetSlots);
-        RaiseLocalEvent(user, ref ev);
-
-        if (ev.Active)
-            UpdateInternal(ev);
-        else
-            Deactivate();
+        RefreshOverlay();
     }
 
     protected override void UpdateInternal(RefreshEquipmentHudEvent<ThermalVisionComponent> args)
