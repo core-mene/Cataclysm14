@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 04/05/2025 22:30:34
-  entityCount: 3641
+  time: 04/07/2025 16:04:34
+  entityCount: 3652
 maps: []
 grids:
 - 1
@@ -1650,7 +1650,8 @@ entities:
           -2,11:
             0: 64
           -1,12:
-            0: 9117
+            0: 8989
+            1: 128
           4,9:
             0: 60142
           4,11:
@@ -1689,18 +1690,18 @@ entities:
             0: 65535
           0,15:
             0: 15
-            1: 4352
-            2: 17408
+            2: 4352
+            3: 17408
           -1,15:
             0: 78
-            3: 16384
+            4: 16384
           1,13:
             0: 30579
           1,14:
             0: 30583
           1,15:
             0: 19
-            3: 4096
+            4: 4096
           -6,-4:
             0: 30581
           -6,-3:
@@ -1727,6 +1728,21 @@ entities:
           moles:
           - 21.824879
           - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.14996
+          moles:
+          - 20.078888
+          - 75.53487
           - 0
           - 0
           - 0
@@ -2055,24 +2071,32 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -2.5,6.5
       parent: 1
+    - type: DeviceLinkSink
+      invokeCounter: 1
   - uid: 362
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -1.5,6.5
       parent: 1
+    - type: DeviceLinkSink
+      invokeCounter: 1
   - uid: 363
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -1.5,9.5
       parent: 1
+    - type: DeviceLinkSink
+      invokeCounter: 2
   - uid: 364
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -2.5,9.5
       parent: 1
+    - type: DeviceLinkSink
+      invokeCounter: 1
   - uid: 365
     components:
     - type: Transform
@@ -2272,6 +2296,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 2113
+      - 3649
   - uid: 2092
     components:
     - type: Transform
@@ -2281,6 +2306,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 2090
+      - 3647
   - uid: 2093
     components:
     - type: Transform
@@ -2290,6 +2316,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 2089
+      - 3647
   - uid: 2094
     components:
     - type: Transform
@@ -2299,6 +2326,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 2090
+      - 3647
   - uid: 2095
     components:
     - type: Transform
@@ -2308,6 +2336,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 2089
+      - 3647
   - uid: 2096
     components:
     - type: Transform
@@ -2317,6 +2346,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 2089
+      - 3646
   - uid: 2097
     components:
     - type: Transform
@@ -2326,6 +2356,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 2087
+      - 3646
   - uid: 2098
     components:
     - type: Transform
@@ -2335,6 +2366,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 2099
+      - 3648
 - proto: AmmoTechFab
   entities:
   - uid: 1340
@@ -8097,6 +8129,25 @@ entities:
     - type: Transform
       pos: 19.525639,14.625024
       parent: 1
+    - type: GroupExamine
+      group:
+      - hoverMessage: ""
+        contextText: verb-examine-group-other
+        icon: /Textures/Interface/examine-star.png
+        components:
+        - Armor
+        - ClothingSpeedModifier
+        entries:
+        - message: >-
+            It provides the following protection:
+
+            - [color=orange]Explosion[/color] damage [color=white]to contents[/color] reduced by [color=lightblue]10%[/color].
+          priority: 0
+          component: Armor
+        - message: This decreases your running speed by [color=yellow]10%[/color].
+          priority: 0
+          component: ClothingSpeedModifier
+        title: null
 - proto: CombatKnife
   entities:
   - uid: 1357
@@ -8116,6 +8167,18 @@ entities:
     components:
     - type: Transform
       pos: 1.5,12.5
+      parent: 1
+  - uid: 3651
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -5.5,5.5
+      parent: 1
+  - uid: 3652
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 8.5,5.5
       parent: 1
 - proto: ComputerComms
   entities:
@@ -8190,6 +8253,14 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 0.5,8.5
+      parent: 1
+- proto: ComputerShipyard
+  entities:
+  - uid: 3650
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,-1.5
       parent: 1
 - proto: ComputerShipyardNfsd
   entities:
@@ -8381,6 +8452,14 @@ entities:
     components:
     - type: Transform
       pos: 2.5,23.5
+      parent: 1
+- proto: DefibrillatorCabinetFilled
+  entities:
+  - uid: 3643
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 14.5,10.5
       parent: 1
 - proto: DisposalBend
   entities:
@@ -9055,6 +9134,19 @@ entities:
       parent: 3630
     - type: Physics
       canCollide: False
+- proto: ExtinguisherCabinetFilled
+  entities:
+  - uid: 3644
+    components:
+    - type: Transform
+      pos: -3.5,12.5
+      parent: 1
+  - uid: 3645
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,40.5
+      parent: 1
 - proto: FaxMachineBase
   entities:
   - uid: 1166
@@ -9085,6 +9177,47 @@ entities:
       parent: 1
     - type: FaxMachine
       name: NFSD | Sheriff
+- proto: FireAlarm
+  entities:
+  - uid: 3646
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -1.5,40.5
+      parent: 1
+    - type: DeviceList
+      devices:
+      - 2097
+      - 2096
+  - uid: 3647
+    components:
+    - type: Transform
+      pos: 6.5,12.5
+      parent: 1
+    - type: DeviceList
+      devices:
+      - 2094
+      - 2092
+      - 2093
+      - 2095
+  - uid: 3648
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 21.5,37.5
+      parent: 1
+    - type: DeviceList
+      devices:
+      - 2098
+  - uid: 3649
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -9.5,0.5
+      parent: 1
+    - type: DeviceList
+      devices:
+      - 2091
 - proto: FirelockGlass
   entities:
   - uid: 3302
@@ -9233,7 +9366,7 @@ entities:
       pos: -7.5,24.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -78.60532
+      secondsUntilStateChange: -1083.4761
       state: Closing
   - uid: 3384
     components:
@@ -14842,6 +14975,35 @@ entities:
     - type: Transform
       pos: -0.5,49.5
       parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14923
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+    - type: ContainerContainer
+      containers:
+        entity_storage: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 3642
+        paper_label: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
 - proto: LockerNfsdSilver
   entities:
   - uid: 764
@@ -19048,7 +19210,7 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: -16.97455,23.6408
+      pos: -17.116417,23.693106
       parent: 1
 - proto: TrainingBomb
   entities:
@@ -22168,6 +22330,15 @@ entities:
     - type: Transform
       pos: 2.5,25.5
       parent: 1
+- proto: WeaponCaseHeavyCdet
+  entities:
+  - uid: 3642
+    components:
+    - type: Transform
+      parent: 1467
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: WeaponDisablerPractice
   entities:
   - uid: 772
