@@ -26,6 +26,10 @@ on:
     types: [ opened, reopened, synchronize, ready_for_review ]
     branches: [ main, staging, stable ]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     if: github.event.pull_request.draft == false
