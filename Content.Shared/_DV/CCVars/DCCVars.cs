@@ -20,7 +20,7 @@ public sealed class DCCVars
     /// Whether the no EORG popup is enabled.
     /// </summary>
     public static readonly CVarDef<bool> RoundEndNoEorgPopup =
-        CVarDef.Create("game.round_end_eorg_popup_enabled", true, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("game.round_end_eorg_popup_enabled", false, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
     /// Skip the no EORG popup.
