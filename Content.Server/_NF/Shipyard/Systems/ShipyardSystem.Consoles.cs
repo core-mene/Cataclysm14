@@ -4,7 +4,6 @@ using Content.Server.Radio.EntitySystems;
 using Content.Server._NF.Bank;
 using Content.Server._NF.Shipyard.Components;
 using Content.Server._NF.ShuttleRecords;
-using Content.Server._NF.Smuggling.Components;
 using Content.Shared._NF.Bank.Components;
 using Content.Shared._NF.Shipyard;
 using Content.Shared._NF.Shipyard.Events;
@@ -35,13 +34,13 @@ using static Content.Shared._NF.Shipyard.Components.ShuttleDeedComponent;
 using Content.Server.Shuttles.Components;
 using Content.Server._NF.Station.Components;
 using System.Text.RegularExpressions;
+using Content.Server._Mono.Shipyard;
 using Content.Shared.UserInterface;
 using Robust.Shared.Audio.Systems;
 using Content.Shared.Access;
 using Content.Shared._NF.Bank.BUI;
 using Content.Shared._NF.ShuttleRecords;
 using Content.Server.StationEvents.Components;
-using Content.Server.Forensics;
 using Content.Shared.Forensics.Components;
 
 namespace Content.Server._NF.Shipyard.Systems;
@@ -283,6 +282,9 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         SendPurchaseMessage(shipyardConsoleUid, player, name, component.ShipyardChannel, secret: false);
         if (component.SecretShipyardChannel is { } secretChannel)
             SendPurchaseMessage(shipyardConsoleUid, player, name, secretChannel, secret: true);
+
+        // Mono
+        Get<ShipyardDirectionSystem>().SendShipDirectionMessage(player, shuttleUid);
 
         PlayConfirmSound(player, shipyardConsoleUid, component);
         if (voucherUsed)
