@@ -240,6 +240,9 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         UpdateShieldFixture(shieldUid, shield);
         Dirty(shieldUid, shield);
 
+        // Make sure the shield is visible from a distance by adding a PVS override
+        _pvsIgnoreSys.AddGlobalOverride(shieldUid);
+
         foreach (CircularShieldEffect effect in shield.Effects)
         {
             effect.OnShieldInit(uid, shield);
