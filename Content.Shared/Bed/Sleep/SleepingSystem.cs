@@ -213,17 +213,18 @@ public sealed partial class SleepingSystem : EntitySystem
     /// </summary>
     private void OnDamageChanged(Entity<SleepingComponent> ent, ref DamageChangedEvent args)
     {
-        if (!args.DamageIncreased || args.DamageDelta == null)
+        if (args.DamageDelta == null)
             return;
 
-        /* Shitmed Change Start - Surgery needs this, sorry! If the nocturine gamers get too feisty
-        I'll probably just increase the threshold */
+        var totalChange = args.DamageDelta.GetTotal();
+        if (totalChange == 0)
+            return;
 
-        if (args.DamageDelta.GetTotal() >= ent.Comp.WakeThreshold
+        // Wake up if either damage or healing exceeds the threshold
+        if ((totalChange > 0 || -totalChange > 0) && 
+            (totalChange >= ent.Comp.WakeThreshold || -totalChange >= ent.Comp.WakeThreshold)
             && !HasComp<ForcedSleepingComponent>(ent))
             TryWaking((ent, ent.Comp));
-
-        // Shitmed Change End
     }
 
     /// <summary>
