@@ -51,7 +51,7 @@
   cost: 5000
   recipeUnlocks:
   - SurveillanceCameraRouterCircuitboard
-#  - SurveillanceCameraWirelessRouterCircuitboard # Frontier - Removal of range limits made it useless to build
+  #  - SurveillanceCameraWirelessRouterCircuitboard # Frontier - Removal of range limits made it useless to build
   - SurveillanceWirelessCameraMovableCircuitboard
   - SurveillanceWirelessCameraAnchoredCircuitboard
   - SurveillanceCameraMonitorCircuitboard
@@ -69,11 +69,11 @@
   tier: 1
   cost: 7500
   recipeUnlocks:
-    - ComputerTelevisionCircuitboard
-    - SynthesizerInstrument
-    - DawInstrumentMachineCircuitboard
-    - MassMediaCircuitboard
-    - JukeboxCircuitBoard
+  - ComputerTelevisionCircuitboard
+  - SynthesizerInstrument
+  - DawInstrumentMachineCircuitboard
+  - MassMediaCircuitboard
+  - JukeboxCircuitBoard
 
 - type: technology
   id: RoboticCleanliness
@@ -135,12 +135,13 @@
   - CryostasisBeaker
   - SyringeCryostasis
 
+# Shitmed Change Start
 - type: technology
-  id: MechanizedTreatment
-  name: research-technology-mechanized-treatment
+  id: AdvancedTreatment
+  name: research-technology-advanced-treatment
   icon:
-    sprite: Mobs/Silicon/chassis.rsi
-    state: medical
+    sprite: _Shitmed/Objects/Specific/Medical/Surgery/e-scalpel.rsi
+    state: e-scalpel-on
   discipline: CivilianServices
   tier: 2
   cost: 5000
@@ -148,6 +149,29 @@
   - BorgModuleAdvancedTreatment
   - BorgModuleDefibrillator
   - BorgModuleAdvancedParamedic # Frontier
+  - EnergyScalpel
+  - EnergyCautery
+  - AdvancedRetractor
+  - BorgModuleAdvancedSurgery
+
+- type: technology
+  id: CyberneticEnhancements
+  name: research-technology-cybernetic-enhancements
+  icon:
+    sprite: _Shitmed/Mobs/Species/IPC/organs.rsi
+    state: eyes
+  discipline: CivilianServices
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - JawsOfLifeLeftArm
+  - JawsOfLifeRightArm
+  - SpeedLeftLeg
+  - SpeedRightLeg
+  - BasicCyberneticEyes
+  - SecurityCyberneticEyes
+  - MedicalCyberneticEyes
+# Shitmed Change End
 
 - type: technology
   id: AdvancedCleaning
@@ -197,14 +221,14 @@
   - WeaponSprayNozzle
   - ClothingBackpackWaterTank
 
-# Tier 3
+    # Tier 3
 
-# - type: technology # Frontier
-  # id: BluespaceCargoTransport
-  # name: research-technology-bluespace-cargo-transport
-  # icon:
+    # - type: technology # Frontier
+    # id: BluespaceCargoTransport
+    # name: research-technology-bluespace-cargo-transport
+    # icon:
     # sprite: Structures/cargo_telepad.rsi
-    # state: display
+  # state: display
   # discipline: CivilianServices
   # tier: 3
   # cost: 15000

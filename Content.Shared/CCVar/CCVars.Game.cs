@@ -391,4 +391,19 @@ public sealed partial class CCVars
     /// </summary>
     public static readonly CVarDef<bool> GameHostnameInTitlebar =
         CVarDef.Create("game.hostname_in_titlebar", true, CVar.SERVER | CVar.REPLICATED);
+
+    /// Mono Changes Below
+
+    /// <summary>
+    ///     Enable dynamic adjustment of role timers and whitelists based on player count.
+    /// </summary>
+    public static readonly CVarDef<bool> DynamicRolesEnabled =
+         CVarDef.Create("game.dynamic_roles.enabled", true, CVar.SERVERONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    ///     The player count at or below which role timers and whitelists are disabled if dynamic roles are enabled.
+    ///     Set to 0 to always disable timers and whitelists when dynamic roles are enabled.
+    /// </summary>
+    public static readonly CVarDef<int> DynamicRolesPlayerThreshold =
+         CVarDef.Create("game.dynamic_roles.player_threshold", 5, CVar.SERVERONLY | CVar.ARCHIVE);
 }

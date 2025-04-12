@@ -17,6 +17,19 @@
   - type: Body
     prototype: Diona
     requiredLegs: 2
+  - type: Targeting
+    targetOdds:
+      Head: 0.1
+      Torso: 0.3
+      Groin: 0.1
+      LeftArm: 0.1
+      LeftHand: 0.05
+      RightArm: 0.1
+      RightHand: 0.05
+      LeftLeg: 0.1
+      LeftFoot: 0.05
+      RightLeg: 0.1
+      RightFoot: 0.05
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Diona

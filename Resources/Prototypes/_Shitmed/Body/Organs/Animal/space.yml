@@ -2,18 +2,16 @@
   parent: OrganAnimalLungs
   id: OrganSpaceAnimalLungs
   name: space animal lungs
-  # Removed StatusEffectOrgan component temporarily due to loading issues
-  # components:
-  # - type: StatusEffectOrgan
-  #   refresh:
-  #     BreathingImmunity: BreathingImmunity
+  components:
+  - type: Organ
+    onAdd:
+    - type: BreathingImmunity
 
 - type: entity
   parent: OrganAnimalHeart
   id: OrganSpaceAnimalHeart
   name: space animal heart
-  # Removed StatusEffectOrgan component temporarily due to loading issues
-  # components:
-  # - type: StatusEffectOrgan
-  #   refresh:
-  #     PressureImmunity: PressureImmunity
+  components:
+  - type: Organ
+    onAdd:
+    - type: PressureImmunity

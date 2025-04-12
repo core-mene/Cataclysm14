@@ -58,6 +58,7 @@ public abstract partial class SharedSurgerySystem : EntitySystem
         SubscribeLocalEvent<SurgeryTargetComponent, SurgeryDoAfterEvent>(OnTargetDoAfter);
         SubscribeLocalEvent<SurgeryCloseIncisionConditionComponent, SurgeryValidEvent>(OnCloseIncisionValid);
         //SubscribeLocalEvent<SurgeryLarvaConditionComponent, SurgeryValidEvent>(OnLarvaValid);
+        SubscribeLocalEvent<SurgeryComponentConditionComponent, SurgeryValidEvent>(OnComponentConditionValid);
         SubscribeLocalEvent<SurgeryPartConditionComponent, SurgeryValidEvent>(OnPartConditionValid);
         SubscribeLocalEvent<SurgeryOrganConditionComponent, SurgeryValidEvent>(OnOrganConditionValid);
         SubscribeLocalEvent<SurgeryWoundedConditionComponent, SurgeryValidEvent>(OnWoundedValid);
@@ -127,19 +128,18 @@ public abstract partial class SharedSurgerySystem : EntitySystem
         if (infected != null && infected.SpawnedLarva != null)
             args.Cancelled = true;
     }*/
-    private void OnPartConditionValid(Entity<SurgeryPartConditionComponent> ent, ref SurgeryValidEvent args)
+
+    private void OnComponentConditionValid(Entity<SurgeryComponentConditionComponent> ent, ref SurgeryValidEvent args)
     {
-        if (!TryComp<BodyPartComponent>(args.Part, out var part))
+        var present = true;
+        foreach (var reg in ent.Comp.Component.Values)
         {
-            args.Cancelled = true;
-            return;
+            var compType = reg.Component.GetType();
+            if (!HasComp(args.Part, compType))
+                present = false;
         }
 
-        var typeMatch = part.PartType == ent.Comp.Part;
-        var symmetryMatch = ent.Comp.Symmetry == null || part.Symmetry == ent.Comp.Symmetry;
-        var valid = typeMatch && symmetryMatch;
-
-        if (ent.Comp.Inverse ? valid : !valid)
+        if (ent.Comp.Inverse ? present : !present)
             args.Cancelled = true;
     }
 
@@ -171,10 +171,21 @@ public abstract partial class SharedSurgerySystem : EntitySystem
 
     private void OnPartRemovedConditionValid(Entity<SurgeryPartRemovedConditionComponent> ent, ref SurgeryValidEvent args)
     {
+        // First check if the part can have a slot for attachment
+        if (!_body.CanAttachToSlot(args.Part, ent.Comp.Connection))
+        {
+            args.Cancelled = true;
+            return;
+        }
+
+        // Get any existing body parts of the specified type/symmetry
         var results = _body.GetBodyChildrenOfType(args.Body, ent.Comp.Part, symmetry: ent.Comp.Symmetry);
+        
+        // If there are no existing parts of this type, allow the surgery (return without cancelling)
         if (results is not { } || !results.Any())
             return;
 
+        // If there are existing parts but none have the reattached component, cancel the surgery
         if (!results.Any(part => HasComp<BodyPartReattachedComponent>(part.Id)))
             args.Cancelled = true;
     }
@@ -196,6 +207,21 @@ public abstract partial class SharedSurgerySystem : EntitySystem
 
         if ((!ent.Comp.Inverse && hasMarking) || (ent.Comp.Inverse && !hasMarking))
             args.Cancelled = true;
+    }
+
+    private void OnPartConditionValid(Entity<SurgeryPartConditionComponent> ent, ref SurgeryValidEvent args)
+    {
+        if (!TryComp<BodyPartComponent>(args.Part, out var bodyPart) ||
+            bodyPart.PartType != ent.Comp.Part ||
+            (ent.Comp.Symmetry.HasValue && bodyPart.Symmetry != ent.Comp.Symmetry))
+        {
+            if (!ent.Comp.Inverse)
+                args.Cancelled = true;
+        }
+        else if (ent.Comp.Inverse)
+        {
+            args.Cancelled = true;
+        }
     }
 
     /*private void OnRemoveLarva(Entity<SurgeryRemoveLarvaComponent> ent, ref SurgeryCompletedEvent args)

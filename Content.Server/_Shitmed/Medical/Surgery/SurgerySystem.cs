@@ -24,6 +24,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using System.Linq;
+using Content.Shared.Verbs;
 
 namespace Content.Server._Shitmed.Medical.Surgery;
 
@@ -45,7 +46,7 @@ public sealed class SurgerySystem : SharedSurgerySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<SurgeryToolComponent, AfterInteractEvent>(OnToolAfterInteract);
+        SubscribeLocalEvent<SurgeryToolComponent, GetVerbsEvent<UtilityVerb>>(OnUtilityVerb);
         SubscribeLocalEvent<SurgeryTargetComponent, SurgeryStepDamageEvent>(OnSurgeryStepDamage);
         // You might be wondering "why aren't we using StepEvent for these two?" reason being that StepEvent fires off regardless of success on the previous functions
         // so this would heal entities even if you had a used or incorrect organ.
@@ -103,29 +104,41 @@ public sealed class SurgerySystem : SharedSurgerySystem
             targetPart: _body.GetTargetBodyPart(partComp));
     }
 
-    private void OnToolAfterInteract(Entity<SurgeryToolComponent> ent, ref AfterInteractEvent args)
+    private void AttemptStartSurgery(Entity<SurgeryToolComponent> ent, EntityUid user, EntityUid target)
     {
-        var user = args.User;
-        if (args.Handled
-            || !args.CanReach
-            || args.Target == null
-            || !HasComp<SurgeryTargetComponent>(args.Target)
-            || !TryComp<SurgeryTargetComponent>(args.User, out var surgery)
-            || !surgery.CanOperate
-            || !IsLyingDown(args.Target.Value, args.User))
-        {
+        if (!IsLyingDown(target, user))
             return;
-        }
 
-        if (user == args.Target && !_config.GetCVar(CCVars.CanOperateOnSelf))
+        if (user == target && !_config.GetCVar(CCVars.CanOperateOnSelf))
         {
             _popup.PopupEntity(Loc.GetString("surgery-error-self-surgery"), user, user);
             return;
         }
 
-        args.Handled = true;
-        _ui.OpenUi(args.Target.Value, SurgeryUIKey.Key, user);
-        RefreshUI(args.Target.Value);
+        _ui.OpenUi(target, SurgeryUIKey.Key, user);
+        RefreshUI(target);
+    }
+
+    private void OnUtilityVerb(Entity<SurgeryToolComponent> ent, ref GetVerbsEvent<UtilityVerb> args)
+    {
+        if (!args.CanInteract
+            || !args.CanAccess
+            || !HasComp<SurgeryTargetComponent>(args.Target))
+            return;
+
+        var user = args.User;
+        var target = args.Target;
+
+        var verb = new UtilityVerb()
+        {
+            Act = () => AttemptStartSurgery(ent, user, target),
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Objects/Specific/Medical/Surgery/scalpel.rsi/"), "scalpel"),
+            Text = Loc.GetString("surgery-verb-text"),
+            Message = Loc.GetString("surgery-verb-message"),
+            DoContactInteraction = true
+        };
+
+        args.Verbs.Add(verb);
     }
 
     private void OnSurgeryStepDamage(Entity<SurgeryTargetComponent> ent, ref SurgeryStepDamageEvent args) =>
@@ -142,12 +155,13 @@ public sealed class SurgerySystem : SharedSurgerySystem
 
     private void OnSurgerySpecialDamageChange(Entity<SurgerySpecialDamageChangeEffectComponent> ent, ref SurgeryStepDamageChangeEvent args)
     {
+        // Im killing this shit soon too, inshallah.
         if (ent.Comp.DamageType == "Rot")
             _rot.ReduceAccumulator(args.Body, TimeSpan.FromSeconds(2147483648)); // BEHOLD, SHITCODE THAT I JUST COPY PASTED. I'll redo it at some point, pinky swear :)
-        else if (ent.Comp.DamageType == "Eye"
+        /*else if (ent.Comp.DamageType == "Eye"
             && TryComp(ent, out BlindableComponent? blindComp)
             && blindComp.EyeDamage > 0)
-            _blindableSystem.AdjustEyeDamage((args.Body, blindComp), -blindComp!.EyeDamage);
+            _blindableSystem.AdjustEyeDamage((args.Body, blindComp), -blindComp!.EyeDamage);*/
     }
 
     private void OnStepScreamComplete(Entity<SurgeryStepEmoteEffectComponent> ent, ref SurgeryStepEvent args)

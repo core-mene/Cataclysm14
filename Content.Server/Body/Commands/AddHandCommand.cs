@@ -4,6 +4,7 @@ using Content.Server.Body.Systems;
 using Content.Shared.Administration;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Part;
+using Content.Shared.Body.Systems;
 using Robust.Shared.Console;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -128,12 +129,16 @@ namespace Content.Server.Body.Commands
             }
 
             var bodySystem = _entManager.System<BodySystem>();
+            var sharedBodySystem = _entManager.System<SharedBodySystem>();
 
             var attachAt = bodySystem.GetBodyChildrenOfType(entity, BodyPartType.Arm, body).FirstOrDefault();
             if (attachAt == default)
                 attachAt = bodySystem.GetBodyChildren(entity, body).First();
 
-            var slotId = part.GetHashCode().ToString();
+            // Get formatted slot ID using the system
+            var slotId = sharedBodySystem.GetFormattedSlotId(hand, part);
+            // Set the slot ID properly using the system
+            sharedBodySystem.SetBodyPartSlotId(hand, part.GetHashCode().ToString(), part);
 
             if (!bodySystem.TryCreatePartSlotAndAttach(attachAt.Id, slotId, hand, BodyPartType.Hand, attachAt.Component, part))
             {

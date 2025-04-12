@@ -1,16 +1,13 @@
 - type: entity
   id: OrganMothStomach
-  parent: [OrganAnimalStomach, OrganHumanStomach]
+  parent: OrganAnimalStomach
   categories: [ HideSpawnMenu ]
-  name: moth stomach # Shitmed
+  name: moth stomach
   components:
   - type: Stomach
     specialDigestible:
-      # tags: # Frontier
-      # - ClothMade # Frontier
-      # - Paper # Frontier
-      components: # Frontier
-      - MothFood # Frontier
+      components:
+      - MothFood
   - type: SolutionContainerManager
     solutions:
       stomach:
@@ -28,7 +25,7 @@
     - id: Food
     - id: Drink
     - id: Medicine
-    - id: Cryogenic # Frontier
+    - id: Cryogenic
     - id: Poison
     - id: Narcotic
     - id: Alcohol

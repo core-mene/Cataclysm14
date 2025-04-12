@@ -9,7 +9,7 @@ using Robust.Shared.Timing;
 
 namespace Content.Shared._White.Overlays;
 
-public abstract class SwitchableOverlaySystem<TComp, TEvent> : EntitySystem
+public abstract class SwitchableOverlaySystem<TComp, TEvent> : EntitySystem // this should get move to a white module if we ever do anything with forks..
     where TComp : SwitchableVisionOverlayComponent
     where TEvent : InstantActionEvent
 {

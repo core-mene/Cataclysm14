@@ -6,6 +6,7 @@
   - type: Sprite
     sprite: Mobs/Species/Diona/organs.rsi
   - type: Organ
+    species: "Diona"
   - type: Food
   - type: Extractable
     grindableSolutionName: organ
@@ -27,7 +28,7 @@
 
 - type: entity
   id: OrganDionaBrain
-  parent: [BaseDionaOrgan, OrganHumanBrain]
+  parent: BaseDionaOrgan
   name: brain
   description: "The central hub of a diona's pseudo-neurological activity, its root-like tendrils search for its former body."
   components:
@@ -37,18 +38,10 @@
   - type: Sprite
     state: brain
   - type: Organ # Shitmed
-    slotId: Brain
+    slotId: brain
   - type: Brain # Shitmed
   - type: SolutionContainerManager
     solutions:
-      organ:
-        maxVol: 10
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 10
-      Lung:
-        maxVol: 100
-        canReact: False
       food:
         maxVol: 5
         reagents:
@@ -65,13 +58,9 @@
     layers:
     - state: eyeball-l
     - state: eyeball-r
-  - type: Organ # Shitmed
+  - type: Organ
     slotId: eyes
-  - type: Tag # goob edit
-    tags:
-      - Meat
-      - Organ
-      - Eyes
+  - type: Eyes
 
 - type: entity
   id: OrganDionaStomach
@@ -85,12 +74,7 @@
     solutions:
       stomach:
         maxVol: 50
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 5
-  - type: Organ # Shitmed
+  - type: Organ
     slotId: stomach
   - type: Stomach
   - type: Metabolizer
@@ -101,7 +85,7 @@
     - id: Food
     - id: Drink
     - id: Medicine
-    - id: Cryogenic # Frontier
+    - id: Cryogenic
     - id: Poison
     - id: Narcotic
     - id: Alcohol
@@ -118,7 +102,7 @@
   components:
   - type: Sprite
     state: lungs
-  - type: Organ # Shitmed
+  - type: Organ
     slotId: lungs
   - type: Item
     size: Small
@@ -134,11 +118,6 @@
       rateModifier: 100.0
   - type: SolutionContainerManager
     solutions:
-      organ:
-        maxVol: 10
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 10
       Lung:
         maxVol: 100
         canReact: False
@@ -152,7 +131,7 @@
   description: "The source of incredible, unending intelligence. Honk."
   components:
   - type: Brain
-  - type: Nymph # This will make the organs turn into a nymph when they're removed.
+  - type: Nymph
     entityPrototype: OrganDionaNymphBrain
     transferMind: true
 

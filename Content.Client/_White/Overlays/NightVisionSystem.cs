@@ -22,13 +22,15 @@ public sealed class NightVisionSystem : EquipmentHudSystem<NightVisionComponent>
         _overlay = new BaseSwitchableOverlay<NightVisionComponent>();
     }
 
-    protected override void OnRefreshComponentHud(Entity<NightVisionComponent> ent, ref RefreshEquipmentHudEvent<NightVisionComponent> args)
+    protected override void OnRefreshComponentHud(Entity<NightVisionComponent> ent,
+        ref RefreshEquipmentHudEvent<NightVisionComponent> args)
     {
         if (!ent.Comp.IsEquipment)
             base.OnRefreshComponentHud(ent, ref args);
     }
 
-    protected override void OnRefreshEquipmentHud(Entity<NightVisionComponent> ent, ref InventoryRelayedEvent<RefreshEquipmentHudEvent<NightVisionComponent>> args)
+    protected override void OnRefreshEquipmentHud(Entity<NightVisionComponent> ent,
+        ref InventoryRelayedEvent<RefreshEquipmentHudEvent<NightVisionComponent>> args)
     {
         if (ent.Comp.IsEquipment)
             base.OnRefreshEquipmentHud(ent, ref args);
@@ -36,18 +38,7 @@ public sealed class NightVisionSystem : EquipmentHudSystem<NightVisionComponent>
 
     private void OnToggle(Entity<NightVisionComponent> ent, ref SwitchableOverlayToggledEvent args)
     {
-        RefreshOverlay(args.User);
-    }
-
-    private void RefreshOverlay(EntityUid user)
-    {
-        var ev = new RefreshEquipmentHudEvent<NightVisionComponent>(TargetSlots);
-        RaiseLocalEvent(user, ref ev);
-
-        if (ev.Active)
-            UpdateInternal(ev);
-        else
-            Deactivate();
+        RefreshOverlay();
     }
 
     protected override void UpdateInternal(RefreshEquipmentHudEvent<NightVisionComponent> args)
@@ -89,6 +80,8 @@ public sealed class NightVisionSystem : EquipmentHudSystem<NightVisionComponent>
 
     private void UpdateNightVision(bool active)
     {
+        Log.Info($"NightVisionSystem: Setting DrawLighting to {!active}");
+
         _lightManager.DrawLighting = !active;
     }
 

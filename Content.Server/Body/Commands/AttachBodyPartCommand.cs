@@ -3,6 +3,7 @@ using Content.Server.Body.Systems;
 using Content.Shared.Administration;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Part;
+using Content.Shared.Body.Systems;
 using Robust.Shared.Console;
 
 namespace Content.Server.Body.Commands
@@ -92,14 +93,19 @@ namespace Content.Server.Body.Commands
             }
 
             var bodySystem = _entManager.System<BodySystem>();
+            var sharedBodySystem = _entManager.System<SharedBodySystem>();
+            
             if (bodySystem.BodyHasChild(bodyId, partUid.Value, body, part))
             {
                 shell.WriteLine($"Body part {_entManager.GetComponent<MetaDataComponent>(partUid.Value).EntityName} with uid {partUid} is already attached to entity {_entManager.GetComponent<MetaDataComponent>(bodyId).EntityName} with uid {bodyId}");
                 return;
             }
 
-            var slotId = $"AttachBodyPartVerb-{partUid}";
-
+            // Get formatted slot ID using the system
+            var slotId = sharedBodySystem.GetFormattedSlotId(partUid.Value, part);
+            // Set the slot ID properly using the system
+            sharedBodySystem.SetBodyPartSlotId(partUid.Value, part.GetHashCode().ToString(), part);
+            
             // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
             if (body.RootContainer.ContainedEntity != null)
             {

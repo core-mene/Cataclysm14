@@ -44,7 +44,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 300
+        Structural: 1250
         Blunt: 100
         Heat: 100
   - type: Sprite
@@ -64,11 +64,10 @@
     color: "#19AFFF"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 600
-    intensitySlope: 6
-    totalIntensity: 1750
-    maxTileBreak: 50
+    explosionType: HardBomb
+    totalIntensity: 2500.0
+    intensitySlope: 3
+    maxIntensity: 400
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard

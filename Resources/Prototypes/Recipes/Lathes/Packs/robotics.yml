@@ -15,6 +15,23 @@
   - BorgModuleFireExtinguisher
   - BorgModuleRadiationDetection
   - BorgModuleTool
+  - BorgModuleSurgery # Shitmed Change
+
+- type: latheRecipePack
+  id: BorgModulesDynamic
+  recipes:
+  - BorgModuleAdvancedSurgery
+
+- type: latheRecipePack
+  id: SMCybernetics
+  recipes:
+  - JawsOfLifeLeftArm
+  - JawsOfLifeRightArm
+  - SpeedLeftLeg
+  - SpeedRightLeg
+  - BasicCyberneticEyes
+  - SecurityCyberneticEyes
+  - MedicalCyberneticEyes
 
 - type: latheRecipePack
   id: BorgLimbsStatic
