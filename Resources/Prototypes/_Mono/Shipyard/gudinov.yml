@@ -9,14 +9,14 @@
 # The price is deliberate. The effective cost is just below $7k. This is a bit more expensive.
 
 - type: vessel
-  id: Gödinov
+  id: Gudinov
   parent: BaseVessel
-  name: UNJ Gödinov
+  name: UNJ Gudinov
   description: A cheap but effective salvage shuttle.
   price: 14000
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/_Mono/Shuttles/gödinov.yml
+  shuttlePath: /Maps/_Mono/Shuttles/gudinov.yml
   guidebookPage: null
   class:
   - Salvage
@@ -25,16 +25,16 @@
   - Plasma
 
 - type: gameMap
-  id: Gödinov
-  mapName: 'UNJ Gödinov'
-  mapPath: /Maps/_Mono/Shuttles/gödinov.yml
+  id: Gudinov
+  mapName: 'UNJ Gudinov'
+  mapPath: /Maps/_Mono/Shuttles/gudinov.yml
   minPlayers: 0
   stations:
-    Gödinov:
+    Gudinov:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Gödinov {1}'
+          mapNameTemplate: 'Gudinov {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
