@@ -195,15 +195,21 @@ namespace Content.Server.Database
             if (Enum.TryParse<Sex>(profile.Sex, true, out var sexVal))
                 sex = sexVal;
 
-            var spawnPriority = (SpawnPriorityPreference) profile.SpawnPriority;
-
-            var gender = sex == Sex.Male ? Gender.Male : Gender.Female;
+            var gender = Gender.Male;
             if (Enum.TryParse<Gender>(profile.Gender, true, out var genderVal))
                 gender = genderVal;
 
-            var balance = profile.BankBalance;
+            // Parse the company from string
+            CompanyAffiliation company = CompanyAffiliation.Neutral;
+            if (!string.IsNullOrEmpty(profile.Company) && 
+                Enum.TryParse(profile.Company, out CompanyAffiliation parsedCompany))
+            {
+                company = parsedCompany;
+            }
 
-            // ReSharper disable once ConditionalAccessQualifierIsNonNullableAccordingToAPIContract
+            var spawnPriority = (SpawnPriorityPreference) profile.SpawnPriority;
+            var balance = profile.BankBalance; // Frontier
+
             var markingsRaw = profile.Markings?.Deserialize<List<string>>();
 
             List<Marking> markings = new();
@@ -250,7 +256,7 @@ namespace Content.Server.Database
                 profile.Age,
                 sex,
                 gender,
-                CompanyAffiliation.Neutral,
+                company,
                 balance,
                 new HumanoidCharacterAppearance
                 (
@@ -289,6 +295,7 @@ namespace Content.Server.Database
             profile.Sex = humanoid.Sex.ToString();
             profile.Gender = humanoid.Gender.ToString();
             profile.BankBalance = humanoid.BankBalance;
+            profile.Company = humanoid.Company.ToString();
             profile.HairName = appearance.HairStyleId;
             profile.HairColor = appearance.HairColor.ToHex();
             profile.FacialHairName = appearance.FacialHairStyleId;
