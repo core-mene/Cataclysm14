@@ -250,6 +250,7 @@ namespace Content.Server.Database
                 profile.Age,
                 sex,
                 gender,
+                CompanyAffiliation.Neutral,
                 balance,
                 new HumanoidCharacterAppearance
                 (

@@ -126,6 +126,16 @@
                     </ScrollContainer>
                 </BoxContainer>
                 End Frontier -->
+                <!-- Company Tab START -->
+                <BoxContainer Orientation="Vertical" Margin="10">
+                    <BoxContainer Orientation="Horizontal">
+                        <Label Text="Company:" />
+                        <Control HorizontalExpand="True" />
+                        <OptionButton Name="CompanyButton" HorizontalAlignment="Right" MinWidth="100" />
+                    </BoxContainer>
+                    <!-- Add other company-related controls here if needed -->
+                </BoxContainer>
+                <!-- Company Tab END -->
                 <BoxContainer Orientation="Vertical" Margin="10">
                     <!-- Traits -->
                     <ScrollContainer VerticalExpand="True">

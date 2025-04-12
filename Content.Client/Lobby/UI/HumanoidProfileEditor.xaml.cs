@@ -177,6 +177,22 @@ namespace Content.Client.Lobby.UI
 
             TabContainer.SetTabTitle(0, Loc.GetString("humanoid-profile-editor-appearance-tab"));
 
+            // Company Tab START
+            TabContainer.SetTabTitle(2, "Company"); // Assuming it's the 3rd tab (index 2)
+
+            CompanyButton.AddItem("Neutral", 0);
+            CompanyButton.AddItem("Rogue", 1);
+            CompanyButton.SelectId(0); // Default to Neutral
+
+            CompanyButton.OnItemSelected += args =>
+            {
+                CompanyButton.SelectId(args.Id);
+                // TODO: Implement SetCompany method to store the choice
+                SetCompany((CompanyAffiliation) args.Id);
+                SetDirty(); // Mark profile as changed
+            };
+            // Company Tab END
+
             #region Sex
 
             SexButton.OnItemSelected += args =>
@@ -407,13 +423,9 @@ namespace Content.Client.Lobby.UI
 
             #endregion Jobs
 
-            //TabContainer.SetTabTitle(2, Loc.GetString("humanoid-profile-editor-antags-tab")); // Frontier
-
-            RefreshTraits();
-
             #region Markings
 
-            TabContainer.SetTabTitle(3, Loc.GetString("humanoid-profile-editor-markings-tab")); // Frontier: 4<3
+            TabContainer.SetTabTitle(4, Loc.GetString("humanoid-profile-editor-markings-tab")); // Frontier: 4<3
 
             Markings.OnMarkingAdded += OnMarkingChange;
             Markings.OnMarkingRemoved += OnMarkingChange;
@@ -491,7 +503,7 @@ namespace Content.Client.Lobby.UI
             TraitsList.DisposeAllChildren();
 
             var traits = _prototypeManager.EnumeratePrototypes<TraitPrototype>().OrderBy(t => Loc.GetString(t.Name)).ToList();
-            TabContainer.SetTabTitle(2, Loc.GetString("humanoid-profile-editor-traits-tab")); // Frontier: 3<2
+            TabContainer.SetTabTitle(3, Loc.GetString("humanoid-profile-editor-traits-tab")); // Frontier: 3<2
 
             if (traits.Count < 1)
             {
@@ -915,8 +927,11 @@ namespace Content.Client.Lobby.UI
             {
                 PreferenceUnavailableButton.SelectId((int) Profile.PreferenceUnavailable);
             }
-        }
 
+            // Load Company START
+            CompanyButton.SelectId((int)(profile?.Company ?? CompanyAffiliation.Neutral));
+            // Load Company END
+        }
 
         /// <summary>
         /// A slim reload that only updates the entity itself and not any of the job entities, etc.
@@ -1787,6 +1802,16 @@ namespace Content.Client.Lobby.UI
             _exporting = false;
             ImportButton.Disabled = false;
             ExportButton.Disabled = false;
+        }
+
+        private void SetCompany(CompanyAffiliation company)
+        {
+            if (Profile == null || Profile.Company == company)
+                return;
+
+            Profile = Profile.WithCompany(company);
+            // Note: ReloadPreview() is likely not needed unless company affects appearance
+            SetDirty();
         }
     }
 }
