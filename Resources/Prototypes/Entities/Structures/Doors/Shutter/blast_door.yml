@@ -82,7 +82,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1000 # Default (300) / Monolith (1000)
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
