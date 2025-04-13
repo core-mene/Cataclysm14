@@ -37,7 +37,7 @@ if __name__ == "__main__":
         nargs="+",  # We accept multiple pathspecs, but need at least one.
         required=False,
         default=[
-            "Resources/Prototypes/_NF/Maps/Outpost",  # Frontier Outpost
+            "Resources/Prototypes/_NF/Maps/Outpost",  # Colonial Outpost
             "Resources/Prototypes/_NF/PointsOfInterest",  # Points of interest
             "Resources/Prototypes/_NF/Shipyard",  # Shipyard ships.
         ]
