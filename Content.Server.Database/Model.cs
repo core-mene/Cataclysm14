@@ -406,7 +406,8 @@ namespace Content.Server.Database
         public string Sex { get; set; } = null!;
         public string Gender { get; set; } = null!;
         public string Species { get; set; } = null!;
-        public string Company { get; set; } = "Neutral"; // Default to Neutral
+        public string Company { get; set; } = "None"; // Default to None
+        [Column("custom_company_data")] public string? CustomCompanyData { get; set; }
         [Column(TypeName = "jsonb")] public JsonDocument? Markings { get; set; } = null!;
         public string HairName { get; set; } = null!;
         public string HairColor { get; set; } = null!;

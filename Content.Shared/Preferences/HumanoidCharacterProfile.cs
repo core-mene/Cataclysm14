@@ -99,7 +99,13 @@ namespace Content.Shared.Preferences
         /// Company affiliation (e.g., Neutral, Rogue).
         /// </summary>
         [DataField, ViewVariables]
-        public CompanyAffiliation Company { get; private set; } = CompanyAffiliation.Neutral;
+        public CompanyAffiliation Company { get; private set; } = CompanyAffiliation.None;
+
+        /// <summary>
+        /// Custom company data when Company is set to CustomCompany.
+        /// </summary>
+        [DataField, ViewVariables]
+        public CustomCompanyData? CustomCompanyData { get; private set; } = null;
 
         [DataField] // Frontier: Bank balance
         public int BankBalance { get; private set; } = DefaultBalance; // Frontier: Bank balance
@@ -151,6 +157,7 @@ namespace Content.Shared.Preferences
             Sex sex,
             Gender gender,
             CompanyAffiliation company,
+            CustomCompanyData? customCompanyData,
             int bankBalance,
             HumanoidCharacterAppearance appearance,
             SpawnPriorityPreference spawnPriority,
@@ -167,6 +174,7 @@ namespace Content.Shared.Preferences
             Sex = sex;
             Gender = gender;
             Company = company;
+            CustomCompanyData = customCompanyData;
             BankBalance = bankBalance;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
@@ -184,7 +192,7 @@ namespace Content.Shared.Preferences
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts)
-            : this(other.Name, other.FlavorText, other.Species, other.Age, other.Sex, other.Gender, other.Company, other.BankBalance, other.Appearance, other.SpawnPriority,
+            : this(other.Name, other.FlavorText, other.Species, other.Age, other.Sex, other.Gender, other.Company, other.CustomCompanyData, other.BankBalance, other.Appearance, other.SpawnPriority,
                 jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts)
         {
         }
@@ -198,6 +206,7 @@ namespace Content.Shared.Preferences
                 other.Sex,
                 other.Gender,
                 other.Company,
+                other.CustomCompanyData,
                 other.BankBalance,
                 other.Appearance.Clone(),
                 other.SpawnPriority,
@@ -308,9 +317,9 @@ namespace Content.Shared.Preferences
             return new(this) { Gender = gender };
         }
 
-        public HumanoidCharacterProfile WithCompany(CompanyAffiliation company)
+        public HumanoidCharacterProfile WithCompany(CompanyAffiliation company, CustomCompanyData? customCompanyData = null)
         {
-            return new(this) { Company = company };
+            return new(this) { Company = company, CustomCompanyData = customCompanyData };
         }
 
         // Frontier: this is probably an issue and should be removed.

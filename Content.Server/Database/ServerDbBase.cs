@@ -200,11 +200,25 @@ namespace Content.Server.Database
                 gender = genderVal;
 
             // Parse the company from string
-            CompanyAffiliation company = CompanyAffiliation.Neutral;
-            if (!string.IsNullOrEmpty(profile.Company) && 
+            CompanyAffiliation company = CompanyAffiliation.None;
+            if (!string.IsNullOrEmpty(profile.Company) &&
                 Enum.TryParse(profile.Company, out CompanyAffiliation parsedCompany))
             {
                 company = parsedCompany;
+            }
+
+            // Extract CustomCompanyData if present
+            CustomCompanyData? customCompanyData = null;
+            if (company == CompanyAffiliation.Custom && !string.IsNullOrEmpty(profile.CustomCompanyData))
+            {
+                try
+                {
+                    customCompanyData = JsonSerializer.Deserialize<CustomCompanyData>(profile.CustomCompanyData);
+                }
+                catch (Exception)
+                {
+                    // If deserialization fails, just leave it as null
+                }
             }
 
             var spawnPriority = (SpawnPriorityPreference) profile.SpawnPriority;
@@ -257,6 +271,7 @@ namespace Content.Server.Database
                 sex,
                 gender,
                 company,
+                customCompanyData,
                 balance,
                 new HumanoidCharacterAppearance
                 (
@@ -296,6 +311,17 @@ namespace Content.Server.Database
             profile.Gender = humanoid.Gender.ToString();
             profile.BankBalance = humanoid.BankBalance;
             profile.Company = humanoid.Company.ToString();
+
+            // Save CustomCompanyData if present
+            if (humanoid.Company == CompanyAffiliation.Custom && humanoid.CustomCompanyData != null)
+            {
+                profile.CustomCompanyData = JsonSerializer.Serialize(humanoid.CustomCompanyData);
+            }
+            else
+            {
+                profile.CustomCompanyData = null;
+            }
+
             profile.HairName = appearance.HairStyleId;
             profile.HairColor = appearance.HairColor.ToHex();
             profile.FacialHairName = appearance.FacialHairStyleId;

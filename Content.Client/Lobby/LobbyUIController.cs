@@ -39,10 +39,12 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
     [Dependency] private readonly IStateManager _stateManager = default!;
     [Dependency] private readonly JobRequirementsManager _requirements = default!;
     [Dependency] private readonly MarkingManager _markings = default!;
+    [Dependency] private readonly IUserInterfaceManager _uiManager = default!;
     [UISystemDependency] private readonly HumanoidAppearanceSystem _humanoid = default!;
     [UISystemDependency] private readonly ClientInventorySystem _inventory = default!;
     [UISystemDependency] private readonly StationSpawningSystem _spawn = default!;
     [UISystemDependency] private readonly GuidebookSystem _guide = default!;
+    [UISystemDependency] private readonly Content.Client.Company.ClientCompanySystem _companySystem = default!;
 
     private CharacterSetupGui? _characterSetup;
     private HumanoidProfileEditor? _profileEditor;
@@ -185,6 +187,7 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
             PreviewPanel.SetSprite(EntityUid.Invalid);
             PreviewPanel.SetSummaryText(string.Empty);
             PreviewPanel.SetBankBalanceText(string.Empty); // Frontier
+            PreviewPanel.SetCompanyText(string.Empty); // Company display
             return;
         }
 
@@ -192,6 +195,33 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
         PreviewPanel.SetSprite(dummy);
         PreviewPanel.SetSummaryText(humanoid.Summary);
         PreviewPanel.SetBankBalanceText(humanoid.BankBalanceText); // Frontier
+        
+        // Format company text similar to examine format
+        string companyName;
+        if (humanoid.Company == Content.Shared.Preferences.Loadouts.CompanyAffiliation.Custom && 
+            humanoid.CustomCompanyData != null)
+        {
+            companyName = humanoid.CustomCompanyData.Name;
+        }
+        else if (humanoid.Company == Content.Shared.Preferences.Loadouts.CompanyAffiliation.None)
+        {
+            companyName = "None";
+            // Display "Company: None" in white text - with explicit white color formatting
+            var noneCompanyText = Loc.GetString("company-examine", ("company", "[color=white]None[/color]"));
+            PreviewPanel.SetCompanyText(noneCompanyText);
+            return;
+        }
+        else
+        {
+            companyName = humanoid.Company.ToString();
+        }
+
+        // Get the correctly formatted company text from the company system
+        // This will use the same deterministic color generation as the examine component
+        var formattedCompanyText = Loc.GetString("company-examine", 
+            ("company", _companySystem.GetFormattedCompanyName(companyName)));
+        
+        PreviewPanel.SetCompanyText(formattedCompanyText);
     }
 
     private void RefreshProfileEditor()
@@ -276,7 +306,8 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
             _prototypeManager,
             _resourceCache,
             _requirements,
-            _markings);
+            _markings,
+            _uiManager);
 
         _profileEditor.OnOpenGuidebook += _guide.OpenHelp;
 
