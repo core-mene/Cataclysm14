@@ -435,8 +435,8 @@
 - type: entity
   parent: BaseComputerTrafficLocal
   id: ComputerShuttleFrontierOutpostLocal
-  name: Frontier Outpost traffic console
-  description: Monitors the traffic around Frontier Outpost.
+  name: Colonial Outpost traffic console
+  description: Monitors the traffic around Colonial Outpost.
   suffix: Local
   components:
   - type: NFDroneConsoleTarget
@@ -445,8 +445,8 @@
 - type: entity
   parent: BaseComputerTrafficRemote
   id: ComputerShuttleFrontierOutpostRemote
-  name: Frontier Outpost traffic console
-  description: Monitors the traffic around Frontier Outpost.
+  name: Colonial Outpost traffic console
+  description: Monitors the traffic around Colonial Outpost.
   suffix: Remote
   components:
   - type: NFDroneConsole

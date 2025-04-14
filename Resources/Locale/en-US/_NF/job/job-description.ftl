@@ -16,4 +16,4 @@ job-description-security-guard = Patrol the empty halls, whistle simple tunes yo
 job-description-senior-officer = Teach new deputies the basics of searches, preforming arrests, prison times and how to properly shoot a firearm.
 job-description-sheriff = Manage your department and keep them efficient, quell dissent, and keep the sector safe.
 job-description-stc = Expertly de-conflict the space around the station and help the NFSD issue fines for overdocked ships.
-job-description-sr = Handle access reassignment fairly using your ID console, manage Frontier outpost, and keep Clippy safe.
+job-description-sr = Handle access reassignment fairly using your ID console, manage Colonial Outpost, and keep Clippy safe.
