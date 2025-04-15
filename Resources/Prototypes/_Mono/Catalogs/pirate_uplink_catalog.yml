@@ -7,7 +7,7 @@
   productEntity: MedkitCombatFilled
   icon: { sprite: Objects/Specific/Medical/firstaidkits.rsi, state: blackkit }
   cost:
-    Doubloon: 2
+    Doubloon: 5
   categories:
   - UplinkPirateUtility
   conditions:
@@ -23,7 +23,7 @@
   productEntity: CombatMedipen
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: morphen }
   cost:
-    Doubloon: 1
+    Doubloon: 2
   categories:
   - UplinkPirateUtility
   conditions:
@@ -39,7 +39,7 @@
   productEntity: Stimpack
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: stimpen }
   cost:
-    Doubloon: 1
+    Doubloon: 2
   categories:
   - UplinkPirateUtility
   conditions:
@@ -55,7 +55,7 @@
   productEntity: Emag
   icon: { sprite: Objects/Tools/emag.rsi, state: icon }
   cost:
-    Doubloon: 4
+    Doubloon: 8
   categories:
   - UplinkPirateUtility
   conditions:
@@ -71,7 +71,7 @@
   productEntity: AccessBreaker
   icon: { sprite: Objects/Tools/access_breaker.rsi, state: icon }
   cost:
-    Doubloon: 3
+    Doubloon: 6
   categories:
   - UplinkPirateUtility
   conditions:
@@ -87,7 +87,7 @@
   productEntity: SyndicateJawsOfLife
   icon: { sprite: Objects/Tools/jaws_of_life.rsi, state: syn_jaws_pry }
   cost:
-    Doubloon: 2
+    Doubloon: 4
   categories:
   - UplinkPirateUtility
   conditions:
@@ -105,7 +105,7 @@
   productEntity: MagazineShotgun
   icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi, state: pellets }
   cost:
-    Doubloon: 1
+    Doubloon: 2
   categories:
   - UplinkPirateAmmo
   conditions:
@@ -121,7 +121,7 @@
   productEntity: MagazinePistolSubMachineGun
   icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
   cost:
-    Doubloon: 1
+    Doubloon: 2
   categories:
   - UplinkPirateAmmo
   conditions:
@@ -139,7 +139,7 @@
   productEntity: ClothingBackpackDuffelSyndicateFilledSMG
   icon: { sprite: Objects/Weapons/Guns/SMGs/c20r.rsi, state: icon }
   cost:
-    Doubloon: 5
+    Doubloon: 15
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -155,7 +155,7 @@
   productEntity: ClothingBackpackDuffelSyndicateFilledShotgun
   icon: { sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi, state: icon }
   cost:
-    Doubloon: 5
+    Doubloon: 25
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -167,45 +167,13 @@
 # Equipment
 
 - type: listing
-  id: UplinkPirateCommanderHardsuit
-  name:  uplink-pirate-commander-hardsuit-name
-  description: uplink-pirate-commander-hardsuit-desc
-  productEntity: ClothingOuterHardsuitSyndieCommander
-  icon: { sprite: Clothing/OuterClothing/Hardsuits/syndiecommander.rsi, state: icon }
-  cost:
-    Doubloon: 10
-  categories:
-  - UplinkPirateHardsuits
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
-  id: UplinkPirateEliteHardsuit
-  name:  uplink-pirate-elite-hardsuit-name
-  description: uplink-pirate-elite-hardsuit-desc
-  productEntity: ClothingBackpackDuffelSyndicateEliteHardsuitBundle
-  icon: { sprite: Clothing/OuterClothing/Hardsuits/syndieelite.rsi, state: icon }
-  cost:
-    Doubloon: 8
-  categories:
-  - UplinkPirateHardsuits
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
   id: UplinkPirateCombatHardsuit
   name:  uplink-pirate-combat-hardsuit-name
   description: uplink-pirate-combat-hardsuit-desc
-  productEntity: ClothingBackpackDuffelSyndicateHardsuitBundle
-  icon: { sprite: Clothing/OuterClothing/Hardsuits/syndicate.rsi, state: icon }
+  productEntity: ClothingOuterHardsuitPirateScaf
+  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/scaf_pirate.rsi, state: icon }
   cost:
-    Doubloon: 6
+    Doubloon: 15
   categories:
   - UplinkPirateHardsuits
   conditions:
@@ -222,7 +190,7 @@
   productEntity: ClothingOuterVestWeb
   icon: { sprite: Clothing/OuterClothing/Vests/webvest.rsi, state: icon }
   cost:
-    Doubloon: 3
+    Doubloon: 5
   categories:
   - UplinkPirateHardsuits
   conditions:

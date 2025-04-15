@@ -26,7 +26,7 @@ Missiles will only track grids with a shuttle console, and are immediately point
 
 ## Shield Generators
 
-Some ships are equipped with [color=cyan]shield generators[/color]. These absorb all incoming impacts, and add power draw for every projectile absorbed. Shields will NOT block beam or hitscan weapons, such as [color=red][bold]lasers[/bold][/color], and the effects of [color=teal][bold]EMPs[/color][/bold] will still go through.
+Some ships are equipped with [color=cyan]shield generators[/color]. These absorb all incoming impacts, and add power draw for every projectile absorbed. [color=yellow]Note that shields only react to projectiles fired from ship weapons, not regular handheld weapons or tools.[/color] Shields will NOT block beam or hitscan weapons, such as [color=red][bold]lasers[/bold][/color], and the effects of [color=teal][bold]EMPs[/color][/bold] will still go through.
 
   <Box>
     <GuideEntityEmbed Entity="CircularShieldConsole"/>
@@ -34,7 +34,7 @@ Some ships are equipped with [color=cyan]shield generators[/color]. These absorb
   </Box>
 
 Due to the rarity of these, they are unable to be looted, and must be scavenged if you wish to outfit your ship with them.
-The most popular shield system for example, the [bold][color=cyan]MS-225[/color][/bold], adds [bold][color=coral]500w[/color][/bold] to the power usage for every impact absorbed.
+The most popular shield system for example, the [bold][color=cyan]MS-225[/color][/bold], adds power usage based on the damage of projectiles it absorbs, with approximately [bold][color=coral]50w per point of damage[/color][/bold].
 After [bold]10 seconds[/bold], this power surge will start to dissipate. However there is a base power draw, and it is calculated via the following equation.
 
 Radius^2 * Shield Width * 0.5 * Power/m^2.

@@ -27,6 +27,12 @@ public sealed class CircularShieldRadarSystem : EntitySystem
         // Add radar blip components to shields when they're created
         SubscribeLocalEvent<CircularShieldComponent, ComponentStartup>(OnShieldStartup);
 
+        // Subscribe to shield movement events
+        SubscribeLocalEvent<CircularShieldComponent, MoveEvent>(OnShieldMoved);
+
+        // Subscribe to parent change events
+        SubscribeLocalEvent<CircularShieldComponent, EntParentChangedMessage>(OnShieldParentChanged);
+
         // We don't need to subscribe to ComponentShutdown directly
         // Instead we'll check if shields still exist during the Update method
     }
@@ -43,6 +49,90 @@ public sealed class CircularShieldRadarSystem : EntitySystem
 
         // Create a special radar blip entity for this shield at the grid's center of mass
         CreateRadarBlipForShield(uid, component, gridUid.Value);
+    }
+
+    private void OnShieldMoved(EntityUid uid, CircularShieldComponent component, ref MoveEvent args)
+    {
+        // Check if this shield already has a blip
+        if (!_shieldRadarBlips.TryGetValue(uid, out var blipUid))
+            return;
+
+        // Get the shield's current grid
+        var xform = Transform(uid);
+        var currentGridUid = xform.GridUid;
+
+        // If the shield is no longer on a grid, delete the blip
+        if (currentGridUid == null || !TryComp<MapGridComponent>(currentGridUid.Value, out _))
+        {
+            if (_entityManager.EntityExists(blipUid))
+                _entityManager.DeleteEntity(blipUid);
+
+            _shieldRadarBlips.Remove(uid);
+            return;
+        }
+
+        // Get the blip's current grid
+        var blipXform = Transform(blipUid);
+        var blipGridUid = blipXform.ParentUid;
+
+        // If the shield moved to a different grid, recreate the blip on the new grid
+        if (blipGridUid != currentGridUid)
+        {
+            // Delete the old blip
+            if (_entityManager.EntityExists(blipUid))
+                _entityManager.DeleteEntity(blipUid);
+
+            _shieldRadarBlips.Remove(uid);
+
+            // Create a new blip on the current grid
+            CreateRadarBlipForShield(uid, component, currentGridUid.Value);
+        }
+    }
+
+    private void OnShieldParentChanged(EntityUid uid, CircularShieldComponent component, ref EntParentChangedMessage args)
+    {
+        // Get the shield's current grid
+        var currentGridUid = args.Transform.GridUid;
+
+        // If we don't have a blip for this shield yet and it's now on a grid, create one
+        if (!_shieldRadarBlips.ContainsKey(uid))
+        {
+            if (currentGridUid != null && TryComp<MapGridComponent>(currentGridUid.Value, out _))
+            {
+                CreateRadarBlipForShield(uid, component, currentGridUid.Value);
+            }
+            return;
+        }
+
+        // Get the existing blip
+        var blipUid = _shieldRadarBlips[uid];
+
+        // If the shield is no longer on a grid, delete the blip
+        if (currentGridUid == null || !TryComp<MapGridComponent>(currentGridUid.Value, out _))
+        {
+            if (_entityManager.EntityExists(blipUid))
+                _entityManager.DeleteEntity(blipUid);
+
+            _shieldRadarBlips.Remove(uid);
+            return;
+        }
+
+        // Get the blip's current grid
+        var blipXform = Transform(blipUid);
+        var blipGridUid = blipXform.ParentUid;
+
+        // If the shield moved to a different grid, recreate the blip on the new grid
+        if (blipGridUid != currentGridUid)
+        {
+            // Delete the old blip
+            if (_entityManager.EntityExists(blipUid))
+                _entityManager.DeleteEntity(blipUid);
+
+            _shieldRadarBlips.Remove(uid);
+
+            // Create a new blip on the current grid
+            CreateRadarBlipForShield(uid, component, currentGridUid.Value);
+        }
     }
 
     private void CreateRadarBlipForShield(EntityUid shieldUid, CircularShieldComponent shield, EntityUid gridUid)

@@ -36,14 +36,8 @@ uplink-pirate-smg-magazine-desc = A 30 round magazine of .35 auto. Compatible wi
 
 # equipment
 
-uplink-pirate-commander-hardsuit-name = Commander Hardsuit
-uplink-pirate-commander-hardsuit-desc = A hardsuit purchased from the Gorlex Marauder's surplus, with great ballistic protection.
-
-uplink-pirate-elite-hardsuit-name = Elite Hardsuit
-uplink-pirate-elite-hardsuit-desc = A hardsuit purchased from the Gorlex Marauder's surplus, with great heat protection.
-
 uplink-pirate-combat-hardsuit-name = Combat Hardsuit
-uplink-pirate-combat-hardsuit-desc = A hardsuit purchased from the Gorlex Marauder's surplus, with good overall protection.
+uplink-pirate-combat-hardsuit-desc = Definitely not just a stolen SCAF suit. Incase you lost yours.
 
 uplink-pirate-webvest-name = Syndicate Webvest
 uplink-pirate-webvest-desc = A webvest smuggled into the sector that hasn't been downgraded like ones utilized by contractors. Great pierce resist, poor heat resist.

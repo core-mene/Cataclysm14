@@ -25,7 +25,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Frontier Outpost STC"
+    name: "Colonial Outpost STC"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -34,7 +34,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Frontier Outpost SR"
+    name: "Colonial Outpost SR"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -43,7 +43,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Frontier Outpost Guard"
+    name: "Colonial Outpost Guard"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -52,7 +52,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Frontier Outpost Reception"
+    name: "Colonial Outpost Reception"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineCaptain]
@@ -61,7 +61,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Frontier Outpost Administration"
+    name: "Colonial Outpost Administration"
 
 # POI
 - type: entity

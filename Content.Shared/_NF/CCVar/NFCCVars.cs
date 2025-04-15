@@ -170,12 +170,12 @@ public sealed class NFCCVars
     public static readonly CVarDef<int> DeadDropMaxTimeout =
         CVarDef.Create("nf14.smuggling.max_timeout", 5400, CVar.REPLICATED);
     /// <summary>
-    /// The shortest distance that a smuggling pod will spawn away from Frontier Outpost.
+    /// The shortest distance that a smuggling pod will spawn away from Colonial Outpost.
     /// </summary>
     public static readonly CVarDef<int> DeadDropMinDistance =
         CVarDef.Create("nf14.smuggling.min_distance", 6500, CVar.REPLICATED);
     /// <summary>
-    /// The longest distance that a smuggling pod will spawn away from Frontier Outpost.
+    /// The longest distance that a smuggling pod will spawn away from Colonial Outpost.
     /// </summary>
     public static readonly CVarDef<int> DeadDropMaxDistance =
         CVarDef.Create("nf14.smuggling.max_distance", 8000, CVar.REPLICATED);

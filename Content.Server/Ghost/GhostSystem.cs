@@ -305,7 +305,18 @@ namespace Content.Server.Ghost
             // Frontier: get admin status for entity.
             bool isAdmin = _admin.IsAdmin(entity);
 
-            var response = new GhostWarpsResponseEvent(GetPlayerWarps(entity).Concat(GetLocationWarps(isAdmin)).ToList()); // Frontier: add isAdmin
+            // Only include admin ghosts if the requester is an admin
+            var warps = GetPlayerWarps(entity)
+                .Concat(GetLocationWarps(isAdmin));
+                
+            if (isAdmin)
+            {
+                // Add admin ghosts and regular ghosts to the warp list for admin users
+                warps = warps.Concat(GetAdminGhostWarps(entity))
+                            .Concat(GetRegularGhostWarps(entity));
+            }
+                
+            var response = new GhostWarpsResponseEvent(warps.ToList());
             RaiseNetworkEvent(response, args.SenderSession.Channel);
         }
 
@@ -401,6 +412,52 @@ namespace Content.Server.Ghost
 
                 if (_mobState.IsAlive(attached) || _mobState.IsCritical(attached))
                     yield return new GhostWarp(GetNetEntity(attached), playerInfo, false);
+            }
+        }
+
+        private IEnumerable<GhostWarp> GetAdminGhostWarps(EntityUid except)
+        {
+            foreach (var player in _playerManager.Sessions)
+            {
+                if (player.AttachedEntity is not {Valid: true} attached)
+                    continue;
+
+                if (attached == except) continue;
+
+                // Skip if not a ghost or not an admin
+                if (!_ghostQuery.HasComp(attached) || !_admin.IsAdmin(attached))
+                    continue;
+
+                TryComp<MindContainerComponent>(attached, out var mind);
+                var jobName = _jobs.MindTryGetJobName(mind?.Mind);
+                
+                // Add "(Admin Ghost)" suffix to the display name
+                var playerInfo = $"{Comp<MetaDataComponent>(attached).EntityName} (Admin Ghost)";
+
+                yield return new GhostWarp(GetNetEntity(attached), playerInfo, false);
+            }
+        }
+
+        private IEnumerable<GhostWarp> GetRegularGhostWarps(EntityUid except)
+        {
+            foreach (var player in _playerManager.Sessions)
+            {
+                if (player.AttachedEntity is not {Valid: true} attached)
+                    continue;
+
+                if (attached == except) continue;
+
+                // Skip if not a ghost or if it's an admin
+                if (!_ghostQuery.HasComp(attached) || _admin.IsAdmin(attached))
+                    continue;
+
+                TryComp<MindContainerComponent>(attached, out var mind);
+                var jobName = _jobs.MindTryGetJobName(mind?.Mind);
+                
+                // Add "(Ghost)" suffix to the display name
+                var playerInfo = $"{Comp<MetaDataComponent>(attached).EntityName} (Ghost)";
+
+                yield return new GhostWarp(GetNetEntity(attached), playerInfo, false);
             }
         }
 

@@ -21,6 +21,7 @@ using Content.Shared.UserInterface;
 using Robust.Server.GameStates;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Threading;
+using Content.Shared._Mono.SpaceArtillery;
 
 namespace Content.Server.Theta.ShipEvent.Systems;
 
@@ -127,6 +128,26 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
     {
         // Add to current surge and reset timer
         shield.CurrentSurgePower += shield.ProjectileWattPerImpact;
+        shield.SurgeTimeRemaining = shield.DamageSurgeDuration;
+
+        // Update power draw immediately to reflect increased power usage
+        UpdatePowerDraw(uid, shield);
+    }
+
+    /// <summary>
+    /// Helper method to apply a power surge to the shield based on projectile damage
+    /// </summary>
+    private void ApplyShieldPowerSurge(EntityUid uid, CircularShieldComponent shield, ProjectileComponent projectile)
+    {
+        // Calculate power surge based on projectile damage
+        float totalDamage = 0f;
+        foreach (var (damageType, damageValue) in projectile.Damage.DamageDict)
+        {
+            totalDamage += damageValue.Float();
+        }
+        
+        // Add to current surge based on damage and reset timer
+        shield.CurrentSurgePower += totalDamage * shield.ProjectileWattPerImpact;
         shield.SurgeTimeRemaining = shield.DamageSurgeDuration;
 
         // Update power draw immediately to reflect increased power usage
@@ -293,6 +314,10 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         // Only do grid check for projectiles
         if (TryComp<ProjectileComponent>(args.OtherEntity, out var projectile))
         {
+            // Check if the projectile has the ShipWeaponProjectile component
+            if (!HasComp<ShipWeaponProjectileComponent>(args.OtherEntity))
+                return;
+                
             // Get the shield's grid
             if (TryComp<TransformComponent>(uid, out var shieldTransform) && shieldTransform.GridUid != null)
             {
@@ -320,8 +345,8 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
             // If projectile is from a different grid, the shield absorbs its energy
             if (isProjectileFromDifferentGrid)
             {
-                // Apply power surge from impact
-                ApplyShieldPowerSurge(uid, shield);
+                // Apply power surge from impact based on projectile damage
+                ApplyShieldPowerSurge(uid, shield, projectile);
             }
         }
 
