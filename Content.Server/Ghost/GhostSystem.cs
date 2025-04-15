@@ -370,7 +370,7 @@ namespace Content.Server.Ghost
         {
             _adminLog.Add(LogType.GhostWarp, $"{ToPrettyString(uid)} ghost warped to {ToPrettyString(target)}");
 
-            if ((TryComp(target, out WarpPointComponent? warp) && warp.Follow) || HasComp<MobStateComponent>(target))
+            if ((TryComp(target, out WarpPointComponent? warp) && warp.Follow) || HasComp<MobStateComponent>(target) || HasComp<GhostComponent>(target))
             {
                 _followerSystem.StartFollowingEntity(uid, target);
                 return;
