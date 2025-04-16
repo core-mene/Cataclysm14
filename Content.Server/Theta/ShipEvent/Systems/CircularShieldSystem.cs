@@ -22,6 +22,7 @@ using Robust.Server.GameStates;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Threading;
 using Content.Shared._Mono.SpaceArtillery;
+using Robust.Shared.Map;
 
 namespace Content.Server.Theta.ShipEvent.Systems;
 
@@ -50,6 +51,89 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         SubscribeLocalEvent<CircularShieldComponent, PowerChangedEvent>(OnShieldPowerChanged);
         SubscribeLocalEvent<CircularShieldComponent, StartCollideEvent>(OnShieldEnter);
         SubscribeLocalEvent<CircularShieldComponent, NewLinkEvent>(OnShieldLink);
+
+        // Subscribe to entity termination directly for extra safety
+        SubscribeLocalEvent<CircularShieldComponent, EntityTerminatingEvent>(OnShieldEntityTerminating);
+
+        // Ensure shields are properly cleaned up when deleted
+        EntityManager.EntityDeleted += OnEntityDeleted;
+    }
+
+    public override void Shutdown()
+    {
+        base.Shutdown();
+        EntityManager.EntityDeleted -= OnEntityDeleted;
+
+        // During server shutdown, forcibly clean up all shields
+        var query = EntityManager.EntityQueryEnumerator<CircularShieldComponent>();
+        while (query.MoveNext(out var uid, out var shield))
+        {
+            // Force remove PVS override
+            _pvsIgnoreSys.RemoveGlobalOverride(uid);
+
+            // Clean up console binding
+            if (shield.BoundConsole != null && EntityManager.EntityExists(shield.BoundConsole.Value))
+            {
+                if (TryComp<CircularShieldConsoleComponent>(shield.BoundConsole.Value, out var console))
+                {
+                    console.BoundShield = null;
+                    Dirty(shield.BoundConsole.Value, console);
+                }
+            }
+
+            // Clear bound console reference
+            shield.BoundConsole = null;
+
+            // Find and delete any associated radar blips
+            var shieldRadarSystem = EntitySystem.Get<CircularShieldRadarSystem>();
+            shieldRadarSystem.RemoveShieldRadarBlip(uid);
+
+            // Remove shield fixture to break physics references
+            _fixSys.DestroyFixture(uid, ShieldFixtureId);
+
+            // Make sure the entity transform is detached from any parent
+            var xform = Transform(uid);
+            if (xform.ParentUid != EntityUid.Invalid)
+            {
+                _formSys.DetachParentToNull(uid, xform);
+            }
+
+            // Mark entity for immediate deletion if possible
+            if (!EntityManager.Deleted(uid))
+            {
+                try
+                {
+                    EntityManager.DeleteEntity(uid);
+                }
+                catch (Exception ex)
+                {
+                    Log.Error($"Error deleting shield entity {uid} during shutdown: {ex}");
+
+                    // Try force delete by queueing instead
+                    EntityManager.QueueDeleteEntity(uid);
+                }
+            }
+        }
+    }
+
+    private void OnEntityDeleted(Entity<MetaDataComponent> entity)
+    {
+        // Check if the entity was a shield
+        if (TryComp<CircularShieldComponent>(entity.Owner, out var shield))
+        {
+            // Make sure we remove the PVS override
+            _pvsIgnoreSys.RemoveGlobalOverride(entity.Owner);
+
+            // Clean up console binding to prevent circular references
+            if (shield.BoundConsole != null && EntityManager.EntityExists(shield.BoundConsole.Value))
+            {
+                if (TryComp<CircularShieldConsoleComponent>(shield.BoundConsole.Value, out var console))
+                {
+                    console.BoundShield = null;
+                    Dirty(shield.BoundConsole.Value, console);
+                }
+            }
+        }
     }
 
     public override void Update(float time)
@@ -145,7 +229,7 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         {
             totalDamage += damageValue.Float();
         }
-        
+
         // Add to current surge based on damage and reset timer
         shield.CurrentSurgePower += totalDamage * shield.ProjectileWattPerImpact;
         shield.SurgeTimeRemaining = shield.DamageSurgeDuration;
@@ -272,6 +356,36 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
 
     private void OnShieldRemoved(EntityUid uid, CircularShieldComponent shield, ComponentShutdown args)
     {
+        // Remove PVS override to prevent "Attempted to send deleted entity" errors
+        _pvsIgnoreSys.RemoveGlobalOverride(uid);
+
+        // Clean up console binding to prevent circular references
+        if (shield.BoundConsole != null && EntityManager.EntityExists(shield.BoundConsole.Value))
+        {
+            if (TryComp<CircularShieldConsoleComponent>(shield.BoundConsole.Value, out var console))
+            {
+                console.BoundShield = null;
+                Dirty(shield.BoundConsole.Value, console);
+            }
+        }
+
+        // Clear bound console reference
+        shield.BoundConsole = null;
+
+        // Remove the radar blip if it exists
+        var shieldRadarSystem = EntitySystem.Get<CircularShieldRadarSystem>();
+        shieldRadarSystem.RemoveShieldRadarBlip(uid);
+
+        // Remove shield fixture to prevent physics references
+        _fixSys.DestroyFixture(uid, ShieldFixtureId);
+
+        // Make sure the transform is properly detached to avoid parent-child issues
+        var xform = Transform(uid);
+        if (xform.ParentUid != EntityUid.Invalid)
+        {
+            _formSys.DetachParentToNull(uid, xform);
+        }
+
         foreach (CircularShieldEffect effect in shield.Effects)
         {
             effect.OnShieldShutdown(uid, shield);
@@ -317,7 +431,7 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
             // Check if the projectile has the ShipWeaponProjectile component
             if (!HasComp<ShipWeaponProjectileComponent>(args.OtherEntity))
                 return;
-                
+
             // Get the shield's grid
             if (TryComp<TransformComponent>(uid, out var shieldTransform) && shieldTransform.GridUid != null)
             {
@@ -420,6 +534,29 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         else if (shield.DesiredDraw > 0)
         {
             shield.Powered = false;
+        }
+    }
+
+    private void OnShieldEntityTerminating(EntityUid uid, CircularShieldComponent shield, ref EntityTerminatingEvent args)
+    {
+        // Force remove PVS override
+        _pvsIgnoreSys.RemoveGlobalOverride(uid);
+
+        // Remove the radar blip
+        var shieldRadarSystem = EntitySystem.Get<CircularShieldRadarSystem>();
+        shieldRadarSystem.RemoveShieldRadarBlip(uid);
+
+        // Clean up console binding
+        if (shield.BoundConsole != null && EntityManager.EntityExists(shield.BoundConsole.Value))
+        {
+            if (TryComp<CircularShieldConsoleComponent>(shield.BoundConsole.Value, out var console))
+            {
+                console.BoundShield = null;
+                Dirty(shield.BoundConsole.Value, console);
+            }
+
+            // Clear reference
+            shield.BoundConsole = null;
         }
     }
 

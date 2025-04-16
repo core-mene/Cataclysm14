@@ -247,5 +247,22 @@ public sealed class CircularShieldRadarSystem : EntitySystem
 
         _shieldRadarBlips.Clear();
     }
+
+    /// <summary>
+    /// Explicitly removes the radar blip for a shield entity.
+    /// Used during shield deletion and server shutdown.
+    /// </summary>
+    public void RemoveShieldRadarBlip(EntityUid shieldUid)
+    {
+        if (!_shieldRadarBlips.TryGetValue(shieldUid, out var blipUid))
+            return;
+            
+        // Delete the blip if it exists
+        if (_entityManager.EntityExists(blipUid))
+            _entityManager.DeleteEntity(blipUid);
+            
+        // Remove from our tracking dictionary
+        _shieldRadarBlips.Remove(shieldUid);
+    }
 }
 
