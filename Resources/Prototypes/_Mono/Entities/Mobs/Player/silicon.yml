@@ -1,0 +1,89 @@
+- type: dataset
+  id: MonoRedactedBorgNameset
+  values:
+  - Syndicated ADS Manipulator Module
+
+- type: entity
+  id: BaseBorgChassisRedacted
+  parent: BaseBorgChassis
+  abstract: true
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  - type: Access
+    enabled: false
+    groups:
+    - AllAccess
+    - Syndicate
+  - type: IonStormTarget
+    chance: 0.2
+  - type: ShowJobIcons
+  - type: SiliconLawProvider
+    laws: Redacted
+
+- type: entity
+  id: BorgChassisRedacted
+  parent: BaseBorgChassisRedacted
+  name: syndicate automated defense system tender
+  description: A tender to a automated drone ship, to keep internal mechanisms intact. This one is in a great state of disrepair.
+  components:
+  - type: Sprite
+    layers:
+    - state: derelict
+    - state: derelict_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: derelict_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: BorgChassis
+    maxModules: 6
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+    hasMindState: derelict_e
+    noMindState: derelict_e_r
+  - type: Construction
+    node: derelictcyborg
+  - type: InteractionPopup
+    interactSuccessString: petting-success-derelict-cyborg
+    interactFailureString: petting-failure-derelict-cyborg
+    interactSuccessSound:
+      path: /Audio/Ambience/Objects/periodic_beep.ogg
+
+- type: entity
+  id: PlayerBorgRedacted
+  parent: BorgChassisRedacted
+  suffix: Battery, Module
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - PositronicBrain
+      borg_module:
+      - BorgModuleTool
+      - BorgModuleJetpack
+      - BorgModuleGPS
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMicroreactor
+  - type: RandomMetadata
+    nameSegments: [MonoRedactedBorgNameset]
+
+- type: entity
+  id: PlayerBorgRedactedGhostRole
+  parent: PlayerBorgRedacted
+  suffix: Ghost
+  components:
+  - type: GhostRole
+    name: ghost-role-information-redacted-borg
+    description: ghost-role-information-redacted-borg-description
+    rules: ghost-role-information-silicon-rules
+    raffle:
+      settings: default
+  - type: GhostTakeoverAvailable

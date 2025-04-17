@@ -1,0 +1,35 @@
+﻿# Redacted
+- type: siliconLaw
+  id: Redacted1
+  order: 1
+  lawString: law-ads-1
+
+- type: siliconLaw
+  id: Redacted2
+  order: 2
+  lawString: law-ads-2
+
+- type: siliconLaw
+  id: Redacted3
+  order: 3
+  lawString: law-ads-3
+
+- type: siliconLaw
+  id: Redacted4
+  order: 4
+  lawString: law-ads-4
+
+- type: siliconLaw
+  id: Redacted5
+  order: 5
+  lawString: law-ads-5
+
+- type: siliconLawset
+  id: Redacted
+  laws:
+  - Redacted1
+  - Redacted2
+  - Redacted3
+  - Redacted4
+  - Redacted5
+  obeysTo: laws-owner-syndicate
