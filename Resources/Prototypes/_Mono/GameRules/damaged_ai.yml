@@ -1,0 +1,18 @@
+- type: entityTable
+  id: DamagedAIShipsTable
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+    - id: UnknownShuttleZenith
+
+- type: entity
+  parent: BaseRandomShuttleRule
+  id: UnknownShuttleZenith
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-ai-shuttle-detected
+    startAudio:
+      path: /Audio/Misc/notice1.ogg
+    weight: 2
+    maxOccurrences: 4
+  - type: LoadMapRule
+    preloadedGrid: AIZenith

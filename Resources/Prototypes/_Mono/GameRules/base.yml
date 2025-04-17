@@ -1,0 +1,19 @@
+- type: entityTable
+  id: STCShuttleSpawnerScheduler
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: DamagedAIShipsTable # for now this is just one, but if you'd want to add more in the future, you could simply just add another table here
+
+- type: entity
+  abstract: true
+  parent: BaseGameRule
+  id: BaseRandomShuttleRule
+  components:
+  - type: StationEvent
+    weight: 10
+    reoccurrenceDelay: 90
+    duration: 1
+    maxOccurrences: 2 # should be the same as [copies] in ship_spawns.yml
+  - type: RuleGrids
+  - type: LoadMapRule
