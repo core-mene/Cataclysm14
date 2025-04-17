@@ -11,7 +11,7 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
     public string RewardType = "FrontierUplinkCoin";
 
     [ViewVariables(VVAccess.ReadWrite), DataField(serverOnly: true)]
-    public string Faction = "NFSD";
+    public string Faction = "NCMC";
 
     [ViewVariables(VVAccess.ReadWrite), DataField]
     public string LocStringPrefix = string.Empty;

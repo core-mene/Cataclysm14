@@ -127,7 +127,7 @@ namespace Content.Server.Forensics
             else
                 fucAmount = 0;
 
-            var channel = _prototypeManager.Index<RadioChannelPrototype>("Nfsd");
+            var channel = _prototypeManager.Index<RadioChannelPrototype>("Ncmc");
             string msgString = Loc.GetString(msg);
             if (fucAmount >= 1)
             {
@@ -315,7 +315,7 @@ namespace Content.Server.Forensics
 
         private void OpenUserInterface(EntityUid user, Entity<ForensicScannerComponent> scanner)
         {
-            UpdateUserInterface(scanner, scanner.Comp);
+            UpdateUserInterface(scanner.Owner, scanner.Comp);
 
             _uiSystem.OpenUi(scanner.Owner, ForensicScannerUiKey.Key, user);
         }
