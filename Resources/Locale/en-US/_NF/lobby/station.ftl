@@ -1,2 +1,2 @@
 ﻿station-frontier-outpost = Colonial Outpost
-station-nsfd = NFSD Outpost
+station-nsfd = NCMC Outpost

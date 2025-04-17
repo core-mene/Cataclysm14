@@ -88,8 +88,8 @@
 - type: entity
   id: NfsdTechFabCircuitboard
   parent: SecurityTechFabCircuitboard
-  name: NFSD techfab machine board
-  description: A machine printed circuit board for an NFSD techfab.
+  name: NCMC techfab machine board
+  description: A machine printed circuit board for an NCMC techfab.
   components:
     - type: Sprite
       sprite: _NF/Objects/Misc/module.rsi
@@ -113,7 +113,7 @@
 - type: entity
   id: ThrusterNfsdMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: NFSD thruster machine board
+  name: NCMC thruster machine board
   components:
   - type: MachineBoard
     prototype: ThrusterNfsd
@@ -171,7 +171,7 @@
 - type: entity
   id: GyroscopeNfsdMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: NFSD gyroscope machine board
+  name: NCMC gyroscope machine board
   components:
   - type: MachineBoard
     prototype: GyroscopeNfsd
@@ -184,7 +184,7 @@
 - type: entity
   id: SmallGyroscopeNfsdMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: small NFSD gyroscope machine board
+  name: small NCMC gyroscope machine board
   components:
   - type: MachineBoard
     prototype: SmallGyroscopeNfsd

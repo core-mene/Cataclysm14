@@ -162,7 +162,7 @@
 - type: entity
   id: CannonBall
   name: cannonball
-  suffix: Pirate
+  suffix: Rogue
   parent: BaseCannonBall
   components:
   - type: CartridgeAmmo
@@ -175,7 +175,7 @@
 - type: entity
   id: CannonBallGrapeshot
   name: grapeshot
-  suffix: Pirate
+  suffix: Rogue
   parent: BaseCannonBall
   components:
   - type: CartridgeAmmo
@@ -188,7 +188,7 @@
 - type: entity
   id: CannonBallGlassshot
   name: glassshot
-  suffix: Pirate
+  suffix: Rogue
   parent: BaseCannonBall
   components:
   - type: CartridgeAmmo

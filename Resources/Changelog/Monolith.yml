@@ -501,3 +501,75 @@ Entries:
       message: Allowed UIVs to spawn at lowpop.
   id: 61
   time: '2025-04-13T23:40:32.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: Added Littora to expedition shipyard
+    - type: Tweak
+      message: Picses gets a sink now.
+    - type: Fix
+      message: Fixed Tzipora cryo setup.
+    - type: Fix
+      message: Fixed MR-8C back sprites.
+    - type: Fix
+      message: Fixed DMR ammo not being in NF lathes.
+  id: 62
+  time: '2025-04-14T02:12:00.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added a (stolen) sick ass red SCAF suit to the Pirate uplink. Also
+        replaces old syndie suits in suit storage lockers.
+    - type: Remove
+      message: >-
+        Removed syndicate hardsuits from Pirate uplinks, and Pirate suit-storage
+        lockers.
+  id: 63
+  time: '2025-04-15T00:09:06.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: Companies have arrived (very experimental)! Expect bugs.
+  id: 64
+  time: '2025-04-15T00:49:54.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: Base ship speed increased from 20 m/s to 30 m/s!
+    - type: Fix
+      message: IFF console status bug should be no more.
+    - type: Fix
+      message: >-
+        Shield blips should no longer be on the wrong grid when their shield
+        generator is moved.
+    - type: Fix
+      message: Bluespace drive's incorrect description has been corrected.
+    - type: Fix
+      message: FTL mass problems are no more with our new ship exercise program.
+    - type: Fix
+      message: Shipyard's ship location message is a little more accurate.
+  id: 65
+  time: '2025-04-15T03:19:41.0000000+00:00'
+- author: LukeZurg22
+  changes:
+    - type: Remove
+      message: Oh Mah Nina from Jukebox
+    - type: Fix
+      message: Department names
+    - type: Fix
+      message: NFDSO -> NCMCO
+  id: 66
+  time: '2025-04-15T04:53:46.0000000+00:00'
+- author: LukeZurg22
+  changes:
+    - type: Tweak
+      message: Numerous NFSD proto names -> NCMC
+  id: 67
+  time: '2025-04-16T01:42:17.0000000+00:00'
+- author: LukeZurg22
+  changes:
+    - type: Tweak
+      message: Adjusted Pirates -> Rogue naming.
+  id: 68
+  time: '2025-04-16T03:53:27.0000000+00:00'

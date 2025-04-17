@@ -141,11 +141,11 @@
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
   id: FaxMachineNFTradeMallNFSD
-  suffix: POI, Trade NFSD
+  suffix: POI, Trade NCMC
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Trade Mall NFSD Post"
+    name: "Trade Mall NCMC Post"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -190,25 +190,25 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Pirate's Cove"
+    name: "Rogue Insurgency Hideout"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
   id: FaxMachineNFNfsd
-  suffix: POI, NFSD
+  suffix: POI, NCMC
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "NFSD Outpost Sheriff"
+    name: "NCMC Outpost Sheriff"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
   id: FaxMachineNFNfsdLawyer
-  suffix: POI, NFSD Lawyer
+  suffix: POI, NCMC Lawyer
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "NFSD Outpost Lawyer"
+    name: "NCMC Outpost Lawyer"
 
 - type: entity
   parent: FaxMachineBase

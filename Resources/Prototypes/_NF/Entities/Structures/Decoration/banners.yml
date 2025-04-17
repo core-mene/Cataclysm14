@@ -1,8 +1,8 @@
 - type: entity
   id: BannerNfsd
   parent: BannerBase
-  name: NFSD banner
-  description: A banner displaying the colors of the New Frontier Sheriff's Department.
+  name: NCMC banner
+  description: A banner displaying the colors of the New Congressional Marine Corps' Department.
   components:
   - type: Sprite
     sprite: _NF/Structures/Decoration/banner.rsi
@@ -14,8 +14,8 @@
 - type: entity
   id: FlagNfsd
   parent: BannerBase
-  name: NFSD flag
-  description: A flag displaying the colors of the New Frontier Sheriff's Department.
+  name: NCMC flag
+  description: A flag displaying the colors of the New Congressional Marine Corps.
   components:
   - type: Sprite
     sprite: _NF/Structures/Decoration/banner.rsi

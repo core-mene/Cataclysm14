@@ -25,8 +25,8 @@
 - type: entity
   parent: BaseShipVoucher
   id: ShipVoucherNfsdSergeant
-  name: NFSD sergeant ship voucher
-  description: Allows for one free small to medium NFSD ship purchase. Destroyed on sale.
+  name: NCMC sergeant ship voucher
+  description: Allows for one free small to medium NCMC ship purchase. Destroyed on sale.
   components:
   - type: Sprite
     layers:
@@ -45,8 +45,8 @@
 - type: entity
   parent: ShipVoucherNfsdSergeant
   id: ShipVoucherNfsdBailiff
-  name: NFSD bailiff ship voucher
-  description: Allows for one free small to capital NFSD ship purchase. Destroyed on sale.
+  name: NCMC bailiff ship voucher
+  description: Allows for one free small to capital NCMC ship purchase. Destroyed on sale.
   components:
   - type: Sprite
     layers:

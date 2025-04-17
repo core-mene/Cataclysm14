@@ -7,6 +7,7 @@ using Content.Client.Players.PlayTimeTracking;
 using Content.Client.Station;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing;
+using Content.Shared.Company;
 using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
@@ -185,6 +186,7 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
             PreviewPanel.SetSprite(EntityUid.Invalid);
             PreviewPanel.SetSummaryText(string.Empty);
             PreviewPanel.SetBankBalanceText(string.Empty); // Frontier
+            PreviewPanel.SetCompanyText(string.Empty); // Company Display
             return;
         }
 
@@ -192,6 +194,17 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
         PreviewPanel.SetSprite(dummy);
         PreviewPanel.SetSummaryText(humanoid.Summary);
         PreviewPanel.SetBankBalanceText(humanoid.BankBalanceText); // Frontier
+        
+        // Company Display
+        var companyId = humanoid.Company;
+        if (_prototypeManager.TryIndex<CompanyPrototype>(companyId, out var company))
+        {
+            PreviewPanel.SetCompanyText($"Company: [color={company.Color.ToHex()}]{company.Name}[/color]");
+        }
+        else
+        {
+            PreviewPanel.SetCompanyText($"Company: [color=yellow]{companyId}[/color]");
+        }
     }
 
     private void RefreshProfileEditor()

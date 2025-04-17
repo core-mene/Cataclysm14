@@ -171,7 +171,7 @@
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitNfsd ]
   id: SuitStorageEVANfsd
-  suffix: EVA, NFSD
+  suffix: EVA, NCMC
   components:
   - type: AccessReader
     access: [["Security"]]
@@ -286,7 +286,7 @@
 - type: entity
   id: SuitStorageCadet
   parent: SuitStorageBase
-  suffix: NFSD Cadet
+  suffix: NCMC Cadet
   components:
   - type: StorageFill
     contents:
@@ -302,7 +302,7 @@
 - type: entity
   id: SuitStorageDeputy
   parent: SuitStorageBase
-  suffix: NFSD Deputy
+  suffix: NCMC Deputy
   components:
   - type: StorageFill
     contents:
@@ -318,7 +318,7 @@
 - type: entity
   id: SuitStorageBrigmedic
   parent: SuitStorageBase
-  suffix: NFSD Brigmedic
+  suffix: NCMC Brigmedic
   components:
   - type: StorageFill
     contents:
@@ -334,7 +334,7 @@
 - type: entity
   id: SuitStorageSergeant
   parent: SuitStorageBase
-  suffix: NFSD Sergeant
+  suffix: NCMC Sergeant
   components:
   - type: StorageFill
     contents:
@@ -350,7 +350,7 @@
 - type: entity
   id: SuitStorageBailiff
   parent: SuitStorageBase
-  suffix: NFSD Bailiff
+  suffix: NCMC Bailiff
   components:
   - type: StorageFill
     contents:
@@ -366,7 +366,7 @@
 - type: entity
   id: SuitStorageSheriff
   parent: SuitStorageBase
-  suffix: NFSD Sheriff
+  suffix: NCMC Sheriff
   components:
   - type: StorageFill
     contents:
@@ -382,7 +382,7 @@
 - type: entity
   id: SuitStorageNfsdCombat
   parent: SuitStorageBase
-  suffix: NFSD Combat
+  suffix: NCMC Combat
   components:
   - type: StorageFill
     contents:
@@ -398,7 +398,7 @@
 - type: entity
   id: SuitStorageNfsdCommand
   parent: SuitStorageBase
-  suffix: NFSD Command
+  suffix: NCMC Command
   components:
   - type: StorageFill
     contents:

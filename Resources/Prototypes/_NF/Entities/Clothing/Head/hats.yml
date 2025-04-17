@@ -138,8 +138,8 @@
 - type: entity
   parent: ClothingHeadBaseButcherable
   id: ClothingHeadHatNfsdBeretGreen
-  name: NFSD beret
-  description: A green beret for use by NFSD officers.
+  name: NCMC beret
+  description: A green beret for use by NCMC officers.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hats/nfsd_beret_green.rsi
@@ -150,8 +150,8 @@
 - type: entity
   parent: ClothingHeadBaseButcherable
   id: ClothingHeadHatNfsdBeretBrown
-  name: NFSD beret
-  description: A brown beret for use by NFSD officers.
+  name: NCMC beret
+  description: A brown beret for use by NCMC officers.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hats/nfsd_beret_brown.rsi
@@ -162,8 +162,8 @@
 - type: entity
   parent: ClothingHeadBaseButcherable
   id: ClothingHeadHatNfsdBeretCream
-  name: NFSD beret
-  description: A cream beret for use by NFSD officers.
+  name: NCMC beret
+  description: A cream beret for use by NCMC officers.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hats/nfsd_beret_cream.rsi
@@ -174,7 +174,7 @@
 - type: entity
   parent: ClothingHeadBaseButcherable
   id: ClothingHeadHatNfsdCampaign
-  name: NFSD campaign hat
+  name: NCMC campaign hat
   description: Yeehaw, partner.
   components:
   - type: Sprite
@@ -203,7 +203,7 @@
 - type: entity
   parent: ClothingHeadHatNfsdCampaign
   id: ClothingHeadHatNfsdCampaignFilled
-  name: NFSD campaign hat
+  name: NCMC campaign hat
   description: Yeehaw, partner.
   suffix: Filled
   components:
@@ -216,7 +216,7 @@
 - type: entity
   parent: ClothingHeadBaseButcherable
   id: ClothingHeadHatNfsdSmallCampaign
-  name: NFSD campaign cap
+  name: NCMC campaign cap
   description: All yee, no haw.
   components:
   - type: Sprite

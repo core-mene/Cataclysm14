@@ -1,9 +1,9 @@
-job-supervisors-sr = the Station Representative
+job-supervisors-sr = the Colonial Liaison
 job-supervisors-sheriff = the Sheriff
 job-supervisors-bailiff = the Bailiff
 job-supervisors-sergeant = the Sergeant
-job-supervisors-cadet = all higher ranking NFSD personnel
-job-supervisors-prisoner = all NFSD personnel
+job-supervisors-cadet = all higher ranking NCMC personnel
+job-supervisors-prisoner = all NCMC personnel
 job-supervisors-nfsd = Deputies, the Bailiff, and the Sheriff
-job-supervisors-pirate = the First Mate and Captain
+job-supervisors-pirate = the Rogue Commander and Commandant
 job-supervisors-nobody = nobody

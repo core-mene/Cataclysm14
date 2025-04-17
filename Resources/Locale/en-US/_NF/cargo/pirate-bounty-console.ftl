@@ -1,4 +1,4 @@
-pirate-bounty-console-menu-title = Pirate bounty console
+pirate-bounty-console-menu-title = Rogue bounty console
 pirate-bounty-console-accept-button-chest = Summon Chest
 pirate-bounty-console-accept-button-label = Accept
 pirate-bounty-console-skip-button-text = Skip
@@ -22,5 +22,5 @@ pirate-bounty-chest-name = pirate bounty chest ({$id})
 pirate-bounty-chest-description-start = On the chest the following words are etched:
 
 pirate-bounty-manifest-name = pirate bounty reminder ({$id})
-pirate-bounty-manifest-header = [font size=14][bold]Pirate bounty request[/bold] ({$id})[/font]
+pirate-bounty-manifest-header = [font size=14][bold]Rogue bounty request[/bold] ({$id})[/font]
 pirate-bounty-manifest-list-start = Items to plunder:

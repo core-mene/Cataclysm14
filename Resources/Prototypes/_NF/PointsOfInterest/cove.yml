@@ -5,13 +5,10 @@
 # Maintainer Info
 # GitHub: ???
 # Discord: ???
-
-# Notes:
-# Byarr
 - type: pointOfInterest
   id: Cove
   parent: BasePOI
-  name: Pirate Cove
+  name: Rogue Insurgency Hideout
   minimumDistance: 10000
   maximumDistance: 15000
   spawnGamePreset: [ NFPirate ]
@@ -26,7 +23,7 @@
 
 - type: gameMap
   id: Cove
-  mapName: 'Pirate Cove'
+  mapName: 'Rogue Insurgency Hideout'
   mapPath: /Maps/_NF/POI/cove.yml
   minPlayers: 0
   stations:
@@ -34,7 +31,7 @@
       stationProto: RecordsFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Pirate Cove'
+          mapNameTemplate: 'Rogue Insurgency Hideout'
         - type: ExtraStationInformation
           iconPath: /Textures/_NF/Interface/Pirate/piratelogo.png
           stationSubtext: 'frontier-lobby-pirate-subtext'

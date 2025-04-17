@@ -11,6 +11,7 @@ using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing;
+using Content.Shared.Company;
 using Content.Shared.GameTicking;
 using Content.Shared.Guidebook;
 using Content.Shared.Humanoid;
@@ -407,13 +408,61 @@ namespace Content.Client.Lobby.UI
 
             #endregion Jobs
 
-            //TabContainer.SetTabTitle(2, Loc.GetString("humanoid-profile-editor-antags-tab")); // Frontier
-
             RefreshTraits();
+
+            #region Company
+
+            TabContainer.SetTabTitle(3, Loc.GetString("humanoid-profile-editor-company-tab"));
+
+            // Clear any existing items
+            CompanyButton.Clear();
+
+            // Add all companies from prototypes - use consistent sorting with UpdateCompanyControls
+            var companies = _prototypeManager.EnumeratePrototypes<CompanyPrototype>().ToList();
+            companies.Sort((a, b) => string.Compare(a.Name, b.Name, StringComparison.Ordinal));
+
+            // Make sure "None" is first in the list
+            var noneIndex = companies.FindIndex(c => c.ID == "None");
+            if (noneIndex != -1)
+            {
+                var none = companies[noneIndex];
+                companies.RemoveAt(noneIndex);
+                companies.Insert(0, none);
+            }
+
+            // Add to dropdown
+            for (var i = 0; i < companies.Count; i++)
+            {
+                CompanyButton.AddItem(companies[i].Name, i);
+                Logger.Debug($"Added company to dropdown: {i} - {companies[i].ID} - {companies[i].Name}");
+            }
+
+            CompanyButton.OnItemSelected += args =>
+            {
+                CompanyButton.SelectId(args.Id);
+                if (args.Id >= 0 && args.Id < companies.Count)
+                {
+                    string companyId = companies[args.Id].ID;
+                    
+                    // Get the current profile for comparison
+                    var oldCompany = Profile?.Company;
+                    
+                    // Update the profile with the new company
+                    Profile = Profile?.WithCompany(companyId);
+                    
+                    // Debug logging to verify selection
+                    Logger.Debug($"Company changed from {oldCompany} to {companyId}");
+                    
+                    // Explicitly call SetDirty to update save button state
+                    SetDirty();
+                }
+            };
+
+            #endregion Company
 
             #region Markings
 
-            TabContainer.SetTabTitle(3, Loc.GetString("humanoid-profile-editor-markings-tab")); // Frontier: 4<3
+            TabContainer.SetTabTitle(4, Loc.GetString("humanoid-profile-editor-markings-tab"));
 
             Markings.OnMarkingAdded += OnMarkingChange;
             Markings.OnMarkingRemoved += OnMarkingChange;
@@ -449,6 +498,7 @@ namespace Content.Client.Lobby.UI
             SpeciesInfoButton.OnPressed += OnSpeciesInfoButtonPressed;
 
             UpdateSpeciesGuidebookIcon();
+            UpdateCompanyControls();
             IsDirty = false;
         }
 
@@ -491,7 +541,7 @@ namespace Content.Client.Lobby.UI
             TraitsList.DisposeAllChildren();
 
             var traits = _prototypeManager.EnumeratePrototypes<TraitPrototype>().OrderBy(t => Loc.GetString(t.Name)).ToList();
-            TabContainer.SetTabTitle(2, Loc.GetString("humanoid-profile-editor-traits-tab")); // Frontier: 3<2
+            TabContainer.SetTabTitle(2, Loc.GetString("humanoid-profile-editor-traits-tab"));
 
             if (traits.Count < 1)
             {
@@ -828,15 +878,32 @@ namespace Content.Client.Lobby.UI
 
         private void SetDirty()
         {
-            // If it equals default then reset the button.
-            if (Profile == null || _preferencesManager.Preferences?.SelectedCharacter.MemberwiseEquals(Profile) == true)
+            // If profile is null, we can't be dirty
+            if (Profile == null)
             {
                 IsDirty = false;
                 return;
             }
 
-            // TODO: Check if profile matches default.
-            IsDirty = true;
+            // If we have no selected character to compare against, we're dirty
+            if (_preferencesManager.Preferences?.SelectedCharacter == null)
+            {
+                IsDirty = true;
+                return;
+            }
+
+            // Get the selected character for comparison
+            var selectedCharacter = (HumanoidCharacterProfile)_preferencesManager.Preferences.SelectedCharacter;
+            
+            // Check explicitly if company changed
+            if (selectedCharacter.Company != Profile.Company)
+            {
+                IsDirty = true;
+                return;
+            }
+
+            // Check if entire profile matches
+            IsDirty = !selectedCharacter.MemberwiseEquals(Profile);
         }
 
         /// <summary>
@@ -902,6 +969,7 @@ namespace Content.Client.Lobby.UI
             UpdateHairPickers();
             UpdateCMarkingsHair();
             UpdateCMarkingsFacialHair();
+            UpdateCompanyControls();
 
             RefreshAntags();
             RefreshJobs();
@@ -1673,8 +1741,9 @@ namespace Content.Client.Lobby.UI
 
         private void UpdateSaveButton()
         {
-            SaveButton.Disabled = Profile is null || !IsDirty;
-            ResetButton.Disabled = Profile is null || !IsDirty;
+            var canSave = Profile is not null;
+            SaveButton.Disabled = !canSave || !IsDirty;
+            ResetButton.Disabled = !canSave || !IsDirty;
         }
 
         private void SetPreviewRotation(Direction direction)
@@ -1787,6 +1856,46 @@ namespace Content.Client.Lobby.UI
             _exporting = false;
             ImportButton.Disabled = false;
             ExportButton.Disabled = false;
+        }
+
+        private void UpdateCompanyControls()
+        {
+            if (Profile is null)
+                return;
+
+            var companies = _prototypeManager.EnumeratePrototypes<CompanyPrototype>().ToList();
+            companies.Sort((a, b) => string.Compare(a.Name, b.Name, StringComparison.Ordinal));
+            
+            // Make sure "None" is first in the list
+            var noneIndex = companies.FindIndex(c => c.ID == "None");
+            if (noneIndex != -1)
+            {
+                var none = companies[noneIndex];
+                companies.RemoveAt(noneIndex);
+                companies.Insert(0, none);
+            }
+            
+            Logger.Debug($"Updating company controls. Current profile company: {Profile.Company}");
+            
+            // Find the company in the list and select it
+            bool found = false;
+            for (var i = 0; i < companies.Count; i++)
+            {
+                if (companies[i].ID == Profile.Company)
+                {
+                    Logger.Debug($"Found company at index {i}: {companies[i].ID} - {companies[i].Name}");
+                    CompanyButton.SelectId(i);
+                    found = true;
+                    break;
+                }
+            }
+            
+            // If company wasn't found, default to "None" (index 0)
+            if (!found)
+            {
+                Logger.Debug($"Company {Profile.Company} not found in list, defaulting to None");
+                CompanyButton.SelectId(0);
+            }
         }
     }
 }

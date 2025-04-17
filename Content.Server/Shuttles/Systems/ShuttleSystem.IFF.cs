@@ -3,6 +3,7 @@ using Content.Shared.CCVar;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Events;
+using Robust.Server.GameObjects;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -13,6 +14,7 @@ public sealed partial class ShuttleSystem
         SubscribeLocalEvent<IFFConsoleComponent, AnchorStateChangedEvent>(OnIFFConsoleAnchor);
         SubscribeLocalEvent<IFFConsoleComponent, IFFShowIFFMessage>(OnIFFShow);
         SubscribeLocalEvent<IFFConsoleComponent, IFFShowVesselMessage>(OnIFFShowVessel);
+        SubscribeLocalEvent<IFFConsoleComponent, BoundUIOpenedEvent>(OnIFFConsoleOpen);
         SubscribeLocalEvent<GridSplitEvent>(OnGridSplit);
     }
 
@@ -33,6 +35,36 @@ public sealed partial class ShuttleSystem
 
             AddIFFFlag(grid, IFFFlags.HideLabel);
         }
+    }
+
+    private void OnIFFConsoleOpen(EntityUid uid, IFFConsoleComponent component, ref BoundUIOpenedEvent args)
+    {
+        // Make sure UI state is up-to-date when opening the UI
+        if (!TryComp(uid, out TransformComponent? xform) || xform.GridUid == null)
+        {
+            _uiSystem.SetUiState(uid, IFFConsoleUiKey.Key, new IFFConsoleBoundUserInterfaceState()
+            {
+                AllowedFlags = component.AllowedFlags,
+                Flags = IFFFlags.None,
+            });
+            return;
+        }
+
+        if (!TryComp<IFFComponent>(xform.GridUid, out var iff))
+        {
+            _uiSystem.SetUiState(uid, IFFConsoleUiKey.Key, new IFFConsoleBoundUserInterfaceState()
+            {
+                AllowedFlags = component.AllowedFlags,
+                Flags = IFFFlags.None,
+            });
+            return;
+        }
+
+        _uiSystem.SetUiState(uid, IFFConsoleUiKey.Key, new IFFConsoleBoundUserInterfaceState()
+        {
+            AllowedFlags = component.AllowedFlags,
+            Flags = iff.Flags,
+        });
     }
 
     private void OnIFFShow(EntityUid uid, IFFConsoleComponent component, IFFShowIFFMessage args)

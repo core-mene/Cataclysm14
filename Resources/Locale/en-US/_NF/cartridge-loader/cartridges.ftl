@@ -14,7 +14,7 @@ ledger-balance = Balance:
 ledger-no-balance = N/A
 
 ledger-tab-Frontier = Colonial Outpost
-ledger-tab-Nfsd = NFSD
+ledger-tab-Nfsd = NCMC
 ledger-tab-Medical = Medical Dispatch
 # Fallback, if this displays, something's wrong.
 ledger-tab-Unknown = Unknown

@@ -3,7 +3,7 @@
   parent: BaseItem
   id: FrontierUplinkCoin
   suffix: 20 TC
-  description: A token awarded to the NFSD for turning in contraband. It can be exchanged in an NFSD uplink device for a variety of law enforcement tools.
+  description: A token awarded to NGC personnel for turning in contraband. It can be exchanged in an NCMC uplink device for a variety of law enforcement tools.
   components:
   - type: Sprite
     sprite: _NF/Objects/Specific/Security/frontieruplinkcoin.rsi
@@ -50,7 +50,7 @@
 - type: entity
   parent: [ BaseItem, StorePresetSecurityUplink ]
   id: BaseSecurityUplinkRadio
-  name: NFSD uplink
+  name: NCMC uplink
   description: Retro looking old radio...
   suffix: Empty
   categories: [ HideSpawnMenu ]
@@ -100,7 +100,7 @@
       FrontierUplinkCoin: 15
 
 - type: entity
-  name: NFSD deployable barrier
+  name: NCMC deployable barrier
   id: NfsdDeployableBarrier
   description: A deployable barrier. Swipe your ID card to lock/unlock it.
   parent: DeployableBarrier

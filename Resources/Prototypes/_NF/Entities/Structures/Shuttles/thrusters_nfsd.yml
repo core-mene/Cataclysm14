@@ -1,7 +1,7 @@
 - type: entity
   id: ThrusterNfsd
   parent: ThrusterSecurity
-  suffix: NFSD
+  suffix: NCMC
   components:
   - type: Sprite
     sprite: _NF/Structures/Shuttles/thrusternfsd.rsi
@@ -11,7 +11,7 @@
 - type: entity
   id: DebugThrusterNfsd
   parent: DebugThrusterSecurity
-  suffix: DEBUG, NFSD
+  suffix: DEBUG, NCMC
   components:
   - type: Sprite
     sprite: _NF/Structures/Shuttles/thrusternfsd.rsi
@@ -21,7 +21,7 @@
 - type: entity
   id: GyroscopeNfsd
   parent: GyroscopeSecurity
-  suffix: NFSD
+  suffix: NCMC
   components:
   - type: Sprite
     sprite: _NF/Structures/Shuttles/nfsdgyroscope.rsi
@@ -32,7 +32,7 @@
 - type: entity
   id: DebugGyroscopeNfsd
   parent: DebugGyroscopeSecurity
-  suffix: DEBUG, NFSD
+  suffix: DEBUG, NCMC
   components:
   - type: Sprite
     sprite: _NF/Structures/Shuttles/nfsdgyroscope.rsi
@@ -44,7 +44,7 @@
   id: SmallGyroscopeNfsd
   parent: SmallGyroscopeSecurity
   name: small gyroscope
-  suffix: NFSD
+  suffix: NCMC
   components:
   - type: Sprite
     sprite: _NF/Structures/Shuttles/nfsdgyroscope.rsi
