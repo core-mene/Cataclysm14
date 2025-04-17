@@ -12,10 +12,9 @@
     factions:
     - Syndicate
   - type: Access
-    enabled: false
-    groups:
-    - AllAccess
-    - Syndicate
+    tags:
+    - NuclearOperative
+    - SyndicateAgent
   - type: IonStormTarget
     chance: 0.2
   - type: ShowJobIcons
