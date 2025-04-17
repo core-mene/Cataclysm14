@@ -24,4 +24,12 @@ public sealed class CompanyPrototype : IPrototype
     /// </summary>
     [DataField("color")]
     public Color Color { get; private set; } = Color.Yellow;
+    
+    /// <summary>
+    /// Whether this company should be disabled from selection in the UI.
+    /// Companies with this set to true will still be assigned automatically through the job system,
+    /// but players won't be able to select them manually.
+    /// </summary>
+    [DataField("disabled")]
+    public bool Disabled { get; private set; } = false;
 } 

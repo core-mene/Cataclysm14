@@ -418,7 +418,9 @@ namespace Content.Client.Lobby.UI
             CompanyButton.Clear();
 
             // Add all companies from prototypes - use consistent sorting with UpdateCompanyControls
-            var companies = _prototypeManager.EnumeratePrototypes<CompanyPrototype>().ToList();
+            var companies = _prototypeManager.EnumeratePrototypes<CompanyPrototype>()
+                .Where(c => !c.Disabled) // Filter out disabled companies
+                .ToList();
             companies.Sort((a, b) => string.Compare(a.Name, b.Name, StringComparison.Ordinal));
 
             // Make sure "None" is first in the list
@@ -1863,7 +1865,9 @@ namespace Content.Client.Lobby.UI
             if (Profile is null)
                 return;
 
-            var companies = _prototypeManager.EnumeratePrototypes<CompanyPrototype>().ToList();
+            var companies = _prototypeManager.EnumeratePrototypes<CompanyPrototype>()
+                .Where(c => !c.Disabled) // Filter out disabled companies
+                .ToList();
             companies.Sort((a, b) => string.Compare(a.Name, b.Name, StringComparison.Ordinal));
             
             // Make sure "None" is first in the list
@@ -1895,6 +1899,12 @@ namespace Content.Client.Lobby.UI
             {
                 Logger.Debug($"Company {Profile.Company} not found in list, defaulting to None");
                 CompanyButton.SelectId(0);
+                
+                // Also reset the profile's company to None if the current one is disabled
+                if (_prototypeManager.TryIndex<CompanyPrototype>(Profile.Company, out var companyProto) && companyProto.Disabled)
+                {
+                    Profile = Profile.WithCompany("None");
+                }
             }
         }
     }
