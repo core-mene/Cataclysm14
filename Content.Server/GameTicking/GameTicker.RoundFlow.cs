@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using Content.Server._NF.RoundNotifications.Events; // Frontier
 using System.Threading.Tasks;
 using Content.Server.Announcements;
 using Content.Server.CrewManifest;
@@ -444,7 +445,7 @@ namespace Content.Server.GameTicking
             UpdateLateJoinStatus();
             AnnounceRound();
             UpdateInfoText();
-            RaiseLocalEvent(new RoundStartedEvent(RoundId));
+            RaiseLocalEvent(new RoundStartedEvent(RoundId)); // Frontier
             SendRoundStartedDiscordMessage();
 
 #if EXCEPTION_TOLERANCE
