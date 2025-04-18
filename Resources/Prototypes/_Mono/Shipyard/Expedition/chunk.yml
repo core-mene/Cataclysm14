@@ -1,0 +1,40 @@
+# Author Info
+# GitHub: SuperJoelD00D
+# Discord: Super_Joel_Dood
+
+# Shuttle Notes: The shuttle itself was created/designed by Bruh21 (That's his Discord, not sure what his GitHub is)
+#
+- type: vessel
+  id: Chunk
+  parent: BaseVessel
+  name: SIC Chunk
+  description: A large and irregularly-shaped atmospherics, expedition capable, salvage ship. It has a built-in TEG engine, and requires a bit of work to set up. Property of the Spinward Industrial Corporation.
+  price: 84750 # Pricey TEG
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/_Mono/Shuttles/Expedition/chunk.yml
+  guidebookPage: null
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: Chunk
+  mapName: 'Chunk'
+  mapPath: /Maps/_Mono/Shuttles/Expedition/chunk.yml
+  minPlayers: 0
+  stations:
+    Chunk:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Chunk {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
