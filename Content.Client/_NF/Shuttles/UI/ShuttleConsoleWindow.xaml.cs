@@ -8,6 +8,7 @@ namespace Content.Client.Shuttles.UI
     public sealed partial class ShuttleConsoleWindow
     {
         public event Action<NetEntity?, InertiaDampeningMode>? OnInertiaDampeningModeChanged;
+        public event Action<NetEntity?, float>? OnMaxShuttleSpeedChanged;
 
         private void NfInitialize()
         {
@@ -15,7 +16,11 @@ namespace Content.Client.Shuttles.UI
             {
                 OnInertiaDampeningModeChanged?.Invoke(entity, mode);
             };
-        }
 
+            NavContainer.OnMaxShuttleSpeedChanged += (entityUid, maxSpeed) =>
+            {
+                OnMaxShuttleSpeedChanged?.Invoke(entityUid, maxSpeed);
+            };
+        }
     }
 }

@@ -182,6 +182,7 @@ public sealed partial class MapScreen : BoxContainer
             // Unselect FTL
             MapFTLButton.Pressed = false;
             MapRadar.FtlMode = false;
+            MapRadar.ShowFTLRangeOnly = false;
             MapFTLButton.Disabled = true;
         }
     }
@@ -189,6 +190,11 @@ public sealed partial class MapScreen : BoxContainer
     private void FtlPreviewToggled(BaseButton.ButtonToggledEventArgs obj)
     {
         MapRadar.FtlMode = obj.Pressed;
+        // When FTL button is toggled, disable the ShowFTLRangeOnly mode
+        if (obj.Pressed)
+        {
+            MapRadar.ShowFTLRangeOnly = false;
+        }
     }
 
     public void SetConsole(EntityUid? console)
@@ -240,6 +246,8 @@ public sealed partial class MapScreen : BoxContainer
     private void MapRebuildPressed(BaseButton.ButtonEventArgs obj)
     {
         PingMap();
+        // Show FTL range circle without targeting elements
+        MapRadar.ShowFTLRangeOnly = true;
     }
 
     /// <summary>

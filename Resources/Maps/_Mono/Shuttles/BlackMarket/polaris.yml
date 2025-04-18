@@ -1679,7 +1679,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 6.5,-15.5
       parent: 1
-- proto: AirlockExternalGlassPirateLocked
+- proto: AirlockExternalGlassRogueLocked
   entities:
   - uid: 17
     components:
@@ -1714,7 +1714,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 7.5,-14.5
       parent: 1
-- proto: AirlockHatchPirateLocked
+- proto: AirlockHatchRogueLocked
   entities:
   - uid: 23
     components:
@@ -1806,7 +1806,7 @@ entities:
     - type: Transform
       pos: -8.5,-13.5
       parent: 1
-- proto: AirlockShuttleSyndicatePirateLocked
+- proto: AirlockShuttleSyndicateRogueLocked
   entities:
   - uid: 41
     components:

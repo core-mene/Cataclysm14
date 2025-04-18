@@ -1906,7 +1906,7 @@ entities:
       devices:
       - 904
       - 1219
-- proto: AirlockExternalGlassPirateLocked
+- proto: AirlockExternalGlassRogueLocked
   entities:
   - uid: 21
     components:
@@ -1937,7 +1937,7 @@ entities:
     - type: Transform
       pos: -5.5,12.5
       parent: 1
-- proto: AirlockHatchPirateLocked
+- proto: AirlockHatchRogueLocked
   entities:
   - uid: 24
     components:
@@ -2094,7 +2094,7 @@ entities:
     - type: Transform
       pos: -6.5,27.5
       parent: 1
-- proto: AirlockShuttleSyndicatePirateLocked
+- proto: AirlockShuttleSyndicateRogueLocked
   entities:
   - uid: 55
     components:

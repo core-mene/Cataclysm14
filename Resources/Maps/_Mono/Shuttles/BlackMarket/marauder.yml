@@ -345,7 +345,7 @@ entities:
       - 285
       - 317
       - 312
-- proto: AirlockExternalGlassPirateLocked
+- proto: AirlockExternalGlassRogueLocked
   entities:
   - uid: 5
     components:
@@ -406,7 +406,7 @@ entities:
       linkedPorts:
         6:
         - DoorStatus: DoorBolt
-- proto: AirlockGlassShuttleSyndicatePirateLocked
+- proto: AirlockGlassShuttleSyndicateRogueLocked
   entities:
   - uid: 12
     components:
@@ -426,7 +426,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -6.5,-0.5
       parent: 1
-- proto: AirlockHatchPirateLocked
+- proto: AirlockHatchRogueLocked
   entities:
   - uid: 15
     components:

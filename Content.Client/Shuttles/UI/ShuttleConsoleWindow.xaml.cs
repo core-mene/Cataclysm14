@@ -22,6 +22,7 @@ public sealed partial class ShuttleConsoleWindow : FancyWindow,
 
     public event Action<NetEntity, NetEntity>? DockRequest;
     public event Action<NetEntity>? UndockRequest;
+    public event Action<List<NetEntity>>? UndockAllRequest;
 
     public ShuttleConsoleWindow()
     {
@@ -61,6 +62,11 @@ public sealed partial class ShuttleConsoleWindow : FancyWindow,
         DockContainer.UndockRequest += entity =>
         {
             UndockRequest?.Invoke(entity);
+        };
+        
+        DockContainer.UndockAllRequest += dockEntities =>
+        {
+            UndockAllRequest?.Invoke(dockEntities);
         };
 
         NfInitialize(); // Frontier Initialization for the ShuttleConsoleWindow

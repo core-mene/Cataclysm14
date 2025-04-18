@@ -16,6 +16,7 @@ public sealed partial class ShuttleSystem
     private void NfInitialize()
     {
         SubscribeLocalEvent<ShuttleConsoleComponent, SetInertiaDampeningRequest>(OnSetInertiaDampening);
+        SubscribeLocalEvent<ShuttleConsoleComponent, SetMaxShuttleSpeedRequest>(OnSetMaxShuttleSpeed);
     }
 
     private bool SetInertiaDampening(EntityUid uid, PhysicsComponent physicsComponent, ShuttleComponent shuttleComponent, TransformComponent transform, InertiaDampeningMode mode)
@@ -72,6 +73,29 @@ public sealed partial class ShuttleSystem
 
         if (SetInertiaDampening(uid, physicsComponent, shuttleComponent, transform, args.Mode) && args.Mode != InertiaDampeningMode.Query)
             component.DampeningMode = args.Mode;
+    }
+
+    private void OnSetMaxShuttleSpeed(EntityUid uid, ShuttleConsoleComponent component, SetMaxShuttleSpeedRequest args)
+    {
+        // Ensure that the entity requested is a valid shuttle
+        if (!EntityManager.TryGetComponent(uid, out TransformComponent? transform) ||
+            !transform.GridUid.HasValue ||
+            !EntityManager.TryGetComponent(transform.GridUid, out ShuttleComponent? shuttleComponent))
+        {
+            return;
+        }
+
+        // Clamp the speed between 0 and 30
+        var maxSpeed = Math.Clamp(args.MaxSpeed, 0f, 30f);
+        
+        // Don't do anything if the value didn't change
+        if (Math.Abs(shuttleComponent.BaseMaxLinearVelocity - maxSpeed) < 0.01f)
+            return;
+            
+        shuttleComponent.BaseMaxLinearVelocity = maxSpeed;
+        
+        // Refresh the shuttle consoles to update the UI
+        _console.RefreshShuttleConsoles(transform.GridUid.Value);
     }
 
     public InertiaDampeningMode NfGetInertiaDampeningMode(EntityUid entity)

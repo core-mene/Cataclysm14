@@ -567,3 +567,80 @@ Entries:
       message: Numerous NFSD proto names -> NCMC
   id: 67
   time: '2025-04-16T01:42:17.0000000+00:00'
+- author: LukeZurg22
+  changes:
+    - type: Tweak
+      message: Adjusted Pirates -> Rogue naming.
+  id: 68
+  time: '2025-04-16T03:53:27.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Wall health and ship weapon damage have both been increased (by a lot).
+        Enjoy your total boarder death.
+  id: 69
+  time: '2025-04-17T03:18:37.0000000+00:00'
+- author: LukeZurg22
+  changes:
+    - type: Add
+      message: Added the Coldcap Botany vessel.
+  id: 70
+  time: '2025-04-17T04:58:57.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: Certain jobs will now put you into companies they belong to.
+    - type: Fix
+      message: Empty company name bug should be gone now.
+  id: 71
+  time: '2025-04-17T07:26:42.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: New maximum speed slider for better control over your ship's speed.
+  id: 72
+  time: '2025-04-17T07:27:32.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: Added Akasono as a entry-level gas mining ship. Base shipyard, ~38k.
+    - type: Tweak
+      message: Changed manufacturer prefixes for a lot of ships. More standard now.
+  id: 73
+  time: '2025-04-17T17:34:42.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added two new ships. You wont find them in any shipyard. Don't worry
+        about it. Don't think about it.
+    - type: Fix
+      message: Fixed missing Jr. PACMAN on Akasono. Gas mining real NOW.
+  id: 74
+  time: '2025-04-17T22:54:39.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Warp points have been removed from station AI cores. Im not dealing with
+        that bloat in the warp menu from AI ships. 
+  id: 75
+  time: '2025-04-18T01:13:37.0000000+00:00'
+- author: SuperJoelD00D
+  changes:
+    - type: Tweak
+      message: NCMC signs are now lore-accurate!
+  id: 76
+  time: '2025-04-18T01:22:55.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed pirate cove not spawning.
+    - type: Tweak
+      message: >-
+        The scheduler for "derelict" AI ship spawns has been tuned (and fixed). 
+        There is now a minimum time of 90 minutes from round-start before any
+        can spawn in, and a min-max time between events of 60-90 minutes.
+  id: 77
+  time: '2025-04-18T03:32:37.0000000+00:00'

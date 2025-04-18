@@ -10,6 +10,7 @@ namespace Content.Client.Shuttles.UI
     {
         private readonly ButtonGroup _buttonGroup = new();
         public event Action<NetEntity?, InertiaDampeningMode>? OnInertiaDampeningModeChanged;
+        public event Action<NetEntity?, float>? OnMaxShuttleSpeedChanged;
 
         private void NfInitialize()
         {
@@ -19,6 +20,10 @@ namespace Content.Client.Shuttles.UI
             // Frontier - Maximum IFF Distance
             MaximumIFFDistanceValue.GetChild(0).GetChild(1).Margin = new Thickness(8, 0, 0, 0);
             MaximumIFFDistanceValue.OnValueChanged += args => OnRangeFilterChanged(args);
+
+            // Frontier - Maximum Shuttle Speed
+            MaximumShuttleSpeedValue.GetChild(0).GetChild(1).Margin = new Thickness(8, 0, 0, 0);
+            MaximumShuttleSpeedValue.OnValueChanged += args => OnMaxSpeedChanged(args);
 
             DampenerOff.OnPressed += _ => SetDampenerMode(InertiaDampeningMode.Off);
             DampenerOn.OnPressed += _ => SetDampenerMode(InertiaDampeningMode.Dampen);
@@ -59,6 +64,13 @@ namespace Content.Client.Shuttles.UI
         private void OnRangeFilterChanged(int value)
         {
             NavRadar.MaximumIFFDistance = (float) value;
+        }
+
+        // Frontier - Maximum Shuttle Speed
+        private void OnMaxSpeedChanged(int value)
+        {
+            _entManager.TryGetNetEntity(_shuttleEntity, out var shuttle);
+            OnMaxShuttleSpeedChanged?.Invoke(shuttle, value);
         }
 
         private void NfAddShuttleDesignation(EntityUid? shuttle)

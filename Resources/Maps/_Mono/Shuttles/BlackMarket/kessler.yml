@@ -462,7 +462,7 @@ entities:
       - 226
       - 230
       - 224
-- proto: AirlockExternalGlassPirateLocked
+- proto: AirlockExternalGlassRogueLocked
   entities:
   - uid: 6
     components:
@@ -484,7 +484,7 @@ entities:
     - type: Transform
       pos: -4.5,-9.5
       parent: 1
-- proto: AirlockHatchPirateLocked
+- proto: AirlockHatchRogueLocked
   entities:
   - uid: 10
     components:
@@ -496,7 +496,7 @@ entities:
     - type: Transform
       pos: -0.5,-4.5
       parent: 1
-- proto: AirlockShuttleSyndicatePirateLocked
+- proto: AirlockShuttleSyndicateRogueLocked
   entities:
   - uid: 12
     components:

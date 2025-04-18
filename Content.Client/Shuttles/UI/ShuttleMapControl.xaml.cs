@@ -45,6 +45,11 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
     /// </summary>
     public bool FtlMode;
 
+    /// <summary>
+    /// Shows only the FTL range circle without cursor targeting elements.
+    /// </summary>
+    public bool ShowFTLRangeOnly;
+
     private Angle _ftlAngle;
 
     /// <summary>
@@ -259,7 +264,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 
         // Draw our FTL range + no FTL zones
         // Do it up here because we want this layered below most things.
-        if (FtlMode)
+        if (FtlMode || ShowFTLRangeOnly)
         {
             if (EntManager.TryGetComponent<TransformComponent>(_shuttleEntity, out var shuttleXform))
             {
@@ -409,7 +414,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
         var mouseLocalPos = GetLocalPosition(mousePos);
 
         // Draw dotted line from our own shuttle entity to mouse.
-        if (FtlMode)
+        if (FtlMode && !ShowFTLRangeOnly)
         {
             if (mousePos.Window != WindowId.Invalid)
             {

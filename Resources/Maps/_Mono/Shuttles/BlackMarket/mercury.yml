@@ -889,7 +889,7 @@ entities:
       - 918
       - 897
       - 896
-- proto: AirlockExternalGlassPirateLocked
+- proto: AirlockExternalGlassRogueLocked
   entities:
   - uid: 10
     components:
@@ -926,7 +926,7 @@ entities:
     - type: Transform
       pos: -0.5,3.5
       parent: 1
-- proto: AirlockHatchPirateLocked
+- proto: AirlockHatchRogueLocked
   entities:
   - uid: 17
     components:
@@ -983,7 +983,7 @@ entities:
     - type: Transform
       pos: -4.5,0.5
       parent: 1
-- proto: AirlockShuttleSyndicatePirateLocked
+- proto: AirlockShuttleSyndicateRogueLocked
   entities:
   - uid: 589
     components:
