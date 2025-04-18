@@ -1,5 +1,7 @@
 using System.Linq;
 using Content.Shared.Administration.Logs;
+using Content.Shared.Clothing.Components;
+using Content.Shared.Clothing.EntitySystems;
 using Content.Shared.CombatMode;
 using Content.Shared.Cuffs;
 using Content.Shared.Cuffs.Components;
@@ -102,6 +104,18 @@ public abstract class SharedStrippableSystem : EntitySystem
 
         var hasEnt = _inventorySystem.TryGetSlotEntity(strippable, args.Slot, out var held, inventory);
 
+        // Check if this could be a clothing swap scenario
+        if (userHands.ActiveHandEntity != null && hasEnt &&
+            TryComp<ClothingComponent>(userHands.ActiveHandEntity.Value, out _) &&
+            TryComp<ClothingComponent>(held, out _))
+        {
+            // Try to handle it as a clothing swap
+            var clothingSwapSystem = EntityManager.EntitySysManager.GetEntitySystem<ClothingSwapSystem>();
+            if (clothingSwapSystem.TrySwapClothing(user, strippable.Owner, args.Slot))
+                return;
+        }
+
+        // Fall back to normal strip behavior
         if (userHands.ActiveHandEntity != null && !hasEnt)
             StartStripInsertInventory((user, userHands), strippable.Owner, userHands.ActiveHandEntity.Value, args.Slot);
         else if (hasEnt)
