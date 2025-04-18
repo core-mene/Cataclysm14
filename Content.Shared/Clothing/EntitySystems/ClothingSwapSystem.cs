@@ -24,63 +24,6 @@ public sealed class ClothingSwapSystem : EntitySystem
         
         // Subscribe to the interaction event for when a player clicks on another item with an item
         SubscribeLocalEvent<ClothingComponent, InteractUsingEvent>(OnInteractUsing);
-        
-        // Subscribe to the Use event (Z key) globally instead of for ClothingComponent
-        // This avoids the conflict with ClothingSystem
-        SubscribeLocalEvent<UseInHandEvent>(OnGlobalUseInHand);
-    }
-    
-    /// <summary>
-    /// Handles the Z key interaction for clothing swap
-    /// </summary>
-    private void OnGlobalUseInHand(UseInHandEvent args)
-    {
-        if (args.Handled)
-            return;
-            
-        // Get the user and their hands
-        var user = args.User;
-        
-        // Check for hands component and active hand
-        if (!TryComp<HandsComponent>(user, out var handsComponent) || 
-            handsComponent.ActiveHand == null || 
-            handsComponent.ActiveHand.HeldEntity == null)
-            return;
-            
-        // Get the held item
-        var heldItem = handsComponent.ActiveHand.HeldEntity.Value;
-            
-        // Skip if the item isn't clothing
-        if (!TryComp<ClothingComponent>(heldItem, out var heldClothing))
-            return;
-
-        // Get all slots that this clothing item could fit into
-        if (_inventorySystem.TryGetSlots(user, out var slotDefinitions))
-        {
-            foreach (var slotDef in slotDefinitions)
-            {
-                // Check if this clothing can fit in this slot
-                if ((heldClothing.Slots & slotDef.SlotFlags) == 0)
-                    continue;
-                    
-                // Check if there's an entity in the slot
-                if (!_inventorySystem.TryGetSlotEntity(user, slotDef.Name, out var slotEntity))
-                    continue;
-                    
-                // Check if the entity in the slot is clothing
-                if (!TryComp<ClothingComponent>(slotEntity, out var targetClothing))
-                    continue;
-                    
-                // Make sure the slot types match
-                if ((targetClothing.Slots & heldClothing.Slots) == 0)
-                    continue;
-                    
-                // We found a compatible occupied slot - perform the swap
-                SwapClothing(user, heldItem, heldClothing, slotEntity.Value, targetClothing, slotDef.Name);
-                args.Handled = true;
-                return;
-            }
-        }
     }
 
     private void OnInteractUsing(EntityUid uid, ClothingComponent targetClothing, InteractUsingEvent args)
@@ -156,7 +99,7 @@ public sealed class ClothingSwapSystem : EntitySystem
     {
         // Determine the entity whose clothes we're actually swapping
         // For the strip menu, this is the target entity, not the user
-        // For self-use (Z key or clicking on your own clothing), this is the user
+        // For self-use (clicking on your own clothing), this is the user
         var clothingOwner = targetClothing.InSlot != null ? 
             _containerSystem.TryGetContainingContainer(targetItem, out var container) ? container.Owner : user : 
             user;
