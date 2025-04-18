@@ -329,7 +329,7 @@
   - AiHolder
   suffix: Empty
   components:
-  - type: WarpPoint
+  #- type: WarpPoint # Mono - comment out
   - type: ContainerComp
     proto: AiHeld
     container: station_ai_mind_slot
@@ -457,8 +457,8 @@
   categories: [ HideSpawnMenu, DoNotMap ]
   components:
   - type: NoFTL
-  - type: WarpPoint
-    follow: true
+  #- type: WarpPoint # Mono - comment out
+  #  follow: true
   - type: Eye
     pvsScale: 1.5
   - type: Visibility
@@ -479,8 +479,8 @@
   components:
   - type: Transform
     anchored: true
-  - type: WarpPoint
-    follow: true
+  #- type: WarpPoint # Mono - comment out
+  #  follow: true
   - type: Eye
   - type: ContentEye
   - type: Examiner
