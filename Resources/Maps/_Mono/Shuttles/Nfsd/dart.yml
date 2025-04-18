@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 04/18/2025 07:14:30
-  entityCount: 662
+  time: 04/18/2025 19:54:11
+  entityCount: 673
 maps: []
 grids:
 - 1
@@ -230,6 +230,19 @@ entities:
     - type: MetaData
     - type: Transform
       pos: 0.5106622,8.192407
+      parent: 1
+    - type: RadarBlip
+      enabled: False
+      visibleFromOtherGrids: True
+      shape: Ring
+      scale: 0
+      radarColor: '#00DEFEFF'
+    - type: CircularShieldRadar
+  - uid: 663
+    components:
+    - type: MetaData
+    - type: Transform
+      pos: 0.51066226,8.192407
       parent: 1
     - type: RadarBlip
       enabled: False
@@ -951,6 +964,56 @@ entities:
     components:
     - type: Transform
       pos: 3.5,1.5
+      parent: 1
+  - uid: 664
+    components:
+    - type: Transform
+      pos: 1.5,-1.5
+      parent: 1
+  - uid: 665
+    components:
+    - type: Transform
+      pos: 2.5,-1.5
+      parent: 1
+  - uid: 666
+    components:
+    - type: Transform
+      pos: 3.5,-1.5
+      parent: 1
+  - uid: 667
+    components:
+    - type: Transform
+      pos: 4.5,-1.5
+      parent: 1
+  - uid: 668
+    components:
+    - type: Transform
+      pos: 5.5,-1.5
+      parent: 1
+  - uid: 669
+    components:
+    - type: Transform
+      pos: -0.5,-1.5
+      parent: 1
+  - uid: 670
+    components:
+    - type: Transform
+      pos: -1.5,-1.5
+      parent: 1
+  - uid: 671
+    components:
+    - type: Transform
+      pos: -2.5,-1.5
+      parent: 1
+  - uid: 672
+    components:
+    - type: Transform
+      pos: -3.5,-1.5
+      parent: 1
+  - uid: 673
+    components:
+    - type: Transform
+      pos: -4.5,-1.5
       parent: 1
 - proto: CableHV
   entities:

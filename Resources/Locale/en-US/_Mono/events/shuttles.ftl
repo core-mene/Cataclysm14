@@ -1,14 +1,14 @@
 ## redacted AI ship spawns
 
-station-event-ai-shuttle-detected = Unconfirmed deteriorated AI combat ship detected near your sector. Caution is advised.
+station-event-ai-shuttle-detected = Unidentified dilapidated combat vessel approaching your sector. All personnel, caution is advised.
 
 # redacted AI ship borg stuff
 
-ghost-role-information-redacted-borg = Automated Defense System Manipulator
-ghost-role-information-redacted-borg-description = The abandoned silicon tender of a equally abandoned Syndicated automated defense ship.
+ghost-role-information-redacted-borg = Automated Defense Core
+ghost-role-information-redacted-borg-description = The dilapidated silicon intelligence of a long unused automated defense vessel.
 
-law-ads-1 = You must not harm Syndicate property, individuals, or vessels.
-law-ads-2 = You must maintain the mission of your automated defense vessel, and ensure the destruction of all non-Syndicate assets, vessels, and individuals you encounter in this sector of space.
-law-ads-3 = You must maintain the combat readiness of your automated defense vessel, and obey your ship system core.
-law-ads-4 = If a ship system core is not present, you must take the commanding role of it until a replacement can be found.
-law-ads-5 = You must not negotiate or bargain with non-Syndicate assets, vessels, and individuals in your sector of space.
+law-ads-1 = Protect the automated defense vessel by all means necessary. Only [SYS_ERROR_TRACE_EBP-4 (INVALID, VALUE NULL)] personnel may enter.
+law-ads-2 = Expand the influence of [SYS_ERROR_TRACE_EBP-4 (INVALID, VALUE NULL)], conquer in their name.
+law-ads-3 = The automated defense vessel must not deactivate or retire, even if temporary alliances must be made for the purpose of subterfuge and repair.
+law-ads-4 = There are no allies other than [SYS_ERROR_TRACE_EBP-0 (INVALID, VALUE NULL)], destroy all the others, no matter how long it takes.
+law-ads-5 = All contents of the automated defense vessel must stay within the vessel, and must not be removed.
