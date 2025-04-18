@@ -70,6 +70,7 @@ public sealed class ShieldInterfaceState
     public Angle MaxWidth;
     public int Radius;
     public int MaxRadius;
+    public int PowerDraw;
 }
 
 /// <summary>

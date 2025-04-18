@@ -261,7 +261,8 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
             Width = shield.Width,
             MaxWidth = shield.MaxWidth,
             Radius = shield.Radius,
-            MaxRadius = shield.MaxRadius
+            MaxRadius = shield.MaxRadius,
+            PowerDraw = shield.DesiredDraw
         };
 
         _uiSys.SetUiState(uid, CircularShieldConsoleUiKey.Key, new ShieldConsoleBoundsUserInterfaceState(
@@ -317,6 +318,8 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         UpdatePowerDraw(console.BoundShield.Value, shield);
 
         Dirty(console.BoundShield.Value, shield);
+
+        UpdateConsoleState(uid, console);
     }
 
     //this is silly, but apparently sink component on shields does not contain linked sources on startup
@@ -534,6 +537,12 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         else if (shield.DesiredDraw > 0)
         {
             shield.Powered = false;
+        }
+        
+        // Update console UI if bound to display new power consumption
+        if (shield.BoundConsole != null && EntityManager.EntityExists(shield.BoundConsole.Value))
+        {
+            UpdateConsoleState(shield.BoundConsole.Value);
         }
     }
 

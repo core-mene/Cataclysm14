@@ -16,6 +16,7 @@
                 <BoxContainer Orientation="Vertical" HorizontalAlignment="Center">
                     <RichTextLabel Name="ShieldPowerStatusLabel" HorizontalAlignment="Center" StyleClasses="LabelKeyText" />
                     <RichTextLabel Name="ShieldActiveStatusLabel" HorizontalAlignment="Center" StyleClasses="LabelKeyText" />
+                    <RichTextLabel Name="ShieldPowerDrawLabel" HorizontalAlignment="Center" StyleClasses="LabelKeyText" />
                 </BoxContainer>
             </controls:StripeBack>
             <Button Name="ShieldEnableButton" Text="{Loc 'shipevent-shieldconsole-enablebutton'}" Margin="0 0 0 10" />
