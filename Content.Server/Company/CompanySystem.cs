@@ -30,15 +30,12 @@ public sealed class CompanySystem : EntitySystem
         "Brigmedic",
         "NFDetective",
         "PublicAffairsLiaison",
-        "Cadet"
     };
 
     private readonly HashSet<string> _rogueJobs = new()
     {
         "PirateCaptain",
-        "PirateFirstMate",
-        "Pirate",
-        "Prisoner"
+        "PirateFirstMate"
     };
 
     public override void Initialize()
