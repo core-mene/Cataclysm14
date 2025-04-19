@@ -403,6 +403,42 @@
     - state: ai
       shader: unshaded
 
+  # MONO CHANGES START - ROUGE AI CORE
+
+- type: entity
+  id: PlayerStationAiRedacted
+  parent: PlayerStationAiEmpty
+  suffix: Job spawn, Remnant
+  components:
+  - type: ContainerFill
+    containers:
+      station_ai_mind_slot:
+      - StationAiBrainRedacted
+  - type: Sprite
+    sprite: Mobs/Silicon/station_ai.rsi
+    layers:
+    - state: base
+    - state: ai
+      shader: unshaded
+
+- type: entity
+  id: StationAiBrainRedacted
+  parent: StationAiBrain
+  categories: [ HideSpawnMenu, DoNotMap ]
+  components:
+  - type: Sprite
+  - type: SiliconLawProvider
+    laws: Redacted
+  - type: GhostRole
+    name: ghost-role-information-redacted-core
+    description: ghost-role-information-redacted-core-description
+    rules: ghost-role-information-silicon-rules
+    raffle:
+      settings: default
+  - type: GhostTakeoverAvailable
+
+# MONO CHANGES END
+
 # The actual brain inside the core
 - type: entity
   id: StationAiBrain

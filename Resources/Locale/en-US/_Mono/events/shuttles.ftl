@@ -4,7 +4,10 @@ station-event-ai-shuttle-detected = Unidentified dilapidated combat vessel appro
 
 # redacted AI ship borg stuff
 
-ghost-role-information-redacted-borg = Automated Defense Core
+ghost-role-information-redacted-core = Automated Defense Ship AI Core
+ghost-role-information-redacted-core-description = The dilapidated silicon intelligence of a long unused automated defense vessel.
+
+ghost-role-information-redacted-borg = Automated Defense Ship Manipulator Module
 ghost-role-information-redacted-borg-description = The dilapidated silicon intelligence of a long unused automated defense vessel.
 
 law-ads-1 = Protect the automated defense vessel by all means necessary. Only [SYS_ERROR_TRACE_EBP-4 (INVALID, VALUE NULL)] personnel may enter.
