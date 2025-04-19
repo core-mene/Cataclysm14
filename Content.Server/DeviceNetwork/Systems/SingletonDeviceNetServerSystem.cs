@@ -2,6 +2,7 @@
 using Content.Server.DeviceNetwork.Components;
 using Content.Server.Medical.CrewMonitoring;
 using Content.Server.Station.Systems;
+using Content.Shared.DeviceNetwork.Components;
 using Content.Shared.Power;
 using Robust.Shared.Map;
 
