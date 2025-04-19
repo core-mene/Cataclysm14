@@ -1,8 +1,8 @@
 - type: entity
   id: CircularShieldConsole
   name: shield control console
-  parent: BaseComputer
-  suffix: Theta
+  parent: BaseComputerAiAccess # Mono
+  suffix: Theta, CircularShield # Mono
   components:
     - type: CircularShieldConsole
     - type: ActivatableUI
@@ -40,12 +40,12 @@
   id: CircularShieldBase
   name: MS-225 shield generator
   parent: BaseStructure
-  suffix: Theta
+  suffix: Theta, CircularShield # Mono
   components:
     - type: CircularShield
-      consumptionPerM2: 0.35 # too much at 1
+      consumptionPerM2: 0.35 # Mono - too much at 1
       maxWidth: 360
-      maxRadius: 50
+      maxRadius: 100 # Mono - 2x
       color: "#00DEFE"
       effects:
         - !type:CircularShieldTempSpeedChangeEffect

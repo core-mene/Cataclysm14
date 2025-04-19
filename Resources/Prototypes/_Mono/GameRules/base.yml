@@ -5,10 +5,10 @@
     - type: BasicStationEventScheduler
       scheduledGameRules: !type:NestedSelector
         tableId: MonoAISTCEventsTable
-      minimumTimeUntilFirstEvent: 5400 # 90 minutes
+      minimumTimeUntilFirstEvent: 10800 # 180 minutes
       minMaxEventTiming:
-        min: 3600 # 60 minutes between events
-        max: 5400 # 90 minutes between events
+        min: 5400 # 90 minutes between events
+        max: 9000 # 150 minutes between events
 
 - type: entityTable
   id: MonoAISTCEventsTable

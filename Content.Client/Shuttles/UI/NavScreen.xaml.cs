@@ -7,6 +7,7 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Physics.Components;
+using Robust.Shared.Prototypes;
 
 namespace Content.Client.Shuttles.UI;
 
@@ -14,6 +15,7 @@ namespace Content.Client.Shuttles.UI;
 public sealed partial class NavScreen : BoxContainer
 {
     [Dependency] private readonly IEntityManager _entManager = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     private SharedTransformSystem _xformSystem;
 
     private EntityUid? _consoleEntity; // Entity of controlling console
@@ -46,8 +48,33 @@ public sealed partial class NavScreen : BoxContainer
             ? null // If empty, do not filter
             : (entity, grid, iff) => // Otherwise use simple search criteria
             {
-                _entManager.TryGetComponent<MetaDataComponent>(entity, out var metadata);
-                return metadata != null && metadata.EntityName.Contains(text, StringComparison.OrdinalIgnoreCase);
+                // Check entity name
+                if (_entManager.TryGetComponent<MetaDataComponent>(entity, out var metadata) && 
+                    metadata.EntityName.Contains(text, StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+                
+                // Check company name
+                if (_entManager.TryGetComponent<Content.Shared.Company.CompanyComponent>(entity, out var companyComp) &&
+                    !string.IsNullOrEmpty(companyComp.CompanyName))
+                {
+                    // Try to match the company ID directly
+                    if (companyComp.CompanyName.Contains(text, StringComparison.OrdinalIgnoreCase))
+                    {
+                        return true;
+                    }
+                    
+                    // Try to match company name from prototype
+                    if (_prototypeManager.TryIndex<Content.Shared.Company.CompanyPrototype>(
+                        companyComp.CompanyName, out var prototype) && 
+                        prototype.Name.Contains(text, StringComparison.OrdinalIgnoreCase))
+                    {
+                        return true;
+                    }
+                }
+                
+                return false;
             };
     }
 

@@ -31,7 +31,7 @@
           False: { visible: false }
 
 - type: entity
-  parent: BaseComputer
+  parent: BaseComputerAiAccess
   id: ComputerGunneryConsole
   name: gunnery control console
   description: Interfaces with the gunnery control server to operate ship weapons.

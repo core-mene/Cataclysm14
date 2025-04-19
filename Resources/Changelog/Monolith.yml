@@ -662,3 +662,42 @@ Entries:
       message: You should no longer gib from space damage!
   id: 80
   time: '2025-04-18T08:11:06.0000000+00:00'
+- author: LukeZurg22
+  changes:
+    - type: Tweak
+      message: New AI Lawset for ADS
+  id: 81
+  time: '2025-04-18T18:11:53.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Derelict AI ships now need more time to spawn in (and have higher
+        cooldowns for spawning), now (should) need whitelist when whitelist is
+        enabled, and now require a sheriff to spawn. Additionally, Zenith can
+        only spawn 3 times now (was 4), and Razor can only spawn 5 times now
+        (was 8).
+    - type: Fix
+      message: >-
+        Ship projectile lifetimes have been lowered again. I accidentally left
+        it on one minute for 20mms. Sorry. 100% FREE LAG
+  id: 82
+  time: '2025-04-18T20:37:20.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: Remnant ships AI core is now a functional ghostrole. Go my Zeniths.
+    - type: Tweak
+      message: Shield gens have double the radius
+    - type: Tweak
+      message: Remnant borgs now get Traffic radio channel.
+    - type: Tweak
+      message: Remnant borgs trade their tools for guns.
+  id: 83
+  time: '2025-04-19T01:00:02.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Tweak
+      message: NSFD -> NCMC radio.
+  id: 84
+  time: '2025-04-19T05:37:28.0000000+00:00'

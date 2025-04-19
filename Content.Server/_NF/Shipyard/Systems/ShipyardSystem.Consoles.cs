@@ -193,6 +193,16 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             PlayDenySound(player, shipyardConsoleUid, component);
             return;
         }
+
+        // Add company information to the shuttle
+        if (TryComp<Content.Shared.Company.CompanyComponent>(player, out var playerCompany) && 
+            !string.IsNullOrEmpty(playerCompany.CompanyName))
+        {
+            var shipCompany = EnsureComp<Content.Shared.Company.CompanyComponent>(shuttleUid);
+            shipCompany.CompanyName = playerCompany.CompanyName;
+            Dirty(shuttleUid, shipCompany);
+        }
+
         EntityUid? shuttleStation = null;
         // setting up any stations if we have a matching game map prototype to allow late joins directly onto the vessel
         if (_prototypeManager.TryIndex<GameMapPrototype>(vessel.ID, out var stationProto))
