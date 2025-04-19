@@ -5,3 +5,11 @@
   rules: ghost-role-information-silicon-rules
   entityPrototype: PlayerBorgRedacted
   whitelisted: true
+
+- type: ghostRole
+  id: RemnantAICore
+  name: ghost-role-information-redacted-core
+  description: ghost-role-information-redacted-core-description
+  rules: ghost-role-information-silicon-rules
+  entityPrototype: StationAiBrainRedacted
+  whitelisted: true
