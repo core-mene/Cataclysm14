@@ -17,6 +17,8 @@
     maxOccurrences: 3
     requiredJobs:
       Sheriff: 1
+  - type: GameRule
+    minPlayers: 25
   - type: LoadMapRule
     preloadedGrid: AIZenith
 
@@ -32,5 +34,7 @@
     maxOccurrences: 5
     requiredJobs:
       Sheriff: 1
+  - type: GameRule
+    minPlayers: 15
   - type: LoadMapRule
     preloadedGrid: AIRazor
