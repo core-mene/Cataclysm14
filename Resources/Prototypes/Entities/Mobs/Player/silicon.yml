@@ -456,7 +456,7 @@
   description: The AI's viewer.
   categories: [ HideSpawnMenu, DoNotMap ]
   components:
-  - type: NoFTL
+  #- type: NoFTL # Mono - comment out
   #- type: WarpPoint # Mono - comment out
   #  follow: true
   - type: Eye
