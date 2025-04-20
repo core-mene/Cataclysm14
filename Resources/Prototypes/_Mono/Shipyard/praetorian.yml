@@ -5,15 +5,15 @@
 # Shuttle Notes:
 #
 - type: vessel
-  id: Archer
+  id: Praetorian
   parent: BaseVessel
-  name: NGC-SKR Archer
-  description: A combat ship outfitted with 4 plasma turrets and 6 light autocannons.
-  price: 85200 # the plasma and plastitanium tax is real...
+  name: NGC-SKR Praetorian
+  description: A more compact Archer, outfitted with a shield gen, 4 AK570s, 2 L85s, and 2 MARAUDERS.
+  price: 98250
   category: Medium
   group: Shipyard
   access: Mercenary
-  shuttlePath: /Maps/_Mono/Shuttles/archer.yml
+  shuttlePath: /Maps/_Mono/Shuttles/praetorian.yml
   guidebookPage: Null
   class:
   - Pursuit
@@ -21,16 +21,16 @@
   - Plasma
 
 - type: gameMap
-  id: Archer
-  mapName: 'NGC-SKR Archer'
-  mapPath: /Maps/_Mono/Shuttles/archer.yml
+  id: Praetorian
+  mapName: 'NGC-SKR Praetorian'
+  mapPath: /Maps/_Mono/Shuttles/praetorian.yml
   minPlayers: 0
   stations:
-    Archer:
+    Praetorian:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Archer {1}'
+          mapNameTemplate: 'Praetorian {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
