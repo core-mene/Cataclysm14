@@ -33,6 +33,23 @@
     price: 80 # Frontier: 100<80 - TODO: material value rework
 
 - type: entity
+  parent: CrateBaseWeldable
+  id: CrateWood
+  name: wooden crate
+  components:
+  - type: Icon
+    sprite: Structures/Storage/Crates/wood.rsi
+  - type: Sprite
+    sprite: Structures/Storage/Crates/wood.rsi
+  - type: Construction
+    graph: CrateWood
+    node: cratewood
+    containers:
+    - entity_storage
+  - type: StaticPrice
+    price: 40 # Monolith
+
+- type: entity
   parent: CratePlastic
   id: CrateFreezer
   name: freezer

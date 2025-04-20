@@ -42,6 +42,18 @@
   icon: { sprite: Structures/Storage/Crates/plastic.rsi, state: icon }
   objectType: Structure
 
+
+- type: construction
+  name: wooden crate
+  id: CrateWood
+  graph: CrateWood
+  startNode: start
+  targetNode: cratewood
+  category: construction-category-storage
+  description: A wooden crate for storing things.
+  icon: { sprite: Structures/Storage/Crates/wood.rsi, state: icon }
+  objectType: Structure
+
 - type: construction
   name: cardboard box
   id: BigBox
