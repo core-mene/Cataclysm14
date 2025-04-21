@@ -460,6 +460,8 @@
     color: "#FF8888" # Frontier: white<FF8888
     energy: 0.5
   - type: GatheringProjectile
+  - type: MiningGatheringSoft # mono
+  - type: MiningGatheringHard # mono
 
 - type: entity
   id: BulletCharge
