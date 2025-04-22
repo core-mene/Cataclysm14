@@ -30,6 +30,7 @@ public sealed class CompanySystem : EntitySystem
         "Brigmedic",
         "NFDetective",
         "PublicAffairsLiaison",
+        "DirectorOfCare"
     };
 
     private readonly HashSet<string> _rogueJobs = new()
