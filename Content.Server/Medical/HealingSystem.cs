@@ -74,13 +74,16 @@ public sealed class HealingSystem : EntitySystem
         // Heal some bloodloss damage.
         if (healing.BloodlossModifier != 0)
         {
-            if (!TryComp<BloodstreamComponent>(entity, out var bloodstream))
+            if (!TryComp<BloodstreamComponent>(entity.Owner, out var bloodstream))
                 return;
             var isBleeding = bloodstream.BleedAmount > 0;
             _bloodstreamSystem.TryModifyBleedAmount(entity.Owner, healing.BloodlossModifier);
             if (isBleeding != bloodstream.BleedAmount > 0)
             {
-                _popupSystem.PopupEntity(Loc.GetString("medical-item-stop-bleeding"), entity, args.User);
+                if (entity.Owner == args.User)
+                    _popupSystem.PopupEntity(Loc.GetString("medical-item-stop-bleeding-self"), entity, args.User);
+                else
+                    _popupSystem.PopupEntity(Loc.GetString("medical-item-stop-bleeding", ("target", Identity.Entity(entity.Owner, EntityManager))), entity, args.User);
             }
         }
 
