@@ -5,32 +5,33 @@
 # Shuttle Notes:
 #
 - type: vessel
-  id: Archer
+  id: PraetorianEXPD
   parent: BaseVessel
-  name: NGC-SKR Archer
-  description: THIS IS NOT A EXPEDITION SHIP. THIS IS A MERCENARY SHIP. A combat ship outfitted with 4 plasma turrets and 6 light autocannons.
-  price: 85200 # the plasma and plastitanium tax is real...
+  name: NGC-SKR Praetorian-EX
+  description: A Praetorian outfitted with a nav computer for expeditions. Other than that, functionally almost the same.
+  price: 126900 # 25% markup
   category: Medium
   group: Expedition
   access: Mercenary
-  shuttlePath: /Maps/_Mono/Shuttles/archer.yml
+  shuttlePath: /Maps/_Mono/Shuttles/praetorian_expd.yml
   guidebookPage: Null
   class:
   - Pursuit
+  - Expedition
   engine:
-  - Plasma
+  - Uranium
 
 - type: gameMap
-  id: Archer
-  mapName: 'NGC-SKR Archer'
-  mapPath: /Maps/_Mono/Shuttles/archer.yml
+  id: PraetorianEXPD
+  mapName: 'NGC-SKR Praetorian-EX'
+  mapPath: /Maps/_Mono/Shuttles/Expedition/praetorian_expd.yml
   minPlayers: 0
   stations:
-    Archer:
+    PraetorianEXPD:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Archer {1}'
+          mapNameTemplate: 'Praetorian-EX {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
