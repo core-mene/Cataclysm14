@@ -1,7 +1,7 @@
 test-description = A collective union of hard-working men and women that go from job to job. A miscellaneous group of individuals misplaced by the Armada. The Gas New Galactic (GNG) makes profound gas and heavy vessel exports.
 
-gas-new-galactic-description = The Gas New Galactic (GNG) makes profound gas and heavy vessel exports.
+gas-new-galactic-description = The state of Gas New Galactic (GNG) was created by Roland Esau, brother of the former CEO of the SIC. Though at first a corporate entity, “Gas New Galactic Industries” corporation established a large mining colony on the border of rogue space that proved to be a riling success. The colonial surge to one of the last surviving plasma worlds in the rogue sector on the edge of space granted substantial sway in the New Galactic Congress’ space, leading to their official recognition as a sovereign entity. GNG itself does not hold elections, and is ruled by an elite class of executives. As their name and origins imply, the GNG’s most profound exports are that of plasma, tritium, and heavy tanker vessels. Their primary trade partners are other members of the NGC.
 
-armadan-exiles-description = A miscellaneous group of individuals displaced by the Armada.
+armadan-exiles-description = A miscellaneous group of individuals whom have been forcibly displaced-by or exiled-from Armadan space. Few of these exiles may speak Comm-Nac, but most speak common. Regardless of each individuals origins, all of the exiles share a common hatred for military intervention and totalitarian authority. Their tenets are as follows, Avoid serving in any and all positions of leadership. Support any other, even at one's own expense. Money is no object. All members have a voice, so long as their message intends to prolong and protect the lives of others. Act on your own accord, wander freely, and take responsibility upon committing wrongdoing.
 
-union-j-description = A collective union of hard-working men and women that go from job to job.
+union-j-description = A group of hard working men and women who make and break things; contractually neutral but often favours the NGC and law enforcement affairs in practice.
