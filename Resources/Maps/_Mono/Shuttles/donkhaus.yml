@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 04/20/2025 03:12:18
-  entityCount: 699
+  time: 04/23/2025 03:25:48
+  entityCount: 705
 maps: []
 grids:
 - 1
@@ -1140,6 +1140,26 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -16.5,-2.5
       parent: 1
+  - uid: 700
+    components:
+    - type: Transform
+      pos: -15.5,-3.5
+      parent: 1
+  - uid: 701
+    components:
+    - type: Transform
+      pos: -14.5,-3.5
+      parent: 1
+  - uid: 702
+    components:
+    - type: Transform
+      pos: -0.5,-3.5
+      parent: 1
+  - uid: 703
+    components:
+    - type: Transform
+      pos: 0.5,-3.5
+      parent: 1
 - proto: BenchSofaCorpLeft
   entities:
   - uid: 28
@@ -2004,6 +2024,16 @@ entities:
     - type: Transform
       pos: 5.5,3.5
       parent: 1
+  - uid: 704
+    components:
+    - type: Transform
+      pos: 8.5,4.5
+      parent: 1
+  - uid: 705
+    components:
+    - type: Transform
+      pos: 9.5,4.5
+      parent: 1
 - proto: CableMV
   entities:
   - uid: 122
@@ -2198,13 +2228,10 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 16.5,2.5
       parent: 1
-- proto: ComputerPowerMonitoring
-  entities:
-  - uid: 502
-    components:
-    - type: Transform
-      pos: 9.5,4.5
-      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
 - proto: ComputerShuttle
   entities:
   - uid: 133
@@ -2213,6 +2240,22 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 16.5,3.5
       parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
+    - type: DeviceLinkSource
+      linkedPorts: {}
+      lastSignals: {}
+      ports:
+      - device-button-1
+      - device-button-2
+      - device-button-3
+      - device-button-4
+      - device-button-5
+      - device-button-6
+      - device-button-7
+      - device-button-8
 - proto: ComputerStationRecords
   entities:
   - uid: 130
@@ -2221,6 +2264,10 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 16.5,4.5
       parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
 - proto: ComputerWithdrawBankATM
   entities:
   - uid: 81
@@ -2229,6 +2276,10 @@ entities:
       rot: 3.141592653589793 rad
       pos: -7.5,4.5
       parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
 - proto: CondimentDispenser
   entities:
   - uid: 2
@@ -3397,7 +3448,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 13.5,2.5
       parent: 1
-- proto: LockerWallMaterialsFuelUraniumFilled
+- proto: LockerWallMaterialsFuelUraniumFilled2
   entities:
   - uid: 503
     components:
@@ -3457,6 +3508,11 @@ entities:
     components:
     - type: Transform
       pos: 7.5,4.5
+      parent: 1
+  - uid: 502
+    components:
+    - type: Transform
+      pos: 9.5,4.5
       parent: 1
 - proto: PosterContrabandAtmosiaDeclarationIndependence
   entities:
@@ -4517,6 +4573,10 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 10.5,-0.5
       parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
 - proto: WallReinforced
   entities:
   - uid: 17
