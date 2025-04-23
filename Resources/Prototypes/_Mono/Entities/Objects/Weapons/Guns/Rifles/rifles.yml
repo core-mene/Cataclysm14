@@ -1,8 +1,8 @@
 - type: entity
-  name: MR-8C DMR
+  name: MR-8C BR
   parent: [BaseWeaponRifle, BaseGunWieldable, BaseC3Contraband]
   id: WeaponRifleMR8C
-  description: The DMR variant of the MR-8 series, firing with incredible accuracy. Chambered in 8x65mm DMR.
+  description: The BR variant of the MR-8 series, firing with incredible accuracy. Chambered in 8x65mm SKR.
   components:
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Rifles/mr8c.rsi
@@ -59,10 +59,13 @@
     sprite: _Mono/Objects/Weapons/Guns/Rifles/mr8c.rsi
   - type: StaticPrice
     price: 1750
-  - type: SpeedModifiedOnWield
-    walkModifier: 0.95
-    sprintModifier: 0.95
-  - type: CursorOffsetRequiresWield
-  - type: EyeCursorOffset
-    maxOffset: 5
-    pvsIncrease: 0.5
+
+    # uncomment all of the following and readd to the yaml when it stops making it shoot offset for some reason
+
+  #- type: SpeedModifiedOnWield
+  #  walkModifier: 0.95
+  #  sprintModifier: 0.95
+  #- type: CursorOffsetRequiresWield
+  #- type: EyeCursorOffset
+  #  maxOffset: 5
+  #  pvsIncrease: 0.5

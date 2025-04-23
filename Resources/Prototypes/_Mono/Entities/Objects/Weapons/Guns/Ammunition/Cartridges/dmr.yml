@@ -1,6 +1,6 @@
 - type: entity
   id: BaseCartridgeDMR
-  name: cartridge (8x65mm DMR)
+  name: cartridge (8x65mm SKR)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
   abstract: true
   components:
@@ -22,7 +22,7 @@
 
 - type: entity
   id: CartridgeDMR
-  name: cartridge (8x65mm DMR)
+  name: cartridge (8x65mm SKR)
   parent: BaseCartridgeDMR
   components:
   - type: CartridgeAmmo

@@ -1,6 +1,6 @@
 - type: entity
   id: BaseMagazineDMR
-  name: DMR magazine (8x65mm DMR)
+  name: MR-8C magazine (8x65mm SKR)
   parent: [BaseItem, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny
   abstract: true
   components:
@@ -33,7 +33,7 @@
 
 - type: entity
   id: MagazineDMREmpty
-  name: DMR magazine (8x65mm DMR any)
+  name: MR-8C magazine (8x65mm SKR any)
   suffix: empty
   parent: BaseMagazineDMR
   components:
@@ -48,7 +48,7 @@
 
 - type: entity
   id: MagazineDMR
-  name: DMR magazine (8x65mm DMR)
+  name: MR-8C magazine (8x65mm SKR)
   parent: BaseMagazineDMR
   components:
   - type: BallisticAmmoProvider
