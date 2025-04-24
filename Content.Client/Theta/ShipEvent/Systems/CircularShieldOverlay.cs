@@ -23,7 +23,7 @@ public sealed class CircularShieldOverlay : Overlay
     private const float EdgeSmoothness = 0.03f;
     private const float Brightness = 0.8f;
 
-    public override OverlaySpace Space => OverlaySpace.WorldSpace;
+    public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowEntities;
 
     public CircularShieldOverlay()
     {
