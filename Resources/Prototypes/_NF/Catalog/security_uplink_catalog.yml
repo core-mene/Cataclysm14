@@ -479,6 +479,106 @@
         - Sheriff
 
 - type: listing
+  id: UplinkSecurityRadPen
+  name:  uplink-security-rad-pen-name
+  description: uplink-security-rad-pen-desc
+  productEntity: RadAutoInjector
+  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: arithpen }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+        - Brigmedic
+
+- type: listing
+  id: UplinkSecurityPyrazinePen
+  name:  uplink-security-pyrazine-pen-name
+  description: uplink-security-pyrazine-pen-desc
+  productEntity: PyraAutoInjector
+  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: pyrapen }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+        - Brigmedic
+
+- type: listing
+  id: UplinkSecurityPuncturasePen
+  name:  uplink-security-puncturase-pen-name
+  description: uplink-security-puncturase-pen-desc
+  productEntity: PunctAutoInjector
+  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: punctpen }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+        - Brigmedic
+
+- type: listing
+  id: UplinkSecurityAntiPoisonPen
+  name:  uplink-security-anti-poison-pen-name
+  description: uplink-security-anti-poison-pen-desc
+  productEntity: AntiPoisonMedipen
+  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: penacid }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+        - Brigmedic
+
+- type: listing
+  id: UplinkSecurityCombatPen
+  name:  uplink-security-combat-pen-name
+  description: uplink-security-combat-pen-desc
+  productEntity: CombatMedipen
+  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: morphen }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+        - Brigmedic
+
+- type: listing
   id: UplinkSecurityEmpRocket
   name:  uplink-security-emprocket-name
   description: uplink-security-emprocket-desc

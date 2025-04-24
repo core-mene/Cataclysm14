@@ -220,3 +220,21 @@ uplink-pirate-accessconfigurator-captain-name = Black Market Access Configurator
 uplink-pirate-accessconfigurator-captain-desc = An access Configurator only sold on the rogue sector market. Lock NGC contraband behind rogue access, today!
 uplink-pirate-radio-implanter-name = Radio Implanter
 uplink-pirate-radio-implanter-desc = Implants a rogue sector radio, allowing covert communication without a headset.
+
+
+#Mono
+
+uplink-security-anti-poison-pen-name = Poison auto-injector
+uplink-security-anti-poison-pen-desc = A rapid dose of anti-poison. Contains ultravasculine and epinephrine.
+
+uplink-security-puncturase-pen-name = Puncturase auto-injector
+uplink-security-puncturase-pen-desc = A rapid dose of puncturase and tranexamic acid, intended for combat applications.
+
+uplink-security-pyrazine-pen-name = Pyrzine auto-injector
+uplink-security-pyrazine-pen-desc = A rapid dose of pyrazine and dermaline, intended for combat applications.
+
+uplink-security-rad-pen-name = Rad auto-injector
+uplink-security-rad-pen-desc = A rapid dose of anti-radiation. Contains arithrazine and bicaridine.
+
+uplink-security-combat-pen-name = Combat Medipen
+uplink-security-combat-pen-desc = A general use shot of omnizine, packaged in a autoinjector.
