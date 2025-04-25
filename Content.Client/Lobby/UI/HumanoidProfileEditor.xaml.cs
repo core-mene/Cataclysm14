@@ -417,9 +417,12 @@ namespace Content.Client.Lobby.UI
             // Clear any existing items
             CompanyButton.Clear();
 
+            var username = _playerManager.LocalPlayer?.Session?.Name; //Lua modified - company login support
+
             // Add all companies from prototypes - use consistent sorting with UpdateCompanyControls
             var companies = _prototypeManager.EnumeratePrototypes<CompanyPrototype>()
-                .Where(c => !c.Disabled) // Filter out disabled companies
+                //.Where(c => !c.Disabled) // Filter out disabled companies
+                .Where(c => !c.Disabled || (username != null && c.Logins.Contains(username))) //Lua modified - company login support
                 .ToList();
             companies.Sort((a, b) => string.Compare(a.Name, b.Name, StringComparison.Ordinal));
 
@@ -1869,8 +1872,11 @@ namespace Content.Client.Lobby.UI
             if (Profile is null)
                 return;
 
+            var username = _playerManager.LocalPlayer?.Session?.Name; //Lua modified - company login support
+
             var companies = _prototypeManager.EnumeratePrototypes<CompanyPrototype>()
-                .Where(c => !c.Disabled) // Filter out disabled companies
+                //.Where(c => !c.Disabled) // Filter out disabled companies
+                .Where(c => !c.Disabled || (username != null && c.Logins.Contains(username))) //Lua modified - company login support
                 .ToList();
             companies.Sort((a, b) => string.Compare(a.Name, b.Name, StringComparison.Ordinal));
 
