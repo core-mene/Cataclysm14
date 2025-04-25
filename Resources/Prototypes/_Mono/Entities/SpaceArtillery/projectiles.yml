@@ -12,7 +12,7 @@
         Radiation: 50
         Structural: 1250
         Heat: 350
-        Ion: 40
+        Ion: 350
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/plasmashot.rsi
     layers:
@@ -47,9 +47,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 7500
-        Blunt: 1750
-        Heat: 350
+        Structural: 10000
+        Blunt: 2250
+        Ion: 1250
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
     layers:
