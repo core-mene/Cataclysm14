@@ -1023,3 +1023,9 @@ Entries:
       message: Garbage collector bugs should now be resolved.
   id: 121
   time: '2025-04-24T19:01:43.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed latejoining on a rogue ship spawning you in CO janitor room.
+  id: 122
+  time: '2025-04-24T20:35:43.0000000+00:00'
