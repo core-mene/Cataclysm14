@@ -38,4 +38,10 @@ public sealed class CompanyPrototype : IPrototype
     /// </summary>
     [DataField("disabled")]
     public bool Disabled { get; private set; } = false;
+
+    /// <summary>
+    /// Access for login in closed company
+    /// </summary>
+    [DataField("logins", required: false)]
+    public List<string> Logins { get; private set; } = new();
 }

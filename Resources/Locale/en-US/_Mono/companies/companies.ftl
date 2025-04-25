@@ -7,3 +7,5 @@ armadan-exiles-description = A miscellaneous group of individuals whom have been
 union-j-description = A group of hard working men and women who make and break things; contractually neutral but often favours the NGC and law enforcement affairs in practice.
 
 # aetherion-dynamics-description = A large corporation hellbent on bulding the best ships and weaponry money can buy. Their agents in the Rogue Frontier specialize in making money and testing the limits of any technology they can get their hands on.
+
+lua-technologies-description = A technocratic corporation developing revolutionary technologies based on the principles of Purspace. A strictly isolated society of scientists where decisions are made solely on the basis of scientific data.
