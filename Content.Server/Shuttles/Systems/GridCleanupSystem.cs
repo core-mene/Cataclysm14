@@ -1,6 +1,7 @@
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
+using Content.Server.Salvage.Expeditions;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -29,6 +30,7 @@ public sealed class GridCleanupSystem : EntitySystem
         // Subscribe to grid events
         SubscribeLocalEvent<GridStartupEvent>(OnGridStartup);
         SubscribeLocalEvent<MapGridComponent, TileChangedEvent>(OnTileChanged);
+        SubscribeLocalEvent<SalvageExpeditionComponent, ComponentStartup>(OnExpeditionStartup);
     }
 
     private void OnGridStartup(GridStartupEvent ev)
@@ -44,6 +46,24 @@ public sealed class GridCleanupSystem : EntitySystem
         CheckGrid(ent);
     }
 
+    private void OnExpeditionStartup(EntityUid uid, SalvageExpeditionComponent component, ComponentStartup args)
+    {
+        // Make sure any grid that gets the expedition component is removed from cleanup
+        if (_pendingCleanup.ContainsKey(uid))
+        {
+            Logger.DebugS("salvage", $"Expedition startup: Removing grid {uid} from cleanup queue");
+            _pendingCleanup.Remove(uid);
+        }
+
+        // Check if this entity also has a grid component and ensure it's not marked for cleanup
+        if (TryComp<MapGridComponent>(uid, out var grid))
+        {
+            // Make sure we don't clean up very small expedition grids
+            var tileCount = CountTiles((uid, grid));
+            Logger.DebugS("salvage", $"Expedition grid {uid} has {tileCount} tiles");
+        }
+    }
+
     private void CheckGrid(Entity<MapGridComponent> ent)
     {
         var gridUid = ent.Owner;
@@ -53,12 +73,31 @@ public sealed class GridCleanupSystem : EntitySystem
         if (_pendingCleanup.ContainsKey(gridUid))
             return;
 
+        // Skip if this is a planet expedition grid
+        if (HasComp<SalvageExpeditionComponent>(gridUid))
+        {
+            Logger.DebugS("salvage", $"CheckGrid: Skipping grid {gridUid} with SalvageExpeditionComponent");
+            return;
+        }
+
+        // Skip if the parent map has a SalvageExpeditionComponent
+        var transform = Transform(gridUid);
+        var mapId = transform.MapID;
+        var mapUid = _mapManager.GetMapEntityId(mapId);
+
+        if (HasComp<SalvageExpeditionComponent>(mapUid))
+        {
+            Logger.DebugS("salvage", $"CheckGrid: Skipping grid {gridUid} on expedition map {mapUid}");
+            return;
+        }
+
         // Count tiles
         var tileCount = CountTiles((gridUid, grid));
 
         // If the tile count is below our threshold, schedule it for deletion
         if (tileCount < MinimumTiles)
         {
+            Logger.DebugS("salvage", $"CheckGrid: Scheduling grid {gridUid} for cleanup with {tileCount} tiles");
             ScheduleGridCleanup(gridUid);
         }
     }
@@ -97,6 +136,26 @@ public sealed class GridCleanupSystem : EntitySystem
                 continue;
             }
 
+            // Skip if this is a planet expedition grid
+            if (HasComp<SalvageExpeditionComponent>(gridUid))
+            {
+                Logger.DebugS("salvage", $"Update: Removing expedition grid {gridUid} from cleanup queue");
+                toRemove.Add(gridUid);
+                continue;
+            }
+
+            // Skip if the parent map has an expedition component
+            var xform = Transform(gridUid);
+            var mapId = xform.MapID;
+            var mapUid = _mapManager.GetMapEntityId(mapId);
+
+            if (HasComp<SalvageExpeditionComponent>(mapUid))
+            {
+                Logger.DebugS("salvage", $"Update: Removing grid {gridUid} on expedition map {mapUid} from cleanup queue");
+                toRemove.Add(gridUid);
+                continue;
+            }
+
             // Verify it still has a grid component
             if (!TryComp<MapGridComponent>(gridUid, out var grid))
             {
@@ -114,6 +173,7 @@ public sealed class GridCleanupSystem : EntitySystem
 
             // Queue the grid for deletion
             QueueDel(gridUid);
+            Logger.DebugS("salvage", $"Update: Queuing grid {gridUid} for deletion with {CountTiles((gridUid, grid))} tiles");
             toRemove.Add(gridUid);
         }
 
