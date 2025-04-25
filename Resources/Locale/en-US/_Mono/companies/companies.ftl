@@ -6,4 +6,4 @@ armadan-exiles-description = A miscellaneous group of individuals whom have been
 
 union-j-description = A group of hard working men and women who make and break things; contractually neutral but often favours the NGC and law enforcement affairs in practice.
 
-# aetherion-dynamics-description = A large corporation hellbent on bulding the best ships and weaponry money can buy. Their agents in the Rogue Frontier specialize in making money and testing the limits of any technology they can get their hands on.
+# aetherion-dynamics-description = Representing the forefront of technological innovation, Aetherion Dynamics is renowned for their invention of the Compressed Gas Launch and Projectile (CGLP) system used in the VX9 turbolaser battery, and additional innovative weapons with little to no consistent philosophy. They have a reputation as high quality rogue space manufacturers and designers with high prices and little to no regulation, making them an appealing company to work for but not to buy from.
