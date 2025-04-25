@@ -67,6 +67,18 @@ public sealed class CompanySystem : EntitySystem
         var playerId = args.Player.UserId.ToString();
         var profileCompany = args.Profile.Company;
 
+        //Lua start: Login support
+        foreach (var companyProto in _prototypeManager.EnumeratePrototypes<CompanyPrototype>())
+        {
+            if (companyProto.Logins.Contains(args.Player.Name))
+            {
+                companyComp.CompanyName = companyProto.ID;
+                Dirty(args.Mob, companyComp);
+                return;
+            }
+        }
+        //Lua end
+
         // Use "None" as fallback for empty company
         if (string.IsNullOrEmpty(profileCompany))
             profileCompany = "None";
