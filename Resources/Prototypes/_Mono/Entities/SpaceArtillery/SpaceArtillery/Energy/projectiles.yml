@@ -1,0 +1,37 @@
+# MARAUDER
+
+- type: entity
+  id: ShipMediumPlasmaProjectile
+  name: plasma projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 50
+        Structural: 1250
+        Heat: 350
+        Ion: 350
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/plasmashot.rsi
+    layers:
+    - state: plasmashot
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 2.5
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 10
+  - type: PointLight
+    color: "#FB00FF"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 125
+    intensitySlope: 3
+    totalIntensity: 35
+    maxTileBreak: 1
