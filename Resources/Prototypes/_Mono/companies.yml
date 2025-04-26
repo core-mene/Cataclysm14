@@ -1,0 +1,59 @@
+# "None" - DO NOT REMOVE!
+- type: company
+  id: None
+  form: Neutral # Do NOT apply "Neutral" to anywhere outside "None"
+  name: None
+  color: "#FFFFFF"
+
+# ====DO NOT TOUCH - ADMIN COMPANIES====
+- type: company
+  id: NGC
+  form: Protagonist
+  name: NGC
+  color: "#047ABD"
+  disabled: true
+
+- type: company
+  id: Rogue
+  form: Antagonist
+  name: Rogue
+  color: "#8B0000"
+  disabled: true
+# DO NOT TOUCH
+
+# ====NGC / Protag. Companies====
+- type: company
+  id: UnionJ
+  form: Protagonist
+  name: Union J
+  description: union-j-description
+  color: "#FFB266"
+
+- type: company
+  id: ArmadanExiles
+  form: Protagonist
+  name: Armadan Exiles
+  description: armadan-exiles-description
+  color: "#D82918"
+
+- type: company
+  id: GasNewGalactic
+  form: Protagonist
+  name: Gas New Galactic
+  description: gas-new-galactic-description
+  color: "#3DA695"
+
+# ====Rogue / Antag. Companies====
+- type: company
+  id: TheViperGroup
+  form: Antagonist
+  name: The Viper Group
+  color: "#D82918"
+
+- type: company
+  id: AetherionDynamics
+  form: Antagonist
+  name: Aetherion Dynamics
+  color: "#7E72B2"
+
+
