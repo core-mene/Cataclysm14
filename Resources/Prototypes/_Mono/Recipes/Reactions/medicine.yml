@@ -1,5 +1,6 @@
 - type: reaction
   id: Fentanyl
+  impact: Medium
   minTemp: 475
   reactants:
     SpaceDrugs:
@@ -19,6 +20,7 @@
 
 - type: reaction
   id: FentanylVestine
+  impact: Medium
   minTemp: 435
   reactants:
     SpaceDrugs:
@@ -33,6 +35,21 @@
       amount: 1
   products:
     Fentanyl: 5
+
+- type: reaction
+  id: FentanylExplosion
+  impact: High
+  minTemp: 480
+  reactants:
+    Fentanyl:
+      amount: 2
+  effects:
+    - !type:ExplosionReactionEffect
+      explosionType: Default # 15 damage per intensity.
+      maxIntensity: 50
+      intensityPerUnit: 0.25
+      intensitySlope: 5
+      maxTotalIntensity: 50
 
 - type: reaction
   id: FentanylSolidification
