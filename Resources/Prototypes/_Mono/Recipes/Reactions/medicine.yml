@@ -1,0 +1,27 @@
+- type: reaction
+  id: Fentanyl
+  minTemp: 475
+  reactants:
+    SpaceDrugs:
+      amount: 2
+    Desoxyephedrine:
+      amount: 1
+    Plasma:
+      amount: 1
+  products:
+    Fentanyl: 5
+    Plasma: 1
+
+- type: reaction
+  id: FentanylSolidification
+  impact: Low
+  quantized: true
+  minTemp: 375
+  reactants:
+    Fentanyl:
+      amount: 5
+    Tricordrazine:
+      amount: 2
+  effects:
+  - !type:CreateEntityReactionEffect
+    entity: FentanylSolidified

@@ -1,4 +1,79 @@
 # Utility
+- type: listing
+  id: UplinkPirateMedicalBundle
+  name:  uplink-pirate-medical-bundle-name
+  description: uplink-pirate-medical-bundle-desc
+  productEntity: ClothingBackpackDuffelSyndicateMedicalBundleFilled
+  cost:
+    Doubloon: 30
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateChemicalSynthesisKit
+  name:  uplink-pirate-chemical-synthesis-kit-name
+  description: uplink-pirate-chemical-synthesis-kit-desc
+  icon: { sprite: /Textures/Objects/Storage/boxicons.rsi, state: vials }
+  productEntity: ChemicalSynthesisKit
+  cost:
+    Doubloon: 3
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateEmpGrenade
+  name:  uplink-pirate-emp-grenade-name
+  description: uplink-pirate-emp-grenade-desc
+  productEntity: EmpGrenade
+  cost:
+    Doubloon: 1
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateIncendiaryGrenade
+  name:  uplink-pirate-incendiary-grenade-name
+  description: uplink-pirate-incendiary-grenade-desc
+  productEntity: GrenadeIncendiary
+  cost:
+    Doubloon: 2
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateShrapnelGrenade
+  name:  uplink-pirate-shrapnel-grenade-name
+  description: uplink-pirate-shrapnel-grenade-desc
+  productEntity: GrenadeShrapnel
+  cost:
+    Doubloon: 2
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
 
 - type: listing
   id: UplinkPirateCombatMedkit
@@ -8,6 +83,37 @@
   icon: { sprite: Objects/Specific/Medical/firstaidkits.rsi, state: blackkit }
   cost:
     Doubloon: 5
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateEnergyShield
+  name:  uplink-pirate-energy-shield-name
+  description: uplink-pirate-energy-shield-desc
+  icon: { sprite: /Textures/Objects/Weapons/Melee/e_shield.rsi, state: eshield-on }
+  productEntity: EnergyShield
+  cost:
+    Doubloon: 5
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateAgentIDCard
+  name:  uplink-pirate-agent-id-card-name
+  description: uplink-pirate-agent-id-card-desc
+  productEntity: AgentIDCard
+  cost:
+    Doubloon: 6
   categories:
   - UplinkPirateUtility
   conditions:
@@ -33,6 +139,70 @@
       - PirateUplink
 
 - type: listing
+  id: UplinkPirateAntiPoisonPen
+  name:  uplink-pirate-anti-poison-pen-name
+  description: uplink-pirate-anti-poison-pen-desc
+  productEntity: AntiPoisonMedipen
+  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: penacid }
+  cost:
+    Doubloon: 2
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPiratePuncturasePen
+  name:  uplink-pirate-puncturase-pen-name
+  description: uplink-pirate-puncturase-pen-desc
+  productEntity: PunctAutoInjector
+  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: punctpen }
+  cost:
+    Doubloon: 2
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPiratePyrazinePen
+  name:  uplink-pirate-pyrazine-pen-name
+  description: uplink-pirate-pyrazine-pen-desc
+  productEntity: PyraAutoInjector
+  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: pyrapen }
+  cost:
+    Doubloon: 2
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateRadPen
+  name:  uplink-pirate-rad-pen-name
+  description: uplink-pirate-rad-pen-desc
+  productEntity: RadAutoInjector
+  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: arithpen }
+  cost:
+    Doubloon: 2
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
   id: UplinkPirateHyperzine
   name:  uplink-pirate-hyperzine-name
   description: uplink-pirate-hyperzine-desc
@@ -40,6 +210,22 @@
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: stimpen }
   cost:
     Doubloon: 2
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateHypopen
+  name:  uplink-pirate-hypopen-name
+  description: uplink-pirate-hypopen-desc
+  productEntity: HypopenBox
+  icon: { sprite: Objects/Misc/pens.rsi, state: pen }
+  cost:
+    Doubloon: 8
   categories:
   - UplinkPirateUtility
   conditions:
@@ -96,6 +282,22 @@
       tags:
       - PirateUplink
 
+- type: listing
+  id: UplinkPirateImplanterFreelance
+  name:  uplink-pirate-implanter-freelance-name
+  description: uplink-pirate-implanter-freelance-desc
+  icon: { sprite: Objects/Devices/encryption_keys.rsi, state: pirate_label }
+  productEntity: RadioImplanterFreelance
+  cost:
+    Doubloon: 3
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
 # Ammunition
 
 - type: listing
@@ -105,7 +307,7 @@
   productEntity: MagazineShotgun
   icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi, state: pellets }
   cost:
-    Doubloon: 2
+    Doubloon: 1
   categories:
   - UplinkPirateAmmo
   conditions:
@@ -121,6 +323,37 @@
   productEntity: MagazinePistolSubMachineGun
   icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
   cost:
+    Doubloon: 1
+  categories:
+  - UplinkPirateAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateSMGAmmoBox
+  name:  uplink-pirate-smg-ammo-box-name
+  description: uplink-pirate-smg-ammo-box-desc
+  productEntity: MagazineBoxPistol
+  cost: 
+    Doubloon: 1
+  categories:
+  - UplinkPirateAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateShellBoxLethal
+  name:  uplink-pirate-shell-box-lethal-name
+  description: uplink-pirate-shell-box-lethal-desc
+  productEntity: BoxLethalshot
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi, state: lethal }
+  cost: 
     Doubloon: 2
   categories:
   - UplinkPirateAmmo
@@ -130,7 +363,98 @@
       tags:
       - PirateUplink
 
+- type: listing
+  id: UplinkPirateLightRifleMagazineBoxBig
+  name:  uplink-pirate-light-rifle-magazine-box-big-name
+  description: uplink-pirate-light-rifle-magazine-box-big-desc
+  productEntity: MagazineBoxLightRifleBig
+  cost:
+    Doubloon: 2
+  categories:
+  - UplinkPirateAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateMagazineBoxMagnum
+  name:  uplink-pirate-magazine-box-magnum-name
+  description: uplink-pirate-magazine-box-magnum-desc
+  productEntity: MagazineBoxMagnum
+  cost: 
+    Doubloon: 1
+  categories:
+  - UplinkPirateAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPiratebox-MagazineLightRifle
+  name:  uplink-pirate-box-magazine-light-rifle-name
+  description: uplink-pirate-box-magazine-light-rifle-desc
+  productEntity: BoxMagazineLightRifle
+  cost: 
+    Doubloon: 4
+  categories:
+  - UplinkPirateAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateBoxMagazinePistol
+  name:  uplink-pirate-box-magazine-pistol-name
+  description: uplink-pirate-box-magazine-pistol-desc
+  productEntity: BoxMagazinePistol
+  cost: 
+    Doubloon: 1
+  categories:
+  - UplinkPirateAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateSpeedLoaderMagnum
+  name:  uplink-pirate-speed-loader-magnum-name
+  description: uplink-pirate-speed-loader-magnum-desc
+  productEntity: SpeedLoaderMagnum
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
+  cost: 
+    Doubloon: 1
+  categories:
+  - UplinkPirateAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
 # Weapons
+
+- type: listing
+  id: UplinkPirateEnergyCutlass
+  name:  uplink-pirate-energy-cutlass-name
+  description: uplink-pirate-energy-cutlass-desc
+  productEntity: EnergyCutlass
+  cost:
+    Doubloon: 6
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
 
 - type: listing
   id: UplinkPirateC20
@@ -156,6 +480,85 @@
   icon: { sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi, state: icon }
   cost:
     Doubloon: 25
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPiratePython
+  name:  uplink-pirate-python-name
+  description: uplink-pirate-python-desc
+  productEntity: WeaponRevolverPython
+  icon: { sprite: Objects/Weapons/Guns/Revolvers/python.rsi, state: icon }
+  cost:
+    Doubloon: 4
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateViper
+  name:  uplink-pirate-viper-name
+  description: uplink-pirate-viper-desc
+  productEntity: WeaponPistolViper
+  icon: { sprite: Objects/Weapons/Guns/Pistols/viper.rsi, state: icon }
+  cost:
+    Doubloon: 4
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateKanabou
+  name:  uplink-pirate-kanabou-name
+  description: uplink-pirate-kanabou-desc
+  productEntity: Kanabou
+  cost:
+    Doubloon: 10
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateAk
+  name:  uplink-pirate-ak-name
+  description: uplink-pirate-ak-desc
+  productEntity: WeaponRifleAk
+  icon: { sprite: Objects/Weapons/Guns/Rifles/ak.rsi, state: icon }
+  cost:
+    Doubloon: 12
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateLaserGun
+  name:  uplink-pirate-laser-gun-name
+  description: uplink-pirate-laser-gun-desc
+  productEntity: WeaponLaserGun
+  icon: { sprite: Objects/Weapons/Guns/Battery/laser_retro.rsi, state: icon }
+  cost:
+    Doubloon: 4
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -191,6 +594,22 @@
   icon: { sprite: Clothing/OuterClothing/Vests/webvest.rsi, state: icon }
   cost:
     Doubloon: 5
+  categories:
+  - UplinkPirateHardsuits
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateSyndieMask
+  name:  uplink-pirate-syndie-mask-name
+  description: uplink-pirate-syndie-mask-desc
+  productEntity: ClothingMaskGasSyndicate
+  icon: { sprite: Clothing/Mask/gassyndicate.rsi, state: icon }
+  cost:
+    Doubloon: 3
   categories:
   - UplinkPirateHardsuits
   conditions:
