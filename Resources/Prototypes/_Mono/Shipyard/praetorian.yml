@@ -8,7 +8,7 @@
   id: Praetorian
   parent: BaseVessel
   name: NGC-SKR Praetorian
-  description: A more compact and advanced Archer, outfitted with a shield gen, 4 AK570s, 2 L85s, and 2 MARAUDERS.
+  description: A more compact and advanced Archer, outfitted with a shield gen, 4 AK570s, 2 L85s, and 2 MARAUDERS. This ship has a military IFF designation.
   price: 101520
   category: Medium
   group: Shipyard
@@ -30,7 +30,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Praetorian {1}'
+          mapNameTemplate: 'Praetorian MIL{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

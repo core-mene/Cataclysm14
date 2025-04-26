@@ -36,7 +36,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Watchdog {1}'
+          mapNameTemplate: 'Watchdog CO{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

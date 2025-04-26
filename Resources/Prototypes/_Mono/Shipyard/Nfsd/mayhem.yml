@@ -2,7 +2,7 @@
   id: Mayhem
   parent: BaseVessel
   name: SKR Mayhem
-  description: A corvette equipped with missiles and a small holding cell.
+  description: A corvette equipped with missiles and a small holding cell. This ship has a NGC IFF designation.
   price: 115250
   category: Large
   group: Security
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierSecurityVessel
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'Mayhem {1}'
+        mapNameTemplate: 'Mayhem NGC{1}'
         nameGenerator:
           !type:NanotrasenNameGenerator
           prefixCreator: '14'

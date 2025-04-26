@@ -34,7 +34,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Mail Pod {1}'
+          mapNameTemplate: 'Mail Pod CO{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

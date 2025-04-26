@@ -2,7 +2,7 @@
   id: Marauder
   parent: BaseVesselAntag
   name: RG Marauder
-  description: Truly a revolutionary piece of pirate ship design. Contains the bare essentials for piracy.
+  description: Truly a revolutionary piece of pirate ship design. Contains the bare essentials for piracy. This ship has a military IFF designation.
   price: 45600
   category: Medium
   group: BlackMarket
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Marauder {1}'
+          mapNameTemplate: 'Marauder MS{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
