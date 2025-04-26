@@ -1,0 +1,41 @@
+# Author Info
+# GitHub: gurt-yo
+# Discord: thevoicesaregettinglouder__
+
+# Shuttle Notes:
+# gurt
+- type: vessel
+  id: Mcargon
+  parent: BaseVessel
+  name: UNJ Mcargon
+  description: A resturant ship for the most robust of hungry individuals.
+  price: 70000 
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/_Mono/Shuttles/ship1.yml
+  guidebookPage: Null
+  class:
+  - Civilian
+  - Kitchen
+  engine:
+  - AME
+
+- type: gameMap
+  id: Mcargon
+  mapName: 'UNJ Mcargon'
+  mapPath: /Maps/_Mono/Shuttles/ship1.yml
+  minPlayers: 0
+  stations:
+    Mcargon:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Mcargon {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 1, 1 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
