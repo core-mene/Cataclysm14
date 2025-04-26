@@ -15,7 +15,7 @@
     Kelotane:
       amount: 0.5
   products:
-    Fentanyl: 7.5
+    Fentanyl: 5.5
 
 - type: reaction
   id: FentanylVestine
@@ -32,7 +32,7 @@
     Vestine:
       amount: 1
   products:
-    Fentanyl: 10
+    Fentanyl: 5
 
 - type: reaction
   id: FentanylSolidification
@@ -41,9 +41,9 @@
   minTemp: 375
   reactants:
     Fentanyl:
-      amount: 5
+      amount: 7
     Tricordrazine:
       amount: 2
   effects:
-  - !type:CreateEntityReactionEffect
-    entity: FentanylSolidified
+    - !type:CreateEntityReactionEffect
+      entity: FentanylSolidified
