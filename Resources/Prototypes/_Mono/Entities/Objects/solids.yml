@@ -1,6 +1,6 @@
 - type: entity
   name: fentanyl crystal
-  parent: BaseItem
+  parent: [ BaseItem, BaseC3ChemContraband ]
   id: FentanylSolidified
   description: 5u of Fentanyl solidified with Tricordrazine. Worth a lot. Does not refund the Tricordrazine when grinded.
   components:
