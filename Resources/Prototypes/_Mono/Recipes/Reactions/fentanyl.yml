@@ -21,7 +21,6 @@
 - type: reaction
   id: FentanylVestine
   impact: Low
-  minTemp: 435
   reactants:
     SpaceDrugs:
       amount: 2
@@ -34,7 +33,7 @@
     Vestine:
       amount: 1
   products:
-    Fentanyl: 5
+    Fentanyl: 10 # vestine is annoying..
 
 - type: reaction
   id: FentanylExplosion
