@@ -45,7 +45,7 @@
   suffix: Theta, CircularShield # Mono
   components:
     - type: CircularShield
-      consumptionPerM2: 0.35 # Mono - too much at 1
+      consumptionPerM2: 0.55 # Mono - too much at 1
       maxWidth: 360
       maxRadius: 100 # Mono - 2x
       color: "#00DEFE"
@@ -104,14 +104,3 @@
       containers:
         machine_board: !type:Container
         machine_parts: !type:Container
-      # Mono changes start - buffer for power outages
-    - type: Battery
-      maxCharge: 1750
-      startingCharge: 1750
-    - type: ExaminableBattery
-    - type: BatterySelfRecharger
-    - type: ApcPowerReceiverBattery
-      idleLoad: 5
-      batteryRechargeRate: 350
-      batteryRechargeEfficiency: 0.55
-      # Mono changes end

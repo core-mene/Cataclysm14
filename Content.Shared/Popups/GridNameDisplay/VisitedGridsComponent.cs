@@ -1,18 +1,41 @@
+using System.Collections.Generic;
 using Robust.Shared.GameStates;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared.Popups.GridNameDisplay;
 
 /// <summary>
-/// Tracks which grids a player has visited during a session to prevent showing
-/// the grid name popup multiple times for the same grid.
+/// Component that tracks which station/grid entities a player has visited.
+/// Used to prevent showing station name popups every time they enter a grid they've already visited.
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+[RegisterComponent, NetworkedComponent, Access(typeof(VisitedGridsSystem))]
 public sealed partial class VisitedGridsComponent : Component
 {
     /// <summary>
-    /// Set of grid EntityUids the player has already visited.
+    /// Set of grid EntityUids that the player has visited.
+    /// This is used for local tracking on both client and server.
     /// </summary>
-    [DataField, AutoNetworkedField]
-    [ViewVariables(VVAccess.ReadOnly)]
+    [DataField("visitedGrids")]
     public HashSet<EntityUid> VisitedGridUids = new();
+
+    /// <summary>
+    /// Set of grid NetEntities that the player has visited.
+    /// This is used for safe network serialization of entity references.
+    /// </summary>
+    [DataField("visitedGridNetUids")]
+    public HashSet<NetEntity> VisitedGridNetUids = new();
+}
+
+/// <summary>
+/// State class for <see cref="VisitedGridsComponent"/> network serialization.
+/// </summary>
+[Serializable, NetSerializable]
+public sealed class VisitedGridsComponentState : ComponentState
+{
+    public readonly HashSet<NetEntity> VisitedGridNetUids;
+
+    public VisitedGridsComponentState(HashSet<NetEntity> visitedGridNetUids)
+    {
+        VisitedGridNetUids = visitedGridNetUids;
+    }
 }

@@ -6,8 +6,9 @@
   children:
   - L85Guide
   - AK570Guide
-  - MARAUDERGuide
   - CHARONGuide
+  - MARAUDERGuide
+  - RUBICONGuide
   - ASM302Guide
 
 - type: guideEntry
@@ -26,6 +27,12 @@
   id: MARAUDERGuide
   name: guide-entry-marauder
   text: "/ServerInfo/_Mono/Guidebook/Specifications/MARAUDER.xml"
+  priority: 1
+
+- type: guideEntry
+  id: RUBICONGuide
+  name: guide-entry-rubicon
+  text: "/ServerInfo/_Mono/Guidebook/Specifications/RUBICON.xml"
   priority: 1
 
 - type: guideEntry

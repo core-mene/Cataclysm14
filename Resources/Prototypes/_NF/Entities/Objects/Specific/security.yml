@@ -99,6 +99,19 @@
     balance:
       FrontierUplinkCoin: 15
 
+#Mono
+
+- type: entity
+  parent: BaseSecurityUplinkRadio
+  id: BaseSecurityUplinkRadioDeputy
+  suffix: Deputy 10
+  components:
+  - type: Store
+    balance:
+      FrontierUplinkCoin: 10
+
+#Mono End
+
 - type: entity
   name: NCMC deployable barrier
   id: NfsdDeployableBarrier

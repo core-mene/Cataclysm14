@@ -33,15 +33,15 @@ Some ships are equipped with [color=cyan]shield generators[/color]. These absorb
     <GuideEntityEmbed Entity="CircularShieldBase"/>
   </Box>
 
-Due to the rarity of these, they are unable to be looted, and must be scavenged if you wish to outfit your ship with them.
-The most popular shield system for example, the [bold][color=cyan]MS-225[/color][/bold], adds power usage based on the damage of projectiles it absorbs, with approximately [bold][color=coral]35w per point of damage[/color][/bold].
-After [bold]10 seconds[/bold], this power surge will start to dissipate. However there is a base power draw, and it is calculated via the following equation.
+Due to the rarity of these, they are unable to be looted, and must be scavenged if you wish to outfit your ship with them. They can be fabricated if you have the suitable T3 arsenal research for it though.
+The most popular shield system for example, the [bold][color=cyan]MS-225[/color][/bold], adds power usage based on the damage of projectiles it absorbs, with approximately [bold][color=coral]105w per point of damage[/color][/bold].
+After [bold]60 seconds[/bold], this power surge will start to dissipate. However there is a base power draw, and it is calculated via the following equation.
 
 Radius^2 * Shield Width * 0.5 * Power/m^2.
 
   ## Bluespace Drives
 
-  Many large, expedition, and combat ships are equipped with a [color=dodgerblue]Bluespace Drive[/color].
+  Many large, expedition, and combat ships are equipped with a [color=dodgerblue]Bluespace Drive[/color]. These can be fabricated with a T3 experimental research.
 
   <Box>
     <GuideEntityEmbed Entity="MachineFTLDrive"/>

@@ -41,10 +41,10 @@ public sealed partial class CircularShieldComponent : Component
 
     // Power surge mechanics when taking damage
     [DataField("projectileWattPerImpact"), ViewVariables(VVAccess.ReadWrite)]
-    public float ProjectileWattPerImpact = 35f; // Watts per point of projectile damage
+    public float ProjectileWattPerImpact = 105f; // Watts per point of projectile damage
 
     [DataField("damageSurgeDuration"), ViewVariables(VVAccess.ReadWrite)]
-    public float DamageSurgeDuration = 10f; // Duration in seconds before surge dissipates
+    public float DamageSurgeDuration = 60f; // Duration in seconds before surge dissipates
 
     [DataField("currentSurgePower"), ViewVariables(VVAccess.ReadWrite)]
     public float CurrentSurgePower; // Additional watts of power usage from damage

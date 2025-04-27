@@ -8,7 +8,7 @@
   id: Archer
   parent: BaseVessel
   name: NGC-SKR Archer
-  description: A combat ship outfitted with 4 plasma turrets and 6 light autocannons.
+  description: A combat ship outfitted with 4 plasma turrets and 6 light autocannons. This ship has a military IFF designation.
   price: 85200 # the plasma and plastitanium tax is real...
   category: Medium
   group: Shipyard
@@ -30,7 +30,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Archer {1}'
+          mapNameTemplate: 'Archer MIL{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

@@ -34,7 +34,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Parcel {1}'
+          mapNameTemplate: 'Parcel CO{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

@@ -2,7 +2,7 @@
   id: Calypso
   parent: BaseVessel
   name: SKR Calypso
-  description: A heavily-armed corvette with multiple weapon platforms for brawls.
+  description: A heavily-armed corvette with multiple weapon platforms for brawls. This ship has a NGC IFF designation.
   price: 98450
   category: Large
   group: Security
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierSecurityVessel
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'Calypso {1}'
+        mapNameTemplate: 'Calypso NGC{1}'
         nameGenerator:
           !type:NanotrasenNameGenerator
           prefixCreator: '14'

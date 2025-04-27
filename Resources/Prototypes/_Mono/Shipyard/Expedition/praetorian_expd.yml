@@ -8,7 +8,7 @@
   id: PraetorianEXPD
   parent: BaseVessel
   name: NGC-SKR Praetorian-EX
-  description: A Praetorian outfitted with a nav computer for expeditions. Other than that, functionally almost the same.
+  description: A Praetorian outfitted with a nav computer for expeditions. Other than that, functionally almost the same. This ship has a military IFF designation.
   price: 126900 # 25% markup
   category: Medium
   group: Expedition
@@ -31,7 +31,7 @@
       stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Praetorian-EX {1}'
+          mapNameTemplate: 'Praetorian-EX MIL{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

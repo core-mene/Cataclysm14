@@ -2,7 +2,7 @@
   id: Anura
   parent: BaseVessel
   name: SKR Anura
-  description: A medium-sized patrol craft. Equipped with a radar suite, 4 heavy autocannons, and 2 light autocannons. Contains a single holding cell.
+  description: A medium-sized patrol craft. Equipped with a radar suite, 4 heavy autocannons, and 2 light autocannons. This ship has a NGC IFF designation.
   price: 53250
   category: Medium
   group: Security
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierSecurityVessel
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'Anura {1}'
+        mapNameTemplate: 'Anura NGC{1}'
         nameGenerator:
           !type:NanotrasenNameGenerator
           prefixCreator: '14'

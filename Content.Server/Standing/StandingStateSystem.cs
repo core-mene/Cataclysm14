@@ -54,14 +54,14 @@ public sealed class StandingStateSystem : EntitySystem
 
 }
 
-    /// <summary>
-    /// Raised after an entity falls down.
-    /// </summary>
-    public sealed class FellDownEvent : EntityEventArgs
+/// <summary>
+/// Raised after an entity falls down.
+/// </summary>
+public sealed class FellDownEvent : EntityEventArgs
+{
+    public EntityUid Uid { get; }
+    public FellDownEvent(EntityUid uid)
     {
-        public EntityUid Uid { get; }
-        public FellDownEvent(EntityUid uid)
-        {
-            Uid = uid;
-        }
+        Uid = uid;
     }
+}

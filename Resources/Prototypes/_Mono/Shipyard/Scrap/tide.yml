@@ -24,7 +24,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Tide {1}'
+          mapNameTemplate: 'Tide SRP{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

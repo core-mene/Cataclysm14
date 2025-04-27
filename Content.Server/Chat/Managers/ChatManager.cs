@@ -28,10 +28,10 @@ internal sealed partial class ChatManager : IChatManager
 {
     private static readonly Dictionary<string, string> PatronOocColors = new()
     {
-        // I had plans for multiple colors and those went nowhere so...
-        { "nuclear_operative", "#aa00ff" },
-        { "syndicate_agent", "#aa00ff" },
-        { "revolutionary", "#aa00ff" }
+        // Removing the special purple color for patrons, just use default OOC color
+        { "nuclear_operative", "" },
+        { "syndicate_agent", "" },
+        { "revolutionary", "" }
     };
 
     [Dependency] private readonly IReplayRecordingManager _replay = default!;
@@ -251,7 +251,10 @@ internal sealed partial class ChatManager : IChatManager
             var prefs = _preferencesManager.GetPreferences(player.UserId);
             colorOverride = prefs.AdminOOCColor;
         }
-        if (  _netConfigManager.GetClientCVar(player.Channel, CCVars.ShowOocPatronColor) && player.Channel.UserData.PatronTier is { } patron && PatronOocColors.TryGetValue(patron, out var patronColor))
+        if (_netConfigManager.GetClientCVar(player.Channel, CCVars.ShowOocPatronColor) && 
+            player.Channel.UserData.PatronTier is { } patron && 
+            PatronOocColors.TryGetValue(patron, out var patronColor) && 
+            !string.IsNullOrEmpty(patronColor))
         {
             wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", patronColor),("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
         }

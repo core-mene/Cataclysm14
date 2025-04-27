@@ -2,7 +2,7 @@
   id: Mercury
   parent: BaseVesselAntag
   name: RG Mercury
-  description: A light sub-capital missile corvette, equipped with 8x ASM-302 pods and 4x L85 20mms.
+  description: A light sub-capital missile corvette, equipped with 8x ASM-302 pods and 4x L85 20mms. This ship has a military IFF designation.
   price: 105820
   category: Large
   group: BlackMarket
@@ -25,7 +25,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Mercury {1}'
+          mapNameTemplate: 'Mercury MS{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

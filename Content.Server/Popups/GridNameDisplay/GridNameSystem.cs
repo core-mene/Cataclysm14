@@ -16,6 +16,7 @@ public sealed class GridNameSystem : EntitySystem
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly PlayerSystem _playerSystem = default!;
+    [Dependency] private readonly VisitedGridsSystem _visitedGrids = default!;
 
     public override void Initialize()
     {
@@ -54,12 +55,11 @@ public sealed class GridNameSystem : EntitySystem
         var visitedComp = EnsureComp<VisitedGridsComponent>(uid);
 
         // If player has already visited this grid, don't show the name again
-        if (visitedComp.VisitedGridUids.Contains(newGridUid.Value))
+        if (_visitedGrids.HasVisitedGrid(uid, newGridUid.Value, visitedComp))
             return;
 
-        // Add the current grid to the list of visited grids
-        visitedComp.VisitedGridUids.Add(newGridUid.Value);
-        Dirty(uid, visitedComp);
+        // Add the current grid to the visited grids list via the system
+        _visitedGrids.AddVisitedGrid(uid, newGridUid.Value, visitedComp);
 
         // Get the grid's name from metadata
         var gridName = MetaData(newGridUid.Value).EntityName;

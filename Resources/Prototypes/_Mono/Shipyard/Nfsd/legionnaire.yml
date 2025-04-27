@@ -1,0 +1,32 @@
+- type: vessel
+  id: Legionnaire
+  parent: BaseVessel
+  name: SKR Legionnaire
+  description: A light ship equipped with EMP weaponry and a prison cell. It's very cramped. This ship has a NGC IFF designation.
+  price: 65300
+  category: Small
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_Mono/Shuttles/Nfsd/legionnaire.yml
+  guidebookPage: Null
+  class:
+  - Pursuit
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Legionnaire
+  mapName: 'Legionnaire'
+  mapPath: /Maps/_Mono/Shuttles/Nfsd/legionnaire.yml
+  minPlayers: 0
+  stations:
+    Legionnaire:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Legionnaire NGC{1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs: {}

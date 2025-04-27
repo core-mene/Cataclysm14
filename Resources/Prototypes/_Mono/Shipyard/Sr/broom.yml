@@ -34,7 +34,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Broom {1}'
+          mapNameTemplate: 'Broom CO{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

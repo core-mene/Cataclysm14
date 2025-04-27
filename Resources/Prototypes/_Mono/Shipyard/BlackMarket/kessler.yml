@@ -2,7 +2,7 @@
   id: Kessler
   parent: BaseVesselAntag
   name: RG Kessler
-  description: A small pirate vessel with a more standard loadout.
+  description: A small pirate vessel with a more standard loadout. This ship has a military IFF designation.
   price: 42580
   category: Small
   group: BlackMarket
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Kessler {1}'
+          mapNameTemplate: 'Kessler MS{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

@@ -38,8 +38,20 @@
           orGroup: deposit
         - id: GasDepositCarbonDioxide
           orGroup: deposit
+          # Mono Changes Start
+        - id: GasDepositPlasmaVerySmall
+          orGroup: deposit
+        - id: GasDepositPlasmaSmall
+          orGroup: deposit
         - id: GasDepositPlasma
           orGroup: deposit
+        - id: GasDepositPlasmaLarge
+          orGroup: deposit
+        - id: GasDepositPlasmaVeryLarge
+          orGroup: deposit
+        - id: GasDepositMuddlePlasma
+          orGroup: deposit
+          # Mono Changes End
         - id: GasDepositAir
           orGroup: deposit
         - id: GasDepositMuddleEven
@@ -96,6 +108,20 @@
           orGroup: deposit
         - id: GasDepositWaterVaporLarge
           orGroup: deposit
+          # Mono Changes Start
+        - id: GasDepositPlasmaVerySmall
+          orGroup: deposit
+        - id: GasDepositPlasmaSmall
+          orGroup: deposit
+        - id: GasDepositPlasma
+          orGroup: deposit
+        - id: GasDepositPlasmaLarge
+          orGroup: deposit
+        - id: GasDepositPlasmaVeryLarge
+          orGroup: deposit
+        - id: GasDepositMuddlePlasma
+          orGroup: deposit
+          # Mono Changes End
 # endregion Snow Table
 
 # region Andesite Table
@@ -136,6 +162,20 @@
           orGroup: deposit
         - id: GasDepositAmmonia
           orGroup: deposit
+          # Mono Changes Start
+        - id: GasDepositPlasmaVerySmall
+          orGroup: deposit
+        - id: GasDepositPlasmaSmall
+          orGroup: deposit
+        - id: GasDepositPlasma
+          orGroup: deposit
+        - id: GasDepositPlasmaLarge
+          orGroup: deposit
+        - id: GasDepositPlasmaVeryLarge
+          orGroup: deposit
+        - id: GasDepositMuddlePlasma
+          orGroup: deposit
+          # Mono Changes End
 # endregion Andesite Table
 
 # region Basalt Table
@@ -170,12 +210,20 @@
           max: 6
           canBeAirSealed: true
         entries:
+          # Mono Changes Start
         - id: GasDepositPlasmaVerySmall
           orGroup: deposit
-        - id: GasDepositMuddlePlasmaVerySmall
+        - id: GasDepositPlasmaSmall
           orGroup: deposit
-        - id: GasDepositMuddleEvenVerySmall
+        - id: GasDepositPlasma
           orGroup: deposit
+        - id: GasDepositPlasmaLarge
+          orGroup: deposit
+        - id: GasDepositPlasmaVeryLarge
+          orGroup: deposit
+        - id: GasDepositMuddlePlasma
+          orGroup: deposit
+          # Mono Changes End
 # endregion Basalt Table
 
 # region Sand Table
@@ -216,6 +264,20 @@
           orGroup: deposit
         - id: GasDepositNitrogenLarge
           orGroup: deposit
+          # Mono Changes Start
+        - id: GasDepositPlasmaVerySmall
+          orGroup: deposit
+        - id: GasDepositPlasmaSmall
+          orGroup: deposit
+        - id: GasDepositPlasma
+          orGroup: deposit
+        - id: GasDepositPlasmaLarge
+          orGroup: deposit
+        - id: GasDepositPlasmaVeryLarge
+          orGroup: deposit
+        - id: GasDepositMuddlePlasma
+          orGroup: deposit
+          # Mono Changes End
 # endregion Sand Table
 
 # region Chromite Table
@@ -258,6 +320,20 @@
           orGroup: deposit
         - id: GasDepositAirVeryLarge
           orGroup: deposit
+          # Mono Changes Start
+        - id: GasDepositPlasmaVerySmall
+          orGroup: deposit
+        - id: GasDepositPlasmaSmall
+          orGroup: deposit
+        - id: GasDepositPlasma
+          orGroup: deposit
+        - id: GasDepositPlasmaLarge
+          orGroup: deposit
+        - id: GasDepositPlasmaVeryLarge
+          orGroup: deposit
+        - id: GasDepositMuddlePlasma
+          orGroup: deposit
+          # Mono Changes End
 # endregion Chromite Table
 
 # region AsteroidRock Table
@@ -300,6 +376,20 @@
           orGroup: deposit
         - id: GasDepositAirSmall
           orGroup: deposit
+          # Mono Changes Start
+        - id: GasDepositPlasmaVerySmall
+          orGroup: deposit
+        - id: GasDepositPlasmaSmall
+          orGroup: deposit
+        - id: GasDepositPlasma
+          orGroup: deposit
+        - id: GasDepositPlasmaLarge
+          orGroup: deposit
+        - id: GasDepositPlasmaVeryLarge
+          orGroup: deposit
+        - id: GasDepositMuddlePlasma
+          orGroup: deposit
+          # Mono Changes End
 # endregion AsteroidRock Table
 
 # region Scrap Table

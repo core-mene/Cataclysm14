@@ -6,3 +6,11 @@
   - type: Contraband
     severity: Class2Restricted
     allowedDepartments: [ PMC, Security, Command, CentralCommand ]
+
+- type: entity
+  parent: BaseC3Contraband
+  id: BaseC3ChemContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: Class3Chem

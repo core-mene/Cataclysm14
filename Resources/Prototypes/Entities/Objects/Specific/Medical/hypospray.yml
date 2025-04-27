@@ -475,7 +475,7 @@
 
 - type: entity
   name: combat medipen
-  parent: [ChemicalMedipen, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ChemicalMedipen] #Mono Removed C3SyndieContraband
   id: CombatMedipen
   description: A single-use medipen containing chemicals that regenerate most types of damage.
   components:
