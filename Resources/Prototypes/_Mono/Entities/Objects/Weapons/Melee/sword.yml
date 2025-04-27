@@ -30,3 +30,34 @@
    - type: Construction
      graph: GraphWeaponHFKatana
      node: WeaponHFKatana
+
+- type: entity
+  name: VT-7 HF blade "Murasama"
+  parent: [Katana, BaseC3Contraband] # we dont want the construction node, so we dont copy off the other HF katana
+  id: WeaponMurasama
+  description: You're the boss.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Melee/murasama.rsi
+  - type: MeleeWeapon
+    attackRate: 2
+    wideAnimationRotation: -60
+    damage:
+      types: # admeme..
+        Slash: 32.5
+        Shock: 12.5
+        Structural: 55
+  - type: Item
+    sprite: _Mono/Objects/Weapons/Melee/murasama.rsi
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Melee/murasama.rsi
+    slots:
+    - Back
+    - Belt
+    - suitStorage
+  - type: Reflect
+    reflectProb: 0.9
+  - type: DisarmMalus
+    malus: 0.9
+  - type: StaticPrice
+    price: 50000
