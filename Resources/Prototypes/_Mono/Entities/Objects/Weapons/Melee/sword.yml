@@ -9,10 +9,10 @@
    - type: MeleeWeapon
      wideAnimationRotation: -60
      damage:
-       types:
-         Slash: 45
-         Burn: 30
-         Ion: 40
+       types: # It's still incredibly strong, but -reasonable-
+         Slash: 18
+         Heat: 15
+         Structural: 25 # Ion doesn't exist, according to Proto manager.
    - type: Item
      sprite: _Mono/Objects/Weapons/Melee/hfblade.rsi
    - type: Clothing
