@@ -348,10 +348,10 @@
   name: Toggle Paramedic Siren
   description: Toggles the paramedic siren on and off.
   components:
-  - type: InstantAction 
+  - type: InstantAction
     icon:
       sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi
-      state: icon-siren
+      state: icon
     useDelay: 1
     itemIconStyle: BigAction
     event: !type:ToggleActionEvent
