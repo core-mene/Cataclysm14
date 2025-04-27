@@ -328,9 +328,6 @@ public sealed partial class ShuttleSystem
         T brokenTiles,
         T sparkTiles) where T : ICollection<Vector2i>
     {
-        // Maximum damage that can be applied to a single entity during impact, prevents gibbing
-        const float MaxEntityDamage = 85f;
-
         for (var i = startIndex; i < endIndex; i++)
         {
             var tileData = tilesToProcess[i];
@@ -361,7 +358,7 @@ public sealed partial class ShuttleSystem
                     try
                     {
                         // Apply damage scaled by distance but capped to prevent gibbing
-                        var scaledDamage = Math.Min(tileData.Energy, MaxEntityDamage);
+                        var scaledDamage = tileData.Energy;
                         var damageSpec = new DamageSpecifier(damageTemplate)
                         {
                             DamageDict = { ["Blunt"] = scaledDamage }
