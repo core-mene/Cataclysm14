@@ -7,11 +7,12 @@
    - type: Sprite
      sprite: _Mono/Objects/Weapons/Melee/hfblade.rsi
    - type: MeleeWeapon
+     attackRate: 1.5
      wideAnimationRotation: -60
      damage:
        types: # It's still incredibly strong, but -reasonable-
-         Slash: 18
-         Heat: 15
+         Slash: 25.5
+         Shock: 7.5
          Structural: 25 # Ion doesn't exist, according to Proto manager.
    - type: Item
      sprite: _Mono/Objects/Weapons/Melee/hfblade.rsi
@@ -23,6 +24,7 @@
      - suitStorage
    - type: Reflect
      reflectProb: 0.6
+   - type: DisarmMalus
    - type: StaticPrice
      price: 5000 # YOU CALL THAT A BLADE.... I'LL SHOW YOU A BLADE...
    - type: Construction
