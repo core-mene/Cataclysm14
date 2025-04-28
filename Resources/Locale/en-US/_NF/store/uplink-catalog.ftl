@@ -127,8 +127,6 @@ uplink-security-shotincend-name = Incendiary Shotgun Shells
 uplink-security-shotincend-desc = A box of lethal .50 calibre incendiary shotgun shells.
 uplink-security-shotslug-name = Lethal Shotgun Slug Shells
 uplink-security-shotslug-desc = A box of lethal .50 calibre slug shotgun shells.
-uplink-security-cash1000-name = 1,000 Spesos
-uplink-security-cash1000-desc = Cold, hard cash.
 uplink-security-empgrenade-box-name = EMP Grenade Box
 uplink-security-empgrenade-box-desc = A box containing 4 EMP grenades.
 uplink-security-explosivegrenade-box-name = Explosive Grenade Box
@@ -238,5 +236,8 @@ uplink-security-rad-pen-desc = A rapid dose of anti-radiation. Contains arithraz
 
 uplink-security-combat-pen-name = Combat Medipen
 uplink-security-combat-pen-desc = A general use shot of omnizine, packaged in a autoinjector.
+
+uplink-security-cash10000-name = 10,000 Spesos
+uplink-security-cash10000-desc = Cold, hard cash.
 
 #Mono End
