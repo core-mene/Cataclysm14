@@ -125,6 +125,27 @@ public sealed partial class AdminVerbSystem
         };
         args.Verbs.Add(explode);
 
+        var bluntGibName = Loc.GetString("admin-smite-blunt-gib-name").ToLowerInvariant();
+        Verb bluntGib = new()
+        {
+            Text = bluntGibName,
+            Category = VerbCategory.Smite,
+            Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/VerbIcons/smite.svg.192dpi.png")),
+            Act = () =>
+            {
+                // Create a very high blunt damage to ensure gibbing
+                var damageSpec = new DamageSpecifier();
+                damageSpec.DamageDict.Add("Blunt", 1000);
+
+                // Apply the damage and then gib the body
+                _damageable.TryChangeDamage(args.Target, damageSpec, true);
+                _bodySystem.GibBody(args.Target);
+            },
+            Impact = LogImpact.Extreme,
+            Message = string.Join(": ", bluntGibName, Loc.GetString("admin-smite-blunt-gib-description"))
+        };
+        args.Verbs.Add(bluntGib);
+
         var chessName = Loc.GetString("admin-smite-chess-dimension-name").ToLowerInvariant();
         Verb chess = new()
         {
