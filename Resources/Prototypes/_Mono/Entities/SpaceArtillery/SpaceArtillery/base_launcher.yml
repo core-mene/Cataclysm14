@@ -1,7 +1,7 @@
 # Base
 
 - type: entity
-  id: BallisticArtillery
+  id: BallisticArtilleryUnanchorable
   abstract: true
   placement:
     mode: SnapgridCenter
@@ -43,9 +43,6 @@
         - MachineLayer
   - type: Transform
     anchored: true
-  - type: Anchorable
-    delay: 10
-  - type: Pullable
   - type: Rotatable
     rotateWhilePulling: false
     rotateWhileAnchored: false
@@ -69,3 +66,12 @@
   - type: RadarBlip
     radarColor: "#9999FF"
     scale: 1
+
+- type: entity
+  id: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
+  abstract: true
+  components:
+  - type: Anchorable
+    delay: 10
+  - type: Pullable
