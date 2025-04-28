@@ -83,6 +83,12 @@ uplink-pirate-c20-desc = A .35 auto light SMG, packaged with a few mags.
 uplink-pirate-bulldog-name = Bulldog Bundle
 uplink-pirate-bulldog-desc = A automatic .50 shotgun, packaged with a few drums.
 
+uplink-pirate-vt7-name = VT7 HF Blade
+uplink-pirate-vt7-desc = A high quality HF blade. 
+
+uplink-security-hfblade-name = HF-Katana
+uplink-security-hfblade-desc = A tool of justice.
+
 # ammo
 
 uplink-pirate-speed-loader-magnum-name = Speedloader (.45 magnum)
