@@ -250,6 +250,27 @@
         - SeniorOfficer
         - Sheriff
 
+- type: listing # Mono - this entire listing
+  id: UplinkSecurityHFBlade
+  name:  uplink-security-hfblade-name
+  description: uplink-security-hfblade-desc
+  productEntity: WeaponHFKatana
+  icon: { sprite: _Mono/Objects/Weapons/Melee/hfblade.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 5
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+        
 - type: listing
   id: UplinkSecurityVulcan
   name:  uplink-security-vulcan-name
