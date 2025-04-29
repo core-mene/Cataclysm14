@@ -189,12 +189,12 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 20
+        Piercing: 10
     deleteOnCollide: true
   - type: SolutionContainerManager
     solutions:
       injector:
-        maxVol: 5
+        maxVol: 10
   - type: RefillableSolution
     solution: injector
   - type: InjectableSolution
@@ -203,13 +203,13 @@
     transferAmount: 5
     solution: injector
   - type: SolutionTransfer
-    maxTransferAmount: 5
+    maxTransferAmount: 10
   - type: Injector
     injectOnly: false
     ignoreMobs: true
     minTransferAmount: 5
-    maxTransferAmount: 5
-    transferAmount: 5
+    maxTransferAmount: 10
+    transferAmount: 10
     toggleState: Draw
 
 # Craftable variations
@@ -337,7 +337,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 15
+        Piercing: 5
     deleteOnCollide: true
   - type: Construction
     graph: CraftCrossbowBoltSyringe
