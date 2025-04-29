@@ -143,9 +143,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 4750
-        Blunt: 10000
-        Ion: 12500
+        Structural: 7750
+        Blunt: 15000
+        Ion: 22500
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -159,7 +159,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 45
+    lifetime: 25
   - type: PointLight
     color: "#FCBA03"
   - type: ExplodeOnTrigger
