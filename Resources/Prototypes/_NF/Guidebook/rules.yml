@@ -6,37 +6,9 @@
   ruleEntry: true
   children:
     - FrontierRuleZeroTolerance
-    - FrontierRule1
-    - FrontierRule2
-    - FrontierRule5
-    - FrontierRule6
 
 - type: guideEntry
   id: FrontierRuleZeroTolerance
   name: guide-entry-frontier-rule-zero-tolerance
   text: "/ServerInfo/_NF/Guidebook/Rules/Zero_Tolerance.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: FrontierRule1
-  name: guide-entry-frontier-rule-1
-  text: "/ServerInfo/_NF/Guidebook/Rules/1_Community.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: FrontierRule2
-  name: guide-entry-frontier-rule-2
-  text: "/ServerInfo/_NF/Guidebook/Rules/2_ICInfo.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: FrontierRule5
-  name: guide-entry-frontier-rule-5
-  text: "/ServerInfo/_NF/Guidebook/Rules/5_Roleplay.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: FrontierRule6
-  name: guide-entry-frontier-rule-6
-  text: "/ServerInfo/_NF/Guidebook/Rules/6_Safezone.xml"
   ruleEntry: true
