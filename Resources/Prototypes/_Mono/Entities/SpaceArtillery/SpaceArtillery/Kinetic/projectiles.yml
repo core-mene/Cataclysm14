@@ -162,12 +162,12 @@
     lifetime: 45
   - type: PointLight
     color: "#FCBA03"
+  - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 75
-    intensitySlope: 2
-    totalIntensity: 20
-    maxTileBreak: 4
+    explosionType: HardBomb
+    totalIntensity: 1250
+    intensitySlope: 5
+    maxIntensity: 1150
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard

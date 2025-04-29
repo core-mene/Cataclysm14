@@ -129,7 +129,7 @@
         density: 1500 # fat mf
   - type: Gun
     projectileSpeed: 105
-    fireRate: 0.25
+    fireRate: 0.1
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/uaf_cyrexa_452.ogg
     soundEmpty:
@@ -139,7 +139,7 @@
     powerUsePassive: 200
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 300
+    autoRechargeRate: 30
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipCyrexaProjectile
