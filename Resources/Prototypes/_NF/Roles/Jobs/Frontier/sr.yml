@@ -9,7 +9,7 @@
     - !type:RoleTimeRequirement
       role: JobSecurityGuard
       time: 10800 # 3 hrs as security guard
-  #whitelisted: true # mono - comment out
+  whitelisted: true
   startingGear: SrGear
   alwaysUseSpawner: true
   icon: "JobIconHeadOfPersonnel"

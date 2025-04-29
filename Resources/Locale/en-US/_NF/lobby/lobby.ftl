@@ -30,7 +30,7 @@ frontier-lobby-medical-description = NGC medical dispatch hub. Here you can:
    - Drop off medical bounties  
  Some of the roles on this station are whitelist-only and require an application in the discord to be accepted.
 
-frontier-lobby-nfsd-subtext = The center of operations for the Sheriffs department.
+frontier-lobby-nfsd-subtext = The center of operations for the NCMC.
 frontier-lobby-nfsd-description = The New Congressional Marine Corps is the center of operations for the NGC's armed expansion into the rogue. Here you can:
    - Join the NCMC department
    - Apply for a bounty hunting license

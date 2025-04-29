@@ -1,0 +1,32 @@
+- type: vessel
+  id: Letterbox
+  parent: BaseVessel
+  name: Letterbox
+  description: The mailing segment of the combined service ship.
+  price: 10000
+  category: Micro
+  group: Sr
+  access: Mail
+  shuttlePath: /Maps/_Mono/Shuttles/Service/letterbox.yml
+  guidebookPage: Null
+  class:
+  - Cargo
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Letterbox
+  mapName: 'Letterbox'
+  mapPath: /Maps/_Mono/Shuttles/Service/letterbox.yml
+  minPlayers: 0
+  stations:
+    Letterbox:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Letterbox SRV{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

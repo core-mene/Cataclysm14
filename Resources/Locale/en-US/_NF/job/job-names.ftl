@@ -1,9 +1,9 @@
 # Frontier
-job-name-bailiff = Bailiff
+job-name-bailiff = NCMC Captain
 job-name-brigmedic = Brigmedic
-job-name-cadet-nf = Cadet
+job-name-cadet-nf = Private
 job-name-contractor = Contractor
-job-name-deputy = Deputy
+job-name-deputy = Sergeant
 job-name-nf-detective = Detective
 job-name-ertmailcarrier = ERT Mail Carrier
 job-name-mercenary = Mercenary
@@ -12,7 +12,7 @@ job-name-pirate = Rogue Agent
 job-name-pirate-captain = Rogue Commander
 job-name-pirate-first-mate = Rogue Commandant
 job-name-security-guard = Security Guard
-job-name-sheriff = Sheriff
+job-name-sheriff = Colonel
 job-name-stc = Station Traffic Controller
 job-name-sr = Colonial Liaison
 job-name-pal = Public Affairs Liaison

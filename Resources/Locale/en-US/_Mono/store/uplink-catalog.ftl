@@ -57,6 +57,9 @@ uplink-pirate-access-breaker-desc = A device that overrides the access reader on
 uplink-pirate-jaws-name = Syndicate Jaws of Life
 uplink-pirate-jaws-desc = A normal jaws-of-life illegally modified past restrictions, capable of opening doors 2x as fast as normal JOL.
 
+uplink-pirate-thruster-kit-name = Thruster Upgrade Kit
+uplink-pirate-thruster-kit-desc = Contains 32 super capaciters. Perfect for upgrading eight thrusters.
+
 # weapons
 
 uplink-pirate-energy-cutlass-name = Energy Cutlass
@@ -82,6 +85,12 @@ uplink-pirate-c20-desc = A .35 auto light SMG, packaged with a few mags.
 
 uplink-pirate-bulldog-name = Bulldog Bundle
 uplink-pirate-bulldog-desc = A automatic .50 shotgun, packaged with a few drums.
+
+uplink-pirate-vt7-name = VT7 HF Blade
+uplink-pirate-vt7-desc = A high quality HF blade. 
+
+uplink-security-hfblade-name = HF-Katana
+uplink-security-hfblade-desc = A tool of justice.
 
 # ammo
 

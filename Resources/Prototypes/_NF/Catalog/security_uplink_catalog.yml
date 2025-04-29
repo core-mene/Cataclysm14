@@ -250,6 +250,27 @@
         - SeniorOfficer
         - Sheriff
 
+- type: listing # Mono - this entire listing
+  id: UplinkSecurityHFBlade
+  name:  uplink-security-hfblade-name
+  description: uplink-security-hfblade-desc
+  productEntity: WeaponHFKatana
+  icon: { sprite: _Mono/Objects/Weapons/Melee/hfblade.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+        
 - type: listing
   id: UplinkSecurityVulcan
   name:  uplink-security-vulcan-name
@@ -320,7 +341,7 @@
   productEntity: EnergySwordNfsd
   icon: { sprite: Objects/Weapons/Melee/e_sword.rsi, state: e_sword }
   cost:
-    FrontierUplinkCoin: 5
+    FrontierUplinkCoin: 7 #Mono: from 5 to 7
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -894,7 +915,7 @@
   productEntity: ClothingBeltSheathFilled
   icon: { sprite: Objects/Weapons/Melee/captain_sabre.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 10
+    FrontierUplinkCoin: 2 #From 10 to 2
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -1013,7 +1034,7 @@
   productEntity: ClothingMaskGasSheriff
   icon: { sprite: _NF/Clothing/Mask/nfsd_sheriff.rsi, state: icon}
   cost:
-    FrontierUplinkCoin: 3
+    FrontierUplinkCoin: 1 #Mono: From 3 to 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -1124,10 +1145,10 @@
           - SecurityUplink
 
 - type: listing
-  id: UplinkSecurityCash1000
-  name:  uplink-security-cash1000-name
-  description: uplink-security-cash1000-desc
-  productEntity: SpaceCash1000
+  id: UplinkSecurityCash5000
+  name:  uplink-security-cash5000-name
+  description: uplink-security-cash5000-desc
+  productEntity: SpaceCash5000 # Mono: Changed the exchange rate from 1000 to 5000
   icon: { sprite: Objects/Economy/cash.rsi, state: cash_1000000 }
   cost:
     FrontierUplinkCoin: 1

@@ -1,0 +1,32 @@
+- type: vessel
+  id: Flyssa
+  parent: BaseVessel
+  name: SKR Flyssa
+  description: A destroyer brought in from the NCMC frontlines for your usage. Equipped with 6 extremely powerful CRYEXA 220mm guns, and 2 CHARON mass drivers. Built solely for combat however, and lacks much else in the interior.
+  price: 685200
+  category: Large
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_Mono/Shuttles/Nfsd/flyssa.yml
+  guidebookPage: Null
+  class:
+  - Capital
+  engine:
+  - AME
+
+- type: gameMap
+  id: Flyssa
+  mapName: 'Flyssa'
+  mapPath: /Maps/_Mono/Shuttles/Nfsd/flyssa.yml
+  minPlayers: 0
+  stations:
+    Flyssa:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Flyssa NGC{1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs: {}

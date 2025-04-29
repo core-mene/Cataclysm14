@@ -10,6 +10,7 @@
   - MARAUDERGuide
   - RUBICONGuide
   - ASM302Guide
+  - CYREXAGuide
 
 - type: guideEntry
   id: L85Guide
@@ -39,6 +40,12 @@
   id: CHARONGuide
   name: guide-entry-charon
   text: "/ServerInfo/_Mono/Guidebook/Specifications/CHARON.xml"
+  priority: 1
+
+- type: guideEntry
+  id: CYREXAGuide
+  name: guide-entry-cyrexa
+  text: "/ServerInfo/_Mono/Guidebook/Specifications/CYREXA.xml"
   priority: 1
 
 - type: guideEntry

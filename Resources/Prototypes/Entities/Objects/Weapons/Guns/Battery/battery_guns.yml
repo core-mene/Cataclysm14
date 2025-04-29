@@ -628,6 +628,7 @@
     - HighRiskItem
     - Sidearm
     - WeaponAntiqueLaser
+    - AdvancedLaserPistol # Mono
   - type: StaticPrice
     price: 750
   - type: StealTarget
@@ -671,6 +672,9 @@
   - type: Appearance
   - type: StaticPrice
     price: 63
+  - type: Tag
+    tags:
+    - AdvancedLaserPistol
 
 - type: entity
   name: C.H.I.M.P. handcannon
