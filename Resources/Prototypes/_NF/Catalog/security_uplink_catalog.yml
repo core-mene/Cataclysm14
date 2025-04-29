@@ -257,7 +257,7 @@
   productEntity: WeaponHFKatana
   icon: { sprite: _Mono/Objects/Weapons/Melee/hfblade.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 15
+    FrontierUplinkCoin: 10
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -341,7 +341,7 @@
   productEntity: EnergySwordNfsd
   icon: { sprite: Objects/Weapons/Melee/e_sword.rsi, state: e_sword }
   cost:
-    FrontierUplinkCoin: 5
+    FrontierUplinkCoin: 7 #Mono: from 5 to 7
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -915,7 +915,7 @@
   productEntity: ClothingBeltSheathFilled
   icon: { sprite: Objects/Weapons/Melee/captain_sabre.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 10
+    FrontierUplinkCoin: 2 #From 10 to 2
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -1034,7 +1034,7 @@
   productEntity: ClothingMaskGasSheriff
   icon: { sprite: _NF/Clothing/Mask/nfsd_sheriff.rsi, state: icon}
   cost:
-    FrontierUplinkCoin: 3
+    FrontierUplinkCoin: 1 #Mono: From 3 to 1
   categories:
     - UplinkSecurityUtility
   conditions:
