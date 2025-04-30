@@ -544,7 +544,8 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         {
             shield.Powered = false;
         }
-        else if (shield.DesiredDraw < shield.PowerDrawLimit)
+        // Turn shield back on when under this power usage amount
+        else if (shield.DesiredDraw < shield.ResetPower)
         {
             shield.Powered = true;
         }
