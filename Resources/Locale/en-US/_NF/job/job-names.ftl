@@ -35,9 +35,9 @@ JobSTC = Station Traffic Controller
 job-name-senior-engineer = Senior Engineer
 job-name-senior-researcher = Senior Researcher
 job-name-senior-physician = Senior Physician
-job-name-senior-officer = Sergeant
+job-name-senior-officer = Lieutenant
 
 JobSeniorEngineer = Senior Engineer
-JobSeniorOfficer = Sergeant
+JobSeniorOfficer = Lieutenant
 JobSeniorPhysician = Senior Physician
 JobSeniorResearcher = Senior Researcher

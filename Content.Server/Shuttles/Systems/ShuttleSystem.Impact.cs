@@ -15,6 +15,7 @@ using Content.Shared.Clothing;
 using Content.Shared.Item.ItemToggle;
 using Content.Shared.Item.ItemToggle.Components;
 using Content.Server._NF.Shuttles.Components;
+using Content.Server._Mono.Ships;
 using Robust.Shared.Threading;
 
 namespace Content.Server.Shuttles.Systems;
@@ -63,8 +64,10 @@ public sealed partial class ShuttleSystem
         // Skip impact processing if either grid has an anchor component
         if (HasComp<PreventGridAnchorChangesComponent>(uid) ||
             HasComp<ForceAnchorComponent>(uid) ||
+            HasComp<ImpactProtectionComponent>(uid) ||
             HasComp<PreventGridAnchorChangesComponent>(args.OtherEntity) ||
-            HasComp<ForceAnchorComponent>(args.OtherEntity))
+            HasComp<ForceAnchorComponent>(args.OtherEntity) ||
+            HasComp<ImpactProtectionComponent>(args.OtherEntity))
             return;
 
         var ourBody = args.OurBody;
