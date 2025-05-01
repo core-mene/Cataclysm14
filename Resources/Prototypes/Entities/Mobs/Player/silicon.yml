@@ -280,6 +280,18 @@
   - type: SiliconLawProvider
     laws: NutimovLawset
 
+- type: entity
+  id: ShipCircuitBoard
+  parent: BaseElectronics
+  name: law board (Ship)
+  description: An electronics board containing the Ship lawset.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+  - type: SiliconLawProvider
+    laws: ShipLawset
+
 # Items
 - type: entity
   id: Intellicard
@@ -415,7 +427,7 @@
   - type: BlockMovement
     blockInteraction: false
   - type: SiliconLawProvider
-    laws: Crewsimov
+    laws: ShipLawset
   - type: SiliconLawBound
   - type: ActionGrant
     actions:
