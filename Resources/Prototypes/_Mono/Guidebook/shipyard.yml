@@ -6,6 +6,7 @@
   children:
   - ShipyardArgent
   - ShipyardSabine
+  - ShipyardJudiciary
 
 - type: guideEntry
   id: ShipyardArgent
@@ -16,3 +17,8 @@
   id: ShipyardSabine
   name: guide-entry-shipyard-sabine
   text: "/ServerInfo/_Mono/Guidebook/Shipyard/Sabine.xml"
+
+- type: guideEntry
+  id: ShipyardJudiciary
+  name: guide-entry-shipyard-judiciary
+  text: "/ServerInfo/_Mono/Guidebook/Shipyard/Judiciary.xml"

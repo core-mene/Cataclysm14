@@ -43,3 +43,12 @@
   - type: ShipyardListing
     shuttles:
     - Ample
+
+- type: entity
+  id: HiveCarrierComputer
+  parent: BaseCarrierComputer
+  name: skyfire carrier console
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Zephyr

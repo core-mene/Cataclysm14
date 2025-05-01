@@ -35,7 +35,10 @@ Some ships are equipped with [color=cyan]shield generators[/color]. These absorb
 
 Due to the rarity of these, they are unable to be looted, and must be scavenged if you wish to outfit your ship with them. They can be fabricated if you have the suitable T3 arsenal research for it though.
 The most popular shield system for example, the [bold][color=cyan]MS-225[/color][/bold], adds power usage based on the damage of projectiles it absorbs, with approximately [bold][color=coral]105w per point of damage[/color][/bold].
-After [bold]25 seconds[/bold], this power surge will start to dissipate. However there is a base power draw, and it is calculated via the following equation.
+After [bold]25 seconds[/bold], this power surge will start to dissipate.
+- Above [bold][color=red]1.5mW[/color][/bold], the shield will turn off, and only reenable once under [bold][color=yellow]200kW[/color][/bold] of power usage.
+
+However there is a base power draw, and it is calculated via the following equation.
 
 Radius^2 * Shield Width * 0.5 * Power/m^2.
 

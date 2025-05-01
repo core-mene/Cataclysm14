@@ -1400,3 +1400,37 @@ Entries:
       message: Fixed missing FTL drive on Flyssa and Archer unpowered thrusters
   id: 165
   time: '2025-04-30T11:37:26.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Tweaked shields a bit more. Now when above 1.5mW of power usage, the
+        shield will only reenable once under 200kW of power usage. Flux
+        overload....
+  id: 166
+  time: '2025-04-30T21:04:24.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Polaris has been remapped. Much more armor tank now than shield tank.
+        Also price lowered (to compensate for removal of missiles, and a lot of
+        the empty space)
+    - type: Fix
+      message: Fixed rusted walls not being the correct sprite (paradise 💪)
+  id: 167
+  time: '2025-04-30T23:40:44.0000000+00:00'
+- author: Onezero0
+  changes:
+    - type: Add
+      message: Added the Judiciary Expeditionary Research vessel.
+  id: 168
+  time: '2025-05-01T00:09:22.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Flyssa is now Bailiff/NCMC captain access-restricted.
+    - type: Fix
+      message: Fixed Flyssa not having a warp point.
+  id: 169
+  time: '2025-05-01T00:36:46.0000000+00:00'

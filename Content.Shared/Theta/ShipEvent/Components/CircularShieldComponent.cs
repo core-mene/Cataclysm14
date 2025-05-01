@@ -55,6 +55,9 @@ public sealed partial class CircularShieldComponent : Component
     [DataField("powerDrawLimit"), ViewVariables(VVAccess.ReadWrite)]
     public float PowerDrawLimit = 1500000f; // Amount of wattage you can draw before the shield system turns off
 
+    [DataField("resetPower"), ViewVariables(VVAccess.ReadWrite)]
+    public float ResetPower = 200000f; // Power usage has to drop below this to reenable shield
+
     [DataField("effects", serverOnly: true)]
     public List<CircularShieldEffect> Effects = new();
 
