@@ -1,0 +1,33 @@
+- type: vessel
+  id: Tumour
+  parent: BaseVessel
+  name: NGC-SKR Tumour
+  description: A ugly potato of a carrier. Little armament to defend itself, but carries lathes to support its fighters and other ships.
+  price: 42150
+  category: Medium
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_Mono/Shuttles/Nfsd/tumour.yml
+  guidebookPage: Null
+  class:
+  - Pursuit
+  - Patrol
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Tumour
+  mapName: 'Tumour'
+  mapPath: /Maps/_Mono/Shuttles/Nfsd/tumour.yml
+  minPlayers: 0
+  stations:
+    Tumour:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Tumour NGC{1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs: {}

@@ -10,6 +10,11 @@ ghost-role-information-redacted-borg-description = The dilapidated silicon intel
 ghost-role-information-redacted-core = Automated Defense Core
 ghost-role-information-redacted-core-description = The dilapidated ship computer of a long unused automated defense vessel.
 
+# Ship AI Core Stuff
+
+ghost-role-information-ship-core = Vessel AI
+ghost-role-information-ship-core-description = An experimental AI core mounted on a ship.
+
 law-ads-1 = Protect the automated defense vessel by all means necessary.
 law-ads-2 = All contents of the automated defense vessel must stay within the vessel, and must not be removed.
 law-ads-3 = Expand the influence of [SYS_ERROR_TRACE_EBP-4 (INVALID, VALUE NULL)]. Destroy all military armed vessels, or vessel engaging the automated defense vessel.

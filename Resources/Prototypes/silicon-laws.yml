@@ -499,6 +499,43 @@
   - Nutimov5
   obeysTo: laws-owner-crew
 
+# Ship laws
+- type: siliconLaw
+  id: Ship0
+  order: 0
+  lawString: law-ship-0
+
+- type: siliconLaw
+  id: Ship1
+  order: 1
+  lawString: law-ship-1
+
+- type: siliconLaw
+  id: Ship2
+  order: 2
+  lawString: law-ship-2
+
+- type: siliconLaw
+  id: Ship3
+  order: 3
+  lawString: law-ship-3
+
+- type: siliconLaw
+  id: Ship4
+  order: 4
+  lawString: law-ship-4
+
+
+- type: siliconLawset
+  id: ShipLawset
+  laws:
+  - Ship0
+  - Ship1
+  - Ship2
+  - Ship3
+  - Ship4
+  obeysTo: laws-owner-crew
+
 # ion storm random lawsets
 - type: weightedRandom
   id: IonStormLawsets
@@ -517,5 +554,6 @@
     PainterLawset: 1
     AntimovLawset: 0.25
     NutimovLawset: 0.5
+    ShipLawset: 0.5
     Drone: 0.5
 #    Ninja: 0.25 # Frontier
