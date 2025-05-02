@@ -19,18 +19,18 @@ nf-adventure-title = Adventure
 nf-adventure-description = Join a ship crew or buy your own and explore, research, salvage, or haul your way to riches!
 
 nf-pirate-title = Colonial Expansion
-nf-pirate-description = A NGC-Rogue Sector warfront far away is taking place, leaving wrecks everywhere for salvage. Careful, rogue insurgents are about.
+nf-pirate-description = A TSF-Rogue Sector warfront far away is taking place, leaving wrecks everywhere for salvage. Careful, rogue insurgents are about.
 
 currency = Spesos
 
 shipyard-rules-default1 =
-    Thank you for your interest in Congressional Security Forces.
+    Thank you for your interest in TSF Security Forces.
     By purchasing a Security vessel, you agree to enforce Space Law
     as found at https://frontierstation.wiki.gg/wiki/Space_Law
 shipyard-rules-default2 =
     Any actions performed by you or you crew that violate Space Law
     can and will result in administrative action.
-    Glory to the Congressional Security Forces!
+    Glory to the TSF Security Forces!
 
 shuttle-ftl-recharge = FTL drives still spooling down!
 shuttle-ftl-too-many = Too many shuttles already on expedition!

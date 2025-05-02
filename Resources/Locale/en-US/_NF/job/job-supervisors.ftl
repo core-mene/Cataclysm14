@@ -1,9 +1,9 @@
 job-supervisors-sr = the Colonial Liaison
 job-supervisors-sheriff = the Colonel
-job-supervisors-bailiff = the NCMC Captain
-job-supervisors-sergeant = the Sergeant
-job-supervisors-cadet = all higher ranking NCMC personnel
-job-supervisors-prisoner = all NCMC personnel
-job-supervisors-nfsd = Sergeants, the NCMC Captain, and the Colonel
+job-supervisors-bailiff = the TSFMC Captain
+job-supervisors-sergeant = the Lieutenant
+job-supervisors-cadet = all higher ranking TSFMC personnel
+job-supervisors-prisoner = all TSFMC personnel
+job-supervisors-nfsd = Lieutenants, the TSFMC Captain, and the Colonel
 job-supervisors-pirate = the Rogue Commander and Commandant
 job-supervisors-nobody = nobody

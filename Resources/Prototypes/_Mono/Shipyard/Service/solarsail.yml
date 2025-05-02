@@ -24,7 +24,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Solarsail NGC{1}'
+          mapNameTemplate: 'Solarsail TSF{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

@@ -108,16 +108,16 @@
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierNfsd
-  suffix: NCMC
+  suffix: TSFMC
   components:
   - type: NavMapBeacon
-    defaultText: station-beacon-nfsd    
+    defaultText: station-beacon-nfsd
     color: "#f1b223"
 
 - type: entity
   parent: DefaultStationBeaconFrontierNfsd
   id: DefaultStationBeaconFrontierNfsdBrig
-  suffix: NCMC Brig
+  suffix: TSFMC Brig
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-nfsd-brig
