@@ -1492,3 +1492,19 @@ Entries:
       message: Implemented the increased POI distance and FTL drive range increase.
   id: 177
   time: '2025-05-02T23:03:29.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed spyglass not having a grav gen.
+    - type: Fix
+      message: Fixed polaris missing directional fans.
+    - type: Tweak
+      message: Removed job restrictions on a lot of TSFMC uplink gear.
+  id: 178
+  time: '2025-05-02T23:29:19.0000000+00:00'
+- author: KiraZen-Underscore
+  changes:
+    - type: Tweak
+      message: Fixed syringe/sponge bolts only injecting 5u instead of 10u.
+  id: 179
+  time: '2025-05-02T23:30:03.0000000+00:00'
