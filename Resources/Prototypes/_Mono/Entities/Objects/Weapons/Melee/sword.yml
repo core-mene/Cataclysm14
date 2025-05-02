@@ -30,10 +30,12 @@
    - type: Construction
      graph: GraphWeaponHFKatana
      node: WeaponHFKatana
+   - type: PirateBountyItem
+     id: HFKatana
 
 - type: entity
   name: VT-7 HF blade "Murasama"
-  parent: [Katana, BaseC3Contraband] # we dont want the construction node, so we dont copy off the other HF katana
+  parent: [Katana, BaseC3SyndicateContraband] # we dont want the construction node, so we dont copy off the other HF katana
   id: WeaponMurasama
   description: You're the boss.
   components:
@@ -64,7 +66,7 @@
 
 - type: entity
   name: VT-7 HF blade
-  parent: [Katana, BaseC3Contraband] # we dont want the construction node, so we dont copy off the other HF katana
+  parent: [Katana, BaseC3SyndicateContraband] # we dont want the construction node, so we dont copy off the other HF katana
   id: WeaponVT7
   description: An advanced HF blade, evidently modified from a very high quality sword.
   components:
