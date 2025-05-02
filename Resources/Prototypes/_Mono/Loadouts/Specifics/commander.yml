@@ -8,7 +8,14 @@
   fallbacks:
   - ContractorClothingNeckIFFCyan
 
-- type: loadout
+- type: loadoutGroup
   id: TsfmcEarsCommander
+  name: loadout-group-contractor-ears
+  minLimit: 1
+  loadouts:
+  - TsfmcCommanderHeadset
+
+- type: loadout
+  id: TsfmcCommanderHeadset
   equipment:
-    ears: ClothingHeadsetTsfmc
+    ears: ClothingHeadsetAltTsfmcCommander

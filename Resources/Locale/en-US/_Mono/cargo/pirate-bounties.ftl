@@ -1,4 +1,4 @@
-pirate-bounty-item-scafsuit = mercenary SCAF Suit
+pirate-bounty-item-scaf = mercenary SCAF Suit
 pirate-bounty-item-tsfmc-tacsuit = TSFMC tacsuit
 pirate-bounty-item-hfblade = HF-katana
 pirate-bounty-item-shipweapon = ship turret
