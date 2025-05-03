@@ -533,6 +533,7 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         if (TryComp<ApcPowerReceiverComponent>(uid, out var receiver))
         {
             receiver.Load = shield.DesiredDraw;
+            Dirty(uid, receiver);
         }
         else if (shield.DesiredDraw > 0)
         {

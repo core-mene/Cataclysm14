@@ -433,7 +433,7 @@ namespace Content.Client.Lobby.UI
                 companies.Insert(0, none);
             }
 
-            // Add to NGC company dropdown
+            // Add to TSF company dropdown
             for (var i = 0; i < companies.Count; i++)
             {
                 CompanyButton.AddItem(companies[i].Name, i);

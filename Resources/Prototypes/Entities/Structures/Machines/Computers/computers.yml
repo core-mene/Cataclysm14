@@ -122,6 +122,7 @@
   abstract: true
   components:
   - type: ShuttleConsole
+  - type: ShuttleConsoleLock
   - type: ActivatableUI
     key: enum.ShuttleConsoleUiKey.Key
   - type: UserInterface
