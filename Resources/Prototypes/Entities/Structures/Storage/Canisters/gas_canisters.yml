@@ -203,6 +203,8 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:DumpCanisterBehavior
+  - type: PirateBountyItem # Mono
+    id: LifeSupportCan
 
 - type: entity
   parent: GasCanister
@@ -242,6 +244,8 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:DumpCanisterBehavior
+  - type: PirateBountyItem # Mono
+    id: LifeSupportCan
 
 - type: entity
   id: LiquidOxygenCanister
@@ -323,6 +327,8 @@
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
         - !type:DumpCanisterBehavior
+    - type: PirateBountyItem # Mono
+      id: LifeSupportCan
 
 - type: entity
   id: LiquidNitrogenCanister

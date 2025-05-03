@@ -442,6 +442,8 @@
       - Sheet
       - RawMaterial
       - Ingot
+  - type: PirateBountyItem # Mono
+    id: Techfab
 
 - type: entity
   id: AmmoTechFab
@@ -475,6 +477,8 @@
       - Sheet
       - RawMaterial
       - Ingot
+  - type: PirateBountyItem # Mono
+    id: Techfab
 
 - type: entity
   id: MedicalTechFab
@@ -518,6 +522,8 @@
     board: MedicalTechFabCircuitboard
   - type: StealTarget
     stealGroup: MedicalTechFabCircuitboard
+  - type: PirateBountyItem # Mono
+    id: Techfab
 
 - type: entity
   parent: BaseLathe

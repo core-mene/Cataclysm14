@@ -23,16 +23,16 @@ frontier-lobby-exped-description = This is base camp for mercenaries and alike. 
    - Socialize with other mercenaries - or not.
 
 frontier-lobby-medical-subtext = The medical dispatch hub and search and rescue center.
-frontier-lobby-medical-description = NGC medical dispatch hub. Here you can:
+frontier-lobby-medical-description = TSF medical dispatch hub. Here you can:
    - Start or find a medical response crew
    - Socialize with other medics
    - Purchase medical specialist ships
-   - Drop off medical bounties  
+   - Drop off medical bounties
  Some of the roles on this station are whitelist-only and require an application in the discord to be accepted.
 
-frontier-lobby-nfsd-subtext = The center of operations for the NCMC.
-frontier-lobby-nfsd-description = The New Congressional Marine Corps is the center of operations for the NGC's armed expansion into the rogue. Here you can:
-   - Join the NCMC department
+frontier-lobby-nfsd-subtext = The center of operations for the TSFMC.
+frontier-lobby-nfsd-description = The TFSMC-FOB is the center of operations for the TSF's armed expansion into the rogue. Here you can:
+   - Join the TSFMC department
    - Apply for a bounty hunting license
    - Report crimes
    - Turn in contraband
@@ -42,4 +42,3 @@ frontier-lobby-pirate-description = This is the ultimate hideout where rogue sec
    - Start a rogue crew
    - Find a crew to join
    - Socialize with other rogue sector insurgents
- The roles on this station are whitelist-only and require an application in the discord to be accepted.

@@ -51,6 +51,7 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         SubscribeLocalEvent<CircularShieldComponent, PowerChangedEvent>(OnShieldPowerChanged);
         SubscribeLocalEvent<CircularShieldComponent, StartCollideEvent>(OnShieldEnter);
         SubscribeLocalEvent<CircularShieldComponent, NewLinkEvent>(OnShieldLink);
+        SubscribeLocalEvent<CircularShieldComponent, AnchorStateChangedEvent>(OnShieldAnchorChanged);
 
         // Subscribe to entity termination directly for extra safety
         SubscribeLocalEvent<CircularShieldComponent, EntityTerminatingEvent>(OnShieldEntityTerminating);
@@ -278,6 +279,17 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
 
         if (!TryComp(console.BoundShield, out CircularShieldComponent? shield))
             return;
+            
+        // Check if the shield is anchored - only anchored shields can be enabled
+        if (TryComp<TransformComponent>(console.BoundShield, out var xform) && !xform.Anchored)
+        {
+            // Don't allow enabling an unanchored shield
+            if (!shield.Enabled)
+            {
+                UpdateConsoleState(uid, console);
+                return;
+            }
+        }
 
         shield.Enabled = !shield.Enabled;
         UpdatePowerDraw(console.BoundShield.Value, shield);
@@ -530,6 +542,29 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
 
     private void UpdatePowerDraw(EntityUid uid, CircularShieldComponent shield)
     {
+        // Check if the shield is anchored - if not, ensure it stays unpowered
+        var xform = Transform(uid);
+        if (!xform.Anchored)
+        {
+            shield.Powered = false;
+            shield.Enabled = false;
+            
+            if (TryComp<ApcPowerReceiverComponent>(uid, out var rcv))
+            {
+                rcv.PowerDisabled = true;
+                Dirty(uid, rcv);
+            }
+            
+            // Update console UI to reflect changes
+            if (shield.BoundConsole != null && EntityManager.EntityExists(shield.BoundConsole.Value))
+            {
+                UpdateConsoleState(shield.BoundConsole.Value);
+            }
+            
+            return;
+        }
+        
+        // Normal power draw calculation for anchored shields
         if (TryComp<ApcPowerReceiverComponent>(uid, out var receiver))
         {
             receiver.Load = shield.DesiredDraw;
@@ -557,6 +592,14 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         }
     }
 
+    /// <summary>
+    /// Overload that accepts Entity&lt;CircularShieldComponent&gt; for convenience
+    /// </summary>
+    private void UpdatePowerDraw(Entity<CircularShieldComponent> ent)
+    {
+        UpdatePowerDraw(ent.Owner, ent.Comp);
+    }
+
     private void OnShieldEntityTerminating(EntityUid uid, CircularShieldComponent shield, ref EntityTerminatingEvent args)
     {
         // Force remove PVS override
@@ -578,6 +621,62 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
             // Clear reference
             shield.BoundConsole = null;
         }
+    }
+
+    /// <summary>
+    /// Handles the shield's response to being anchored or unanchored.
+    /// Shields should only be powered when anchored.
+    /// </summary>
+    private void OnShieldAnchorChanged(Entity<CircularShieldComponent> ent, ref AnchorStateChangedEvent args)
+    {
+        var shield = ent.Comp;
+        
+        if (!args.Anchored)
+        {
+            // When unanchored, disable power and set shield to inactive
+            shield.Powered = false;
+            shield.Enabled = false;
+            
+            // Update power draw to ensure it's properly disabled
+            UpdatePowerDraw(ent);
+            
+            // If we have an ApcPowerReceiver, disable it while unanchored
+            if (TryComp<ApcPowerReceiverComponent>(ent, out var powerReceiver))
+            {
+                powerReceiver.PowerDisabled = true;
+                Dirty(ent, powerReceiver);
+            }
+            
+            // Properly shut down all shield effects
+            foreach (CircularShieldEffect effect in shield.Effects)
+            {
+                effect.OnShieldShutdown(ent, shield);
+            }
+        }
+        else
+        {
+            // When re-anchored, re-enable the power receiver
+            if (TryComp<ApcPowerReceiverComponent>(ent, out var powerReceiver))
+            {
+                powerReceiver.PowerDisabled = false;
+                Dirty(ent, powerReceiver);
+                
+                // We don't immediately set shield.Powered = true here
+                // Instead, let the PowerChangedEvent handle that properly
+                // This ensures we respect the actual power state
+            }
+            
+            // Update power draw to respect circuit changes
+            UpdatePowerDraw(ent);
+        }
+        
+        // Update the console UI if bound to a console
+        if (shield.BoundConsole != null && EntityManager.EntityExists(shield.BoundConsole.Value))
+        {
+            UpdateConsoleState(shield.BoundConsole.Value);
+        }
+        
+        Dirty(ent, shield);
     }
 
     private class ShieldUpdateJob : IParallelRobustJob
