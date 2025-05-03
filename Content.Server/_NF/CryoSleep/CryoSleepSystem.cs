@@ -342,11 +342,6 @@ public sealed partial class CryoSleepSystem : SharedCryoSleepSystem
         }
 
         // Send radio message on appropriate channel
-        if (isPirate)
-        {
-            //No more revealing base coords, it won't send anything. #Mono
-        }
-        else
         {
             // Use Common channel for everyone else
             if (_prototypeManager.TryIndex<RadioChannelPrototype>(SharedChatSystem.CommonChannel, out var commonChannel))
