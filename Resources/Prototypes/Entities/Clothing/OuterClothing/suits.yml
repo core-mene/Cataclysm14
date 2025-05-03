@@ -27,6 +27,8 @@
     - WhitelistChameleon
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.5
 
 - type: entity
   parent: ClothingOuterSuitBomb

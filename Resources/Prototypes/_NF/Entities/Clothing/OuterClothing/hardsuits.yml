@@ -29,6 +29,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMercenary
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.55
 
 - type: entity
   parent: ClothingOuterHardsuitMercenary
@@ -71,6 +73,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitPilot
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.6
 
 #ERT Mail Carrier Hardsuit
 - type: entity
@@ -114,6 +118,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMaximPrototype
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.6
 
 # Syndicate NPC hard suit, unremoveable
 - type: entity
@@ -171,6 +177,8 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.95
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.35
 
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
@@ -224,6 +232,8 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.25
 
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
@@ -267,17 +277,19 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.2
-        Slash: 0.25
-        Piercing: 0.25
-        Heat: 0.15
-        Radiation: 0.1
-        Caustic: 0.15
+        Blunt: 0.3
+        Slash: 0.35
+        Piercing: 0.3
+        Heat: 0.25
+        Radiation: 0.25
+        Caustic: 0.25
   - type: ClothingSpeedModifier
-    walkModifier: 0.75
-    sprintModifier: 0.65
+    walkModifier: 0.85
+    sprintModifier: 0.75
   - type: FactionClothing
     faction: NanoTrasen
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.15
 
 #Security Combat Hardsuit
 - type: entity
@@ -306,6 +318,8 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.825
     sprintModifier: 0.825
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.25
 
 #Security Command Hardsuit
 - type: entity
@@ -334,6 +348,8 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.8
     sprintModifier: 0.8
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.2
 
 # SCAF hardsuit
 - type: entity
@@ -367,6 +383,8 @@
     clothingPrototype: ClothingHeadHelmetHardsuitScaf
   - type: PirateBountyItem
     id: ClothingOuterHardsuitScaf
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.4 # slightly worse than rogue one
 
 # Tactical Maid Hardsuit
 
@@ -401,6 +419,8 @@
       path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitTacticalMaid
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.4
 
 - type: entity
   parent: [BaseC3PirateContraband, ClothingOuterHardsuitBaseNF]
@@ -428,3 +448,5 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.85
     sprintModifier: 0.75
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.4

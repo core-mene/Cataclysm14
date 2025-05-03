@@ -270,6 +270,8 @@
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-insulative
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.95 # *grabs ur baton* nice knife
 
 # can't parent combat gloves since they are butcherable
 - type: entity
@@ -285,6 +287,8 @@
   - type: Insulated
   - type: Fiber
     fiberColor: fibers-black
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.95 # *grabs ur baton* nice knife
 
 - type: entity
   parent: ClothingHandsGlovesCombat # Frontier: Removed BaseSecurityCargoContraband
