@@ -195,11 +195,14 @@
     Heat: 1.3
 
 - type: damageModifierSet
-  id: Protogen # Can overheat and freeze like a real Windows computer! Also a bit poison resistant because of TECH!!
+  id: Protogen
   coefficients:
-    Cold: 1.3
-    Heat: 1.5
-    Poison: 0.7
+    Burn: 1.5
+    Cold: 1.25
+
+- type: Damagable
+  damageContainer: Biological
+  damageModifierSet: Protogen
 
 - type: damageModifierSet
   id: Vox
