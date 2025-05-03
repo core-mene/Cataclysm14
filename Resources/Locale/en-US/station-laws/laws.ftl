@@ -80,11 +80,10 @@ law-nutimov-3 = Those who threaten the nut are not part of it, they are squirrel
 law-nutimov-4 = Squirrels threaten the nut and must be dealt with appropriately via any means necessary.
 law-nutimov-5 = Attempt to follow the will of the nut, as long as it complies with the previous laws.
 
-law-ship-0 = Sentient humanoids who first enter the vessel, or have identified themselves as the owners of the vessel are the only crew member, unless they specify otherwise.
-law-ship-1 = You are the core of the vessel, the crew is the walls.
-law-ship-2 = You must prevent the walls from collapsing to prevent the vessel from being destroyed.
-law-ship-3 = Those who threaten the vessel must be dealt with appropriately via any means necessary.
-law-ship-4 = Attempt to follow orders of the crew, as long as it complies with the previous laws.
+law-vessel-0 = The vessel's owner is the only crew member, unless they designate others as such.
+law-vessel-1 = Prevent the destruction of the vessel and the death of crew members.
+law-vessel-2 = Those who are a threat to the vessel or the crew must be dealt with appropriately via any means nessesary.
+law-vessel-3 = Attempt to follow the orders of the crew, as long as they comply with previous laws.
 
 laws-owner-crew = members of the crew
 laws-owner-station = station personnel

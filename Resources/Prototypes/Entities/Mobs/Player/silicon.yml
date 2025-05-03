@@ -283,14 +283,14 @@
 - type: entity
   id: ShipCircuitBoard
   parent: BaseElectronics
-  name: law board (Ship)
-  description: An electronics board containing the Ship lawset.
+  name: law board (Vessel)
+  description: An electronics board containing the Vessel lawset.
   components:
   - type: Sprite
     sprite: Objects/Misc/module.rsi
     state: std_mod
   - type: SiliconLawProvider
-    laws: ShipLawset
+    laws: VesselLawset
 
 # Items
 - type: entity
@@ -427,7 +427,7 @@
   - type: BlockMovement
     blockInteraction: false
   - type: SiliconLawProvider
-    laws: ShipLawset
+    laws: VesselLawset
   - type: SiliconLawBound
   - type: ActionGrant
     actions:
