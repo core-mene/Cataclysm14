@@ -3,20 +3,14 @@ using Content.Shared.Shuttles.Systems;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Access.Components;
 using Content.Shared._NF.Shipyard.Components;
-using Content.Shared.Interaction;
-using Content.Server._NF.Shipyard.Systems;
 using Content.Server.Shuttles.Components;
-using Content.Server._NF.Shipyard;
 using Content.Server.Hands.Systems;
 using Content.Shared._NF.Shipyard;
 using Content.Shared.UserInterface;
-using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
-using Content.Shared.Hands.EntitySystems;
-using Robust.Shared.Log;
 using Content.Shared.Verbs;
-using Content.Shared.Popups;
 using Robust.Shared.Utility;
+using Content.Server._NF.Shipyard.Components;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -57,16 +51,18 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
     }
 
     /// <summary>
-    /// Adds a verb to unlock the console if the player has an ID card in hand
+    /// Adds a verb to unlock the console if the player has an ID card or voucher in hand
     /// </summary>
     private void AddUnlockVerb(EntityUid uid, ShuttleConsoleLockComponent component, GetVerbsEvent<AlternativeVerb> args)
     {
         if (!args.CanAccess || !args.CanInteract)
             return;
 
-        // Check if player has an ID card in hand
+        // Check if player has an ID card or voucher in hand
         var idCards = FindAccessibleIDCards(args.User);
-        if (idCards.Count == 0)
+        var vouchers = FindAccessibleVouchers(args.User);
+
+        if (idCards.Count == 0 && vouchers.Count == 0)
             return;
 
         AlternativeVerb verb = new()
@@ -82,25 +78,45 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
     }
 
     /// <summary>
-    /// Tries to toggle the lock state of the console using an ID card from the player
+    /// Tries to toggle the lock state of the console using an ID card or voucher from the player
     /// </summary>
     private void TryToggleLock(EntityUid uid, EntityUid user, ShuttleConsoleLockComponent component)
     {
         // If locked, try to unlock
         if (component.Locked)
         {
+            bool unlocked = false;
+
             // Try each ID card the user has
             var idCards = FindAccessibleIDCards(user);
             foreach (var idCard in idCards)
             {
                 if (TryUnlock(uid, idCard, component))
                 {
-                    return;
+                    unlocked = true;
+                    break;
                 }
             }
 
-            // If we reach here, none of the ID cards worked
-            Popup.PopupEntity(Loc.GetString("shuttle-console-wrong-deed"), uid, user);
+            // If ID cards didn't work, try each voucher
+            if (!unlocked)
+            {
+                var vouchers = FindAccessibleVouchers(user);
+                foreach (var voucher in vouchers)
+                {
+                    if (TryUnlockWithVoucher(uid, voucher, component))
+                    {
+                        unlocked = true;
+                        break;
+                    }
+                }
+            }
+
+            // If we reach here and nothing worked, show error
+            if (!unlocked)
+            {
+                Popup.PopupEntity(Loc.GetString("shuttle-console-wrong-deed"), uid, user);
+            }
         }
         // If unlocked, try to lock it again (only works if it's your ship)
         else
@@ -112,15 +128,30 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
                 return;
             }
 
-            var idCards = FindAccessibleIDCards(user);
             var validLock = false;
 
+            // Try ID cards first
+            var idCards = FindAccessibleIDCards(user);
             foreach (var idCard in idCards)
             {
                 if (TryLock(uid, idCard, component))
                 {
                     validLock = true;
                     break;
+                }
+            }
+
+            // If ID cards didn't work, try vouchers
+            if (!validLock)
+            {
+                var vouchers = FindAccessibleVouchers(user);
+                foreach (var voucher in vouchers)
+                {
+                    if (TryLockWithVoucher(uid, voucher, component))
+                    {
+                        validLock = true;
+                        break;
+                    }
                 }
             }
 
@@ -187,6 +218,124 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
     }
 
     /// <summary>
+    /// Tries to unlock the console with the given voucher
+    /// </summary>
+    private bool TryUnlockWithVoucher(EntityUid console, EntityUid voucher, ShuttleConsoleLockComponent? lockComp = null)
+    {
+        if (!Resolve(console, ref lockComp))
+            return false;
+
+        // If the console is already unlocked, do nothing
+        if (!lockComp.Locked)
+            return false;
+
+        // Can't unlock a console without a shuttle ID
+        if (string.IsNullOrEmpty(lockComp.ShuttleId))
+            return false;
+
+        // Get the voucher's UID
+        var voucherUid = voucher.ToString();
+        var deedFound = false;
+        var query = EntityQueryEnumerator<ShuttleDeedComponent>();
+
+        while (query.MoveNext(out var entity, out var deed))
+        {
+            var deedShuttleId = deed.ShuttleUid.HasValue ? deed.ShuttleUid.Value.ToString() : null;
+
+            // Check if this deed was purchased with this specific voucher and matches the shuttle ID
+            if (deed.PurchasedWithVoucher &&
+                deed.ShuttleUid != null &&
+                lockComp.ShuttleId != null &&
+                deedShuttleId == lockComp.ShuttleId &&
+                deed.PurchaseVoucherUid == voucherUid)
+            {
+                deedFound = true;
+                Log.Debug("Found matching voucher-purchased deed for shuttle console {0}", console);
+                break;
+            }
+        }
+
+        if (!deedFound)
+        {
+            Log.Debug("No matching voucher-purchased deed found for shuttle console {0}", console);
+            _audio.PlayPvs("/Audio/Effects/Cargo/buzz_sigh.ogg", voucher);
+            return false;
+        }
+
+        // Success! Unlock the console
+        Log.Debug("Successfully unlocked shuttle console {0} with voucher {1}", console, voucher);
+        lockComp.Locked = false;
+        _audio.PlayPvs("/Audio/Machines/id_swipe.ogg", console);
+        Popup.PopupEntity(Loc.GetString("shuttle-console-unlocked"), console);
+        return true;
+    }
+
+    /// <summary>
+    /// Tries to lock the console with the given voucher
+    /// </summary>
+    private bool TryLockWithVoucher(EntityUid console, EntityUid voucher, ShuttleConsoleLockComponent? lockComp = null)
+    {
+        if (!Resolve(console, ref lockComp))
+            return false;
+
+        // If the console is already locked, do nothing
+        if (lockComp.Locked)
+            return false;
+
+        // Can't lock a console without a shuttle ID
+        if (string.IsNullOrEmpty(lockComp.ShuttleId))
+            return false;
+
+        // Get the voucher's UID
+        var voucherUid = voucher.ToString();
+        var deedFound = false;
+        var query = EntityQueryEnumerator<ShuttleDeedComponent>();
+
+        while (query.MoveNext(out var entity, out var deed))
+        {
+            var deedShuttleId = deed.ShuttleUid.HasValue ? deed.ShuttleUid.Value.ToString() : null;
+
+            // Check if this deed was purchased with this specific voucher and matches the shuttle ID
+            if (deed.PurchasedWithVoucher &&
+                deed.ShuttleUid != null &&
+                lockComp.ShuttleId != null &&
+                deedShuttleId == lockComp.ShuttleId &&
+                deed.PurchaseVoucherUid == voucherUid)
+            {
+                deedFound = true;
+                Log.Debug("Found matching voucher-purchased deed for shuttle console {0}", console);
+                break;
+            }
+        }
+
+        if (!deedFound)
+        {
+            Log.Debug("No matching voucher-purchased deed found for shuttle console {0}", console);
+            _audio.PlayPvs("/Audio/Effects/Cargo/buzz_sigh.ogg", voucher);
+            return false;
+        }
+
+        // Success! Lock the console
+        Log.Debug("Successfully locked shuttle console {0} with voucher {1}", console, voucher);
+        lockComp.Locked = true;
+        _audio.PlayPvs("/Audio/Machines/id_swipe.ogg", console);
+        Popup.PopupEntity(Loc.GetString("shuttle-console-locked-success"), console);
+
+        // Remove any pilots
+        if (TryComp<ShuttleConsoleComponent>(console, out var shuttleComp))
+        {
+            // Clone the list to avoid modification during enumeration
+            var pilots = shuttleComp.SubscribedPilots.ToList();
+            foreach (var pilot in pilots)
+            {
+                _consoleSystem.RemovePilot(pilot);
+            }
+        }
+
+        return true;
+    }
+
+    /// <summary>
     /// Prevents using the console UI if it's locked
     /// </summary>
     private void OnUIOpenAttempt(EntityUid uid, ShuttleConsoleLockComponent component, ActivatableUIOpenAttemptEvent args)
@@ -219,6 +368,29 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
         }
 
         // TODO: Check for PDAs and other items containing ID cards
+
+        return results;
+    }
+
+    /// <summary>
+    /// Finds all vouchers accessible to a user (in hands)
+    /// </summary>
+    private List<EntityUid> FindAccessibleVouchers(EntityUid user)
+    {
+        var results = new List<EntityUid>();
+
+        // Check hands
+        var hands = _handsSystem.EnumerateHands(user);
+        foreach (var hand in hands)
+        {
+            if (hand.HeldEntity == null)
+                continue;
+
+            if (TryComp<ShipyardVoucherComponent>(hand.HeldEntity, out _))
+            {
+                results.Add(hand.HeldEntity.Value);
+            }
+        }
 
         return results;
     }
@@ -274,8 +446,7 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
         {
             Log.Debug("No deeds found for ID card {0}", idCard);
             _audio.PlayPvs(idComp.ErrorSound, idCard);
-            Popup.PopupEntity(Loc.GetString("shuttle-console-wrong-id"), console);
-            return true;
+            return false;
         }
 
         // Check if any deed matches the shuttle ID
@@ -299,8 +470,7 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
         {
             Log.Debug("No matching deed found for shuttle console {0}", console);
             _audio.PlayPvs(idComp.ErrorSound, idCard);
-            Popup.PopupEntity(Loc.GetString("shuttle-console-wrong-deed"), console);
-            return true;
+            return false;
         }
 
         // Success! Unlock the console

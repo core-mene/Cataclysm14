@@ -55,6 +55,11 @@ public sealed partial class ShuttleSystem
         SubscribeLocalEvent<ShuttleComponent, StartCollideEvent>(OnShuttleCollide);
     }
 
+    /// <summary>
+    /// Handles collision between two shuttles, applying impact damage and effects.
+    /// Larger shuttles (by mass) will not experience impact effects when colliding with smaller shuttles.
+    /// Smaller shuttles will still experience the full impact regardless.
+    /// </summary>
     private void OnShuttleCollide(EntityUid uid, ShuttleComponent component, ref StartCollideEvent args)
     {
         if (!TryComp<MapGridComponent>(uid, out var ourGrid) ||
@@ -64,10 +69,8 @@ public sealed partial class ShuttleSystem
         // Skip impact processing if either grid has an anchor component
         if (HasComp<PreventGridAnchorChangesComponent>(uid) ||
             HasComp<ForceAnchorComponent>(uid) ||
-            HasComp<ImpactProtectionComponent>(uid) ||
             HasComp<PreventGridAnchorChangesComponent>(args.OtherEntity) ||
-            HasComp<ForceAnchorComponent>(args.OtherEntity) ||
-            HasComp<ImpactProtectionComponent>(args.OtherEntity))
+            HasComp<ForceAnchorComponent>(args.OtherEntity))
             return;
 
         var ourBody = args.OurBody;
@@ -118,10 +121,15 @@ public sealed partial class ShuttleSystem
             Log.Error($"Error playing shuttle impact sound: {ex}");
         }
 
+        // Compare masses to determine which shuttle should process the impact
+        bool ourShuttleIsHeavier = ourBody.Mass > otherBody.Mass;
+        bool otherShuttleIsHeavier = otherBody.Mass > ourBody.Mass;
+
         // Process impact zones sequentially to avoid race conditions
         try
         {
-            if (Exists(uid) && HasComp<Robust.Shared.Physics.BroadphaseComponent>(uid))
+            // Only apply impact to our shuttle if it's not heavier
+            if (!ourShuttleIsHeavier && Exists(uid) && HasComp<Robust.Shared.Physics.BroadphaseComponent>(uid))
             {
                 ProcessImpactZone(uid, ourGrid, ourTile, (float)energy, -dir, impactRadius);
             }
@@ -133,7 +141,8 @@ public sealed partial class ShuttleSystem
 
         try
         {
-            if (Exists(args.OtherEntity) && HasComp<Robust.Shared.Physics.BroadphaseComponent>(args.OtherEntity))
+            // Only apply impact to other shuttle if it's not heavier
+            if (!otherShuttleIsHeavier && Exists(args.OtherEntity) && HasComp<Robust.Shared.Physics.BroadphaseComponent>(args.OtherEntity))
             {
                 ProcessImpactZone(args.OtherEntity, otherGrid, otherTile, (float)energy, dir, impactRadius);
             }
@@ -146,7 +155,8 @@ public sealed partial class ShuttleSystem
         // Knockdown unbuckled entities on both grids
         try
         {
-            if (Exists(uid))
+            // Only knockdown entities on our shuttle if it's not heavier
+            if (!ourShuttleIsHeavier && Exists(uid))
             {
                 KnockdownEntitiesOnGrid(uid);
             }
@@ -158,7 +168,8 @@ public sealed partial class ShuttleSystem
 
         try
         {
-            if (Exists(args.OtherEntity))
+            // Only knockdown entities on other shuttle if it's not heavier
+            if (!otherShuttleIsHeavier && Exists(args.OtherEntity))
             {
                 KnockdownEntitiesOnGrid(args.OtherEntity);
             }

@@ -227,8 +227,8 @@
 - type: entity
   parent: BaseStationAdminBankATM
   id: StationAdminBankATMNfsd
-  description: Used to transfer funds to and from NCMCO's bank account.
-  suffix: NCMC
+  description: Used to transfer funds to and from TSFMC-FOB's bank account.
+  suffix: TSFMC
   components:
   - type: StationBankATM
     account: Nfsd

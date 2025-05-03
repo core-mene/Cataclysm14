@@ -1,7 +1,7 @@
 - type: vessel
   id: Tumour
   parent: BaseVessel
-  name: NGC-SKR Tumour
+  name: TSF-SKR Tumour
   description: A ugly potato of a carrier. Little armament to defend itself, but carries lathes to support its fighters and other ships.
   price: 42150
   category: Medium
@@ -25,7 +25,7 @@
       stationProto: StandardFrontierSecurityVessel
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'Tumour NGC{1}'
+        mapNameTemplate: 'Tumour TSF{1}'
         nameGenerator:
           !type:NanotrasenNameGenerator
           prefixCreator: '14'

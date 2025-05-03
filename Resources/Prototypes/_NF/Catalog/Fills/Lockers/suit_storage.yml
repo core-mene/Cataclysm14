@@ -171,7 +171,7 @@
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitNfsd ]
   id: SuitStorageEVANfsd
-  suffix: EVA, NCMC
+  suffix: EVA, TSFMC
   components:
   - type: AccessReader
     access: [["Security"]]
@@ -286,15 +286,15 @@
 - type: entity
   id: SuitStorageCadet
   parent: SuitStorageBase
-  suffix: NCMC Cadet
+  suffix: TSFMC Private
   components:
   - type: StorageFill
     contents:
         - id: AirTankFilled
         - id: ClothingOuterHardsuitNfsdBronze # Frontier
-        - id: ClothingMaskGasNfsd
+        - id: ClothingMaskGasSecurity
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd # Frontier
+        - id: ClothingShoesBootsMagSecurity # Frontier
   - type: AccessReader
     access: [["Security"]]
 
@@ -302,15 +302,15 @@
 - type: entity
   id: SuitStorageDeputy
   parent: SuitStorageBase
-  suffix: NCMC Deputy
+  suffix: TSFMC Corporal
   components:
   - type: StorageFill
     contents:
         - id: AirTankFilled
         - id: ClothingOuterHardsuitNfsdSilver # Frontier
-        - id: ClothingMaskGasNfsd 
+        - id: ClothingMaskGasSecurity
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd # Frontier
+        - id: ClothingShoesBootsMagSecurity # Frontier
   - type: AccessReader
     access: [["Security"]]
 
@@ -318,15 +318,15 @@
 - type: entity
   id: SuitStorageBrigmedic
   parent: SuitStorageBase
-  suffix: NCMC Brigmedic
+  suffix: TSFMC Brigmedic
   components:
   - type: StorageFill
     contents:
         - id: AirTankFilled
         - id: ClothingOuterHardsuitNfsdBrigmedic # Frontier
-        - id: ClothingMaskGasNfsd 
+        - id: ClothingMaskGasSecurity
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd # Frontier
+        - id: ClothingShoesBootsMagSecurity # Frontier
   - type: AccessReader
     access: [["Security"]]
 
@@ -334,15 +334,15 @@
 - type: entity
   id: SuitStorageSergeant
   parent: SuitStorageBase
-  suffix: NCMC Sergeant
+  suffix: TSFMC Lieutenant
   components:
   - type: StorageFill
     contents:
         - id: AirTankFilled
         - id: ClothingOuterHardsuitNfsdGold # Frontier
-        - id: ClothingMaskGasNfsd 
+        - id: ClothingMaskGasSecurity
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd # Frontier
+        - id: ClothingShoesBootsMagSecurity # Frontier
   - type: AccessReader
     access: [["Security"]]
 
@@ -350,15 +350,15 @@
 - type: entity
   id: SuitStorageBailiff
   parent: SuitStorageBase
-  suffix: NCMC Bailiff
+  suffix: TSFMC Captain
   components:
   - type: StorageFill
     contents:
         - id: AirTankFilled
         - id: ClothingOuterHardsuitNfsdGold # Frontier
-        - id: ClothingMaskGasNfsd 
+        - id: ClothingMaskGasSecurity
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd # Frontier
+        - id: ClothingShoesBootsMagSecurity # Frontier
   - type: AccessReader
     access: [["Security"]]
 
@@ -366,7 +366,7 @@
 - type: entity
   id: SuitStorageSheriff
   parent: SuitStorageBase
-  suffix: NCMC Sheriff
+  suffix: TSFMC Colonel
   components:
   - type: StorageFill
     contents:
@@ -374,7 +374,7 @@
         - id: ClothingOuterHardsuitNfsdSheriff # Frontier
         - id: ClothingMaskGasSheriff
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd # Frontier
+        - id: ClothingShoesBootsMagSecurity # Frontier
   - type: AccessReader
     access: [["Security"]]
 
@@ -382,15 +382,15 @@
 - type: entity
   id: SuitStorageNfsdCombat
   parent: SuitStorageBase
-  suffix: NCMC Combat
+  suffix: TSFMC Combat
   components:
   - type: StorageFill
     contents:
         - id: AirTankFilled
         - id: ClothingOuterHardsuitNfsdCombat # Frontier
-        - id: ClothingMaskGasNfsd 
+        - id: ClothingMaskGasSecurity
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd # Frontier
+        - id: ClothingShoesBootsMagSecurity # Frontier
   - type: AccessReader
     access: [["Security"]]
 
@@ -398,14 +398,14 @@
 - type: entity
   id: SuitStorageNfsdCommand
   parent: SuitStorageBase
-  suffix: NCMC Command
+  suffix: TSFMC Command
   components:
   - type: StorageFill
     contents:
         - id: AirTankFilled
         - id: ClothingOuterHardsuitNfsdCommand # Frontier
-        - id: ClothingMaskGasNfsd 
+        - id: ClothingMaskGasSecurity
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd # Frontier
+        - id: ClothingShoesBootsMagSecurity # Frontier
   - type: AccessReader
     access: [["Security"]]

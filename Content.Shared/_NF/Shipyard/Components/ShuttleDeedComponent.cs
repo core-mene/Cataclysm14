@@ -29,6 +29,13 @@ public sealed partial class ShuttleDeedComponent : Component
     public bool PurchasedWithVoucher;
 
     /// <summary>
+    /// The EntityUid of the voucher used to purchase this ship, stored as a string.
+    /// Only relevant if PurchasedWithVoucher is true.
+    /// </summary>
+    [DataField]
+    public string? PurchaseVoucherUid;
+
+    /// <summary>
     /// The ID card entity that holds this deed
     /// </summary>
     [DataField]

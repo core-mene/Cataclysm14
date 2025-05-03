@@ -12,7 +12,7 @@ ghost-role-information-clugg-name = Clugg
 ghost-role-information-clugg-description = Ugg! Clugg love eat meat. Find new home off space rock, make big hunt.
 
 ghost-role-information-clarpy-name = Clarpy
-ghost-role-information-clarpy-description = Avast ye mail! Wanted in numerous NGC states for crimes against mice.
+ghost-role-information-clarpy-description = Avast ye mail! Wanted in numerous TSF states for crimes against mice.
 ghost-role-information-clarpy-rules = You are a [color=red][bold]Team Antagonist[/bold][/color] with all other pirates.
 
 ghost-role-information-cult-cat-name = Blood Cult Cat

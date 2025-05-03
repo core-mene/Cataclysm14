@@ -1,7 +1,7 @@
 - type: vessel
   id: Zephyr
   parent: BaseVessel
-  name: SKR Zephyr
+  name: TSF-SKR Zephyr
   description: A fighter refurbished from recovered remnant Razor hulls.
   price: 14200
   category: Small
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierVessel
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'Zephyr NGC{1}'
+        mapNameTemplate: 'Zephyr TSF{1}'
         nameGenerator:
           !type:NanotrasenNameGenerator
           prefixCreator: '14'

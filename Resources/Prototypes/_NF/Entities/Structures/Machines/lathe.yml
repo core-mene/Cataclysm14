@@ -47,6 +47,8 @@
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFServiceTechfabDeprecatedEmagStatic
+  - type: PirateBountyItem # Mono
+    id: Techfab
 
 - type: entity
   parent: [ BlueprintReceiverBase, BaseLatheLube ]
@@ -77,6 +79,8 @@
     - NFEngineeringTechfabDeprecatedStatic
     dynamicPacks:
     - NFEngineeringTechfabDeprecated
+  - type: PirateBountyItem # Mono
+    id: Techfab
 
 - type: entity
   parent: [ BlueprintReceiverBase, BaseLatheLube ]
@@ -110,12 +114,14 @@
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFSalvageTechfabDeprecatedEmag
+  - type: PirateBountyItem # Mono
+    id: Techfab
 
 - type: entity
   id: NfsdTechFab
   parent: [ BlueprintReceiverBase, SecurityTechFab ]
-  name: NCMC techfab
-  description: Prints equipment for use by NCMC.
+  name: TSFMC techfab
+  description: Prints equipment for use by TSFMC.
   components:
   - type: Sprite
     sprite: _NF/Structures/Machines/techfab.rsi
@@ -142,6 +148,8 @@
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFNfsdTechfabDeprecatedEmag
+  - type: PirateBountyItem # Mono
+    id: Techfab
 
 - type: entity
   id: MercenaryTechFab
@@ -174,6 +182,8 @@
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFMercenaryTechfabDeprecatedEmag
+  - type: PirateBountyItem # Mono
+    id: Techfab
 
 - type: entity
   id: MercenaryTechFabHacked
@@ -216,6 +226,8 @@
     - NFHackedMercenaryTechfabDeprecatedStatic
     dynamicPacks:
     - NFHackedMercenaryTechfabDeprecated
+  - type: PirateBountyItem # Mono
+    id: Techfab
 
 - type: entity
   parent: [BaseStructureDisableToolUse, BaseLathe]

@@ -2,7 +2,7 @@
   id: MachineFTLDrive
   parent: BaseMachinePowered
   name: CTLA-25 bluespace drive
-  description: A FTL drive that extends a ship's FTL range to ~2.5 kilometers.
+  description: A FTL drive that extends a ship's FTL range to ~5 kilometers. Does not stack.
   placement:
     mode: SnapgridCenter
   components:
@@ -20,7 +20,7 @@
         visible: false
         shader: unshaded
     - type: FTLDrive
-      range: 2500
+      range: 5000
     - type: ApcPowerReceiver
       powerLoad: 2000
     - type: PointLight
@@ -55,3 +55,5 @@
       containers:
         machine_board: !type:Container
         machine_parts: !type:Container
+    - type: PirateBountyItem
+      id: FTLDrive

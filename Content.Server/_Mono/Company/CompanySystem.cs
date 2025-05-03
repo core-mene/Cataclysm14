@@ -88,11 +88,11 @@ public sealed class CompanySystem : EntitySystem
             _playerOriginalCompanies[playerId] = profileCompany;
         }
 
-        // Check if player's job is one of the NGC jobs
+        // Check if player's job is one of the TSF jobs
         if (args.JobId != null && _ngcJobs.Contains(args.JobId))
         {
-            // Assign NGC company
-            companyComp.CompanyName = "NGC";
+            // Assign TSF company
+            companyComp.CompanyName = "TSF";
         }
         // Check if player's job is one of the Rogue jobs
         else if (args.JobId != null && _rogueJobs.Contains(args.JobId))
