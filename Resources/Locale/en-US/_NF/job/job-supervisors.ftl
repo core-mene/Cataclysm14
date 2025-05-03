@@ -1,7 +1,7 @@
 job-supervisors-sr = the Colonial Liaison
-job-supervisors-sheriff = the Colonel
+job-supervisors-sheriff = the TSFMC Colonel
 job-supervisors-bailiff = the TSFMC Captain
-job-supervisors-sergeant = the Lieutenant
+job-supervisors-sergeant = the TSFMC Lieutenant
 job-supervisors-cadet = all higher ranking TSFMC personnel
 job-supervisors-prisoner = all TSFMC personnel
 job-supervisors-nfsd = Lieutenants, the TSFMC Captain, and the Colonel
