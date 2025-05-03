@@ -14,7 +14,7 @@
   id: NfsdClothingMaskGasNfsd
   storage:
     back:
-    - ClothingMaskGasNfsd
+    - ClothingMaskGasSecurity
 
 - type: loadout
   id: NfsdVoxClothingMaskGasNfsd
@@ -22,4 +22,4 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesVox
   equipment:
-    mask: ClothingMaskGasNfsd
+    mask: ClothingMaskGasSecurity

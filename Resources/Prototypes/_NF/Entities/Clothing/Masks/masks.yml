@@ -45,8 +45,8 @@
 - type: entity
   parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSecurity ]
   id: ClothingMaskGasNfsd
-  name: NCMC gas mask
-  description: A standard issue NCMC gas mask.
+  name: TSFMC gas mask
+  description: A standard issue TSFMC gas mask.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Mask/nfsd.rsi
@@ -57,7 +57,7 @@
 - type: entity
   parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSwat ]
   id: ClothingMaskGasSheriff
-  name: NCMC colonel gas mask
+  name: TSFMC colonel gas mask
   description: A gas mask worthy of a colonel.
   components:
   - type: Sprite
