@@ -344,11 +344,7 @@ public sealed partial class CryoSleepSystem : SharedCryoSleepSystem
         // Send radio message on appropriate channel
         if (isPirate)
         {
-            // Use Freelancer channel for pirates
-            if (_prototypeManager.TryIndex<RadioChannelPrototype>("Freelance", out var freelanceChannel))
-            {
-                _radioSystem.SendRadioMessage(cryopod, message, freelanceChannel, cryopod);
-            }
+            //No more revealing base coords, it won't send anything. #Mono
         }
         else
         {

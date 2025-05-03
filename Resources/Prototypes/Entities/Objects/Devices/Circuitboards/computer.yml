@@ -553,3 +553,16 @@
       state: cpu_science
     - type: ComputerBoard
       prototype: StationAiUploadComputer
+
+#Mono
+- type: entity
+  parent: [ BaseComputerCircuitboard, BaseC3SyndicateContraband ]
+  id: RogueCommsComputerCircuitboard
+  name: rogue communications computer board
+  description: A computer printed circuit board for a rogue communications console.
+  components:
+    - type: Sprite
+      sprite: _Mono/Objects/Misc/module.rsi
+      state: cpu_rogue
+    - type: ComputerBoard
+      prototype: RogueComputerComms

@@ -1,0 +1,33 @@
+- type: entity
+  parent: ComputerComms
+  id: RogueComputerComms
+  name: rogue communications computer
+  description: A computer capable of remotely hacking into the station's communications systems. Using this to make an announcement will alert the station to your presence.
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_not_rot
+    - map: ["computerLayerKeyboard"]
+      state: gunnery_keyboard
+    - map: ["computerLayerScreen"]
+      state: comm_rogue
+    - map: ["computerLayerKeys"]
+      state: rogue_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: AccessReader
+    access: [[ "Pirate" ]]
+  - type: CommunicationsConsole
+    title: comms-console-announcement-title-rogue
+    color: "#643535"
+    canShuttle: false
+    global: true #announce to everyone they're about to fuck shit up
+    sound: /Audio/Announcements/announce.ogg
+  - type: Computer
+    board: RogueCommsComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#643535"
