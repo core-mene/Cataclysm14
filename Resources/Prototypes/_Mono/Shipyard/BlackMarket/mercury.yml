@@ -25,7 +25,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Mercury MS{1}'
+          mapNameTemplate: 'Mercury RG{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

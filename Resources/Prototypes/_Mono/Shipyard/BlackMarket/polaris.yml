@@ -25,7 +25,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Polaris MS{1}'
+          mapNameTemplate: 'Polaris RG{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

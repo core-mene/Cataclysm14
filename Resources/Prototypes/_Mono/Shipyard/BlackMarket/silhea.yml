@@ -1,30 +1,30 @@
 - type: vessel
-  id: Marauder
+  id: Silhea
   parent: BaseVesselAntag
-  name: RG Marauder
-  description: Truly a revolutionary piece of pirate ship design. Contains the bare essentials for piracy. This ship has a military IFF designation.
-  price: 45600
+  name: RG Silhea
+  description: A strange ship with 2 fixed forward-facing CYREXAs, and 4 20mm autocannons. Why did they build this? Who designed this? Who knows.
+  price: 74500 # appraises at like 50k, but cyrexas are pretty fucking good
   category: Medium
   group: BlackMarket
   access: Pirate
-  shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/marauder.yml
+  shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/silhea.yml
   guidebookPage: Null
   class:
   - Pirate
   engine:
-  - Plasma
+  - AME
 
 - type: gameMap
-  id: Marauder
-  mapName: 'Marauder'
-  mapPath: /Maps/_Mono/Shuttles/BlackMarket/marauder.yml
+  id: Silhea
+  mapName: 'Silhea'
+  mapPath: /Maps/_Mono/Shuttles/BlackMarket/silhea.yml
   minPlayers: 0
   stations:
-    Marauder:
+    Silhea:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Marauder MS{1}'
+          mapNameTemplate: 'Silhea RG{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
