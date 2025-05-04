@@ -56,7 +56,7 @@ public sealed partial class DockingScreen : BoxContainer
         // Set up FTL Lock buttons
         FTLLockEnabledButton.Group = _ftlLockButtonGroup;
         FTLLockDisabledButton.Group = _ftlLockButtonGroup;
-        
+
         FTLLockEnabledButton.OnPressed += _ => OnFTLLockPressed(true);
         FTLLockDisabledButton.OnPressed += _ => OnFTLLockPressed(false);
 
@@ -74,7 +74,7 @@ public sealed partial class DockingScreen : BoxContainer
             return;
 
         var dockedPorts = new List<NetEntity>();
-        
+
         foreach (var dock in shuttleDocks)
         {
             if (dock.Connected)
@@ -107,11 +107,11 @@ public sealed partial class DockingScreen : BoxContainer
         var currentGrid = DockingControl.GridEntity.Value;
         var netEntity = _entManager.GetNetEntity(currentGrid);
         Logger.DebugS("shuttle", $"FTL Lock button pressed with enabled={enabled}, GridEntity={currentGrid}, NetEntity={netEntity}");
-        
+
         if (!Docks.TryGetValue(netEntity, out var shuttleDocks))
         {
             Logger.DebugS("shuttle", $"FTL Lock button pressed but no docks found for NetEntity={netEntity}");
-            
+
             // Even if there are no docks, we still want to toggle FTL for the main grid
             var emptyList = new List<NetEntity> { netEntity };
             ToggleFTLLockRequest.Invoke(emptyList, enabled);
@@ -124,38 +124,38 @@ public sealed partial class DockingScreen : BoxContainer
             .Where(d => d.Connected && d.GridDockedWith != null)
             .Select(d => d.GridDockedWith!.Value)
             .ToList();
-        
+
         // Always include the current shuttle grid in the list
         if (!dockedShuttles.Contains(netEntity))
         {
             dockedShuttles.Add(netEntity);
         }
-        
+
         Logger.DebugS("shuttle", $"FTL Lock button pressed, found {dockedShuttles.Count} total grids (including main grid)");
 
         // Pass the enabled parameter to the event handler
         // The server-side will handle setting this state on the current entity and any docked shuttles
         ToggleFTLLockRequest.Invoke(dockedShuttles, enabled);
         Logger.DebugS("shuttle", $"FTL Lock request sent with enabled={enabled}");
-        
+
         // Immediately update the lock indicators to give immediate visual feedback
         // This ensures the UI is consistent with the button the user just pressed
         foreach (var dock in shuttleDocks)
         {
             if (!dock.Connected || dock.GridDockedWith == null || !_ourDockButtons.TryGetValue(dock.Entity, out var button))
                 continue;
-            
+
             if (button.ChildCount == 0)
                 continue;
-                
+
             var buttonContainer = button.GetChild(0) as BoxContainer;
             if (buttonContainer == null || buttonContainer.ChildCount < 2)
                 continue;
-                
+
             var lockIndicator = buttonContainer.GetChild(1) as Label;
             if (lockIndicator == null)
                 continue;
-                
+
             // Use the pressed button state to update indicators
             lockIndicator.Text = enabled ? "LOCKED" : "UNLOCKED";
             lockIndicator.FontColorOverride = enabled ? Color.Red : Color.Green;
@@ -176,7 +176,7 @@ public sealed partial class DockingScreen : BoxContainer
         DockingControl.DockState = state;
         DockingControl.GridEntity = shuttle;
         BuildDocks(shuttle);
-        
+
         // Enable the undock all button only if there are docked ports
         var hasDockedPorts = false;
         if (shuttle != null)
@@ -187,12 +187,12 @@ public sealed partial class DockingScreen : BoxContainer
                 hasDockedPorts = shuttleDocks.Any(d => d.Connected);
             }
         }
-        
+
         UndockAllButton.Disabled = !hasDockedPorts;
-        
+
         // Update FTL Lock button appearance based on the lock status of docked shuttles
         UpdateFTLLockButton(shuttle);
-        
+
         // Update lock status indicators on all dock buttons
         UpdateDockLockIndicators(shuttle);
     }
@@ -201,20 +201,20 @@ public sealed partial class DockingScreen : BoxContainer
     {
         if (shuttle == null)
             return;
-            
+
         var netEntity = _entManager.GetNetEntity(shuttle.Value);
         if (!Docks.TryGetValue(netEntity, out var shuttleDocks))
             return;
-            
+
         var dockedShuttles = shuttleDocks
             .Where(d => d.Connected && d.GridDockedWith != null)
             .Select(d => d.GridDockedWith!.Value)
             .ToList();
-            
+
         // The FTL Lock button should be toggleable even without docked shuttles
         bool anyDisabled = false;
         bool anyEnabled = false;
-        
+
         // If no docked shuttles, check the main shuttle's FTL lock status
         if (dockedShuttles.Count == 0)
         {
@@ -251,7 +251,7 @@ public sealed partial class DockingScreen : BoxContainer
                 }
             }
         }
-        
+
         // Update button selection state based on FTL lock status
         if (anyDisabled && !anyEnabled)
         {
@@ -271,24 +271,24 @@ public sealed partial class DockingScreen : BoxContainer
     {
         if (shuttle == null)
             return;
-            
+
         var netEntity = _entManager.GetNetEntity(shuttle.Value);
         if (!Docks.TryGetValue(netEntity, out var shuttleDocks))
             return;
-            
+
         foreach (var dock in shuttleDocks)
         {
             if (!_ourDockButtons.TryGetValue(dock.Entity, out var button))
                 continue;
-                
+
             // Find the lock indicator label in the button's children
             if (button.ChildCount == 0)
                 continue;
-                
+
             var buttonContainer = button.GetChild(0) as BoxContainer;
             if (buttonContainer == null)
                 continue;
-                
+
             // Only update if connected to another grid
             if (!dock.Connected || dock.GridDockedWith == null)
             {
@@ -303,26 +303,26 @@ public sealed partial class DockingScreen : BoxContainer
                 }
                 continue;
             }
-                
+
             // Update or add lock status
             // Use the button state for consistency across the UI
             bool isLocked = FTLLockEnabledButton.Pressed;
-            
+
             var dockedEntity = _entManager.GetEntity(dock.GridDockedWith.Value);
-            
+
             // Log the actual state we're seeing vs what we're showing
             if (_entManager.TryGetComponent<FTLLockComponent>(dockedEntity, out var lockComp))
             {
                 Logger.DebugS("shuttle", $"UpdateDockLockIndicators: Entity {dockedEntity} component says FTLLock.Enabled = {lockComp.Enabled}, UI showing = {isLocked}");
             }
-            
+
             // Get or create lock indicator
             Label? lockIndicator = null;
             if (buttonContainer.ChildCount > 1)
             {
                 lockIndicator = buttonContainer.GetChild(1) as Label;
             }
-            
+
             if (lockIndicator == null)
             {
                 // Create new lock indicator if it doesn't exist
@@ -335,7 +335,7 @@ public sealed partial class DockingScreen : BoxContainer
                 };
                 buttonContainer.AddChild(lockIndicator);
             }
-            
+
             // Update the lock indicator
             lockIndicator.Text = isLocked ? "LOCKED" : "UNLOCKED";
             lockIndicator.FontColorOverride = isLocked ? Color.Red : Color.Green;
@@ -375,8 +375,7 @@ public sealed partial class DockingScreen : BoxContainer
 
             idx++;
             dockText.Clear();
-            
-            // Always display as "external airlock" to match the screenshot
+
             dockText.Append("external airlock");
 
             // Create a BoxContainer to hold button text and lock indicator
@@ -403,7 +402,7 @@ public sealed partial class DockingScreen : BoxContainer
                 // Determine FTL lock status based on the button state, which reflects what the user has selected
                 // This ensures UI is consistent with user actions even before server confirmation
                 bool isLocked = FTLLockEnabledButton.Pressed;
-                
+
                 // Add debugging to check what's going on
                 var dockedEntity = _entManager.GetEntity(dock.GridDockedWith.Value);
                 if (_entManager.TryGetComponent<FTLLockComponent>(dockedEntity, out var lockComp))
