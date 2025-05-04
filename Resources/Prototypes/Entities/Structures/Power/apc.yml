@@ -20,8 +20,6 @@
     castShadows: false
     netsync: false
   - type: Clickable
-  - type: AccessReader
-#    access: [["Engineering"]]
   - type: InteractionOutline
   - type: Transform
     anchored: true
@@ -36,21 +34,26 @@
     - state: display-charging
       shader: unshaded
       map: ["enum.ApcVisualLayers.ChargeState"]
-    - state: lock0-unlocked
+    - state: lock0-locked
       shader: unshaded
       map: ["enum.ApcVisualLayers.InterfaceLock"]
-    - state: lock1-unlocked
+      visible: false
+    - state: lock1-locked
       shader: unshaded
       map: ["enum.ApcVisualLayers.PanelLock"]
-    - state: channel0-auto_on
+      visible: false
+    - state: lock1-locked #when these are implemented get actual sprites.
       shader: unshaded
       map: ["enum.ApcVisualLayers.Equipment"]
-    - state: channel1-auto_on
+      visible: false
+    - state: lock1-locked
       shader: unshaded
       map: ["enum.ApcVisualLayers.Lighting"]
-    - state: channel2-auto_on
+      visible: false
+    - state: lock1-locked
       shader: unshaded
       map: ["enum.ApcVisualLayers.Environment"]
+      visible: false
   - type: Appearance
   - type: ApcVisuals
   - type: Battery
@@ -91,10 +94,10 @@
     graph: APC
     node: apc
   - type: PowerNetworkBattery
-    maxSupply: 15000 # Frontier: 10000<15000
-    maxChargeRate: 5000
-    supplyRampTolerance: 15000 # Frontier: 1000<15000
-    supplyRampRate: 500
+    maxSupply: 25000
+    maxChargeRate: 10000
+    supplyRampTolerance: 2500
+    supplyRampRate: 2500
   - type: WallMount
   - type: WiresPanel
   - type: WiresVisuals
