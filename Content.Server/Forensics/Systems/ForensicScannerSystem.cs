@@ -60,16 +60,16 @@ namespace Content.Server.Forensics
 
         // Frontier: payout constants
         // Temporary values, sane defaults, will be overwritten by CVARs.
-        private int _minFUCPayout = 2;
+        private int _minFUCPayout = 6;
 
-        private const int ActiveUnusedDeadDropSpesoReward = 20000;
-        private const float ActiveUnusedDeadDropFUCReward = 2.0f;
-        private const int ActiveUsedDeadDropSpesoReward = 10000;
-        private const float ActiveUsedDeadDropFUCReward = 1.0f;
-        private const int InactiveUsedDeadDropSpesoReward = 5000;
-        private const float InactiveUsedDeadDropFUCReward = 0.5f;
-        private const int DropPodSpesoReward = 10000;
-        private const float DropPodFUCReward = 1.0f;
+        private const int ActiveUnusedDeadDropSpesoReward = 100000; //Mono
+        private const float ActiveUnusedDeadDropFUCReward = 6.0f; //Mono
+        private const int ActiveUsedDeadDropSpesoReward = 50000; //Mono
+        private const float ActiveUsedDeadDropFUCReward = 3.0f; //Mono
+        private const int InactiveUsedDeadDropSpesoReward = 25000; //Mono
+        private const float InactiveUsedDeadDropFUCReward = 2.0f; //Mono
+        private const int DropPodSpesoReward = 75000; //Mono
+        private const float DropPodFUCReward = 5.0f; //Mono
         // End Frontier: payout constants
 
         public override void Initialize()

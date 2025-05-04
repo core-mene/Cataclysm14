@@ -58,6 +58,7 @@ public abstract class SharedJetpackSystem : EntitySystem
         var gridUid = ev.ChangedGridIndex;
         var jetpackQuery = GetEntityQuery<JetpackComponent>();
 
+        // First, disable jetpacks on users
         var query = EntityQueryEnumerator<JetpackUserComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out var user, out var transform))
         {
@@ -67,6 +68,26 @@ public abstract class SharedJetpackSystem : EntitySystem
                 _popup.PopupClient(Loc.GetString("jetpack-to-grid"), uid, uid);
 
                 SetEnabled(user.Jetpack, jetpack, false, uid);
+            }
+        }
+
+        // Additionally, find any active jetpacks without users on the grid that need to be disabled
+        if (ev.HasGravity)
+        {
+            var activeJetpackQuery = EntityQueryEnumerator<ActiveJetpackComponent, JetpackComponent, TransformComponent>();
+            
+            while (activeJetpackQuery.MoveNext(out var jetpackUid, out _, out var jetpackComponent, out var jetpackTransform))
+            {
+                // If the jetpack is on this grid and has no user, disable it
+                if (jetpackTransform.GridUid == gridUid && !HasComp<JetpackUserComponent>(jetpackUid))
+                {
+                    // Check if the jetpack is being held/worn by someone
+                    EntityUid? user = null;
+                    Container.TryGetContainingContainer((jetpackUid, null, null), out var container);
+                    user = container?.Owner;
+                    
+                    SetEnabled(jetpackUid, jetpackComponent, false, user);
+                }
             }
         }
     }

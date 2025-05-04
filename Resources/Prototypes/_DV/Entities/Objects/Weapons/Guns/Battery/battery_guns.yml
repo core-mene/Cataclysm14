@@ -58,7 +58,7 @@
 - type: entity
   name: X-01 multiphase energy gun
   parent: [BaseWeaponBatterySmall, BaseCommandContraband] # Frontier: added BaseCommandContraband
-  categories: [DoNotMap] # Frontier - this is the sheriff's gun
+  categories: [DoNotMap] # Frontier / Monolith - this is the colonel /sheriff's gun
   id: WeaponEnergyGunMultiphase
   description: This is an expensive, modern recreation of an antique laser gun. This gun has several unique firemodes, but lacks the ability to recharge over time. On the handle is a label that says 'for authorized use only.'
   components:

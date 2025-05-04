@@ -1,0 +1,127 @@
+# sir. These are strong walls. For outposts. Indestructible is too much
+
+
+- type: entity
+  parent: WallReinforced
+  id: WallReinforcedOutpost
+  suffix: OUTPOST ONLY
+  components:
+  - type: IconSmooth
+    key: walls
+    base: reinf_over
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 55000 # Mono - wall buff - 5x
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 50000 # Mono - wall buff - 5x
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+
+- type: entity
+  parent: WallShuttleDiagonal
+  id: WallReinforcedDiagonalOutpost
+  name: reinforced wall
+  suffix: diagonal, OUTPOST ONLY
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Tag
+    tags:
+    - Diagonal
+  - type: Sprite
+    drawdepth: Walls
+    sprite: Structures/Walls/reinforced_diagonal.rsi
+    state: state0
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30500 # Mono - wall buff - 6x
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 30000 # Mono - wall buff - 6x
+      behaviors:
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: IconSmooth
+    mode: Diagonal
+    key: walls
+    base: state
+  - type: Icon
+    sprite: Structures/Walls/reinforced_diagonal.rsi
+    state: state0
+
+# plastitainum
+
+- type: entity
+  parent: WallPlastitanium
+  id: WallPlastitaniumOutpost
+  suffix: OUTPOST ONLY
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100000
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Girder:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+
+- type: entity
+  parent: WallPlastitaniumDiagonal
+  id: WallPlastitaniumDiagonalOutpost
+  name: plastitanium wall
+  suffix: diagonal, OUTPOST ONLY
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50000
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Girder:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

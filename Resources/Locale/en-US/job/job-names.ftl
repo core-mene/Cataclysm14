@@ -92,7 +92,7 @@ JobERTSecurity = ERT Security
 # Frontier: Head of Personnel<Station Representative
 JobHeadOfPersonnel = Station Representative
 # Frontier: Head of Security<Sheriff
-JobHeadOfSecurity = Sheriff
+JobHeadOfSecurity = Colonel
 JobJanitor = Janitor
 JobLawyer = Lawyer
 JobLibrarian = Librarian

@@ -558,13 +558,13 @@ Entries:
     - type: Fix
       message: Department names
     - type: Fix
-      message: NFDSO -> NCMCO
+      message: NFDSO -> TSFMC-FOB
   id: 66
   time: '2025-04-15T04:53:46.0000000+00:00'
 - author: LukeZurg22
   changes:
     - type: Tweak
-      message: Numerous NFSD proto names -> NCMC
+      message: Numerous NFSD proto names -> TSFMC
   id: 67
   time: '2025-04-16T01:42:17.0000000+00:00'
 - author: LukeZurg22
@@ -624,13 +624,13 @@ Entries:
     - type: Tweak
       message: >-
         Warp points have been removed from station AI cores. Im not dealing with
-        that bloat in the warp menu from AI ships. 
+        that bloat in the warp menu from AI ships.
   id: 75
   time: '2025-04-18T01:13:37.0000000+00:00'
 - author: SuperJoelD00D
   changes:
     - type: Tweak
-      message: NCMC signs are now lore-accurate!
+      message: TSFMC signs are now lore-accurate!
   id: 76
   time: '2025-04-18T01:22:55.0000000+00:00'
 - author: starch70
@@ -639,7 +639,7 @@ Entries:
       message: Fixed pirate cove not spawning.
     - type: Tweak
       message: >-
-        The scheduler for "derelict" AI ship spawns has been tuned (and fixed). 
+        The scheduler for "derelict" AI ship spawns has been tuned (and fixed).
         There is now a minimum time of 90 minutes from round-start before any
         can spawn in, and a min-max time between events of 60-90 minutes.
   id: 77
@@ -647,7 +647,7 @@ Entries:
 - author: LukeZurg22
   changes:
     - type: Add
-      message: The NGC Dart (NCMC former-Armadan scout ship)
+      message: The NGC Dart (TSFMC former-Armadan scout ship)
   id: 78
   time: '2025-04-18T07:35:41.0000000+00:00'
 - author: Ark
@@ -698,14 +698,14 @@ Entries:
 - author: Ark
   changes:
     - type: Tweak
-      message: NSFD -> NCMC radio.
+      message: NSFD -> TSFMC radio.
   id: 84
   time: '2025-04-19T05:37:28.0000000+00:00'
 - author: SuperJoelD00D
   changes:
     - type: Tweak
       message: >-
-        NCMCO has been changed a bit. We called in the painters to repaint the
+        TSFMCO has been changed a bit. We called in the painters to repaint the
         trim of the hallways to blue, and fixed the chemistry room situation.
         There should also be what we consider all the entertainment you'll ever
         need in the break room (that is, a TV and a water cooler). Also, PAL and
@@ -854,7 +854,7 @@ Entries:
 - author: LukeZurg22
   changes:
     - type: Fix
-      message: NFSD -> NCMC.
+      message: NFSD -> TSFMC.
   id: 103
   time: '2025-04-22T06:54:11.0000000+00:00'
 - author: Ark
@@ -934,7 +934,7 @@ Entries:
 - author: SuperJoelD00D
   changes:
     - type: Tweak
-      message: Made NCMCO (and Courthouse) proper colors, that being blue. Yay!
+      message: Made TSFMCO (and Courthouse) proper colors, that being blue. Yay!
   id: 112
   time: '2025-04-23T18:32:32.0000000+00:00'
 - author: DisguisedBear
@@ -987,8 +987,8 @@ Entries:
   changes:
     - type: Tweak
       message: >-
-        NCMCO and Rogue Insurgency Hideout now get a few roundstart Pirate/Cadet
-        roles.
+        TSFMCO and Rogue Insurgency Hideout now get a few roundstart
+        Pirate/Cadet roles.
   id: 116
   time: '2025-04-24T02:38:35.0000000+00:00'
 - author: sowelipililimute
@@ -1132,7 +1132,7 @@ Entries:
 - author: starch70
   changes:
     - type: Add
-      message: Added the Legionnaire to NCMC shipyard.
+      message: Added the Legionnaire to TSFMC shipyard.
     - type: Add
       message: >-
         Added M220 RUBICON EMP launcher. Currently only on the Legionnaire.
@@ -1296,3 +1296,322 @@ Entries:
       message: Updated the color of DME.
   id: 153
   time: '2025-04-28T08:34:24.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: Added HF-katana to TSFMC uplink
+    - type: Add
+      message: Added (big nerfed) Murasama to Rogue uplink
+    - type: Tweak
+      message: Changed HF-katana to C2 contraband from C3.
+  id: 154
+  time: '2025-04-28T13:23:09.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added Flyssa-class to the TSFMC shipyard, a NGC destroyer lended from
+        the frontlines to help you kill Rogues. A bit over half a million, but
+        the CYREXAs are worth it.
+    - type: Add
+      message: >-
+        Added CYREXA 220mm guns as a heavy AP weapon, for capital-ship main
+        batteries.
+    - type: Remove
+      message: >-
+        Removed buying autocannons from TM/TO. You lagged the server too much
+        with gun bricks. No more.
+    - type: Tweak
+      message: Shield power surge duration lowered again to 25s.
+    - type: Tweak
+      message: CHARON is now unanchorable.
+    - type: Tweak
+      message: Removed CHARON flatpack from exped spawns.
+  id: 155
+  time: '2025-04-29T00:49:47.0000000+00:00'
+- author: LukeZurg22
+  changes:
+    - type: Add
+      message: New Service Shuttles
+    - type: Add
+      message: Colonial Staff Console to Colonial Outpost
+    - type: Remove
+      message: Old Service Shuttles
+    - type: Tweak
+      message: Sheriff -> Colonel
+  id: 156
+  time: '2025-04-29T07:08:08.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: When rule breaks. The end is upon us all.
+  id: 157
+  time: '2025-04-29T11:08:43.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: Added a revamped interior (and some parts of the front hull) for Flyssa!
+  id: 158
+  time: '2025-04-29T21:51:26.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added a shield power draw limit of 1.5mW to the MS-225 before it turns
+        off. I didn't have time to test this much, so report any bugs.
+  id: 159
+  time: '2025-04-30T02:35:55.0000000+00:00'
+- author: KiraZen-Underscore
+  changes:
+    - type: Add
+      message: Added Exocron, a Rogue ship which is made out of an old Zenith.
+  id: 160
+  time: '2025-04-30T05:59:49.0000000+00:00'
+- author: LukeZurg22
+  changes:
+    - type: Fix
+      message: No more 100 TC up per 6-10 wrecks.
+  id: 161
+  time: '2025-04-30T06:04:17.0000000+00:00'
+- author: LukeZurg22
+  changes:
+    - type: Fix
+      message: TSFMC Lieutenant role name
+  id: 162
+  time: '2025-04-30T07:07:43.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: Burned down the shield blip orphanage.
+  id: 163
+  time: '2025-04-30T08:58:45.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Flyssa, Polaris, Zenith, and Razor now all skip processing for impact
+        collisions. No more Zeniths ramming you to death. No more killing a
+        Flyssa with a framework.
+  id: 164
+  time: '2025-04-30T10:39:01.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed missing FTL drive on Flyssa and Archer unpowered thrusters
+  id: 165
+  time: '2025-04-30T11:37:26.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Tweaked shields a bit more. Now when above 1.5mW of power usage, the
+        shield will only reenable once under 200kW of power usage. Flux
+        overload....
+  id: 166
+  time: '2025-04-30T21:04:24.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Polaris has been remapped. Much more armor tank now than shield tank.
+        Also price lowered (to compensate for removal of missiles, and a lot of
+        the empty space)
+    - type: Fix
+      message: Fixed rusted walls not being the correct sprite (paradise 💪)
+  id: 167
+  time: '2025-04-30T23:40:44.0000000+00:00'
+- author: Onezero0
+  changes:
+    - type: Add
+      message: Added the Judiciary Expeditionary Research vessel.
+  id: 168
+  time: '2025-05-01T00:09:22.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Flyssa is now Bailiff/TSFMC captain access-restricted.
+    - type: Fix
+      message: Fixed Flyssa not having a warp point.
+  id: 169
+  time: '2025-05-01T00:36:46.0000000+00:00'
+- author: KiraZen-Underscore
+  changes:
+    - type: Add
+      message: >-
+        Ship AI Cores. They are not in any of the ships yet, either me or
+        someone in the future will make a ship with them.
+  id: 170
+  time: '2025-05-01T10:00:35.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: Added Tumour to TSFMC shipyard. Horrid carrier. Unbelievably ugly.
+    - type: Tweak
+      message: Polaris gets the missiles back. Also better firing port for the CHARON.
+  id: 171
+  time: '2025-05-01T10:27:49.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: Added Spyglass. Its a science ship for Rogues. Insane.
+  id: 172
+  time: '2025-05-01T20:50:52.0000000+00:00'
+- author: Onezero0
+  changes:
+    - type: Fix
+      message: Fixed the Judiciary missing an expedition console.
+  id: 173
+  time: '2025-05-02T00:35:08.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: Shuttle consoles are now locked when you initially purchase your ship.
+  id: 174
+  time: '2025-05-02T03:56:57.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: >-
+        You should no longer be able to keep firing a turret when it is off your
+        grid.
+  id: 175
+  time: '2025-05-02T07:16:24.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        Being outside your ship in FTL will now gib you. Is it really that
+        surprising?
+  id: 176
+  time: '2025-05-02T07:21:47.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: NGC is gone. I killed it. TSF now.
+    - type: Add
+      message: Implemented the increased POI distance and FTL drive range increase.
+  id: 177
+  time: '2025-05-02T23:03:29.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed spyglass not having a grav gen.
+    - type: Fix
+      message: Fixed polaris missing directional fans.
+    - type: Tweak
+      message: Removed job restrictions on a lot of TSFMC uplink gear.
+  id: 178
+  time: '2025-05-02T23:29:19.0000000+00:00'
+- author: KiraZen-Underscore
+  changes:
+    - type: Tweak
+      message: Fixed syringe/sponge bolts only injecting 5u instead of 10u.
+  id: 179
+  time: '2025-05-02T23:30:03.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Rogues no longer need any TSFMC playtime.
+    - type: Fix
+      message: Fixed a few more remaining bits of NFSD filth I could find.
+    - type: Fix
+      message: Fixed Colonel not having TSFMC prefix in name.
+  id: 180
+  time: '2025-05-03T01:08:31.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Fix
+      message: >-
+        shields are FINALLY FIXED i FINALLY FOUND THE FUCKING PROBLEM GRAGHHHH
+        ZENITH MERCURY KESSLER EXOCRON EXPED PRAETORIAN AND CALYPSO ALL NO
+        LONGER HAVE INVINCIBLE SHIELDS!!
+  id: 181
+  time: '2025-05-03T03:03:55.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added 3 new bounties to Rogues, and descriptions for almost all of the
+        Rogue bounties.
+    - type: Fix
+      message: >-
+        Fixed structure bounties for rogues (FTL drives, shield gens, etc) not
+        being able to be redeemed.
+  id: 182
+  time: '2025-05-03T04:53:26.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Tweak
+      message: Ship collisions are now based off mass. Beware the wall!
+  id: 183
+  time: '2025-05-03T04:59:26.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: If you have magboots active during FTL, you will no longer slip.
+  id: 184
+  time: '2025-05-03T05:57:24.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: Vouchers should now be able to unlock shuttle consoles.
+  id: 185
+  time: '2025-05-03T07:05:18.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: Shields should no longer function while not anchored.
+  id: 186
+  time: '2025-05-03T07:24:36.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: Added stamres. Fuck you.
+    - type: Add
+      message: Added Silhea to rogue shipyard.
+    - type: Remove
+      message: Removed Marauder. It was funny while it lasted.
+    - type: Fix
+      message: Fixed some shit with Flyssa and Tumour
+    - type: Tweak
+      message: Changed weapon layout on Calypso.
+  id: 187
+  time: '2025-05-03T21:32:56.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed Silhea LV wiring.
+  id: 188
+  time: '2025-05-04T00:58:57.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: Added Corvax sprites for walls and windows. Doors is a wyci still.
+  id: 189
+  time: '2025-05-04T03:44:38.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: More purging of stupid NFSD shit. TSFMC duffels and satchels. Lets go.
+    - type: Add
+      message: Brigmeds get deputy uplink.
+    - type: Add
+      message: >-
+        Remapped TSFMC-FOB. I made it in like 4 hours from 1 AM to 5 AM. I cant
+        wait for bug reports.
+  id: 190
+  time: '2025-05-04T09:19:19.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: Abandoned ships now look for players before deleting.
+  id: 191
+  time: '2025-05-04T11:13:03.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added really strong walls and windows to CO, TSFMC-FOB, and Rogue
+        Insurgency Hideout
+  id: 192
+  time: '2025-05-04T17:40:11.0000000+00:00'

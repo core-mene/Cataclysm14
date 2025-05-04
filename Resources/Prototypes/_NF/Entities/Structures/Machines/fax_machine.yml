@@ -141,11 +141,11 @@
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
   id: FaxMachineNFTradeMallNFSD
-  suffix: POI, Trade NCMC
+  suffix: POI, Trade TSFMC
   #categories: [ HideSpawnMenu ] # Mono - comment out
   components:
   - type: FaxMachine
-    name: "Trade Mall NCMC Post"
+    name: "Trade Mall TSFMC Post"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -195,20 +195,20 @@
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
   id: FaxMachineNFNfsd
-  suffix: POI, NCMC
+  suffix: POI, TSFMC
   #categories: [ HideSpawnMenu ] # Mono - comment out
   components:
   - type: FaxMachine
-    name: "NCMC Outpost Sheriff"
+    name: "TSFMC Outpost Colonel"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
   id: FaxMachineNFNfsdLawyer
-  suffix: POI, NCMC Lawyer
+  suffix: POI, TSFMC Lawyer
   #categories: [ HideSpawnMenu ] # Mono - comment out
   components:
   - type: FaxMachine
-    name: "NCMC Outpost Lawyer"
+    name: "TSFMC Outpost Lawyer"
 
 - type: entity
   parent: FaxMachineBase

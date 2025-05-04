@@ -5,9 +5,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/uranium_window.rsi # Frontier
+    sprite: Structures/Windows/uranium_window.rsi
   - type: Icon
-    sprite: _NF/Structures/Windows/uranium_window.rsi # Frontier
+    sprite: Structures/Windows/uranium_window.rsi
     state: full
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -115,7 +115,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/uranium_window_diagonal.rsi # Frontier
+    sprite: Structures/Windows/uranium_window_diagonal.rsi
     state: state0
   - type: Tag
     tags:
@@ -125,7 +125,7 @@
     key: walls # Frontier: windows<walls
     base: state
   - type: Icon
-    sprite: _NF/Structures/Windows/uranium_window_diagonal.rsi # Frontier
+    sprite: Structures/Windows/uranium_window_diagonal.rsi
     state: state0
   - type: Fixtures
     fixtures:

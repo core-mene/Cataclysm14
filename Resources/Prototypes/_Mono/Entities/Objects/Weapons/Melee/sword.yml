@@ -1,6 +1,6 @@
 - type: entity
   name: HF-katana
-  parent: [Katana, BaseC3Contraband]
+  parent: [Katana, BaseC2ContrabandUnredeemable]
   id: WeaponHFKatana
   description: A katana modified to have a high-frequency blade. Its incredibly powerful.
   components:
@@ -23,17 +23,19 @@
      - Belt
      - suitStorage
    - type: Reflect
-     reflectProb: 0.6
+     reflectProb: 0.35
    - type: DisarmMalus
    - type: StaticPrice
      price: 5000 # YOU CALL THAT A BLADE.... I'LL SHOW YOU A BLADE...
    - type: Construction
      graph: GraphWeaponHFKatana
      node: WeaponHFKatana
+   - type: PirateBountyItem
+     id: HFKatana
 
 - type: entity
   name: VT-7 HF blade "Murasama"
-  parent: [Katana, BaseC3Contraband] # we dont want the construction node, so we dont copy off the other HF katana
+  parent: [Katana, BaseC3SyndicateContraband] # we dont want the construction node, so we dont copy off the other HF katana
   id: WeaponMurasama
   description: You're the boss.
   components:
@@ -61,3 +63,34 @@
     malus: 0.9
   - type: StaticPrice
     price: 50000
+
+- type: entity
+  name: VT-7 HF blade
+  parent: [Katana, BaseC3SyndicateContraband] # we dont want the construction node, so we dont copy off the other HF katana
+  id: WeaponVT7
+  description: An advanced HF blade, evidently modified from a very high quality sword.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Melee/murasama.rsi
+  - type: MeleeWeapon
+    attackRate: 1.5
+    wideAnimationRotation: -60
+    damage:
+      types:
+        Slash: 19.5
+        Shock: 6.5
+        Structural: 55
+  - type: Item
+    sprite: _Mono/Objects/Weapons/Melee/murasama.rsi
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Melee/murasama.rsi
+    slots:
+    - Back
+    - Belt
+    - suitStorage
+  - type: Reflect
+    reflectProb: 0.40
+  - type: DisarmMalus
+    malus: 0.9
+  - type: StaticPrice
+    price: 5000

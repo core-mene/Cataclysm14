@@ -7,6 +7,7 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared;
 using Robust.Shared.Configuration;
+using Robust.Shared.Console;
 using Robust.Shared.Network;
 using Robust.Shared.Utility;
 using UsernameHelpers = Robust.Shared.AuthLib.UsernameHelpers;
@@ -26,11 +27,13 @@ namespace Content.Client.MainMenu
         [Dependency] private readonly IResourceCache _resourceCache = default!;
         [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
         [Dependency] private readonly ILogManager _logManager = default!;
+        [Dependency] private readonly IConsoleHost _console = default!;
 
         private ISawmill _sawmill = default!;
 
         private MainMenuControl _mainMenuControl = default!;
         private bool _isConnecting;
+        private bool _shouldGoLobby;
 
         // ReSharper disable once InconsistentNaming
         private static readonly Regex IPv6Regex = new(@"\[(.*:.*:.*)](?::(\d+))?");
@@ -43,13 +46,25 @@ namespace Content.Client.MainMenu
             _mainMenuControl = new MainMenuControl(_resourceCache, _configurationManager);
             _userInterfaceManager.StateRoot.AddChild(_mainMenuControl);
 
+            _client.PlayerJoinedGame += OnPlayerJoinedGame;
+
             _mainMenuControl.QuitButton.OnPressed += QuitButtonPressed;
             _mainMenuControl.OptionsButton.OnPressed += OptionsButtonPressed;
             _mainMenuControl.DirectConnectButton.OnPressed += DirectConnectButtonPressed;
+            _mainMenuControl.LobbyButton.OnPressed += LobbyButtonPressed;
             _mainMenuControl.AddressBox.OnTextEntered += AddressBoxEntered;
             _mainMenuControl.ChangelogButton.OnPressed += ChangelogButtonPressed;
 
             _client.RunLevelChanged += RunLevelChanged;
+        }
+
+        private void OnPlayerJoinedGame(object? sender, PlayerEventArgs e)
+        {
+            if (_shouldGoLobby)
+            {
+                _console.ExecuteCommand("golobby");
+                _shouldGoLobby = false;
+            }
         }
 
         /// <inheritdoc />
@@ -80,6 +95,14 @@ namespace Content.Client.MainMenu
         {
             var input = _mainMenuControl.AddressBox;
             TryConnect(input.Text);
+        }
+
+        private void LobbyButtonPressed(BaseButton.ButtonEventArgs args)
+        {
+            var input = _mainMenuControl.AddressBox;
+            TryConnect(input.Text);
+
+            _shouldGoLobby = true;
         }
 
         private void AddressBoxEntered(LineEdit.LineEditEventArgs args)
@@ -190,6 +213,7 @@ namespace Content.Client.MainMenu
         {
             _isConnecting = state;
             _mainMenuControl.DirectConnectButton.Disabled = state;
+            _mainMenuControl.LobbyButton.Disabled = state;
         }
     }
 }

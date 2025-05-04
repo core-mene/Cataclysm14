@@ -30,6 +30,11 @@
                 Text="{Loc 'main-menu-direct-connect-button'}"
                 TextAlign="Center"
                 StyleIdentifier="mainMenu"/>
+        <Button Name="LobbyButton"
+                Access="Public"
+                Text="{Loc 'main-menu-lobby-button'}"
+                TextAlign="Center"
+                StyleIdentifier="mainMenu"/>
         <Button Name="OptionsButton"
                 Access="Public"
                 Text="{Loc 'main-menu-options-button'}"

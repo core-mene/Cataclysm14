@@ -1,6 +1,6 @@
 # Author Info
-# GitHub: SuperJoelD00D
-# Discord: Super_Joel_Dood
+# GitHub: starch70
+# Discord: _starch_
 
 # Maintainer Info
 # GitHub: ???
@@ -11,9 +11,9 @@
 - type: pointOfInterest
   id: Nfsd
   parent: BasePOI
-  name: 'NCMC Outpost'
-  minimumDistance: 750
-  maximumDistance: 1000
+  name: 'TSFMC Sector FOB'
+  minimumDistance: 5750
+  maximumDistance: 6500
   spawnGroup: Required
   gridPath: /Maps/_NF/POI/nfsd.yml
   addComponents:
@@ -24,7 +24,7 @@
 
 - type: gameMap
   id: Nfsd
-  mapName: 'NCMC Outpost'
+  mapName: 'TSFMC Sector FOB'
   mapPath: /Maps/_NF/POI/nfsd.yml
   minPlayers: 0
   stations:
@@ -32,7 +32,7 @@
       stationProto: SecurityFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'NCMC Outpost'
+          mapNameTemplate: 'TSFMC Sector FOB'
         - type: ExtraStationInformation
           iconPath: /Textures/_NF/Structures/Decoration/banner.rsi/nfsd-banner.png
           stationSubtext: 'frontier-lobby-nfsd-subtext'
@@ -42,13 +42,13 @@
           availableJobs:
             Sheriff: [ 1, 1 ]
             Bailiff: [ 1, 1 ]
-            SeniorOfficer: [ 1, 1 ]
-            Brigmedic: [ 0, 0 ]
-            NFDetective: [ 0, 0 ]
-            Deputy: [ 3, 3 ]
-            Cadet: [ 2, 2 ] # Mono
+            SeniorOfficer: [ 2, 2 ]
+            Brigmedic: [ 1, 1 ]
+            #NFDetective: [ 0, 0 ] # Mono - comment out
+            Deputy: [ 5, 5 ] # Mono
+            Cadet: [ 3, 3 ] # Mono
             # Others:
-            PublicAffairsLiaison: [ 1, 1 ]
+            #PublicAffairsLiaison: [ 1, 1 ] # Mono - comment out
           tags:
           - HeadOfPersonnel
           - HeadOfSecurity

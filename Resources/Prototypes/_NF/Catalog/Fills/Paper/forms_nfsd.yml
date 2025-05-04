@@ -27,15 +27,15 @@
 - type: entity
   id: BoxFolderNfsdForms
   parent: [FillNfsdForms, BoxFolderPalGreen]
-  name: NCMC form folder
-  description: A folder filled with NCMC paperwork templates.
+  name: TSFMC form folder
+  description: A folder filled with TSFMC paperwork templates.
   suffix: Forms, Green
 
 - type: entity
   id: BoxFolderNfsdFormsBrown
   parent: [FillNfsdForms, BoxFolderPalBrown]
-  name: NCMC form folder
-  description: A folder filled with NCMC paperwork templates.
+  name: TSFMC form folder
+  description: A folder filled with TSFMC paperwork templates.
   suffix: Forms, Brown
 
 # Forms
@@ -47,8 +47,8 @@
   components:
   - type: Paper
     content: |2
-      [color=#4f6e40]◥[bold]N[/bold]◣ [bold]New Frontier Sheriff's Department[/bold][/color]
-      [color=#4f6e40]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
+      [color=#40516e]◥[bold]N[/bold]◣ [bold]Trans-Solar Federation Marine Corps[/bold][/color]
+      [color=#40516e]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
       [head=2]Search Warrant[/head]
 
       [head=3]Warrant Information[/head]
@@ -64,7 +64,7 @@
 
 
 
-      [color=#AAAAAA]This Warrant is only valid when requested by an agent of the NCMC and approved, signed, and stamped by a [italic]distinct[/italic] (unless impossible) officer ranked Bailiff or above or a Station Representative.[/color]
+      [color=#AAAAAA]This Warrant is only valid when requested by an agent of the TSFMC and approved, signed, and stamped by a [italic]distinct[/italic] (unless impossible) officer ranked Bailiff or above or a Station Representative.[/color]
 
 - type: entity # Creator: Starly (Shaw Clifflower)
   id: PaperWrittenNfsdReport
@@ -74,22 +74,22 @@
   components:
   - type: Paper
     content: |2
-      [color=#4f6e40]◥[bold]N[/bold]◣ [bold]New Frontier Sheriff's Department[/bold][/color]
-      [color=#4f6e40]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
+      [color=#40516e]◥[bold]N[/bold]◣ [bold]Trans-Solar Federation Marine Corps[/bold][/color]
+      [color=#40516e]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
       [head=2]After Action Report[/head]
 
       [bold]Case #:[/bold]
-      [bold]Offending Vessel:[/bold] 
+      [bold]Offending Vessel:[/bold]
 
-      [bold]Suspect:[/bold] 
-      [bold]Charges (list any escalations):[/bold] 
+      [bold]Suspect:[/bold]
+      [bold]Charges (list any escalations):[/bold]
 
-      [bold]Suspect:[/bold] 
-      [bold]Charges (list any escalations):[/bold] 
+      [bold]Suspect:[/bold]
+      [bold]Charges (list any escalations):[/bold]
 
-      [bold]Responding Vessel:[/bold] 
-      [bold]Time of Incident:[/bold] 
-      [bold]Officers on Board:[/bold] 
+      [bold]Responding Vessel:[/bold]
+      [bold]Time of Incident:[/bold]
+      [bold]Officers on Board:[/bold]
 
       [head=3]Evidence Collected[/head]
       List all evidence collected below and the officer in possession.
@@ -108,7 +108,7 @@
 
 
 
-      [color=#AAAAAA]I, the [italic]Bailiff or Sheriff[/italic] of the NCMC, or an agent acting on their behalf, certify that everything written in this report is correct and truthful. I am aware of the penalties should anything in this report be proven incorrect, falsified, or exaggerated.[/color]
+      [color=#AAAAAA]I, the [italic]Bailiff or Colonel[/italic] of the TSFMC, or an agent acting on their behalf, certify that everything written in this report is correct and truthful. I am aware of the penalties should anything in this report be proven incorrect, falsified, or exaggerated.[/color]
 
 - type: entity
   id: PaperWrittenNfsdArrestWarrant
@@ -118,34 +118,34 @@
   components:
   - type: Paper
     content: |2
-      [color=#4f6e40]◥[bold]N[/bold]◣ [bold]New Frontier Sheriff's Department[/bold][/color]
-      [color=#4f6e40]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
+      [color=#40516e]◥[bold]N[/bold]◣ [bold]Trans-Solar Federation Marine Corps[/bold][/color]
+      [color=#40516e]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
       [head=2]Arrest Warrant[/head]
 
       [head=2]Defendant(s)[/head]
-      [bold]Name:[/bold] 
-      [bold]Description:[/bold] 
+      [bold]Name:[/bold]
+      [bold]Description:[/bold]
 
-      [bold]Name:[/bold] 
-      [bold]Description:[/bold] 
+      [bold]Name:[/bold]
+      [bold]Description:[/bold]
 
-      [bold]Name:[/bold] 
-      [bold]Description:[/bold] 
+      [bold]Name:[/bold]
+      [bold]Description:[/bold]
 
       [head=2]Offense Details[/head]
-      [bold]Case #:[/bold] 
-      [bold]Approximate Time of Offense:[/bold] 
-      [bold]Location of Offense:[/bold] 
-      [bold]Charges:[/bold] 
+      [bold]Case #:[/bold]
+      [bold]Approximate Time of Offense:[/bold]
+      [bold]Location of Offense:[/bold]
+      [bold]Charges:[/bold]
 
       [head=2]Requestor Information[/head]
-      [bold]Requesting Officer:[/bold] 
-      [bold]Authorizing Officer:[/bold] 
-      [bold]Time of Authorization:[/bold] 
+      [bold]Requesting Officer:[/bold]
+      [bold]Authorizing Officer:[/bold]
+      [bold]Time of Authorization:[/bold]
 
 
 
-      [color=#AAAAAA]This warrant is only valid when requested by an agent of the NCMC, and approved, signed and stamped by a distinct (unless impossible) officer ranked Bailiff or above, or a Station Representative.[/color]
+      [color=#AAAAAA]This warrant is only valid when requested by an agent of the TSFMC, and approved, signed and stamped by a distinct (unless impossible) officer ranked Bailiff or above, or a Station Representative.[/color]
 
 - type: entity # Creator: Kwentov (Vica)
   id: PaperWrittenNfsdArrestReport
@@ -155,28 +155,28 @@
   components:
   - type: Paper
     content: |2
-      [color=#4f6e40]◥[bold]N[/bold]◣ [bold]New Frontier Sheriff's Department[/bold][/color]
-      [color=#4f6e40]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
+      [color=#40516e]◥[bold]N[/bold]◣ [bold]Trans-Solar Federation Marine Corps[/bold][/color]
+      [color=#40516e]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
       [head=2]Arrest Report[/head]
 
       [head=2]Incident Details[/head]
-      [bold]Case #:[/bold] 
-      [bold]Time of Arrest:[/bold] 
-      [bold]Location of Arrest:[/bold] 
-      [bold]Charges:[/bold] 
+      [bold]Case #:[/bold]
+      [bold]Time of Arrest:[/bold]
+      [bold]Location of Arrest:[/bold]
+      [bold]Charges:[/bold]
 
       [head=2]Arrested Person(s)[/head]
-      [bold]Name:[/bold] 
-      [bold]Description:[/bold] 
-      [bold]Fine or Punishment:[/bold] 
+      [bold]Name:[/bold]
+      [bold]Description:[/bold]
+      [bold]Fine or Punishment:[/bold]
 
-      [bold]Name:[/bold] 
-      [bold]Description:[/bold] 
-      [bold]Fine or Punishment:[/bold] 
+      [bold]Name:[/bold]
+      [bold]Description:[/bold]
+      [bold]Fine or Punishment:[/bold]
 
       [head=2]Arrestor[/head]
-      [bold]Arresting Officer:[/bold] 
-      [bold]Supervisor:[/bold] 
+      [bold]Arresting Officer:[/bold]
+      [bold]Supervisor:[/bold]
 
 
 
@@ -192,33 +192,33 @@
   components:
   - type: Paper
     content: |2 # If editing this, edit PaperWrittenFrontierEmployeePayHistory
-      [color=#4f6e40]◥[bold]N[/bold]◣ [bold]New Frontier Sheriff's Department[/bold][/color]
-      [color=#4f6e40]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
+      [color=#40516e]◥[bold]N[/bold]◣ [bold]Trans-Solar Federation Marine Corps[/bold][/color]
+      [color=#40516e]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
       [head=2]Duty Log[/head]
 
-      [head=2]Sheriff[/head]
-      [bold]Name:[/bold] 
-      [bold]Sign On Time:[/bold] 
-      [bold]Sign Off Time:[/bold] 
+      [head=2]Colonel[/head]
+      [bold]Name:[/bold]
+      [bold]Sign On Time:[/bold]
+      [bold]Sign Off Time:[/bold]
 
       [head=2]Officers[/head]
-      [bold]Name:[/bold] 
+      [bold]Name:[/bold]
       [bold]Position:[/bold]
-      [bold]Sign On Time:[/bold] 
-      [bold]Sign Off Time:[/bold] 
+      [bold]Sign On Time:[/bold]
+      [bold]Sign Off Time:[/bold]
 
-      [bold]Name:[/bold] 
+      [bold]Name:[/bold]
       [bold]Position:[/bold]
-      [bold]Sign On Time:[/bold] 
-      [bold]Sign Off Time:[/bold] 
+      [bold]Sign On Time:[/bold]
+      [bold]Sign Off Time:[/bold]
 
-      [bold]Name:[/bold] 
+      [bold]Name:[/bold]
       [bold]Position:[/bold]
-      [bold]Sign On Time:[/bold] 
-      [bold]Sign Off Time:[/bold] 
+      [bold]Sign On Time:[/bold]
+      [bold]Sign Off Time:[/bold]
 
 
-      [color=#AAAAAA]This Form is considered NT Sensitive Data, Class 2, and is for internal NCMC use only.[/color]
+      [color=#AAAAAA]This Form is considered NT Sensitive Data, Class 2, and is for internal TSFMC use only.[/color]
 
 
 - type: entity # Based on form made by Blumbee (Aki Suboshi)
@@ -229,30 +229,30 @@
   components:
   - type: Paper
     content: |2 # If updating this, update PaperWrittenFrontierContrabandTurnover
-      [color=#4f6e40]◥[bold]N[/bold]◣ [bold]New Frontier Sheriff's Department[/bold][/color]
-      [color=#4f6e40]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
+      [color=#40516e]◥[bold]N[/bold]◣ [bold]Trans-Solar Federation Marine Corps[/bold][/color]
+      [color=#40516e]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
       [head=2]Contraband Turnover Receipt[/head]
 
-      [bold]Contraband Holder:[/bold] 
-      [bold]Total Contraband Value (FUC):[/bold] 
+      [bold]Contraband Holder:[/bold]
+      [bold]Total Contraband Value (FUC):[/bold]
       [bold]Payout per FUC:[/bold] [color=#ff0000]$2,000[/color]
-      [bold]Payout Total:[/bold] 
+      [bold]Payout Total:[/bold]
 
       [bold]C2 Contraband:[/bold]
-          [bullet/] 
-          [bullet/] 
-          [bullet/] 
+          [bullet/]
+          [bullet/]
+          [bullet/]
 
       [bold]C3 Contraband:[/bold]
-          [bullet/] 
-          [bullet/] 
-          [bullet/] 
+          [bullet/]
+          [bullet/]
+          [bullet/]
 
-      [bold]Shift Time:[/bold] 
+      [bold]Shift Time:[/bold]
 
 
 
-      [color=#AAAAAA]This Form is void without the signatures of both Parties and a stamp of Frontier Command (Sheriff or Colonial Liaison).[/color]
+      [color=#AAAAAA]This Form is void without the signatures of both Parties and a stamp of Frontier Command (Colonel or Colonial Liaison).[/color]
 
 - type: entity # Based on form made by Blumbee (Aki Suboshi)
   id: PaperWrittenNfsdContrabandAmnesty
@@ -262,17 +262,17 @@
   components:
   - type: Paper
     content: |2 # If updating this, update PaperWrittenFrontierContrabandAmnesty
-      [color=#4f6e40]◥[bold]N[/bold]◣ [bold]New Frontier Sheriff's Department[/bold][/color]
-      [color=#4f6e40]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
+      [color=#40516e]◥[bold]N[/bold]◣ [bold]Trans-Solar Federation Marine Corps[/bold][/color]
+      [color=#40516e]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
       [head=2]Contraband Amnesty Agreement[/head]
 
       [head=3]Contraband Holder[/head]
-          [bold]Name:[/bold] 
-          [bold]Species:[/bold] 
-          [bold]Vessel IFF:[/bold] 
+          [bold]Name:[/bold]
+          [bold]Species:[/bold]
+          [bold]Vessel IFF:[/bold]
 
       [bold]Payout per FUC:[/bold] [color=#ff0000]$2,000[/color]
-      [bold]Shift Time:[/bold] 
+      [bold]Shift Time:[/bold]
 
       This document is a contract between the above Contraband Holder and Frontier Command.
 
@@ -282,7 +282,7 @@
 
 
 
-      [color=#AAAAAA]This form is void without the signatures of both Parties and a stamp of Frontier Command (Sheriff or Colonial Liaison).[/color]
+      [color=#AAAAAA]This form is void without the signatures of both Parties and a stamp of Frontier Command (Colonel or Colonial Liaison).[/color]
 
 - type: entity # Based on form made by Blumbee (Aki Suboshi)
   id: PaperWrittenNfsdContrabandPermit
@@ -292,17 +292,17 @@
   components:
   - type: Paper
     content: |2 # If updating this, update PaperWrittenFrontierContrabandPermit
-      [color=#4f6e40]◥[bold]N[/bold]◣ [bold]New Frontier Sheriff's Department[/bold][/color]
-      [color=#4f6e40]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
+      [color=#40516e]◥[bold]N[/bold]◣ [bold]Trans-Solar Federation Marine Corps[/bold][/color]
+      [color=#40516e]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
       [head=2]Class 2 Contraband Permit[/head]
 
-      [bold]Permit Holder:[/bold] 
+      [bold]Permit Holder:[/bold]
       [bold]Holder Crew:[/bold]
-          [bullet/] 
-          [bullet/] 
-          [bullet/] 
+          [bullet/]
+          [bullet/]
+          [bullet/]
 
-      [bold]Shift Time:[/bold] 
+      [bold]Shift Time:[/bold]
 
       This Permit allows the Holder and crew, as listed above, to possess and use class 2 contraband.
       Non-compliance with a Contraband Amnesty agreement voids this Permit.
@@ -310,7 +310,7 @@
 
 
 
-      [color=#AAAAAA]This Permit is void without the signature of the Holder and the signature and stamp of the Sheriff[/color]
+      [color=#AAAAAA]This Permit is void without the signature of the Holder and the signature and stamp of the Colonel[/color]
 
 - type: entity # Based on form made by Starly (Shaw Clifflower)
   id: PaperWrittenNfsdAuthorization
@@ -320,8 +320,8 @@
   components:
   - type: Paper
     content: |2 # When updating this, update PaperWrittenFrontierAuthorization
-      [color=#4f6e40]◥[bold]N[/bold]◣ [bold]New Frontier Sheriff's Department[/bold][/color]
-      [color=#4f6e40]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
+      [color=#40516e]◥[bold]N[/bold]◣ [bold]Trans-Solar Federation Marine Corps[/bold][/color]
+      [color=#40516e]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
       [head=2]Authorization for Bluespace Threats[/head]
 
       [bold]Vessel Captain:[/bold]
@@ -330,9 +330,9 @@
 
       [bold]Issuing Frontier Command:[/bold]
           [bullet]XXXXXXXX, Colonial Liaison
-          [bullet]XXXXXXXX, Sheriff
+          [bullet]XXXXXXXX, Colonel
 
-      This document authorizes the above vessel and its captain to assist and cooperate with the NCMC and Frontier authorities in neutralizing hostile bluespace threats to Frontier. These include, but are not limited to:
+      This document authorizes the above vessel and its captain to assist and cooperate with the TSFMC and Frontier authorities in neutralizing hostile bluespace threats to Frontier. These include, but are not limited to:
           [bullet] Cultist vessels
           [bullet] Syndicate vessels
           [bullet] Wizard Federation vessels
@@ -340,12 +340,12 @@
 
       This document does NOT deputize the authorized party. The authorized party is not granted special privileges to arrest, detain, and prosecute individuals associated with Nanotrasen.
 
-      [bold]Any contraband seized during operations aboard hostile vessels must be surrendered, either to the NCMC or the Colonial Liaison, for a cash bounty. Failure to surrender contraband will lead to the forfeiture of this agreement, and the authorized party may be liable for criminal charges.[/bold]
+      [bold]Any contraband seized during operations aboard hostile vessels must be surrendered, either to the TSFMC or the Colonial Liaison, for a cash bounty. Failure to surrender contraband will lead to the forfeiture of this agreement, and the authorized party may be liable for criminal charges.[/bold]
 
-      The authorized party is to keep a copy of this document for inspection. The authorized party is expected to maintain contact with NCMC command and/or the Colonial Liaison to minimize casualties.
+      The authorized party is to keep a copy of this document for inspection. The authorized party is expected to maintain contact with TSFMC command and/or the Colonial Liaison to minimize casualties.
 
-      Before engaging with hostile vessels, the authorized party is expected to follow any instructions given by the NCMC for staging or other preparation prior to boarding.
+      Before engaging with hostile vessels, the authorized party is expected to follow any instructions given by the TSFMC for staging or other preparation prior to boarding.
 
 
 
-      [color=#AAAAAA]This Form is void without the signatures of both Parties and a stamp of Frontier Command (Sheriff or Colonial Liaison).[/color]
+      [color=#AAAAAA]This Form is void without the signatures of both Parties and a stamp of Frontier Command (Colonel or Colonial Liaison).[/color]

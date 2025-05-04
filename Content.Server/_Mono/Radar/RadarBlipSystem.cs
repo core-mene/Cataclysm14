@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Server.Theta.ShipEvent.Components;
 using Content.Shared._Mono.Radar;
 using Content.Shared.Projectiles;
 using Content.Shared.Shuttles.Components;
@@ -66,6 +67,11 @@ public sealed partial class RadarBlipSystem : EntitySystem
                     continue;
 
                 var blipGrid = _xform.GetGrid(blipUid);
+
+                // Check if this is a shield radar blip without a grid
+                // If so, don't display it (fixes grid-orphaned shield generators)
+                if (HasComp<CircularShieldRadarComponent>(blipUid) && blipGrid == null)
+                    continue;
 
                 if (blip.RequireNoGrid)
                 {

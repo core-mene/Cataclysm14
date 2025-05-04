@@ -7,9 +7,9 @@
 
 # ====DO NOT TOUCH - ADMIN COMPANIES====
 - type: company
-  id: NGC
+  id: TSF
   form: Protagonist
-  name: NGC
+  name: TSF
   color: "#047ABD"
   disabled: true
 
@@ -21,34 +21,27 @@
   disabled: true
 # DO NOT TOUCH
 
-# ====NGC / Protag. Companies====
-- type: company
-  id: UnionJ
-  form: Protagonist
-  name: Union J
-  description: union-j-description
-  color: "#FFB266"
-
-- type: company
-  id: ArmadanExiles
-  form: Protagonist
-  name: Armadan Exiles
-  description: armadan-exiles-description
-  color: "#D82918"
-
-- type: company
-  id: GasNewGalactic
-  form: Protagonist
-  name: Gas New Galactic
-  description: gas-new-galactic-description
-  color: "#3DA695"
-
+# ====TSF / Protag. Companies====
 - type: company
   id: DarkMatterEnterprises
   form: Protagonist
   name: Dark Matter Enterprises
   description: dark-matter-enterprises-description
   color: "#BF00B9"
+
+- type: company
+  id: SouthernPeakMercenaries
+  form: Protagonist
+  name: The Southern Peaks
+  description: southern-peak-mercenaries-description
+  color: "#020624"
+
+- type: company
+  id: ZealotsOfBalaam
+  form: Protagonist
+  name: Zealots Of Balaam
+  description: zealots-of-balaam-description
+  color: "#BC7F58"
 
 # ====Rogue / Antag. Companies====
 - type: company

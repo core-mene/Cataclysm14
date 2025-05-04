@@ -61,7 +61,7 @@
 - type: entity
   parent: IDCardStandard
   id: CadetIDCard
-  name: NCMC cadet ID card
+  name: TSFMC private ID card
   components:
   - type: PresetIdCard
     job: Cadet
@@ -78,7 +78,7 @@
 - type: entity
   parent: CadetIDCard
   id: DeputyIDCard
-  name: NCMC deputy ID card
+  name: TSFMC corporal ID card
   components:
   - type: PresetIdCard
     job: Deputy
@@ -91,7 +91,7 @@
 - type: entity
   parent: CadetIDCard
   id: BrigmedicNFIDCard
-  name: NCMC brigmedic ID card
+  name: TSFMC brigmedic ID card
   components:
   - type: PresetIdCard
     job: Brigmedic
@@ -104,7 +104,7 @@
 - type: entity
   parent: CadetIDCard
   id: SergeantIDCard
-  name: NCMC sergeant ID card
+  name: TSFMC lieutenant ID card
   components:
   - type: PresetIdCard
     job: SeniorOfficer
@@ -117,7 +117,7 @@
 - type: entity
   parent: CadetIDCard
   id: BailiffIDCard
-  name: NCMC bailiff ID card
+  name: TSFMC captain ID card
   components:
   - type: PresetIdCard
     job: Bailiff
@@ -130,7 +130,7 @@
 - type: entity
   parent: [CadetIDCard, BaseCommandContraband]
   id: ShriffIDCard
-  name: NCMC sheriff ID card
+  name: TSFMC colonel ID card
   components:
   - type: PresetIdCard
     job: Sheriff
@@ -145,7 +145,7 @@
 - type: entity
   parent: CadetIDCard
   id: NFDetectiveIDCard
-  name: NCMC detective ID card
+  name: TSFMC detective ID card
   components:
   - type: PresetIdCard
     job: NFDetective
@@ -220,7 +220,7 @@
 - type: entity
   parent: PirateIDCard
   id: PirateNFIDCard
-  name: pirate ID card
+  name: rogue agent ID card
   description: Garr, be this wood?
   components:
   - type: PresetIdCard
@@ -236,7 +236,7 @@
 - type: entity
   parent: PirateNFIDCard
   id: PirateCaptainNFIDCard
-  name: pirate captain ID card
+  name: rogue commander ID card
   description: Ahoy, see how it glistens!
   components:
   - type: PresetIdCard
@@ -250,7 +250,7 @@
 - type: entity
   parent: PirateNFIDCard
   id: PirateFirstMateNFIDCard
-  name: pirate first mate ID card
+  name: rogue commandant ID card
   components:
   - type: PresetIdCard
     job: PirateFirstMate

@@ -19,9 +19,10 @@
         - CrateTradeContrabandSecure1
         - LandMineExplosive
         - BannerSyndicate
+        - Telecrystal1
       rarePrototypes:
-        - Telecrystal5 # FIXME: loose telecrystals no good
-      rareChance: 0.01 # ~1/12th as likely as a given crate
+        - Telecrystal5
+      rareChance: 0.01 # Mono
 
 - type: entity
   name: Contraband Crate Spawner

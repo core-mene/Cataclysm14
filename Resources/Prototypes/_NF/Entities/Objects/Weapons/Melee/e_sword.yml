@@ -1,12 +1,12 @@
 - type: entity
-  name: NCMC energy sword
+  name: TSFMC energy sword
   parent: [BaseC2ContrabandUnredeemable, EnergySword]
   id: EnergySwordNfsd
   description: A very loud & dangerous sword with a beam made of pure, concentrated plasma. Cuts through unarmored targets like butter.
   components:
   - type: EnergySword
     colorOptions:
-      - "#d4ffbf"
+      - "#bfdaff" # Mono
     blockHacking: true
 
 - type: entity

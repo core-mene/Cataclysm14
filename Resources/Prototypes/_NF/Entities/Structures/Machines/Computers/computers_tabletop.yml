@@ -642,8 +642,8 @@
 - type: entity
   parent: BaseComputerTabletopStationAdminBankATM
   id: ComputerTabletopStationAdminBankATMNfsd
-  description: Used to transfer funds from the NCMCO's bank account
-  suffix: NCMC, Tabletop
+  description: Used to transfer funds from the TSFMC-FOB's bank account
+  suffix: TSFMC, Tabletop
   components:
   - type: StationBankATM
     account: Nfsd

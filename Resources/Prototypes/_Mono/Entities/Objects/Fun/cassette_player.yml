@@ -1,0 +1,98 @@
+# Cassette Player
+- type: entity
+  parent: BaseItem
+  id: CassettePlayer
+  name: cassette player
+  components:
+  - type: Contraband
+    severity: Class3Chem
+  - type: Sprite
+    sprite: _Mono/Objects/Fun/cassette.rsi
+    state: player_filled
+  - type: Item
+    size: Small
+  - type: Clothing
+    sprite: _Mono/Objects/Fun/cassette.rsi
+    slots: [Belt]
+  - type: StaticPrice
+    price: 3000
+
+# Base Tape
+- type: entity
+  parent: BaseItem
+  id: BaseTape
+  name: cassette tape   
+  description: Nothing screams quality like rewinding your music with a pen!
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Fun/cassette.rsi
+    state: tape_default
+  - type: Item
+    size: Small
+  - type: StaticPrice
+    price: 1000
+
+# Cassette Tapes 
+- type: entity
+  parent: BaseTape
+  id: CassetteTapeDefault
+  suffix: plain
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Fun/cassette.rsi
+    state: tape_default
+  
+- type: entity
+  parent: BaseTape
+  id: CassetteTapeRed
+  suffix: red
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Fun/cassette.rsi
+    state: tape_red
+    
+- type: entity
+  parent: BaseTape
+  id: CassetteTapeGreen
+  suffix: green
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Fun/cassette.rsi
+    state: tape_green
+
+- type: entity
+  parent: BaseTape
+  id: CassetteTapeBlue
+  suffix: blue
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Fun/cassette.rsi
+    state: tape_blue
+
+- type: entity
+  parent: BaseTape
+  id: CassetteTapeArmada
+  suffix: green
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Fun/cassette.rsi
+    state: tape_armada
+    
+- type: entity
+  parent: BaseTape
+  id: CassetteTapeCongress
+  suffix: congress
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Fun/cassette.rsi
+    state: tape_congress
+
+- type: entity
+  parent: BaseTape
+  id: CassetteTapeRogue
+  suffix: rogue
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Fun/cassette.rsi
+    state: tape_rogue

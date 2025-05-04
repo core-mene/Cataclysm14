@@ -1,0 +1,33 @@
+- type: vessel
+  id: Exocron
+  parent: BaseVesselAntag
+  name: RG Exocron
+  description: A small vessel made out of salvaged rusted Zenith parts, and remade for humanoids. Designed to only be an agile fighter, and not anything else. No evil AI's inside.
+  price: 95000
+  category: Small
+  group: BlackMarket
+  access: Pirate
+  shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/exocron.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  engine:
+  - AME
+
+- type: gameMap
+  id: Exocron
+  mapName: 'Exocron'
+  mapPath: /Maps/_Mono/Shuttles/BlackMarket/exocron.yml
+  minPlayers: 0
+  stations:
+    Exocron:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Exocron RG{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Pirate: [ 0, 0 ]

@@ -15,6 +15,25 @@
       - PirateUplink
 
 - type: listing
+  id: UplinkPirateRogueCommsComputerCircuitboard
+  name:  uplink-pirate-comms-computer-circuitboard-name
+  description: uplink-pirate-comms-computer-circuitboard-desc
+  icon: { sprite: _Mono/Objects/Misc/module.rsi, state: cpu_rogue }
+  productEntity: RogueCommsComputerCircuitboard
+  cost:
+    Doubloon: 4
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+  - !type:BuyerJobCondition
+    whitelist:
+      - PirateCaptain
+
+- type: listing
   id: UplinkPirateChemicalSynthesisKit
   name:  uplink-pirate-chemical-synthesis-kit-name
   description: uplink-pirate-chemical-synthesis-kit-desc
@@ -99,6 +118,22 @@
   productEntity: EnergyShield
   cost:
     Doubloon: 5
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateThrusterKit
+  name:  uplink-pirate-thruster-kit-name
+  description: uplink-pirate-thruster-kit-desc
+  icon: { sprite: Objects/Storage/boxes.rsi, state: box}
+  productEntity: BoxT3SuperCapacitor
+  cost:
+    Doubloon: 3
   categories:
   - UplinkPirateUtility
   conditions:
@@ -448,6 +483,22 @@
   productEntity: EnergyCutlass
   cost:
     Doubloon: 6
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateVT7
+  name:  uplink-pirate-vt7-name
+  description: uplink-pirate-vt7-desc
+  productEntity: WeaponVT7
+  icon: { sprite: _Mono/Objects/Weapons/Melee/murasama.rsi, state: icon }
+  cost:
+    Doubloon: 15
   categories:
   - UplinkPirateWeapons
   conditions:
