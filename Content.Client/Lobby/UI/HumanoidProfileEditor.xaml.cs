@@ -437,7 +437,7 @@ namespace Content.Client.Lobby.UI
             for (var i = 0; i < companies.Count; i++)
             {
                 CompanyButton.AddItem(companies[i].Name, i);
-                Logger.Debug($"Added company to dropdown: {i} - {companies[i].ID} - {companies[i].Name}");
+                //Logger.Debug($"Added company to dropdown: {i} - {companies[i].ID} - {companies[i].Name}");
             }
 
             CompanyButton.OnItemSelected += args =>
@@ -458,7 +458,7 @@ namespace Content.Client.Lobby.UI
                     Profile = Profile?.WithCompany(companyId);
 
                     // Debug logging to verify selection
-                    Logger.Debug($"Company changed from {oldCompany} to {companyId}");
+                    //Logger.Debug($"Company changed from {oldCompany} to {companyId}");
 
                     // Explicitly call SetDirty to update save button state
                     SetDirty();
@@ -1887,8 +1887,8 @@ namespace Content.Client.Lobby.UI
                 companies.Insert(0, none);
             }
 
-            Logger.Debug($"Updating company controls." +
-                         $"Current profile company: {Profile.Company}\n");
+            //Logger.Debug($"Updating company controls." +
+                         //$"Current profile company: {Profile.Company}\n");
 
             // Find the company in the list and select it
             bool found = false;
@@ -1897,7 +1897,7 @@ namespace Content.Client.Lobby.UI
                 if (companies[i].ID != Profile.Company)
                     continue; // Short circuit.
 
-                Logger.Debug($"Found company at index {i}: {companies[i].ID} - {companies[i].Name}");
+                //Logger.Debug($"Found company at index {i}: {companies[i].ID} - {companies[i].Name}");
                 CompanyButton.SelectId(i);
 
                 // Description of Company (pointed-to in prototype, defined in Locale)
@@ -1912,7 +1912,7 @@ namespace Content.Client.Lobby.UI
             // If company wasn't found, default to "None" (index 0)
             if (!found)
             {
-                Logger.Debug($"Company {Profile.Company} not found in list, defaulting to None");
+                //Logger.Debug($"Company {Profile.Company} not found in list, defaulting to None");
                 CompanyButton.SelectId(0);
 
                 // Also reset the profile's company to None if the current one is disabled
