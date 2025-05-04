@@ -22,14 +22,16 @@
         Piercing: 0.9
         Caustic: 0.9
   - type: ClothingSpeedModifier
-    walkModifier: 0.80
-    sprintModifier: 0.80
+    walkModifier: 0.9 # Mono
+    sprintModifier: 0.9 # Mono
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitBasic
   - type: StaticPrice # Frontier
     price: 20 # Frontier
     vendPrice: 2000 # Frontier
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.6
 
 #Atmospherics Hardsuit
 - type: entity
@@ -61,11 +63,13 @@
         Heat: 0.8
         Radiation: 0.5
   - type: ClothingSpeedModifier
-    walkModifier: 0.7
-    sprintModifier: 0.7
+    walkModifier: 0.85 # Mono
+    sprintModifier: 0.85 # Mono
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitAtmos
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.6
 
 #Engineering Hardsuit
 - type: entity
@@ -93,11 +97,13 @@
         Caustic: 0.5
         Radiation: 0.2
   - type: ClothingSpeedModifier
-    walkModifier: 0.7
-    sprintModifier: 0.7
+    walkModifier: 0.85 # Mono
+    sprintModifier: 0.85 # Mono
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitEngineering
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.55 # slightly better than atmos hardsuit, cuz insulating plating or whatever
 
 #Spationaut Hardsuit
 - type: entity
@@ -132,6 +138,8 @@
     - Hardsuit
     - WhitelistChameleon
     - HardsuitSpatio
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.6
 
 #Salvage Hardsuit
 - type: entity
@@ -163,6 +171,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSalvage
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.55
 
 #Goliath Hardsuit
 - type: entity
@@ -198,6 +208,8 @@
   - type: Construction
     graph: HardsuitGoliath
     node: hardsuitGoliath
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.45
 
 #Maxim Hardsuit
 - type: entity
@@ -231,6 +243,8 @@
     coolingCoefficient: 0.001
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMaxim
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.45
 
 #Security Hardsuit
 - type: entity
@@ -261,6 +275,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSecurity
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.4
 
 #Brigmedic Hardsuit
 - type: entity
@@ -288,6 +304,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitBrigmedic
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.4
 
 #Warden's Hardsuit
 - type: entity
@@ -318,6 +336,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitWarden
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.3
 
 #Captain's Hardsuit
 - type: entity
@@ -350,6 +370,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCap
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.3
 
 #Chief Engineer's Hardsuit
 - type: entity
@@ -384,6 +406,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitEngineeringWhite
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.45
 
 #Chief Medical Officer's Hardsuit
 - type: entity
@@ -409,6 +433,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMedical
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.8
 
 #Research Director's Hardsuit
 - type: entity
@@ -455,6 +481,8 @@
     stealGroup: ClothingOuterHardsuitRd
   - type: PirateBountyItem # Frontier
     id: ClothingOuterHardsuitRd # Frontier
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.4
 
 #Head of Security's Hardsuit
 - type: entity
@@ -486,6 +514,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSecurityRed
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.4
 
 #Luxury Mining Hardsuit
 - type: entity
@@ -518,6 +548,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitLuxury
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.5
 
 #ANTAG HARDSUITS
 #Blood-red Hardsuit
@@ -558,6 +590,8 @@
     - MonkeyWearable
     - Hardsuit
     - WhitelistChameleon
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.2
 
 # Syndicate Medic Hardsuit
 - type: entity
@@ -615,6 +649,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSyndieElite
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.25
 
 #Syndicate Commander Hardsuit
 - type: entity
@@ -647,6 +683,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSyndieCommander
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.2
 
 #Cybersun Juggernaut Hardsuit
 - type: entity
@@ -679,6 +717,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCybersun
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.1
 
 #Wizard Hardsuit
 - type: entity
@@ -711,6 +751,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitWizard
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.3
 
 #Ling Space Suit
 - type: entity
@@ -741,6 +783,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitLing
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.5 # its just skin....
 
 #Pirate EVA Suit (Deep Space EVA Suit)
 #Despite visually appearing like a softsuit, it functions exactly like a hardsuit would (parents off of base hardsuit, has resistances and toggleable clothing, etc.) so it goes here.
@@ -773,6 +817,8 @@
     clothingPrototype: ClothingHeadHelmetHardsuitPirateEVA
   - type: StaticPrice
     price: 0
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.6
 
 #Pirate Captain Hardsuit
 - type: entity
@@ -806,6 +852,8 @@
     clothingPrototype: ClothingHeadHelmetHardsuitPirateCap
   - type: StaticPrice
     price: 0
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.5
 
 #CENTCOMM / ERT HARDSUITS
 #ERT Leader Hardsuit
@@ -932,6 +980,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitDeathsquad
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0
 
 #CBURN Hardsuit
 - type: entity
@@ -969,6 +1019,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetCBURN
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.15
 
 #MISC. HARDSUITS
 #Clown Hardsuit
@@ -1003,6 +1055,8 @@
     node: clownHardsuit
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitClown
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.8
 
 #Mime Hardsuit
 - type: entity
@@ -1020,6 +1074,8 @@
     node: mimeHardsuit
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMime
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.8
 
 #Santa's Hardsuit
 - type: entity
@@ -1050,3 +1106,5 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSanta
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.8

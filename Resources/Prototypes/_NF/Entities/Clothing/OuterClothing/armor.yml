@@ -22,6 +22,8 @@
   - type: ExplosionResistance
     damageCoefficient: 0.60
   - type: GroupExamine
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.4
 
 # Syndicate armored bio suit
 - type: entity
@@ -50,6 +52,8 @@
     sprintModifier: 0.85
   - type: ExplosionResistance
     damageCoefficient: 0.60
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.6
 
 - type: entity
   parent: [ ClothingOuterBaseLarge, BaseC2ContrabandUnredeemable ]
@@ -75,6 +79,8 @@
   - type: ExplosionResistance
     damageCoefficient: 0.60
   - type: GroupExamine
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.4
 
 - type: entity
   parent: [ BaseC1Contraband, ClothingOuterVestWebMercenary ]

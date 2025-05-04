@@ -15,6 +15,25 @@
       - PirateUplink
 
 - type: listing
+  id: UplinkPirateRogueCommsComputerCircuitboard
+  name:  uplink-pirate-comms-computer-circuitboard-name
+  description: uplink-pirate-comms-computer-circuitboard-desc
+  icon: { sprite: _Mono/Objects/Misc/module.rsi, state: cpu_rogue }
+  productEntity: RogueCommsComputerCircuitboard
+  cost:
+    Doubloon: 4
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+  - !type:BuyerJobCondition
+    whitelist:
+      - PirateCaptain
+
+- type: listing
   id: UplinkPirateChemicalSynthesisKit
   name:  uplink-pirate-chemical-synthesis-kit-name
   description: uplink-pirate-chemical-synthesis-kit-desc

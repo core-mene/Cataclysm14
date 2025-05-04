@@ -353,7 +353,7 @@ namespace Content.Server.Power.Pow3r
             [ViewVariables(VVAccess.ReadWrite)] public bool Paused;
             [ViewVariables(VVAccess.ReadWrite)] public float MaxSupply;
 
-            [ViewVariables(VVAccess.ReadWrite)] public float SupplyRampRate = 5000;
+            [ViewVariables(VVAccess.ReadWrite)] public float SupplyRampRate = 50000; // mono - buff to 50k from 5k
             [ViewVariables(VVAccess.ReadWrite)] public float SupplyRampTolerance = 5000;
 
             // == Runtime parameters ==
@@ -420,7 +420,7 @@ namespace Content.Server.Power.Pow3r
             /// </remarks>
             [ViewVariables(VVAccess.ReadWrite)] public float SupplyRampTolerance = 5000;
 
-            [ViewVariables(VVAccess.ReadWrite)] public float SupplyRampRate = 5000;
+            [ViewVariables(VVAccess.ReadWrite)] public float SupplyRampRate = 50000; // mono 10x
             [ViewVariables(VVAccess.ReadWrite)] public float Efficiency = 1;
 
             // == Runtime parameters ==

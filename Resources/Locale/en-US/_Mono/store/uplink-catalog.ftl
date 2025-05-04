@@ -60,6 +60,9 @@ uplink-pirate-jaws-desc = A normal jaws-of-life illegally modified past restrict
 uplink-pirate-thruster-kit-name = Thruster Upgrade Kit
 uplink-pirate-thruster-kit-desc = Contains 32 super capaciters. Perfect for upgrading eight thrusters.
 
+uplink-pirate-comms-computer-circuitboard-name = Rogue communications computer board
+uplink-pirate-comms-computer-circuitboard-desc = A computer printed circuit board for a rogue communications console.
+
 # weapons
 
 uplink-pirate-energy-cutlass-name = Energy Cutlass
