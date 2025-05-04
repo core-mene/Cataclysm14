@@ -8,8 +8,8 @@
       connections:
       - torso
       organs:
-        brain: OrganHumanBrain
-        eyes: OrganHumanEyes
+        brain: OrganProtogenBrain
+        eyes: OrganProtogenEyes
     torso:
       part: TorsoProtogen
       connections:
@@ -19,11 +19,11 @@
       - left leg
       - head # Shitmed
       organs:
-        heart: OrganHumanHeart
-        lungs: OrganHumanLungs
-        stomach: OrganHumanStomach
-        liver: OrganHumanLiver
-        kidneys: OrganHumanKidneys
+        heart: OrganProtogenHeart
+        lungs: OrganProtogenLungs
+        stomach: OrganProtogenStomach
+        liver: OrganProtogenLiver
+        kidneys: OrganProtogenKidneys
     right arm:
       part: RightArmProtogen
       connections:
