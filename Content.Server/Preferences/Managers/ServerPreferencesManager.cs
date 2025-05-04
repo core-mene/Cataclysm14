@@ -106,10 +106,27 @@ namespace Content.Server.Preferences.Managers
 
             profile.EnsureValid(session, _dependencies);
 
-            var profiles = new Dictionary<int, ICharacterProfile>(curPrefs.Characters)
+            if (curPrefs.Characters.TryGetValue(slot, out var existingProfile) &&
+                existingProfile is HumanoidCharacterProfile humanoidEditingTarget &&
+                profile is HumanoidCharacterProfile humanProfile)
             {
-                [slot] = profile
-            };
+                // Prevent company modification if already set
+                if (humanoidEditingTarget.Company != "" && humanProfile.Company != humanoidEditingTarget.Company)
+                {
+                    _sawmill.Info($"{session.Name} has tried to modify a locked character's company. They are using a modified client!");
+                    return;
+                }
+
+                // Prevent increasing bank balance
+                if (humanoidEditingTarget.BankBalance != humanProfile.BankBalance && humanProfile.BankBalance > humanoidEditingTarget.BankBalance)
+                {
+                    _sawmill.Info($"{session.Name} has tried to give their character money. They are using a modified client!");
+                    return;
+                }
+            }
+
+            var profiles = new Dictionary<int, ICharacterProfile>(curPrefs.Characters);
+            profiles[slot] = profile;
 
             prefsData.Prefs = new PlayerPreferences(profiles, slot, curPrefs.AdminOOCColor);
 
