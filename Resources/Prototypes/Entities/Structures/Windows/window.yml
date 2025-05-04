@@ -20,9 +20,9 @@
       - Window
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/window.rsi # Frontier
+    sprite: Structures/Windows/window.rsi
   - type: Icon
-    sprite: _NF/Structures/Windows/window.rsi # Frontier
+    sprite: Structures/Windows/window.rsi
     state: full
   - type: Physics
     bodyType: Static
@@ -100,9 +100,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/tinted_window.rsi # Frontier
+    sprite: Structures/Windows/tinted_window.rsi
   - type: Icon
-    sprite: _NF/Structures/Windows/tinted_window.rsi # Frontier
+    sprite: Structures/Windows/tinted_window.rsi
   - type: IconSmooth
     base: twindow
   - type: Construction
@@ -252,7 +252,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/window_diagonal.rsi # Frontier
+    sprite: Structures/Windows/window_diagonal.rsi
     state: state0
   - type: Tag
     tags:
@@ -261,7 +261,7 @@
     mode: Diagonal
     base: state
   - type: Icon
-    sprite: _NF/Structures/Windows/window_diagonal.rsi # Frontier
+    sprite: Structures/Windows/window_diagonal.rsi
     state: state0
   - type: Fixtures
     fixtures:
