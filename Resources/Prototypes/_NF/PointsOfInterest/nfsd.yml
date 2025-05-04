@@ -1,6 +1,6 @@
 # Author Info
-# GitHub: SuperJoelD00D
-# Discord: Super_Joel_Dood
+# GitHub: starch70
+# Discord: _starch_
 
 # Maintainer Info
 # GitHub: ???
@@ -12,7 +12,7 @@
   id: Nfsd
   parent: BasePOI
   name: 'TSFMC Sector FOB'
-  minimumDistance: 4750
+  minimumDistance: 5750
   maximumDistance: 6500
   spawnGroup: Required
   gridPath: /Maps/_NF/POI/nfsd.yml
@@ -44,11 +44,11 @@
             Bailiff: [ 1, 1 ]
             SeniorOfficer: [ 2, 2 ]
             Brigmedic: [ 1, 1 ]
-            #NFDetective: [ 0, 0 ] # Mono
-            Deputy: [ 4, 4 ]
-            Cadet: [ 2, 2 ] # Mono
+            #NFDetective: [ 0, 0 ] # Mono - comment out
+            Deputy: [ 5, 5 ] # Mono
+            Cadet: [ 3, 3 ] # Mono
             # Others:
-            #PublicAffairsLiaison: [ 1, 1 ] # Mono
+            #PublicAffairsLiaison: [ 1, 1 ] # Mono - comment out
           tags:
           - HeadOfPersonnel
           - HeadOfSecurity
