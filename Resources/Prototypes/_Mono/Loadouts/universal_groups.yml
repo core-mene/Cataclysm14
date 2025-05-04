@@ -1,10 +1,11 @@
 - type: loadoutGroup
   id: TsfmcBackpack
   name: loadout-group-contractor-backpack
-  hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
   - TsfmcClothingBackpack
+  - TsfmcClothingSatchel
+  - TsfmcClothingDuffel
   fallbacks:
   - TsfmcClothingBackpack
 
@@ -46,7 +47,7 @@
   - TsfmcCombatGloves
   - TsfmcNitrileGloves
   fallbacks:
-  - TsfmcCombatGloves
+  - TsfmcNitrileGloves
 
 - type: loadoutGroup
   id: TsfmcBelt
@@ -61,9 +62,9 @@
 - type: loadoutGroup
   id: TsfmcBrigmedicBelt
   name: loadout-group-contractor-belt
+  hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
-  - TsfmcCombatWebbing
   - TsfmcCombatWebbingMedical
   fallbacks:
   - TsfmcCombatWebbingMedical
@@ -98,12 +99,12 @@
 - type: loadoutGroup
   id: TsfmcBrigmedicGlasses
   name: loadout-group-contractor-glasses
+  hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
-  - TsfmcHud
   - TsfmcMedSec
   fallbacks:
-  - TsfmcHud
+  - TsfmcMedSec
 
 - type: loadoutGroup
   id: TsfmcHead
@@ -116,6 +117,7 @@
 - type: loadoutGroup
   id: TsfmcEars
   name: loadout-group-contractor-ears
+  hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
   - TsfmcHeadsetGrunt
@@ -126,6 +128,7 @@
 - type: loadoutGroup
   id: TsfmcEarsSenior
   name: loadout-group-contractor-ears
+  hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
   - TsfmcHeadsetSenior
@@ -136,6 +139,7 @@
 - type: loadoutGroup
   id: TsfmcOuterClothing
   name: loadout-group-contractor-outerclothing
+  hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
   - TsfmcVestSlim
