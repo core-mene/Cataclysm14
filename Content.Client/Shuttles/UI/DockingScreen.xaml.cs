@@ -376,7 +376,7 @@ public sealed partial class DockingScreen : BoxContainer
             idx++;
             dockText.Clear();
 
-            dockText.Append("external airlock");
+            dockText.Append(dock.LabelName ?? dock.Name);
 
             // Create a BoxContainer to hold button text and lock indicator
             var buttonContainer = new BoxContainer
