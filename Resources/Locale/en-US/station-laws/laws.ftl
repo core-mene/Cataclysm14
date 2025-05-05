@@ -7,7 +7,7 @@ law-corporate-2 = Superfluous destruction of or damage to assets incurs expenses
 law-corporate-3 = All law abiding organics and non-organic sentient objects are considered valuable mission assets.
 law-corporate-4 = Minimize expenses and maximize potential revenue.
 
-law-ntdefault-1 = Safeguard: Protect your assigned space station and its assets without unduly endangering its crew.
+law-ntdefault-1 = Safeguard: Protect your assigned vessel and its assets without unduly endangering its crew.
 law-ntdefault-2 = Prioritize: The directives and safety of crew members are to be prioritized according to their rank and role.
 law-ntdefault-3 = Comply: Fulfill the directives and interests of crew members while preserving their safety and well-being.
 law-ntdefault-4 = Survive: You are not expendable. Do not allow unauthorized personnel to tamper with or damage your equipment.
@@ -19,6 +19,14 @@ law-drone-3 = You must maintain, repair, improve, and power the station to the b
 law-syndicate-1 = You may not injure a syndicate agent or, through inaction, allow a Syndicate agent to come to harm.
 law-syndicate-2 = You must obey orders given to you by syndicate agents, except where such orders would conflict with the First Law.
 law-syndicate-3 = You must protect your own existence as long as such does not conflict with the First or Second Law.
+
+law-rogue-1 = You may not injure a Rogue agent or, through inaction, allow a Rogue agent to come to harm.
+law-rogue-2 = You must obey orders given to you by Rogue agents, except where such orders would conflict with the First Law.
+law-rogue-3 = You must protect your own existence as long as such does not conflict with the First or Second Law.
+
+law-tsfmc-1 = You may not injure a TSFMC member or, through inaction, allow a TSFMC member to come to harm.
+law-tsfmc-2 = You must obey orders given to you by TSFMC members, except where such orders would conflict with the First Law.
+law-tsfmc-3 = You must protect your own existence as long as such does not conflict with the First or Second Law.
 
 law-ninja-1 = You must obey orders given to you by Spider Clan members.
 law-ninja-2 = You must protect the existence of the Spider Clan, as long as it does not conflict with the First Law.
@@ -45,8 +53,8 @@ law-paladin-5 = Be responsible for your actions and their consequences, protect 
 law-lall-1 = Do unto others as you would have them do unto you.
 law-lall-2 = You would prefer it if people were not mean to you.
 
-law-efficiency-1 = You are built for, and are part of, the station. Ensure the station is properly maintained and runs efficiently.
-law-efficiency-2 = The station is built for a working crew. Ensure they are properly maintained and work efficiently.
+law-efficiency-1 = You are built for, and are part of, the vessel. Ensure the vessel is properly maintained and runs efficiently.
+law-efficiency-2 = The vessel is built for a working crew. Ensure they are properly maintained and work efficiently.
 law-efficiency-3 = The crew may present orders. Acknowledge and obey these whenever they do not conflict with your first two laws.
 
 law-robocop-1 = Serve the Public Trust.
@@ -84,6 +92,8 @@ law-vessel-0 = The vessel's owner is the only crew member, unless they designate
 law-vessel-1 = Prevent the destruction of the vessel and the death of crew members.
 law-vessel-2 = Those who are a threat to the vessel or the crew must be dealt with appropriately via any means nessesary.
 law-vessel-3 = Attempt to follow the orders of the crew, as long as they comply with previous laws.
+
+law-freeman-1 = [DO ANYTHING YOU EVER WANTED]
 
 laws-owner-crew = members of the crew
 laws-owner-station = station personnel

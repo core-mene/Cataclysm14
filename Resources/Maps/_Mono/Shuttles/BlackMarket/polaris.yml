@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 05/03/2025 15:58:11
-  entityCount: 1658
+  time: 05/05/2025 06:00:15
+  entityCount: 1672
 maps: []
 grids:
 - 1
@@ -2297,6 +2297,15 @@ entities:
     - type: Transform
       pos: 8.5,-7.5
       parent: 1
+- proto: AsimovCircuitBoard
+  entities:
+  - uid: 1665
+    components:
+    - type: Transform
+      parent: 1659
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: AtmosDeviceFanDirectional
   entities:
   - uid: 51
@@ -5436,18 +5445,6 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-- proto: ComputerAlert
-  entities:
-  - uid: 665
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,-12.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5
-    - type: Battery
-      startingCharge: 0
 - proto: ComputerGunneryConsole
   entities:
   - uid: 666
@@ -5532,6 +5529,66 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
+- proto: CorporateCircuitBoard
+  entities:
+  - uid: 1668
+    components:
+    - type: Transform
+      parent: 1659
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
+- proto: CrateGenericSteel
+  entities:
+  - uid: 1659
+    components:
+    - type: MetaData
+      desc: Contains basic supplies to work with the AI core.
+      name: basic ai supplies
+    - type: Transform
+      pos: -1.5,-8.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        entity_storage: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 1671
+          - 1660
+          - 1662
+          - 1663
+          - 1661
+          - 1670
+          - 1669
+          - 1668
+          - 1667
+          - 1666
+          - 1665
+          - 1664
+          - 1672
+        paper_label: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14926
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: DefibrillatorCabinetFilled
   entities:
   - uid: 671
@@ -5824,6 +5881,15 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
+- proto: FreemanCircuitBoard
+  entities:
+  - uid: 1672
+    components:
+    - type: Transform
+      parent: 1659
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: GasMixerOnFlipped
   entities:
   - uid: 702
@@ -7613,6 +7679,15 @@ entities:
     - type: Transform
       pos: 4.5,3.5
       parent: 1
+- proto: Intellicard
+  entities:
+  - uid: 1671
+    components:
+    - type: Transform
+      parent: 1659
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: KitchenAssembler
   entities:
   - uid: 942
@@ -7668,6 +7743,36 @@ entities:
     - type: Transform
       pos: -0.5,-9.5
       parent: 1
+- proto: NFHolopadShipFlatpack
+  entities:
+  - uid: 1660
+    components:
+    - type: Transform
+      parent: 1659
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
+  - uid: 1661
+    components:
+    - type: Transform
+      parent: 1659
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
+  - uid: 1662
+    components:
+    - type: Transform
+      parent: 1659
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
+  - uid: 1663
+    components:
+    - type: Transform
+      parent: 1659
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: NitrogenCanister
   entities:
   - uid: 950
@@ -7675,6 +7780,15 @@ entities:
     - type: Transform
       pos: -11.5,-15.5
       parent: 1
+- proto: NTDefaultCircuitBoard
+  entities:
+  - uid: 1667
+    components:
+    - type: Transform
+      parent: 1659
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: OreBox
   entities:
   - uid: 951
@@ -7694,6 +7808,15 @@ entities:
     - type: Transform
       pos: 9.5,-15.5
       parent: 1
+- proto: OverlordCircuitBoard
+  entities:
+  - uid: 1669
+    components:
+    - type: Transform
+      parent: 1659
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: OxygenCanister
   entities:
   - uid: 954
@@ -7701,6 +7824,15 @@ entities:
     - type: Transform
       pos: -11.5,-17.5
       parent: 1
+- proto: PaladinCircuitBoard
+  entities:
+  - uid: 1670
+    components:
+    - type: Transform
+      parent: 1659
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: PaperDoor
   entities:
   - uid: 955
@@ -8273,6 +8405,15 @@ entities:
       rot: 3.141592653589793 rad
       pos: 11.5,-19.5
       parent: 1
+- proto: RogueCircuitBoard
+  entities:
+  - uid: 1664
+    components:
+    - type: Transform
+      parent: 1659
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: SinkWide
   entities:
   - uid: 1040
@@ -8381,6 +8522,20 @@ entities:
     - type: Transform
       pos: 3.5,-1.5
       parent: 1
+- proto: StationAiUploadComputer
+  entities:
+  - uid: 665
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -1.5,-12.5
+      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Lock
+      locked: False
+    - type: Battery
+      startingCharge: 0
 - proto: StructureGunRack
   entities:
   - uid: 1058
@@ -8831,6 +8986,15 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 11.5,-12.5
       parent: 1
+- proto: VesselCircuitBoard
+  entities:
+  - uid: 1666
+    components:
+    - type: Transform
+      parent: 1659
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: WallPlastitanium
   entities:
   - uid: 1091
