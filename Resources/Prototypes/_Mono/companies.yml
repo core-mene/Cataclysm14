@@ -19,6 +19,23 @@
   name: Rogue
   color: "#8B0000"
   disabled: true
+
+- type: company
+  id: TSFHighComm
+  form: Protagonist
+  name: TSF High Command
+  color: "#008CE3"
+  disabled: true
+  logins: # admins only here !!! or your PR will be CLOSED!!!! also serves as a example for ur whitelisted factions
+  - starch
+  - localhost@starch
+  - localhost@Ark
+  - Ark
+  - Tikibomb
+  - DisguisedBear
+  - JuneCat
+  - Erol509
+  - SuperJoelDood
 # DO NOT TOUCH
 
 # ====TSF / Protag. Companies====
@@ -48,6 +65,7 @@
   id: TheViperGroup
   form: Antagonist
   name: The Viper Group
+  description: viper-group-description
   color: "#D82918"
 
 - type: company
