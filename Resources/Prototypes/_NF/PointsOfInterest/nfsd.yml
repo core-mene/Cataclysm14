@@ -15,7 +15,7 @@
   minimumDistance: 5750
   maximumDistance: 6500
   spawnGroup: Required
-  gridPath: /Maps/_NF/POI/nfsd.yml
+  gridPath: /Maps/_NF/POI/tsfmc.yml
   addComponents:
   - type: IFF
     color: "#047abd"
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Nfsd
   mapName: 'TSFMC Sector FOB'
-  mapPath: /Maps/_NF/POI/nfsd.yml
+  mapPath: /Maps/_NF/POI/tsfmc.yml
   minPlayers: 0
   stations:
     Nfsd:
