@@ -50,4 +50,10 @@ public sealed partial class CCVars : CVars
     /// </summary>
     public static readonly CVarDef<bool> AutoGetUp =
         CVarDef.Create("white.auto_get_up", true, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED); // WD EDIT
+
+    public static readonly CVarDef<bool> LogInChat =
+        CVarDef.Create("white.log_in_chat", true, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED); // WD EDIT
+
+    public static readonly CVarDef<bool> CoalesceIdenticalMessages =
+        CVarDef.Create("white.coalesce_identical_messages", true, CVar.CLIENT | CVar.ARCHIVE | CVar.CLIENTONLY); // WD EDIT
 }
