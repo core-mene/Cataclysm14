@@ -10,15 +10,31 @@
   - TsfmcDrozdLoadout
 
 - type: loadoutGroup
-  id: TsfmcMag
-  name: loadout-group-tsfmc-magazine
-  minLimit: 1
-  maxLimit: 2
+  id: TsfmcMag1
+  name: loadout-group-tsfmc-magazine-first
+  minLimit: 0
+  maxLimit: 1
   loadouts:
   - TsfmcSmgMagLoadout
   - TsfmcSmgMagEmpLoadout
   - TsfmcRifleMagLoadout
+  - TsfmcRifleIncendiaryMagLoadout
   - TsfmcPistolMagLoadout
   - TsfmcPistolIncendiaryMagLoadout
+  - TsfmcLightRifleMagLoadout
   fallbacks:
   - TsfmcSmgMagLoadout
+
+- type: loadoutGroup
+  id: TsfmcMag2
+  name: loadout-group-tsfmc-magazine-second
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - TsfmcSmgMagLoadout
+  - TsfmcRifleMagLoadout
+  - TsfmcPistolMagLoadout
+  - TsfmcLightRifleMagLoadout
+  fallbacks:
+  - TsfmcSmgMagLoadout
+

@@ -1,2 +1,3 @@
-loadout-group-tsfmc-weapon = main weapon
-loadout-group-tsfmc-magazine = magazine
+loadout-group-tsfmc-weapon = primary weapon
+loadout-group-tsfmc-magazine-first = magazine 1
+loadout-group-tsfmc-magazine-second = magazine 2

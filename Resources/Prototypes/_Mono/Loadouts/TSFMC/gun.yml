@@ -15,6 +15,13 @@
     - WeaponRifleLecter
 
 - type: loadout
+  id: TsfmcVulcanLoadout
+  price: 3000
+  storage:
+    back:
+    - WeaponRifleVulcan
+
+- type: loadout
   id: TsfmcEnergyGunLoadout
   price: 0
   storage:
@@ -45,6 +52,13 @@
     - MagazineRifle
 
 - type: loadout
+  id: TsfmcRifleIncendiaryMagLoadout
+  price: 500
+  storage:
+    back:
+    - MagazineRifleIncendiary
+
+- type: loadout
   id: TsfmcPistolMagLoadout
   price: 0
   storage:
@@ -57,3 +71,10 @@
   storage:
     back:
     - MagazinePistolIncendiary
+
+- type: loadout
+  id: TsfmcLightRifleMagLoadout
+  price: 50
+  storage:
+    back:
+    - MagazineLightRifle
