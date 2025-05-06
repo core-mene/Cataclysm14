@@ -196,10 +196,10 @@
     laws: LiveLetLiveLaws
 
 - type: entity
-  id: StationEfficiencyCircuitBoard
+  id: VesselEfficiencyCircuitBoard
   parent: BaseElectronics
-  name: law board (Station Efficiency)
-  description: An electronics board containing the Station Efficiency lawset.
+  name: law board (Vessel Efficiency)
+  description: An electronics board containing the Vessel Efficiency lawset.
   components:
   - type: Sprite
     sprite: Objects/Misc/module.rsi
