@@ -25,6 +25,9 @@
     damage:
       types:
         Slash: 5
+  - type: Body
+    prototype: Protogen
+    requiredLegs: 2
   - type: HumanoidAppearance
     species: Protogen
     hideLayersOnEquip:
