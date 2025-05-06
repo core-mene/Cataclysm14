@@ -90,10 +90,16 @@ uplink-pirate-bulldog-name = Bulldog Bundle
 uplink-pirate-bulldog-desc = A automatic .50 shotgun, packaged with a few drums.
 
 uplink-pirate-vt7-name = VT7 HF Blade
-uplink-pirate-vt7-desc = A high quality HF blade. 
+uplink-pirate-vt7-desc = A high quality HF blade.
 
-uplink-security-hfblade-name = HF-Katana
-uplink-security-hfblade-desc = A tool of justice.
+uplink-pirate-anaconda-name = Anaconda
+uplink-pirate-anaconda-desc = The pride of Cybersun engineers. A handheld, compact, self-recharging ballistic firearm.
+
+uplink-pirate-wspr-name = WSPR
+uplink-pirate-wspr-desc = A counter to the TSFMC's Annie. Uses the same .30 subsonic ammo.
+
+uplink-pirate-burner-name = Burner Heavy Rifle
+uplink-pirate-burner-desc = A destructive .50 caliber rifle. Supports HE ammo. Horribly destructive.
 
 # ammo
 
