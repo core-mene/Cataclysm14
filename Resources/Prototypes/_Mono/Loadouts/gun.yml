@@ -11,9 +11,8 @@
 
 - type: loadoutGroup
   id: TsfmcMag1
-  name: loadout-group-tsfmc-magazine-first
+  name: loadout-group-tsfmc-magazine
   minLimit: 1
-  maxLimit: 1
   loadouts:
   - TsfmcSmgMagLoadout
   - TsfmcSmgMagEmpLoadout
@@ -24,17 +23,4 @@
   - TsfmcLightRifleMagLoadout
   fallbacks:
   - TsfmcSmgMagLoadout
-
-- type: loadoutGroup
-  id: TsfmcMag2
-  name: loadout-group-tsfmc-magazine-second
-  minLimit: 1
-  maxLimit: 1
-  loadouts:
-  - TsfmcSmgMagLoadoutSpare
-  - TsfmcRifleMagLoadoutSpare
-  - TsfmcPistolMagLoadoutSpare
-  - TsfmcLightRifleMagLoadoutSpare
-  fallbacks:
-  - TsfmcSmgMagLoadoutSpare
 

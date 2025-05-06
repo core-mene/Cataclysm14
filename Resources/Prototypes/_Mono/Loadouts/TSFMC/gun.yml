@@ -35,69 +35,32 @@
   price: 0
   storage:
     back:
-    - MagazinePistolSubMachineGun
+    - BoxMagazinePistolSubMachineGun
 
 - type: loadout
   id: TsfmcSmgMagEmpLoadout
   price: 100
   storage:
     back:
-    - MagazinePistolSubMachineGunEmp
+    - BoxMagazinePistolSubMachineGunEmp
 
 - type: loadout
   id: TsfmcRifleMagLoadout
-  price: 50
+  price: 0
   storage:
     back:
-    - MagazineRifle
-
-- type: loadout
-  id: TsfmcRifleIncendiaryMagLoadout
-  price: 500
-  storage:
-    back:
-    - MagazineRifleIncendiary
+    - BoxMagazineRifle
 
 - type: loadout
   id: TsfmcPistolMagLoadout
   price: 0
   storage:
     back:
-    - MagazinePistol
-
-- type: loadout
-  id: TsfmcPistolIncendiaryMagLoadout
-  price: 50
-  storage:
-    back:
-    - MagazinePistolIncendiary
+    - BoxMagazinePistol
 
 - type: loadout
   id: TsfmcLightRifleMagLoadout
   price: 50
   storage:
     back:
-    - MagazineLightRifle
-
-# spares
-
-- type: loadout
-  id: TsfmcSmgMagLoadout
-  price: 0
-  storage:
-    back:
-    - MagazinePistolSubMachineGun
-
-- type: loadout
-  id: TsfmcRifleMagLoadout
-  price: 125
-  storage:
-    back:
-    - MagazineRifle
-
-- type: loadout
-  id: TsfmcLightRifleMagLoadout
-  price: 125
-  storage:
-    back:
-    - MagazineLightRifle
+    - BoxMagazineLightRifle
