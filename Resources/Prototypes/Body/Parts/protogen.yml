@@ -1,123 +1,120 @@
+# TODO: Add descriptions (many)
+# TODO BODY: Part damage
 - type: entity
   id: PartProtogen
-  parent: BasePart
+  parent: [BaseItem, BasePart]
   name: "protogen body part"
   abstract: true
   components:
-  - type: Sprite
-    sprite: Mobs/Species/Protogen/parts.rsi
-  - type: BodyPart
-    species: "Protogen"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: Blood
+        Quantity: 10
 
 - type: entity
   id: TorsoProtogen
   name: "protogen torso"
-  parent: BaseTorso
+  parent: [PartProtogen, BaseTorso]
   components:
   - type: Sprite
     sprite: Mobs/Species/Protogen/parts.rsi
     state: "torso_m"
-  - type: BodyPart
-    species: "Protogen"
-    vital: true
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: Blood
+        Quantity: 20
+
 
 - type: entity
   id: HeadProtogen
   name: "protogen head"
-  parent: BaseHead
+  parent: [PartProtogen, BaseHead]
   components:
   - type: Sprite
     sprite: Mobs/Species/Protogen/parts.rsi
     state: "head_m"
-  - type: BodyPart
-    species: "Protogen"
-    vital: true
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: Blood
+        Quantity: 10
 
 - type: entity
   id: LeftArmProtogen
   name: "left protogen arm"
-  parent: BaseLeftArm
+  parent: [PartProtogen, BaseLeftArm]
   components:
   - type: Sprite
     sprite: Mobs/Species/Protogen/parts.rsi
     state: "l_arm"
-  - type: BodyPart
-    species: "Protogen"
 
 - type: entity
   id: RightArmProtogen
   name: "right protogen arm"
-  parent: BaseRightArm
+  parent: [PartProtogen, BaseRightArm]
   components:
   - type: Sprite
     sprite: Mobs/Species/Protogen/parts.rsi
     state: "r_arm"
-  - type: BodyPart
-    species: "Protogen"
 
 - type: entity
-  id: LeftHandProtogen
+  id: LeftProtogenMoth
   name: "left protogen hand"
-  parent: BaseLeftHand
+  parent: [PartProtogen, BaseLeftHand]
   components:
   - type: Sprite
     sprite: Mobs/Species/Protogen/parts.rsi
     state: "l_hand"
-  - type: BodyPart
-    species: "Protogen"
 
 - type: entity
   id: RightHandProtogen
   name: "right protogen hand"
-  parent: BaseRightHand
+  parent: [PartProtogen, BaseRightHand]
   components:
   - type: Sprite
     sprite: Mobs/Species/Protogen/parts.rsi
     state: "r_hand"
-  - type: BodyPart
-    species: "Protogen"
 
 - type: entity
   id: LeftLegProtogen
-  name: "left protogen leg"
-  parent: BaseLeftLeg
+  name: "left Protogen leg"
+  parent: [PartProtogen, BaseLeftLeg]
   components:
   - type: Sprite
     sprite: Mobs/Species/Protogen/parts.rsi
     state: "l_leg"
-  - type: BodyPart
-    species: "Protogen"
 
 - type: entity
   id: RightLegProtogen
   name: "right protogen leg"
-  parent: BaseRightLeg
+  parent: [PartProtogen, BaseRightLeg]
   components:
   - type: Sprite
     sprite: Mobs/Species/Protogen/parts.rsi
     state: "r_leg"
-  - type: BodyPart
-    species: "Protogen"
 
 - type: entity
   id: LeftFootProtogen
   name: "left protogen foot"
-  parent: BaseLeftFoot
+  parent: [PartProtogen, BaseLeftFoot]
   components:
   - type: Sprite
     sprite: Mobs/Species/Protogen/parts.rsi
     state: "l_foot"
-  - type: BodyPart
-    species: "Protogen"
 
 - type: entity
   id: RightFootProtogen
   name: "right protogen foot"
-  parent: BaseRightFoot
+  parent: [PartProtogen, BaseRightFoot]
   components:
   - type: Sprite
     sprite: Mobs/Species/Protogen/parts.rsi
     state: "r_foot"
-  - type: BodyPart
-    species: "Protogen"
-
