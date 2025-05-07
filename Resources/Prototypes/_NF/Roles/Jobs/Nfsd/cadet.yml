@@ -8,7 +8,7 @@
       time: 7200 # 2 hours # mono
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 3600 # 1 hours # mono
+      time: 18000 # 5 hours # mono
       inverted: true # Leave slots open for newer, less confident players.
   startingGear: CadetGear
   icon: JobIconCadetNF

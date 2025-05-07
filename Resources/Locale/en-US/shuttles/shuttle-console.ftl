@@ -15,6 +15,9 @@ shuttle-console-emergency-unlocked = Emergency lockdown overridden. The console 
 shuttle-console-verb-unlock = Unlock Console
 shuttle-console-verb-lock = Lock Console
 
+## Shuttle Console FTL
+shuttle-ftl-proximity = Unable to FTL while around other ships.
+
 ## Shuttle Console Panic Button
 shuttle-console-panic-button = Emergency Broadcast
 shuttle-console-panic-no-grid = Unable to identify ship.
