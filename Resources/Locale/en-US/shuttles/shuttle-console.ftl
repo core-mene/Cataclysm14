@@ -8,7 +8,16 @@ shuttle-console-wrong-id = The ID card doesn't have any shuttle deeds.
 shuttle-console-wrong-deed = The ID card doesn't contain a valid deed for this shuttle.
 shuttle-console-cannot-lock = You don't have permission to lock this console.
 shuttle-console-no-ship-id = This console isn't assigned to any ship.
+shuttle-console-emergency-locked = This console is under emergency lockdown. Only TSFMC can unlock it.
+shuttle-console-emergency-unlocked = Emergency lockdown overridden. The console has been unlocked.
 
 ## Shuttle Console Lock Verbs
 shuttle-console-verb-unlock = Unlock Console
-shuttle-console-verb-lock = Lock Console 
+shuttle-console-verb-lock = Lock Console
+
+## Shuttle Console Panic Button
+shuttle-console-panic-button = Emergency Broadcast
+shuttle-console-panic-no-grid = Unable to identify ship.
+shuttle-console-panic-failed = Failed to send emergency broadcast.
+shuttle-console-panic-message = EMERGENCY: {$gridName} broadcasting SOS ({$coordinates}).
+shuttle-console-panic-sent = Emergency broadcast sent. Console has been locked down pending response.
