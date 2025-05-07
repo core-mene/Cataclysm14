@@ -232,6 +232,8 @@
   components:
   - type: StationBankATM
     account: Nfsd
+  - type: CompanyAccessReader
+    requiredCompany: TSF
 
 - type: entity
   parent: BaseStationAdminBankATM

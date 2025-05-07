@@ -1,0 +1,59 @@
+- type: listing
+  id: UplinkSecurityAnnie
+  name:  uplink-security-annie-name
+  description: uplink-security-annie-desc
+  productEntity: WeaponRifleAnnie
+  cost:
+    FrontierUplinkCoin: 15
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityEg4
+  name:  uplink-security-eg4-name
+  description: uplink-security-eg4-desc
+  productEntity: WeaponEnergyRevolver
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+  - UplinkSecurityWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityMagazineSubsonic
+  name:  uplink-subsonic-mag-name
+  description: uplink-subsonic-mag-desc
+  productEntity: MagazineLightRifleSubsonic
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+  - UplinkSecurityAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityBoxSubsonic
+  name:  uplink-subsonic-mag-name
+  description: uplink-subsonic-mag-desc
+  productEntity: MagazineBoxLightRifleSubsonic
+  cost:
+    FrontierUplinkCoin: 3
+  categories:
+  - UplinkSecurityAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink

@@ -1722,3 +1722,108 @@ Entries:
       message: You can now click on other grids when firing through the gunnery.
   id: 205
   time: '2025-05-06T07:15:08.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added the Vulcan to the TSFMC long-arm loadout shit. Its that FAL from
+        DV, if you didn't know.
+    - type: Tweak
+      message: >-
+        Swapped out individual mags in TSFMC weapon loadouts with magazine
+        boxes. Sadly you have to sacrifice incendiary mags for these. But thats
+        2x the amount of mags. So be happy.
+  id: 206
+  time: '2025-05-06T10:22:00.0000000+00:00'
+- author: SuperJoelD00D
+  changes:
+    - type: Add
+      message: >-
+        Added the protogen species! Currently has no special features besides
+        damage multipliers. C# for protogens, just a week away!
+  id: 207
+  time: '2025-05-06T20:09:46.0000000+00:00'
+- author: KiraZen_
+  changes:
+    - type: Add
+      message: Added three law boards, "Rogue", "TSFMC", and "Freeman"
+    - type: Add
+      message: >-
+        Made AI law consoles be able to be found on expeds and dungeons. I
+        think.
+    - type: Tweak
+      message: Changed Flyssa AI core room, the AI core is actually accessible now.
+  id: 208
+  time: '2025-05-06T20:11:10.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Fix
+      message: >-
+        Fixed the TSFMC standard airlock open sprite not using the correct
+        sprite. Crazy changelog.
+  id: 209
+  time: '2025-05-06T20:43:39.0000000+00:00'
+- author: Onezero0
+  changes:
+    - type: Add
+      message: Added the Magus, an armed, PMC-rated medical corvette.
+  id: 210
+  time: '2025-05-06T22:30:55.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: Ported WSPR, Anaconda, and Burner from Goob for rogue uplink.
+    - type: Add
+      message: Ported Annie and EG-4 from Goob for TSFMC uplink.
+    - type: Tweak
+      message: Nerfed ASM-302 tracking angles.
+  id: 211
+  time: '2025-05-06T22:41:05.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: Consoles can now be locked to companies by developers.
+    - type: Fix
+      message: Whitelisted companies should no longer force you into them only.
+  id: 212
+  time: '2025-05-07T02:26:33.0000000+00:00'
+- author: SuperJoelD00D
+  changes:
+    - type: Tweak
+      message: >-
+        An anonymous source said my sprites sucked, so I stole someone else's
+        sprites. New tail and ear sprites.
+  id: 213
+  time: '2025-05-07T05:50:20.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Tweak
+      message: Job slots are now limited to 10. Sorry Rogues.
+  id: 214
+  time: '2025-05-07T05:54:35.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: All ships now come with a TSF-compliant emergency transponder.
+  id: 215
+  time: '2025-05-07T06:50:44.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: >-
+        Reflections no longer stack and instead choose the item with the highest
+        reflection chance. Thanks Traildog.
+  id: 216
+  time: '2025-05-07T07:04:33.0000000+00:00'
+- author: gus
+  changes:
+    - type: Fix
+      message: Compatibility mode will work once again.
+  id: 217
+  time: '2025-05-07T07:45:49.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: You can now toggle detailed examine. Ported from Goob.
+  id: 218
+  time: '2025-05-07T09:07:31.0000000+00:00'

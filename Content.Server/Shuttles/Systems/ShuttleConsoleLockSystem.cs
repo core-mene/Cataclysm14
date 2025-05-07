@@ -11,6 +11,7 @@ using Robust.Shared.Audio.Systems;
 using Content.Shared.Verbs;
 using Robust.Shared.Utility;
 using Content.Server._NF.Shipyard.Components;
+using Content.Shared._Mono.Company;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -23,6 +24,7 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
     [Dependency] private readonly ShuttleConsoleSystem _consoleSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly HandsSystem _handsSystem = default!;
+    [Dependency] private readonly ShuttleSystem _shuttleSystem = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -85,13 +87,22 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
         // If locked, try to unlock
         if (component.Locked)
         {
+            // Handle emergency lock case first
+            if (component.EmergencyLocked)
+            {
+                // For emergency mode, just show the emergency message and don't try to unlock with deeds
+                Popup.PopupEntity(Loc.GetString("shuttle-console-emergency-locked"), uid, user);
+                //return;
+            }
+
+            // Normal unlock procedure for non-emergency locks
             bool unlocked = false;
 
             // Try each ID card the user has
             var idCards = FindAccessibleIDCards(user);
             foreach (var idCard in idCards)
             {
-                if (TryUnlock(uid, idCard, component))
+                if (TryUnlock(uid, idCard, component, user: user))
                 {
                     unlocked = true;
                     break;
@@ -398,7 +409,7 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
     /// <summary>
     /// Server-side implementation of TryUnlock
     /// </summary>
-    public override bool TryUnlock(EntityUid console, EntityUid idCard, ShuttleConsoleLockComponent? lockComp = null, IdCardComponent? idComp = null)
+    public override bool TryUnlock(EntityUid console, EntityUid idCard, ShuttleConsoleLockComponent? lockComp = null, IdCardComponent? idComp = null, EntityUid? user = null)
     {
         if (!Resolve(console, ref lockComp) || !Resolve(idCard, ref idComp))
             return false;
@@ -406,6 +417,40 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
         // If the console is already unlocked, do nothing
         if (!lockComp.Locked)
             return false;
+
+        // Special handling for emergency locks - requires TSF company access
+        if (lockComp.EmergencyLocked)
+        {
+            // Check if the ID card or user has TSF company access
+            var hasTSFAccess = false;
+
+            // Check for access tags on the ID card
+            if (TryComp<AccessComponent>(idCard, out var access))
+            {
+                // Check if ID has Nfsd or Security access
+                hasTSFAccess = access.Tags.Contains("Nfsd") || access.Tags.Contains("Security");
+            }
+
+            // Check for TSF company membership directly on the user entity
+            if (!hasTSFAccess && user != null && TryComp<CompanyComponent>(user, out var userCompany))
+            {
+                hasTSFAccess = userCompany.CompanyName == "TSF" || userCompany.CompanyName == "TSFHighCommand";
+            }
+
+            if (!hasTSFAccess)
+            {
+                _audio.PlayPvs(idComp.ErrorSound, console);
+                Popup.PopupEntity(Loc.GetString("shuttle-console-emergency-locked"), console);
+                return false;
+            }
+
+            // Success! Clear the emergency lock state
+            lockComp.EmergencyLocked = false;
+            lockComp.Locked = false;
+            _audio.PlayPvs(idComp.SwipeSound, console);
+            Popup.PopupEntity(Loc.GetString("shuttle-console-emergency-unlocked"), console);
+            return true;
+        }
 
         // If there's no shuttle ID, there's nothing to unlock against
         if (string.IsNullOrEmpty(lockComp.ShuttleId))
@@ -494,6 +539,104 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
 
         // Only lock if there's a valid shuttle ID
         lockComp.Locked = !string.IsNullOrEmpty(shuttleId);
+
+        // Remove any pilots when locking the console
+        if (lockComp.Locked && TryComp<ShuttleConsoleComponent>(console, out var shuttleComp))
+        {
+            // Clone the list to avoid modification during enumeration
+            var pilots = shuttleComp.SubscribedPilots.ToList();
+            foreach (var pilot in pilots)
+            {
+                _consoleSystem.RemovePilot(pilot);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Sets a console into emergency locked mode
+    /// </summary>
+    public void SetEmergencyLock(EntityUid console, bool enabled)
+    {
+        if (!TryComp<ShuttleConsoleLockComponent>(console, out var lockComp))
+        {
+            // Add the component if it doesn't exist
+            if (enabled)
+            {
+                lockComp = AddComp<ShuttleConsoleLockComponent>(console);
+                lockComp.Locked = true;
+                lockComp.EmergencyLocked = true;
+
+                // Make the shuttle visible in emergency mode by manipulating IFF
+                if (TryComp<TransformComponent>(console, out var xform) && xform.GridUid != null)
+                {
+                    var gridUid = xform.GridUid.Value;
+
+                    // Store original IFF flags
+                    if (TryComp<IFFComponent>(gridUid, out var iff))
+                    {
+                        lockComp.OriginalIFFFlags = iff.Flags;
+
+                        // Remove hiding flags
+                        _shuttleSystem.RemoveIFFFlag(gridUid, IFFFlags.Hide | IFFFlags.HideLabel);
+                    }
+                    else
+                    {
+                        // If no IFF component exists, add one that's visible
+                        var iffComp = EntityManager.EnsureComponent<IFFComponent>(gridUid);
+                        lockComp.OriginalIFFFlags = iffComp.Flags;
+                    }
+                }
+
+                Dirty(console, lockComp);
+            }
+            return;
+        }
+
+        // Update existing component
+        lockComp.Locked = enabled || !string.IsNullOrEmpty(lockComp.ShuttleId);
+        lockComp.EmergencyLocked = enabled;
+
+        // Handle IFF visibility
+        if (TryComp<TransformComponent>(console, out var transform) && transform.GridUid != null)
+        {
+            var gridUid = transform.GridUid.Value;
+
+            if (enabled)
+            {
+                // Save current IFF flags and make visible
+                if (TryComp<IFFComponent>(gridUid, out var iff))
+                {
+                    lockComp.OriginalIFFFlags = iff.Flags;
+
+                    // Remove hiding flags
+                    _shuttleSystem.RemoveIFFFlag(gridUid, IFFFlags.Hide | IFFFlags.HideLabel);
+                }
+                else
+                {
+                    // If no IFF component exists, add one that's visible
+                    var iffComp = EntityManager.EnsureComponent<IFFComponent>(gridUid);
+                    lockComp.OriginalIFFFlags = iffComp.Flags;
+                }
+            }
+            else
+            {
+                // Restore original flags
+                if (TryComp<IFFComponent>(gridUid, out var iff))
+                {
+                    // Clear all flags first
+                    _shuttleSystem.RemoveIFFFlag(gridUid, IFFFlags.Hide | IFFFlags.HideLabel);
+
+                    // Then restore the original flags that were hiding
+                    if ((lockComp.OriginalIFFFlags & IFFFlags.Hide) != 0)
+                        _shuttleSystem.AddIFFFlag(gridUid, IFFFlags.Hide);
+
+                    if ((lockComp.OriginalIFFFlags & IFFFlags.HideLabel) != 0)
+                        _shuttleSystem.AddIFFFlag(gridUid, IFFFlags.HideLabel);
+                }
+            }
+        }
+
+        Dirty(console, lockComp);
 
         // Remove any pilots when locking the console
         if (lockComp.Locked && TryComp<ShuttleConsoleComponent>(console, out var shuttleComp))

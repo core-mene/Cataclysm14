@@ -1107,3 +1107,23 @@
     - VendingMachineRestockPottedPlantVend
     chance: 0.95
     offset: 0.0
+
+- type: entity
+  name: random law board
+  id: SpawnDungeonLootLawBoards
+  parent: MarkerBasePlaceFree
+  suffix: Dungeon
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _NF/Objects/Devices/flatpack.rsi
+        state: engineering_lathe
+      - sprite: _NF/Markers/general.rsi
+        state: questionmark
+        color: red
+  - type: RandomSpawner
+    prototypes:
+    - SpawnDungeonLawBoardScience
+    chance: 0.15
+    offset: 0.0

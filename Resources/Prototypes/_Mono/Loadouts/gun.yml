@@ -13,12 +13,12 @@
   id: TsfmcMag
   name: loadout-group-tsfmc-magazine
   minLimit: 1
-  maxLimit: 2
   loadouts:
   - TsfmcSmgMagLoadout
   - TsfmcSmgMagEmpLoadout
   - TsfmcRifleMagLoadout
   - TsfmcPistolMagLoadout
-  - TsfmcPistolIncendiaryMagLoadout
+  - TsfmcLightRifleMagLoadout
   fallbacks:
   - TsfmcSmgMagLoadout
+

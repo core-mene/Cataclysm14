@@ -66,22 +66,6 @@ public sealed class CompanySystem : EntitySystem
         var playerId = args.Player.UserId.ToString();
         var profileCompany = args.Profile.Company;
 
-        //Lua start: Login support
-        foreach (var companyProto in _prototypeManager.EnumeratePrototypes<CompanyPrototype>())
-        {
-            if (companyProto.Logins.Contains(args.Player.Name))
-            {
-                companyComp.CompanyName = companyProto.ID;
-                Dirty(args.Mob, companyComp);
-                return;
-            }
-        }
-        //Lua end
-
-        // Use "None" as fallback for empty company
-        if (string.IsNullOrEmpty(profileCompany))
-            profileCompany = "None";
-
         // Store the player's original company preference if not already stored
         if (!_playerOriginalCompanies.ContainsKey(playerId))
         {
@@ -102,8 +86,35 @@ public sealed class CompanySystem : EntitySystem
         }
         else
         {
-            // Restore the player's original company preference
-            companyComp.CompanyName = _playerOriginalCompanies[playerId];
+            // Only consider whitelist if the player has NO specific company preference
+            bool loginFound = false;
+
+            // Only check logins if the player hasn't explicitly set a company preference
+            // or if their preference is "None"
+            if (string.IsNullOrEmpty(profileCompany))
+            {
+                // Check for company login whitelists
+                foreach (var companyProto in _prototypeManager.EnumeratePrototypes<CompanyPrototype>())
+                {
+                    if (companyProto.Logins.Contains(args.Player.Name))
+                    {
+                        companyComp.CompanyName = companyProto.ID;
+                        loginFound = true;
+                        break;
+                    }
+                }
+            }
+
+            // If no login was found or login check was skipped due to player preference, use the player's preference
+            if (!loginFound)
+            {
+                // Use "None" as fallback for empty company
+                if (string.IsNullOrEmpty(profileCompany))
+                    profileCompany = "None";
+
+                // Restore the player's original company preference
+                companyComp.CompanyName = profileCompany;
+            }
         }
 
         // Ensure the component is networked to clients
@@ -116,17 +127,17 @@ public sealed class CompanySystem : EntitySystem
         if (_prototypeManager.TryIndex<CompanyPrototype>(component.CompanyName, out var prototype) && component.CompanyName != "None")
         {
             // Use the color from the prototype with gender-appropriate pronoun
-            args.PushMarkup(Loc.GetString("examine-company", 
-                ("entity", uid), 
-                ("company", $"[color={prototype.Color.ToHex()}]{prototype.Name}[/color]")), 
+            args.PushMarkup(Loc.GetString("examine-company",
+                ("entity", uid),
+                ("company", $"[color={prototype.Color.ToHex()}]{prototype.Name}[/color]")),
                 priority: 100); // Much higher priority (100) will ensure it's at the top
         }
         else if (component.CompanyName != "None")
         {
             // Fallback for companies without prototypes
-            args.PushMarkup(Loc.GetString("examine-company", 
-                ("entity", uid), 
-                ("company", $"[color=yellow]{component.CompanyName}[/color]")), 
+            args.PushMarkup(Loc.GetString("examine-company",
+                ("entity", uid),
+                ("company", $"[color=yellow]{component.CompanyName}[/color]")),
                 priority: 100);
         }
         // Don't show anything for "None" company

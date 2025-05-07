@@ -49,7 +49,7 @@
       types:
         Radiation: 75
         Heat: 115
-        Ion: 3750 # heavy shield damage
+        Ion: 375
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
     layers:
@@ -59,7 +59,7 @@
   - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#00FFAA"
-    scale: 2
+    scale: 1.5
     requireNoGrid: true
     shape: circle
   - type: TimedDespawn
@@ -69,4 +69,4 @@
   - type: EmpOnTrigger
     range: 4
     energyConsumption: 2700000
-    disableDuration: 10
+    disableDuration: 5

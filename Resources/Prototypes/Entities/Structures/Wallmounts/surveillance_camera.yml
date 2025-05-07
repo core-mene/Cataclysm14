@@ -6,24 +6,6 @@
   components:
   - type: Physics
     bodyType: Static
-  - type: Fixtures
-    fixtures:
-      light:
-        shape:
-          !type:PhysShapeCircle
-          radius: 5
-        hard: false
-        mask:
-        - GhostImpassable
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.5,-0.5,-0.2,-0.15"
-        density: 190
-        mask:
-        - TabletopMachineMask
-        layer:
-        - TabletopMachineLayer
   - type: LightOnCollide
   - type: PointLight
     enabled: false

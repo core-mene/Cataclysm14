@@ -1025,12 +1025,12 @@
   - type: Sprite
     layers:
     - state: base
-      color: "#384d2f"
+      color: "#373a45"
     - state: closed
       map: ["closeLayer"]
-      color: "#a9947d"
+      color: "#7d94a9"
     - state: open
-      color: "#a9947d"
+      color: "#7d94a9"
       map: ["openLayer"]
       visible: false
     - state: inside
@@ -1048,25 +1048,25 @@
     - state: fill-util1-1
       map: [ "pouchFill1" ]
       visible: false
-    - state: decal-shield
+    - state: decal-line-01
       map: [ "decal1" ]
-      color: "#f2b833"
+      color: "#316294"
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
-        color: "#a9947d"
+        color: "#7d94a9"
       right:
       - state: inhand-right
-        color: "#a9947d"
+        color: "#7d94a9"
   - type: Clothing
     clothingVisuals:
       belt:
       - state: equipped-BELT
-        color: "#a9947d"
+        color: "#7d94a9"
       pocket:
       - state: equipped-BELT
-        color: "#a9947d"
+        color: "#7d94a9"
 
 - type: entity
   id: NFPouchPirate

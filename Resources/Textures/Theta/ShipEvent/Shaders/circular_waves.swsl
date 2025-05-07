@@ -3,18 +3,23 @@ uniform highp float BRIGHTNESS;
 uniform highp float FREQUENCY;
 uniform highp vec2 CENTER;
 uniform highp vec3 BASE_COLOR;
-uniform highp float RING_WIDTH = 0.1; // Controls the width of the ring (0.1 = 10% of radius)
-uniform highp float EDGE_SMOOTHNESS = 0.02; // Controls how smooth the edge transition is
-uniform highp float SCREEN_RADIUS = 100.0; // Shield radius in screen coordinates
+uniform highp float RING_WIDTH;
+uniform highp float EDGE_SMOOTHNESS;
+uniform highp float SCREEN_RADIUS;
 
 void fragment()
 {
+    // Set default values if uniforms aren't provided
+    highp float ringWidth = RING_WIDTH > 0.0 ? RING_WIDTH : 0.1;
+    highp float edgeSmoothness = EDGE_SMOOTHNESS > 0.0 ? EDGE_SMOOTHNESS : 0.02;
+    highp float screenRadius = SCREEN_RADIUS > 0.0 ? SCREEN_RADIUS : 100.0;
+
     // Calculate normalized distance from center
     highp vec2 delta = FRAGCOORD.xy - CENTER;
     highp float dist = length(delta);
 
     // Normalize the distance by the actual shield radius
-    highp float normalizedDist = dist / SCREEN_RADIUS;
+    highp float normalizedDist = dist / screenRadius;
 
     // Only discard if we're way outside the shield radius
     if (normalizedDist > 1.1) {
@@ -22,19 +27,19 @@ void fragment()
     }
 
     // Create inner and outer ring edges
-    highp float innerEdge = 0.85 - (RING_WIDTH / 2.0);
-    highp float outerEdge = 0.85 + (RING_WIDTH / 2.0);
+    highp float innerEdge = 0.85 - (ringWidth / 2.0);
+    highp float outerEdge = 0.85 + (ringWidth / 2.0);
 
     // Calculate ring mask - value between 0 and 1 based on distance from ideal ring
     highp float ringMask = 0.0;
 
     // If inside the inner edge, fade from 0 to 1
     if (normalizedDist < innerEdge) {
-        ringMask = smoothstep(innerEdge - EDGE_SMOOTHNESS, innerEdge, normalizedDist);
+        ringMask = smoothstep(innerEdge - edgeSmoothness, innerEdge, normalizedDist);
     }
     // If outside the outer edge, fade from 1 to 0
     else if (normalizedDist > outerEdge) {
-        ringMask = 1.0 - smoothstep(outerEdge, outerEdge + EDGE_SMOOTHNESS, normalizedDist);
+        ringMask = 1.0 - smoothstep(outerEdge, outerEdge + edgeSmoothness, normalizedDist);
     }
     // If between inner and outer edge, fully visible
     else {

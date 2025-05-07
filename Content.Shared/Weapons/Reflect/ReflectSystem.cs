@@ -60,27 +60,64 @@ public sealed class ReflectSystem : EntitySystem
         if (args.Reflected)
             return;
 
+        // Get all reflective items
+        var reflectiveItems = new List<(EntityUid Entity, ReflectComponent Component)>();
         foreach (var ent in _inventorySystem.GetHandOrInventoryEntities(uid, SlotFlags.All & ~SlotFlags.POCKET))
         {
-            if (!TryReflectHitscan(uid, ent, args.Shooter, args.SourceItem, args.Direction, out var dir))
-                continue;
+            if (TryComp<ReflectComponent>(ent, out var reflectComp) && 
+                _toggle.IsActivated(ent) && 
+                (reflectComp.Reflects & args.Reflective) != 0x0)
+            {
+                reflectiveItems.Add((ent, reflectComp));
+            }
+        }
 
+        // No reflective items found
+        if (reflectiveItems.Count == 0)
+            return;
+
+        // Find the item with the highest reflection probability
+        reflectiveItems.Sort((a, b) => b.Component.ReflectProb.CompareTo(a.Component.ReflectProb));
+        var bestReflector = reflectiveItems[0];
+
+        // Try to reflect with the best reflector
+        if (TryReflectHitscan(uid, bestReflector.Entity, args.Shooter, args.SourceItem, args.Direction, out var dir))
+        {
             args.Direction = dir.Value;
             args.Reflected = true;
-            break;
         }
     }
 
     private void OnReflectUserCollide(EntityUid uid, ReflectUserComponent component, ref ProjectileReflectAttemptEvent args)
     {
+        // Get all reflective items
+        var reflectiveItems = new List<(EntityUid Entity, ReflectComponent Component)>();
+        
+        // First, check the projectile's reflective type
+        if (!TryComp<ReflectiveComponent>(args.ProjUid, out var reflective))
+            return;
+            
         foreach (var ent in _inventorySystem.GetHandOrInventoryEntities(uid, SlotFlags.All & ~SlotFlags.POCKET))
         {
-            if (!TryReflectProjectile(uid, ent, args.ProjUid))
-                continue;
-
-            args.Cancelled = true;
-            break;
+            if (TryComp<ReflectComponent>(ent, out var reflectComp) && 
+                _toggle.IsActivated(ent) &&
+                (reflectComp.Reflects & reflective.Reflective) != 0x0)
+            {
+                reflectiveItems.Add((ent, reflectComp));
+            }
         }
+
+        // No reflective items found
+        if (reflectiveItems.Count == 0)
+            return;
+
+        // Find the item with the highest reflection probability
+        reflectiveItems.Sort((a, b) => b.Component.ReflectProb.CompareTo(a.Component.ReflectProb));
+        var bestReflector = reflectiveItems[0];
+
+        // Try to reflect with the best reflector
+        if (TryReflectProjectile(uid, bestReflector.Entity, args.ProjUid, reflect: bestReflector.Component))
+            args.Cancelled = true;
     }
 
     private void OnReflectCollide(EntityUid uid, ReflectComponent component, ref ProjectileReflectAttemptEvent args)

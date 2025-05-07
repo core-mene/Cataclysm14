@@ -227,7 +227,7 @@
   name: random machine board
   id: SpawnDungeonLootCircuitBoardScience
   parent: MarkerBasePlaceFree
-  suffix: "Dungeon, Sciense"
+  suffix: "Dungeon, Science"
   components:
   - type: Sprite
     layers:
@@ -268,7 +268,7 @@
   name: random flatpack
   id: SpawnDungeonLootFlatpacksScience
   parent: MarkerBasePlaceFree
-  suffix: "Dungeon, Sciense"
+  suffix: "Dungeon, Science"
   components:
   - type: Sprite
     layers:
@@ -296,3 +296,40 @@
     rarePrototypes:
     - MachineAnomalyGeneratorFlatpack
     rareChance: 0.001
+
+- type: entity
+  name: random law board
+  id: SpawnDungeonLawBoardScience
+  parent: MarkerBasePlaceFree
+  suffix: "Dungeon, Science"
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+        scale: 0.7, 0.7
+      - sprite: Objects/Misc/module.rsi
+        state: science
+      - sprite: _NF/Markers/general.rsi
+        state: questionmark
+        color: red
+  - type: RandomSpawner
+    prototypes:
+    - VesselCircuitBoard
+    - TSFMCCircuitBoard
+    - RogueCircuitBoard
+    - NutimovCircuitBoard
+    - AntimovCircuitBoard
+    - RobocopCircuitBoard
+    - VesselEfficiencyCircuitBoard
+    - PaladinCircuitBoard
+    - CommandmentCircuitBoard
+    - NTDefaultCircuitBoard
+    - CorporateCircuitBoard
+    - AsimovCircuitBoard
+    chance: 0.9
+    offset: 0.0
+    rarePrototypes:
+    - AntimovCircuitBoard
+    - FreemanCircuitBoard
+    - OverlordCircuitBoard
+    rareChance: 0.05

@@ -60,7 +60,7 @@ public abstract class SharedShuttleConsoleLockSystem : EntitySystem
     /// <summary>
     /// Attempts to unlock a console with the given ID card
     /// </summary>
-    public virtual bool TryUnlock(EntityUid console, EntityUid idCard, ShuttleConsoleLockComponent? lockComp = null, IdCardComponent? idComp = null)
+    public virtual bool TryUnlock(EntityUid console, EntityUid idCard, ShuttleConsoleLockComponent? lockComp = null, IdCardComponent? idComp = null, EntityUid? user = null)
     {
         // Implemented in client and server separately
         return false;

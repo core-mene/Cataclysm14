@@ -1,0 +1,24 @@
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateFilledWSPR
+  name: WSPR bundle
+  description: "A bundle carrying the syndicate's WSPR assault rifle, packed with 2 spare magazines."
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponRifleWSPR
+      - id: MagazineLightRifleSubsonic
+        amount: 2
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateBurner
+  name: Burner Bundle
+  description: "A high caliber Burner rifle, comes with some anti materiel and high explosive ammunition."
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponRifleBurner
+      - id: MagazineHighCaliberExplosive
+      - id: MagazineHighCaliber
+      - id: MagazineBoxHighCaliber
