@@ -31,6 +31,11 @@ public sealed partial class StationJobsSystem : EntitySystem
     [Dependency] private readonly GameTicker _gameTicker = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
 
+    /// <summary>
+    /// The maximum number of slots allowed for any job.
+    /// </summary>
+    private const int MaxJobSlots = 10;
+
     /// <inheritdoc/>
     public override void Initialize()
     {
@@ -171,8 +176,10 @@ public sealed partial class StationJobsSystem : EntitySystem
             case false:
                 if (!createSlot)
                     return false;
-                stationJobs.TotalJobs += amount;
-                jobList[jobPrototypeId] = amount;
+                // Limit to MaxJobSlots
+                var newAmount = Math.Min(amount, MaxJobSlots);
+                stationJobs.TotalJobs += newAmount;
+                jobList[jobPrototypeId] = newAmount;
                 UpdateJobsAvailable();
                 return true;
             case true:
@@ -184,7 +191,8 @@ public sealed partial class StationJobsSystem : EntitySystem
                 if (available + amount < 0 && !clamp)
                     return false;
 
-                jobList[jobPrototypeId] = Math.Max(avail + amount, 0);
+                // Clamp to both minimum 0 and maximum MaxJobSlots
+                jobList[jobPrototypeId] = Math.Min(Math.Max(avail + amount, 0), MaxJobSlots);
                 stationJobs.TotalJobs = jobList.Values.Select(x => x ?? 0).Sum();
                 UpdateJobsAvailable();
                 return true;
@@ -247,6 +255,9 @@ public sealed partial class StationJobsSystem : EntitySystem
         if (amount < 0)
             throw new ArgumentException("Tried to set a job to have a negative number of slots!", nameof(amount));
 
+        // Enforce the MaxJobSlots limit
+        var clampedAmount = Math.Min(amount, MaxJobSlots);
+        
         var jobList = stationJobs.JobList;
 
         switch (jobList.ContainsKey(jobPrototypeId))
@@ -254,14 +265,14 @@ public sealed partial class StationJobsSystem : EntitySystem
             case false:
                 if (!createSlot)
                     return false;
-                stationJobs.TotalJobs += amount;
-                jobList[jobPrototypeId] = amount;
+                stationJobs.TotalJobs += clampedAmount;
+                jobList[jobPrototypeId] = clampedAmount;
                 UpdateJobsAvailable();
                 return true;
             case true:
-                stationJobs.TotalJobs += amount - (jobList[jobPrototypeId] ?? 0);
+                stationJobs.TotalJobs += clampedAmount - (jobList[jobPrototypeId] ?? 0);
 
-                jobList[jobPrototypeId] = amount;
+                jobList[jobPrototypeId] = clampedAmount;
                 UpdateJobsAvailable();
                 return true;
         }
