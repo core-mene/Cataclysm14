@@ -8,10 +8,18 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 namespace Content.Server.Shuttles.Components
 {
     [RegisterComponent]
+    [AutoGenerateComponentState]
     public sealed partial class ShuttleConsoleComponent : SharedShuttleConsoleComponent
     {
         [ViewVariables]
         public readonly List<EntityUid> SubscribedPilots = new();
+
+        /// <summary>
+        /// Custom display names for network port buttons.
+        /// Key is the port ID, value is the display name.
+        /// </summary>
+        [DataField("portLabels"), AutoNetworkedField]
+        public new Dictionary<string, string> PortNames = new();
 
         /// <summary>
         /// How much should the pilot's eye be zoomed by when piloting using this console?

@@ -503,18 +503,27 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         if (!Resolve(entity, ref entity.Comp1, ref entity.Comp2))
             return new NavInterfaceState(SharedRadarConsoleSystem.DefaultMaxRange, null, null, docks, Shared._NF.Shuttles.Events.InertiaDampeningMode.Dampen); // Frontier: add inertia dampening
 
+        // Get port names from the console component if available
+        var portNames = new Dictionary<string, string>();
+        if (TryComp<ShuttleConsoleComponent>(entity, out var consoleComp))
+        {
+            portNames = consoleComp.PortNames;
+        }
+
         return GetNavState(
             entity,
             docks,
             entity.Comp2.Coordinates,
-            entity.Comp2.LocalRotation);
+            entity.Comp2.LocalRotation,
+            portNames);
     }
 
     public NavInterfaceState GetNavState(
         Entity<RadarConsoleComponent?, TransformComponent?> entity,
         Dictionary<NetEntity, List<DockingPortState>> docks,
         EntityCoordinates coordinates,
-        Angle angle)
+        Angle angle,
+        Dictionary<string, string>? portNames = null)
     {
         if (!Resolve(entity, ref entity.Comp1, ref entity.Comp2))
             return new NavInterfaceState(SharedRadarConsoleSystem.DefaultMaxRange, GetNetCoordinates(coordinates), angle, docks, InertiaDampeningMode.Dampen); // Frontier: add inertial dampening
@@ -524,7 +533,8 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
             GetNetCoordinates(coordinates),
             angle,
             docks,
-            _shuttle.NfGetInertiaDampeningMode(entity)); // Frontier: inertia dampening
+            _shuttle.NfGetInertiaDampeningMode(entity), // Frontier: inertia dampening
+            portNames);
     }
 
     /// <summary>

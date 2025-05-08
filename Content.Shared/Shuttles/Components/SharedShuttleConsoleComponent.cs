@@ -10,6 +10,12 @@ namespace Content.Shared.Shuttles.Components
     public abstract partial class SharedShuttleConsoleComponent : Component
     {
         public static string DiskSlotName = "disk_slot";
+
+        /// <summary>
+        /// Custom display names for network port buttons.
+        /// Key is the port ID, value is the display name.
+        /// </summary>
+        public Dictionary<string, string> PortNames = new();
     }
 
     [Serializable, NetSerializable]

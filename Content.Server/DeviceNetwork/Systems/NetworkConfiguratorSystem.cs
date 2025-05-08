@@ -2,6 +2,7 @@ using System.Linq;
 using Content.Server.Administration.Logs;
 using Content.Server.DeviceLinking.Systems;
 using Content.Server.DeviceNetwork.Components;
+using Content.Server.Shuttles.Components;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Database;
@@ -536,6 +537,21 @@ public sealed class NetworkConfiguratorSystem : SharedNetworkConfiguratorSystem
             return;
 
         var sources = _deviceLinkSystem.GetSourcePorts(sourceUid, sourceComponent);
+
+        // Check if the source entity has a ShuttleConsoleComponent with custom port names
+        if (TryComp<ShuttleConsoleComponent>(sourceUid, out var shuttleConsole) && shuttleConsole.PortNames.Count > 0)
+        {
+            // Apply custom port names to the source ports
+            foreach (var sourcePort in sources)
+            {
+                if (shuttleConsole.PortNames.TryGetValue(sourcePort.ID, out var customName))
+                {
+                    // We can't modify the prototype directly, so we create a new one with the custom name
+                    sourcePort.Name = customName;
+                }
+            }
+        }
+
         var sinks = _deviceLinkSystem.GetSinkPorts(sinkUid, sinkComponent);
         var links = _deviceLinkSystem.GetLinks(sourceUid, sinkUid, sourceComponent);
         var defaults = _deviceLinkSystem.GetDefaults(sources);

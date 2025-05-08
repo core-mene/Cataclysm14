@@ -113,7 +113,47 @@ public sealed partial class NavScreen : BoxContainer
     public void UpdateState(NavInterfaceState scc)
     {
         NavRadar.UpdateState(scc);
+        
+        // Update port names if custom names are available
+        UpdateNetworkPortButtonNames(scc.NetworkPortNames);
+        
         NfUpdateState(); // Frontier Update State
+    }
+
+    /// <summary>
+    /// Updates the text on the network port buttons based on the custom port names.
+    /// </summary>
+    /// <param name="portNames">Dictionary of port IDs to display names</param>
+    private void UpdateNetworkPortButtonNames(Dictionary<string, string> portNames)
+    {
+        // Map of button names to their corresponding port IDs in the component
+        var buttonToPortIdMap = new Dictionary<Button, string>
+        {
+            { DeviceButton1, "device-button-1" },
+            { DeviceButton2, "device-button-2" },
+            { DeviceButton3, "device-button-3" },
+            { DeviceButton4, "device-button-4" },
+            { DeviceButton5, "device-button-5" },
+            { DeviceButton6, "device-button-6" },
+            { DeviceButton7, "device-button-7" },
+            { DeviceButton8, "device-button-8" }
+        };
+
+        // For each button, check if there's a custom name and update accordingly
+        foreach (var (button, portId) in buttonToPortIdMap)
+        {
+            if (portNames.TryGetValue(portId, out var customName))
+            {
+                // Use the custom name if available
+                button.Text = customName;
+            }
+            else
+            {
+                // Otherwise use the default localized name
+                var locKey = $"shuttle-console-{portId}";
+                button.Text = Loc.GetString(locKey);
+            }
+        }
     }
 
     public void SetMatrix(EntityCoordinates? coordinates, Angle? angle)
