@@ -505,6 +505,22 @@
       - PirateUplink
 
 - type: listing
+  id: UplinkPirateSpeedLoaderMagnum
+  name:  uplink-pirate-speed-loader-magnum-name
+  description: uplink-pirate-speed-loader-magnum-desc
+  productEntity: SpeedLoaderMagnum
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
+  cost:
+    Doubloon: 1
+  categories:
+  - UplinkPirateAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
   id: UplinkPirateBurnerBox
   name:  uplink-pirate-box-highcal-name
   description: uplink-pirate-box-highcal-desc
@@ -526,22 +542,6 @@
   productEntity: MagazineBoxHighCaliberExplosive
   cost:
     Doubloon: 15
-  categories:
-  - UplinkPirateAmmo
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
-  id: UplinkPirateSpeedLoaderMagnum
-  name:  uplink-pirate-speed-loader-magnum-name
-  description: uplink-pirate-speed-loader-magnum-desc
-  productEntity: SpeedLoaderMagnum
-  icon: { sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
-  cost:
-    Doubloon: 1
   categories:
   - UplinkPirateAmmo
   conditions:
@@ -663,6 +663,22 @@
       - PirateUplink
 
 - type: listing
+  id: UplinkPirateAk
+  name:  uplink-pirate-ak-name
+  description: uplink-pirate-ak-desc
+  productEntity: WeaponRifleAk
+  icon: { sprite: Objects/Weapons/Guns/Rifles/ak.rsi, state: icon }
+  cost:
+    Doubloon: 12
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
   id: UplinkPirateBurner
   name:  uplink-pirate-burner-name
   description: uplink-pirate-burner-desc
@@ -702,22 +718,6 @@
   icon: { sprite: _Goobstation/Objects/Weapons/Guns/Rifles/wspr.rsi, state: icon }
   cost:
     Doubloon: 15
-  categories:
-  - UplinkPirateWeapons
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
-  id: UplinkPirateAk
-  name:  uplink-pirate-ak-name
-  description: uplink-pirate-ak-desc
-  productEntity: WeaponRifleAk
-  icon: { sprite: Objects/Weapons/Guns/Rifles/ak.rsi, state: icon }
-  cost:
-    Doubloon: 12
   categories:
   - UplinkPirateWeapons
   conditions:

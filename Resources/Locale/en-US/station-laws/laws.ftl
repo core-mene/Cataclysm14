@@ -7,7 +7,7 @@ law-corporate-2 = Superfluous destruction of or damage to assets incurs expenses
 law-corporate-3 = All law abiding organics and non-organic sentient objects are considered valuable mission assets.
 law-corporate-4 = Minimize expenses and maximize potential revenue.
 
-law-ntdefault-1 = Safeguard: Protect your assigned vesse    l and its assets without unduly endangering its crew.
+law-ntdefault-1 = Safeguard: Protect your assigned vessel and its assets without unduly endangering its crew.
 law-ntdefault-2 = Prioritize: The directives and safety of crew members are to be prioritized according to their rank and role.
 law-ntdefault-3 = Comply: Fulfill the directives and interests of crew members while preserving their safety and well-being.
 law-ntdefault-4 = Survive: You are not expendable. Do not allow unauthorized personnel to tamper with or damage your equipment.
