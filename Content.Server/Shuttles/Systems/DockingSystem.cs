@@ -1,4 +1,3 @@
-using System.Numerics;
 using Content.Server.Doors.Systems;
 using Content.Server.NPC.Pathfinding;
 using Content.Server.Shuttles.Components;
@@ -11,8 +10,6 @@ using Content.Shared.Shuttles.Events;
 using Content.Shared.Shuttles.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
-using Robust.Shared.Physics;
-using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Dynamics.Joints;
 using Robust.Shared.Physics.Systems;
@@ -339,10 +336,63 @@ namespace Content.Server.Shuttles.Systems
             if (dock.Comp.DockedWith == null)
                 return;
 
+            // Check if either shuttle is in FTL before undocking
+            var otherDockUid = dock.Comp.DockedWith.Value;
+            var shuttleUid = Transform(dock).GridUid;
+            var otherShuttleUid = Transform(otherDockUid).GridUid;
+
+            bool dockedInFTL = false;
+            EntityUid? ftlSourceShuttle = null;
+            FTLComponent? ftlComp = null;
+
+            // Check if either shuttle is in FTL travel
+            if (shuttleUid != null && TryComp<FTLComponent>(shuttleUid, out var shuttleFTL) &&
+                shuttleFTL.State == FTLState.Travelling)
+            {
+                dockedInFTL = true;
+                ftlSourceShuttle = shuttleUid;
+                ftlComp = shuttleFTL;
+            }
+            else if (otherShuttleUid != null && TryComp<FTLComponent>(otherShuttleUid, out var otherShuttleFTL) &&
+                     otherShuttleFTL.State == FTLState.Travelling)
+            {
+                dockedInFTL = true;
+                ftlSourceShuttle = otherShuttleUid;
+                ftlComp = otherShuttleFTL;
+            }
+
             OnUndock(dock.Owner);
             OnUndock(dock.Comp.DockedWith.Value);
             Cleanup(dock.Owner, dock);
             _console.RefreshShuttleConsoles();
+
+            // If undocking occurred during FTL travel, we need to update the FTL components
+            if (dockedInFTL && ftlSourceShuttle != null && ftlComp != null)
+            {
+                // The linked shuttle should be the main shuttle controlling FTL
+                var mainFTLShuttle = ftlComp.LinkedShuttle ?? ftlSourceShuttle.Value;
+
+                // For both shuttles, make sure they can complete their FTL journey independently
+                if (shuttleUid != null && shuttleUid != mainFTLShuttle &&
+                    TryComp<FTLComponent>(shuttleUid, out var shuttleFtlComp) && shuttleFtlComp.State == FTLState.Travelling)
+                {
+                    // Make sure the undocked shuttle maintains the same FTL state
+                    // This allows the undocked shuttle to complete its FTL journey
+                    // Set no LinkedShuttle so it will be processed independently
+                    shuttleFtlComp.LinkedShuttle = null;
+                    Dirty(shuttleUid.Value, shuttleFtlComp);
+                }
+
+                if (otherShuttleUid != null && otherShuttleUid != mainFTLShuttle &&
+                    TryComp<FTLComponent>(otherShuttleUid, out var otherFtlComp) && otherFtlComp.State == FTLState.Travelling)
+                {
+                    // Make sure the undocked shuttle maintains the same FTL state
+                    // This allows the undocked shuttle to complete its FTL journey
+                    // Set no LinkedShuttle so it will be processed independently
+                    otherFtlComp.LinkedShuttle = null;
+                    Dirty(otherShuttleUid.Value, otherFtlComp);
+                }
+            }
         }
 
         private void OnUndock(EntityUid dockUid)
@@ -475,9 +525,9 @@ namespace Content.Server.Shuttles.Systems
         {
             if (args.DockEntities.Count == 0)
                 return;
-            
+
             var undockedAny = false;
-            
+
             foreach (var dockEntity in args.DockEntities)
             {
                 if (!TryGetEntity(dockEntity, out var dockEnt) ||
@@ -496,7 +546,7 @@ namespace Content.Server.Shuttles.Systems
                 Undock(dock);
                 undockedAny = true;
             }
-            
+
             if (!undockedAny)
             {
                 _popup.PopupCursor(Loc.GetString("shuttle-console-undock-fail"));
