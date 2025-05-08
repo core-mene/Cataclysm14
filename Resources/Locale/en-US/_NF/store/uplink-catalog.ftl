@@ -241,4 +241,7 @@ uplink-security-cash5000-desc = Cold, hard cash.
 uplink-security-thrusterkit-name = Thruster Upgrade Kit
 uplink-security-thrusterkit-desc = Contains 32 super capaciters. Perfect for upgrading eight thrusters.
 
+uplink-security-cyborg-module-name = Security Cyborg Module
+uplink-security-cyborg-module-desc = A machete, an energy gun, and a stun baton, made specifically for borgs. Wait, don't Rogues have the same thing?
+
 #Mono End

@@ -10,13 +10,7 @@ ghost-role-information-redacted-borg-description = The dilapidated silicon intel
 ghost-role-information-redacted-core = Automated Defense Core
 ghost-role-information-redacted-core-description = The dilapidated ship computer of a long unused automated defense vessel.
 
-# AI Core Stuff
-
-ghost-role-information-vessel-core = Vessel AI Core
-ghost-role-information-vessel-core-description = An ADS AI core that has been reprogrammed and put onto a civilian vessel.
-
-ghost-role-information-tsfmc-core = TSFMC AI Core
-ghost-role-information-tsfmc-core-description = An ADS AI core that has been reprogrammed and put onto an TSFMC vessel.
+# ADS Core
 
 ghost-role-information-rogue-core = Rogue AI Core
 ghost-role-information-rogue-core-description = An ADS AI core that has been reprogrammed and put onto a Rogue vessel.

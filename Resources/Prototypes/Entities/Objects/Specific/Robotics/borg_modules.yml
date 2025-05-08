@@ -205,6 +205,41 @@
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: tool-module }
 
+- type: entity
+  id: BorgModuleSecurity
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: security cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: syndicate
+    - state: icon-syndicate
+  - type: ItemBorgModule
+    moduleId: Security
+    items:
+    - Machete
+    - CyborgStunbaton
+    - WeaponCyborgEnergyGun
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
+
+- type: entity
+  id: BorgModuleMercenary
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: mercenary cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: syndicate
+    - state: icon-syndicate
+  - type: ItemBorgModule
+    moduleId: Mercenary
+    items:
+    - Machete
+    - WeaponPistolMercenaryEchis
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
+
 # cargo modules
 - type: entity
   id: BorgModuleAppraisal

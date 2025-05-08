@@ -333,6 +333,22 @@
       tags:
       - PirateUplink
 
+- type: listing
+  id: UplinkPirateSecurityCyborgModule
+  name: uplink-pirate-security-cyborg-module-name
+  description: uplink-pirate-security-cyborg-module-desc
+  icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
+  productEntity: BorgModuleSecurity
+  cost:
+    Doubloon: 10
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
 # Ammunition
 
 - type: listing
@@ -404,7 +420,7 @@
   description: uplink-pirate-light-rifle-magazine-box-big-desc
   productEntity: MagazineBoxLightRifleBig
   cost:
-    Doubloon: 4
+    Doubloon: 2
   categories:
   - UplinkPirateAmmo
   conditions:
@@ -429,42 +445,12 @@
       - PirateUplink
 
 - type: listing
-  id: UplinkPirateBoxMagazineLightRifle
+  id: UplinkPiratebox-MagazineLightRifle
   name:  uplink-pirate-box-magazine-light-rifle-name
   description: uplink-pirate-box-magazine-light-rifle-desc
   productEntity: BoxMagazineLightRifle
   cost:
     Doubloon: 4
-  categories:
-  - UplinkPirateAmmo
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
-  id: UplinkPirateMagazineSubsonic
-  name:  uplink-subsonic-mag-name
-  description: uplink-subsonic-mag-desc
-  productEntity: MagazineLightRifleSubsonic
-  cost:
-    Doubloon: 1
-  categories:
-  - UplinkPirateAmmo
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
-  id: UplinkPirateBoxSubsonic
-  name:  uplink-subsonic-mag-name
-  description: uplink-subsonic-mag-desc
-  productEntity: MagazineBoxLightRifleSubsonic
-  cost:
-    Doubloon: 3
   categories:
   - UplinkPirateAmmo
   conditions:
@@ -496,36 +482,6 @@
   icon: { sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
   cost:
     Doubloon: 1
-  categories:
-  - UplinkPirateAmmo
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
-  id: UplinkPirateBurnerBox
-  name:  uplink-pirate-box-highcal-name
-  description: uplink-pirate-box-highcal-desc
-  productEntity: MagazineBoxHighCaliber
-  cost:
-    Doubloon: 7
-  categories:
-  - UplinkPirateAmmo
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
-  id: UplinkPirateBurnerBoxHE
-  name:  uplink-pirate-box-highcal-he-name
-  description: uplink-pirate-box-highcal-he-desc
-  productEntity: MagazineBoxHighCaliberExplosive
-  cost:
-    Doubloon: 15
   categories:
   - UplinkPirateAmmo
   conditions:
@@ -654,54 +610,6 @@
   icon: { sprite: Objects/Weapons/Guns/Rifles/ak.rsi, state: icon }
   cost:
     Doubloon: 12
-  categories:
-  - UplinkPirateWeapons
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
-  id: UplinkPirateBurner
-  name:  uplink-pirate-burner-name
-  description: uplink-pirate-burner-desc
-  productEntity: ClothingBackpackDuffelSyndicateBurner
-  icon: { sprite: _Goobstation/Objects/Weapons/Guns/Rifles/burner.rsi, state: icon }
-  cost:
-    Doubloon: 35
-  categories:
-  - UplinkPirateWeapons
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
-  id: UplinkPirateAnaconda
-  name:  uplink-pirate-anaconda-name
-  description: uplink-pirate-anaconda-desc
-  productEntity: WeaponPistolAnaconda
-  icon: { sprite: _Goobstation/Objects/Weapons/Guns/Pistols/anaconda.rsi, state: icon }
-  cost:
-    Doubloon: 15
-  categories:
-  - UplinkPirateWeapons
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
-  id: UplinkPirateWspr
-  name:  uplink-pirate-wspr-name
-  description: uplink-pirate-wspr-desc
-  productEntity: ClothingBackpackDuffelSyndicateFilledWSPR
-  icon: { sprite: _Goobstation/Objects/Weapons/Guns/Rifles/wspr.rsi, state: icon }
-  cost:
-    Doubloon: 15
   categories:
   - UplinkPirateWeapons
   conditions:

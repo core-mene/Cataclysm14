@@ -544,6 +544,22 @@
         tags:
           - SecurityUplink
 
+- type: listing
+  id: UplinkSecurityCyborgModule
+  name:  uplink-security-cyborg-module-name
+  description: uplink-security-cyborg-module-desc
+  productEntity: BorgModuleSecurity
+  icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
 #Mono end
 
 - type: listing
