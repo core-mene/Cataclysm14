@@ -196,10 +196,10 @@
     laws: LiveLetLiveLaws
 
 - type: entity
-  id: StationEfficiencyCircuitBoard
+  id: VesselEfficiencyCircuitBoard
   parent: BaseElectronics
-  name: law board (Station Efficiency)
-  description: An electronics board containing the Station Efficiency lawset.
+  name: law board (Vessel Efficiency)
+  description: An electronics board containing the Vessel Efficiency lawset.
   components:
   - type: Sprite
     sprite: Objects/Misc/module.rsi
@@ -293,6 +293,18 @@
     laws: VesselLawset
 
 - type: entity
+  id: TSFMCCircuitBoard
+  parent: BaseElectronics
+  name: law board (TSFMC)
+  description: An electronics board containing the TSFMC lawset.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+  - type: SiliconLawProvider
+    laws: TSFMCLawset
+
+- type: entity
   id: RogueCircuitBoard
   parent: BaseElectronics
   name: law board (Rogue)
@@ -305,16 +317,16 @@
     laws: RogueLawset
 
 - type: entity
-  id: TSFMCCircuitBoard
+  id: FreemanCircuitBoard
   parent: BaseElectronics
-  name: law board (TSFMC)
-  description: An electronics board containing the TSFMC lawset.
+  name: law board (Freeman)
+  description: An electronics board containing the Freeman lawset.
   components:
   - type: Sprite
     sprite: Objects/Misc/module.rsi
     state: std_mod
   - type: SiliconLawProvider
-    laws: TSFMCLawset
+    laws: FreemanLawset
 
 # Items
 - type: entity
