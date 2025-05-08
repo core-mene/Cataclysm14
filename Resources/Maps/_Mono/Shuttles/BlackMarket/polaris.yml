@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 05/03/2025 15:58:11
-  entityCount: 1658
+  time: 05/08/2025 19:52:22
+  entityCount: 1660
 maps: []
 grids:
 - 1
@@ -5436,18 +5436,6 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-- proto: ComputerAlert
-  entities:
-  - uid: 665
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,-12.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5
-    - type: Battery
-      startingCharge: 0
 - proto: ComputerGunneryConsole
   entities:
   - uid: 666
@@ -8273,6 +8261,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: 11.5,-19.5
       parent: 1
+- proto: RogueCircuitBoard
+  entities:
+  - uid: 1660
+    components:
+    - type: Transform
+      pos: -1.5,-12.5
+      parent: 1
 - proto: SinkWide
   entities:
   - uid: 1040
@@ -8381,6 +8376,20 @@ entities:
     - type: Transform
       pos: 3.5,-1.5
       parent: 1
+- proto: StationAiUploadComputer
+  entities:
+  - uid: 665
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -1.5,-12.5
+      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Lock
+      locked: False
+    - type: Battery
+      startingCharge: 0
 - proto: StructureGunRack
   entities:
   - uid: 1058
@@ -8830,6 +8839,13 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 11.5,-12.5
+      parent: 1
+- proto: VesselCircuitBoard
+  entities:
+  - uid: 1659
+    components:
+    - type: Transform
+      pos: -1.5,-12.5
       parent: 1
 - proto: WallPlastitanium
   entities:
