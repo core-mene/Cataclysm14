@@ -5,32 +5,32 @@
 # Shuttle Notes:
 #
 - type: vessel
-  id: Tzipora
+  id: Taichi
   parent: BaseVessel
-  name: SKR Tzipora
-  description: A advanced medical ship, outfitted with cryo, chem, and surgical capabilities.
-  price: 145530
-  category: Large
+  name: SKR Taichi
+  description: A extremely compact medical ship, with a full chemistry setup.
+  price: 32500
+  category: Small
   group: Medical
-  shuttlePath: /Maps/_Mono/Shuttles/tzipora.yml
+  shuttlePath: /Maps/_Mono/Shuttles/taichi.yml
   guidebookPage: null
   class:
   - Medical
   - Chemistry
   engine:
-  - AME
+  - Uranium
 
 - type: gameMap
-  id: Tzipora
-  mapName: 'SKR Tzipora'
-  mapPath: /Maps/_Mono/Shuttles/tzipora.yml
+  id: Taichi
+  mapName: 'SKR Taichi'
+  mapPath: /Maps/_Mono/Shuttles/taichi.yml
   minPlayers: 0
   stations:
-    Tzipora:
-      stationProto: StandardFrontierExpeditionVessel
+    Taichi:
+      stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Tzipora CIV{1}'
+          mapNameTemplate: 'Taichi CIV{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

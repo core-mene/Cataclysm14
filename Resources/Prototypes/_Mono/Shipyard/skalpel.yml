@@ -9,13 +9,14 @@
   parent: BaseVessel
   name: TSF-SKR Skalpel
   description: A de-militarized S&R ship, outfitted with chemistry and paramedic equipment.
-  price: 48800
+  price: 65200
   category: Medium
   group: Medical
   shuttlePath: /Maps/_Mono/Shuttles/skalpel.yml
   guidebookPage: null
   class:
   - Medical
+  - Chemistry
   engine:
   - Uranium
 
