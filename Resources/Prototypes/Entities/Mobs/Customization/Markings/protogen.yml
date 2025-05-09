@@ -42,3 +42,12 @@
   sprites:
   - sprite: Mobs/Customization/protogen_parts.rsi
     state: two_ears_protogen
+
+- type: marking
+  id: ProtogenVisor
+  bodyPart: Snout
+  markingCategory: Snout
+  speciesRestriction: [Protogen]
+  sprites:
+  - sprite: Mobs/Customization/protogen_parts.rsi
+    state: visor_protogen
