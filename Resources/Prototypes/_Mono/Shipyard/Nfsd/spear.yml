@@ -1,0 +1,32 @@
+- type: vessel
+  id: Spear
+  parent: BaseVessel
+  name: TSF-SKR Spear
+  description: A small ship meant as a escort. Horrible interior space, and not much in the way of comfort.
+  price: 33200
+  category: Small
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_Mono/Shuttles/Nfsd/spear.yml
+  guidebookPage: Null
+  class:
+  - Patrol
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Spear
+  mapName: 'Spear'
+  mapPath: /Maps/_Mono/Shuttles/Nfsd/spear.yml
+  minPlayers: 0
+  stations:
+    Spear:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Spear TSF{1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs: {}

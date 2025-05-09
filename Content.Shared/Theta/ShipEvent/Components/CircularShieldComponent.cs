@@ -41,7 +41,7 @@ public sealed partial class CircularShieldComponent : Component
 
     // Power surge mechanics when taking damage
     [DataField("projectileWattPerImpact"), ViewVariables(VVAccess.ReadWrite)]
-    public float ProjectileWattPerImpact = 105f; // Watts per point of projectile damage
+    public float ProjectileWattPerImpact = 25f; // Watts per point of projectile damage
 
     [DataField("damageSurgeDuration"), ViewVariables(VVAccess.ReadWrite)]
     public float DamageSurgeDuration = 25f; // Duration in seconds before surge dissipates
@@ -53,10 +53,10 @@ public sealed partial class CircularShieldComponent : Component
     public float SurgeTimeRemaining; // Time remaining for the current power surge
 
     [DataField("powerDrawLimit"), ViewVariables(VVAccess.ReadWrite)]
-    public float PowerDrawLimit = 1500000f; // Amount of wattage you can draw before the shield system turns off
+    public float PowerDrawLimit = 1500000f; // Amount of wattage you can draw before the shield system turns off - lol this dont work
 
     [DataField("resetPower"), ViewVariables(VVAccess.ReadWrite)]
-    public float ResetPower = 200000f; // Power usage has to drop below this to reenable shield
+    public float ResetPower = 200000f; // Power usage has to drop below this to reenable shield - lol this dont work
 
     [DataField("effects", serverOnly: true)]
     public List<CircularShieldEffect> Effects = new();

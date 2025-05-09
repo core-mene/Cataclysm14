@@ -1,0 +1,33 @@
+- type: vessel
+  id: Tethys
+  parent: BaseVesselAntag
+  name: RG Tethys
+  description: A basic entry-level rogue ship. 4 heavy autocannons and a bit of plastitanium is what you get.
+  price: 37520 # WALMARTMOBILE
+  category: Medium
+  group: BlackMarket
+  access: Pirate
+  shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/tethys.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Tethys
+  mapName: 'Tethys'
+  mapPath: /Maps/_Mono/Shuttles/BlackMarket/tethys.yml
+  minPlayers: 0
+  stations:
+    Silhea:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Tethys RG{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Pirate: [ 0, 0 ]
