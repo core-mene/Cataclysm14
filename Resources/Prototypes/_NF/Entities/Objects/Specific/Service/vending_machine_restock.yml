@@ -7,7 +7,7 @@
   - type: VendingMachineRestock
     canRestock:
     - AstroVendInventory
-    - AstroVendPOIInventory # Infinite stock apart from clothing.
+    #- AstroVendPOIInventory # Infinite stock apart from clothing. DISABLED on Monolith
   - type: Sprite
     layers:
     - state: base
