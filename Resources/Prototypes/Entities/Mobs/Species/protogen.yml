@@ -43,6 +43,16 @@
   - type: Carriable # Frontier: Carrying system from nyanotrasen.
   - type: Speech # Frontier
     allowedEmotes: ['Belch', 'Beep', 'Ping', 'Buzz'] # Frontier + Protogen stuff
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0.25
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 5.5
+    baseWalkSpeed : 2.75
 
 - type: entity
   parent: BaseSpeciesDummy
