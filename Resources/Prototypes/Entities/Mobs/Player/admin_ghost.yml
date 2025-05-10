@@ -23,7 +23,7 @@
   - type: Puller
   - type: CombatMode
   - type: Stealth
-    minVisibility: -1.5
+    maxVisibility: -1.5
   - type: Physics
     ignorePaused: true
     bodyType: Kinematic
