@@ -32,14 +32,14 @@
         - type: StationNameSetup
           mapNameTemplate: 'Camelot Station'
         - type: ExtraStationInformation
-          iconPath: /Textures/_NF/Markers/jobs.rsi/mercenary.png
+          iconPath: /Textures/_NF/Structures/Storage/Crates/secure_ammo.rsi/icon.png
           stationSubtext: 'frontier-lobby-camelot-subtext'
           stationDescription: 'frontier-lobby-camelot-description'
           lobbySortOrder: 4
         - type: StationJobs
           availableJobs:
             PirateFirstMate: [ 0, 1 ]
-            Pirate: [ 0, 2 ]
+            Pirate: [ 0, 4 ]
             Contractor: [ 0, -1 ]
             Pilot: [ 0, -1 ]
             Mercenary: [ 0, -1 ]
