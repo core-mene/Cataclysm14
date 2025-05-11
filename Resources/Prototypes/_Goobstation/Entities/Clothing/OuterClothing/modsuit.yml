@@ -53,7 +53,7 @@
 - type: entity
   parent: ClothingOuterBase
   id: ClothingModsuitChestplateSecurity
-  name: dragoon MODsuit chestplate
+  name: soldat MODsuit chestplate
   description: A robust modular suit cover with ceramic inserts for extra protection.
   categories: [ HideSpawnMenu ]
   components:
@@ -141,12 +141,12 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.6
+        Blunt: 0.5
         Slash: 0.5
-        Piercing: 0.5
+        Piercing: 0.45
         Heat: 0.5
-        Caustic: 0.6
-        Radiation: 0.6
+        Caustic: 0.5
+        Radiation: 0.5
   - type: ComponentToggler
     components:
     - type: PressureProtection

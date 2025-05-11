@@ -22,8 +22,8 @@
   components:
   - type: StorageFill
     contents:
-        - id: NitrogenTankFilled
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitEVA
         - id: ClothingHeadHelmetEVALarge
         - id: ClothingMaskBreath
@@ -37,8 +37,8 @@
   components:
   - type: StorageFill
     contents:
-        - id: NitrogenTankFilled
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterSuitEmergency
         - id: ClothingMaskBreath
         - id: JetpackMiniFilled # Frontier
@@ -97,11 +97,10 @@
     contents:
         - id: OxygenTankFilled
         - id: NitrogenTankFilled
-#        - id: JetpackVoidFilled # Frontier
+        - id: JetpackVoidFilled
         - id: ClothingOuterHardsuitAncientEVA
         - id: ClothingHeadHelmetAncient
         - id: ClothingMaskBreath
-        - id: JetpackMiniFilled # Frontier
 
 #HARDSUITS
 #Basic hardsuit
@@ -129,7 +128,7 @@
         - id: OxygenTankFilled
         - id: NitrogenTankFilled
         - id: ClothingShoesBootsMag
-        - id: ClothingOuterHardsuitEngineering
+        - id: UndeterminedVoidsuitEngineer # Goob edit
         - id: ClothingMaskBreath
         - id: JetpackMiniFilled # Frontier
   - type: AccessReader
@@ -145,7 +144,7 @@
     contents:
         - id: OxygenTankFilled
         - id: NitrogenTankFilled
-        - id: ClothingOuterHardsuitAtmos
+        - id: ClothingModsuitAtmostechPowerCell
         - id: ClothingMaskBreath
         - id: JetpackMiniFilled # Frontier
   - type: AccessReader
@@ -161,7 +160,7 @@
     contents:
         - id: OxygenTankFilled
         - id: NitrogenTankFilled
-        - id: ClothingOuterHardsuitSecurity
+        - id: UndeterminedVoidsuitSecurity # Goob edit
         - id: ClothingMaskBreath
         - id: JetpackSecurityFilled # Frontier
         - id: ClothingShoesBootsMagSecurityFilled # Frontier
@@ -210,7 +209,7 @@
 #HOS's hardsuit
 - type: entity
   id: SuitStorageHOS
-  parent: [BaseStructureIndestructible, BaseStructureLockImmuneToEmag, BaseStructureAccessReaderImmuneToEmag, BaseStructureDisableToolUse, SuitStorageBase] # Frontier: added BaseStructureDisableToolUse
+  parent: SuitStorageBase
   suffix: Head of Security
   components:
   - type: EntityTableContainerFill
@@ -223,7 +222,7 @@
 #Warden's hardsuit
 - type: entity
   id: SuitStorageWarden
-  parent: [BaseStructureIndestructible, BaseStructureLockImmuneToEmag, BaseStructureAccessReaderImmuneToEmag, BaseStructureDisableToolUse, SuitStorageBase] # Frontier: added BaseStructureDisableToolUse
+  parent: SuitStorageBase
   suffix: Warden
   components:
   - type: StorageFill
