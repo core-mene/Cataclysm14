@@ -22,6 +22,11 @@
   accessGroups:
   - GeneralNfsdAccess
   special:
+  - !type:AddComponentSpecial
+    components:
+    - type: NpcFactionMember
+      factions:
+      - TSFMC
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, TrackingImplant ]
   - !type:GiveItemOnHolidaySpecial

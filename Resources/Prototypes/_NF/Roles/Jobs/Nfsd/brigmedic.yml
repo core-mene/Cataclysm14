@@ -22,6 +22,13 @@
   accessGroups:
   - GeneralNfsdBrigmedicAccess
   special:
+  - !type:AddComponentSpecial
+    components:
+    - type: NpcFactionMember
+      factions:
+      - TSFMC
+    - type: SurgerySpeedModifier
+      SpeedModifier: 1.75
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, TrackingImplant ]
   - !type:GiveItemOnHolidaySpecial

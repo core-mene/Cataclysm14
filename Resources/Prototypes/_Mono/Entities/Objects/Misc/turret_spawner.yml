@@ -1,0 +1,29 @@
+- type: entity
+  id: SpawnMobWeaponTurretLaserTSFMC
+  parent: MarkerBase
+  name: TSFMC laser turret spawner
+  suffix: TSFMC, Frontier
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _NF/Objects/Weapons/Guns/Turrets/laser.rsi
+      state: base
+  - type: ConditionalSpawner
+    prototypes:
+    - WeaponTurretLaserTSFMC
+
+- type: entity
+  id: SpawnMobWeaponTurretTFSMC
+  parent: MarkerBase
+  name: TSFMC ballistic turret spawner
+  suffix: TSFMC, Frontier
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+      state: syndie_lethal
+  - type: ConditionalSpawner
+    prototypes:
+    - WeaponTurretTSFMC

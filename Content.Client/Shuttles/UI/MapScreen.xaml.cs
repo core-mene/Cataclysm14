@@ -232,7 +232,13 @@ public sealed partial class MapScreen : BoxContainer
         }
 
         RebuildMapObjects();
-        BumpMapDequeue();
+        
+        // Immediately add all objects to the map instead of queueing them
+        foreach (var mapObj in _pendingMapObjects)
+        {
+            AddMapObject(mapObj.mapId, mapObj.mapobj);
+        }
+        _pendingMapObjects.Clear();
 
         _nextPing = _timing.CurTime + _pingCooldown;
         MapRebuildButton.Disabled = true;
@@ -518,13 +524,14 @@ public sealed partial class MapScreen : BoxContainer
 
         var curTime = _timing.CurTime;
 
-        if (_nextMapDequeue < curTime && _pendingMapObjects.Count > 0)
-        {
-            var mapObj = _pendingMapObjects[^1];
-            _pendingMapObjects.RemoveAt(_pendingMapObjects.Count - 1);
-            AddMapObject(mapObj.mapId, mapObj.mapobj);
-            BumpMapDequeue();
-        }
+        // Skip the gradual reveal of map objects - they're already added in PingMap
+        // if (_nextMapDequeue < curTime && _pendingMapObjects.Count > 0)
+        // {
+        //     var mapObj = _pendingMapObjects[^1];
+        //     _pendingMapObjects.RemoveAt(_pendingMapObjects.Count - 1);
+        //     AddMapObject(mapObj.mapId, mapObj.mapobj);
+        //     BumpMapDequeue();
+        // }
 
         if (!IsFTLBlocked() && _nextPing < curTime)
         {

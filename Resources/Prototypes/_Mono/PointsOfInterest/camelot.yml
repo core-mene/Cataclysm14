@@ -1,0 +1,50 @@
+# Author Info
+# GitHub: starch70
+# Discord: _starch_
+
+# Maintainer Info
+# GitHub: starch70
+# Discord: _starch_
+
+# Notes:
+# neutral station for rogues & contractors
+- type: pointOfInterest
+  id: Camelot
+  parent: BasePOI
+  name: 'Camelot Station'
+  minimumDistance: 9650
+  maximumDistance: 11400
+  spawnGroup: Required
+  gridPath: /Maps/_Mono/POI/camelot.yml
+  addComponents:
+  - type: IFF
+    color: "#ccaa55"
+  - type: SolarPoweredGrid
+    trackOnInit: true
+    doNotCull: true
+
+- type: gameMap
+  id: Camelot
+  mapName: 'Camelot Station'
+  mapPath: /Maps/_Mono/POI/camelot.yml
+  minPlayers: 0
+  stations:
+    Camelot:
+      stationProto: RecordsFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Camelot Station'
+        - type: ExtraStationInformation
+          iconPath: /Textures/_NF/Structures/Storage/Crates/secure_ammo.rsi/icon.png
+          stationSubtext: 'frontier-lobby-camelot-subtext'
+          stationDescription: 'frontier-lobby-camelot-description'
+          lobbySortOrder: 4
+        - type: StationJobs
+          availableJobs:
+            PirateFirstMate: [ 0, 1 ]
+            Pirate: [ 0, 4 ]
+            Contractor: [ 0, -1 ]
+            Pilot: [ 0, -1 ]
+            Mercenary: [ 0, -1 ]
+        - type: StationDeadDrop
+          maxDeadDrops: 1 # Fewer here, players start here.

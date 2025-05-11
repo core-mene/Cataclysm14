@@ -23,6 +23,8 @@
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
+      - type: SurgerySpeedModifier
+        SpeedModifier: 2.5
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

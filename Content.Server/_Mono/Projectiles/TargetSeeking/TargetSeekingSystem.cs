@@ -19,6 +19,20 @@ public sealed class TargetSeekingSystem : EntitySystem
     {
         base.Initialize();
         SubscribeLocalEvent<TargetSeekingComponent, ProjectileHitEvent>(OnProjectileHit);
+        SubscribeLocalEvent<TargetSeekingComponent, ComponentInit>(OnComponentInit);
+    }
+
+    /// <summary>
+    /// Initialize the target seeking component with information about its origin grid.
+    /// </summary>
+    private void OnComponentInit(EntityUid uid, TargetSeekingComponent component, ComponentInit args)
+    {
+        if (TryComp<ProjectileComponent>(uid, out var projectile) && 
+            projectile.Shooter.HasValue &&
+            TryComp<TransformComponent>(projectile.Shooter.Value, out var shooterTransform))
+        {
+            component.OriginGridUid = shooterTransform.GridUid;
+        }
     }
 
     /// <summary>
@@ -98,6 +112,13 @@ public sealed class TargetSeekingSystem : EntitySystem
             // If this entity has a grid UID, use that as our actual target
             // This targets the ship grid rather than just the console
             var actualTarget = targetXform.GridUid ?? targetUid;
+            
+            // Skip if the target grid is the same as our origin grid
+            if (targetXform.GridUid.HasValue && component.OriginGridUid.HasValue && 
+                targetXform.GridUid.Value == component.OriginGridUid.Value)
+            {
+                continue; // Don't target the grid we were fired from
+            }
 
             // Get angle to the target
             var targetPos = _transform.ToMapCoordinates(targetXform.Coordinates).Position;
@@ -121,19 +142,6 @@ public sealed class TargetSeekingSystem : EntitySystem
             if (distance > component.DetectionRange)
             {
                 continue;
-            }
-
-            // Skip if the target is our own launcher (don't target our own ship)
-            if (TryComp<ProjectileComponent>(uid, out var projectile) &&
-                TryComp<TransformComponent>(projectile.Shooter, out var shooterTransform))
-            {
-                var shooterGridUid = shooterTransform.GridUid;
-
-                // If the shooter is on the same grid as this potential target, skip it
-                if (targetXform.GridUid.HasValue && shooterGridUid == targetXform.GridUid)
-                {
-                    continue;
-                }
             }
 
             // If this is closer than our previous best target, update

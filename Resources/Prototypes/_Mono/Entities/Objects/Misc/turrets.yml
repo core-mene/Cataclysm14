@@ -1,0 +1,32 @@
+- type: entity
+  id: WeaponTurretLaserTSFMC
+  name: laser turret
+  suffix: TSFMC
+  parent:
+  - BaseTurretSearchBeam
+  - BaseWeaponTurretEnergyNF
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Turrets/laser.rsi
+  - type: Gun
+    fireRate: 2
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+      params:
+        variation: 0.125
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLightLaser
+    fireCost: 10
+  - type: NpcFactionMember
+    factions:
+    - TSFMCTurret
+
+- type: entity
+  parent: BaseWeaponBallisticTurret
+  id: WeaponTurretTSFMC
+  suffix: TSFMC
+  components:
+  - type: NpcFactionMember
+    factions:
+    - TSFMCTurret
