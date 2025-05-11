@@ -1,0 +1,41 @@
+# Author Info
+# GitHub: starch70
+# Discord: _starch_
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: flashpoint
+  parent: BaseVessel
+  name: PBB Flashpoint
+  description: A plastitanium reinforced boarding semi-capital ship. Its design is made to be easily modifiable according to the owner's needs.
+  price: 274600 # plastitanium tax
+  category: Medium
+  group: Expedition
+  access: Mercenary
+  shuttlePath: /Maps/_Mono/Shuttles/Expedition/flashpoint.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: flashpoint
+  mapName: 'PBB Flashpoint'
+  mapPath: /Maps/_Mono/Shuttles/Expedition/flashpoint.yml
+  minPlayers: 0
+  stations:
+    flashpoint:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Flashpoint MIL{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
