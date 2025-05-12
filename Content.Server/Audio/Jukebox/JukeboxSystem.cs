@@ -56,20 +56,28 @@ public sealed class JukeboxSystem : SharedJukeboxSystem
                 return;
             }
 
-            component.AudioStream = Audio.PlayPvs(jukeboxProto.Path, uid, AudioParams.Default.WithMaxDistance(10f))?.Entity;
-            // Frontier: wallmount jukebox
-            if (TryComp<TransformComponent>(component.AudioStream, out var xform))
+            var audioStream = Audio.PlayPvs(jukeboxProto.Path, uid, AudioParams.Default.WithMaxDistance(10f))?.Entity;
+            
+            if (audioStream != null && Exists(audioStream.Value) && HasComp<MetaDataComponent>(audioStream.Value))
             {
-                xform.LocalPosition = component.AudioOffset;
+                component.AudioStream = audioStream;
+                
+                if (TryComp<TransformComponent>(component.AudioStream, out var xform))
+                {
+                    xform.LocalPosition = component.AudioOffset;
+                }
+                
+                Dirty(uid, component);
             }
-            // End Frontier
-            Dirty(uid, component);
         }
     }
 
     private void OnJukeboxPause(Entity<JukeboxComponent> ent, ref JukeboxPauseMessage args)
     {
-        Audio.SetState(ent.Comp.AudioStream, AudioState.Paused);
+        if (ent.Comp.AudioStream != null && Exists(ent.Comp.AudioStream.Value) && HasComp<MetaDataComponent>(ent.Comp.AudioStream.Value))
+        {
+            Audio.SetState(ent.Comp.AudioStream, AudioState.Paused);
+        }
     }
 
     private void OnJukeboxSetTime(EntityUid uid, JukeboxComponent component, JukeboxSetTimeMessage args)
@@ -77,7 +85,11 @@ public sealed class JukeboxSystem : SharedJukeboxSystem
         if (TryComp(args.Actor, out ActorComponent? actorComp))
         {
             var offset = actorComp.PlayerSession.Channel.Ping * 1.5f / 1000f;
-            Audio.SetPlaybackPosition(component.AudioStream, args.SongTime + offset);
+            
+            if (component.AudioStream != null && Exists(component.AudioStream.Value) && HasComp<MetaDataComponent>(component.AudioStream.Value))
+            {
+                Audio.SetPlaybackPosition(component.AudioStream, args.SongTime + offset);
+            }
         }
     }
 
@@ -98,13 +110,22 @@ public sealed class JukeboxSystem : SharedJukeboxSystem
 
     private void Stop(Entity<JukeboxComponent> entity)
     {
-        Audio.SetState(entity.Comp.AudioStream, AudioState.Stopped);
+        if (entity.Comp.AudioStream != null && Exists(entity.Comp.AudioStream.Value) && HasComp<MetaDataComponent>(entity.Comp.AudioStream.Value))
+        {
+            Audio.SetState(entity.Comp.AudioStream, AudioState.Stopped);
+        }
+        
         Dirty(entity);
     }
 
     private void OnJukeboxSelected(EntityUid uid, JukeboxComponent component, JukeboxSelectedMessage args)
     {
-        if (!Audio.IsPlaying(component.AudioStream))
+        bool isPlaying = component.AudioStream != null && 
+                         Exists(component.AudioStream.Value) && 
+                         HasComp<MetaDataComponent>(component.AudioStream.Value) && 
+                         Audio.IsPlaying(component.AudioStream);
+                         
+        if (!isPlaying)
         {
             component.SelectedSongId = args.SongId;
             DirectSetVisualState(uid, JukeboxVisualState.Select);
