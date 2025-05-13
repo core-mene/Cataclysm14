@@ -11,12 +11,13 @@
   cost: 5000
   recipeUnlocks:
   - WeaponProtoKineticAccelerator
-#  - ShuttleGunKineticCircuitboard # Frontier - Hold on there pardner
+  #  - ShuttleGunKineticCircuitboard # Frontier - Hold on there pardner
   # These are roundstart but not replenishable for salvage
   - WeaponCrusher
   - WeaponCrusherDagger
   # This is not roundstart since its a direct upgrade
   - WeaponCrusherGlaive
+  - MechEquipmentKineticAccelerator # Goobstation
 
 # Frontier: restricted arsenal research
 
@@ -56,6 +57,7 @@
   cost: 7500
   recipeUnlocks:
   - WeaponLaserCarbine
+  - WeaponMechCombatFiredartLaser # Goobstation
 
 - type: technology
   id: NonlethalAmmunition
@@ -75,6 +77,7 @@
   - MagazineBoxMagnumRubber # Frontier
   - MagazineBoxPistolRubber # Frontier
   - MagazineBoxRifleRubber # Frontier
+  - WeaponMechCombatDisabler # Goobstation
 
 # Frontier: restricted arsenal research
 
@@ -161,6 +164,7 @@
   cost: 10000
   recipeUnlocks:
   - WeaponLaserCannon
+  - WeaponMechCombatSolarisLaser # Goobstation
 
 - type: technology
   id: WaveParticleHarnessing
@@ -192,9 +196,9 @@
   - GrenadeBlast
   - GrenadeEMP #Frontier
   - PowerCageHigh #frontier
-#  - ShuttleGunSvalinnMachineGunCircuitboard # Frontier
-#  - ShuttleGunPerforatorCircuitboard # Frontier
-#  - ShuttleGunFriendshipCircuitboard # Frontier
+  #  - ShuttleGunSvalinnMachineGunCircuitboard # Frontier
+  #  - ShuttleGunPerforatorCircuitboard # Frontier
+  #  - ShuttleGunFriendshipCircuitboard # Frontier
   technologyPrerequisites:
   - SalvageWeapons
 
@@ -213,6 +217,7 @@
   - WeaponAdvancedLaser
   - PortableRecharger
   - NFBlueprintPortableRecharger # Frontier
+  - WeaponMechCombatImmolationGun # Goobstation
 
 - type: technology
   id: ExperimentalBatteryAmmo
