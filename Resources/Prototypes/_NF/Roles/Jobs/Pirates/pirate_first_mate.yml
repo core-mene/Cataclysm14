@@ -9,7 +9,7 @@
     - !type:RoleTimeRequirement
       role: JobPirate
       time: 10800 # 3 hours
-  #whitelisted: true # mono - comment out
+  whitelisted: true # mono - People join Rogues just to murderbone. No more.
   startingGear: PirateFirstMateNFGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
