@@ -1069,6 +1069,10 @@ namespace Content.Shared.Interaction
             if (target == null)
                 return false;
 
+            // Prevent firing assertion if the target was deleted after do-after completion
+            if (IsDeleted(target))
+                return false;
+
             DebugTools.Assert(!IsDeleted(user) && !IsDeleted(used) && !IsDeleted(target));
             var afterInteractUsingEvent = new AfterInteractUsingEvent(user, used, target, clickLocation, canReach);
             RaiseLocalEvent(target.Value, afterInteractUsingEvent);

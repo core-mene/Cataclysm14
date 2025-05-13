@@ -13,7 +13,7 @@ namespace Content.Server.Power.Components
         /// The charge rate of the charger, in watts
         /// </summary>
         [DataField("chargeRate")]
-        public float ChargeRate = 20.0f;
+        public float ChargeRate = 50.0f; /// Mono 20->50
 
         /// <summary>
         /// The container ID that is holds the entities being charged.
