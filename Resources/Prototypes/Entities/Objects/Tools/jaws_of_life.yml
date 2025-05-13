@@ -46,7 +46,7 @@
     wideAnimationRotation: 90
     damage:
       types:
-        Blunt: 18
+        Blunt: 20
     soundHit:
       collection: MetalThud
 
@@ -82,7 +82,3 @@
           state: syn_jaws_cutter
         useSound: /Audio/Items/jaws_cut.ogg
         changeSound: /Audio/Items/change_jaws.ogg
-  - type: MeleeWeapon
-    damage:
-      types:
-        Blunt: 20

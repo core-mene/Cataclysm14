@@ -40,9 +40,9 @@
         variation: 0.125
     activatedDamage:
       types:
-          Slash: 15
-          Heat: 20
-          Structural: 20
+        Slash: 15
+        Heat: 20
+        Structural: 20
   - type: MeleeWeapon
     wideAnimationRotation: -135
     attackRate: 1.15
@@ -264,8 +264,8 @@
   - type: ItemToggleMeleeWeapon
     activatedDamage:
       types:
-          Slash: 15
-          Heat: 20
+        Slash: 15
+        Heat: 20
     deactivatedSecret: true
   - type: Sprite
     sprite: Objects/Weapons/Melee/e_cutlass.rsi
