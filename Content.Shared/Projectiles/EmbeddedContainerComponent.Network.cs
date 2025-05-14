@@ -1,10 +1,12 @@
 using Robust.Shared.GameStates;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared.Projectiles
 {
     /// <summary>
     /// Network state for EmbeddedContainerComponent, sending valid embedded entities.
     /// </summary>
+    [Serializable, NetSerializable]
     public sealed class EmbeddedContainerComponentState : ComponentState
     {
         public HashSet<NetEntity> EmbeddedEntities { get; }
