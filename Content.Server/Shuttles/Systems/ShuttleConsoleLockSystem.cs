@@ -520,6 +520,22 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
         if (Transform(console).GridUid is not { } iffVisibilityGridUid)
             return;
 
+        HandleIff(enabled, iffVisibilityGridUid, lockComp);
+
+        Dirty(console, lockComp);
+
+        // Remove any pilots when locking the console
+        if (!lockComp.Locked || !TryComp<ShuttleConsoleComponent>(console, out var shuttleComp))
+            return;
+
+        // Clone the list to avoid modification during enumeration
+        var pilots = shuttleComp.SubscribedPilots.ToList();
+        foreach (var pilot in pilots)
+            _consoleSystem.RemovePilot(pilot);
+    }
+
+    private void HandleIff(bool enabled, EntityUid iffVisibilityGridUid, ShuttleConsoleLockComponent lockComp)
+    {
         if (enabled)
         {
             // Save current IFF flags and make visible
@@ -536,32 +552,20 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
                 var iffComp = EnsureComp<IFFComponent>(iffVisibilityGridUid);
                 lockComp.OriginalIFFFlags = iffComp.Flags;
             }
-        }
-        else
-        {
-            // Restore original flags
-            if (TryComp<IFFComponent>(iffVisibilityGridUid, out _))
-            {
-                // Clear all flags first
-                _shuttleSystem.RemoveIFFFlag(iffVisibilityGridUid, IFFFlags.Hide | IFFFlags.HideLabel);
-                // Then restore the original flags that were hiding
-                if ((lockComp.OriginalIFFFlags & IFFFlags.Hide) != 0)
-                    _shuttleSystem.AddIFFFlag(iffVisibilityGridUid, IFFFlags.Hide);
 
-                if ((lockComp.OriginalIFFFlags & IFFFlags.HideLabel) != 0)
-                    _shuttleSystem.AddIFFFlag(iffVisibilityGridUid, IFFFlags.HideLabel);
-            }
-        }
-
-        Dirty(console, lockComp);
-
-        // Remove any pilots when locking the console
-        if (!lockComp.Locked || !TryComp<ShuttleConsoleComponent>(console, out var shuttleComp))
             return;
+        }
 
-        // Clone the list to avoid modification during enumeration
-        var pilots = shuttleComp.SubscribedPilots.ToList();
-        foreach (var pilot in pilots)
-            _consoleSystem.RemovePilot(pilot);
+        // Restore original flags
+        if (!TryComp<IFFComponent>(iffVisibilityGridUid, out _))
+            return;
+        // Clear all flags first
+        _shuttleSystem.RemoveIFFFlag(iffVisibilityGridUid, IFFFlags.Hide | IFFFlags.HideLabel);
+        // Then restore the original flags that were hiding
+        if ((lockComp.OriginalIFFFlags & IFFFlags.Hide) != 0)
+            _shuttleSystem.AddIFFFlag(iffVisibilityGridUid, IFFFlags.Hide);
+
+        if ((lockComp.OriginalIFFFlags & IFFFlags.HideLabel) != 0)
+            _shuttleSystem.AddIFFFlag(iffVisibilityGridUid, IFFFlags.HideLabel);
     }
 }
