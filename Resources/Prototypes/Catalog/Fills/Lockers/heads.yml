@@ -215,7 +215,7 @@
   table: !type:AllSelector
     children:
     #    - id: BoxEncryptionKeyMedical # Frontier - bloat
-    #    - id: ClothingBackpackDuffelSurgeryFilled # Frontier - bloat
+    - id: ClothingBackpackDuffelSurgeryFilled # Frontier Revert - Mono
     #    - id: ClothingCloakCmo # Frontier - bloat
     - id: ClothingEyesHudMedical
     #    - id: ClothingHandsGlovesNitrile # Frontier - bloat
@@ -227,6 +227,8 @@
     #    - id: Hypospray # Frontier - balance
     - id: HypoMini # Frontier
     #    - id: MedicalTechFabCircuitboard # Frontier - bloat
+    - id: MedicalTechFabFlatpack # Mono
+    - id: Multitool # Mono
     #    - id: MedkitFilled # Frontier - bloat
     #    - id: RubberStampCMO # Frontier - MOM stamp
     - id: MedTekCartridge

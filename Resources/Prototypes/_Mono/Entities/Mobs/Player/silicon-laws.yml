@@ -123,3 +123,27 @@
   laws:
   - Freeman1
   obeysTo: laws-owner-crew
+
+# Entertainer lawset
+- type: siliconLaw
+  id: Entertainer1
+  order: 1
+  lawString: law-entertainer-1
+
+- type: siliconLaw
+  id: Entertainer2
+  order: 2
+  lawString: law-entertainer-2
+
+- type: siliconLaw
+  id: Entertainer3
+  order: 3
+  lawString: law-entertainer-3
+
+- type: siliconLawset
+  id: EntertainerLawset
+  laws:
+  - Entertainer1
+  - Entertainer2
+  - Entertainer3
+  obeysTo: laws-owner-crew

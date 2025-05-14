@@ -27,8 +27,8 @@
     soundEmpty:
       path: /Audio/_DV/Weapons/Guns/Empty/dry_fire.ogg
   - type: Battery
-    maxCharge: 2000
-    startingCharge: 2000
+    maxCharge: 3000 # Mono 2000->3000
+    startingCharge: 3000 # Mono 2000->3000
   - type: ProjectileBatteryAmmoProvider
     proto: BulletDisabler
     fireCost: 100
@@ -84,8 +84,8 @@
     soundEmpty:
       path: /Audio/_DV/Weapons/Guns/Empty/dry_fire.ogg
   - type: Battery
-    maxCharge: 2000
-    startingCharge: 2000
+    maxCharge: 3000 # Mono 2000->3000
+    startingCharge: 3000 # Mono 2000->3000
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 25
@@ -120,7 +120,7 @@
   parent: [BaseWeaponBatterySmall, BaseCommandContraband] # Frontier: added BaseCommandContraband
   categories: [DoNotMap] # Frontier / Monolith - this is the colonel /sheriff's gun
   id: WeaponEnergyGunMultiphase
-  description: This is an expensive, modern recreation of an antique laser gun. This gun has several unique firemodes, but lacks the ability to recharge over time. On the handle is a label that says 'for authorized use only.'
+  description: This is an expensive, modern recreation of an antique laser gun. This gun has several unique firemodes, but lacks the ability to recharge over time in exchange for a larger battery. On the handle is a label that says 'for authorized use only.'
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Battery/multiphase_energygun.rsi
@@ -145,19 +145,19 @@
     soundEmpty:
       path: /Audio/_DV/Weapons/Guns/Empty/dry_fire.ogg
   - type: Battery
-    maxCharge: 2000
-    startingCharge: 2000
+    maxCharge: 3750 # Mono 2000->3750
+    startingCharge: 3750 # Mono 2000->3750
   - type: ProjectileBatteryAmmoProvider
     proto: BulletDisabler
-    fireCost: 100
+    fireCost: 75 # Mono 100 -> 75
   - type: EnergyGun
     fireModes:
     - proto: BulletDisabler
-      fireCost: 100
+      fireCost: 75 # Mono 100 -> 75
       name: disable
       state: disabler
     - proto: BulletEnergyGunLaser
-      fireCost: 200
+      fireCost: 150 # Mono 200 -> 150
       name: lethal
       state: lethal
     # - proto: BulletEnergyGunIon

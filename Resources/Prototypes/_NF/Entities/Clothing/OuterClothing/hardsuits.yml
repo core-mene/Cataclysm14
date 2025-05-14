@@ -3,7 +3,7 @@
   parent: ClothingOuterHardsuitBaseNF
   id: ClothingOuterHardsuitMercenary # stats are of luxury mining hardsuit
   name: mercenary hardsuit
-  description: A special suit that protects from the danger of space, employed by mercenary forces. Not certified to be blunderbuss-proof.
+  description: A special suit that protects from the danger of space, employed by mercenary forces. Certified to be blunderbuss-resistant.
   components:
   - type: Sprite
     sprite: _NF/Clothing/OuterClothing/Hardsuits/mercenary.rsi
@@ -13,14 +13,14 @@
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.6 # Removed 10%
+    damageCoefficient: 0.5 # Removed 10%
   - type: Armor
     modifiers:
-      coefficients:
-        Blunt: 0.75
-        Slash: 0.75
-        Piercing: 0.75
-        Heat: 0.8
+      coefficients: # Buffed to be more durable
+        Blunt: 0.6 #0.75->0.6
+        Slash: 0.6 #0.75->0.6
+        Piercing: 0.6 #0.75->0.6
+        Heat: 0.65 #0.80->0.65
         Radiation: 0.6
         Caustic: 0.8
   - type: ClothingSpeedModifier
@@ -102,7 +102,7 @@
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/maxim_prototype.rsi
   - type: ExplosionResistance
-    damageCoefficient: 0.5
+    damageCoefficient: 0.4 # 10% increase
   - type: Armor
     modifiers:
       coefficients:
@@ -113,8 +113,8 @@
         Radiation: 0.3
         Caustic: 0.5
   - type: ClothingSpeedModifier
-    walkModifier: 0.8
-    sprintModifier: 0.9
+    walkModifier: 1 #0.8->1
+    sprintModifier: 0.95 #0.9->0.95
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMaximPrototype
@@ -279,8 +279,8 @@
       coefficients:
         Blunt: 0.3
         Slash: 0.35
-        Piercing: 0.3
-        Heat: 0.25
+        Piercing: 0.25 # 5% increase.
+        Heat: 0.3 # 5% decrease.
         Radiation: 0.25
         Caustic: 0.25
   - type: ClothingSpeedModifier
@@ -369,6 +369,7 @@
         Slash: 0.55
         Piercing: 0.45
         Heat: 0.65
+        Radiation: 0.5 # Added Radiation Resist
         Caustic: 0.65
   - type: ExplosionResistance
     damageCoefficient: 0.55

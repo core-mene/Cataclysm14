@@ -45,13 +45,28 @@
 
 - type: listing
   id: UplinkSecurityBoxSubsonic
-  name:  uplink-subsonic-mag-name
-  description: uplink-subsonic-mag-desc
+  name:  uplink-subsonic-box-name
+  description: uplink-subsonic-box-desc
   productEntity: MagazineBoxLightRifleSubsonic
   cost:
     FrontierUplinkCoin: 3
   categories:
   - UplinkSecurityAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityAuroraExosuit
+  name:  uplink-exosuit-aurora-name
+  description: uplink-exosuit-aurora-desc
+  productEntity: ClothingOuterExosuitAurora
+  cost:
+    FrontierUplinkCoin: 25
+  categories:
+  - UplinkSecurityHardsuits
   conditions:
   - !type:StoreWhitelistCondition
     whitelist:

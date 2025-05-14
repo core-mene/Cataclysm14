@@ -328,6 +328,18 @@
   - type: SiliconLawProvider
     laws: FreemanLawset
 
+- type: entity
+  id: EntertainerCircuitBoard
+  parent: BaseElectronics
+  name: law board (Entertainer)
+  description: An electronics board containing the Entertainer lawset.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+  - type: SiliconLawProvider
+    laws: EntertainerLawset
+
 # Items
 - type: entity
   id: Intellicard

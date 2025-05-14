@@ -6,3 +6,6 @@ uplink-security-annie-desc = A .30 subsonic weapon, made to shoulder the weight 
 
 uplink-security-hfblade-name = HF-Katana
 uplink-security-hfblade-desc = A tool of justice.
+
+uplink-exosuit-aurora-name = M-320X AURORA
+uplink-exosuit-aurora-desc = A prototype exosuit for the future of warfare. Utilizes nanomachines in a basic amount to protect the wearer from vacuum, and protects very well against HF blades, while enhancing the wearers mobility.
