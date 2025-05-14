@@ -15,27 +15,27 @@ public sealed partial class ShuttleConsoleLockComponent : Component
     /// <summary>
     /// Whether the console is currently locked
     /// </summary>
-    [DataField("locked")]
+    [DataField]
     public bool Locked = true;
 
     /// <summary>
     /// Whether the console is locked due to an emergency broadcast
     /// Only corporate TSF employees can unlock this state
     /// </summary>
-    [DataField("emergencyLocked")]
-    public bool EmergencyLocked = false;
+    [DataField]
+    public bool EmergencyLocked;
 
     /// <summary>
     /// The ID of the shuttle this console is locked to
     /// </summary>
-    [DataField("shuttleId")]
+    [DataField]
     public string? ShuttleId;
-    
+
     /// <summary>
     /// The original IFF flags before emergency lock was activated
     /// Used to restore the IFF state after emergency lockdown is cleared
     /// </summary>
-    [DataField("originalIFFFlags")]
+    [DataField]
     public IFFFlags OriginalIFFFlags = IFFFlags.None;
 }
 

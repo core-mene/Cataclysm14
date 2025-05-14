@@ -588,9 +588,9 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         // Create the panic button verb
         Verb verb = new()
         {
-            Act = () => SendPanicSignal(uid, args.User, component),
+            Act = () => SendPanicSignal(uid, args.User),
             Text = Loc.GetString("shuttle-console-panic-button"),
-            Priority = 1
+            Priority = 1,
         };
 
         args.Verbs.Add(verb);
@@ -599,18 +599,19 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
     /// <summary>
     /// Sends an emergency signal to the TSFMC radio channel with the shuttle's name and location
     /// </summary>
-    private void SendPanicSignal(EntityUid uid, EntityUid user, ShuttleConsoleComponent component)
+    private void SendPanicSignal(EntityUid uid, EntityUid user, ShuttleConsoleComponent? component = null, MetaDataComponent? gridMeta = null)
     {
+        if (!Resolve(uid, ref component))
+            return;
+
         // Get the grid entity
-        var transform = Transform(uid);
-        if (transform.GridUid is not {} gridUid)
+        if (Transform(uid).GridUid is not {} gridUid)
         {
             _popup.PopupEntity(Loc.GetString("shuttle-console-panic-no-grid"), uid, user);
             return;
         }
 
         // Get grid name
-        MetaDataComponent? gridMeta = null;
         if (!Resolve(gridUid, ref gridMeta))
         {
             _popup.PopupEntity(Loc.GetString("shuttle-console-panic-failed"), uid, user);
@@ -618,16 +619,15 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         }
 
         var gridName = gridMeta.EntityName;
-        var coordinates = transform.Coordinates;
-        var mapCoordinates = _transform.ToMapCoordinates(coordinates);
+        var mapCoordinates = _transform.ToMapCoordinates(Transform(uid).Coordinates);
 
         // Construct emergency message
-        string message = Loc.GetString("shuttle-console-panic-message",
+        var message = Loc.GetString("shuttle-console-panic-message",
             ("gridName", gridName),
             ("coordinates", $"{mapCoordinates.Position.X:0.0}, {mapCoordinates.Position.Y:0.0}"));
 
         // Send to TSFMC radio channel
-        _radioSystem.SendRadioMessage(user, message, "Nfsd", uid);
+        _radioSystem.SendRadioMessage(user, message, "Nfsd", uid); // god bro why.
 
         // Lock the console in emergency mode
         var lockSystem = EntityManager.EntitySysManager.GetEntitySystem<ShuttleConsoleLockSystem>();
