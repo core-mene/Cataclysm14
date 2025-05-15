@@ -126,7 +126,11 @@
         shape:
           !type:PhysShapeAabb
           bounds: "-0.75,-0.75,0.75,0.75"
-        density: 1500 # fat mf
+        density: 1500
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
   - type: Gun
     projectileSpeed: 105
     fireRate: 0.125
@@ -193,8 +197,12 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.75,-0.75,0.75,0.75"
-        density: 1500 # fat mf
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 1500
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
   - type: Destructible
     thresholds:
     - trigger:
