@@ -6,8 +6,6 @@
   - ClarkeLArm
   - ClarkeRArm
   - ClarkeTreads
-  - ClarkeCentralElectronics
-  - ClarkePeripheralsElectronics
 
 - type: latheRecipePack
   id: DurandMechParts
@@ -38,4 +36,41 @@
   - MechEquipmentDrillDiamond
   - MechEquipmentKineticAccelerator
   - MechEquipmentHonkerBananaMortar
-  - MechEquipmentHonkerMousetrapMortar 
+  - MechEquipmentHonkerMousetrapMortar
+
+- type: latheRecipePack
+  id: MechBoardsPlus
+  recipes:
+  - GygaxCentralElectronics
+  - GygaxPeripheralsElectronics
+  - GygaxTargetingElectronics
+  - DurandCentralElectronics
+  - DurandPeripheralsElectronics
+  - DurandTargetingElectronics
+  - ClarkeCentralElectronics
+  - ClarkePeripheralsElectronics
+
+- type: latheRecipePack
+  id: MechMiscStatic
+  recipes:
+  - MechAirTank
+  - MechThruster
+
+- type: latheRecipePack
+  id: RipleyUpgrade
+  recipes:
+  - RipleyMKIIHarness
+  - RipleyUpgradeKit
+
+- type: latheRecipePack
+  id: WeaponMechCombatArsenal
+  recipes:
+  - WeaponMechCombatImmolationGun
+  - WeaponMechCombatSolarisLaser
+  - WeaponMechCombatFiredartLaser
+  - WeaponMechCombatUltraRifle
+  - WeaponMechCombatShotgun
+  - WeaponMechCombatShotgunIncendiary
+  - WeaponMechCombatDisabler
+  - WeaponMechCombatFlashbangLauncher
+  - WeaponMechCombatMissileRack8

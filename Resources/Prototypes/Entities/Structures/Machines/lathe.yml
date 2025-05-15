@@ -294,6 +294,7 @@
     - NFMedicalBoards # Frontier + Shitmed Change
     - NFServiceBoards # Frontier
     - MonoAdvancedShuttleComponents # Mono
+    - MechBoardsPlus
   - type: EmagLatheRecipes
     emagDynamicPacks: [] # Frontier: empty list
     # - SecurityBoards # Frontier
@@ -340,6 +341,7 @@
     - RoboticsStatic
     - BorgModulesStatic
     - BorgLimbsStatic
+    - MechMiscStatic # Mono
     dynamicPacks:
     - Robotics
     - BorgModules
@@ -348,22 +350,15 @@
     # Shitmed Change
     - BorgModulesDynamic
     - SMCybernetics
-    # Mono - Mech parts
+    # Mono - Mechs
     - ClarkeMechParts
     - DurandMechParts
     - GygaxMechParts
     - MechWeapons
+    - RipleyUpgrade
   - type: EmagLatheRecipes
     emagStaticPacks:
-    - WeaponMechCombatImmolationGun
-    - WeaponMechCombatSolarisLaser
-    - WeaponMechCombatFiredartLaser
-    - WeaponMechCombatUltraRifle
-    - WeaponMechCombatShotgun
-    - WeaponMechCombatShotgunIncendiary
-    - WeaponMechCombatDisabler
-    - WeaponMechCombatFlashbangLauncher
-    - WeaponMechCombatMissileRack8
+    - WeaponMechCombatArsenal
   - type: MaterialStorage
     whitelist:
       tags:
@@ -452,16 +447,8 @@
     - SecurityWeapons
     - SecurityDisablers
     - SMCybernetics
-    # Mono - Mech parts
-    - WeaponMechCombatImmolationGun
-    - WeaponMechCombatSolarisLaser
-    - WeaponMechCombatFiredartLaser
-    - WeaponMechCombatUltraRifle
-    - WeaponMechCombatShotgun
-    - WeaponMechCombatShotgunIncendiary
-    - WeaponMechCombatDisabler
-    - WeaponMechCombatFlashbangLauncher
-    - WeaponMechCombatMissileRack8
+    # Mono - Mechs
+    - WeaponMechCombatArsenal
   - type: MaterialStorage
     whitelist:
       tags:
