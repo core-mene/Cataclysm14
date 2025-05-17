@@ -90,7 +90,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/clock.rsi
   - type: Icon
@@ -128,7 +128,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/clown.rsi
   - type: Icon
@@ -156,6 +156,17 @@
   - type: IconSmooth
     key: walls
     base: clown
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 8000 # really good ramming wall, bananium is rare so it's probably fine
 
 - type: entity
   parent: BaseWall
@@ -165,8 +176,8 @@
   components:
   - type: Tag
     tags:
-      - Wall
-      - Structure
+    - Wall
+    - Structure
   - type: Sprite
     sprite: Structures/Walls/meat.rsi
   - type: Icon
@@ -198,7 +209,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/cult.rsi
   - type: Icon
@@ -228,8 +239,8 @@
   components:
   - type: Tag
     tags:
-      - Wall
-      - Debug
+    - Wall
+    - Debug
   - type: Sprite
     sprite: Structures/Walls/debug.rsi
   - type: Icon
@@ -258,7 +269,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/diamond.rsi
   - type: Icon
@@ -291,7 +302,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/gold.rsi
   - type: Icon
@@ -325,6 +336,17 @@
         node: girder
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 4000
   - type: IconSmooth
     key: walls
     base: gold
@@ -336,7 +358,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/ice.rsi
   - type: Icon
@@ -365,7 +387,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/plasma.rsi
   - type: Icon
@@ -412,7 +434,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/plastic.rsi
   - type: Icon
@@ -457,17 +479,33 @@
   description: Skub knows this wall is too hard to destroy. # Frontier
   suffix: indestructible
   components:
-    - type: Tag
-      tags:
-        - Wall
-    - type: Sprite
-      sprite: Structures/Walls/plastitanium.rsi
-      color: "#cdf3cd" # Frontier
-    - type: Icon
-      sprite: Structures/Walls/plastitanium.rsi
-    - type: IconSmooth
-      key: walls
-      base: plastitanium
+  - type: Tag
+    tags:
+    - Wall
+  - type: Sprite
+    sprite: Structures/Walls/plastitanium.rsi
+    color: "#cdf3cd" # Frontier
+  - type: Icon
+    sprite: Structures/Walls/plastitanium.rsi
+  - type: IconSmooth
+    key: walls
+    base: plastitanium
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 4000
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: RadiationBlocker
+    resistance: 5
 
 - type: entity
   parent: WallPlastitaniumIndestructible
@@ -476,24 +514,24 @@
   description: Keeps the air in and the greytide out. # Frontier: restore base value
   suffix: ""
   components:
-    - type: Sprite # Frontier
-      color: "#ffffff" # Frontier
-    - type: Tag
-      tags:
-        - Wall
-    - type: Destructible
-      thresholds:
-        - trigger:
-            !type:DamageTrigger
-            damage: 7500 # Mono - wall buff - 7.5x
-          behaviors:
-            - !type:SpawnEntitiesBehavior
-              spawn:
-                Girder:
-                  min: 1
-                  max: 1
-            - !type:DoActsBehavior
-              acts: [ "Destruction" ]
+  - type: Sprite # Frontier
+    color: "#ffffff" # Frontier
+  - type: Tag
+    tags:
+    - Wall
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 7500 # Mono - wall buff - 7.5x
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Girder:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
 
 - type: entity
   parent: WallShuttleDiagonal
@@ -522,11 +560,11 @@
         !type:DamageTrigger
         damage: 3500 # Mono - wall buff - 2x
       behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
-        - !type:PlaySoundBehavior
-          sound:
-            collection: MetalSlam
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
     - trigger:
         !type:DamageTrigger
         damage: 2000 # Mono - wall buff - 2x
@@ -582,10 +620,10 @@
       fix1:
         shape:
           !type:PolygonShape
-            vertices:
-            - "-0.5,-0.5"
-            - "0.5,0.5"
-            - "0.5,-0.5"
+          vertices:
+          - "-0.5,-0.5"
+          - "0.5,0.5"
+          - "0.5,-0.5"
         mask:
         - FullTileMask
         layer:
@@ -649,6 +687,17 @@
     price: 115 # Frontier 250<115
   - type: RadiationBlocker
     resistance: 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 2000
   - type: RCDDeconstructable #Frontier
     cost: 6 #Frontier
     delay: 8 #Frontier
@@ -732,7 +781,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/riveted.rsi
   - type: Icon
@@ -770,7 +819,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/sandstone.rsi
   - type: Icon
@@ -803,7 +852,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/silver.rsi
   - type: Icon
@@ -870,13 +919,8 @@
   - type: Icon
     sprite: Structures/Walls/shuttle_diagonal.rsi
     state: state0
-  - type: Damageable
-    damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallic
-  - type: Physics
-    bodyType: Static
-#  - type: Reflect # Frontier
-#    reflectProb: 1 # Frontier
+  - type: Reflect
+    reflectProb: 1
   - type: Pullable
   - type: Airtight
     noAirWhenFullyAirBlocked: false
@@ -888,25 +932,31 @@
       fix1:
         shape:
           !type:PolygonShape
-            vertices:
-            - "-0.5,-0.5"
-            - "0.5,0.5"
-            - "0.5,-0.5"
+          vertices:
+          - "-0.5,-0.5"
+          - "0.5,0.5"
+          - "0.5,-0.5"
         mask:
         - FullTileMask
         layer:
         - WallLayer
+        density: 2000
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Physics
+    bodyType: Static
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
         damage: 3600 # Mono - wall buff - 6x
       behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
-        - !type:PlaySoundBehavior
-          sound:
-            collection: MetalSlam
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
     - trigger:
         !type:DamageTrigger
         damage: 1800 # Mono - wall buff - 6x
@@ -984,6 +1034,19 @@
           3: { state: shuttle_construct-3, visible: true}
           4: { state: shuttle_construct-4, visible: true}
           5: { state: shuttle_construct-5, visible: true}
+  - type: Reflect
+    reflectProb: 1
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 2000
   - type: RCDDeconstructable #Frontier
     cost: 6 #Frontier
     delay: 8 #Frontier
@@ -1043,7 +1106,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/solid.rsi
   - type: WallReplacementMarker
@@ -1177,6 +1240,17 @@
         node: girder
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 6000
   - type: IconSmooth
     key: walls
     base: uranium
@@ -1248,7 +1322,7 @@
     damageModifierSet: Web
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/web.rsi
   - type: Icon
@@ -1290,7 +1364,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/necropolis.rsi
   - type: Icon
@@ -1314,7 +1388,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/mining.rsi
   - type: Icon
@@ -1418,7 +1492,7 @@
     lifetime: 15
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Physics
     bodyType: Static
   - type: Fixtures
@@ -1426,7 +1500,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-            bounds: "-0.5,-0.5,0.5,0.5"
+          bounds: "-0.5,-0.5,0.5,0.5"
         mask:
         - FullTileMask
         layer:
@@ -1437,30 +1511,30 @@
   id: WallForce
   name: force wall
   components:
-    - type: TimedDespawn
-      lifetime: 12
-    - type: Tag
-      tags:
-        - Wall
-    - type: Physics
-      bodyType: Static
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape:
-            !type:PhysShapeAabb
-            bounds: "-0.5,-0.5,0.5,0.5"
-          mask:
-            - FullTileMask
-          layer:
-            - WallLayer
-    - type: Airtight
-    - type: Sprite
-      sprite: Structures/Magic/forcewall.rsi
-      state: forcewall
-    - type: Icon
-      sprite: Structures/Magic/forcewall.rsi
-      state: forcewall
+  - type: TimedDespawn
+    lifetime: 12
+  - type: Tag
+    tags:
+    - Wall
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: Airtight
+  - type: Sprite
+    sprite: Structures/Magic/forcewall.rsi
+    state: forcewall
+  - type: Icon
+    sprite: Structures/Magic/forcewall.rsi
+    state: forcewall
 
 - type: entity
   parent: BaseWall
@@ -1470,7 +1544,7 @@
   components:
   - type: Tag
     tags:
-      - Wall
+    - Wall
   - type: Sprite
     sprite: Structures/Walls/cobblebrick.rsi
   - type: Icon
