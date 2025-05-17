@@ -10,12 +10,19 @@
   - !type:OverallPlaytimeRequirement
     time: 14400 # 4 hrs
   startingGear: USSPMedicGear
+  alwaysUseSpawner: true
+  hideConsoleVisibility: true
   icon: "JobIconBrigmedic" # TODO - new USSP icons
   supervisors: job-supervisors-ussp-sergeant
   canBeAntag: false
+  weight: 15
+  displayWeight: 15
   special:
   - !type:AddComponentSpecial
     components:
+    - type: MailDisabled
+    - type: SpecialSectorStationRecord
+      recordGeneration: FalseRecord
     - type: NpcFactionMember
       factions:
       - USSP
