@@ -1126,25 +1126,6 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: SYN_LP
-  - uid: 5831
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: solution - food
-    - type: Transform
-      parent: 5830
-    - type: Solution
-      solution:
-        maxVol: 1
-        name: food
-        reagents:
-        - data: []
-          ReagentId: Fiber
-          Quantity: 1
-    - type: ContainedSolution
-      containerName: food
-      container: 5830
 - proto: AirCanister
   entities:
   - uid: 2
