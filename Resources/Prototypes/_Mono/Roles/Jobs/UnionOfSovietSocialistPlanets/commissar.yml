@@ -19,6 +19,12 @@
   icon: "JobIconHeadOfSecurity" # TODO - new USSP icons
   supervisors: job-supervisors-ussp-highcomm
   canBeAntag: false
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: NpcFactionMember
+      factions:
+      - USSP
   accessGroups:
   - GeneralAccess
   - USSPAA

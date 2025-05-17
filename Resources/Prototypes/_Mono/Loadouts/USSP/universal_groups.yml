@@ -1,11 +1,13 @@
 - type: loadoutGroup
-  id: TsfmcBackpack
+  id: USSPBackpack
   name: loadout-group-contractor-backpack
   minLimit: 1
   loadouts:
-  - TsfmcClothingBackpack
+  - USSPBackpack
+  - USSPDuffel
+  - USSPSatchel
   fallbacks:
-  - TsfmcClothingBackpack
+  - USSPBackpack
 
 - type: loadoutGroup
   id: USSPJumpsuit
@@ -31,8 +33,8 @@
   id: USSPHead
   name: loadout-group-contractor-head
   loadouts:
-  - TsfmcHelmet
-  - TsfmcBeret
+  - USSPHelmet
+  - USSPBeret
 
 - type: loadoutGroup
   id: USSPEars

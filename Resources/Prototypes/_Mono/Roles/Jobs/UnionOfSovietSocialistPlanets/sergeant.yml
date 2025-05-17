@@ -13,6 +13,12 @@
   icon: "JobIconSeniorOfficer" # TODO - new USSP icons
   supervisors: job-supervisors-ussp-commissars
   canBeAntag: false
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: NpcFactionMember
+      factions:
+      - USSP
   accessGroups:
   - GeneralAccess
   - USSPHigh
