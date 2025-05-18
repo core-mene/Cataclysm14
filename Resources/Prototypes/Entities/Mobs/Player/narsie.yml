@@ -71,7 +71,6 @@
   - type: IntrinsicRadioReceiver
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
     - Command
     - CentCom
@@ -82,6 +81,9 @@
     - Service
     - Supply
     - Syndicate
+  - type: CollectiveMind
+    channels:
+    - Binary
     globalReceive: true
   - type: Physics
     bodyType: Dynamic

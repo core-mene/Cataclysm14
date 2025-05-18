@@ -1,4 +1,4 @@
-﻿using Robust.Shared.GameStates;
+using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Starlight.CollectiveMind
@@ -11,6 +11,9 @@ namespace Content.Shared._Starlight.CollectiveMind
 
         [DataField]
         public ProtoId<CollectiveMindPrototype>? DefaultChannel = null;
+
+        [DataField]
+        public HashSet<ProtoId<CollectiveMindPrototype>> Channels = new();
 
         [DataField]
         public bool HearAll = false;

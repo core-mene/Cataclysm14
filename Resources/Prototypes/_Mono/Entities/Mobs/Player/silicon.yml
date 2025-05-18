@@ -141,16 +141,17 @@
     access: [["SyndicateAgent"], ["NuclearOperative"]]
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
     - Common
     - Remnants
     - Traffic
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
     - Remnants
     - Traffic
+  - type: CollectiveMind
+    channels:
+    - Binary
   - type: ShowSyndicateIcons
   - type: MovementAlwaysTouching
   - type: Speech
@@ -326,16 +327,17 @@
   components:
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
     - Common
     - Remnants
     - Traffic
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
     - Remnants
     - Traffic
+  - type: CollectiveMind
+    channels:
+    - Binary
   - type: LanguageKnowledge
     speaks:
     - TauCetiBasic
@@ -399,7 +401,6 @@
   components:
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
     - Common
     - Traffic
     - Science
@@ -408,13 +409,15 @@
     - Medical
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
     - Traffic
     - Science
     - Supply
     - Engineering
     - Medical
+  - type: CollectiveMind
+    channels:
+    - Binary
 
 # TSFMC AI core
 
@@ -464,7 +467,6 @@
   components:
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
     - Common
     - Traffic
     - Science
@@ -475,7 +477,6 @@
     - Command
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
     - Traffic
     - Science
@@ -484,6 +485,9 @@
     - Medical
     - Nfsd
     - Command
+  - type: CollectiveMind
+    channels:
+    - Binary
 
 # Rogue AI Core
 
@@ -533,7 +537,6 @@
   components:
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
     - Common
     - Traffic
     - Science
@@ -543,7 +546,6 @@
     - Freelance
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
     - Traffic
     - Science
@@ -551,3 +553,6 @@
     - Engineering
     - Medical
     - Freelance
+  - type: CollectiveMind
+    channels:
+    - Binary
