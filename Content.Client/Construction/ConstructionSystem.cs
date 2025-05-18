@@ -269,7 +269,8 @@ namespace Content.Client.Construction
             return false;
         }
 
-        public void TryStartConstruction(EntityUid ghostId, ConstructionGhostComponent? ghostComp = null)
+        public void TryStartConstruction(EntityUid ghostId, ConstructionGhostComponent? ghostComp = null,
+                                         EntityUid? with = null) // Goobstation
         {
             if (!Resolve(ghostId, ref ghostComp))
                 return;
@@ -280,7 +281,8 @@ namespace Content.Client.Construction
             }
 
             var transform = EntityManager.GetComponent<TransformComponent>(ghostId);
-            var msg = new TryStartStructureConstructionMessage(GetNetCoordinates(transform.Coordinates), ghostComp.Prototype.ID, transform.LocalRotation, ghostId.GetHashCode());
+            var msg = new TryStartStructureConstructionMessage(GetNetCoordinates(transform.Coordinates), ghostComp.Prototype.ID, transform.LocalRotation, ghostId.GetHashCode(),
+                                                               GetNetEntity(with)); // Goobstation
             RaiseNetworkEvent(msg);
         }
 

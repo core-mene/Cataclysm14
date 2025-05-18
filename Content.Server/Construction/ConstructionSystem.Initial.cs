@@ -472,7 +472,8 @@ namespace Content.Server.Construction
                     GetCoordinates(ev.Location),
                     ev.Angle,
                     ev.Ack,
-                    args.SenderSession);
+                    args.SenderSession,
+                    ev.With);
         }
 
 /// <summary>
@@ -484,7 +485,8 @@ namespace Content.Server.Construction
             EntityCoordinates location,
             Angle angle,
             int ack = 0,
-            ICommonSession? senderSession = null)
+            ICommonSession? senderSession = null,
+            NetEntity? with = null)
         {
             // </Goobstation>
             if (!PrototypeManager.TryIndex(prototypeName, out ConstructionPrototype? constructionPrototype))
@@ -549,9 +551,13 @@ namespace Content.Server.Construction
                     _beingBuilt[session].Remove(ack);
             }
 
-            HandsComponent? hands = null; // Goobstation
+            // Goobstation
+            EntityUid? entWith = with == null ? null : GetEntity(with);
+            if (entWith == null && TryComp<HandsComponent>(user, out var hands))
+                entWith = hands.ActiveHandEntity;
+
             if (!_actionBlocker.CanInteract(user, null)
-                || (senderSession != null && EntityManager.TryGetComponent(user, out hands) && hands.ActiveHandEntity == null)) // Goobstation - dont check hands for constructor
+                || (senderSession != null && entWith == null)) // Goobstation
             {
                 Cleanup();
                 return false;
@@ -578,7 +584,7 @@ namespace Content.Server.Construction
             {
                 var valid = false;
 
-                if (hands?.ActiveHandEntity is not { Valid: true } holding) // Goobstation - don't check for constructor machine
+                if (entWith is not {Valid: true} holding) // Goobstation - don't check for constructor machine
                 {
                     Cleanup();
                     return false;
