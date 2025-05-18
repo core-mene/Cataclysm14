@@ -5,7 +5,7 @@
   playTimeTracker: JobSeniorOfficer
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 28800 # 8 hours # mono
+      time: 90000 # 25 hours # mono
     - !type:DepartmentTimeRequirement
       department: Security
       time: 28800 # 8 hours # mono
@@ -15,7 +15,7 @@
   alternateRequirementSets:
     longerPlaytimeLessSec:
     - !type:OverallPlaytimeRequirement
-      time: 43200 # 12 hours # mono
+      time: 108000 # 12 hours # mono
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
       time: 21600 # 6 hours

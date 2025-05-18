@@ -5,7 +5,7 @@
   playTimeTracker: JobHeadOfPersonnel
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 43200 # 20 hrs # mono - change to 12hr
+      time: 72000 # 20 hrs
     - !type:RoleTimeRequirement
       role: JobSecurityGuard
       time: 10800 # 3 hrs as security guard

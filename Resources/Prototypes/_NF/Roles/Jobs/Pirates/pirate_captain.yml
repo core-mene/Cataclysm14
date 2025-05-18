@@ -5,11 +5,14 @@
   playTimeTracker: JobPirateCaptain
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 86400 # 24 hours - mono
+      time: 234000 # 65 hours - mono
     - !type:RoleTimeRequirement
       role: JobPirateFirstMate # mono
-      time: 10800 # 3 hours
-  whitelisted: true 
+      time: 54000 # 3 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 36000 # 10 hours # mono
+  whitelisted: true
   startingGear: PirateCaptainNFGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
