@@ -7,10 +7,8 @@ using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Radio;
 using Content.Shared.Radio.Components;
-using Robust.Server.GameObjects; // Frontier
 using Content.Shared.Speech;
 using Content.Shared.Ghost; // Nuclear-14
-using Content.Shared.Implants.Components; // Add reference for RattleComponent
 using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -37,7 +35,6 @@ public sealed class RadioSystem : EntitySystem
     private readonly HashSet<string> _messages = new();
 
     private EntityQuery<TelecomExemptComponent> _exemptQuery;
-    private EntityQuery<RattleComponent> _rattleQuery;
 
     public override void Initialize()
     {
@@ -46,7 +43,6 @@ public sealed class RadioSystem : EntitySystem
         SubscribeLocalEvent<IntrinsicRadioTransmitterComponent, EntitySpokeEvent>(OnIntrinsicSpeak);
 
         _exemptQuery = GetEntityQuery<TelecomExemptComponent>();
-        _rattleQuery = GetEntityQuery<RattleComponent>();
     }
 
     private void OnIntrinsicSpeak(EntityUid uid, IntrinsicRadioTransmitterComponent component, EntitySpokeEvent args)
@@ -159,9 +155,6 @@ public sealed class RadioSystem : EntitySystem
         if (frequency == null) // Nuclear-14
             frequency = GetFrequency(messageSource, channel); // Nuclear-14
 
-        // Check if the radio source has a rattle component (implant)
-        var hasRattleComponent = _rattleQuery.HasComp(radioSource);
-
         while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
         {
             if (!radio.ReceiveAllChannels)
@@ -176,13 +169,13 @@ public sealed class RadioSystem : EntitySystem
 
             if (!channel.LongRange && transform.MapID != sourceMapId && !radio.GlobalReceive)
                 continue;
-                
+
             // Check if within range for range-limited channels
-            if (channel.MaxRange.HasValue && channel.MaxRange.Value > 0 && !hasRattleComponent)
+            if (channel.MaxRange.HasValue && channel.MaxRange.Value > 0)
             {
                 var sourcePos = Transform(radioSource).WorldPosition;
                 var targetPos = transform.WorldPosition;
-                
+
                 // Check distance between sender and receiver
                 if ((sourcePos - targetPos).Length() > channel.MaxRange.Value)
                     continue;
