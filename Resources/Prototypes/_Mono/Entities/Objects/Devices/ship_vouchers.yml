@@ -17,8 +17,8 @@
 - type: entity
   parent: BaseShipVoucher
   id: ShipVoucherUSSP
-  name: USSP ship voucher
-  description: A small card that authorizes the acquisition of a singular free USSP ship.
+  name: USSP Gadyuka voucher
+  description: A small card that authorizes the acquisition of a Gadyuka for free.
   components:
   - type: Sprite
     layers:
@@ -28,6 +28,6 @@
     destroyOnEmpty: true
     consoleType: USSP
     access:
-    - USSP
+    - USSPGadyuka # SHITCODE!!!
   - type: StaticPrice
     vendPrice: 12500
