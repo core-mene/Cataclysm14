@@ -18,7 +18,7 @@
 - type: tile
   id: FloorSteelMonoAlt
   name: tiles-steel-floor-mono
-  sprite: /Textures/Tiles/steel_mono.png
+  sprite: _Mono/Textures/Tiles/steel_mono.png
   variants: 2
   placementVariants:
   - 1.0
@@ -34,7 +34,7 @@
 - type: tile
   id: FloorDarkAlt
   name: tiles-dark-floor
-  sprite: /Textures/Tiles/dark.png
+  sprite: _Mono/Textures/Tiles/dark.png
   variants: 3
   placementVariants:
   - 1.0
@@ -51,7 +51,7 @@
 - type: tile
   id: FloorDarkMonoAlt
   name: tiles-dark-floor-mono
-  sprite: /Textures/Tiles/dark_mono.png
+  sprite: _Mono/Textures/Tiles/dark_mono.png
   variants: 2
   placementVariants:
   - 1.0
@@ -67,7 +67,7 @@
 - type: tile
   id: FloorTechMaintAlt
   name: tiles-techmaint-floor
-  sprite: /Textures/Tiles/tech_maint.png
+  sprite: _Mono/Textures/Tiles/tech_maint.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
