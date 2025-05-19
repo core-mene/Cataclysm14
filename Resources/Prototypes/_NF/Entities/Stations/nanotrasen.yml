@@ -51,6 +51,16 @@
   categories: [ HideSpawnMenu ]
 
 - type: entity
+  id: RecordsFrontierOutpostCargo
+  parent:
+  - StandardFrontierOutpost
+  - BaseStationRecords
+  - BaseStationCargo
+  - NFBaseStationCargo
+  - BaseStationCargoMarket
+  categories: [ HideSpawnMenu ]
+
+- type: entity
   id: DeadDropRecordsFrontierOutpost
   parent:
   - StandardFrontierOutpost
