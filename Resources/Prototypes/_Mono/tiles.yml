@@ -1,7 +1,7 @@
 - type: tile
   id: FloorSteelAlt
   name: tiles-steel-floor
-  sprite: Textures/_Mono/Tiles/steel.png
+  sprite: /Textures/_Mono/Tiles/steel.png
   variants: 3
   placementVariants:
   - 1.0
@@ -18,7 +18,7 @@
 - type: tile
   id: FloorSteelMonoAlt
   name: tiles-steel-floor-mono
-  sprite: Textures/_Mono/Tiles/steel_mono.png
+  sprite: /Textures/_Mono/Tiles/steel_mono.png
   variants: 2
   placementVariants:
   - 1.0
@@ -34,12 +34,7 @@
 - type: tile
   id: FloorDarkAlt
   name: tiles-dark-floor
-  sprite: Textures/_Mono/Tiles/dark.png
-  variants: 3
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
+  sprite: /Textures/_Mono/Tiles/dark.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -51,11 +46,7 @@
 - type: tile
   id: FloorDarkMonoAlt
   name: tiles-dark-floor-mono
-  sprite: Textures/_Mono/Tiles/dark_mono.png
-  variants: 2
-  placementVariants:
-  - 1.0
-  - 1.0
+  sprite: /Textures/_Mono/Tiles/dark_mono.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -67,7 +58,7 @@
 - type: tile
   id: FloorTechMaintAlt
   name: tiles-techmaint-floor
-  sprite: Textures/_Mono/Tiles/tech_maint.png
+  sprite: /Textures/_Mono/Tiles/tech_maint.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -79,10 +70,7 @@
 - type: tile
   id: FloorSteelAltGrey
   name: tiles-steel-floor
-  sprite: Textures/_Mono/Tiles/steel_grey.png
-  variants: 1
-  placementVariants:
-  - 1.0
+  sprite: /Textures/_Mono/Tiles/steel_grey.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -94,10 +82,7 @@
 - type: tile
   id: FloorSteelMonoAltGrey
   name: tiles-steel-floor-mono
-  sprite: Textures/_Mono/Tiles/steel_mono_grey.png
-  variants: 1
-  placementVariants:
-  - 1.0
+  sprite: /Textures/_Mono/Tiles/steel_mono_grey.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
