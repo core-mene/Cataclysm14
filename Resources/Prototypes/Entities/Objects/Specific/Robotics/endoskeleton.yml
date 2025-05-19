@@ -26,6 +26,9 @@
     drawdepth: Items
     sprite: Objects/Specific/Robotics/cyborg_parts.rsi
     state: robo_suit
+  - type: Tag  # Mono
+    tags:
+    - CyborgEndoskeleton
   - type: Appearance
   - type: ItemMapper
     sprite: Objects/Specific/Robotics/cyborg_parts.rsi

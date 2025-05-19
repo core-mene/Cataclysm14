@@ -30,6 +30,10 @@
 - type: entity
   parent: ClothingOuterArmorBase # Frontier: removed BaseSecurityBartenderContraband
   id: ClothingOuterArmorBasic
+  components:
+  - type: Tag  # Mono
+    tags:
+    - Kevlar
 
 #Alternate / slim basic armor vest
 - type: entity
@@ -67,6 +71,9 @@
   - type: GroupExamine
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.2
+  - type: Tag  # Mono
+    tags:
+    - Kevlar
 
 - type: entity
   parent: ClothingOuterArmorBase
@@ -89,6 +96,9 @@
     damageCoefficient: 0.80
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.2
+  - type: Tag  # Mono
+    tags:
+    - Kevlar
 
 - type: entity
   parent: ClothingOuterArmorBase
@@ -190,6 +200,9 @@
     autoRechargeRate: 2
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.2
+  - type: Tag  # Mono
+    tags:
+    - Kevlar
 
 - type: entity
   parent: [ClothingOuterBaseLarge, BaseC3CultContraband, AllowSuitStorageClothing, ContrabandClothing] # Frontier: BaseMajorContraband<BaseC3CultContraband, added ContrabandClothing as parent
@@ -308,6 +321,9 @@
   - type: GroupExamine
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.4
+  - type: Tag  # Mono
+    tags:
+    - Kevlar
 
 - type: entity
   parent: [ ClothingOuterBaseLarge, BaseC3Contraband, AllowSuitStorageClothing ] # Frontier: BaseMajorContraband<BaseC3Contraband

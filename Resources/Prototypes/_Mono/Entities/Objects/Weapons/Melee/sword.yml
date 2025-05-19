@@ -65,6 +65,9 @@
     malus: 0.9
   - type: StaticPrice
     price: 7500
+  - type: Tag  # Mono
+    tags:
+    - VT7
 
 - type: entity
   name: VT-7 HF blade "Murasama"
@@ -96,3 +99,6 @@
     malus: 0.9
   - type: StaticPrice
     price: 50000
+  - type: Tag  # Mono
+    tags:
+    - VT7

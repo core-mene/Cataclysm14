@@ -1,0 +1,21 @@
+ussp-bounty-item-bread = Bread
+ussp-bounty-item-artifact = Alien Artifact
+ussp-bounty-item-stew = Soup
+ussp-bounty-item-pizza = Pizza
+ussp-bounty-item-radio = Handicomms
+ussp-bounty-item-rogue-hardsuit = Rogue Hardsuit
+ussp-bounty-item-cyborg-endoskeleton = Cyborg Endoskeleton
+ussp-bounty-item-kevlar = Body Armor
+ussp-bounty-item-vt7 = VT-7 HF Blade
+ussp-bounty-item-lasergun = Laser Weaponry
+
+ussp-bounty-description-generic = USSP needs this for the fight!
+ussp-bounty-description-nova = Nova Cygni command needs this!
+ussp-bounty-description-artifact = Sell in a artifact container.
+ussp-bounty-description-bread = Cannot be sliced!
+ussp-bounty-description-food-warm = Soldiers are hungry for warm food.
+ussp-bounty-description-rogue-hardsuit = Viper Group hardsuits and Rogue SCAF suits count to this.
+ussp-bounty-description-cyborg-endoskeleton = Only the exoskeleton will count. Completed cyborgs do not count.
+ussp-bounty-description-kevlar = Hardsuits do not count. Nova Cygni wants easy kevlar.
+ussp-bounty-description-vt7 = Only the Rogue one counts. Don't want a war starting now!
+ussp-bounty-description-lasergun = Anything that shoots a projectile with no travel time, and feeds from a battery.
