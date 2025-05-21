@@ -1,0 +1,37 @@
+- type: vessel
+  id: Tunguska
+  parent: BaseVesselAntag
+  name: NCS Tunguska
+  description: A refitted Seraphim with as many guns as it could sustain. Prepare for a onslaught of autocannon fire.
+  price: 195700
+  category: Large
+  group: Ussp
+  access: USSP
+  shuttlePath: /Maps/_Mono/Shuttles/USSP/tunguska.yml
+  guidebookPage: Null
+  class:
+  - Patrol
+  - Capital
+  engine:
+  - AME
+
+- type: gameMap
+  id: Tunguska
+  mapName: 'Tunguska'
+  mapPath: /Maps/_Mono/Shuttles/USSP/tunguska.yml
+  minPlayers: 0
+  stations:
+    Tunguska:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Tunguska USSP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            USSPSergeant: [0, 0]
+            USSPCorporal: [0, 0]
+            USSPMedic: [0, 0]
+            USSPRifleman: [0, 0]
