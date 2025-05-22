@@ -299,15 +299,13 @@ public sealed class AmeControllerSystem : EntitySystem
         if (!Resolve(uid, ref controller))
             return;
 
-        var max = GetMaxInjectionAmount((uid, controller));
+        var max = int.MaxValue; // Mono
         SetInjectionAmount(uid, MathHelper.Clamp(controller.InjectionAmount + delta, 0, max), user, controller);
     }
 
     public int GetMaxInjectionAmount(Entity<AmeControllerComponent> ent)
     {
-        if (!TryGetAMENodeGroup(ent, out var group))
-            return 0;
-        return  group.CoreCount * 8;
+        return int.MaxValue; // Mono
     }
 
     private void UpdateDisplay(EntityUid uid, int stability, AmeControllerComponent? controller = null, AppearanceComponent? appearance = null)
