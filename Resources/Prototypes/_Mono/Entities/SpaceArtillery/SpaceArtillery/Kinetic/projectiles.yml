@@ -107,7 +107,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 25
+    lifetime: 15
   - type: PointLight
     color: "#FCBA03"
   - type: ExplodeOnTrigger
@@ -195,7 +195,7 @@
     requireNoGrid: true
     shape: circle
   - type: TimedDespawn
-    lifetime: 100
+    lifetime: 20
   - type: PointLight
     color: "#FB00FF"
   - type: EmpOnTrigger

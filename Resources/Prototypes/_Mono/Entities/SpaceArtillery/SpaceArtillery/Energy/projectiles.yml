@@ -9,8 +9,8 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 50
-        Structural: 1250
+        Radiation: 1250
+        Structural: 4250
         Heat: 350
         Ion: 350
   - type: Sprite
@@ -33,7 +33,7 @@
     explosionType: Default
     maxIntensity: 125
     intensitySlope: 3
-    totalIntensity: 35
+    totalIntensity: 95
     maxTileBreak: 1
 
 # RUBICON
