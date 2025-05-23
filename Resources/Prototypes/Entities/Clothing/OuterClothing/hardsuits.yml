@@ -788,7 +788,8 @@
     sprintModifier: 0.8
   - type: HeldSpeedModifier
   - type: ToggleableClothing
-    clothingPrototypes: ClothingHeadHelmetHardsuitWizard
+    clothingPrototypes:
+      head:  ClothingHeadHelmetHardsuitWizard
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.3
 
