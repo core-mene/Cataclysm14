@@ -21,9 +21,9 @@ namespace Content.Server.Shuttles.Systems;
 
 public sealed partial class ShuttleSystem
 {
-    private const float SpaceFrictionStrength = 0.0075f;
-    private const float DampenDampingStrength = 0.25f;
-    private const float AnchorDampingStrength = 2.5f;
+    private const float SpaceFrictionStrength = 0.0015f;
+    private const float DampenDampingStrength = 0.05f; // FRONTIER MERGE: this should be valuable
+    private const float AnchorDampingStrength = 0.5f;
     private void NfInitialize()
     {
         SubscribeLocalEvent<ShuttleConsoleComponent, SetInertiaDampeningRequest>(OnSetInertiaDampening);
@@ -50,7 +50,15 @@ public sealed partial class ShuttleSystem
             return false;
         }
 
-        shuttleComponent.BodyModifier = mode switch
+        var linearDampeningStrength = mode switch
+        {
+            InertiaDampeningMode.Off => SpaceFrictionStrength,
+            InertiaDampeningMode.Dampen => DampenDampingStrength,
+            InertiaDampeningMode.Anchor => AnchorDampingStrength,
+            _ => DampenDampingStrength, // other values: default to some sane behaviour (assume normal dampening)
+        };
+
+        var angularDampeningStrength = mode switch
         {
             InertiaDampeningMode.Off => SpaceFrictionStrength,
             InertiaDampeningMode.Dampen => DampenDampingStrength,
