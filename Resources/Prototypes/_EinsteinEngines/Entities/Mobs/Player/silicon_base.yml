@@ -290,6 +290,7 @@
         - Pacified
         # - PsionicsDisabled
         # - PsionicallyInsulated
+        - Flashed # Goobstation
     - type: Blindable
     - type: FireVisuals
       alternateState: Standing
@@ -302,6 +303,10 @@
     - type: Targeting
     - type: SurgeryTarget
     - type: LayingDown
+    - type: ExaminableCharacter # WWDP
+    - type: CanEnterCryostorage # Goobstation
+    - type: StatusIcon # Goobstation
+      bounds: -0.5,-0.5,0.5,0.5
 
 - type: damageModifierSet
   id: IPC
