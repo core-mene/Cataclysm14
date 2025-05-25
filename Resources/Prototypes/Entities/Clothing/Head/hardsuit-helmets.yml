@@ -341,7 +341,7 @@
 
 #Research Director's Hardsuit
 - type: entity
-  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  parent: ClothingHeadHardsuitBase # Mono - remove light, replace with NVG
   id: ClothingHeadHelmetHardsuitRd
   name: experimental research hardsuit helmet
   description: Lightweight hardsuit helmet that doesn't restrict your head movements.
@@ -350,11 +350,13 @@
     sprite: Clothing/Head/Hardsuits/rd.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/rd.rsi
-  - type: PointLight
-    color: "#d6adff"
   - type: PressureProtection
     highPressureMultiplier: 0.60
     lowPressureMultiplier: 1000
+  - type: NightVision # Mono - remove light, replace with NVG
+    flashDurationMultiplier: 2
+    isEquipment: true
+    color: "#34AEEB"
 
 #Head of Security's hardsuit
 - type: entity
