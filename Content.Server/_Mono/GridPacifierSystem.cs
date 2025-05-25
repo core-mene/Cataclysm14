@@ -1,11 +1,14 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Shared._Mono;
+using Content.Shared._Mono.Company;
 using Content.Shared.CombatMode.Pacification;
 using Content.Shared.Ghost;
 using Content.Shared.Mind;
 using Content.Shared.Mobs.Components;
 using Robust.Shared.Containers;
 using Robust.Shared.Map.Components;
+using Robust.Shared.Timing;
 
 namespace Content.Server._Mono;
 
@@ -18,6 +21,7 @@ public sealed class GridPacifierSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private readonly IGameTiming _gameTiming = default!;
 
     public override void Initialize()
     {
@@ -38,6 +42,9 @@ public sealed class GridPacifierSystem : EntitySystem
             Log.Warning($"GridPacifierComponent applied to non-grid entity {ToPrettyString(uid)}");
             return;
         }
+
+        // Initialize the next update time
+        component.NextUpdate = _gameTiming.CurTime + component.UpdateInterval;
 
         // Find all entities on the grid and apply Pacified to them if they're organic
         var allEntitiesOnGrid = _lookup.GetEntitiesIntersecting(uid).ToHashSet();
@@ -64,6 +71,70 @@ public sealed class GridPacifierSystem : EntitySystem
         }
 
         component.PacifiedEntities.Clear();
+    }
+
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+        
+        var curTime = _gameTiming.CurTime;
+        
+        // Find all grids with a GridPacifierComponent
+        var query = EntityQueryEnumerator<GridPacifierComponent, MapGridComponent>();
+        while (query.MoveNext(out var uid, out var component, out _))
+        {
+            // Check if it's time for the periodic update
+            if (curTime < component.NextUpdate)
+                continue;
+                
+            // Schedule the next update
+            component.NextUpdate = curTime + component.UpdateInterval;
+            
+            // Perform a complete re-check of all entities on the grid
+            PerformGridwideCheck(uid, component);
+        }
+    }
+    
+    /// <summary>
+    /// Performs a complete check of all entities on the grid, applying or removing
+    /// pacification as needed based on current conditions.
+    /// </summary>
+    private void PerformGridwideCheck(EntityUid gridUid, GridPacifierComponent component)
+    {
+        // First, get all entities currently on the grid
+        var entitiesOnGrid = _lookup.GetEntitiesIntersecting(gridUid).ToHashSet();
+        
+        // Create a copy of the current pacified entities list for tracking which ones are no longer on the grid
+        var stillPacifiedEntities = new HashSet<EntityUid>();
+        
+        // Process all entities currently on the grid
+        foreach (var entity in entitiesOnGrid)
+        {
+            // Skip the grid itself and entities inside containers
+            if (entity == gridUid || _container.IsEntityInContainer(entity))
+                continue;
+                
+            // Process this entity - this will either pacify it or skip it based on conditions
+            ProcessEntityOnGrid(gridUid, entity, component);
+            
+            // If this entity is pacified after processing, add it to our tracking set
+            if (component.PacifiedEntities.Contains(entity))
+                stillPacifiedEntities.Add(entity);
+        }
+        
+        // Find entities that are no longer on the grid or no longer meet pacification criteria
+        // These are entities that were in the pacified list but aren't in our updated tracking set
+        var entitiesToRemove = component.PacifiedEntities.Where(e => !stillPacifiedEntities.Contains(e)).ToList();
+        
+        // Remove pacification from these entities
+        foreach (var entity in entitiesToRemove)
+        {
+            if (EntityManager.EntityExists(entity))
+            {
+                RemovePacified(entity);
+                component.PacifiedEntities.Remove(entity);
+            }
+        }
     }
 
     private void OnEntityMoved(ref MoveEvent args)
@@ -161,6 +232,26 @@ public sealed class GridPacifierSystem : EntitySystem
         if (!IsOrganic(entityUid))
             return;
 
+        // Check if the entity is from an exempt company
+        if (TryComp<CompanyComponent>(entityUid, out var companyComp) && 
+            !string.IsNullOrEmpty(companyComp.CompanyName))
+        {
+            // Check against all three exempt company slots
+            if ((!string.IsNullOrEmpty(component.ExemptCompany1) && companyComp.CompanyName == component.ExemptCompany1) ||
+                (!string.IsNullOrEmpty(component.ExemptCompany2) && companyComp.CompanyName == component.ExemptCompany2) ||
+                (!string.IsNullOrEmpty(component.ExemptCompany3) && companyComp.CompanyName == component.ExemptCompany3))
+            {
+                // Entity is from an exempt company
+                // If they were previously pacified, remove the pacification
+                if (component.PacifiedEntities.Contains(entityUid))
+                {
+                    RemovePacified(entityUid);
+                    component.PacifiedEntities.Remove(entityUid);
+                }
+                return;
+            }
+        }
+
         ApplyPacified(gridUid, entityUid, component);
     }
 
@@ -226,4 +317,4 @@ public sealed class GridPacifierSystem : EntitySystem
 
         return false;
     }
-} 
+}

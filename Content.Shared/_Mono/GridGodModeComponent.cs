@@ -1,4 +1,4 @@
-namespace Content.Server._Mono;
+namespace Content.Shared._Mono;
 
 /// <summary>
 /// Component that applies GodMode to all non-organic entities on a grid.
