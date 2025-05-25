@@ -226,7 +226,12 @@
         - MachineLayer
   - type: Gun
     projectileSpeed: 105
-    fireRate: 1.5
+    fireRate: 0.125
+    burstCooldown: 10
+    burstFireRate: 1.5
+    shotsPerBurst: 2
+    selectedMode: Burst
+    availableModes: Burst
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
     soundEmpty:
@@ -234,8 +239,6 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 12000
-    autoRechargePause: true
-    autoRechargePauseTime: 10
   - type: SpaceArtillery
     powerChargeRate: 12000
     powerUsePassive: 1500
