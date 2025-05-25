@@ -123,6 +123,11 @@
   - type: Gun
     fireRate: 2.5
     projectileSpeed: 80
+    burstCooldown: 0.5
+    burstFireRate: 10
+    shotsPerBurst: 2
+    selectedMode: Burst
+    availableModes: Burst
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/120mm_mortar.ogg
     soundEmpty:
