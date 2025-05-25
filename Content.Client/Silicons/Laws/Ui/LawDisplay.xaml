@@ -9,10 +9,25 @@
             <RichTextLabel Name="LawNumberLabel" StyleClasses="LabelKeyText"/>
             <customControls:HSeparator Margin="0 5 0 5"/>
             <RichTextLabel Name="LawLabel"/>
-            <BoxContainer Name="LawAnnouncementButtons" Orientation="Horizontal" HorizontalExpand="True" Margin="0 5 0 0">
+            <BoxContainer Orientation="Vertical" HorizontalExpand="True" Margin="0 5 0 0">
                 <Label Text="{Loc laws-ui-state-law}" StyleClasses="StatusFieldTitle"/>
-                <Control Margin="5 0 0 0" />
-                <!-- Buttons are added via C# code-->
+                <PanelContainer StyleClasses="BackgroundDark" MinHeight="40" Margin="0 5 0 0">
+                    <ScrollContainer 
+                        HScrollEnabled="True" 
+                        VScrollEnabled="False" 
+                        HorizontalExpand="True"
+                        MinHeight="40"
+                        ReturnMeasure="True"
+                        ReserveScrollbarSpace="True">
+                        <BoxContainer Name="LawAnnouncementButtons" 
+                                    Orientation="Horizontal" 
+                                    HorizontalExpand="True"
+                                    MinHeight="40"
+                                    Margin="4 4 4 4">
+                            <!-- Buttons are added via C# code-->
+                        </BoxContainer>
+                    </ScrollContainer>
+                </PanelContainer>
             </BoxContainer>
         </BoxContainer>
     </PanelContainer>
