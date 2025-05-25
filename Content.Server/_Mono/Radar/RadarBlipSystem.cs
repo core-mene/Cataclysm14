@@ -61,6 +61,10 @@ public sealed partial class RadarBlipSystem : EntitySystem
                         continue;
                 }
 
+                // This prevents blips from showing on radars that are on different maps
+                if (blipXform.MapID != radarMapId)
+                    continue;
+
                 var blipPosition = _xform.GetWorldPosition(blipUid);
                 var distance = (blipPosition - radarPosition).Length();
                 if (distance > component.MaxRange)
