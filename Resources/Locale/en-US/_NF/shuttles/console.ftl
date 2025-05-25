@@ -8,6 +8,9 @@ shuttle-console-inertia-dampener-off = Cruise
 shuttle-console-inertia-dampener-dampen = Drive
 shuttle-console-inertia-dampener-anchor = Park
 
+# Mono
+shuttle-console-force-anchored = This ship is anchored and cannot use FTL.
+
 # Network Port Buttons
 shuttle-console-network-ports = Network Ports
 
