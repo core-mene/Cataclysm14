@@ -1,9 +1,15 @@
 - type: loadoutGroup
   id: RogueJumpsuit
   name: loadout-group-contractor-jumpsuit
-  hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
   - RogueClothingJumpsuit
+  - RogueClothingJumpsuitPants
+  - RogueClothingJumpsuitJeans
+  - RogueClothingJumpsuitCargos
+  - RogueClothingJumpsuitWarm
   fallbacks:
   - RogueClothingJumpsuit
+  subgroups:
+  - PirateJumpsuit
+  - PirateMercenaryJumpsuit

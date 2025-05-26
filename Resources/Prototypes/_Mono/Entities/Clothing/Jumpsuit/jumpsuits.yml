@@ -39,3 +39,59 @@
   - type: SuitSensor
     randomMode: false
     mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformRoguePants
+  name: rogue field pants
+  description: A matte black tactical outfit worn by independent agents working on contracts. The red ar- wait it's just the pants?
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/rogue/shirtless.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/rogue/shirtless.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformRogueJeans
+  name: rogue field suit (jeans)
+  description: A matte black shirt paired with jeans. Worn by independent agents who prefer fieldwork with a bit more flexibility. The red armband still signals uncertain allegiance.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/rogue/tactical_jeans.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/rogue/tactical_jeans.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformRogueCargos
+  name: rogue field suit (cargos)
+  description: A matte black tactical top combined with durable brown cargo pants, suited for terrain-heavy contracts. Independent agents favor this blend of function and subtle defiance. The red armband stays—barely.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/rogue/tactical_cargo.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/rogue/tactical_cargo.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformRogueWarm
+  name: rogue warm field suit
+  description: A heavily insulated variant of the rogue field suit, lined for extreme environments. Built for survival without compromise.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/rogue/warm.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/rogue/warm.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
