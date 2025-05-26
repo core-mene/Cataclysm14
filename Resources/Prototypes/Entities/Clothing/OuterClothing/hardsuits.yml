@@ -25,13 +25,14 @@
     walkModifier: 0.9 # Mono
     sprintModifier: 0.9 # Mono
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitBasic
   - type: StaticPrice # Frontier
     price: 20 # Frontier
     vendPrice: 2000 # Frontier
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.6
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitBasic
 
 #Atmospherics Hardsuit
 - type: entity
@@ -66,10 +67,11 @@
     walkModifier: 0.85 # Mono
     sprintModifier: 0.85 # Mono
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitAtmos
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.6
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitAtmos
 
 #Engineering Hardsuit
 - type: entity
@@ -100,8 +102,9 @@
     walkModifier: 0.85 # Mono
     sprintModifier: 0.85 # Mono
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitEngineering
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitEngineering
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.55 # slightly better than atmos hardsuit, cuz insulating plating or whatever
 
@@ -131,8 +134,6 @@
     walkModifier: 0.9
     sprintModifier: 0.8
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitSpatio
   - type: Tag
     tags:
     - Hardsuit
@@ -140,6 +141,9 @@
     - HardsuitSpatio
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.6
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitSpatio
 
 #Salvage Hardsuit
 - type: entity
@@ -169,10 +173,11 @@
     walkModifier: 0.75
     sprintModifier: 0.75
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitSalvage
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.55
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitSalvage
 
 #Goliath Hardsuit
 - type: entity
@@ -203,8 +208,9 @@
     walkModifier: 0.8
     sprintModifier: 0.8
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitGoliath
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitGoliath
   - type: Construction
     graph: HardsuitGoliath
     node: hardsuitGoliath
@@ -241,10 +247,11 @@
   - type: TemperatureProtection
     heatingCoefficient: 0.001
     coolingCoefficient: 0.001
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitMaxim
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.45
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitMaxim
 
 #Security Hardsuit
 - type: entity
@@ -269,14 +276,16 @@
         Slash: 0.6
         Piercing: 0.6
         Caustic: 0.7
+        Heat: 0.7 # Goobstation
   - type: ClothingSpeedModifier
     walkModifier: 0.75
     sprintModifier: 0.75
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitSecurity
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.4
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitSecurity
 
 #Brigmedic Hardsuit
 - type: entity
@@ -298,12 +307,14 @@
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.7
+        Heat: 0.7 # Goobstation
   - type: ClothingSpeedModifier
     walkModifier: 0.65
     sprintModifier: 0.65
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitBrigmedic
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitBrigmedic
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.4
 
@@ -330,14 +341,16 @@
         Slash: 0.6
         Piercing: 0.6
         Caustic: 0.7
+        Heat: 0.7 # Goobstation
   - type: ClothingSpeedModifier
     walkModifier: 0.7
     sprintModifier: 0.7
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitWarden
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.3
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitWarden
 
 #Captain's Hardsuit
 - type: entity
@@ -360,18 +373,19 @@
       coefficients:
         Blunt: 0.8
         Slash: 0.8
-        Piercing: 0.7 #Frontier 0.6<0.7
-        Heat: 0.75 #Frontier 0.5<0.75
-        Radiation: 0.75 #Frontier 0.5<0.75
-        Caustic: 0.85 #Frontier 0.6<0.85
+        Piercing: 0.6
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.6
   - type: ClothingSpeedModifier
     walkModifier: 0.8
     sprintModifier: 0.8
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitCap
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.3
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitCap
 
 #Chief Engineer's Hardsuit
 - type: entity
@@ -398,16 +412,17 @@
         Slash: 0.8
         Piercing: 0.8
         Heat: 0.4
-        Radiation: 0.05 # Frontier - 0<0.05
+        Radiation: 0.0
         Caustic: 0.7
   - type: ClothingSpeedModifier
     walkModifier: 0.75
     sprintModifier: 0.8
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitEngineeringWhite
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.45
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitEngineeringWhite
 
 #Chief Medical Officer's Hardsuit
 - type: entity
@@ -434,10 +449,11 @@
     walkModifier: 1 # 0.9-> 1 - Mono
     sprintModifier: 1 # 0.95-> 1 - Mono
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitMedical
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.7
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitMedical
 
 #Research Director's Hardsuit
 - type: entity
@@ -457,10 +473,10 @@
     modifiers:
       coefficients:
         Blunt: 0.6
-        Slash: 0.8
-        Piercing: 0.9
+        Slash: 0.65 # Mono 0.65 < 0.8
+        Piercing: 0.65 # Mono 0.65 < 0.9
         Heat: 0.3
-        Radiation: 0.1
+        Radiation: 0 # Mono 0 < 0.1
         Caustic: 0.2
   - type: ExplosionResistance
     damageCoefficient: 0.1
@@ -476,8 +492,9 @@
     tags:
     - WhitelistChameleon
     - HighRiskItem
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitRd
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitRd
   - type: StaticPrice
     price: 750
   - type: StealTarget
@@ -511,14 +528,16 @@
         Piercing: 0.5
         Radiation: 0.5
         Caustic: 0.6
+        Heat: 0.6 # Goobstation
   - type: ClothingSpeedModifier
     walkModifier: 0.8
     sprintModifier: 0.8
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitSecurityRed
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.4
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitSecurityRed
 
 #Luxury Mining Hardsuit
 - type: entity
@@ -526,7 +545,6 @@
   id: ClothingOuterHardsuitLuxury #DO NOT MAP - https://github.com/space-wizards/space-station-14/pull/19738#issuecomment-1703486738
   name: luxury mining hardsuit
   description: A refurbished mining hardsuit, fashioned after the Quartermaster's colors. Graphene lining provides less protection, but is much easier to move.
-  categories: [ DoNotMap ]
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Hardsuits/luxury.rsi
@@ -549,8 +567,9 @@
     walkModifier: 0.85
     sprintModifier: 0.9
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitLuxury
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitLuxury
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.5
 
@@ -586,8 +605,9 @@
     walkModifier: 0.9
     sprintModifier: 0.9
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitSyndie
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitSyndie
   - type: Tag
     tags:
     - MonkeyWearable
@@ -619,8 +639,9 @@
   - type: ClothingSpeedModifier # Mono
     walkModifier: 0.93
     sprintModifier: 0.93
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitSyndieMedic
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitSyndieMedic
   - type: Tag
     tags:
     - Hardsuit
@@ -662,10 +683,11 @@
     walkModifier: 1.0
     sprintModifier: 1.0 # 0.9-> 1 Mono
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitSyndieElite
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.2
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitSyndieElite
 
 #Syndicate Commander Hardsuit
 - type: entity
@@ -696,8 +718,9 @@
     walkModifier: 1.0
     sprintModifier: 1.0
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitSyndieCommander
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitSyndieCommander
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.2
 
@@ -730,8 +753,9 @@
     walkModifier: 0.9
     sprintModifier: 0.65
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitCybersun
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitCybersun
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.1
 
@@ -765,7 +789,8 @@
     sprintModifier: 0.8
   - type: HeldSpeedModifier
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitWizard
+    clothingPrototypes:
+      head:  ClothingHeadHelmetHardsuitWizard
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.3
 
@@ -796,10 +821,11 @@
     walkModifier: 0.8
     sprintModifier: 0.8
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitLing
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.5 # its just skin....
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitLing
 
 #Pirate EVA Suit (Deep Space EVA Suit)
 #Despite visually appearing like a softsuit, it functions exactly like a hardsuit would (parents off of base hardsuit, has resistances and toggleable clothing, etc.) so it goes here.
@@ -828,8 +854,9 @@
     walkModifier: 0.6
     sprintModifier: 0.6
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitPirateEVA
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitPirateEVA
   - type: StaticPrice
     price: 0
   - type: StaminaDamageResistance # Mono - Stamres
@@ -863,8 +890,9 @@
     walkModifier: 0.8
     sprintModifier: 0.8
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitPirateCap
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitPirateCap
   - type: StaticPrice
     price: 0
   - type: StaminaDamageResistance # Mono - Stamres
@@ -882,8 +910,9 @@
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertleader.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertleader.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitERTLeader
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitERTLeader
 
 #ERT Chaplain Hardsuit
 - type: entity
@@ -896,8 +925,9 @@
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertchaplain.rsi #if you change this, please update the humanoid.yml with a better markers sprite.
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertchaplain.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitERTChaplain
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitERTChaplain
 
 #ERT Engineer Hardsuit
 - type: entity
@@ -910,8 +940,9 @@
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertengineer.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertengineer.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitERTEngineer
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitERTEngineer
 
 #ERT Medic Hardsuit
 - type: entity
@@ -924,8 +955,9 @@
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertmedical.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertmedical.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitERTMedical
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitERTMedical
 
 #ERT Security Hardsuit
 - type: entity
@@ -938,8 +970,9 @@
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertsecurity.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertsecurity.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitERTSecurity
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitERTSecurity
   - type: Tag
     tags:
     - Hardsuit
@@ -956,8 +989,9 @@
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertjanitor.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertjanitor.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitERTJanitor
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitERTJanitor
 
 #Deathsquad
 - type: entity
@@ -993,10 +1027,11 @@
     walkModifier: 1.0
     sprintModifier: 1.0
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitDeathsquad
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitDeathsquad
 
 #CBURN Hardsuit
 - type: entity
@@ -1032,10 +1067,11 @@
     walkModifier: 1.0
     sprintModifier: 1.0
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetCBURN
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.15
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetCBURN
 
 #MISC. HARDSUITS
 #Clown Hardsuit
@@ -1068,10 +1104,11 @@
   - type: Construction
     graph: ClownHardsuit
     node: clownHardsuit
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitClown
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.8
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitClown
 
 #Mime Hardsuit
 - type: entity
@@ -1087,10 +1124,11 @@
   - type: Construction
     graph: MimeHardsuit
     node: mimeHardsuit
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitMime
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.8
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitMime
 
 #Santa's Hardsuit
 - type: entity
@@ -1119,7 +1157,8 @@
     walkModifier: 0.9
     sprintModifier: 0.9
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitSanta
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.8
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitSanta

@@ -1,0 +1,19 @@
+- type: thiefBackpackSet
+  id: VoidsuitSelectorRDHardsuit
+  name: selectable-set-rd-hardsuit-name
+  description: selectable-set-rd-hardsuit-desc
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/rd.rsi
+    state: icon
+  content:
+  - ClothingOuterHardsuitRd
+
+- type: thiefBackpackSet
+  id: VoidsuitSelectorRDModsuit
+  name: selectable-set-rd-modsuit-name
+  description: selectable-set-rd-modsuit-desc
+  sprite:
+    sprite: _Goobstation/Clothing/Back/Modsuits/researchdirector.rsi
+    state: control
+  content:
+  - ClothingModsuitResearchDirectorPowerCell

@@ -22,6 +22,21 @@
 
 - type: entity
   parent: BaseRandomShuttleRule
+  id: UnknownShuttleNebula
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-ai-shuttle-detected
+    startAudio:
+      path: /Audio/Misc/notice1.ogg
+    weight: 2
+    maxOccurrences: 6
+  - type: GameRule
+    minPlayers: 25
+  - type: LoadMapRule
+    preloadedGrid: AINebula
+
+- type: entity
+  parent: BaseRandomShuttleRule
   id: UnknownShuttleRazor
   components:
   - type: StationEvent

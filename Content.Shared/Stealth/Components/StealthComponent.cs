@@ -86,3 +86,20 @@ public sealed partial class StealthComponent : Component
     [DataField("examinedDesc")]
     public string ExaminedDesc = "stealth-visual-effect";
 }
+
+[Serializable, NetSerializable]
+public sealed class StealthComponentState : ComponentState
+{
+    public readonly float Visibility;
+    public readonly TimeSpan? LastUpdated;
+    public readonly float MaxVisibility; // Shitmed Change
+    public readonly bool Enabled;
+
+    public StealthComponentState(float stealthLevel, TimeSpan? lastUpdated, float maxVisibility, bool enabled)
+    {
+        Visibility = stealthLevel;
+        LastUpdated = lastUpdated;
+        MaxVisibility = maxVisibility; // Shitmed Change
+        Enabled = enabled;
+    }
+}

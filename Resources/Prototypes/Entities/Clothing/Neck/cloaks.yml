@@ -99,7 +99,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckCloakNanotrasen
   name: nanotrasen cloak
-  description: A stately blue cloak to represent the NT.
+  description: A stately blue cloak to represent NT.
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/nanotrasen.rsi
@@ -152,14 +152,19 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/goliathcloak.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodGoliathCloak
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      neck: ClothingHeadHatHoodGoliathCloak
     requiredSlot:
     - neck
     slot: head
+  - type: UserInterface
+    interfaces:
+      enum.ToggleClothingUiKey.Key:
+        type: ToggleableClothingBoundUserInterface
   - type: ContainerContainer
     containers:
-      toggleable-clothing: !type:ContainerSlot {}
+      toggleable-clothing: !type:Container {}
 
 - type: entity
   parent: ClothingNeckBase
@@ -178,14 +183,18 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/moth.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodMoth
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHatHoodMoth
     requiredSlot:
     - neck
-    slot: head
+  - type: UserInterface
+    interfaces:
+      enum.ToggleClothingUiKey.Key:
+        type: ToggleableClothingBoundUserInterface
   - type: ContainerContainer
     containers:
-      toggleable-clothing: !type:ContainerSlot {}
+      toggleable-clothing: !type:Container {}
   - type: TypingIndicatorClothing
     proto: moth
 
@@ -197,14 +206,18 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/void.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodVoidCloak
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHatHoodVoidCloak
     requiredSlot:
     - neck
-    slot: head
+  - type: UserInterface
+    interfaces:
+      enum.ToggleClothingUiKey.Key:
+        type: ToggleableClothingBoundUserInterface
   - type: ContainerContainer
     containers:
-      toggleable-clothing: !type:ContainerSlot {}
+      toggleable-clothing: !type:Container {}
   - type: TypingIndicatorClothing
     proto: alien
 

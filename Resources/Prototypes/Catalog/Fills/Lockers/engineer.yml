@@ -89,11 +89,10 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingOuterHardsuitAtmos
+      - id: ClothingModsuitAtmostechPowerCell # Goob edit
+      - id: OxygenTankFilled
+      - id: NitrogenTankFilled
       - id: ClothingMaskGasAtmos
-#      - id: NitrogenTankFilled
-#      - id: OxygenTankFilled
-      - id: AirTankFilled
       - id: ClothingOuterSuitAtmosFire
       - id: ClothingHeadHelmetAtmosFire
       - id: GasAnalyzer
@@ -135,12 +134,11 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingOuterHardsuitEngineering
+      - id: UndeterminedVoidsuitEngineer # Goob edit
+      - id: OxygenTankFilled
+      - id: NitrogenTankFilled
       - id: ClothingHandsGlovesColorYellow
       - id: ClothingMaskGas
-#      - id: NitrogenTankFilled
-#      - id: OxygenTankFilled
-      - id: AirTankFilled
       - id: ClothingShoesBootsMag
       - id: trayScanner # Frontier
       - id: JetpackMiniFilled # Frontier

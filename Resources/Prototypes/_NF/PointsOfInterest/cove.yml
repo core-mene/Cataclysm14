@@ -39,8 +39,8 @@
         - type: StationJobs
           availableJobs:
             PirateCaptain: [ 1, 1 ]
-            PirateFirstMate: [ 2, 2 ] # Mono
-            Pirate: [ 4, 4 ] # Mono
+            PirateFirstMate: [ 4, 4 ] # Mono
+            Pirate: [ -1, -1 ] # Mono
         - type: StationDeadDropReporting
           messageSet: Pirate
         - type: StationDeadDropHintExempt

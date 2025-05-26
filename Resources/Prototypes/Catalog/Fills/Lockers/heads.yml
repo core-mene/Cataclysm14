@@ -177,8 +177,7 @@
     children:
     - id: ClothingMaskGasAtmos
     - id: ClothingOuterHardsuitEngineeringWhite
-    #    - id: ClothingShoesBootsMagAdv # Frontier
-    - id: ClothingShoesBootsMag # Frontier
+    - id: ClothingShoesBootsMagAdv
     #    - id: JetpackVoidFilled # Frontier
     #    - id: OxygenTankFilled # Frontier
     - id: OxygenTankFilled
@@ -220,20 +219,16 @@
     - id: ClothingBackpackDuffelSurgeryFilled # Frontier Revert - Mono
     #    - id: ClothingCloakCmo # Frontier - bloat
     - id: ClothingEyesHudMedical
-    #    - id: ClothingHandsGlovesNitrile # Frontier - bloat
-    #    - id: ClothingHeadHatBeretCmo # Frontier - bloat
+    - id: ClothingHandsGlovesNitrile
     - id: ClothingHeadsetAltMedical
-    #    - id: ClothingMaskSterile # Frontier - bloat
-    #    - id: DoorRemoteMedical # Frontier - bloat
+    - id: ClothingMaskSterile
     - id: HandheldCrewMonitor
-    #    - id: Hypospray # Frontier - balance
-    - id: HypoMini # Frontier
-    #    - id: MedicalTechFabCircuitboard # Frontier - bloat
-    - id: MedicalTechFabFlatpack # Mono
-    - id: Multitool # Mono
-    #    - id: MedkitFilled # Frontier - bloat
-    #    - id: RubberStampCMO # Frontier - MOM stamp
-    - id: DefibrillatorCompact # Mono
+    - id: Hypospray
+    - id: MedicalTechFabCircuitboard
+    - id: MedkitFilled
+    - id: RubberStampCMO
+    # Goobstation Start
+    - id: Multitool
     - id: MedTekCartridge
     - id: ClothingBeltMedicalFilled # Frontier - add more bloat
     - id: RubberStampDoctor # Frontier
@@ -248,7 +243,6 @@
     children:
     - id: ClothingMaskBreathMedical
     - id: ClothingOuterHardsuitMedical
-    #    - id: OxygenTankFilled # Frontier
     - id: OxygenTankFilled
     - id: NitrogenTankFilled
     - id: JetpackMiniFilled # Frontier
@@ -302,7 +296,6 @@
     children:
     - id: ClothingMaskBreath
     - id: ClothingOuterHardsuitRd
-    #    - id: OxygenTankFilled # Frontier
     - id: OxygenTankFilled
     - id: NitrogenTankFilled
     - id: JetpackMiniFilled # Frontier
@@ -356,15 +349,6 @@
     #    - id: WeaponDisabler # Frontier
     #    - id: WantedListCartridge # Frontier
     - id: DrinkHosFlask
-    - id: ClothingUniformJumpskirtHoSAlt # Frontier: consistency with old fill
-    - id: ClothingUniformJumpsuitHoSAlt # Frontier: consistency with old fill
-    - id: ClothingHeadHatBeretHoS # Frontier: consistency with old fill
-    - id: ClothingHeadHatHoshat # Frontier: consistency with old fill
-    - id: ClothingUniformJumpskirtHosFormal # Frontier: consistency with old fill
-    - id: ClothingUniformJumpsuitHosFormal # Frontier: consistency with old fill
-    - id: ClothingNeckMantleHOS # Frontier: consistency with old fill
-    - id: ClothingOuterWinterHoS # Frontier: consistency with old fill
-    - id: ClothingShoesBootsWinterHoS # Frontier: consistency with old fill
     - id: Demag # Frontier
 
 # Hardsuit table, used for suit storage as well
@@ -373,9 +357,10 @@
   table: !type:AllSelector
     children:
     - id: ClothingMaskGasSwat
-    - id: ClothingOuterHardsuitSecurityRed
+    - id: UndeterminedVoidsuitHeadOfSecurity # Goob edit
     - id: JetpackSecurityFilled
     - id: OxygenTankFilled
+    - id: NitrogenTankFilled
 
 # No hardsuit locker
 - type: entity
@@ -407,7 +392,6 @@
   id: LockerFreezerVaultFilled
   suffix: Vault, Locked
   parent: LockerFreezerBase
-  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: AccessReader
     access: [ [ "Command" ] ]

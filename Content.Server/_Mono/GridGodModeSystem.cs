@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server.Damage.Systems;
+using Content.Shared._Mono;
 using Content.Shared.Damage.Components;
 using Content.Shared.Ghost;
 using Content.Shared.Mind;

@@ -10,7 +10,7 @@
       tags:
         - CartridgePistol
     proto: CartridgePistol
-    capacity: 60
+    capacity: 70 # 60->70 Two mags per box
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -25,6 +25,27 @@
   - type: Appearance
 
 # Boxes
+- type: entity # Mono Big Pistol Mags
+  parent: BaseMagazineBoxPistol
+  id: MagazineBoxPistolBig
+  name: ammunition box (.35 auto)
+  suffix: Big
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 280 # 8 mags per box similar to rifle box
+    proto: CartridgePistol
+  - type: Sprite
+    layers:
+    - state: base-b # Frontier: base-big<base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-1 # Frontier: mag-big-1<magb-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb # Frontier: mag-big<magb
+    steps: 4
+    zeroVisible: false
+  - type: Appearance
+
 - type: entity
   parent: BaseMagazineBoxPistol
   id: MagazineBoxPistol

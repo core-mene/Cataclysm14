@@ -251,7 +251,7 @@
   parent: BaseMagazinePistolSubMachineGun
   components:
   - type: BallisticAmmoProvider
-    capacity: 30
+#    capacity: 30 - Mono This is redundant
     proto: CartridgePistol
     whitelist:
       tags:

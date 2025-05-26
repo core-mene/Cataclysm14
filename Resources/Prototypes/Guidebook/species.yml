@@ -19,7 +19,8 @@
   - Chitinid # DeltaV
   - Resomi
   - Protogen
-#    - Rodentia # DeltaV
+  - IPC
+  #- Rodentia # DeltaV
 
 - type: guideEntry
   id: Arachnid
@@ -70,3 +71,8 @@
   id: Protogen
   name: species-name-protogen
   text: "/ServerInfo/Guidebook/Mobs/Protogen.xml"
+
+- type: guideEntry
+  id: IPC
+  name: species-name-ipc
+  text: "/ServerInfo/Guidebook/Mobs/IPCs.xml"

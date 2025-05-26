@@ -85,7 +85,7 @@
 - type: latheRecipe
   id: ClothingOuterHardsuitVoidParamed
   parent: NFBaseEVASuitRecipe
-  result: ClothingOuterHardsuitVoidParamed
+  result: UndeterminedVoidsuitParamedic
   materials:
     Plastic: 1000
     Steel: 1000
@@ -257,12 +257,12 @@
 - type: latheRecipe
   id: ClothingOuterHardsuitAtmos
   parent: NFBaseHardSuitRecipe
-  result: ClothingOuterHardsuitAtmos
+  result: ClothingModsuitAtmostechPowerCell
 
 - type: latheRecipe
   id: ClothingOuterHardsuitEngineering
   parent: NFBaseHardSuitRecipe
-  result: ClothingOuterHardsuitEngineering
+  result: UndeterminedVoidsuitEngineer
 
 - type: latheRecipe
   id: ClothingOuterHardsuitSpatio
@@ -341,7 +341,7 @@
 - type: latheRecipe
   id: ClothingOuterHardsuitRd
   parent: NFBaseHardSuitArmoredRecipe
-  result: ClothingOuterHardsuitRd
+  result: UndeterminedVoidsuitRD
 
 - type: latheRecipe
   id: ClothingOuterHardsuitLuxury

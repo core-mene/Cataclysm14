@@ -30,6 +30,10 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 350
+  - type: SpaceArtillery
+    powerChargeRate: 350
+    powerUsePassive: 500
+    powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMediumPlasmaProjectile
@@ -53,7 +57,7 @@
           collection: MetalBreak
   - type: RadarBlip
     radarColor: "#C92BCC"
-    scale: 1
+    scale: 2
   - type: ShipGunType
     shipType: Energy
 
@@ -89,6 +93,10 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 350
+  - type: SpaceArtillery
+    powerChargeRate: 350
+    powerUsePassive: 1250
+    powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipRubiconProjectile
@@ -112,7 +120,7 @@
           collection: MetalBreak
   - type: RadarBlip
     radarColor: "#035EFC"
-    scale: 1
+    scale: 2
   - type: ShipGunType
     shipType: Energy
 
@@ -121,7 +129,7 @@
 - type: entity
   id: WeaponTurretDymere
   name: ADEX-9 DYMERE Turbolaser
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   description: Aetherion Dynamics Weapons Development Branch's most iconic product. Ionized gas projectiles will melt through anything you put in front of them. Can be remotely activated, or linked up to a GCS.
   components:
   - type: StaticPrice
@@ -156,12 +164,16 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 67
+  - type: SpaceArtillery
+    powerChargeRate: 67
+    powerUsePassive: 5750
+    powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipDymereProjectile
     fireCost: 2400
   - type: RadarBlip
-    radarColor: "#FA4E5C"
+    radarColor: "#C92BCC"
+    scale: 3
   - type: ShipGunType
     shipType: Energy
-

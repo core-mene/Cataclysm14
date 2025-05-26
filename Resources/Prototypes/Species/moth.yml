@@ -16,6 +16,7 @@
   id: MobMothSprites
   sprites:
     Head: MobMothHead
+    Hair: MobHumanoidAnyMarking # Mono
     Snout: MobHumanoidAnyMarking
     Chest: MobMothTorso
     HeadTop: MobHumanoidAnyMarking
@@ -39,10 +40,10 @@
 
 - type: markingPoints
   id: MobMothMarkingLimits
-  onlyWhitelisted: true
+  onlyWhitelisted: false # Mono
   points:
     Hair:
-      points: 0
+      points: 1 # Mono Moth Hair
       required: false
     FacialHair:
       points: 0

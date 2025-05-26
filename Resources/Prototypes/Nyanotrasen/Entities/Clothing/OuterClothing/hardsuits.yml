@@ -9,7 +9,8 @@
   - type: Clothing
     sprite:  Nyanotrasen/Clothing/OuterClothing/ReverseEngineering/syndicate.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitSyndieReverseEngineered
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitSyndieReverseEngineered
 
 - type: entity
   parent: ClothingOuterHardsuitJuggernaut
@@ -23,5 +24,6 @@
   - type: Clothing
     sprite:  Nyanotrasen/Clothing/OuterClothing/ReverseEngineering/juggernaut.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitJuggernautReverseEngineered
-    
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitJuggernautReverseEngineered
+

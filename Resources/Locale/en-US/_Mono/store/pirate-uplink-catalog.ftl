@@ -78,9 +78,6 @@ uplink-pirate-cash10000-name = 10,000 spesos
 uplink-pirate-cash10000-desc = That's my boy, you made my day.
 # desc is quote
 
-uplink-pirate-syndicate-poi-name = Syndicate Pinpointer
-uplink-pirate-syndicate-poi-desc = Points to some unknown place?
-
 # MARK: Weapons
 
 uplink-pirate-energy-cutlass-name = Energy Cutlass
@@ -167,7 +164,7 @@ uplink-pirate-box-highcal-he-name = HE .50 ammunition box
 uplink-pirate-box-highcal-he-desc = A box of explosive ammunition for the Burner heavy rifle.
 
 uplink-pirate-emp-rocket-name = RPG-7 EMP Rocket
-uplink-pirate-emp-rocket-desc = A rocket with vengeance against anything electrical. Disables and discharges electrical appliances in it's radius.
+uplink-pirate-emp-rocket-desc = A rocket with vengeance against anything electrical. Disables and drains electrical items in it's radius.
 
 # MARK: Equipment
 

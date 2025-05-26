@@ -16,6 +16,7 @@
   - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorPDA
+  - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorUtility
@@ -42,6 +43,7 @@
   - ContractorEncryptionKey
   - ContractorBoxSurvival
   - PilotPDA
+  - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorUtility
@@ -68,6 +70,7 @@
   - ContractorEncryptionKey
   - ContractorBoxSurvival
   - MercenaryPDA
+  - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorUtility
@@ -91,6 +94,7 @@
   - ContractorEars
   - ContractorEncryptionKey
   - ContractorBoxSurvival
+  - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorFun
@@ -111,6 +115,7 @@
   - ContractorEars
   - ContractorEncryptionKey
   - ContractorBoxSurvival
+  - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorFun
@@ -130,6 +135,7 @@
   - ContractorEars
   - ContractorEncryptionKey
   - ContractorBoxSurvival
+  - MailCarrierWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorFun
@@ -152,6 +158,7 @@
   - ContractorBelt
   - StcEars
   - ContractorBoxSurvival
+  - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorFun
@@ -175,6 +182,7 @@
   - StationRepEars
   - ContractorBoxSurvival
   - StationRepPDA
+  - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorFun
@@ -196,6 +204,7 @@
   - SecurityGuardEars
   - NfsdBoxSurvival
   - SecurityGuardPDA
+  - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
@@ -220,6 +229,7 @@
   - DocEars
   - ContractorBoxSurvival
   - DocPDA
+  - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
@@ -248,6 +258,7 @@
   - NfsdEarsCream
   - NfsdBoxSurvival
   - NFDetectivePDA
+  - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
@@ -270,6 +281,7 @@
   - NfsdEarsBrown
   - NfsdBoxSurvival
   - PalPDA
+  - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
@@ -284,12 +296,12 @@
 - type: roleLoadout
   id: JobPrisoner
   groups:
-#  - PrisonerHead
-#  - PrisonerNeck
+  #  - PrisonerHead
+  #  - PrisonerNeck
   - PrisonerJumpsuit
-#  - PrisonerGloves
-#  - PrisonerBackpack
-#  - PrisonerShoes
+  #  - PrisonerGloves
+  #  - PrisonerBackpack
+  #  - PrisonerShoes
   - PrisonerFace
   - PrisonerSurvival
   - PrisonerPDA

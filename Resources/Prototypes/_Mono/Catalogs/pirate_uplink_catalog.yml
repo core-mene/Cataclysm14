@@ -382,21 +382,6 @@
       tags:
       - PirateUplink
 
-- type: listing
-  id: UplinkPirateSyndicatePOI
-  name: uplink-pirate-syndicate-poi-name
-  description: uplink-pirate-syndicate-poi-desc
-  productEntity: PinpointerSyndicatePOI
-  cost:
-    Doubloon: 50
-  categories:
-  - UplinkPirateUtility
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
 - type: listing 
   id: UplinkPirateCash10000
   name: uplink-pirate-cash10000-name
@@ -598,7 +583,7 @@
 
 - type: listing
   id: UplinkPirateEmpRocket
-  name: uplink-pirate-emp-rocketname
+  name: uplink-pirate-emp-rocket-name
   description: uplink-pirate-emp-rocket-desc
   productEntity: CartridgeRocketEmp
   cost:

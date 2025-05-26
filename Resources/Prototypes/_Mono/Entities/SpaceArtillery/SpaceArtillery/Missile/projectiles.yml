@@ -20,6 +20,7 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
+    radarColor: "#FCBA03"
     scale: 1
     requireNoGrid: true
     shape: triangle
@@ -67,7 +68,8 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 1
+    radarColor: "#FCBA03"
+    scale: 1.5
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
@@ -92,6 +94,51 @@
     launchSpeed: 60
     maxSpeed: 140
 
+# ASM-501
+
+- type: entity
+  id: ShipMissileASM501
+  name: ASM-501 missile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 15000
+        Blunt: 2000
+        Heat: 500
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: frag
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    radarColor: "#FCBA03"
+    scale: 4
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 30
+  - type: PointLight
+    radius: 5
+    color: orange
+    energy: 2
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 6000
+    intensitySlope: 30
+    totalIntensity: 6000
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+  - type: TargetSeeking
+    launchSpeed: 20
+    maxSpeed: 20
+
 # TOVEK
 
 - type: entity
@@ -114,6 +161,7 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
+    radarColor: "#FB00FF"
     scale: 1
     requireNoGrid: true
     shape: triangle

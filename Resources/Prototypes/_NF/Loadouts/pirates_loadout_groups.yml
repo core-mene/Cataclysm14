@@ -8,6 +8,8 @@
   - PirateJumpskirt
   - PirateClothingUniformJumpsuitPirateSlops
   - PirateClothingUniformJumpsuitPirateLuffy
+  subgroups: # mono
+  - PirateMercenaryJumpsuit
 
 - type: loadoutGroup
   id: PiratePDA
@@ -98,6 +100,15 @@
   - PirateCaptainPirateCaptainNFPDA
   fallbacks:
   - PirateCaptainPirateCaptainNFPDA
+
+- type: loadoutGroup
+  id: PirateCaptainWallet
+  name: loadout-group-contractor-wallet
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - PirateCaptainClothingWalletLeatherPirate
+  fallbacks:
+  - PirateCaptainClothingWalletLeatherPirate
 
 - type: loadoutGroup
   id: PirateCaptainTrinkets

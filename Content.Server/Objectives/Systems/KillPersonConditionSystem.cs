@@ -53,7 +53,7 @@ public sealed class KillPersonConditionSystem : EntitySystem
         if (target.Target != null)
             return;
 
-        var allHumans = _mind.GetAliveHumans(args.MindId);
+        var allHumans = _mind.GetAliveHumans(args.MindId, comp.NeedsOrganic);
 
         // Can't have multiple objectives to kill the same person
         foreach (var objective in args.Mind.Objectives)

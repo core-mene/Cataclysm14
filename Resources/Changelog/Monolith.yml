@@ -2700,3 +2700,276 @@ Entries:
       message: AME injection is no longer limited.
   id: 316
   time: '2025-05-22T06:52:02.0000000+00:00'
+- author: BlueHNT
+  changes:
+    - type: Remove
+      message: Removed SyndiePOI from Rogue Uplink
+  id: 317
+  time: '2025-05-22T13:29:27.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Tweak
+      message: ADS borgs now have antique power cells instead of microreactors.
+    - type: Tweak
+      message: 90mm firerate and range buffed.
+    - type: Fix
+      message: Ported over fixes from Starlight for Resomi displacement maps.
+    - type: Fix
+      message: Fixed ship weapon noises not being mono. No more absurdly loud 20mm.
+  id: 318
+  time: '2025-05-22T23:21:51.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Shuttle Consoles radar range increased to 512. Admin Radar/Observer
+        Radar buffed as well.
+    - type: Tweak
+      message: STC Console and AI Radar Ability buffed to advanced radar range.
+  id: 319
+  time: '2025-05-22T23:22:39.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Infinite Corporal/Rogue Agent Slots for FOB/Insurgency Outpost. 3 extra
+        slots corporal slots for backup FOB.
+  id: 320
+  time: '2025-05-23T04:34:19.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Tweak
+      message: Faction bases are now titlecard.
+  id: 321
+  time: '2025-05-23T06:03:28.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Modsuits real. For now just a secondary option in Paramedic and
+        Engineering suit storage lockers, (and replaces atmos hardsuit). Also
+        buildable in T2 Experimental.
+    - type: Tweak
+      message: Radiation suits use Paradise sprites now.
+  id: 322
+  time: '2025-05-23T20:03:58.0000000+00:00'
+- author: Onezero0
+  changes:
+    - type: Add
+      message: >-
+        Added the Dram, a mobile bar ship for all you who want booze (or
+        icecream)
+  id: 323
+  time: '2025-05-23T21:34:41.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: Expedition FTL proximity check now works.
+  id: 324
+  time: '2025-05-23T23:03:31.0000000+00:00'
+- author: DisguisedBear
+  changes:
+    - type: Tweak
+      message: Increased Tarnyx Projectile Speed
+  id: 325
+  time: '2025-05-24T04:39:51.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: Added Fracture to TSFMC shipyard.
+    - type: Add
+      message: Added new ADS event.
+    - type: Tweak
+      message: Added ADS prefix to all ADS ships.
+    - type: Fix
+      message: Fixed unpowered thruster on Zenith.
+  id: 326
+  time: '2025-05-24T05:22:09.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: Ported over the IPC species from Goob!
+    - type: Add
+      message: Ported over Mech lights and fixes from Goob!
+  id: 327
+  time: '2025-05-24T10:08:22.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed Fracture.
+  id: 328
+  time: '2025-05-24T13:24:50.0000000+00:00'
+- author: BlueHNT
+  changes:
+    - type: Tweak
+      message: Fixed Cyrexa's secondary barrel (now shoots twice before delay).
+    - type: Fix
+      message: Fixed guns having less ammo than they should.
+  id: 329
+  time: '2025-05-24T13:25:49.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed ADS cores not being WL'd
+    - type: Fix
+      message: Fix ADS-Nebula missing gyroscope.
+  id: 330
+  time: '2025-05-24T14:36:57.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: Moth Hair
+  id: 331
+  time: '2025-05-24T21:13:35.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added MODsuits/undetermined voidsuit selectors to more suit storages
+        where they should've been.
+    - type: Add
+      message: MODsuit boots now work as magboots/noslips.
+    - type: Tweak
+      message: 0.1x the power consumption for MODsuits.
+  id: 332
+  time: '2025-05-24T21:54:34.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        I decided to add a selector for selecting between RD MODsuit and RD
+        hardsuit instead of butchering it. Have fun.
+    - type: Add
+      message: >-
+        RD Hardsuit uses Shiptest sprites now instead of TG MODsuit/Goob
+        sprites.
+    - type: Tweak
+      message: >-
+        RD hardsuit pierce and slash has been buffed a bit. Also replaced the
+        headlamp with NVDs.
+  id: 333
+  time: '2025-05-25T00:40:48.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: IPCs should now start with the encryption keys for their job.
+  id: 334
+  time: '2025-05-25T01:49:41.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        Ships will now be re-positioned if they go to the same location and end
+        up stuck together after FTL.
+    - type: Fix
+      message: Docked ships should no longer clip together after FTL ends.
+  id: 335
+  time: '2025-05-25T02:15:47.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: Ported over wallets from Frontier!
+  id: 336
+  time: '2025-05-25T03:29:19.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Tweak
+      message: You are no longer able to FTL a POI.
+  id: 337
+  time: '2025-05-25T05:57:02.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: Blips from other maps will no longer show up.
+  id: 338
+  time: '2025-05-25T09:39:25.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: Ship designations should no longer say "Unknown" for shipyard ships.
+  id: 339
+  time: '2025-05-25T09:59:51.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: .35 big magazine boxes to merc vender and loot drops
+    - type: Tweak
+      message: Small pistol magazine boxes now 70 ammo
+    - type: Tweak
+      message: Ammo mags start loaded in the liberation station
+    - type: Fix
+      message: .35 mags are now all 35 ammo, instead of just empty .35 mags
+  id: 340
+  time: '2025-05-25T11:25:53.0000000+00:00'
+- author: BlueHNT
+  changes:
+    - type: Fix
+      message: Fixed Cyrexa burst firing only once instead of twice
+  id: 341
+  time: '2025-05-25T20:22:39.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: Laws UI now uses a scrollbar at smaller window sizes.
+  id: 342
+  time: '2025-05-25T20:23:13.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        Added a few more features to organs from Goliaths, Space Cobras, Laser
+        Raptors and Space Dragons.
+    - type: Tweak
+      message: >-
+        Monkeys and kobolds now have full body parts and can take damage from
+        them. Naturally they are also valid for surgery.
+    - type: Tweak
+      message: Monkeys and kobolds can now wear backpacks, glasses, and have pockets!
+  id: 343
+  time: '2025-05-25T20:24:10.0000000+00:00'
+- author: WreakHavocOnTheMiddleClass
+  changes:
+    - type: Tweak
+      message: Adds a tank dispenser to the Camelot Station tool room.
+  id: 344
+  time: '2025-05-26T00:54:02.0000000+00:00'
+- author: BlueHNT
+  changes:
+    - type: Tweak
+      message: Gave AK570 a second barrel
+  id: 345
+  time: '2025-05-26T00:55:46.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: >-
+        Adds the TSF Tarantula, a durable mid-range brawler equipped with heavy
+        autocannons.
+  id: 346
+  time: '2025-05-26T01:06:50.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: >-
+        Re-adds civilian and merc clothing to rogue loadouts, which start with
+        IFF off for them.
+    - type: Add
+      message: >-
+        Cryo messages are back for TSF/Rogues on their faction comms channels,
+        now that it doesn't leak base coords.
+    - type: Tweak
+      message: TSFMC and USSP Uniforms start with Vitals on and Coords off.
+  id: 347
+  time: '2025-05-26T01:24:54.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: Shield blips should no longer show up on ships in FTL.
+  id: 348
+  time: '2025-05-26T02:27:22.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: New conflict rule regarding outpost striking.
+  id: 349
+  time: '2025-05-26T09:33:39.0000000+00:00'

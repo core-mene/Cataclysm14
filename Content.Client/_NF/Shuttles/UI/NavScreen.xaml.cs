@@ -110,15 +110,32 @@ namespace Content.Client.Shuttles.UI
             // Frontier - PR #1284 Add Shuttle Designation
             if (_entManager.TryGetComponent<MetaDataComponent>(shuttle, out var metadata))
             {
-                var shipNameParts = metadata.EntityName.Split(' ');
-                var designation = shipNameParts[^1];
-                if (designation.Length > 2 && designation[2] == '-')
+                var shipName = metadata.EntityName;
+                
+                // Try to find a designation in the format XXX-### (like CIV-748)
+                // by checking each word in the ship name
+                var shipNameParts = shipName.Split(' ');
+                
+                foreach (var part in shipNameParts)
                 {
-                    NavDisplayLabel.Text = string.Join(' ', shipNameParts[..^1]);
-                    ShuttleDesignation.Text = designation;
+                    // Check if this part matches the designation format (e.g., CIV-748)
+                    // The format is 2+ characters, followed by a dash, followed by more characters
+                    if (part.Length > 3 && part.Contains('-'))
+                    {
+                        var dashIndex = part.IndexOf('-');
+                        if (dashIndex >= 2 && dashIndex < part.Length - 1)
+                        {
+                            // This part looks like a designation
+                            NavDisplayLabel.Text = shipName.Replace(part, "").Trim();
+                            ShuttleDesignation.Text = part;
+                            return;
+                        }
+                    }
                 }
-                else
-                    NavDisplayLabel.Text = metadata.EntityName;
+                
+                // If we get here, no designation was found, so just show the full name
+                NavDisplayLabel.Text = shipName;
+                // Leave ShuttleDesignation.Text as "Unknown" (the default)
             }
             // End Frontier - PR #1284
         }

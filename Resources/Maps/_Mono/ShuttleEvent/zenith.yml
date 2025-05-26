@@ -29,7 +29,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: Zenith
+      name: ADS Zenith
     - type: Transform
       pos: 0.5,0.5
       parent: invalid
@@ -2594,10 +2594,6 @@ entities:
     - type: Transform
       pos: 4.5,1.5
       parent: 1
-    - type: Thruster
-      enabled: False
-    - type: ApcPowerReceiver
-      powerLoad: 1
   - uid: 404
     components:
     - type: Transform

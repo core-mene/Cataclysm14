@@ -1,4 +1,4 @@
-# 20mm
+# L85 20mm
 
 - type: entity
   id: WeaponTurretL85Autocannon
@@ -33,7 +33,10 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 500
+    autoRechargeRate: 100
+  - type: SpaceArtillery
+    powerChargeRate: 100
+    powerUsePassive: 100
   - type: Actions
   - type: CombatMode
     isInCombatMode: true
@@ -44,12 +47,12 @@
   - type: RadiationBlocker
     resistance: 8
   - type: RadarBlip
-    radarColor: "#00A6FF"
+    radarColor: "#FF0000"
     scale: 1
   - type: ShipGunType
     shipType: Ballistic
 
-# DRAVON
+# DRAVON 57mm
 
 - type: entity
   id: WeaponTurretDravon
@@ -81,17 +84,21 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 220
+  - type: SpaceArtillery
+    powerChargeRate: 220
+    powerUsePassive: 750
+    powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipDravonProjectile
     fireCost: 28
   - type: RadarBlip
-    radarColor: "#FF9100"
-    scale: 1
+    radarColor: "#FF0000"
+    scale: 1.5
   - type: ShipGunType
     shipType: Ballistic
 
-# 90mm
+# AK570 90mm
 
 - type: entity
   id: WeaponTurretAK570
@@ -114,31 +121,40 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 2.0
+    fireRate: 2.5
     projectileSpeed: 80
+    burstCooldown: 0.5
+    burstFireRate: 10
+    shotsPerBurst: 2
+    selectedMode: Burst
+    availableModes: Burst
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/120mm_mortar.ogg
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 95
+    autoRechargeRate: 125
+  - type: SpaceArtillery
+    powerChargeRate: 125
+    powerUsePassive: 600
+    powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: 90mmBulletArmorPiercing
     fireCost: 50
   - type: RadarBlip
-    radarColor: "#FF9100"
-    scale: 1
+    radarColor: "#FF0000"
+    scale: 1.5
   - type: ShipGunType
     shipType: Ballistic
 
-# TARNYX
+# TARNYX EMP 150mm
 
 - type: entity
   id: WeaponTurretTarnyx
   name: ADBX-31 TARNYX 150mm EMP Cannon
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   description: A heavy EMP Cannon made by Aetherion Dynamics. It can disable massive parts of an enemy ship, making it effective in asymmetric combat. Can be remotely activated, or linked up to a GCS.
   components:
   - type: StaticPrice
@@ -157,7 +173,7 @@
     range: 500
   - type: Gun
     fireRate: 0.0667
-    projectileSpeed: 80
+    projectileSpeed: 150
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
     soundEmpty:
@@ -165,13 +181,17 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 214
+  - type: SpaceArtillery
+    powerChargeRate: 214
+    powerUsePassive: 3500
+    powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipTarnyxProjectile
-    fireCost: 8000
+    fireCost: 17500 # low shot weapon moved back to the original spot
   - type: RadarBlip
-    radarColor: "#FF9100"
-    scale: 1
+    radarColor: "#035EFC"
+    scale: 2.5
   - type: ShipGunType
     shipType: Ballistic
 
@@ -193,8 +213,8 @@
   - type: Appearance
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 1000
-    startingCharge: 1000
+    maxCharge: 12000
+    startingCharge: 12000
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
@@ -211,20 +231,30 @@
         - MachineLayer
   - type: Gun
     projectileSpeed: 105
-    fireRate: 0.125
+    fireRate: 0.2
+    burstCooldown: 10
+    burstFireRate: 2
+    shotsPerBurst: 2
+    selectedMode: Burst
+    availableModes: Burst
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 60
+    autoRechargeRate: 12000
+  - type: SpaceArtillery
+    powerChargeRate: 12000
+    powerUsePassive: 1500
+    powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipCyrexaProjectile
-    fireCost: 350
+    fireCost: 6000
   - type: RadarBlip
-    radarColor: "#03FC9D"
+    radarColor: "#FF0000"
+    scale: 2
   - type: ShipGunType
     shipType: Ballistic
 
@@ -260,6 +290,10 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 350
+  - type: SpaceArtillery
+    powerChargeRate: 350
+    powerUsePassive: 1000
+    powerUseActive: 7500
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipRailgunProjectile
@@ -294,6 +328,6 @@
           collection: MetalBreak
   - type: RadarBlip
     radarColor: "#CF0E0E"
-    scale: 1
+    scale: 3
   - type: ShipGunType
     shipType: Ballistic

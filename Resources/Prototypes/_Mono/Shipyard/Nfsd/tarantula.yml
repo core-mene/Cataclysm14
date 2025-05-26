@@ -1,0 +1,33 @@
+- type: vessel
+  id: Tarantula
+  parent: BaseVesselAntag
+  name: TSF-SKR Tarantula
+  description: A durable ship built for sustained mid-range engagements, equipped with heavy autocannons.
+  price: 95525
+  category: Medium
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_Mono/Shuttles/Nfsd/tarantula.yml
+  guidebookPage: Null
+  class:
+  - Patrol
+  - Pursuit
+  engine:
+  - AME
+
+- type: gameMap
+  id: Tarantula
+  mapName: 'Tarantula'
+  mapPath: /Maps/_Mono/Shuttles/Nfsd/tarantula.yml
+  minPlayers: 0
+  stations:
+    Tarantula:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Tarantula TSF{1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs: {}

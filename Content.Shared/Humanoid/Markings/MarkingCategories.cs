@@ -15,6 +15,7 @@ namespace Content.Shared.Humanoid.Markings
         Chest,
         Arms,
         Legs,
+        Wings, // For IPC wings porting from SimpleStation
         Tail,
         Overlay
     }
@@ -41,6 +42,7 @@ namespace Content.Shared.Humanoid.Markings
                 HumanoidVisualLayers.RLeg => MarkingCategories.Legs,
                 HumanoidVisualLayers.LFoot => MarkingCategories.Legs,
                 HumanoidVisualLayers.RFoot => MarkingCategories.Legs,
+                HumanoidVisualLayers.Wings => MarkingCategories.Wings, //For IPC wings porting from SimpleStation
                 HumanoidVisualLayers.Tail => MarkingCategories.Tail,
                 HumanoidVisualLayers.RArmExtension => MarkingCategories.Arms, // Frontier: species-specific layer
                 HumanoidVisualLayers.LArmExtension => MarkingCategories.Arms, // Frontier: species-specific layer

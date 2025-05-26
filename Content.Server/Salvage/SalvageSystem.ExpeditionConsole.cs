@@ -13,6 +13,7 @@ using Content.Shared.NPC.Components; // Frontier
 using Content.Shared.IdentityManagement; // Frontier
 using Content.Shared.NPC; // Frontier
 using Content.Server._NF.Salvage; // Frontier
+using Content.Server.Shuttles.Components;
 
 namespace Content.Server.Salvage;
 
@@ -20,6 +21,8 @@ public sealed partial class SalvageSystem
 {
     [ValidatePrototypeId<EntityPrototype>]
     public const string CoordinatesDisk = "CoordinatesDisk";
+    private const float ShuttleFTLRange = 100f;
+    private const float ShuttleFTLMassThreshold = 50f;
 
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
 
@@ -66,6 +69,65 @@ public sealed partial class SalvageSystem
                 PlayDenySound(uid, component);
                 _popupSystem.PopupEntity(Loc.GetString("shuttle-ftl-recharge"), uid, PopupType.MediumCaution);
                 UpdateConsoles(station.Value, data); // Sure, why not?
+                return;
+            }
+
+            var xform = Transform(grid);
+            var bounds = xform.WorldMatrix.TransformBox(gridComp.LocalAABB).Enlarged(ShuttleFTLRange);
+            var bodyQuery = GetEntityQuery<PhysicsComponent>();
+            // Keep track of docked grids to exclude them from the proximity check
+            var dockedGrids = new HashSet<EntityUid>();
+
+            // Find all docked grids by looking for DockingComponents on the shuttle
+            var dockQuery = EntityQueryEnumerator<DockingComponent, TransformComponent>();
+            while (dockQuery.MoveNext(out var dockUid, out var dock, out var dockXform))
+            {
+                // Only consider docks on our grid
+                if (dockXform.GridUid != grid || !dock.Docked || dock.DockedWith == null)
+                    continue;
+
+                // If we have a docked entity, get its grid
+                if (TryComp<TransformComponent>(dock.DockedWith.Value, out var dockedXform) && dockedXform.GridUid != null)
+                {
+                    dockedGrids.Add(dockedXform.GridUid.Value);
+
+                    // Check if we're docked to another grid
+                    var parentGridUid = dockedXform.GridUid.Value;
+
+                    // Find all other grids docked to this parent grid
+                    // These should also be excluded from the proximity check so we can
+                    // still FTL even when other ships are docked to the same station/grid
+                    var parentDockQuery = EntityQueryEnumerator<DockingComponent, TransformComponent>();
+                    while (parentDockQuery.MoveNext(out var parentDockUid, out var parentDock, out var parentDockXform))
+                    {
+                        // Only consider docks on the parent grid
+                        if (parentDockXform.GridUid != parentGridUid || !parentDock.Docked || parentDock.DockedWith == null)
+                            continue;
+
+                        // If we have a docked entity and it's not our grid, add its grid to the exclusion list
+                        if (TryComp<TransformComponent>(parentDock.DockedWith.Value, out var siblingDockedXform) &&
+                            siblingDockedXform.GridUid != null &&
+                            siblingDockedXform.GridUid != grid)
+                        {
+                            dockedGrids.Add(siblingDockedXform.GridUid.Value);
+                        }
+                    }
+                }
+            }
+
+            foreach (var other in _mapManager.FindGridsIntersecting(xform.MapID, bounds))
+            {
+                if (other.Owner == grid ||
+                    dockedGrids.Contains(other.Owner) || // Skip grids that are docked to us or to the same parent grid
+                    !bodyQuery.TryGetComponent(other.Owner, out var body) ||
+                    body.Mass < ShuttleFTLMassThreshold)
+                {
+                    continue;
+                }
+
+                PlayDenySound(uid, component);
+                _popupSystem.PopupEntity(Loc.GetString("shuttle-ftl-proximity"), uid, PopupType.Medium);
+                UpdateConsoles(station.Value, data);
                 return;
             }
         }

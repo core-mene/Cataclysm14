@@ -21,13 +21,14 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
+    radarColor: "#C92BCC"
     scale: 2.5
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 10
   - type: PointLight
-    color: "#FB00FF"
+    radarColor: "#C92BCC"
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
@@ -58,8 +59,8 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    radarColor: "#00FFAA"
-    scale: 1.5
+    radarColor: "#035EFC"
+    scale: 2
     requireNoGrid: true
     shape: circle
   - type: TimedDespawn
@@ -93,8 +94,8 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    radarColor: "#6BC1FF"
-    scale: 2
+    radarColor: "#C92BCC"
+    scale: 3.5
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
