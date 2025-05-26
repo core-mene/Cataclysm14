@@ -3,6 +3,7 @@ using Content.Server.Theta.ShipEvent.Components;
 using Content.Shared._Mono.Radar;
 using Content.Shared.Projectiles;
 using Content.Shared.Shuttles.Components;
+using Robust.Shared.Map.Components;
 
 namespace Content.Server._Mono.Radar;
 
@@ -40,6 +41,9 @@ public sealed partial class RadarBlipSystem : EntitySystem
             var radarGrid = _xform.GetGrid(uid);
             var radarMapId = radarXform.MapID;
 
+            // Check if the radar is on an FTL map
+            var isFtlMap = HasComp<FTLComponent>(radarXform.GridUid);
+
             var blipQuery = EntityQueryEnumerator<RadarBlipComponent, TransformComponent>();
 
             while (blipQuery.MoveNext(out var blipUid, out var blip, out var blipXform))
@@ -65,16 +69,30 @@ public sealed partial class RadarBlipSystem : EntitySystem
                 if (blipXform.MapID != radarMapId)
                     continue;
 
+                var blipGrid = _xform.GetGrid(blipUid);
+
+                if (HasComp<CircularShieldRadarComponent>(blipUid))
+                {
+                    // Skip if in FTL
+                    if (isFtlMap)
+                        continue;
+
+                    // Skip if no grid
+                    if (blipGrid == null)
+                        continue;
+
+                    // Ensure the grid is a valid MapGrid
+                    if (!HasComp<MapGridComponent>(blipGrid.Value))
+                        continue;
+
+                    // Ensure the shield is a direct child of the grid
+                    if (blipXform.ParentUid != blipGrid)
+                        continue;
+                }
+
                 var blipPosition = _xform.GetWorldPosition(blipUid);
                 var distance = (blipPosition - radarPosition).Length();
                 if (distance > component.MaxRange)
-                    continue;
-
-                var blipGrid = _xform.GetGrid(blipUid);
-
-                // Check if this is a shield radar blip without a grid
-                // If so, don't display it (fixes grid-orphaned shield generators)
-                if (HasComp<CircularShieldRadarComponent>(blipUid) && blipGrid == null)
                     continue;
 
                 if (blip.RequireNoGrid)
