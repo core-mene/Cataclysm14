@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 05/19/2025 22:21:17
-  entityCount: 8101
+  time: 05/25/2025 23:50:02
+  entityCount: 8098
 maps: []
 grids:
 - 1
@@ -35757,11 +35757,6 @@ entities:
     - type: Transform
       pos: -15.5,0.5
       parent: 1
-  - uid: 5584
-    components:
-    - type: Transform
-      pos: -17.5,3.5
-      parent: 1
   - uid: 5585
     components:
     - type: Transform
@@ -35783,11 +35778,6 @@ entities:
     components:
     - type: Transform
       pos: -15.5,0.5
-      parent: 1
-  - uid: 5589
-    components:
-    - type: Transform
-      pos: -17.5,3.5
       parent: 1
   - uid: 5590
     components:
@@ -35838,11 +35828,6 @@ entities:
     components:
     - type: Transform
       pos: -6.5,-18.5
-      parent: 1
-  - uid: 5600
-    components:
-    - type: Transform
-      pos: -17.5,3.5
       parent: 1
 - proto: LootSpawnerMaterials
   entities:
@@ -40594,11 +40579,6 @@ entities:
     - type: Transform
       pos: -13.5,0.5
       parent: 1
-  - uid: 6440
-    components:
-    - type: Transform
-      pos: -17.5,3.5
-      parent: 1
   - uid: 6441
     components:
     - type: Transform
@@ -40966,6 +40946,11 @@ entities:
       parent: 1
 - proto: VendingMachineTankDispenserEVAPOI
   entities:
+  - uid: 5584
+    components:
+    - type: Transform
+      pos: -17.5,3.5
+      parent: 1
   - uid: 6505
     components:
     - type: Transform

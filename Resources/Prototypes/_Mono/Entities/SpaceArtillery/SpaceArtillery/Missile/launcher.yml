@@ -1,4 +1,4 @@
-# VESPERA
+# ADMP-27 VESPERA
 
 - type: entity
   id: WeaponTurretVespera
@@ -40,20 +40,21 @@
     fireCost: 867
   - type: RadarBlip
     radarColor: "#FCBA03"
-    scale: 1
+    scale: 2
   - type: ShipGunType
     shipType: Missile
 
-# Vanyk
+
+# ASM-501 Smerchs
 
 - type: entity
-  id: WeaponTurretVanyk
-  name: ASM-302 pod
+  id: WeaponTurretASM501
+  name: ASM-501 pod
   parent: BallisticArtillery
-  description: A basic guided missile pod. Can be remotely activated, or linked up to a GCS.
+  description: ASM-501 Smerchs heavy torpedo launcher. Can be remotely activated, or linked up to a GCS.
   components:
   - type: StaticPrice
-    price: 2250
+    price: 7500
   - type: Sprite
     sprite: _Mono/Objects/ShuttleWeapons/vanyk.rsi
     layers:
@@ -67,15 +68,58 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 1
-    projectileSpeed: 80
+    fireRate: 0.1
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
+  - type: SpaceArtillery
+    powerChargeRate: 250
+    powerUsePassive: 200
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 60
+  - type: Actions
+  - type: ProjectileBatteryAmmoProvider
+    proto: ShipMissileASM501
+    fireCost: 350
+  - type: RadarBlip
+    radarColor: "#FCBA03"
+    scale: 2.5
+  - type: ShipGunType
+    shipType: Missile
+
+# ASM-302 Vanyk
+
+- type: entity
+  id: WeaponTurretVanyk
+  name: ASM-302 pod
+  parent: BallisticArtillery
+  description: ASM-302 Vanyk basic guided missile pod. Can be remotely activated, or linked up to a GCS.
+  components:
+  - type: StaticPrice
+    price: 5000
+  - type: Sprite
+    sprite: _Mono/Objects/ShuttleWeapons/vanyk.rsi
+    layers:
+    - state: space_artillery
+  - type: Appearance
+  - type: AmmoCounter
+  - type: Battery
+    maxCharge: 40000
+    startingCharge: 40000
+  - type: ExaminableBattery
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: Gun
+    fireRate: 0.8
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
     soundEmpty:
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 350
+    autoRechargeRate: 60
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMissileASM302
@@ -103,11 +147,11 @@
           collection: MetalBreak
   - type: RadarBlip
     radarColor: "#FCBA03"
-    scale: 1
+    scale: 1.5
   - type: ShipGunType
     shipType: Missile
 
-# TOVEK
+# ADMX-23 TOVEK
 
 - type: entity
   id: WeaponTurretTovek
@@ -148,7 +192,7 @@
     proto: ShipMissileASM557
     fireCost: 17500
   - type: RadarBlip
-    radarColor: "#FCBA03"
-    scale: 1
+    radarColor: "#035EFC"
+    scale: 2
   - type: ShipGunType
     shipType: Missile

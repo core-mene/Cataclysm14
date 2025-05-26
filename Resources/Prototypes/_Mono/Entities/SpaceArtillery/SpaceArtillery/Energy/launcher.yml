@@ -57,7 +57,7 @@
           collection: MetalBreak
   - type: RadarBlip
     radarColor: "#C92BCC"
-    scale: 1
+    scale: 2
   - type: ShipGunType
     shipType: Energy
 
@@ -120,7 +120,7 @@
           collection: MetalBreak
   - type: RadarBlip
     radarColor: "#035EFC"
-    scale: 1
+    scale: 2
   - type: ShipGunType
     shipType: Energy
 
@@ -173,7 +173,7 @@
     proto: ShipDymereProjectile
     fireCost: 2400
   - type: RadarBlip
-    radarColor: "#FA4E5C"
+    radarColor: "#C92BCC"
+    scale: 3
   - type: ShipGunType
     shipType: Energy
-

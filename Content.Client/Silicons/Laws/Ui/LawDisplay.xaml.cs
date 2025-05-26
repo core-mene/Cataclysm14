@@ -50,8 +50,9 @@ public sealed partial class LawDisplay : Control
             Text = Loc.GetString("hud-chatbox-select-channel-Local"),
             Modulate = Color.DarkGray,
             StyleClasses = { "chatSelectorOptionButton" },
-            MinHeight = 35,
-            MinWidth = 75,
+            MinHeight = 30,
+            MinWidth = 80,
+            Margin = new Thickness(2, 0, 6, 0)
         };
 
         _nextAllowedPress[localButton] = TimeSpan.Zero;
@@ -77,8 +78,9 @@ public sealed partial class LawDisplay : Control
                 Text = Loc.GetString(radioChannelProto.Name),
                 Modulate = radioChannelProto.Color,
                 StyleClasses = { "chatSelectorOptionButton" },
-                MinHeight = 35,
-                MinWidth = 75,
+                MinHeight = 30,
+                MinWidth = 80,
+                Margin = new Thickness(2, 0, 6, 0)
             };
 
             _nextAllowedPress[radioChannelButton] = TimeSpan.Zero;

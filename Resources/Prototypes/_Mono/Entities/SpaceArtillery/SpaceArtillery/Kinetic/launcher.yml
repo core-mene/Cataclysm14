@@ -1,4 +1,4 @@
-# 20mm
+# L85 20mm
 
 - type: entity
   id: WeaponTurretL85Autocannon
@@ -47,12 +47,12 @@
   - type: RadiationBlocker
     resistance: 8
   - type: RadarBlip
-    radarColor: "#00A6FF"
+    radarColor: "#FF0000"
     scale: 1
   - type: ShipGunType
     shipType: Ballistic
 
-# DRAVON
+# DRAVON 57mm
 
 - type: entity
   id: WeaponTurretDravon
@@ -93,12 +93,12 @@
     proto: ShipDravonProjectile
     fireCost: 28
   - type: RadarBlip
-    radarColor: "#FF9100"
-    scale: 1
+    radarColor: "#FF0000"
+    scale: 1.5
   - type: ShipGunType
     shipType: Ballistic
 
-# 90mm
+# AK570 90mm
 
 - type: entity
   id: WeaponTurretAK570
@@ -123,6 +123,11 @@
   - type: Gun
     fireRate: 2.5
     projectileSpeed: 80
+    burstCooldown: 0.5
+    burstFireRate: 10
+    shotsPerBurst: 2
+    selectedMode: Burst
+    availableModes: Burst
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/120mm_mortar.ogg
     soundEmpty:
@@ -139,12 +144,12 @@
     proto: 90mmBulletArmorPiercing
     fireCost: 50
   - type: RadarBlip
-    radarColor: "#FF9100"
-    scale: 1
+    radarColor: "#FF0000"
+    scale: 1.5
   - type: ShipGunType
     shipType: Ballistic
 
-# TARNYX
+# TARNYX EMP 150mm
 
 - type: entity
   id: WeaponTurretTarnyx
@@ -185,8 +190,8 @@
     proto: ShipTarnyxProjectile
     fireCost: 17500 # low shot weapon moved back to the original spot
   - type: RadarBlip
-    radarColor: "#FF9100"
-    scale: 1
+    radarColor: "#035EFC"
+    scale: 2.5
   - type: ShipGunType
     shipType: Ballistic
 
@@ -226,7 +231,12 @@
         - MachineLayer
   - type: Gun
     projectileSpeed: 105
-    fireRate: 1.5
+    fireRate: 0.2
+    burstCooldown: 10
+    burstFireRate: 2
+    shotsPerBurst: 2
+    selectedMode: Burst
+    availableModes: Burst
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
     soundEmpty:
@@ -234,8 +244,6 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 12000
-    autoRechargePause: true
-    autoRechargePauseTime: 10
   - type: SpaceArtillery
     powerChargeRate: 12000
     powerUsePassive: 1500
@@ -245,7 +253,8 @@
     proto: ShipCyrexaProjectile
     fireCost: 6000
   - type: RadarBlip
-    radarColor: "#03FC9D"
+    radarColor: "#FF0000"
+    scale: 2
   - type: ShipGunType
     shipType: Ballistic
 
@@ -319,6 +328,6 @@
           collection: MetalBreak
   - type: RadarBlip
     radarColor: "#CF0E0E"
-    scale: 1
+    scale: 3
   - type: ShipGunType
     shipType: Ballistic

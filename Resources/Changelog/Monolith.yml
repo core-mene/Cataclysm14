@@ -2901,3 +2901,75 @@ Entries:
       message: .35 mags are now all 35 ammo, instead of just empty .35 mags
   id: 340
   time: '2025-05-25T11:25:53.0000000+00:00'
+- author: BlueHNT
+  changes:
+    - type: Fix
+      message: Fixed Cyrexa burst firing only once instead of twice
+  id: 341
+  time: '2025-05-25T20:22:39.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: Laws UI now uses a scrollbar at smaller window sizes.
+  id: 342
+  time: '2025-05-25T20:23:13.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        Added a few more features to organs from Goliaths, Space Cobras, Laser
+        Raptors and Space Dragons.
+    - type: Tweak
+      message: >-
+        Monkeys and kobolds now have full body parts and can take damage from
+        them. Naturally they are also valid for surgery.
+    - type: Tweak
+      message: Monkeys and kobolds can now wear backpacks, glasses, and have pockets!
+  id: 343
+  time: '2025-05-25T20:24:10.0000000+00:00'
+- author: WreakHavocOnTheMiddleClass
+  changes:
+    - type: Tweak
+      message: Adds a tank dispenser to the Camelot Station tool room.
+  id: 344
+  time: '2025-05-26T00:54:02.0000000+00:00'
+- author: BlueHNT
+  changes:
+    - type: Tweak
+      message: Gave AK570 a second barrel
+  id: 345
+  time: '2025-05-26T00:55:46.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: >-
+        Adds the TSF Tarantula, a durable mid-range brawler equipped with heavy
+        autocannons.
+  id: 346
+  time: '2025-05-26T01:06:50.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: >-
+        Re-adds civilian and merc clothing to rogue loadouts, which start with
+        IFF off for them.
+    - type: Add
+      message: >-
+        Cryo messages are back for TSF/Rogues on their faction comms channels,
+        now that it doesn't leak base coords.
+    - type: Tweak
+      message: TSFMC and USSP Uniforms start with Vitals on and Coords off.
+  id: 347
+  time: '2025-05-26T01:24:54.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: Shield blips should no longer show up on ships in FTL.
+  id: 348
+  time: '2025-05-26T02:27:22.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: New conflict rule regarding outpost striking.
+  id: 349
+  time: '2025-05-26T09:33:39.0000000+00:00'

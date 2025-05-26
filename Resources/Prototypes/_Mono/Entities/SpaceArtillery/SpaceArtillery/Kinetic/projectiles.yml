@@ -20,7 +20,8 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 3
+    radarColor: "#CF0E0E"
+    scale: 4
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
@@ -59,7 +60,7 @@
     radius: 3.5
     energy: 0.5
   - type: RadarBlip
-    scale: 0.35
+    scale: 0.5
     requireNoGrid: true
     shape: triangle
 
@@ -128,15 +129,17 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: TimedDespawn
-    lifetime: 4
+    lifetime: 6.4
   - type: PointLight
     radius: 3.5
     energy: 0.5
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 1
+    scale: 1.5
     requireNoGrid: true
     shape: triangle
+
+# 90mm AP
 
 - type: entity
   id: 90mmBulletArmorPiercing
@@ -152,12 +155,14 @@
     layers:
     - state: base-projectile
   - type: Explosive
-    maxIntensity: 30
+    maxIntensity: 50
     intensitySlope: 2
     totalIntensity: 4
     maxTileBreak: 1
   - type: PointLight
     color: orange
+
+# 90mm HE
 
 - type: entity
   id: 90mmBulletExplosiveBase
@@ -190,7 +195,7 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    radarColor: "#00FFAA"
+    radarColor: "#035EFC"
     scale: 1.5
     requireNoGrid: true
     shape: circle
@@ -226,7 +231,7 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 2.5
+    scale: 3.25
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn

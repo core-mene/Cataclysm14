@@ -8,6 +8,9 @@
     sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmc.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmc.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
 
 - type: entity
   parent: ClothingUniformBase
@@ -19,3 +22,6 @@
     sprite: _Mono/Clothing/Uniforms/Jumpsuit/ussp.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Uniforms/Jumpsuit/ussp.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
