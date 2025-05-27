@@ -277,11 +277,10 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                 }
             }
 
-            // Monolith, removes duplicate entry after PR "IPC [Port] [Bounty] #561"
             // Frontier: do not re-equip roleLoadout, make sure we equip job startingGear,
             // and deduct loadout costs from a bank account if we have one.
-            // if (prototype?.StartingGear is not null)
-            //     EquipStartingGear(entity.Value, prototype.StartingGear, raiseEvent: false);
+            if (prototype?.StartingGear is not null)
+                EquipStartingGear(entity.Value, prototype.StartingGear, raiseEvent: false);
 
             var bankComp = EnsureComp<BankAccountComponent>(entity.Value);
 
