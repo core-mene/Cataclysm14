@@ -66,5 +66,6 @@ trait-spanish-desc = Hola señor, donde esta la biblioteca.
 trait-painnumbness-name = Numb
 trait-painnumbness-desc = You lack any sense of feeling pain, being unaware of how hurt you may be.
 
+# Mono
 trait-russian-name = Russian accent
 trait-russian-desc = You reek of vodka smell.
