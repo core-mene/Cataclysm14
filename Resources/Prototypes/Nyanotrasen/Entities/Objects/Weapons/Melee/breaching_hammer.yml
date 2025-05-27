@@ -1,3 +1,4 @@
+# mono edit
 - type: entity
   name: breaching hammer
   parent: [BaseItem, BaseC2ContrabandUnredeemable]
@@ -10,19 +11,19 @@
   - type: Item
     size: Huge
   - type: MeleeWeapon
-    attackRate: 0.75
+    attackRate: 0.5
     range: 1.70
     damage:
       types:
         Blunt: 15
-        Structural: 25
+        Structural: 50
     bluntStaminaDamageFactor: 1.50 # 15 stamina damage
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 30
-        Structural: 45
+        Blunt: 50
+        Structural: 250 # takes about 1 minute to breach a plastitanium wall
   - type: Tool
     qualities:
       - Prying
@@ -33,3 +34,4 @@
     slots:
     - back
     - suitStorage # Frontier - Same as axe
+#mono edit end
