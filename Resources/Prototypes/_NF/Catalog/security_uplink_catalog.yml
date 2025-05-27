@@ -475,7 +475,7 @@
   productEntity: PyraAutoInjector
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: pyrapen }
   cost:
-    FrontierUplinkCoin: 1
+    FrontierUplinkCoin: 2
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -495,7 +495,7 @@
   productEntity: PunctAutoInjector
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: punctpen }
   cost:
-    FrontierUplinkCoin: 1
+    FrontierUplinkCoin: 2
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -544,6 +544,22 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
+        - Sheriff
+        - Brigmedic
+
+- type: listing
+  id: UplinkSecuritySyringeCaseFilled
+  name:  uplink-security-syringe-case-name
+  description: uplink-security-syringe-case-desc
+  productEntity: SyringeCaseAltFilled
+  cost:
+    FrontierUplinkCoin: 8
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
         - Sheriff
         - Brigmedic
 
