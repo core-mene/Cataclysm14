@@ -1,4 +1,5 @@
 using System.Threading;
+using Content.Server.Database;
 using Content.Server.Preferences.Managers;
 using Content.Server.GameTicking;
 using Content.Shared._NF.Bank;
@@ -6,8 +7,10 @@ using Content.Shared._NF.Bank.Components;
 using Content.Shared.Preferences;
 using Robust.Shared.Player;
 using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks;
 using Content.Shared._NF.Bank.Events;
 using Content.Shared.GameTicking;
+using Robust.Shared.Network;
 
 namespace Content.Server._NF.Bank;
 
@@ -15,6 +18,7 @@ public sealed partial class BankSystem : SharedBankSystem
 {
     [Dependency] private readonly IServerPreferencesManager _prefsManager = default!;
     [Dependency] private readonly ISharedPlayerManager _playerManager = default!;
+    [Dependency] private readonly IServerDbManager _db = default!;
 
     private ISawmill _log = default!;
 
@@ -219,6 +223,98 @@ public sealed partial class BankSystem : SharedBankSystem
         _prefsManager.SetProfile(session.UserId, index, newProfile);
         // Update any active admin UI with new balance
         RaiseLocalEvent(new BalanceChangedEvent(session, newBalance.Value));
+        return true;
+    }
+
+    /// <summary>
+    /// Attempts to remove money from an offline character's bank account.
+    /// This method works with offline players by directly modifying their preferences and saving to the database.
+    /// </summary>
+    /// <param name="userId">The NetUserId of the offline player</param>
+    /// <param name="prefs">The player's preferences</param>
+    /// <param name="profile">The character profile to modify</param>
+    /// <param name="amount">The amount to withdraw</param>
+    /// <returns>true if the transaction was successful, false if it was not</returns>
+    public async Task<bool> TryBankWithdrawOffline(NetUserId userId, PlayerPreferences prefs, HumanoidCharacterProfile profile, int amount)
+    {
+        if (amount <= 0)
+        {
+            _log.Info($"TryBankWithdrawOffline: {amount} is invalid");
+            return false;
+        }
+
+        int balance = profile.BankBalance;
+
+        if (balance < amount)
+        {
+            _log.Info($"TryBankWithdrawOffline: {userId} tried to withdraw {amount}, but has insufficient funds ({balance})");
+            return false;
+        }
+
+        balance -= amount;
+
+        var newProfile = profile.WithBankBalance(balance);
+        var index = prefs.IndexOfCharacter(profile);
+        if (index == -1)
+        {
+            _log.Info($"TryBankWithdrawOffline: {userId} tried to adjust the balance of {profile.Name}, but they were not in the user's character set.");
+            return false;
+        }
+
+        // Update preferences in cache if the player data exists
+        if (_prefsManager.TryGetCachedPreferences(userId, out var cachedPrefs))
+        {
+            _prefsManager.SetProfile(userId, index, newProfile);
+        }
+        else
+        {
+            // If not in cache, save directly to database
+            await _db.SaveCharacterSlotAsync(userId, newProfile, index);
+        }
+
+        _log.Info($"Offline player {userId} withdrew {amount}");
+        return true;
+    }
+
+    /// <summary>
+    /// Attempts to add money to an offline character's bank account.
+    /// This method works with offline players by directly modifying their preferences and saving to the database.
+    /// </summary>
+    /// <param name="userId">The NetUserId of the offline player</param>
+    /// <param name="prefs">The player's preferences</param>
+    /// <param name="profile">The character profile to modify</param>
+    /// <param name="amount">The amount to deposit</param>
+    /// <returns>true if the transaction was successful, false if it was not</returns>
+    public async Task<bool> TryBankDepositOffline(NetUserId userId, PlayerPreferences prefs, HumanoidCharacterProfile profile, int amount)
+    {
+        if (amount <= 0)
+        {
+            _log.Info($"TryBankDepositOffline: {amount} is invalid");
+            return false;
+        }
+
+        int newBalance = profile.BankBalance + amount;
+
+        var newProfile = profile.WithBankBalance(newBalance);
+        var index = prefs.IndexOfCharacter(profile);
+        if (index == -1)
+        {
+            _log.Info($"TryBankDepositOffline: {userId} tried to adjust the balance of {profile.Name}, but they were not in the user's character set.");
+            return false;
+        }
+
+        // Update preferences in cache if the player data exists
+        if (_prefsManager.TryGetCachedPreferences(userId, out var cachedPrefs))
+        {
+            _prefsManager.SetProfile(userId, index, newProfile);
+        }
+        else
+        {
+            // If not in cache, save directly to database
+            await _db.SaveCharacterSlotAsync(userId, newProfile, index);
+        }
+
+        _log.Info($"Offline player {userId} deposited {amount}");
         return true;
     }
 

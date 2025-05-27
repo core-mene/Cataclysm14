@@ -1,5 +1,7 @@
 using System.Linq;
+using System.Threading.Tasks;
 using Content.Server.Administration;
+using Content.Server.Database;
 using Content.Server.Preferences.Managers;
 using Content.Server._NF.Bank;
 using Content.Shared.Administration;
@@ -7,6 +9,7 @@ using Content.Shared.Preferences;
 using Content.Shared._NF.Bank.Components;
 using Robust.Server.Player;
 using Robust.Shared.Console;
+using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
 
@@ -17,6 +20,7 @@ public sealed class BankCommand : IConsoleCommand
 {
     [Dependency] private readonly IServerPreferencesManager _prefsManager = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private readonly IServerDbManager _dbManager = default!;
     [Dependency] private readonly IEntitySystemManager _entitySystemManager = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
 
@@ -24,11 +28,12 @@ public sealed class BankCommand : IConsoleCommand
 
     public string Description => "Modifies a player's bank account balance.";
 
-    public string Help => "bank <username/id> <amount>\n" +
+    public string Help => "bank <username/character> <amount>\n" +
                           "Adds or removes the specified amount from the player's bank account. " +
-                          "Use positive values to add money, negative values to remove money.";
+                          "Use positive values to add money, negative values to remove money. " +
+                          "Works with online players, offline players in cache, and players in database.";
 
-    public void Execute(IConsoleShell shell, string argStr, string[] args)
+    public async void Execute(IConsoleShell shell, string argStr, string[] args)
     {
         if (args.Length != 2)
         {
@@ -45,29 +50,59 @@ public sealed class BankCommand : IConsoleCommand
             return;
         }
 
-        // Try to find player by name first
-        ICommonSession? targetSession = null;
+        // First try online players by name
+        var onlinePlayer = _playerManager.Sessions
+            .FirstOrDefault(s => s.Name.Equals(target, StringComparison.OrdinalIgnoreCase));
 
-        foreach (var session in _playerManager.Sessions)
+        if (onlinePlayer != null)
         {
-            if (session.Name.Equals(target, StringComparison.OrdinalIgnoreCase))
+            // Handle online player
+            await HandleOnlinePlayer(shell, onlinePlayer, amount, target);
+            return;
+        }
+
+        // If player name not found online, try by ID
+        if (Guid.TryParse(target, out var userId))
+        {
+            onlinePlayer = _playerManager.Sessions.FirstOrDefault(s => s.UserId == userId);
+            if (onlinePlayer != null)
             {
-                targetSession = session;
-                break;
+                await HandleOnlinePlayer(shell, onlinePlayer, amount, target);
+                return;
             }
         }
 
-        // If player name not found, try by ID
-        if (targetSession == null && Guid.TryParse(target, out var userId))
+        // If not online, check cached preferences for offline players
+        if (TryGetOfflinePlayerData(target, out var offlineUserId, out var offlinePrefs, out var offlineProfile))
         {
-            targetSession = _playerManager.Sessions.FirstOrDefault(s => s.UserId == userId);
-        }
-
-        if (targetSession == null)
-        {
-            shell.WriteError($"Unable to find player '{target}'.");
+            await HandleOfflinePlayer(shell, offlineUserId, offlinePrefs, offlineProfile, amount, target);
             return;
         }
+
+        // If not in cache, try the database
+        var record = await _dbManager.GetPlayerRecordByUserName(target);
+        if (record != null)
+        {
+            var dbUserId = record.UserId;
+            var dbPrefs = await _dbManager.GetPlayerPreferencesAsync(dbUserId, default);
+            if (dbPrefs != null &&
+                dbPrefs.SelectedCharacterIndex >= 0 &&
+                dbPrefs.Characters.TryGetValue(dbPrefs.SelectedCharacterIndex, out var dbProfile))
+            {
+                if (dbProfile is HumanoidCharacterProfile dbHumanoid)
+                {
+                    await HandleOfflinePlayer(shell, dbUserId, dbPrefs, dbHumanoid, amount, target);
+                    return;
+                }
+            }
+        }
+
+        shell.WriteError($"Unable to find player or character '{target}'.");
+    }
+
+    private async Task HandleOnlinePlayer(IConsoleShell shell, ICommonSession targetSession, int amount, string target)
+    {
+        var bankSystem = _entitySystemManager.GetEntitySystem<BankSystem>();
 
         if (!_prefsManager.TryGetCachedPreferences(targetSession.UserId, out var prefs))
         {
@@ -159,19 +194,105 @@ public sealed class BankCommand : IConsoleCommand
             : $"Removed {Math.Abs(amount)} from player '{target}' balance. New balance: {newBalance.Value}");
     }
 
+    private async Task HandleOfflinePlayer(IConsoleShell shell, NetUserId userId, PlayerPreferences prefs, HumanoidCharacterProfile profile, int amount, string target)
+    {
+        var bankSystem = _entitySystemManager.GetEntitySystem<BankSystem>();
+        var currentBalance = profile.BankBalance;
+
+        // Ensure the player won't have negative balance after withdrawal
+        if (amount < 0 && Math.Abs(amount) > currentBalance)
+        {
+            shell.WriteError($"Player '{target}' only has {currentBalance}, cannot remove {Math.Abs(amount)}.");
+            return;
+        }
+
+        if (amount == 0)
+        {
+            shell.WriteLine($"Player '{target}' balance unchanged: {currentBalance}");
+            return;
+        }
+
+        bool success;
+        int? newBalance = null;
+
+        // Use the new offline bank methods
+        if (amount > 0)
+        {
+            success = await bankSystem.TryBankDepositOffline(userId, prefs, profile, amount);
+            if (success)
+                newBalance = currentBalance + amount;
+        }
+        else
+        {
+            success = await bankSystem.TryBankWithdrawOffline(userId, prefs, profile, Math.Abs(amount));
+            if (success)
+                newBalance = currentBalance - Math.Abs(amount);
+        }
+
+        if (!success || newBalance == null)
+        {
+            shell.WriteError($"Failed to modify offline player '{target}' bank balance.");
+            return;
+        }
+
+        shell.WriteLine(amount > 0
+            ? $"Added {amount} to offline player '{target}' balance. New balance: {newBalance.Value}"
+            : $"Removed {Math.Abs(amount)} from offline player '{target}' balance. New balance: {newBalance.Value}");
+    }
+
+    private bool TryGetOfflinePlayerData(string username, out NetUserId userId, out PlayerPreferences prefs, out HumanoidCharacterProfile profile)
+    {
+        userId = default;
+        prefs = null!;
+        profile = null!;
+
+        // Check all users in the preferences cache
+        foreach (var playerData in _playerManager.GetAllPlayerData())
+        {
+            if (_prefsManager.TryGetCachedPreferences(playerData.UserId, out var cachedPrefs))
+            {
+                foreach (var (_, characterProfile) in cachedPrefs.Characters)
+                {
+                    if (characterProfile is HumanoidCharacterProfile humanoid &&
+                        humanoid.Name.Equals(username, StringComparison.OrdinalIgnoreCase))
+                    {
+                        userId = playerData.UserId;
+                        prefs = cachedPrefs;
+                        profile = humanoid;
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
         if (args.Length == 1)
         {
-            var options = new List<CompletionOption>();
+            var options = new List<string>();
 
-            // Add all online players as completion options
-            foreach (var session in IoCManager.Resolve<IPlayerManager>().Sessions)
+            // Add online players
+            options.AddRange(_playerManager.Sessions.Select(s => s.Name));
+
+            // Add players from cached preferences
+            foreach (var playerData in _playerManager.GetAllPlayerData())
             {
-                options.Add(new CompletionOption(session.Name, $"Player: {session.Name}"));
+                if (_prefsManager.TryGetCachedPreferences(playerData.UserId, out var prefs))
+                {
+                    foreach (var (_, profile) in prefs.Characters)
+                    {
+                        if (profile is HumanoidCharacterProfile humanoid)
+                        {
+                            options.Add(humanoid.Name);
+                        }
+                    }
+                }
             }
 
-            return CompletionResult.FromOptions(options);
+            return CompletionResult.FromHintOptions(options.Distinct(), "<username/character>");
         }
 
         if (args.Length == 2)
