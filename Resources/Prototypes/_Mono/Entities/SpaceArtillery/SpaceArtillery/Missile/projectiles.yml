@@ -228,9 +228,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 150
+    maxIntensity: 90
     intensitySlope: 0.3
-    totalIntensity: 150
+    totalIntensity: 90
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
@@ -272,7 +272,7 @@
     energy: 2
   - type: ExplodeOnTrigger
   - type: EmpOnTrigger
-    range: 20
+    range: 10
     energyConsumption: 60000000
     disableDuration: 16
   - type: Explosive
