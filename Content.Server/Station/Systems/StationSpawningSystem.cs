@@ -181,12 +181,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             profile = HumanoidCharacterProfile.RandomWithSpecies(speciesId);
         }
 
-        if (prototype?.StartingGear != null)
-        {
-            var startingGear = _prototypeManager.Index<StartingGearPrototype>(prototype.StartingGear);
-            EquipStartingGear(entity.Value, startingGear, raiseEvent: false);
-            _internalEncryption.TryInsertEncryptionKey(entity.Value, startingGear); // Goobstation - Removed EntityManager
-        }
+
 
         if (loadout != null)
         {
