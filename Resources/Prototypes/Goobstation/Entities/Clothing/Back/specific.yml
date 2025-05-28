@@ -5,11 +5,11 @@
   description: Stores energy to freeze time flow, warping the space inside for more capacity.
   components:
   - type: Sprite
-    sprite: Goobstation/Clothing/Back/Backpacks/stasis_back.rsi
+    sprite: _Goobstation/Clothing/Back/Backpacks/stasis_back.rsi
     state: icon
   - type: Clothing
     slots: BACK
-    sprite: Goobstation/Clothing/Back/Backpacks/stasis_back.rsi
+    sprite: _Goobstation/Clothing/Back/Backpacks/stasis_back.rsi
   - type: BasicEntityAmmoProvider
     proto: BulletStasis
     capacity: 1
@@ -17,7 +17,7 @@
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 2.5
     rechargeSound:
-      path: /Audio/Goobstation/Weapons/ChronoLegionnaire/stasisgun_reload.ogg
+      path: /Audio/_Goobstation/Weapons/ChronoLegionnaire/stasisgun_reload.ogg
   - type: Item
     size: Ginormous
   - type: Storage
