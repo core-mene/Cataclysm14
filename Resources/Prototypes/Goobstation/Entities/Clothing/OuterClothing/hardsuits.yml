@@ -33,7 +33,8 @@
   - type: StasisProtection
   - type: StasisBlinkProvider
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitChronolegioneer
+    clothingPrototypes:
+      head:  ClothingHeadHelmetHardsuitChronolegioneer
 
 - type: entity
   parent: ClothingOuterHardsuitChronolegioneer
