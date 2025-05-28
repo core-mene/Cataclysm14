@@ -355,7 +355,8 @@ public sealed partial class CargoSystem
                 if (_blacklistQuery.HasComponent(ent))
                     continue;
 
-                var price = _pricing.GetPrice(ent);
+                // Mono: Use vending machine discount pricing for cargo sales
+                var price = _pricing.GetPriceWithVendingDiscount(ent, gridUid);
                 if (price == 0)
                     continue;
                 toSell.Add(ent);

@@ -17,6 +17,7 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Content.Server.Materials.Components; // Frontier
+using Content.Server._Mono.VendingMachine; // Mono
 using System.Linq;
 using Content.Shared.Research.Prototypes;
 
@@ -33,6 +34,7 @@ public sealed class PricingSystem : EntitySystem
     [Dependency] private readonly BodySystem _bodySystem = default!;
     [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
+    [Dependency] private readonly VendingMachinePurchaseSystem _vendingPurchase = default!; // Mono
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -283,9 +285,54 @@ public sealed class PricingSystem : EntitySystem
         return price;
     }
 
+    /// <summary>
+    /// Mono: Appraises an entity with vending machine discounts applied if applicable.
+    /// This method should be used by cargo systems when selling items.
+    /// </summary>
+    /// <param name="uid">The entity to appraise</param>
+    /// <param name="currentGrid">The grid where the entity is being sold</param>
+    /// <param name="includeContents">Whether to include contained entities</param>
+    /// <returns>The price with vending machine discount applied if applicable</returns>
+    public double GetPriceWithVendingDiscount(EntityUid uid, EntityUid currentGrid, bool includeContents = true)
+    {
+        var ev = new PriceCalculationEvent();
+        ev.Price = 0;
+        RaiseLocalEvent(uid, ref ev);
+
+        if (ev.Handled)
+            return ev.Price;
+
+        var price = ev.Price;
+        price += GetMaterialsPrice(uid);
+        price += GetSolutionsPrice(uid);
+
+        // Can't use static price with stackprice
+        var oldPrice = price;
+        price += GetStackPrice(uid);
+
+        if (oldPrice.Equals(price))
+        {
+            // Use the vending machine discount version of static price
+            price += GetStaticPriceWithVendingDiscount(uid, currentGrid);
+        }
+
+        if (includeContents && TryComp<ContainerManagerComponent>(uid, out var containers))
+        {
+            foreach (var container in containers.Containers.Values)
+            {
+                foreach (var ent in container.ContainedEntities)
+                {
+                    price += GetPriceWithVendingDiscount(ent, currentGrid);
+                }
+            }
+        }
+
+        return price;
+    }
+
     // Begin Frontier - GetPrice variant that uses predicate
     /// <summary>
-    /// Appraises an entity, returning its price. Respects predicate - an entity that is excluded will be removed from the 
+    /// Appraises an entity, returning its price. Respects predicate - an entity that is excluded will be removed from the
     /// </summary>
     /// <param name="uid">The entity to appraise.</param>
     /// <param name="includeContents">Whether to examine its contents.</param>
@@ -415,6 +462,26 @@ public sealed class PricingSystem : EntitySystem
         }
 
         return price;
+    }
+
+    /// <summary>
+    /// Mono: Gets the static price with vending machine discounts applied if applicable.
+    /// This method should be used by cargo systems when selling items.
+    /// </summary>
+    /// <param name="uid">The entity to price</param>
+    /// <param name="currentGrid">The grid where the entity is being sold</param>
+    /// <returns>The price with vending machine discount applied if applicable</returns>
+    public double GetStaticPriceWithVendingDiscount(EntityUid uid, EntityUid currentGrid)
+    {
+        // Check if this entity has a vending machine discount
+        var discountPrice = _vendingPurchase.GetVendingMachineDiscountPrice(uid, currentGrid);
+        if (discountPrice.HasValue)
+        {
+            return discountPrice.Value;
+        }
+
+        // Fall back to normal static price
+        return GetStaticPrice(uid);
     }
 
     private double GetStaticPrice(EntityPrototype prototype)

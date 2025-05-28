@@ -230,10 +230,17 @@ namespace Content.Shared.VendingMachines
 
         /// <summary>
         /// The current balance in the cash slot.
-        /// Kept for 
+        /// Kept for
         /// </summary>
         [DataField, AutoNetworkedField]
         public int CashSlotBalance;
+
+        /// <summary>
+        /// Mono: Tracks the last purchase price for vending machine purchase tracking.
+        /// Used to mark spawned entities with purchase information.
+        /// </summary>
+        [DataField]
+        public double? LastPurchasePrice;
         // End Frontier: taxes, cash slot
     }
 

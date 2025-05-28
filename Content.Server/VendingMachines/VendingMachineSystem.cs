@@ -35,6 +35,7 @@ using Content.Shared._NF.Bank.BUI; // Frontier
 using Content.Server._NF.Contraband.Systems; // Frontier
 using Content.Shared.Stacks; // Frontier
 using Content.Server.Stack;
+using Content.Server._Mono.VendingMachine;
 using Robust.Shared.Containers; // Frontier
 
 namespace Content.Server.VendingMachines
@@ -58,6 +59,7 @@ namespace Content.Server.VendingMachines
         [Dependency] private readonly IAdminLogManager _adminLogger = default!; // Frontier
         [Dependency] private readonly ContrabandTurnInSystem _contraband = default!; // Frontier
         [Dependency] private readonly StackSystem _stack = default!; // Frontier
+        [Dependency] private readonly VendingMachinePurchaseSystem _vendingPurchase = default!; // Mono
 
         private const float WallVendEjectDistanceFromWall = 1f;
 
@@ -377,6 +379,9 @@ namespace Content.Server.VendingMachines
                 }
 
                 bool paidFully = false;
+                // Mono: Store the purchase price for tracking
+                component.LastPurchasePrice = totalPrice;
+
                 if (TryEjectVendorItem(uid, type, itemId, component.CanShoot, component))
                 {
                     if (cashEntity != null)
@@ -533,6 +538,14 @@ namespace Content.Server.VendingMachines
             var ent = Spawn(vendComponent.NextItemToEject, spawnCoordinates);
 
             _contraband.ClearContrabandValue(ent); // Frontier
+
+            // Mono: Track vending machine purchases for pricing modifications
+            // Only track if this was a paid purchase (not a random eject or force eject)
+            if (!forceEject && vendComponent.LastPurchasePrice.HasValue)
+            {
+                _vendingPurchase.MarkAsPurchased(ent, uid, vendComponent.LastPurchasePrice.Value);
+                vendComponent.LastPurchasePrice = null; // Clear after use
+            }
 
             if (vendComponent.ThrowNextItem)
             {
