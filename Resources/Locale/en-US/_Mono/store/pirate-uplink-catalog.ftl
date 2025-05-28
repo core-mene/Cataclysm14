@@ -183,6 +183,9 @@ uplink-pirate-webvest-desc = A webvest smuggled into the sector that hasn't been
 uplink-pirate-syndie-mask-name = Syndicate Gas Mask
 uplink-pirate-syndie-mask-desc = A smuggled into the sector tactical mask that can be connected to an air supply.
 
+uplink-pirate-modsuit-name = RX-01 Rogue Modsuit
+uplink-pirate-modsuit-desc = An experimental modsuit prototype developed by Ullman Industries. When powered it provides enhanced agility and boosted sensors. "The original client died so uh, go nuts" - Felix Ullman
+
 # MARK: Explosives
 
 uplink-pirate-c4-name = C-4

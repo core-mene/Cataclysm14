@@ -901,6 +901,21 @@
       tags:
       - PirateUplink
 
+- type: listing
+  id: UplinkPirateModsuit
+  name: uplink-pirate-modsuit-name
+  description: uplink-pirate-modsuit-desc
+  productEntity: ClothingModsuitRoguePowerCell
+  cost:
+    Doubloon: 25
+  categories:
+  - UplinkPirateEquipment
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
 #MARK: Explosives
 
 - type: listing
