@@ -5,7 +5,7 @@
   productEntity: ClothingOuterHardsuitNfsdBronze
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_bronze.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 2
+    FederationMilitaryCredit: 2
   categories:
     - UplinkSecurityHardsuits
   conditions:
@@ -21,7 +21,7 @@
   productEntity: ClothingOuterHardsuitNfsdSilver
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_silver.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 2
+    FederationMilitaryCredit: 2
   categories:
     - UplinkSecurityHardsuits
   conditions:
@@ -37,7 +37,7 @@
   productEntity: ClothingOuterHardsuitNfsdBrigmedic
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_brigmed.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 2
+    FederationMilitaryCredit: 2
   categories:
     - UplinkSecurityHardsuits
   conditions:
@@ -53,7 +53,7 @@
   productEntity: ClothingOuterHardsuitNfsdGold
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_gold.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 3
+    FederationMilitaryCredit: 3
   categories:
     - UplinkSecurityHardsuits
   conditions:
@@ -74,7 +74,7 @@
   productEntity: ClothingOuterHardsuitNfsdCombat
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_combat.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 10
+    FederationMilitaryCredit: 10
   categories:
     - UplinkSecurityHardsuits
   conditions:
@@ -90,7 +90,7 @@
   productEntity: ClothingOuterHardsuitNfsdCommand
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_command.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 10
+    FederationMilitaryCredit: 10
   categories:
     - UplinkSecurityHardsuits
   conditions:
@@ -110,7 +110,7 @@
   productEntity: ClothingOuterHardsuitNfsdExperimental
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_experimental.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 25
+    FederationMilitaryCredit: 25
   categories:
     - UplinkSecurityHardsuits
   conditions:
@@ -126,7 +126,7 @@
   productEntity: ClothingOuterHardsuitNfsdSheriff
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_sheriff.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 3
+    FederationMilitaryCredit: 3
   categories:
     - UplinkSecurityHardsuits
   conditions:
@@ -145,7 +145,7 @@
   productEntity: WeaponPistolMk58
   icon: { sprite: Objects/Weapons/Guns/Pistols/mk58.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 2
+    FederationMilitaryCredit: 2
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -161,7 +161,7 @@
   productEntity: WeaponDisabler
   icon: { sprite: Objects/Weapons/Guns/Battery/disabler.rsi, state: base }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -177,7 +177,7 @@
   productEntity: Stunbaton
   icon: { sprite: Objects/Weapons/Melee/stunbaton.rsi, state: stunbaton_off }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -193,7 +193,7 @@
   productEntity: WeaponEmpEmitter
   icon: { sprite: _NF/Objects/Weapons/Guns/Projectiles/emp.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 3 #Mono Emmiter price: From 1 to 3
+    FederationMilitaryCredit: 3 #Mono Emmiter price: From 1 to 3
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -209,7 +209,7 @@
   productEntity: WeaponShotgunEnforcer
   icon: { sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 3
+    FederationMilitaryCredit: 3
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -225,7 +225,7 @@
   productEntity: WeaponRifleLecter
   icon: { sprite: Objects/Weapons/Guns/Rifles/lecter.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 3
+    FederationMilitaryCredit: 3
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -241,7 +241,7 @@
   productEntity: WeaponHFKatana
   icon: { sprite: _Mono/Objects/Weapons/Melee/hfblade.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 10
+    FederationMilitaryCredit: 10
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -257,7 +257,7 @@
   productEntity: WeaponRifleVulcan
   icon: { sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 3
+    FederationMilitaryCredit: 3
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -273,7 +273,7 @@
   productEntity: WeaponLaserCarbine
   icon: { sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 1 # GARBAGE!!!
+    FederationMilitaryCredit: 1 # GARBAGE!!!
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -289,7 +289,7 @@
   productEntity: WeaponDisablerSMG
   icon: { sprite: Objects/Weapons/Guns/Battery/disabler_smg.rsi, state: base }
   cost:
-    FrontierUplinkCoin: 5 # STUNMETA!!!
+    FederationMilitaryCredit: 5 # STUNMETA!!!
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -305,7 +305,7 @@
   productEntity: EnergySwordNfsd
   icon: { sprite: Objects/Weapons/Melee/e_sword.rsi, state: e_sword }
   cost:
-    FrontierUplinkCoin: 7 #Mono: from 5 to 7
+    FederationMilitaryCredit: 7 #Mono: from 5 to 7
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -321,7 +321,7 @@
   productEntity: WeaponSubMachineGunWt550
   icon: { sprite: Objects/Weapons/Guns/SMGs/wt550.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 4
+    FederationMilitaryCredit: 4
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -337,7 +337,7 @@
   productEntity: WeaponEnergyGun
   icon: { sprite: _DV/Objects/Weapons/Guns/Battery/energygun.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 4
+    FederationMilitaryCredit: 4
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -353,7 +353,7 @@
   productEntity: WeaponLauncherRocketEmp
   icon: { sprite: Objects/Weapons/Guns/Launchers/rocket.rsi, state: base }
   cost:
-    FrontierUplinkCoin: 5
+    FederationMilitaryCredit: 5
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -370,7 +370,7 @@
   productEntity: HoloprojectorNfsd
   icon: { sprite: _NF/Objects/Devices/Holoprojectors/nfsd.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -386,7 +386,7 @@
   productEntity: JetpackNfsdFilled
   icon: { sprite: _NF/Objects/Tanks/Jetpacks/nfsd.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -402,7 +402,7 @@
   productEntity: ClothingShoesBootsMagSecurityFilled # Mono
   icon: { sprite: _NF/Clothing/Shoes/Boots/magboots-security.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -418,7 +418,7 @@
   productEntity: NfsdTechFabCircuitboard
   icon: { sprite: _NF/Objects/Misc/module.rsi, state: nfsd }
   cost:
-    FrontierUplinkCoin: 5
+    FederationMilitaryCredit: 5
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -434,7 +434,7 @@
   productEntity: BoxEncryptionKeyNfsd
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -455,7 +455,7 @@
   productEntity: RadAutoInjector
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: arithpen }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -475,7 +475,7 @@
   productEntity: PyraAutoInjector
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: pyrapen }
   cost:
-    FrontierUplinkCoin: 2
+    FederationMilitaryCredit: 2
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -495,7 +495,7 @@
   productEntity: PunctAutoInjector
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: punctpen }
   cost:
-    FrontierUplinkCoin: 2
+    FederationMilitaryCredit: 2
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -515,7 +515,7 @@
   productEntity: AntiPoisonMedipen
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: penacid }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -534,7 +534,7 @@
   description: uplink-security-compact-defibrillator-desc
   productEntity: DefibrillatorCompact
   cost:
-    FrontierUplinkCoin: 3
+    FederationMilitaryCredit: 3
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -553,7 +553,7 @@
   description: uplink-security-syringe-case-desc
   productEntity: SyringeCaseAltFilled
   cost:
-    FrontierUplinkCoin: 8
+    FederationMilitaryCredit: 8
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -573,7 +573,7 @@
   productEntity: CombatMedipen
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: morphen }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -589,7 +589,7 @@
   productEntity: BorgModuleSecurity
   icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
   cost:
-    FrontierUplinkCoin: 10
+    FederationMilitaryCredit: 10
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -607,7 +607,7 @@
   productEntity: CartridgeRocketEmp
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi, state: rpg-emp }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -623,7 +623,7 @@
   productEntity: BoxT3SuperCapacitor
   icon: { sprite: Objects/Storage/boxes.rsi, state: box}
   cost:
-    FrontierUplinkCoin: 4
+    FederationMilitaryCredit: 4
   categories:
     - UplinkSecurityBundles
   conditions:
@@ -639,7 +639,7 @@
   productEntity: BoxMagazinePistol
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -655,7 +655,7 @@
   productEntity: BoxMagazineRifle
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -671,7 +671,7 @@
   productEntity: BoxMagazineLightRifle
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -687,7 +687,7 @@
   productEntity: BoxMagazinePistolSubMachineGunTopMounted
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -703,7 +703,7 @@
   productEntity: BoxMagazinePistolRubber
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -719,7 +719,7 @@
   productEntity: BoxMagazineRifleRubber
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -735,7 +735,7 @@
   productEntity: BoxMagazineLightRifleRubber
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -751,7 +751,7 @@
   productEntity: HypoBrigmedic
   icon: { sprite: _NF/Objects/Specific/Medical/hypobrigmedic.rsi, state: hypo }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -771,7 +771,7 @@
   productEntity: SyringeAmbuzol
   icon: { sprite: Objects/Specific/Chemistry/syringe.rsi, state: syringe_base0 }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -791,7 +791,7 @@
   productEntity: MedkitCombatFilled
   icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: blackkit } # Frontier: _NF prefix
   cost:
-    FrontierUplinkCoin: 2
+    FederationMilitaryCredit: 2
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -812,7 +812,7 @@
   productEntity: WeaponRevolverInspector
   icon: { sprite: Objects/Weapons/Guns/Revolvers/inspector.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -828,7 +828,7 @@
   productEntity: WeaponRevolverMateba
   icon: { sprite: Objects/Weapons/Guns/Revolvers/mateba.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 3
+    FederationMilitaryCredit: 3
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -849,7 +849,7 @@
   productEntity: Truncheon
   icon: { sprite: Objects/Weapons/Melee/truncheon.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -865,7 +865,7 @@
   productEntity: PlasteelArmingSword
   icon: { sprite: _NF/Objects/Weapons/Melee/armingsword.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 2
+    FederationMilitaryCredit: 2
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -881,7 +881,7 @@
   productEntity: ClothingBeltSheathFilled
   icon: { sprite: Objects/Weapons/Melee/captain_sabre.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 2 #From 10 to 2
+    FederationMilitaryCredit: 2 #From 10 to 2
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -897,7 +897,7 @@
   productEntity: WeaponPulsePistol
   icon: { sprite: Objects/Weapons/Guns/Battery/pulse_pistol.rsi, state: base }
   cost:
-    FrontierUplinkCoin: 12
+    FederationMilitaryCredit: 12
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -918,7 +918,7 @@
   productEntity: WeaponPulseCarbine
   icon: { sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi, state: base }
   cost:
-    FrontierUplinkCoin: 20
+    FederationMilitaryCredit: 20
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -939,7 +939,7 @@
   productEntity: SecBreachingHammer
   icon: { sprite: Nyanotrasen/Objects/Weapons/Melee/breaching_hammer.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 3
+    FederationMilitaryCredit: 3
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -955,7 +955,7 @@
   productEntity: TelescopicShield
   icon: { sprite: Objects/Weapons/Melee/teleriot_shield.rsi, state: teleriot-on }
   cost:
-    FrontierUplinkCoin: 2
+    FederationMilitaryCredit: 2
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -971,7 +971,7 @@
   productEntity: EnergyShieldNfsd
   icon: { sprite: _NF/Objects/Weapons/Melee/e_shield.rsi, state: eshield-on }
   cost:
-    FrontierUplinkCoin: 4
+    FederationMilitaryCredit: 4
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -987,7 +987,7 @@
   productEntity: ClothingMaskGasSheriff
   icon: { sprite: _NF/Clothing/Mask/nfsd_sheriff.rsi, state: icon}
   cost:
-    FrontierUplinkCoin: 1 #Mono: From 3 to 1
+    FederationMilitaryCredit: 1 #Mono: From 3 to 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -1008,7 +1008,7 @@
   productEntity: SpeedLoaderMagnum
   icon: { sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: base }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -1024,7 +1024,7 @@
   productEntity: SpeedLoaderMagnumRubber
   icon: { sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: base }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -1040,7 +1040,7 @@
   productEntity: BoxLethalshot
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -1056,7 +1056,7 @@
   productEntity: BoxBeanbag
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -1072,7 +1072,7 @@
   productEntity: BoxShotgunIncendiary
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
-    FrontierUplinkCoin: 2
+    FederationMilitaryCredit: 2
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -1088,7 +1088,7 @@
   productEntity: BoxShotgunSlug
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -1104,7 +1104,7 @@
   productEntity: SpaceCash5000 # Mono: Changed the exchange rate from 1000 to 5000
   icon: { sprite: Objects/Economy/cash.rsi, state: cash_1000000 }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -1120,7 +1120,7 @@
   productEntity: BoxEMPGrenadesNfsd
   icon: { sprite: Objects/Weapons/Grenades/empgrenade.rsi, state: icon}
   cost:
-    FrontierUplinkCoin: 2
+    FederationMilitaryCredit: 2
   categories:
     - UplinkSecurityExplosives
   conditions:
@@ -1136,7 +1136,7 @@
   productEntity: BoxExplosiveGrenadesNfsd
   icon: { sprite: Objects/Weapons/Grenades/grenade.rsi, state: icon}
   cost:
-    FrontierUplinkCoin: 3
+    FederationMilitaryCredit: 3
   categories:
     - UplinkSecurityExplosives
   conditions:
@@ -1152,7 +1152,7 @@
   productEntity: BoxIncendiaryGrenadesNfsd
   icon: { sprite: Objects/Weapons/Grenades/pyrogrenade.rsi, state: icon}
   cost:
-    FrontierUplinkCoin: 3
+    FederationMilitaryCredit: 3
   categories:
     - UplinkSecurityExplosives
   conditions:
@@ -1168,7 +1168,7 @@
   productEntity: BoxShrapnelGrenadesNfsd
   icon: { sprite: Objects/Weapons/Grenades/shrapnelgrenade.rsi, state: icon}
   cost:
-    FrontierUplinkCoin: 2
+    FederationMilitaryCredit: 2
   categories:
     - UplinkSecurityExplosives
   conditions:
@@ -1184,7 +1184,7 @@
   productEntity: BoxSmokeGrenades
   icon: { sprite: Objects/Weapons/Grenades/smoke.rsi, state: icon}
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -1200,7 +1200,7 @@
   productEntity: BoxTeargasGrenades
   icon: { sprite: Objects/Weapons/Grenades/tear_gas.rsi, state: icon}
   cost:
-    FrontierUplinkCoin: 2
+    FederationMilitaryCredit: 2
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -1216,7 +1216,7 @@
   productEntity: BoxFlashBangGrenades
   icon: { sprite: Objects/Weapons/Grenades/flashbang.rsi, state: icon}
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -1232,7 +1232,7 @@
   productEntity: BoxStingerGrenadesNfsd
   icon: { sprite: Objects/Weapons/Grenades/stingergrenade.rsi, state: icon}
   cost:
-    FrontierUplinkCoin: 2
+    FederationMilitaryCredit: 2
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -1248,7 +1248,7 @@
   productEntity: BoxBreachingCharges
   icon: { sprite: _DV/Objects/Weapons/Bombs/breaching.rsi, state: icon}
   cost:
-    FrontierUplinkCoin: 3
+    FederationMilitaryCredit: 3
   categories:
     - UplinkSecurityExplosives
   conditions:
@@ -1264,7 +1264,7 @@
   productEntity: HoverbikeNfsdFlatpack
   icon: { sprite: _NF/Objects/Vehicles/hoverbike.rsi, state: vehicle }
   cost:
-    FrontierUplinkCoin: 3
+    FederationMilitaryCredit: 3
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -1280,7 +1280,7 @@
   productEntity: CrateArmoryLethalNfsd
   icon: { sprite: _NF/Structures/Storage/Crates/nfsd_secure2.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 15
+    FederationMilitaryCredit: 15
   categories:
     - UplinkSecurityBundles
   conditions:
@@ -1296,7 +1296,7 @@
   productEntity: ClothingBackpackDuffelNfsdTrackingBundle
   icon: { sprite: _NF/Clothing/Back/Duffels/nfsd_brown.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 4
+    FederationMilitaryCredit: 4
   categories:
     - UplinkSecurityBundles
   conditions:
@@ -1312,7 +1312,7 @@
   productEntity: ClothingBackpackDuffelNfsdEmpBundle
   icon: { sprite: _NF/Clothing/Back/Duffels/nfsd_brown.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 4
+    FederationMilitaryCredit: 4
   categories:
     - UplinkSecurityBundles
   conditions:
@@ -1328,7 +1328,7 @@
   productEntity: CrateArmoryNonLethalNfsd
   icon: { sprite: _NF/Structures/Storage/Crates/nfsd_secure1.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 10
+    FederationMilitaryCredit: 10
   categories:
     - UplinkSecurityBundles
   conditions:
@@ -1344,7 +1344,7 @@
   productEntity: BoxEmpGrenadesAmmo
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -1360,7 +1360,7 @@
   productEntity: NFBoxDartsTracking
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityAmmo
   conditions:
@@ -1376,7 +1376,7 @@
   productEntity: SpaceBladeSec
   icon: { sprite: _NF/Objects/Fun/spaceblade.rsi, state: secblade }
   cost:
-    FrontierUplinkCoin: 1
+    FederationMilitaryCredit: 1
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -1392,7 +1392,7 @@
   productEntity: ContrabandForensicsModule
   icon: { sprite: _NF/Objects/Devices/cartridge.rsi, state: contraband_forensics }
   cost:
-    FrontierUplinkCoin: 4
+    FederationMilitaryCredit: 4
   categories:
     - UplinkSecurityUtility
   conditions:

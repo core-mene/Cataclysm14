@@ -13,7 +13,6 @@
   - AllAccess
   access:
   - CentralCommand
-  whitelisted: true # Frontier
 
 - type: startingGear
   id: ERTLeaderGear
@@ -108,7 +107,6 @@
   - !type:AddComponentSpecial
     components:
     - type: BibleUser #Lets them heal with bibles
-  whitelisted: true # Frontier
 
 - type: startingGear
   id: ERTChaplainGear
@@ -187,7 +185,6 @@
   - AllAccess
   access:
   - CentralCommand
-  whitelisted: true # Frontier
 
 - type: startingGear
   id: ERTEngineerGear
@@ -260,7 +257,6 @@
   - AllAccess
   access:
   - CentralCommand
-  whitelisted: true # Frontier
 
 - type: startingGear
   id: ERTSecurityGear
@@ -351,7 +347,6 @@
   - AllAccess
   access:
   - CentralCommand
-  whitelisted: true # Frontier
 
 - type: startingGear
   id: ERTMedicalGear
@@ -416,7 +411,6 @@
   - AllAccess
   access:
   - CentralCommand
-  whitelisted: true # Frontier
 
 - type: startingGear
   id: ERTJanitorGear

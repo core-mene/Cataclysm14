@@ -12,10 +12,10 @@ namespace Content.Server._NF.Smuggling.Components;
 public sealed partial class SectorDeadDropComponent : Component
 {
     /// <summary>
-    ///     Accumulator for FUC values.  Pays out at a given amount.
+    ///     Accumulator for FMC values.  Pays out at a given amount.
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
-    public FixedPoint2 FUCAccumulator = FixedPoint2.Zero;
+    public FixedPoint2 FMCAccumulator = FixedPoint2.Zero;
 
     // Utility field for windowing reported events.  Having more in an hour results in more precise information.
     [ViewVariables(VVAccess.ReadWrite)]

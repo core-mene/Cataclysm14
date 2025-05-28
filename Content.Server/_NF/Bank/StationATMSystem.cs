@@ -286,7 +286,7 @@ public sealed partial class BankSystem
         if (cashEntity == null)
             return;
 
-        // Invalid item inserted (doubloons, FUC, telecrystals...): amount should be negative (to denote an error)
+        // Invalid item inserted (data chits, FMC, telecrystals...): amount should be negative (to denote an error)
         if (!TryComp<StackComponent>(cashEntity, out var cashStack) ||
             cashStack.StackTypeId != component.CashType)
         {
