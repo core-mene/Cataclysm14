@@ -262,8 +262,12 @@ public sealed partial class FireControlSystem : EntitySystem
                     var diff = destinationMapCoords.Position - currentMapCoords.Position;
                     if (diff.LengthSquared() > 0.01f)
                     {
-                        var goalAngle = Angle.FromWorldVec(diff);
-                        _rotateToFace.TryRotateTo(localWeapon, goalAngle, 0f, Angle.FromDegrees(1), float.MaxValue, weaponXform);
+                        // Only rotate the gun if it has line of sight to the target
+                        if (HasLineOfSight(localWeapon, currentMapCoords.Position, destinationMapCoords.Position, currentMapCoords.MapId))
+                        {
+                            var goalAngle = Angle.FromWorldVec(diff);
+                            _rotateToFace.TryRotateTo(localWeapon, goalAngle, 0f, Angle.FromDegrees(1), float.MaxValue, weaponXform);
+                        }
                     }
                 }
             }
@@ -406,24 +410,31 @@ public sealed partial class FireControlSystem : EntitySystem
     }
 
     /// <summary>
-    /// Checks if a weapon can fire in a specific direction without obstacles
+    /// Checks if a weapon has line of sight to a target position
     /// </summary>
     /// <param name="weapon">The weapon entity</param>
     /// <param name="weaponPos">The weapon's position</param>
-    /// <param name="direction">Normalized direction vector</param>
     /// <param name="targetPos">The target position</param>
     /// <param name="mapId">The map ID</param>
     /// <param name="maxDistance">Maximum raycast distance in meters</param>
-    /// <returns>True if the weapon can fire in that direction</returns>
-    private bool CanFireInDirection(EntityUid weapon, Vector2 weaponPos, Vector2 direction, Vector2 targetPos, MapId mapId, float maxDistance = 50f)
+    /// <returns>True if the weapon has line of sight to the target</returns>
+    private bool HasLineOfSight(EntityUid weapon, Vector2 weaponPos, Vector2 targetPos, MapId mapId, float maxDistance = 50f)
     {
+        // Calculate direction to target
+        var direction = (targetPos - weaponPos);
+        var distance = direction.Length();
+        if (distance <= 0)
+            return false; // Can't have LOS to the same position
+
+        direction = Vector2.Normalize(direction);
+
         // Get the weapon's grid for grid filtering
         var weaponTransform = Transform(weapon);
         var weaponGridUid = weaponTransform.GridUid;
 
         // Calculate distance to target (capped at maximum distance)
         var targetDistance = Vector2.Distance(weaponPos, targetPos);
-        var distance = Math.Min(targetDistance, maxDistance);
+        var rayDistance = Math.Min(targetDistance, maxDistance);
 
         // Initialize ray collision
         var ray = new CollisionRay(weaponPos, direction, collisionMask: (int)(CollisionGroup.Opaque | CollisionGroup.Impassable));
@@ -447,18 +458,34 @@ public sealed partial class FireControlSystem : EntitySystem
             return entityGridUid != weaponGridUid;
         }
 
-        // Check if there's any obstacles in the firing direction, only considering entities on the same grid
+        // Check if there's any obstacles in the line of sight, only considering entities on the same grid
         var raycastResults = _physics.IntersectRayWithPredicate(
             mapId,
             ray,
             weapon,
             IgnoreEntityNotOnSameGrid,
-            distance,
-            returnOnFirstHit: false
+            rayDistance,
+            returnOnFirstHit: true // We only need to know if there's ANY obstacle
         ).ToList();
 
-        // Can only fire if there's no obstacles in the path
+        // Has line of sight if there are no obstacles in the path
         return raycastResults.Count == 0;
+    }
+
+    /// <summary>
+    /// Checks if a weapon can fire in a specific direction without obstacles
+    /// </summary>
+    /// <param name="weapon">The weapon entity</param>
+    /// <param name="weaponPos">The weapon's position</param>
+    /// <param name="direction">Normalized direction vector</param>
+    /// <param name="targetPos">The target position</param>
+    /// <param name="mapId">The map ID</param>
+    /// <param name="maxDistance">Maximum raycast distance in meters</param>
+    /// <returns>True if the weapon can fire in that direction</returns>
+    private bool CanFireInDirection(EntityUid weapon, Vector2 weaponPos, Vector2 direction, Vector2 targetPos, MapId mapId, float maxDistance = 50f)
+    {
+        // Use the HasLineOfSight method for consistency
+        return HasLineOfSight(weapon, weaponPos, targetPos, mapId, maxDistance);
     }
 
     /// <summary>
