@@ -33,6 +33,8 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 
     protected override bool Draggable => true;
 
+    protected override float ScrollSensitivity => 4f;
+
     public bool ShowBeacons = true;
     public MapId ViewingMap = MapId.Nullspace;
 

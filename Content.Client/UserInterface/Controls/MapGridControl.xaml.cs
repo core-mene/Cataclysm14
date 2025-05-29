@@ -41,7 +41,7 @@ public partial class MapGridControl : LayoutContainer
     protected Vector2 StartDragPosition;
     protected bool Recentering;
 
-    protected const float ScrollSensitivity = 8f;
+    protected virtual float ScrollSensitivity => 8f;
 
     protected float RecenterMinimum = 0.05f;
 
