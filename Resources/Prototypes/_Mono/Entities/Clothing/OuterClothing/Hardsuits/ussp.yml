@@ -152,3 +152,42 @@
   - type: StaticPrice
     price: 2000
     vendPrice: 8000
+
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitOfficerCombat
+  name: USSP Commissar tacsuit
+  description: TBD
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/ussp_officer_combat.rsi
+  - type: Item
+    size: Huge
+  - type: Clothing
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/ussp_officer_combat.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.45
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.40
+        Piercing: 0.35
+        Heat: 0.75
+        Radiation: 0.55
+        Caustic: 0.55
+  - type: StaminaDamageResistance
+    coefficient: 0.40
+  - type: ClothingSpeedModifier
+    walkModifier: 0.90
+    sprintModifier: 0.90
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitOfficerCombat
+  - type: StaticPrice
+    price: 1250
+    vendPrice: 7500cuz

@@ -13,3 +13,19 @@
         - id: ClothingShoesBootsMagSecurity
   - type: AccessReader
     access: [["USSP"]]
+
+- type: entity
+  id: SuitStorageCommissar
+  parent: SuitStorageBase
+  suffix: USSP Officer Tac-Suit
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
+        - id: ClothingOuterHardsuitOfficerCombat
+        - id: ClothingMaskGasSecurity
+        - id: JetpackMiniFilled
+        - id: ClothingShoesBootsMagSecurity
+  - type: AccessReader
+    access: [["USSPCommand"]]
