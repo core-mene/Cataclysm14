@@ -149,6 +149,8 @@ public sealed partial class ShuttleConsoleSystem
             return;
         }
 
+        targetCoordinates = _shuttle.ClampCoordinatesToFTLRange(shuttleUid.Value, targetCoordinates);
+
         List<ShuttleExclusionObject>? exclusions = null;
         GetExclusions(ref exclusions);
 

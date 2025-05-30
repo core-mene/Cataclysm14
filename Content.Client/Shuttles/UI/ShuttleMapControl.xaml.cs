@@ -131,23 +131,6 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
                     // We'll send the "adjusted" position and server will adjust it back when relevant.
                     var mapCoords = new MapCoordinates(InverseMapPosition(args.RelativePosition), ViewingMap);
 
-                    if (!_physicsQuery.TryGetComponent(_shuttleEntity, out var shuttlePhysics) || !EntManager.TryGetComponent(_shuttleEntity, out TransformComponent? shuttleTransform))
-                        return;
-
-                    var shuttleUid = _shuttleEntity.Value;
-
-                    var shuttlePosition = Maps.GetGridPosition((shuttleUid, shuttlePhysics, shuttleTransform));
-                    var targetPosition = mapCoords.Position;
-                    var shuttleToTarget = targetPosition - shuttlePosition;
-
-                    var range = _shuttles.GetFTLRange(shuttleUid);
-
-                    // If the target position is outside of the shuttle's FTL range, then try to FTL as close as possible to save the player some hassle.
-                    if (shuttleToTarget.Length() > range)
-                    {
-                        mapCoords = new(shuttlePosition + shuttleToTarget.Normalized() * range, ViewingMap);
-                    }
-
                     RequestFTL?.Invoke(mapCoords, _ftlAngle);
                 }
             }
