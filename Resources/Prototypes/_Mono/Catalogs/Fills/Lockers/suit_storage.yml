@@ -17,13 +17,14 @@
 - type: entity
   id: SuitStorageCommissar
   parent: SuitStorageBase
-  suffix: USSP Officer Tac-Suit
+  suffix: USSP Commissar Suits
   components:
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
         - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitOfficerCombat
+        - id: ClothingOuterHardsuitUsspL30
         - id: ClothingMaskGasSecurity
         - id: JetpackMiniFilled
         - id: ClothingShoesBootsMagSecurity
