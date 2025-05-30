@@ -42,3 +42,10 @@ frontier-lobby-pirate-description = This is the ultimate hideout where rogue sec
    - Start a rogue crew
    - Find a crew to join
    - Socialize with other rogue sector insurgents
+
+# Crew Menu
+frontier-lobby-crew-vessel = [bold][color=#A88B5E]Vessel:[/color][/bold] {$name}
+frontier-lobby-crew-class-prefix = [bold][color=#A88B5E]Classes:[/color][/bold]{" "}
+frontier-lobby-crew-size = [bold][color=#A88B5E]Size:[/color][/bold] {$size}
+frontier-lobby-crew-class-advertisement = [bold][color=#A88B5E]Advertisement:[/color][/bold]
+frontier-lobby-crew-only-hide-jobless = Hide jobless ships

@@ -89,41 +89,67 @@ public sealed partial class MedicalBountySystem : EntitySystem
                 return; // Nothing to do, keep bounty at null.
         }
 
-        // Precondition: check entity can fulfill bounty conditions
-        if (!TryComp<DamageableComponent>(entity, out var damageable) ||
-            !TryComp<BloodstreamComponent>(entity, out var bloodstream))
+        // Precondition: check entity can fulfill bounty conditions - only require DamageableComponent
+        if (!TryComp<DamageableComponent>(entity, out var damageable))
+        {
+            Log.Warning($"Medical bounty entity {ToPrettyString(entity)} missing DamageableComponent, skipping initialization");
             return;
+        }
+
+        // Check if entity has bloodstream for reagent injection
+        var hasBloodstream = TryComp<BloodstreamComponent>(entity, out var bloodstream);
+
+        var entityName = MetaData(entity).EntityName;
+        Log.Info($"Initializing medical bounty for {entityName} ({ToPrettyString(entity)}), hasBloodstream: {hasBloodstream}");
 
         // Apply damage from prototype, keep track of value
+        // Filter damage types to only those supported by the entity
         DamageSpecifier damageToApply = new DamageSpecifier();
         var bountyValueAccum = component.Bounty.BaseReward;
+        var supportedDamageTypes = damageable.Damage.DamageDict.Keys.ToHashSet();
+
         foreach (var (damageType, damageValue) in component.Bounty.DamageSets)
         {
             if (!_proto.TryIndex<DamageTypePrototype>(damageType, out var damageProto))
                 continue;
 
+            // Check if this damage type is supported by the entity
+            if (!supportedDamageTypes.Contains(damageType))
+            {
+                Log.Info($"Skipping unsupported damage type {damageType} for {entityName}");
+                continue;
+            }
+
             var randomDamage = _random.Next(damageValue.MinDamage, damageValue.MaxDamage + 1);
             bountyValueAccum += randomDamage * damageValue.ValuePerPoint;
             damageToApply += new DamageSpecifier(damageProto, randomDamage);
+            Log.Info($"Adding {randomDamage} {damageType} damage to {entityName}");
         }
+
         _damageable.TryChangeDamage(entity, damageToApply, true, damageable: damageable);
 
-        // Inject reagents into chemical solution, if any
-        foreach (var (reagentType, reagentValue) in component.Bounty.Reagents)
+        // Inject reagents into chemical solution, if any (only if entity has bloodstream)
+        if (hasBloodstream && bloodstream != null)
         {
-            if (!_proto.HasIndex<ReagentPrototype>(reagentType))
-                continue;
+            foreach (var (reagentType, reagentValue) in component.Bounty.Reagents)
+            {
+                if (!_proto.HasIndex<ReagentPrototype>(reagentType))
+                    continue;
 
-            Solution soln = new Solution();
-            var reagentQuantity = _random.Next(reagentValue.MinQuantity, reagentValue.MaxQuantity + 1);
-            soln.AddReagent(reagentType, reagentQuantity);
-            if (_bloodstream.TryAddToChemicals(entity, soln, bloodstream))
-                bountyValueAccum += reagentQuantity * reagentValue.ValuePerPoint;
+                Solution soln = new Solution();
+                var reagentQuantity = _random.Next(reagentValue.MinQuantity, reagentValue.MaxQuantity + 1);
+                soln.AddReagent(reagentType, reagentQuantity);
+                if (_bloodstream.TryAddToChemicals(entity, soln, bloodstream))
+                    bountyValueAccum += reagentQuantity * reagentValue.ValuePerPoint;
+            }
         }
 
         // Bounty calculation completed, set output state.
         component.MaxBountyValue = bountyValueAccum;
         component.BountyInitialized = true;
+
+        // Log final bounty value for debugging
+        Log.Info($"Medical bounty initialization complete for {entityName}: MaxBountyValue={bountyValueAccum}, TotalDamage={damageable.TotalDamage}");
     }
 
     private void RedeemMedicalBounty(EntityUid uid, MedicalBountyRedemptionComponent component, RedeemMedicalBountyMessage ev)

@@ -1,6 +1,6 @@
 - type: entity
   id: ThrusterSecurity
-  parent: [ BaseStructureDisableAnchoring, Thruster ]
+  parent: Thruster # Mono - Removed BaseStructureDisableAnchoring
   name: thruster
   suffix: Security
   components:
@@ -19,7 +19,7 @@
 
 - type: entity
   id: DebugThrusterSecurity
-  parent: [BaseStructureDisableToolUse, DebugThruster]
+  parent: DebugThruster # Mono - Removed BaseStructureDisableAnchoring
   name: thruster
   suffix: DEBUG, Security
   components:
@@ -42,7 +42,7 @@
 
 - type: entity
   id: GyroscopeSecurity
-  parent: [BaseStructureDisableToolUse, Gyroscope]
+  parent: Gyroscope # Mono - Removed BaseStructureDisableAnchoring
   suffix: Security
   components:
   - type: Sprite
@@ -52,7 +52,7 @@
 
 - type: entity
   id: DebugGyroscopeSecurity
-  parent: [BaseStructureDisableToolUse, DebugGyroscope]
+  parent: DebugGyroscope # Mono - Removed BaseStructureDisableAnchoring
   name: gyroscope
   suffix: DEBUG, Security
   components:

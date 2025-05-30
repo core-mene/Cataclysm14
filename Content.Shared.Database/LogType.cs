@@ -473,4 +473,8 @@ public enum LogType
     /// A player has deleted a bounty contract.
     /// </summary>
     BountyContractRemoved = 206,
+    /// <summary>
+    /// Shuttle info was changed.
+    /// </summary>
+    ShuttleInfoChanged = 208,
 }

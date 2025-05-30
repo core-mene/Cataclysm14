@@ -1,7 +1,7 @@
 - type: entity
-  name: frontier uplink coin
+  name: Federation Military Credit
   parent: BaseItem
-  id: FrontierUplinkCoin
+  id: FederationMilitaryCredit
   suffix: 20 TC
   description: A token awarded to TSF personnel for turning in contraband. It can be exchanged in an TSFMC uplink device for a variety of law enforcement tools.
   components:
@@ -13,34 +13,34 @@
     size: Tiny
   - type: Stack
     count: 20
-    stackType: FrontierUplinkCoin
+    stackType: FederationMilitaryCredit
   - type: StaticPrice
     price: 0
   - type: StackPrice
     price: 200
   - type: Currency
     price:
-      FrontierUplinkCoin: 1
+      FederationMilitaryCredit: 1
 
 - type: entity
-  parent: FrontierUplinkCoin
-  id: FrontierUplinkCoin1
+  parent: FederationMilitaryCredit
+  id: FederationMilitaryCredit1
   suffix: 1 TC
   components:
   - type: Stack
     count: 1
 
 - type: entity
-  parent: FrontierUplinkCoin
-  id: FrontierUplinkCoin5
+  parent: FederationMilitaryCredit
+  id: FederationMilitaryCredit5
   suffix: 5 TC
   components:
   - type: Stack
     count: 5
 
 - type: entity
-  parent: FrontierUplinkCoin
-  id: FrontierUplinkCoin10
+  parent: FederationMilitaryCredit
+  id: FederationMilitaryCredit10
   suffix: 10 TC
   components:
   - type: Stack
@@ -79,7 +79,7 @@
   components:
   - type: Store
     balance:
-      FrontierUplinkCoin: 99999
+      FederationMilitaryCredit: 99999
 
 - type: entity
   parent: BaseSecurityUplinkRadio
@@ -88,7 +88,7 @@
   components:
   - type: Store
     balance:
-      FrontierUplinkCoin: 20
+      FederationMilitaryCredit: 20
 
 - type: entity
   parent: BaseSecurityUplinkRadio
@@ -97,7 +97,7 @@
   components:
   - type: Store
     balance:
-      FrontierUplinkCoin: 15
+      FederationMilitaryCredit: 15
 
 #Mono
 
@@ -108,7 +108,7 @@
   components:
   - type: Store
     balance:
-      FrontierUplinkCoin: 10
+      FederationMilitaryCredit: 10
 
 #Mono End
 

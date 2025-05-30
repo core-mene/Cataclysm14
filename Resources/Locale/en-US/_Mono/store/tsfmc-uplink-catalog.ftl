@@ -4,6 +4,9 @@ uplink-security-eg4-desc = A self-recharging energy weapon, capable of shooting 
 uplink-security-annie-name = Annie
 uplink-security-annie-desc = A .30 subsonic weapon, made to shoulder the weight of impossible operations.
 
+uplink-security-portable-recharger-name = Portable Recharger
+uplink-security-portable-recharger-desc = An experimental portable recharger equipped with an inbuilt microreactor.
+
 uplink-security-hfblade-name = HF-Katana
 uplink-security-hfblade-desc = A tool of justice.
 

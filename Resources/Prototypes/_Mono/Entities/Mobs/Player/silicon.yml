@@ -89,11 +89,13 @@
   - type: IntrinsicRadioTransmitter
     channels:
     - Binary
+    - Common
     - Syndicate
     - Traffic
   - type: ActiveRadio
     channels:
     - Binary
+    - Common
     - Syndicate
     - Traffic
   - type: ShowSyndicateIcons
@@ -237,11 +239,13 @@
   - type: IntrinsicRadioTransmitter
     channels:
     - Binary
+    - Common
     - Syndicate
     - Traffic
   - type: ActiveRadio
     channels:
     - Binary
+    - Common
     - Syndicate
     - Traffic
   - type: IgnoreUIRange

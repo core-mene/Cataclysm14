@@ -192,12 +192,12 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             }
         }
 
-
         if (!TryPurchaseShuttle(station, vessel.ShuttlePath, out var shuttleUidOut))
         {
             PlayDenySound(player, shipyardConsoleUid, component);
             return;
         }
+
         var shuttleUid = shuttleUidOut.Value;
         if (!_entityManager.TryGetComponent<ShuttleComponent>(shuttleUid, out var shuttle))
         {
@@ -224,6 +224,9 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             };
             shuttleStation = _station.InitializeNewStation(stationProto.Stations[vessel.ID], gridUids);
             name = Name(shuttleStation.Value);
+
+            var vesselInfo = EnsureComp<ExtraShuttleInformationComponent>(shuttleStation.Value);
+            vesselInfo.Vessel = vessel.ID;
         }
 
         // Add FTLLockComponent to the shuttle with Enabled set to true

@@ -18,6 +18,8 @@
   weight: 30
   displayWeight: 30
   special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, UsspTrackingImplant ]
   - !type:AddComponentSpecial
     components:
     - type: MailDisabled

@@ -23,7 +23,7 @@
 # region Class 2
 # Class 2 contraband: explosives, unregistered firearms,
 
-# Specific parent for sensitive items (e.g. command headset, secway, secway keys) that should not be redeemed for FUCs
+# Specific parent for sensitive items (e.g. command headset, secway, secway keys) that should not be redeemed for FMCs
 - type: entity
   id: BaseC2ContrabandUnredeemable
   abstract: true
@@ -41,7 +41,7 @@
   - type: Contraband
     severity: Class2Expedition
     turnInValues: &oneFUC
-      FrontierUplinkCoin: 1
+      FederationMilitaryCredit: 1
 
 - type: entity
   parent: BaseC2ContrabandUnredeemable
@@ -50,7 +50,7 @@
   components:
   - type: Contraband
     turnInValues: &noFUCs
-      FrontierUplinkCoin: 0
+      FederationMilitaryCredit: 0
 # endregion
 
 # region Class 3 Objects
@@ -69,7 +69,7 @@
   - type: Contraband
     severity: Class3Expedition
     turnInValues:
-      FrontierUplinkCoin: 3 #Mono: Increased FUC turn in from 2 to 3
+      FederationMilitaryCredit: 3
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable
@@ -78,7 +78,7 @@
   components:
   - type: Contraband
     turnInValues:
-      FrontierUplinkCoin: 2 #Mono: Increased FUC turn in from 1 to 2
+      FederationMilitaryCredit: 2
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable
@@ -137,7 +137,7 @@
   - type: Contraband
     severity: Class3PirateHighValue
     turnInValues:
-      FrontierUplinkCoin: 4
+      FederationMilitaryCredit: 4
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable
@@ -162,7 +162,7 @@
   components:
   - type: Contraband
     turnInValues:
-      FrontierUplinkCoin: 2 #Mono: Increased FUC turn in from 1 to 2
+      FederationMilitaryCredit: 2
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable

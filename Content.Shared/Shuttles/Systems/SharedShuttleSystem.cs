@@ -216,8 +216,10 @@ public abstract partial class SharedShuttleSystem : EntitySystem
         // This is the already adjusted position
         var targetPosition = mapCoordinates.Position;
 
+        var range = GetFTLRange(shuttleUid);
+
         // Check range even if it's cross-map.
-        if ((targetPosition - ourPos).Length() > GetFTLRange(shuttleUid))
+        if (range <= 0 || (targetPosition - ourPos).Length() > range)
         {
             return false;
         }
@@ -254,6 +256,33 @@ public abstract partial class SharedShuttleSystem : EntitySystem
         }
 
         return true;
+    }
+
+    /// <summary>
+    /// Returns the given EntityCoordinates with the distance clamped to the maximum FTL range of the given shuttle.
+    /// </summary>
+    public EntityCoordinates ClampCoordinatesToFTLRange(EntityUid shuttleUid, EntityCoordinates coordinates)
+    {
+        if (!_physicsQuery.TryGetComponent(shuttleUid, out var shuttlePhysics) || !_xformQuery.TryGetComponent(shuttleUid, out var shuttleTransform))
+            return coordinates;
+
+        var targetMapCoordinates = XformSystem.ToMapCoordinates(coordinates);
+
+        if (targetMapCoordinates == MapCoordinates.Nullspace)
+            return coordinates;
+
+        var targetPosition = targetMapCoordinates.Position;
+        var shuttlePosition = Maps.GetGridPosition((shuttleUid, shuttlePhysics, shuttleTransform));
+
+        var shuttleToTarget = targetPosition - shuttlePosition;
+
+        var targetDistance = shuttleToTarget.Length();
+        var maximumDistance = GetFTLRange(shuttleUid);
+
+        if (targetDistance > maximumDistance)
+            return coordinates.WithPosition(shuttlePosition + shuttleToTarget.Normalized() * maximumDistance);
+
+        return coordinates;
     }
 }
 

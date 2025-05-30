@@ -295,9 +295,6 @@
   - type: SealableClothing
     sealUpPopup: sealable-clothing-seal-up-boots
     sealDownPopup: sealable-clothing-seal-down-boots
-  - type: ClothingSpeedModifier
-    walkModifier: 0.90
-    sprintModifier: 0.90
   - type: NoSlip
   - type: Magboots
   - type: SealableClothingVisuals
@@ -305,3 +302,8 @@
       shoes:
       - state: equipped-FEET-sealed
         shader: unshaded
+  - type: ComponentToggler
+    components:
+    - type: ClothingSpeedModifier
+      walkModifier: 1.2
+      sprintModifier: 1.2

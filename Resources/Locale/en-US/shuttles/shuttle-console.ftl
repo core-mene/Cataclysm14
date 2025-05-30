@@ -8,6 +8,7 @@ shuttle-console-wrong-id = The ID card doesn't have any shuttle deeds.
 shuttle-console-wrong-deed = The ID card doesn't contain a valid deed for this shuttle.
 shuttle-console-cannot-lock = You don't have permission to lock this console.
 shuttle-console-no-ship-id = This console isn't assigned to any ship.
+shuttle-console-no-id-card = No ID card present in PDA.
 shuttle-console-emergency-locked = This console is under emergency lockdown. Only TSFMC can unlock it.
 shuttle-console-emergency-unlocked = Emergency lockdown overridden. The console has been unlocked.
 

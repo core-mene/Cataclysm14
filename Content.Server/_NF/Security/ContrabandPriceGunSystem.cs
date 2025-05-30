@@ -10,7 +10,7 @@ using Robust.Shared.Audio.Systems;
 namespace Content.Server._NF.Security.Systems;
 
 /// <summary>
-/// This system handles contraband appraisal messages and will inform a user of how much an item is worth for trade-in in FUCs.
+/// This system handles contraband appraisal messages and will inform a user of how much an item is worth for trade-in in FMCs.
 /// </summary>
 public sealed class ContrabandPriceGunSystem : EntitySystem
 {

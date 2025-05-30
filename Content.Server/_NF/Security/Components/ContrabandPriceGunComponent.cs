@@ -5,7 +5,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 namespace Content.Server._NF.Security.Components;
 
 /// <summary>
-/// This is used for the contraband appraisal gun, which checks the contraband turn-in value in FUCs of any object it appraises.
+/// This is used for the contraband appraisal gun, which checks the contraband turn-in value in FMCs of any object it appraises.
 /// </summary>
 [RegisterComponent]
 public sealed partial class ContrabandPriceGunComponent : Component
@@ -14,7 +14,7 @@ public sealed partial class ContrabandPriceGunComponent : Component
     /// The currency that scanned items will be checked for.
     /// </summary>
     [DataField(customTypeSerializer: typeof(PrototypeIdSerializer<CurrencyPrototype>))]
-    public string Currency = "FrontierUplinkCoin";
+    public string Currency = "FederationMilitaryCredit";
 
     /// <summary>
     /// The prefix for localization strings to display.

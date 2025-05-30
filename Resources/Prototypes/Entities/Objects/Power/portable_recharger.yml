@@ -2,10 +2,10 @@
   parent: Clothing
   id: PortableRecharger
   name: portable recharger
-  description: High-tech recharger adapted for portability.
+  description: A high-tech recharger adapted for portability equipped with an inbuilt microreactor. # Mono
   components:
   - type: Item
-    size: Ginormous # Frontier Huge<Ginormous
+    size: Huge # Mono Revert
   - type: Sprite
     sprite: Objects/Power/portable_recharger.rsi
     state: charging
@@ -14,14 +14,16 @@
     quickEquip: false
     slots:
     - back
+    - Belt # Mono
+    - SuitStorage # Mono
   - type: Charger
-    chargeRate: 125 # Frontier: chargeRate: 50 Mono
+    chargeRate: 150 # Frontier: chargeRate: 50 Mono
     slotId: charger_slot
     portable: true
   - type: PowerChargerVisuals
   - type: ApcPowerReceiver
     needsPower: false
-    powerLoad: 1 # Frontier: 0<1 (claims to work without power if 0)
+    powerLoad: 0 # Mono Revert
   - type: StaticPrice
     price: 500
   - type: Tag
@@ -32,7 +34,8 @@
   - type: ItemSlots
     slots:
       charger_slot:
-        ejectOnInteract: true
+        ejectOnInteract: false # Mono
+        ejectOnUse: true # Mono
         whitelist:
           components:
           - HitscanBatteryAmmoProvider

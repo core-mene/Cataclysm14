@@ -12,6 +12,7 @@ using Content.Shared.Popups;
 using Content.Shared.Power;
 using Content.Shared.Tools.Components;
 using Content.Shared.Wires;
+using Content.Shared._Mono.NoHack;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -608,6 +609,9 @@ public sealed class WiresSystem : SharedWiresSystem
 
     private void TryDoWireAction(EntityUid target, EntityUid user, EntityUid toolEntity, int id, WiresAction action, WiresComponent? wires = null, ToolComponent? tool = null)
     {
+        if (HasComp<NoHackComponent>(target))
+            return;
+
         if (!Resolve(target, ref wires)
             || !Resolve(toolEntity, ref tool))
             return;

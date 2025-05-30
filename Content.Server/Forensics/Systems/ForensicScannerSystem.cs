@@ -60,16 +60,16 @@ namespace Content.Server.Forensics
 
         // Frontier: payout constants
         // Temporary values, sane defaults, will be overwritten by CVARs.
-        private int _minFUCPayout = 6;
+        private int _minFMCPayout = 6;
 
-        private const int ActiveUnusedDeadDropSpesoReward = 100000; //Mono
-        private const float ActiveUnusedDeadDropFUCReward = 6.0f; //Mono
+        private const int ActiveUnusedDeadDropSpesoReward = 250000; //Mono
+        private const float ActiveUnusedDeadDropFMCReward = 12.0f; //Mono
         private const int ActiveUsedDeadDropSpesoReward = 50000; //Mono
-        private const float ActiveUsedDeadDropFUCReward = 3.0f; //Mono
+        private const float ActiveUsedDeadDropFMCReward = 3.0f; //Mono
         private const int InactiveUsedDeadDropSpesoReward = 25000; //Mono
-        private const float InactiveUsedDeadDropFUCReward = 2.0f; //Mono
+        private const float InactiveUsedDeadDropFMCReward = 2.0f; //Mono
         private const int DropPodSpesoReward = 75000; //Mono
-        private const float DropPodFUCReward = 5.0f; //Mono
+        private const float DropPodFMCReward = 3.0f; //Mono
         // End Frontier: payout constants
 
         public override void Initialize()
@@ -84,20 +84,20 @@ namespace Content.Server.Forensics
             SubscribeLocalEvent<ForensicScannerComponent, ForensicScannerClearMessage>(OnClear);
             SubscribeLocalEvent<ForensicScannerComponent, ForensicScannerDoAfterEvent>(OnDoAfter);
 
-            Subs.CVar(_cfg, NFCCVars.SmugglingMinFucPayout, OnMinFucPayoutChanged, true); // Frontier
+            Subs.CVar(_cfg, NFCCVars.SmugglingMinFMCPayout, OnMinFMCPayoutChanged, true); // Frontier
         }
 
-        private void OnMinFucPayoutChanged(int newMin)
+        private void OnMinFMCPayoutChanged(int newMin)
         {
-            _minFUCPayout = newMin;
+            _minFMCPayout = newMin;
         }
 
         // Frontier: add dead drop rewards
         /// <summary>
         ///     Rewards the NFSD department for scanning a dead drop.
-        ///     Gives some amount of spesos and FUC to the
+        ///     Gives some amount of spesos and FMC to the
         /// </summary>
-        private void GiveReward(EntityUid uidOrigin, EntityUid target, int spesoAmount, FixedPoint2 fucAmount, string msg)
+        private void GiveReward(EntityUid uidOrigin, EntityUid target, int spesoAmount, FixedPoint2 fmcAmount, string msg)
         {
             SoundSpecifier confirmSound = new SoundPathSpecifier("/Audio/Effects/Cargo/ping.ogg");
             _audio.PlayPvs(_audio.GetSound(confirmSound), uidOrigin);
@@ -107,33 +107,33 @@ namespace Content.Server.Forensics
             else
                 spesoAmount = 0;
 
-            if (fucAmount > 0)
+            if (fmcAmount > 0)
             {
-                // Accumulate sector-wide FUCs, pay out if min threshold met
+                // Accumulate sector-wide FMCs, pay out if min threshold met
                 if (TryComp<SectorDeadDropComponent>(_service.GetServiceEntity(), out var sectorDD))
                 {
-                    sectorDD.FUCAccumulator += fucAmount;
-                    if (sectorDD.FUCAccumulator >= _minFUCPayout)
+                    sectorDD.FMCAccumulator += fmcAmount;
+                    if (sectorDD.FMCAccumulator >= _minFMCPayout)
                     {
                         // inherent floor
-                        int payout = sectorDD.FUCAccumulator.Int();
-                        sectorDD.FUCAccumulator -= payout;
+                        int payout = sectorDD.FMCAccumulator.Int();
+                        sectorDD.FMCAccumulator -= payout;
 
-                        var stackPrototype = _prototypeManager.Index<StackPrototype>("FrontierUplinkCoin");
+                        var stackPrototype = _prototypeManager.Index<StackPrototype>("FederationMilitaryCredit");
                         _stackSystem.Spawn(payout, stackPrototype, Transform(target).Coordinates);
                     }
                 }
             }
             else
-                fucAmount = 0;
+                fmcAmount = 0;
 
             var channel = _prototypeManager.Index<RadioChannelPrototype>("Nfsd");
             string msgString = Loc.GetString(msg);
-            if (fucAmount >= 1)
+            if (fmcAmount >= 1)
             {
                 msgString = msgString + " " + Loc.GetString("forensic-reward-amount",
                 ("spesos", BankSystemExtensions.ToSpesoString(spesoAmount)),
-                ("fuc", BankSystemExtensions.ToFUCString(fucAmount.Int())));
+                ("fmc", BankSystemExtensions.ToFMCString(fmcAmount.Int())));
             }
             else
             {
@@ -194,33 +194,33 @@ namespace Content.Server.Forensics
                         if (_gameTiming.CurTime >= deadDrop.NextDrop)
                         {
                             int spesoReward;
-                            FixedPoint2 fucReward;
+                            FixedPoint2 fmcReward;
                             string msg;
                             if (deadDrop.DeadDropCalled)
                             {
                                 spesoReward = ActiveUsedDeadDropSpesoReward;
-                                fucReward = ActiveUsedDeadDropFUCReward;
+                                fmcReward = ActiveUsedDeadDropFMCReward;
                                 msg = "forensic-reward-dead-drop-used-present";
                             }
                             else
                             {
                                 spesoReward = ActiveUnusedDeadDropSpesoReward;
-                                fucReward = ActiveUnusedDeadDropFUCReward;
+                                fmcReward = ActiveUnusedDeadDropFMCReward;
                                 msg = "forensic-reward-dead-drop-unused";
                             }
-                            GiveReward(uid, target, spesoReward, fucReward, msg);
+                            GiveReward(uid, target, spesoReward, fmcReward, msg);
                             _deadDrop.CompromiseDeadDrop(target, deadDrop);
                         }
                         // Otherwise, if it's been used, pay out at a reduced rate and compromise it.
                         else if (deadDrop.DeadDropCalled)
                         {
-                            GiveReward(uid, target, InactiveUsedDeadDropSpesoReward, InactiveUsedDeadDropFUCReward, "forensic-reward-dead-drop-used-gone");
+                            GiveReward(uid, target, InactiveUsedDeadDropSpesoReward, InactiveUsedDeadDropFMCReward, "forensic-reward-dead-drop-used-gone");
                             _deadDrop.CompromiseDeadDrop(target, deadDrop);
                         }
                     }
                     else if (TryComp<ContrabandPodGridComponent>(Transform(target).GridUid, out var pod) && !pod.Scanned)
                     {
-                        GiveReward(uid, target, DropPodSpesoReward, DropPodFUCReward, "forensic-reward-pod");
+                        GiveReward(uid, target, DropPodSpesoReward, DropPodFMCReward, "forensic-reward-pod");
                         pod.Scanned = true;
                     }
                 }
