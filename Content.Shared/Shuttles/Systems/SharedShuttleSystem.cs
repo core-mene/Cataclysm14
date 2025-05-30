@@ -156,15 +156,16 @@ public abstract partial class SharedShuttleSystem : EntitySystem
     {
         // Return the default FTL range if no powered drive was found
         // In the future, we could return a different range if an unpowered drive was found
-        if(!TryGetFTLDrive(shuttleUid, out var drive, out var driveComp)
-           || !_powerReceiverSystem.IsPowered(drive.Value))
+        if(!TryGetFTLDrive(shuttleUid, out var drive, out var driveComp, true))
             return FTLRange;
 
         return driveComp.Range;
     }
 
-    public bool TryGetFTLDrive(EntityUid shuttleUid, [NotNullWhen(true)] out EntityUid? driveUid, [NotNullWhen(true)] out FTLDriveComponent? drive)
+    public bool TryGetFTLDrive(EntityUid shuttleUid, [NotNullWhen(true)] out EntityUid? driveUid, [NotNullWhen(true)] out FTLDriveComponent? drive, bool poweredOnly = false)
     {
+        float highestRange = 0;
+
         driveUid = null;
         drive = null;
 
@@ -176,13 +177,17 @@ public abstract partial class SharedShuttleSystem : EntitySystem
         {
             if (Transform(uid).GridUid != shuttleUid)
                 continue;
+            if (poweredOnly && !_powerReceiverSystem.IsPowered(uid))
+                continue;
+            if (highestRange > 0 && comp.Range <= highestRange)
+                continue;
 
+            highestRange = comp.Range;
             driveUid = uid;
             drive = comp;
-            return true;
         }
 
-        return false;
+        return driveUid != null;
     }
 
     public float GetFTLBufferRange(EntityUid shuttleUid, MapGridComponent? grid = null)
