@@ -41,7 +41,13 @@ public partial class MapGridControl : LayoutContainer
     protected Vector2 StartDragPosition;
     protected bool Recentering;
 
-    protected const float ScrollSensitivity = 8f;
+    protected virtual float ScrollSensitivity => 8f;
+
+    /// <summary>
+    /// Zoom factor for consistent multiplicative zoom steps.
+    /// Each scroll step zooms in/out by this factor.
+    /// </summary>
+    protected const float ZoomFactor = 3.0f;
 
     protected float RecenterMinimum = 0.05f;
 
@@ -110,10 +116,11 @@ public partial class MapGridControl : LayoutContainer
         if (!Draggable)
             return;
 
-        if (args.Function == EngineKeyFunctions.Use)
+        if (args.Function == EngineKeyFunctions.UseSecondary)
         {
             StartDragPosition = args.PointerLocation.Position;
             _draggin = true;
+            args.Handle();
         }
     }
 
@@ -122,8 +129,11 @@ public partial class MapGridControl : LayoutContainer
         if (!Draggable)
             return;
 
-        if (args.Function == EngineKeyFunctions.Use)
+        if (args.Function == EngineKeyFunctions.UseSecondary)
+        {
             _draggin = false;
+            args.Handle();
+        }
     }
 
     protected override void MouseMove(GUIMouseMoveEventArgs args)
@@ -140,7 +150,21 @@ public partial class MapGridControl : LayoutContainer
     protected override void MouseWheel(GUIMouseWheelEventArgs args)
     {
         base.MouseWheel(args);
-        AddRadarRange(-args.Delta.Y * 1f / ScrollSensitivity * ActualRadarRange);
+
+        // Use multiplicative zoom for consistent zoom steps
+        // Positive delta = zoom in (divide), negative delta = zoom out (multiply)
+        var zoomDirection = -args.Delta.Y / ScrollSensitivity;
+
+        if (zoomDirection > 0)
+        {
+            // Zoom out - multiply by zoom factor
+            ActualRadarRange = Math.Clamp(ActualRadarRange * MathF.Pow(ZoomFactor, zoomDirection), WorldMinRange, WorldMaxRange);
+        }
+        else if (zoomDirection < 0)
+        {
+            // Zoom in - divide by zoom factor
+            ActualRadarRange = Math.Clamp(ActualRadarRange * MathF.Pow(ZoomFactor, zoomDirection), WorldMinRange, WorldMaxRange);
+        }
     }
 
     public void AddRadarRange(float value)

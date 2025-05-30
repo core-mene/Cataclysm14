@@ -3179,3 +3179,72 @@ Entries:
       message: IPC medical bounty should now give a payout.
   id: 378
   time: '2025-05-29T09:40:52.0000000+00:00'
+- author: RikuTheKiller
+  changes:
+    - type: Tweak
+      message: >-
+        The maximum size of the map viewport on shuttle consoles is now 8 times
+        larger. (512m -> 4096m)
+    - type: Tweak
+      message: >-
+        The scroll sensitivity of the map viewport on shuttle consoles is now
+        twice as high. (1/8 -> 1/4)
+  id: 379
+  time: '2025-05-30T00:44:04.0000000+00:00'
+- author: RikuTheKiller
+  changes:
+    - type: Tweak
+      message: >-
+        Shuttle consoles now use the right mouse button to pan, allowing you to
+        pan while FTL is enabled. The controls menu bind is now "Use Secondary"
+        (it was previously "Use")
+  id: 380
+  time: '2025-05-30T00:48:54.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: Zooming in and out on the Map menu is now consistent.
+  id: 381
+  time: '2025-05-30T01:49:06.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Captain can adjust FOB job slots.
+  id: 382
+  time: '2025-05-30T03:42:22.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Unused dead drops give more FMCs/Spesos
+  id: 383
+  time: '2025-05-30T03:43:04.0000000+00:00'
+- author: BlueHNT
+  changes:
+    - type: Tweak
+      message: RX-01 movement buff should now be felt properly
+  id: 384
+  time: '2025-05-30T03:49:17.0000000+00:00'
+- author: HungryCuban
+  changes:
+    - type: Add
+      message: Added Ussp radio implant!
+  id: 385
+  time: '2025-05-30T03:53:08.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Fix
+      message: You can now swipe your voucher to unlock/lock your shuttle console.
+  id: 386
+  time: '2025-05-30T04:16:33.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Tweak
+      message: Rogue uplink no longer has gambling. It's so over.
+  id: 387
+  time: '2025-05-30T05:08:14.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: All hydro trays unanchorable.
+  id: 388
+  time: '2025-05-30T06:18:02.0000000+00:00'

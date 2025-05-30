@@ -35,7 +35,7 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
         SubscribeLocalEvent<ShuttleConsoleLockComponent, GetVerbsEvent<AlternativeVerb>>(AddUnlockVerb); // Add context menu verb
         SubscribeLocalEvent<ShuttleConsoleLockComponent, ActivatableUIOpenAttemptEvent>(OnUIOpenAttempt); // Keep the UI open attempt block to prevent piloting locked consoles
 
-        // Subscribe to AfterInteract events for PDA and ID card tap/swipe functionality
+        // Subscribe to AfterInteract events for PDA, ID card, and voucher tap/swipe functionality
         SubscribeLocalEvent<PdaComponent, AfterInteractEvent>(OnPdaAfterInteract);
         SubscribeLocalEvent<ShuttleConsoleLockComponent, AfterInteractUsingEvent>(OnAfterInteractUsing);
     }
@@ -107,19 +107,20 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
     }
 
     /// <summary>
-    /// Handles ID card interaction with shuttle consoles for lock/unlock functionality
+    /// Handles ID card, PDA, and voucher interaction with shuttle consoles for lock/unlock functionality
     /// </summary>
     private void OnAfterInteractUsing(EntityUid uid, ShuttleConsoleLockComponent component, AfterInteractUsingEvent args)
     {
         if (args.Handled || !args.CanReach)
             return;
 
-        // Check if the used item is an ID card or PDA with ID card
+        // Check if the used item is an ID card, PDA with ID card, or voucher
         if (!TryComp<IdCardComponent>(args.Used, out _) &&
-            (!TryComp<PdaComponent>(args.Used, out var pda) || pda.ContainedId == null))
+            (!TryComp<PdaComponent>(args.Used, out var pda) || pda.ContainedId == null) &&
+            !TryComp<ShipyardVoucherComponent>(args.Used, out _))
             return;
 
-        // Try to toggle the lock using the ID card
+        // Try to toggle the lock using the ID card or voucher
         TryToggleLock(uid, args.User, component);
         args.Handled = true;
     }

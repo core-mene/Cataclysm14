@@ -1,8 +1,8 @@
 - type: entity
-  parent: [BaseStructureDisableToolUse, hydroponicsTray]
+  parent: hydroponicsTray # Anchorable
   id: hydroponicsTrayAnchored
   suffix: anchored
-  description: An anchored interstellar-grade space farmplot allowing for rapid growth and selective breeding of crops. Stronger than your average hydroponics tray but can still be broken with force.
+  description: An interstellar-grade space farmplot allowing for rapid growth and selective breeding of crops. Stronger than your average hydroponics tray.
   components:
   - type: Sprite
     layers:

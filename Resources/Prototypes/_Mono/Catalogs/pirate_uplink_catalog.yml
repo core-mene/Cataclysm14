@@ -397,7 +397,7 @@
       tags:
       - PirateUplink
 
-- type: listing 
+- type: listing
   id: UplinkPirateCash10000
   name: uplink-pirate-cash10000-name
   description: uplink-pirate-cash10000-desc
@@ -1010,32 +1010,32 @@
 
 #MARK: $Gambling$
 
-- type: listing
-  id: UplinkPirateSurplus
-  name: uplink-pirate-syndisurplus-name
-  description: uplink-pirate-syndisurplus-desc
-  productEntity: CrateSyndicateSurplusBundle
-  cost:
-    Doubloon: 25
-  categories:
-  - UplinkPirateGambling
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
-  id: UplinkPirateSuperSurplus
-  name: uplink-pirate-syndisupersurplus-name
-  description: uplink-pirate-syndisupersurplus-desc
-  productEntity: CrateSyndicateSuperSurplusBundle
-  cost:
-    Doubloon: 50
-  categories:
-  - UplinkPirateGambling
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
+#- type: listing
+#  id: UplinkPirateSurplus
+#  name: uplink-pirate-syndisurplus-name
+#  description: uplink-pirate-syndisurplus-desc
+#  productEntity: CrateSyndicateSurplusBundle
+#  cost:
+#    Doubloon: 25
+#  categories:
+#  - UplinkPirateGambling
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - PirateUplink
+#
+#- type: listing
+#  id: UplinkPirateSuperSurplus
+#  name: uplink-pirate-syndisupersurplus-name
+#  description: uplink-pirate-syndisupersurplus-desc
+#  productEntity: CrateSyndicateSuperSurplusBundle
+#  cost:
+#    Doubloon: 50
+#  categories:
+#  - UplinkPirateGambling
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - PirateUplink

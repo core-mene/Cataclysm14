@@ -62,14 +62,14 @@ namespace Content.Server.Forensics
         // Temporary values, sane defaults, will be overwritten by CVARs.
         private int _minFMCPayout = 6;
 
-        private const int ActiveUnusedDeadDropSpesoReward = 100000; //Mono
-        private const float ActiveUnusedDeadDropFMCReward = 6.0f; //Mono
+        private const int ActiveUnusedDeadDropSpesoReward = 250000; //Mono
+        private const float ActiveUnusedDeadDropFMCReward = 12.0f; //Mono
         private const int ActiveUsedDeadDropSpesoReward = 50000; //Mono
         private const float ActiveUsedDeadDropFMCReward = 3.0f; //Mono
         private const int InactiveUsedDeadDropSpesoReward = 25000; //Mono
         private const float InactiveUsedDeadDropFMCReward = 2.0f; //Mono
         private const int DropPodSpesoReward = 75000; //Mono
-        private const float DropPodFMCReward = 5.0f; //Mono
+        private const float DropPodFMCReward = 3.0f; //Mono
         // End Frontier: payout constants
 
         public override void Initialize()
