@@ -29,13 +29,16 @@ public sealed class CompanySystem : EntitySystem
         "Brigmedic",
         "NFDetective",
         "PublicAffairsLiaison",
-        "DirectorOfCare"
+        "DirectorOfCare",
+        "SecurityGuard",
+        "Cadet"
     };
 
     private readonly HashSet<string> _rogueJobs = new()
     {
         "PirateCaptain",
-        "PirateFirstMate"
+        "PirateFirstMate",
+        "Pirate"
     };
 
     private readonly HashSet<string> _usspJobs = new()

@@ -21,13 +21,13 @@ public sealed class GridRaiderSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<GridRaiderComponent, ComponentStartup>(OnGridRaiderStartup);
+        SubscribeLocalEvent<GridRaiderComponent, MapInitEvent>(OnGridRaiderMapInit);
         SubscribeLocalEvent<GridRaiderComponent, ComponentShutdown>(OnGridRaiderShutdown);
     }
 
 
 
-    private void OnGridRaiderStartup(EntityUid uid, GridRaiderComponent component, ComponentStartup args)
+    private void OnGridRaiderMapInit(EntityUid uid, GridRaiderComponent component, MapInitEvent args)
     {
         // Verify this is applied to a grid
         if (!HasComp<MapGridComponent>(uid))
@@ -59,7 +59,7 @@ public sealed class GridRaiderSystem : EntitySystem
 
 
     /// <summary>
-    /// Applies initial protection to all eligible entities on the grid during startup
+    /// Applies initial protection to all eligible entities on the grid during map initialization
     /// </summary>
     private void ApplyInitialProtection(EntityUid gridUid, GridRaiderComponent component)
     {
