@@ -944,6 +944,76 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     }
     #endregion Ship Pricing
 
+    public void OnRenameMessage(EntityUid uid, ShipyardConsoleComponent component, ShipyardConsoleRenameMessage args)
+    {
+        if (args.Actor is not { Valid: true } player)
+            return;
+
+        if (component.TargetIdSlot.ContainerSlot?.ContainedEntity is not { Valid: true } targetId)
+        {
+            ConsolePopup(player, Loc.GetString("shipyard-console-no-idcard"));
+            PlayDenySound(player, uid, component);
+            return;
+        }
+
+        if (!TryComp<ShuttleDeedComponent>(targetId, out var deed) || deed.ShuttleUid == null)
+        {
+            ConsolePopup(player, Loc.GetString("shipyard-console-no-deed"));
+            PlayDenySound(player, uid, component);
+            return;
+        }
+
+        // Validate the new name
+        var newName = args.NewName.Trim();
+        if (string.IsNullOrEmpty(newName))
+        {
+            ConsolePopup(player, "Ship name cannot be empty.");
+            PlayDenySound(player, uid, component);
+            return;
+        }
+
+        if (newName.Length > ShuttleDeedComponent.MaxNameLength)
+        {
+            ConsolePopup(player, $"Ship name cannot exceed {ShuttleDeedComponent.MaxNameLength} characters.");
+            PlayDenySound(player, uid, component);
+            return;
+        }
+
+        // Get the old name for logging
+        var oldName = GetFullName(deed);
+
+        // Preserve the original sell value from the current UI state
+        int originalSellValue = 0;
+        if (_ui.TryGetUiState<ShipyardConsoleInterfaceState>(uid, (ShipyardConsoleUiKey)args.UiKey, out var currentState))
+        {
+            originalSellValue = currentState.ShipSellValue;
+        }
+
+        // Rename the ship using the existing method
+        if (TryRenameShuttle(targetId, deed, newName, deed.ShuttleNameSuffix))
+        {
+            ConsolePopup(player, $"Ship renamed to '{GetFullName(deed)}'");
+            PlayConfirmSound(player, uid, component);
+
+            // Get the player's balance or use 0 if they don't have a bank account
+            int balance = 0;
+            if (TryComp<BankAccountComponent>(player, out var bank))
+                balance = bank.Balance;
+
+            // Update the UI with the new ship name, preserving the original sell value
+            var fullName = GetFullName(deed);
+            RefreshState(uid, balance, true, fullName, originalSellValue, targetId, (ShipyardConsoleUiKey)args.UiKey, false);
+
+            _adminLogger.Add(LogType.ShipYardUsage, LogImpact.Low,
+                $"{ToPrettyString(player):actor} renamed ship from '{oldName}' to '{GetFullName(deed)}' via {ToPrettyString(uid)}");
+        }
+        else
+        {
+            ConsolePopup(player, "Failed to rename ship.");
+            PlayDenySound(player, uid, component);
+        }
+    }
+
     public void OnUnassignDeedMessage(EntityUid uid, ShipyardConsoleComponent component, ShipyardConsoleUnassignDeedMessage args)
     {
         if (args.Actor is not { Valid: true } player)
