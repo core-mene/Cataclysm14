@@ -587,8 +587,8 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         if (!args.CanAccess || !args.CanInteract || !this.IsPowered(uid, EntityManager))
             return;
 
-        // Don't show the panic button if the console is emergency locked
-        if (TryComp<ShuttleConsoleLockComponent>(uid, out var lockComp) && lockComp.EmergencyLocked)
+        // Don't show the panic button if the console is locked (either emergency locked or normally locked)
+        if (TryComp<ShuttleConsoleLockComponent>(uid, out var lockComp) && (lockComp.EmergencyLocked || lockComp.Locked))
             return;
 
         // Create the panic button verb
