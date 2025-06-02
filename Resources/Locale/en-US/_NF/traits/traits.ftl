@@ -17,7 +17,3 @@ trait-streetpunk-accent-desc = Ya were born in a sprawlin' megacity an' never we
 
 trait-clumsy-name = Clumsy
 trait-clumsy-desc = You are very clumsy! Certain actions, like shooting, are more difficult.
-
-# These traits are bound to be replaced with a slider, but they live here for now.
-trait-tall-name = Tall
-trait-short-name = Short
