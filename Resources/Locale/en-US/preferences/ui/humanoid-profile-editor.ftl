@@ -23,6 +23,10 @@ humanoid-profile-editor-open-image-button = Open images
 humanoid-profile-editor-save-button = Save
 humanoid-profile-editor-reset-button = Reset
 humanoid-profile-editor-spawn-priority-label = Spawn priority:
+# Mono Start
+humanoid-profile-editor-height-label = Height:
+humanoid-profile-editor-width-label = Width:
+# Mono End
 humanoid-profile-editor-eyes-label = Eye color:
 humanoid-profile-editor-jobs-tab = Jobs
 humanoid-profile-editor-preference-unavailable-stay-in-lobby-button = Stay in lobby if preference unavailable.
