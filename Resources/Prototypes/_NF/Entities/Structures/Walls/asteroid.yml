@@ -4,9 +4,6 @@
   abstract: true
   components: &softRockComps
   - type: OreVein
-    gatherDestructionWhitelist:
-      components:
-      - MiningGatheringHard
 
 - type: entity
   parent: IronRock
