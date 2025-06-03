@@ -19,6 +19,26 @@
         Plasteel: 10
 
 - type: entity
+  id: MachineShieldFS421Circuitboard
+  parent: BaseMachineCircuitboard
+  name: FS-421 fortress shield generator board
+  description: A machine board for a fortress shield generator.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: CircularShieldBase # why are we using the base for this? whatever
+    componentRequirements:
+      AmeFuelContainer:
+        amount: 3
+        defaultPrototype: AmeJar
+    stackRequirements:
+      Glass: 10
+      Steel: 10
+      Plasma: 30
+      Plasteel: 10
+
+- type: entity
   id: MachineDriveCTLA25Circuitboard
   parent: BaseMachineCircuitboard
   name: CTLA-25 bluespace drive board
