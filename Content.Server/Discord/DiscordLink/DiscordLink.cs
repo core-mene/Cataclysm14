@@ -4,6 +4,7 @@ using Content.Shared.CCVar;
 using Discord;
 using Discord.WebSocket;
 using Robust.Shared.Configuration;
+using Robust.Shared.Network;
 using Robust.Shared.Reflection;
 using Robust.Shared.Utility;
 using LogMessage = Discord.LogMessage;
@@ -265,6 +266,126 @@ public sealed class DiscordLink : IPostInjectInit
         }
 
         await channel.SendMessageAsync(message, allowedMentions: AllowedMentions.None);
+    }
+
+    /// <summary>
+    /// Creates a thread in a forum channel for an ahelp conversation.
+    /// </summary>
+    public async Task<ulong?> CreateAhelpThreadAsync(ulong forumChannelId, NetUserId userId, string playerName, string initialMessage, int? roundId = null, string? characterName = null)
+    {
+        if (_client == null)
+        {
+            return null;
+        }
+
+        var channel = _client.GetChannel(forumChannelId) as IForumChannel;
+        if (channel == null)
+        {
+            _sawmill.Error("Tried to create ahelp thread but the forum channel {Channel} was not found.", forumChannelId);
+            return null;
+        }
+
+        try
+        {
+            // Build thread title with Round ID and character name
+            var titleParts = new List<string> { "Ahelp" };
+
+            if (roundId.HasValue)
+                titleParts.Add($"R{roundId.Value}");
+
+            if (!string.IsNullOrEmpty(characterName))
+                titleParts.Add(characterName);
+
+            titleParts.Add($"{playerName} ({userId})");
+
+            var threadName = string.Join(" - ", titleParts);
+
+            // Since we use AllowedMentions.None, we don't need to escape @ symbols
+            // Only escape < and / to prevent unwanted formatting
+            var sanitizedMessage = initialMessage.Replace("<", "\\<").Replace("/", "\\/");
+
+            var thread = await channel.CreatePostAsync(threadName, ThreadArchiveDuration.OneDay, null, sanitizedMessage, allowedMentions: AllowedMentions.None);
+            return thread.Id;
+        }
+        catch (Exception e)
+        {
+            _sawmill.Error($"Error while creating ahelp thread: {e}");
+            return null;
+        }
+    }
+
+    /// <summary>
+    /// Gets Discord user information including nickname and top role.
+    /// </summary>
+    public async Task<(string displayName, string? roleTitle, uint? roleColor)> GetDiscordUserInfoAsync(ulong userId)
+    {
+        if (_client == null || _guildId == 0)
+        {
+            return ("Unknown", null, null);
+        }
+
+        try
+        {
+            var guild = _client.GetGuild(_guildId);
+            if (guild == null)
+            {
+                return ("Unknown", null, null);
+            }
+
+            var user = guild.GetUser(userId);
+            if (user == null)
+            {
+                return ("Unknown", null, null);
+            }
+
+            var displayName = user.DisplayName; // This gets nickname if set, otherwise username
+
+            // Get the highest role (excluding @everyone)
+            var topRole = user.Roles
+                .Where(r => !r.IsEveryone)
+                .OrderByDescending(r => r.Position)
+                .FirstOrDefault();
+
+            var roleTitle = topRole?.Name;
+            var roleColor = topRole?.Color.RawValue;
+
+            return (displayName, roleTitle, roleColor);
+        }
+        catch (Exception e)
+        {
+            _sawmill.Error($"Error while getting Discord user info: {e}");
+            return ("Unknown", null, null);
+        }
+    }
+
+    /// <summary>
+    /// Sends a message to a Discord thread with the specified ID. Without any mentions.
+    /// </summary>
+    public async Task SendThreadMessageAsync(ulong threadId, string message)
+    {
+        if (_client == null)
+        {
+            return;
+        }
+
+        var thread = _client.GetChannel(threadId) as IMessageChannel;
+        if (thread == null)
+        {
+            _sawmill.Error("Tried to send a message to Discord thread but the thread {Thread} was not found.", threadId);
+            return;
+        }
+
+        try
+        {
+            // Since we use AllowedMentions.None, we don't need to escape @ symbols
+            // Only escape < and / to prevent unwanted formatting
+            var sanitizedMessage = message.Replace("<", "\\<").Replace("/", "\\/");
+            await thread.SendMessageAsync(sanitizedMessage, allowedMentions: AllowedMentions.None);
+        }
+        catch (Exception e)
+        {
+            _sawmill.Error($"Error while sending message to Discord thread: {e}");
+        }
     }
 
     #endregion
