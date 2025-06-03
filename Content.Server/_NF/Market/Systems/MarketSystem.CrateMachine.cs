@@ -102,8 +102,12 @@ public sealed partial class MarketSystem
             }
             else
             {
-                var spawn = Spawn(data.Prototype, coordinates);
-                _crateMachine.InsertIntoCrate(spawn, targetCrate);
+                // Spawn the requested quantity of non-stackable items
+                for (int i = 0; i < data.Quantity; i++)
+                {
+                    var spawn = Spawn(data.Prototype, coordinates);
+                    _crateMachine.InsertIntoCrate(spawn, targetCrate);
+                }
             }
         }
     }
