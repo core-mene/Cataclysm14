@@ -112,7 +112,7 @@
             - PowerCell
             - PowerCellSmall
   - type: HitscanBatteryAmmoProvider
-    hitscanEntityProto: RedLightLaser
+    proto: RedLightLaser
     fireCost: 50
 
 - type: entity
@@ -166,7 +166,7 @@
           tags:
             - PowerCage
   - type: HitscanBatteryAmmoProvider
-    hitscanEntityProto: RedShuttleLaser
+    proto: RedShuttleLaser
     fireCost: 150
 
 # ---- Launchers ----
