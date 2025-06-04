@@ -50,10 +50,17 @@ public sealed partial class LobbyCharacterPreviewPanel : Control
             Company.SetMessage(string.Empty);
             return;
         }
-        
+
         Company.SetMessage(FormattedMessage.FromMarkupPermissive(value));
     }
     // End Company Display
+
+    // MonoCoins Display
+    public void SetMonoCoinsText(string value)
+    {
+        MonoCoins.Text = value;
+    }
+    // End MonoCoins Display
 
     public void SetSprite(EntityUid uid)
     {

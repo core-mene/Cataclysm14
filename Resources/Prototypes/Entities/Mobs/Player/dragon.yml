@@ -9,7 +9,7 @@
   - type: Body # Shitmed
     prototype: SpaceDragon
   - type: Bloodstream
-    bloodMaxVolume: 650
+    bloodMaxVolume: 800 # Mono
   - type: GhostRole
     allowMovement: true
     allowSpeech: true
@@ -41,9 +41,22 @@
   - type: MobMover
   - type: InputMover
   - type: MovementSpeedModifier
-    baseWalkSpeed: 3
-    baseSprintSpeed: 5
-    weightlessModifier: 1.5
+    baseWalkSpeed: 4 # 3->4
+    baseSprintSpeed: 6 # 5->6
+    weightlessModifier: 2 # 1.5>2 - Mono "I hope you like going fast"
+  - type: UserInterface
+    interfaces:
+      enum.RadarConsoleUiKey.Key:
+        type: RadarConsoleBoundUserInterface
+  - type: IntrinsicUI
+    uis:
+      enum.RadarConsoleUiKey.Key:
+        toggleAction: ActionObserverShowRadar
+  - type: RadarConsole # Mono
+    maxRange: 384
+    followEntity: true
+    maxIffRange: 0
+    hideCoords: false
   - type: RandomSprite
     available:
     - enum.DamageStateVisualLayers.Base:
@@ -138,8 +151,9 @@
       path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
     damage:
       types:
-        Piercing: 15
-        Slash: 15
+        Piercing: 20
+        Slash: 20
+        Structural: 200
   - type: Devourer
     foodPreference: Humanoid
     shouldStoreDevoured: true
@@ -168,6 +182,18 @@
   components:
   - type: Dragon
     spawnRiftAction: ActionSpawnRift
+  - type: ActionGun
+    action: ActionDragonsBreath
+    gunProto: DragonsBreathGun
+  # - type: GuideHelp # Frontier: removed from guidebook
+  #   guides: # Frontier: removed from guidebook
+  #   - MinorAntagonists # Frontier: removed from guidebook
+
+- type: entity # Mono Admeme Tool
+  parent: BaseMobDragon
+  id: MobDragonRiftless
+  suffix: Riftless
+  components:
   - type: ActionGun
     action: ActionDragonsBreath
     gunProto: DragonsBreathGun

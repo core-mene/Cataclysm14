@@ -240,6 +240,22 @@
       - PirateUplink
 
 - type: listing
+  id: UplinkPirateHoverbikeFlatpack
+  name: uplink-pirate-hoverbike-name
+  description: uplink-pirate-hoverbike-desc
+  productEntity: HoverbikePirateFlatpack
+  icon: { sprite: _NF/Objects/Vehicles/hoverbike.rsi, state: vehicle }
+  cost:
+    Doubloon: 5
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+
+- type: listing
   id: UplinkPirateEnergyShield
   name: uplink-pirate-energy-shield-name
   description: uplink-pirate-energy-shield-desc

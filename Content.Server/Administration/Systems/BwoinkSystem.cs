@@ -9,6 +9,7 @@ using Content.Server.Administration.Managers;
 using Content.Server.Afk;
 using Content.Server.Database;
 using Content.Server.Discord;
+using Content.Server.Discord.DiscordLink;
 using Content.Server.GameTicking;
 using Content.Server.Players.RateLimiting;
 using Content.Server.Preferences.Managers;
@@ -45,6 +46,7 @@ namespace Content.Server.Administration.Systems
         [Dependency] private readonly IServerDbManager _dbManager = default!;
         [Dependency] private readonly PlayerRateLimitManager _rateLimit = default!;
         [Dependency] private readonly IServerPreferencesManager _preferencesManager = default!;
+        [Dependency] private readonly DiscordChatLink _discordChatLink = default!;
 
         [GeneratedRegex(@"^https://(?:(?:canary|ptb)\.)?discord\.com/api/webhooks/(\d+)/((?!.*/).*)$")]
         private static partial Regex DiscordRegex();
@@ -635,7 +637,11 @@ namespace Content.Server.Administration.Systems
         public void OnWebhookBwoinkTextMessage(BwoinkTextMessage message, ServerApi.BwoinkActionBody body)
         {
             // Note for forks:
-            AdminData webhookAdminData = new();
+            // Create admin data with Adminhelp flag so Discord messages are treated as admin messages
+            AdminData webhookAdminData = new()
+            {
+                Flags = AdminFlags.Adminhelp
+            };
 
             // TODO: fix args
             OnBwoinkInternal(message, SystemUserId, webhookAdminData, body.Username, null, body.UserOnly, body.WebhookUpdate, true);
@@ -698,18 +704,25 @@ namespace Content.Server.Administration.Systems
             }
             else if (fromWebhook || senderAdmin is not null && senderAdmin.HasFlag(AdminFlags.Adminhelp)) // Frontier: anything sent via webhooks are from an admin.
             {
-                // Get the admin's OOC color from preferences if available
-                string colorHex = "#FF0000"; // Default red color
-                if (senderAdmin is not null && !fromWebhook)
+                // For Discord messages, use the senderName as-is since it already contains formatting
+                if (fromWebhook)
                 {
-                    var prefs = _preferencesManager.GetPreferences(senderId);
-                    if (prefs != null)
-                    {
-                        colorHex = prefs.AdminOOCColor.ToHex();
-                    }
+                    bwoinkText = $"{adminPrefix}{senderName}";
                 }
-                
-                bwoinkText = $"[color={colorHex}]{adminPrefix}{senderName}[/color]";
+                else
+                {
+                    // Get the admin's OOC color from preferences if available
+                    string colorHex = "#FF0000"; // Default red color
+                    if (senderAdmin is not null)
+                    {
+                        var prefs = _preferencesManager.GetPreferences(senderId);
+                        if (prefs != null)
+                        {
+                            colorHex = prefs.AdminOOCColor.ToHex();
+                        }
+                    }
+                    bwoinkText = $"[color={colorHex}]{adminPrefix}{senderName}[/color]";
+                }
             }
             else
             {
@@ -811,6 +824,20 @@ namespace Content.Server.Administration.Systems
                     noReceivers: nonAfkAdmins.Count == 0
                 );
                 _messageQueues[msg.UserId].Enqueue(GenerateAHelpMessage(messageParams));
+            }
+
+            // Send to Discord chat link (thread-based integration)
+            if (sendWebhook && !fromWebhook)
+            {
+                // Fire and forget - don't block the main thread
+                _ = Task.Run(async () =>
+                {
+                    var lookup = await _playerLocator.LookupIdAsync(message.UserId);
+                    var playerName = lookup?.Username ?? "Unknown";
+                    var roundId = _gameTicker.RoundId;
+                    var characterName = _minds.GetCharacterName(message.UserId);
+                    _discordChatLink.SendAhelpMessage(message.UserId, playerName, senderName, message.Text, message.AdminOnly, roundId, characterName);
+                });
             }
 
             if (admins.Count != 0 || sendsWebhook)

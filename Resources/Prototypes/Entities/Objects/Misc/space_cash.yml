@@ -147,6 +147,17 @@
 
 - type: entity
   parent: SpaceCash
+  id: SpaceCash7500
+  suffix: 500
+  components:
+  - type: Icon
+    sprite: _NF/Objects/Economy/cash.rsi # Frontier: use Frontier sprite set
+    state: cash_5000 # Frontier: cash_1000<cash_5000
+  - type: Stack
+    count: 7500
+
+- type: entity
+  parent: SpaceCash
   id: SpaceCash10000
   suffix: 10000
   components:

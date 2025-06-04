@@ -104,6 +104,12 @@ namespace Content.Shared.Maps
         public float? MobFrictionNoInput { get; private set; }
 
         /// <summary>
+        /// Effective mass of this tile for grid impacts.
+        /// </summary>
+        [DataField]
+        public float Mass = 800f;
+
+        /// <summary>
         ///     Accel override for mob mover in <see cref="SharedMoverController"/>
         /// </summary>
         [DataField("mobAcceleration")]

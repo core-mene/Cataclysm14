@@ -33,6 +33,9 @@
             Poison: -1.5 # Was 1, Slight Buff as it should heal for half the amount as Dip or Stelli(GoobStation)
       - !type:HealthChange
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 20
         damage:
@@ -52,6 +55,9 @@
         probability: 0.2
       - !type:ChemVomit
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 20
         probability: 0.02
@@ -100,10 +106,18 @@
     Medicine:
       effects:
       - !type:GenericStatusEffect
+        conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         key: Drunk
         time: 6.0
         type: Remove
       - !type:HealthChange
+        conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         damage:
           types:
             Poison: -0.5
@@ -143,6 +157,9 @@
             Brute: -2.5 # Was 2, Buffed due to limb damage changes(GoobStation)
       - !type:HealthChange
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 15
         damage:
@@ -151,6 +168,9 @@
             Poison: 1.5
       - !type:ChemVomit
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 30
         probability: 0.02
@@ -232,6 +252,9 @@
             Cold: -2 # Was 1.5, Buffed due to limb damage changes(GoobStation)
       - !type:HealthChange
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 10
         damage:
@@ -263,8 +286,11 @@
             Bloodloss: -0.5
       - !type:HealthChange
         conditions:
-          - !type:ReagentThreshold
-            min: 20
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
+        - !type:ReagentThreshold
+          min: 20
         damage:
           types:
             Asphyxiation: 3
@@ -295,8 +321,11 @@
         amount: -3
       - !type:HealthChange
         conditions:
-          - !type:ReagentThreshold
-            min: 25
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
+        - !type:ReagentThreshold
+          min: 25
         damage:
           types:
             Asphyxiation: 5
@@ -331,6 +360,9 @@
             Burn: -1 # Was .5, Buffed due to limb damage changes(GoobStation)
       - !type:HealthChange
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 20
         damage:
@@ -367,6 +399,9 @@
         key: Adrenaline # Guess what epinephrine is...
         component: IgnoreSlowOnDamage
         time: 5 # lingers less than hivemind reagent to give it a niche
+      - !type:MovespeedModifier # Goob edit
+        walkSpeedModifier: 1.1
+        sprintSpeedModifier: 1.1
 
 - type: reagent
   id: Hyronalin
@@ -384,9 +419,16 @@
           types:
             Radiation: -1
       - !type:ChemVomit
+        conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         probability: 0.02
       - !type:HealthChange
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 30
         damage:
@@ -410,6 +452,9 @@
       effects:
       - !type:ChemVomit
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 4
         probability: 0.3
@@ -515,22 +560,22 @@
     Medicine:
       effects:
       - !type:HealthChange
+        conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         probability: 0.3
         damage:
           types:
             Heat: 0.5
-      - !type:HealthChange
-        conditions:
-          - !type:ReagentThreshold
-            min: 30
-        damage:
-          types:
-            Poison: 3
       - !type:ChemVomit
         probability: 0.15
         conditions:
-          - !type:ReagentThreshold
-            min: 30
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
+        - !type:ReagentThreshold
+          min: 30
       - !type:GenericStatusEffect
         key: PressureImmunity
         component: PressureImmunity
@@ -539,9 +584,17 @@
         component: StutteringAccent
       - !type:Jitter
       - !type:Emote
+        conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         emote: Scream
         probability: 0.2
       - !type:PopupMessage
+        conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         type: Local
         visualType: Large
         messages: [ "barozine-effect-skin-burning", "barozine-effect-muscle-contract" ]
@@ -569,24 +622,14 @@
       - !type:HealthChange
         damage:
           types:
-            Cellular: -0.3
-            Radiation: 0.15
-            Caustic: 0.15
-      - !type:HealthChange
+            Cellular: -1
+            Radiation: 1
+      - !type:ChemVomit
         conditions:
-        - !type:ReagentThreshold
-          min: 11
-        damage:
-          types:
-            Radiation: 0.2
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentThreshold
-          reagent: Arithrazine
-          min: 1
-        damage:
-          types:
-            Caustic: 0.3
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
+        probability: 0.05
 
 - type: reagent
   id: PolypyryliumOligomers
@@ -607,6 +650,9 @@
             Asphyxiation: -2.5
       - !type:HealthChange
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 30
         damage:
@@ -711,6 +757,9 @@
             Poison: -4
       - !type:AdjustReagent
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           reagent: Amatoxin
           min: 1
@@ -729,6 +778,10 @@
     Poison:
       effects:
       - !type:HealthChange
+        conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         damage:
           types:
             Poison: 2
@@ -970,6 +1023,9 @@
             Caustic: -3
       - !type:HealthChange
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 16
         damage:
@@ -989,6 +1045,9 @@
         probability: 0.2
       - !type:ChemVomit
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 30
         probability: 0.02
@@ -1025,6 +1084,9 @@
             Slash: -4 # Was 3, Buffed due to limb damage changes(GoobStation)
       - !type:HealthChange
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 12
         damage:
@@ -1049,6 +1111,9 @@
             Blunt: 0.1
       - !type:HealthChange
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 11
         damage:
@@ -1072,6 +1137,9 @@
             Blunt: -4 # Was 3, Buffed due to limb damage changes(GoobStation)
       - !type:HealthChange
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 10.5
         damage:
@@ -1143,6 +1211,9 @@
       # od causes massive bleeding
       - !type:HealthChange
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 20
         damage:
@@ -1151,11 +1222,17 @@
             Piercing: 0.5
       - !type:ChemVomit
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 15
         probability: 0.1
       - !type:Emote
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 20
         emote: Scream
@@ -1189,6 +1266,9 @@
       # od makes you freeze to death
       - !type:HealthChange
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 12
         damage:
@@ -1214,7 +1294,7 @@
   color: "#b5e36d"
   worksOnTheDead: true
   metabolisms:
-    Cryogenic: # Frontier: Medicine<Cryogenic
+    Medicine:
       effects:
         - !type:ReduceRotting
           seconds: 20
@@ -1241,7 +1321,7 @@
     amount: 5
   - !type:PlantCryoxadone {}
   metabolisms:
-    Cryogenic: # Frontier: Medicine<Cryogenic
+    Medicine:
       effects:
         - !type:HealthChange
           conditions:
@@ -1264,7 +1344,7 @@
   color: "#89f77f"
   worksOnTheDead: true
   metabolisms:
-    Cryogenic: # Frontier: Medicine<Cryogenic
+    Medicine:
       effects:
       - !type:HealthChange
         conditions:
@@ -1274,8 +1354,7 @@
           types:
             Heat: -3.0
             Shock: -3.0
-            Cold: -3.0 # Frontier
-            Caustic: -3.0 # Frontier
+            Caustic: -1.0
 
 - type: reagent
   id : Mannitol # currently this is just a way to create psicodine
@@ -1310,6 +1389,9 @@
       effects:
       - !type:HealthChange
         conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         - !type:ReagentThreshold
           min: 30
         damage:
@@ -1336,13 +1418,10 @@
         type: Local
         visualType: Medium
         messages:
-        # - "psicodine-effect-fearless" # Frontier
+        - "psicodine-effect-fearless"
         - "psicodine-effect-anxieties-wash-away"
         - "psicodine-effect-at-peace"
-        - "psicodine-effect-nf-calm" # Frontier
-        - "psicodine-effect-nf-no-stress" # Frontier
-        - "psicodine-effect-nf-everything-is-fine" # Frontier
-        probability: 0.1 # Frontier: 0.2<0.1
+        probability: 0.2
 
 - type: reagent
   id: PotassiumIodide
@@ -1363,8 +1442,11 @@
         refresh: false
       - !type:HealthChange
         conditions:
-          - !type:ReagentThreshold
-            min: 20
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
+        - !type:ReagentThreshold
+          min: 20
         damage:
           types:
             Poison: 1

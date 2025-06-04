@@ -8,7 +8,6 @@ using Content.Server._NF.Bank;
 using Content.Server._NF.GameRule.Components;
 using Content.Server._NF.GameTicking.Events;
 using Content.Server.Cargo.Components;
-using Content.Server.Discord;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Presets;
 using Content.Server.GameTicking.Rules;
@@ -23,7 +22,6 @@ using Robust.Shared.Enums;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Timing;
 
 namespace Content.Server._NF.GameRule;
 
@@ -198,6 +196,48 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
     private void OnRoundRestart(RoundRestartCleanupEvent ev)
     {
         _players.Clear();
+    }
+
+    /// <summary>
+    /// Mono: Gets profit information for a player by their character name.
+    /// </summary>
+    public string? GetPlayerProfitInfo(NetUserId userId, string characterName)
+    {
+        // Find the player by character name and user ID
+        var playerEntry = _players.FirstOrDefault(kvp =>
+            kvp.Value.UserId == userId && kvp.Value.Name == characterName);
+
+        if (playerEntry.Key == EntityUid.Invalid)
+            return null;
+
+        var playerInfo = playerEntry.Value;
+        var endBalance = playerInfo.EndBalance;
+
+        // Try to get current balance if end balance wasn't set
+        if (_bank.TryGetBalance(playerEntry.Key, out var bankBalance))
+        {
+            endBalance = bankBalance;
+        }
+
+        // Check if endBalance is valid (non-negative)
+        if (endBalance < 0)
+            return null;
+
+        var profit = endBalance - playerInfo.StartBalance;
+        string summaryText;
+        if (profit < 0)
+        {
+            summaryText = Loc.GetString("adventure-list-loss", ("amount", BankSystemExtensions.ToSpesoString(-profit)));
+        }
+        else
+        {
+            summaryText = Loc.GetString("adventure-list-profit", ("amount", BankSystemExtensions.ToSpesoString(profit)));
+        }
+
+        // Strip color markup tags for Discord
+        summaryText = System.Text.RegularExpressions.Regex.Replace(summaryText, @"\[color=[^\]]*\]|\[/color\]", "");
+
+        return $"- {playerInfo.Name} {summaryText}";
     }
 
     protected override void Started(EntityUid uid, NFAdventureRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
