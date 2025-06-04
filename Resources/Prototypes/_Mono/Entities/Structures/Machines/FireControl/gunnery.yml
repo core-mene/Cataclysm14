@@ -1,6 +1,6 @@
 # Monolith : Gunnery Server
 - type: entity
-  id: GunneryServer
+  id: GunneryServerBase
   parent: BaseMachinePowered
   name: gunnery control server
   description: Manages the remote operation of ship weapons.
@@ -13,14 +13,9 @@
     - state: unlit
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
-  - type: FireControlServer
-  - type: ApcPowerReceiver
-    powerLoad: 200
   - type: ExtensionCableReceiver
   - type: Appearance
   - type: AmbientOnPowered
-  - type: Machine
-    board: MachineGCSCircuitboard
   - type: AmbientSound
     volume: -9
     range: 5
@@ -47,12 +42,72 @@
     startingCharge: 100
   - type: ExaminableBattery
   - type: BatterySelfRecharger
-  - type: ApcPowerReceiverBattery
-    idleLoad: 5
-    batteryRechargeRate: 250
-    batteryRechargeEfficiency: 0.95
   - type: PirateBountyItem
     id: GunneryServer
+
+- type: entity
+  id: GunneryServerLow
+  parent: GunneryServerBase
+  name: low-power gunnery control server
+  components:
+  - type: Machine
+    board: MachineGCSLowCircuitboard
+  - type: FireControlServer
+    processingPower: 6
+  - type: ApcPowerReceiver
+    powerLoad: 250
+  - type: ApcPowerReceiverBattery
+    idleLoad: 5
+    batteryRechargeRate: 300
+    batteryRechargeEfficiency: 0.95
+
+- type: entity
+  id: GunneryServerMedium
+  parent: GunneryServerBase
+  name: medium-power gunnery control server
+  components:
+  - type: Machine
+    board: MachineGCSMediumCircuitboard
+  - type: FireControlServer
+    processingPower: 10
+  - type: ApcPowerReceiver
+    powerLoad: 500
+  - type: ApcPowerReceiverBattery
+    idleLoad: 10
+    batteryRechargeRate: 600
+    batteryRechargeEfficiency: 0.95
+
+- type: entity
+  id: GunneryServerHigh
+  parent: GunneryServerBase
+  name: high-power gunnery control server
+  components:
+  - type: Machine
+    board: MachineGCSHighCircuitboard
+  - type: FireControlServer
+    processingPower: 14
+  - type: ApcPowerReceiver
+    powerLoad: 1000
+  - type: ApcPowerReceiverBattery
+    idleLoad: 20
+    batteryRechargeRate: 1200
+    batteryRechargeEfficiency: 0.95
+
+- type: entity
+  id: GunneryServerStation
+  parent: GunneryServerBase
+  name: station gunnery control server
+  components:
+  - type: Machine
+    board: MachineGCSStationCircuitboard
+  - type: FireControlServer
+    processingPower: 50
+  - type: ApcPowerReceiver
+    powerLoad: 5000
+  - type: ApcPowerReceiverBattery
+    idleLoad: 50
+    batteryRechargeRate: 6000
+    batteryRechargeEfficiency: 0.95
 
 # Monolith : Gunnery Computer
 - type: entity
