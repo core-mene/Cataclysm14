@@ -59,13 +59,11 @@
   - type: MobState
     allowedStates:
     - Alive
-    - Critical
-    - Dead
+    - Dead # why did EE just not remove the state and instead made them crit at 119.999???
   - type: MobThresholds
     thresholds:
       0: Alive
-      119.999: Critical # TO make it almost impossible
-      120: Dead
+      100: Dead # mono
     stateAlertDict:
       Alive: BorgHealth
       Critical: BorgCrit
