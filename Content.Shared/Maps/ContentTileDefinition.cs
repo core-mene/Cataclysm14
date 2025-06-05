@@ -107,7 +107,7 @@ namespace Content.Shared.Maps
         /// Effective mass of this tile for grid impacts.
         /// </summary>
         [DataField]
-        public float Mass = 800f;
+        public float Mass = 1000f;
 
         /// <summary>
         ///     Accel override for mob mover in <see cref="SharedMoverController"/>
