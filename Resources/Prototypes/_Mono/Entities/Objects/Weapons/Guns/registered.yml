@@ -37,6 +37,16 @@
   id: WeaponRifleLecterPMC
   description: A Lecter that has been properly registered for private security and mercenary use.
 
+# Shotguns
+
+- type: entity
+  parent:
+  - BaseC2ContrabandMercenary
+  - WeaponShotgunEnforcer
+  name: PMC Enforcer
+  id: WeaponShotgunEnforcerPMC
+  description: An Enforcer that has been properly registered for private security and mercenary use.
+
 # Pistols
 
 - type: entity
