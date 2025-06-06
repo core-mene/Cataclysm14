@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using System.Threading.Tasks;
 using Content.Server.Announcements;
 using Content.Server.CrewManifest;
 using Content.Server.Discord;
@@ -656,6 +657,12 @@ namespace Content.Server.GameTicking
         {
             try
             {
+                // Discord limits
+                const int MaxEmbedCharacters = 6000;
+                const int MaxFieldsPerEmbed = 25;
+                const int MaxFieldValueLength = 1024;
+                const int MaxFieldNameLength = 256;
+
                 var webhookUrl = _cfg.GetCVar(CCVars.DiscordCrewManifestWebhook);
                 if (string.IsNullOrEmpty(webhookUrl))
                     return;
@@ -706,23 +713,67 @@ namespace Content.Server.GameTicking
                     }
                 }
 
-                // Split into multiple fields if the content is too long for a single Discord field
-                var fields = new List<WebhookEmbedField>();
+                // Prepare base embed content
+                var title = "Round End Summary";
+                var description = "Round **" + RoundId + "** has ended with **" + sortedPlayers.Count + "** total characters involved.";
+                var footerText = serverName + " - Round " + RoundId;
+
+                // Calculate base embed character count (title + description + footer)
+                var baseCharacterCount = title.Length + description.Length + footerText.Length;
+
+                // Create embeds with proper limit handling
+                var embeds = new List<WebhookEmbed>();
+                var currentFields = new List<WebhookEmbedField>();
+                var currentEmbedCharacterCount = baseCharacterCount;
+                var embedCount = 0;
+
+                // Helper function to create and add an embed
+                void AddCurrentEmbed()
+                {
+                    if (currentFields.Count > 0)
+                    {
+                        embeds.Add(new WebhookEmbed
+                        {
+                            Title = embedCount == 0 ? title : title + " (continued)",
+                            Description = embedCount == 0 ? description : "",
+                            Color = 0x9999FF,
+                            Fields = new List<WebhookEmbedField>(currentFields),
+                            Footer = new WebhookEmbedFooter { Text = footerText }
+                        });
+                        embedCount++;
+                        currentFields.Clear();
+                        currentEmbedCharacterCount = baseCharacterCount;
+                    }
+                }
+
+                // Process manifest lines
                 var currentFieldLines = new List<string>();
                 var currentFieldLength = 0;
                 var manifestFieldCount = 0;
 
                 foreach (var line in manifestLines)
                 {
-                    // Discord field value limit is 1024 characters
-                    if (currentFieldLength + line.Length + 1 > 1020 && currentFieldLines.Count > 0)
+                    // Check if adding this line would exceed field value limit
+                    if (currentFieldLength + line.Length + 1 > MaxFieldValueLength - 20 && currentFieldLines.Count > 0)
                     {
-                        fields.Add(new WebhookEmbedField
+                        var fieldName = manifestFieldCount == 0 ? "Player Manifest" : "Player Manifest (continued)";
+                        var fieldValue = string.Join("\n", currentFieldLines);
+                        var fieldCharacterCount = fieldName.Length + fieldValue.Length;
+
+                        // Check if adding this field would exceed embed limits
+                        if (currentFields.Count >= MaxFieldsPerEmbed - 1 ||
+                            currentEmbedCharacterCount + fieldCharacterCount > MaxEmbedCharacters - 500)
                         {
-                            Name = manifestFieldCount == 0 ? "Player Manifest" : "Player Manifest (continued)",
-                            Value = string.Join("\n", currentFieldLines),
+                            AddCurrentEmbed();
+                        }
+
+                        currentFields.Add(new WebhookEmbedField
+                        {
+                            Name = fieldName,
+                            Value = fieldValue,
                             Inline = false
                         });
+                        currentEmbedCharacterCount += fieldCharacterCount;
                         manifestFieldCount++;
                         currentFieldLines.Clear();
                         currentFieldLength = 0;
@@ -732,36 +783,59 @@ namespace Content.Server.GameTicking
                     currentFieldLength += line.Length + 1; // +1 for newline
                 }
 
-                // Add the remaining lines
+                // Add remaining manifest lines
                 if (currentFieldLines.Count > 0)
                 {
-                    fields.Add(new WebhookEmbedField
+                    var fieldName = manifestFieldCount == 0 ? "Player Manifest" : "Player Manifest (continued)";
+                    var fieldValue = string.Join("\n", currentFieldLines);
+                    var fieldCharacterCount = fieldName.Length + fieldValue.Length;
+
+                    // Check if adding this field would exceed embed limits
+                    if (currentFields.Count >= MaxFieldsPerEmbed - 1 ||
+                        currentEmbedCharacterCount + fieldCharacterCount > MaxEmbedCharacters - 500)
                     {
-                        Name = manifestFieldCount == 0 ? "Player Manifest" : "Player Manifest (continued)",
-                        Value = string.Join("\n", currentFieldLines),
+                        AddCurrentEmbed();
+                    }
+
+                    currentFields.Add(new WebhookEmbedField
+                    {
+                        Name = fieldName,
+                        Value = fieldValue,
                         Inline = false
                     });
+                    currentEmbedCharacterCount += fieldCharacterCount;
                 }
 
-                // Add profit information if available
+                // Process profit lines if available
                 if (profitLines.Count > 0)
                 {
-                    // Split profit lines into fields if needed (same algorithm as Player Manifest)
                     var currentProfitLines = new List<string>();
                     var currentProfitLength = 0;
                     var profitFieldCount = 0;
 
                     foreach (var line in profitLines)
                     {
-                        // Discord field value limit is 1024 characters
-                        if (currentProfitLength + line.Length + 1 > 1020 && currentProfitLines.Count > 0)
+                        // Check if adding this line would exceed field value limit
+                        if (currentProfitLength + line.Length + 1 > MaxFieldValueLength - 20 && currentProfitLines.Count > 0)
                         {
-                            fields.Add(new WebhookEmbedField
+                            var fieldName = profitFieldCount == 0 ? "TSF Central Bank" : "TSF Central Bank (continued)";
+                            var fieldValue = string.Join("\n", currentProfitLines);
+                            var fieldCharacterCount = fieldName.Length + fieldValue.Length;
+
+                            // Check if adding this field would exceed embed limits
+                            if (currentFields.Count >= MaxFieldsPerEmbed - 1 ||
+                                currentEmbedCharacterCount + fieldCharacterCount > MaxEmbedCharacters - 500)
                             {
-                                Name = profitFieldCount == 0 ? "NT Galactic Bank" : "NT Galactic Bank (continued)",
-                                Value = string.Join("\n", currentProfitLines),
+                                AddCurrentEmbed();
+                            }
+
+                            currentFields.Add(new WebhookEmbedField
+                            {
+                                Name = fieldName,
+                                Value = fieldValue,
                                 Inline = false
                             });
+                            currentEmbedCharacterCount += fieldCharacterCount;
                             profitFieldCount++;
                             currentProfitLines.Clear();
                             currentProfitLength = 0;
@@ -771,37 +845,47 @@ namespace Content.Server.GameTicking
                         currentProfitLength += line.Length + 1; // +1 for newline
                     }
 
-                    // Add the remaining lines
+                    // Add remaining profit lines
                     if (currentProfitLines.Count > 0)
                     {
-                        fields.Add(new WebhookEmbedField
+                        var fieldName = profitFieldCount == 0 ? "TSF Central Bank" : "TSF Central Bank (continued)";
+                        var fieldValue = string.Join("\n", currentProfitLines);
+                        var fieldCharacterCount = fieldName.Length + fieldValue.Length;
+
+                        // Check if adding this field would exceed embed limits
+                        if (currentFields.Count >= MaxFieldsPerEmbed - 1 ||
+                            currentEmbedCharacterCount + fieldCharacterCount > MaxEmbedCharacters - 500)
                         {
-                            Name = profitFieldCount == 0 ? "NT Galactic Bank" : "NT Galactic Bank (continued)",
-                            Value = string.Join("\n", currentProfitLines),
+                            AddCurrentEmbed();
+                        }
+
+                        currentFields.Add(new WebhookEmbedField
+                        {
+                            Name = fieldName,
+                            Value = fieldValue,
                             Inline = false
                         });
+                        currentEmbedCharacterCount += fieldCharacterCount;
                     }
                 }
 
-                var payload = new WebhookPayload
-                {
-                    Embeds = new List<WebhookEmbed>
-                    {
-                        new()
-                        {
-                            Title = "Round End Summary",
-                            Description = "Round **" + RoundId + "** has ended with **" + sortedPlayers.Count + "** total characters being involved.",
-                            Color = 0x9999FF,
-                            Fields = fields,
-                            Footer = new WebhookEmbedFooter
-                            {
-                                Text = serverName + " - Round " + RoundId
-                            }
-                        }
-                    }
-                };
+                // Add any remaining fields to the final embed
+                AddCurrentEmbed();
 
-                await _discord.CreateMessage(webhookIdentifier, payload);
+                // Send embeds (split into multiple messages if needed)
+                foreach (var embed in embeds)
+                {
+                    var payload = new WebhookPayload
+                    {
+                        Embeds = new List<WebhookEmbed> { embed }
+                    };
+
+                    await _discord.CreateMessage(webhookIdentifier, payload);
+
+                    // Small delay between messages to avoid rate limiting
+                    if (embeds.Count > 1)
+                        await Task.Delay(100);
+                }
             }
             catch (Exception e)
             {
