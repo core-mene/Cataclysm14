@@ -3,6 +3,8 @@ using Content.Shared.Examine;
 using Content.Shared.Inventory;
 using Content.Shared.PDA;
 using Content.Shared.Verbs;
+using Content.Shared._Mono.Company;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
 namespace Content.Shared.Access.Systems;
@@ -11,6 +13,7 @@ public sealed class IdExaminableSystem : EntitySystem
 {
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
     [Dependency] private readonly InventorySystem _inventorySystem = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
     public override void Initialize()
     {
@@ -69,12 +72,28 @@ public sealed class IdExaminableSystem : EntitySystem
     {
         var jobSuffix = string.IsNullOrWhiteSpace(id.LocalizedJobTitle) ? string.Empty : $" ({id.LocalizedJobTitle})";
 
+        // Get company information if available
+        var companySuffix = string.Empty;
+        if (!string.IsNullOrWhiteSpace(id.CompanyName) && id.CompanyName != "None")
+        {
+            if (_prototypeManager.TryIndex<CompanyPrototype>(id.CompanyName, out var companyProto))
+            {
+                companySuffix = $" - [color={companyProto.Color.ToHex()}]{companyProto.Name}[/color]";
+            }
+            else
+            {
+                companySuffix = $" - {id.CompanyName}";
+            }
+        }
+
         var val = string.IsNullOrWhiteSpace(id.FullName)
             ? Loc.GetString(id.NameLocId,
-                ("jobSuffix", jobSuffix))
+                ("jobSuffix", jobSuffix),
+                ("companySuffix", companySuffix))
             : Loc.GetString(id.FullNameLocId,
                 ("fullName", id.FullName),
-                ("jobSuffix", jobSuffix));
+                ("jobSuffix", jobSuffix),
+                ("companySuffix", companySuffix));
 
         return val;
     }

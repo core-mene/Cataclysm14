@@ -27,6 +27,8 @@ using Content.Shared._NF.Bank.Components; // Frontier
 using Content.Shared._NF.Shipyard.Components; // Frontier
 using Content.Server._NF.Shipyard.Systems; // Frontier
 using Content.Server._NF.SectorServices; // Frontier
+using Content.Shared._Mono.Company;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.PDA
 {
@@ -43,6 +45,7 @@ namespace Content.Server.PDA
         [Dependency] private readonly ContainerSystem _containerSystem = default!;
         [Dependency] private readonly IdCardSystem _idCard = default!;
         [Dependency] private readonly SectorServiceSystem _sectorService = default!;
+        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
         public override void Initialize()
         {
@@ -204,6 +207,24 @@ namespace Content.Server.PDA
             var ownedShipName = ""; // Frontier
             if (TryComp<ShuttleDeedComponent>(pda.ContainedId, out var shuttleDeedComp)) // Frontier
                 ownedShipName = ShipyardSystem.GetFullName(shuttleDeedComp); // Frontier
+
+            // Get company information from ID card
+            string? companyName = null;
+            Color companyColor = Color.White;
+            if (id?.CompanyName != null && !string.IsNullOrWhiteSpace(id.CompanyName) && id.CompanyName != "None")
+            {
+                if (_prototypeManager.TryIndex<CompanyPrototype>(id.CompanyName, out var companyProto))
+                {
+                    companyName = companyProto.Name; // Use the display name, not the ID
+                    companyColor = companyProto.Color;
+                }
+                else
+                {
+                    // Fallback to ID if prototype not found
+                    companyName = id.CompanyName;
+                }
+            }
+
             var state = new PdaUpdateState(
                 programs,
                 GetNetEntity(loader.ActiveProgram),
@@ -216,6 +237,8 @@ namespace Content.Server.PDA
                     ActualOwnerName = pda.OwnerName,
                     IdOwner = id?.FullName,
                     JobTitle = id?.LocalizedJobTitle,
+                    CompanyName = companyName,
+                    CompanyColor = companyColor,
                     StationAlertLevel = pda.StationAlertLevel,
                     StationAlertColor = pda.StationAlertColor
                 },

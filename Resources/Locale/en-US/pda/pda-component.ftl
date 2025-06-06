@@ -8,6 +8,8 @@ comp-pda-ui-blank = ID:
 
 comp-pda-ui-owner = Owner: [color=white]{$actualOwnerName}[/color]
 
+comp-pda-ui-owner-with-company = Owner: [color=white]{$actualOwnerName}[/color] [color={$companyColor}]({$companyName})[/color]
+
 comp-pda-io-program-list-button = Programs
 
 comp-pda-io-settings-button = Settings
