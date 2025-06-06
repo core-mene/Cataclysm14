@@ -42,6 +42,7 @@ public sealed partial class GunSystem : SharedGunSystem
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly StaminaSystem _stamina = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private readonly RequireProjectileTargetSystem _requireProjectileTarget = default!;
 
     private const float DamagePitchVariation = 0.05f;
 
@@ -189,11 +190,13 @@ public sealed partial class GunSystem : SharedGunSystem
                             // Check if laser is shot from in a container
                             if (!_container.IsEntityOrParentInContainer(lastUser))
                             {
-                                // Checks if the laser should pass over unless targeted by its user
+                                // Use the same collision logic as projectiles
                                 foreach (var collide in rayCastResults)
                                 {
-                                    if (collide.HitEntity != gun.Target &&
-                                        CompOrNull<RequireProjectileTargetComponent>(collide.HitEntity)?.Active == true)
+                                    var isTargeted = collide.HitEntity == gun.Target;
+
+                                    // Use shared logic to determine if collision should be prevented
+                                    if (_requireProjectileTarget.ShouldPreventCollision(collide.HitEntity, user, isTargeted))
                                     {
                                         continue;
                                     }
