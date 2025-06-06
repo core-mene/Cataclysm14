@@ -124,7 +124,7 @@
   suffix: BlackMarket
   parent: [BaseStructureDisableToolUse, BaseStructureDestructible, ComputerBankATMDeposit]
   id: ComputerBlackMarketBankATM
-  description: Has some sketchy looking modifications and a sticker that says DEPOSIT FEE 30%
+  description: Has some sketchy looking modifications and a sticker that says DEPOSIT FEE 20%
   components:
   - type: Sprite
     netsync: false
@@ -143,13 +143,13 @@
         type: BankATMMenuBoundUserInterface
   - type: BankATM
     taxAccounts:
-      Frontier: 0.3 # The scandal!
+      Frontier: 0.2 # Monolith
 
 - type: entity
   suffix: Wallmount, BlackMarket
   parent: [BaseStructureDisableToolUse, BaseStructureDestructible, BaseStructureComputerWallmount, ComputerBankATMDeposit]
   id: ComputerWallmountBlackMarketBankATM
-  description: Has some sketchy looking modifications and a sticker that says DEPOSIT FEE 30%
+  description: Has some sketchy looking modifications and a sticker that says DEPOSIT FEE 20%
   components:
   - type: Sprite
     netsync: false
@@ -167,7 +167,7 @@
         type: BankATMMenuBoundUserInterface
   - type: BankATM
     taxAccounts:
-      Frontier: 0.3 # The scandal!
+      Frontier: 0.2 # Monolith
 
 - type: entity
   name: station administration console
