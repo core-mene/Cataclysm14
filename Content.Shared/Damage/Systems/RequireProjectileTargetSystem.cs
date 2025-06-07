@@ -84,37 +84,28 @@ public sealed class RequireProjectileTargetSystem : EntitySystem
         if (!ent.Comp.Active)
             return;
 
-        // Check if this is a targeted projectile aimed at this specific entity
-        var isTargetedAtThis = TryComp(args.OtherEntity, out ProjectileComponent? projectile) &&
-                               CompOrNull<TargetedProjectileComponent>(args.OtherEntity)?.Target == ent;
-
-        // Use shared logic to determine if collision should be prevented
-        if (ShouldPreventCollision(ent, projectile?.Shooter, isTargetedAtThis))
-        {
-            args.Cancelled = true;
-            return;
-        }
-
-        // Otherwise, allow projectiles to hit
-        if (projectile != null)
-            return;
-
         var other = args.OtherEntity;
 
-        // Check if target and projectile are on different maps/z-levels
-        var targetXform = Transform(ent);
-        var projectileXform = Transform(other);
-        if (targetXform.MapID != projectileXform.MapID)
+        // ONLY apply collision prevention logic to projectiles
+        // This check must come FIRST to prevent non-projectiles from being affected
+        if (!TryComp(other, out ProjectileComponent? projectile))
+            return;
+
+        // Check if this is a targeted projectile aimed at this specific entity
+        var isTargetedAtThis = CompOrNull<TargetedProjectileComponent>(other)?.Target == ent;
+
+        // Use shared logic to determine if collision should be prevented
+        if (ShouldPreventCollision(ent, projectile.Shooter, isTargetedAtThis))
         {
             args.Cancelled = true;
             return;
         }
 
-        if (TryComp(other, out ProjectileComponent? otherProjectile) &&
-            CompOrNull<TargetedProjectileComponent>(other)?.Target != ent)
+        // Rest of the projectile-specific logic
+        if (CompOrNull<TargetedProjectileComponent>(other)?.Target != ent)
         {
             // Prevents shooting out of while inside of crates
-            var shooter = otherProjectile.Shooter;
+            var shooter = projectile.Shooter;
             if (!shooter.HasValue)
                 return;
 
@@ -126,6 +117,15 @@ public sealed class RequireProjectileTargetSystem : EntitySystem
             // so it's impossible to check if the entity is in a container
             if (TerminatingOrDeleted(shooter.Value))
                 return;
+
+            // Check if target and projectile are on different maps/z-levels
+            var targetXform = Transform(ent);
+            var projectileXform = Transform(other);
+            if (targetXform.MapID != projectileXform.MapID)
+            {
+                args.Cancelled = true;
+                return;
+            }
 
             if (!_container.IsEntityOrParentInContainer(shooter.Value))
                args.Cancelled = true;
