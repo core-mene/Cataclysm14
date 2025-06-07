@@ -5,7 +5,7 @@
   suffix: Non-lethal
   components:
   - type: BallisticAmmoProvider # Inherit whitelist, capacity from parent
-    proto: CartridgeLightRifleRubber
+    proto: Cartridge7.62x39mmRubber
 
 # Frontier
 - type: entity
@@ -17,7 +17,7 @@
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Snipers/repeater.rsi
   - type: Clothing
-    sprite: _NF/Objects/Weapons/Guns/Snipers/repeater.rsi    
+    sprite: _NF/Objects/Weapons/Guns/Snipers/repeater.rsi
   - type: StaticPrice
     price: 500
   - type: BallisticAmmoProvider

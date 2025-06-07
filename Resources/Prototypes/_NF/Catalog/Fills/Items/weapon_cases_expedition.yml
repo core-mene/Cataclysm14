@@ -364,7 +364,7 @@
     contents:
     - id: WeaponRifleGestio
       amount: 1
-    - id: MagazineLightRifleLowCapacity
+    - id: Magazine7.62x39mmLowCapacity
       amount: 3
 
 - type: entity
@@ -403,7 +403,7 @@
     contents:
     - id: WeaponRifleAk
       amount: 1
-    - id: MagazineLightRifle
+    - id: Magazine7.62x39mm
       amount: 2
 
 - type: entity
@@ -429,7 +429,7 @@
     contents:
     - id: WeaponRifleSVS
       amount: 1
-    - id: MagazineLightRifleLowCapacity
+    - id: Magazine7.62x39mmLowCapacity
       amount: 2
 
 - type: entity
@@ -442,7 +442,7 @@
     contents:
     - id: WeaponRifleVulcanExpedition
       amount: 1
-    - id: MagazineLightRifle
+    - id: Magazine7.62x39mm
       amount: 2
 
 - type: entity
@@ -549,7 +549,7 @@
     contents:
     - id: WeaponSniperMosinExpedition
       amount: 1
-    - id: MagazineBoxLightRifle
+    - id: MagazineBox7.62x39mm
       amount: 2
 
 - type: entity
@@ -601,7 +601,7 @@
     contents:
     - id: WeaponSniperCeremonialExpedition
       amount: 1
-    - id: MagazineBoxLightRifle
+    - id: MagazineBox7.62x39mm
       amount: 2
 
 # Launchers
@@ -642,7 +642,7 @@
     contents:
     - id: WeaponLightMachineGunL6
       amount: 1
-    - id: MagazineLightRifleBox
+    - id: Magazine7.62x39mmBox
       amount: 2
 
 # Melee
@@ -822,7 +822,7 @@
   id: WeaponCaseShortAmmoBoxUranium20
   categories: [ HideSpawnMenu ]
 
-## .30 rifle
+## 7.62x39mm
 - type: entity
   parent:
   - WeaponCaseShortAmmo

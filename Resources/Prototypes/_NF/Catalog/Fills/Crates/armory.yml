@@ -9,7 +9,7 @@
     contents:
       - id: WeaponRifleGestio
         amount: 2
-      - id: MagazineLightRifleLowCapacity
+      - id: Magazine7.62x39mmLowCapacity
         amount: 6
 
 # Contraband (unregistered) weaponry crates for expeditions
@@ -102,7 +102,7 @@
     contents:
       - id: WeaponRifleGestioExpedition
         amount: 2
-      - id: MagazineLightRifleLowCapacity
+      - id: Magazine7.62x39mmLowCapacity
         amount: 6
 
 - type: entity
@@ -172,7 +172,7 @@
   id: CrateAmmoBoxUranium20
   categories: [ HideSpawnMenu ]
 
-## .30 rifle
+## 7.62x39mm
 - type: entity
   parent:
   - CrateAmmoSecureMercenary

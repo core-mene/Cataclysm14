@@ -1,10 +1,10 @@
 - type: entity
-  id: CartridgeLightRifleRubber
-  name: cartridge (.30 rifle rubber)
-  parent: BaseCartridgeLightRifle
+  id: Cartridge7.62x39mmRubber
+  name: cartridge (7.62x39mm rubber)
+  parent: BaseCartridge7.62x39mm
   components:
   - type: CartridgeAmmo
-    proto: BulletLightRifleRubber
+    proto: Bullet7.62x39mmRubber
   - type: Sprite
     layers:
       - state: base

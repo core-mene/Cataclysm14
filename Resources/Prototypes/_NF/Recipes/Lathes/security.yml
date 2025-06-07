@@ -39,23 +39,23 @@
     Plastic: 163 #66% of 245
 
 - type: latheRecipe # gestio mag empty
-  id: MagazineLightRifleLowCapacityEmpty
+  id: Magazine7.62x39mmLowCapacityEmpty
   parent: BaseEmptyAmmoRecipe
-  result: MagazineLightRifleLowCapacityEmpty
+  result: Magazine7.62x39mmLowCapacityEmpty
   materials:
     Steel: 20
 - type: latheRecipe # Gestio small rubber mag
-  id: MagazineLightRifleLowCapacityRubber
+  id: Magazine7.62x39mmLowCapacityRubber
   parent: BaseAmmoRecipe
-  result: MagazineLightRifleLowCapacityRubber
+  result: Magazine7.62x39mmLowCapacityRubber
   materials:
     Steel: 82 #33% of cost in steel
     Plastic: 163 #66% of 245
 
 - type: latheRecipe # gestio mag
-  id: MagazineLightRifleLowCapacity
+  id: Magazine7.62x39mmLowCapacity
   parent: BaseAmmoRecipe
-  result: MagazineLightRifleLowCapacity
+  result: Magazine7.62x39mmLowCapacity
   materials:
     Steel: 245 # 20 [Steel per empty mag] + 15 [bullets] * 15 [Steel per bullet]
 
@@ -122,17 +122,17 @@
     Plastic: 300 #75% of box cost
 
 - type: latheRecipe
-  id: MagazineBoxLightRifleRubber
+  id: MagazineBox7.62x39mmRubber
   parent: BaseAmmoRecipe
-  result: MagazineBoxLightRifleRubber
+  result: MagazineBox7.62x39mmRubber
   materials:
     Steel: 300
     Plastic: 600
 
 - type: latheRecipe
-  id: MagazineLightRifleRubber
+  id: Magazine7.62x39mmRubber
   parent: BaseAmmoRecipe
-  result: MagazineLightRifleRubber
+  result: Magazine7.62x39mmRubber
   materials:
     Steel: 150 #50% of ammo box
     Plastic: 300 #50% of ammo box

@@ -24,13 +24,13 @@
 
 - type: entity
   parent: BaseBlueprintExpedition
-  id: NFBlueprintMagazineBoxLightRifleUranium
+  id: NFBlueprintMagazineBox7.62x39mmUranium
   name: uranium .30 ammo blueprint
-  description: A blueprint with a schematic of an uranium .30 rifle ammo. It can be inserted into an autolathe or a techfab.
+  description: A blueprint with a schematic of an uranium 7.62x39mm ammo. It can be inserted into an autolathe or a techfab.
   components:
   - type: Blueprint
     providedRecipes:
-    - MagazineBoxLightRifleUranium
+    - MagazineBox7.62x39mmUranium
 
 - type: entity
   parent: BaseBlueprintExpedition
@@ -76,13 +76,13 @@
 
 - type: entity
   parent: BaseBlueprintExpedition
-  id: NFBlueprintMagazineBoxLightRifleIncendiary
+  id: NFBlueprintMagazineBox7.62x39mmIncendiary
   name: incendiary .30 ammo blueprint
-  description: A blueprint with a schematic of an incendiary .30 rifle ammo. It can be inserted into an autolathe or a techfab.
+  description: A blueprint with a schematic of an incendiary 7.62x39mm ammo. It can be inserted into an autolathe or a techfab.
   components:
   - type: Blueprint
     providedRecipes:
-    - MagazineBoxLightRifleIncendiary
+    - MagazineBox7.62x39mmIncendiary
 
 - type: entity
   parent: BaseBlueprintExpedition

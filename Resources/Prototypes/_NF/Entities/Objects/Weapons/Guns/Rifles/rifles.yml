@@ -36,28 +36,28 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifleRubber
+        startingItem: Magazine7.62x39mmRubber
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifle
+            - Magazine7.62x39mm
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifleRubber
+        startingItem: Cartridge7.62x39mmRubber
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - Cartridge7.62x39mm
 
 # Frontier
 - type: entity
   name: Gestio
   parent: [ BaseWeaponRifle, BaseC1Contraband ]
   id: WeaponRifleGestio
-  description: An old burst-fire rifle made by Silver Industries that never left trials. Accepts low capacity .30 rifle magazines.
+  description: An old burst-fire rifle made by Silver Industries that never left trials. Accepts low capacity 7.62x39mm magazines.
   components:
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Rifles/gestio.rsi
@@ -84,21 +84,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifleLowCapacity
+        startingItem: Magazine7.62x39mmLowCapacity
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifleLowCapacity
+            - Magazine7.62x39mmLowCapacity
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle
+        startingItem: Cartridge7.62x39mm
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - Cartridge7.62x39mm
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -118,21 +118,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifleLowCapacityRubber
+        startingItem: Magazine7.62x39mmLowCapacityRubber
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifleLowCapacity
+            - Magazine7.62x39mmLowCapacity
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifleRubber
+        startingItem: Cartridge7.62x39mmRubber
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - Cartridge7.62x39mm
 
 - type: entity
   parent: [ BaseWeaponRifle, BaseC1Contraband ]
@@ -216,7 +216,7 @@
   id: WeaponRifleSVS
   name: SVS-42
   parent: [ BaseWeaponRifle, BaseGunMelee, BaseC1Contraband ]
-  description: "Originally designed by Samonov, this old surplus rifle looks like it's seen a few wars. Uses low capacity .30 rifle magazines. Equipped with bayonet."
+  description: "Originally designed by Samonov, this old surplus rifle looks like it's seen a few wars. Uses low capacity 7.62x39mm magazines. Equipped with bayonet."
   components:
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Rifles/svs42.rsi
@@ -245,21 +245,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifleLowCapacity
+        startingItem: Magazine7.62x39mmLowCapacity
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifleLowCapacity
+            - Magazine7.62x39mmLowCapacity
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle
+        startingItem: Cartridge7.62x39mm
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - Cartridge7.62x39mm
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
