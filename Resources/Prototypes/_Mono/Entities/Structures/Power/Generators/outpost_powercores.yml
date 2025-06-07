@@ -1,6 +1,6 @@
 - type: entity
   id: MachineOutpostCore
-  parent: BaseMachinePowered
+  parent: BaseGenerator
   name: B.R0-200k Bluespace Reactor
   description: A modified FTL drive, safely refitted to release large amounts of power consistently.
   suffix: 200kw
@@ -22,7 +22,9 @@
         shader: unshaded
         color: "#62D6B9"
     - type: PowerSupplier
-      powerLoad: 200000
+      supplyRate: 200000
+      supplyRampRate: 100000
+      supplyRampTolerance: 200
     - type: RadiationSource
       intensity: 2
     - type: Destructible
