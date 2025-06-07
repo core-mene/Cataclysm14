@@ -250,8 +250,8 @@
   id: WeaponLaserCarbine
   description: A simple civilian grade laser carbine, the workhorse of many private security organizations. # Frontier: description
   components:
-  - type: StaticPrice
-    price: 420
+  - type: StaticPrice # mono edit
+    price: 750
   - type: HitscanBatteryAmmoProvider
     proto: RedLaser
     fireCost: 62.5
@@ -395,6 +395,8 @@
   - type: Battery
     maxCharge: 4000
     startingCharge: 4000
+  - type: StaticPrice # mono edit
+    price: 1400
 
 
 - type: entity
@@ -562,7 +564,7 @@
     zeroVisible: true
   - type: Appearance
   - type: StaticPrice
-    price: 260
+    price: 420
 
 - type: entity
   name: taser
@@ -830,3 +832,5 @@
     autoRechargeRate: 24
     autoRechargePause: true
     autoRechargePauseTime: 30
+  - type: StaticPrice # mono edit
+    price: 2000
