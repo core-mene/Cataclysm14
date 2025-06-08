@@ -252,7 +252,7 @@
   name: N1984
   parent: [BaseWeaponPistol, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponPistolN1984 # the spaces in description are for formatting.
-  description: The sidearm of any self respecting officer. Comes in .45 magnum, the lord's caliber. On the handle is a label that says 'for authorized use only.'
+  description: The sidearm of any self respecting officer. Comes in .45_magnum, the lord's caliber. On the handle is a label that says 'for authorized use only.'
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/N1984.rsi
@@ -277,18 +277,18 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineMagnum
+        startingItem: Magazine.45_magnum
         insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineMagnum
+            - Magazine.45_magnum
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeMagnum
+        startingItem: Cartridge.45_magnum
         priority: 1
         whitelist:
           tags:
-            - CartridgeMagnum
+            - Cartridge.45_magnum

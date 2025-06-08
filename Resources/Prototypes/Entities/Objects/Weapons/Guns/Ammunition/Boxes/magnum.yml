@@ -1,14 +1,14 @@
 - type: entity
   abstract: true
   parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
-  id: BaseMagazineBoxMagnum
+  id: BaseMagazineBox.45_magnum
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeMagnum
-    proto: CartridgeMagnum
+        - Cartridge.45_magnum
+    proto: Cartridge.45_magnum
     capacity: 12
   - type: Item
     size: Small
@@ -16,7 +16,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/magnum.rsi # Frontier: add _NF prefix
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/.45_magnum.rsi # Frontier: add _NF prefix
   - type: MagazineVisuals
     magState: mag
     steps: 4
@@ -25,12 +25,12 @@
 
 # Boxes
 - type: entity
-  parent: BaseMagazineBoxMagnum
-  id: MagazineBoxMagnum
-  name: ammunition box (.45 magnum)
+  parent: BaseMagazineBox.45_magnum
+  id: MagazineBox.45_magnum
+  name: ammunition box (.45_magnum)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnum
+    proto: Cartridge.45_magnum
   - type: Sprite
     layers:
     - state: base
@@ -39,12 +39,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  parent: BaseMagazineBoxMagnum
-  id: MagazineBoxMagnumPractice
-  name: ammunition box (.45 magnum practice)
+  parent: BaseMagazineBox.45_magnum
+  id: MagazineBox.45_magnumPractice
+  name: ammunition box (.45_magnum practice)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumPractice
+    proto: Cartridge.45_magnumPractice
   - type: Sprite
     layers:
     - state: base
@@ -54,12 +54,12 @@
     - state: practice
 
 - type: entity
-  id: MagazineBoxMagnumIncendiary
-  parent: BaseMagazineBoxMagnum
-  name: ammunition box (.45 magnum incendiary)
+  id: MagazineBox.45_magnumIncendiary
+  parent: BaseMagazineBox.45_magnum
+  name: ammunition box (.45_magnum incendiary)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumIncendiary
+    proto: Cartridge.45_magnumIncendiary
   - type: Sprite
     layers:
     - state: base
@@ -69,12 +69,12 @@
     - state: incendiary
 
 - type: entity
-  id: MagazineBoxMagnumUranium
-  parent: BaseMagazineBoxMagnum
-  name: ammunition box (.45 magnum uranium)
+  id: MagazineBox.45_magnumUranium
+  parent: BaseMagazineBox.45_magnum
+  name: ammunition box (.45_magnum uranium)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumUranium
+    proto: Cartridge.45_magnumUranium
   - type: Sprite
     layers:
     - state: base
@@ -84,12 +84,12 @@
     - state: uranium
 
 - type: entity
-  id: MagazineBoxMagnumAP
-  parent: BaseMagazineBoxMagnum
-  name: ammunition box (.45 magnum armor-piercing)
+  id: MagazineBox.45_magnumAP
+  parent: BaseMagazineBox.45_magnum
+  name: ammunition box (.45_magnum armor-piercing)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumAP
+    proto: Cartridge.45_magnumAP
   - type: Sprite
     layers:
     - state: base

@@ -42,7 +42,7 @@
   components:
   - type: RevolverAmmoProvider
     capacity: 5
-    proto: CartridgeMagnumRubber
+    proto: Cartridge.45_magnumRubber
     chambers: [ True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null ]
 

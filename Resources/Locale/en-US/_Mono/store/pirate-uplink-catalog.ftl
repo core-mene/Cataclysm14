@@ -87,7 +87,7 @@ uplink-pirate-energy-cutlass-name = Energy Cutlass
 uplink-pirate-energy-cutlass-desc = An exotic energy weapon.
 
 uplink-pirate-python-name = Python
-uplink-pirate-python-desc = A brutally simple, effective, and loud revolver. Comes loaded with .45 magnum rounds.
+uplink-pirate-python-desc = A brutally simple, effective, and loud revolver. Comes loaded with .45_magnum rounds.
 
 uplink-pirate-viper-name = Viper
 uplink-pirate-viper-desc = A small, easily concealable, but somewhat underpowered gun. Retrofitted with a fully automatic receiver. Uses pistol magazines (9x19mm).
@@ -133,8 +133,8 @@ uplink-pirate-box-magazine-pistol-desc = A box filled with 4 9x19mm pistol magaz
 uplink-pirate-box-magazine-light-rifle-name = Box of 7.62x39mm magazines
 uplink-pirate-box-magazine-light-rifle-desc = A box filled with 4 7.62x39mm magazines.
 
-uplink-pirate-magazine-box-magnum-name = Box of .45 magnum speedloaders
-uplink-pirate-magazine-box-magnum-desc = A box containing 4 .45 magnum speedloaders.
+uplink-pirate-magazine-box-45_magnum-name = Box of .45_magnum speedloaders
+uplink-pirate-magazine-box-45_magnum-desc = A box containing 4 .45_magnum speedloaders.
 
 uplink-pirate-light-rifle-magazine-box-big-name = Ammunition box (7.62x39mm)
 uplink-pirate-light-rifle-magazine-box-big-desc = A box containing 200 7.62x39mm catridges.

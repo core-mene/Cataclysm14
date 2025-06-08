@@ -14,7 +14,7 @@
     availableModes:
     - SemiAuto
   - type: RevolverAmmoProvider
-    proto: CartridgeMagnum
+    proto: Cartridge.45_magnum
     capacity: 6
     chambers: [ True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null ]
@@ -37,7 +37,7 @@
     availableModes:
     - SemiAuto
   - type: RevolverAmmoProvider
-    proto: CartridgeMagnum
+    proto: Cartridge.45_magnum
     capacity: 4
     chambers: [ True, True, True, True ]
     ammoSlots: [ null, null, null, null ]
@@ -60,7 +60,7 @@
     availableModes:
     - SemiAuto
   - type: RevolverAmmoProvider
-    proto: CartridgeMagnum
+    proto: Cartridge.45_magnum
     chambers: [ True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null ]
   - type: StaticPrice

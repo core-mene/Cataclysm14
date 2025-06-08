@@ -32,7 +32,7 @@ reagent-name-root-beer = root beer
 reagent-desc-root-beer = A very sweet, carbonated drink reminiscent of sarsaparilla. Goes well with ice cream.
 
 reagent-name-root-beer-float = root beer float
-reagent-desc-root-beer-float = Root beer, but now with ice cream on top. It truly is the magnum opus of Canadian summertime drinks.
+reagent-desc-root-beer-float = Root beer, but now with ice cream on top. It truly is the .45_magnum opus of Canadian summertime drinks.
 
 reagent-name-sol-dry = Sol Dry
 reagent-desc-sol-dry = Sweet ginger soda from outer space!

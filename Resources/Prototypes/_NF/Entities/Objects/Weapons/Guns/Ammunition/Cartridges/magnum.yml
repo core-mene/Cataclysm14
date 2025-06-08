@@ -1,10 +1,10 @@
 - type: entity
-  id: CartridgeMagnumRubber
-  name: cartridge (.45 magnum rubber)
-  parent: BaseCartridgeMagnum
+  id: Cartridge.45_magnumRubber
+  name: cartridge (.45_magnum rubber)
+  parent: BaseCartridge.45_magnum
   components:
   - type: CartridgeAmmo
-    proto: BulletMagnumRubber
+    proto: Bullet.45_magnumRubber
   - type: Sprite
     layers:
       - state: base

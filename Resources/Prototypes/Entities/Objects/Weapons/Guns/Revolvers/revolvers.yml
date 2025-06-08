@@ -38,10 +38,10 @@
   - type: RevolverAmmoProvider
     whitelist:
       tags:
-        - CartridgeMagnum
-        - SpeedLoaderMagnum
+        - Cartridge.45_magnum
+        - SpeedLoader.45_magnum
     mayTransfer: true # Frontier
-    proto: CartridgeMagnum
+    proto: Cartridge.45_magnum
     capacity: 6
     chambers: [ True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null ]
@@ -116,7 +116,7 @@
   suffix: armor-piercing
   components:
   - type: RevolverAmmoProvider
-    proto: CartridgeMagnumAP
+    proto: Cartridge.45_magnumAP
 
 - type: entity
   name: Python
@@ -148,9 +148,9 @@
   - type: RevolverAmmoProvider
     whitelist:
       tags:
-        - CartridgeMagnum
-        - SpeedLoaderMagnum
-    proto: CartridgeMagnumAP
+        - Cartridge.45_magnum
+        - SpeedLoader.45_magnum
+    proto: Cartridge.45_magnumAP
 
 
 - type: entity

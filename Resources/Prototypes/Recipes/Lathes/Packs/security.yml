@@ -17,7 +17,7 @@
   recipes:
   - BoxShotgunPractice
   - MagazineBox7.62x39mmPractice
-  - MagazineBoxMagnumPractice
+  - MagazineBox.45_magnumPractice
   - MagazineBoxPistolPractice
   - MagazineBox5.56x45mmPractice
   - WeaponDisablerPractice
@@ -32,8 +32,8 @@
   - BoxShotgunSlug
   - MagazineBox7.62x39mm
   - MagazineBox7.62x39mmRubber # Frontier
-  - MagazineBoxMagnum
-  - MagazineBoxMagnumRubber # Frontier
+  - MagazineBox.45_magnum
+  - MagazineBox.45_magnumRubber # Frontier
   - MagazineBoxPistol
   - MagazineBoxPistolRubber # Frontier
   - MagazineBox5.56x45mm
@@ -54,8 +54,8 @@
   - MagazineShotgun
   - MagazineShotgunEmpty
   - MagazineShotgunSlug
-  - SpeedLoaderMagnum
-  - SpeedLoaderMagnumEmpty
+  - SpeedLoader.45_magnum
+  - SpeedLoader.45_magnumEmpty
   - SpeedLoader5.56x45mm # Frontier
   - SpeedLoader5.56x45mmEmpty # Frontier
   - MagazineNovaliteC1Empty # Frontier
@@ -117,8 +117,8 @@
   - BoxShellTranquilizer
   # - MagazineBox7.62x39mmIncendiary # Frontier
   # - MagazineBox7.62x39mmUranium # Frontier
-  # - MagazineBoxMagnumIncendiary # Frontier
-  # - MagazineBoxMagnumUranium # Frontier
+  # - MagazineBox.45_magnumIncendiary # Frontier
+  # - MagazineBox.45_magnumUranium # Frontier
   # - MagazineBoxPistolIncendiary # Frontier
   # - MagazineBoxPistolUranium # Frontier
   # - MagazineBox5.56x45mmIncendiary # Frontier
@@ -133,8 +133,8 @@
   # - MagazineRifleUranium # Frontier
   - MagazineShotgunBeanbag
   # - MagazineShotgunIncendiary # Frontier
-  # - SpeedLoaderMagnumIncendiary # Frontier
-  # - SpeedLoaderMagnumUranium # Frontier
+  # - SpeedLoader.45_magnumIncendiary # Frontier
+  # - SpeedLoader.45_magnumUranium # Frontier
 
 - type: latheRecipePack
   id: SecurityWeapons

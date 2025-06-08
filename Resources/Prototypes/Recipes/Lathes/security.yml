@@ -287,8 +287,8 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: MagazineBoxMagnum
-  result: MagazineBoxMagnum
+  id: MagazineBox.45_magnum
+  result: MagazineBox.45_magnum
   materials:
     Steel: 240
 
@@ -409,29 +409,29 @@
 
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
-  id: SpeedLoaderMagnumEmpty
-  result: SpeedLoaderMagnumEmpty
+  id: SpeedLoader.45_magnumEmpty
+  result: SpeedLoader.45_magnumEmpty
   materials:
     Steel: 50
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: SpeedLoaderMagnum
-  result: SpeedLoaderMagnum
+  id: SpeedLoader.45_magnum
+  result: SpeedLoader.45_magnum
   materials:
     Steel: 190
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: SpeedLoaderMagnumPractice
-  result: SpeedLoaderMagnumPractice
+  id: SpeedLoader.45_magnumPractice
+  result: SpeedLoader.45_magnumPractice
   materials:
     Steel: 90
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: SpeedLoaderMagnumUranium
-  result: SpeedLoaderMagnumUranium
+  id: SpeedLoader.45_magnumUranium
+  result: SpeedLoader.45_magnumUranium
   materials:
     Steel: 50
     Plastic: 150
@@ -439,8 +439,8 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: SpeedLoaderMagnumIncendiary
-  result: SpeedLoaderMagnumIncendiary
+  id: SpeedLoader.45_magnumIncendiary
+  result: SpeedLoader.45_magnumIncendiary
   materials:
     Steel: 50
     Plastic: 150
@@ -492,8 +492,8 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: MagazineBoxMagnumIncendiary
-  result: MagazineBoxMagnumIncendiary
+  id: MagazineBox.45_magnumIncendiary
+  result: MagazineBox.45_magnumIncendiary
   materials:
     Plastic: 240
 
@@ -536,8 +536,8 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: MagazineBoxMagnumPractice
-  result: MagazineBoxMagnumPractice
+  id: MagazineBox.45_magnumPractice
+  result: MagazineBox.45_magnumPractice
   materials:
     Steel: 60
 
@@ -592,8 +592,8 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: MagazineBoxMagnumUranium
-  result: MagazineBoxMagnumUranium
+  id: MagazineBox.45_magnumUranium
+  result: MagazineBox.45_magnumUranium
   materials:
     Plastic: 240
     Uranium: 180

@@ -1,17 +1,17 @@
 - type: entity
-  id: BaseSpeedLoaderMagnum
-  name: "speed loader (.45 magnum)"
+  id: BaseSpeedLoader.45_magnum
+  name: "speed loader (.45_magnum)"
   parent: [ BaseItem, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
-      - SpeedLoaderMagnum
+      - SpeedLoader.45_magnum
   - type: SpeedLoader
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-        - CartridgeMagnum
+        - Cartridge.45_magnum
     capacity: 6
   - type: Sprite
   - type: ContainerContainer
@@ -20,14 +20,14 @@
         ents: []
 
 - type: entity
-  id: SpeedLoaderMagnum
-  name: "speed loader (.45 magnum)"
-  parent: BaseSpeedLoaderMagnum
+  id: SpeedLoader.45_magnum
+  name: "speed loader (.45_magnum)"
+  parent: BaseSpeedLoader.45_magnum
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnum
+    proto: Cartridge.45_magnum
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/.45_magnum/.45_magnum_speed_loader.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
@@ -40,14 +40,14 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoaderMagnumEmpty
-  name: "speed loader (.45 magnum any)"
-  parent: SpeedLoaderMagnum
+  id: SpeedLoader.45_magnumEmpty
+  name: "speed loader (.45_magnum any)"
+  parent: SpeedLoader.45_magnum
   components:
   - type: BallisticAmmoProvider
     proto: null
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/.45_magnum/.45_magnum_speed_loader.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
@@ -58,22 +58,22 @@
         map: [ "enum.GunVisualLayers.Mag" ]
 
 - type: entity
-  id: SpeedLoaderMagnumIncendiary
-  name: "speed loader (.45 magnum incendiary)"
-  parent: SpeedLoaderMagnum
+  id: SpeedLoader.45_magnumIncendiary
+  name: "speed loader (.45_magnum incendiary)"
+  parent: SpeedLoader.45_magnum
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumIncendiary
+    proto: Cartridge.45_magnumIncendiary
 
 - type: entity
-  id: SpeedLoaderMagnumPractice
-  name: "speed loader (.45 magnum practice)"
-  parent: BaseSpeedLoaderMagnum
+  id: SpeedLoader.45_magnumPractice
+  name: "speed loader (.45_magnum practice)"
+  parent: BaseSpeedLoader.45_magnum
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumPractice
+    proto: Cartridge.45_magnumPractice
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/.45_magnum/.45_magnum_speed_loader.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
@@ -86,14 +86,14 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoaderMagnumAP
-  name: "speed loader (.45 magnum armor-piercing)"
-  parent: BaseSpeedLoaderMagnum
+  id: SpeedLoader.45_magnumAP
+  name: "speed loader (.45_magnum armor-piercing)"
+  parent: BaseSpeedLoader.45_magnum
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumAP
+    proto: Cartridge.45_magnumAP
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/.45_magnum/.45_magnum_speed_loader.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
@@ -106,14 +106,14 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoaderMagnumUranium
-  name: "speed loader (.45 magnum uranium)"
-  parent: BaseSpeedLoaderMagnum
+  id: SpeedLoader.45_magnumUranium
+  name: "speed loader (.45_magnum uranium)"
+  parent: BaseSpeedLoader.45_magnum
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumUranium
+    proto: Cartridge.45_magnumUranium
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/.45_magnum/.45_magnum_speed_loader.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]

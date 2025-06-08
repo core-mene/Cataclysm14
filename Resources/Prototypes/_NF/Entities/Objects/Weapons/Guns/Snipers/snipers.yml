@@ -17,12 +17,12 @@
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Snipers/repeater.rsi
   - type: Clothing
-    sprite: _NF/Objects/Weapons/Guns/Snipers/repeater.rsi    
+    sprite: _NF/Objects/Weapons/Guns/Snipers/repeater.rsi
   - type: StaticPrice
     price: 500
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-      - CartridgeMagnum
+      - Cartridge.45_magnum
     capacity: 7
-    proto: CartridgeMagnum
+    proto: Cartridge.45_magnum

@@ -466,7 +466,7 @@
   id: UplinkPistol9mmMagazine
   name: uplink-pistol-magazine-name
   description: uplink-pistol-magazine-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
+  icon: { sprite: /Textures/_Mono/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
   productEntity: Magazine9x19mm
   cost:
     Telecrystal: 1
@@ -478,7 +478,7 @@
   id: UplinkMagazine9x19mmSubMachineGun
   name: uplink-pistol-magazine-c20r-name
   description: uplink-pistol-magazine-c20r-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
+  icon: { sprite: /Textures/_Mono/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
   productEntity: Magazine9x19mmSubMachineGun
   cost:
     Telecrystal: 2
@@ -490,7 +490,7 @@
   id: UplinkMagazine9x19mmCaselessRifle
   name: uplink-pistol-magazine-caseless-name
   description: uplink-pistol-magazine-caseless-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi, state: red-icon }
+  icon: { sprite: /Textures/_Mono/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi, state: red-icon }
   productEntity: Magazine9x19mmCaselessRifle
   cost:
     Telecrystal: 1
@@ -499,11 +499,11 @@
 
 # For the Python
 - type: listing
-  id: UplinkSpeedLoaderMagnumAP
-  name: uplink-speedloader-magnum-name
+  id: UplinkSpeedLoader.45_magnumAP
+  name: uplink-speedloader-45_magnum-name
   description: uplink-speedloader-magnu-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
-  productEntity: SpeedLoaderMagnumAP
+  icon: { sprite: /Textures/_Mono/_Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/.45_magnum/.45_magnum_speed_loader.rsi, state: icon }
+  productEntity: SpeedLoader.45_magnumAP
   cost:
     Telecrystal: 3
   categories:

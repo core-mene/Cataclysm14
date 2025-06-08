@@ -54,7 +54,7 @@
   name: syndicate captain
   parent: MobSyndicateNavalBase
   id: MobSyndicateNavalCaptainA
-  description: The executive officer in lieu of the commander, syndicate captains ensure operations onboard go smoothly. Equipped with a magnum revolver.
+  description: The executive officer in lieu of the commander, syndicate captains ensure operations onboard go smoothly. Equipped with a .45_magnum revolver.
   categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
@@ -65,7 +65,7 @@
       rechargeSound:
         path: /Audio/_NF/Effects/silence.ogg
     - type: BasicEntityAmmoProvider
-      proto: BulletMagnumAP
+      proto: Bullet.45_magnumAP
       capacity: 1
       count: 1
     - type: Gun
@@ -85,7 +85,7 @@
       prototypes:
         - SyndicateNavalCaptainGearB
     - type: BasicEntityAmmoProvider
-      proto: BulletMagnum
+      proto: Bullet.45_magnum
       capacity: 1
       count: 1
 
@@ -98,7 +98,7 @@
       prototypes:
         - SyndicateNavalCaptainGearC
     - type: BasicEntityAmmoProvider
-      proto: BulletMagnum
+      proto: Bullet.45_magnum
       capacity: 1
       count: 1
 
@@ -111,7 +111,7 @@
       prototypes:
         - SyndicateNavalCaptainGearD
     - type: BasicEntityAmmoProvider
-      proto: BulletMagnum
+      proto: Bullet.45_magnum
       capacity: 1
       count: 1
 
@@ -747,7 +747,7 @@
       prototypes:
         - SyndicateNavalCaptainVoidGear
     - type: BasicEntityAmmoProvider
-      proto: BulletMagnum
+      proto: Bullet.45_magnum
       capacity: 1
       count: 1
 

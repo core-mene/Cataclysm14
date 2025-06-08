@@ -1005,8 +1005,8 @@
   id: UplinkSecuritySpeedloader
   name:  uplink-security-speedloader-name
   description: uplink-security-speedloader-desc
-  productEntity: SpeedLoaderMagnum
-  icon: { sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: base }
+  productEntity: SpeedLoader.45_magnum
+  icon: { sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/.45_magnum/.45_magnum_speed_loader.rsi, state: base }
   cost:
     FederationMilitaryCredit: 1
   categories:
@@ -1021,8 +1021,8 @@
   id: UplinkSecuritySpeedloaderRubber
   name:  uplink-security-speedloaderrubber-name
   description: uplink-security-speedloaderrubber-desc
-  productEntity: SpeedLoaderMagnumRubber
-  icon: { sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: base }
+  productEntity: SpeedLoader.45_magnumRubber
+  icon: { sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/.45_magnum/.45_magnum_speed_loader.rsi, state: base }
   cost:
     FederationMilitaryCredit: 1
   categories:
