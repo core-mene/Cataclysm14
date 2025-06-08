@@ -9,7 +9,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineRifleRubber
+        startingItem: Magazine5.56x45mmRubber
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
@@ -19,11 +19,11 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeRifleRubber
+        startingItem: Cartridge5.56x45mmRubber
         priority: 1
         whitelist:
           tags:
-            - CartridgeRifle
+            - Cartridge5.56x45mm
 
 #Delta-V
 - type: entity
@@ -36,21 +36,22 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine7.62x39mmRubber
+        startingItem: Magazine7.62x51mmRubber
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine7.62x39mm
+            - Magazine7.62x51mm
+            - Magazine7.62x51mmLowCapacity
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge7.62x39mmRubber
+        startingItem: Cartridge7.62x51mmRubber
         priority: 1
         whitelist:
           tags:
-            - Cartridge7.62x39mm
+            - Cartridge7.62x51mm
 
 # Frontier
 - type: entity
@@ -172,11 +173,11 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeRifle
+        startingItem: Cartridge5.56x45mm
         priority: 1
         whitelist:
           tags:
-            - CartridgeRifle
+            - Cartridge5.56x45mm
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -206,11 +207,11 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeRifleRubber
+        startingItem: Cartridge5.56x45mmRubber
         priority: 1
         whitelist:
           tags:
-            - CartridgeRifle
+            - Cartridge5.56x45mm
 
 - type: entity
   id: WeaponRifleSVS

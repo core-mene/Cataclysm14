@@ -144,7 +144,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: MagazineBoxRifle
+    - id: MagazineBox5.56x45mm
       prob: 0.9
     - id: MagazineNovaliteC1Empty
       prob: 0.9
@@ -152,7 +152,7 @@
       prob: 0.9
     - id: MagazineNovaliteC1
       prob: 0.2
-    - id: MagazineBoxRifleBig
+    - id: MagazineBox5.56x45mmBig
       prob: 0.2
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
@@ -272,9 +272,9 @@
       prob: 0.6
     - id: SpeedLoader5.56x45mm
       prob: 0.1
-    - id: MagazineBoxRifle
+    - id: MagazineBox5.56x45mm
       prob: 0.9
-    - id: MagazineBoxRifleBig
+    - id: MagazineBox5.56x45mmBig
       prob: 0.2
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg

@@ -15,10 +15,10 @@
   - type: RevolverAmmoProvider
     whitelist:
       tags:
-        - CartridgeRifle
+        - Cartridge5.56x45mm
         - SpeedLoader5.56x45mm
     capacity: 8
-    proto: CartridgeRifle
+    proto: Cartridge5.56x45mm
     chambers: [ True, True, True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null, null, null ]
   - type: StaticPrice
@@ -31,7 +31,7 @@
   components:
   - type: RevolverAmmoProvider
     capacity: 8
-    proto: CartridgeRifleRubber
+    proto: Cartridge5.56x45mmRubber
     chambers: [ True, True, True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null, null, null ]
 

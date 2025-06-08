@@ -83,6 +83,7 @@
         whitelist:
           tags:
             - Magazine7.62x39mm
+            - Magazine7.62x39mmLowCapacity
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
@@ -132,11 +133,11 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeRifle
+        startingItem: Cartridge5.56x45mm
         priority: 1
         whitelist:
           tags:
-            - CartridgeRifle
+            - Cartridge5.56x45mm
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -179,11 +180,11 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeRifle
+        startingItem: Cartridge5.56x45mm
         priority: 1
         whitelist:
           tags:
-            - CartridgeRifle
+            - Cartridge5.56x45mm
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

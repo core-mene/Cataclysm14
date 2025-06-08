@@ -1,15 +1,4 @@
 - type: entity
-  id: Bullet5.56x45mm
-  name: bullet (5.56x45mm)
-  parent: BaseBullet
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Projectile
-    damage:
-      types:
-        Piercing: 19
-
-- type: entity
   id: BulletMinigun
   name: minigun bullet (.10 rifle)
   parent: Bullet5.56x45mm

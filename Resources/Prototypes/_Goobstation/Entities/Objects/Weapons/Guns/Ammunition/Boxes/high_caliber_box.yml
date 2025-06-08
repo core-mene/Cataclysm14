@@ -1,15 +1,15 @@
 - type: entity
   abstract: true
   parent: [ BaseItem, BaseC3PirateContraband ]
-  id: BaseMagazineBoxHighCaliber
-  name: ammunition box (.50 anti-materiel)
+  id: BaseMagazineBox12.7x99mm
+  name: ammunition box (12.7x99mm anti-materiel)
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeHighCaliber
-    proto: CartridgeHighCaliber
+        - Cartridge12.7x99mm
+    proto: Cartridge12.7x99mm
     capacity: 30
   - type: Item
     size: Small
@@ -30,14 +30,14 @@
   - type: Appearance
 
 - type: entity
-  parent: BaseMagazineBoxHighCaliber
-  id: MagazineBoxHighCaliber
+  parent: BaseMagazineBox12.7x99mm
+  id: MagazineBox12.7x99mm
 
 - type: entity
-  parent: BaseMagazineBoxHighCaliber
-  id: MagazineBoxHighCaliberExplosive
-  name: ammunition box (.50 high-explosive)
+  parent: BaseMagazineBox12.7x99mm
+  id: MagazineBox12.7x99mmExplosive
+  name: ammunition box (12.7x99mm high-explosive)
   components:
   - type: BallisticAmmoProvider
     capacity: 30
-    proto: CartridgeHighCaliberExplosive
+    proto: Cartridge12.7x99mmExplosive

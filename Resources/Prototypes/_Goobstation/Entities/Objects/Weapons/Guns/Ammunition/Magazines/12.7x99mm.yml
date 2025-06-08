@@ -1,26 +1,26 @@
 - type: entity
-  id: BaseMagazineHighCaliber
-  name: "magazine (.50 caliber)"
+  id: BaseMagazine12.7x99mm
+  name: "magazine (12.7x99mm)"
   parent: [ BaseItem, BaseC3PirateContraband ]
   abstract: true
   components:
   - type: Tag
     tags:
-      - MagazineHighCaliber
+      - Magazine12.7x99mm
   - type: Item
     size: Small
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeHighCaliber
-    proto: CartridgeHighCaliber
+        - Cartridge12.7x99mm
+    proto: Cartridge12.7x99mm
     capacity: 10
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/heavy_rifle_mags.rsi
+    sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/12.7x99mm_mags.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -33,30 +33,30 @@
   - type: Appearance
 
 - type: entity
-  id: MagazineHighCaliberEmpty
-  name: "magazine (.50 empty)"
-  parent: BaseMagazineHighCaliber
+  id: Magazine12.7x99mmEmpty
+  name: "magazine (12.7x99mm empty)"
+  parent: BaseMagazine12.7x99mm
   components:
   - type: BallisticAmmoProvider
     proto: null
 
 - type: entity
-  id: MagazineHighCaliber
-  name: "magazine (.50 anti-materiel)"
-  parent: BaseMagazineHighCaliber
+  id: Magazine12.7x99mm
+  name: "magazine (12.7x99mm anti-materiel)"
+  parent: BaseMagazine12.7x99mm
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeHighCaliber
+    proto: Cartridge12.7x99mm
 
 - type: entity
-  id: MagazineHighCaliberExplosive
-  name: "magazine (.50 high-explosive)"
-  parent: BaseMagazineHighCaliber
+  id: Magazine12.7x99mmExplosive
+  name: "magazine (12.7x99mm high-explosive)"
+  parent: BaseMagazine12.7x99mm
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeHighCaliberExplosive
+    proto: Cartridge12.7x99mmExplosive
   - type: Sprite
-    sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/heavy_rifle_mags.rsi
+    sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/12.7x99mm_mags.rsi
     layers:
     - state: red
       map: ["enum.GunVisualLayers.Base"]

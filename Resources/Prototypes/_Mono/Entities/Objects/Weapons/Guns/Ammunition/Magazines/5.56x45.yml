@@ -1,11 +1,11 @@
 # Upstream
 - type: entity
-  id: MagazineRifleRubber
+  id: Magazine5.56x45mmRubber
   name: "magazine (5.56x45mm rubber)"
-  parent: BaseMagazineRifle
+  parent: BaseMagazine5.56x45mm
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifleRubber
+    proto: Cartridge5.56x45mmRubber
   - type: Sprite
     layers:
     - state: rubber
@@ -15,7 +15,7 @@
 
 # Novalite
 - type: entity
-  parent: BaseMagazineRifle
+  parent: BaseMagazine5.56x45mm
   id: MagazineNovaliteC1Empty
   name: "clip (5.56x45mm any)"
   suffix: empty
@@ -29,7 +29,7 @@
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeRifle
+        - Cartridge5.56x45mm
     capacity: 25
   - type: ContainerContainer
     containers:
@@ -54,7 +54,7 @@
   suffix: full
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifle
+    proto: Cartridge5.56x45mm
   - type: Sprite
     layers:
     - state: base
@@ -69,7 +69,7 @@
   suffix: full
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifleRubber
+    proto: Cartridge5.56x45mmRubber
   - type: Sprite
     layers:
     - state: base

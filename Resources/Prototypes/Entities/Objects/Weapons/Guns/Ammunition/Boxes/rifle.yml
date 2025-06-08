@@ -1,14 +1,14 @@
 - type: entity
   abstract: true
   parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
-  id: BaseMagazineBoxRifle
+  id: BaseMagazineBox5.56x45mm
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeRifle
-    proto: CartridgeRifle
+        - Cartridge5.56x45mm
+    proto: Cartridge5.56x45mm
     capacity: 50
   - type: Item
     size: Small
@@ -25,14 +25,14 @@
 
 # Boxes
 - type: entity
-  parent: BaseMagazineBoxRifle
-  id: MagazineBoxRifleBig
+  parent: BaseMagazineBox5.56x45mm
+  id: MagazineBox5.56x45mmBig
   name: ammunition box (5.56x45mm)
   suffix: Big
   components:
   - type: BallisticAmmoProvider
     capacity: 200
-    proto: CartridgeRifle
+    proto: Cartridge5.56x45mm
   - type: Sprite
     layers:
     - state: base-b # Frontier: base-big<base-b
@@ -46,12 +46,12 @@
   - type: Appearance
 
 - type: entity
-  parent: BaseMagazineBoxRifle
-  id: MagazineBoxRifle
+  parent: BaseMagazineBox5.56x45mm
+  id: MagazineBox5.56x45mm
   name: ammunition box (5.56x45mm)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifle
+    proto: Cartridge5.56x45mm
   - type: Sprite
     layers:
     - state: base
@@ -60,12 +60,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  parent: BaseMagazineBoxRifle
-  id: MagazineBoxRiflePractice
+  parent: BaseMagazineBox5.56x45mm
+  id: MagazineBox5.56x45mmPractice
   name: ammunition box (5.56x45mm practice)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRiflePractice
+    proto: Cartridge5.56x45mmPractice
   - type: Sprite
     layers:
     - state: base
@@ -75,12 +75,12 @@
     - state: practice
 
 - type: entity
-  id: MagazineBoxRifleIncendiary
-  parent: BaseMagazineBoxRifle
+  id: MagazineBox5.56x45mmIncendiary
+  parent: BaseMagazineBox5.56x45mm
   name: ammunition box (5.56x45mm incendiary)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifleIncendiary
+    proto: Cartridge5.56x45mmIncendiary
   - type: Sprite
     layers:
     - state: base
@@ -90,12 +90,12 @@
     - state: incendiary
 
 - type: entity
-  id: MagazineBoxRifleUranium
-  parent: BaseMagazineBoxRifle
+  id: MagazineBox5.56x45mmUranium
+  parent: BaseMagazineBox5.56x45mm
   name: ammunition box (5.56x45mm uranium)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifleUranium
+    proto: Cartridge5.56x45mmUranium
   - type: Sprite
     layers:
     - state: base

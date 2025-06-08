@@ -1,8 +1,8 @@
 - type: entity
   name: Vulcan
-  parent: [BaseWeaponRifle, BaseGunWieldable, BaseC1Contraband] # Frontier: add BaseC1Contraband
+  parent: [BaseWeaponLightMachineGun, BaseGunWieldable, BaseC1Contraband] # Frontier: add BaseC1Contraband
   id: WeaponRifleVulcan
-  description: One of the heaviest small arms to grace Security's armory, this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World". Uses 7.62x39mm ammo.
+  description: One of the heaviest small arms to grace Security's armory, this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World". Uses 7.62x51mm ammo.
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi
@@ -12,12 +12,12 @@
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
-    minAngle: -20
-    maxAngle: -46
+    minAngle: -19
+    maxAngle: -16
   - type: Gun
     minAngle: 21
-    maxAngle: 54
-    angleIncrease: 3
+    maxAngle: 32
+    angleIncrease: 10
     angleDecay: 24
     fireRate: 5
     selectedMode: SemiAuto
@@ -29,21 +29,22 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine7.62x39mm
+        startingItem: Magazine7.62x51mm
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine7.62x39mm
+            - Magazine7.62x51mm
+            - Magazine7.62x51mmLowCapacity
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge7.62x39mm
+        startingItem: Cartridge7.62x51mm
         priority: 1
         whitelist:
           tags:
-            - Cartridge7.62x39mm
+            - Cartridge7.62x51mm
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

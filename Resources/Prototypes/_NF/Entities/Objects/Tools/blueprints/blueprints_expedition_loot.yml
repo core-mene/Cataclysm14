@@ -14,13 +14,13 @@
 
 - type: entity
   parent: BaseBlueprintExpedition
-  id: NFBlueprintMagazineBoxRifleUranium
+  id: NFBlueprintMagazineBox5.56x45mmUranium
   name: uranium 5.56x45mm blueprint
   description: A blueprint with a schematic of an uranium 5.56x45mm ammo. It can be inserted into an autolathe or a techfab.
   components:
   - type: Blueprint
     providedRecipes:
-    - MagazineBoxRifleUranium
+    - MagazineBox5.56x45mmUranium
 
 - type: entity
   parent: BaseBlueprintExpedition
@@ -66,13 +66,13 @@
 
 - type: entity
   parent: BaseBlueprintExpedition
-  id: NFBlueprintMagazineBoxRifleIncendiary
+  id: NFBlueprintMagazineBox5.56x45mmIncendiary
   name: incendiary 5.56x45mm blueprint
   description: A blueprint with a schematic of an incendiary 5.56x45mm ammo. It can be inserted into an autolathe or a techfab.
   components:
   - type: Blueprint
     providedRecipes:
-    - MagazineBoxRifleIncendiary
+    - MagazineBox5.56x45mmIncendiary
 
 - type: entity
   parent: BaseBlueprintExpedition

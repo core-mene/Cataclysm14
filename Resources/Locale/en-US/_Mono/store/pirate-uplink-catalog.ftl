@@ -95,7 +95,7 @@ uplink-pirate-viper-desc = A small, easily concealable, but somewhat underpowere
 uplink-pirate-kanabou-name = Kanabou
 uplink-pirate-kanabou-desc = A weapon for those who wish to forgo subtlety. Particularly suited to oni.
 
-uplink-pirate-ak-name = AKMS
+uplink-pirate-ak-name = AKM
 uplink-pirate-ak-desc = An iconic weapon of war. Uses 7.62x39mm ammo.
 
 uplink-pirate-laser-gun-name = Retro laser blaster
@@ -120,7 +120,7 @@ uplink-pirate-wspr-name = WSPR
 uplink-pirate-wspr-desc = A counter to the TSFMC's Annie. Uses the same .30 subsonic ammo.
 
 uplink-pirate-burner-name = Burner Heavy Rifle
-uplink-pirate-burner-desc = A destructive .50 caliber rifle. Supports HE ammo. Horribly destructive.
+uplink-pirate-burner-desc = A destructive 12.7x99mm rifle. Supports HE ammo. Horribly destructive.
 
 uplink-pirate-blueprint-launcher-rocket-name = RPG-7 Blueprint
 uplink-pirate-blueprint-launcher-rocket-desc = A blueprint for RPG-7 and the ammo for it. Good for long term terrorism!

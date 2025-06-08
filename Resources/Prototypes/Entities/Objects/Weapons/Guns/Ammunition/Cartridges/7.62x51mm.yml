@@ -1,15 +1,15 @@
 - type: entity
-  id: BaseCartridgeRifle
-  name: cartridge (5.56x45mm)
+  id: BaseCartridge7.62x51mm
+  name: cartridge (7.62x51mm)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
-      - Cartridge
-      - CartridgeRifle
+    - Cartridge
+    - Cartridge7.62x51mm
   - type: CartridgeAmmo
-    proto: BulletRifle
+    proto: Bullet7.62x51mm
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
@@ -21,20 +21,20 @@
     price: 1
 
 - type: entity
-  id: CartridgeRifle
-  name: cartridge (5.56x45mm)
-  parent: BaseCartridgeRifle
+  id: Cartridge7.62x51mm
+  name: cartridge (7.62x51mm)
+  parent: BaseCartridge7.62x51mm
   components:
   - type: CartridgeAmmo
-    proto: BulletRifle
+    proto: Bullet7.62x51mm
 
 - type: entity
-  id: CartridgeRiflePractice
-  name: cartridge (5.56x45mm practice)
-  parent: BaseCartridgeRifle
+  id: Cartridge7.62x51mmPractice
+  name: cartridge (7.62x51mm practice)
+  parent: BaseCartridge7.62x51mm
   components:
   - type: CartridgeAmmo
-    proto: BulletRiflePractice
+    proto: Bullet7.62x51mmPractice
   - type: Sprite
     layers:
       - state: base
@@ -44,12 +44,12 @@
         color: "#dbdbdb"
 
 - type: entity
-  id: CartridgeRifleIncendiary
-  name: cartridge (5.56x45mm incendiary)
-  parent: BaseCartridgeRifle
+  id: Cartridge7.62x51mmIncendiary
+  name: cartridge (7.62x51mm incendiary)
+  parent: BaseCartridge7.62x51mm
   components:
   - type: CartridgeAmmo
-    proto: BulletRifleIncendiary
+    proto: Bullet7.62x51mmIncendiary
   - type: Sprite
     layers:
       - state: base
@@ -59,12 +59,12 @@
         color: "#ff6e52"
 
 - type: entity
-  id: CartridgeRifleUranium
-  name: cartridge (5.56x45mm uranium)
-  parent: BaseCartridgeRifle
+  id: Cartridge7.62x51mmUranium
+  name: cartridge (7.62x51mm uranium)
+  parent: BaseCartridge7.62x51mm
   components:
   - type: CartridgeAmmo
-    proto: BulletRifleUranium
+    proto: Bullet7.62x51mmUranium
   - type: Sprite
     layers:
       - state: base

@@ -1,26 +1,27 @@
 # Empty mags
 - type: entity
-  id: BaseMagazineRifle
-  name: "magazine (5.56x45mm)"
-  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
+  id: BaseMagazine7.62x54mmR
+  name: "magazine (7.62x54mmR)"
+  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband added RecyclableItemSteelTiny
   abstract: true
   components:
   - type: Tag
     tags:
-      - MagazineRifle
-  - type: Item
-    size: Small
+      - Magazine7.62x54mmR
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeRifle
-    capacity: 25
+        - Cartridge7.62x54mmR
+    proto: Cartridge7.62x54mmR
+    capacity: 10
+  - type: Item
+    size: Small
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Rifle/rifle_mag.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/7.62x54mmR/7.62x54mmR_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -34,12 +35,12 @@
 
 # Magazines
 - type: entity
-  id: MagazineRifle
-  name: "magazine (5.56x45mm)"
-  parent: BaseMagazineRifle
+  id: Magazine7.62x54mmR
+  name: "magazine (7.62x54mmR)"
+  parent: BaseMagazine7.62x54mmR
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifle
+    proto: Cartridge7.62x54mmR
   - type: Sprite
     layers:
     - state: red
@@ -48,10 +49,10 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: MagazineRifleEmpty
-  name: "magazine (5.56x45mm any)"
+  id: Magazine7.62x54mmREmpty
+  name: "magazine (7.62x54mmR any)"
   suffix: empty
-  parent: MagazineRifle
+  parent: Magazine7.62x54mmR
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -63,20 +64,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: MagazineRifleIncendiary
-  name: "magazine (5.56x45mm incendiary)"
-  parent: MagazineRifle
+  id: Magazine7.62x54mmRPractice
+  name: "magazine (7.62x54mmR practice)"
+  parent: BaseMagazine7.62x54mmR
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifleIncendiary
-
-- type: entity
-  id: MagazineRiflePractice
-  name: "magazine (5.56x45mm practice)"
-  parent: BaseMagazineRifle
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeRiflePractice
+    proto: Cartridge7.62x54mmRPractice
   - type: Sprite
     layers:
     - state: practice
@@ -85,15 +78,23 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: MagazineRifleUranium
-  name: "magazine (5.56x45mm uranium)"
-  parent: BaseMagazineRifle
+  id: Magazine7.62x54mmRUranium
+  name: "magazine (7.62x54mmR uranium)"
+  parent: BaseMagazine7.62x54mmR
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifleUranium
+    proto: Cartridge7.62x54mmRUranium
   - type: Sprite
     layers:
     - state: uranium
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine7.62x54mmRIncendiary
+  name: "magazine (7.62x54mmR incendiary)"
+  parent: Magazine7.62x54mmR
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x54mmRIncendiary

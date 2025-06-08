@@ -1,0 +1,57 @@
+- type: entity
+  id: Bullet5.56x45mm
+  name: bullet (5.56x45mm)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 17
+
+- type: entity
+  id: Bullet5.56x45mmPractice
+  name: bullet (5.56x45mm practice)
+  parent: BaseBulletPractice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 2
+
+- type: entity
+  id: Bullet5.56x45mmRubber
+  name: bullet (5.56x45mm rubber)
+  parent: BaseBulletRubber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3
+
+- type: entity
+  id: Bullet5.56x45mmIncendiary
+  parent: BaseBulletIncendiary
+  name: bullet (5.56x45mm incendiary)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 2
+        Heat: 15
+
+- type: entity
+  id: Bullet5.56x45mmUranium
+  parent: BaseBulletUranium
+  name: bullet (5.56x45mm uranium)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 7
+        Piercing: 8
+

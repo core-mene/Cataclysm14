@@ -1,11 +1,11 @@
 - type: entity
-  parent: MagazineBoxRifleBig
-  id: MagazineBoxRifleBigRubber
+  parent: MagazineBox5.56x45mmBig
+  id: MagazineBox5.56x45mmBigRubber
   name: ammunition box (5.56x45mm rubber)
   components:
   - type: BallisticAmmoProvider
     capacity: 200
-    proto: CartridgeRifleRubber
+    proto: Cartridge5.56x45mmRubber
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/5.56x45mm.rsi
     layers:
@@ -16,12 +16,12 @@
     - state: practice-b
 
 - type: entity
-  parent: BaseMagazineBoxRifle
-  id: MagazineBoxRifleRubber
+  parent: BaseMagazineBox5.56x45mm
+  id: MagazineBox5.56x45mmRubber
   name: ammunition box (5.56x45mm rubber)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifleRubber
+    proto: Cartridge5.56x45mmRubber
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/5.56x45mm.rsi
     layers:

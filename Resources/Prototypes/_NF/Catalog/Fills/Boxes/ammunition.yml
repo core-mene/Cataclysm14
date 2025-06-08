@@ -60,10 +60,10 @@
 - type: entity
   name: box of 5.56x45mm (rubber) magazines
   parent: BoxMagazine
-  id: BoxMagazineRifleRubber
+  id: BoxMagazine5.56x45mmRubber
   description: A box full of 5.56x45mm (rubber) magazines.
   components:
   - type: StorageFill
     contents:
-      - id: MagazineRifleRubber
+      - id: Magazine5.56x45mmRubber
         amount: 4
