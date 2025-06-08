@@ -1,8 +1,8 @@
-# .20 rifle ammo
+# 5.56x45mm ammo
 - type: entity # Lethal
   abstract: true
   id: StorageFillAmmoBoxLethal20
-  suffix: .20 rifle, Lethal, x4 boxes
+  suffix: 5.56x45mm, Lethal, x4 boxes
   components:
   - type: StorageFill
     contents:
@@ -12,7 +12,7 @@
 - type: entity # Lethal
   abstract: true
   id: StorageFillAmmoBoxBigLethal20
-  suffix: .20 rifle, Lethal, x4 big boxes
+  suffix: 5.56x45mm, Lethal, x4 big boxes
   components:
   - type: StorageFill
     contents:
@@ -22,7 +22,7 @@
 - type: entity # Rubber
   abstract: true
   id: StorageFillAmmoBoxRubber20
-  suffix: .20 rifle, Rubber, x4 boxes
+  suffix: 5.56x45mm, Rubber, x4 boxes
   components:
   - type: StorageFill
     contents:
@@ -32,7 +32,7 @@
 - type: entity # Rubber
   abstract: true
   id: StorageFillAmmoBoxBigRubber20
-  suffix: .20 rifle, Rubber, x4 big boxes
+  suffix: 5.56x45mm, Rubber, x4 big boxes
   components:
   - type: StorageFill
     contents:
@@ -42,7 +42,7 @@
 - type: entity # Practice
   abstract: true
   id: StorageFillAmmoBoxPractice20
-  suffix: .20 rifle, Practice, x4 boxes
+  suffix: 5.56x45mm, Practice, x4 boxes
   components:
   - type: StorageFill
     contents:
@@ -52,7 +52,7 @@
 - type: entity # Incendiary
   abstract: true
   id: StorageFillAmmoBoxIncendiary20
-  suffix: .20 rifle, Incendiary, x4 boxes
+  suffix: 5.56x45mm, Incendiary, x4 boxes
   components:
   - type: StorageFill
     contents:
@@ -62,72 +62,72 @@
 - type: entity # Uranium
   abstract: true
   id: StorageFillAmmoBoxUranium20
-  suffix: .20 rifle, Uranium, x4 boxes
+  suffix: 5.56x45mm, Uranium, x4 boxes
   components:
   - type: StorageFill
     contents:
     - id: MagazineBoxRifleUranium
       amount: 4
 
-# .30 rifle ammo
+# 7.62x39mm ammo
 - type: entity # Lethal
   abstract: true
   id: StorageFillAmmoBoxLethal30
-  suffix: .30 rifle, Lethal, x4 boxes
+  suffix: 7.62x39mm, Lethal, x4 boxes
   components:
   - type: StorageFill
     contents:
-    - id: MagazineBoxLightRifle
+    - id: MagazineBox7.62x39mm
       amount: 4
 
 - type: entity # Lethal
   abstract: true
   id: StorageFillAmmoBoxBigLethal30
-  suffix: .30 rifle, Lethal, x4 big boxes
+  suffix: 7.62x39mm, Lethal, x4 big boxes
   components:
   - type: StorageFill
     contents:
-    - id: MagazineBoxLightRifleBig
+    - id: MagazineBox7.62x39mmBig
       amount: 4
 
 - type: entity # Rubber
   abstract: true
   id: StorageFillAmmoBoxRubber30
-  suffix: .30 rifle, Rubber, x4 boxes
+  suffix: 7.62x39mm, Rubber, x4 boxes
   components:
   - type: StorageFill
     contents:
-    - id: MagazineBoxLightRifleRubber
+    - id: MagazineBox7.62x39mmRubber
       amount: 4
 
 - type: entity # Practice
   abstract: true
   id: StorageFillAmmoBoxPractice30
-  suffix: .30 rifle, Practice, x4 boxes
+  suffix: 7.62x39mm, Practice, x4 boxes
   components:
   - type: StorageFill
     contents:
-    - id: MagazineBoxLightRiflePractice
+    - id: MagazineBox7.62x39mmPractice
       amount: 4
 
 - type: entity # Incendiary
   abstract: true
   id: StorageFillAmmoBoxIncendiary30
-  suffix: .30 rifle, Incendiary, x4 boxes
+  suffix: 7.62x39mm, Incendiary, x4 boxes
   components:
   - type: StorageFill
     contents:
-    - id: MagazineBoxLightRifleIncendiary
+    - id: MagazineBox7.62x39mmIncendiary
       amount: 4
 
 - type: entity # Uranium
   abstract: true
   id: StorageFillAmmoBoxUranium30
-  suffix: .30 rifle, Uranium, x4 boxes
+  suffix: 7.62x39mm, Uranium, x4 boxes
   components:
   - type: StorageFill
     contents:
-    - id: MagazineBoxLightRifleUranium
+    - id: MagazineBox7.62x39mmUranium
       amount: 4
 
 # .35 pistol ammo

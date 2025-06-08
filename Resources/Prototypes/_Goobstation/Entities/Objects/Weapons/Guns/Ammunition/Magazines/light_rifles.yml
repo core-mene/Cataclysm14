@@ -1,18 +1,18 @@
 - type: entity
-  id: MagazineLightRifleSubsonic
-  name: "magazine (.30 rifle subsonic)"
-  parent: BaseMagazineLightRifle
+  id: Magazine7.62x39mmSubsonic
+  name: "magazine (7.62x39mm subsonic)"
+  parent: BaseMagazine7.62x39mm
   components:
   - type: Tag
     tags:
-      - MagazineLightRifleSubsonic
-      - MagazineLightRifle
+      - Magazine7.62x39mmSubsonic
+      - Magazine7.62x39mm
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifleSubsonic
+    proto: Cartridge7.62x39mmSubsonic
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeLightRifleSubsonic
+        - Cartridge7.62x39mmSubsonic
     capacity: 35
   - type: Sprite
     layers:

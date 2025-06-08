@@ -28,10 +28,10 @@
     projectileSpeed: 65 # Mono
   - type: BallisticAmmoProvider
     capacity: 10
-    proto: CartridgeLightRifle
+    proto: Cartridge7.62x39mm
     whitelist:
       tags:
-      - CartridgeLightRifle
+      - Cartridge7.62x39mm
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -43,7 +43,7 @@
   name: Kardashev-Mosin
   parent: [BaseWeaponSniper, BaseGunWieldable, BaseGunMelee, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added BaseGunMelee
   id: WeaponSniperMosin
-  description: A weapon for hunting, or endless trench warfare. Uses .30 rifle ammo. Equipped with bayonet. # Frontier: bayonet
+  description: A weapon for hunting, or endless trench warfare. Uses 7.62x39mm ammo. Equipped with bayonet. # Frontier: bayonet
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi

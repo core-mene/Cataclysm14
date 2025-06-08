@@ -2,7 +2,7 @@
   name: Annie
   parent: [BaseC2ContrabandUnredeemable, BaseWeaponRifle] # Mono - C2 contra
   id: WeaponRifleAnnie
-  description: A beast designed to shoulder the weight of impossible missions. Uses .30 rifle ammo.
+  description: A beast designed to shoulder the weight of impossible missions. Uses 7.62x39mm ammo.
   components:
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Rifles/annie.rsi
@@ -31,21 +31,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifle
+        startingItem: Magazine7.62x39mm
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifle
+            - Magazine7.62x39mm
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle
+        startingItem: Cartridge7.62x39mm
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - Cartridge7.62x39mm
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -62,7 +62,7 @@
   name: WSPR
   parent: [BaseC3PirateContraband, BaseWeaponRifle] # Mono - C3
   id: WeaponRifleWSPR
-  description: A cutting-edge rifle from Cybersun, versatile, reliable, and Syndicate-approved. Uses .30 rifle subsonic ammo.
+  description: A cutting-edge rifle from Cybersun, versatile, reliable, and Syndicate-approved. Uses 7.62x39mm subsonic ammo.
   components:
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Rifles/wspr.rsi
@@ -87,21 +87,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifleSubsonic
+        startingItem: Magazine7.62x39mmSubsonic
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifleSubsonic
+            - Magazine7.62x39mmSubsonic
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifleSubsonic
+        startingItem: Cartridge7.62x39mmSubsonic
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifleSubsonic
+            - Cartridge7.62x39mmSubsonic
   - type: MagazineVisuals
     magState: mag
     steps: 1

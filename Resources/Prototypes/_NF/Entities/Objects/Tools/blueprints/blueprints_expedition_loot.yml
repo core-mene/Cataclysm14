@@ -15,8 +15,8 @@
 - type: entity
   parent: BaseBlueprintExpedition
   id: NFBlueprintMagazineBoxRifleUranium
-  name: uranium .20 ammo blueprint
-  description: A blueprint with a schematic of an uranium .20 rifle ammo. It can be inserted into an autolathe or a techfab.
+  name: uranium 5.56x45mm blueprint
+  description: A blueprint with a schematic of an uranium 5.56x45mm ammo. It can be inserted into an autolathe or a techfab.
   components:
   - type: Blueprint
     providedRecipes:
@@ -24,13 +24,13 @@
 
 - type: entity
   parent: BaseBlueprintExpedition
-  id: NFBlueprintMagazineBoxLightRifleUranium
-  name: uranium .30 ammo blueprint
-  description: A blueprint with a schematic of an uranium .30 rifle ammo. It can be inserted into an autolathe or a techfab.
+  id: NFBlueprintMagazineBox7.62x39mmUranium
+  name: uranium 7.62x39mm blueprint
+  description: A blueprint with a schematic of an uranium 7.62x39mm ammo. It can be inserted into an autolathe or a techfab.
   components:
   - type: Blueprint
     providedRecipes:
-    - MagazineBoxLightRifleUranium
+    - MagazineBox7.62x39mmUranium
 
 - type: entity
   parent: BaseBlueprintExpedition
@@ -67,8 +67,8 @@
 - type: entity
   parent: BaseBlueprintExpedition
   id: NFBlueprintMagazineBoxRifleIncendiary
-  name: incendiary .20 ammo blueprint
-  description: A blueprint with a schematic of an incendiary .20 rifle ammo. It can be inserted into an autolathe or a techfab.
+  name: incendiary 5.56x45mm blueprint
+  description: A blueprint with a schematic of an incendiary 5.56x45mm ammo. It can be inserted into an autolathe or a techfab.
   components:
   - type: Blueprint
     providedRecipes:
@@ -76,13 +76,13 @@
 
 - type: entity
   parent: BaseBlueprintExpedition
-  id: NFBlueprintMagazineBoxLightRifleIncendiary
-  name: incendiary .30 ammo blueprint
-  description: A blueprint with a schematic of an incendiary .30 rifle ammo. It can be inserted into an autolathe or a techfab.
+  id: NFBlueprintMagazineBox7.62x39mmIncendiary
+  name: incendiary 7.62x39mm blueprint
+  description: A blueprint with a schematic of an incendiary 7.62x39mm ammo. It can be inserted into an autolathe or a techfab.
   components:
   - type: Blueprint
     providedRecipes:
-    - MagazineBoxLightRifleIncendiary
+    - MagazineBox7.62x39mmIncendiary
 
 - type: entity
   parent: BaseBlueprintExpedition

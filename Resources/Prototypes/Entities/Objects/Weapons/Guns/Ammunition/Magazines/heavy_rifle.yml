@@ -1,12 +1,12 @@
 - type: entity
-  id: BaseMagazineHeavyRifle
-  name: "magazine (.20 rifle)"
+  id: BaseMagazine5.56x45mm
+  name: "magazine (5.56x45mm)"
   parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
   abstract: true
   components:
   - type: Tag
     tags:
-      - MagazineHeavyRifle
+      - Magazine5.56x45mm
   - type: Item
     size: Small
   - type: BallisticAmmoProvider

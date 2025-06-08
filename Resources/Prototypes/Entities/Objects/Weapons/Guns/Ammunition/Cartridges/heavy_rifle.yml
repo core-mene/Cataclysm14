@@ -1,15 +1,15 @@
 - type: entity
-  id: BaseCartridgeHeavyRifle
-  name: cartridge (.20 rifle)
+  id: BaseCartridge5.56x45mm
+  name: cartridge (5.56x45mm)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
       - Cartridge
-      - CartridgeHeavyRifle
+      - Cartridge5.56x45mm
   - type: CartridgeAmmo
-    proto: BulletHeavyRifle
+    proto: Bullet5.56x45mm
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
@@ -23,7 +23,7 @@
 - type: entity
   id: CartridgeMinigun
   name: cartridge (.10 rifle)
-  parent: BaseCartridgeHeavyRifle
+  parent: BaseCartridge5.56x45mm
   components:
   - type: CartridgeAmmo
     proto: BulletMinigun

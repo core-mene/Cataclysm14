@@ -73,7 +73,7 @@
   name: AK-502
   parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponRifleAK502
-  description: A standard-issue USSP combat rifle. Uses .30 rifle ammo.
+  description: A standard-issue USSP combat rifle. Uses 7.62x39mm ammo.
   components:
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Rifles/ak502.rsi
@@ -99,21 +99,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifle
+        startingItem: Magazine7.62x39mm
         insertSound: /Audio/Weapons/Guns/MagIn/sfrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/hpistol_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - MagazineLightRifle
+          - Magazine7.62x39mm
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle
+        startingItem: Cartridge7.62x39mm
         priority: 1
         whitelist:
           tags:
-          - CartridgeLightRifle
+          - Cartridge7.62x39mm
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

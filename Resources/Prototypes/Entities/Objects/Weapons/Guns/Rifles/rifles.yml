@@ -30,21 +30,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifle
+        startingItem: Magazine7.62x39mm
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifle
+            - Magazine7.62x39mm
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle
+        startingItem: Cartridge7.62x39mm
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - Cartridge7.62x39mm
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -56,7 +56,7 @@
   name: AKMS
   parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband
   id: WeaponRifleAk
-  description: An iconic weapon of war. Uses .30 rifle ammo. An illegal firearm often used by Syndicate agents.
+  description: An iconic weapon of war. Uses 7.62x39mm ammo. An illegal firearm often used by Syndicate agents.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Rifles/ak.rsi
@@ -76,21 +76,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifle
+        startingItem: Magazine7.62x39mm
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifle
+            - Magazine7.62x39mm
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle
+        startingItem: Cartridge7.62x39mm
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - Cartridge7.62x39mm
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -107,7 +107,7 @@
   name: M-90gl
   parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponRifleM90GrenadeLauncher
-  description: An older bullpup carbine model, with an attached underbarrel grenade launcher. Uses .20 rifle ammo. An illegal firearm often used by Syndicate agents.
+  description: An older bullpup carbine model, with an attached underbarrel grenade launcher. Uses 5.56x45mm ammo. An illegal firearm often used by Syndicate agents.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Rifles/carbine.rsi
@@ -151,7 +151,7 @@
   name: Lecter
   parent: [BaseWeaponRifle, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponRifleLecter
-  description: A high end military grade assault rifle. Uses .20 rifle ammo. On the receiver is a label that says 'for authorized use only.'
+  description: A high end military grade assault rifle. Uses 5.56x45mm ammo. On the receiver is a label that says 'for authorized use only.'
   components:
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Rifles/lecter.rsi # Frontier: add _NF prefix

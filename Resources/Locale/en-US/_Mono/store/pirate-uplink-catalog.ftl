@@ -96,7 +96,7 @@ uplink-pirate-kanabou-name = Kanabou
 uplink-pirate-kanabou-desc = A weapon for those who wish to forgo subtlety. Particularly suited to oni.
 
 uplink-pirate-ak-name = AKMS
-uplink-pirate-ak-desc = An iconic weapon of war. Uses .30 rifle ammo.
+uplink-pirate-ak-desc = An iconic weapon of war. Uses 7.62x39mm ammo.
 
 uplink-pirate-laser-gun-name = Retro laser blaster
 uplink-pirate-laser-gun-desc = A civilian grade weapon using light amplified by the stimulated emission of radiation.
@@ -130,14 +130,14 @@ uplink-pirate-blueprint-launcher-rocket-desc = A blueprint for RPG-7 and the amm
 uplink-pirate-box-magazine-pistol-name = Box of pistol .35 auto magazines
 uplink-pirate-box-magazine-pistol-desc = A box filled with 4 .35 auto pistol magazines.
 
-uplink-pirate-box-magazine-light-rifle-name = Box of .30 rifle magazines
-uplink-pirate-box-magazine-light-rifle-desc = A box filled with 4 .30 rifle magazines.
+uplink-pirate-box-magazine-light-rifle-name = Box of 7.62x39mm magazines
+uplink-pirate-box-magazine-light-rifle-desc = A box filled with 4 7.62x39mm magazines.
 
 uplink-pirate-magazine-box-magnum-name = Box of .45 magnum speedloaders
 uplink-pirate-magazine-box-magnum-desc = A box containing 4 .45 magnum speedloaders.
 
-uplink-pirate-light-rifle-magazine-box-big-name = Ammunition box (.30 rifle)
-uplink-pirate-light-rifle-magazine-box-big-desc = A box containing 200 .30 rifle catridges.
+uplink-pirate-light-rifle-magazine-box-big-name = Ammunition box (7.62x39mm)
+uplink-pirate-light-rifle-magazine-box-big-desc = A box containing 200 7.62x39mm catridges.
 
 uplink-pirate-shell-box-lethal-name = Shell box (lethal)
 uplink-pirate-shell-box-lethal-desc = A box containing 16 .50 shotgun shells.

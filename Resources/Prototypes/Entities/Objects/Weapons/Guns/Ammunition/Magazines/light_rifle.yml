@@ -1,19 +1,19 @@
 # Empty mags
 - type: entity
-  id: BaseMagazineLightRifle
-  name: "magazine (.30 rifle)"
+  id: BaseMagazine7.62x39mm
+  name: "magazine (7.62x39mm)"
   parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband added RecyclableItemSteelTiny
   abstract: true
   components:
   - type: Tag
     tags:
-      - MagazineLightRifle
+      - Magazine7.62x39mm
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeLightRifle
-    proto: CartridgeLightRifle
+        - Cartridge7.62x39mm
+    proto: Cartridge7.62x39mm
     capacity: 30
   - type: Item
     size: Small
@@ -21,7 +21,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_mag.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/7.62x39mm/7.62x39mm_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -35,19 +35,19 @@
 
 # Magazines
 - type: entity
-  id: MagazineLightRifleBox
-  name: "L6 SAW magazine box (.30 rifle)"
-  parent: BaseMagazineLightRifle
+  id: Magazine7.62x39mmBox
+  name: "L6 SAW magazine box (7.62x39mm)"
+  parent: BaseMagazine7.62x39mm
   components:
   - type: Tag
     tags:
-      - MagazineLightRifleBox
+      - Magazine7.62x39mmBox
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifle
+    proto: Cartridge7.62x39mm
     capacity: 100
   - type: Item
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_box.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/7.62x39mm/7.62x39mm_box.rsi
   - type: MagazineVisuals
     magState: mag
     steps: 8
@@ -55,12 +55,12 @@
   - type: Appearance
 
 - type: entity
-  id: MagazineLightRifle
-  name: "magazine (.30 rifle)"
-  parent: BaseMagazineLightRifle
+  id: Magazine7.62x39mm
+  name: "magazine (7.62x39mm)"
+  parent: BaseMagazine7.62x39mm
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifle
+    proto: Cartridge7.62x39mm
   - type: Sprite
     layers:
     - state: red
@@ -69,10 +69,10 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: MagazineLightRifleEmpty
-  name: "magazine (.30 rifle any)"
+  id: Magazine7.62x39mmEmpty
+  name: "magazine (7.62x39mm any)"
   suffix: empty
-  parent: MagazineLightRifle
+  parent: Magazine7.62x39mm
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -84,12 +84,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: MagazineLightRiflePractice
-  name: "magazine (.30 rifle practice)"
-  parent: BaseMagazineLightRifle
+  id: Magazine7.62x39mmPractice
+  name: "magazine (7.62x39mm practice)"
+  parent: BaseMagazine7.62x39mm
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRiflePractice
+    proto: Cartridge7.62x39mmPractice
   - type: Sprite
     layers:
     - state: practice
@@ -98,12 +98,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: MagazineLightRifleUranium
-  name: "magazine (.30 rifle uranium)"
-  parent: BaseMagazineLightRifle
+  id: Magazine7.62x39mmUranium
+  name: "magazine (7.62x39mm uranium)"
+  parent: BaseMagazine7.62x39mm
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifleUranium
+    proto: Cartridge7.62x39mmUranium
   - type: Sprite
     layers:
     - state: uranium
@@ -112,40 +112,40 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: MagazineLightRifleIncendiary
-  name: "magazine (.30 rifle incendiary)"
-  parent: MagazineLightRifle
+  id: Magazine7.62x39mmIncendiary
+  name: "magazine (7.62x39mm incendiary)"
+  parent: Magazine7.62x39mm
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifleIncendiary
+    proto: Cartridge7.62x39mmIncendiary
 
 - type: entity
-  id: MagazineLightRifleMaxim
-  name: "pan magazine (.30 rifle)"
-  parent: BaseMagazineLightRifle
+  id: Magazine7.62x39mmMaxim
+  name: "pan magazine (7.62x39mm)"
+  parent: BaseMagazine7.62x39mm
   components:
   - type: Tag
     tags:
-      - MagazineLightRiflePan
+      - Magazine7.62x39mmPan
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifle
+    proto: Cartridge7.62x39mm
     capacity: 96
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/maxim.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/7.62x39mm/maxim.rsi
 
 - type: entity
-  id: MagazineLightRiflePkBox
-  name: "PK munitions box (.30 rifle)"
-  parent: BaseMagazineLightRifle
+  id: Magazine7.62x39mmPkBox
+  name: "PK munitions box (7.62x39mm)"
+  parent: BaseMagazine7.62x39mm
   components:
   - type: Tag
     tags:
-      - MagazineLightRifleBox
+      - Magazine7.62x39mmBox
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifle
+    proto: Cartridge7.62x39mm
     capacity: 80
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/pk_box.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/7.62x39mm/pk_box.rsi
   - type: MagazineVisuals
     magState: mag
     steps: 8
