@@ -46,7 +46,7 @@
     sound:
       path: "/Audio/Effects/flash_bang.ogg"
   - type: SpawnOnTrigger
-    proto: GrenadeFlashEffect
+    proto: 40mmGrenadeFlashEffect
   - type: OnUseTimerTrigger
     initialBeepDelay: 0
     beepInterval: 2

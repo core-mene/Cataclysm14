@@ -129699,7 +129699,7 @@ entities:
     - type: Transform
       pos: -43.5,-12.5
       parent: 8364
-- proto: MagazinePistolSubMachineGun
+- proto: Magazine9x19mmSubMachineGun
   entities:
   - uid: 9371
     components:
@@ -129715,7 +129715,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: MagazinePistolSubMachineGunTopMounted
+- proto: Magazine9x19mmSubMachineGunTopMounted
   entities:
   - uid: 534
     components:

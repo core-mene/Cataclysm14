@@ -73,7 +73,7 @@
       path: "/Audio/Effects/flash_bang.ogg"
   - type: DeleteOnTrigger
   - type: SpawnOnTrigger
-    proto: GrenadeFlashEffect
+    proto: 40mmGrenadeFlashEffect
   - type: Appearance
   - type: TimerTriggerVisuals
     primingSound:
@@ -466,7 +466,7 @@
     sprite: Objects/Weapons/Grenades/grenade.rsi
   - type: DeleteOnTrigger
   - type: SpawnOnTrigger
-    proto: GrenadeFlashEffect
+    proto: 40mmGrenadeFlashEffect
   - type: SoundOnTrigger
     sound:
       path: /Audio/Effects/Emotes/parp1.ogg

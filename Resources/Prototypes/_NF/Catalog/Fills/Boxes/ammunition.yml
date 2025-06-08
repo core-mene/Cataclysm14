@@ -35,25 +35,25 @@
 
 # Pistol
 - type: entity
-  name: box of pistol .35 auto (rubber) magazines
+  name: box of pistol 9x19mm (rubber) magazines
   parent: BoxMagazine
-  id: BoxMagazinePistolRubber
-  description: A box full of pistol .35 auto (rubber) magazines.
+  id: BoxMagazine9x19mmRubber
+  description: A box full of pistol 9x19mm (rubber) magazines.
   components:
   - type: StorageFill
     contents:
-      - id: MagazinePistolRubber
+      - id: Magazine9x19mmRubber
         amount: 4
 
 - type: entity
-  name: box of SMG .35 auto (rubber) magazines
+  name: box of SMG 9x19mm (rubber) magazines
   parent: BoxMagazine
-  id: BoxMagazinePistolSubMachineGunRubber
-  description: A box full of SMG .35 auto (rubber) magazines.
+  id: BoxMagazine9x19mmSubMachineGunRubber
+  description: A box full of SMG 9x19mm (rubber) magazines.
   components:
   - type: StorageFill
     contents:
-      - id: MagazinePistolSubMachineGunRubber
+      - id: Magazine9x19mmSubMachineGunRubber
         amount: 3
 
 # Rifle

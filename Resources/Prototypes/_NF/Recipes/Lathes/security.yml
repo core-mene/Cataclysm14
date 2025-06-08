@@ -106,17 +106,17 @@
     Plastic: 120 # 8 [bullets] * 15 [Plastic per bullet]
 
 - type: latheRecipe
-  id: MagazinePistolRubber
+  id: Magazine9x19mmRubber
   parent: BaseAmmoRecipe
-  result: MagazinePistolRubber
+  result: Magazine9x19mmRubber
   materials:
     Steel: 100 #50% of box cost
     Plastic: 200 #50% of box cost
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: MagazinePistolSubMachineGunRubber
-  result: MagazinePistolSubMachineGunRubber
+  id: Magazine9x19mmSubMachineGunRubber
+  result: Magazine9x19mmSubMachineGunRubber
   materials:
     Steel: 150 #75% of box cost
     Plastic: 300 #75% of box cost

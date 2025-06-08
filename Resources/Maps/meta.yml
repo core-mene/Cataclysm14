@@ -23419,7 +23419,7 @@ entities:
     - type: Transform
       pos: -45.725807,-31.611805
       parent: 5350
-- proto: BoxMagazinePistol
+- proto: BoxMagazine9x19mm
   entities:
   - uid: 1376
     components:
@@ -131997,7 +131997,7 @@ entities:
     - type: Transform
       pos: -15.720936,42.71257
       parent: 5350
-- proto: MagazinePistolPractice
+- proto: Magazine9x19mmPractice
   entities:
   - uid: 22240
     components:
@@ -132009,7 +132009,7 @@ entities:
     - type: Transform
       pos: -15.689243,42.42685
       parent: 5350
-- proto: MagazinePistolSubMachineGun
+- proto: Magazine9x19mmSubMachineGun
   entities:
   - uid: 14878
     components:
@@ -132025,7 +132025,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: MagazinePistolSubMachineGunPractice
+- proto: Magazine9x19mmSubMachineGunPractice
   entities:
   - uid: 22238
     components:
@@ -132037,7 +132037,7 @@ entities:
     - type: Transform
       pos: -15.387077,43.488113
       parent: 5350
-- proto: MagazinePistolSubMachineGunTopMounted
+- proto: Magazine9x19mmSubMachineGunTopMounted
   entities:
   - uid: 10438
     components:

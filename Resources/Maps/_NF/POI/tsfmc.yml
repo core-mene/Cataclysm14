@@ -3401,7 +3401,7 @@ entities:
     - type: Transform
       pos: 27.5,16.5
       parent: 1
-- proto: BoxMagazinePistol
+- proto: BoxMagazine9x19mm
   entities:
   - uid: 204
     components:
@@ -3445,7 +3445,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: BoxMagazinePistolSubMachineGun
+- proto: BoxMagazine9x19mmSubMachineGun
   entities:
   - uid: 217
     components:

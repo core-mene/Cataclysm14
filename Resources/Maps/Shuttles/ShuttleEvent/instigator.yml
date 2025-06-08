@@ -674,7 +674,7 @@ entities:
   - uid: 531
     components:
     - type: MetaData
-      desc: a box full of frag grenade cartridges
+      desc: a box full of frag 40mm grenade cartridges
       name: frag grenade box
     - type: Transform
       pos: -0.7699833,1.7199572
@@ -781,7 +781,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: BoxMagazinePistolCaselessRifle
+- proto: BoxMagazine9x19mmCaselessRifle
   entities:
   - uid: 463
     components:
@@ -2588,7 +2588,7 @@ entities:
     - type: Transform
       pos: 0.5,4.5
       parent: 1
-- proto: GrenadeEMP
+- proto: 40mmGrenadeEMP
   entities:
   - uid: 130
     components:
@@ -2614,7 +2614,7 @@ entities:
       parent: 532
     - type: Physics
       canCollide: False
-- proto: GrenadeFrag
+- proto: 40mmGrenadeFrag
   entities:
   - uid: 522
     components:

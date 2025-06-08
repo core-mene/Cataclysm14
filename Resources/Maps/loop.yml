@@ -35587,7 +35587,7 @@ entities:
     - type: Transform
       pos: -9.5,24.5
       parent: 2
-- proto: CartridgePistolPractice
+- proto: Cartridge9x19mmPractice
   entities:
   - uid: 17219
     components:
@@ -69683,7 +69683,7 @@ entities:
     - type: Transform
       pos: -23.5,16.5
       parent: 2
-- proto: GrenadeFlashBang
+- proto: 40mmGrenadeFlashBang
   entities:
   - uid: 6127
     components:
@@ -77354,14 +77354,14 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -63.5,-3.5
       parent: 2
-- proto: MagazinePistolSubMachineGunPractice
+- proto: Magazine9x19mmSubMachineGunPractice
   entities:
   - uid: 17217
     components:
     - type: Transform
       pos: 29.182188,37.520115
       parent: 2
-- proto: MagazinePistolSubMachineGunTopMounted
+- proto: Magazine9x19mmSubMachineGunTopMounted
   entities:
   - uid: 2542
     components:

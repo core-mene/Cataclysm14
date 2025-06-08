@@ -7506,14 +7506,14 @@ entities:
     - type: Transform
       pos: 11.480659,26.619143
       parent: 1668
-- proto: BoxMagazinePistolPractice
+- proto: BoxMagazine9x19mmPractice
   entities:
   - uid: 2984
     components:
     - type: Transform
       pos: 11.430329,8.720324
       parent: 1668
-- proto: BoxMagazinePistolSubMachineGun
+- proto: BoxMagazine9x19mmSubMachineGun
   entities:
   - uid: 2314
     components:
@@ -7535,14 +7535,14 @@ entities:
     - type: Transform
       pos: 11.511909,22.641312
       parent: 1668
-- proto: BoxMagazinePistolSubMachineGunPractice
+- proto: BoxMagazine9x19mmSubMachineGunPractice
   entities:
   - uid: 1742
     components:
     - type: Transform
       pos: 11.445954,9.423449
       parent: 1668
-- proto: BoxMagazinePistolSubMachineGunTopMounted
+- proto: BoxMagazine9x19mmSubMachineGunTopMounted
   entities:
   - uid: 2334
     components:
@@ -38716,7 +38716,7 @@ entities:
     - type: Transform
       pos: -5.5,26.5
       parent: 1668
-- proto: GrenadeFlashBang
+- proto: 40mmGrenadeFlashBang
   entities:
   - uid: 2615
     components:
@@ -38738,7 +38738,7 @@ entities:
     - type: Transform
       pos: 14.708689,30.81574
       parent: 1668
-- proto: GrenadeIncendiary
+- proto: 40mmGrenadeIncendiary
   entities:
   - uid: 2601
     components:
@@ -38760,7 +38760,7 @@ entities:
     - type: Transform
       pos: 14.906606,30.826159
       parent: 1668
-- proto: GrenadeShrapnel
+- proto: 40mmGrenadeShrapnel
   entities:
   - uid: 2141
     components:
@@ -38782,7 +38782,7 @@ entities:
     - type: Transform
       pos: 14.292023,30.40949
       parent: 1668
-- proto: GrenadeStinger
+- proto: 40mmGrenadeStinger
   entities:
   - uid: 3019
     components:

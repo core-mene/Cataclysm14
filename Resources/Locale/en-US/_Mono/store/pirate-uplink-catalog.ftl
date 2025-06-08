@@ -90,7 +90,7 @@ uplink-pirate-python-name = Python
 uplink-pirate-python-desc = A brutally simple, effective, and loud revolver. Comes loaded with .45 magnum rounds.
 
 uplink-pirate-viper-name = Viper
-uplink-pirate-viper-desc = A small, easily concealable, but somewhat underpowered gun. Retrofitted with a fully automatic receiver. Uses pistol magazines (.35 auto).
+uplink-pirate-viper-desc = A small, easily concealable, but somewhat underpowered gun. Retrofitted with a fully automatic receiver. Uses pistol magazines (9x19mm).
 
 uplink-pirate-kanabou-name = Kanabou
 uplink-pirate-kanabou-desc = A weapon for those who wish to forgo subtlety. Particularly suited to oni.
@@ -102,7 +102,7 @@ uplink-pirate-laser-gun-name = Retro laser blaster
 uplink-pirate-laser-gun-desc = A civilian grade weapon using light amplified by the stimulated emission of radiation.
 
 uplink-pirate-c20-name = C-20r Bundle
-uplink-pirate-c20-desc = A .35 auto light SMG, packaged with a few mags.
+uplink-pirate-c20-desc = A 9x19mm light SMG, packaged with a few mags.
 
 uplink-pirate-atreides-name = Atreides bundle
 uplink-pirate-atreides-desc = A .35 one-handed light SMG, packaged with some magazines.
@@ -127,8 +127,8 @@ uplink-pirate-blueprint-launcher-rocket-desc = A blueprint for RPG-7 and the amm
 
 # MARK: Ammo
 
-uplink-pirate-box-magazine-pistol-name = Box of pistol .35 auto magazines
-uplink-pirate-box-magazine-pistol-desc = A box filled with 4 .35 auto pistol magazines.
+uplink-pirate-box-magazine-pistol-name = Box of pistol 9x19mm magazines
+uplink-pirate-box-magazine-pistol-desc = A box filled with 4 9x19mm pistol magazines.
 
 uplink-pirate-box-magazine-light-rifle-name = Box of 7.62x39mm magazines
 uplink-pirate-box-magazine-light-rifle-desc = A box filled with 4 7.62x39mm magazines.
@@ -142,8 +142,8 @@ uplink-pirate-light-rifle-magazine-box-big-desc = A box containing 200 7.62x39mm
 uplink-pirate-shell-box-lethal-name = Shell box (lethal)
 uplink-pirate-shell-box-lethal-desc = A box containing 16 .50 shotgun shells.
 
-uplink-pirate-smg-ammo-box-name = Ammunition box (.35 auto)
-uplink-pirate-smg-ammo-box-desc = A box containing 60 .35 auto pistol catridges. Can be used to load SMG magazines.
+uplink-pirate-smg-ammo-box-name = Ammunition box (9x19mm)
+uplink-pirate-smg-ammo-box-desc = A box containing 60 9x19mm pistol catridges. Can be used to load SMG magazines.
 
 uplink-pirate-box-bulldog-ammo-name = Box of .50 pellet drums
 uplink-pirate-box-bulldog-ammo-desc = A box containing 4 .50 pellet shotgun drums.
@@ -151,8 +151,8 @@ uplink-pirate-box-bulldog-ammo-desc = A box containing 4 .50 pellet shotgun drum
 uplink-pirate-box-bulldog-slug-ammo-name = Box of .50 slug drums
 uplink-pirate-box-bulldog-slug-ammo-desc = A box containing 4 .50 slug shotgun drums.
 
-uplink-pirate-box-smg-magazine-name = Box of .35 auto SMG magazines
-uplink-pirate-box-smg-magazine-desc = A box filled with 3 .35 auto smg magazines.
+uplink-pirate-box-smg-magazine-name = Box of 9x19mm SMG magazines
+uplink-pirate-box-smg-magazine-desc = A box filled with 3 9x19mm smg magazines.
 
 uplink-subsonic-mag-name = .30 subsonic rifle mag
 uplink-subsonic-mag-desc = Supports the WSPR and Annie.

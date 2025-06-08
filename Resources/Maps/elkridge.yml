@@ -17870,14 +17870,14 @@ entities:
     - type: Transform
       pos: -5.5149493,7.610962
       parent: 2
-- proto: BoxMagazinePistolPractice
+- proto: BoxMagazine9x19mmPractice
   entities:
   - uid: 14027
     components:
     - type: Transform
       pos: -12.401453,-36.442593
       parent: 2
-- proto: BoxMagazinePistolSubMachineGunPractice
+- proto: BoxMagazine9x19mmSubMachineGunPractice
   entities:
   - uid: 14026
     components:
@@ -74353,7 +74353,7 @@ entities:
     - type: Transform
       pos: 42.5,-3.5
       parent: 2
-- proto: GrenadeFoamDart
+- proto: 40mmGrenadeFoamDart
   entities:
   - uid: 2327
     components:
@@ -81064,7 +81064,7 @@ entities:
     - type: Transform
       pos: 26.5,-8.5
       parent: 2
-- proto: MagazinePistolSubMachineGunTopMounted
+- proto: Magazine9x19mmSubMachineGunTopMounted
   entities:
   - uid: 5644
     components:

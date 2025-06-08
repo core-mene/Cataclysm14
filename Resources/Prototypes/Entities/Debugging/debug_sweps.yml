@@ -26,7 +26,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistolDebug
+        startingItem: Magazine9x19mmDebug
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
@@ -39,12 +39,12 @@
         priority: 1
         whitelist:
           tags:
-            - CartridgePistol
+            - Cartridge9x19mm
 
 - type: entity
-  id: MagazinePistolDebug
+  id: Magazine9x19mmDebug
   name: bang, ded mag
-  parent: BaseMagazinePistol
+  parent: BaseMagazine9x19mm
   suffix: DEBUG
   components:
   - type: Tag
@@ -74,7 +74,7 @@
 - type: entity
   id: CartridgeDebug
   name: bang, ded cartridge
-  parent: BaseCartridgePistol
+  parent: BaseCartridge9x19mm
   suffix: DEBUG
   components:
   - type: Tag

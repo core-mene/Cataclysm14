@@ -1,6 +1,6 @@
 # Weapons
 uplink-pistol-viper-name = Viper
-uplink-pistol-viper-desc = A small, easily concealable, but somewhat underpowered gun. Retrofitted with a fully automatic receiver. Uses pistol magazines (.35 auto).
+uplink-pistol-viper-desc = A small, easily concealable, but somewhat underpowered gun. Retrofitted with a fully automatic receiver. Uses pistol magazines (9x19mm).
 
 uplink-revolver-python-name = Python
 uplink-revolver-python-desc = A brutally simple, effective, and loud Syndicate revolver. Comes loaded with armor-piercing rounds. Uses .45 magnum.
@@ -82,10 +82,10 @@ uplink-shrapnel-grenade-name = Shrapnel Grenade
 uplink-shrapnel-grenade-desc = Launches a spray of sharp fragments dealing great damage against unarmored targets.
 
 # Ammo
-uplink-pistol-magazine-name = Pistol Magazine (.35 auto)
+uplink-pistol-magazine-name = Pistol Magazine (9x19mm)
 uplink-pistol-magazine-desc = Pistol magazine with 10 catridges. Compatible with the Viper.
 
-uplink-pistol-magazine-c20r-name = SMG magazine (.35 auto)
+uplink-pistol-magazine-c20r-name = SMG magazine (9x19mm)
 uplink-pistol-magazine-c20r-desc = Rifle magazine with 30 catridges. Compatible with C-20r.
 
 uplink-pistol-magazine-caseless-name = Pistol Magazine (.25 caseless)

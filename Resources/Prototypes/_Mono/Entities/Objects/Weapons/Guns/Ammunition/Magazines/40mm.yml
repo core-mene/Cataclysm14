@@ -1,12 +1,12 @@
 - type: entity
-  id: BaseMagazineGrenade
-  name: grenade cartridge
+  id: BaseMagazine40mm
+  name: 40mm grenade cartridge
   parent: [ BaseCartridge, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   abstract: true
   components:
   - type: Tag
     tags:
-    - MagazineGrenade
+    - Magazine40mm
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -40,48 +40,48 @@
   - type: Appearance
 
 - type: entity
-  id: MagazineGrenadeEmpty
-  name: grenade cartridge
-  parent: BaseMagazineGrenade
+  id: Magazine40mmEmpty
+  name: 40mm grenade cartridge
+  parent: BaseMagazine40mm
   components:
   - type: BallisticAmmoProvider
 
 - type: entity
-  id: MagazineGrenadeFrag
-  name: frag grenade cartridge
-  parent: BaseMagazineGrenade
+  id: Magazine40mmFrag
+  name: frag 40mm grenade cartridge
+  parent: BaseMagazine40mm
   components:
   - type: BallisticAmmoProvider
-    proto: GrenadeFrag
+    proto: 40mmGrenadeFrag
 
 - type: entity
-  id: MagazineGrenadeEMP
-  name: EMP grenade cartridge
-  parent: BaseMagazineGrenade
+  id: Magazine40mmEMP
+  name: EMP 40mm grenade cartridge
+  parent: BaseMagazine40mm
   components:
   - type: BallisticAmmoProvider
-    proto: GrenadeEMP
+    proto: 40mmGrenadeEMP
 
 - type: entity
-  id: MagazineGrenadeFlash
-  name: flash grenade cartridge
-  parent: BaseMagazineGrenade
+  id: Magazine40mmFlash
+  name: flash 40mm grenade cartridge
+  parent: BaseMagazine40mm
   components:
   - type: BallisticAmmoProvider
-    proto: GrenadeFlash
+    proto: 40mmGrenadeFlash
 
 - type: entity
-  id: MagazineGrenadeBlast
-  name: blast grenade cartridge
-  parent: BaseMagazineGrenade
+  id: Magazine40mmBlast
+  name: blast 40mm grenade cartridge
+  parent: BaseMagazine40mm
   components:
   - type: BallisticAmmoProvider
-    proto: GrenadeBlast
+    proto: 40mmGrenadeBlast
 
 - type: entity
-  id: MagazineGrenadeBaton
-  name: baton grenade cartridge
-  parent: BaseMagazineGrenade
+  id: Magazine40mmBaton
+  name: baton 40mm grenade cartridge
+  parent: BaseMagazine40mm
   components:
   - type: BallisticAmmoProvider
-    proto: GrenadeBaton
+    proto: 40mmGrenadeBaton

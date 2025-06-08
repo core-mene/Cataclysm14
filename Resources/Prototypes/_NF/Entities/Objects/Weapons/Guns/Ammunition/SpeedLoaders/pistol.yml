@@ -1,11 +1,11 @@
 # Upstream
 - type: entity
   id: SpeedLoaderPistolRubber
-  name: "speed loader (.35 auto rubber)"
+  name: "speed loader (9x19mm rubber)"
   parent: BaseSpeedLoaderPistol
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgePistolRubber
+    proto: Cartridge9x19mmRubber
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Pistol/pistol_speed_loader.rsi
     layers:

@@ -272,7 +272,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
   - type: ProjectileBatteryAmmoProvider
-    proto: GrenadeBlast
+    proto: 40mmGrenadeBlast
     fireCost: 100
   - type: Appearance
   - type: AmmoCounter
@@ -297,7 +297,7 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: ProjectileBatteryAmmoProvider
-    proto: GrenadeFlash
+    proto: 40mmGrenadeFlash
     fireCost: 30
   - type: Appearance
   - type: AmmoCounter

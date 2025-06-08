@@ -2,10 +2,10 @@
 - type: entity
   parent: BaseMagazineBoxPistol
   id: MagazineBoxPistolRubber
-  name: ammunition box (.35 auto rubber)
+  name: ammunition box (9x19mm rubber)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgePistolRubber
+    proto: Cartridge9x19mmRubber
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
     layers:
@@ -19,10 +19,10 @@
 - type: entity
   parent: BaseMagazineBoxPistol
   id: MagazineBoxPistolEmp
-  name: ammunition box (.35 auto emp)
+  name: ammunition box (9x19mm emp)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgePistolEmp
+    proto: Cartridge9x19mmEmp
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
     layers:

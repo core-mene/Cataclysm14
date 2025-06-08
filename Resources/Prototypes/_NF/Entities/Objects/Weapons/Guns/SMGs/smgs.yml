@@ -9,18 +9,18 @@
       slots:
         gun_magazine:
           name: Magazine
-          startingItem: MagazinePistolSubMachineGunRubber
+          startingItem: Magazine9x19mmSubMachineGunRubber
           insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
           ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
           priority: 2
           whitelist:
             tags:
-              - MagazinePistolSubMachineGun
+              - Magazine9x19mmSubMachineGun
           whitelistFailPopup: gun-magazine-whitelist-fail
         gun_chamber:
           name: Chamber
-          startingItem: CartridgePistolRubber
+          startingItem: Cartridge9x19mmRubber
           priority: 1
           whitelist:
             tags:
-              - CartridgePistol
+              - Cartridge9x19mm

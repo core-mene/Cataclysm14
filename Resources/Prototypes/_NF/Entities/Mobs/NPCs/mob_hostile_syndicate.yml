@@ -316,7 +316,7 @@
       rechargeSound:
         path: /Audio/_NF/Effects/silence.ogg
     - type: BasicEntityAmmoProvider
-      proto: BulletPistol
+      proto: Bullet9x19mm
       capacity: 7
       count: 7
     - type: Gun
@@ -378,7 +378,7 @@
       rechargeSound:
         path: /Audio/_NF/Effects/silence.ogg
     - type: BasicEntityAmmoProvider
-      proto: GrenadeFrag
+      proto: 40mmGrenadeFrag
       capacity: 1
       count: 1
     - type: Gun
@@ -398,7 +398,7 @@
       prototypes:
         - SyndicateNavalGrenadierGearB
     - type: BasicEntityAmmoProvider
-      proto: GrenadeBlast
+      proto: 40mmGrenadeBlast
       capacity: 1
       count: 1
 
@@ -411,7 +411,7 @@
       prototypes:
         - SyndicateNavalGrenadierGearC
     - type: BasicEntityAmmoProvider
-      proto: GrenadeBaton
+      proto: 40mmGrenadeBaton
       capacity: 1
       count: 1
 
@@ -424,7 +424,7 @@
       prototypes:
         - SyndicateNavalGrenadierGearD
     - type: BasicEntityAmmoProvider
-      proto: GrenadeFlash
+      proto: 40mmGrenadeFlash
       capacity: 2
       count: 2
 
@@ -444,7 +444,7 @@
       rechargeSound:
         path: /Audio/_NF/Effects/silence.ogg
     - type: BasicEntityAmmoProvider
-      proto: BulletPistolEmp
+      proto: Bullet9x19mmEmp
       capacity: 4
       count: 4
     - type: Gun
@@ -605,7 +605,7 @@
       rechargeSound:
         path: /Audio/_NF/Effects/silence.ogg
     - type: BasicEntityAmmoProvider
-      proto: BulletPistol
+      proto: Bullet9x19mm
       capacity: 4
       count: 4
     - type: Gun

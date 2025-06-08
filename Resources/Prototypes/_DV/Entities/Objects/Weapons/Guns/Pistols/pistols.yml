@@ -2,7 +2,7 @@
   name: Mk32 "Universal"
   parent: [BaseWeaponPistol, BaseC1Contraband]
   id: WeaponPistolUniversal
-  description: The Mark 32 Offensive Handgun, produced by NanoTrasen's Small Arms Division. Uses .35 auto ammo.
+  description: The Mark 32 Offensive Handgun, produced by NanoTrasen's Small Arms Division. Uses 9x19mm ammo.
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Pistols/universal.rsi
@@ -23,21 +23,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistol
+        startingItem: Magazine9x19mm
         insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazinePistol
+            - Magazine9x19mm
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistol
+        startingItem: Cartridge9x19mm
         priority: 1
         whitelist:
           tags:
-            - CartridgePistol
+            - Cartridge9x19mm
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -47,7 +47,7 @@
   name: Pollock
   parent: [BaseWeaponPistol, BaseC1Contraband]
   id: WeaponPistolPollock
-  description: A compact and mass-produced combat pistol. Uses .35 auto ammo.
+  description: A compact and mass-produced combat pistol. Uses 9x19mm ammo.
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Pistols/pollock.rsi
@@ -61,22 +61,22 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistol
+        startingItem: Magazine9x19mm
         insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazinePistol
-            - MagazinePistolHighCapacity
+            - Magazine9x19mm
+            - Magazine9x19mmHighCapacity
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistol
+        startingItem: Cartridge9x19mm
         priority: 1
         whitelist:
           tags:
-            - CartridgePistol
+            - Cartridge9x19mm
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

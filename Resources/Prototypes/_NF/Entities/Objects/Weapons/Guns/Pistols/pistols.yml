@@ -7,20 +7,20 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistolRubber
+        startingItem: Magazine9x19mmRubber
         insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazinePistol
+            - Magazine9x19mm
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistolRubber
+        startingItem: Cartridge9x19mmRubber
         priority: 1
         whitelist:
           tags:
-            - CartridgePistol
+            - Cartridge9x19mm
 
 - type: entity
   name: N1984

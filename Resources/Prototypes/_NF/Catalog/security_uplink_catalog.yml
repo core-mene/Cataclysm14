@@ -634,9 +634,9 @@
 
 - type: listing
   id: UplinkSecurityPistolMagazine
-  name:  uplink-security-magazinepistol-name
-  description: uplink-security-magazinepistol-desc
-  productEntity: BoxMagazinePistol
+  name:  uplink-security-Magazine9x19mm-name
+  description: uplink-security-Magazine9x19mm-desc
+  productEntity: BoxMagazine9x19mm
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
     FederationMilitaryCredit: 1
@@ -684,7 +684,7 @@
   id: UplinkSecurityWT550Magazine
   name:  uplink-security-wt550magazine-name
   description: uplink-security-wt550magazine-desc
-  productEntity: BoxMagazinePistolSubMachineGunTopMounted
+  productEntity: BoxMagazine9x19mmSubMachineGunTopMounted
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
     FederationMilitaryCredit: 1
@@ -698,9 +698,9 @@
 
 - type: listing
   id: UplinkSecurityPistolMagazineRubber
-  name:  uplink-security-magazinepistol-rubber-name
-  description: uplink-security-magazinepistol-rubber-desc
-  productEntity: BoxMagazinePistolRubber
+  name:  uplink-security-Magazine9x19mm-rubber-name
+  description: uplink-security-Magazine9x19mm-rubber-desc
+  productEntity: BoxMagazine9x19mmRubber
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
     FederationMilitaryCredit: 1

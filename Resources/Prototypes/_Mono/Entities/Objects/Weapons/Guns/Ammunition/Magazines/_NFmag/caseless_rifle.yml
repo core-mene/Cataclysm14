@@ -1,7 +1,7 @@
 - type: entity
-  id: MagazinePistolCaselessRifleRubber
+  id: Magazine9x19mmCaselessRifleRubber
   name: "pistol magazine (.25 caseless rubber)"
-  parent: BaseMagazinePistolCaselessRifle
+  parent: BaseMagazine9x19mmCaselessRifle
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeCaselessRifleRubber

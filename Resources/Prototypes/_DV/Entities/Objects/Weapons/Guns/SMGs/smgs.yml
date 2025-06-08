@@ -2,7 +2,7 @@
   name: Typewriter
   parent: [BaseWeaponSubMachineGun, BaseGunWieldable, BaseC2Contraband] # Frontier: added BaseC2Contraband
   id: WeaponSubMachineGunTypewriter
-  description: A modern take on the classic design used by mobsters throughout space and time. Types .35 auto ammo.
+  description: A modern take on the classic design used by mobsters throughout space and time. Types 9x19mm ammo.
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/SMGs/typewriter.rsi
@@ -29,21 +29,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistolSubMachineGun
+        startingItem: Magazine9x19mmSubMachineGun
         insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazinePistolSubMachineGun
+            - Magazine9x19mmSubMachineGun
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistol
+        startingItem: Cartridge9x19mm
         priority: 1
         whitelist:
           tags:
-            - CartridgePistol
+            - Cartridge9x19mm
   - type: MagazineVisuals
     magState: mag
     steps: 1

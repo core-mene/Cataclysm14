@@ -1,11 +1,11 @@
 # Upstream
 - type: entity
-  id: CartridgePistolRubber
-  name: cartridge (.35 auto rubber)
-  parent: BaseCartridgePistol
+  id: Cartridge9x19mmRubber
+  name: cartridge (9x19mm rubber)
+  parent: BaseCartridge9x19mm
   components:
   - type: CartridgeAmmo
-    proto: BulletPistolRubber
+    proto: Bullet9x19mmRubber
   - type: Sprite
     layers:
       - state: base
@@ -16,12 +16,12 @@
 
 # Frontier
 - type: entity
-  id: CartridgePistolEmp
-  name: cartridge (.35 auto emp)
-  parent: BaseCartridgePistol
+  id: Cartridge9x19mmEmp
+  name: cartridge (9x19mm emp)
+  parent: BaseCartridge9x19mm
   components:
   - type: CartridgeAmmo
-    proto: BulletPistolEmp
+    proto: Bullet9x19mmEmp
   - type: EmpDescription
     range: 0.3
     energyConsumption: 2700000

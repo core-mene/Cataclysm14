@@ -1,15 +1,15 @@
 - type: entity
-  id: BaseCartridgePistol
-  name: cartridge (.35 auto)
+  id: BaseCartridge9x19mm
+  name: cartridge (9x19mm)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
       - Cartridge
-      - CartridgePistol
+      - Cartridge9x19mm
   - type: CartridgeAmmo
-    proto: BulletPistol
+    proto: Bullet9x19mm
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
@@ -21,20 +21,20 @@
     price: 1
 
 - type: entity
-  id: CartridgePistol
-  name: cartridge (.35 auto)
-  parent: BaseCartridgePistol
+  id: Cartridge9x19mm
+  name: cartridge (9x19mm)
+  parent: BaseCartridge9x19mm
   components:
   - type: CartridgeAmmo
-    proto: BulletPistol
+    proto: Bullet9x19mm
 
 - type: entity
-  id: CartridgePistolPractice
-  name: cartridge (.35 auto practice)
-  parent: BaseCartridgePistol
+  id: Cartridge9x19mmPractice
+  name: cartridge (9x19mm practice)
+  parent: BaseCartridge9x19mm
   components:
   - type: CartridgeAmmo
-    proto: BulletPistolPractice
+    proto: Bullet9x19mmPractice
   -  type: Sprite
      layers:
        - state: base
@@ -44,12 +44,12 @@
          color: "#dbdbdb"
 
 - type: entity
-  id: CartridgePistolIncendiary
-  name: cartridge (.35 auto incendiary)
-  parent: BaseCartridgePistol
+  id: Cartridge9x19mmIncendiary
+  name: cartridge (9x19mm incendiary)
+  parent: BaseCartridge9x19mm
   components:
   - type: CartridgeAmmo
-    proto: BulletPistolIncendiary
+    proto: Bullet9x19mmIncendiary
   - type: Sprite
     layers:
       - state: base
@@ -59,12 +59,12 @@
         color: "#ff6e52"
 
 - type: entity
-  id: CartridgePistolUranium
-  name: cartridge (.35 auto uranium)
-  parent: BaseCartridgePistol
+  id: Cartridge9x19mmUranium
+  name: cartridge (9x19mm uranium)
+  parent: BaseCartridge9x19mm
   components:
   - type: CartridgeAmmo
-    proto: BulletPistolUranium
+    proto: Bullet9x19mmUranium
   - type: Sprite
     layers:
       - state: base

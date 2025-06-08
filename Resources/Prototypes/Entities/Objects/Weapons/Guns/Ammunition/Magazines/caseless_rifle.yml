@@ -52,14 +52,14 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: BaseMagazinePistolCaselessRifle
+  id: BaseMagazine9x19mmCaselessRifle
   name: "pistol magazine (.25 caseless)"
   parent: BaseMagazineCaselessRifle
   abstract: true
   components:
   - type: Tag
     tags:
-      - MagazinePistolCaselessRifle
+      - Magazine9x19mmCaselessRifle
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -97,9 +97,9 @@
     zeroVisible: false
 
 - type: entity
-  id: MagazinePistolCaselessRifle
+  id: Magazine9x19mmCaselessRifle
   name: "pistol magazine (.25 caseless)"
-  parent: BaseMagazinePistolCaselessRifle
+  parent: BaseMagazine9x19mmCaselessRifle
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeCaselessRifle
@@ -117,9 +117,9 @@
   - type: Appearance
 
 - type: entity
-  id: MagazinePistolCaselessRiflePractice
+  id: Magazine9x19mmCaselessRiflePractice
   name: "pistol magazine (.25 caseless practice)"
-  parent: BaseMagazinePistolCaselessRifle
+  parent: BaseMagazine9x19mmCaselessRifle
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeCaselessRiflePractice

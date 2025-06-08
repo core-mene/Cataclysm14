@@ -14,23 +14,23 @@
 - type: entity
   name: box of .25 caseless magazines
   parent: BoxMagazine
-  id: BoxMagazinePistolCaselessRifle
+  id: BoxMagazine9x19mmCaselessRifle
   description: A box full of .25 caseless magazines.
   components:
   - type: StorageFill
     contents:
-      - id: MagazinePistolCaselessRifle
+      - id: Magazine9x19mmCaselessRifle
         amount: 4
 
 - type: entity
   name: box of .25 caseless (practice) magazines
   parent: BoxMagazine
-  id: BoxMagazinePistolCaselessRiflePractice
+  id: BoxMagazine9x19mmCaselessRiflePractice
   description: A box full of .25 caseless practice magazines.
   components:
   - type: StorageFill
     contents:
-      - id: MagazinePistolCaselessRiflePractice
+      - id: Magazine9x19mmCaselessRiflePractice
         amount: 4
 
 # 7.62x39mm
@@ -81,91 +81,91 @@
 
 # Pistol
 - type: entity
-  name: box of WT550 .35 auto magazines
+  name: box of WT550 9x19mm magazines
   parent: BoxMagazine
-  id: BoxMagazinePistolSubMachineGunTopMounted
-  description: A box full of WT550 .35 auto magazines.
+  id: BoxMagazine9x19mmSubMachineGunTopMounted
+  description: A box full of WT550 9x19mm magazines.
   components:
   - type: StorageFill
     contents:
-      - id: MagazinePistolSubMachineGunTopMounted
+      - id: Magazine9x19mmSubMachineGunTopMounted
         amount: 3
 
 - type: entity
-  name: box of pistol .35 auto magazines
+  name: box of pistol 9x19mm magazines
   parent: BoxMagazine
-  id: BoxMagazinePistol
-  description: A box full of pistol .35 auto magazines.
+  id: BoxMagazine9x19mm
+  description: A box full of pistol 9x19mm magazines.
   components:
   - type: StorageFill
     contents:
-      - id: MagazinePistol
+      - id: Magazine9x19mm
         amount: 4
 
 - type: entity
-  name: box of pistol .35 auto (practice) magazines
+  name: box of pistol 9x19mm (practice) magazines
   parent: BoxMagazine
-  id: BoxMagazinePistolPractice
+  id: BoxMagazine9x19mmPractice
   description: A box full of  magazines.
   components:
   - type: StorageFill
     contents:
-      - id: MagazinePistolPractice
+      - id: Magazine9x19mmPractice
         amount: 4
 
 - type: entity
-  name: box of machine pistol .35 auto magazines
+  name: box of machine pistol 9x19mm magazines
   parent: BoxMagazine
-  id: BoxMagazinePistolHighCapacity
-  description: A box full of machine pistol .35 auto magazines.
+  id: BoxMagazine9x19mmHighCapacity
+  description: A box full of machine pistol 9x19mm magazines.
   components:
   - type: StorageFill
     contents:
-      - id: MagazinePistolHighCapacity
+      - id: Magazine9x19mmHighCapacity
         amount: 4
 
 - type: entity
-  name: box of machine pistol .35 auto (practice) magazines
+  name: box of machine pistol 9x19mm (practice) magazines
   parent: BoxMagazine
-  id: BoxMagazinePistolHighCapacityPractice
-  description: A box full of machine pistol .35 auto (practice) magazines.
+  id: BoxMagazine9x19mmHighCapacityPractice
+  description: A box full of machine pistol 9x19mm (practice) magazines.
   components:
   - type: StorageFill
     contents:
-      - id: MagazinePistolHighCapacityPractice
+      - id: Magazine9x19mmHighCapacityPractice
         amount: 4
 
 - type: entity
-  name: box of SMG .35 auto magazines
+  name: box of SMG 9x19mm magazines
   parent: BoxMagazine
-  id: BoxMagazinePistolSubMachineGun
-  description: A box full of SMG .35 auto magazines.
+  id: BoxMagazine9x19mmSubMachineGun
+  description: A box full of SMG 9x19mm magazines.
   components:
   - type: StorageFill
     contents:
-      - id: MagazinePistolSubMachineGun
+      - id: Magazine9x19mmSubMachineGun
         amount: 3
 
 - type: entity
-  name: box of SMG .35 auto (practice) magazines
+  name: box of SMG 9x19mm (practice) magazines
   parent: BoxMagazine
-  id: BoxMagazinePistolSubMachineGunPractice
-  description: A box full of SMG .35 auto (practice) magazines.
+  id: BoxMagazine9x19mmSubMachineGunPractice
+  description: A box full of SMG 9x19mm (practice) magazines.
   components:
   - type: StorageFill
     contents:
-      - id: MagazinePistolSubMachineGunPractice
+      - id: Magazine9x19mmSubMachineGunPractice
         amount: 3
 
 - type: entity
-  name: box of SMG .35 auto (emp) magazines
+  name: box of SMG 9x19mm (emp) magazines
   parent: BoxMagazine
-  id: BoxMagazinePistolSubMachineGunEmp
-  description: A box full of SMG .35 auto (emp) magazines.
+  id: BoxMagazine9x19mmSubMachineGunEmp
+  description: A box full of SMG 9x19mm (emp) magazines.
   components:
   - type: StorageFill
     contents:
-      - id: MagazinePistolSubMachineGunEmp
+      - id: Magazine9x19mmSubMachineGunEmp
         amount: 3
 
 # Shotgun

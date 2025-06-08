@@ -1,6 +1,6 @@
 # Empty mags
 - type: entity
-  parent: BaseMagazinePistolHighCapacity
+  parent: BaseMagazine9x19mmHighCapacity
   id: MagazineAsmgtUniversalEmpty
   name: "ASMGT-compatible ammo box"
   description: |-
@@ -16,7 +16,7 @@
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgePistol
+        - Cartridge9x19mm
         - Cartridge5.56x45mm
         - Cartridge7.62x39mm
         - CartridgeCaselessRifle
@@ -44,7 +44,7 @@
   suffix: loaded .35 pistol
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgePistol
+    proto: Cartridge9x19mm
   - type: Sprite
     layers:
     - state: base

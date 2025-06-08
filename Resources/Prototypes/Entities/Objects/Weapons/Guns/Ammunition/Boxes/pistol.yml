@@ -2,14 +2,14 @@
   abstract: true
   parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
   id: BaseMagazineBoxPistol
-  name: ammunition box (.35 auto)
+  name: ammunition box (9x19mm)
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgePistol
-    proto: CartridgePistol
+        - Cartridge9x19mm
+    proto: Cartridge9x19mm
     capacity: 70 # 60->70 Two mags per box
   - type: Item
     size: Small
@@ -28,12 +28,12 @@
 - type: entity # Mono Big Pistol Mags
   parent: BaseMagazineBoxPistol
   id: MagazineBoxPistolBig
-  name: ammunition box (.35 auto)
+  name: ammunition box (9x19mm)
   suffix: Big
   components:
   - type: BallisticAmmoProvider
     capacity: 280 # 8 mags per box similar to rifle box
-    proto: CartridgePistol
+    proto: Cartridge9x19mm
   - type: Sprite
     layers:
     - state: base-b # Frontier: base-big<base-b
@@ -49,10 +49,10 @@
 - type: entity
   parent: BaseMagazineBoxPistol
   id: MagazineBoxPistol
-  name: ammunition box (.35 auto)
+  name: ammunition box (9x19mm)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgePistol
+    proto: Cartridge9x19mm
   - type: Sprite
     layers:
     - state: base
@@ -63,10 +63,10 @@
 - type: entity
   parent: BaseMagazineBoxPistol
   id: MagazineBoxPistolPractice
-  name: ammunition box (.35 auto practice)
+  name: ammunition box (9x19mm practice)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgePistolPractice
+    proto: Cartridge9x19mmPractice
   - type: Sprite
     layers:
     - state: base
@@ -78,10 +78,10 @@
 - type: entity
   parent: BaseMagazineBoxPistol
   id: MagazineBoxPistolIncendiary
-  name: ammunition box (.35 auto incendiary)
+  name: ammunition box (9x19mm incendiary)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgePistolIncendiary
+    proto: Cartridge9x19mmIncendiary
   - type: Sprite
     layers:
     - state: base
@@ -93,10 +93,10 @@
 - type: entity
   id: MagazineBoxPistolUranium
   parent: BaseMagazineBoxPistol
-  name: ammunition box (.35 auto uranium)
+  name: ammunition box (9x19mm uranium)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgePistolUranium
+    proto: Cartridge9x19mmUranium
   - type: Sprite
     layers:
     - state: base
