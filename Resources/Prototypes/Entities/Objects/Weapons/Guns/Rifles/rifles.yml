@@ -53,7 +53,7 @@
     price: 500
 
 - type: entity
-  name: AKMS
+  name: AKM
   parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband
   id: WeaponRifleAk
   description: An iconic weapon of war. Uses 7.62x39mm ammo. An illegal firearm often used by Syndicate agents.
@@ -101,7 +101,7 @@
     zeroVisible: true
   - type: Appearance
   - type: PirateBountyItem # Frontier
-    id: AKMS # Frontier
+    id: AKM # Frontier
 
 - type: entity
   name: M-90gl

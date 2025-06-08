@@ -6,7 +6,7 @@
   components:
   - type: Tag
     tags:
-      - SpeedLoaderRifleHeavy
+      - SpeedLoader5.56x45mm
   - type: SpeedLoader
   - type: BallisticAmmoProvider
     whitelist:
@@ -20,17 +20,17 @@
         ents: []
 
 - type: entity
-  id: SpeedLoaderRifleHeavy
+  id: SpeedLoader5.56x45mm
   name: "speed loader (5.56x45mm)"
   parent: BaseSpeedLoader5.56x45mm
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRifle
   - type: Icon
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
     state: icon
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
@@ -43,17 +43,17 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoaderRifleHeavyEmpty
+  id: SpeedLoader5.56x45mmEmpty
   name: "speed loader (5.56x45mm any)"
-  parent: SpeedLoaderRifleHeavy
+  parent: SpeedLoader5.56x45mm
   components:
   - type: BallisticAmmoProvider
     proto: null
   - type: Icon
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
     state: base
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
@@ -61,14 +61,14 @@
         map: [ "enum.GunVisualLayers.Mag" ]
 
 - type: entity
-  id: SpeedLoaderRifleHeavyIncendiary
+  id: SpeedLoader5.56x45mmIncendiary
   name: "speed loader (5.56x45mm incendiary)"
   parent: BaseSpeedLoader5.56x45mm
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRifleIncendiary
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
@@ -81,17 +81,17 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoaderRifleHeavyPractice
+  id: SpeedLoader5.56x45mmPractice
   name: "speed loader (5.56x45mm practice)"
   parent: BaseSpeedLoader5.56x45mm
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRiflePractice
   - type: Icon
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
     state: practice-icon
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
@@ -104,17 +104,17 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoaderRifleHeavyUranium
+  id: SpeedLoader5.56x45mmUranium
   name: "speed loader (5.56x45mm uranium)"
   parent: BaseSpeedLoader5.56x45mm
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRifleUranium
   - type: Icon
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
     state: uranium-icon
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
@@ -127,17 +127,17 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoaderRifleHeavyRubber
+  id: SpeedLoader5.56x45mmRubber
   name: "speed loader (5.56x45mm rubber)"
   parent: BaseSpeedLoader5.56x45mm
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRifleRubber
   - type: Icon
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
     state: rubber-icon
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/argenti_speed_loader.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
