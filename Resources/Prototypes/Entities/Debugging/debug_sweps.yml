@@ -26,7 +26,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine9x19mmDebug
+        startingItem: MagazinePistolDebug
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
@@ -42,7 +42,7 @@
             - Cartridge9x19mm
 
 - type: entity
-  id: Magazine9x19mmDebug
+  id: MagazinePistolDebug
   name: bang, ded mag
   parent: BaseMagazine9x19mm
   suffix: DEBUG
@@ -54,7 +54,7 @@
     proto: CartridgeDebug
     capacity: 1000
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/9x19mm/9x19mm_pistol_mag.rsi
 
 - type: entity
   id: BulletDebug

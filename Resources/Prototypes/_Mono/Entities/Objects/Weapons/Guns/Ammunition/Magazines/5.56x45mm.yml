@@ -20,7 +20,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Rifle/rifle_mag.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/5.56x45mm/5.56x45mm_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -134,7 +134,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/Rifle/novalite_clip.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/5.56x45mm/novalite_clip.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
