@@ -40,11 +40,11 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeDMR
+        startingItem: Cartridge8x65mmSKR
         priority: 1
         whitelist:
           tags:
-            - CartridgeDMR
+            - Cartridge8x65mmSKR
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

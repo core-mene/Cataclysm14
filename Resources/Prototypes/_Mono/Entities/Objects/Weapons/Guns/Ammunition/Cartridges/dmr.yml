@@ -1,5 +1,5 @@
 - type: entity
-  id: BaseCartridgeDMR
+  id: BaseCartridge8x65mmSKR
   name: cartridge (8x65mm SKR)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
   abstract: true
@@ -7,9 +7,9 @@
   - type: Tag
     tags:
       - Cartridge
-      - CartridgeDMR
+      - Cartridge8x65mmSKR
   - type: CartridgeAmmo
-    proto: BulletDMR
+    proto: Bullet8x65mmSKR
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
@@ -21,9 +21,9 @@
     price: 1
 
 - type: entity
-  id: CartridgeDMR
+  id: Cartridge8x65mmSKR
   name: cartridge (8x65mm SKR)
-  parent: BaseCartridgeDMR
+  parent: BaseCartridge8x65mmSKR
   components:
   - type: CartridgeAmmo
-    proto: BulletDMR
+    proto: Bullet8x65mmSKR

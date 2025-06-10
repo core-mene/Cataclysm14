@@ -7,8 +7,8 @@
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeDMR
-    proto: CartridgeDMR
+        - Cartridge8x65mmSKR
+    proto: Cartridge8x65mmSKR
     capacity: 60
   - type: Item
     size: Small
@@ -30,7 +30,7 @@
   name: ammunition box (8x65mm SKR)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeDMR
+    proto: Cartridge8x65mmSKR
   - type: Sprite
     layers:
     - state: base

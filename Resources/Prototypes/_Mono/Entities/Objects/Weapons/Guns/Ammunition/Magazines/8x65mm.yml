@@ -11,7 +11,7 @@
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeDMR
+        - Cartridge8x65mmSKR
     capacity: 20
   - type: Item
     size: Small
@@ -52,7 +52,7 @@
   parent: BaseMagazineDMR
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeDMR
+    proto: Cartridge8x65mmSKR
   - type: Sprite
     layers:
     - state: red
