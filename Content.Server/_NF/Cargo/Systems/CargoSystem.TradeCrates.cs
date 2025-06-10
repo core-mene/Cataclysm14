@@ -40,6 +40,7 @@ public sealed partial class CargoSystem
         ev.Price = double.Max(0.0, ev.Price); // Ensure non-negative values.
     }
 
+    
     private void OnTradeCrateInit(Entity<TradeCrateComponent> ent, ref ComponentInit ev)
     {
         // If there are no available destinations, tough luck.
