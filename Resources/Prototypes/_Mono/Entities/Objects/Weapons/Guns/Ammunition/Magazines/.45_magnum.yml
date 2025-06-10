@@ -22,7 +22,7 @@
   components:
   - type: Tag
     tags:
-      - Magazine.45_magnumSubMachineGunFMJ
+      - Magazine.45_magnumSubMachineGun
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -135,7 +135,7 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine.45_magnumSubMachineGunFMJ
+  id: Magazine.45_magnumSubMachineGun
   name: SMG magazine (.45 magnum FMJ)
   parent: BaseMagazine.45_magnumSubMachineGun
   components:
