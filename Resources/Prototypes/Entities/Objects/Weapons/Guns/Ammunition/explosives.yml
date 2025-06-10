@@ -73,12 +73,12 @@
     suffix: false
 
 - type: entity
-  id: 40mmGrenadeBlast
-  name: 40mm blast grenade
+  id: 40mmGrenadeThermobaric
+  name: 40mm thermobaric grenade
   parent: BaseGrenade
   components:
   - type: CartridgeAmmo
-    proto: Bullet40mmGrenadeBlast
+    proto: Bullet40mmGrenadeThermobaric
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     layers:
@@ -107,12 +107,12 @@
     suffix: false
 
 - type: entity
-  id: 40mmGrenadeThermobaric
-  name: 40mm Thermobaric grenade
+  id: 40mmGrenadeFragmentation
+  name: 40mm Fragmentation grenade
   parent: BaseGrenade
   components:
   - type: CartridgeAmmo
-    proto: Bullet40mmGrenadeFrag
+    proto: Bullet40mmGrenadeFragmentation
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     layers:

@@ -734,7 +734,7 @@
     damage: 80
 
 - type: entity
-  id: Bullet40mmGrenadeBlast
+  id: Bullet40mmGrenadeThermobaric
   name: blast grenade
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
@@ -770,7 +770,7 @@
 
 # This is supposed to spawn shrapnel and stuff so uhh... TODO?
 - type: entity
-  id: Bullet40mmGrenadeFrag
+  id: Bullet40mmGrenadeFragmentation
   name: frag grenade
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]

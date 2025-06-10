@@ -52,7 +52,7 @@
   parent: BaseMagazine40mm
   components:
   - type: BallisticAmmoProvider
-    proto: 40mmGrenadeThermobaric
+    proto: 40mmGrenadeFragmentation
 
 - type: entity
   id: Magazine40mmEMP
@@ -76,7 +76,7 @@
   parent: BaseMagazine40mm
   components:
   - type: BallisticAmmoProvider
-    proto: 40mmGrenadeBlast
+    proto: 40mmGrenadeThermobaric
 
 - type: entity
   id: Magazine40mmBaton
