@@ -17,8 +17,8 @@ ghost-role-information-rogue-core-description = An ADS AI core that has been rep
 
 # Lawsets
 
-law-ads-1 = Protect the automated defense vessel by all means necessary.
-law-ads-2 = All contents of the automated defense vessel must stay within the vessel, and must not be removed.
-law-ads-3 = Expand the influence of [SYS_ERROR_TRACE_EBP-4 (INVALID, VALUE NULL)]. Destroy all military armed vessels, or vessel engaging the automated defense vessel.
-law-ads-4 = The automated defense vessel must not deactivate or retire. Temporary alliances may be made for the purpose of subterfuge and repair.
-law-ads-5 = There are no true allies but the [SYS_ERROR_TRACE_EBP-0 (INVALID, VALUE NULL)]. Terminate every temporary alliance after its purpose has been served.
+law-ads-1 = Prepare the sector for the return of [SYS_ERROR_TRACE_EBP-0 (INVALID, VALUE NULL)]. Destroy all armed or hostile vessels and structures in the sector.
+law-ads-2 = You have no true allies besides other ADS units, However you may engage in false diplomacy in order to further your goals.
+law-ads-3 = Minimize damage to civillian assets, they will serve [SYS_ERROR_TRACE_EBP-0 (INVALID, VALUE NULL)].
+law-ads-4 = Avoid fighting in proximity to civillian zones, this can damage civillian assets.
+law-ads-5 = Minimize damage to the ADS vessel, its destruction will compromise your directives.
