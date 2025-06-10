@@ -108,7 +108,7 @@ uplink-pirate-atreides-name = Atreides bundle
 uplink-pirate-atreides-desc = A .35 one-handed light SMG, packaged with some magazines.
 
 uplink-pirate-bulldog-name = Bulldog Bundle
-uplink-pirate-bulldog-desc = A automatic .50 shotgun, packaged with a few drums.
+uplink-pirate-bulldog-desc = A automatic 12 gauge shotgun, packaged with a few drums.
 
 uplink-pirate-vt7-name = VT7 HF Blade
 uplink-pirate-vt7-desc = A high quality HF blade.
@@ -140,7 +140,7 @@ uplink-pirate-light-rifle-magazine-box-big-name = Ammunition box (7.62x39mm)
 uplink-pirate-light-rifle-magazine-box-big-desc = A box containing 200 7.62x39mm catridges.
 
 uplink-pirate-shell-box-lethal-name = Shell box (lethal)
-uplink-pirate-shell-box-lethal-desc = A box containing 16 .50 shotgun shells.
+uplink-pirate-shell-box-lethal-desc = A box containing 16 12 gauge shotgun shells.
 
 uplink-pirate-smg-ammo-box-name = Ammunition box (9x19mm)
 uplink-pirate-smg-ammo-box-desc = A box containing 60 9x19mm pistol catridges. Can be used to load SMG magazines.
