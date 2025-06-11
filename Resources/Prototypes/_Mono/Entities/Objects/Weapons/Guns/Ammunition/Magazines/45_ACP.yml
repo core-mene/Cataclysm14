@@ -32,15 +32,13 @@
   - type: Appearance
 
 - type: entity
-  id: BaseMagazine45_ACPPistolHighCapacity
-  name: machine pistol magazine (.45 ACP FMJ)
+  id: BaseMagazine45_ACPPistolHighCapacityFMJ  name: machine pistol magazine (.45 ACP FMJ)
   parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine45_ACPPistolHighCapacity
-  - type: BallisticAmmoProvider
+      - Magazine45_ACPPistolHighCapacityFMJ  - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
@@ -65,15 +63,13 @@
   - type: Appearance
 
 - type: entity
-  id: BaseMagazine45_ACPSubMachineGun
-  name: SMG magazine (.45 ACP FMJ)
+  id: BaseMagazine45_ACPSubMachineGunFMJ  name: SMG magazine (.45 ACP FMJ)
   parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseSecurityContraband<BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine45_ACPSubMachineGun
-  - type: BallisticAmmoProvider
+      - Magazine45_ACPSubMachineGunFMJ  - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
@@ -167,8 +163,7 @@
   id: Magazine45_ACPPistolHighCapacityEmpty
   name: machine pistol magazine (.45 ACP any)
   suffix: empty
-  parent: BaseMagazine45_ACPPistolHighCapacity
-  components:
+  parent: BaseMagazine45_ACPPistolHighCapacityFMJ  components:
   - type: BallisticAmmoProvider
     proto: null
   - type: Sprite
@@ -179,10 +174,8 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine45_ACPPistolHighCapacity
-  name: machine pistol magazine (.45 ACP FMJ)
-  parent: BaseMagazine45_ACPPistolHighCapacity
-  components:
+  id: Magazine45_ACPPistolHighCapacityFMJ  name: machine pistol magazine (.45 ACP FMJ)
+  parent: BaseMagazine45_ACPPistolHighCapacityFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPFMJ
   - type: Sprite
@@ -195,8 +188,7 @@
 - type: entity
   id: Magazine45_ACPPistolHighCapacityPractice
   name: machine pistol magazine (.45 ACP practice)
-  parent: BaseMagazine45_ACPPistolHighCapacity
-  components:
+  parent: BaseMagazine45_ACPPistolHighCapacityFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPFMJ
   - type: Sprite
@@ -207,10 +199,8 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine45_ACPSubMachineGun
-  name: SMG magazine (.45 ACP FMJ)
-  parent: BaseMagazine45_ACPSubMachineGun
-  components:
+  id: Magazine45_ACPSubMachineGunFMJ  name: SMG magazine (.45 ACP FMJ)
+  parent: BaseMagazine45_ACPSubMachineGunFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPFMJ
     whitelist:
@@ -229,8 +219,7 @@
   id: Magazine45_ACPSubMachineGunEmpty
   name: SMG magazine (.45 ACP any)
   suffix: empty
-  parent: BaseMagazine45_ACPSubMachineGun
-  components:
+  parent: BaseMagazine45_ACPSubMachineGunFMJ  components:
   - type: BallisticAmmoProvider
     proto: null
   - type: Sprite
@@ -243,8 +232,7 @@
 - type: entity
   id: Magazine45_ACPSubMachineGunPractice
   name: SMG magazine (.45 ACP practice)
-  parent: BaseMagazine45_ACPSubMachineGun
-  components:
+  parent: BaseMagazine45_ACPSubMachineGunFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPPractice
   - type: Sprite
@@ -257,8 +245,7 @@
 - type: entity
   id: Magazine45_ACPSubMachineGunUranium
   name: SMG magazine (.45 ACP uranium)
-  parent: BaseMagazine45_ACPSubMachineGun
-  components:
+  parent: BaseMagazine45_ACPSubMachineGunFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPUranium
   - type: Sprite
@@ -269,8 +256,7 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  parent: BaseMagazine45_ACPSubMachineGun
-  id: Magazine45_ACPSubMachineGunIncendiary
+  parent: BaseMagazine45_ACPSubMachineGunFMJ  id: Magazine45_ACPSubMachineGunIncendiary
   name: SMG magazine (.45 ACP incendiary)
   components:
   - type: BallisticAmmoProvider
@@ -294,8 +280,7 @@
 - type: entity
   id: Magazine45_ACPSubMachineGunRubber
   name: SMG magazine (.45 ACP rubber)
-  parent: BaseMagazine45_ACPSubMachineGun
-  components:
+  parent: BaseMagazine45_ACPSubMachineGunFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPRubber
   - type: Sprite
@@ -310,8 +295,7 @@
 - type: entity
   id: Magazine45_ACPPistolHighCapacityRubber
   name: machine pistol magazine (.45 ACP rubber)
-  parent: BaseMagazine45_ACPPistolHighCapacity
-  components:
+  parent: BaseMagazine45_ACPPistolHighCapacityFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPFMJ
   - type: Sprite
@@ -326,8 +310,7 @@
 - type: entity
   id: Magazine45_ACPSubMachineGunEmp
   name: SMG magazine (.45 ACP emp)
-  parent: BaseMagazine45_ACPSubMachineGun
-  components:
+  parent: BaseMagazine45_ACPSubMachineGunFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPEmp
   - type: Sprite

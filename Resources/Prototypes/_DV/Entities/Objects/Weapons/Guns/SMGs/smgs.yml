@@ -29,14 +29,12 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine45_ACPSubMachineGun
-        insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
+        startingItem: Magazine45_ACPSubMachineGunFMJ        insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine45_ACPSubMachineGun
-        whitelistFailPopup: gun-magazine-whitelist-fail
+            - Magazine45_ACPSubMachineGunFMJ        whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
         startingItem: Cartridge45_ACPFMJ

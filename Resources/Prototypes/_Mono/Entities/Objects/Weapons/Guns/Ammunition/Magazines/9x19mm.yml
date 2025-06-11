@@ -32,15 +32,13 @@
   - type: Appearance
 
 - type: entity
-  id: BaseMagazine9x19mmPistolHighCapacity
-  name: machine pistol magazine (9x19mm FMJ)
+  id: BaseMagazine9x19mmPistolHighCapacityFMJ  name: machine pistol magazine (9x19mm FMJ)
   parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine9x19mmPistolHighCapacity
-  - type: BallisticAmmoProvider
+      - Magazine9x19mmPistolHighCapacityFMJ  - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
@@ -65,15 +63,13 @@
   - type: Appearance
 
 - type: entity
-  id: BaseMagazine9x19mmSubMachineGun
-  name: SMG magazine (9x19mm FMJ)
+  id: BaseMagazine9x19mmSubMachineGunFMJ  name: SMG magazine (9x19mm FMJ)
   parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseSecurityContraband<BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine9x19mmSubMachineGun
-  - type: BallisticAmmoProvider
+      - Magazine9x19mmSubMachineGunFMJ  - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
@@ -167,8 +163,7 @@
   id: Magazine9x19mmPistolHighCapacityEmpty
   name: machine pistol magazine (9x19mm any)
   suffix: empty
-  parent: BaseMagazine9x19mmPistolHighCapacity
-  components:
+  parent: BaseMagazine9x19mmPistolHighCapacityFMJ  components:
   - type: BallisticAmmoProvider
     proto: null
   - type: Sprite
@@ -179,10 +174,8 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine9x19mmPistolHighCapacity
-  name: machine pistol magazine (9x19mm FMJ)
-  parent: BaseMagazine9x19mmPistolHighCapacity
-  components:
+  id: Magazine9x19mmPistolHighCapacityFMJ  name: machine pistol magazine (9x19mm FMJ)
+  parent: BaseMagazine9x19mmPistolHighCapacityFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmFMJ
   - type: Sprite
@@ -195,8 +188,7 @@
 - type: entity
   id: Magazine9x19mmPistolHighCapacityPractice
   name: machine pistol magazine (9x19mm practice)
-  parent: BaseMagazine9x19mmPistolHighCapacity
-  components:
+  parent: BaseMagazine9x19mmPistolHighCapacityFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmFMJ
   - type: Sprite
@@ -207,10 +199,8 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine9x19mmSubMachineGun
-  name: SMG magazine (9x19mm FMJ)
-  parent: BaseMagazine9x19mmSubMachineGun
-  components:
+  id: Magazine9x19mmSubMachineGunFMJ  name: SMG magazine (9x19mm FMJ)
+  parent: BaseMagazine9x19mmSubMachineGunFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmFMJ
     whitelist:
@@ -229,8 +219,7 @@
   id: Magazine9x19mmSubMachineGunEmpty
   name: SMG magazine (9x19mm any)
   suffix: empty
-  parent: BaseMagazine9x19mmSubMachineGun
-  components:
+  parent: BaseMagazine9x19mmSubMachineGunFMJ  components:
   - type: BallisticAmmoProvider
     proto: null
   - type: Sprite
@@ -243,8 +232,7 @@
 - type: entity
   id: Magazine9x19mmSubMachineGunPractice
   name: SMG magazine (9x19mm practice)
-  parent: BaseMagazine9x19mmSubMachineGun
-  components:
+  parent: BaseMagazine9x19mmSubMachineGunFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmPractice
   - type: Sprite
@@ -257,8 +245,7 @@
 - type: entity
   id: Magazine9x19mmSubMachineGunUranium
   name: SMG magazine (9x19mm uranium)
-  parent: BaseMagazine9x19mmSubMachineGun
-  components:
+  parent: BaseMagazine9x19mmSubMachineGunFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmUranium
   - type: Sprite
@@ -269,8 +256,7 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  parent: BaseMagazine9x19mmSubMachineGun
-  id: Magazine9x19mmSubMachineGunIncendiary
+  parent: BaseMagazine9x19mmSubMachineGunFMJ  id: Magazine9x19mmSubMachineGunIncendiary
   name: SMG magazine (9x19mm incendiary)
   components:
   - type: BallisticAmmoProvider
@@ -294,8 +280,7 @@
 - type: entity
   id: Magazine9x19mmSubMachineGunRubber
   name: SMG magazine (9x19mm rubber)
-  parent: BaseMagazine9x19mmSubMachineGun
-  components:
+  parent: BaseMagazine9x19mmSubMachineGunFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmRubber
   - type: Sprite
@@ -310,8 +295,7 @@
 - type: entity
   id: Magazine9x19mmPistolHighCapacityRubber
   name: machine pistol magazine (9x19mm rubber)
-  parent: BaseMagazine9x19mmPistolHighCapacity
-  components:
+  parent: BaseMagazine9x19mmPistolHighCapacityFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmFMJ
   - type: Sprite
@@ -326,8 +310,7 @@
 - type: entity
   id: Magazine9x19mmSubMachineGunEmp
   name: SMG magazine (9x19mm emp)
-  parent: BaseMagazine9x19mmSubMachineGun
-  components:
+  parent: BaseMagazine9x19mmSubMachineGunFMJ  components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmEmp
   - type: Sprite
