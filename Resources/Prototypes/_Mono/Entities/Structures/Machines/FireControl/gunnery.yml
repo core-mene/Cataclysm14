@@ -53,7 +53,7 @@
   - type: Machine
     board: MachineGCSLowCircuitboard
   - type: FireControlServer
-    processingPower: 6
+    processingPower: 8
   - type: ApcPowerReceiver
     powerLoad: 250
   - type: ApcPowerReceiverBattery
@@ -69,7 +69,7 @@
   - type: Machine
     board: MachineGCSMediumCircuitboard
   - type: FireControlServer
-    processingPower: 10
+    processingPower: 12
   - type: ApcPowerReceiver
     powerLoad: 500
   - type: ApcPowerReceiverBattery
@@ -85,7 +85,7 @@
   - type: Machine
     board: MachineGCSHighCircuitboard
   - type: FireControlServer
-    processingPower: 14
+    processingPower: 16
   - type: ApcPowerReceiver
     powerLoad: 1000
   - type: ApcPowerReceiverBattery
