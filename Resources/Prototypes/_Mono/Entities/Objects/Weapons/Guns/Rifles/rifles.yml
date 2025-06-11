@@ -1,5 +1,5 @@
 - type: entity
-  name: MR-8C BR
+  name: MR-8C BR (8x65mm SKR)
   parent: [BaseWeaponRifle, BaseGunWieldable, BaseC3Contraband]
   id: WeaponRifleMR8C
   description: The BR variant of the MR-8 series, firing with incredible accuracy. Chambered in 8x65mm SKR.
@@ -70,7 +70,7 @@
   #  pvsIncrease: 0.5
 
 - type: entity
-  name: AK-502
+  name: AK-502 (7.62x39mm)
   parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponRifleAK502
   description: A standard-issue USSP combat rifle. Uses 7.62x39mm ammo.

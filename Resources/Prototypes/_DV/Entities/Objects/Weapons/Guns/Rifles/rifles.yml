@@ -1,5 +1,5 @@
 - type: entity
-  name: Vulcan
+  name: Vulcan (7.62x51mm)
   parent: [BaseWeaponLightMachineGun, BaseGunWieldable, BaseC1Contraband] # Frontier: add BaseC1Contraband
   id: WeaponRifleVulcan
   description: One of the heaviest small arms to grace Security's armory, this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World". Uses 7.62x51mm ammo.
@@ -90,7 +90,7 @@
     pvsIncrease: 0.15 # Frontier
 
 - type: entity
-  name: CAWS-25 Jackdaw
+  name: CAWS-25 Jackdaw (6.35x40mm)
   parent: [BaseWeaponRifle, BaseGunWieldable, BaseC3Contraband] # Frontier: add BaseC3Contraband
   id: WeaponRifleJackdaw
   description: The beginning of the end is heralded by the song of a Jackdaw. Uses 6.35x40mm Caseless ammo.

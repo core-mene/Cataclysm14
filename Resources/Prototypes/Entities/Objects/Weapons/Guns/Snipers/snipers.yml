@@ -40,7 +40,7 @@
     price: 500
 
 - type: entity
-  name: Kardashev-Mosin
+  name: Kardashev-Mosin (7.62x54mmR)
   parent: [BaseWeaponSniper, BaseGunWieldable, BaseGunMelee, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added BaseGunMelee
   id: WeaponSniperMosin
   description: A weapon for hunting, or endless trench warfare. Uses 7.62x54mmR ammo. Equipped with bayonet. # Frontier: bayonet
@@ -61,7 +61,7 @@
     proto: Cartridge7.62x54mmRFMJ
 
 - type: entity
-  name: Hristov
+  name: Hristov (14.5x114mm)
   parent: [BaseWeaponSniper, BaseGunWieldable, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponSniperHristov
   description: A portable anti-material rifle. Fires high velocity 14.5mm shells. Uses 14.5x114mm ammo.

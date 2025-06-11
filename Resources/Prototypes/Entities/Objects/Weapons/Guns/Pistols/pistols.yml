@@ -70,7 +70,7 @@
     price: 100 # mono
 
 - type: entity
-  name: viper
+  name: viper (9x19mm)
   parent: [BaseWeaponPistol, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponPistolViper
   description: A small, easily concealable, but somewhat underpowered gun. Retrofitted with a fully automatic receiver. Uses 9x19mm ammo. An illegal firearm often used by Syndicate agents.
@@ -225,7 +225,7 @@
       gun_chamber: !type:ContainerSlot
 
 - type: entity
-  name: mk 58
+  name: mk 58 (.45 ACP)
   parent: [BaseWeaponPistol, BaseC1Contraband] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable<BaseC1Contraband to match weapon description
   id: WeaponPistolMk58
   description: The Mark 58 Offensive Handgun, produced by NanoTrasen's Small Arms Division. Uses .45 ACP ammo.
@@ -268,7 +268,7 @@
             - Cartridge45_ACPFMJ
 
 - type: entity
-  name: N1984
+  name: N1984 (.45 magnum)
   parent: [BaseWeaponPistol, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponPistolN1984 # the spaces in description are for formatting.
   description: The sidearm of any self respecting officer. Comes in .45 magnum, the lord's caliber. On the handle is a label that says 'for authorized use only.'

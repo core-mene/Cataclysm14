@@ -45,7 +45,7 @@
     price: 500
 
 - type: entity
-  name: Bulldog
+  name: Bulldog (12 gauge)
   # Don't parent to BaseWeaponShotgun because it differs significantly
   parent: [BaseItem, BaseGunWieldable, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponShotgunBulldog
@@ -103,7 +103,7 @@
     price: 500
 
 - type: entity
-  name: double-barreled shotgun
+  name: double-barreled shotgun (12 gauge)
   parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC1Contraband] # Frontier: BaseSecurityBartenderContraband<BaseC1Contraband
   id: WeaponShotgunDoubleBarreled
   description: An immortal classic. A civilian grade shotgun. Uses 12 gauge shotgun shells.
@@ -128,7 +128,7 @@
     price: 350
 
 - type: entity
-  name: double-barreled shotgun
+  name: double-barreled shotgun (12 gauge)
   parent: WeaponShotgunDoubleBarreled
   id: WeaponShotgunDoubleBarreledRubber
   description: An immortal classic. Uses 12 gauge shotgun shells.
@@ -138,7 +138,7 @@
     proto: ShellShotgun12gaugeBeanbag
 
 - type: entity
-  name: Enforcer
+  name: Enforcer (12 gauge)
   parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponShotgunEnforcer
   description: A premium semi-automatic shotgun, featuring an upgraded clip capacity. Uses 12 gauge shotgun shells. # Frontier: no sec reference
@@ -165,7 +165,7 @@
     proto: ShellShotgun12gaugeBeanbag
 
 - type: entity
-  name: Kammerer
+  name: Kammerer (12 gauge)
   parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponShotgunKammerer
   description: An old yet faithful design, and a favorite among irregular forces on many worlds. Uses 12 gauge shotgun shells. # Frontier: of<on
@@ -187,7 +187,7 @@
     - WeaponShotgunKammerer
 
 - type: entity
-  name: sawn-off shotgun
+  name: sawn-off shotgun (12 gauge)
   parent: [ BaseWeaponShotgun, BaseC1Contraband ] # Frontier: BaseSecurityBartenderContraband<BaseC1Contraband
   id: WeaponShotgunSawn
   description: Groovy! Uses 12 gauge shotgun shells.
@@ -209,7 +209,7 @@
     deconstructionTarget: null
 
 - type: entity
-  name: sawn-off shotgun
+  name: sawn-off shotgun (12 gauge)
   parent: WeaponShotgunSawn
   id: WeaponShotgunSawnEmpty
   suffix: Empty
@@ -222,7 +222,7 @@
     deconstructionTarget: null
 
 - type: entity
-  name: handmade pistol
+  name: handmade pistol (12 gauge)
   parent: [BaseWeaponShotgun, BaseC1Contraband] # Frontier: BaseMinorContraband<BaseC1Contraband
   id: WeaponShotgunHandmade
   description: Looks unreliable, but legal. Uses 12 gauge shotgun shells.
@@ -246,7 +246,7 @@
     price: 0
 
 - type: entity
-  name: blunderbuss
+  name: blunderbuss (12 gauge)
   parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC3PirateContraband] # Frontier: BaseMinorContraband<BaseC3PirateContraband
   id: WeaponShotgunBlunderbuss
   suffix: Pirate
@@ -267,7 +267,7 @@
     price: 0
 
 - type: entity
-  name: improvised shotgun
+  name: improvised shotgun (12 gauge)
   parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC1Contraband] # Frontier: BaseMinorContraband<BaseC1Contraband
   id: WeaponShotgunImprovised
   description: A shitty, but legal, hand-made shotgun that uses 12 gauge shotgun shells. It can only hold one round in the chamber.
@@ -294,7 +294,7 @@
     price: 20
 
 - type: entity
-  name: improvised shotgun
+  name: improvised shotgun (12 gauge)
   parent: WeaponShotgunImprovised
   suffix: Loaded
   id: WeaponShotgunImprovisedLoaded

@@ -53,7 +53,7 @@
     price: 50
 
 - type: entity
-  name: Deckard
+  name: Deckard (.45 magnum)
   parent: [BaseWeaponRevolver, BaseC1Contraband] # Frontier: BaseSecurityCommandContraband<BaseC1Contraband
   id: WeaponRevolverDeckard
   description: A rare, civilian grade custom-built revolver. Use when there is no time for Voight-Kampff test. Uses .45 magnum ammo.
@@ -81,7 +81,7 @@
     price: 150
 
 - type: entity
-  name: Inspector
+  name: Inspector (.45 magnum)
   parent: [BaseWeaponRevolver, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponRevolverInspector
   description: A detective's best friend. Uses .45 magnum ammo. On the handle is a label that says 'for authorized use only.'
@@ -96,7 +96,7 @@
     ammoSlots: [ null, null, null, null, null, null ]
 
 - type: entity
-  name: Mateba
+  name: Mateba (.45 magnum)
   parent: [BaseWeaponRevolver, BaseC2ContrabandUnredeemable] # Frontier: BaseMajorContraband<BaseC2ContrabandUnredeemable
   id: WeaponRevolverMateba
   description: The iconic sidearm of the dreaded death squads. Uses .45 magnum ammo. On the handle is a label that says 'for authorized use only.'
@@ -119,7 +119,7 @@
     proto: Cartridge45_magnumAP
 
 - type: entity
-  name: Python
+  name: Python (.45 magnum)
   parent: [BaseWeaponRevolver, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponRevolverPython
   description: An illegal revolver favoured by Syndicate agents. Uses .45 magnum ammo. # Frontier
@@ -154,7 +154,7 @@
 
 
 - type: entity
-  name: pirate revolver
+  name: pirate revolver (.45 magnum)
   parent: [BaseWeaponRevolver, BaseC3PirateContraband] # Frontier: BaseMinorContraband<BaseC3PirateContraband
   id: WeaponRevolverPirate
   description: An odd, illegal, old-looking revolver, favoured by pirate crews. Uses .45 magnum ammo. # Frontier
