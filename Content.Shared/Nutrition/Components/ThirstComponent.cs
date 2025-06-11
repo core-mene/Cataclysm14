@@ -14,7 +14,7 @@ public sealed partial class ThirstComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("baseDecayRate")]
     [AutoNetworkedField]
-    public float BaseDecayRate = 0.005f;
+    public float BaseDecayRate = 0.008f;
 
     [ViewVariables(VVAccess.ReadWrite)]
     [AutoNetworkedField]
