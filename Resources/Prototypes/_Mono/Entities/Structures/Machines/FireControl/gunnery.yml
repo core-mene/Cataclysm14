@@ -38,8 +38,8 @@
       machine_board: !type:Container
       machine_parts: !type:Container
   - type: Battery # every time my shield got shot this would lose power for a second and it was very annoying. no more.
-    maxCharge: 100
-    startingCharge: 100
+    maxCharge: 1000
+    startingCharge: 1000
   - type: ExaminableBattery
   - type: BatterySelfRecharger
   - type: PirateBountyItem
