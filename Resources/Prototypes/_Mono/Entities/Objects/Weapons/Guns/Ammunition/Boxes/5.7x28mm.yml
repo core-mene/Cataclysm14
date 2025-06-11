@@ -1,0 +1,140 @@
+- type: entity
+  abstract: true
+  parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
+  id: BaseMagazineBox5.7x28mm
+  name: ammunition box (5.7x28mm FMJ)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge5.7x28mmFMJ
+    proto: Cartridge5.7x28mmFMJ
+    capacity: 70 # 60->70 Two mags per box
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi # Frontier: _NF prefix
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+# Boxes
+- type: entity # Mono Big Pistol Mags
+  parent: BaseMagazineBox5.7x28mm
+  id: MagazineBox5.7x28mmBig
+  name: ammunition box (5.7x28mm FMJ)
+  suffix: Big
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 280 # 8 mags per box similar to rifle box
+    proto: Cartridge5.7x28mmFMJ
+  - type: Sprite
+    layers:
+    - state: base-b # Frontier: base-big<base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-1 # Frontier: mag-big-1<magb-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb # Frontier: mag-big<magb
+    steps: 4
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BaseMagazineBox5.7x28mm
+  id: MagazineBox5.7x28mm
+  name: ammunition box (5.7x28mm FMJ)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.7x28mmFMJ
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BaseMagazineBox5.7x28mm
+  id: MagazineBox5.7x28mmPractice
+  name: ammunition box (5.7x28mm practice)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.7x28mmPractice
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: practice
+
+- type: entity
+  parent: BaseMagazineBox5.7x28mm
+  id: MagazineBox5.7x28mmIncendiary
+  name: ammunition box (5.7x28mm incendiary)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.7x28mmIncendiary
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: incendiary
+
+- type: entity
+  id: MagazineBox5.7x28mmUranium
+  parent: BaseMagazineBox5.7x28mm
+  name: ammunition box (5.7x28mm uranium)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.7x28mmUranium
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: uranium
+
+# Upstream
+- type: entity
+  parent: BaseMagazineBox5.7x28mm
+  id: MagazineBox5.7x28mmRubber
+  name: ammunition box (5.7x28mm rubber)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.7x28mmRubber
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: rubber
+
+# Frontier
+- type: entity
+  parent: BaseMagazineBox5.7x28mm
+  id: MagazineBox5.7x28mmEmp
+  name: ammunition box (5.7x28mm emp)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.7x28mmEmp
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: emp

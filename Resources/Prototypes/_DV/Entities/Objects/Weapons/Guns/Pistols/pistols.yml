@@ -5,14 +5,14 @@
   description: The Mark 32 Offensive Handgun, produced by NanoTrasen's Small Arms Division. Uses 9x19mm ammo.
   components:
   - type: Sprite
-    sprite: _DV/Objects/Weapons/Guns/Pistols/universal.rsi
+    sprite: Objects/Weapons/Guns/Pistols/mk32.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _DV/Objects/Weapons/Guns/Pistols/universal.rsi
+    sprite: Objects/Weapons/Guns/Pistols/mk32.rsi
   - type: Gun
     fireRate: 4 # Frontier: 3<4
     availableModes:
