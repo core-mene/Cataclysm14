@@ -2,7 +2,7 @@
   parent: BaseCrowbar
   id: CrowbarPocket
   name: pocket crowbar
-  description: 
+  description:
   components:
   - type: EmitSoundOnLand
     sound:
@@ -15,7 +15,7 @@
       types:
         Blunt: 6
   - type: Tool
-    speedModifier: 0.5
+    speedModifier: 1 # 0.5->1 - Mono
   - type: PhysicalComposition
     materialComposition:
       Steel: 50

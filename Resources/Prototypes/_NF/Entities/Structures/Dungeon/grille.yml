@@ -28,11 +28,11 @@
         state: grille
       - sprite: Decals/dirty.rsi
         state: rust
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape:
-            !type:PhysShapeAabb
-            bounds: "-0.5,-0.5,0.5,0.5"
-          layer:
-          - WallLayer # Blocks lasers, but not LoS
+#    - type: Fixtures # Mono - No longer blocks lasers
+#      fixtures:
+#        fix1:
+#          shape:
+#            !type:PhysShapeAabb
+#            bounds: "-0.5,-0.5,0.5,0.5"
+#          layer:
+#          - WallLayer # Blocks lasers, but not LoS

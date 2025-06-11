@@ -113,8 +113,8 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 75000
-    valueElsewhere: 50000
+    valueAtDestination: 65000
+    valueElsewhere: 45000
 
 - type: entity
   parent: CrateTradeBaseSecureContraband
@@ -142,11 +142,11 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 100000
+    valueAtDestination: 90000
     valueElsewhere: 7500
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
     expressOnTimeBonus: 10000
-    expressLatePenalty: 85000
+    expressLatePenalty: 75000
 
 - type: entity
   parent: CrateTradeBaseSecureContraband
@@ -174,10 +174,10 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 80000
+    valueAtDestination: 70000
     valueElsewhere: 4000
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
-    expressOnTimeBonus: 40000
+    expressOnTimeBonus: 30000
     expressLatePenalty: 30000
 
 - type: entity
@@ -207,10 +207,10 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 120000
+    valueAtDestination: 105000
     valueElsewhere: 5000
     expressDeliveryDuration: 36000 # one hour, go go (timeout mostly for pirates & NFSD)
-    expressOnTimeBonus: 60000
+    expressOnTimeBonus: 45000
     expressLatePenalty: 30000
 
 - type: entity
@@ -240,9 +240,9 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 120000
+    valueAtDestination: 105000
     valueElsewhere: 6000
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
-    expressOnTimeBonus: 60000
+    expressOnTimeBonus: 45000
     expressLatePenalty: 30000
 # endregion Contraband Crates

@@ -185,6 +185,7 @@
   coefficients:
     Blunt: 0.7
     Slash: 0.8
+    Piercing: 0.9 # Mono
     Heat: 1.5
     Shock: 1.2
 
@@ -192,15 +193,18 @@
   id: Moth # Slightly worse at everything but cold
   coefficients:
     Cold: 0.7
-    Heat: 1.3
+    Heat: 1.15 # 1.3->1.15 Mono
 
-- type: damageModifierSet
+- type: damageModifierSet # Mono
   id: Protogen
   coefficients:
-    Heat: 1.5
-    Cold: 1.25
+    Heat: 1.3
+    Cold: 1.15
     Radiation: 1.55
-    Shock: 1.2
+    Shock: 1.5
+    Blunt: 0.8
+    Slash: 0.9
+    Piercing: 0.9
 
 - type: damageModifierSet
   id: Vox

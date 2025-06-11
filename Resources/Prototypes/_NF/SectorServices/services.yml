@@ -14,6 +14,7 @@
   components:
   - type: SectorShuttleRecords
 
+# mono edit
 - type: sectorService
   id: BankAccounts
   components:
@@ -22,15 +23,20 @@
       Frontier:
         !type:SectorBankAccountInfo
         balance: 8000
-        increasePerSecond: 1 # TODO: move to ~65K per hour (~18/s), about enough for minimum wage for Frontier employees
+        increasePerSecond: 14 # ~50K per hour, minimum wage employees!
       Nfsd:
         !type:SectorBankAccountInfo
         balance: 8000
-        increasePerSecond: 20 # 72K per hour, about enough for minimum wage for the default TSFMC size
+        increasePerSecond: 42 # ~150K per hour, about enough for minimum wage for the default TSFMC size
       Medical:
         !type:SectorBankAccountInfo
         balance: 8000
-        increasePerSecond: 6 # 21.6K per hour, a bit over for the DOC MOM's wage.
+        increasePerSecond: 18 # ~65K per hour, a bit over for the DOC MOM's wage.
+      BlackMarket:
+        !type:SectorBankAccountInfo
+        balance: 0
+        increasePerSecond: 0 # black market scam zone, not originally intended to be used properly
+# mono edit end
 
  # A global source of character records (DNA, fingerprints, criminal records, etc.)
 - type: sectorService

@@ -30,7 +30,7 @@
       stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Tzipora CIV{1}'
+          mapNameTemplate: 'Tzipora MED{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

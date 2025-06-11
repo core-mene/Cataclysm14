@@ -6,6 +6,8 @@ using Content.Shared.CombatMode.Pacification;
 using Content.Shared.Ghost;
 using Content.Shared.Mind;
 using Content.Shared.Mobs.Components;
+using Content.Server.Players.PlayTimeTracking;
+using Robust.Server.Player;
 using Robust.Shared.Containers;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
@@ -22,6 +24,8 @@ public sealed class GridPacifierSystem : EntitySystem
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private readonly PlayTimeTrackingManager _playTimeTracking = default!;
 
     public override void Initialize()
     {
@@ -312,6 +316,17 @@ public sealed class GridPacifierSystem : EntitySystem
         // Skip if already pacified by this component
         if (component.PacifiedEntities.Contains(entityUid))
             return;
+
+        // Check if this is a player entity and if so, check their playtime
+        if (_playerManager.TryGetSessionByEntity(entityUid, out var session))
+        {
+            // Only affect players with less than 1 hour of overall playtime
+            var overallPlaytime = _playTimeTracking.GetOverallPlaytime(session);
+            if (overallPlaytime >= TimeSpan.FromHours(1))
+            {
+                return;
+            }
+        }
 
         // Check if the entity is from an exempt company
         if (TryComp<CompanyComponent>(entityUid, out var companyComp) &&

@@ -44,14 +44,15 @@
       - DeathAcidifierImplant
       - DeathRattleImplant
       - MindShieldImplant
-      - MedicalTrackingImplant
-      - RadioImplantFreelance
+      - MedicalTrackingImplant # Mono
+      - RadioImplantFreelance # Mono
       - TrackingImplant # Moved Down, This is the TSFMC Tracker - Mono
-      - FreelanceTrackingImplant
+      - FreelanceTrackingImplant # Mono
+      - UsspTrackingImplant # Mono
       deimplantFailureDamage:
         types:
-          Cellular: 5 # 50->5
-          Heat: 10
+#          Cellular: 5 # 50->5 - Mono
+          Heat: 10 # Mono
     - type: Sprite
       sprite: Objects/Specific/Medical/implanter.rsi
       state: implanter0

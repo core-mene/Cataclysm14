@@ -6,7 +6,9 @@ using Content.Shared.Access;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Database;
+using Content.Shared.Examine;
 using Content.Shared.Popups;
+using Content.Shared._Mono.Company;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Content.Server.Kitchen.EntitySystems;
@@ -26,12 +28,32 @@ public sealed class IdCardSystem : SharedIdCardSystem
         base.Initialize();
 
         SubscribeLocalEvent<IdCardComponent, BeingMicrowavedEvent>(OnMicrowaved);
+        SubscribeLocalEvent<IdCardComponent, ExaminedEvent>(OnExamined);
+    }
+
+    private void OnExamined(EntityUid uid, IdCardComponent component, ExaminedEvent args)
+    {
+        if (!args.IsInDetailsRange)
+            return;
+
+        // Show only company information if available
+        if (!string.IsNullOrWhiteSpace(component.CompanyName) && component.CompanyName != "None")
+        {
+            if (_prototypeManager.TryIndex<CompanyPrototype>(component.CompanyName, out var companyProto))
+            {
+                args.PushMarkup($"[color={companyProto.Color.ToHex()}]{companyProto.Name}[/color]");
+            }
+            else
+            {
+                args.PushMarkup(component.CompanyName);
+            }
+        }
     }
 
     private void OnMicrowaved(EntityUid uid, IdCardComponent component, BeingMicrowavedEvent args)
     {
         if (!component.CanMicrowave || !TryComp<MicrowaveComponent>(args.Microwave, out var micro) || micro.Broken)
-            return;   
+            return;
 
         if (TryComp<AccessComponent>(uid, out var access))
         {

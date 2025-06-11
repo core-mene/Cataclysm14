@@ -30,7 +30,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Skalpel CIV{1}'
+          mapNameTemplate: 'Skalpel MED{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

@@ -28,7 +28,7 @@
       factions:
       - TSFMC
     - type: SurgerySpeedModifier
-      SpeedModifier: 1.75
+      SpeedModifier: 1.65
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, TrackingImplant ]
   - !type:GiveItemOnHolidaySpecial
@@ -45,3 +45,4 @@
     - MagazinePistol
     - FederationMilitaryCredit10
     - BaseSecurityUplinkRadioDeputy #Mono: Added Deputy uplink
+    - RadioHandheldNF # Mono

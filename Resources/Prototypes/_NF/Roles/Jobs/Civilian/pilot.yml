@@ -17,6 +17,11 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+  - !type:AddComponentSpecial
+    components:
+      - type: SurgerySpeedModifier
+        SpeedModifier: 1.25
+    
 
 - type: startingGear
   id: PilotGear

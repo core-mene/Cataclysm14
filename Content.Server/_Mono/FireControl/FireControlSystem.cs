@@ -452,7 +452,7 @@ public sealed partial class FireControlSystem : EntitySystem
     /// <param name="mapId">The map ID</param>
     /// <param name="maxDistance">Maximum raycast distance in meters</param>
     /// <returns>True if the weapon has line of sight to the target</returns>
-    private bool HasLineOfSight(EntityUid weapon, Vector2 weaponPos, Vector2 targetPos, MapId mapId, float maxDistance = 50f)
+    private bool HasLineOfSight(EntityUid weapon, Vector2 weaponPos, Vector2 targetPos, MapId mapId, float maxDistance = 500f)
     {
         // Calculate direction to target
         var direction = (targetPos - weaponPos);
@@ -516,7 +516,7 @@ public sealed partial class FireControlSystem : EntitySystem
     /// <param name="mapId">The map ID</param>
     /// <param name="maxDistance">Maximum raycast distance in meters</param>
     /// <returns>True if the weapon can fire in that direction</returns>
-    private bool CanFireInDirection(EntityUid weapon, Vector2 weaponPos, Vector2 direction, Vector2 targetPos, MapId mapId, float maxDistance = 50f)
+    private bool CanFireInDirection(EntityUid weapon, Vector2 weaponPos, Vector2 direction, Vector2 targetPos, MapId mapId, float maxDistance = 500f)
     {
         // Use the HasLineOfSight method for consistency
         return HasLineOfSight(weapon, weaponPos, targetPos, mapId, maxDistance);
@@ -529,7 +529,7 @@ public sealed partial class FireControlSystem : EntitySystem
     /// <param name="maxDistance">Maximum raycast distance in meters</param>
     /// <param name="rayCount">Number of rays to cast around the entity</param>
     /// <returns>Dictionary mapping directions (angles in degrees) to whether they're clear for firing</returns>
-    public Dictionary<float, bool> CheckAllDirections(EntityUid weapon, float maxDistance = 50f, int rayCount = 128)
+    public Dictionary<float, bool> CheckAllDirections(EntityUid weapon, float maxDistance = 500f, int rayCount = 256)
     {
         var directions = new Dictionary<float, bool>();
 

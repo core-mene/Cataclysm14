@@ -58,7 +58,7 @@
   parent: JobIconHeadOfPersonnel
   id: JobIconStationRepresentative
   jobName: job-name-station-representative
-  allowSelection: false # Frontier: no impersonating command staff, literally 1984
+#  allowSelection: false # Frontier: no impersonating command staff, literally 1984 - Mono Revert
 
 - type: jobIcon
   parent: JobIcon
@@ -67,7 +67,7 @@
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: stationtrafficcontroller
   jobName: job-name-station-traffic-controller
-  allowSelection: false # Frontier: no impersonating command staff, literally 1984
+#  allowSelection: false # Frontier: no impersonating command staff, literally 1984 - Mono Revert
 
 - type: jobIcon
   parent: JobIcon
@@ -142,7 +142,7 @@
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: nfsdsheriff
   jobName: job-name-sheriff
-  allowSelection: false # Frontier: no impersonating command staff, literally 1984
+#  allowSelection: false # Frontier: no impersonating command staff, literally 1984 - Mono Revert
 
   # Medical positions
 
@@ -153,4 +153,4 @@
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: nfmsdoc
   jobName: job-name-doc
-  allowSelection: false # Frontier: no impersonating command staff, literally 1984
+#  allowSelection: false # Frontier: no impersonating command staff, literally 1984 - Mono Revert

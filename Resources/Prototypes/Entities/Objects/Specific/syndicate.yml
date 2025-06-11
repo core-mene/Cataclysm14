@@ -22,6 +22,10 @@
   - type: Currency
     price:
       Telecrystal: 1
+  - type: Contraband
+    turnInValues:
+      FederationMilitaryCredit: 1
+      Doubloon: 1
 
 - type: entity
   parent: Telecrystal

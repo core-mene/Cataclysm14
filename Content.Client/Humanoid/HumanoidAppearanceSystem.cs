@@ -205,7 +205,10 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
         // Apply scaling for client-side preview (width, height)
         var sprite = Comp<SpriteComponent>(uid);
-        sprite.Scale = new Vector2(profile.Appearance.Width, profile.Appearance.Height);
+        // Check to prevent sprite scale errors for old profiles
+        var width = profile.Appearance.Width <= 0.005f ? 1.0f : profile.Appearance.Width;
+        var height = profile.Appearance.Height <= 0.005f ? 1.0f : profile.Appearance.Height;
+        sprite.Scale = new Vector2(width, height);
 
         UpdateSprite(humanoid, Comp<SpriteComponent>(uid));
     }

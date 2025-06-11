@@ -77,7 +77,7 @@
   - type: KillOnOverheat # GoobStation
   - type: Deathgasp
     prototype: SiliconDeathgasp
-    needsCritical: false
+    needsCritical: true # Mono
   - type: MobState
     allowedStates:
     - Alive

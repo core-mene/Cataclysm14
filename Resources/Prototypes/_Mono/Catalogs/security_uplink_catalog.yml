@@ -95,17 +95,17 @@
       tags:
       - SecurityUplink
 
-- type: listing
-  id: UplinkSecurityAuroraExosuit
-  name:  uplink-exosuit-aurora-name
-  description: uplink-exosuit-aurora-desc
-  productEntity: ClothingOuterExosuitAurora
-  cost:
-    FederationMilitaryCredit: 25
-  categories:
-  - UplinkSecurityHardsuits
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - SecurityUplink
+# - type: listing
+#   id: UplinkSecurityAuroraExosuit
+#   name:  uplink-exosuit-aurora-name
+#   description: uplink-exosuit-aurora-desc
+#   productEntity: ClothingOuterExosuitAurora
+#   cost:
+#     FederationMilitaryCredit: 25
+#   categories:
+#   - UplinkSecurityHardsuits
+#   conditions:
+#   - !type:StoreWhitelistCondition
+#     whitelist:
+#       tags:
+#       - SecurityUplink

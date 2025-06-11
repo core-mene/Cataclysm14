@@ -1,14 +1,14 @@
 - type: damageModifierSet
   id: Vulpkanin
   coefficients:
-    Heat: 1.15
+    Heat: 1.1 # 1.15->1.1 - Mono
 
 - type: damageModifierSet
   id: Harpy
   coefficients:
-    Blunt: 1.15
-    Slash: 1.15
-    Piercing: 1.15
+    Blunt: 1.1 # 1.15->1.1 - Mono
+    Slash: 1.1 # 1.15->1.1 - Mono
+#    Piercing: 1.15
 
 - type: damageModifierSet
   id: Rodentia
@@ -36,6 +36,6 @@
     Blunt: 0.9
     Piercing: 0.9
     Slash: 0.9
-    Cold: 1.1
+    Cold: 1.3 # 1.1->1.3 Mono
     Shock: 1.15
     Radiation: 0.2

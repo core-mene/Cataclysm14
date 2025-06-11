@@ -14,11 +14,11 @@
 - type: damageModifierSet
   id: LightArmor
   coefficients:
-    Blunt: 0.75
-    Slash: 0.75
-    Piercing: 0.7
+    Blunt: 0.65 # 0.75->0.65 Mono
+    Slash: 0.65 # 0.75->0.65 Mono
+    Piercing: 0.6 # 0.7->0.6 Mono
     Shock: 1.2
-    Heat: 0.7
+    Heat: 0.6 # 0.7->0.6
   flatReductions:
     Blunt: 5
     Heat: 5
@@ -26,11 +26,11 @@
 - type: damageModifierSet
   id: MediumArmorNT
   coefficients:
-    Blunt: 0.6
-    Slash: 0.6
-    Piercing: 0.65
+    Blunt: 0.45 # 0.6->0.45 Mono
+    Slash: 0.45 # 0.6->0.45 Mono
+    Piercing: 0.5 # 0.65->0.5 Mono
     Shock: 1.4
-    Heat: 0.7
+    Heat: 0.6 # 0.7->0.55 Mono
   flatReductions:
     Blunt: 8
     Heat: 10
@@ -38,11 +38,11 @@
 - type: damageModifierSet
   id: HeavyArmorNT
   coefficients:
-    Blunt: 0.5
-    Slash: 0.5
-    Piercing: 0.35
+    Blunt: 0.35 # 0.5->0.35 - Mono
+    Slash: 0.35 # 0.5->0.35 - Mono
+    Piercing: 0.25 # 0.35->0.25 - Mono
     Shock: 1.8
-    Heat: 0.6
+    Heat: 0.5 # 0.6->0.5 - Mono
   flatReductions:
     Blunt: 15
     Heat: 15
@@ -50,11 +50,11 @@
 - type: damageModifierSet
   id: MediumArmorSyndi
   coefficients:
-    Blunt: 0.6
-    Slash: 0.6
-    Piercing: 0.6
+    Blunt: 0.45 # 0.6->0.4 - Mono
+    Slash: 0.45 # 0.6->0.45 - Mono
+    Piercing: 0.45 # 0.6->0.45 - Mono
     Shock: 1.4
-    Heat: 0.75
+    Heat: 0.65 # 0.75->0.65 - Mono
   flatReductions:
     Blunt: 8
     Heat: 5
@@ -62,11 +62,24 @@
 - type: damageModifierSet
   id: HeavyArmorSyndi
   coefficients:
-    Blunt: 0.5
-    Slash: 0.5
-    Piercing: 0.4
+    Blunt: 0.35 # 0.5->0.35 - Mono
+    Slash: 0.35 # 0.5->0.35 - Mono
+    Piercing: 0.25 # 0.4->0.25 - Mono
     Shock: 1.8
-    Heat: 0.7
+    Heat: 0.6 # 0.7->0.6 - Mono
   flatReductions:
     Blunt: 10
     Heat: 7
+
+- type: damageModifierSet
+  id: Yowie
+  coefficients:
+    Blunt: 0.85
+    Slash: 0.85
+    Piercing: 0.85
+    Heat: 1.15
+    Shock: 1
+    Cold: 0.9
+    Bloodloss: 0.9
+    Poison: 0.0 # Yea, heroin is heaps good for ya
+    Radiation : 0.7 # Engie yowies need some help against anti-rads

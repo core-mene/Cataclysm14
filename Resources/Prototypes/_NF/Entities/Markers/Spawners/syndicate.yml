@@ -20,9 +20,16 @@
         - LandMineExplosive
         - BannerSyndicate
         - Telecrystal1
+        - Telecrystal1 # Mono
+        - Telecrystal1 # Mono
       rarePrototypes:
         - Telecrystal5
-      rareChance: 0.01 # Mono
+        - Telecrystal5 # Mono
+        - Telecrystal5 # Mono
+        - SpawnMobWeaponTurretLaserSyndicateNF # Mono
+        - SpawnMobWeaponTurretSyndicate # Mono
+        - CrateSyndicateSurplusBundle # Mono
+      rareChance: 0.1 # Mono
 
 - type: entity
   name: Contraband Crate Spawner
@@ -78,6 +85,9 @@
         - Telecrystal5
         - Telecrystal5
       rarePrototypes:
+        - ClothingBackpackDuffelSyndicateHardsuitBundle
+        - ClothingBackpackDuffelSyndicateMedicHardsuitBundle
         - PinpointerSyndicatePOI
-      rareChance: 0.1
+        - PinpointerSyndicatePOI
+      rareChance: 0.2 # Mono
       offset: 0

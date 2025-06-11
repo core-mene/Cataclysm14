@@ -45,6 +45,13 @@ public sealed partial class IdCardComponent : Component
     public List<ProtoId<DepartmentPrototype>> JobDepartments = new();
 
     /// <summary>
+    /// The company name associated with this ID card
+    /// </summary>
+    [DataField]
+    [AutoNetworkedField]
+    public string? CompanyName;
+
+    /// <summary>
     /// Determines if accesses from this card should be logged by <see cref="AccessReaderComponent"/>
     /// </summary>
     [DataField]

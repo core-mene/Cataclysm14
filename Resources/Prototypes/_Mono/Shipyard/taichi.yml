@@ -30,7 +30,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Taichi CIV{1}'
+          mapNameTemplate: 'Taichi MED{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

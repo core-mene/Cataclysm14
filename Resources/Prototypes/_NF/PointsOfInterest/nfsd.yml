@@ -12,8 +12,8 @@
   id: Nfsd
   parent: BasePOI
   name: 'TSFMC Sector FOB'
-  minimumDistance: 5750
-  maximumDistance: 6500
+  minimumDistance: 7250 # Mono
+  maximumDistance: 9750 # Mono
   spawnGroup: Required
   gridPath: /Maps/_NF/POI/tsfmc.yml
   addComponents:

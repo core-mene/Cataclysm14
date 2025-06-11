@@ -1,0 +1,12 @@
+- type: reaction # mono, takes barozine from frontier
+  id: Barozine
+  minTemp: 379
+  reactants:
+    CarpoToxin:
+      amount: 5
+    Bruizine:
+      amount: 5
+    TranexamicAcid:
+      amount: 5
+  products:
+    Barozine: 10

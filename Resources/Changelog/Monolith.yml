@@ -3496,3 +3496,448 @@ Entries:
       message: Cargo market computers should no longer scam you.
   id: 418
   time: '2025-06-03T07:00:23.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Resomi temp speed thresholds adjusted for cold damage thresholds.
+  id: 419
+  time: '2025-06-03T22:49:36.0000000+00:00'
+- author: RikuTheKiller
+  changes:
+    - type: Add
+      message: Added the pirate hoverbike to the rogue uplink.
+  id: 420
+  time: '2025-06-03T22:57:49.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Baby space dragons scary. Also can talk now.
+    - type: Tweak
+      message: Space dragons made even scarier
+  id: 421
+  time: '2025-06-03T23:07:02.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: FOB much harder to find
+  id: 422
+  time: '2025-06-03T23:08:04.0000000+00:00'
+- author: mikusssssss
+  changes:
+    - type: Add
+      message: Pilots now do surgery 0.25x faster than normal
+    - type: Tweak
+      message: Brigmed surgery speed (1.75x<1.5x)
+    - type: Tweak
+      message: DoC's now do surgery slower (2.5x<2x)
+    - type: Fix
+      message: >-
+        DoC's shouldnt be so incredibly good at surgery they break the entire
+        surgery menu
+  id: 423
+  time: '2025-06-03T23:11:21.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: Ported over the Yowie species from Goob!
+    - type: Add
+      message: Made the Yowie accent into a trait.
+  id: 424
+  time: '2025-06-04T00:26:55.0000000+00:00'
+- author: EctoplasmIsGood
+  changes:
+    - type: Tweak
+      message: TSF now get 7,500 per FMC from uplink rather then the previous 5,000
+  id: 425
+  time: '2025-06-04T01:27:02.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: Round End Summary is now sent to the Discord!
+  id: 426
+  time: '2025-06-04T02:06:50.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Protogens get mild resistances to brute types. Less weak to heat/cold.
+    - type: Tweak
+      message: Protogens get a builtin Midi player.
+  id: 427
+  time: '2025-06-04T19:47:20.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: >-
+        Orit gets directional fans for its airlocks now, also now uranium,
+        alongside other minor improvements.
+  id: 428
+  time: '2025-06-04T19:48:15.0000000+00:00'
+- author: mikusssssss
+  changes:
+    - type: Tweak
+      message: IPC no longer die at 120 damage, and instead do so at 100 (like in goob)
+    - type: Fix
+      message: >-
+        Fixed having a very, very, very, very, very rare chance for an IPC to go
+        "crit"
+  id: 429
+  time: '2025-06-04T19:49:29.0000000+00:00'
+- author: JonahDes
+  changes:
+    - type: Add
+      message: Gave salvage borg a wrench to unanchor things.
+  id: 430
+  time: '2025-06-04T19:50:19.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Tweak
+      message: Turrets can now see you through windows.
+  id: 431
+  time: '2025-06-06T01:43:43.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Replaced 57mms with marauders on the Tarantula
+  id: 432
+  time: '2025-06-06T01:49:15.0000000+00:00'
+- author: mikusssssss
+  changes:
+    - type: Tweak
+      message: >-
+        Shuttle collisions now behave closer to goobstation, ramming is now an
+        actual threat
+  id: 433
+  time: '2025-06-06T01:52:24.0000000+00:00'
+- author: mikusssssss
+  changes:
+    - type: Tweak
+      message: >-
+        Unsterilized surgery now deals 15 poison per step instead of 5, wear
+        those gloves and masks!
+    - type: Fix
+      message: >-
+        Fixed incompetent medical doctors (if morale doesnt improve it'll deal
+        genetic :trollface: )
+  id: 434
+  time: '2025-06-06T01:56:04.0000000+00:00'
+- author: mikusssssss
+  changes:
+    - type: Tweak
+      message: Fentanyl cost per piece raised 2000<2500
+  id: 435
+  time: '2025-06-06T01:56:40.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: USSP tracker added to implant whitelist
+    - type: Tweak
+      message: Draw time reduced, no more cellular backlash on fail.
+  id: 436
+  time: '2025-06-06T01:59:06.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Smuggling better loot, slightly less generic smuggling crates cause of
+        it
+    - type: Tweak
+      message: More DB for each crate when turned in for DBs.
+    - type: Tweak
+      message: Smuggling crates worth slightly less.
+  id: 437
+  time: '2025-06-06T02:00:15.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        TSFMC playtime for rogue agent removed, replaced with 10 extra hours of
+        overall playtime, now 25 hours total.
+  id: 438
+  time: '2025-06-06T02:01:21.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Remove
+      message: Faction bases are no longer [titlecard].
+  id: 439
+  time: '2025-06-06T02:23:06.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Protogens are now strippable and can be operated on again
+  id: 440
+  time: '2025-06-06T04:05:07.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Comms channels more accurate.
+  id: 441
+  time: '2025-06-06T22:43:15.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Merc/Scaf suits a bit more durable.
+  id: 442
+  time: '2025-06-06T22:43:56.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Medical ships now have a MED designation
+  id: 443
+  time: '2025-06-06T22:44:32.0000000+00:00'
+- author: mikusssssss
+  changes:
+    - type: Tweak
+      message: >-
+        The Rogues are no longer in a contract with Nanotrasen (Blackmarket
+        ATM's now only have a 20% deposit fee instead of 30%)
+  id: 444
+  time: '2025-06-06T22:47:40.0000000+00:00'
+- author: cheetah1984
+  changes:
+    - type: Tweak
+      message: Increased ship based PKA damage by 2900% (0.5 < 15)
+    - type: Tweak
+      message: Increased ship based PKA structural damage by 1400% (1 < 15)
+    - type: Tweak
+      message: Increased range of ship based PKA by 50%
+  id: 445
+  time: '2025-06-06T22:49:43.0000000+00:00'
+- author: ScyronX
+  changes:
+    - type: Fix
+      message: Fixed vulcan sprite
+  id: 446
+  time: '2025-06-06T22:54:21.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: 'Additional AME cores no longer applies diminishing power returns. '
+  id: 447
+  time: '2025-06-06T22:56:19.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Remove
+      message: Grandhonker has been retired.
+  id: 448
+  time: '2025-06-06T23:08:58.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Tweak
+      message: >-
+        Downed players will now be hit by stray bullets when alive. This does
+        not affect players in your own company.
+  id: 449
+  time: '2025-06-06T23:13:37.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Species resistances tweaked.
+    - type: Tweak
+      message: >-
+        Mech resistances buffed across the board to be in line with
+        military-tier armor.
+  id: 450
+  time: '2025-06-07T01:21:08.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Infiltrator fixed.
+  id: 451
+  time: '2025-06-07T02:28:52.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: You can now turn in TC for 1 DB/Data Chit each.
+    - type: Tweak
+      message: only 1 FMC per TC turned in awarded now.
+  id: 452
+  time: '2025-06-07T02:52:15.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        Space garbage will now automatically be cleaned up! Report any issues on
+        GitHub.
+  id: 453
+  time: '2025-06-07T03:00:41.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Tweak
+      message: Discord changelog should include a link to the PR now.
+  id: 454
+  time: '2025-06-07T11:42:30.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/745
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Mass drivers reflecting at the owner is gone sadly
+  id: 455
+  time: '2025-06-07T21:37:38.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/753
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Only TSF company can modify CO/MD budget.
+  id: 456
+  time: '2025-06-07T22:23:14.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/751
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        A bit more evil added to drop pods, slightly less contra crates on
+        average.
+  id: 457
+  time: '2025-06-07T22:24:04.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/749
+- author: Ark
+  changes:
+    - type: Fix
+      message: Corpses should no longer go through walls.
+  id: 458
+  time: '2025-06-07T22:25:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/756
+- author: Danchi299
+  changes:
+    - type: Tweak
+      message: Most PMC Weapon prices were increased.
+    - type: Tweak
+      message: Replaced Enforcer with Kammerer in PMC Liberty Station
+    - type: Remove
+      message: >-
+        Removed Energy Shotgun from PMC Liberty Station. May be re-added later
+        as expeditionary loot.
+  id: 459
+  time: '2025-06-07T22:27:02.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/754
+- author: EctoplasmIsGood
+  changes:
+    - type: Remove
+      message: Temporarily disabled the rogue, USSP, and TSF speed suits
+    - type: Remove
+      message: Temporarily disabled the HF katana and VT7
+  id: 460
+  time: '2025-06-10T02:00:49.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/771
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: EG-4 does slightly more damage
+  id: 461
+  time: '2025-06-10T02:01:23.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/761
+- author: BlueHNT
+  changes:
+    - type: Fix
+      message: Fixed FTL resale profiteering
+  id: 462
+  time: '2025-06-10T02:01:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/765
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: ADS requires more players to spawn
+  id: 463
+  time: '2025-06-10T02:07:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/760
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Expedition windows no longer block laser
+    - type: Tweak
+      message: Expeditions mob prying speed doubled
+    - type: Tweak
+      message: Starting crowbar in loadout now the same speed as normal crowbars.
+  id: 464
+  time: '2025-06-10T02:09:19.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/758
+- author: mikusssssss
+  changes:
+    - type: Tweak
+      message: >-
+        Brigmedics now do surgery at a 1.65x modifier instead of the previous
+        1.5x. I am not being held hostage.
+  id: 465
+  time: '2025-06-10T02:10:09.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/763
+- author: BlueHNT
+  changes:
+    - type: Add
+      message: Added Taxes.
+    - type: Remove
+      message: Removed Freedom.
+    - type: Tweak
+      message: Rogues no longer get taxed by CO, money instead goes into BlackMarket.
+    - type: Tweak
+      message: >-
+        Increased payouts to CO/TSF/MD Station Administration Consoles to
+        properly pay their employees.
+  id: 466
+  time: '2025-06-10T02:12:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/750
+- author: RikuTheKiller
+  changes:
+    - type: Fix
+      message: >-
+        The FTL orientation indicator actually points in the right direction,
+        rather than being mirrored over the X axis.
+  id: 467
+  time: '2025-06-11T01:49:17.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/775
+- author: EctoplasmIsGood
+  changes:
+    - type: Tweak
+      message: Rewrote ADS laws
+  id: 468
+  time: '2025-06-11T01:57:36.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/777
+- author: Scryon
+  changes:
+    - type: Tweak
+      message: Changed Vulpkanin sounds to better ones.
+  id: 469
+  time: '2025-06-11T02:02:18.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/770
+- author: Onezero0
+  changes:
+    - type: Add
+      message: Added a recipe for Barozine.
+  id: 470
+  time: '2025-06-11T02:09:04.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/780
+- author: Ark
+  changes:
+    - type: Tweak
+      message: Rodentia are no longer hidden from the character menu.
+  id: 471
+  time: '2025-06-11T02:11:09.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/784
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Colonel spawns with a Mateba.
+    - type: Tweak
+      message: TSFMC/USSP spawns with Handicomms
+    - type: Tweak
+      message: Renamed CO radio channels.
+  id: 472
+  time: '2025-06-11T02:14:13.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/769
+- author: BlueHNT
+  changes:
+    - type: Add
+      message: Added normal e-sword to rogues.
+    - type: Tweak
+      message: Buying guns as Rogue doesn't cost your life savings anymore.
+  id: 473
+  time: '2025-06-11T02:16:20.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/776
+- author: Onezero0
+  changes:
+    - type: Tweak
+      message: >-
+        Tweaked some parts of the razor, less maneuverable but faster with an
+        upgraded FTL drive and forwards thrusters.
+  id: 474
+  time: '2025-06-11T02:48:08.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/779

@@ -1,11 +1,16 @@
 using System.Linq;
 using System.Numerics;
+using System.Threading.Tasks;
 using Content.Server.Announcements;
+using Content.Server.CrewManifest;
 using Content.Server.Discord;
 using Content.Server.GameTicking.Events;
 using Content.Server.Ghost;
 using Content.Server.Maps;
 using Content.Server.Roles;
+using Content.Server.Station.Systems;
+using Content.Server._NF.Bank;
+using Content.Server._NF.GameRule;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
 using Content.Shared.GameTicking;
@@ -19,7 +24,6 @@ using Robust.Shared.Audio;
 using Robust.Shared.EntitySerialization;
 using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Map;
-using Robust.Shared.Map.Components;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
@@ -32,6 +36,9 @@ namespace Content.Server.GameTicking
         [Dependency] private readonly DiscordWebhook _discord = default!;
         [Dependency] private readonly RoleSystem _role = default!;
         [Dependency] private readonly ITaskManager _taskManager = default!;
+        [Dependency] private readonly CrewManifestSystem _crewManifest = default!;
+        [Dependency] private readonly StationSystem _stationSystem = default!;
+        [Dependency] private readonly BankSystem _bank = default!;
 
         private static readonly Counter RoundNumberMetric = Metrics.CreateCounter(
             "ss14_round_number",
@@ -502,6 +509,15 @@ namespace Content.Server.GameTicking
             {
                 Log.Error($"Error while sending round end Discord message: {e}");
             }
+
+            try
+            {
+                SendCrewManifestDiscordMessage(_replayRoundPlayerInfo);
+            }
+            catch (Exception e)
+            {
+                Log.Error($"Error while sending crew manifest Discord message: {e}");
+            }
         }
 
         public void ShowRoundEndScoreboard(string text = "")
@@ -634,6 +650,246 @@ namespace Content.Server.GameTicking
             catch (Exception e)
             {
                 Log.Error($"Error while sending discord round end message:\n{e}");
+            }
+        }
+
+        private async void SendCrewManifestDiscordMessage(RoundEndMessageEvent.RoundEndPlayerInfo[]? playerInfo)
+        {
+            try
+            {
+                // Discord limits
+                const int MaxEmbedCharacters = 6000;
+                const int MaxFieldsPerEmbed = 25;
+                const int MaxFieldValueLength = 1024;
+                const int MaxFieldNameLength = 256;
+
+                var webhookUrl = _cfg.GetCVar(CCVars.DiscordCrewManifestWebhook);
+                if (string.IsNullOrEmpty(webhookUrl))
+                    return;
+
+                var webhookData = await _discord.GetWebhook(webhookUrl);
+                if (webhookData == null)
+                    return;
+
+                var webhookIdentifier = webhookData.Value.ToIdentifier();
+
+                if (playerInfo == null || playerInfo.Length == 0)
+                    return;
+
+                var serverName = _baseServer.ServerName;
+
+                // Filter out observers and sort by antag status (antags first), then by player name
+                var sortedPlayers = playerInfo
+                    .Where(p => !p.Observer && !string.IsNullOrEmpty(p.PlayerICName))
+                    .OrderBy(p => !p.Antag)
+                    .ThenBy(p => p.PlayerOOCName)
+                    .ToList();
+
+                if (sortedPlayers.Count == 0)
+                    return;
+
+                // Create the manifest text in the same format as the round end summary
+                var manifestLines = new List<string>();
+                var profitLines = new List<string>();
+
+                // Get the NFAdventureRuleSystem to access profit data
+                var adventureSystem = EntityManager.System<NFAdventureRuleSystem>();
+
+                foreach (var player in sortedPlayers)
+                {
+                    // Use localization to get the proper job name instead of the key
+                    var roleName = Loc.GetString(player.Role);
+                    var playerLine = "- " + player.PlayerOOCName + " was " + player.PlayerICName + " playing role of " + roleName + ".";
+                    manifestLines.Add(playerLine);
+
+                    // Try to get profit information for this player
+                    if (player.PlayerGuid != null && !string.IsNullOrEmpty(player.PlayerICName))
+                    {
+                        var profitInfo = adventureSystem.GetPlayerProfitInfo(player.PlayerGuid.Value, player.PlayerICName);
+                        if (profitInfo != null)
+                        {
+                            profitLines.Add(profitInfo);
+                        }
+                    }
+                }
+
+                // Prepare base embed content
+                var title = "Round End Summary";
+                var description = "Round **" + RoundId + "** has ended with **" + sortedPlayers.Count + "** total characters involved.";
+                var footerText = serverName + " - Round " + RoundId;
+
+                // Calculate base embed character count (title + description + footer)
+                var baseCharacterCount = title.Length + description.Length + footerText.Length;
+
+                // Create embeds with proper limit handling
+                var embeds = new List<WebhookEmbed>();
+                var currentFields = new List<WebhookEmbedField>();
+                var currentEmbedCharacterCount = baseCharacterCount;
+                var embedCount = 0;
+
+                // Helper function to create and add an embed
+                void AddCurrentEmbed()
+                {
+                    if (currentFields.Count > 0)
+                    {
+                        embeds.Add(new WebhookEmbed
+                        {
+                            Title = embedCount == 0 ? title : title + " (continued)",
+                            Description = embedCount == 0 ? description : "",
+                            Color = 0x9999FF,
+                            Fields = new List<WebhookEmbedField>(currentFields),
+                            Footer = new WebhookEmbedFooter { Text = footerText }
+                        });
+                        embedCount++;
+                        currentFields.Clear();
+                        currentEmbedCharacterCount = baseCharacterCount;
+                    }
+                }
+
+                // Process manifest lines
+                var currentFieldLines = new List<string>();
+                var currentFieldLength = 0;
+                var manifestFieldCount = 0;
+
+                foreach (var line in manifestLines)
+                {
+                    // Check if adding this line would exceed field value limit
+                    if (currentFieldLength + line.Length + 1 > MaxFieldValueLength - 20 && currentFieldLines.Count > 0)
+                    {
+                        var fieldName = manifestFieldCount == 0 ? "Player Manifest" : "Player Manifest (continued)";
+                        var fieldValue = string.Join("\n", currentFieldLines);
+                        var fieldCharacterCount = fieldName.Length + fieldValue.Length;
+
+                        // Check if adding this field would exceed embed limits
+                        if (currentFields.Count >= MaxFieldsPerEmbed - 1 ||
+                            currentEmbedCharacterCount + fieldCharacterCount > MaxEmbedCharacters - 500)
+                        {
+                            AddCurrentEmbed();
+                        }
+
+                        currentFields.Add(new WebhookEmbedField
+                        {
+                            Name = fieldName,
+                            Value = fieldValue,
+                            Inline = false
+                        });
+                        currentEmbedCharacterCount += fieldCharacterCount;
+                        manifestFieldCount++;
+                        currentFieldLines.Clear();
+                        currentFieldLength = 0;
+                    }
+
+                    currentFieldLines.Add(line);
+                    currentFieldLength += line.Length + 1; // +1 for newline
+                }
+
+                // Add remaining manifest lines
+                if (currentFieldLines.Count > 0)
+                {
+                    var fieldName = manifestFieldCount == 0 ? "Player Manifest" : "Player Manifest (continued)";
+                    var fieldValue = string.Join("\n", currentFieldLines);
+                    var fieldCharacterCount = fieldName.Length + fieldValue.Length;
+
+                    // Check if adding this field would exceed embed limits
+                    if (currentFields.Count >= MaxFieldsPerEmbed - 1 ||
+                        currentEmbedCharacterCount + fieldCharacterCount > MaxEmbedCharacters - 500)
+                    {
+                        AddCurrentEmbed();
+                    }
+
+                    currentFields.Add(new WebhookEmbedField
+                    {
+                        Name = fieldName,
+                        Value = fieldValue,
+                        Inline = false
+                    });
+                    currentEmbedCharacterCount += fieldCharacterCount;
+                }
+
+                // Process profit lines if available
+                if (profitLines.Count > 0)
+                {
+                    var currentProfitLines = new List<string>();
+                    var currentProfitLength = 0;
+                    var profitFieldCount = 0;
+
+                    foreach (var line in profitLines)
+                    {
+                        // Check if adding this line would exceed field value limit
+                        if (currentProfitLength + line.Length + 1 > MaxFieldValueLength - 20 && currentProfitLines.Count > 0)
+                        {
+                            var fieldName = profitFieldCount == 0 ? "TSF Central Bank" : "TSF Central Bank (continued)";
+                            var fieldValue = string.Join("\n", currentProfitLines);
+                            var fieldCharacterCount = fieldName.Length + fieldValue.Length;
+
+                            // Check if adding this field would exceed embed limits
+                            if (currentFields.Count >= MaxFieldsPerEmbed - 1 ||
+                                currentEmbedCharacterCount + fieldCharacterCount > MaxEmbedCharacters - 500)
+                            {
+                                AddCurrentEmbed();
+                            }
+
+                            currentFields.Add(new WebhookEmbedField
+                            {
+                                Name = fieldName,
+                                Value = fieldValue,
+                                Inline = false
+                            });
+                            currentEmbedCharacterCount += fieldCharacterCount;
+                            profitFieldCount++;
+                            currentProfitLines.Clear();
+                            currentProfitLength = 0;
+                        }
+
+                        currentProfitLines.Add(line);
+                        currentProfitLength += line.Length + 1; // +1 for newline
+                    }
+
+                    // Add remaining profit lines
+                    if (currentProfitLines.Count > 0)
+                    {
+                        var fieldName = profitFieldCount == 0 ? "TSF Central Bank" : "TSF Central Bank (continued)";
+                        var fieldValue = string.Join("\n", currentProfitLines);
+                        var fieldCharacterCount = fieldName.Length + fieldValue.Length;
+
+                        // Check if adding this field would exceed embed limits
+                        if (currentFields.Count >= MaxFieldsPerEmbed - 1 ||
+                            currentEmbedCharacterCount + fieldCharacterCount > MaxEmbedCharacters - 500)
+                        {
+                            AddCurrentEmbed();
+                        }
+
+                        currentFields.Add(new WebhookEmbedField
+                        {
+                            Name = fieldName,
+                            Value = fieldValue,
+                            Inline = false
+                        });
+                        currentEmbedCharacterCount += fieldCharacterCount;
+                    }
+                }
+
+                // Add any remaining fields to the final embed
+                AddCurrentEmbed();
+
+                // Send embeds (split into multiple messages if needed)
+                foreach (var embed in embeds)
+                {
+                    var payload = new WebhookPayload
+                    {
+                        Embeds = new List<WebhookEmbed> { embed }
+                    };
+
+                    await _discord.CreateMessage(webhookIdentifier, payload);
+
+                    // Small delay between messages to avoid rate limiting
+                    if (embeds.Count > 1)
+                        await Task.Delay(100);
+                }
+            }
+            catch (Exception e)
+            {
+                Log.Error($"Error while sending crew manifest discord message:\n{e}");
             }
         }
 

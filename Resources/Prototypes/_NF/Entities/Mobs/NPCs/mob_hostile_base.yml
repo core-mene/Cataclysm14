@@ -153,13 +153,13 @@
 #    - type: Pullable # TODO: This makes the mob stuck to your hand if it dies when you pull it
     - type: Carriable # Carrying system from nyanotrasen.
     - type: Tool
-      speedModifier: 1.5
+      speedModifier: 3 # 1.5->3 Mono
       qualities:
         - Prying
     - type: Prying # Open door from xeno.yml.
       pryPowered: true
       force: true
-      speedModifier: 1.5
+      speedModifier: 3 # 1.5->3 - Mono
       useSound:
         path: /Audio/Items/crowbar.ogg
     - type: MovementIgnoreGravity
@@ -234,14 +234,14 @@
   - type: ProtectedFromStepTriggers
   - type: Climbing
   - type: Tool
-    speedModifier: 1.5
+    speedModifier: 3 # 1.5->3 Mono
     qualities:
       - Prying
     hideQualities: true
   - type: Prying
     pryPowered: true
     force: true
-    speedModifier: 1.5
+    speedModifier: 3 # 1.5->3 Mono
     useSound:
       path: /Audio/Items/crowbar.ogg
 #  - type: Access

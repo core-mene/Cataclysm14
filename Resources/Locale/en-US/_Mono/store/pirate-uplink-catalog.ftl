@@ -86,6 +86,9 @@ uplink-pirate-cash10000-desc = That's my boy, you made my day.
 uplink-pirate-energy-cutlass-name = Energy Cutlass
 uplink-pirate-energy-cutlass-desc = An exotic energy weapon.
 
+uplink-pirate-energy-sword-name = Energy Sword
+uplink-pirate-energy-sword-desc = Courtesy of the Gorlex Marauders. Make your mark, leave no witnesses.
+
 uplink-pirate-python-name = Python
 uplink-pirate-python-desc = A brutally simple, effective, and loud revolver. Comes loaded with .45 magnum rounds.
 
