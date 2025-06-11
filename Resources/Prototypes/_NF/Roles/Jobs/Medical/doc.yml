@@ -5,15 +5,14 @@
   playTimeTracker: JobDirectorOfCare
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 54000 # 20 hrs # mono - change to 15hr
+      time: 144000 # 20 hrs # mono - change to 40hr
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 36000 # mono - 10 hours
+      time: 72000 # mono - 10 hours
   alternateRequirementSets: # mono
     longerPlaytimeLessSec: # mono
     - !type:OverallPlaytimeRequirement # mono
-      time: 108000 # mono 30 hours
-  whitelisted: true # mono
+      time: 234000 # mono 65 hours
   startingGear: DocGear
   alwaysUseSpawner: true
   icon: "JobIconDoc"
