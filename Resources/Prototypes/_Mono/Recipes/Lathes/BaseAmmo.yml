@@ -1,10 +1,12 @@
-# practice = TOTAL/10
+# practice/empty = TOTAL/10
 #Base intermediate ammo for 5.56 and 5.45 and potential others [TOTAL = 475]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: BaseFMJAmmoIntermediateMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 475
 
@@ -12,6 +14,8 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoRubberIntermediateMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 75
     Plastic: 400
@@ -20,6 +24,8 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoIncendiaryIntermediateMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 75
     Plastic: 150
@@ -29,8 +35,29 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoPracticeIntermediateMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 47
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoEmptyIntermediateMagazineRecipe
+  abstract: true
+  categories:
+  - Ammo
+  materials:
+    Steel: 47
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoUraniumIntermediateMagazineRecipe
+  abstract: true
+  categories:
+  - Ammo
+  materials:
+    Steel: 175
+    Uranium: 300
 
 #Base Fully powered ammo for all the 7.62 [TOTAL = 575]
 
@@ -38,6 +65,8 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoFMJFullyPoweredMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 575
 
@@ -45,6 +74,8 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoRubberFullyPoweredMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 125
     Plastic: 450
@@ -53,6 +84,8 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoIncendiaryFullyPoweredMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 100
     Plastic: 175
@@ -62,8 +95,29 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoPracticeFullyPoweredMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 57
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoEmptyFullyPoweredMagazineRecipe
+  abstract: true
+  categories:
+  - Ammo
+  materials:
+    Steel: 57
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoUraniumFullyPoweredMagazineRecipe
+  abstract: true
+  categories:
+  - Ammo
+  materials:
+    Steel: 200
+    Uranium: 375
 
 #Base pistol ammo for .45 ACP, 9mm, 5.7mm, 4.6mm [TOTAL = 175]
 
@@ -71,6 +125,8 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoFMJPistolMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 175
 
@@ -78,14 +134,18 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoRubberPistolMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
-    Steel: 25
-    Plastic: 125
+    Steel: 40
+    Plastic: 135
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: BaseAmmoIncendiaryPistolMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 25
     Plastic: 50
@@ -95,8 +155,29 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoPracticePistolMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 17
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoEmptyPistolMagazineRecipe
+  abstract: true
+  categories:
+  - Ammo
+  materials:
+    Steel: 17
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoUraniumPistolMagazineRecipe
+  abstract: true
+  categories:
+  - Ammo
+  materials:
+    Steel: 60
+    Uranium: 125
 
 #Base smg ammo for .45 ACP, 9mm, 5.7mm, 4.6mm [TOTAL = 375]
 
@@ -104,6 +185,8 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoFMJSMGMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 375
 
@@ -111,6 +194,8 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoRubberSMGMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 50
     Plastic: 325
@@ -119,6 +204,8 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoIncendiarySMGMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 75
     Plastic: 100
@@ -128,5 +215,26 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoPracticeSMGMagazineRecipe
   abstract: true
+  categories:
+  - Ammo
   materials:
     Steel: 37
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoEmptySMGMagazineRecipe
+  abstract: true
+  categories:
+  - Ammo
+  materials:
+    Steel: 37
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoUraniumSMGMagazineRecipe
+  abstract: true
+  categories:
+  - Ammo
+  materials:
+    Steel: 125
+    Uranium: 250

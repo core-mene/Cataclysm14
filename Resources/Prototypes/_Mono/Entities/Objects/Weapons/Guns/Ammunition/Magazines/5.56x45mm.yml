@@ -7,7 +7,7 @@
   components:
   - type: Tag
     tags:
-      - MagazineRifle
+      - Magazine5.56x45mmFMJ
   - type: Item
     size: Small
   - type: BallisticAmmoProvider
@@ -34,7 +34,7 @@
 
 # Magazines
 - type: entity
-  id: MagazineRifle
+  id: Magazine5.56x45mmFMJ
   name: "magazine (5.56x45mm FMJ)"
   parent: BaseMagazine5.56x45mm
   components:
@@ -48,10 +48,10 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: MagazineRifleEmpty
+  id: Magazine5.56x45mmEmpty
   name: "magazine (5.56x45mm any)"
   suffix: empty
-  parent: MagazineRifle
+  parent: Magazine5.56x45mmFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -63,15 +63,15 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: MagazineRifleIncendiary
+  id: Magazine5.56x45mmIncendiary
   name: "magazine (5.56x45mm incendiary)"
-  parent: MagazineRifle
+  parent: Magazine5.56x45mmFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge5.56x45mmIncendiary
 
 - type: entity
-  id: MagazineRiflePractice
+  id: Magazine5.56x45mmPractice
   name: "magazine (5.56x45mm practice)"
   parent: BaseMagazine5.56x45mm
   components:
@@ -85,7 +85,7 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: MagazineRifleUranium
+  id: Magazine5.56x45mmUranium
   name: "magazine (5.56x45mm uranium)"
   parent: BaseMagazine5.56x45mm
   components:

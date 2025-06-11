@@ -132053,7 +132053,7 @@ entities:
       parent: 5350
     - type: BallisticAmmoProvider
       unspawnedCount: 30
-- proto: MagazineRifle
+- proto: Magazine5.56x45mmFMJ
   entities:
   - uid: 28208
     components:
@@ -132069,7 +132069,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: MagazineRiflePractice
+- proto: Magazine5.56x45mmPractice
   entities:
   - uid: 22345
     components:
