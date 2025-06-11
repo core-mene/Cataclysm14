@@ -72,3 +72,18 @@
       - state: tip
         map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#65fe08"
+
+- type: entity
+  id: Cartridge7.62x51mmRubber
+  name: cartridge (7.62x51mm rubber)
+  parent: BaseCartridge7.62x51mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet7.62x51mmRubber
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#43c4f7"

@@ -1,0 +1,104 @@
+- type: entity
+  id: BaseCartridge.45_magnum
+  name: cartridge (.45 magnum)
+  parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge.45_magnum
+  - type: CartridgeAmmo
+    proto: Bullet.45_magnum
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: Cartridge.45_magnum
+  name: cartridge (.45 magnum)
+  parent: BaseCartridge.45_magnum
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet.45_magnum
+
+- type: entity
+  id: Cartridge.45_magnumPractice
+  name: cartridge (.45 magnum practice)
+  parent: BaseCartridge.45_magnum
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet.45_magnumPractice
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#dbdbdb"
+
+- type: entity
+  id: Cartridge.45_magnumIncendiary
+  name: cartridge (.45 magnum incendiary)
+  parent: BaseCartridge.45_magnum
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet.45_magnumIncendiary
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#ff6e52"
+
+- type: entity
+  id: Cartridge.45_magnumAP
+  name: cartridge (.45 magnum armor-piercing)
+  parent: BaseCartridge.45_magnum
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet.45_magnumAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#0a0a0a"
+
+- type: entity
+  id: Cartridge.45_magnumUranium
+  name: cartridge (.45 magnum uranium)
+  parent: BaseCartridge.45_magnum
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet.45_magnumUranium
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#65fe08"
+
+- type: entity
+  id: Cartridge.45_magnumRubber
+  name: cartridge (.45 magnum rubber)
+  parent: BaseCartridge.45_magnum
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet.45_magnumRubber
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#43c4f7"
