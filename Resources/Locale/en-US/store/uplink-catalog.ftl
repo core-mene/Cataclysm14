@@ -285,7 +285,7 @@ uplink-holy-hand-grenade-name = Holy Hand Grenade
 uplink-holy-hand-grenade-desc = O Lord, bless this thy hand grenade, that with it thou mayst blow thine enemies to tiny bits, in thy mercy.
 
 uplink-revolver-cap-gun-fake-name = Fake Cap Gun
-uplink-revolver-cap-gun-fake-desc = Fool your enemy! It can use both cap and .45_magnum bullets. Comes loaded with .45_magnum bullets.
+uplink-revolver-cap-gun-fake-desc = Fool your enemy! It can use both cap and .45 magnum bullets. Comes loaded with .45 magnum bullets.
 
 uplink-banana-peel-explosive-name = Explosive Banana Peel
 uplink-banana-peel-explosive-desc = They will burst into laughter when they slip on it!

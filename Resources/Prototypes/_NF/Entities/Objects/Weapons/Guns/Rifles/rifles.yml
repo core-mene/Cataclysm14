@@ -70,13 +70,14 @@
   - type: Clothing
     sprite: _NF/Objects/Weapons/Guns/Rifles/gestio.rsi
   - type: Gun
-    fireRate: 3.8
+    fireRate: 3.5
     burstFireRate: 8
-    shotsPerBurst: 2
+    shotsPerBurst: 3
     burstCooldown: 0.4
     selectedMode: Burst
     availableModes:
       - Burst
+      - SemiAuto
     soundGunshot:
       path: /Audio/_NF/Weapons/Guns/Gunshots/rifle.ogg
       params:
@@ -92,6 +93,7 @@
         whitelist:
           tags:
             - Magazine7.62x39mmLowCapacity
+            - Magazine7.62x39mmFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber

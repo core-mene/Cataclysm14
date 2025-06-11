@@ -38,3 +38,22 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BaseMagazineBox14.5x114mm
+  id: MagazineBox14.5x114mmBig
+  name: ammunition box (14.5x114mm)
+  suffix: 30
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 30
+    proto: Cartridge14.5x114mm
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/anti_materiel.rsi
+    layers:
+    - state: base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb
