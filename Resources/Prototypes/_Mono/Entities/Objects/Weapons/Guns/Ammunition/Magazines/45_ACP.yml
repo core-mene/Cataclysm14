@@ -1,5 +1,5 @@
 - type: entity
-  id: BaseMagazine45_ACPPistol
+  id: BaseMagazine45_ACP
   name: pistol magazine (.45 ACP FMJ)
   parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
   abstract: true
@@ -100,7 +100,7 @@
 - type: entity
   id: Magazine45_ACPPistolFMJ
   name: pistol magazine (.45 ACP FMJ)
-  parent: BaseMagazine45_ACPPistol
+  parent: BaseMagazine45_ACP
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPFMJ
@@ -138,7 +138,7 @@
 - type: entity
   id: Magazine45_ACPPistolPractice
   name: pistol magazine (.45 ACP practice)
-  parent: BaseMagazine45_ACPPistol
+  parent: BaseMagazine45_ACP
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPPractice
@@ -152,7 +152,7 @@
 - type: entity
   id: Magazine45_ACPPistolUranium
   name: pistol magazine (.45 ACP uranium)
-  parent: BaseMagazine45_ACPPistol
+  parent: BaseMagazine45_ACP
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPUranium
@@ -279,7 +279,7 @@
 - type: entity
   id: Magazine45_ACPRubber
   name: pistol magazine (.45 ACP rubber)
-  parent: BaseMagazine45_ACPPistol
+  parent: BaseMagazine45_ACP
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPRubber

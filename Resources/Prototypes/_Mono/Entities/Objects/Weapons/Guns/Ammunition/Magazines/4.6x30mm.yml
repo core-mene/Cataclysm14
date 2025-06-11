@@ -1,5 +1,5 @@
 - type: entity
-  id: BaseMagazine4.6x30mmPistol
+  id: BaseMagazine4.6x30mm
   name: pistol magazine (4.6x30mm FMJ)
   parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
   abstract: true
@@ -100,7 +100,7 @@
 - type: entity
   id: Magazine4.6x30mmPistolFMJ
   name: pistol magazine (4.6x30mm FMJ)
-  parent: BaseMagazine4.6x30mmPistol
+  parent: BaseMagazine4.6x30mm
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge4.6x30mmFMJ
@@ -138,7 +138,7 @@
 - type: entity
   id: Magazine4.6x30mmPistolPractice
   name: pistol magazine (4.6x30mm practice)
-  parent: BaseMagazine4.6x30mmPistol
+  parent: BaseMagazine4.6x30mm
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge4.6x30mmPractice
@@ -152,7 +152,7 @@
 - type: entity
   id: Magazine4.6x30mmPistolUranium
   name: pistol magazine (4.6x30mm uranium)
-  parent: BaseMagazine4.6x30mmPistol
+  parent: BaseMagazine4.6x30mm
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge4.6x30mmUranium
@@ -279,7 +279,7 @@
 - type: entity
   id: Magazine4.6x30mmRubber
   name: pistol magazine (4.6x30mm rubber)
-  parent: BaseMagazine4.6x30mmPistol
+  parent: BaseMagazine4.6x30mm
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge4.6x30mmRubber
