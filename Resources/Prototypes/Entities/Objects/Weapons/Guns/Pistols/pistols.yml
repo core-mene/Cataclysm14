@@ -105,7 +105,7 @@
     price: 200
 
 - type: entity
-  name: echis
+  name: echis (9x19mm)
   parent: [ BaseItem, BaseC3SyndicateContraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponPistolEchis
   description: A viper for use by cyborgs. Creates 9x19mm on the fly from an internal ammo fabricator, which slowly self-charges.
@@ -140,7 +140,7 @@
   - type: AmmoCounter
 
 - type: entity
-  name: mercenary echis
+  name: mercenary echis (9x19mm)
   parent: [ BaseItem, BaseC1Contraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponPistolMercenaryEchis
   description: A viper for use by cyborgs, redesigned for mercenary use. Creates 9x19mm on the fly from an internal ammo fabricator, which slowly self-charges.
@@ -175,7 +175,7 @@
   - type: AmmoCounter
 
 - type: entity
-  name: cobra
+  name: cobra (6.35x40mm)
   parent: [ BaseWeaponPistol, BaseC3SyndicateContraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponPistolCobra
   description: A rugged, robust operator handgun with inbuilt silencer. Uses 6.35x40mm Caseless ammo. An illegal firearm often used by Syndicate agents.

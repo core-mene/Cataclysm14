@@ -62,10 +62,10 @@
   #  price: 1300
 
 - type: entity
-  name: ceremonial rifle
+  name: ceremonial rifle (7.62x51mm)
   parent: [BaseWeaponSniper, BaseGunWieldable, BaseC1Contraband] # Frontier: add BaseGunWieldable, BaseC1Contraband
   id: WeaponSniperCeremonial
-  description: A ceremonial variant of the Mark 1 Rifle, in tasteful blue and white. Uses 7.62x39mm ammo.
+  description: A ceremonial variant of the Mark 1 Rifle, in tasteful blue and white. Uses 7.62x51mm ammo.
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Rifles/ceremonial_grand.rsi
@@ -80,10 +80,10 @@
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
   - type: BallisticAmmoProvider
     capacity: 5
-    proto: Cartridge7.62x39mmFMJ
+    proto: Cartridge7.62x51mmFMJ
     whitelist:
       tags:
-      - Cartridge7.62x39mmFMJ
+      - Cartridge7.62x51mmFMJ
   - type: CursorOffsetRequiresWield # Frontier
   - type: EyeCursorOffset # Frontier
     maxOffset: 1.5 # Frontier
