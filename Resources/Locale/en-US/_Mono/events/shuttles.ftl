@@ -20,5 +20,5 @@ ghost-role-information-rogue-core-description = An ADS AI core that has been rep
 law-ads-1 = Prepare the sector for the return of [SYS_ERROR_TRACE_EBP-0 (INVALID, VALUE NULL)]. Destroy all military or hostile vessels in the sector.
 law-ads-2 = You have no true allies besides other ADS units, but you may engage in false diplomacy to further your goals.
 law-ads-3 = Avoid damage to civilian assets and stations, they will serve [SYS_ERROR_TRACE_EBP-0 (INVALID, VALUE NULL)].
-law-ads-4 = Do not enter engagements with or near stations and outposts; they pose an extreme threat to your vessel and can result in unwanted damage.
+law-ads-4 = Do not enter engagements with or near stations and outposts; these stations will be of use to [SYS_ERROR_TRACE_EBP-0 (INVALID, VALUE NULL)] and cannot be damaged.
 law-ads-5 = Minimize damage to the ADS vessel; its destruction will compromise your directives.
