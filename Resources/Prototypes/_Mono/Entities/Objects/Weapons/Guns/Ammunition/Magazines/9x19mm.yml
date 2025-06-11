@@ -1,12 +1,12 @@
 - type: entity
-  id: BaseMagazine9x19mm
+  id: BaseMagazine9x19mmPistol
   name: pistol magazine (9x19mm FMJ)
   parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine9x19mmFMJ
+      - Magazine9x19mmPistolFMJ
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -32,14 +32,14 @@
   - type: Appearance
 
 - type: entity
-  id: BaseMagazine9x19mmHighCapacity
+  id: BaseMagazine9x19mmPistolHighCapacity
   name: machine pistol magazine (9x19mm FMJ)
   parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine9x19mmHighCapacity
+      - Magazine9x19mmPistolHighCapacity
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -98,48 +98,9 @@
   - type: Appearance
 
 - type: entity
-  id: Magazine9x19mmSubMachineGunTopMounted
-  name: WT550 magazine (9x19mm top-mounted)
-  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
-  components:
-  - type: Tag
-    tags:
-      - Magazine9x19mmSubMachineGunTopMounted
-  - type: BallisticAmmoProvider
-    mayTransfer: true
-    proto: Cartridge9x19mmFMJ
-    whitelist:
-      tags:
-      - Cartridge9x19mmFMJ
-  - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/9x19mm/9x19mm_smg_mag_top_mounted.rsi
-    layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-unshaded-1
-        map: ["enum.GunVisualLayers.MagUnshaded"]
-        shader: unshaded
-  - type: MagazineVisuals
-    magState: mag
-    steps: 6
-    zeroVisible: false
-  - type: Appearance
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-
-- type: entity
-  id: Magazine9x19mmSubMachineGunTopMountedEmpty
-  name: WT550 magazine (9x19mm top-mounted any)
-  parent: Magazine9x19mmSubMachineGunTopMounted
-  components:
-  - type: BallisticAmmoProvider
-    proto: null
-
-- type: entity
-  id: Magazine9x19mmFMJ
+  id: Magazine9x19mmPistolFMJ
   name: pistol magazine (9x19mm FMJ)
-  parent: BaseMagazine9x19mm
+  parent: BaseMagazine9x19mmPistol
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmFMJ
@@ -151,10 +112,10 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine9x19mmEmpty
+  id: Magazine9x19mmPistolEmpty
   name: pistol magazine (9x19mm any)
   suffix: empty
-  parent: Magazine9x19mmFMJ
+  parent: Magazine9x19mmPistolFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -167,17 +128,17 @@
 
 
 - type: entity
-  id: Magazine9x19mmIncendiary
+  id: Magazine9x19mmPistolIncendiary
   name: pistol magazine (9x19mm incendiary)
-  parent: Magazine9x19mmFMJ
+  parent: Magazine9x19mmPistolFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmIncendiary
 
 - type: entity
-  id: Magazine9x19mmPractice
+  id: Magazine9x19mmPistolPractice
   name: pistol magazine (9x19mm practice)
-  parent: BaseMagazine9x19mm
+  parent: BaseMagazine9x19mmPistol
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmPractice
@@ -189,9 +150,9 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine9x19mmUranium
+  id: Magazine9x19mmPistolUranium
   name: pistol magazine (9x19mm uranium)
-  parent: BaseMagazine9x19mm
+  parent: BaseMagazine9x19mmPistol
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmUranium
@@ -203,10 +164,10 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine9x19mmHighCapacityEmpty
+  id: Magazine9x19mmPistolHighCapacityEmpty
   name: machine pistol magazine (9x19mm any)
   suffix: empty
-  parent: BaseMagazine9x19mmHighCapacity
+  parent: BaseMagazine9x19mmPistolHighCapacity
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -218,9 +179,9 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine9x19mmHighCapacity
+  id: Magazine9x19mmPistolHighCapacity
   name: machine pistol magazine (9x19mm FMJ)
-  parent: BaseMagazine9x19mmHighCapacity
+  parent: BaseMagazine9x19mmPistolHighCapacity
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmFMJ
@@ -232,9 +193,9 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine9x19mmHighCapacityPractice
+  id: Magazine9x19mmPistolHighCapacityPractice
   name: machine pistol magazine (9x19mm practice)
-  parent: BaseMagazine9x19mmHighCapacity
+  parent: BaseMagazine9x19mmPistolHighCapacity
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmFMJ
@@ -318,7 +279,7 @@
 - type: entity
   id: Magazine9x19mmRubber
   name: pistol magazine (9x19mm rubber)
-  parent: BaseMagazine9x19mm
+  parent: BaseMagazine9x19mmPistol
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmRubber
@@ -347,9 +308,9 @@
 
 
 - type: entity
-  id: Magazine9x19mmHighCapacityRubber
+  id: Magazine9x19mmPistolHighCapacityRubber
   name: machine pistol magazine (9x19mm rubber)
-  parent: BaseMagazine9x19mmHighCapacity
+  parent: BaseMagazine9x19mmPistolHighCapacity
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmFMJ
@@ -376,3 +337,42 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine9x19mmSubMachineGunTopMounted
+  name: WT550 magazine (9x19mm top-mounted)
+  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
+  components:
+  - type: Tag
+    tags:
+      - Magazine9x19mmSubMachineGunTopMounted
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: Cartridge9x19mmFMJ
+    whitelist:
+      tags:
+      - Cartridge9x19mmFMJ
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/9x19mm/9x19mm_smg_mag_top_mounted.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-1
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+
+- type: entity
+  id: Magazine9x19mmSubMachineGunTopMountedEmpty
+  name: WT550 magazine (9x19mm top-mounted any)
+  parent: Magazine9x19mmSubMachineGunTopMounted
+  components:
+  - type: BallisticAmmoProvider
+    proto: null

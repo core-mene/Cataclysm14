@@ -28,43 +28,12 @@
 - type: latheRecipePack
   id: SecurityAmmoStatic
   recipes:
-  - Box12GaugeBuckshot
-  - Box12GaugeSlug
-  - MagazineBox7.62x39mmFMJ
-  - MagazineBox7.62x39mmRubber # Frontier
-  - MagazineBox45_magnum
-  - MagazineBox45_magnumRubber # Frontier
-  - MagazineBox9x19mmFMJ
-  - MagazineBox9x19mmRubber # Frontier
-  - MagazineBox5.56x45mmFMJ
-  - MagazineBox5.56x45mmRubber # Frontier
-  - Magazine7.62x39mmFMJ
-  - Magazine7.62x39mmRubber # Frontier
-  - Magazine7.62x39mmEmpty
-  - Magazine9x19mmFMJ
-  - Magazine9x19mmRubber # Frontier
-  - Magazine9x19mmEmpty
-  - Magazine9x19mmSubMachineGun
-  - Magazine9x19mmSubMachineGunRubber # Frontier
-  - Magazine9x19mmSubMachineGunEmpty
-  - Magazine9x19mmSubMachineGunTopMounted
-  - Magazine9x19mmSubMachineGunTopMountedEmpty
-  - Magazine5.56x45mmFMJ
-  - Magazine5.56x45mmEmpty
-  - MagazineShotgun
-  - MagazineShotgunEmpty
-  - MagazineShotgunSlug
-  - SpeedLoader45_magnum
-  - SpeedLoader45_magnumEmpty
-  - SpeedLoader5.56x45mm # Frontier
-  - SpeedLoader5.56x45mmEmpty # Frontier
   - MagazineNovaliteC1Empty # Frontier
   - MagazineNovaliteC1 # Frontier
   - MagazineNovaliteC1Rubber # Frontier
   - MagazineDMR # mono
   - MagazineDMREmpty # mono
   - MagazineBoxDMR # mono
-  - Magazine7.62x39mmLowCapacity # mono
 
 - type: latheRecipePack
   id: SecurityWeaponsStatic
@@ -111,7 +80,6 @@
 - type: latheRecipePack
   id: SecurityAmmo
   recipes:
-  - Box12GaugeBeanbag
   # - Box12GaugeIncendiary # Frontier
   # - Box12GaugeUranium # Frontier
   - Box12GaugeTranquilizer
@@ -125,13 +93,12 @@
   # - MagazineBox5.56x45mmUranium # Frontier
   # - Magazine7.62x39mmIncendiary # Frontier
   # - Magazine7.62x39mmUranium # Frontier
-  # - Magazine9x19mmIncendiary # Frontier
-  # - Magazine9x19mmUranium # Frontier
+  # - Magazine9x19mmPistolIncendiary # Frontier
+  # - Magazine9x19mmPistolUranium # Frontier
   # - Magazine9x19mmSubMachineGunIncendiary # Frontier
   # - Magazine9x19mmSubMachineGunUranium # Frontier
   # - Magazine5.56x45mmIncendiary # Frontier
   # - Magazine5.56x45mmUranium # Frontier
-  - MagazineShotgunBeanbag
   # - MagazineShotgunIncendiary # Frontier
   # - SpeedLoader45_magnumIncendiary # Frontier
   # - SpeedLoader45_magnumUranium # Frontier
