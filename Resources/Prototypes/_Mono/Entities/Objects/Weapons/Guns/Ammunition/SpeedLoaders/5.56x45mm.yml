@@ -6,7 +6,7 @@
   components:
   - type: Tag
     tags:
-      - SpeedLoader5.56x45mm
+      - SpeedLoader5.56x45mmFMJ
   - type: SpeedLoader
   - type: BallisticAmmoProvider
     whitelist:
@@ -20,7 +20,7 @@
         ents: []
 
 - type: entity
-  id: SpeedLoader5.56x45mm
+  id: SpeedLoader5.56x45mmFMJ
   name: "speed loader (5.56x45mm FMJ)"
   parent: BaseSpeedLoader5.56x45mm
   components:
@@ -45,7 +45,7 @@
 - type: entity
   id: SpeedLoader5.56x45mmEmpty
   name: "speed loader (5.56x45mm any)"
-  parent: SpeedLoader5.56x45mm
+  parent: SpeedLoader5.56x45mmFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null

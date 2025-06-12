@@ -233,6 +233,16 @@
     Steel: 575
     Uranium: 1150
 
+#Base Fully powered ammo magazines for all the other 7.62 (-7.62x39mm) 
+#speedloaders:     [TOTAL = 225]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoFMJFullyPoweredSpeedloaderRecipe
+  abstract: true
+  materials:
+    Steel: 225
+
 #Base pistol caliber magazines ammo for .45 ACP, 9mm, 5.7mm, 4.6mm
 #Magazines: [TOTAL = 175]
 

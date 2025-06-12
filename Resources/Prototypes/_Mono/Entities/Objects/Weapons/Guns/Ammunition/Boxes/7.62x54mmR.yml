@@ -1,14 +1,14 @@
 - type: entity
   abstract: true
   parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
-  id: BaseAmmoBox7.62x39mm
+  id: BaseAmmoBox7.62x54mmR
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge7.62x39mmFMJ
-    proto: Cartridge7.62x39mmFMJ
+        - Cartridge7.62x54mmRFMJ
+    proto: Cartridge7.62x54mmRFMJ
     capacity: 60
   - type: Item
     size: Small
@@ -16,7 +16,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/7.62x39mm.rsi # Frontier: add _NF prefix
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/7.62x54mmR.rsi # Frontier: add _NF prefix
   - type: MagazineVisuals
     magState: mag
     steps: 4
@@ -25,14 +25,14 @@
 
 # Boxes
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmBigFMJ
-  name: ammunition box (7.62x39mm FMJ)
+  parent: BaseAmmoBox7.62x54mmR
+  id: AmmoBox7.62x54mmRBigFMJ
+  name: ammunition box (7.62x54mmR FMJ)
   suffix: Big
   components:
   - type: BallisticAmmoProvider
     capacity: 200
-    proto: Cartridge7.62x39mmFMJ
+    proto: Cartridge7.62x54mmRFMJ
   - type: Sprite
     layers:
     - state: base-b # Frontier: base<base-b
@@ -45,12 +45,12 @@
   # End Frontier
 
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmFMJ
-  name: ammunition box (7.62x39mm FMJ)
+  parent: BaseAmmoBox7.62x54mmR
+  id: AmmoBox7.62x54mmRFMJ
+  name: ammunition box (7.62x54mmR FMJ)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmFMJ
+    proto: Cartridge7.62x54mmRFMJ
   - type: Sprite
     layers:
     - state: base
@@ -59,12 +59,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmPractice
-  name: ammunition box (7.62x39mm practice)
+  parent: BaseAmmoBox7.62x54mmR
+  id: AmmoBox7.62x54mmRPractice
+  name: ammunition box (7.62x54mmR practice)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmPractice
+    proto: Cartridge7.62x54mmRPractice
   - type: Sprite
     layers:
     - state: base
@@ -74,12 +74,12 @@
     - state: practice
 
 - type: entity
-  id: AmmoBox7.62x39mmIncendiary
-  parent: BaseAmmoBox7.62x39mm
-  name: ammunition box (7.62x39mm incendiary)
+  id: AmmoBox7.62x54mmRIncendiary
+  parent: BaseAmmoBox7.62x54mmR
+  name: ammunition box (7.62x54mmR incendiary)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmIncendiary
+    proto: Cartridge7.62x54mmRIncendiary
   - type: Sprite
     layers:
     - state: base
@@ -89,12 +89,12 @@
     - state: incendiary
 
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmUranium
-  name: ammunition box (7.62x39mm uranium)
+  parent: BaseAmmoBox7.62x54mmR
+  id: AmmoBox7.62x54mmRUranium
+  name: ammunition box (7.62x54mmR uranium)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmUranium
+    proto: Cartridge7.62x54mmRUranium
   - type: Sprite
     layers:
     - state: base
@@ -104,14 +104,14 @@
     - state: uranium
 
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmRubber
-  name: ammunition box (7.62x39mm rubber)
+  parent: BaseAmmoBox7.62x54mmR
+  id: AmmoBox7.62x54mmRRubber
+  name: ammunition box (7.62x54mmR rubber)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmRubber
+    proto: Cartridge7.62x54mmRRubber
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/7.62x39mm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/7.62x54mmR.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -120,15 +120,15 @@
     - state: rubber
 
 - type: entity
-  parent: AmmoBox7.62x39mmBigFMJ
-  id: AmmoBox7.62x39mmRubberBig
-  name: ammunition box (7.62x39mm rubber)
+  parent: AmmoBox7.62x54mmRBigFMJ
+  id: AmmoBox7.62x54mmRRubberBig
+  name: ammunition box (7.62x54mmR rubber)
   suffix: Big
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmRubber
+    proto: Cartridge7.62x54mmRRubber
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/7.62x39mm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/7.62x54mmR.rsi
     layers:
     - state: base-b
       map: ["enum.GunVisualLayers.Base"]
@@ -137,17 +137,17 @@
     - state: rubber-b
 
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmSubsonic
-  name: ammunition box (7.62x39mm subsonic)
+  parent: BaseAmmoBox7.62x54mmR
+  id: AmmoBox7.62x54mmRSubsonic
+  name: ammunition box (7.62x54mmR subsonic)
   components:
   - type: BallisticAmmoProvider
     capacity: 70
-    proto: Cartridge7.62x39mmSubsonic
+    proto: Cartridge7.62x54mmRSubsonic
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge7.62x39mmSubsonic
+        - Cartridge7.62x54mmRSubsonic
   - type: Sprite
     layers:
     - state: base
