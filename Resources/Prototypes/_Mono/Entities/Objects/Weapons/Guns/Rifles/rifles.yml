@@ -30,13 +30,13 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineDMR
+        startingItem: Magazine8x65mmSKR
         insertSound: /Audio/Weapons/Guns/MagIn/sfrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/hpistol_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineDMR
+            - Magazine8x65mmSKR
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber

@@ -1,12 +1,12 @@
 - type: entity
-  id: BaseMagazineDMR
+  id: BaseMagazine8x65mm
   name: MR-8C magazine (8x65mm SKR)
   parent: [BaseItem, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny
   abstract: true
   components:
   - type: Tag
     tags:
-      - MagazineDMR
+      - Magazine8x65mmSKR
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -32,10 +32,10 @@
   - type: Appearance
 
 - type: entity
-  id: MagazineDMREmpty
+  id: Magazine8x65mmEmpty
   name: MR-8C magazine (8x65mm SKR any)
   suffix: empty
-  parent: BaseMagazineDMR
+  parent: BaseMagazine8x65mm
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -47,9 +47,9 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: MagazineDMR
+  id: Magazine8x65mmSKR
   name: MR-8C magazine (8x65mm SKR)
-  parent: BaseMagazineDMR
+  parent: BaseMagazine8x65mm
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge8x65mmSKR
