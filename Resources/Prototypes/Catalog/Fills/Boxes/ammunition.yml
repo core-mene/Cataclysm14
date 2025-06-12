@@ -60,7 +60,8 @@
 - type: entity
   name: box of SMG .45 magnum magazines
   parent: BoxMagazine
-  id: BoxMagazine45_magnumSubMachineGunFMJ  description: A box full of SMG .45 magnum magazines.
+  id: BoxMagazine45_magnumSubMachineGun
+  description: A box full of SMG .45 magnum magazines.
   components:
   - type: StorageFill
     contents:
@@ -115,11 +116,13 @@
 - type: entity
   name: box of machine pistol 9x19mm magazines
   parent: BoxMagazine
-  id: BoxMagazine9x19mmPistolHighCapacityFMJ  description: A box full of machine pistol 9x19mm magazines.
+  id: BoxMagazine9x19mmPistolHighCapacity
+  description: A box full of machine pistol 9x19mm magazines.
   components:
   - type: StorageFill
     contents:
-      - id: Magazine9x19mmPistolHighCapacityFMJ        amount: 4
+      - id: Magazine9x19mmPistolHighCapacity
+        amount: 4
 
 - type: entity
   name: box of machine pistol 9x19mm (practice) magazines
@@ -135,11 +138,13 @@
 - type: entity
   name: box of SMG 9x19mm magazines
   parent: BoxMagazine
-  id: BoxMagazine9x19mmSubMachineGunFMJ  description: A box full of SMG 9x19mm magazines.
+  id: BoxMagazine9x19mmSubMachineGun
+  description: A box full of SMG 9x19mm magazines.
   components:
   - type: StorageFill
     contents:
-      - id: Magazine9x19mmSubMachineGunFMJ        amount: 3
+      - id: Magazine9x19mmSubMachineGun
+        amount: 3
 
 - type: entity
   name: box of SMG 9x19mm (practice) magazines

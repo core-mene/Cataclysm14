@@ -15,7 +15,8 @@
           priority: 2
           whitelist:
             tags:
-              - Magazine9x19mmSubMachineGunFMJ          whitelistFailPopup: gun-magazine-whitelist-fail
+              - Magazine9x19mmSubMachineGun
+          whitelistFailPopup: gun-magazine-whitelist-fail
         gun_chamber:
           name: Chamber
           startingItem: Cartridge9x19mmRubber

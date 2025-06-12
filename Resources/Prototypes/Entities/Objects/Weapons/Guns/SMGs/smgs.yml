@@ -1,7 +1,8 @@
 - type: entity
   name: BaseSMG
   parent: BaseItem
-  id: BaseWeaponSubMachineGunFMJ  description: A rooty tooty point and shooty.
+  id: BaseWeaponSubMachineGun
+  description: A rooty tooty point and shooty.
   abstract: true
   components:
   - type: Sprite
@@ -36,12 +37,14 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine9x19mmSubMachineGunFMJ        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        startingItem: Magazine9x19mmSubMachineGun
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine9x19mmSubMachineGunFMJ        whitelistFailPopup: gun-magazine-whitelist-fail
+            - Magazine9x19mmSubMachineGun
+        whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
         startingItem: Cartridge9x19mmFMJ
@@ -84,12 +87,14 @@
     slots:
        gun_magazine:
           name: Magazine
-          startingItem: Magazine5.7x28mmSubMachineGunFMJ          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+          startingItem: Magazine5.7x28mmSubMachineGun
+          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
           ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
           priority: 2
           whitelist:
             tags:
-              - Magazine5.7x28mmSubMachineGunFMJ          whitelistFailPopup: gun-magazine-whitelist-fail
+              - Magazine5.7x28mmSubMachineGun
+          whitelistFailPopup: gun-magazine-whitelist-fail
        gun_chamber:
           name: Chamber
           startingItem: Cartridge5.7x28mmFMJ
@@ -175,12 +180,14 @@
       slots:
         gun_magazine:
           name: Magazine
-          startingItem: Magazine45_ACPSubMachineGunFMJ          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+          startingItem: Magazine45_ACPSubMachineGun
+          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
           ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
           priority: 2
           whitelist:
             tags:
-              - Magazine45_ACPSubMachineGunFMJ          whitelistFailPopup: gun-magazine-whitelist-fail
+              - Magazine45_ACPSubMachineGun
+          whitelistFailPopup: gun-magazine-whitelist-fail
         gun_chamber:
           name: Chamber
           startingItem: Cartridge45_ACPFMJ

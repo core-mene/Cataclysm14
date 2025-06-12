@@ -15,7 +15,8 @@
     capacity: 7
 
 - type: entity
-  id: BaseMagazine45_magnumSubMachineGunFMJ  name: SMG magazine (.45 magnum FMJ)
+  id: BaseMagazine45_magnumSubMachineGun
+  name: SMG magazine (.45 magnum FMJ)
   parent: [BaseItem, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny
   abstract: true
   components:
@@ -122,7 +123,8 @@
   id: Magazine45_magnumSubMachineGunEmpty
   name: SMG magazine (.45 magnum any)
   suffix: empty
-  parent: BaseMagazine45_magnumSubMachineGunFMJ  components:
+  parent: BaseMagazine45_magnumSubMachineGun
+  components:
   - type: BallisticAmmoProvider
     proto: null
   - type: Sprite
@@ -135,7 +137,8 @@
 - type: entity
   id: Magazine45_magnumSubMachineGunFMJ
   name: SMG magazine (.45 magnum FMJ)
-  parent: BaseMagazine45_magnumSubMachineGunFMJ  components:
+  parent: BaseMagazine45_magnumSubMachineGun
+  components:
   - type: BallisticAmmoProvider
     proto: Cartrdige45_magnumFMJ
   - type: Sprite
@@ -148,7 +151,8 @@
 - type: entity
   id: Magazine45_magnumSubMachineGunPractice
   name: SMG magazine (.45 magnum practice)
-  parent: BaseMagazine45_magnumSubMachineGunFMJ  components:
+  parent: BaseMagazine45_magnumSubMachineGun
+  components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumPractice
   - type: Sprite
@@ -161,7 +165,8 @@
 - type: entity
   id: Magazine45_magnumSubMachineGunUranium
   name: SMG magazine (.45 magnum uranium)
-  parent: BaseMagazine45_magnumSubMachineGunFMJ  components:
+  parent: BaseMagazine45_magnumSubMachineGun
+  components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumUranium
   - type: Sprite
@@ -174,7 +179,8 @@
 - type: entity
   id: Magazine45_magnumSubMachineGunPiercing
   name: SMG magazine (.45 magnum armor-piercing) # Frontier: armour<armor
-  parent: BaseMagazine45_magnumSubMachineGunFMJ  components:
+  parent: BaseMagazine45_magnumSubMachineGun
+  components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumAP
   - type: Sprite
@@ -202,7 +208,8 @@
 - type: entity
   id: Magazine45_magnumSubMachineGunRubber
   name: "SMG magazine (.45 magnum rubber)"
-  parent: BaseMagazine45_magnumSubMachineGunFMJ  components:
+  parent: BaseMagazine45_magnumSubMachineGun
+  components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumRubber
   - type: Sprite

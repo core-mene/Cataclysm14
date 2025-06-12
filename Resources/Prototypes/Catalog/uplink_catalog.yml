@@ -475,10 +475,12 @@
 
 # For the C20R
 - type: listing
-  id: UplinkMagazine9x19mmSubMachineGunFMJ  name: uplink-pistol-magazine-c20r-name
+  id: UplinkMagazine9x19mmSubMachineGun
+  name: uplink-pistol-magazine-c20r-name
   description: uplink-pistol-magazine-c20r-desc
   icon: { sprite: /Textures/_Mono/Objects/Weapons/Guns/Ammunition/Magazine/9x19mm/9x19mm_smg_mag.rsi, state: red-icon }
-  productEntity: Magazine9x19mmSubMachineGunFMJ  cost:
+  productEntity: Magazine9x19mmSubMachineGun
+  cost:
     Telecrystal: 2
   categories:
   - UplinkAmmo

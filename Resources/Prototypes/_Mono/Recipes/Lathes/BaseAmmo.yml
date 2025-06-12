@@ -247,19 +247,19 @@
     Steel: 60
     Uranium: 125
 
-#Base pistol caliber SubMachineGun magazines ammo for .45 ACP, 9mm, 5.7mm, 4.6mm
+#Base pistol caliber smg magazines ammo for .45 ACP, 9mm, 5.7mm, 4.6mm
 #Magazines: [TOTAL = 375]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoFMJPistolCaliberSubMachineGunMagazineRecipe
+  id: BaseAmmoFMJPistolCaliberSMGMagazineRecipe
   abstract: true
   materials:
     Steel: 375
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoRubberPistolCaliberSubMachineGunMagazineRecipe
+  id: BaseAmmoRubberPistolCaliberSMGMagazineRecipe
   abstract: true
   materials:
     Steel: 50
@@ -267,7 +267,7 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoIncendiaryPistolCaliberSubMachineGunMagazineRecipe
+  id: BaseAmmoIncendiaryPistolCaliberSMGMagazineRecipe
   abstract: true
   materials:
     Steel: 75
@@ -276,21 +276,21 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoPracticePistolCaliberSubMachineGunMagazineRecipe
+  id: BaseAmmoPracticePistolCaliberSMGMagazineRecipe
   abstract: true
   materials:
     Steel: 37
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoEmptyPistolCaliberSubMachineGunMagazineRecipe
+  id: BaseAmmoEmptyPistolCaliberSMGMagazineRecipe
   abstract: true
   materials:
     Steel: 37
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoUraniumPistolCaliberSubMachineGunMagazineRecipe
+  id: BaseAmmoUraniumPistolCaliberSMGMagazineRecipe
   abstract: true
   materials:
     Steel: 125
