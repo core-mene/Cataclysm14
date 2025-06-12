@@ -65,14 +65,14 @@
   - type: Appearance
 
 - type: entity
-  id: BaseMagazine4.6x30mmSubMachineGun
+  id: BaseMagazine4.6x30mmSubMachineGunFMJ
   name: SMG magazine (4.6x30mm FMJ)
   parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseSecurityContraband<BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine4.6x30mmSubMachineGun
+      - Magazine4.6x30mmSubMachineGunFMJ
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -207,9 +207,9 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmSubMachineGun
+  id: Magazine4.6x30mmSubMachineGunFMJ
   name: SMG magazine (4.6x30mm FMJ)
-  parent: BaseMagazine4.6x30mmSubMachineGun
+  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge4.6x30mmFMJ
@@ -229,7 +229,7 @@
   id: Magazine4.6x30mmSubMachineGunEmpty
   name: SMG magazine (4.6x30mm any)
   suffix: empty
-  parent: BaseMagazine4.6x30mmSubMachineGun
+  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -243,7 +243,7 @@
 - type: entity
   id: Magazine4.6x30mmSubMachineGunPractice
   name: SMG magazine (4.6x30mm practice)
-  parent: BaseMagazine4.6x30mmSubMachineGun
+  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge4.6x30mmPractice
@@ -257,7 +257,7 @@
 - type: entity
   id: Magazine4.6x30mmSubMachineGunUranium
   name: SMG magazine (4.6x30mm uranium)
-  parent: BaseMagazine4.6x30mmSubMachineGun
+  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge4.6x30mmUranium
@@ -269,7 +269,7 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  parent: BaseMagazine4.6x30mmSubMachineGun
+  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
   id: Magazine4.6x30mmSubMachineGunIncendiary
   name: SMG magazine (4.6x30mm incendiary)
   components:
@@ -294,7 +294,7 @@
 - type: entity
   id: Magazine4.6x30mmSubMachineGunRubber
   name: SMG magazine (4.6x30mm rubber)
-  parent: BaseMagazine4.6x30mmSubMachineGun
+  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge4.6x30mmRubber
@@ -326,7 +326,7 @@
 - type: entity
   id: Magazine4.6x30mmSubMachineGunEmp
   name: SMG magazine (4.6x30mm emp)
-  parent: BaseMagazine4.6x30mmSubMachineGun
+  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge4.6x30mmEmp

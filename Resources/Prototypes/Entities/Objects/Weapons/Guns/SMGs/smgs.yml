@@ -37,13 +37,13 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine9x19mmSubMachineGun
+        startingItem: Magazine9x19mmSubMachineGunFMJ
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine9x19mmSubMachineGun
+            - Magazine9x19mmSubMachineGunFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
@@ -87,13 +87,13 @@
     slots:
        gun_magazine:
           name: Magazine
-          startingItem: Magazine5.7x28mmSubMachineGun
+          startingItem: Magazine5.7x28mmSubMachineGunFMJ
           insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
           ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
           priority: 2
           whitelist:
             tags:
-              - Magazine5.7x28mmSubMachineGun
+              - Magazine5.7x28mmSubMachineGunFMJ
           whitelistFailPopup: gun-magazine-whitelist-fail
        gun_chamber:
           name: Chamber
@@ -180,13 +180,13 @@
       slots:
         gun_magazine:
           name: Magazine
-          startingItem: Magazine45_ACPSubMachineGun
+          startingItem: Magazine45_ACPSubMachineGunFMJ
           insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
           ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
           priority: 2
           whitelist:
             tags:
-              - Magazine45_ACPSubMachineGun
+              - Magazine45_ACPSubMachineGunFMJ
           whitelistFailPopup: gun-magazine-whitelist-fail
         gun_chamber:
           name: Chamber

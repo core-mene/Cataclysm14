@@ -65,14 +65,14 @@
   - type: Appearance
 
 - type: entity
-  id: BaseMagazine9x19mmSubMachineGun
+  id: BaseMagazine9x19mmSubMachineGunFMJ
   name: SMG magazine (9x19mm FMJ)
   parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseSecurityContraband<BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine9x19mmSubMachineGun
+      - Magazine9x19mmSubMachineGunFMJ
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -207,9 +207,9 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine9x19mmSubMachineGun
+  id: Magazine9x19mmSubMachineGunFMJ
   name: SMG magazine (9x19mm FMJ)
-  parent: BaseMagazine9x19mmSubMachineGun
+  parent: BaseMagazine9x19mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmFMJ
@@ -229,7 +229,7 @@
   id: Magazine9x19mmSubMachineGunEmpty
   name: SMG magazine (9x19mm any)
   suffix: empty
-  parent: BaseMagazine9x19mmSubMachineGun
+  parent: BaseMagazine9x19mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -243,7 +243,7 @@
 - type: entity
   id: Magazine9x19mmSubMachineGunPractice
   name: SMG magazine (9x19mm practice)
-  parent: BaseMagazine9x19mmSubMachineGun
+  parent: BaseMagazine9x19mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmPractice
@@ -257,7 +257,7 @@
 - type: entity
   id: Magazine9x19mmSubMachineGunUranium
   name: SMG magazine (9x19mm uranium)
-  parent: BaseMagazine9x19mmSubMachineGun
+  parent: BaseMagazine9x19mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmUranium
@@ -269,7 +269,7 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  parent: BaseMagazine9x19mmSubMachineGun
+  parent: BaseMagazine9x19mmSubMachineGunFMJ
   id: Magazine9x19mmSubMachineGunIncendiary
   name: SMG magazine (9x19mm incendiary)
   components:
@@ -294,7 +294,7 @@
 - type: entity
   id: Magazine9x19mmSubMachineGunRubber
   name: SMG magazine (9x19mm rubber)
-  parent: BaseMagazine9x19mmSubMachineGun
+  parent: BaseMagazine9x19mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmRubber
@@ -326,7 +326,7 @@
 - type: entity
   id: Magazine9x19mmSubMachineGunEmp
   name: SMG magazine (9x19mm emp)
-  parent: BaseMagazine9x19mmSubMachineGun
+  parent: BaseMagazine9x19mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmEmp

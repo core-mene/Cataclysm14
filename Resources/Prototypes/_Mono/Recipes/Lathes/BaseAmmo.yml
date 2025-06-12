@@ -252,14 +252,14 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoFMJPistolCaliberSMGMagazineRecipe
+  id: BaseAmmoFMJPistolCaliberSubMachineGunMagazineRecipe
   abstract: true
   materials:
     Steel: 375
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoRubberPistolCaliberSMGMagazineRecipe
+  id: BaseAmmoRubberPistolCaliberSubMachineGunMagazineRecipe
   abstract: true
   materials:
     Steel: 50
@@ -267,7 +267,7 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoIncendiaryPistolCaliberSMGMagazineRecipe
+  id: BaseAmmoIncendiaryPistolCaliberSubMachineGunMagazineRecipe
   abstract: true
   materials:
     Steel: 75
@@ -276,21 +276,21 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoPracticePistolCaliberSMGMagazineRecipe
+  id: BaseAmmoPracticePistolCaliberSubMachineGunMagazineRecipe
   abstract: true
   materials:
     Steel: 37
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoEmptyPistolCaliberSMGMagazineRecipe
+  id: BaseAmmoEmptyPistolCaliberSubMachineGunMagazineRecipe
   abstract: true
   materials:
     Steel: 37
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoUraniumPistolCaliberSMGMagazineRecipe
+  id: BaseAmmoUraniumPistolCaliberSubMachineGunMagazineRecipe
   abstract: true
   materials:
     Steel: 125

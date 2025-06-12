@@ -55,7 +55,7 @@
   - type: StorageFill
     contents:
       - id: WeaponSubMachineGunC20r
-      - id: Magazine9x19mmSubMachineGun
+      - id: Magazine9x19mmSubMachineGunFMJ
         amount: 3
 #     - id: SMGSuppressor
 # Mono edit
@@ -68,7 +68,7 @@
   - type: StorageFill
     contents:
       - id: WeaponSubMachineGunAtreides
-      - id: Magazine9x19mmSubMachineGun
+      - id: Magazine9x19mmSubMachineGunFMJ
         amount: 3
 #     - id: SMGSuppressor
 # Mono edit end
@@ -135,7 +135,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: Magazine9x19mmSubMachineGun
+      - id: Magazine9x19mmSubMachineGunFMJ
         amount: 4
       - id: MagazineShotgun
         amount: 4
