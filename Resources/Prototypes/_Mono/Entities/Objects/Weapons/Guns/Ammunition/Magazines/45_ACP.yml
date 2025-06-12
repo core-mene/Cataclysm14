@@ -32,14 +32,14 @@
   - type: Appearance
 
 - type: entity
-  id: BaseMagazine45_ACPPistolHighCapacity
+  id: BaseMagazine45_ACPPistolHighCapacityFMJ
   name: machine pistol magazine (.45 ACP FMJ)
   parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine45_ACPPistolHighCapacity
+      - Magazine45_ACPPistolHighCapacityFMJ
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -167,7 +167,7 @@
   id: Magazine45_ACPPistolHighCapacityEmpty
   name: machine pistol magazine (.45 ACP any)
   suffix: empty
-  parent: BaseMagazine45_ACPPistolHighCapacity
+  parent: BaseMagazine45_ACPPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -179,9 +179,9 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine45_ACPPistolHighCapacity
+  id: Magazine45_ACPPistolHighCapacityFMJ
   name: machine pistol magazine (.45 ACP FMJ)
-  parent: BaseMagazine45_ACPPistolHighCapacity
+  parent: BaseMagazine45_ACPPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPFMJ
@@ -195,7 +195,7 @@
 - type: entity
   id: Magazine45_ACPPistolHighCapacityPractice
   name: machine pistol magazine (.45 ACP practice)
-  parent: BaseMagazine45_ACPPistolHighCapacity
+  parent: BaseMagazine45_ACPPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPFMJ
@@ -310,7 +310,7 @@
 - type: entity
   id: Magazine45_ACPPistolHighCapacityRubber
   name: machine pistol magazine (.45 ACP rubber)
-  parent: BaseMagazine45_ACPPistolHighCapacity
+  parent: BaseMagazine45_ACPPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPFMJ

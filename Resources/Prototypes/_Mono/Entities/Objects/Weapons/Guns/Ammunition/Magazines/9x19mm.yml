@@ -32,14 +32,14 @@
   - type: Appearance
 
 - type: entity
-  id: BaseMagazine9x19mmPistolHighCapacity
+  id: BaseMagazine9x19mmPistolHighCapacityFMJ
   name: machine pistol magazine (9x19mm FMJ)
   parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine9x19mmPistolHighCapacity
+      - Magazine9x19mmPistolHighCapacityFMJ
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -167,7 +167,7 @@
   id: Magazine9x19mmPistolHighCapacityEmpty
   name: machine pistol magazine (9x19mm any)
   suffix: empty
-  parent: BaseMagazine9x19mmPistolHighCapacity
+  parent: BaseMagazine9x19mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -179,9 +179,9 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine9x19mmPistolHighCapacity
+  id: Magazine9x19mmPistolHighCapacityFMJ
   name: machine pistol magazine (9x19mm FMJ)
-  parent: BaseMagazine9x19mmPistolHighCapacity
+  parent: BaseMagazine9x19mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmFMJ
@@ -195,7 +195,7 @@
 - type: entity
   id: Magazine9x19mmPistolHighCapacityPractice
   name: machine pistol magazine (9x19mm practice)
-  parent: BaseMagazine9x19mmPistolHighCapacity
+  parent: BaseMagazine9x19mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmFMJ
@@ -310,7 +310,7 @@
 - type: entity
   id: Magazine9x19mmPistolHighCapacityRubber
   name: machine pistol magazine (9x19mm rubber)
-  parent: BaseMagazine9x19mmPistolHighCapacity
+  parent: BaseMagazine9x19mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmFMJ

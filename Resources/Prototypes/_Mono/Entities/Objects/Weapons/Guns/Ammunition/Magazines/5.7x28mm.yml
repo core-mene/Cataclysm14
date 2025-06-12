@@ -32,14 +32,14 @@
   - type: Appearance
 
 - type: entity
-  id: BaseMagazine5.7x28mmPistolHighCapacity
+  id: BaseMagazine5.7x28mmPistolHighCapacityFMJ
   name: machine pistol magazine (5.7x28mm FMJ)
   parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine5.7x28mmPistolHighCapacity
+      - Magazine5.7x28mmPistolHighCapacityFMJ
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -167,7 +167,7 @@
   id: Magazine5.7x28mmPistolHighCapacityEmpty
   name: machine pistol magazine (5.7x28mm any)
   suffix: empty
-  parent: BaseMagazine5.7x28mmPistolHighCapacity
+  parent: BaseMagazine5.7x28mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -179,9 +179,9 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine5.7x28mmPistolHighCapacity
+  id: Magazine5.7x28mmPistolHighCapacityFMJ
   name: machine pistol magazine (5.7x28mm FMJ)
-  parent: BaseMagazine5.7x28mmPistolHighCapacity
+  parent: BaseMagazine5.7x28mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge5.7x28mmFMJ
@@ -195,7 +195,7 @@
 - type: entity
   id: Magazine5.7x28mmPistolHighCapacityPractice
   name: machine pistol magazine (5.7x28mm practice)
-  parent: BaseMagazine5.7x28mmPistolHighCapacity
+  parent: BaseMagazine5.7x28mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge5.7x28mmFMJ
@@ -310,7 +310,7 @@
 - type: entity
   id: Magazine5.7x28mmPistolHighCapacityRubber
   name: machine pistol magazine (5.7x28mm rubber)
-  parent: BaseMagazine5.7x28mmPistolHighCapacity
+  parent: BaseMagazine5.7x28mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge5.7x28mmFMJ
