@@ -2,7 +2,6 @@
   abstract: true
   parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
   id: BaseAmmoBox14.5x114mm
-  name: ammunition box (14.5x114mm)
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true

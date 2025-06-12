@@ -2,7 +2,6 @@
   abstract: true
   parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
   id: BaseAmmoBox45_ACP
-  name: ammunition box (.45 ACP FMJ)
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true

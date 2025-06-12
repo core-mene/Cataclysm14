@@ -2,7 +2,6 @@
   abstract: true
   parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
   id: BaseAmmoBox9x19mm
-  name: ammunition box (9x19mm FMJ)
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
