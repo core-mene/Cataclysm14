@@ -142,7 +142,7 @@
     - NFServiceStatic # Frontier
   - type: EmagLatheRecipes
     emagStaticPacks:
-    - SecurityAmmoStatic
+    - CivilianAmmoRecipePack
     - MonoRestraintsStatic # Mono
   - type: BlueprintReceiver
     whitelist:
@@ -232,7 +232,7 @@
     # WD EDIT END
   - type: EmagLatheRecipes
     emagDynamicPacks:
-    - SecurityAmmo
+    - AdvancedAmmoRecipePack
     - SecurityExplosives
     - SecurityEquipment
     - SecurityWeapons
@@ -433,13 +433,13 @@
     staticPacks:
     - SecurityEquipmentStatic
     - SecurityPracticeStatic
-    - SecurityAmmoStatic
+    - CivilianAmmoRecipePack
     - SecurityWeaponsStatic
     dynamicPacks:
     - SecurityEquipment
     - SecurityBoards
     - SecurityExplosives
-    - SecurityAmmo
+    - AdvancedAmmoRecipePack
     - SecurityWeapons
     - SecurityDisablers
     - SMCybernetics
@@ -479,7 +479,7 @@
     idleState: icon
     runningState: icon
     staticPacks:
-    - SecurityAmmoStatic
+    - CivilianAmmoRecipePack
   - type: MaterialStorage
     whitelist:
       tags:
