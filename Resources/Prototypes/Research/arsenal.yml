@@ -19,32 +19,43 @@
   - WeaponCrusherGlaive
   - MechEquipmentKineticAccelerator # Goobstation
 
-# Frontier: restricted arsenal research
+#Frontier: restricted arsenal research ;Monolith: readded :)
 
-# - type: technology
-#   id: DraconicMunitions
-#   name: research-technology-draconic-munitions
-#   icon:
-#     sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
-#     state: incendiarydisplay
-#   discipline: Arsenal
-#   tier: 1
-#   cost: 10000
-#   recipeUnlocks:
-#   - Box12GaugeIncendiary
-#   - Magazine5.56x45mmIncendiary
-#   - Magazine9x19mmPistolIncendiary
-#   - Magazine9x19mmSubMachineGunIncendiary
-#   - Magazine7.62x39mmIncendiary
-#   - SpeedLoader45_magnumIncendiary
-#   - MagazineShotgunIncendiary
-#   - AmmoBox9x19mmIncendiary
-#   - AmmoBox45_magnumIncendiary
-#   - AmmoBox7.62x39mmIncendiary
-#   - AmmoBox5.56x45mmIncendiary
-# #   - SpeedLoader5.56x45mmIncendiary # Frontier
-
-# End Frontier: restricted arsenal research
+- type: technology
+  id: DraconicMunitions
+  name: research-technology-draconic-munitions
+  icon:
+    sprite: Structures/Storage/tanks.rsi
+    state: fueltank
+  discipline: Arsenal
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - Magazine45_ACPPistolIncendiary
+  - Magazine45_ACPSubMachineGunIncendiary
+  - AmmoBox45_ACPIncendiary
+  - Magazine9x19mmPistolIncendiary
+  - Magazine9x19mmSubMachineGunIncendiary
+  - SpeedLoader9x19mmIncendiary
+  - AmmoBox9x19mmIncendiary
+  - Magazine5.7x28mmPistolIncendiary
+  - Magazine5.7x28mmSubMachineGunIncendiary
+  - AmmoBox5.7x28mmIncendiary
+  - Magazine4.6x30mmPistolIncendiary
+  - Magazine4.6x30mmSubMachineGunIncendiary
+  - AmmoBox4.6x30mmIncendiary
+  - Magazine45_magnumPistolIncendiary
+  - SpeedLoader45_magnumIncendiary
+  - AmmoBox45_magnumIncendiary
+  - Magazine7.62x39mmIncendiary
+  - AmmoBox7.62x39mmIncendiary
+  - Magazine5.56x45mmIncendiary
+  - SpeedLoader5.56x45mmIncendiary
+  - AmmoBox5.56x45mmIncendiary
+  - Magazine7.62x54mmRIncendiary
+  - AmmoBox7.62x54mmRIncendiary
+  - Magazine7.62x51mmIncendiary
+  - AmmoBox7.62x51mmIncendiary
 
 - type: technology
   id: WeaponizedLaserManipulation
@@ -69,41 +80,46 @@
   tier: 1
   cost: 5000
   recipeUnlocks:
-  - MagazineShotgunBeanbag
-  - Box12GaugeTranquilizer
-  - Box12GaugeBeanbag
   - WeaponDisabler
-  - AmmoBox7.62x39mmRubber # Frontier
-  - AmmoBox45_magnumRubber # Frontier
-  - AmmoBox9x19mmRubber # Frontier
-  - AmmoBox5.56x45mmRubber # Frontier
   - WeaponMechCombatDisabler # Goobstation
 
-# Frontier: restricted arsenal research
+#Frontier: restricted arsenal research ;Monolith: readded :)
 
-# - type: technology
-#   id: UraniumMunitions
-#   name: research-technology-uranium-munitions
-#   icon:
-#     sprite: Objects/Materials/Sheets/other.rsi
-#     state: uranium
-#   discipline: Arsenal
-#   tier: 1
-#   cost: 7500
-#   recipeUnlocks:
-#   - Magazine5.56x45mmUranium
-#   - Magazine9x19mmPistolUranium
-#   - Magazine9x19mmSubMachineGunUranium
-#   - Magazine7.62x39mmUranium
-#   - SpeedLoader45_magnumUranium
-#   - AmmoBox9x19mmUranium
-#   - AmmoBox45_magnumUranium
-#   - AmmoBox7.62x39mmUranium
-#   - AmmoBox5.56x45mmUranium
-#   - Box12GaugeUranium
-# #  - SpeedLoader5.56x45mmUranium # Frontier
-
-# End Frontier: restricted arsenal research
+- type: technology
+  id: UraniumMunitions
+  name: research-technology-uranium-munitions
+  icon:
+    sprite: Objects/Materials/Sheets/other.rsi
+    state: uranium
+  discipline: Arsenal
+  tier: 3
+  cost: 7500
+  recipeUnlocks:
+  - Magazine45_ACPPistolUranium
+  - Magazine45_ACPSubMachineGunUranium
+  - AmmoBox45_ACPUranium
+  - Magazine9x19mmPistolUranium
+  - Magazine9x19mmSubMachineGunUranium
+  - SpeedLoader9x19mmUranium
+  - AmmoBox9x19mmUranium
+  - Magazine5.7x28mmPistolUranium
+  - Magazine5.7x28mmSubMachineGunUranium
+  - AmmoBox5.7x28mmUranium
+  - Magazine4.6x30mmPistolUranium
+  - Magazine4.6x30mmSubMachineGunUranium
+  - AmmoBox4.6x30mmUranium
+  - Magazine45_magnumPistolUranium
+  - SpeedLoader45_magnumUranium
+  - AmmoBox45_magnumUranium
+  - Magazine7.62x39mmUranium
+  - AmmoBox7.62x39mmUranium
+  - Magazine5.56x45mmUranium
+  - SpeedLoader5.56x45mmUranium
+  - AmmoBox5.56x45mmUranium
+  - Magazine7.62x54mmRUranium
+  - AmmoBox7.62x54mmRUranium
+  - Magazine7.62x51mmUranium
+  - AmmoBox7.62x51mmUranium
 
 - type: technology
   id: AdvancedRiotControl

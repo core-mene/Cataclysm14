@@ -134,6 +134,12 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge5.7x28mmIncendiary
+  - type: Sprite
+    layers:
+    - state: red
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
   id: Magazine5.7x28mmPistolPractice
@@ -275,6 +281,12 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge5.7x28mmIncendiary
+  - type: Sprite
+    layers:
+    - state: red
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
   id: Magazine5.7x28mmPistolRubber

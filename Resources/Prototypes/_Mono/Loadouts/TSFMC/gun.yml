@@ -31,18 +31,32 @@
 # the BULLETS
 
 - type: loadout
-  id: TsfmcSmgMagLoadout
+  id: Tsfmc9x19mmSmgMagLoadout
   price: 0
   storage:
     back:
     - BoxMagazine9x19mmSubMachineGunFMJ
 
 - type: loadout
-  id: TsfmcSmgMagEmpLoadout
+  id: Tsfmc9x19mmSmgMagEmpLoadout
   price: 100
   storage:
     back:
     - BoxMagazine9x19mmSubMachineGunEmp
+
+- type: loadout
+  id: Tsfmc45_ACPSmgMagLoadout
+  price: 0
+  storage:
+    back:
+    - BoxMagazine45_ACPSubMachineGunFMJ
+
+- type: loadout
+  id: Tsfmc45_ACPSmgMagEmpLoadout
+  price: 100
+  storage:
+    back:
+    - BoxMagazine45_ACPSubMachineGunEmp
 
 - type: loadout
   id: TsfmcRifleMagLoadout
@@ -59,8 +73,8 @@
     - BoxMagazine9x19mm
 
 - type: loadout
-  id: Tsfmc7.62x39mmMagLoadout
+  id: Tsfmc7.62x51mmMagLoadout
   price: 50
   storage:
     back:
-    - BoxMagazine7.62x39mm
+    - BoxMagazine7.62x51mm

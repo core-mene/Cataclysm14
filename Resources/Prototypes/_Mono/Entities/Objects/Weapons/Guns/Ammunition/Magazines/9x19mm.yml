@@ -134,6 +134,12 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmIncendiary
+  - type: Sprite
+    layers:
+    - state: red
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
   id: Magazine9x19mmPistolPractice
@@ -144,7 +150,7 @@
     proto: Cartridge9x19mmPractice
   - type: Sprite
     layers:
-    - state: practice
+    - state: red
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
@@ -275,6 +281,12 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmIncendiary
+  - type: Sprite
+    layers:
+    - state: red
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
   id: Magazine9x19mmPistolRubber
