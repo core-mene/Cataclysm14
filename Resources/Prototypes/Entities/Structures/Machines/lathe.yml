@@ -480,6 +480,11 @@
     runningState: icon
     staticPacks:
     - CivilianAmmoRecipePack
+    dynamicPacks:
+    - AdvancedAmmoRecipePack
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - AdvancedAmmoRecipePack
   - type: MaterialStorage
     whitelist:
       tags:
