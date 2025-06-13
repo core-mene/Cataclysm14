@@ -158,25 +158,28 @@
 - type: loadoutGroup
   id: MercenaryFirearm
   name: loadout-group-mercenary-weapon
-  minLimit: 1
+  minLimit: 0
   loadouts:
   - MercenaryWt550Loadout
   - MercenaryC20rLoadout
   - MercenaryKammererLoadout
+  - MercenaryEnforcerLoadout
   - MercenaryLecterLoadout
   - MercenaryDrozdLoadout
+  - MercenaryEnergyGunLoadout
+  - MercenaryLaserCarbineLoadout
+  - MercenaryLaserCannonLoadout
+  - MercenaryDisablerSMGLoadout
   fallbacks:
   - MercenaryWt550Loadout
 
 - type: loadoutGroup
   id: MercenaryPistol
   name: loadout-group-mercenary-pistol
-  minLimit: 1
+  minLimit: 0
   loadouts:
-  - MercenaryWt550Loadout
-  - MercenaryC20rLoadout
-  - MercenaryKammererLoadout
-  - MercenaryLecterLoadout
-  - MercenaryDrozdLoadout
+  - MercenaryViperLoadout
+  - MercenaryMk32Loadout
+  - MercenarySawedOffLoadout
   fallbacks:
-  - MercenaryWt550Loadout
+  - MercenaryViperLoadout

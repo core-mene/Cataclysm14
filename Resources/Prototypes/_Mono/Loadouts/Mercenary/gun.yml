@@ -1,5 +1,7 @@
 # the GUNS
 
+#Rifles
+
 - type: loadout
   id: MercenaryDrozdLoadout
   price: 25000
@@ -22,6 +24,13 @@
     - WeaponShotgunKammererPMC
 
 - type: loadout
+  id: MercenaryEnforcerLoadout
+  price: 27000
+  storage:
+    back:
+    - WeaponShotgunEnforcerPMC
+
+- type: loadout
   id: MercenaryC20rLoadout
   price: 44000
   storage:
@@ -36,22 +45,52 @@
     - WeaponSubMachineGunWt550PMC
 
 - type: loadout
-  id: MercenaryWt550Loadout
-  price: 32000
+  id: MercenaryEnergyGunLoadout
+  price: 18000
   storage:
     back:
-    - WeaponSubMachineGunWt550PMC
+    - WeaponEnergyGunPMC
 
 - type: loadout
-  id: MercenaryWt550Loadout
-  price: 32000
+  id: MercenaryLaserCarbineLoadout
+  price: 13000
   storage:
     back:
-    - WeaponSubMachineGunWt550PMC
+    - WeaponLaserCarbinePMC
 
 - type: loadout
-  id: MercenaryWt550Loadout
-  price: 32000
+  id: MercenaryLaserCannonLoadout
+  price: 21000
   storage:
     back:
-    - WeaponSubMachineGunWt550PMC
+    - WeaponLaserCannonPMC
+
+- type: loadout
+  id: MercenaryDisablerSMGLoadout
+  price: 10000
+  storage:
+    back:
+    - WeaponDisablerSMGPMC
+
+#Pistols
+
+- type: loadout
+  id: MercenaryViperLoadout
+  price: 5000
+  storage:
+    back:
+    - WeaponPistolViperPMC
+
+- type: loadout
+  id: MercenaryMk32Loadout
+  price: 2500
+  storage:
+    back:
+    - WeaponPistolMk32
+
+- type: loadout
+  id: MercenarySawedOffLoadout
+  price: 12000
+  storage:
+    back:
+    - WeaponShotgunSawn
