@@ -124,7 +124,7 @@ uplink-pirate-anaconda-name = Anaconda
 uplink-pirate-anaconda-desc = The pride of Cybersun engineers. A handheld, compact, self-recharging ballistic firearm.
 
 uplink-pirate-wspr-name = WSPR
-uplink-pirate-wspr-desc = A counter to the TSFMC's Annie. Uses the same .30 subsonic ammo.
+uplink-pirate-wspr-desc = A counter to the TSFMC's Annie. Uses the same 7.62x39mm subsonic ammo.
 
 uplink-pirate-burner-name = Burner Heavy Rifle
 uplink-pirate-burner-desc = A destructive 12.7x99mm rifle. Supports HE ammo. Horribly destructive.
@@ -152,25 +152,25 @@ uplink-pirate-shell-box-lethal-desc = A box containing 16, 12 gauge shotgun shel
 uplink-pirate-smg-ammo-box-name = Ammunition box (9x19mm FMJ)
 uplink-pirate-smg-ammo-box-desc = A box containing 60 9x19mm pistol catridges. Can be used to load SMG magazines.
 
-uplink-pirate-box-bulldog-ammo-name = Box of .50 pellet drums
-uplink-pirate-box-bulldog-ammo-desc = A box containing 4 .50 pellet shotgun drums.
+uplink-pirate-box-bulldog-ammo-name = Box of 12 gauge buckshot drums
+uplink-pirate-box-bulldog-ammo-desc = A box containing 4 12 gauge buckshot shotgun drums.
 
-uplink-pirate-box-bulldog-slug-ammo-name = Box of .50 slug drums
-uplink-pirate-box-bulldog-slug-ammo-desc = A box containing 4 .50 slug shotgun drums.
+uplink-pirate-box-bulldog-slug-ammo-name = Box of 12 gauge slug drums
+uplink-pirate-box-bulldog-slug-ammo-desc = A box containing 4 12 gauge slug shotgun drums.
 
 uplink-pirate-box-smg-magazine-name = Box of 9x19mm SMG magazines
 uplink-pirate-box-smg-magazine-desc = A box filled with 3 9x19mm smg magazines.
 
-uplink-subsonic-mag-name = .30 subsonic rifle mag
+uplink-subsonic-mag-name = 7.62x39mm subsonic rifle mag
 uplink-subsonic-mag-desc = Supports the WSPR and Annie.
 
-uplink-subsonic-box-name = .30 subsonic rifle box
+uplink-subsonic-box-name = 7.62x39mm subsonic rifle box
 uplink-subsonic-box-desc = A box of ammo for the WSPR and Annie.
 
-uplink-pirate-box-highcal-name = .50 ammunition box
+uplink-pirate-box-highcal-name = 12.7x99mm box
 uplink-pirate-box-highcal-desc = A box of general-purpose ammunition for the Burner heavy rifle.
 
-uplink-pirate-box-highcal-he-name = HE .50 ammunition box
+uplink-pirate-box-highcal-he-name = HE 12.7x99mm box
 uplink-pirate-box-highcal-he-desc = A box of explosive ammunition for the Burner heavy rifle.
 
 uplink-pirate-emp-rocket-name = RPG-7 EMP Rocket
