@@ -51,6 +51,9 @@
       gun_chamber: !type:ContainerSlot
   - type: StaticPrice
     price: 500
+  - type: ItemTax # Mono
+    taxAccounts:
+      nfsd: 0.2
 
 - type: entity
   name: AKMS

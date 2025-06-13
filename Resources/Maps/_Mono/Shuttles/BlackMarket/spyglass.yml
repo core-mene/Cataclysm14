@@ -2525,17 +2525,13 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -8.5,-4.5
       parent: 1
-- proto: GunneryServer
+- proto: GunneryServerLow
   entities:
   - uid: 305
     components:
     - type: Transform
       pos: 4.5,-1.5
       parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5
-    - type: Battery
-      startingCharge: 0
 - proto: GyroscopeSecurity
   entities:
   - uid: 306

@@ -7,6 +7,9 @@ uplink-security-annie-desc = A .30 subsonic weapon, made to shoulder the weight 
 uplink-security-portable-recharger-name = Portable Recharger
 uplink-security-portable-recharger-desc = An experimental portable recharger equipped with an inbuilt microreactor.
 
+uplink-security-cash75000-name = 75,000 Spesos
+uplink-security-cash75000-desc = Cold, hard cash, in bulk.
+
 uplink-security-surgery-duffel-name = Advanced Surgery Kit
 uplink-security-surgery-duffel-desc = A duffel filled with advanced surgery tools, perfect for re-attaching some heads.
 

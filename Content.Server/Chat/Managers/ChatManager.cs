@@ -204,12 +204,12 @@ internal sealed partial class ChatManager : IChatManager
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Hook admin from {sender}: {message}");
     }
 
-    public void SendHookAhelp(NetUserId userId, string sender, string message)
+    public void SendHookAhelp(NetUserId userId, string sender, string message, bool adminOnly = false)
     {
         // Send the ahelp message to the BwoinkSystem to handle it properly
         var bwoinkSystem = _entityManager.System<BwoinkSystem>();
         bwoinkSystem.OnWebhookBwoinkTextMessage(
-            new SharedBwoinkSystem.BwoinkTextMessage(userId, SharedBwoinkSystem.SystemUserId, message),
+            new SharedBwoinkSystem.BwoinkTextMessage(userId, SharedBwoinkSystem.SystemUserId, message, adminOnly: adminOnly),
             new ServerApi.BwoinkActionBody
             {
                 Text = message,

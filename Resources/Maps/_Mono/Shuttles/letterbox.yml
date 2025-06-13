@@ -166,8 +166,6 @@ entities:
       pos: 1.5,-2.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2
 - proto: AlwaysPoweredLightExterior
@@ -527,8 +525,6 @@ entities:
       pos: 1.5,-1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2
 - proto: GasVentScrubber
@@ -540,8 +536,6 @@ entities:
       pos: -0.5,0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2
 - proto: GravityGeneratorMini

@@ -277,11 +277,13 @@
   name: research-technology-rapid-construction
   icon:
     sprite: _NF/Objects/Tools/rcd.rsi
-    state: icon-shipyard # Frontier
+    state: icon # Mono
   discipline: Industrial
   tier: 2
   cost: 10000
   recipeUnlocks:
-  - ShipyardRCD # Frontier
-  - ShipyardRCDAmmo # Frontier
-  - NFBlueprintShipyardRCDAmmo # Frontier
+#  - ShipyardRCD # Frontier
+#  - ShipyardRCDAmmo # Frontier
+  - RCD
+  - RCDAmmo
+  - NFBlueprintRCDAmmo

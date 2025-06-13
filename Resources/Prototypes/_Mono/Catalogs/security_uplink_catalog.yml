@@ -66,6 +66,22 @@
       - SecurityUplink
 
 - type: listing
+  id: UplinkSecurityCash75000
+  name: uplink-security-cash75000-name
+  description: uplink-security-cash75000-desc
+  productEntity: SpaceCash75000
+  icon: { sprite: _NF/Objects/Economy/cash.rsi, state: cash_100000 }
+  cost:
+    FederationMilitaryCredit: 10
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
   id: UplinkSecurityMagazineSubsonic
   name:  uplink-subsonic-mag-name
   description: uplink-subsonic-mag-desc
@@ -94,6 +110,22 @@
     whitelist:
       tags:
       - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityNavyOfficerSword
+  name:  uplink-security-navyofficersword-name
+  description: uplink-security-navyofficersword-desc
+  productEntity: ClothingBeltSheathFilledNavy
+  icon: { sprite: _Mono/Objects/Weapons/Melee/ccsabre.rsi, state: icon }
+  cost:
+    FederationMilitaryCredit: 2 #From 10 to 2
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
 
 # - type: listing
 #   id: UplinkSecurityAuroraExosuit

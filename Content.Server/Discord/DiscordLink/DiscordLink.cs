@@ -288,7 +288,7 @@ public sealed class DiscordLink : IPostInjectInit
         try
         {
             // Build thread title with Round ID and character name
-            var titleParts = new List<string> { "Ahelp" };
+            var titleParts = new List<string>();
 
             if (roundId.HasValue)
                 titleParts.Add($"R{roundId.Value}");

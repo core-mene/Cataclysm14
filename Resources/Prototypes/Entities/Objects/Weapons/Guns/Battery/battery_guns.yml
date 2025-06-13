@@ -31,6 +31,9 @@
   - type: SurgeryTool # Shitmed
     endSound:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+  - type: ItemTax # Mono
+    taxAccounts:
+      nfsd: 0.3
 
 - type: entity
   id: BaseWeaponPowerCell

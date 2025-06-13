@@ -35,7 +35,7 @@
       BlackMarket:
         !type:SectorBankAccountInfo
         balance: 0
-        increasePerSecond: 0 # black market scam zone, not originally intended to be used properly
+        increasePerSecond: 1 # black market scam zone, not originally intended to be used properly - Note, don't set to 0, it'll cause annoying spam info messages
 # mono edit end
 
  # A global source of character records (DNA, fingerprints, criminal records, etc.)

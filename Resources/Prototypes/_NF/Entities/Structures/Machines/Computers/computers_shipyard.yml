@@ -132,7 +132,7 @@
     shipyardChannel: Syndicate
     secretShipyardChannel: Nfsd
     taxAccounts:
-      Invalid: 0.30
+      BlackMarket: 0.1 # 0.3->0.1, made BM Mono
     ignoreBaseSaleRate: true # Fixed 70% sale rate.
     canTransferDeed: false
 
@@ -163,7 +163,7 @@
     shipyardChannel: Freelance
     secretShipyardChannel: Nfsd
     taxAccounts:
-      Invalid: 0.30
+      BlackMarket: 0.30 # Made BM - Mono
     ignoreBaseSaleRate: true # Fixed 70% sale rate.
     canTransferDeed: false
 

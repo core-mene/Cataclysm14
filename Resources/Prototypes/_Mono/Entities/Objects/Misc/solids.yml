@@ -43,3 +43,8 @@
         acts: [ "Destruction" ]
   - type: PirateBountyItem
     id: FentanylCrystal
+  - type: ItemTax # Mono
+    taxAccounts:
+      Medical: -0.05
+      nfsd: -0.1
+      BlackMarket: 0.25

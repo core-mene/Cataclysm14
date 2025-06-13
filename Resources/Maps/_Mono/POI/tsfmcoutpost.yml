@@ -5139,17 +5139,13 @@ entities:
     - type: Transform
       pos: 9.5,-15.5
       parent: 1
-- proto: GunneryServer
+- proto: GunneryServerStation
   entities:
   - uid: 298
     components:
     - type: Transform
       pos: 1.5,-15.5
       parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5
-    - type: Battery
-      startingCharge: 0
 - proto: GunSafeBaseSecure
   entities:
   - uid: 344

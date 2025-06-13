@@ -27,8 +27,8 @@
     MailWinterCoat: 0.3
     MailCosplayArc: 0.3
     MailCosplayGeisha: 0.3
-    MailNFCosplayMaid: 0.20
-    MailNFTacticalMaid: 0.10 # Shares a pool with NFCosplayMaid as a rare variant
+    MailNFCosplayMaid: 0.4
+    MailNFTacticalMaid: 0.5 # Shares a pool with NFCosplayMaid as a rare variant
     MailNFCosplayNurse: 0.3
     MailCosplaySchoolgirl: 0.3
     MailNFCosplayWizard: 0.6
@@ -64,8 +64,9 @@
     MailNFCircuitboardIndustrial: 1.25
     MailNFCircuitboardService: 1.25
     MailNFCognizine: 0.5
-    MailNFMedkit: 0.5
-    MailNFIFFBoard: 0.25
+    MailNFMedkit: 1
+    MailNFIFFBoard: 0.5
+    MailMonoRCD: 0.5
     MailNFMoney: 1
     MailNFNecrosol: 0.5
     MailNFOmnizine: 0.5
@@ -74,7 +75,7 @@
     MailNFPowerTool: 0.6
     MailNFT2ComponentBox: 0.6
     MailNFT3ComponentBox: 1.2
-    MailNFT4ComponentBox: 0.2
+    MailNFT4ComponentBox: 0.4
     # Weapons
     MailNFBoxer: 0.2
     MailNFConscript: 0.2
@@ -82,11 +83,15 @@
     MailNFKendoKit: 0.2
     MailNFKnife: 0.7
     MailNFSword: 0.3
+    MailMonoC20r: 0.2
+    MailMonoAK: 0.2
+    MailMonoC4: 0.3
+    MailMonoDesword: 0.005
     # Pranks
     MailNFBuildABuddy: 0.5
     MailNFCritter: 1
     MailNFEMP: 0.5
-    MailRestraints: 0.5 # TODO: figure out what to do with this.
+    MailRestraints: 1 # TODO: figure out what to do with this.
     MailNFSmoke: 0.5
     MailNFVagueThreat: 0.4
 
@@ -96,10 +101,10 @@
     Security:
       MailSecurityDonuts: 3
       MailSecurityNonlethalsKit: 2
-      MailSecurityNFHudNfsdMed: 1
+      MailSecurityNFHudNfsdMed: 1.25
       MailSecurityNFSpaceLaw: 1
       MailSecurityNFMusket: 1
-      MailNFMedkit: 0.5 # 1 weight total
+      MailNFMedkit: 1 # 2 weight total
 
   jobs:
     StationRepresentative:
@@ -119,3 +124,6 @@
       MailCommandNFStationPet: 2 # Don't see the harm in this with Smile and Cappy around
       MailCommandNFPipebombIntern: 1 # TODO: make the "real" pipebomb
       MailCommandNFWristwatchGold: 0.5
+    MailCarrier:
+      MailMonoERTMailKit: 1
+      MailNFMoney: 3

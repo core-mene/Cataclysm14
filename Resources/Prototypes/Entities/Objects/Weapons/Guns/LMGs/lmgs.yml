@@ -65,6 +65,9 @@
     price: 500
   - type: UseDelay
     delay: 1
+  - type: ItemTax # Mono
+    taxAccounts:
+      nfsd: 0.2
 
 - type: entity
   name: L6 SAW

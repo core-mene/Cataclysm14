@@ -695,12 +695,21 @@ namespace Content.Server.GameTicking
                 // Get the NFAdventureRuleSystem to access profit data
                 var adventureSystem = EntityManager.System<NFAdventureRuleSystem>();
 
+                // Use HashSets to track unique entries to avoid duplicates
+                var seenManifestEntries = new HashSet<string>();
+                var seenProfitEntries = new HashSet<string>();
+
                 foreach (var player in sortedPlayers)
                 {
                     // Use localization to get the proper job name instead of the key
                     var roleName = Loc.GetString(player.Role);
                     var playerLine = "- " + player.PlayerOOCName + " was " + player.PlayerICName + " playing role of " + roleName + ".";
-                    manifestLines.Add(playerLine);
+
+                    // Only add manifest line if we haven't seen this exact entry before
+                    if (seenManifestEntries.Add(playerLine))
+                    {
+                        manifestLines.Add(playerLine);
+                    }
 
                     // Try to get profit information for this player
                     if (player.PlayerGuid != null && !string.IsNullOrEmpty(player.PlayerICName))
@@ -708,14 +717,18 @@ namespace Content.Server.GameTicking
                         var profitInfo = adventureSystem.GetPlayerProfitInfo(player.PlayerGuid.Value, player.PlayerICName);
                         if (profitInfo != null)
                         {
-                            profitLines.Add(profitInfo);
+                            // Only add profit info if we haven't seen this exact entry before
+                            if (seenProfitEntries.Add(profitInfo))
+                            {
+                                profitLines.Add(profitInfo);
+                            }
                         }
                     }
                 }
 
                 // Prepare base embed content
                 var title = "Round End Summary";
-                var description = "Round **" + RoundId + "** has ended with **" + sortedPlayers.Count + "** total characters involved.";
+                var description = "Round **" + RoundId + "** has ended with **" + manifestLines.Count + "** total characters involved.";
                 var footerText = serverName + " - Round " + RoundId;
 
                 // Calculate base embed character count (title + description + footer)

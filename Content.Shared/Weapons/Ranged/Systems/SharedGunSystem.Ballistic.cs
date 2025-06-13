@@ -96,7 +96,7 @@ public abstract partial class SharedGunSystem
             // Continuous loading
             _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, fillDelay, new AmmoFillDoAfterEvent(), used: uid, target: args.Target, eventTarget: uid) // Frontier: component.FillDelay<fillDelay
             {
-                BreakOnMove = true,
+                // BreakOnMove = true, // Goobstation - no
                 BreakOnDamage = false,
                 NeedHand = true
             });
@@ -298,6 +298,7 @@ public abstract partial class SharedGunSystem
                 DirtyField(uid, component, nameof(BallisticAmmoProviderComponent.UnspawnedCount));
                 entity = Spawn(component.Proto, args.Coordinates);
                 args.Ammo.Add((entity, EnsureShootable(entity)));
+
             }
         }
 

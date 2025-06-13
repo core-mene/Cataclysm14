@@ -413,8 +413,6 @@ entities:
       pos: -2.5,5.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7
   - uid: 20
@@ -2449,17 +2447,13 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 0.5,13.5
       parent: 1
-- proto: GunneryServer
+- proto: GunneryServerLow
   entities:
   - uid: 340
     components:
     - type: Transform
       pos: -1.5,2.5
       parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5
-    - type: Battery
-      startingCharge: 0
 - proto: Gyroscope
   entities:
   - uid: 341

@@ -2498,17 +2498,13 @@ entities:
     - type: Transform
       pos: -10.5,5.5
       parent: 1
-- proto: GunneryServer
+- proto: GunneryServerMedium
   entities:
   - uid: 331
     components:
     - type: Transform
       pos: -3.5,9.5
       parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5
-    - type: Battery
-      startingCharge: 0
 - proto: GyroscopeNfsd
   entities:
   - uid: 332

@@ -12,11 +12,18 @@ using Content.Server._NF.Cargo.Components; // Frontier
 using Content.Shared._NF.Bank.Components; // Frontier
 using Content.Shared.Mobs;
 using Robust.Shared.Containers; // Frontier
+using Content.Shared._Mono.ItemTax.Components; // Mono
+using Content.Server._NF.Bank; // Mono
+using Content.Shared._NF.Bank.BUI;
+using Robust.Shared.Toolshed.Commands.Math; // Mono
+
 
 namespace Content.Server.Cargo.Systems;
 
 public sealed partial class CargoSystem
 {
+    [Dependency] BankSystem _bank = default!; // Mono
+
     /*
      * Handles cargo shuttle / trade mechanics.
      */
@@ -71,7 +78,7 @@ public sealed partial class CargoSystem
             return;
         }
         // Frontier: per-object market modification
-        GetPalletGoods(uid, gridUid, out var toSell, out var amount, out var noModAmount);
+        GetPalletGoods(uid, gridUid, out var toSell, out var amount, out var noModAmount, out var blackMarketTaxAmount, out var frontierTaxAmount, out var nfsdTaxAmount, out var medicalTaxAmount);
         if (TryComp<MarketModifierComponent>(uid, out var priceMod))
         {
             amount *= priceMod.Mod;
@@ -79,7 +86,7 @@ public sealed partial class CargoSystem
         amount += noModAmount;
         // End Frontier
         _uiSystem.SetUiState(uid.Owner, CargoPalletConsoleUiKey.Sale, // Frontier: uid<uid.Owner
-            new CargoPalletConsoleInterfaceState((int) amount, toSell.Count, true));
+            new CargoPalletConsoleInterfaceState((int)amount, toSell.Count, true));
     }
 
     private void OnPalletUIOpen(EntityUid uid, CargoPalletConsoleComponent component, BoundUIOpenedEvent args)
@@ -265,11 +272,11 @@ public sealed partial class CargoSystem
 
     #region Station
 
-    private bool SellPallets(Entity<CargoPalletConsoleComponent> consoleUid, EntityUid gridUid, out double amount, out double noMultiplierAmount) // Frontier: first arg to Entity, add noMultiplierAmount
+    private bool SellPallets(Entity<CargoPalletConsoleComponent> consoleUid, EntityUid gridUid, out double amount, out double noMultiplierAmount, out double blackMarketTaxAmount, out double frontierTaxAmount, out double nfsdTaxAmount, out double medicalTaxAmount) // Frontier: first arg to Entity, add noMultiplierAmount
     {
-        GetPalletGoods(consoleUid, gridUid, out var toSell, out amount, out noMultiplierAmount); // Frontier: add noMultiplierAmount
+        GetPalletGoods(consoleUid, gridUid, out var toSell, out amount, out noMultiplierAmount, out blackMarketTaxAmount, out frontierTaxAmount, out nfsdTaxAmount, out medicalTaxAmount); // Frontier: add noMultiplierAmount
 
-        Log.Debug($"Cargo sold {toSell.Count} entities for {amount} (plus {noMultiplierAmount} without mods)"); // Frontier: add section in parentheses
+        Log.Debug($"Cargo sold {toSell.Count} entities for {amount} (plus {noMultiplierAmount} without mods). (Taxes: Black Market: {blackMarketTaxAmount}, CO: {frontierTaxAmount}, TSFMC: {nfsdTaxAmount}, MD: {medicalTaxAmount})"); // Frontier: add section in parentheses
 
         if (toSell.Count == 0)
             return false;
@@ -320,10 +327,14 @@ public sealed partial class CargoSystem
         }
     }
 
-    private void GetPalletGoods(Entity<CargoPalletConsoleComponent> consoleUid, EntityUid gridUid, out HashSet<EntityUid> toSell, out double amount, out double noMultiplierAmount) // Frontier: first arg to Entity, add noMultiplierAmount
+    private void GetPalletGoods(Entity<CargoPalletConsoleComponent> consoleUid, EntityUid gridUid, out HashSet<EntityUid> toSell, out double amount, out double noMultiplierAmount, out double blackMarketTaxAmount, out double frontierTaxAmount, out double nfsdTaxAmount, out double medicalTaxAmount) // Frontier: first arg to Entity, add noMultiplierAmount
     {
         amount = 0;
         noMultiplierAmount = 0;
+        blackMarketTaxAmount = 0;
+        frontierTaxAmount = 0;
+        nfsdTaxAmount = 0;
+        medicalTaxAmount = 0;
         toSell = new HashSet<EntityUid>();
 
         foreach (var (palletUid, _, _) in GetCargoPallets(consoleUid, gridUid, BuySellType.Sell))
@@ -367,6 +378,31 @@ public sealed partial class CargoSystem
                 else
                     amount += price;
                 // End Frontier: check for items that are immune to market modifiers
+                // Mono: ItemTaxs to budgets.
+                if (TryComp<ItemTaxComponent>(ent, out var itemTax))
+                {
+                    foreach (var (account, taxCoeff) in itemTax.TaxAccounts)
+                    {
+                        switch (account)
+                        {
+                            case SectorBankAccount.BlackMarket:
+                                blackMarketTaxAmount += price * taxCoeff;
+                                break;
+                            case SectorBankAccount.Frontier:
+                                frontierTaxAmount += price * taxCoeff;
+                                break;
+                            case SectorBankAccount.Nfsd:
+                                nfsdTaxAmount += price * taxCoeff;
+                                break;
+                            case SectorBankAccount.Medical:
+                                medicalTaxAmount += price * taxCoeff;
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+                // End Mono
             }
         }
     }
@@ -409,7 +445,7 @@ public sealed partial class CargoSystem
             return;
         }
 
-        if (!SellPallets((uid, component), gridUid, out var price, out var noMultiplierPrice)) // Frontier: convert first arg to Entity, add noMultiplierPrice
+        if (!SellPallets((uid, component), gridUid, out var price, out var noMultiplierPrice, out var blackMarketTaxAmount, out var frontierTaxAmount, out var nfsdTaxAmount, out var medicalTaxAmount)) // Frontier: convert first arg to Entity, add noMultiplierPrice
             return;
 
         // Frontier: market modifiers & immune objects
@@ -419,8 +455,38 @@ public sealed partial class CargoSystem
         }
         price += noMultiplierPrice;
         // End Frontier: market modifiers & immune objects
+        // Mono Begin
+        if (blackMarketTaxAmount > 0)
+            _bank.TrySectorDeposit(SectorBankAccount.BlackMarket, (int)blackMarketTaxAmount, LedgerEntryType.BlackMarketSales);
+        if (frontierTaxAmount > 0)
+            _bank.TrySectorDeposit(SectorBankAccount.Frontier, (int)frontierTaxAmount, LedgerEntryType.ColonialOutpostSales);
+        if (nfsdTaxAmount > 0)
+            _bank.TrySectorDeposit(SectorBankAccount.Nfsd, (int)nfsdTaxAmount, LedgerEntryType.TSFMCSales);
+        if (medicalTaxAmount > 0)
+            _bank.TrySectorDeposit(SectorBankAccount.Medical, (int)medicalTaxAmount, LedgerEntryType.MedicalSales);
+        if (blackMarketTaxAmount < 0)
+        {
+            blackMarketTaxAmount = -blackMarketTaxAmount;
+            _bank.TrySectorWithdraw(SectorBankAccount.BlackMarket, (int)blackMarketTaxAmount, LedgerEntryType.BlackMarketPenalties);
+        }
+        if (frontierTaxAmount < 0)
+        {
+            frontierTaxAmount = -frontierTaxAmount;
+            _bank.TrySectorWithdraw(SectorBankAccount.Frontier, (int)frontierTaxAmount, LedgerEntryType.ColonialOutpostPenalties);
+        }
+        if (nfsdTaxAmount < 0)
+        {
+            nfsdTaxAmount = -nfsdTaxAmount;
+            _bank.TrySectorWithdraw(SectorBankAccount.Nfsd, (int)nfsdTaxAmount, LedgerEntryType.TSFMCPenalties);
+        }
+        if (medicalTaxAmount < 0)
+        {
+            medicalTaxAmount = -medicalTaxAmount;
+            _bank.TrySectorWithdraw(SectorBankAccount.Medical, (int)medicalTaxAmount, LedgerEntryType.MedicalPenalties);
+        }
+        // Mono End
         var stackPrototype = _protoMan.Index<StackPrototype>(component.CashType);
-        _stack.Spawn((int) price, stackPrototype, xform.Coordinates);
+        _stack.Spawn((int)price, stackPrototype, xform.Coordinates);
         _audio.PlayPvs(ApproveSound, uid);
         UpdatePalletConsoleInterface((uid, component)); // Frontier: EntityUid<Entity
     }

@@ -1,6 +1,7 @@
 using Content.Server.Nutrition.Components;
 using Content.Server.Shuttles.Components;
 using Content.Shared._Mono.CCVar;
+using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Light.Components;
 using Content.Shared.Nutrition.Components;
@@ -11,7 +12,7 @@ using Robust.Shared.Timing;
 namespace Content.Server._Mono;
 
 /// <summary>
-///     Deletes all entities with SpaceGarbageComponent every second.
+///     Deletes all entities with SpaceGarbageComponent.
 /// </summary>
 public sealed class SpaceGarbageCleanupSystem : EntitySystem
 {
@@ -40,7 +41,7 @@ public sealed class SpaceGarbageCleanupSystem : EntitySystem
         var query = EntityQueryEnumerator<SpaceGarbageComponent>();
         while (query.MoveNext(out var uid, out _))
         {
-            // Skip deletion if the entity is inside a container (like inside a gun)
+            // Skip deletion if the entity is inside a container.
             if (_container.IsEntityInContainer(uid))
                 continue;
 
@@ -48,8 +49,16 @@ public sealed class SpaceGarbageCleanupSystem : EntitySystem
             if (HasComp<LightBulbComponent>(uid))
                 continue;
 
-            // Skip deletion if the entity has a Food component
+            // Skip deletion if the entity has a Food component. Protect my pizzas!
             if (HasComp<FoodComponent>(uid))
+                continue;
+
+            // Skip deletion if the entity has a Utensil component. Protect my sporks!
+            if (HasComp<UtensilComponent>(uid))
+                continue;
+
+            // Skip deletion if the entity has a Hypospray component. Protect my medipens!
+            if (HasComp<HyposprayComponent>(uid))
                 continue;
 
             // For drinks, only skip deletion if they have solution (are not empty)

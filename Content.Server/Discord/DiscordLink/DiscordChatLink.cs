@@ -109,6 +109,16 @@ public sealed class DiscordChatLink : IPostInjectInit
             var userId = _ahelpThreads.FirstOrDefault(x => x.Value == message.Channel.Id).Key;
             if (userId != default)
             {
+                // Check for "ao:" prefix to determine if message should be admin-only
+                var adminOnly = false;
+                var processedContents = contents;
+                
+                if (contents.StartsWith("ao:", StringComparison.OrdinalIgnoreCase))
+                {
+                    adminOnly = true;
+                    processedContents = contents[3..].TrimStart(); // Remove "ao:" prefix and trim whitespace
+                }
+
                 // Get Discord user info for better formatting
                 _ = Task.Run(async () =>
                 {
@@ -117,7 +127,7 @@ public sealed class DiscordChatLink : IPostInjectInit
                     // Format the author name with role and color
                     var formattedAuthor = FormatDiscordAuthor(displayName, roleTitle, roleColor);
 
-                    _taskManager.RunOnMainThread(() => _chatManager.SendHookAhelp(userId, formattedAuthor, contents));
+                    _taskManager.RunOnMainThread(() => _chatManager.SendHookAhelp(userId, formattedAuthor, processedContents, adminOnly));
                 });
             }
         }

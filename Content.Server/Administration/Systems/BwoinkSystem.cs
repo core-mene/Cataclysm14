@@ -741,7 +741,7 @@ namespace Content.Server.Administration.Systems
                 bwoinkText = $"{senderName}";
             }
 
-            bwoinkText = $"{(fromWebhook ? Loc.GetString("bwoink-message-discord") : "")}{(message.AdminOnly ? Loc.GetString("bwoink-message-admin-only") : !message.PlaySound ? Loc.GetString("bwoink-message-silent") : "")} {bwoinkText}: {escapedText}";
+            bwoinkText = $"{(fromWebhook ? Loc.GetString("bwoink-message-discord") : "")}{(message.AdminOnly ? " " + Loc.GetString("bwoink-message-admin-only") : !message.PlaySound ? " " + Loc.GetString("bwoink-message-silent") : "")} {bwoinkText}: {escapedText}";
 
             var senderAHelpAdmin = senderAdmin?.HasFlag(AdminFlags.Adminhelp) ?? false;
             // If it's not an admin / admin chooses to keep the sound and message is not an admin only message, then play it.

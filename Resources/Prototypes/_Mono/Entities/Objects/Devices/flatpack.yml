@@ -74,3 +74,14 @@
     entity: MachineFTLDrive25S
   - type: StaticPrice
     price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: MassMediaFlatpack
+  name: news manager console flatpack
+  description: A flatpack used for constructing a news manager console.
+  components:
+  - type: Flatpack
+    entity: ComputerMassMedia
+  - type: StaticPrice
+    price: 500

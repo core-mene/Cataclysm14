@@ -106,7 +106,7 @@
   - type: WiresVisuals
   # Frontier: vending machine modifications
   - type: MarketModifier
-    mod: 10
+    mod: 8 # 10->8 Mono
   - type: PotentialDeadDrop
     hintText: dead-drop-hint-vendor
   - type: VendingMachine
@@ -899,7 +899,7 @@
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: MarketModifier # Frontier
-    mod: 5 # Frontier
+    mod: 3.5 # 5->3.5 Mono
   - type: PointLight
     radius: 1.5
     energy: 1.6

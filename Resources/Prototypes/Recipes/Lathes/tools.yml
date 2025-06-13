@@ -114,22 +114,22 @@
     Steel: 600
     Plastic: 200
 
-- type: latheRecipe
-  parent: BaseToolRecipe
-  id: RCD
-  result: RCDEmpty
-  completetime: 4
-  materials:
-    Steel: 1000
-    Plastic: 300
+#- type: latheRecipe
+#  parent: BaseToolRecipe
+#  id: RCD
+#  result: RCDEmpty
+#  completetime: 4
+#  materials:
+#    Steel: 1000
+#    Plastic: 300
 
-- type: latheRecipe
-  parent: BaseToolRecipe
-  id: RCDAmmo
-  result: RCDAmmo
-  materials:
-    Steel: 500
-    Plastic: 250
+#- type: latheRecipe
+#  parent: BaseToolRecipe
+#  id: RCDAmmo
+#  result: RCDAmmo
+#  materials:
+#    Steel: 500
+#    Plastic: 250
 
 - type: latheRecipe
   parent: BaseBigToolRecipe

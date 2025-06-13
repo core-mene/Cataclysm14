@@ -62,7 +62,7 @@ public sealed partial class BankSystem : SharedBankSystem
     {
         if (amount <= 0)
         {
-            _log.Info($"TryBankWithdraw: {amount} is invalid");
+            _log.Info($"TryBankWithdraw: {amount} is invalid from Uid {mobUid}");
             return false;
         }
 
@@ -110,7 +110,7 @@ public sealed partial class BankSystem : SharedBankSystem
     {
         if (amount <= 0)
         {
-            _log.Info($"TryBankDeposit: {amount} is invalid");
+            _log.Info($"TryBankDeposit: {amount} is invalid from Uid {mobUid}");
             return false;
         }
 
@@ -164,7 +164,7 @@ public sealed partial class BankSystem : SharedBankSystem
         newBalance = null; // Default return
         if (amount <= 0)
         {
-            _log.Info($"TryBankWithdraw: {amount} is invalid");
+            _log.Info($"TryBankWithdraw: {amount} is invalid. Admin remove money variation.");
             return false;
         }
 
@@ -207,7 +207,7 @@ public sealed partial class BankSystem : SharedBankSystem
         newBalance = null; // Default return
         if (amount <= 0)
         {
-            _log.Info($"TryBankDeposit: {amount} is invalid");
+            _log.Info($"TryBankDeposit: {amount} is invalid. Admin add money variation.");
             return false;
         }
 

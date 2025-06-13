@@ -484,7 +484,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             foreach (var (account, taxCoeff) in component.TaxAccounts)
             {
                 var tax = CalculateSalesTax(originalBill, taxCoeff);
-                _bank.TrySectorDeposit(account, tax, LedgerEntryType.BlackMarketShipyardTax);
+                _bank.TrySectorDeposit(account, tax, LedgerEntryType.ShipyardTax); // BlackMarketShipyardTax->ShipyardTAx
                 bill -= tax;
             }
             bill = int.Max(0, bill);
@@ -524,11 +524,11 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     {
         if (!TryComp<ShipyardUnassignCooldownComponent>(player, out var cooldown))
             return null;
-            
+
         var currentTime = _timing.CurTime;
         if (currentTime >= cooldown.NextUnassignTime)
             return null;
-            
+
         return cooldown.NextUnassignTime - currentTime;
     }
 
@@ -1036,14 +1036,14 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         // Check if the player is on cooldown
         var cooldown = EnsureComp<ShipyardUnassignCooldownComponent>(player);
         var currentTime = _timing.CurTime;
-        
+
         if (currentTime < cooldown.NextUnassignTime)
         {
             // Calculate remaining time
             var timeRemaining = cooldown.NextUnassignTime - currentTime;
             var hoursRemaining = (int)timeRemaining.TotalHours;
             var minutesRemaining = (int)timeRemaining.TotalMinutes % 60;
-            
+
             // Display cooldown message
             var cooldownMessage = Loc.GetString(
                 "shipyard-console-unassign-cooldown",
@@ -1057,25 +1057,25 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
         // Get the name of the ship before we remove the component
         var shipName = GetFullName(deed);
-        
+
         // Remove the deed component from the ID card
         RemComp<ShuttleDeedComponent>(targetId);
-        
+
         // Set the cooldown
         cooldown.NextUnassignTime = currentTime + cooldown.CooldownDuration;
-        
+
         ConsolePopup(player, Loc.GetString("shipyard-console-deed-unassigned"));
         PlayConfirmSound(player, uid, component);
-        
+
         // Get the player's balance or use 0 if they don't have a bank account
         int balance = 0;
         if (TryComp<BankAccountComponent>(player, out var bank))
             balance = bank.Balance;
-        
+
         // Update the UI
         RefreshState(uid, balance, true, null, 0, targetId, (ShipyardConsoleUiKey)args.UiKey, false);
-        
-        _adminLogger.Add(LogType.ShipYardUsage, LogImpact.Low, 
+
+        _adminLogger.Add(LogType.ShipYardUsage, LogImpact.Low,
             $"{ToPrettyString(player):actor} unassigned deed for ship '{shipName}' from {ToPrettyString(targetId)} via {ToPrettyString(uid)}");
     }
 }

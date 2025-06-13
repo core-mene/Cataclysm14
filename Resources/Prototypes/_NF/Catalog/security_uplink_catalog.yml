@@ -873,22 +873,22 @@
       whitelist:
         tags:
           - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityCaptainSword
-  name:  uplink-security-captainsword-name
-  description: uplink-security-captainsword-desc
-  productEntity: ClothingBeltSheathFilled
-  icon: { sprite: Objects/Weapons/Melee/captain_sabre.rsi, state: icon }
-  cost:
-    FederationMilitaryCredit: 2 #From 10 to 2
-  categories:
-    - UplinkSecurityWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
+# Mono
+#- type: listing
+#  id: UplinkSecurityCaptainSword
+#  name:  uplink-security-captainsword-name
+#  description: uplink-security-captainsword-desc
+#  productEntity: ClothingBeltSheathFilled
+#  icon: { sprite: Objects/Weapons/Melee/captain_sabre.rsi, state: icon }
+#  cost:
+#    FederationMilitaryCredit: 2 #From 10 to 2
+#  categories:
+#    - UplinkSecurityWeapons
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
 
 - type: listing
   id: UplinkSecurityPulsePistol

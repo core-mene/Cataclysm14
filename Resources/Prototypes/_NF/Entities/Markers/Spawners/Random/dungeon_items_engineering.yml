@@ -105,11 +105,12 @@
     chance: 0.95
     offset: 0.0
     rarePrototypes:
-    #- RCD
-    - ShipyardRCD
-    - ShipyardRCDAmmo
+    - RCD # Mono revert
+    - RCDAmmo # Mono
+#    - ShipyardRCD
+#    - ShipyardRCDAmmo
     - SyndicateJawsOfLife
-    rareChance: 0.01
+    rareChance: 0.03 # 0.01->0.03 Mono
 
 - type: entity
   name: random toolbox

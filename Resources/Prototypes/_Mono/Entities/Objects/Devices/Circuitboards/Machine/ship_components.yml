@@ -41,15 +41,83 @@
       Uranium: 30
 
 - type: entity
-  id: MachineGCSCircuitboard
+  id: MachineGCSLowCircuitboard
   parent: BaseMachineCircuitboard
-  name: gunnery control server board
+  name: low-power gunnery control server board
   description: A machine board for a GCS.
   components:
   - type: Sprite
     state: security
   - type: MachineBoard
-    prototype: GunneryServer
+    prototype: GunneryServerLow
+    requirements:
+      Capacitor: 2
+      Manipulator: 2
+    stackRequirements:
+      Glass: 10
+      Steel: 10
+
+- type: entity
+  id: MachineGCSMediumCircuitboard
+  parent: BaseMachineCircuitboard
+  name: medium-power gunnery control server board
+  description: A machine board for a GCS.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: GunneryServerMedium
+    requirements:
+      Capacitor: 2
+      Manipulator: 2
+    stackRequirements:
+      Glass: 10
+      Steel: 10
+
+- type: entity
+  id: MachineGCSHighCircuitboard
+  parent: BaseMachineCircuitboard
+  name: high-power gunnery control server board
+  description: A machine board for a GCS.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: GunneryServerHigh
+    requirements:
+      Capacitor: 2
+      Manipulator: 2
+    stackRequirements:
+      Glass: 10
+      Steel: 10
+
+- type: entity
+  id: MachineGCSUltraCircuitboard
+  parent: BaseMachineCircuitboard
+  name: ultra-high-power gunnery control server board
+  description: A machine board for a GCS.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: GunneryServerUltra
+    requirements:
+      Capacitor: 2
+      Manipulator: 2
+    stackRequirements:
+      Glass: 10
+      Steel: 10
+
+- type: entity
+  id: MachineGCSStationCircuitboard
+  parent: BaseMachineCircuitboard
+  name: station gunnery control server board
+  description: A machine board for a GCS.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: GunneryServerStation
     requirements:
       Capacitor: 2
       Manipulator: 2

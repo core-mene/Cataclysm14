@@ -275,7 +275,16 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             // Frontier: do not re-equip roleLoadout, make sure we equip job startingGear,
             // and deduct loadout costs from a bank account if we have one.
             if (prototype?.StartingGear is not null)
+            {
                 EquipStartingGear(entity.Value, prototype.StartingGear, raiseEvent: false);
+
+                // Add support for IPC encryption keys from job starting gear headsets
+                if (HasComp<EncryptionKeyHolderComponent>(entity.Value) &&
+                    _prototypeManager.TryIndex(prototype.StartingGear, out var startingGearProto))
+                {
+                    _internalEncryption.TryInsertEncryptionKey(entity.Value, startingGearProto);
+                }
+            }
 
             var bankComp = EnsureComp<BankAccountComponent>(entity.Value);
 

@@ -15,7 +15,7 @@ public sealed partial class NewsWriterComponent : Component
     public TimeSpan NextPublish;
 
     [ViewVariables(VVAccess.ReadWrite), DataField]
-    public float PublishCooldown = 20f;
+    public float PublishCooldown = 120f; //20->120 Mono
 
     [DataField]
     public SoundSpecifier NoAccessSound = new SoundPathSpecifier("/Audio/Machines/airlock_deny.ogg");

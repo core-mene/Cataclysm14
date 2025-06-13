@@ -3589,8 +3589,6 @@ entities:
       pos: 3.5,-2.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 513
       - 514
@@ -4246,8 +4244,6 @@ entities:
       pos: 5.5,-1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 18
     - type: AtmosPipeColor
@@ -4315,8 +4311,6 @@ entities:
       pos: 5.5,-2.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 18
     - type: AtmosPipeColor
@@ -4611,17 +4605,13 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 4.5,9.5
       parent: 1
-- proto: GunneryServer
+- proto: GunneryServerHigh
   entities:
   - uid: 663
     components:
     - type: Transform
       pos: -3.5,-3.5
       parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5
-    - type: Battery
-      startingCharge: 0
 - proto: GyroscopeNfsd
   entities:
   - uid: 664

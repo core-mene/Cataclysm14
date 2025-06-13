@@ -10,10 +10,10 @@ namespace Content.Server._NF.Mail.Components;
 public sealed partial class SectorMailComponent : Component // Frontier: Station->Sector
 {
     [DataField]
-    public float Accumulator = 1995f;
+    public float Accumulator = 905f;
 
     [DataField]
-    public TimeSpan TeleportInterval = TimeSpan.FromMinutes(35);
+    public TimeSpan TeleportInterval = TimeSpan.FromMinutes(15); //35 min -> 15 min
 
     /// <summary>
     /// The MailDeliveryPoolPrototype that's used to select what mail this
@@ -29,7 +29,7 @@ public sealed partial class SectorMailComponent : Component // Frontier: Station
     /// It does not determine unique recipients. That is random.
     /// </summary>
     [DataField]
-    public int CandidatesPerDelivery = 4;
+    public int CandidatesPerDelivery = 14; //4->14 Mono - This is divided between Trade Mall and CO.
 
     [DataField]
     public int MinimumDeliveriesPerTeleport = 1;
@@ -51,7 +51,7 @@ public sealed partial class SectorMailComponent : Component // Frontier: Station
     /// mail lately to prevent entity bloat for the sake of performance.
     /// </remarks>
     [DataField]
-    public int MaximumUndeliveredParcels = 5;
+    public int MaximumUndeliveredParcels = 25; // 5->25 Mono
 
     /// <summary>
     /// Any item that breaks or is destroyed in less than this amount of
@@ -64,7 +64,7 @@ public sealed partial class SectorMailComponent : Component // Frontier: Station
     /// What's the bonus for delivering a fragile package intact?
     /// </summary>
     [DataField]
-    public int FragileBonus = 2000;
+    public int FragileBonus = 10000; // Mono 2000->10000
 
     /// <summary>
     /// What's the malus for failing to deliver a fragile package?
@@ -89,7 +89,7 @@ public sealed partial class SectorMailComponent : Component // Frontier: Station
     /// What's the bonus for delivering a priority package on time?
     /// </summary>
     [DataField]
-    public int PriorityBonus = 5000;
+    public int PriorityBonus = 15000; //5000->15000
 
     /// <summary>
     /// What's the malus for failing to deliver a priority package?
@@ -102,7 +102,7 @@ public sealed partial class SectorMailComponent : Component // Frontier: Station
     /// What's the bonus for delivering a large package intact?
     /// </summary>
     [DataField]
-    public int LargeBonus = 5000;
+    public int LargeBonus = 25000; // 5000->25000 Mono
 
     /// <summary>
     /// What's the malus for failing to deliver a large package?
