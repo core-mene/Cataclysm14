@@ -30,6 +30,14 @@
     proto: Bullet6.35x40mmCaseless
 
 - type: entity
+  id: Cartridge6.35x40mmCaselessRubber
+  name: cartridge (6.35x40mm Caseless rubber)
+  parent: BaseCartridge6.35x40mmCaseless
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet6.35x40mmCaselessRubber
+
+- type: entity
   id: Cartridge6.35x40mmCaselessPractice
   name: cartridge (6.35x40mm Caseless practice)
   parent: BaseCartridge6.35x40mmCaseless
