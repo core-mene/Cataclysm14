@@ -255,12 +255,12 @@
 # Shotgun ammo
 - type: entity # Lethal
   abstract: true
-  id: StorageFillAmmoBox12GaugeBuckshotgun
+  id: StorageFillAmmoAmmoBox12_gaugeBuckshotgun
   suffix: Shotgun, Lethal, x2 boxes
   components:
   - type: StorageFill
     contents:
-    - id: Box12GaugeBuckshot
+    - id: AmmoBox12_gaugeBuckshot
       amount: 2
 
 - type: entity # Rubber
@@ -270,7 +270,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: Box12GaugeBeanbag
+    - id: AmmoBox12_gaugeBeanbag
       amount: 2
 
 - type: entity # Practice
@@ -280,7 +280,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: Box12GaugePractice
+    - id: AmmoBox12_gaugePractice
       amount: 2
 
 - type: entity # Incendiary
@@ -290,7 +290,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: Box12GaugeIncendiary
+    - id: AmmoBox12_gaugeIncendiary
       amount: 2
 
 - type: entity # Uranium
@@ -300,7 +300,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: Box12GaugeUranium
+    - id: AmmoBox12_gaugeUranium
       amount: 2
 
 - type: entity # Slugs
@@ -310,7 +310,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: Box12GaugeSlug
+    - id: AmmoBox12_gaugeSlug
       amount: 2
 
 - type: entity # Flare
@@ -320,7 +320,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: Box12GaugeFlare
+    - id: AmmoBox12_gaugeFlare
       amount: 2
 
 # .45 magnum ammo

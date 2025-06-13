@@ -17,7 +17,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi # Frontier: _NF prefix
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/5.7x28mm.rsi
   - type: MagazineVisuals
     magState: mag
     steps: 3
@@ -114,7 +114,6 @@
   - type: BallisticAmmoProvider
     proto: Cartridge5.7x28mmRubber
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -131,7 +130,6 @@
   - type: BallisticAmmoProvider
     proto: Cartridge5.7x28mmEmp
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

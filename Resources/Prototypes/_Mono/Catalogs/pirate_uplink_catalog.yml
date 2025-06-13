@@ -435,7 +435,7 @@
   id: UplinkPirateShotgunDrum
   name: uplink-pirate-box-bulldog-ammo-name
   description: uplink-pirate-box-bulldog-ammo-desc
-  productEntity: BoxMagazineShotgun
+  productEntity: BoxMagazine12_gauge
   cost:
     Doubloon: 1
   categories:
@@ -450,7 +450,7 @@
   id: UplinkPirateShotgunDrumSlug
   name: uplink-pirate-box-bulldog-slug-ammo-name
   description: uplink-pirate-box-bulldog-slug-ammo-desc
-  productEntity: BoxMagazineShotgunSlug
+  productEntity: BoxMagazine12_gaugeSlug
   cost:
     Doubloon: 1
   categories:
@@ -480,8 +480,8 @@
   id: UplinkPirateShellBoxLethal
   name: uplink-pirate-shell-box-lethal-name
   description: uplink-pirate-shell-box-lethal-desc
-  productEntity: Box12GaugeBuckshot
-  icon: { sprite: Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi, state: lethal }
+  productEntity: AmmoBox12_gaugeBuckshot
+  icon: { sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/12_gauge.rsi, state: lethal }
   cost:
     Doubloon: 1
   categories:

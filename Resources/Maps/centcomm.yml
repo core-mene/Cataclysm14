@@ -7487,7 +7487,7 @@ entities:
     - type: Transform
       pos: -0.5,-45.5
       parent: 1668
-- proto: Box12GaugeBuckshot
+- proto: AmmoBox12_gaugeBuckshot
   entities:
   - uid: 1093
     components:
@@ -7602,7 +7602,7 @@ entities:
     - type: Transform
       pos: 11.430329,9.079699
       parent: 1668
-- proto: BoxMagazineShotgun
+- proto: BoxMagazine12_gauge
   entities:
   - uid: 2362
     components:
@@ -7614,7 +7614,7 @@ entities:
     - type: Transform
       pos: 16.162495,24.820536
       parent: 1668
-- proto: BoxMagazineShotgunBeanbag
+- proto: BoxMagazine12_gaugeBeanbag
   entities:
   - uid: 2365
     components:
@@ -7626,7 +7626,7 @@ entities:
     - type: Transform
       pos: 16.610413,24.49762
       parent: 1668
-- proto: BoxMagazineShotgunIncendiary
+- proto: BoxMagazine12_gaugeIncendiary
   entities:
   - uid: 2364
     components:
@@ -7638,7 +7638,7 @@ entities:
     - type: Transform
       pos: 16.152079,24.508036
       parent: 1668
-- proto: BoxMagazineShotgunSlug
+- proto: BoxMagazine12_gaugeSlug
   entities:
   - uid: 2363
     components:
@@ -7669,35 +7669,35 @@ entities:
     - type: Transform
       pos: -31.416765,-8.047967
       parent: 1668
-- proto: Box12GaugeTranquilizer
+- proto: AmmoBox12_gaugeTranquilizer
   entities:
   - uid: 1323
     components:
     - type: Transform
       pos: 34.536674,-21.41355
       parent: 1668
-- proto: Box12GaugeFlare
+- proto: AmmoBox12_gaugeFlare
   entities:
   - uid: 1329
     components:
     - type: Transform
       pos: 34.567924,-22.2573
       parent: 1668
-- proto: Box12GaugeIncendiary
+- proto: AmmoBox12_gaugeIncendiary
   entities:
   - uid: 1311
     components:
     - type: Transform
       pos: 34.52105,-21.1323
       parent: 1668
-- proto: Box12GaugeSlug
+- proto: AmmoBox12_gaugeSlug
   entities:
   - uid: 1335
     components:
     - type: Transform
       pos: 34.5523,-21.72605
       parent: 1668
-- proto: Box12GaugeUranium
+- proto: AmmoBox12_gaugeUranium
   entities:
   - uid: 1334
     components:

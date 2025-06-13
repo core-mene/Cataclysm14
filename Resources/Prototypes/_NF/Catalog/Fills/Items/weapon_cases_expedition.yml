@@ -207,7 +207,7 @@
     contents:
     - id: WeaponShotgunHandmadeExpedition
       amount: 1
-    - id: Box12GaugeBuckshot
+    - id: AmmoBox12_gaugeBuckshot
       amount: 1
 
 - type: entity
@@ -220,7 +220,7 @@
     contents:
     - id: WeaponShotgunDoubleBarreledExpedition
       amount: 1
-    - id: Box12GaugeBuckshot
+    - id: AmmoBox12_gaugeBuckshot
       amount: 2
 
 - type: entity
@@ -233,7 +233,7 @@
     contents:
     - id: WeaponShotgunSawnExpedition
       amount: 1
-    - id: Box12GaugeBuckshot
+    - id: AmmoBox12_gaugeBuckshot
       amount: 1
 
 - type: entity
@@ -246,7 +246,7 @@
     contents:
     - id: WeaponShotgunKammererExpedition
       amount: 1
-    - id: Box12GaugeBuckshot
+    - id: AmmoBox12_gaugeBuckshot
       amount: 2
 
 - type: entity
@@ -259,7 +259,7 @@
     contents:
     - id: WeaponShotgunEnforcerExpedition
       amount: 1
-    - id: Box12GaugeBuckshot
+    - id: AmmoBox12_gaugeBuckshot
       amount: 2
 
 - type: entity
@@ -272,9 +272,9 @@
     contents:
     - id: WeaponShotgunBulldog
       amount: 1
-    - id: MagazineShotgun
+    - id: Magazine12_gaugeBuckshot
       amount: 2
-    - id: Box12GaugeBuckshot
+    - id: AmmoBox12_gaugeBuckshot
       amount: 2
 
 # SMGs
@@ -948,8 +948,8 @@
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBox12GaugeBuckshotgun
-  id: WeaponCaseShortAmmoBox12GaugeBuckshotgun
+  - StorageFillAmmoAmmoBox12_gaugeBuckshotgun
+  id: WeaponCaseShortAmmoAmmoBox12_gaugeBuckshotgun
   categories: [ HideSpawnMenu ]
 
 - type: entity

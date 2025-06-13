@@ -23062,7 +23062,7 @@ entities:
     - type: Transform
       pos: -18.52302,-24.35315
       parent: 5350
-- proto: Box12GaugeBeanbag
+- proto: AmmoBox12_gaugeBeanbag
   entities:
   - uid: 3114
     components:
@@ -23374,7 +23374,7 @@ entities:
     - type: Transform
       pos: 47.486122,-24.404968
       parent: 5350
-- proto: Box12GaugeBuckshot
+- proto: AmmoBox12_gaugeBuckshot
   entities:
   - uid: 3056
     components:
@@ -23443,7 +23443,7 @@ entities:
     - type: Transform
       pos: -46.819557,-31.22118
       parent: 5350
-- proto: Box12GaugePractice
+- proto: AmmoBox12_gaugePractice
   entities:
   - uid: 7275
     components:
@@ -146601,7 +146601,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ShellShotgun12gaugeBeanbag
+- proto: ShellShotgun12_gaugeBeanbag
   entities:
   - uid: 9472
     components:

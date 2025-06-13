@@ -32,9 +32,9 @@
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-      - ShellShotgun12gauge
+      - ShellShotgun12_gauge
     capacity: 7
-    proto: ShellShotgun12gauge
+    proto: ShellShotgun12_gauge
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
   - type: ContainerContainer
@@ -81,11 +81,11 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineShotgun
+        startingItem: Magazine12_gaugeBuckshot
         priority: 2
         whitelist:
           tags:
-          - MagazineShotgun
+          - Magazine12_gaugeBuckshot
         whitelistFailPopup: gun-magazine-whitelist-fail
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
@@ -135,7 +135,7 @@
   suffix: Non-Lethal
   components:
   - type: BallisticAmmoProvider
-    proto: ShellShotgun12gaugeBeanbag
+    proto: ShellShotgun12_gaugeBeanbag
 
 - type: entity
   name: Enforcer (12 gauge)
@@ -162,7 +162,7 @@
   suffix: Non-Lethal
   components:
   - type: BallisticAmmoProvider
-    proto: ShellShotgun12gaugeBeanbag
+    proto: ShellShotgun12_gaugeBeanbag
 
 - type: entity
   name: Kammerer (12 gauge)
@@ -300,4 +300,4 @@
   id: WeaponShotgunImprovisedLoaded
   components:
   - type: BallisticAmmoProvider
-    proto: ShellShotgun12gaugeImprovised
+    proto: ShellShotgun12_gaugeImprovised

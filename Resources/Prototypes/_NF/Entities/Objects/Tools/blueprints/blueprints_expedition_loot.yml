@@ -4,13 +4,13 @@
 
 - type: entity
   parent: BaseBlueprintExpedition
-  id: NFBlueprintBox12GaugeUranium
+  id: NFBlueprintAmmoBox12_gaugeUranium
   name: uranium 12 gauge shotgun ammo blueprint
   description: A blueprint with a schematic of an uranium shotgun ammo. It can be inserted into an autolathe or a techfab.
   components:
   - type: Blueprint
     providedRecipes:
-    - Box12GaugeUranium
+    - AmmoBox12_gaugeUranium
 
 - type: entity
   parent: BaseBlueprintExpedition
@@ -56,13 +56,13 @@
 
 - type: entity
   parent: BaseBlueprintExpedition
-  id: NFBlueprintBox12GaugeIncendiary
+  id: NFBlueprintAmmoBox12_gaugeIncendiary
   name: incendiary 12 gauge shotgun ammo blueprint
   description: A blueprint with a schematic of an incendiary shotgun ammo. It can be inserted into an autolathe or a techfab.
   components:
   - type: Blueprint
     providedRecipes:
-    - Box12GaugeIncendiary
+    - AmmoBox12_gaugeIncendiary
 
 - type: entity
   parent: BaseBlueprintExpedition

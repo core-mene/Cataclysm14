@@ -39398,7 +39398,7 @@ entities:
     - type: Transform
       pos: -28.464748,-17.253857
       parent: 2
-- proto: Box12GaugeBuckshot
+- proto: AmmoBox12_gaugeBuckshot
   entities:
   - uid: 4197
     components:
@@ -39456,14 +39456,14 @@ entities:
     - type: Transform
       pos: 27.126343,-29.311195
       parent: 21002
-- proto: Box12GaugeTranquilizer
+- proto: AmmoBox12_gaugeTranquilizer
   entities:
   - uid: 4195
     components:
     - type: Transform
       pos: -18.456379,-2.4510403
       parent: 2
-- proto: Box12GaugeSlug
+- proto: AmmoBox12_gaugeSlug
   entities:
   - uid: 4199
     components:
@@ -160298,7 +160298,7 @@ entities:
       rot: 6.283185307179586 rad
       pos: 15.087707,39.601242
       parent: 2
-- proto: ShellShotgun12gaugeSlug
+- proto: ShellShotgun12_gaugeSlug
   entities:
   - uid: 19082
     components:

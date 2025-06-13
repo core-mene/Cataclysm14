@@ -1037,7 +1037,7 @@
   id: UplinkSecurityShotLethal
   name:  uplink-security-shotlethal-name
   description: uplink-security-shotlethal-desc
-  productEntity: Box12GaugeBuckshot
+  productEntity: AmmoBox12_gaugeBuckshot
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
     FederationMilitaryCredit: 1
@@ -1053,7 +1053,7 @@
   id: UplinkSecurityShotBeanbag
   name:  uplink-security-shotbeanbag-name
   description: uplink-security-shotbeanbag-desc
-  productEntity: Box12GaugeBeanbag
+  productEntity: AmmoBox12_gaugeBeanbag
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
     FederationMilitaryCredit: 1
@@ -1069,7 +1069,7 @@
   id: UplinkSecurityShotIncend
   name:  uplink-security-shotincend-name
   description: uplink-security-shotincend-desc
-  productEntity: Box12GaugeIncendiary
+  productEntity: AmmoBox12_gaugeIncendiary
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
     FederationMilitaryCredit: 2
@@ -1085,7 +1085,7 @@
   id: UplinkSecurityShotSlug
   name:  uplink-security-shotslug-name
   description: uplink-security-shotslug-desc
-  productEntity: Box12GaugeSlug
+  productEntity: AmmoBox12_gaugeSlug
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
     FederationMilitaryCredit: 1

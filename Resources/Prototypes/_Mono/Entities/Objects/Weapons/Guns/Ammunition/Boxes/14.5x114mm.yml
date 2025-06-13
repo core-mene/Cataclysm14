@@ -16,7 +16,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/anti_materiel.rsi # Frontier: _NF prefix
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/14.5x114mm.rsi
   - type: MagazineVisuals
     magState: mag
     steps: 4
@@ -48,7 +48,7 @@
     capacity: 30
     proto: Cartridge14.5x114mm
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/anti_materiel.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/14.5x114mm.rsi
     layers:
     - state: base-b
       map: ["enum.GunVisualLayers.Base"]

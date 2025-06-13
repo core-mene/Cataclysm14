@@ -298,47 +298,47 @@
 - type: entity
   name: box of (12 gauge pellet) ammo drums
   parent: BoxMagazine
-  id: BoxMagazineShotgun
+  id: BoxMagazine12_gauge
   description: A box full of (12 gauge pellet) ammo drums.
   components:
   - type: StorageFill
     contents:
-      - id: MagazineShotgun
+      - id: Magazine12_gaugeBuckshot
         amount: 4
 
 #mono edit
 - type: entity
   name: box of (12 gauge beanbag) ammo drums
   parent: BoxMagazine
-  id: BoxMagazineShotgunBeanbag
+  id: BoxMagazine12_gaugeBeanbag
   description: A box full of (12 gauge beanbag) ammo drums.
   components:
   - type: StorageFill
     contents:
-      - id: MagazineShotgunBeanbag
+      - id: Magazine12_gaugeBeanbag
         amount: 4
 
 - type: entity
   name: box of (12 gauge slug) ammo drums
   parent: BoxMagazine
-  id: BoxMagazineShotgunSlug
+  id: BoxMagazine12_gaugeSlug
   description: A box full of (12 gauge slug) ammo drums.
   components:
   - type: StorageFill
     contents:
-      - id: MagazineShotgunSlug
+      - id: Magazine12_gaugeSlug
         amount: 4
 #mono edit end
 
 - type: entity
   name: box of (12 gauge incendiary) ammo drums
   parent: BoxMagazine
-  id: BoxMagazineShotgunIncendiary
+  id: BoxMagazine12_gaugeIncendiary
   description: A box full of (12 gauge incendiary) ammo drums.
   components:
   - type: StorageFill
     contents:
-      - id: MagazineShotgunIncendiary
+      - id: Magazine12_gaugeIncendiary
         amount: 4
 
 #mono edit
