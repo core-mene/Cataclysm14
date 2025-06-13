@@ -118,11 +118,11 @@
   id: Magazine7.62x51mmLowCapacityEmpty
   name: "low cap magazine (7.62x51mm any)"
   suffix: empty
-  parent: Magazine7.62x51mmLowCapacity
+  parent: Magazine7.62x51mmLowCapacityFMJ
   components:
   - type: Tag
     tags:
-      - Magazine7.62x51mmLowCapacity
+      - Magazine7.62x51mmLowCapacityFMJ
   - type: BallisticAmmoProvider
     proto: null
   - type: Item
@@ -136,13 +136,13 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x51mmLowCapacity
+  id: Magazine7.62x51mmLowCapacityFMJ
   name: "low cap magazine (7.62x51mm FMJ)"
   parent: Magazine7.62x51mmFMJ
   components:
   - type: Tag
     tags:
-      - Magazine7.62x51mmLowCapacity
+      - Magazine7.62x51mmLowCapacityFMJ
   - type: BallisticAmmoProvider
     capacity: 10
   - type: Item
@@ -158,7 +158,7 @@
 - type: entity
   id: Magazine7.62x51mmLowCapacityPractice
   name: "low cap magazine (7.62x51mm practice)"
-  parent: Magazine7.62x51mmLowCapacity
+  parent: Magazine7.62x51mmLowCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge7.62x51mmPractice
@@ -172,7 +172,7 @@
 - type: entity
   id: Magazine7.62x51mmLowCapacityRubber
   name: "low cap magazine (7.62x51mm rubber)"
-  parent: Magazine7.62x51mmLowCapacity
+  parent: Magazine7.62x51mmLowCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge7.62x51mmRubber
@@ -186,7 +186,7 @@
 - type: entity
   id: Magazine7.62x51mmLowCapacityUranium
   name: "low cap magazine (7.62x51mm uranium)"
-  parent: Magazine7.62x51mmLowCapacity
+  parent: Magazine7.62x51mmLowCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge7.62x51mmUranium

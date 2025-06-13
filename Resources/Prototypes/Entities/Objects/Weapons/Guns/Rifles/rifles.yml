@@ -83,7 +83,7 @@
         whitelist:
           tags:
             - Magazine7.62x39mmFMJ
-            - Magazine7.62x39mmLowCapacity
+            - Magazine7.62x39mmLowCapacityFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
@@ -151,7 +151,7 @@
 - type: entity
   name: Lecter (5.56x45mm)
   parent: [BaseWeaponRifle, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
-  id: WeaponRifleLecter 
+  id: WeaponRifleLecter
   description: A high end military grade assault rifle. Uses 5.56x45mm ammo. On the receiver is a label that says 'for authorized use only.'
   components:
   - type: Sprite

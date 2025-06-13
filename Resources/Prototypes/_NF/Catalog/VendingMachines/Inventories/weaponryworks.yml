@@ -40,21 +40,27 @@
     WeaponRevolverArgenti: 4294967295
     WeaponPistolMk32: 4294967295
     WeaponRevolverFaith: 4294967295
-    AmmoBox12_gaugeSlug: 4294967295
-    AmmoBox12_gaugeBuckshot: 4294967295
-    AmmoBox12_gaugeBeanbag: 4294967295
-    AmmoBox5.56x45mmFMJ: 4294967295
-    AmmoBox5.56x45mmRubber: 4294967295
-    AmmoBox7.62x39mmFMJ: 4294967295
-    AmmoBox7.62x39mmRubber: 4294967295
-    AmmoBox9x19mmFMJ: 4294967295
-    AmmoBox9x19mmRubber: 4294967295
-    AmmoBox45_magnumFMJ: 4294967295
-    AmmoBox45_magnumRubber: 4294967295
-    SpeedLoader5.56x45mmEmpty: 4294967295
-    MagazineNovaliteC1Empty: 4294967295
-    Magazine7.62x39mmLowCapacityEmpty: 4294967295
-    Magazine9x19mmPistolEmpty: 4294967295
+# Magazines
+    Magazine9x19mmPistolFMJ: 4294967295 # 9x19mm Pistol
+    Magazine45_ACPPistolFMJ: 4294967295 # .45 ACP Pistol
+    Magazine9x19mmSubMachineGun: 4294967295 # 9x19mm C20r
+    Magazine45_ACPSubMachineGun: 4294967295 # .45 ACP Drzozd
+    Magazine4.6x30mmSubMachineGunTopMounted: 4294967295 # 4.6x30mm WT550
+    Magazine5.56x45mmFMJ: 4294967295 # 5.56x45mm Lecter
+    Magazine7.62x39mmLowCapacityFMJ: 4294967295 # 7.62x39mm Gestio/AKM
+    Magazine7.62x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
+    Magazine7.62x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
+    SpeedLoader7.62x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
+    SpeedLoader7.62x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
+    SpeedLoader45_magnumFMJ: 4294967295 # .45 magnum revolvers
+# Ammo
+    AmmoBox5.56x45mmBigFMJ: 4294967295 # 5.56x45mm
+    AmmoBox7.62x39mmBigFMJ: 4294967295 # 7.62x39mm
+    AmmoBox9x19mmBig: 4294967295 # 9x19mm
+    AmmoBox45_magnumFMJ: 4294967295 # .45 magnum
+    AmmoBox12_gaugeSlug: 4294967295 # 12 gauge
+    AmmoBox12_gaugeBuckshot: 4294967295 # 12 gauge
+    AmmoBox12_gaugeBeanbag: 4294967295 # 12 gauge
   emaggedInventory:
     WeaponPistolViper: 1
 
@@ -82,22 +88,23 @@
     CombatKnife: 4294967295
     SurvivalKnifePMC: 4294967295
 # Magazines
-    Magazine9x19mmPistolFMJ: 4294967295 # .35 Pistol
-    Magazine45_ACPPistolFMJ: 4294967295 # .35 Pistol
-    Magazine9x19mmSubMachineGun: 4294967295 # .35 SMG
-    Magazine45_ACPSubMachineGun: 4294967295 # .35 SMG
-    Magazine9x19mmSubMachineGunTopMounted: 4294967295 # .35 WT
-    Magazine5.56x45mmFMJ: 4294967295 # 5.56x45mm
-    Magazine7.62x39mmLowCapacity: 4294967295 # .30 SVS
-    Magazine7.62x39mmLowCapacity: 4294967295 # .30 SVS
-    Magazine7.62x39mmLowCapacity: 4294967295 # .30 SVS
-    SpeedLoader7.62x39mmFMJ: 4294967295 # .30 Mosin
-    SpeedLoader7.62x54mmRFMJ: 4294967295 # .30 Mosin
+    Magazine9x19mmPistolFMJ: 4294967295 # 9x19mm Pistol
+    Magazine45_ACPPistolFMJ: 4294967295 # .45 ACP Pistol
+    Magazine9x19mmSubMachineGun: 4294967295 # 9x19mm C20r
+    Magazine45_ACPSubMachineGun: 4294967295 # .45 ACP Drzozd
+    Magazine4.6x30mmSubMachineGunTopMounted: 4294967295 # 4.6x30mm WT550
+    Magazine5.56x45mmFMJ: 4294967295 # 5.56x45mm Lecter
+    Magazine7.62x39mmLowCapacityFMJ: 4294967295 # 7.62x39mm Gestio/AKM
+    Magazine7.62x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
+    Magazine7.62x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
+    SpeedLoader7.62x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
+    SpeedLoader7.62x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
+    SpeedLoader45_magnumFMJ: 4294967295 # .45 magnum revolvers
 # Ammo
-    AmmoBox5.56x45mmBigFMJ: 4294967295 # .20
-    AmmoBox6.35x40mmCaselessBig: 4294967295 # .25
-    AmmoBox7.62x39mmBigFMJ: 4294967295 # .30
-    AmmoBox9x19mmBig: 4294967295 # .35
-    AmmoBox45_magnumFMJ: 4294967295 # .45
-    AmmoBox12_gaugeSlug: 4294967295
-    AmmoBox12_gaugeBuckshot: 4294967295
+    AmmoBox5.56x45mmBigFMJ: 4294967295 # 5.56x45mm
+    AmmoBox7.62x39mmBigFMJ: 4294967295 # 7.62x39mm
+    AmmoBox9x19mmBig: 4294967295 # 9x19mm
+    AmmoBox45_magnumFMJ: 4294967295 # .45 magnum
+    AmmoBox12_gaugeSlug: 4294967295 # 12 gauge
+    AmmoBox12_gaugeBuckshot: 4294967295 # 12 gauge
+    AmmoBox12_gaugeBeanbag: 4294967295 # 12 gauge

@@ -43,7 +43,7 @@
         whitelist:
           tags:
             - Magazine7.62x51mmFMJ
-            - Magazine7.62x51mmLowCapacity
+            - Magazine7.62x51mmLowCapacityFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
@@ -86,13 +86,13 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine7.62x39mmLowCapacity
+        startingItem: Magazine7.62x39mmLowCapacityFMJ
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine7.62x39mmLowCapacity
+            - Magazine7.62x39mmLowCapacityFMJ
             - Magazine7.62x39mmFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
@@ -127,7 +127,7 @@
         priority: 2
         whitelist:
           tags:
-            - Magazine7.62x39mmLowCapacity
+            - Magazine7.62x39mmLowCapacityFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
