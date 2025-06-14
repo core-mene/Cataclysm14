@@ -14,7 +14,8 @@
   displayWeight: 55 # Second from the top
   canBeAntag: false
   accessGroups:
-  - AllAccess
+  - GeneralAccess
+  - Medical
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, TrackingImplant ]
