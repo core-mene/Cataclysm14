@@ -91,6 +91,8 @@ public sealed partial class ShuttleDockControl : BaseShuttleControl
 
     protected override void Draw(DrawingHandleScreen handle)
     {
+        UseCircleMaskShader(handle); // Mono
+
         base.Draw(handle);
 
         DrawBacking(handle);
@@ -127,11 +129,11 @@ public sealed partial class ShuttleDockControl : BaseShuttleControl
 
         if (viewedDockPos != null)
         {
-            viewedDockPos = viewedDockPos.Value + _angle.Value.RotateVec(new Vector2(0f,-0.6f) * MinimapScale);
+            viewedDockPos = viewedDockPos.Value + _angle.Value.RotateVec(new Vector2(0f, -0.6f) * MinimapScale);
         }
 
         var canDockChange = _timing.CurTime > _nextDockChange;
-        var lineOffset = (float) _timing.RealTime.TotalSeconds * 30f;
+        var lineOffset = (float)_timing.RealTime.TotalSeconds * 30f;
 
         var viewedDockType = _viewedState?.DockType ?? DockType.None; // Frontier: cache dock type
         var viewedReceiveOnly = _viewedState?.ReceiveOnly ?? true; // Frontier: cache receive only
@@ -334,6 +336,8 @@ public sealed partial class ShuttleDockControl : BaseShuttleControl
         // Draw the dock itself
         handle.DrawRect(ourDock, dockColor.WithAlpha(0.2f));
         handle.DrawRect(ourDock, dockColor, filled: false);
+
+        ClearShader(handle); // Mono
     }
 
     private void HideDocks()
