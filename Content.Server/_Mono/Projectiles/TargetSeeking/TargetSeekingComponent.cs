@@ -15,10 +15,10 @@ public sealed partial class TargetSeekingComponent : Component
     public float DetectionRange = 300f;
 
     /// <summary>
-    /// Angular range in which targets can be detected and tracked.
+    /// Minimum angular deviation from directly facing the target.
     /// </summary>
     [DataField]
-    public Angle Tolerance = Angle.FromDegrees(360);
+    public Angle Tolerance = Angle.FromDegrees(1);
 
     /// <summary>
     /// How quickly the projectile can change direction in degrees per second.
