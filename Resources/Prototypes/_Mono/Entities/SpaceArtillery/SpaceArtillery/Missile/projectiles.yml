@@ -41,8 +41,8 @@
   - type: MiningGatheringHard
   - type: TargetSeeking
     acceleration: 150
-    detectionRange: 100
-    scanArc: 30
+    detectionRange: 200
+    scanArc: 40
     launchSpeed: 300
     maxSpeed: 360
 
@@ -89,8 +89,8 @@
   - type: MiningGatheringHard
   - type: TargetSeeking
     acceleration: 200
-    detectionRange: 150
-    scanArc: 30
+    detectionRange: 300
+    scanArc: 40
     launchSpeed: 180
     maxSpeed: 420
 
@@ -137,7 +137,7 @@
   - type: MiningGatheringHard
   - type: TargetSeeking
     acceleration: 50
-    detectionRange: 200
+    detectionRange: 500
     scanArc: 50
     launchSpeed: 50
     maxSpeed: 60
@@ -190,7 +190,7 @@
   - type: MiningGatheringHard
   - type: TargetSeeking
     acceleration: 80
-    detectionRange: 200
+    detectionRange: 500
     scanArc: 50
     launchSpeed: 100
     maxSpeed: 300
