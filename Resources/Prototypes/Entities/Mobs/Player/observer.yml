@@ -76,9 +76,9 @@
       enum.RadarConsoleUiKey.Key:
         toggleAction: ActionObserverShowRadar
   - type: RadarConsole
-    maxRange: 512 #256->512 Mono
+    maxRange: 768 #256->768 Mono
     followEntity: true
-    maxIffRange: 512 #256->512
+    maxIffRange: 768 #256->768 Mono
     hideCoords: true
   - type: ComplexInteraction # Needed to interact with innate radar console
   - type: ShipyardSellCondition # Teleport to shipyard console on sale
