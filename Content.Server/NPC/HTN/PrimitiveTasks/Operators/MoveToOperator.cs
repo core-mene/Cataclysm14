@@ -75,6 +75,14 @@ public sealed partial class MoveToOperator : HTNOperator, IHtnConditionalShutdow
     [DataField("stopOnLineOfSight")]
     public bool StopOnLineOfSight;
 
+    // Goobstation
+    /// <summary>
+    /// Velocity below which we count as successfully braked.
+    /// Don't try to brake if null (upstream behavior).
+    /// </summary>
+    [DataField]
+    public float? BrakeMaxVelocity = 0.1f;
+
     private const string MovementCancelToken = "MovementCancelToken";
 
     public override void Initialize(IEntitySystemManager sysManager)
