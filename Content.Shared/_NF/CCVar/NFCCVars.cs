@@ -36,7 +36,7 @@ public sealed class NFCCVars
     /// The time in seconds after which a cryosleeping body is considered expired and can be deleted from the storage map.
     /// </summary>
     public static readonly CVarDef<float> CryoExpirationTime =
-        CVarDef.Create("nf14.uncryo.maxtime", 180 * 60f, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("nf14.uncryo.maxtime", 360 * 60f, CVar.SERVER | CVar.REPLICATED);
 
     /*
      *  Public Transit
@@ -132,7 +132,7 @@ public sealed class NFCCVars
     /// Cooldown for failed missions.
     /// </summary>
     public static readonly CVarDef<float> SalvageExpeditionFailedCooldown =
-        CVarDef.Create("salvage.expedition_failed_cooldown", 1200f, CVar.REPLICATED);
+        CVarDef.Create("salvage.expedition_failed_cooldown", 450f, CVar.REPLICATED); //Mono 1200->450
 
     /// <summary>
     /// Whether salvage expedition rewards is enabled.

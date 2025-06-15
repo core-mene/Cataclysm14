@@ -79,6 +79,7 @@
   - StationRepresentative # Frontier
   - Sheriff  # Frontier
   - StationTrafficController # Frontier
+  - DirectorOfCare # Mono
   primary: false
   weight: 100
 
@@ -96,9 +97,10 @@
   name: department-Medical
   description: department-Medical-description
   color: "#52B4E9"
-  weight: -93
-  primary: false
-  editorHidden: true # Frontier
+  weight: 0
+  roles: # Mono
+  - DirectorOfCare # Mono
+  - MdMedic # Mono
 
 - type: department
   id: Security

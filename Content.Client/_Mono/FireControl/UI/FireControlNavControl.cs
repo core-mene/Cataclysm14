@@ -60,7 +60,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
     private float _lastCursorUpdateTime = 0f;
     private const float CursorUpdateInterval = 0.1f; // 10 updates per second
 
-    public FireControlNavControl() : base(64f, 512f, 512f)
+    public FireControlNavControl() : base(64f, 768f, 768f)
     {
         IoCManager.InjectDependencies(this);
         _shuttles = EntManager.System<SharedShuttleSystem>();
@@ -179,6 +179,8 @@ public sealed class FireControlNavControl : BaseShuttleControl
 
     protected override void Draw(DrawingHandleScreen handle)
     {
+        UseCircleMaskShader(handle); // Mono
+
         base.Draw(handle);
 
         DrawBacking(handle);
@@ -329,7 +331,8 @@ public sealed class FireControlNavControl : BaseShuttleControl
             if (_isMouseInside && _controllables != null)
             {
                 var worldPos = blip.Item1;
-                var isFireControllable = _controllables.Any(c => {
+                var isFireControllable = _controllables.Any(c =>
+                {
                     var coords = EntManager.GetCoordinates(c.Coordinates);
                     var entityMapPos = _transform.ToMapCoordinates(coords);
                     return Vector2.Distance(entityMapPos.Position, worldPos) < 0.1f &&
@@ -406,6 +409,8 @@ public sealed class FireControlNavControl : BaseShuttleControl
                 handle.DrawLine(startPosInView, endPosInView, line.Color.WithAlpha(0.8f));
             }
         }
+
+        ClearShader(handle);
         #endregion
     }
 

@@ -15,10 +15,10 @@ public sealed partial class TargetSeekingComponent : Component
     public float DetectionRange = 300f;
 
     /// <summary>
-    /// Angular range in which targets can be detected and tracked.
+    /// Minimum angular deviation from directly facing the target.
     /// </summary>
     [DataField]
-    public Angle ScanArc = Angle.FromDegrees(360);
+    public Angle Tolerance = Angle.FromDegrees(1);
 
     /// <summary>
     /// How quickly the projectile can change direction in degrees per second.
@@ -66,7 +66,7 @@ public sealed partial class TargetSeekingComponent : Component
     /// Field of view in degrees for target detection.
     /// </summary>
     [DataField]
-    public float FieldOfView = 90f;
+    public float ScanArc = 90f;
 
     /// <summary>
     /// Used for tracking metrics between updates.

@@ -30,5 +30,5 @@ comms-console-announcement-title-nukie = Syndicate Nuclear Operative
 comms-console-announcement-title-station-ai = Station AI
 comms-console-announcement-title-wizard = Wizard
 
-#Mono
+# Mono
 comms-console-announcement-title-rogue = Rogue Insurgency

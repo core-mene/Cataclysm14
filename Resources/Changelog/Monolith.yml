@@ -4128,3 +4128,170 @@ Entries:
   id: 494
   time: '2025-06-13T06:45:38.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/759
+- author: BlueHNT
+  changes:
+    - type: Add
+      message: Added combat medipen recipe
+  id: 495
+  time: '2025-06-13T16:26:19.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/812
+- author: RikuTheKiller
+  changes:
+    - type: Add
+      message: Radars are now circular.
+  id: 496
+  time: '2025-06-14T10:39:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/818
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Kammerer firerate increased, but is now pump action. (Press Z or Space
+        or use the item after every shot to cycle the chamber)
+  id: 497
+  time: '2025-06-14T10:43:24.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/811
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Shotgun shell boxes doubled capacity
+  id: 498
+  time: '2025-06-14T10:44:25.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/815
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: Rarely, a resomi that says too much silly might let out a bawk.
+  id: 499
+  time: '2025-06-14T10:47:49.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/816
+- author: RikuTheKiller
+  changes:
+    - type: Tweak
+      message: >-
+        Advanced radar consoles have been retired, all other radar consoles have
+        the increased range now.
+  id: 500
+  time: '2025-06-14T10:58:54.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/819
+- author: BlueHNT
+  changes:
+    - type: Add
+      message: >-
+        Humans and dwarves now interact about 20% faster. This is tied to human
+        hands, each hand gives 10% do-after speed boost.
+    - type: Add
+      message: Added D.E.X hands to research that give 20% faster interaction each.
+    - type: Tweak
+      message: >-
+        Dwarves no longer have faster do-afters like humans but instead they are
+        not poisoned by ethanol and heal twice as much by metabolizing it.
+  id: 501
+  time: '2025-06-14T11:00:34.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/813
+- author: RikuTheKiller
+  changes:
+    - type: Tweak
+      message: >-
+        [EXPERIMENTAL] All shipgun projectiles are 3 times faster, ranges have
+        been tweaked and missile tracking works better. Report any and all
+        issues you have with this change, it's up for debate and needs live
+        testing.
+  id: 502
+  time: '2025-06-14T11:01:44.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/820
+- author: Ark
+  changes:
+    - type: Fix
+      message: Camelot should no longer have godmode.
+  id: 503
+  time: '2025-06-14T11:10:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/821
+- author: BlueHNT
+  changes:
+    - type: Tweak
+      message: Spyglass tweak (Added second APC, Added Sink, Added Bedroll in locker)
+  id: 504
+  time: '2025-06-14T17:32:39.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/823
+- author: BlueHNT
+  changes:
+    - type: Add
+      message: Added Emergency Responder
+    - type: Tweak
+      message: Changed requirements for Director of Care
+  id: 505
+  time: '2025-06-14T17:33:44.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/787
+- author: Junerisms
+  changes:
+    - type: Add
+      message: >-
+        Added the Jitterbug. A cheap yet purely botanical shuttle. Farm away
+        farmers.
+  id: 506
+  time: '2025-06-14T18:27:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/597
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: Jukebox Flatpack to Flatpackvend
+  id: 507
+  time: '2025-06-15T01:43:09.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/824
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Bodies in cryo get deleted after 6 hours instead of 3.
+  id: 508
+  time: '2025-06-15T01:45:13.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/825
+- author: RikuTheKiller
+  changes:
+    - type: Tweak
+      message: Missiles track significantly better now.
+  id: 509
+  time: '2025-06-15T01:47:25.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/826
+- author: Ark
+  changes:
+    - type: Fix
+      message: Replacement gunnery servers should properly sync/refresh now.
+  id: 510
+  time: '2025-06-15T01:56:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/828
+- author: Ark
+  changes:
+    - type: Fix
+      message: Camelot High Command jobs should now have air alarm access.
+  id: 511
+  time: '2025-06-15T03:46:22.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/830
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Failed exped cooldown 20 minutes->7.5 minutes.
+  id: 512
+  time: '2025-06-15T04:06:19.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/831
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Gauze and bloodpacks now more affordable
+  id: 513
+  time: '2025-06-15T08:36:36.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/832
+- author: Ark
+  changes:
+    - type: Fix
+      message: Compatibility Mode should no longer crash your client.
+  id: 514
+  time: '2025-06-15T08:37:19.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/833
+- author: RikuTheKiller
+  changes:
+    - type: Fix
+      message: Compat mode doesn't crash AND the consoles aren't 1 pixel wide.
+  id: 515
+  time: '2025-06-15T12:11:23.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/835

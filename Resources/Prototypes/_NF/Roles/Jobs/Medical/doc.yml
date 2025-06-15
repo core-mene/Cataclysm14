@@ -5,14 +5,21 @@
   playTimeTracker: JobDirectorOfCare
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 54000 # 20 hrs # mono - change to 15hr
+      time: 144000 # 20 hrs # mono - change to 40hr
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 72000 # mono - 10 hours
+  alternateRequirementSets: # mono
+    longerPlaytimeLessSec: # mono
+    - !type:OverallPlaytimeRequirement # mono
+      time: 234000 # mono 65 hours
   startingGear: DocGear
   alwaysUseSpawner: true
   icon: "JobIconDoc"
   requireAdminNotify: true
   supervisors: job-supervisors-centcom
   weight: 170
-  displayWeight: 55 # Second from the top
+  displayWeight: 60 # Second from the top # mono - first from top
   canBeAntag: false
   accessGroups:
   - AllAccess
@@ -24,7 +31,7 @@
       - type: CommandStaff
       - type: NpcFactionMember
         factions:
-        - TSFMC
+        - MD # mono faction
       - type: SurgerySpeedModifier
         SpeedModifier: 2
   - !type:GiveItemOnHolidaySpecial

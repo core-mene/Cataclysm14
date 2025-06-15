@@ -75,6 +75,7 @@ public sealed partial class ReformSystem : EntitySystem
             BreakOnDamage = true,
             CancelDuplicate = true,
             RequireCanInteract = false,
+            MultiplyDelay = false, // Goobstation
         };
 
         _doAfterSystem.TryStartDoAfter(doAfter);

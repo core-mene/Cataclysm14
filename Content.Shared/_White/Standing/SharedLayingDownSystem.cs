@@ -126,7 +126,8 @@ public abstract class SharedLayingDownSystem : EntitySystem
         {
             BreakOnDamage = true,
             BreakOnHandChange = false,
-            RequireCanInteract = false
+            RequireCanInteract = false,
+            MultiplyDelay = false, // Goobstation
         };
 
         if (!_doAfter.TryStartDoAfter(args))

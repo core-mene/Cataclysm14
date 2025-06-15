@@ -304,7 +304,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
             }
 
             var adjustedPos = Vector2.Transform(mapCoords.Position, matty);
-            var localPos = ScalePosition(adjustedPos with { Y = -adjustedPos.Y});
+            var localPos = ScalePosition(adjustedPos with { Y = -adjustedPos.Y });
             handle.DrawCircle(localPos, exclusion.Range * MinimapScale, exclusionColor.WithAlpha(0.05f));
             handle.DrawCircle(localPos, exclusion.Range * MinimapScale, exclusionColor, filled: false);
 
@@ -503,7 +503,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 
                     // Draw line from our shuttle to target
                     // Might need to clip the line if it's too far? But my brain wasn't working so F.
-                    handle.DrawDottedLine(gridUiPos, mouseLocalPos, color, (float) realTime.TotalSeconds * 30f);
+                    handle.DrawDottedLine(gridUiPos, mouseLocalPos, color, (float)realTime.TotalSeconds * 30f);
 
                     // Draw shuttle pre-vis
                     var mouseVerts = GetMapObject(mouseLocalPos, -_ftlAngle, scale: MinimapScale); // Mono Edit: UI controls and the map are in different coordinate orientations, so the angle has to be negated. (shuttle Y is UI control -Y)

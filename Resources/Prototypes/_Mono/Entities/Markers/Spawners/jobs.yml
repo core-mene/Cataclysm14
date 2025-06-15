@@ -52,3 +52,16 @@
   - type: Sprite
     sprite: Structures/Decoration/banner.rsi
     state: banner-red
+
+- type: entity
+  id: SpawnPointMdMedic
+  parent: SpawnPointJobBase
+  name: Emergency Responder
+  components:
+  - type: SpawnPoint
+    job_id: MdMedic
+  - type: Sprite
+    sprite: _NF/Markers/jobs.rsi
+    layers:
+      - state: green
+      - state: medic

@@ -271,7 +271,8 @@ namespace Content.Server.Carrying
             var args = new DoAfterArgs(EntityManager, carrier, duration, ev, carried, target: carried) // Frontier: length<duration
             {
                 BreakOnMove = true,
-                NeedHand = true
+                NeedHand = true,
+                MultiplyDelay = false, // Goobstation
             };
 
             _doAfterSystem.TryStartDoAfter(args);

@@ -1,122 +1,92 @@
 - type: entity
   id: PartDiona
-  parent: BasePart
+  parent: [BaseItem, BasePart]
   name: "diona body part"
   abstract: true
   components:
   - type: Sprite
     sprite: Mobs/Species/Diona/parts.rsi
-  - type: BodyPart
-    species: "Diona"
+  - type: Icon # Shitmed Change
+    sprite: Mobs/Species/Diona/parts.rsi
+  - type: BodyPart # Shitmed Change
+    species: Diona
 
 - type: entity
   id: TorsoDiona
   name: "diona torso"
-  parent: BaseTorso
+  parent: [PartDiona, BaseTorso]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Diona/parts.rsi
     state: "torso_m"
-  - type: BodyPart
-    species: "Diona"
-    vital: true
 
 - type: entity
   id: HeadDiona
   name: "diona head"
-  parent: BaseHead
+  parent: [PartDiona, BaseHead]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Diona/parts.rsi
     state: "head_m"
-  - type: BodyPart
-    species: "Diona"
-    vital: true
 
 - type: entity
   id: LeftArmDiona
   name: "left diona arm"
-  parent: BaseLeftArm
+  parent: [PartDiona, BaseLeftArm]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Diona/parts.rsi
     state: "l_arm"
-  - type: BodyPart
-    species: "Diona"
 
 - type: entity
   id: RightArmDiona
   name: "right diona arm"
-  parent: BaseRightArm
+  parent: [PartDiona, BaseRightArm]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Diona/parts.rsi
     state: "r_arm"
-  - type: BodyPart
-    species: "Diona"
 
 - type: entity
   id: LeftHandDiona
   name: "left diona hand"
-  parent: BaseLeftHand
+  parent: [PartDiona, BaseLeftHand]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Diona/parts.rsi
     state: "l_hand"
-  - type: BodyPart
-    species: "Diona"
 
 - type: entity
   id: RightHandDiona
   name: "right diona hand"
-  parent: BaseRightHand
+  parent: [PartDiona, BaseRightHand]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Diona/parts.rsi
     state: "r_hand"
-  - type: BodyPart
-    species: "Diona"
 
 - type: entity
   id: LeftLegDiona
   name: "left diona leg"
-  parent: BaseLeftLeg
+  parent: [PartDiona, BaseLeftLeg]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Diona/parts.rsi
     state: "l_leg"
-  - type: BodyPart
-    species: "Diona"
 
 - type: entity
   id: RightLegDiona
   name: "right diona leg"
-  parent: BaseRightLeg
+  parent: [PartDiona, BaseRightLeg]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Diona/parts.rsi
     state: "r_leg"
-  - type: BodyPart
-    species: "Diona"
 
 - type: entity
   id: LeftFootDiona
   name: "left diona foot"
-  parent: BaseLeftFoot
+  parent: [PartDiona, BaseLeftFoot]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Diona/parts.rsi
     state: "l_foot"
-  - type: BodyPart
-    species: "Diona"
 
 - type: entity
   id: RightFootDiona
   name: "right diona foot"
-  parent: BaseRightFoot
+  parent: [PartDiona, BaseRightFoot]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Diona/parts.rsi
     state: "r_foot"
-  - type: BodyPart
-    species: "Diona"

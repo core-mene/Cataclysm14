@@ -40,6 +40,7 @@
         - type: StationJobs
           availableJobs:
             DirectorOfCare: [ 1, 1 ]
+            MdMedic: [ -1, -1 ] # mono
             Pilot: [ -1, -1 ]
             Mercenary: [ -1, -1 ]
           tags:

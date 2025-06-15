@@ -11424,7 +11424,7 @@ entities:
     - type: Transform
       pos: 17.5,-15.5
       parent: 1
-- proto: ComputerAdvancedRadar
+- proto: ComputerRadar
   entities:
   - uid: 1858
     components:
@@ -11618,7 +11618,7 @@ entities:
       - device-button-6
       - device-button-7
       - device-button-8
-- proto: ComputerWallmountAdvancedRadar
+- proto: ComputerWallmountRadar
   entities:
   - uid: 1872
     components:

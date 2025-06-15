@@ -53,6 +53,13 @@ public sealed partial class DoAfterArgs
     [DataField]
     public bool Hidden;
 
+    /// <summary>
+    /// Goobstation
+    /// Whether the delay multiplier event should be raised
+    /// </summary>
+    [DataField]
+    public bool MultiplyDelay = true;
+
     #region Event options
     /// <summary>
     ///     The event that will get raised when the DoAfter has finished. If null, this will simply raise a <see cref="SimpleDoAfterEvent"/>
@@ -275,6 +282,7 @@ public sealed partial class DoAfterArgs
         BlockDuplicate = other.BlockDuplicate;
         CancelDuplicate = other.CancelDuplicate;
         DuplicateCondition = other.DuplicateCondition;
+        MultiplyDelay = other.MultiplyDelay; // Goobstation
         ShowTo = other.ShowTo; // Goobstation - Show doAfter popup to another entity
 
         // Networked

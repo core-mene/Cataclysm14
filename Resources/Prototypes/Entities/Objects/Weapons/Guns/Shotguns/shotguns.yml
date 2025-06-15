@@ -236,7 +236,7 @@
     shape: # Goobstation
     - 0,0,4,1
   - type: BallisticAmmoProvider
-    capacity: 8
+    capacity: 8 # 7->8 Mono
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
     fireRate: 2.2 # Mono
@@ -270,11 +270,12 @@
     sprite: _NF/Objects/Weapons/Guns/Shotguns/pump.rsi # Frontier: add _NF prefix
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
-    fireRate: 1.6 # Mono
+    #fireRate: 1 # Goobstation
   - type: Tag
     tags:
     - WeaponShotgunKammerer
   - type: BallisticAmmoProvider # Goobstation
+    autoCycle: false
   - type: PirateBountyItem # Mono
     id: StandardTSFLongarm
 

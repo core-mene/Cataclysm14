@@ -34,7 +34,6 @@ public sealed class CompanySystem : EntitySystem
         "Brigmedic",
         "NFDetective",
         "PublicAffairsLiaison",
-        "DirectorOfCare",
         "SecurityGuard",
         "Cadet"
     };
@@ -53,6 +52,12 @@ public sealed class CompanySystem : EntitySystem
         "USSPCorporal",
         "USSPMedic",
         "USSPRifleman"
+    };
+
+    private readonly HashSet<string> _mdJobs = new()
+    {
+        "DirectorOfCare",
+        "MdMedic",
     };
 
     public override void Initialize()
@@ -103,6 +108,11 @@ public sealed class CompanySystem : EntitySystem
         {
             // Assign USSP company
             companyComp.CompanyName = "USSP";
+        }
+        else if (args.JobId != null && _mdJobs.Contains(args.JobId))
+        {
+            // Assign MD company
+            companyComp.CompanyName = "MD";
         }
         else
         {

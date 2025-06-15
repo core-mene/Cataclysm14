@@ -99,7 +99,8 @@ public sealed partial class MechSystem : SharedMechSystem
             var doAfterEventArgs = new DoAfterArgs(EntityManager, args.User, component.BatteryRemovalDelay,
                 new RemoveBatteryEvent(), uid, target: uid, used: args.Target)
             {
-                BreakOnMove = true
+                BreakOnMove = true,
+                MultiplyDelay = false, // Goobstation
             };
 
             _doAfter.TryStartDoAfter(doAfterEventArgs);
