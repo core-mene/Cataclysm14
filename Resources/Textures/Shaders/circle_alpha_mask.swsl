@@ -1,7 +1,7 @@
 light_mode unshaded;
 
 // Radius of the circle in pixels.
-uniform highp float radius = 0.5;
+uniform highp float radius;
 
 // Screen-space center of the circle in pixels.
 uniform highp vec2 center;
