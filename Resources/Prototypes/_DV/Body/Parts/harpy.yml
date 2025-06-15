@@ -29,13 +29,6 @@
   parent: [ PartHarpyBase, BaseRightArm ]
   id: RightArmHarpy
   name: "right harpy arm"
-  components:
-  - type: BodyPart
-    onAdd: # Shitmed Change
-    - type: Flight
-      isLayerAnimated: true
-      layer: "/Textures/_EinsteinEngines/Mobs/Customization/Harpy/harpy_wings.rsi"
-      animationKey: "Flap"
 
 - type: entity
   parent: [ PartHarpyBase, BaseLeftHand ]
