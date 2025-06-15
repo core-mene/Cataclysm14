@@ -1,7 +1,7 @@
 light_mode unshaded;
 
 // Radius of the circle in pixels.
-uniform highp float radius;
+uniform highp float radius = 0.5;
 
 // Screen-space center of the circle in pixels.
 uniform highp vec2 center;
@@ -14,8 +14,6 @@ highp float linearStep(highp float edge0, highp float edge1, highp float x) {
 }
 
 void fragment() {
-    highp float radius = 0.5;
-
     // Fragment (pixel) position relative to the screen-space center passed in by script.
     highp vec2 position = FRAGCOORD.xy - center;
 
