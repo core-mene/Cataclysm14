@@ -100,7 +100,6 @@
   minLimit: 0
   loadouts:
   - SecurityGuardWt550Loadout
-  - SecurityGuardC20rLoadout
   - SecurityGuardKammererLoadout
   - SecurityGuardEnforcerLoadout
   - SecurityGuardLecterLoadout
@@ -117,10 +116,9 @@
   name: loadout-group-mercenary-pistol
   minLimit: 0
   loadouts:
-  - SecurityGuardViperLoadout
   - SecurityGuardMk32Loadout
   - SecurityGuardSawedOffLoadout
   fallbacks:
-  - SecurityGuardViperLoadout
+  - SecurityGuardMk32Loadout
 
 # Mono End
