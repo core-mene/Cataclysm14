@@ -18,9 +18,9 @@
 
 - type: entity
   id: OrganBloodsuckerHeart
-  parent: OrganAnimalHeart
-  name: heart
-  categories: [ HideSpawnMenu ]
+  parent: OrganSpaceAnimalHeart # Mono Edit - Immunity to Pressure Loss
+  name: space bloodsucker heart # Mono
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Metabolizer
     metabolizerTypes: [ Bloodsucker ]

@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: BasePart
+  parent: [BaseItem, BasePart]
   id: PartRodentiaBase
   components:
   - type: Sprite
@@ -9,16 +9,39 @@
     sprite: _DV/Mobs/Species/Rodentia/parts.rsi
   - type: BodyPart
     species: Rodentia
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: Blood
+        Quantity: 10
 
 - type: entity
   parent: [ PartRodentiaBase, BaseTorso ]
   id: TorsoRodentia
   name: "rodentia torso"
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: Blood
+        Quantity: 20
 
 - type: entity
   parent: [ PartRodentiaBase, BaseHead ]
   id: HeadRodentia
   name: "rodentia head"
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: Blood
+        Quantity: 10
 
 - type: entity
   parent: [ PartRodentiaBase, BaseLeftArm ]

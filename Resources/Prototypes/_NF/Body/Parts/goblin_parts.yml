@@ -4,6 +4,10 @@
   name: "goblin body part"
   abstract: true
   components:
+  - type: Icon
+    sprite: _NF/Mobs/Species/Goblin/parts.rsi
+  - type: BodyPart # Mono Shitmed
+    species: Goblin
   - type: Extractable
     juiceSolution:
       reagents:

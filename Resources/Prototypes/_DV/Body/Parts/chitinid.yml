@@ -8,12 +8,14 @@
   components:
   - type: Sprite
     sprite: _DV/Mobs/Species/Chitinid/parts.rsi
+  - type: BodyPart # Mono Shitmed
+    species: Chitinid
   - type: Extractable
     juiceSolution:
       reagents:
       - ReagentId: Fat
         Quantity: 3
-      - ReagentId: Blood
+      - ReagentId: InsectBlood
         Quantity: 10
 
 - type: entity
@@ -28,7 +30,7 @@
       reagents:
       - ReagentId: Fat
         Quantity: 10
-      - ReagentId: Blood
+      - ReagentId: InsectBlood
         Quantity: 20
 
 
@@ -44,7 +46,7 @@
       reagents:
       - ReagentId: Fat
         Quantity: 5
-      - ReagentId: Blood
+      - ReagentId: InsectBlood
         Quantity: 10
 
 - type: entity

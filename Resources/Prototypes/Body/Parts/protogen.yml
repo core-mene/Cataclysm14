@@ -6,6 +6,10 @@
   name: "protogen body part"
   abstract: true
   components:
+  - type: Icon # Shitmed Change
+    sprite: Mobs/Species/Protogen/parts.rsi
+  - type: BodyPart # Shitmed Change
+    species: Protogen
   - type: Extractable
     juiceSolution:
       reagents:

@@ -79,35 +79,35 @@
   result: BioSynthHeart
   completetime: 10
   materials:
-    Biomass: 10
+    Biomass: 7 # 10>7 Mono
 
 - type: latheRecipe
   id: SynthLungs
   result: BioSynthLungs
   completetime: 10
   materials:
-    Biomass: 10
+    Biomass: 7 # 10>7 Mono
 
 - type: latheRecipe
   id: SynthLiver
   result: BioSynthLiver
   completetime: 10
   materials:
-    Biomass: 10
+    Biomass: 7 # 10>7 Mono
 
 - type: latheRecipe
   id: SynthEyes
   result: BioSynthEyes
   completetime: 10
   materials:
-    Biomass: 10
+    Biomass: 7 # 10>7 Mono
 
-#- type: latheRecipe - Mono - Doesn't work yet sadly
-#  id: SynthHeadEmpty
-#  result: BioSynthHeadEmpty
-#  completetime: 10
-#  materials:
-#    Biomass: 5
+- type: latheRecipe
+  id: SynthHeadEmpty
+  result: BioSynthHeadEmpty
+  completetime: 10
+  materials:
+    Biomass: 5
 
 - type: latheRecipe
   id: SynthLeftArm

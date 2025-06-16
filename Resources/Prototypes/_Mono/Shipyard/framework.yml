@@ -12,8 +12,8 @@
   id: Framework
   parent: BaseVessel
   name: UNJ Framework
-  description: The cheapest hunk of junk this side of the Rogue. Not meant to last.
-  price: 9000
+  description: The cheapest hunk of junk this side of the Rogue. Not meant to last, but has the potential to be anything.
+  price: 10000
   category: Small
   group: Shipyard
   shuttlePath: /Maps/_Mono/Shuttles/framework.yml
@@ -31,7 +31,7 @@
   minPlayers: 0
   stations:
     Framework:
-      stationProto: StandardFrontierVessel
+      stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Framework CIV{1}'

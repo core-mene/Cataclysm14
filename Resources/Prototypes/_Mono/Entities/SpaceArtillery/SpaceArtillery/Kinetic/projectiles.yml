@@ -200,13 +200,13 @@
     requireNoGrid: true
     shape: circle
   - type: TimedDespawn
-    lifetime: 6.7
+    lifetime: 3
   - type: PointLight
     color: "#FB00FF"
   - type: EmpOnTrigger
     range: 10
     energyConsumption: 2700000
-    disableDuration: 7.5
+    disableDuration: 5
 
 # 220mm Cyrexa
 
@@ -235,7 +235,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 8.3
+    lifetime: 4
   - type: PointLight
     color: "#FCBA03"
   - type: ExplodeOnTrigger
