@@ -19,8 +19,8 @@
     conductivity: 0.41
   - type: FlavorProfile
     flavors:
-      - Raw
-      - Resomi
+      - raw
+      - resomi
   - type: Construction
     graph: ResomiSteak
     node: start
@@ -40,9 +40,9 @@
     output: FoodMeatResomiFried
   - type: FlavorProfile
     flavors:
-      - Raw
-      - Resomi
-      - Floury
+      - raw
+      - resomi
+      - floury
 
 - type: entity
   name: cooked resomi steak
@@ -59,9 +59,9 @@
       - Steak
   - type: FlavorProfile
     flavors:
-      - Cooked
-      - Resomi
-      - Meaty
+      - cooked
+      - resomi
+      - meaty
   - type: SolutionContainerManager
     solutions:
       food:
@@ -94,9 +94,9 @@
           Quantity: 5
   - type: FlavorProfile
     flavors:
-      - Oily
-      - Salty
-      - Resomi
+      - oily
+      - salty
+      - resomi
 
 - type: entity
   name: raw resomi cutlet
@@ -140,9 +140,9 @@
       - Meat
   - type: FlavorProfile
     flavors:
-      - Cooked
-      - Resomi
-      - Meaty
+      - cooked
+      - resomi
+      - meaty
   - type: SolutionContainerManager
     solutions:
       food:
@@ -167,10 +167,10 @@
     state: resomi-bucket
   - type: FlavorProfile
     flavors:
-      - Cooked
-      - Oily
-      - Salty
-      - Resomi
+      - cooked
+      - oily
+      - salty
+      - resomi
   - type: Item
   - type: Food
     trash:
