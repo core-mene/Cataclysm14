@@ -109,7 +109,6 @@
   - type: Tag
     tags:
       - Raw
-      - Resomi
       - Cutlet
   - type: SolutionContainerManager
     solutions:
@@ -135,9 +134,9 @@
     state: cutlet-cooked
   - type: Tag
     tags:
-      - Meat
-      - Cutlet
       - Cooked
+      - Cutlet
+      - Meat
   - type: FlavorProfile
     flavors:
       - Cooked
