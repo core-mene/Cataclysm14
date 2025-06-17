@@ -303,6 +303,21 @@
       - PirateUplink
 
 - type: listing
+  id: UplinkPirateRadioJammer
+  name: uplink-pirate-radio-jammer-name
+  description: uplink-pirate-radio-jammer-desc
+  productEntity: RadioJammer
+  cost:
+    Doubloon: 4
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
   id: UplinkPirateHypopen
   name: uplink-pirate-hypopen-name
   description: uplink-pirate-hypopen-desc

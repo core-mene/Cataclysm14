@@ -50,6 +50,9 @@ uplink-pirate-energy-shield-desc = Exotic energy shield that reflects almost all
 uplink-pirate-agent-id-card-name = Agent ID Card
 uplink-pirate-agent-id-card-desc = A modified ID card that can copy accesses from other cards and change its name and job title at-will.
 
+uplink-pirate-radio-jammer-name = Radio Jammer
+uplink-pirate-radio-jammer-desc = This device will disrupt any nearby outgoing radio communication as well as suit sensors when activated.
+
 uplink-pirate-hypopen-name = Hypopen
 uplink-pirate-hypopen-desc = A chemical hypospray disguised as a pen, capable of instantly injecting up to 10u of reagents. Starts empty.
 
