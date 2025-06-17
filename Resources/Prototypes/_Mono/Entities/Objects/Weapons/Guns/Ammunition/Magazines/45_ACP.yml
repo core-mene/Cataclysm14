@@ -352,7 +352,7 @@
 
 - type: entity
   id: Magazine45_ACPSubMachineGunTopMountedFMJ
-  name: WT550 magazine (.45 ACP top-mounted)
+  name: top-mounted magazine (.45 ACP top-mounted)
   parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
   components:
   - type: Tag
@@ -384,7 +384,7 @@
 
 - type: entity
   id: Magazine45_ACPSubMachineGunTopMountedEmpty
-  name: WT550 magazine (.45 ACP top-mounted any)
+  name: top-mounted magazine (.45 ACP top-mounted any)
   parent: Magazine45_ACPSubMachineGunTopMountedFMJ
   components:
   - type: BallisticAmmoProvider
