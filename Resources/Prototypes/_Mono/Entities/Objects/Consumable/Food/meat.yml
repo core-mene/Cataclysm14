@@ -5,7 +5,8 @@
   description: A slab of raw resomi. Remember to wash your hands!
   components:
   - type: Sprite
-    state: bird
+    sprite: _Mono/Objects/Consumable/Food/meat.rsi
+    state: bird-resomi
   - type: SolutionContainerManager
     solutions:
       food:
@@ -50,8 +51,8 @@
   description: A perfectly cooked resomi steak. Surprisingly tender.
   components:
   - type: Sprite
-    sprite: Objects/Consumable/Food/meat.rsi
-    state: bird-cooked
+    sprite: _Mono/Objects/Consumable/Food/meat.rsi
+    state: resomi-cooked
   - type: Tag
     tags:
       - Meat
@@ -77,8 +78,8 @@
   description: A crispy fried resomi fillet. Tastes like space chicken.
   components:
   - type: Sprite
-    sprite: Objects/Consumable/Food/meat.rsi
-    state: chicken-fried
+    sprite: _Mono/Objects/Consumable/Food/meat.rsi
+    state: resomi-fried
   - type: Tag
     tags:
       - Cooked
@@ -104,8 +105,8 @@
   description: A thin slice of raw resomi meat, ready for breading or frying.
   components:
   - type: Sprite
-    sprite: Objects/Consumable/Food/meat.rsi
-    state: cutlet
+    sprite: _Mono/Objects/Consumable/Food/meat.rsi
+    state: resomi-cutlet
   - type: Tag
     tags:
       - Raw
@@ -130,8 +131,8 @@
   description: A cooked slice of resomi meat, golden and juicy.
   components:
   - type: Sprite
-    sprite: Objects/Consumable/Food/meat.rsi
-    state: cutlet-cooked
+    sprite: _Mono/Objects/Consumable/Food/meat.rsi
+    state: resomi-cutlet-cooked
   - type: Tag
     tags:
       - Cooked
@@ -161,15 +162,15 @@
   id: FoodMeatResomiBucket
   description: A bucket filled with several crispy fried resomi pieces.
   components:
+  - type: Sprite
+    sprite: _Mono/Objects/Consumable/Food/meat.rsi
+    state: resomi-bucket
   - type: FlavorProfile
     flavors:
       - Cooked
       - Oily
       - Salty
       - Resomi
-  - type: Sprite
-    sprite: _Mono/Objects/Consumable/Food/meat.rsi
-    state: resomi-fried
   - type: Item
   - type: Food
     trash:
