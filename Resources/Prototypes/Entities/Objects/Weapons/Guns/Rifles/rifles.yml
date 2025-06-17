@@ -68,7 +68,18 @@
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -40
   - type: Gun
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    minAngle: 21
+    maxAngle: 52
+    angleIncrease: 3
+    angleDecay: 24
     fireRate: 5
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
@@ -113,6 +124,12 @@
   id: WeaponRifleM90GrenadeLauncher
   description: An older bullpup carbine model, with an attached underbarrel grenade launcher. Uses 5.56x45mm ammo. An illegal firearm often used by Syndicate agents.
   components:
+  - type: Gun
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    - Burst
   - type: Sprite
     sprite: Objects/Weapons/Guns/Rifles/carbine.rsi
     layers:
@@ -166,7 +183,19 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _NF/Objects/Weapons/Guns/Rifles/lecter.rsi # Frontier: add _NF prefix
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -40
   - type: Gun
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    - Burst
+    minAngle: 21
+    maxAngle: 52
+    angleIncrease: 1.4
+    angleDecay: 24
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
   - type: ItemSlots
