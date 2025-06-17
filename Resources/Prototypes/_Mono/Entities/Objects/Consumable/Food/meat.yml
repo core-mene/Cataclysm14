@@ -187,3 +187,35 @@
     tags:
       - Cooked
       - Meat
+
+- type: entity
+  name: bucket of fried chicken
+  parent: FoodMeatBase
+  id: FoodMeatChickenBucket
+  description: A bucket filled with several crispy fried chicken pieces.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Consumable/Food/meat.rsi
+    state: chicken-bucket
+  - type: FlavorProfile
+    flavors:
+      - cooked
+      - oily
+      - salty
+      - meaty
+  - type: Item
+  - type: Food
+    trash:
+      - BucketPaper
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 40
+        - ReagentId: Protein
+          Quantity: 25
+  - type: Tag
+    tags:
+      - Cooked
+      - Meat

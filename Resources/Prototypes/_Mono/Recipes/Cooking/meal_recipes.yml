@@ -23,3 +23,15 @@
     FoodMeatResomi: 1
   recipeType:
   - Assembler
+
+- type: microwaveMealRecipe
+  id: RecipeFriedChickenBucket
+  name: bucket of fried chicken recipe
+  result: FoodMeatChickenBucket
+  time: 5
+  group: Savory
+  solids:
+    FoodMeatChickenFried: 5
+    BucketPaper: 1
+  recipeType:
+  - Assembler
