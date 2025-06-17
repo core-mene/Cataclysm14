@@ -27,7 +27,7 @@
 
 #Delta-V
 - type: entity
-  name: Vulcan (7.62x51mm)
+  name: FCM Vulcan (7.62x51mm)
   parent: WeaponRifleVulcan
   id: WeaponRifleVulcanRubber
   suffix: Non-lethal
@@ -272,9 +272,10 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-  - type: CursorOffsetRequiresWield
-  - type: EyeCursorOffset
-    maxOffset: 1.5
-    pvsIncrease: 0.15
+# - type: CursorOffsetRequiresWield
+# - type: EyeCursorOffset
+#   maxOffset: 1.5
+#   pvsIncrease: 0.15
+#uncomment when scope works
   - type: AltFireMelee
     attackType: Light
