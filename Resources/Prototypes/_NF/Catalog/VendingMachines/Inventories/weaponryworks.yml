@@ -72,10 +72,12 @@
 - type: vendingMachineInventory # Mono - this entire thing is mono
   id: WeaponryWorksVendPOIMercInventory
   startingInventory:
+# Rifles
+    WeaponRifleLecterPMC: 4294967295
+    WeaponRifleVulcanCFCM: 4294967295
 # SMGs
     WeaponSubMachineGunC20rPMC: 4294967295
     WeaponSubMachineGunWt550PMC: 4294967295
-    WeaponRifleLecterPMC: 4294967295
     WeaponSubMachineGunDrozdPMC: 4294967295
 # Shotguns
     WeaponShotgunEnforcerPMC: 4294967295
@@ -102,6 +104,8 @@
     Magazine5.56x45mmFMJ: 4294967295 # 5.56x45mm Lecter
     Magazine7.62x39mmLowCapacityFMJ: 4294967295 # 7.62x39mm Gestio/AKM
     Magazine7.62x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
+    Magazine7.62x51mmLowCapacityFMJ: 4294967295 # 7.62x51mm Vulcan
+    Magazine7.62x51mmFMJ: 4294967295 # 7.62x51mm Vulcan
     Magazine7.62x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
     SpeedLoader7.62x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
     SpeedLoader7.62x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
@@ -111,11 +115,13 @@
     AmmoBox5.56x45mmBigFMJ: 4294967295 # 5.56x45mm
     AmmoBox7.62x39mmFMJ: 4294967295 # 7.62x39mm
     AmmoBox7.62x39mmBigFMJ: 4294967295 # 7.62x39mm
+    AmmoBox7.62x54mmRFMJ: 4294967295 # 7.62x54mmR
+    AmmoBox7.62x54mmRBigFMJ: 4294967295 # 7.62x54mmR
     AmmoBox9x19mmFMJ: 4294967295 # 9x19mm
     AmmoBox9x19mmBigFMJ: 4294967295 # 9x19mm
     AmmoBox45_ACPFMJ: 4294967295 # .45 ACP
     AmmoBox45_ACPBigFMJ: 4294967295 # .45 ACP
-    AmmoBox4.6x30mmPFMJ: 4294967295 # 4.6x30mm
+    AmmoBox4.6x30mmFMJ: 4294967295 # 4.6x30mm
     AmmoBox4.6x30mmBigFMJ: 4294967295 # 4.6x30mm
     AmmoBox45_magnumFMJ: 4294967295 # .45 magnum
     AmmoBox12_gaugeSlug: 4294967295 # 12 gauge
