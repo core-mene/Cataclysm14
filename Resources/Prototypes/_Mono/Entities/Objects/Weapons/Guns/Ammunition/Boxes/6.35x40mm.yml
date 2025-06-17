@@ -56,21 +56,49 @@
 - type: entity
   parent: BaseAmmoBox6.35x40mmCaseless
   id: AmmoBox6.35x40mmCaselessBigRubber
-  name: ammunition box (6.35x40mm Caseless rubber)
+  name: big ammunition box (6.35x40mm Caseless Rubber)
+  suffix: Big
   components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,1
   - type: BallisticAmmoProvider
-    capacity: 200
+    capacity: 300
     proto: Cartridge6.35x40mmCaselessRubber
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/6.35x40mm_caseless.rsi
     layers:
-    - state: base-b
+    - state: base-b # Frontier: base-big<base-b
       map: ["enum.GunVisualLayers.Base"]
-    - state: magb-1
+    - state: magb-1 # Frontier: mag-big-1<magb-1
       map: ["enum.GunVisualLayers.Mag"]
-    - state: rubber-b
   - type: MagazineVisuals
-    magState: magb
+    magState: magb # Frontier: mag-big<magb
+    steps: 4
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BaseAmmoBox6.35x40mmCaseless
+  id: AmmoBox6.35x40mmCaselessBigFMJ
+  name: big ammunition box (6.35x40mm Caseless FMJ)
+  suffix: Big
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,1
+  - type: BallisticAmmoProvider
+    capacity: 300
+    proto: Cartridge6.35x40mmCaselessFMJ
+  - type: Sprite
+    layers:
+    - state: base-b # Frontier: base-big<base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-1 # Frontier: mag-big-1<magb-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb # Frontier: mag-big<magb
     steps: 4
     zeroVisible: false
   - type: Appearance
@@ -90,21 +118,3 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: rubber
-
-- type: entity
-  parent: BaseAmmoBox6.35x40mmCaseless
-  id: AmmoBox6.35x40mmCaselessBig
-  name: ammunition box (6.35x40mm Caseless)
-  components:
-  - type: BallisticAmmoProvider
-    capacity: 200
-    proto: Cartridge6.35x40mmCaseless
-  - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/6.35x40mm_caseless.rsi
-    layers:
-    - state: base-b
-      map: ["enum.GunVisualLayers.Base"]
-    - state: magb-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: magb

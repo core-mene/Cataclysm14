@@ -27,11 +27,15 @@
 - type: entity
   parent: BaseAmmoBox5.56x45mm
   id: AmmoBox5.56x45mmBigFMJ
-  name: ammunition box (5.56x45mm FMJ)
+  name: big ammunition box (5.56x45mm FMJ)
   suffix: Big
   components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,1
   - type: BallisticAmmoProvider
-    capacity: 200
+    capacity: 250
     proto: Cartridge5.56x45mmFMJ
   - type: Sprite
     layers:

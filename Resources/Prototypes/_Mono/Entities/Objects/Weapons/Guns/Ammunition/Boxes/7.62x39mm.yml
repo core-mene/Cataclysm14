@@ -27,22 +27,28 @@
 - type: entity
   parent: BaseAmmoBox7.62x39mm
   id: AmmoBox7.62x39mmBigFMJ
-  name: ammunition box (7.62x39mm FMJ)
+  name: big ammunition box (7.62x39mm FMJ)
   suffix: Big
   components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,1
   - type: BallisticAmmoProvider
-    capacity: 200
+    capacity: 250
     proto: Cartridge7.62x39mmFMJ
   - type: Sprite
     layers:
-    - state: base-b # Frontier: base<base-b
+    - state: base-b # Frontier: base-big<base-b
       map: ["enum.GunVisualLayers.Base"]
-    - state: magb-3 # Frontier: mag-1<magb-3
+    - state: magb-1 # Frontier: mag-big-1<magb-1
       map: ["enum.GunVisualLayers.Mag"]
-  # Frontier:
   - type: MagazineVisuals
-    magState: magb
-  # End Frontier
+    magState: magb # Frontier: mag-big<magb
+    steps: 4
+    zeroVisible: false
+  - type: Appearance
+
 
 - type: entity
   parent: BaseAmmoBox7.62x39mm

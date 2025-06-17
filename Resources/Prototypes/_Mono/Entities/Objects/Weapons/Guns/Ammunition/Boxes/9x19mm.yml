@@ -24,14 +24,18 @@
   - type: Appearance
 
 # Boxes
-- type: entity # Mono Big Pistol Mags
+- type: entity
   parent: BaseAmmoBox9x19mm
   id: AmmoBox9x19mmBigFMJ
-  name: ammunition box (9x19mm FMJ)
+  name: big ammunition box (9x19mm FMJ)
   suffix: Big
   components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,1
   - type: BallisticAmmoProvider
-    capacity: 280 # 8 mags per box similar to rifle box
+    capacity: 300
     proto: Cartridge9x19mmFMJ
   - type: Sprite
     layers:
