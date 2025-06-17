@@ -87,3 +87,17 @@
   - StationRepNFPouchSr
   subgroups:
   - ContractorTrinkets
+
+# Begin Mono
+
+- type: loadoutGroup
+  id: StationRepFirearm
+  name: loadout-group-sr-weapon
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - StationRepEnergyGunLoadout
+  fallbacks:
+  - StationRepEnergyGunLoadout
+
+# End Mono

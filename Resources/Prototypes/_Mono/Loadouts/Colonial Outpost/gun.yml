@@ -1,0 +1,91 @@
+# CL the GUNS
+
+- type: loadout
+  id: StationRepEnergyGunLoadout
+  price: 5000
+  storage:
+    back:
+    - WeaponEnergyGun
+
+#security the GUNS - 70% discount for security guards compared to merc for most items, more for less lethal options.
+
+#Rifles
+
+- type: loadout
+  id: SecurityGuardDrozdLoadout
+  price: 17500
+  storage:
+    back:
+    - WeaponSubMachineGunDrozd
+
+- type: loadout
+  id: SecurityGuardLecterLoadout
+  price: 17500
+  storage:
+    back:
+    - WeaponRifleLecter
+
+- type: loadout
+  id: SecurityGuardKammererLoadout
+  price: 10500
+  storage:
+    back:
+    - WeaponShotgunKammerer
+
+- type: loadout
+  id: SecurityGuardEnforcerLoadout
+  price: 18900
+  storage:
+    back:
+    - WeaponShotgunEnforcer
+
+- type: loadout
+  id: SecurityGuardWt550Loadout
+  price: 22400
+  storage:
+    back:
+    - WeaponSubMachineGunWt550
+
+- type: loadout
+  id: SecurityGuardEnergyGunLoadout
+  price: 10800
+  storage:
+    back:
+    - WeaponEnergyGun
+
+- type: loadout
+  id: SecurityGuardLaserCarbineLoadout
+  price: 9100
+  storage:
+    back:
+    - WeaponLaserCarbine
+
+- type: loadout
+  id: SecurityGuardLaserCannonLoadout
+  price: 14700
+  storage:
+    back:
+    - WeaponLaserCannon
+
+- type: loadout
+  id: SecurityGuardDisablerSMGLoadout
+  price: 4000
+  storage:
+    back:
+    - WeaponDisablerSMG
+
+#Pistols
+
+- type: loadout
+  id: SecurityGuardMk32Loadout
+  price: 1500
+  storage:
+    back:
+    - WeaponPistolMk32
+
+- type: loadout
+  id: SecurityGuardSawedOffLoadout
+  price: 7500
+  storage:
+    back:
+    - WeaponShotgunSawn
