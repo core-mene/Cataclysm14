@@ -126,3 +126,47 @@
   - type: StaticPrice
     price: 100
     vendPrice: 9000
+
+#Mercenary vulcan
+- type: entity
+  name: FCM-C Vulcan (7.62x51mm)
+  parent: WeaponRifleVulcan
+  id: WeaponRifleVulcanCFCM
+  description: The "Vulcan" Civilian Medium combat rifle (Fusil de Combat Moyen Civil) in 7.62x51mm, this civilian version only has semi-automatic mode and reduced firerate.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/WeaponRifleVulcanCFCM.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 21
+    maxAngle: 32
+    angleIncrease: 10
+    angleDecay: 24
+    fireRate: 1.5
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine7.62x51mmFMJ
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - Magazine7.62x51mmFMJ
+            - Magazine7.62x51mmLowCapacityFMJ
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge7.62x51mmFMJ
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge7.62x51mmFMJ
