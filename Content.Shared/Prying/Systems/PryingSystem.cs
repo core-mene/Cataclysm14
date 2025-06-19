@@ -6,6 +6,7 @@ using Content.Shared.Doors.Components;
 using Content.Shared.Interaction;
 using Content.Shared.Popups;
 using Content.Shared.Prying.Components;
+using Content.Shared.Timing;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Serialization;
@@ -22,6 +23,7 @@ public sealed class PryingSystem : EntitySystem
     [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly UseDelaySystem _delay = default!; // Goobstation
 
     public override void Initialize()
     {
