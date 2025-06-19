@@ -92,7 +92,7 @@
   id: EncryptionKeyCommand
   name: TSF command encryption key # mono
   categories: [ DoNotMap ] # Frontier
-  description: An encryption key used by crew's bosses.
+  description: An encryption key used by TSF Command.
   components:
   - type: EncryptionKey
     channels:
@@ -188,7 +188,7 @@
   id: EncryptionKeySecurity
   name: colonial security encryption key # mono
   categories: [ DoNotMap ] # Frontier
-  description: An encryption key used by Frontier security forces. # Frontier
+  description: An encryption key used by Colonial security. # Mono
   components:
   - type: EncryptionKey
     channels:
@@ -266,7 +266,7 @@
   parent: [EncryptionKey, BaseC3PirateContrabandHighValue] # Frontier: added BaseC3PirateContraband - Mono: Changed to HighValue
   id: EncryptionKeyFreelance
   name: insurgency encryption key # mono
-  description: An encryption key used by freelancers, who may or may not have an affiliation. It looks like it's worn out.
+  description: An encryption key used by insurgents. # Mono
   components:
     - type: EncryptionKey
       channels:
