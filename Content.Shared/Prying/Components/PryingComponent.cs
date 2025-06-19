@@ -99,6 +99,7 @@ public record struct GetPryTimeModifierEvent
     public GetPryTimeModifierEvent(EntityUid user, bool instaPry) // Goobstation
     {
         User = user;
+        InstaPry = instaPry; // Goobstation
     }
 }
 
