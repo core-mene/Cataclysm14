@@ -322,3 +322,8 @@
   - type: CanEnterCryostorage # Goobstation
   - type: StatusIcon # Goobstation
     bounds: -0.5,-0.5,0.5,0.5
+  - type: PseudoItem # Mono - Everyone bluespace baggable
+    storedOffset: -10,0
+    shape:
+      - 0, 0, 4, 4
+      - 0, 3, 6, 5

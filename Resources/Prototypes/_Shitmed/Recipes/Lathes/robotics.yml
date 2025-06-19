@@ -16,16 +16,16 @@
     Plasma: 100
     Plastic: 100
 
-- type: latheRecipe
-  parent: BaseRoboticsRecipe
-  id: TorsoIPC
-  result: TorsoIPC
-  completetime: 3
-  materials:
-    Steel: 3000
-    Gold: 500
-    Plastic: 500
-    Plasma: 500
+# - type: latheRecipe
+#   parent: BaseRoboticsRecipe
+#   id: TorsoIPC
+#   result: TorsoIPC
+#   completetime: 3
+#   materials:
+#     Steel: 3000
+#     Gold: 500
+#     Plastic: 500
+#     Plasma: 500
 
 # Generic
 
@@ -83,25 +83,3 @@
   parent: BaseIPCOrganRecipe
   id: OrganIPCPump
   result: OrganIPCPump
-
-- type: latheRecipe
-  id: DexLeftHand
-  result: DexLeftHand
-  completetime: 5
-  materials:
-    Steel: 500
-    Glass: 250
-    Plastic: 250
-    Gold: 150
-    Silver: 150
-
-- type: latheRecipe
-  id: DexRightHand
-  result: DexRightHand
-  completetime: 5
-  materials:
-    Steel: 500
-    Glass: 250
-    Plastic: 250
-    Gold: 150
-    Silver: 150

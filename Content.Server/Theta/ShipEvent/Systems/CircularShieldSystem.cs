@@ -236,7 +236,7 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
 
     private void UpdateConsoleState(EntityUid uid, CircularShieldConsoleComponent? console = null, RadarConsoleComponent? radar = null)
     {
-        if (!Resolve(uid, ref console, ref radar)
+        if (!Resolve(uid, ref console, ref radar, false)
             || console.BoundShield == null)
             return;
 

@@ -47,6 +47,9 @@
     whitelist:
       tags:
       - Pizza
+    blacklist:
+      tags:
+      - Slice
 
 - type: cargoBounty
   id: USSPBountyHandheldRadio

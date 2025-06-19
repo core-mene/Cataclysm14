@@ -110,7 +110,7 @@
     sprite: _NF/Structures/Machines/VendingMachines/expeditionaryflatpackvend.rsi
 
 - type: entity
-  parent: [BaseStructureDisableAnchoring, StorePresetUplink, VendingMachine]
+  parent: [StorePresetUplink, VendingMachine] # Mono - Removed BaseStructureDisableAnchoring
   id: VendingMachineSyndieContraband
   name: ContraVend
   description: Wanted across multiple sectors!
@@ -380,7 +380,7 @@
     color: "#EEEEFF"
 
 - type: entity
-  parent: [BaseStructureDisableAnchoring, VendingMachine]
+  parent: VendingMachine # Mono - removed BaseStructureDisableAnchoring
   id: VendingMachineNfsdDrobe
   name: TSFMCDrobe
   description: A vending machine for TSFMC clothing!
@@ -430,7 +430,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
 - type: entity
-  parent: [BaseStructureDisableAnchoring, VendingMachine]
+  parent: VendingMachine # Mono - removed BaseStructureDisableAnchoring
   id: VendingMachineNfsdTech
   name: TSFMCTech
   description: A vending machine for TSFMC tech!

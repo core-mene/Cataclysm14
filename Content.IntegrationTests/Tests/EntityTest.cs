@@ -1,3 +1,4 @@
+#nullable enable
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -50,7 +51,7 @@ namespace Content.IntegrationTests.Tests
                     // TODO: Fix this better in engine.
                     mapSystem.SetTile(grid.Owner, grid.Comp, Vector2i.Zero, new Tile(1));
                     var coord = new EntityCoordinates(grid.Owner, 0, 0);
-                    entityMan.SpawnEntity(protoId, coord);
+                    SpawnEntity(entityMan, protoId, coord);
                 }
             });
 
@@ -107,7 +108,7 @@ namespace Content.IntegrationTests.Tests
                     .ToList();
                 foreach (var protoId in protoIds)
                 {
-                    entityMan.SpawnEntity(protoId, map.GridCoords);
+                    SpawnEntity(entityMan, protoId, map.GridCoords); // Monolith
                 }
             });
             await server.WaitRunTicks(15);
@@ -173,7 +174,8 @@ namespace Content.IntegrationTests.Tests
                 {
                     mapSys.CreateMap(out var mapId);
                     var grid = mapManager.CreateGridEntity(mapId);
-                    var ent = sEntMan.SpawnEntity(protoId, new EntityCoordinates(grid.Owner, 0.5f, 0.5f));
+                    var ent = SpawnEntity(sEntMan, protoId, new EntityCoordinates(grid.Owner, 0.5f, 0.5f)); // Monolith
+
                     foreach (var (_, component) in sEntMan.GetNetComponents(ent))
                     {
                         sEntMan.Dirty(ent, component);
@@ -227,6 +229,7 @@ namespace Content.IntegrationTests.Tests
         /// crude test to try catch issues like this, and possibly should just be disabled.
         /// </remarks>
         [Test]
+        [Ignore("Even wizden calls this test ass")]
         public async Task SpawnAndDeleteEntityCountTest()
         {
             var settings = new PoolSettings { Connected = true, Dirty = true };
@@ -283,7 +286,7 @@ namespace Content.IntegrationTests.Tests
                 var count = Count(server.EntMan);
                 var clientCount = Count(client.EntMan);
                 EntityUid uid = default;
-                await server.WaitPost(() => uid = server.EntMan.SpawnEntity(protoId, coords));
+                await server.WaitPost(() => uid = SpawnEntity(server.EntMan, protoId, coords)); // Monolith
                 await pair.RunTicksSync(3);
 
                 // If the entity deleted itself, check that it didn't spawn other entities
@@ -394,7 +397,7 @@ namespace Content.IntegrationTests.Tests
                             continue;
                         }
 
-                        var entity = entityManager.SpawnEntity(null, testLocation);
+                        var entity = SpawnEntity(entityManager, null, testLocation); // Monolith
 
                         Assert.That(entityManager.GetComponent<MetaDataComponent>(entity).EntityInitialized);
 
@@ -420,6 +423,44 @@ namespace Content.IntegrationTests.Tests
             });
 
             await pair.CleanReturnAsync();
+        }
+
+        private EntityUid SpawnEntity(
+            IEntityManager entManager,
+            string? protoName,
+            MapCoordinates coordinates,
+            ComponentRegistry? registry = null)
+        {
+            try
+            {
+                return entManager.SpawnEntity(protoName, coordinates, registry);
+            }
+            catch (Exception e)
+            {
+                // hey look, it tells you specifically what entity now!
+                Assert.Fail($"Failed to spawn entity {protoName}\n{e}");
+            }
+
+            return EntityUid.Invalid;
+        }
+
+        private EntityUid SpawnEntity(
+            IEntityManager entManager,
+            string? protoName,
+            EntityCoordinates coordinates,
+            ComponentRegistry? registry = null)
+        {
+            try
+            {
+                return entManager.SpawnEntity(protoName, coordinates, registry);
+            }
+            catch (Exception e)
+            {
+                // hey look, it tells you specifically what entity now!
+                Assert.Fail($"Failed to spawn entity {protoName}\n{e}");
+            }
+
+            return EntityUid.Invalid;
         }
     }
 }

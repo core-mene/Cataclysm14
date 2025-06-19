@@ -237,6 +237,10 @@ namespace Content.Shared.Stacks
                     continue;
                 merged = true;
 
+                // Check if the entity was deleted during merging.
+                if (TerminatingOrDeleted(uid) || EntityManager.IsQueuedForDeletion(uid))
+                    break;
+
                 if (stack.Count <= 0)
                     break;
             }

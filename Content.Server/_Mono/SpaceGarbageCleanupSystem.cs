@@ -1,3 +1,4 @@
+using Content.Server.Light.Components;
 using Content.Server.Nutrition.Components;
 using Content.Server.Shuttles.Components;
 using Content.Shared._Mono.CCVar;
@@ -59,6 +60,10 @@ public sealed class SpaceGarbageCleanupSystem : EntitySystem
 
             // Skip deletion if the entity has a Hypospray component. Protect my medipens!
             if (HasComp<HyposprayComponent>(uid))
+                continue;
+
+            // Skip deletion if the entity has an ExpendableLightComponent.
+            if (HasComp<ExpendableLightComponent>(uid))
                 continue;
 
             // For drinks, only skip deletion if they have solution (are not empty)

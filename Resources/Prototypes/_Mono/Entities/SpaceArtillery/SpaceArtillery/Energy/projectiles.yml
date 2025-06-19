@@ -104,11 +104,11 @@
     color: "#6BC1FF"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 500
-    intensitySlope: 2
-    totalIntensity: 250
-    maxTileBreak: 1
+    explosionType: HardBomb
+    totalIntensity: 1250
+    intensitySlope: 10
+    maxIntensity: 55
+    maxTileBreak: 5
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard

@@ -146,8 +146,8 @@
   - type: Appearance
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 40800
+    startingCharge: 40800
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
@@ -166,11 +166,13 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
+    autoRechargePause: true
+    autoRechargePauseTime: 60
     autoRecharge: true
-    autoRechargeRate: 67
+    autoRechargeRate: 81600
   - type: SpaceArtillery
-    powerChargeRate: 67
-    powerUsePassive: 5750
+    powerChargeRate: 81600
+    powerUsePassive: 25000
     powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider

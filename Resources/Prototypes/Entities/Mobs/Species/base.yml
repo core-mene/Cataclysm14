@@ -290,6 +290,11 @@
   - type: Carriable # Goobstation
   - type: LayingDown # WD EDIT
   - type: CPRTraining # Goobstation
+  - type: PseudoItem # Mono - Everyone bluespace baggable
+    storedOffset: -10,0
+    shape:
+      - 0, 0, 4, 4
+      - 0, 3, 6, 5
 
 - type: entity
   save: false
