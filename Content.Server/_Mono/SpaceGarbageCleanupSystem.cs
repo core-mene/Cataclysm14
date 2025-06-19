@@ -62,7 +62,7 @@ public sealed class SpaceGarbageCleanupSystem : EntitySystem
             if (HasComp<HyposprayComponent>(uid))
                 continue;
 
-            // Skip deletion if the entity has an ExpendableLightComponent that is activated.
+            // Skip deletion if the entity has an ExpendableLightComponent.
             if (HasComp<ExpendableLightComponent>(uid))
                 continue;
 
