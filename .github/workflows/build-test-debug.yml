@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'monolith8319' # Frontier
+    if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'monolith8319' # Mono
     strategy:
       matrix:
         os: [ubuntu-latest]
