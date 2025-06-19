@@ -531,7 +531,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         Angle angle,
         Dictionary<string, string>? portNames = null)
     {
-        if (!Resolve(entity, ref entity.Comp1, ref entity.Comp2))
+        if (!Resolve(entity, ref entity.Comp1, ref entity.Comp2, false))
             return new NavInterfaceState(SharedRadarConsoleSystem.DefaultMaxRange, GetNetCoordinates(coordinates), angle, docks, InertiaDampeningMode.Dampen); // Frontier: add inertial dampening
 
         return new NavInterfaceState(
