@@ -2618,6 +2618,13 @@ entities:
     - type: Transform
       pos: 5.5,2.5
       parent: 1
+- proto: ShipyardLiquidatorInfo
+  entities:
+  - uid: 71
+    components:
+    - type: Transform
+      pos: 2.2239702,-5.184417
+      parent: 1
 - proto: ShuttersNormalOpen
   entities:
   - uid: 130
