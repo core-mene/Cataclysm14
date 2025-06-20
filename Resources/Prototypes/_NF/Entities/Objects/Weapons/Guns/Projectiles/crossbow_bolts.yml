@@ -554,7 +554,7 @@
   categories: [ HideSpawnMenu, Spawner ] # Spawner category - this is intended to create other entities
   components:
   - type: ScatteringGrenade
-    fillPrototype: PelletShotgun
+    fillPrototype: Pellet12gaugeBuckshot
     capacity: 6
     delayBeforeTriggerContents: 0
   - type: TriggerOnSpawn

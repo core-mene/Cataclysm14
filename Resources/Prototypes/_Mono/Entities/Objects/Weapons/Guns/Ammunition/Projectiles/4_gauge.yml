@@ -1,6 +1,6 @@
 - type: entity
-  id: Pellet12gaugeSlug
-  name: pellet (12 gauge slug)
+  id: Pellet23x75mmSlug
+  name: pellet (4 gauge slug)
   categories: [ HideSpawnMenu ]
   parent: BaseBullet
   components:
@@ -13,8 +13,25 @@
         Piercing: 35
 
 - type: entity
-  id: Pellet12gaugeBeanbag
-  name: beanbag (12 gauge)
+  id: Pellet23x75mmFlashbang
+  name: pellet (4 gauge flashbang)
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: slug
+  - type: FlashOnTrigger
+    range: 7
+  - type: SpawnOnTrigger
+    proto: GrenadeFlashEffect
+  - type: ActiveTimerTrigger
+    timeRemaining: 0.3
+  - type: DeleteOnTrigger
+
+- type: entity
+  id: Pellet23x75mmBeanbag
+  name: beanbag (4 gauge)
   categories: [ HideSpawnMenu ]
   parent: BaseBullet
   components:
@@ -29,8 +46,8 @@
     damage: 40 # 3 hits to stun
 
 - type: entity
-  id: Pellet12gaugeBuckshot
-  name: pellet (12 gauge)
+  id: Pellet23x75mmBuckshot
+  name: pellet (4 gauge)
   categories: [ HideSpawnMenu ]
   parent: BaseBullet
   components:
@@ -43,18 +60,18 @@
         Piercing: 10
 
 - type: entity
-  id: Pellet12gaugeBuckshotSpread
+  id: Pellet23x75mmBuckshotSpread
   categories: [ HideSpawnMenu ]
-  parent: Pellet12gaugeBuckshot
+  parent: Pellet23x75mmBuckshot
   components:
   - type: ProjectileSpread
-    proto: Pellet12gaugeBuckshot
+    proto: Pellet23x75mmBuckshot
     count: 6
     spread: 15
 
 - type: entity
-  id: Pellet12gaugeIncendiary
-  name: pellet (12 gauge incendiary)
+  id: Pellet23x75mmIncendiary
+  name: pellet (4 gauge incendiary)
   categories: [ HideSpawnMenu ]
   parent: BaseBulletIncendiary
   components:
@@ -70,18 +87,18 @@
     ignited: true
 
 - type: entity
-  id: Pellet12gaugeIncendiarySpread
+  id: Pellet23x75mmIncendiarySpread
   categories: [ HideSpawnMenu ]
-  parent: Pellet12gaugeIncendiary
+  parent: Pellet23x75mmIncendiary
   components:
   - type: ProjectileSpread
-    proto: Pellet12gaugeIncendiary
+    proto: Pellet23x75mmIncendiary
     count: 6
     spread: 15
 
 - type: entity
-  id: Pellet12gaugePractice
-  name: pellet (12 gauge practice)
+  id: Pellet23x75mmPractice
+  name: pellet (4 gauge practice)
   categories: [ HideSpawnMenu ]
   parent: BaseBulletPractice
   components:
@@ -94,17 +111,17 @@
         Blunt: 1
 
 - type: entity
-  id: Pellet12gaugePracticeSpread
+  id: Pellet23x75mmPracticeSpread
   categories: [ HideSpawnMenu ]
-  parent: Pellet12gaugePractice
+  parent: Pellet23x75mmPractice
   components:
   - type: ProjectileSpread
-    proto: Pellet12gaugePractice
+    proto: Pellet23x75mmPractice
     count: 6
     spread: 15
 
 - type: entity
-  id: Pellet12gaugeImprovised
+  id: Pellet23x75mmImprovised
   name: improvised pellet
   categories: [ HideSpawnMenu ]
   parent: BaseBullet
@@ -119,45 +136,8 @@
         Slash: 3
 
 - type: entity
-  id: Pellet12gaugeImprovisedSpread
-  categories: [ HideSpawnMenu ]
-  parent: Pellet12gaugeImprovised
-  components:
-  - type: ProjectileSpread
-    proto: Pellet12gaugeImprovised
-    count: 10
-    spread: 45
-
-- type: entity
-  id: Pellet12gaugeTranquilizer
-  name: pellet (12 gauge tranquilizer)
-  categories: [ HideSpawnMenu ]
-  parent: BaseBulletPractice
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    state: buckshot
-  - type: Projectile
-    damage:
-      types:
-        Blunt: 1
-  - type: SolutionContainerManager
-    solutions:
-      ammo:
-        maxVol: 15
-  - type: RefillableSolution
-    solution: ammo
-  - type: DrainableSolution
-    solution: ammo
-  - type: SolutionInjectOnProjectileHit
-    transferAmount: 15
-    solution: ammo
-  - type: InjectableSolution
-    solution: ammo
-
-- type: entity
-  id: Pellet12gaugeFlare
-  name: pellet (12 gauge flare)
+  id: Pellet23x75mmFlare
+  name: pellet (4 gauge flare)
   categories: [ HideSpawnMenu ]
   components:
   - type: Physics
@@ -203,8 +183,8 @@
         Heat: 5
 
 - type: entity
-  id: Pellet12gaugeUranium
-  name: pellet (12 gauge uranium)
+  id: Pellet23x75mmUranium
+  name: pellet (4 gauge uranium)
   categories: [ HideSpawnMenu ]
   parent: BaseBullet
   components:
@@ -218,69 +198,11 @@
         Piercing: 5
 
 - type: entity
-  id: Pellet12gaugeUraniumSpread
+  id: Pellet23x75mmUraniumSpread
   categories: [ HideSpawnMenu ]
-  parent: Pellet12gaugeUranium
+  parent: Pellet23x75mmUranium
   components:
   - type: ProjectileSpread
-    proto: Pellet12gaugeUranium
+    proto: Pellet23x75mmUranium
     count: 5
     spread: 6
-
-- type: entity
-  id: PelletGrapeshot #tally fucking ho
-  name: grapeshot pellet
-  categories: [ HideSpawnMenu ]
-  parent: BaseBullet
-  components:
-  - type: Sprite
-    noRot: false
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    layers:
-    - state: grapeshot
-      shader: unshaded
-  - type: Projectile
-    damage:
-      types:
-        Piercing: 25
-        Structural: 5
-
-- type: entity
-  id: PelletGrapeshotSpread
-  categories: [ HideSpawnMenu ]
-  parent: PelletGrapeshot
-  components:
-  - type: ProjectileSpread
-    proto: PelletGrapeshot
-    count: 5
-    spread: 40
-
-- type: entity
-  id: PelletGlass
-  name: glass shard
-  parent: BaseBullet
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    noRot: false
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    layers:
-    - state: shard
-      shader: unshaded
-  - type: EmbeddableProjectile
-    deleteOnRemove: true
-  - type: Projectile
-    deleteOnCollide: false
-    damage:
-      types:
-        Slash: 25
-
-- type: entity
-  id: PelletGlassSpread
-  parent: PelletGlass
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectileSpread
-    proto: PelletGlass
-    count: 5
-    spread: 10
