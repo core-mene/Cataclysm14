@@ -2,7 +2,7 @@
   parent: BaseClothingModsuitHelmet
   id: ClothingModsuitHelmetUSSPVaryag
   name: USSP Enforcer Modsuit Helmet
-  description: A heavy-duty modsuit helmet designed for USSP security forces. It provides excellent protection against various hazards and is equipped with a sealing mechanism to maintain internal pressure in space environments.
+  description: A heavy-duty modsuit helmet designed for the USSP. It provides excellent protection against various hazards and is equipped with a sealing mechanism to maintain internal pressure in space environments.
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -28,9 +28,8 @@
       coefficients:
         Blunt: 0.90
         Slash: 0.90
-        Piercing: 0.85
+        Piercing: 0.90
         Heat: 0.90
-        Radiation: 0.75
   - type: ComponentToggler
     components:
     - type: BreathMask
@@ -89,7 +88,7 @@
   parent: BaseClothingModsuitHelmet
   id: ClothingModsuitHelmetUSSPZastavnik
   name: Head of Security Modsuit Helmet
-  description: A heavy-duty modsuit helmet designed for the Head of Security. It provides excellent protection against various hazards and is equipped with a sealing mechanism to maintain internal pressure in space environments.
+  description: A heavy-duty modsuit helmet designed for the USSP. It provides excellent protection against various hazards and is equipped with a sealing mechanism to maintain internal pressure in space environments.
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -115,7 +114,7 @@
       coefficients:
         Blunt: 0.90
         Slash: 0.90
-        Piercing: 0.85
+        Piercing: 0.90
         Heat: 0.90
         Radiation: 0.75
   - type: ComponentToggler
