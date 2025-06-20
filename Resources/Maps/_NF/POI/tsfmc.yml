@@ -3401,7 +3401,7 @@ entities:
     - type: Transform
       pos: 27.5,16.5
       parent: 1
-- proto: BoxMagazine9x19mmFMJ
+- proto: BoxMagazine45_ACPFMJ
   entities:
   - uid: 204
     components:
@@ -3445,7 +3445,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: BoxMagazine9x19mmSubMachineGunFMJ
+- proto: BoxMagazine45_ACPSubMachineGunFMJ
   entities:
   - uid: 217
     components:
@@ -15943,7 +15943,7 @@ entities:
     - type: Transform
       pos: -27.5,7.5
       parent: 1
-- proto: AmmoBox7.62x39mmPractice
+- proto: AmmoBox7.62x51mmPractice
   entities:
   - uid: 2263
     components:
@@ -15955,7 +15955,7 @@ entities:
     - type: Transform
       pos: -14.463586,16.659513
       parent: 1
-- proto: AmmoBox9x19mmPractice
+- proto: AmmoBox45_ACPPractice
   entities:
   - uid: 2265
     components:
