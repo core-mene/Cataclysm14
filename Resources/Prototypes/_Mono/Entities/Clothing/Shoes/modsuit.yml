@@ -1,0 +1,33 @@
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingModsuitBootsUSSPEnforcer
+  name: Security Modsuit Boots
+  description: A heavy-duty modsuit boots designed for USSP security forces. They provide excellent protection against various hazards and are equipped with a sealing mechanism to maintain internal pressure in space environments.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Mono/Clothing/Shoes/Modsuits/ussp-enforcer.rsi
+    layers:
+    - state: boots
+    - state: boots-sealed
+      map: [ "sealed" ]
+  - type: Clothing
+    equipSound: /Audio/Mecha/mechmove03.ogg
+    unequipSound: /Audio/Mecha/mechmove03.ogg
+    slots: [ feet ]
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: SealableClothing
+    sealUpPopup: sealable-clothing-seal-up-boots
+    sealDownPopup: sealable-clothing-seal-down-boots
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: NoSlip
+  - type: Magboots
+  - type: SealableClothingVisuals
+    visualLayers:
+      shoes:
+      - state: equipped-FEET-sealed

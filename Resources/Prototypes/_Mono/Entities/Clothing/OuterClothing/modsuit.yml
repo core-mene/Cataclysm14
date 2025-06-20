@@ -1,0 +1,52 @@
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingModsuitChestplateUSSPEnforcer
+  name: Security Modsuit Chestplate
+  description: A heavy-duty modsuit chestplate designed for security personnel. It provides excellent protection against various hazards and is equipped with a sealing mechanism to maintain internal pressure in space environments.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Appearance
+  - type: AllowSuitStorage
+  - type: Sprite
+    sprite: _Mono/Clothing/OuterClothing/Modsuits/ussp-enforcer.rsi
+    layers:
+    - state: chestplate
+    - state: chestplate-sealed
+      visible: false
+      map: [ "sealed" ]
+  - type: Clothing
+    equipSound: /Audio/Mecha/mechmove03.ogg
+    unequipSound: /Audio/Mecha/mechmove03.ogg
+    slots: [ outerClothing ]
+  - type: ClothingSpeedModifier
+    walkModifier: 0.80
+    sprintModifier: 0.80
+  - type: SealableClothing
+    sealUpPopup: sealable-clothing-seal-up-chestplate
+    sealDownPopup: sealable-clothing-seal-down-chestplate
+  - type: SealableClothingVisuals
+    visualLayers:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING-sealed
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: StaminaDamageResistance
+    coefficient: 0.7
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+        Radiation: 0.6
+  - type: ComponentToggler
+    components:
+    - type: PressureProtection
+      highPressureMultiplier: 0.3
+      lowPressureMultiplier: 1000
+    - type: TemperatureProtection
+      coolingCoefficient: 0.1
+      heatingCoefficient: 0.4
+  - type: FireProtection
+    reduction: 0.5

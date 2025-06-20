@@ -1,0 +1,89 @@
+- type: entity
+  parent: [Clothing, ContentsExplosionResistanceBase]
+  id: ClothingModsuitUSSPEnforcer
+  name: USSP Enforcer Modsuit
+  description: A heavy-duty modsuit designed for USSP security forces. It provides excellent protection against various hazards and is equipped with a sealing mechanism to maintain internal pressure in space environments.
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Mono/Clothing/Back/Modsuits/ussp-enforcer.rsi
+    layers:
+    - state: control
+    - state: control-sealed
+      visible: false
+      shader: unshaded
+      map: [ "sealed" ]
+  - type: Item
+    size: Huge
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - back
+  - type: Storage
+    grid:
+    - 0,0,6,3
+    maxItemSize: Huge
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+      toggleable-clothing: !type:Container
+      cell_slot: !type:ContainerSlot
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+      enum.ToggleClothingUiKey.Key:
+        type: ToggleableClothingBoundUserInterface
+  - type: UseDelay
+    delay: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: ToggleableClothing
+    requiredSlot: back
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
+    clothingPrototypes:
+      head: ClothingModsuitHelmetUSSPEnforcer
+      gloves: ClothingModsuitGauntletsUSSPEnforcer
+      outerClothing: ClothingModsuitChestplateUSSPEnforcer
+      shoes: ClothingModsuitBootsUSSPEnforcer
+  - type: WiresPanel
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        whitelist:
+          components:
+            - PowerCell
+  - type: ItemSlotsRequirePanel
+    slots:
+      cell_slot: true
+  - type: PowerCellDraw
+    drawRate: 0.1 # Sealed draw rate
+    useRate: 0.5 # Draw rate for sealing
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: false
+  - type: DoAfter
+  - type: SealableClothingControl
+  - type: SealableClothingRequiresPower
+  - type: SealableClothingVisuals
+    visualLayers:
+      back:
+      - state: equipped-BACKPACK-sealed
+        shader: unshaded
+
+- type: entity
+  parent: ClothingModsuitUSSPEnforcer
+  id: ClothingModsuitUSSPEnforcerPowerCell
+  suffix: High-Capacity Battery
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+        whitelist:
+          components:
+            - PowerCell
