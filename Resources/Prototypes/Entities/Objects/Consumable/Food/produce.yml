@@ -401,6 +401,7 @@
   - type: Extractable
     grindableSolutionName: food
   - type: SpaceGarbage
+    cleanupExempt: true # Mono
 
 - type: entity
   name: baked banana peel
@@ -2275,6 +2276,7 @@
   - type: Seed
     seedId: bungo
   - type: SpaceGarbage
+    cleanupExempt: true # Mono
   - type: BadFood
 
 - type: entity

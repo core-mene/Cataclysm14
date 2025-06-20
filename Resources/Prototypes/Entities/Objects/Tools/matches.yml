@@ -22,6 +22,7 @@
     - Matchstick
     - Trash
   - type: SpaceGarbage
+    cleanupExempt: true # Mono
   - type: Sprite
     sprite: Objects/Tools/matches.rsi
     layers:
@@ -63,6 +64,8 @@
     - state: match_burnt
   - type: Matchstick
     state: Burnt
+  - type: SpaceGarbage # Mono
+    cleanupExempt: false # Mono
   - type: StaticPrice
     price: 1
 
@@ -115,3 +118,4 @@
     tags:
     - Trash
   - type: SpaceGarbage
+    cleanupExempt: true # Mono

@@ -12,6 +12,7 @@
     tags:
     - Trash
   - type: SpaceGarbage
+    cleanupExempt: true # Mono
   - type: StaticPrice
     price: 5
   - type: InjectableSolution

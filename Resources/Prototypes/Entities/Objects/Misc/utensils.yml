@@ -8,6 +8,7 @@
   - type: Item # TODO add inhand sprites for all utensils
     sprite: Objects/Misc/utensils.rsi
   - type: SpaceGarbage
+    cleanupExempt: true # Mono
   - type: StaticPrice # Frontier
     price: 1
   - type: Tweezers # Shitmed: Any utensil can poorly remove organs

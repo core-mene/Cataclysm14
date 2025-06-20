@@ -16,6 +16,7 @@
     - Crayon
     - Trash
   - type: SpaceGarbage
+    cleanupExempt: true # Mono
   - type: UserInterface
     interfaces:
       enum.CrayonUiKey.Key:
