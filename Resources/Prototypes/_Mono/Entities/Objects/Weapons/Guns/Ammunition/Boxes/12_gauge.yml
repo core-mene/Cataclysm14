@@ -22,7 +22,7 @@
       mayTransfer: true
       whitelist:
         tags:
-        - ShellShotgun12_gauge
+        - ShellShotgun12_gaugeBuckshot
       capacity: 32 # Mono 16->32
     - type: MagazineVisuals
       magState: mag
@@ -56,7 +56,7 @@
   id: AmmoBox12_gaugeBuckshot
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgun12_gauge
+      proto: ShellShotgun12_gaugeBuckshot
     - type: Sprite
       layers:
       - state: base

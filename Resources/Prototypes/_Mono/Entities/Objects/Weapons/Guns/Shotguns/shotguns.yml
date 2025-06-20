@@ -1,0 +1,30 @@
+- type: entity
+  name: Big Leady (4 gauge)
+  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC2ContrabandUnredeemable]
+  id: WeaponShotgunBigLeady
+  description: An old yet faithful design, and a favorite among irregular forces on many worlds. Uses 12 gauge shotgun shells.
+  components: # intend for BigLeady to have tighter choke for slower fire rate and/or manual cycling
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,4,0
+    sprite: _NF/Objects/Weapons/Guns/Shotguns/pump_inhands_64x.rsi # Frontier: add _NF prefix
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Shotguns/pump.rsi # Frontier: add _NF prefix
+  - type: Clothing
+    sprite: _NF/Objects/Weapons/Guns/Shotguns/pump.rsi # Frontier: add _NF prefix
+  - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
+  - type: Gun
+    #fireRate: 1 # Goobstation
+  - type: Tag
+    tags:
+    - WeaponShotgunBigLeady
+  - type: BallisticAmmoProvider # Goobstation
+    autoCycle: false
+    whitelist:
+      tags:
+      - ShellShotgun23x75mmBuckshot
+    capacity: 7
+    proto: ShellShotgun23x75mmBuckshot
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg

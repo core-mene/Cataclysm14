@@ -10,19 +10,20 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 35
+        Piercing: 80
+        Structural: 200
 
 - type: entity
   id: Pellet23x75mmFlashbang
   name: pellet (4 gauge flashbang)
   categories: [ HideSpawnMenu ]
-  parent: BaseBullet
+  parent: BaseBulletTrigger
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     state: slug
   - type: FlashOnTrigger
-    range: 7
+    range: 10
   - type: SpawnOnTrigger
     proto: GrenadeFlashEffect
   - type: ActiveTimerTrigger
@@ -41,9 +42,9 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 10
+        Blunt: 20
   - type: StaminaDamageOnCollide
-    damage: 40 # 3 hits to stun
+    damage: 120
 
 - type: entity
   id: Pellet23x75mmBuckshot
@@ -57,7 +58,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 10
+        Piercing: 20
 
 - type: entity
   id: Pellet23x75mmBuckshotSpread
@@ -81,8 +82,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 3
-        Heat: 7
+        Blunt: 6
+        Heat: 14
   - type: IgnitionSource
     ignited: true
 
@@ -108,7 +109,7 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 1
+        Blunt: 3
 
 - type: entity
   id: Pellet23x75mmPracticeSpread
@@ -119,21 +120,6 @@
     proto: Pellet23x75mmPractice
     count: 6
     spread: 15
-
-- type: entity
-  id: Pellet23x75mmImprovised
-  name: improvised pellet
-  categories: [ HideSpawnMenu ]
-  parent: BaseBullet
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    state: shard
-  - type: Projectile
-    damage:
-      types:
-        Piercing: 3
-        Slash: 3
 
 - type: entity
   id: Pellet23x75mmFlare
@@ -180,7 +166,7 @@
     deleteOnCollide: false
     damage:
       types:
-        Heat: 5
+        Heat: 10
 
 - type: entity
   id: Pellet23x75mmUranium
@@ -194,8 +180,8 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 5
-        Piercing: 5
+        Radiation: 10
+        Piercing: 10
 
 - type: entity
   id: Pellet23x75mmUraniumSpread
@@ -206,3 +192,27 @@
     proto: Pellet23x75mmUranium
     count: 5
     spread: 6
+
+- type: entity
+  id: Pellet23x75mmDozd
+  name: pellet (4 gauge)
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: Dozd
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 7
+
+- type: entity
+  id: Pellet23x75mmDozdSpread
+  categories: [ HideSpawnMenu ]
+  parent: Pellet23x75mmDozd
+  components:
+  - type: ProjectileSpread
+    proto: Pellet23x75mmDozd
+    count: 12
+    spread: 30

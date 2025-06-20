@@ -1,7 +1,7 @@
 - type: entity
   id: SpeedLoader7.62x54mmRFMJ
   name: "speed loader (7.62x54mmR FMJ)"
-  parent: [ BaseItem, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  parent: [ BaseItem, BaseC1Contraband ]
   components:
   - type: Tag
     tags:

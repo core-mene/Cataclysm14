@@ -1,7 +1,7 @@
 - type: entity
   id: BaseCartridge9x19mm
   name: cartridge (9x19mm FMJ)
-  parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  parent: [ BaseCartridge, BaseC1Contraband ]
   abstract: true
   components:
   - type: Tag

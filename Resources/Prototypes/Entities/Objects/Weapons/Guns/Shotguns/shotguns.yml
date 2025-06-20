@@ -103,9 +103,9 @@
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-      - ShellShotgun12_gauge
+      - ShellShotgun12_gaugeBuckshot
     capacity: 7
-    proto: ShellShotgun12_gauge
+    proto: ShellShotgun12_gaugeBuckshot
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
   - type: ContainerContainer

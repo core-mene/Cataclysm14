@@ -7,7 +7,7 @@
   - type: Tag
     tags:
     - Cartridge
-    - ShellShotgun23x75mm
+    - ShellShotgun23x75mmBuckshot
   - type: CartridgeAmmo
     soundEject:
       collection: ShellEject
@@ -29,28 +29,39 @@
   - type: Tag
     tags:
     - Cartridge
-    - ShellShotgun23x75mm
-    - ShellShotgun23x75mmLight
+    - ShellShotgun23x75mmBuckshot
   - type: Sprite
     layers:
       - state: beanbag
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
-    proto: Pellet12gaugeBeanbag
+    proto: Pellet23x75mmBeanbag
   - type: SpentAmmoVisuals
     state: "beanbag"
 
 - type: entity
+  id: ShellShotgun23x75mmDozd
+  name: shotgun shell (4 gauge Dozd)
+  parent: BaseShellShotgun23x75mm
+  components:
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: Pellet23x75mmDozdSpread
+
+- type: entity
   id: ShellShotgun23x75mmSlug
   name: shotgun shell (4 gauge slug)
-  parent: BaseShellShotgun23x75mm # Frontier: remove BaseSecurityContraband
+  parent: BaseShellShotgun23x75mm
   components:
   - type: Sprite
     layers:
       - state: slug
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
-    proto: Pellet12gaugeSlug
+    proto: Pellet23x75mmSlug
   - type: SpentAmmoVisuals
     state: "slug"
 
@@ -62,67 +73,84 @@
   - type: Tag
     tags:
     - Cartridge
-    - ShellShotgun23x75mm
-    - ShellShotgun23x75mmLight
+    - ShellShotgun23x75mmBuckshot
   - type: Sprite
     layers:
       - state: flare
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
-    proto: Pellet12gaugeFlare
+    proto: Pellet23x75mmFlare
   - type: SpentAmmoVisuals
     state: "flare"
 
 - type: entity
-  id: ShellShotgun23x75mm
-  name: shotgun shell (4 gauge)
-  parent: BaseShellShotgun23x75mm # Frontier: remove BaseSecurityContraband
+  id: ShellShotgun23x75mmBuckshot
+  name: shotgun shell (4 gauge buckshot)
+  parent: BaseShellShotgun23x75mm
   components:
   - type: Sprite
     layers:
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
-    proto: Pellet12gaugeBuckshotSpread
+    proto: Pellet23x75mmBuckshotSpread
 
 - type: entity
   id: ShellShotgun23x75mmIncendiary
   name: shotgun shell (4 gauge incendiary)
-  parent: BaseShellShotgun23x75mm # Frontier: remove BaseSecurityContraband
+  parent: BaseShellShotgun23x75mm
   components:
   - type: Sprite
     layers:
       - state: incendiary
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
-    proto: Pellet12gaugeIncendiarySpread
+    proto: Pellet23x75mmIncendiarySpread
   - type: SpentAmmoVisuals
     state: "incendiary"
 
 - type: entity
   id: ShellShotgun23x75mmPractice
   name: shotgun shell (4 gauge practice)
-  parent: BaseShellShotgun23x75mm # Frontier: remove BaseSecurityContraband
+  parent: BaseShellShotgun23x75mm
   components:
   - type: Sprite
     layers:
       - state: practice
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
-    proto: Pellet12gaugePracticeSpread
+    proto: Pellet23x75mmPracticeSpread
   - type: SpentAmmoVisuals
     state: "practice"
 
 - type: entity
   id: ShellShotgun23x75mmUranium
   name: shotgun shell (4 gauge uranium)
-  parent: BaseShellShotgun23x75mm # Frontier: remove BaseSecurityContraband
+  parent: BaseShellShotgun23x75mm
   components:
     - type: Sprite
       layers:
         - state: depleted-uranium
           map: [ "enum.AmmoVisualLayers.Base" ]
     - type: CartridgeAmmo
-      proto: Pellet12gaugeUraniumSpread
+      proto: Pellet23x75mmUraniumSpread
     - type: SpentAmmoVisuals
       state: "depleted-uranium"
+
+- type: entity
+  id: ShellShotgun23x75mmFlashbang
+  name: shotgun shell (4 gauge flashbang)
+  parent: BaseShellShotgun23x75mm
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - ShellShotgun23x75mmBuckshot
+  - type: Sprite
+    layers:
+      - state: flare
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: Pellet23x75mmFlashbang
+  - type: SpentAmmoVisuals
+    state: "incendiary"
