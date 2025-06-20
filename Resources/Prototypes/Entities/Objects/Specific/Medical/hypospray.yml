@@ -22,10 +22,8 @@
   - type: UseDelay
     delay: 0.5
   - type: StaticPrice
-    price: 750
-  - type: Tag
-    tags:
-    - HighRiskItem
+    price: 1000
+    vendPrice: 10000
   - type: StealTarget
     stealGroup: Hypospray
 
