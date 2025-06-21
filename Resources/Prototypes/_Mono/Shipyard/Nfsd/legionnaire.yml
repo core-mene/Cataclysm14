@@ -21,10 +21,10 @@
 - type: gameMap
   id: Legionnaire
   mapName: 'Legionnaire'
-  mapPath: /Maps/_Mono/Shuttles/Nfsd/legionnaire-ASM.yml
+  mapPath: /Maps/_Mono/Shuttles/Nfsd/legionnaire.yml
   minPlayers: 0
   stations:
-    Legionnaire-ASM:
+    Legionnaire:
       stationProto: StandardFrontierSecurityVessel
       components:
       - type: StationNameSetup
