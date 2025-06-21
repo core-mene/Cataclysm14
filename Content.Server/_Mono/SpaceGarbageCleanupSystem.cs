@@ -17,12 +17,20 @@ namespace Content.Server._Mono;
 /// </summary>
 public sealed class SpaceGarbageCleanupSystem : EntitySystem
 {
+
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
 
+    private ISawmill _log = default!;
     private TimeSpan _nextCleanup = TimeSpan.Zero;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+        _log = Logger.GetSawmill("spacegarbagecleanup");
+    }
 
     public override void Update(float frameTime)
     {
@@ -40,6 +48,10 @@ public sealed class SpaceGarbageCleanupSystem : EntitySystem
 
         // Find all entities with SpaceGarbageComponent and delete them
         var query = EntityQueryEnumerator<SpaceGarbageComponent>();
+
+        // Logging Var
+        var entCount = 0;
+
         while (query.MoveNext(out var uid, out var comp))
         {
             // Skip deletion if the component marks the entity as exempt.
@@ -74,8 +86,11 @@ public sealed class SpaceGarbageCleanupSystem : EntitySystem
             if (HasComp<DrinkComponent>(uid))
                 continue;
 
+            // Adds entity to logging
+            entCount += 1;
             // Delete the entity
             QueueDel(uid);
         }
+        _log.Info($"Deleted {entCount} entities");
     }
 }
