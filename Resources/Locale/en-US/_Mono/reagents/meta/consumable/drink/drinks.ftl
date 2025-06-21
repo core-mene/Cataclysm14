@@ -36,3 +36,9 @@ reagent-desc-yorkshire-tea = A robust and hearty black tea blend, perfect for br
 reagent-name-yorkshire-tea-powder = Yorkshire tea powder
 reagent-desc-yorkshire-tea-powder = A special blend of black tea leaves, ground for a strong cup.
 
+reagent-name-decaf-black-tea = decaf black tea
+reagent-desc-decaf-black-tea = A classic black tea with the caffeine removed, but all the flavor remains.
+
+reagent-name-decaf-black-tea-powder = decaf black tea powder
+reagent-desc-decaf-black-tea-powder = Finely ground decaffeinated black tea leaves, perfect for a gentle brew.
+

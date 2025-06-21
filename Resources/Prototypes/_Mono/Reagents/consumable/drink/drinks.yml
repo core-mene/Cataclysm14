@@ -12,6 +12,18 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:GenericStatusEffect
+        key: Drowsiness
+        time: 1.0
+        type: Remove
+      - !type:AdjustReagent
+        reagent: Theobromine
+        amount: 0.025
 
 - type: reagent
   id: GreenTea
@@ -22,7 +34,7 @@
   flavor: flavor-complex-tea-green
   color: "#6B8E23"
   metamorphicSprite:
-    sprite: Objects/Consumable/Drinks/greenteaglass.rsi
+    sprite: Objects/Consumable/Drinks/greenteaglass.rsi # TODO: Update sprite
     state: icon_empty
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
@@ -37,7 +49,7 @@
   flavor: flavor-complex-tea-chamomile
   color: "#EEDC82"
   metamorphicSprite:
-    sprite: Objects/Consumable/Drinks/chamomileteaglass.rsi
+    sprite: Objects/Consumable/Drinks/chamomileteaglass.rsi # TODO: Update sprite
     state: icon_empty
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
@@ -52,7 +64,7 @@
   flavor: flavor-complex-tea-berry
   color: "#A23E48"
   metamorphicSprite:
-    sprite: Objects/Consumable/Drinks/berryteaglass.rsi
+    sprite: Objects/Consumable/Drinks/berryteaglass.rsi # TODO: Update sprite
     state: icon_empty
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
@@ -67,7 +79,7 @@
   flavor: flavor-complex-tea-fruit
   color: "#FFB347"
   metamorphicSprite:
-    sprite: Objects/Consumable/Drinks/fruitteaglass.rsi
+    sprite: Objects/Consumable/Drinks/fruitteaglass.rsi # TODO: Update sprite
     state: icon_empty
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
@@ -82,7 +94,22 @@
   flavor: flavor-complex-tea-yorkshire
   color: "#4B3621"
   metamorphicSprite:
-    sprite: Objects/Consumable/Drinks/yorkshireteaglass.rsi
+    sprite: Objects/Consumable/Drinks/yorkshireteaglass.rsi # TODO: Update sprite
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: DecafBlackTea
+  name: reagent-name-decaf-black-tea
+  parent: BaseAlcohol
+  desc: reagent-desc-decaf-black-tea
+  physicalDesc: reagent-physical-desc-robust
+  flavor: flavor-complex-tea-black
+  color: "#4A3B2F"
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/greenteaglass.rsi # TODO: Update sprite
     state: icon_empty
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-

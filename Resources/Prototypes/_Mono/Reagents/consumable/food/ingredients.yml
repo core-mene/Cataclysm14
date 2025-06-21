@@ -14,6 +14,8 @@
       - !type:AdjustReagent
         reagent: Nutriment
         amount: 0.1
+        reagent: Theobromine
+        amount: 0.1
 
 - type: reagent
   id: GreenTeaPowder
@@ -90,6 +92,23 @@
   physicalDesc: reagent-physical-desc-powdery
   flavor: tea-yorkshire
   color: "#4B3621"
+  group: Foods
+  metabolisms:
+    Food:
+      effects:
+      - !type:SatiateThirst
+        factor: -0.2
+      - !type:AdjustReagent
+        reagent: Nutriment
+        amount: 0.1
+
+- type: reagent
+  id: DecafBlackTeaPowder
+  name: reagent-name-decaf-black-tea-powder
+  desc: reagent-desc-decaf-black-tea-powder
+  physicalDesc: reagent-physical-desc-powdery
+  flavor: tea-black
+  color: "#4A3B2F"
   group: Foods
   metabolisms:
     Food:
