@@ -27,7 +27,7 @@ public sealed partial class DebrisFeaturePlacerControllerComponent : Component
     /// <summary>
     ///     The chance spawning a piece of debris will just be cancelled randomly.
     /// </summary>
-    [DataField("randomCancelChance")] public float RandomCancellationChance = 0.65f; // Mono 0.35f->0.65f
+    [DataField("randomCancelChance")] public float RandomCancellationChance = 0.75f; // Mono 0.35f->0.65f
 
     /// <summary>
     ///     Radius in which there should be no objects for debris to spawn.
