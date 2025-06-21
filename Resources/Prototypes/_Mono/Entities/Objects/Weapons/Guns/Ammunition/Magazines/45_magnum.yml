@@ -1,7 +1,7 @@
 - type: entity
   id: BaseMagazine45_magnum
   name: pistol magazine (.45 magnum FMJ)
-  parent: [BaseC1Contraband, RecyclableItemSteelTiny ]
+  parent: [BaseItem,BaseC1Contraband, RecyclableItemSteelTiny ]
   abstract: true
   components:
   - type: Tag
