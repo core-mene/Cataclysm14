@@ -1,5 +1,6 @@
 ﻿- type: gcQueue
   id: SpaceDebris
-  depth: 150
+  depth: 200
   minDepthToProcess: 50
 #  trySkipQueue: true  # Frontier - Attempt immediate removal if possible # Mono Revert
+  MaximumTickTime: 3
