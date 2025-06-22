@@ -39,12 +39,13 @@ public sealed class DebrisFeaturePlacerSystem : BaseWorldSystem
         SubscribeLocalEvent<DebrisFeaturePlacerControllerComponent, WorldChunkUnloadedEvent>(OnChunkUnloaded);
         SubscribeLocalEvent<OwnedDebrisComponent, ComponentShutdown>(OnDebrisShutdown);
         SubscribeLocalEvent<OwnedDebrisComponent, MoveEvent>(OnDebrisMove);
+        SubscribeLocalEvent<OwnedDebrisComponent, TryCancelGC>(OnTryCancelGC); // Mono Re-add
         SubscribeLocalEvent<SimpleDebrisSelectorComponent, TryGetPlaceableDebrisFeatureEvent>(
             OnTryGetPlacableDebrisEvent);
     }
 
     /// <summary>
-    ///     Handles GC cancellation in case the chunk is still loaded. - Mono Note: GC is a Discontinued Wizden Feature, but we still use it. Do not remove!
+    ///     Handles GC cancellation in case the chunk is still loaded. - Mono Note: GC is a Discontinued Wizden Feature, but we still use it. Do not remove randomly!
     /// </summary>
     private void OnTryCancelGC(EntityUid uid, OwnedDebrisComponent component, ref TryCancelGC args)
     {
@@ -105,6 +106,12 @@ public sealed class DebrisFeaturePlacerSystem : BaseWorldSystem
     private void OnChunkUnloaded(EntityUid uid, DebrisFeaturePlacerControllerComponent component,
         ref WorldChunkUnloadedEvent args)
     {
+        foreach (var (_, debris) in component.OwnedDebris) // Mono Re-add
+        {
+            if (debris is not null)
+                _gc.TryGCEntity(debris.Value); // gonb.
+        }
+
         component.DoSpawns = true;
     }
 
