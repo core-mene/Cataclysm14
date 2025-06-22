@@ -234,12 +234,12 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
 
             if (session.AttachedEntity is not { Valid: true } playerEnt
                 || HasComp<GhostComponent>(playerEnt)
-                || TryComp<MobStateComponent>(playerEnt, out var state) && state.CurrentState != MobState.Alive) 
+                || TryComp<MobStateComponent>(playerEnt, out var state) && state.CurrentState != MobState.Alive)
                 continue;
 
             var pos = _transform.GetWorldPosition(playerEnt);
 
-            if (closest is null || !Exists(closest.Value.Entity))
+            if (closest is null)
             {
                 closest = (playerEnt, Vector2.Distance(pos, from));
                 continue;

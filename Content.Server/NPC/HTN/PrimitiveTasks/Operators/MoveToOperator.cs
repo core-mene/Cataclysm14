@@ -95,7 +95,7 @@ public sealed partial class MoveToOperator : HTNOperator, IHtnConditionalShutdow
         var nearest = _steering.GetNearestPlayerEntity(pos);
         var range = blackboard.GetValueOrDefault<float>(RangeKey, _entManager);
 
-        if (nearest != null && nearest.Value.Distance > 2000f || nearest == null)
+        if (nearest is { Distance: > 2000f })
             return (false, null);
 
         if (xform.Coordinates.TryDistance(_entManager, targetCoordinates, out var distance) && distance <= range)
