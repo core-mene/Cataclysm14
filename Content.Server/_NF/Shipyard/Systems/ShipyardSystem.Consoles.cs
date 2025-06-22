@@ -205,12 +205,12 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             return;
         }
 
-        // Add company information to the shuttle
-        if (TryComp<CompanyComponent>(player, out var playerCompany) &&
-            !string.IsNullOrEmpty(playerCompany.CompanyName))
+        // Add company information to the shuttle from the ID card
+        if (TryComp<IdCardComponent>(targetId, out var idCardCompany) &&
+            !string.IsNullOrEmpty(idCardCompany.CompanyName))
         {
             var shipCompany = EnsureComp<CompanyComponent>(shuttleUid);
-            shipCompany.CompanyName = playerCompany.CompanyName;
+            shipCompany.CompanyName = idCardCompany.CompanyName;
             Dirty(shuttleUid, shipCompany);
         }
 
