@@ -280,13 +280,13 @@
   - type: TimedDespawn
     lifetime: 8.3
   - type: PointLight
-    color: "#FCBA03"
+    color: "#fc5a03"
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBomb
-    totalIntensity: 700
-    intensitySlope: 35
-    maxIntensity: 1300
+    totalIntensity: 1000
+    intensitySlope: 25
+    maxIntensity: 75
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
@@ -320,13 +320,13 @@
   - type: TimedDespawn
     lifetime: 8.3
   - type: PointLight
-    color: "#FCBA03"
+    color: "#fc8c03"
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBomb
-    totalIntensity: 300
-    intensitySlope: 30
-    maxIntensity: 600
+    totalIntensity: 750
+    intensitySlope: 35
+    maxIntensity: 50
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard

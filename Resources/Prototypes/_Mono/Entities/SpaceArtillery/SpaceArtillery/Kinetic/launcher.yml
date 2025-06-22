@@ -380,7 +380,7 @@
         - MachineLayer
   - type: Gun
     projectileSpeed: 315
-    fireRate: 0.075
+    fireRate: 0.1
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
     soundEmpty:
@@ -390,13 +390,13 @@
     autoRechargeRate: 12000
     autoRechargePause: true
   - type: SpaceArtillery
-    powerChargeRate: 800
-    powerUsePassive: 1500
+    powerChargeRate: 12000
+    powerUsePassive: 2000
     powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipBoforsProjectile
-    fireCost: 6000
+    fireCost: 8000
   - type: RadarBlip
     radarColor: "#03FC9D"
     scale: 3.5
@@ -448,16 +448,16 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 12000
+    autoRechargeRate: 10000
     autoRechargePause: true
   - type: SpaceArtillery
-    powerChargeRate: 700
+    powerChargeRate: 10000
     powerUsePassive: 1500
     powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipKargilProjectile
-    fireCost: 6000
+    fireCost: 5000
   - type: RadarBlip
     radarColor: "#03FC9D"
     scale: 3
