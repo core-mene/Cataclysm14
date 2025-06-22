@@ -76,7 +76,7 @@ public sealed partial class MoveToOperator : HTNOperator, IHtnConditionalShutdow
         _transform = sysManager.GetEntitySystem<SharedTransformSystem>();
         _cfg = IoCManager.Resolve<IConfigurationManager>();
 
-        _cfg.OnValueChanged<bool>(_cfg.GetCVar(CCVars.NPCMovementCheckPlayerDistances), UpdateDoNearbyPlayerCheck, true);
+        _cfg.OnValueChanged<bool>(CCVars.NPCMovementCheckPlayerDistances, UpdateDoNearbyPlayerCheck, true);
     }
 
     private void UpdateDoNearbyPlayerCheck(bool newValue)
