@@ -51,7 +51,7 @@
   name: USSP combat medic PDA
   components:
   - type: Pda
-    id: SecurityCadetIDCard
+    id: USSPMedicIDCard
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -70,7 +70,7 @@
   name: USSP efreitor PDA
   components:
   - type: Pda
-    id: SecurityCadetIDCard
+    id: USSPCorporalIDCard
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -87,7 +87,7 @@
   name: USSP serzhant PDA
   components:
   - type: Pda
-    id: SecurityCadetIDCard
+    id: USSPSergeantIDCard
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -105,7 +105,7 @@
   name: USSP commissar PDA
   components:
   - type: Pda
-    id: SecurityCadetIDCard
+    id: USSPCommissarIDCard
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:

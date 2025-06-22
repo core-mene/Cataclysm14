@@ -13,4 +13,9 @@ public sealed partial class CCVars
     ///     Should NPCs pathfind when steering. For debug purposes.
     /// </summary>
     public static readonly CVarDef<bool> NPCPathfinding = CVarDef.Create("npc.pathfinding", true);
+
+    /// <summary>
+    ///     Should NPCs check player distances when moving? Mostly because fuck debugging this reliably.
+    /// </summary>
+    public static readonly CVarDef<bool> NPCMovementCheckPlayerDistances = CVarDef.Create("npc.movement_check_player_distances", false);
 }

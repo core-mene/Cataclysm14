@@ -30,7 +30,7 @@
     - state: idsecurityofficer
 
 - type: entity
-  parent: CadetIDCard
+  parent: IDCardStandard
   id: USSPMedicIDCard
   name: USSP combat medic ID card
   components:
@@ -43,7 +43,7 @@
     - state: idbrigmedic
 
 - type: entity
-  parent: CadetIDCard
+  parent: IDCardStandard
   id: USSPSergeantIDCard
   name: USSP serzhant ID card
   components:
@@ -56,7 +56,7 @@
     - state: idseniorofficer
 
 - type: entity
-  parent: [CadetIDCard, BaseCommandContraband]
+  parent: [IDCardStandard, BaseCommandContraband]
   id: USSPCommissarIDCard
   name: USSP commissar ID card
   components:

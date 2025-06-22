@@ -9,7 +9,10 @@ using Content.Server.NPC.Pathfinding;
 using Content.Shared.CCVar;
 using Content.Shared.Climbing.Systems;
 using Content.Shared.CombatMode;
+using Content.Shared.Ghost;
 using Content.Shared.Interaction;
+using Content.Shared.Mobs;
+using Content.Shared.Mobs.Components;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Events;
 using Content.Shared.Movement.Systems;
@@ -30,6 +33,7 @@ using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Content.Shared.Prying.Systems;
 using Microsoft.Extensions.ObjectPool;
+using Robust.Server.Player;
 
 namespace Content.Server.NPC.Systems;
 
@@ -62,6 +66,7 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedCombatModeSystem _combat = default!;
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
 
     private EntityQuery<FixturesComponent> _fixturesQuery;
     private EntityQuery<MovementSpeedModifierComponent> _modifierQuery;
@@ -216,6 +221,40 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
         component.PathfindToken?.Cancel();
         component.PathfindToken = null;
         RemComp<NPCSteeringComponent>(uid);
+    }
+
+    public (EntityUid Entity, float Distance)? GetNearestPlayerEntity(Vector2 from)
+    {
+        var allPlayerData = _playerManager.GetAllPlayerData();
+        (EntityUid Entity, float Distance)? closest = null;
+
+        foreach (var playerData in allPlayerData)
+        {
+            var session = _playerManager.GetSessionById(playerData.UserId);
+
+            if (session.AttachedEntity is not { Valid: true } playerEnt
+                || HasComp<GhostComponent>(playerEnt)
+                || TryComp<MobStateComponent>(playerEnt, out var state) && state.CurrentState != MobState.Alive)
+                continue;
+
+            var pos = _transform.GetWorldPosition(playerEnt);
+
+            if (closest is null)
+            {
+                closest = (playerEnt, Vector2.Distance(pos, from));
+                continue;
+            }
+
+            var closestData = closest.Value;
+            var distance = Vector2.Distance(pos, from);
+
+            if (distance < closestData.Distance)
+            {
+                closest = (playerEnt, distance);
+            }
+        }
+
+        return closest;
     }
 
     public override void Update(float frameTime)
@@ -461,7 +500,7 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
             return;
         }
 
-        var targetPos = steering.Coordinates.ToMap(EntityManager, _transform);
+        var targetPos = _transform.ToMapCoordinates(steering.Coordinates);
         var ourPos = _transform.GetMapCoordinates(uid, xform: xform);
 
         PrunePath(uid, ourPos, targetPos.Position - ourPos.Position, result.Path);

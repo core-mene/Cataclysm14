@@ -48,7 +48,7 @@ jobs:
       - name: Commit Changelog
         run: |
           git pull origin main
-          git add *.yml
+          git add "${{ env.CHANGELOG_DIR }}"
           git commit -m "Automated Changelog (#${{ env.PR_NUMBER }})"
           git push
         shell: bash

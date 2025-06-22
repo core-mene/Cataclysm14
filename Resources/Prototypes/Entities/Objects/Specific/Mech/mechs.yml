@@ -42,6 +42,8 @@
     interfaces:
       enum.MechUiKey.Key:
         type: MechBoundUserInterface
+      enum.RadarConsoleUiKey.Key:
+        type: RadarConsoleBoundUserInterface
   - type: MeleeWeapon
     canWideSwing: false
     hidden: true
@@ -144,6 +146,9 @@
   - type: StaticPrice
     price: 450
   # Goobstation Change End
+  - type: RadarConsole
+    maxRange: 256
+    followEntity: true
 
 - type: entity
   id: MechRipley

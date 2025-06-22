@@ -48,6 +48,11 @@ namespace Content.Shared.Maps
         [DataField]
         public PrototypeFlags<ToolQualityPrototype> DeconstructTools { get; set; } = new();
 
+        /// Monolith - Goobstation
+        /// Tile deconstruct do-after time multiplier
+        [DataField]
+        public float DeconstructTimeMultiplier { get; private set; }
+
         // Delta V
         // [DataField("canShovel")] public bool CanShovel { get; private set; }
         //Delta V

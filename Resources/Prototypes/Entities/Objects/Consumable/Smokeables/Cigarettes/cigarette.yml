@@ -12,6 +12,7 @@
       - Cigarette
       - Trash
   - type: SpaceGarbage
+    cleanupExempt: true # Mono
   - type: Clothing
     sprite: Objects/Consumable/Smokeables/Cigarettes/cigarette.rsi
     slots: [ mask ]
@@ -58,6 +59,8 @@
     state: burnt-icon
   - type: Smokable
     state: Burnt
+  - type: SpaceGarbage
+    cleanupExempt: false # Mono
   - type: SolutionContainerManager
     solutions:
       smokable:

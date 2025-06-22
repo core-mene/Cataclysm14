@@ -1,16 +1,15 @@
-- type: emote
-  id: Gekker
-  name: chat-emote-name-gekker
-  category: Vocal
-  chatMessages: [ gekkers ]
-  chatTriggers:
-  - gekkers
-
-- type: emote
+- type: emote ## goobstation - edited for monolith
   id: Yip
   name: chat-emote-name-yip
   category: Vocal
-  chatMessages: [ yips ]
+  icon: { sprite: Mobs/Animals/kobold.rsi, state: full }
+  chatMessages: [ "chat-emote-msg-yip" ]
+  whitelist:
+    tags:
+    - ReptilianEmotes
+  blacklist:
+    components:
+      - BorgChassis
   chatTriggers:
   - yip
   - yips

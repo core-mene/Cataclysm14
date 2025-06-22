@@ -336,9 +336,13 @@
   whitelist:
     components:
     - MobState
+  blacklist: # Mono - Silicons dont die like humans
+    components:
+    - Silicon
+    - BorgChassis
   chatMessages: ["chat-emote-msg-deathgasp"]
-  # chatTriggers: # DeltaV - Remove from the emote wheel
-  # - deathgasp
+  chatTriggers: # Mono - D-V ready for some more 1984 - Readds deathgasp
+    - deathgasp
 
 - type: emote
   id: MonkeyDeathgasp
@@ -399,6 +403,10 @@
   category: Vocal
   icon: Interface/Emotes/beep.png
   chatMessages: ["chat-emote-msg-beep"]
+  whitelist: # Mono - IPC's, borgs, protogens
+    components:
+    - Silicon
+    - BorgChassis
   chatTriggers:
     - beep
     - beeps
@@ -411,6 +419,10 @@
   category: Vocal
   icon: Interface/Emotes/chime.png
   chatMessages: ["chat-emote-msg-chime"]
+  whitelist: # Mono - IPC's, borgs, protogens
+    components:
+    - Silicon
+    - BorgChassis
   chatTriggers:
     - chime
     - chimes
@@ -423,6 +435,10 @@
   category: Vocal
   icon: Interface/Emotes/buzztwo.png
   chatMessages: ["chat-emote-msg-buzzestwo"]
+  whitelist: # Mono - IPC's, borgs, protogens
+    components:
+    - Silicon
+    - BorgChassis
   chatTriggers:
     - buzztwice
     - buzzstwice
@@ -442,6 +458,10 @@
   category: Vocal
   icon: Interface/Emotes/ping.png
   chatMessages: ["chat-emote-msg-ping"]
+  whitelist: # Mono - IPC's, borgs, protogens
+    components:
+    - Silicon
+    - BorgChassis
   chatTriggers:
     - ping
     - pings

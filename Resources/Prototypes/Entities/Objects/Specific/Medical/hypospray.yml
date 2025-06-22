@@ -1,7 +1,7 @@
 - type: entity
   name: hypospray
   parent: BaseItem # Frontier: remove BaseGrandTheftContraband
-  description: A sterile injector for rapid administration of drugs to patients.
+  description: The base, unrestricted hypospray. Designed by top Nanotrasen researchers, it features a large chemical storage, along with a next-to-zero injection delay. It has a warning on its side reading "FOR MEDICAL USE ONLY.".
   id: Hypospray
   components:
   - type: Sprite
@@ -22,10 +22,8 @@
   - type: UseDelay
     delay: 0.5
   - type: StaticPrice
-    price: 750
-  - type: Tag
-    tags:
-    - HighRiskItem
+    price: 1000
+    vendPrice: 20000
   - type: StealTarget
     stealGroup: Hypospray
 

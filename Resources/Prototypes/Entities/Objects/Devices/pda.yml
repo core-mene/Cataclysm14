@@ -160,17 +160,18 @@
 
 - type: entity
   parent: BasePDA
-  id: BaseMedicalPDA
+  id: BaseMedicalPDA # Mono: BaseMedicalPDA reinstated
   abstract: true
-  # Frontier: cartridges moved to loadouts
-  # components:
-  # - type: CartridgeLoader
-    # uiKey: enum.PdaUiKey.Key
-    # preinstalled:
-      # - CrewManifestCartridge
-      # - NotekeeperCartridge
-      # - NewsReaderCartridge
-      # - MedTekCartridge
+  components:
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge # Frontier
+    - AstroNavCartridge # Frontier
+    - MedTekCartridge
   # End Frontier
 
 - type: entity

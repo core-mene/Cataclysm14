@@ -1189,6 +1189,7 @@
     blacklist:
       components: [ Storage ]
   - type: SpaceGarbage
+    cleanupExempt: true
   - type: Sprite
     sprite: _NF/Objects/Storage/Pouches/tobacco_pouch.rsi
     layers:

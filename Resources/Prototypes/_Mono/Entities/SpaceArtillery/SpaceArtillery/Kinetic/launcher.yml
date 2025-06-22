@@ -77,8 +77,8 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 1.25
-    projectileSpeed: 225
+    fireRate: 1.5
+    projectileSpeed: 322
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/mortar.ogg
     soundEmpty:
@@ -93,7 +93,7 @@
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipDravonProjectile
-    fireCost: 28
+    fireCost: 250
   - type: RadarBlip
     radarColor: "#FF0000"
     scale: 1.5
