@@ -1,7 +1,7 @@
 ﻿<Document>
   # ADBX-31 TARNYX 150mm EMP Cannon
 
-  A [color=Gold]ballistic[/color] EMP cannon built to disable massive portions of enemy ships.
+  A [color=gold]ballistic[/color] EMP cannon built to disable massive portions of enemy ships with a single, powerful shot.
 
   <Box>
     <GuideEntityEmbed Entity="WeaponTurretTarnyx"/>
@@ -9,12 +9,14 @@
 
   ## Gun Specifications
 
-  - Firerate: [color=crimson] 3 RPM [/color]/[color=deepskyblue] 0.05 RPS [/color]
+  - Firerate: [color=crimson]3 RPM[/color] ([color=deepskyblue]0.05 RPS[/color])
   - Sell Value: [color=greenyellow][bold]1500 Spesos[/bold][/color]
   - Muzzle Velocity: [color=orange]400 m/s[/color]
-  - Range: [color=orange]1200m[/color]
+  - Maximum Range: [color=orange]1200m[/color]
+  - Power Usage (Passive): [color=turquoise]3500u/s[/color]
   - Capacitor Storage: [color=orange]40000u[/color]
   - Capacitor Recharge: [color=turquoise]214u/s[/color]
   - Capacitor Fire Cost: [color=turquoise]17500u[/color]
+  - Firing Mode: [color=gold]Single Shot[/color]
 
 </Document>

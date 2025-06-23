@@ -1,31 +1,33 @@
 ﻿<Document>
   # ADMP-27 Vespera Rapid-Fire Missile System
 
-  A rapid-fire swarm [color=GreenYellow]missile[/color] turret built to launch missiles in high volume within a short period of time.
+A rapid-fire swarm [color=GreenYellow]missile[/color] turret built to launch missiles in high volume within a short period of time. The Vespera saturates targets with a barrage of guided warheads, overwhelming defenses with sheer volume.
 
   <Box>
     <GuideEntityEmbed Entity="WeaponTurretVespera"/>
   </Box>
 
-  ## Pod Specifications
+## Pod Specifications
 
-  - Firerate: [color=crimson] 180 RPM [/color]/[color=deepskyblue] 3 RPS [/color]
-  - Sell Value: [color=greenyellow][bold]2000 Spesos[/bold][/color]
-  - Capacitor Storage: [color=orange]40000u[/color]
-  - Capacitor Recharge: [color=turquoise]200u/s[/color]
-  - Capacitor Fire Cost: [color=turquoise]867u[/color]
+- Firerate: [color=crimson]180 RPM[/color] ([color=deepskyblue]3 RPS[/color])
+- Sell Value: [color=greenyellow][bold]2000 Spesos[/bold][/color]
+- Power Usage (Passive): [color=turquoise]750u/s[/color]
+- Capacitor Storage: [color=orange]40000u[/color]
+- Capacitor Recharge: [color=turquoise]200u/s[/color]
+- Capacitor Fire Cost: [color=turquoise]867u[/color]
+- Firing Mode: [color=gold]Automatic[/color]
 
   <Box>
     <GuideEntityEmbed Entity="ShipMissileASM417"/>
   </Box>
 
-  ## Missile Specifications
+## Missile Specifications
 
-  - Acceleration: [color=mediumspringgreen][bold]150 m/s²[/bold][/color]
-  - Tracking Range: [color=orangered][bold]200m[/bold][/color]
-  - Scanning Arc: [color=teal]40 degrees[/color]
-  - Launch Speed: [color=darkorange]300 m/s[/color]
-  - Max Speed: [color=darkorange]360 m/s[/color]
-  - Range: [color=orange]1260m[/color]
+- Acceleration: [color=mediumspringgreen][bold]150 m/s²[/bold][/color]
+- Tracking Range: [color=orangered][bold]200m[/bold][/color]
+- Scanning Arc: [color=teal]40 degrees[/color]
+- Launch Speed: [color=darkorange]300 m/s[/color]
+- Max Speed: [color=darkorange]360 m/s[/color]
+- Range: [color=orange]1260m[/color]
 
 </Document>
