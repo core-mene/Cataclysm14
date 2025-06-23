@@ -80,16 +80,18 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
-    ejectState: eject-unshaded
-    denyState: deny-unshaded
+    # ejectState: eject-unshaded
+    # denyState: deny-unshaded
     ejectDelay: 1.9
     initialStockQuality: 0.33
+  - type: MarketModifier
+    mod: 8
   - type: Advertise
     pack: BaristaAds
   - type: SpeakOnUIClosed
     pack: BaristaGoodbyes
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/gib.rsi # TODO: Update this sprite
+    sprite: _Mono/Structures/Machines/VendingMachines/barista.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
