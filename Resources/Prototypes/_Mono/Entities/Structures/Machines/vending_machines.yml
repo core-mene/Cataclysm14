@@ -66,3 +66,39 @@
   name: ContraVend
   suffix: POI
   description: Wanted across multiple sectors!
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineBarista
+  name: Barista Vendor
+  description: Sells a variety of coffees, teas, and pastries.
+  components:
+  - type: VendingMachine
+    pack: BaristaInventory
+    dispenseOnHitChance: 0.25
+    dispenseOnHitThreshold: 2
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+    ejectDelay: 1.9
+    initialStockQuality: 0.33
+  - type: Advertise
+    pack: BaristaAds
+  - type: SpeakOnUIClosed
+    pack: BaristaGoodbyes
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/gib.rsi # TODO: Update this sprite
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#D82929"

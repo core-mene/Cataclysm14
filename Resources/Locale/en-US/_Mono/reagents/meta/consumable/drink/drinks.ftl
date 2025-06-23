@@ -33,3 +33,9 @@ reagent-desc-decaf-black-tea = A classic black tea with the caffeine removed, bu
 reagent-name-decaf-black-tea-powder = decaf black tea powder
 reagent-desc-decaf-black-tea-powder = Finely ground decaffeinated black tea leaves, perfect for a gentle brew.
 
+reagent-name-syndie-tea = Waffle Co. Coffee Delight
+reagent-desc-syndie-tea = A synthetic beverage that mimics the taste of coffee, but with a watery texture and artificial flavor.
+
+reagent-name-decaf-coffee = decaf coffee
+reagent-desc-decaf-coffee = A cup of coffee with all the flavor, but none of the caffeine.
+

@@ -1,0 +1,23 @@
+- type: entity
+  name: teaspoon # It's essentially a reskinned dropped for rp-flavor.
+  parent: Dropper
+  description: A small spoon used for transferring minimal amount of powder to cups.
+  id: Teaspoon
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chemistry/dropper.rsi #TODO: Update sprite
+    layers:
+      - state: dropper
+      - state: dropper1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    fillBaseName: dropper
+    inHandsMaxFillLevels: 1
+    inHandsFillBaseName: -fill-
+  - type: StaticPrice
+    price: 40
+  - type: Tag
+    tags:
+    - Dropper

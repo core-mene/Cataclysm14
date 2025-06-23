@@ -72,3 +72,33 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
+- type: reagent
+  id: SyndieTea
+  name: reagent-name-tea-syndie
+  parent: BaseDrink
+  desc: reagent-desc-tea-syndie
+  physicalDesc: reagent-physical-desc-spicy
+  flavor: teaSyndie
+  color: "#FF0000"
+  metamorphicSprite:
+    sprite: _Mono/Objects/Consumable/Drinks/syndieteaglass.rsi # TODO: Update sprite
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: DecafCoffee
+  name: reagent-name-decaf-coffee
+  parent: BaseDrink
+  desc: reagent-desc-decaf-coffee
+  physicalDesc: reagent-physical-desc-aromatic
+  flavor: coffeeDecaf
+  color: "#6B4F2A"
+  metamorphicSprite:
+    sprite: _Mono/Objects/Consumable/Drinks/coffeeglass.rsi # TODO: Update sprite
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false

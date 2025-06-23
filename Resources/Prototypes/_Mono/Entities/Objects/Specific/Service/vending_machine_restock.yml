@@ -1,0 +1,15 @@
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachineRestockChemVend
+  name: BaristaVend Restock
+  description: A box filled with tea pouches, cups, and barista supplies. Load it into a Barista Vendor to restock. A label reads "FOR AUTHORIZED BARISTAS ONLY. TAMPERING WILL RUIN THE FLAVOR."
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - BaristaVendInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
+    - state: refill_medical #TODO: Update sprites
