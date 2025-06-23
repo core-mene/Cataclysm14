@@ -1,0 +1,171 @@
+- type: entity
+  parent: [ BoxCardboard, BaseBagOpenClose ]
+  id: FoodBoxCookieSimple
+  name: Simple Cookie Box
+  description: A box containing simple cookies. Perfect for a snack!
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Baked/nuggets.rsi #TODO: Update sprite
+    state: box
+    layers:
+    - state: box
+      map: ["closeLayer"]
+    - state: box-open
+      map: ["openLayer"]
+      visible: false
+    - state: box1
+      map: ["box1"]
+      visible: false
+    - state: box2
+      map: ["box2"]
+      visible: false
+    - state: box3
+      map: ["box3"]
+      visible: false
+    - state: box4
+      map: ["box4"]
+      visible: false
+    - state: box5
+      map: ["box5"]
+      visible: false
+    - state: box6
+      map: ["box6"]
+      visible: false
+  - type: Storage
+    grid:
+    - 0,0,1,2
+  - type: Item
+    sprite: Objects/Consumable/Food/Baked/nuggets.rsi #TODO: Update sprite
+    size: Small
+    heldPrefix: box
+  - type: StorageFill
+    contents:
+    - id: FoodBakedCookieSimple #TODO: Add it
+      amount: 6
+  - type: ItemCounter
+    count:
+      tags: [SimpleCookie]
+    composite: true
+    layerStates:
+    - box1
+    - box2
+    - box3
+    - box4
+    - box5
+    - box6
+  - type: Appearance
+
+- type: entity
+  parent: [ BoxCardboard, BaseBagOpenClose ]
+  id: FoodBoxCookieSugar
+  name: Sugar Cookie Box
+  description: A box containing sugar cookies. Perfect for a snack!
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Baked/nuggets.rsi #TODO: Update sprite
+    state: box
+    layers:
+    - state: box
+      map: ["closeLayer"]
+    - state: box-open
+      map: ["openLayer"]
+      visible: false
+    - state: box1
+      map: ["box1"]
+      visible: false
+    - state: box2
+      map: ["box2"]
+      visible: false
+    - state: box3
+      map: ["box3"]
+      visible: false
+    - state: box4
+      map: ["box4"]
+      visible: false
+    - state: box5
+      map: ["box5"]
+      visible: false
+    - state: box6
+      map: ["box6"]
+      visible: false
+  - type: Storage
+    grid:
+    - 0,0,1,2
+  - type: Item
+    sprite: Objects/Consumable/Food/Baked/nuggets.rsi #TODO: Update sprite
+    size: Small
+    heldPrefix: box
+  - type: StorageFill
+    contents:
+    - id: FoodBakedCookieSugar
+      amount: 6
+  - type: ItemCounter
+    count:
+      tags: [SugarCookie]
+    composite: true
+    layerStates:
+    - box1
+    - box2
+    - box3
+    - box4
+    - box5
+    - box6
+  - type: Appearance
+
+- type: entity
+  parent: [ BoxCardboard, BaseBagOpenClose ]
+  id: FoodBoxCookieOatmeal
+  name: Oatmeal Cookie Box
+  description: A box containing oatmeal cookies. Perfect for a snack!
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Baked/nuggets.rsi #TODO: Update sprite
+    state: box
+    layers:
+    - state: box
+      map: ["closeLayer"]
+    - state: box-open
+      map: ["openLayer"]
+      visible: false
+    - state: box1
+      map: ["box1"]
+      visible: false
+    - state: box2
+      map: ["box2"]
+      visible: false
+    - state: box3
+      map: ["box3"]
+      visible: false
+    - state: box4
+      map: ["box4"]
+      visible: false
+    - state: box5
+      map: ["box5"]
+      visible: false
+    - state: box6
+      map: ["box6"]
+      visible: false
+  - type: Storage
+    grid:
+    - 0,0,1,2
+  - type: Item
+    sprite: Objects/Consumable/Food/Baked/nuggets.rsi #TODO: Update sprite
+    size: Small
+    heldPrefix: box
+  - type: StorageFill
+    contents:
+    - id: FoodBakedCookieOatmeal
+      amount: 6
+  - type: ItemCounter
+    count:
+      tags: [OatmealCookie]
+    composite: true
+    layerStates:
+    - box1
+    - box2
+    - box3
+    - box4
+    - box5
+    - box6
+  - type: Appearance
+

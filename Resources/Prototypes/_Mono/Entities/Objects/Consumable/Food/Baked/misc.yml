@@ -1,0 +1,11 @@
+- type: entity
+  name: simple cookie
+  parent: FoodBakedBase
+  id: FoodBakedCookieSimple
+  description: A simple dry cookie, perfect pair for some tea or coffee.
+  components:
+  - type: Sprite
+    state: cookie-sugar #TODO: Update sprite
+  - type: Tag
+    tags: 
+    - SimpleCookie

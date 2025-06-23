@@ -219,6 +219,9 @@
           Quantity: 5
         - ReagentId: Vitamin
           Quantity: 1
+  - type: Tag
+    tags: 
+    - OatmealCookie
 
 - type: entity
   name: raisin cookie
@@ -249,6 +252,9 @@
   components:
   - type: Sprite
     state: cookie-sugar
+  - type: Tag # Mono 
+    tags: 
+    - SugarCookie
 
 # Nuggets
 
