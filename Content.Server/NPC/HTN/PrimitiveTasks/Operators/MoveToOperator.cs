@@ -76,7 +76,7 @@ public sealed partial class MoveToOperator : HTNOperator, IHtnConditionalShutdow
         _transform = sysManager.GetEntitySystem<SharedTransformSystem>();
         _cfg = IoCManager.Resolve<IConfigurationManager>();
 
-        _cfg.OnValueChanged<bool>(CCVars.NPCMovementCheckPlayerDistances, UpdateDoNearbyPlayerCheck, true);
+        _cfg.OnValueChanged(CCVars.NPCMovementCheckPlayerDistances, UpdateDoNearbyPlayerCheck, true);
     }
 
     private void UpdateDoNearbyPlayerCheck(bool newValue)
@@ -104,7 +104,7 @@ public sealed partial class MoveToOperator : HTNOperator, IHtnConditionalShutdow
             return (false, null);
         }
 
-        var range = blackboard.GetValue<float>(RangeKey);
+        var range = blackboard.GetValueOrDefault<float>(RangeKey, _entManager);
 
         if (_doNearbyPlayerCheck) // don't do the check at all if it's false, save More performance
         {
