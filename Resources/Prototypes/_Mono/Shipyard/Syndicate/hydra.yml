@@ -1,29 +1,29 @@
 - type: vessel
-  id: Infiltrator
+  id: Hydra
   parent: BaseVesselAntag
-  name: Infiltrator
-  description: A heavily armed, well equipped syndicate vessel meant for raiding enemy stations.
-  price: 245000
-  category: Large
+  name: Hydra
+  description: A missile supremacy ship meant for stealthy hit and runs.
+  price: 185000
+  category: Medium
   group: Syndicate
-  shuttlePath: /Maps/_Mono/Shuttles/Syndicate/infiltrator.yml
+  shuttlePath: /Maps/_Mono/Shuttles/Syndicate/hydra.yml
   guidebookPage: Null
   class:
   - Syndicate
   engine:
-  - AME
+  - Uranium
 
 - type: gameMap
-  id: Infiltrator
-  mapName: 'Infiltrator'
-  mapPath: /Maps/_Mono/Shuttles/Syndicate/infiltrator.yml
+  id: Hydra
+  mapName: 'Hydra'
+  mapPath: /Maps/_Mono/Shuttles/Syndicate/hydra.yml
   minPlayers: 0
   stations:
-    Infiltrator:
+    Hydra:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Infiltrator MIL{1}'
+          mapNameTemplate: 'Hydra MIL{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
