@@ -97,6 +97,8 @@
       head: ClothingHeadHatHoodWinterDefault
   - type: UserInterface
     interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
       enum.ToggleClothingUiKey.Key:
         type: ToggleableClothingBoundUserInterface
   - type: ContainerContainer
@@ -202,6 +204,8 @@
         ents: []
   - type: UserInterface
     interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
       enum.ToggleClothingUiKey.Key:
         type: ToggleableClothingBoundUserInterface
 

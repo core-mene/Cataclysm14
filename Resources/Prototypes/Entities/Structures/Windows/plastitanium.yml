@@ -93,13 +93,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 6000 # vanilla (1000) / CombatOverhaul (6000)
+        damage: 9000 # Backup
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 6000 # vanilla (500) / CombatOverhaul (6000) - Mono
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -195,13 +195,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 6000 # vanilla (1000) / CombatOverhaul (6000)
+        damage: 9000 # Mono
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 6000 # vanilla (1000) / CombatOverhaul (6000) - Mono
       behaviors:
       - !type:PlaySoundBehavior
         sound:

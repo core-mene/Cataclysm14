@@ -33,6 +33,14 @@
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2000 # Mono 500->2000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
   - type: ContainerFill
     containers:
       board: [ DoorElectronics ]
@@ -82,7 +90,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2500 # Default (300) / Monolith (1000) / CombatOverhaul (2500)
+        damage: 300
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]

@@ -304,6 +304,9 @@
     - state: ai
       shader: unshaded
   - type: Anchorable
+  - type: Construction
+    graph: AiVessel
+    node: end
 
 - type: entity
   id: StationAiBrainVessel

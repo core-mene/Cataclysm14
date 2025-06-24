@@ -24,7 +24,7 @@
           - id: SalvageCanisterSpawner
             prob: 0.2
           - id: SalvageMobSpawner
-            prob: 0.7
+            prob: 0.1 # Mono
           - id: WallSolid
             prob: 1
           - id: Grille
@@ -44,7 +44,7 @@
           - id: SalvageCanisterSpawner
             prob: 0.2
           - id: SalvageMobSpawner
-            prob: 0.7
+            prob: 0.1 # Mono
     - type: IFF
       flags: HideLabel
       color: "#88b0d1"

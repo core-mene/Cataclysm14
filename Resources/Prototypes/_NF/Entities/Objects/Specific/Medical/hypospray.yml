@@ -23,13 +23,14 @@
     delay: 2.5
   - type: StaticPrice
     price: 550
+    vendPrice: 5000 # Mono
   - type: PirateBountyItem # Frontier
     id: HypoMini # Frontier
 
 - type: entity
   name: NTCS-102 hypospray
   parent: [HypoMini, BaseC2ContrabandUnredeemable]
-  description: A commercial hypospray designed by Nanotrasen Chemical Supply. It has two built in safety features for the consumer market, a small chemical reservoir and an injection delay. This one is branded for use by law-enforcement.
+  description: A commercial hypospray designed by Nanotrasen Chemical Supply. It has a larger chemical reservoir compared to its commercial version and a slightly lowered injection delay. # Mono
   id: HypoBrigmedic
   components:
   - type: Sprite
@@ -40,7 +41,7 @@
   - type: SolutionContainerManager # Mono
     solutions:
       hypospray:
-        maxVol: 10
+        maxVol: 15 # why is a lawenforcement version the same as a civilian version?
   - type: RefillableSolution
     solution: hypospray
   - type: ExaminableSolution
@@ -50,12 +51,12 @@
   - type: UseDelay
     delay: 1.5
   - type: StaticPrice
-    price: 550  # Mono end
+    price: 750  # Mono end
 
 - type: entity
   name: NTCS-103 hypospray
   parent: HypoMini
-  description: A commercial hypospray designed by Nanotrasen Chemical Supply. It has two built in safety features for the consumer market, a small chemical reservoir and an injection delay. This one seems to be a limited edition, lucky you!
+  description: A modified, experimental hypospray designed as a limited edition by the Nanotrasen Chemical Supply. It has a lowered injection delay and a slighlty modified chemical reservoir.
   id: HypoMiniLimitedEdition
   components:
   - type: Sprite
@@ -63,7 +64,16 @@
     state: hypo
   - type: Item
     sprite: _NF/Objects/Specific/Medical/hypominilimitededition.rsi
-
+  - type: StaticPrice # Mono
+    price: 20 # 20 whole dollars
+    vendPrice: 10000
+  - type: UseDelay
+    delay: 2
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 12 # Mono end
+    
 - type: entity
   name: empty medipen
   parent: BaseItem

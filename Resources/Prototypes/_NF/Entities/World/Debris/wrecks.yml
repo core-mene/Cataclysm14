@@ -82,7 +82,7 @@
           prob: 0.03
         # Mobs
         - id: NFSalvageMobSpawner
-          prob: 0.1
+          prob: 0.01 # Mono
         # Room
         - id: NFWreckRoomMarker
           prob: 0.01
@@ -270,6 +270,16 @@
 # endregion Wrecks
 
 # region Brass Wrecks
+- type: entity
+  id: NFWreckDebrisBrassSmall
+  parent: [NFBaseWreckDebrisBrass, NFBaseWreckSmall]
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  id: NFWreckDebrisBrassMedium
+  parent: [NFBaseWreckDebrisBrass, NFBaseWreckMedium]
+  categories: [ HideSpawnMenu ]
+
 - type: entity
   id: NFWreckDebrisBrassLarge
   parent: [NFBaseWreckDebrisBrass, NFBaseWreckLarge]

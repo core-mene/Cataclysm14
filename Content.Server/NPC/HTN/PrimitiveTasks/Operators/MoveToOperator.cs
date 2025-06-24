@@ -1,8 +1,19 @@
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2025 ark1368
+// SPDX-FileCopyrightText: 2025 monolith8319
+// SPDX-FileCopyrightText: 2025 sleepyyapril
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.NPC.Components;
 using Content.Server.NPC.Pathfinding;
 using Content.Server.NPC.Systems;
+using Content.Shared.CCVar;
+using Robust.Shared.Configuration;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Components;
@@ -18,6 +29,9 @@ public sealed partial class MoveToOperator : HTNOperator, IHtnConditionalShutdow
     private NPCSteeringSystem _steering = default!;
     private PathfindingSystem _pathfind = default!;
     private SharedTransformSystem _transform = default!;
+    private IConfigurationManager _cfg = default!;
+
+    private bool _doNearbyPlayerCheck;
 
     /// <summary>
     /// When to shut the task down.
@@ -69,6 +83,14 @@ public sealed partial class MoveToOperator : HTNOperator, IHtnConditionalShutdow
         _pathfind = sysManager.GetEntitySystem<PathfindingSystem>();
         _steering = sysManager.GetEntitySystem<NPCSteeringSystem>();
         _transform = sysManager.GetEntitySystem<SharedTransformSystem>();
+        _cfg = IoCManager.Resolve<IConfigurationManager>();
+
+        _cfg.OnValueChanged(CCVars.NPCMovementCheckPlayerDistances, UpdateDoNearbyPlayerCheck, true);
+    }
+
+    private void UpdateDoNearbyPlayerCheck(bool newValue)
+    {
+        _doNearbyPlayerCheck = newValue;
     }
 
     public override async Task<(bool Valid, Dictionary<string, object>? Effects)> Plan(NPCBlackboard blackboard,
@@ -91,14 +113,19 @@ public sealed partial class MoveToOperator : HTNOperator, IHtnConditionalShutdow
             return (false, null);
         }
 
-        var pos = _transform.GetWorldPosition(owner);
-        var nearest = _steering.GetNearestPlayerEntity(pos);
         var range = blackboard.GetValueOrDefault<float>(RangeKey, _entManager);
 
-        if (nearest != null && nearest.Value.Distance > 2000f || nearest == null)
-            return (false, null);
+        if (_doNearbyPlayerCheck) // don't do the check at all if it's false, save More performance
+        {
+            var pos = _transform.GetWorldPosition(owner);
+            var nearest = _steering.GetNearestPlayerEntity(pos);
 
-        if (xform.Coordinates.TryDistance(_entManager, targetCoordinates, out var distance) && distance <= range)
+            if (nearest is { Distance: > 2000f })
+                return (false, null);
+        }
+
+        if (xform.Coordinates.TryDistance(_entManager, targetCoordinates, out var distance)
+            && distance <= range)
         {
             // In range
             return (true, new Dictionary<string, object>()
