@@ -13,14 +13,6 @@
   - type: StaticPrice
     price: 200
 
-- type: entity # Knife
-  parent:
-  - BaseC2ContrabandMercenary
-  - SurvivalKnife
-  name: PMC Survival Knife
-  id: SurvivalKnifePMC
-  description: A Knife that has been properly registered for private security and mercenary use. Why did you register you knife?
-
 # SMGs
 
 - type: entity #WT-550
@@ -40,7 +32,7 @@
   - WeaponSubMachineGunDrozd
   name: PMC Drozd (.45 ACP)
   id: WeaponSubMachineGunDrozdPMC
-  description: A Drozd that has been properly registered for private security and mercenary use. An old and cheap fully automatic Heavy SMG. Beloved by Mercenaries for it's affordability. Uses 9x19mm ammo.
+  description: A Drozd that has been properly registered for private security and mercenary use. An old and cheap fully automatic Heavy SMG. Beloved by Mercenaries for it's affordability. Uses .45 ACP ammo.
   components:
   - type: StaticPrice
     price: 1350
@@ -84,13 +76,13 @@
   - type: StaticPrice
     price: 800
 
-- type: entity
+- type: entity #Enforcer
   parent:
   - BaseC2ContrabandMercenary
   - WeaponShotgunEnforcer
-  name: PMC Enforcer
+  name: PMC Enforcer (12 gauge)
   id: WeaponShotgunEnforcerPMC
-  description: An Enforcer that has been properly registered for private security and mercenary use.
+  description: An Enforcer that has been properly registered for private security and mercenary use. A premium semi-automatic shotgun, and the pride of all security forces. Uses 12 gauge shotgun shells.
   components:
   - type: StaticPrice
     price: 1800

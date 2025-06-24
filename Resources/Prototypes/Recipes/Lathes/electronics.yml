@@ -61,6 +61,16 @@
     Steel: 100
     Glass: 500
     Bananium: 100
+    
+- type: latheRecipe
+  abstract: true
+  parent: BaseCircuitboardRecipe
+  id: BaseBluespaceCircuitboardRecipe
+  materials:
+    Steel: 100
+    Glass: 500
+    Bluespace: 200
+    Diamond: 200
 
 # Recipes
 
@@ -608,3 +618,8 @@
   parent: BaseCircuitboardRecipe
   id: HolopadMachineCircuitboard
   result: HolopadMachineCircuitboard
+  
+- type: latheRecipe
+  parent: BaseBluespaceCircuitboardRecipe
+  id: AiCoreElectronics
+  result: AiCoreElectronics

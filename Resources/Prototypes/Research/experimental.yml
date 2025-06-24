@@ -139,6 +139,18 @@
   recipeUnlocks:
   # - WeaponParticleDecelerator # Frontier - Cancer gun that skip walls
   - HoloprojectorField
+  
+- type: technology
+  id: AiTechnology
+  name: research-technology-ai
+  icon:
+    sprite: Mobs/Silicon/station_ai.rsi
+    state: ai
+  discipline: Experimental
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - AiCoreElectronics
 
 # Tier 3
 
