@@ -9,9 +9,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 300
-        Blunt: 125
-        Heat: 30
+        Structural: 450
+        Blunt: 65
+        Heat: 10
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/mini_rocket.rsi
     layers:
@@ -33,7 +33,7 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 65
+    totalIntensity: 75
     intensitySlope: 8
     maxIntensity: 25
   - type: GatheringProjectile
@@ -57,9 +57,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 500
-        Blunt: 125
-        Heat: 30
+        Structural: 1000
+        Blunt: 175
+        Heat: 50
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
@@ -81,9 +81,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 65
-    intensitySlope: 5
-    maxIntensity: 25
+    totalIntensity: 150
+    intensitySlope: 10
+    maxIntensity: 55
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
