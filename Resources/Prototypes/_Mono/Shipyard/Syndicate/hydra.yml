@@ -1,12 +1,12 @@
 - type: vessel
-  id: Hunter
+  id: Hydra
   parent: BaseVesselAntag
-  name: Hunter
-  description: A cheap, armored personnel carrier armed with 4 90mm autocannons.
-  price: 50000
-  category: Small
+  name: Hydra
+  description: A syndicate missile corvette meant for stealthy hit and runs and harassment.
+  price: 185000
+  category: Medium
   group: Syndicate
-  shuttlePath: /Maps/_Mono/Shuttles/Syndicate/hunter.yml
+  shuttlePath: /Maps/_Mono/Shuttles/Syndicate/hydra.yml
   guidebookPage: Null
   class:
   - Syndicate
@@ -14,16 +14,16 @@
   - Uranium
 
 - type: gameMap
-  id: Hunter
-  mapName: 'Hunter'
-  mapPath: /Maps/_Mono/Shuttles/Syndicate/hunter.yml
+  id: Hydra
+  mapName: 'Hydra'
+  mapPath: /Maps/_Mono/Shuttles/Syndicate/hydra.yml
   minPlayers: 0
   stations:
-    Hunter:
+    Hydra:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Hunter MIL{1}'
+          mapNameTemplate: 'Hydra MIL{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
