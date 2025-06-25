@@ -26,6 +26,7 @@
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 ErhardSteinhauer
 // SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 monolith8319
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 

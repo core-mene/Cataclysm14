@@ -3,6 +3,7 @@
 // SPDX-FileCopyrightText: 2024 Plykiya
 // SPDX-FileCopyrightText: 2024 themias
 // SPDX-FileCopyrightText: 2025 ErhardSteinhauer
+// SPDX-FileCopyrightText: 2025 monolith8319
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 

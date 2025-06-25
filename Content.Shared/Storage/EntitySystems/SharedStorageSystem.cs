@@ -24,6 +24,7 @@
 // SPDX-FileCopyrightText: 2025 GreaseMonk
 // SPDX-FileCopyrightText: 2025 Kyle Tyo
 // SPDX-FileCopyrightText: 2025 lzk
+// SPDX-FileCopyrightText: 2025 monolith8319
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
