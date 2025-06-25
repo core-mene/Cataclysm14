@@ -30,6 +30,8 @@
     maxItemSize: Small
     grid:
     - 0,0,3,1
+    quickInsert: true # Mono
+    areaInsert: true # Mono
     whitelist:
       components:
       - Cash
@@ -40,6 +42,8 @@
     blacklist:
       tags:
       - Book
+  - type: UseDelay # Mono
+    delay: 0.5
   - type: Item
     size: Small
   - type: Clothing
@@ -80,6 +84,3 @@
         closed-coin:
           Open: { state: open-coin }
           Closed: { state: closed-coin }
-  - type: MagnetPickup # Mono
-    magnetEnabled: false
-    magnetCanBeEnabled: false
