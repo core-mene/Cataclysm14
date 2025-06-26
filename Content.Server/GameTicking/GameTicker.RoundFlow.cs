@@ -44,6 +44,7 @@
 // SPDX-FileCopyrightText: 2024 nikthechampiongr
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 monolith8319
 // SPDX-FileCopyrightText: 2025 pathetic meowmeow
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
