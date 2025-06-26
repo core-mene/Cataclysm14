@@ -28,6 +28,8 @@ public abstract partial class SharedStationAiSystem
         SubscribeLocalEvent<StationAiHeldComponent, AttemptRelayActionComponentChangeEvent>(OnHeldRelay);
         SubscribeLocalEvent<StationAiHeldComponent, JumpToCoreEvent>(OnCoreJump);
         SubscribeLocalEvent<TryGetIdentityShortInfoEvent>(OnTryGetIdentityShortInfo);
+
+        SubscribeLocalEvent<StationAiHeldComponent, ComponentRemove>(OnHeldComponentRemove);
     }
 
     private void OnTryGetIdentityShortInfo(TryGetIdentityShortInfoEvent args)
@@ -113,6 +115,13 @@ public abstract partial class SharedStationAiSystem
         if (!TryGetEntity(ev.Entity, out var target))
             return;
 
+        // Validate AI core can interact.
+        if (TryComp(ev.Actor, out StationAiHeldComponent? aiComp) && !ValidateAi((ev.Actor, aiComp)))
+        {
+            ShowDeviceNotRespondingPopup(ev.Actor);
+            return;
+        }
+
         ev.Event.User = ev.Actor;
         RaiseLocalEvent(target.Value, (object) ev.Event);
     }
@@ -136,13 +145,26 @@ public abstract partial class SharedStationAiSystem
 
     private void OnHeldInteraction(Entity<StationAiHeldComponent> ent, ref InteractionAttemptEvent args)
     {
-        // Cancel if it's not us or something with a whitelist, or whitelist is disabled.
-        args.Cancelled = (!TryComp(args.Target, out StationAiWhitelistComponent? whitelistComponent)
-                          || !whitelistComponent.Enabled)
-                         && ent.Owner != args.Target
-                         && args.Target != null;
-        if (whitelistComponent is { Enabled: false })
+        // Allow self-interaction.
+        if (ent.Owner == args.Target)
+            return;
+
+        // Check if target has whitelist component and if it's enabled.
+        if (!TryComp(args.Target, out StationAiWhitelistComponent? whitelistComponent) ||
+            !whitelistComponent.Enabled)
         {
+            args.Cancelled = args.Target != null;
+            if (whitelistComponent is { Enabled: false })
+            {
+                ShowDeviceNotRespondingPopup(ent.Owner);
+            }
+            return;
+        }
+
+        // Validate the AI core can interact.
+        if (!ValidateAi((ent.Owner, ent.Comp)))
+        {
+            args.Cancelled = true;
             ShowDeviceNotRespondingPopup(ent.Owner);
         }
     }
@@ -151,6 +173,12 @@ public abstract partial class SharedStationAiSystem
     {
         if (!args.CanComplexInteract
             || !HasComp<StationAiHeldComponent>(args.User))
+        {
+            return;
+        }
+
+        // Validate the AI core can interact.
+        if (!ValidateAi((args.User, null)))
         {
             return;
         }
@@ -164,7 +192,7 @@ public abstract partial class SharedStationAiSystem
         var verb = new AlternativeVerb
         {
             Text = isOpen ? Loc.GetString("ai-close") : Loc.GetString("ai-open"),
-            Act = () => 
+            Act = () =>
             {
                 // no need to show menu if device is not powered.
                 if (!PowerReceiver.IsPowered(ent.Owner))
@@ -188,7 +216,27 @@ public abstract partial class SharedStationAiSystem
 
     private void ShowDeviceNotRespondingPopup(EntityUid toEntity)
     {
+        var currentTime = _timing.CurTime;
+
+        // Check if we're still in cooldown.
+        if (_lastDeviceNotRespondingPopup.TryGetValue(toEntity, out var lastTime))
+        {
+            var timeSinceLastPopup = currentTime - lastTime;
+            if (timeSinceLastPopup.TotalSeconds < DeviceNotRespondingCooldown)
+            {
+                return; // Still in cooldown, don't show popup
+            }
+        }
+
+        // Update the last popup time and show the popup.
+        _lastDeviceNotRespondingPopup[toEntity] = currentTime;
         _popup.PopupClient(Loc.GetString("ai-device-not-responding"), toEntity, PopupType.MediumCaution);
+    }
+
+    private void OnHeldComponentRemove(Entity<StationAiHeldComponent> ent, ref ComponentRemove args)
+    {
+        // Clean up popup cooldown tracking when the component is removed.
+        _lastDeviceNotRespondingPopup.Remove(ent.Owner);
     }
 }
 

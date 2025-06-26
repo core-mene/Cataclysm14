@@ -72,6 +72,16 @@ public abstract partial class SharedStationAiSystem : EntitySystem
 
     private const float MaxVisionMultiplier = 5f;
 
+    /// <summary>
+    /// Mono: Rate limit for "device not responding" popup messages in seconds.
+    /// </summary>
+    private const float DeviceNotRespondingCooldown = 1.5f;
+
+    /// <summary>
+    /// Mono: Tracks the last time a "device not responding" popup was shown for each entity.
+    /// </summary>
+    private readonly Dictionary<EntityUid, TimeSpan> _lastDeviceNotRespondingPopup = new();
+
     public override void Initialize()
     {
         base.Initialize();
@@ -530,7 +540,22 @@ public abstract partial class SharedStationAiSystem : EntitySystem
             return false;
         }
 
-        return _blocker.CanComplexInteract(entity.Owner);
+        // Check if the AI core can perform complex interactions.
+        if (!_blocker.CanComplexInteract(entity.Owner))
+        {
+            return false;
+        }
+
+        // Check if the AI core is anchored.
+        if (!TryGetCore(entity.Owner, out var core))
+        {
+            return false;
+        }
+
+        // AI core must be anchored to interact with whitelisted entities.
+        var coreTransform = Transform(core.Owner);
+
+        return coreTransform.Anchored;
     }
 }
 
