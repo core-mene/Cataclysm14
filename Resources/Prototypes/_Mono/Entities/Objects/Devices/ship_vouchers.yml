@@ -31,3 +31,23 @@
     - USSPGadyuka # SHITCODE!!!
   - type: StaticPrice
     vendPrice: 12500
+
+- type: entity
+  parent: ShipVoucherNfsdBailiff
+  id: ShipVoucherTsfmcColonel
+  name: TSFMC colonel ship voucher
+  description: Allows for two free TSFMC ship purchases. Destroyed on sale.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherbailiff
+  - type: ShipyardVoucher
+    redemptionsLeft: 2
+    access:
+    - Armory
+    - Sergeant # Frontier
+    - Bailiff # Frontier
+    - HeadOfSecurity # Monolith
+    accessGroups: # Frontier
+    - GeneralNfsdAccess # Frontier
