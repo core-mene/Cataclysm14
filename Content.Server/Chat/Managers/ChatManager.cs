@@ -12,6 +12,7 @@ using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Chat;
 using Content.Shared.Database;
+using Content.Shared.Ghost;
 using Content.Shared.Mind;
 using Content.Shared.Players.RateLimiting;
 using Robust.Shared.Configuration;
@@ -199,9 +200,26 @@ internal sealed partial class ChatManager : IChatManager
     {
         var clients = _adminManager.ActiveAdmins.Select(p => p.Channel);
         var wrappedMessage = Loc.GetString("chat-manager-send-hook-admin-wrap-message", ("senderName", sender), ("message", FormattedMessage.EscapeText(message)));
-        
+
         ChatMessageToMany(ChatChannel.AdminChat, message, wrappedMessage, source: EntityUid.Invalid, hideChat: false, recordReplay: false, clients);
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Hook admin from {sender}: {message}");
+    }
+
+    public void SendHookDead(string sender, string message)
+    {
+        var clients = GetDeadChatClients();
+        var wrappedMessage = Loc.GetString("chat-manager-send-hook-dead-wrap-message", ("senderName", sender), ("message", FormattedMessage.EscapeText(message)));
+
+        ChatMessageToMany(ChatChannel.Dead, message, wrappedMessage, source: EntityUid.Invalid, hideChat: false, recordReplay: true, clients);
+        _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Hook dead chat from {sender}: {message}");
+    }
+
+    private IEnumerable<INetChannel> GetDeadChatClients()
+    {
+        var ghostFilter = Filter.Empty().AddWhereAttachedEntity(entity => _entityManager.HasComponent<GhostComponent>(entity));
+        var adminFilter = _adminManager.ActiveAdmins;
+
+        return ghostFilter.Recipients.Union(adminFilter).Select(p => p.Channel);
     }
 
     public void SendHookAhelp(NetUserId userId, string sender, string message, bool adminOnly = false)

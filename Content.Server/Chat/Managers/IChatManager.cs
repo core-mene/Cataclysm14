@@ -23,6 +23,7 @@ namespace Content.Server.Chat.Managers
         void SendHookOOC(string sender, string message);
         void SendHookAdmin(string sender, string message);
         void SendHookAhelp(NetUserId userId, string sender, string message, bool adminOnly = false);
+        void SendHookDead(string sender, string message);
         void SendAdminAnnouncement(string message, AdminFlags? flagBlacklist = null, AdminFlags? flagWhitelist = null);
         void SendAdminAnnouncementMessage(ICommonSession player, string message, bool suppressLog = true);
 
