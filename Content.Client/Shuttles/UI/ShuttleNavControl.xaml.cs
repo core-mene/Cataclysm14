@@ -427,7 +427,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
                     var radius = Width * 0.5f;
                     var squaredRadius = radius * radius;
 
-                    // If true, flip the entire label to the right side of the blip and left-align it.
+                    // If true, flip the entire label to the right side of the blip and left-aligned it.
                     // We default to the label being on the left side of the blip because it looked better to me in testing. (arbitrary)
                     var flipLabel = isOnLeftSide && labelCorners.Any(corner => corner.LengthSquared() > squaredRadius);
 
@@ -448,8 +448,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
                         !string.IsNullOrEmpty(companyComp.CompanyName))
                     {
                         var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
-                        CompanyPrototype? prototype = null;
-                        if (prototypeManager.TryIndex(companyComp.CompanyName, out prototype) && prototype != null)
+                        if (prototypeManager.TryIndex(companyComp.CompanyName, out CompanyPrototype prototype))
                         {
                             displayColor = prototype.Color;
                         }
