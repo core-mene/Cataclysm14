@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2025 Aiden
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Solstice
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Projectiles;
 using Content.Shared.Theta.ShipEvent.Components;
 using Robust.Shared.Threading;
