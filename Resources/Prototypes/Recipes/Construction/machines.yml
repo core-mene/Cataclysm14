@@ -150,3 +150,19 @@
   canBuildInImpassable: true
   conditions:
     - !type:WallmountCondition
+    
+- type: construction
+  name: ai core
+  id: AiCore
+  graph: AiVessel
+  startNode: start
+  targetNode: end
+  category: construction-category-machines
+  description: A shell for an Artificial Intelligence to be housed in
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Machines/plasteel_core.rsi
+    state: core_empty
+  conditions:
+    - !type:TileNotBlocked
