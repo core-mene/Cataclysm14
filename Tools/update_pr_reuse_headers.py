@@ -124,7 +124,7 @@ def is_token(name):
     email = name[email_pos:]
     real_name = name[:email_pos - 2]
 
-    return is_token_basic(email) == True or is_token_basic(real_name) == True or real_name.startswith("TheDen") # lmao
+    return is_token_basic(email) == True or is_token_basic(real_name) == True or real_name.startswith("monolith") # lmao
 
 def run_git_command(command, cwd=REPO_PATH, check=True):
     """Runs a git command and returns its output."""
@@ -222,7 +222,7 @@ def get_authors_from_git(file_path, cwd=REPO_PATH, pr_base_sha=None, pr_head_sha
 
             # Use current year
             current_year = datetime.now(timezone.utc).year
-            if user_name and user_email and user_name.strip() != "Unknown" and user_name != "TheDen-Bot":
+            if user_name and user_email and user_name.strip() != "Unknown" and not user_name.startswith("monolith"):
                 return {f"{user_name} <{user_email}>": (current_year, current_year)}
             else:
                 print("Warning: Could not get current user from git config or name is 'Unknown'")
