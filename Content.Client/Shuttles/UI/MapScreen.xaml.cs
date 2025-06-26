@@ -190,6 +190,7 @@ public sealed partial class MapScreen : BoxContainer
     private void FtlPreviewToggled(BaseButton.ButtonToggledEventArgs obj)
     {
         MapRadar.FtlMode = obj.Pressed;
+
         // When FTL button is toggled, disable the ShowFTLRangeOnly mode
         if (obj.Pressed)
         {
@@ -255,7 +256,7 @@ public sealed partial class MapScreen : BoxContainer
         PingMap();
 
         // Reset range back after map pinging is complete.
-        MapRadar.ShowFTLRangeOnly = MapFTLButton.Pressed;
+        MapRadar.ShowFTLRangeOnly = !MapFTLButton.Pressed;
     }
 
     /// <summary>
