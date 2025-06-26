@@ -28,6 +28,7 @@
 // SPDX-FileCopyrightText: 2025 Luna "YuNii" Henrich
 // SPDX-FileCopyrightText: 2025 ScarKy0
 // SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 monolith8319
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 

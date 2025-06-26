@@ -21,6 +21,7 @@
 // SPDX-FileCopyrightText: 2024 Winkarst
 // SPDX-FileCopyrightText: 2024 lzk
 // SPDX-FileCopyrightText: 2024 no
+// SPDX-FileCopyrightText: 2025 monolith8319
 // SPDX-FileCopyrightText: 2025 slarticodefast
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later

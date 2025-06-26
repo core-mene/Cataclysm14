@@ -27,6 +27,7 @@
 // SPDX-FileCopyrightText: 2025 SpaceManiac
 // SPDX-FileCopyrightText: 2025 Tayrtahn
 // SPDX-FileCopyrightText: 2025 keronshb
+// SPDX-FileCopyrightText: 2025 monolith8319
 // SPDX-FileCopyrightText: 2025 slarticodefast
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
