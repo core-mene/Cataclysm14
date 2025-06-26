@@ -98,6 +98,8 @@
         reagents:
         - ReagentId: YorkshireTeaPowder
           Quantity: 50
+  - type: StaticPrice
+    price: 120
 
 - type: entity
   parent: ReagentPacketBase
@@ -130,6 +132,8 @@
         reagents:
         - ReagentId: SyndicateTeaPowder
           Quantity: 50
+  - type: StaticPrice
+    price: 60
 
 - type: entity
   parent: ReagentPacketBase
