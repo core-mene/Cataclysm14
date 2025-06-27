@@ -66,16 +66,26 @@ public sealed class SpawnPointSystem : EntitySystem
         if (possiblePositions.Count == 0)
         {
             // Ok we've still not returned, but we need to put them /somewhere/.
-            // TODO: Refactor gameticker spawning code so we don't have to do this!
+            // However, we should only use spawn points from the same station to prevent cross-faction spawning.
             var points2 = EntityQueryEnumerator<SpawnPointComponent, TransformComponent>();
+            var stationFallbackPositions = new List<EntityCoordinates>();
 
-            if (points2.MoveNext(out var spawnPoint, out var xform))
+            while (points2.MoveNext(out var uid, out var spawnPoint, out var xform))
             {
-                possiblePositions.Add(xform.Coordinates);
+                // Only use spawn points from the same station to prevent cross-faction spawning
+                if (args.Station != null && _stationSystem.GetOwningStation(uid, xform) != args.Station)
+                    continue;
+
+                stationFallbackPositions.Add(xform.Coordinates);
+            }
+
+            if (stationFallbackPositions.Count > 0)
+            {
+                possiblePositions.AddRange(stationFallbackPositions);
             }
             else
             {
-                Log.Error("No spawn points were available!");
+                Log.Error($"No spawn points were available for station {args.Station}!");
                 return;
             }
         }
