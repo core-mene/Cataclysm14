@@ -80610,6 +80610,13 @@ entities:
     - type: Transform
       pos: 6.5,-19.5
       parent: 2
+- proto: StationEfficiencyCircuitBoard
+  entities:
+  - uid: 14285
+    components:
+    - type: Transform
+      pos: 84.42593,28.382923
+      parent: 2
 - proto: StationMap
   entities:
   - uid: 484

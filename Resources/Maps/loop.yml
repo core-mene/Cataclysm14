@@ -92865,6 +92865,14 @@ entities:
     - type: Transform
       pos: -19.5,16.5
       parent: 2
+- proto: StationEfficiencyCircuitBoard
+  entities:
+  - uid: 5335
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -28.276436,88.639465
+      parent: 2
 - proto: StationMap
   entities:
   - uid: 2660
