@@ -1,4 +1,9 @@
-﻿using System.Linq;
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 ark1368
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using System.Linq;
 using System.Threading.Tasks;
 using Content.Server.Chat.Managers;
 using Content.Shared.CCVar;
@@ -23,6 +28,7 @@ public sealed class DiscordChatLink : IPostInjectInit
     private ulong? _oocChannelId;
     private ulong? _adminChannelId;
     private ulong? _ahelpChannelId;
+    private ulong? _deadChatChannelId;
 
     // Track ahelp threads for each user
     private readonly Dictionary<NetUserId, ulong> _ahelpThreads = new();
@@ -34,6 +40,7 @@ public sealed class DiscordChatLink : IPostInjectInit
         _configurationManager.OnValueChanged(CCVars.OocDiscordChannelId, OnOocChannelIdChanged, true);
         _configurationManager.OnValueChanged(CCVars.AdminChatDiscordChannelId, OnAdminChannelIdChanged, true);
         _configurationManager.OnValueChanged(CCVars.AhelpDiscordChannelId, OnAhelpChannelIdChanged, true);
+        _configurationManager.OnValueChanged(CCVars.DeadChatDiscordChannelId, OnDeadChatChannelIdChanged, true);
     }
 
     public void Shutdown()
@@ -43,6 +50,7 @@ public sealed class DiscordChatLink : IPostInjectInit
         _configurationManager.UnsubValueChanged(CCVars.OocDiscordChannelId, OnOocChannelIdChanged);
         _configurationManager.UnsubValueChanged(CCVars.AdminChatDiscordChannelId, OnAdminChannelIdChanged);
         _configurationManager.UnsubValueChanged(CCVars.AhelpDiscordChannelId, OnAhelpChannelIdChanged);
+        _configurationManager.UnsubValueChanged(CCVars.DeadChatDiscordChannelId, OnDeadChatChannelIdChanged);
     }
 
     private void OnOocChannelIdChanged(string channelId)
@@ -78,6 +86,17 @@ public sealed class DiscordChatLink : IPostInjectInit
         _ahelpChannelId = ulong.Parse(channelId);
     }
 
+    private void OnDeadChatChannelIdChanged(string channelId)
+    {
+        if (string.IsNullOrEmpty(channelId))
+        {
+            _deadChatChannelId = null;
+            return;
+        }
+
+        _deadChatChannelId = ulong.Parse(channelId);
+    }
+
     private void OnMessageReceived(SocketMessage message)
     {
         if (message.Author.IsBot)
@@ -91,6 +110,13 @@ public sealed class DiscordChatLink : IPostInjectInit
             _ = Task.Run(async () =>
             {
                 var (displayName, _, _) = await _discordLink.GetDiscordUserInfoAsync(message.Author.Id);
+
+                // Fallback to basic Discord username if lookup failed
+                if (displayName == "Unknown")
+                {
+                    displayName = message.Author.GlobalName ?? message.Author.Username;
+                }
+
                 _taskManager.RunOnMainThread(() => _chatManager.SendHookOOC(displayName, contents));
             });
         }
@@ -100,7 +126,30 @@ public sealed class DiscordChatLink : IPostInjectInit
             _ = Task.Run(async () =>
             {
                 var (displayName, _, _) = await _discordLink.GetDiscordUserInfoAsync(message.Author.Id);
+
+                // Fallback to basic Discord username if lookup failed
+                if (displayName == "Unknown")
+                {
+                    displayName = message.Author.GlobalName ?? message.Author.Username;
+                }
+
                 _taskManager.RunOnMainThread(() => _chatManager.SendHookAdmin(displayName, contents));
+            });
+        }
+        else if (message.Channel.Id == _deadChatChannelId)
+        {
+            // Get Discord user info for better formatting
+            _ = Task.Run(async () =>
+            {
+                var (displayName, _, _) = await _discordLink.GetDiscordUserInfoAsync(message.Author.Id);
+
+                // Fallback to basic Discord username if lookup failed
+                if (displayName == "Unknown")
+                {
+                    displayName = message.Author.GlobalName ?? message.Author.Username;
+                }
+
+                _taskManager.RunOnMainThread(() => _chatManager.SendHookDead(displayName, contents));
             });
         }
         else if (_ahelpThreads.ContainsValue(message.Channel.Id))
@@ -139,6 +188,7 @@ public sealed class DiscordChatLink : IPostInjectInit
         {
             ChatChannel.OOC => _oocChannelId,
             ChatChannel.AdminChat => _adminChannelId,
+            ChatChannel.Dead => _deadChatChannelId,
             _ => throw new InvalidOperationException("Channel not linked to Discord."),
         };
 

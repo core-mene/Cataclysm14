@@ -6,6 +6,7 @@ adventure-list-loss = lost a total of [color=#659cc9]{$amount}[/color].
 adventure-webhook-list-start = TSF Central Bank
 adventure-webhook-list-high = This Shift's Top Earners:
 adventure-webhook-list-low = This Shift's Biggest Spenders:
+adventure-webhook-list-no-entries = No entries found.
 adventure-webhook-top-profit = made a total profit of {$amount}.
 adventure-webhook-top-loss = lost a total of {$amount}.
 
