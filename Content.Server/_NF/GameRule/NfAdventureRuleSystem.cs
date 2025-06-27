@@ -120,17 +120,29 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
                 continue;
 
             var profit = endBalance - playerInfo.StartBalance;
+            var playerBankData = new BankData()
+            {
+                PlayerName = playerInfo.Name,
+                Profit = profit
+            };
+
+            bankData.Add(playerBankData);
+        }
+
+        var orderedData = bankData.OrderByDescending(data => data.Profit);
+
+        // Sort by profit
+        foreach (var data in orderedData)
+        {
+            var profit = Math.Abs(data.Profit);
             var profitInSpesos = BankSystemExtensions.ToSpesoString(profit);
-            var localeId = profit >= 0 ? _summaryProfitLocId : _summaryLossLocId;
-            var color = profit >= 0 ? _summaryProfitColor : _summaryLossColor;
+            var localeId = data.Profit >= 0 ? _summaryProfitLocId : _summaryLossLocId;
+            var color = data.Profit >= 0 ? _summaryProfitColor : _summaryLossColor;
 
             var amountText = $"{color}{profitInSpesos}[/color]";
             var summaryText = Loc.GetString(localeId, ("amount", amountText));
 
-            var data = new BankData(playerInfo.Name, profit);
-
-            ev.AddLine($"- {playerInfo.Name} {summaryText}");
-            bankData.Add(data);
+            ev.AddLine($"- {data.PlayerName} {summaryText}");
         }
     }
 
@@ -186,6 +198,8 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
 
         builder.AppendLine(highText);
         builder.AppendLine(highestProfits);
+
+        builder.AppendLine(string.Empty);
 
         builder.AppendLine(lowText);
         builder.AppendLine(highestLosses);
