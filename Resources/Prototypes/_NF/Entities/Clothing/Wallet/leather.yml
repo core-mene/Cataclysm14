@@ -1,8 +1,15 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 monolith8319
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: NFBaseWallet
   id: ClothingWalletLeatherBrown
   name: leather wallet
-  description: Surprisingly thick. Careful not to lose it, and don't sit on it.
+  description: Surprisingly thick. Careful not to lose it, and don't sit on it. Comes with a little money vacuum. # Mono
   components:
   - type: Sprite
     sprite: _NF/Clothing/Wallet/leather.rsi
@@ -56,7 +63,7 @@
 - type: entity
   parent: ClothingWalletLeatherBrown
   id: ClothingWalletLeatherMail
-  description: On the inside is an embroidered picture of a cat, a heart, and the word "CLIPPY".
+  description: On the inside is an embroidered picture of a cat, a heart, and the word "CLIPPY". Comes with a little money vacuum. # Mono
   components:
   - type: Sprite
     layers:
@@ -78,7 +85,7 @@
 - type: entity
   parent: ClothingWalletLeatherBrown
   id: ClothingWalletLeatherPirate
-  description: There's an old picture of a cat with a beard inside.
+  description: There's an old picture of a cat with a beard inside. Comes with a little money vacuum. # Mono
   components:
   - type: Sprite
     layers:
