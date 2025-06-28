@@ -4,7 +4,7 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 06/28/2025 19:08:26
+  time: 06/28/2025 20:12:13
   entityCount: 230
 maps: []
 grids:
@@ -204,21 +204,24 @@ entities:
           decals:
             102: 1,-4
         - node:
+            cleanable: True
             color: '#FFFFFFFF'
             id: WarnCornerSE
           decals:
-            18: -3,-2
+            120: -3,-2
         - node:
+            cleanable: True
             color: '#FFFFFFFF'
             id: WarnCornerSmallSE
           decals:
-            15: -3,1
+            117: -3,1
         - node:
+            cleanable: True
             color: '#FFFFFFFF'
             id: WarnLineE
           decals:
-            13: -3,-1
-            14: -3,0
+            118: -3,0
+            119: -3,-1
         - node:
             color: '#FFFFFFFF'
             id: WarnLineN
@@ -231,11 +234,16 @@ entities:
             color: '#FFFFFFFF'
             id: WarnLineW
           decals:
-            16: -3,1
             19: -1,1
             20: 0,1
             21: 1,1
             26: 2,1
+        - node:
+            cleanable: True
+            color: '#FFFFFFFF'
+            id: WarnLineW
+          decals:
+            116: -3,1
     - type: GridAtmosphere
       version: 2
       data:
@@ -960,7 +968,6 @@ entities:
     - type: GasMixer
       inletTwoConcentration: 0.22000003
       inletOneConcentration: 0.78
-      enabled: True
 - proto: GasPassiveVent
   entities:
   - uid: 122
@@ -1115,8 +1122,6 @@ entities:
     - type: Transform
       pos: -1.5,-5.5
       parent: 2
-    - type: GasPressurePump
-      enabled: True
 - proto: GasVentPump
   entities:
   - uid: 1

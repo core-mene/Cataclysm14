@@ -1,18 +1,18 @@
 # Author Info
-# GitHub: kyres1
-# Discord: kyres1
+# GitHub: UnicornOnLSD
+# Discord: unicornonlsd
 
 # Shuttle Notes:
 #
 - type: vessel
-  id: Fuse
+  id: Pluto
   parent: BaseVessel
-  name: DIS NAME PENDING
-  description: A frigate sized cargo hauler manufactured by the Drake Industries shipyars. Fitted with a 25 type bluespace drive and more than enough space for cargo hauling.
+  name: DIS Pluto
+  description: A frigate sized cargo hauler manufactured by the Drake Industries shipyards. Fitted with a 25 type bluespace drive and more than enough space for small scale cargo hauling.
   price: 49 500
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/_Mono/Shuttles/fuse.yml
+  shuttlePath: /Maps/_Mono/Shuttles/pluto.yml
   guidebookPage: Null
   class:
   - Cargo
@@ -20,16 +20,16 @@
   - Uranium
 
 - type: gameMap
-  id: Twilight
-  mapName: 'DIS NAME PENDING'
-  mapPath: /Maps/_Mono/Shuttles/fuse.yml
+  id: Pluto
+  mapName: 'DIS Pluto'
+  mapPath: /Maps/_Mono/Shuttles/pluto.yml
   minPlayers: 0
   stations:
     Twilight:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Fuse CIV{1}'
+          mapNameTemplate: 'Pluto CIV{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
