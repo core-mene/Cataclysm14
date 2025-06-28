@@ -1,31 +1,11 @@
-# SPDX-FileCopyrightText: 2023 Leon Friedrich
-# SPDX-FileCopyrightText: 2023 Nemanja
-# SPDX-FileCopyrightText: 2023 Scribbles0
-# SPDX-FileCopyrightText: 2023 brainfood1183
-# SPDX-FileCopyrightText: 2023 deltanedas
-# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 Emisse
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 Kara
-# SPDX-FileCopyrightText: 2024 Maxtone
-# SPDX-FileCopyrightText: 2024 Mr. Samuel
-# SPDX-FileCopyrightText: 2024 Salvantrix
-# SPDX-FileCopyrightText: 2024 Tych0
-# SPDX-FileCopyrightText: 2024 metalgearsloth
-# SPDX-FileCopyrightText: 2025 UnicornOnLSD
-# SPDX-FileCopyrightText: 2025 dustylens
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 06/28/2025 20:12:13
-  entityCount: 230
+  time: 06/28/2025 21:59:29
+  entityCount: 233
 maps: []
 grids:
 - 2
@@ -269,28 +249,29 @@ entities:
       data:
         tiles:
           0,0:
-            0: 20519
+            0: 16423
+            1: 4096
           0,-1:
             0: 28723
           -1,0:
             0: 50431
           0,1:
             0: 1
-            1: 512
+            2: 512
           -1,1:
             0: 13
-            1: 512
+            2: 512
           0,-2:
             0: 13057
           -1,-2:
             0: 60428
-            1: 16
+            2: 16
           -1,-1:
             0: 63310
           -2,0:
             0: 2184
           -2,1:
-            1: 4
+            2: 4
             0: 8
           -2,-1:
             0: 34824
@@ -302,6 +283,21 @@ entities:
           moles:
           - 21.824879
           - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.14996
+          moles:
+          - 21.813705
+          - 82.06108
           - 0
           - 0
           - 0
@@ -330,6 +326,37 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
+- proto: ActionToggleInternals
+  entities:
+  - uid: 232
+    mapInit: true
+    paused: true
+    components:
+    - type: Transform
+      parent: 202
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 202
+  - uid: 233
+    mapInit: true
+    paused: true
+    components:
+    - type: Transform
+      parent: 196
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 196
+- proto: ActionToggleJetpack
+  entities:
+  - uid: 231
+    mapInit: true
+    paused: true
+    components:
+    - type: Transform
+      parent: 202
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 202
 - proto: AirAlarm
   entities:
   - uid: 59
@@ -904,8 +931,16 @@ entities:
     components:
     - type: Transform
       parent: 102
+    - type: GasTank
+      toggleActionEntity: 233
     - type: Physics
       canCollide: False
+    - type: ActionsContainer
+    - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents:
+          - 233
     - type: InsideEntityStorage
 - proto: EmergencyLight
   entities:
@@ -1270,50 +1305,62 @@ entities:
     components:
     - type: Transform
       parent: 102
+    - type: GasTank
+      toggleActionEntity: 232
+    - type: Jetpack
+      toggleActionEntity: 231
     - type: Physics
       canCollide: False
+    - type: ActionsContainer
+    - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents:
+          - 231
+          - 232
     - type: InsideEntityStorage
-- proto: LockerQuarterMaster
+- proto: LockerWallColorSalvage
   entities:
   - uid: 102
     components:
     - type: Transform
-      pos: 0.5,3.5
+      rot: -1.5707963267948966 rad
+      pos: 1.5,3.5
       parent: 2
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.14923
-        moles:
-        - 1.8856695
-        - 7.0937095
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
           showEnts: False
           occludes: True
           ents:
-          - 196
-          - 202
-          - 207
           - 208
-          - 213
+          - 202
           - 221
+          - 196
+          - 213
+          - 207
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
           ent: null
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.1493
+        moles:
+        - 1.8968438
+        - 7.1357465
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: MachineFTLDrive
   entities:
   - uid: 229
