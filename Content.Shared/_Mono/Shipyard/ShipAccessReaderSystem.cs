@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 ark1368
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared._NF.Shipyard.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Access.Components;
