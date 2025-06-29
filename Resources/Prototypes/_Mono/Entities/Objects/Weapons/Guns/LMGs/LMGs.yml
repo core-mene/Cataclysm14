@@ -1,6 +1,6 @@
 - type: entity
   name: DP-29
-  parent: [BaseWeaponRifle, BaseGunWieldable, BaseC3Contraband]
+  parent: [BaseWeaponLightMachineGun, BaseGunWieldable, BaseC3Contraband]
   id: WeaponDP29
   description: A staple of USSP military doctrine, the DP-29 is a mass-produced light machine gun designed for reliability, ease of use, and battlefield endurance. Featuring a distinctive top-mounted pan magazine and a folding bipod, the DP-29 excels at providing suppressive fire in both urban and open combat scenarios. While its design dates back decades, its reliability and ease of maintenance make it a favorite among USSP infantry squads.
   components:
@@ -59,10 +59,14 @@
   - type: StaticPrice
     price: 1750
     vendPrice: 50000
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.8
+    sprintModifier: 0.65
+  - type: GunRequiresWield
 
 - type: entity
   name: MR-8D LWMMG (8x65mm SKR)
-  parent: [BaseWeaponRifle, BaseGunWieldable, BaseC3Contraband]
+  parent: [BaseWeaponLightMachineGun, BaseGunWieldable, BaseC3Contraband]
   id: WeaponLMGMR8D
   description: The LWMMG variant of the MR-8 series. Chambered in 8x65mm SKR, and accepts both box and STANAG magazines. Firerate is sacrificed to prevent overheating of the barrel however.
   components:
@@ -81,7 +85,7 @@
     maxAngle: 52
     angleIncrease: 8
     angleDecay: 19
-    fireRate: 2.5 # 150 rpm
+    fireRate: 3 # 180 rpm
     selectedMode: FullAuto
     availableModes:
     - SemiAuto

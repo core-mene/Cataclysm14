@@ -68,6 +68,10 @@
   - type: ItemTax # Mono
     taxAccounts:
       nfsd: 0.2
+  - type: SpeedModifiedOnWield # Mono
+    walkModifier: 0.8
+    sprintModifier: 0.65
+  - type: GunRequiresWield # Mono
 
 - type: entity
   name: L6 SAW (7.62x39mm)
