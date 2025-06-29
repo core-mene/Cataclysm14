@@ -29,7 +29,7 @@ public sealed class ShipOwnershipSystem : EntitySystem
 
     // Timer for deletion checks
     private TimeSpan _nextDeletionCheckTime;
-    private const int DeletionCheckIntervalSeconds = 300;
+    private const int DeletionCheckIntervalSeconds = 600; // Mono
 
     public override void Initialize()
     {
