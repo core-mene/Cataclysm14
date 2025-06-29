@@ -63,7 +63,7 @@
 - type: entity
   name: MR-8D LWMMG (8x65mm SKR)
   parent: [BaseWeaponRifle, BaseGunWieldable, BaseC3Contraband]
-  id: WeaponRifleMR8C
+  id: WeaponLMGMR8D
   description: The LWMMG variant of the MR-8 series. Chambered in 8x65mm SKR, and accepts both box and STANAG magazines. Firerate is sacrificed to prevent overheating of the barrel however.
   components:
   - type: Sprite
@@ -122,3 +122,7 @@
     sprite: _Mono/Objects/Weapons/Guns/LMGs/mr8d.rsi
   - type: StaticPrice
     price: 2500
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.8
+    sprintModifier: 0.65
+  - type: GunRequiresWield
