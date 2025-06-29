@@ -1,26 +1,3 @@
-// SPDX-FileCopyrightText: 2023 Cheackraze
-// SPDX-FileCopyrightText: 2023 Debug
-// SPDX-FileCopyrightText: 2023 FoxxoTrystan
-// SPDX-FileCopyrightText: 2023 InsanityMoose
-// SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
-// SPDX-FileCopyrightText: 2024 Arimah
-// SPDX-FileCopyrightText: 2024 Checkraze
-// SPDX-FileCopyrightText: 2024 Dvir
-// SPDX-FileCopyrightText: 2024 GreaseMonk
-// SPDX-FileCopyrightText: 2024 Mnemotechnican
-// SPDX-FileCopyrightText: 2024 Salvantrix
-// SPDX-FileCopyrightText: 2024 Shroomerian
-// SPDX-FileCopyrightText: 2024 checkraze
-// SPDX-FileCopyrightText: 2024 neuPanda
-// SPDX-FileCopyrightText: 2025 Alkheemist
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 LukeZurg22
-// SPDX-FileCopyrightText: 2025 Redrover1760
-// SPDX-FileCopyrightText: 2025 Whatstone
-// SPDX-FileCopyrightText: 2025 ark1368
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Content.Server.Access.Systems;
 using Content.Server.Popups;
 using Content.Server.Radio.EntitySystems;
@@ -68,7 +45,11 @@ using Content.Server.StationEvents.Components;
 using Content.Shared._Mono.Company;
 using Content.Shared.Forensics.Components;
 using Content.Shared.Shuttles.Components;
+using Robust.Server.Player;
 using Robust.Shared.Player;
+using Content.Server.Shuttles.Components;
+using Content.Server.Shuttles.Systems;
+using Robust.Shared.Log;
 using Robust.Shared.Timing;
 
 namespace Content.Server._NF.Shipyard.Systems;
@@ -343,9 +324,6 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         _records.Synchronize(station);
 
         EntityManager.AddComponents(shuttleUid, vessel.AddComponents);
-
-        // Add ship access control
-        AddShipAccessToEntities(shuttleUid);
 
         // Ensure cleanup on ship sale
         EnsureComp<LinkedLifecycleGridParentComponent>(shuttleUid);
