@@ -235,7 +235,7 @@
   cost:
     FederationMilitaryCredit: 5
   categories:
-  - UplinkSecurityVoucher
+  - UplinkSecurityVouchers
   conditions:
   - !type:StoreWhitelistCondition
     whitelist:
@@ -255,7 +255,7 @@
   cost:
     FederationMilitaryCredit: 25
   categories:
-  - UplinkSecurityVoucher
+  - UplinkSecurityVouchers
   conditions:
   - !type:StoreWhitelistCondition
     whitelist:
