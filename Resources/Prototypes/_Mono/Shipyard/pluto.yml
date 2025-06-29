@@ -1,32 +1,15 @@
-# SPDX-FileCopyrightText: 2023 IHAN <IHAN>
-# SPDX-FileCopyrightText: 2023 Kennedy
-# SPDX-FileCopyrightText: 2023 PECK
-# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
-# SPDX-FileCopyrightText: 2024 Debug
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 Maxtone
-# SPDX-FileCopyrightText: 2024 Salvantrix
-# SPDX-FileCopyrightText: 2024 Whatstone
-# SPDX-FileCopyrightText: 2025 Carolyn3114
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 UnicornOnLSD
-# SPDX-FileCopyrightText: 2025 kyres1
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 # Author Info
 # GitHub: UnicornOnLSD
 # Discord: unicornonlsd
 
-# Shuttle Notes:
-#
+# Shuttle Notes: The cargo compartiment decals are cleanable, it's on purpose to let retrofitters make that cargo bay into whatever they want. 
+#                The price is intended to be above the ship's actual value, to balance out the presence of an FTL drive and count the additional features on top of that.
 - type: vessel
   id: Pluto
   parent: BaseVessel
   name: DIS Pluto
-  description: A frigate sized cargo hauler manufactured by the Drake Industries shipyards. Fitted with a 25 type bluespace drive and more than enough space for small scale cargo hauling.
-  price: 19900
+  description: A frigate sized cargo freighter straight from the DIS. Furnished with room for extra power, a 25 type bluespace drive and more than enough space for small scale cargo transport.
+  price: 29900
   category: Small
   group: Shipyard
   shuttlePath: /Maps/_Mono/Shuttles/pluto.yml
