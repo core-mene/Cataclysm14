@@ -1,29 +1,30 @@
 - type: vessel
-  id: Anaconda
+  id: Scorpion
   parent: BaseVesselAntag
-  name: ASR Anaconda
-  description: A ship built around a mass driver, with 2 swarm missile pods and basic PD armament for support.
+  name: ASR Scorpion
+  description: An unusual variant from the same shipyards manufacturing Anacondas, using a mix of missile pods and 2 large-caliber cannons.
   price: 122500
   category: Medium
   group: BlackMarket
-  shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/anaconda.yml
+  shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/scorpion.yml
   guidebookPage: Null
   class:
   - Pirate
+  - Pursuit
   engine:
-  - AME
+  - Uranium
 
 - type: gameMap
-  id: Anaconda
-  mapName: 'ASR Anaconda'
-  mapPath: /Maps/_Mono/Shuttles/BlackMarket/anaconda.yml
+  id: Scorpion
+  mapName: 'ASR Scorpion'
+  mapPath: /Maps/_Mono/Shuttles/BlackMarket/scorpion.yml
   minPlayers: 0
   stations:
-    Anaconda:
+    Scorpion:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Anaconda RG{1}'
+          mapNameTemplate: 'Scorpion RG{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
