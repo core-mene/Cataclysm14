@@ -36,3 +36,9 @@ uplink-exosuit-aurora-desc = A prototype exosuit for the future of warfare. Util
 
 uplink-security-ashstorm-name = EM72 Ashstorm
 uplink-security-ashstorm-desc = The TSF-EM72 Ashstorm is a directed-energy light machine gun developed by Aetherion Dynamics under TSF weapons contract 934A.
+
+uplink-security-medium-voucher-name = TSFMC Medium Ship Voucher
+uplink-security-medium-voucher-desc = A single use voucher for any small to medium sized ship.
+
+uplink-security-capital-voucher-name = TSFMC Capital Ship Voucher
+uplink-security-capital-voucher-desc = A single use voucher for any small to capital sized ship.
