@@ -1,25 +1,11 @@
-# SPDX-FileCopyrightText: 2023 Cheackraze
-# SPDX-FileCopyrightText: 2023 Kennedy
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 dustylens
-# SPDX-FileCopyrightText: 2025 Junerisms
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 grandalff
-# SPDX-FileCopyrightText: 2025 revoemagcoconut
-# SPDX-FileCopyrightText: 2025 significant harassment
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 06/29/2025 13:43:50
-  entityCount: 512
+  time: 06/29/2025 16:09:58
+  entityCount: 515
 maps: []
 grids:
 - 1
@@ -220,8 +206,8 @@ entities:
             1: 7
             0: 63232
           -1,-3:
-            0: 35969
-            3: 16448
+            0: 34945
+            3: 17472
           -2,-1:
             1: 128
           -1,-5:
@@ -370,7 +356,7 @@ entities:
       pos: 0.5,-13.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -1111.1879
+      secondsUntilStateChange: -1337.6731
       state: Opening
     - type: DeviceLinkSink
       invokeCounter: 1
@@ -1751,12 +1737,42 @@ entities:
       - device-button-6
       - device-button-7
       - device-button-8
-- proto: ComputerWallmountRadar
+- proto: ComputerWallmountCrewMonitoring
   entities:
   - uid: 243
     components:
     - type: Transform
       pos: -0.5,2.5
+      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
+- proto: ComputerWallmountRadar
+  entities:
+  - uid: 303
+    components:
+    - type: Transform
+      pos: 5.5,-11.5
+      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
+  - uid: 513
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 1.5,-15.5
+      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
+  - uid: 514
+    components:
+    - type: Transform
+      pos: -4.5,-11.5
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 5
@@ -2167,13 +2183,12 @@ entities:
     - type: Transform
       pos: -1.5,-9.5
       parent: 1
-- proto: LockerWallChemistryFilled
+- proto: LockerWallMaterialsFuelUraniumFilled
   entities:
-  - uid: 303
+  - uid: 515
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -2.5,-9.5
+      pos: 3.5,-11.5
       parent: 1
 - proto: LockerWallMedicalFilled
   entities:
@@ -2372,7 +2387,7 @@ entities:
       parent: 1
 - proto: SMESBasic
   entities:
-  - uid: 331
+  - uid: 330
     components:
     - type: Transform
       pos: 2.5,-13.5
@@ -2381,74 +2396,74 @@ entities:
       maxSupply: 5000
 - proto: SpawnPointLatejoin
   entities:
-  - uid: 332
+  - uid: 331
     components:
     - type: Transform
       pos: -0.5,-8.5
       parent: 1
-  - uid: 333
+  - uid: 332
     components:
     - type: Transform
       pos: 1.5,0.5
       parent: 1
 - proto: SpawnPointUSSPCommissar
   entities:
-  - uid: 334
+  - uid: 333
     components:
     - type: Transform
       pos: 1.5,0.5
       parent: 1
 - proto: SpawnPointUSSPCorporal
   entities:
-  - uid: 335
+  - uid: 334
     components:
     - type: Transform
       pos: 1.5,0.5
       parent: 1
 - proto: SpawnPointUSSPMedic
   entities:
-  - uid: 336
+  - uid: 335
     components:
     - type: Transform
       pos: -0.5,-8.5
       parent: 1
 - proto: SpawnPointUSSPRifleman
   entities:
-  - uid: 337
+  - uid: 336
     components:
     - type: Transform
       pos: 1.5,0.5
       parent: 1
 - proto: SpawnPointUSSPSergeant
   entities:
-  - uid: 338
+  - uid: 337
     components:
     - type: Transform
       pos: 1.5,0.5
       parent: 1
 - proto: StasisBed
   entities:
-  - uid: 339
+  - uid: 338
     components:
     - type: Transform
       pos: 2.5,-9.5
       parent: 1
 - proto: SubstationBasic
   entities:
-  - uid: 340
+  - uid: 339
     components:
     - type: Transform
       pos: -1.5,-13.5
       parent: 1
 - proto: SubstationWallBasic
   entities:
-  - uid: 341
+  - uid: 340
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 3.5,-10.5
       parent: 1
-  - uid: 342
+  - uid: 341
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -2456,7 +2471,7 @@ entities:
       parent: 1
 - proto: SuitStorageWallmountUssp
   entities:
-  - uid: 343
+  - uid: 342
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -2464,43 +2479,43 @@ entities:
       parent: 1
 - proto: Table
   entities:
-  - uid: 344
+  - uid: 343
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -0.5,-0.5
       parent: 1
-  - uid: 345
+  - uid: 344
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -1.5,-9.5
       parent: 1
-  - uid: 346
+  - uid: 345
     components:
     - type: Transform
       pos: 1.5,-0.5
       parent: 1
 - proto: Thruster
   entities:
-  - uid: 347
+  - uid: 346
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 4.5,-2.5
       parent: 1
-  - uid: 348
+  - uid: 347
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -3.5,-2.5
       parent: 1
-  - uid: 349
+  - uid: 348
     components:
     - type: Transform
       pos: -0.5,5.5
       parent: 1
-  - uid: 350
+  - uid: 349
     components:
     - type: Transform
       pos: 0.5,5.5
@@ -2509,88 +2524,88 @@ entities:
       enabled: False
     - type: ApcPowerReceiver
       powerLoad: 1
-  - uid: 351
+  - uid: 350
     components:
     - type: Transform
       pos: 1.5,5.5
       parent: 1
-  - uid: 352
+  - uid: 351
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -2.5,-6.5
       parent: 1
-  - uid: 353
+  - uid: 352
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 3.5,-6.5
       parent: 1
-  - uid: 354
+  - uid: 353
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 5.5,-8.5
       parent: 1
-  - uid: 355
+  - uid: 354
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -4.5,-8.5
       parent: 1
-  - uid: 356
+  - uid: 355
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -3.5,-15.5
       parent: 1
-  - uid: 357
+  - uid: 356
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -2.5,-15.5
       parent: 1
-  - uid: 358
+  - uid: 357
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -1.5,-15.5
       parent: 1
-  - uid: 359
+  - uid: 358
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 2.5,-15.5
       parent: 1
-  - uid: 360
+  - uid: 359
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 3.5,-15.5
       parent: 1
-  - uid: 361
+  - uid: 360
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 4.5,-15.5
       parent: 1
-  - uid: 362
+  - uid: 361
     components:
     - type: Transform
       pos: 6.5,-10.5
       parent: 1
-  - uid: 363
+  - uid: 362
     components:
     - type: Transform
       pos: -5.5,-10.5
       parent: 1
-  - uid: 364
+  - uid: 363
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 6.5,-8.5
       parent: 1
-  - uid: 365
+  - uid: 364
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -2598,14 +2613,14 @@ entities:
       parent: 1
 - proto: ToolboxMechanicalFilled
   entities:
-  - uid: 366
+  - uid: 365
     components:
     - type: Transform
       pos: 3.5,-12.5
       parent: 1
 - proto: VendingMachineChemicals
   entities:
-  - uid: 330
+  - uid: 366
     components:
     - type: Transform
       pos: -1.5,-10.5
