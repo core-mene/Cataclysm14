@@ -237,15 +237,15 @@
   categories:
   - UplinkSecurityVouchers
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - SecurityUplink
-  - !type:BuyerJobCondition
-    whitelist:
-      - Sheriff
-      - Bailiff
-      - SeniorOfficer
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
 
 - type: listing
   id: UplinkSecurityCapitalVoucher
@@ -257,14 +257,14 @@
   categories:
   - UplinkSecurityVouchers
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - SecurityUplink
-  - !type:BuyerJobCondition
-    whitelist:
-      - Bailiff
-      - Sheriff
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
 
 # - type: listing
 #   id: UplinkSecurityAuroraExosuit
