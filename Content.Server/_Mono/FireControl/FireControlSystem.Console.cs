@@ -11,6 +11,7 @@ using Content.Server._Mono.Ships.Systems;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Systems;
 using Content.Shared._Mono.FireControl;
+using Content.Shared.GameTicking;
 using Content.Shared._Mono.Ships.Components;
 using Content.Shared.Popups;
 using Content.Shared.Power;
@@ -29,14 +30,35 @@ public sealed partial class FireControlSystem : EntitySystem
     [Dependency] private readonly CrewedShuttleSystem _crewedShuttle = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
 
+    private bool _completedCheck = false;
+
     private void InitializeConsole()
     {
+        SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnSpawnComplete);
+
         SubscribeLocalEvent<FireControlConsoleComponent, PowerChangedEvent>(OnPowerChanged);
         SubscribeLocalEvent<FireControlConsoleComponent, ComponentShutdown>(OnComponentShutdown);
         SubscribeLocalEvent<FireControlConsoleComponent, FireControlConsoleRefreshServerMessage>(OnRefreshServer);
         SubscribeLocalEvent<FireControlConsoleComponent, FireControlConsoleFireMessage>(OnFire);
         SubscribeLocalEvent<FireControlConsoleComponent, BoundUIOpenedEvent>(OnUIOpened);
         SubscribeLocalEvent<FireControlConsoleComponent, ActivatableUIOpenAttemptEvent>(OnConsoleUIOpenAttempt);
+    }
+
+    // scuffed one-time check of all station control consoles to ensure they're already refreshed
+    // given this only happens once, we can assume all refreshed are things like Camelot's gunnery server.
+    private void OnSpawnComplete(PlayerSpawnCompleteEvent ev)
+    {
+        if (_completedCheck)
+            return;
+
+        var query = EntityQueryEnumerator<FireControlConsoleComponent>();
+
+        while (query.MoveNext(out var uid, out var console))
+        {
+            DoRefreshServer(uid, console);
+        }
+
+        _completedCheck = true;
     }
 
     private void OnPowerChanged(EntityUid uid, FireControlConsoleComponent component, PowerChangedEvent args)
@@ -52,7 +74,7 @@ public sealed partial class FireControlSystem : EntitySystem
         UnregisterConsole(uid, component);
     }
 
-    private void OnRefreshServer(EntityUid uid, FireControlConsoleComponent component, FireControlConsoleRefreshServerMessage args)
+    private void DoRefreshServer(EntityUid uid, FireControlConsoleComponent component)
     {
         // First, clean up any invalid server references across all grids
         CleanupInvalidServerReferences();
@@ -93,9 +115,16 @@ public sealed partial class FireControlSystem : EntitySystem
         UpdateUi(uid, component);
     }
 
+    private void OnRefreshServer(EntityUid uid, FireControlConsoleComponent component, FireControlConsoleRefreshServerMessage args)
+    {
+        DoRefreshServer(uid, component);
+    }
+
     private void OnFire(EntityUid uid, FireControlConsoleComponent component, FireControlConsoleFireMessage args)
     {
-        if (component.ConnectedServer == null || !TryComp<FireControlServerComponent>(component.ConnectedServer, out var server))
+        if (component.ConnectedServer == null
+            || !TryComp<FireControlServerComponent>(component.ConnectedServer, out var server)
+            || !server.Consoles.Contains(uid))
             return;
 
         // Fire the actual weapons
@@ -145,6 +174,19 @@ public sealed partial class FireControlSystem : EntitySystem
         component.ConnectedServer = null;
         UpdateUi(console, component);
     }
+
+    private bool CanRegister((EntityUid? ServerUid, FireControlServerComponent? ServerComponent) gridServer)
+    {
+        if (gridServer.ServerComponent == null)
+            return false;
+
+        if (gridServer.ServerComponent.EnforceMaxConsoles
+            && gridServer.ServerComponent.Consoles.Count >= gridServer.ServerComponent.MaxConsoles)
+            return false;
+
+        return true;
+    }
+
     private bool TryRegisterConsole(EntityUid console, FireControlConsoleComponent? consoleComponent = null)
     {
         if (!Resolve(console, ref consoleComponent))
@@ -164,16 +206,16 @@ public sealed partial class FireControlSystem : EntitySystem
         if (gridServer.ServerUid == null || gridServer.ServerComponent == null)
             return false;
 
-        if (gridServer.ServerComponent.Consoles.Add(console))
+        var canRegister = CanRegister(gridServer);
+
+        if (canRegister && gridServer.ServerComponent.Consoles.Add(console))
         {
             consoleComponent.ConnectedServer = gridServer.ServerUid;
             UpdateUi(console, consoleComponent);
             return true;
         }
-        else
-        {
-            return false;
-        }
+
+        return false;
     }
 
     private void UpdateUi(EntityUid uid, FireControlConsoleComponent? component = null)
@@ -186,6 +228,9 @@ public sealed partial class FireControlSystem : EntitySystem
         List<FireControllableEntry> controllables = new();
         if (component.ConnectedServer != null && TryComp<FireControlServerComponent>(component.ConnectedServer, out var server))
         {
+            if (!server.Consoles.Contains(uid))
+                return;
+
             foreach (var controllable in server.Controlled)
             {
                 var controlled = new FireControllableEntry();
