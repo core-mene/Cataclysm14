@@ -16,11 +16,6 @@
   maximumDistance: 8500
   spawnGroup: Required
   gridPath: /Maps/_Mono/POI/tsfmcoutpost.yml
-  addComponents:
-  - type: IFF
-    color: "#047abd"
-    flags: [HideLabel]
-    readOnly: true # mono
 
 - type: gameMap
   id: TSFMCOutpost

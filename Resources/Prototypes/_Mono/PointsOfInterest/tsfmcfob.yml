@@ -1,10 +1,11 @@
 # Author Info
-# GitHub: starch70
-# Discord: _starch_
-
+# GitHub: onezerooo0, Redrover1760
+# Discord: onezero00, gnarlysheep
+-
 # Maintainer Info
 # GitHub: ???
 # Discord: ???
+# I'm not a maintainer lmao, but rover is
 
 # Notes: Wow.
 #
@@ -15,7 +16,7 @@
   minimumDistance: 7250 # Mono
   maximumDistance: 9750 # Mono
   spawnGroup: Required
-  gridPath: /Maps/_NF/POI/tsfmc.yml
+  gridPath: /Maps/_Mono/POI/tsfmcfob.yml
   addComponents:
   - type: IFF
     color: "#047abd"
@@ -25,10 +26,10 @@
 - type: gameMap
   id: Nfsd
   mapName: 'TSFMC Sector FOB'
-  mapPath: /Maps/_NF/POI/tsfmc.yml
+  mapPath: /Maps/_Mono/POI/tsfmcfob.yml
   minPlayers: 0
   stations:
-    Nfsd:
+    NFSD:
       stationProto: SecurityFrontierOutpost
       components:
         - type: StationNameSetup
