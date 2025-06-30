@@ -117,7 +117,7 @@
           32:
             sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
             state: mask
-      outerClothing:
+      outerClothing: # Starlight/Goob
         sizeMaps:
           32:
             sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
@@ -229,7 +229,7 @@
   - type: Sprite # goob - in game visuals
     layers:
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
-    - map: [ "enum.HumanoidVisualLayers.Groin" ]
+#    - map: [ "enum.HumanoidVisualLayers.Groin" ] # Mono - No groins here
     - map: [ "enum.HumanoidVisualLayers.Head" ]
     - map: [ "enum.HumanoidVisualLayers.Snout" ]
     - map: [ "enum.HumanoidVisualLayers.Eyes" ]
@@ -352,7 +352,7 @@
   - type: Sprite # goob - makes character setup look consistent with in-game visuals
     layers:
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
-    - map: [ "enum.HumanoidVisualLayers.Groin" ]
+#    - map: [ "enum.HumanoidVisualLayers.Groin" ]
     - map: [ "enum.HumanoidVisualLayers.Head" ]
     - map: [ "enum.HumanoidVisualLayers.Snout" ]
     - map: [ "enum.HumanoidVisualLayers.Eyes" ]
