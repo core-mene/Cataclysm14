@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: job
   id: USSPRifleman
   name: job-name-ussp-rifleman
@@ -5,7 +12,7 @@
   playTimeTracker: JobUSSPRifleman
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 14400 # 4 hrs
+    time: 32400 # 9 hrs
   startingGear: USSPRiflemanGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true

@@ -1,3 +1,12 @@
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2024 TsjipTsjip
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 neuPanda
+// SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 sleepyyapril
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Guidebook;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
@@ -33,6 +42,13 @@ public sealed class VesselPrototype : IPrototype, IInheritingPrototype
     /// </summary>
     [DataField(required: true)]
     public int Price;
+
+    /// <summary>
+    ///     Whether the ship should be crewed or not
+    ///     This is automatically set to true when the ship is a Capital-class ship.
+    /// </summary>
+    [DataField]
+    public bool RequireCrew;
 
     /// <summary>
     ///     The size of the vessel. (e.g. Small, Medium, Large etc.)

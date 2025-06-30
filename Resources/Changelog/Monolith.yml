@@ -5076,3 +5076,121 @@ Entries:
   id: 603
   time: '2025-06-29T10:09:10.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1013
+- author: ScyronX
+  changes:
+    - type: Tweak
+      message: Unanchored artillery can no longer be fired with a gunnery console!
+  id: 604
+  time: '2025-06-30T00:52:09.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1014
+- author: ScyronX
+  changes:
+    - type: Fix
+      message: Fixed secret door sprite
+  id: 605
+  time: '2025-06-30T00:59:45.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1011
+- author: Mr T
+  changes:
+    - type: Add
+      message: Gives Wallmount Substations a UI!
+  id: 606
+  time: '2025-06-30T01:03:42.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1017
+- author: sleepyyapril
+  changes:
+    - type: Tweak
+      message: The shipyard directions now also state the name of your ship.
+    - type: Fix
+      message: Fixed shipyard directions on purchase being inaccurate.
+  id: 607
+  time: '2025-06-30T03:20:28.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1030
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Adjusts basically all relevant combat hardsuit armor values.
+    - type: Remove
+      message: Removes security huds from viper suits
+    - type: Fix
+      message: Command combat tacsuit uplink description/name fixed
+    - type: Tweak
+      message: >-
+        Some DT cost adjustments. Jackal costs more being a proper medium
+        armored suit, smokes and emps for rogues cost more, syndicate mask costs
+        a bit more. Eshield DT cost down.
+    - type: Tweak
+      message: 'TSF esword slightly less pricey. '
+  id: 608
+  time: '2025-06-30T03:32:03.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1020
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        Ships are now (again) restricted to ID cards with deed access. You can
+        still grant guest access by allowing others to swipe your unlocked
+        shuttle console, without providing them a copy of your deed.
+    - type: Fix
+      message: Vouchers now grant access to their deed-locked ships.
+    - type: Fix
+      message: Cyborgs can now receive guest access.
+    - type: Fix
+      message: >-
+        TSF, USSP, and Rogue ships are now automatically accessible to their
+        respective faction members.
+  id: 609
+  time: '2025-06-30T03:34:02.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1035
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: >-
+        Added the ability to buy vouchers. LT and up can buy a medium sized
+        voucher at 5 FMCs per, Captain can buy a large voucher at 25 FMC per.
+    - type: Tweak
+      message: >-
+        Serpent can be bought by LT and up again. Captains can use their voucher
+        as usual.
+  id: 610
+  time: '2025-06-30T03:44:34.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1025
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Cadet and Rifleman required general playtime hours increased to 9 hours
+  id: 611
+  time: '2025-06-30T03:50:59.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1019
+- author: sleepyyapril
+  changes:
+    - type: Tweak
+      message: >-
+        Serpents, Europas, and other Capital-class ships can no longer be easily
+        piloted alone.
+  id: 612
+  time: '2025-06-30T03:52:04.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1036
+- author: plethorian
+  changes:
+    - type: Add
+      message: Added the Defector shuttle to the Black Market shipyard
+  id: 613
+  time: '2025-06-30T03:53:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1024
+- author: UnicornOnLSD
+  changes:
+    - type: Add
+      message: >-
+        Added rig, a hybrid cruiser specialised in both salvage and cargo
+        hauling, straight from the DIS. Available to all, for now.
+  id: 614
+  time: '2025-06-30T03:59:13.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1028
+- author: grandalff
+  changes:
+    - type: Add
+      message: Added a new USSP medical ship - NCS Sekunda
+  id: 615
+  time: '2025-06-30T04:08:51.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1018

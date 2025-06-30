@@ -9,6 +9,7 @@
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 ark1368
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -32,10 +33,11 @@ using Content.Shared.Mobs.Components;
 using Robust.Shared.Containers;
 using Content.Server._NF.Station.Components;
 using Content.Server.Storage.Components;
+using Content.Shared._Mono.Shipyard;
 using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Utility;
-using Content.Server._NF.Shipyard.Systems;
-using Robust.Shared.Player;
+using Content.Shared.Doors.Components;
+using Robust.Shared.Map.Components;
 
 namespace Content.Server._NF.Shipyard.Systems;
 
@@ -52,6 +54,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     [Dependency] private readonly MapSystem _map = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly ShipOwnershipSystem _shipOwnership = default!;
+    [Dependency] private readonly EntityLookupSystem _lookup = default!;
 
     public MapId? ShipyardMap { get; private set; }
     private float _shuttleIndex;
@@ -420,5 +423,33 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     {
         string?[] parts = { comp.ShuttleName, comp.ShuttleNameSuffix };
         return string.Join(' ', parts.Where(it => it != null));
+    }
+
+    /// <summary>
+    /// Mono: Adds ShipAccessReaderComponent to all doors and lockers on a ship grid.
+    /// </summary>
+    private void AddShipAccessToEntities(EntityUid gridUid)
+    {
+        // Get the grid bounds to find all entities on the grid
+        if (!TryComp<MapGridComponent>(gridUid, out var grid))
+            return;
+
+        var gridBounds = grid.LocalAABB;
+        var gridEntities = new HashSet<EntityUid>();
+        _lookup.GetLocalEntitiesIntersecting(gridUid, gridBounds, gridEntities);
+
+        foreach (var entity in gridEntities)
+        {
+            // Add ship access to doors
+            if (EntityManager.HasComponent<DoorComponent>(entity))
+            {
+                EntityManager.EnsureComponent<ShipAccessReaderComponent>(entity);
+            }
+            // Add ship access to entity storage (lockers, crates, etc.)
+            else if (EntityManager.HasComponent<EntityStorageComponent>(entity))
+            {
+                EntityManager.EnsureComponent<ShipAccessReaderComponent>(entity);
+            }
+        }
     }
 }

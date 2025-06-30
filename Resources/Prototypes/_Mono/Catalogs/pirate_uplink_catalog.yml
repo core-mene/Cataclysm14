@@ -1,3 +1,18 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 Ghost581
+# SPDX-FileCopyrightText: 2025 KiraZen_
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 ScyronX
+# SPDX-FileCopyrightText: 2025 SupernoobTheN1
+# SPDX-FileCopyrightText: 2025 Your Name
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 #MARK: Medical
 - type: listing
   id: UplinkPirateMedicalBundle
@@ -163,7 +178,7 @@
   productEntity: Stimpack
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: stimpen }
   cost:
-    Doubloon: 2
+    Doubloon: 3
   categories:
   - UplinkPirateMedical
   conditions:
@@ -262,7 +277,7 @@
   icon: { sprite: /Textures/Objects/Weapons/Melee/e_shield.rsi, state: eshield-on }
   productEntity: EnergyShield
   cost:
-    Doubloon: 5
+    Doubloon: 4
   categories:
   - UplinkPirateUtility
   conditions:
@@ -293,7 +308,7 @@
   description: uplink-pirate-agent-id-card-desc
   productEntity: AgentIDCard
   cost:
-    Doubloon: 4
+    Doubloon: 3
   categories:
   - UplinkPirateUtility
   conditions:
@@ -308,7 +323,7 @@
   description: uplink-pirate-radio-jammer-desc
   productEntity: RadioJammer
   cost:
-    Doubloon: 4
+    Doubloon: 2
   categories:
   - UplinkPirateUtility
   conditions:
@@ -808,7 +823,7 @@
   productEntity: WeaponRifleAk
   icon: { sprite: Objects/Weapons/Guns/Rifles/ak.rsi, state: icon }
   cost:
-    Doubloon: 3
+    Doubloon: 5
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -921,7 +936,7 @@
   productEntity: ClothingOuterHardsuitPirateScaf
   icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/scaf_pirate.rsi, state: icon }
   cost:
-    Doubloon: 2
+    Doubloon: 3
   categories:
   - UplinkPirateEquipment
   conditions:
@@ -937,7 +952,7 @@
   productEntity: ClothingOuterHardsuitViperGroupStandard
   icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/viper_group_standard.rsi, state: icon }
   cost:
-    Doubloon: 10
+    Doubloon: 15
   categories:
   - UplinkPirateEquipment
   conditions:
@@ -969,7 +984,7 @@
   productEntity: ClothingOuterVestWeb
   icon: { sprite: Clothing/OuterClothing/Vests/webvest.rsi, state: icon }
   cost:
-    Doubloon: 1
+    Doubloon: 3
   categories:
   - UplinkPirateEquipment
   conditions:
@@ -985,7 +1000,7 @@
   productEntity: ClothingMaskGasSyndicate
   icon: { sprite: Clothing/Mask/gassyndicate.rsi, state: icon }
   cost:
-    Doubloon: 1
+    Doubloon: 3
   categories:
   - UplinkPirateEquipment
   conditions:
@@ -1034,7 +1049,7 @@
   productEntity: BoxSmokeGrenades
   icon: { sprite: Objects/Weapons/Grenades/smoke.rsi, state: icon}
   cost:
-    Doubloon: 2
+    Doubloon: 3
   categories:
     - UplinkPirateExplosives # Moved to Explosives - Mono
   conditions:
@@ -1049,7 +1064,7 @@
   description: uplink-pirate-c4-desc
   productEntity: C4
   cost:
-    Doubloon: 2
+    Doubloon: 1
   categories:
   - UplinkPirateExplosives
   conditions:
@@ -1080,7 +1095,7 @@
   productEntity: BoxEMPGrenadesNfsd
   icon: { sprite: Objects/Weapons/Grenades/empgrenade.rsi, state: icon}
   cost:
-    Doubloon: 2
+    Doubloon: 3
   categories:
   - UplinkPirateExplosives
   conditions:

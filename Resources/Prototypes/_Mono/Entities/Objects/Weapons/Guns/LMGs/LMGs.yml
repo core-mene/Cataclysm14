@@ -83,13 +83,13 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
-    minAngle: -21
-    maxAngle: -27
+    minAngle: -33
+    maxAngle: -46
   - type: Gun
     minAngle: 34
     maxAngle: 49
-    angleIncrease: 8
-    angleDecay: 19
+    angleIncrease: 6
+    angleDecay: 24
     fireRate: 6 # 360 rpm
     selectedMode: FullAuto
     availableModes:

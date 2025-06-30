@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Trauma Armed Forces
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtTAF
+  name: trauma armed forces jumpskirt
+  description: Standard fatigues of the Trauma Armed Forces.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpskirt/trauma.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpskirt/trauma.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals

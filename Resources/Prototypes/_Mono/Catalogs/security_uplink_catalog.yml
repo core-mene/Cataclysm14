@@ -227,6 +227,45 @@
         tags:
           - SecurityUplink
 
+- type: listing
+  id: UplinkSecurityMediumVoucher
+  name:  uplink-security-medium-voucher-name
+  description: uplink-security-medium-voucher-desc
+  productEntity: ShipVoucherNfsdSergeant
+  cost:
+    FederationMilitaryCredit: 5
+  categories:
+  - UplinkSecurityVouchers
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityCapitalVoucher
+  name:  uplink-security-capital-voucher-name
+  description: uplink-security-capital-voucher-desc
+  productEntity: ShipVoucherNfsdBailiff
+  cost:
+    FederationMilitaryCredit: 25
+  categories:
+  - UplinkSecurityVouchers
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
+
 # - type: listing
 #   id: UplinkSecurityAuroraExosuit
 #   name:  uplink-exosuit-aurora-name

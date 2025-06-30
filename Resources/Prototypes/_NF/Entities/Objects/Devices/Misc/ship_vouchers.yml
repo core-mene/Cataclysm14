@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # New Frontiers - This file is licensed under AGPLv3
 # Copyright (c) 2024 New Frontiers Contributors
 # See AGPLv3.txt for details.
@@ -26,7 +35,7 @@
 - type: entity
   parent: BaseShipVoucher
   id: ShipVoucherNfsdSergeant
-  name: TSFMC lieutenant ship voucher
+  name: TSFMC medium ship voucher
   description: Allows for one free small to medium TSFMC ship purchase. Destroyed on sale.
   components:
   - type: Sprite
@@ -46,7 +55,7 @@
 - type: entity
   parent: ShipVoucherNfsdSergeant
   id: ShipVoucherNfsdBailiff
-  name: TSFMC captain ship voucher
+  name: TSFMC capital ship voucher
   description: Allows for one free small to capital TSFMC ship purchase. Destroyed on sale.
   components:
   - type: Sprite
