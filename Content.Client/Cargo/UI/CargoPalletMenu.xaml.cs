@@ -30,9 +30,14 @@ public sealed partial class CargoPalletMenu : FancyWindow
         CountLabel.Text = count.ToString();
     }
 
-    public void SetMultiplier(float multiplier)
+    public void SetTradeCrateMultiplier(double multiplier)
     {
-        MultiplierLabel.Text = $"{multiplier.ToString("0.00")}x";
+        TradeCrateMultiplierLabel.Text = $"{multiplier:0.00}x";
+    }
+
+    public void SetOtherMultiplier(double multiplier)
+    {
+        OtherMultiplierLabel.Text = $"{multiplier:0.00}x";
     }
 
     public void SetEnabled(bool enabled)

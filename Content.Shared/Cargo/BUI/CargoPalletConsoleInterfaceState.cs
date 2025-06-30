@@ -23,13 +23,19 @@ public sealed class CargoPalletConsoleInterfaceState : BoundUserInterfaceState
     /// <summary>
     /// the multiplier for the given cargo sell
     /// </summary>
-    public float? Multiplier;
+    public double TradeCrateMultiplier;
 
-    public CargoPalletConsoleInterfaceState(int appraisal, int count, bool enabled, float multiplier = 1f)
+    /// <summary>
+    /// the multiplier for the given cargo sell
+    /// </summary>
+    public double OtherMultiplier;
+
+    public CargoPalletConsoleInterfaceState(int appraisal, int count, bool enabled, double tradeCrateMultiplier = 1, double otherMultiplier = 1)
     {
         Appraisal = appraisal;
         Count = count;
         Enabled = enabled;
-        Multiplier = multiplier;
+        TradeCrateMultiplier = tradeCrateMultiplier;
+        OtherMultiplier = otherMultiplier;
     }
 }

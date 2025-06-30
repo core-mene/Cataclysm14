@@ -44,6 +44,7 @@ public sealed class CargoPalletConsoleBoundUserInterface : BoundUserInterface
         _menu?.SetEnabled(palletState.Enabled);
         _menu?.SetAppraisal(palletState.Appraisal);
         _menu?.SetCount(palletState.Count);
-        _menu?.SetMultiplier(palletState.Multiplier ?? 1.0f);
+        _menu?.SetTradeCrateMultiplier(palletState.TradeCrateMultiplier);
+        _menu?.SetOtherMultiplier(palletState.OtherMultiplier);
     }
 }

@@ -16,6 +16,7 @@ using Content.Shared._Mono.ItemTax.Components; // Mono
 using Content.Server._NF.Bank;
 using Content.Server._NF.Trade; // Mono
 using Content.Shared._NF.Bank.BUI;
+using Content.Shared._NF.Trade;
 using Robust.Shared.Toolshed.Commands.Math; // Mono
 
 
@@ -72,7 +73,7 @@ public sealed partial class CargoSystem
 
     private void UpdatePalletConsoleInterface(Entity<CargoPalletConsoleComponent> uid) // Frontier: EntityUid<Entity
     {
-        if (Transform(uid).GridUid is not EntityUid gridUid)
+        if (Transform(uid).GridUid is not { Valid: true } gridUid)
         {
             _uiSystem.SetUiState(uid.Owner,
                 CargoPalletConsoleUiKey.Sale, // Frontier: uid<uid.Owner
@@ -83,24 +84,24 @@ public sealed partial class CargoSystem
         // Frontier: per-object market modification
         GetPalletGoods(uid, gridUid, out var toSell, out var amount, out var noModAmount, out var blackMarketTaxAmount, out var frontierTaxAmount, out var nfsdTaxAmount, out var medicalTaxAmount);
 
-        if (TryComp<MarketModifierComponent>(uid, out var priceMod))
-        {
-            amount *= priceMod.Mod;
-        }
-
         amount += noModAmount;
-
         // End Frontier
-        var multiplier = 1f;
-        var station = _station.GetOwningStation(uid);
 
-        if (station != null
-            && TryComp<TradeCrateWildcardDestinationComponent>(station, out var wildcard))
-            multiplier = wildcard.ValueMultiplier;
+        // Monolith: display multiplier
+        var station = _station.GetOwningStation(uid);
+        var tradeCrateMultiplier = 1D;
+        var otherMultiplier = 1D;
+
+        if (TryComp<TradeCrateWildcardDestinationComponent>(station, out var wildcard))
+            tradeCrateMultiplier = wildcard.ValueMultiplier;
+
+        if (TryComp<MarketModifierComponent>(uid, out var marketModifier) && !marketModifier.Buy)
+            otherMultiplier = marketModifier.Mod;
 
         _uiSystem.SetUiState(uid.Owner,
             CargoPalletConsoleUiKey.Sale, // Frontier: uid<uid.Owner
-            new CargoPalletConsoleInterfaceState((int)amount, toSell.Count, true, multiplier));
+            new CargoPalletConsoleInterfaceState((int)amount, toSell.Count, true, tradeCrateMultiplier, otherMultiplier));
+        // End Monolith
     }
 
     private void OnPalletUIOpen(EntityUid uid, CargoPalletConsoleComponent component, BoundUIOpenedEvent args)
@@ -386,11 +387,33 @@ public sealed partial class CargoSystem
                     continue;
                 toSell.Add(ent);
 
+                var station = _station.GetOwningStation(ent);
+                double multiplier = 1;
+
+                if (station != null
+                    && !HasComp<TradeCrateWildcardDestinationComponent>(station)
+                    && TryComp<MarketModifierComponent>(consoleUid, out var marketModifier)
+                    && !HasComp<IgnoreMarketModifierComponent>(ent)
+                    && !marketModifier.Buy
+                    && !HasComp<TradeCrateComponent>(ent))
+                {
+                    multiplier = marketModifier.Mod;
+                }
+
+                if (station != null
+                    && TryComp<TradeCrateWildcardDestinationComponent>(station, out var wildcard)
+                    && HasComp<TradeCrateComponent>(ent))
+                {
+                    multiplier = wildcard.ValueMultiplier;
+                }
+
                 // Frontier: check for items that are immune to market modifiers
                 if (HasComp<IgnoreMarketModifierComponent>(ent))
                     noMultiplierAmount += price;
                 else
-                    amount += price;
+                    amount += price * multiplier;
+
+
                 // End Frontier: check for items that are immune to market modifiers
                 // Mono: ItemTaxs to budgets.
                 if (TryComp<ItemTaxComponent>(ent, out var itemTax))
@@ -452,7 +475,7 @@ public sealed partial class CargoSystem
     {
         var xform = Transform(uid);
 
-        if (xform.GridUid is not EntityUid gridUid)
+        if (xform.GridUid is not { Valid: true } gridUid)
         {
             _uiSystem.SetUiState(uid, CargoPalletConsoleUiKey.Sale,
             new CargoPalletConsoleInterfaceState(0, 0, false));
@@ -462,12 +485,8 @@ public sealed partial class CargoSystem
         if (!SellPallets((uid, component), gridUid, out var price, out var noMultiplierPrice, out var blackMarketTaxAmount, out var frontierTaxAmount, out var nfsdTaxAmount, out var medicalTaxAmount)) // Frontier: convert first arg to Entity, add noMultiplierPrice
             return;
 
-        // Frontier: market modifiers & immune objects
-        if (TryComp<MarketModifierComponent>(uid, out var priceMod))
-        {
-            price *= priceMod.Mod;
-        }
         price += noMultiplierPrice;
+
         // End Frontier: market modifiers & immune objects
         // Mono Begin
         if (blackMarketTaxAmount > 0)
