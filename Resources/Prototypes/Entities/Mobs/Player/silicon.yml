@@ -406,6 +406,7 @@
         acts: [ "Destruction" ]
   - type: ApcPowerReceiver
     powerLoad: 1000
+    needsPower: false # Mono
   - type: StationAiCore
   - type: StationAiVision
   - type: InteractionOutline
