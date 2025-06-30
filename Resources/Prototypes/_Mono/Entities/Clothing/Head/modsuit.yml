@@ -20,7 +20,8 @@
     sealUpPopup: sealable-clothing-seal-up-helmet
     sealDownPopup: sealable-clothing-seal-down-helmet
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       head:
       - state: equipped-HEAD-sealed
   - type: Armor
@@ -106,7 +107,8 @@
     sealUpPopup: sealable-clothing-seal-up-helmet
     sealDownPopup: sealable-clothing-seal-down-helmet
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       head:
       - state: equipped-HEAD-sealed
   - type: Armor
@@ -193,10 +195,10 @@
     sealUpPopup: sealable-clothing-seal-up-helmet
     sealDownPopup: sealable-clothing-seal-down-helmet
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       head:
       - state: equipped-HEAD-sealed
-        shader: unshaded
   - type: Armor
     modifiers:
       coefficients:

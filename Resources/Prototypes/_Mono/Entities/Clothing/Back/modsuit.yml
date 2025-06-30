@@ -69,10 +69,10 @@
   - type: SealableClothingControl
   - type: SealableClothingRequiresPower
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       back:
       - state: equipped-BACKPACK-sealed
-        shader: unshaded
 
 - type: entity
   parent: ClothingModsuitUSSPVaryag
@@ -159,10 +159,10 @@
   - type: SealableClothingControl
   - type: SealableClothingRequiresPower
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       back:
       - state: equipped-BACKPACK-sealed
-        shader: unshaded
   - type: Construction
     graph: Modsuit
     node: headofsecurity
@@ -252,10 +252,10 @@
   - type: SealableClothingControl
   - type: SealableClothingRequiresPower
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       back:
       - state: equipped-BACKPACK-sealed
-        shader: unshaded
   - type: Construction
     graph: Modsuit
     node: rogue

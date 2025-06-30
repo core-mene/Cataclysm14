@@ -28,7 +28,8 @@
   - type: NoSlip
   - type: Magboots
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
 
@@ -62,7 +63,8 @@
   - type: NoSlip
   - type: Magboots
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
 
@@ -93,10 +95,10 @@
   - type: NoSlip
   - type: Magboots
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
-        shader: unshaded
   - type: ComponentToggler
     components:
     - type: ClothingSpeedModifier
