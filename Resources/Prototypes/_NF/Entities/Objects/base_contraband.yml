@@ -40,8 +40,8 @@
   components:
   - type: Contraband
     severity: Class2Expedition
-    turnInValues: &oneFUC
-      FederationMilitaryCredit: 1
+    turnInValues:
+      FederationMilitaryCredit: 5
 
 - type: entity
   parent: BaseC2ContrabandUnredeemable
@@ -69,7 +69,7 @@
   - type: Contraband
     severity: Class3Expedition
     turnInValues:
-      FederationMilitaryCredit: 3
+      FederationMilitaryCredit: 15
   - type: ItemTax # Mono
     taxAccounts:
       nfsd: -0.05
@@ -81,7 +81,7 @@
   components:
   - type: Contraband
     turnInValues:
-      FederationMilitaryCredit: 2
+      FederationMilitaryCredit: 10
   - type: ItemTax # Mono
     taxAccounts:
       nfsd: -0.05
@@ -109,7 +109,7 @@
   components:
   - type: Contraband
     turnInValues:
-      FederationMilitaryCredit: 2
+      FederationMilitaryCredit: 10
 
 - type: entity
   parent: BaseC3CultContraband
@@ -134,7 +134,8 @@
   abstract: true
   components:
   - type: Contraband
-    turnInValues: *oneFUC
+    turnInValues:
+      FederationMilitaryCredit: 5
   - type: ItemTax # Mono
     taxAccounts:
       nfsd: -0.1
@@ -147,7 +148,7 @@
   - type: Contraband
     severity: Class3PirateHighValue
     turnInValues:
-      FederationMilitaryCredit: 4
+      FederationMilitaryCredit: 20
   - type: ItemTax # Mono
     taxAccounts:
       nfsd: -0.1
@@ -175,7 +176,7 @@
   components:
   - type: Contraband
     turnInValues:
-      FederationMilitaryCredit: 2
+      FederationMilitaryCredit: 10
   - type: ItemTax # Mono
     taxAccounts:
       nfsd: -0.2
@@ -195,7 +196,8 @@
   components:
   - type: Contraband
     severity: Class3Wizard
-    turnInValues: *oneFUC
+    turnInValues:
+      FederationMilitaryCredit: 5
 # endregion
 
 # region Class 3 Mobs
@@ -244,6 +246,6 @@
     severity: PirateTarget
     # Security and heads only
     turnInValues:
-      Doubloon: 1
+      Doubloon: 5
     hideCarryStatus: true
 # endregion

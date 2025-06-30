@@ -15,7 +15,7 @@
   - type: Contraband
     severity: Class3Chem
     turnInValues:
-      FederationMilitaryCredit: 0 # set to 0 due to TSF farming FMCs, should be simply locked away or destroyed If turnInValues gets set as double/float, could set it to ~0.2 or so
+      FederationMilitaryCredit: 2 # set to 2 now that FMC values are multiplied by 5
 
 # These are compatibility prototypes to work with ported definitions
 # They simply map to the appropriate NF/Mono contraband equivalents
