@@ -141,6 +141,30 @@
   - type: Anchorable
     flags: Anchorable
 
+- type: entity
+  id: GunneryServerStationConsolesEnforced
+  parent: [BaseStructureDisableToolUse, GunneryServerBase]
+  name: station gunnery control server
+  suffix: Enforced Max Consoles
+  components:
+  - type: Machine
+    board: MachineGCSStationCircuitboard
+  - type: FireControlServer
+    processingPower: 1000
+    enforceMaxConsoles: true
+    maxConsoles: 2
+  - type: Battery
+    maxCharge: 2500
+    startingCharge: 2500
+  - type: ApcPowerReceiver
+    powerLoad: 5000
+  - type: ApcPowerReceiverBattery
+    idleLoad: 50
+    batteryRechargeRate: 6000
+    batteryRechargeEfficiency: 0.95
+  - type: Anchorable
+    flags: Anchorable
+
 # Monolith : Gunnery Computer
 - type: entity
   parent: BaseComputerAiAccess
