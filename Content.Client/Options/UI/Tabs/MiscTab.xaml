@@ -21,6 +21,7 @@
                 <CheckBox Name="LogInChatCheckBox" Text="{Loc 'ui-options-log-in-chat'}" /> <!-- WD EDIT -->
                 <CheckBox Name="CoalesceIdenticalMessagesCheckBox" Text="{Loc 'ui-options-coalesce-identical-messages'}" /> <!-- WD EDIT -->
                 <CheckBox Name="DetailedExamineCheckBox" Text="{Loc 'ui-options-detailed-examine'}" /> <!-- Goobstation Change -->
+                <CheckBox Name="RadioNoiseCheckBox" Text="{Loc 'ui-options-radio-noise'}" /> <!-- Mono -->
                 <Label Text="{Loc 'ui-options-general-cursor'}"
                        StyleClasses="LabelKeyText"/>
                 <CheckBox Name="ShowHeldItemCheckBox" Text="{Loc 'ui-options-show-held-item'}" />

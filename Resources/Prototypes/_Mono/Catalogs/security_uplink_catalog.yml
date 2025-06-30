@@ -1,3 +1,13 @@
+# SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
+# SPDX-FileCopyrightText: 2025 Your Name
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: listing
   id: UplinkSecurityAnnie
   name:  uplink-security-annie-name
@@ -20,6 +30,36 @@
   productEntity: WeaponEnergyRevolver
   cost:
     FederationMilitaryCredit: 7
+  categories:
+  - UplinkSecurityWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityMR8C
+  name:  uplink-security-mr8c-name
+  description: uplink-security-mr8c-desc
+  productEntity: WeaponRifleMR8C
+  cost:
+    FederationMilitaryCredit: 15
+  categories:
+  - UplinkSecurityWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityMR8B
+  name:  uplink-security-mr8b-name
+  description: uplink-security-mr8b-desc
+  productEntity: WeaponLMGMR8B
+  cost:
+    FederationMilitaryCredit: 25
   categories:
   - UplinkSecurityWeapons
   conditions:
@@ -127,6 +167,51 @@
       - SecurityUplink
 
 - type: listing
+  id: UplinkSecurityMagazine8x65mm
+  name:  uplink-security-8x65mm-magazine-name
+  description: uplink-security-8x65mm-magazine-desc
+  productEntity: Magazine8x65mmSKR
+  cost:
+    FederationMilitaryCredit: 1
+  categories:
+  - UplinkSecurityAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityMagazineBox8x65mm
+  name: uplink-security-8x65mm-boxmag-name
+  description: uplink-security-8x65mm-boxmag-desc
+  productEntity: Magazine8x65mmSKRBox
+  cost:
+    FederationMilitaryCredit: 2
+  categories:
+  - UplinkSecurityAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityBoxSKR
+  name:  uplink-security-8x65mm-box-name
+  description: uplink-security-8x65mm-box-desc
+  productEntity: AmmoBox8x65mmSKR
+  cost:
+    FederationMilitaryCredit: 5
+  categories:
+  - UplinkSecurityAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
   id: UplinkSecurityNavyOfficerSword
   name:  uplink-security-navyofficersword-name
   description: uplink-security-navyofficersword-desc
@@ -141,6 +226,45 @@
       whitelist:
         tags:
           - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityMediumVoucher
+  name:  uplink-security-medium-voucher-name
+  description: uplink-security-medium-voucher-desc
+  productEntity: ShipVoucherNfsdSergeant
+  cost:
+    FederationMilitaryCredit: 5
+  categories:
+  - UplinkSecurityVouchers
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityCapitalVoucher
+  name:  uplink-security-capital-voucher-name
+  description: uplink-security-capital-voucher-desc
+  productEntity: ShipVoucherNfsdBailiff
+  cost:
+    FederationMilitaryCredit: 25
+  categories:
+  - UplinkSecurityVouchers
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
 
 # - type: listing
 #   id: UplinkSecurityAuroraExosuit

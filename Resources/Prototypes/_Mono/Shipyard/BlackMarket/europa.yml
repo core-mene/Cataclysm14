@@ -1,7 +1,16 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: vessel
   id: Europa
   parent: BaseVesselAntag
-  name: RSIC Europa
+  name: ASR Europa
   description: A multipurpose corvette, with a focus on broadside firepower and shields.
   price: 180750
   category: Large
@@ -16,7 +25,7 @@
 
 - type: gameMap
   id: Europa
-  mapName: 'RSIC Europa'
+  mapName: 'ASR Europa'
   mapPath: /Maps/_Mono/Shuttles/BlackMarket/europa.yml
   minPlayers: 0
   stations:

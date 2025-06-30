@@ -1,10 +1,22 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 ark1368
+// SPDX-FileCopyrightText: 2025 sleepyyapril
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 // Copyright Rane (elijahrane@gmail.com) 2025
 // All rights reserved. Relicensed under AGPL with permission
 
+using Content.Server._Mono.Ships.Systems;
+using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Systems;
 using Content.Shared._Mono.FireControl;
+using Content.Shared._Mono.Ships.Components;
+using Content.Shared.Popups;
 using Content.Shared.Power;
 using Content.Shared.Shuttles.BUIStates;
+using Content.Shared.Shuttles.Components;
+using Content.Shared.UserInterface;
 using Robust.Server.GameObjects;
 
 namespace Content.Server._Mono.FireControl;
@@ -13,6 +25,10 @@ public sealed partial class FireControlSystem : EntitySystem
 {
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
     [Dependency] private readonly ShuttleConsoleSystem _shuttleConsoleSystem = default!;
+    [Dependency] private readonly TransformSystem _transform = default!;
+    [Dependency] private readonly CrewedShuttleSystem _crewedShuttle = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
+
     private void InitializeConsole()
     {
         SubscribeLocalEvent<FireControlConsoleComponent, PowerChangedEvent>(OnPowerChanged);
@@ -20,6 +36,7 @@ public sealed partial class FireControlSystem : EntitySystem
         SubscribeLocalEvent<FireControlConsoleComponent, FireControlConsoleRefreshServerMessage>(OnRefreshServer);
         SubscribeLocalEvent<FireControlConsoleComponent, FireControlConsoleFireMessage>(OnFire);
         SubscribeLocalEvent<FireControlConsoleComponent, BoundUIOpenedEvent>(OnUIOpened);
+        SubscribeLocalEvent<FireControlConsoleComponent, ActivatableUIOpenAttemptEvent>(OnConsoleUIOpenAttempt);
     }
 
     private void OnPowerChanged(EntityUid uid, FireControlConsoleComponent component, PowerChangedEvent args)
@@ -92,6 +109,23 @@ public sealed partial class FireControlSystem : EntitySystem
     public void OnUIOpened(EntityUid uid, FireControlConsoleComponent component, BoundUIOpenedEvent args)
     {
         UpdateUi(uid, component);
+    }
+
+    private void OnConsoleUIOpenAttempt(
+        EntityUid uid,
+        FireControlConsoleComponent component,
+        ActivatableUIOpenAttemptEvent args)
+    {
+        var shuttle = _transform.GetParentUid(uid);
+        var uiOpen = _crewedShuttle.AnyShuttleConsoleActiveByPlayer(shuttle, args.User);
+        var hasComp = HasComp<CrewedShuttleComponent>(shuttle);
+
+        // Crewed shuttles should not allow people to have both gunnery and shuttle consoles open.
+        if (uiOpen && hasComp)
+        {
+            args.Cancel();
+            _popup.PopupClient(Loc.GetString("shuttle-console-crewed"), args.User);
+        }
     }
 
     private void UnregisterConsole(EntityUid console, FireControlConsoleComponent? component = null)

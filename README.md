@@ -30,7 +30,7 @@ We provide some scripts shown below to make the job easier.
 ### Windows
 
 > 1. Clone this repository
-> 2. Run `Scripts/sh/updateEngine.bat` in a terminal to download the engine
+> 2. Run `Scripts/sh/updateEngine.bat` in a terminal or in file explorer to download the engine
 > 3. Run `Scripts/bat/buildAllDebug.bat` after making any changes to the source
 > 4. Run `Scripts/bat/runQuickAll.bat` to launch the client and the server
 > 5. Connect to localhost in the client and play

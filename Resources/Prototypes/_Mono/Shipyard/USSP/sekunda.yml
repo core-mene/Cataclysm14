@@ -1,0 +1,43 @@
+# SPDX-FileCopyrightText: 2025 grandalff
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: vessel
+  id: Sekunda
+  parent: BaseVesselAntag
+  name: NCS Sekunda
+  description: A USSP corpsman and fire support ship, comes with an FTL drive, tiny medical and chemical bay, light arnament and a cramped interior.
+  price: 35500
+  category: Medium
+  group: Ussp
+  access: USSP
+  shuttlePath: /Maps/_Mono/Shuttles/USSP/sekunda.yml
+  guidebookPage: Null
+  class:
+  - Patrol
+  - Medical
+  - Chemistry
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Sekunda
+  mapName: 'Sekunda'
+  mapPath: /Maps/_Mono/Shuttles/USSP/sekunda.yml
+  minPlayers: 0
+  stations:
+    Sekunda:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Sekunda USSP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            USSPSergeant: [0, 0]
+            USSPCorporal: [0, 0]
+            USSPMedic: [0, 0]
+            USSPRifleman: [0, 0]
+#Idfk what im doing I will not lie at all. What am I doing? Hello? Mooooooooooooom? AAAAAAAAAAAAAAAAA! *crashes your entire game and dies*

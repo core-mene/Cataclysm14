@@ -1,0 +1,38 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkIceCreamJug
+  name: ice cream jug
+  description: A jug full of sweet, homemade ice cream.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: IceCream
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-ice-cream
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkRootBearFloatJug
+  name: root beer float jug
+  description: Root beer, but now with ice cream on top. It truly is the magnum opus of Canadian summertime drinks.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: RootBeerFloat
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-root-beer-float
+

@@ -9,7 +9,7 @@ store-category-secutility = Utility
 store-category-secammo = Ammunition
 store-category-secexplosives = Explosives
 store-category-secbundles = Bundles
-
+store-category-secvouchers = Vouchers
 
 uplink-security-hardsuit-name = Bronze Patrol Suit
 uplink-security-hardsuit-desc = The standard-issue TSFMC space proof suit for patrol duty. This bronze variant has cadet rank markings.
@@ -25,8 +25,8 @@ uplink-security-hardsuit-sheriff-name = Colonel's Patrol Suit
 uplink-security-hardsuit-sheriff-desc = The standard-issue TSFMC space proof suit for patrol duty. This gold variant has colonel rank markings.
 uplink-security-hardsuit-combat-name = Combat Suit
 uplink-security-hardsuit-combat-desc = A heavily armored TSFMC suit. Space proof, with thick armor plating at the expense of mobility.
-uplink-security-hardsuit-commmand-name = Command Combat Suit
-uplink-security-hardsuit-commmand-desc = A heavily armored TSFMC suit. Space proof, with thick armor plating at the expense of mobility. This variant has supervisor rank markings.
+uplink-security-hardsuit-command-name = Command Combat Suit
+uplink-security-hardsuit-command-desc = A heavily armored TSFMC suit. Space proof, with thick armor plating at the expense of mobility. This variant has supervisor rank markings.
 uplink-security-lethalarmory-name = Lethal Armory Stock Crate
 uplink-security-lethalarmory-desc = A crate containing weapons necessary to fill an armory.
 uplink-security-nonlethalarmory-name = Non-lethal Armory Stock Crate

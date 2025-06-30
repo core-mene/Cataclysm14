@@ -1,8 +1,21 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Ilya246
+# SPDX-FileCopyrightText: 2024 deltanedas
+# SPDX-FileCopyrightText: 2024 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Whatstone
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # recipes should generally cost 1.5x to 2x of the biomass output of their mob
 
 - type: latheRecipe
   id: MonkeyCube
   result: MonkeyCube
+  categories: # Mono
+  - Animals
   completetime: 30
   materials:
     Biomass: 16
@@ -10,6 +23,8 @@
 - type: latheRecipe
   id: KoboldCube
   result: KoboldCube
+  categories: # Mono
+  - Animals
   completetime: 30
   materials:
     Biomass: 16
@@ -17,6 +32,8 @@
 - type: latheRecipe
   id: CowCube
   result: CowCube
+  categories: # Mono
+  - Animals
   completetime: 30
   materials:
     Biomass: 120
@@ -24,6 +41,8 @@
 - type: latheRecipe
   id: GoatCube
   result: GoatCube
+  categories: # Mono
+  - Animals
   completetime: 30
   materials:
     Biomass: 35
@@ -31,13 +50,17 @@
 - type: latheRecipe
   id: MothroachCube
   result: MothroachCube
-  completetime: 45 # prevent biblical floods
+  categories: # Mono
+  - Animals
+  completetime: 45
   materials:
-    Biomass: 20 # a lot of materials wasted due to complex genetics
+    Biomass: 20
 
 - type: latheRecipe
   id: MouseCube
   result: MouseCube
+  categories: # Mono
+  - Animals
   completetime: 15
   materials:
     Biomass: 12
@@ -45,6 +68,8 @@
 - type: latheRecipe
   id: CockroachCube
   result: CockroachCube
+  categories: # Mono
+  - Animals
   completetime: 15
   materials:
     Biomass: 16
@@ -52,6 +77,8 @@
 - type: latheRecipe
   id: SpaceCarpCube
   result: SpaceCarpCube
+  categories: # Mono
+  - DangerousAnimals
   completetime: 30
   materials:
     Biomass: 24
@@ -60,6 +87,8 @@
 - type: latheRecipe
   id: SpaceTickCube
   result: SpaceTickCube
+  categories: # Mono
+  - DangerousAnimals
   completetime: 15
   materials:
     Biomass: 8
@@ -68,6 +97,8 @@
 - type: latheRecipe
   id: AbominationCube
   result: AbominationCube
+  categories: # Mono
+  - DangerousAnimals
   completetime: 30
   materials: # abominations are slow and essentially worse than even carp
     Biomass: 28

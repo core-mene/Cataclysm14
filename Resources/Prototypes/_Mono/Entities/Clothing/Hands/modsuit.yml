@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 NotActuallyMarty
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: ClothingHandsBase
   id: ClothingModsuitGauntletsUSSPVaryag
@@ -30,7 +36,8 @@
     sealUpPopup: sealable-clothing-seal-up-gauntlets
     sealDownPopup: sealable-clothing-seal-down-gauntlets
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       gloves:
       - state: equipped-HAND-sealed
 
@@ -66,6 +73,44 @@
     sealUpPopup: sealable-clothing-seal-up-gauntlets
     sealDownPopup: sealable-clothing-seal-down-gauntlets
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND-sealed
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingModsuitGauntletsRogue
+  name: RX-01 modsuit gauntlets
+  description: Non-conductive mesh, pressure-sealed seams. Surprisingly legal. Proudly produced in Sector by Ullman Industries.
+  categories: [HideSpawnMenu]
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Mono/Clothing/Hands/Modsuits/rogue.rsi
+    layers:
+    - state: gauntlets
+    - state: gauntlets-sealed
+      visible: false
+      map: [ "sealed" ]
+  - type: Clothing
+    equipSound: /Audio/Mecha/mechmove03.ogg
+    unequipSound: /Audio/Mecha/mechmove03.ogg
+    slots: [ gloves ]
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-modular
+    fiberColor: fibers-black
+  - type: FingerprintMask
+  - type: SealableClothing
+    sealUpPopup: sealable-clothing-seal-up-gauntlets
+    sealDownPopup: sealable-clothing-seal-down-gauntlets
+  - type: SealableClothingVisuals
+    spriteLayer: sealed
+    clothingVisuals:
       gloves:
       - state: equipped-HAND-sealed

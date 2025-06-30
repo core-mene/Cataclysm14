@@ -1,7 +1,13 @@
+// SPDX-FileCopyrightText: 2025 NotActuallyMarty
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Client._Goobstation.Clothing.Components;
 using Content.Client.Clothing;
 using Content.Shared._Goobstation.Clothing;
 using Content.Shared.Clothing;
+using Content.Shared.Inventory;
 using Content.Shared.Item;
 using Robust.Client.GameObjects;
 using System.Linq;
@@ -40,8 +46,13 @@ public sealed class SealableClothingVisualizerSystem : VisualizerSystem<Sealable
             || !isSealed)
             return;
 
-        if (!comp.VisualLayers.TryGetValue(args.Slot, out var layers))
+        if (!comp.ClothingVisuals.TryGetValue(args.Slot, out var layers))
             return;
+        // attempt to get species specific data || if none found will use generic data instead
+        if (TryComp(args.Equipee, out InventoryComponent? inventory) &&
+            inventory.SpeciesId != null &&
+            comp.ClothingVisuals.TryGetValue($"{args.Slot}-{inventory.SpeciesId}", out var speciesLayers))
+            layers = speciesLayers;
 
         var i = 0;
         foreach (var layer in layers)

@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 NotActuallyMarty
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: ClothingShoesBase
   id: ClothingModsuitBootsStandard
@@ -28,10 +35,10 @@
   - type: NoSlip
   - type: Magboots
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
-        shader: unshaded
 
 - type: entity
   parent: ClothingShoesBase
@@ -63,7 +70,8 @@
   - type: NoSlip
   - type: Magboots
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
 
@@ -97,7 +105,8 @@
   - type: NoSlip
   - type: Magboots
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
 
@@ -131,7 +140,8 @@
   - type: NoSlip
   - type: Magboots
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
 
@@ -165,7 +175,8 @@
   - type: NoSlip
   - type: Magboots
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
 
@@ -199,7 +210,8 @@
   - type: NoSlip
   - type: Magboots
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
 
@@ -233,7 +245,8 @@
   - type: NoSlip
   - type: Magboots
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
 
@@ -267,43 +280,7 @@
   - type: NoSlip
   - type: Magboots
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
-
-- type: entity
-  parent: ClothingShoesBase
-  id: ClothingModsuitBootsRogue
-  name: RX-01 modsuit boots
-  description: Magnetized to help you avoid slips, trips, and Feds.
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Appearance
-  - type: Sprite
-    sprite: _Goobstation/Clothing/Shoes/Modsuits/rogue.rsi
-    layers:
-    - state: boots
-    - state: boots-sealed
-      map: [ "sealed" ]
-  - type: Clothing
-    equipSound: /Audio/Mecha/mechmove03.ogg
-    unequipSound: /Audio/Mecha/mechmove03.ogg
-    slots: [ feet ]
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-  - type: SealableClothing
-    sealUpPopup: sealable-clothing-seal-up-boots
-    sealDownPopup: sealable-clothing-seal-down-boots
-  - type: NoSlip
-  - type: Magboots
-  - type: SealableClothingVisuals
-    visualLayers:
-      shoes:
-      - state: equipped-FEET-sealed
-        shader: unshaded
-  - type: ComponentToggler
-    components:
-    - type: ClothingSpeedModifier
-      walkModifier: 1.2
-      sprintModifier: 1.2

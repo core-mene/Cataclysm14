@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Greenwall-Exe
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Author Info
 # GitHub: Greemwall-Exe
 # Discord: Greenwall or zacausa
@@ -12,18 +17,18 @@
   price: 6000
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/_Mono/Shuttles/Baeg.yml
+  shuttlePath: /Maps/_Mono/Shuttles/baeg.yml
   guidebookPage: Null
   class:
   - Civilian
   - Salvage
   engine:
-  - AME
+  - APU
 
 - type: gameMap
   id: Baeg
   mapName: 'Z-22 Baeg'
-  mapPath: /Maps/_Mono/Shuttles/Baeg.yml
+  mapPath: /Maps/_Mono/Shuttles/baeg.yml
   minPlayers: 0
   stations:
     Baeg:

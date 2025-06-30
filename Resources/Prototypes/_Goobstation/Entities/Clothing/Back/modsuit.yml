@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 NotActuallyMarty
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: [Clothing, ContentsExplosionResistanceBase]
   id: ClothingModsuitStandard
@@ -69,10 +76,10 @@
   - type: SealableClothingControl
   - type: SealableClothingRequiresPower
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       back:
       - state: equipped-BACKPACK-sealed
-        shader: unshaded
   - type: Construction
     graph: Modsuit
     node: standard
@@ -162,10 +169,10 @@
   - type: SealableClothingControl
   - type: SealableClothingRequiresPower
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       back:
       - state: equipped-BACKPACK-sealed
-        shader: unshaded
   - type: Construction
     graph: Modsuit
     node: security
@@ -205,6 +212,11 @@
     quickEquip: false
     slots:
     - back
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      back-resomi:
+      - state: equipped-BACKPACK-resomi
   - type: Storage
     grid:
     - 0,0,6,3
@@ -255,10 +267,12 @@
   - type: SealableClothingControl
   - type: SealableClothingRequiresPower
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       back:
       - state: equipped-BACKPACK-sealed
-        shader: unshaded
+      back-resomi:
+      - state: equipped-BACKPACK-sealed-resomi
   - type: Construction
     graph: Modsuit
     node: headofsecurity
@@ -350,10 +364,10 @@
   - type: SealableClothingControl
   - type: SealableClothingRequiresPower
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       back:
       - state: equipped-BACKPACK-sealed
-        shader: unshaded
   - type: Construction
     graph: Modsuit
     node: paramedic
@@ -443,10 +457,12 @@
   - type: SealableClothingControl
   - type: SealableClothingRequiresPower
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       back:
       - state: equipped-BACKPACK-sealed
-        shader: unshaded
+      back-resomi:
+      - state: equipped-BACKPACK-sealed-resomi
   - type: Construction
     graph: Modsuit
     node: engineer
@@ -536,10 +552,12 @@
   - type: SealableClothingControl
   - type: SealableClothingRequiresPower
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       back:
       - state: equipped-BACKPACK-sealed
-        shader: unshaded
+      back-resomi:
+      - state: equipped-BACKPACK-sealed-resomi
   - type: Construction
     graph: Modsuit
     node: atmostech
@@ -629,10 +647,10 @@
   - type: SealableClothingControl
   - type: SealableClothingRequiresPower
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       back:
       - state: equipped-BACKPACK-sealed
-        shader: unshaded
   - type: Construction
     graph: Modsuit
     node: rd
@@ -724,10 +742,12 @@
   - type: SealableClothingControl
   - type: SealableClothingRequiresPower
   - type: SealableClothingVisuals
-    visualLayers:
+    spriteLayer: sealed
+    clothingVisuals:
       back:
       - state: equipped-BACKPACK-sealed
-        shader: unshaded
+      back-resomi:
+      - state: equipped-BACKPACK-sealed-resomi
   - type: Construction
     graph: Modsuit
     node: captain
@@ -735,99 +755,6 @@
 - type: entity
   parent: ClothingModsuitCaptain
   id: ClothingModsuitCaptainPowerCell
-  suffix: High-Capacity Battery
-  components:
-  - type: ItemSlots
-    slots:
-      cell_slot:
-        name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellHigh
-        whitelist:
-          components:
-            - PowerCell
-
-- type: entity
-  parent: [Clothing, ContentsExplosionResistanceBase, BaseC3PirateContrabandHighValue]
-  id: ClothingModsuitRogue
-  name: RX-01 hardsuit control unit
-  description: Core control unit for the RX-01. Survives power spikes, hull breaches, and rogue ingenuity. Somehow.
-  components:
-  - type: Appearance
-  - type: Sprite
-    sprite: _Goobstation/Clothing/Back/Modsuits/rogue.rsi
-    layers:
-    - state: control
-    - state: control-sealed
-      visible: false
-      shader: unshaded
-      map: [ "sealed" ]
-  - type: Item
-    size: Huge
-  - type: Clothing
-    quickEquip: false
-    slots:
-    - back
-  - type: Storage
-    grid:
-    - 0,0,6,3
-    maxItemSize: Huge
-  - type: ContainerContainer
-    containers:
-      storagebase: !type:Container
-        ents: []
-      toggleable-clothing: !type:Container
-      cell_slot: !type:ContainerSlot
-  - type: UserInterface
-    interfaces:
-      enum.StorageUiKey.Key:
-        type: StorageBoundUserInterface
-      enum.ToggleClothingUiKey.Key:
-        type: ToggleableClothingBoundUserInterface
-  - type: UseDelay
-    delay: 0.5
-  - type: ExplosionResistance
-    damageCoefficient: 0.9
-  - type: ToggleableClothing
-    requiredSlot: back
-    blockUnequipWhenAttached: true
-    replaceCurrentClothing: true
-    clothingPrototypes:
-      head: ClothingModsuitHelmetRogue
-      gloves: ClothingModsuitGauntletsRogue
-      outerClothing: ClothingModsuitChestplateRogue
-      shoes: ClothingModsuitBootsRogue
-  - type: WiresPanel
-  - type: ItemSlots
-    slots:
-      cell_slot:
-        name: power-cell-slot-component-slot-name-default
-        whitelist:
-          components:
-            - PowerCell
-  - type: ItemSlotsRequirePanel
-    slots:
-      cell_slot: true
-  - type: PowerCellDraw
-    drawRate: 0.2 # Sealed draw rate
-    useRate: 0.5 # Draw rate for sealing
-  - type: PowerCellSlot
-    cellSlotId: cell_slot
-    fitsInCharger: false
-  - type: DoAfter
-  - type: SealableClothingControl
-  - type: SealableClothingRequiresPower
-  - type: SealableClothingVisuals
-    visualLayers:
-      back:
-      - state: equipped-BACKPACK-sealed
-        shader: unshaded
-  - type: Construction
-    graph: Modsuit
-    node: rogue
-
-- type: entity
-  parent: ClothingModsuitRogue
-  id: ClothingModsuitRoguePowerCell
   suffix: High-Capacity Battery
   components:
   - type: ItemSlots
