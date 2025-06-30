@@ -9,6 +9,7 @@
 
 using Content.Server.Shuttles.Systems;
 using Content.Shared._Mono.FireControl;
+using Content.Shared.GameTicking;
 using Content.Shared.Power;
 using Content.Shared.Shuttles.BUIStates;
 using Robust.Server.GameObjects;
@@ -19,13 +20,35 @@ public sealed partial class FireControlSystem : EntitySystem
 {
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
     [Dependency] private readonly ShuttleConsoleSystem _shuttleConsoleSystem = default!;
+
+    private bool _completedCheck = false;
+
     private void InitializeConsole()
     {
+        SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnSpawnComplete);
+
         SubscribeLocalEvent<FireControlConsoleComponent, PowerChangedEvent>(OnPowerChanged);
         SubscribeLocalEvent<FireControlConsoleComponent, ComponentShutdown>(OnComponentShutdown);
         SubscribeLocalEvent<FireControlConsoleComponent, FireControlConsoleRefreshServerMessage>(OnRefreshServer);
         SubscribeLocalEvent<FireControlConsoleComponent, FireControlConsoleFireMessage>(OnFire);
         SubscribeLocalEvent<FireControlConsoleComponent, BoundUIOpenedEvent>(OnUIOpened);
+    }
+
+    // scuffed one-time check of all station control consoles to ensure they're already refreshed
+    // given this only happens once, we can assume all refreshed are things like Camelot's gunnery server.
+    private void OnSpawnComplete(PlayerSpawnCompleteEvent ev)
+    {
+        if (_completedCheck)
+            return;
+
+        var query = EntityQueryEnumerator<FireControlConsoleComponent>();
+
+        while (query.MoveNext(out var uid, out var console))
+        {
+            DoRefreshServer(uid, console);
+        }
+
+        _completedCheck = true;
     }
 
     private void OnPowerChanged(EntityUid uid, FireControlConsoleComponent component, PowerChangedEvent args)
@@ -41,7 +64,7 @@ public sealed partial class FireControlSystem : EntitySystem
         UnregisterConsole(uid, component);
     }
 
-    private void OnRefreshServer(EntityUid uid, FireControlConsoleComponent component, FireControlConsoleRefreshServerMessage args)
+    private void DoRefreshServer(EntityUid uid, FireControlConsoleComponent component)
     {
         // First, clean up any invalid server references across all grids
         CleanupInvalidServerReferences();
@@ -80,6 +103,11 @@ public sealed partial class FireControlSystem : EntitySystem
 
         // Always update UI to reflect current state
         UpdateUi(uid, component);
+    }
+
+    private void OnRefreshServer(EntityUid uid, FireControlConsoleComponent component, FireControlConsoleRefreshServerMessage args)
+    {
+        DoRefreshServer(uid, component);
     }
 
     private void OnFire(EntityUid uid, FireControlConsoleComponent component, FireControlConsoleFireMessage args)
