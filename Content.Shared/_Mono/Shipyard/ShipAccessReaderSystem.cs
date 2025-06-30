@@ -11,6 +11,8 @@ using Content.Shared.Inventory;
 using Content.Shared.Popups;
 using Content.Shared.Storage.Components;
 using Content.Shared.Lock;
+using Content.Shared._NF.Whitelist.Components;
+using Content.Shared.Silicons.Borgs.Components;
 using Robust.Shared.Map;
 
 namespace Content.Shared._Mono.Shipyard;
@@ -123,11 +125,37 @@ public sealed class ShipAccessReaderSystem : EntitySystem
             }
         }
 
+        // Find all accessible vouchers for the user
+        var accessibleVouchers = FindAccessibleVouchers(user);
+        // Log.Debug("ShipAccess: User {0} has {1} accessible vouchers: {2}", user, accessibleVouchers.Count, string.Join(", ", accessibleVouchers));
+
+        // Check if any of the user's vouchers have a deed for this specific ship
+        foreach (var voucherUid in accessibleVouchers)
+        {
+            if (TryComp<ShuttleDeedComponent>(voucherUid, out var voucherDeed))
+            {
+                // Log.Debug("ShipAccess: Voucher {0} has deed for shuttle {1}, target ship is {2}", voucherUid, voucherDeed.ShuttleUid, shipDeed.ShuttleUid);
+                // Check if this deed is for the same ship
+                if (voucherDeed.ShuttleUid == shipDeed.ShuttleUid)
+                {
+                    // Log.Debug("ShipAccess: User {0} has correct deed access via voucher {1}", user, voucherUid);
+                    return true; // User has the correct deed
+                }
+            }
+        }
+
         // Check if any of the user's ID cards have guest access to this ship
         if (TryComp<ShipGuestAccessComponent>(gridUid, out var guestAccess))
         {
             // Log.Debug("ShipAccess: Grid {0} has guest access component with {1} guest cards: {2}",
             //     gridUid, guestAccess.GuestIdCards.Count, string.Join(", ", guestAccess.GuestIdCards));
+
+            // Check if the user is a cyborg with guest access
+            if (TryComp<BorgChassisComponent>(user, out _) && guestAccess.GuestCyborgs.Contains(user))
+            {
+                // Log.Debug("ShipAccess: Cyborg {0} has guest access", user);
+                return true; // Cyborg has guest access
+            }
 
             foreach (var cardUid in accessibleCards)
             {
@@ -135,6 +163,16 @@ public sealed class ShipAccessReaderSystem : EntitySystem
                 {
                     // Log.Debug("ShipAccess: User {0} has guest access via card {1}", user, cardUid);
                     return true; // User's ID card has guest access
+                }
+            }
+
+            // Also check if any vouchers have guest access
+            foreach (var voucherUid in accessibleVouchers)
+            {
+                if (guestAccess.GuestIdCards.Contains(voucherUid))
+                {
+                    // Log.Debug("ShipAccess: User {0} has guest access via voucher {1}", user, voucherUid);
+                    return true; // User's voucher has guest access
                 }
             }
         }
@@ -188,5 +226,33 @@ public sealed class ShipAccessReaderSystem : EntitySystem
         }
 
         return cards;
+    }
+
+    /// <summary>
+    /// Finds all vouchers that the user can access (in hands or inventory).
+    /// </summary>
+    /// <param name="user">The user to check</param>
+    /// <returns>Collection of accessible voucher entities</returns>
+    private HashSet<EntityUid> FindAccessibleVouchers(EntityUid user)
+    {
+        var vouchers = new HashSet<EntityUid>();
+
+        // Check items in hands for vouchers
+        foreach (var item in _handsSystem.EnumerateHeld(user))
+        {
+            // Check if the item is a voucher
+            if (HasComp<NFShipyardVoucherComponent>(item))
+                vouchers.Add(item);
+        }
+
+        // Check ID slot in inventory for vouchers (in case someone puts a voucher in the ID slot)
+        if (_inventorySystem.TryGetSlotEntity(user, "id", out var idUid))
+        {
+            // Check if the item is a voucher
+            if (HasComp<NFShipyardVoucherComponent>(idUid.Value))
+                vouchers.Add(idUid.Value);
+        }
+
+        return vouchers;
     }
 }

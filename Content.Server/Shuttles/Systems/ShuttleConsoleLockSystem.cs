@@ -18,6 +18,7 @@ using Robust.Shared.Utility;
 using Content.Server._NF.Shipyard.Components;
 using Content.Shared._Mono.Company;
 using Content.Shared._Mono.Shipyard;
+using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Interaction;
 using Content.Shared.PDA;
 using Robust.Shared.Audio;
@@ -58,7 +59,7 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
     }
 
     /// <summary>
-    /// Adds a verb to unlock the console if the player has an ID card or voucher in hand
+    /// Adds verbs for console interaction (unlock/lock, guest access, reset guest access)
     /// </summary>
     private void AddUnlockVerb(EntityUid uid,
         ShuttleConsoleLockComponent component,
@@ -70,26 +71,30 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
         // Check if player has an ID card or voucher in hand
         var idCards = FindAccessibleIdCards(args.User);
         var vouchers = FindAccessibleVouchers(args.User);
+        var isCyborg = TryComp<BorgChassisComponent>(args.User, out _);
 
-        if (idCards.Count == 0 && vouchers.Count == 0)
-            return;
+        // Show unlock/lock verb only for users with ID cards or vouchers
+        var hasIdOrVoucher = idCards.Count > 0 || vouchers.Count > 0;
 
-        AlternativeVerb verb = new()
+        if (hasIdOrVoucher)
         {
-            Act = () => TryToggleLock(uid, args.User, component),
-            Text = component.Locked
-                ? Loc.GetString("shuttle-console-verb-unlock")
-                : Loc.GetString("shuttle-console-verb-lock"),
-            Icon = component.Locked
-                ? new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/unlock.svg.192dpi.png"))
-                : new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/lock.svg.192dpi.png")),
-            Priority = 10,
-        };
+            AlternativeVerb verb = new()
+            {
+                Act = () => TryToggleLock(uid, args.User, component),
+                Text = component.Locked
+                    ? Loc.GetString("shuttle-console-verb-unlock")
+                    : Loc.GetString("shuttle-console-verb-lock"),
+                Icon = component.Locked
+                    ? new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/unlock.svg.192dpi.png"))
+                    : new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/lock.svg.192dpi.png")),
+                Priority = 10,
+            };
 
-        args.Verbs.Add(verb);
+            args.Verbs.Add(verb);
+        }
 
         // Add reset guest access verb for deed holders when console is unlocked
-        if (!component.Locked && HasDeedAccess(uid, args.User, component))
+        if (!component.Locked && hasIdOrVoucher && HasDeedAccess(uid, args.User, component))
         {
             AlternativeVerb resetVerb = new()
             {
@@ -100,6 +105,21 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
             };
 
             args.Verbs.Add(resetVerb);
+        }
+
+        // Add guest access verb for users without deed access when console is unlocked
+        // This includes cyborgs (who don't have ID cards) and users with ID cards that don't have the correct deed
+        if (!component.Locked && (isCyborg || (hasIdOrVoucher && !HasDeedAccess(uid, args.User, component))))
+        {
+            AlternativeVerb guestVerb = new()
+            {
+                Act = () => TryGrantGuestAccess(uid, args.User, component),
+                Text = Loc.GetString("shuttle-console-verb-guest-access"),
+                Icon = new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/group.svg.192dpi.png")),
+                Priority = 10,
+            };
+
+            args.Verbs.Add(guestVerb);
         }
     }
 
@@ -145,6 +165,8 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
         TryToggleLock(uid, args.User, component);
         args.Handled = true;
     }
+
+
 
     /// <summary>
     /// Tries to toggle the lock state of the console using an ID card or voucher from the player
@@ -667,6 +689,14 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
 
         // Log.Debug("TryGrantGuestAccess: Grid {0} has ShuttleDeedComponent for shuttle {1}", gridUid, shipDeed.ShuttleUid);
 
+        // Check if the user is a cyborg
+        if (TryComp<BorgChassisComponent>(user, out _))
+        {
+            // Handle cyborg guest access
+            TryGrantCyborgGuestAccess(console, user, gridUid);
+            return;
+        }
+
         // Find all accessible ID cards for the user
         var idCards = FindAccessibleIdCards(user);
         // Log.Debug("TryGrantGuestAccess: User {0} has {1} accessible ID cards: {2}", user, idCards.Count, string.Join(", ", idCards));
@@ -718,6 +748,36 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
     }
 
     /// <summary>
+    /// Grants guest access to a cyborg.
+    /// </summary>
+    private void TryGrantCyborgGuestAccess(EntityUid console, EntityUid cyborg, EntityUid gridUid)
+    {
+        // Log.Debug("TryGrantCyborgGuestAccess: Cyborg {0} attempting to get guest access via console {1} on grid {2}", cyborg, console, gridUid);
+
+        // Ensure the ship has a guest access component
+        var guestAccess = EnsureComp<ShipGuestAccessComponent>(gridUid);
+        // Log.Debug("TryGrantCyborgGuestAccess: Ensured ShipGuestAccessComponent on grid {0}", gridUid);
+
+        // Check if the cyborg already has guest access
+        if (guestAccess.GuestCyborgs.Contains(cyborg))
+        {
+            // Log.Debug("TryGrantCyborgGuestAccess: Cyborg {0} already has guest access", cyborg);
+            Popup.PopupEntity(Loc.GetString("shuttle-console-guest-access-already-granted"), console, cyborg);
+            return;
+        }
+
+        // Grant guest access to the cyborg
+        guestAccess.GuestCyborgs.Add(cyborg);
+        Dirty(gridUid, guestAccess);
+
+        // Log.Debug("TryGrantCyborgGuestAccess: Successfully granted guest access to cyborg {0} on grid {1}", cyborg, gridUid);
+
+        // Play sound and show popup
+        _audio.PlayPvs(new SoundPathSpecifier("/Audio/Machines/id_swipe.ogg"), console);
+        Popup.PopupEntity(Loc.GetString("shuttle-console-guest-access-granted"), console, cyborg);
+    }
+
+    /// <summary>
     /// Checks if a user has deed access to the ship this console is on.
     /// </summary>
     private bool HasDeedAccess(EntityUid console, EntityUid user, ShuttleConsoleLockComponent lockComp)
@@ -750,8 +810,7 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
     }
 
     /// <summary>
-    /// Resets guest access for the ship, removing all guest ID cards.
-    /// Only available to users with deed access.
+    /// Resets guest access for the ship.
     /// </summary>
     private void TryResetGuestAccess(EntityUid console, EntityUid user, ShuttleConsoleLockComponent lockComp)
     {
@@ -780,20 +839,21 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
             return;
         }
 
-        // Check if there are any guest cards to reset
-        if (guestAccess.GuestIdCards.Count == 0)
+        // Check if there are any guest cards or cyborgs to reset
+        var totalGuests = guestAccess.GuestIdCards.Count + guestAccess.GuestCyborgs.Count;
+        if (totalGuests == 0)
         {
             Popup.PopupEntity(Loc.GetString("shuttle-console-no-guest-access"), console, user);
             return;
         }
 
         // Reset guest access
-        var guestCount = guestAccess.GuestIdCards.Count;
         guestAccess.GuestIdCards.Clear();
+        guestAccess.GuestCyborgs.Clear();
         Dirty(gridUid, guestAccess);
 
         // Play sound and show popup
         _audio.PlayPvs(new SoundPathSpecifier("/Audio/Machines/id_swipe.ogg"), console);
-        Popup.PopupEntity(Loc.GetString("shuttle-console-guest-access-reset", ("count", guestCount)), console, user);
+        Popup.PopupEntity(Loc.GetString("shuttle-console-guest-access-reset", ("count", totalGuests)), console, user);
     }
 }

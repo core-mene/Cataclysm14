@@ -21,6 +21,7 @@ shuttle-console-guest-access-reset = Reset guest access for {$count} ID cards.
 shuttle-console-verb-unlock = Unlock Console
 shuttle-console-verb-lock = Lock Console
 shuttle-console-verb-reset-guest-access = Reset Guest Access
+shuttle-console-verb-guest-access = Guest Access
 
 ## Shuttle Console FTL
 shuttle-ftl-proximity = Unable to FTL while around other ships.

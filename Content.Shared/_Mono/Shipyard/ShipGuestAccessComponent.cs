@@ -17,4 +17,10 @@ public sealed partial class ShipGuestAccessComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public HashSet<EntityUid> GuestIdCards = new();
+
+    /// <summary>
+    /// Set of cyborg EntityUids that have been granted guest access to this ship.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public HashSet<EntityUid> GuestCyborgs = new();
 }
