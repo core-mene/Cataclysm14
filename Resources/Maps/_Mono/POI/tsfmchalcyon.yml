@@ -7730,7 +7730,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -8.5,-11.5
       parent: 1
-- proto: BoxBeanbag
+- proto: Error
   entities:
   - uid: 296
     components:
@@ -7751,7 +7751,7 @@ entities:
     - type: Transform
       pos: -6.462846,11.782579
       parent: 1
-- proto: BoxMagazinePistolSubMachineGun
+- proto: Error
   entities:
   - uid: 6359
     components:
@@ -7760,7 +7760,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: BoxMagazinePistolSubMachineGunTopMounted
+- proto: Error
   entities:
   - uid: 6362
     components:
@@ -7769,7 +7769,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: BoxMagazineRifle
+- proto: Error
   entities:
   - uid: 6352
     components:
@@ -7778,7 +7778,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: BoxMagazineShotgun
+- proto: Error
   entities:
   - uid: 6354
     components:
@@ -36221,7 +36221,7 @@ entities:
     - type: Transform
       pos: 3.5,-33.5
       parent: 1
-- proto: MagazineBoxPistolPractice
+- proto: Error
   entities:
   - uid: 6079
     components:
