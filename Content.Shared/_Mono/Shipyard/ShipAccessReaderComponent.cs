@@ -18,7 +18,7 @@ public sealed partial class ShipAccessReaderComponent : Component
     /// Whether ship access checking is enabled for this entity.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public bool Enabled = true;
+    public bool Enabled;
 
     /// <summary>
     /// Message to show when access is denied due to lack of ship deed.

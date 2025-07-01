@@ -1,8 +1,10 @@
+# 1 old DC = 5 DC, renamed to Data Chits.
+
 - type: entity
   name: data chit
   parent: BaseItem
   id: Doubloon
-  suffix: 20 DC
+  suffix: 100 DC
   description: A rugged, shielded disk containing encrypted intelligence.
   components:
   - type: Sprite
@@ -12,12 +14,12 @@
     sprite: _Mono/Objects/Specific/Rogue/rogue_chits.rsi
     size: Tiny
   - type: Stack
-    count: 20
+    count: 100
     stackType: Doubloon
   - type: StaticPrice
     price: 0
   - type: StackPrice
-    price: 200
+    price: 40
   - type: Currency
     price:
       Doubloon: 1
@@ -40,11 +42,19 @@
 
 - type: entity
   parent: Doubloon
-  id: Doubloon10
-  suffix: 10 DC
+  id: Doubloon25
+  suffix: 25 DC
   components:
   - type: Stack
-    count: 10
+    count: 25
+
+- type: entity
+  parent: Doubloon
+  id: Doubloon50
+  suffix: 50 DC
+  components:
+  - type: Stack
+    count: 50
 
 # Uplinks
 - type: entity
@@ -88,17 +98,17 @@
 - type: entity
   parent: BasePirateUplink
   id: BasePirateUplinkRadioPirateCaptain
-  suffix: P. Captain 20
+  suffix: Commander 100
   components:
   - type: Store
     balance:
-      Doubloon: 20
+      Doubloon: 100
 
 - type: entity
   parent: BasePirateUplink
   id: BasePirateUplinkPirateCrew
-  suffix: Crew 15
+  suffix: Agent 75
   components:
   - type: Store
     balance:
-      Doubloon: 15
+      Doubloon: 75

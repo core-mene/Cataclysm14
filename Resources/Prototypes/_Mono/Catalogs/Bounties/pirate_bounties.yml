@@ -1,6 +1,11 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: pirateBounty # Mono SCAF-> General Merc Suits including SCAF
   id: PirateBountyMercSuit
-  reward: 4
+  reward: 20
   description: pirate-bounty-description-merc-suit
   entries:
   - name: pirate-bounty-item-merc-suit
@@ -9,7 +14,7 @@
 
 - type: pirateBounty
   id: PirateBountyTacsuit
-  reward: 6
+  reward: 30
   description: pirate-bounty-description-tsfmctacsuit
   entries:
   - name: pirate-bounty-item-tsfmc-tacsuit
@@ -18,7 +23,7 @@
 
 - type: pirateBounty # Mono
   id: PirateBountyTSFEnergyWeapon
-  reward: 5
+  reward: 25
   description: pirate-bounty-description-energy-weapon
   entries:
   - name: pirate-bounty-item-energy-weapon
@@ -27,7 +32,7 @@
 
 - type: pirateBounty # Mono
   id: PirateBountyStandardTSFLongarm
-  reward: 4
+  reward: 20
   description: pirate-bounty-description-standard-tsf-longarm
   entries:
   - name: pirate-bounty-item-standard-tsf-longarm
@@ -36,7 +41,7 @@
 
 - type: pirateBounty # Mono
   id: PirateBountyExperimentalTSFWeapon
-  reward: 12
+  reward: 60
   description: pirate-bounty-description-experimental-tsf-weapon
   entries:
   - name: pirate-bounty-item-experimental-tsf-weapon
@@ -45,7 +50,7 @@
 
 - type: pirateBounty
   id: PirateBountyShipWeapon
-  reward: 4
+  reward: 20
   description: pirate-bounty-description-shipweapon
   spawnChest: false
   entries:
@@ -55,7 +60,7 @@
 
 - type: pirateBounty
   id: PirateBountyFentanylLarge
-  reward: 5
+  reward: 25
   description: pirate-bounty-description-generic
   entries:
   - name: pirate-bounty-item-fentanyl
@@ -64,7 +69,7 @@
 
 #- type: pirateBounty - Mono
 #  id: PirateBountyFentanylSmall
-#  reward: 2
+#  reward: 10
 #  description: pirate-bounty-description-generic
 #  entries:
 #  - name: pirate-bounty-item-fentanyl
@@ -73,7 +78,7 @@
 
 - type: pirateBounty
   id: PirateBountyFTLDrive
-  reward: 5
+  reward: 25
   description: pirate-bounty-description-generic
   spawnChest: false
   entries:
@@ -83,7 +88,7 @@
 
 - type: pirateBounty
   id: PirateBountyShipShield
-  reward: 5
+  reward: 25
   description: pirate-bounty-description-generic
   spawnChest: false
   entries:
@@ -93,7 +98,7 @@
 
 - type: pirateBounty
   id: PirateBountyGCS
-  reward: 4
+  reward: 20
   description: pirate-bounty-description-generic
   spawnChest: false
   entries:
@@ -122,7 +127,7 @@
 
 - type: pirateBounty # Mono
   id: PirateBountyEncryptionKeyTSFMC
-  reward: 5
+  reward: 25
   description: pirate-bounty-description-encryption-key-TSFMC
   entries:
   - name: pirate-bounty-item-encryption-key-TSFMC
@@ -131,7 +136,7 @@
 
 - type: pirateBounty
   id: PirateBountyTechfab
-  reward: 2
+  reward: 10
   description: pirate-bounty-description-techfab
   spawnChest: false
   entries:
@@ -141,7 +146,7 @@
 
 - type: pirateBounty
   id: PirateBountyCybernetics
-  reward: 4
+  reward: 20
   description: pirate-bounty-description-cybernetics
   entries:
   - name: pirate-bounty-item-cybernetics
@@ -150,7 +155,7 @@
 
 - type: pirateBounty
   id: PirateBountyRTG
-  reward: 3
+  reward: 15
   description: pirate-bounty-description-rtg
   spawnChest: false
   entries:

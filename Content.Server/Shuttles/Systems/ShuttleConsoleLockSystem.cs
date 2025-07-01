@@ -122,6 +122,26 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
 
             args.Verbs.Add(guestVerb);
         }
+
+        // Add ship access toggle verbs for deed holders when console is unlocked
+        if (!component.Locked && hasIdOrVoucher && HasDeedAccess(uid, args.User, component))
+        {
+            var shipAccessEnabled = IsShipAccessEnabled(uid);
+
+            AlternativeVerb shipAccessVerb = new()
+            {
+                Act = () => TryToggleShipAccess(uid, args.User, component, !shipAccessEnabled),
+                Text = shipAccessEnabled
+                    ? Loc.GetString("shuttle-console-verb-unlock-ship")
+                    : Loc.GetString("shuttle-console-verb-lock-ship"),
+                Icon = shipAccessEnabled
+                    ? new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/unlock.svg.192dpi.png"))
+                    : new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/lock.svg.192dpi.png")),
+                Priority = 8,
+            };
+
+            args.Verbs.Add(shipAccessVerb);
+        }
     }
 
     /// <summary>
@@ -856,5 +876,79 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
         // Play sound and show popup
         _audio.PlayPvs(new SoundPathSpecifier("/Audio/Machines/id_swipe.ogg"), console);
         Popup.PopupEntity(Loc.GetString("shuttle-console-guest-access-reset", ("count", totalGuests)), console, user);
+    }
+
+    /// <summary>
+    /// Checks if ship access is currently enabled on the grid
+    /// </summary>
+    private bool IsShipAccessEnabled(EntityUid consoleUid)
+    {
+        // Get the grid the console is on
+        var consoleTransform = Transform(consoleUid);
+        if (consoleTransform.GridUid == null)
+            return false;
+
+        var gridUid = consoleTransform.GridUid.Value;
+
+        // Get all entities on the grid using transform children
+        var gridTransform = Transform(gridUid);
+        var childEnumerator = gridTransform.ChildEnumerator;
+
+        while (childEnumerator.MoveNext(out var child))
+        {
+            if (TryComp<ShipAccessReaderComponent>(child, out var accessReader) && accessReader.Enabled)
+                return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Toggles ship access for all ship access readers on the grid
+    /// </summary>
+    private void ToggleShipAccess(EntityUid consoleUid, bool enabled)
+    {
+        // Get the grid the console is on
+        var consoleTransform = Transform(consoleUid);
+        if (consoleTransform.GridUid == null)
+            return;
+
+        var gridUid = consoleTransform.GridUid.Value;
+
+        // Get all entities on the grid using transform children
+        var gridTransform = Transform(gridUid);
+        var childEnumerator = gridTransform.ChildEnumerator;
+
+        while (childEnumerator.MoveNext(out var child))
+        {
+            if (TryComp<ShipAccessReaderComponent>(child, out var accessReader))
+            {
+                accessReader.Enabled = enabled;
+                Dirty(child, accessReader);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Attempts to toggle ship access for the grid
+    /// </summary>
+    private void TryToggleShipAccess(EntityUid consoleUid, EntityUid user, ShuttleConsoleLockComponent component, bool enable)
+    {
+        // Only allow deed holders to toggle ship access
+        if (!HasDeedAccess(consoleUid, user, component))
+        {
+            Popup.PopupEntity(Loc.GetString("shuttle-console-access-denied"), consoleUid, user);
+            return;
+        }
+
+        // Toggle ship access
+        ToggleShipAccess(consoleUid, enable);
+
+        // Play sound and show popup
+        _audio.PlayPvs(new SoundPathSpecifier("/Audio/Machines/id_swipe.ogg"), consoleUid);
+        var message = enable
+            ? Loc.GetString("shuttle-console-ship-access-enabled")
+            : Loc.GetString("shuttle-console-ship-access-disabled");
+        Popup.PopupEntity(message, consoleUid, user);
     }
 }

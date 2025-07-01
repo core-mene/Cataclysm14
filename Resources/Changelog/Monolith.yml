@@ -5345,3 +5345,36 @@ Entries:
   id: 632
   time: '2025-07-01T02:22:15.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1064
+- author: Ark
+  changes:
+    - type: Tweak
+      message: You can now turn off the ship access lock.
+  id: 633
+  time: '2025-07-01T05:00:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1066
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        TC, FMC, and DC are now multiplied in 5 in values and prices. What Goob
+        did to TC basically.
+    - type: Tweak
+      message: Fent can be sold for 1 FMC each (equivalent to 0.2 old FMCs)
+    - type: Fix
+      message: Stacked Telecrystals/Fent/etc now sells at the proper price.
+    - type: Fix
+      message: You can no longer sell some specific non-contraband items for FMCs.
+    - type: Fix
+      message: >-
+        Items without FMC/DT value will not be sold at their respective
+        consoles.
+  id: 634
+  time: '2025-07-01T06:43:07.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1061
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Rogue bounties now use 5x numbers too
+  id: 635
+  time: '2025-07-01T13:18:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1069

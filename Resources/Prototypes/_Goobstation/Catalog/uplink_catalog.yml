@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Mechs
 
 - type: listing
@@ -7,7 +12,7 @@
   icon: { sprite: /Textures/Objects/Specific/Mech/mecha.rsi, state: darkgygax }
   productEntity: CrateCybersunDarkGygaxBundle
   cost:
-    Telecrystal: 40 # 400->40 - Mono
+    Telecrystal: 200 # 400->200 - Mono
   categories:
   - UplinkAllies
 
@@ -18,7 +23,7 @@
   icon: { sprite: /Textures/Objects/Specific/Mech/mecha.rsi, state: mauler }
   productEntity: CrateCybersunMaulerBundle
   cost:
-    Telecrystal: 65 # 650->65 - Mono
+    Telecrystal: 325 # 650->325 - Mono
   categories:
   - UplinkAllies
 #  conditions: # Mono
