@@ -3912,8 +3912,6 @@ entities:
       pos: 30.5,-15.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 6015
       - 7368
@@ -4003,8 +4001,6 @@ entities:
       pos: 30.5,-29.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 6015
       - 7368
@@ -4177,8 +4173,6 @@ entities:
       pos: 39.5,-19.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7368
   - uid: 7405
@@ -4187,8 +4181,6 @@ entities:
       pos: 49.5,-19.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7368
 - proto: AirSensorFreezer
@@ -25738,8 +25730,6 @@ entities:
       pos: 31.5,-25.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 6015
       - 7368
@@ -25750,8 +25740,6 @@ entities:
       pos: 30.5,-25.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 6015
       - 7368
@@ -26026,8 +26014,6 @@ entities:
       pos: 33.5,-18.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7368
   - uid: 7362
@@ -26036,8 +26022,7 @@ entities:
       pos: 33.5,-17.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
       deviceLists:
       - 7368
   - uid: 7363
@@ -26046,8 +26031,6 @@ entities:
       pos: 33.5,-14.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7368
   - uid: 7364
@@ -26056,8 +26039,6 @@ entities:
       pos: 35.5,-16.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7368
   - uid: 7365
@@ -26066,8 +26047,6 @@ entities:
       pos: 47.5,-20.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7368
   - uid: 7366
@@ -26076,8 +26055,6 @@ entities:
       pos: 47.5,-19.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7368
   - uid: 7367
@@ -26086,8 +26063,6 @@ entities:
       pos: 47.5,-18.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7368
 - proto: FloorDrain
@@ -33796,8 +33771,6 @@ entities:
       pos: 31.5,-14.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 6015
       - 7368
@@ -33999,8 +33972,6 @@ entities:
     - type: AtmosPipeColor
       color: '#0055CCFF'
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7368
 - proto: GasVentPumpFreezer
@@ -34399,8 +34370,6 @@ entities:
       pos: 30.5,-14.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 6015
       - 7368
@@ -34590,8 +34559,6 @@ entities:
     - type: AtmosPipeColor
       color: '#990000FF'
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7368
 - proto: GasVentScrubberFreezer
