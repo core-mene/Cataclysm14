@@ -1,10 +1,17 @@
+# SPDX-FileCopyrightText: 2023 AndresE55
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: listing
   id: UplinkKanabou
   name: uplink-kanabou-name
   description: uplink-kanabou-desc
   productEntity: Kanabou
   cost:
-    Telecrystal: 10
+    Telecrystal: 50
   categories:
   - UplinkWeaponry
   # conditions: # Frontier: muh speciesism
@@ -18,7 +25,7 @@
   description: uplink-rickenbacker4001-desc
   productEntity: Rickenbacker4001Instrument
   cost:
-    Telecrystal: 10
+    Telecrystal: 30 # Mono 50->30
   categories:
   - UplinkWeaponry
   # conditions: # Frontier: no musicians
@@ -33,7 +40,7 @@
   icon: { sprite: Nyanotrasen/Clothing/OuterClothing/Armor/touseigusoku.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateBundleSamurai
   cost:
-    Telecrystal: 6
+    Telecrystal: 30
   categories:
   - UplinkWearables
   # conditions: # Frontier: muh speciesism

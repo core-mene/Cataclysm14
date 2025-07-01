@@ -1,3 +1,12 @@
+// SPDX-FileCopyrightText: 2024 Checkraze
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 GreaseMonk
+// SPDX-FileCopyrightText: 2024 Salvantrix
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server._NF.Contraband.Components;
 using Content.Server.Cargo.Components;
 using Content.Server.Cargo.Systems;
@@ -156,11 +165,15 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
                     if (!comp.TurnInValues.ContainsKey(console.RewardType))
                         continue;
 
-                    toSell.Add(ent);
                     var value = comp.TurnInValues[console.RewardType];
+                    // Mono Begin - Accounting for stacks of contraband
+                    if (TryComp<StackComponent>(ent, out var stackcomp))
+                        value *= stackcomp.Count;
+                    // Mono End
                     if (value <= 0)
                         continue;
                     amount += value;
+                    toSell.Add(ent); // Mono - Moved down to not sell valueless contraband
                 }
             }
         }

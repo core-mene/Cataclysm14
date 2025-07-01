@@ -4,6 +4,7 @@
 // SPDX-FileCopyrightText: 2024 neuPanda
 // SPDX-FileCopyrightText: 2025 Dvir
 // SPDX-FileCopyrightText: 2025 sleepyyapril
+// SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -150,6 +151,12 @@ public enum VesselClass : byte
     // Antag ships
     Syndicate,
     Pirate,
+    // Mono - combat factions
+    Corvette,
+    Frigate,
+    Destroyer,
+    Cruiser,
+    // i doubt we'll ever get to cruisers
 }
 
 public enum VesselEngine : byte

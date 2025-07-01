@@ -1,8 +1,18 @@
 # Frontier-specific contraband targets.
 # If you need multiple currency types, specify them in the actual object instead of inheriting multiple parents here.
 
+- type: entity # Mono
+  id: BaseContrabandNoValue
+  abstract: true
+  components:
+  - type: Contraband
+    turnInValues:
+      FederationMilitaryCredit: 0
+      Doubloon: 0
+
 # region Class 1
 - type: entity
+  parent: BaseContrabandNoValue
   id: BaseC1Contraband
   abstract: true
   components:
@@ -25,6 +35,7 @@
 
 # Specific parent for sensitive items (e.g. command headset, secway, secway keys) that should not be redeemed for FMCs
 - type: entity
+  parent: BaseContrabandNoValue
   id: BaseC2ContrabandUnredeemable
   abstract: true
   components:
@@ -40,21 +51,18 @@
   components:
   - type: Contraband
     severity: Class2Expedition
-    turnInValues: &oneFUC
-      FederationMilitaryCredit: 1
+    turnInValues:
+      FederationMilitaryCredit: 5
 
 - type: entity
   parent: BaseC2ContrabandUnredeemable
   id: BaseC2Contraband
   abstract: true
-  components:
-  - type: Contraband
-    turnInValues: &noFUCs
-      FederationMilitaryCredit: 0
 # endregion
 
 # region Class 3 Objects
 - type: entity
+  parent: BaseContrabandNoValue
   id: BaseC3ContrabandUnredeemable
   abstract: true
   components:
@@ -69,7 +77,7 @@
   - type: Contraband
     severity: Class3Expedition
     turnInValues:
-      FederationMilitaryCredit: 3
+      FederationMilitaryCredit: 15
   - type: ItemTax # Mono
     taxAccounts:
       nfsd: -0.05
@@ -81,7 +89,7 @@
   components:
   - type: Contraband
     turnInValues:
-      FederationMilitaryCredit: 2
+      FederationMilitaryCredit: 10
   - type: ItemTax # Mono
     taxAccounts:
       nfsd: -0.05
@@ -90,9 +98,6 @@
   parent: BaseC3ContrabandUnredeemable
   id: BaseC3ContrabandNoValue
   abstract: true
-  components:
-  - type: Contraband
-    turnInValues: *noFUCs
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable
@@ -109,15 +114,12 @@
   components:
   - type: Contraband
     turnInValues:
-      FederationMilitaryCredit: 2
+      FederationMilitaryCredit: 10
 
 - type: entity
-  parent: BaseC3CultContraband
+  parent: BaseC3ContrabandUnredeemable
   id: BaseC3CultContrabandNoValue
   abstract: true
-  components:
-  - type: Contraband
-    turnInValues: *noFUCs
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable
@@ -126,7 +128,6 @@
   components:
   - type: Contraband
     severity: Class3Pirate
-    turnInValues: *noFUCs
 
 - type: entity
   parent: BaseC3PirateContrabandNoValue
@@ -134,7 +135,8 @@
   abstract: true
   components:
   - type: Contraband
-    turnInValues: *oneFUC
+    turnInValues:
+      FederationMilitaryCredit: 5
   - type: ItemTax # Mono
     taxAccounts:
       nfsd: -0.1
@@ -147,7 +149,7 @@
   - type: Contraband
     severity: Class3PirateHighValue
     turnInValues:
-      FederationMilitaryCredit: 4
+      FederationMilitaryCredit: 20
   - type: ItemTax # Mono
     taxAccounts:
       nfsd: -0.1
@@ -164,9 +166,6 @@
   parent: BaseC3SyndicateContrabandUnredeemable
   id: BaseC3SyndicateContrabandNoValue
   abstract: true
-  components:
-  - type: Contraband
-    turnInValues: *noFUCs
 
 - type: entity
   parent: BaseC3SyndicateContrabandUnredeemable
@@ -175,7 +174,7 @@
   components:
   - type: Contraband
     turnInValues:
-      FederationMilitaryCredit: 2
+      FederationMilitaryCredit: 10
   - type: ItemTax # Mono
     taxAccounts:
       nfsd: -0.2
@@ -195,7 +194,8 @@
   components:
   - type: Contraband
     severity: Class3Wizard
-    turnInValues: *oneFUC
+    turnInValues:
+      FederationMilitaryCredit: 5
 # endregion
 
 # region Class 3 Mobs
@@ -221,9 +221,6 @@
   parent: BaseC3MobCreature
   id: BaseC3MobCreatureNoValue # For non-humanoid/non-sapient beasts
   abstract: true
-  components:
-  - type: Contraband
-    turnInValues: *noFUCs
 
 - type: entity
   parent: BaseC3Contraband
@@ -237,6 +234,7 @@
 
 # region Miscellaneous
 - type: entity
+  parent: BaseContrabandNoValue
   id: BasePirateTarget
   abstract: true
   components:
@@ -244,6 +242,6 @@
     severity: PirateTarget
     # Security and heads only
     turnInValues:
-      Doubloon: 1
+      Doubloon: 5
     hideCarryStatus: true
 # endregion

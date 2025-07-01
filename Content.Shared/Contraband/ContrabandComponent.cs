@@ -1,4 +1,13 @@
-﻿using Content.Shared.Roles;
+// SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+// SPDX-FileCopyrightText: 2024 Kara
+// SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2025 John
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Content.Shared.Roles;
 using Content.Shared.Store; // Frontier: turn-in features
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -37,7 +46,7 @@ public sealed partial class ContrabandComponent : Component
 
     // Frontier: turn-in features
     /// <summary>
-    ///     The set of currency types this item can be redeemed 
+    ///     The set of currency types this item can be redeemed
     /// </summary>
     [DataField]
     [AutoNetworkedField]

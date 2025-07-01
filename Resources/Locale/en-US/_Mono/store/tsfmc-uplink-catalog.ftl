@@ -1,3 +1,33 @@
+uplink-security-anti-poison-pen-name = Poison auto-injector
+uplink-security-anti-poison-pen-desc = A rapid dose of anti-poison. Contains ultravasculine and epinephrine.
+
+uplink-security-puncturase-pen-name = Puncturase auto-injector
+uplink-security-puncturase-pen-desc = A rapid dose of puncturase and tranexamic acid, intended for combat applications.
+
+uplink-security-pyrazine-pen-name = Pyrzine auto-injector
+uplink-security-pyrazine-pen-desc = A rapid dose of pyrazine and dermaline, intended for combat applications.
+
+uplink-security-rad-pen-name = Rad auto-injector
+uplink-security-rad-pen-desc = A rapid dose of anti-radiation. Contains arithrazine and bicaridine.
+
+uplink-security-combat-pen-name = Combat Medipen
+uplink-security-combat-pen-desc = A general use shot of omnizine, packaged in a autoinjector.
+
+uplink-security-syringe-case-name = Medipen Case
+uplink-security-syringe-case-desc = A pocket case filled with medipens for most combat scenarios.
+
+uplink-security-compact-defibrillator-name = Compact Defibrillator
+uplink-security-compact-defibrillator-desc = A portable defibrillator made for field revivals.
+
+uplink-security-cash7500-name = 7,500 Spesos
+uplink-security-cash7500-desc = Cold, hard cash.
+
+uplink-security-thrusterkit-name = Thruster Upgrade Kit
+uplink-security-thrusterkit-desc = Contains 32 super capaciters. Perfect for upgrading eight thrusters.
+
+uplink-security-cyborg-module-name = Security Cyborg Module
+uplink-security-cyborg-module-desc = A machete, an energy gun, and a stun baton, made specifically for borgs. Wait, don't Rogues have the same thing?
+
 uplink-security-eg4-name = EG-4 Energy Revolver
 uplink-security-eg4-desc = A self-recharging energy weapon, capable of shooting both disabling and lethal bolts. Like a mini-energy gun.
 

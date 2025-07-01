@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: vessel
   id: Drakon
   parent: BaseVesselAntag
@@ -11,6 +16,7 @@
   guidebookPage: Null
   class:
   - Pursuit
+  - Corvette
   engine:
   - AME
 

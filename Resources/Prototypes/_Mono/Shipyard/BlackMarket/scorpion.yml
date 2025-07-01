@@ -12,7 +12,7 @@
   parent: BaseVesselAntag
   name: ASR Scorpion
   description: An unusual variant from the same shipyards manufacturing Anacondas, using a mix of missile pods and 2 large-caliber cannons.
-  price: 122500
+  price: 107500
   category: Medium
   group: BlackMarket
   shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/scorpion.yml
@@ -20,6 +20,7 @@
   class:
   - Pirate
   - Pursuit
+  - Corvette
   engine:
   - Uranium
 

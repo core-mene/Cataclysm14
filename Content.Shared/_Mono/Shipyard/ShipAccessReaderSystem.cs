@@ -17,6 +17,7 @@ using Content.Shared._NF.Whitelist.Components;
 using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared._Mono.Company;
 using Content.Shared.Ghost;
+using Content.Shared.Silicons.StationAi;
 using Robust.Shared.Map;
 
 namespace Content.Shared._Mono.Shipyard;
@@ -98,6 +99,13 @@ public sealed class ShipAccessReaderSystem : EntitySystem
         {
             // Log.Debug("ShipAccess: Admin ghost {0} bypassing ship access check", user);
             return true; // Admin ghosts can access everything
+        }
+
+        // Allow AI cores to bypass ship access checks
+        if (HasComp<StationAiHeldComponent>(user))
+        {
+            // Log.Debug("ShipAccess: AI core {0} bypassing ship access check", user);
+            return true; // AI cores can access everything
         }
 
         // Get the grid the target entity is on

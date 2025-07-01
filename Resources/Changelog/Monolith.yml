@@ -5291,3 +5291,90 @@ Entries:
   id: 626
   time: '2025-06-30T20:55:48.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1045
+- author: grandalff
+  changes:
+    - type: Tweak
+      message: >-
+        Changed Sekunda price yet again, from 45k to 55k, as recommended by more
+        experienced mappers.
+  id: 627
+  time: '2025-06-30T23:41:18.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1060
+- author: Ark
+  changes:
+    - type: Fix
+      message: AI cores can now open deed-locked airlocks.
+    - type: Tweak
+      message: AI cores will now say they are powered and not un-powered.
+  id: 628
+  time: '2025-07-01T00:03:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1062
+- author: UnicornOnLSD
+  changes:
+    - type: Add
+      message: Drake Industries emblem.
+  id: 629
+  time: '2025-07-01T00:17:04.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1052
+- author: sleepyyapril
+  changes:
+    - type: Tweak
+      message: The cargo sale UI got a bit of an overhaul.
+  id: 630
+  time: '2025-07-01T01:49:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1059
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        You are now told your coordinates when you spawn in. This is for those
+        Rogues who have forgotten.
+  id: 631
+  time: '2025-07-01T02:15:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1063
+- author: 07hcrats
+  changes:
+    - type: Add
+      message: >-
+        Added corvette/frigate (and destroyer/capital (unused, for contribs))
+        tags to shipyard ships.
+    - type: Tweak
+      message: Removed capital tag from Europa.
+    - type: Fix
+      message: Fixed Scorpion price being identical to Anaconda price.
+  id: 632
+  time: '2025-07-01T02:22:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1064
+- author: Ark
+  changes:
+    - type: Tweak
+      message: You can now turn off the ship access lock.
+  id: 633
+  time: '2025-07-01T05:00:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1066
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        TC, FMC, and DC are now multiplied in 5 in values and prices. What Goob
+        did to TC basically.
+    - type: Tweak
+      message: Fent can be sold for 1 FMC each (equivalent to 0.2 old FMCs)
+    - type: Fix
+      message: Stacked Telecrystals/Fent/etc now sells at the proper price.
+    - type: Fix
+      message: You can no longer sell some specific non-contraband items for FMCs.
+    - type: Fix
+      message: >-
+        Items without FMC/DT value will not be sold at their respective
+        consoles.
+  id: 634
+  time: '2025-07-01T06:43:07.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1061
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Rogue bounties now use 5x numbers too
+  id: 635
+  time: '2025-07-01T13:18:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1069

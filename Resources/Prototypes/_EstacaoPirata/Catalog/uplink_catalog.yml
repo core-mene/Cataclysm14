@@ -1,9 +1,15 @@
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Whatstone
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: listing
   id: UplinkSyndicateDeck
   name: uplink-syndicate-deck-name
   description: uplink-syndicate-deck-desc
   productEntity: CardBoxSyndicate
   cost:
-    Telecrystal: 4 # Frontier: 1<4 (less spam please)
+    Telecrystal: 5 # Mono: 4>5 frontier revert
   categories:
   - UplinkPointless
