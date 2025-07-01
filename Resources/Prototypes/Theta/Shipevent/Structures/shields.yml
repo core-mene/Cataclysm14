@@ -123,9 +123,9 @@
   suffix: Theta, CircularShield, OUTPOST ONLY # Mono
   components:
   - type: CircularShield
-    consumptionPerM2: 0.03 # Mono - too much at 1
+    consumptionPerM2: 0.05 # Mono - too much at 1
     maxWidth: 360
-    maxRadius: 175 # Mono - 2x
+    maxRadius: 125 # Mono - 2x
     wattDamageRatio: 3
     color: "#B79CF7"
     effects:
