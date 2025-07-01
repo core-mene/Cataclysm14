@@ -17,7 +17,7 @@
   minimumDistance: 2500 # Mono
   maximumDistance: 4000 # Mono
   spawnGroup: Required
-  gridPath: /Maps/_Mono/POI/tsfmc_halcyon.yml
+  gridPath: /Maps/_Mono/POI/tsfmchalcyon.yml
   addComponents:
   - type: IFF
     color: "#047abd"
@@ -26,7 +26,7 @@
 - type: gameMap
   id: TSFMCHalcyon
   mapName: 'TSFMC Flagship Halcyon'
-  mapPath: /Maps/_Mono/POI/tsfmc_halcyon.yml
+  mapPath: /Maps/_Mono/POI/tsfmchalcyon.yml
   minPlayers: 0
   stations:
     TSFMCHalcyon:
