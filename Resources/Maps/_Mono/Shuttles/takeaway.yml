@@ -1,36 +1,11 @@
-# SPDX-FileCopyrightText: 2021 AJCM-git
-# SPDX-FileCopyrightText: 2021 Paul Ritter
-# SPDX-FileCopyrightText: 2021 wrexbe
-# SPDX-FileCopyrightText: 2022 20kdc
-# SPDX-FileCopyrightText: 2022 Kara
-# SPDX-FileCopyrightText: 2022 LittleBuilderJane
-# SPDX-FileCopyrightText: 2022 Peptide90
-# SPDX-FileCopyrightText: 2022 metalgearsloth
-# SPDX-FileCopyrightText: 2022 mirrorcult
-# SPDX-FileCopyrightText: 2023 Alexander Evgrashin
-# SPDX-FileCopyrightText: 2023 Cheackraze
-# SPDX-FileCopyrightText: 2023 Emisse
-# SPDX-FileCopyrightText: 2023 YumiGumi
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 Minty Moo
-# SPDX-FileCopyrightText: 2024 ThatOneGoblin25
-# SPDX-FileCopyrightText: 2024 TsjipTsjip
-# SPDX-FileCopyrightText: 2024 crystalHex
-# SPDX-FileCopyrightText: 2024 dustylens
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 tonotom
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/01/2025 03:58:14
-  entityCount: 935
+  time: 07/01/2025 04:31:49
+  entityCount: 936
 maps: []
 grids:
 - 1
@@ -2873,6 +2848,8 @@ entities:
       pos: -1.5,-14.5
       parent: 1
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 770
       - 768
@@ -2884,6 +2861,8 @@ entities:
       pos: 1.5,-9.5
       parent: 1
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 770
       - 767
@@ -2895,6 +2874,8 @@ entities:
       pos: 0.5,-9.5
       parent: 1
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 770
       - 767
@@ -2906,6 +2887,8 @@ entities:
       pos: 3.5,-9.5
       parent: 1
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 770
       - 767
@@ -2918,6 +2901,8 @@ entities:
       pos: -1.5,-13.5
       parent: 1
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 770
       - 768
@@ -2929,6 +2914,8 @@ entities:
       pos: 2.5,-9.5
       parent: 1
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 770
       - 767
@@ -2943,6 +2930,8 @@ entities:
       pos: -1.5,-6.5
       parent: 1
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 767
       - 769
@@ -2954,6 +2943,8 @@ entities:
       pos: 1.5,-4.5
       parent: 1
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 767
       - 935
@@ -2999,14 +2990,14 @@ entities:
   - uid: 451
     components:
     - type: Transform
-      pos: 0.30741644,-10.346408
+      pos: 0.26611638,-10.167565
       parent: 1
 - proto: FoodCondimentSqueezeBottleMustard
   entities:
   - uid: 456
     components:
     - type: Transform
-      pos: 0.49491644,-10.190158
+      pos: 0.46924138,-10.21444
       parent: 1
 - proto: GasMixer
   entities:
@@ -3773,6 +3764,8 @@ entities:
       pos: 3.5,-5.5
       parent: 1
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 767
     - type: AtmosPipeColor
@@ -3809,6 +3802,8 @@ entities:
     - type: AtmosPipeColor
       color: '#990000FF'
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 767
   - uid: 402
@@ -4358,6 +4353,13 @@ entities:
     components:
     - type: Transform
       pos: 5.5,-8.5
+      parent: 1
+- proto: NapkinDrum5
+  entities:
+  - uid: 936
+    components:
+    - type: Transform
+      pos: 0.6411164,-10.480065
       parent: 1
 - proto: NFAshtray
   entities:
