@@ -33,7 +33,8 @@ public sealed partial class ShuttleSystem
             return false;
         }
 
-        if (!EntityManager.HasComponent<ShuttleDeedComponent>(transform.GridUid) ||
+        if (!EntityManager.HasComponent<ShuttleDeedComponent>(transform.GridUid) &
+            !EntityManager.HasComponent<DeedlessShuttleComponent>(transform.GridUid) || // Mono
             EntityManager.HasComponent<StationDampeningComponent>(_station.GetOwningStation(transform.GridUid)))
         {
             return false;
