@@ -150,6 +150,12 @@ public enum VesselClass : byte
     // Antag ships
     Syndicate,
     Pirate,
+    // Mono - combat factions
+    Corvette,
+    Frigate,
+    Destroyer,
+    Cruiser,
+    // i doubt we'll ever get to cruisers
 }
 
 public enum VesselEngine : byte
