@@ -1,5 +1,14 @@
 - type: pointOfInterest
+  parent: BaseMobilePOI
   id: BasePOI
+  abstract: true
+  addComponents:
+  - type: ForceAnchor
+
+# Mono
+
+- type: pointOfInterest
+  id: BaseMobilePOI
   abstract: true
   minimumDistance: 4000 # Some sane defaults
   maximumDistance: 8000
