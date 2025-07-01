@@ -173,7 +173,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
                     if (value <= 0)
                         continue;
                     amount += value;
-                    toSell.Add(ent);
+                    toSell.Add(ent); // Mono - Moved down to not sell valueless contraband
                 }
             }
         }
