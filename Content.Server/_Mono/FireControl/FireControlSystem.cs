@@ -19,6 +19,7 @@ using Robust.Shared.Physics.Systems;
 using System.Linq;
 using Content.Shared.Physics;
 using System.Numerics;
+using Content.Server._Mono.SpaceArtillery;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Shuttles.Components;
 using Robust.Shared.Timing;
@@ -386,6 +387,13 @@ public sealed partial class FireControlSystem : EntitySystem
         if (grid != null && TryComp<FTLComponent>((EntityUid)grid, out var ftlComp))
         {
             // Cannot fire weapons during FTL travel
+            return;
+        }
+
+        // Check if the weapon's grid is pacified
+        if (grid != null && TryComp<SpaceArtilleryDisabledGridComponent>((EntityUid)grid, out var pacifiedComp))
+        {
+            // Cannot fire weapons if pacified
             return;
         }
 
