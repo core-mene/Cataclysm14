@@ -70,10 +70,7 @@ using Content.Shared._Mono.Company;
 using Content.Shared.Forensics.Components;
 using Content.Shared.Shuttles.Components;
 using Robust.Shared.Player;
-using Content.Server.Shuttles.Components;
-using Content.Server.Shuttles.Systems;
 using Content.Shared._Mono.Ships.Components;
-using Robust.Shared.Log;
 using Robust.Shared.Timing;
 
 namespace Content.Server._NF.Shipyard.Systems;
@@ -293,9 +290,6 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             // Add lock component and set the shuttle ID
             var lockComp = EnsureComp<ShuttleConsoleLockComponent>(consoleUid);
             _shuttleConsoleLock.SetShuttleId(consoleUid, shuttleUid.ToString(), lockComp);
-
-            // Ensure emergency lock is disabled for newly purchased ships
-            _shuttleConsoleLock.SetEmergencyLock(consoleUid, false);
 
             // Log for debugging
             Log.Debug("Locked shuttle console {0} to shuttle {1} for deed holder {2}", consoleUid, shuttleUid, targetId);

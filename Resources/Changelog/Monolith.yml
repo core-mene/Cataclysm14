@@ -5378,3 +5378,117 @@ Entries:
   id: 635
   time: '2025-07-01T13:18:12.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1069
+- author: Ark
+  changes:
+    - type: Remove
+      message: >-
+        Emergency Broadcast (Panic Button) has been sunset. Did TSFMC really
+        care about you?
+    - type: Tweak
+      message: >-
+        Shuttle console locks are now grid-based. No more bypassing it by
+        destroying the original console.
+  id: 636
+  time: '2025-07-01T22:49:25.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1072
+- author: UnicornOnLSD
+  changes:
+    - type: Tweak
+      message: >-
+        DIS Pluto & DIS Rig now brandish DI's emblem. DIS Rig's price 59 900 ->
+        75 000
+  id: 637
+  time: '2025-07-01T22:56:19.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1071
+- author: sleepyyapril
+  changes:
+    - type: Tweak
+      message: Made hitboxes the same for everyone, no matter your height and width.
+  id: 638
+  time: '2025-07-01T23:40:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1074
+- author: grandalff
+  changes:
+    - type: Tweak
+      message: Changed out Sekunda's grinder with hotplate
+    - type: Add
+      message: Added chem locker to Sekunda
+  id: 639
+  time: '2025-07-01T23:42:00.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1073
+- author: Ark
+  changes:
+    - type: Remove
+      message: Trade Outpost removed from rotation. Trade Mall forever!
+  id: 640
+  time: '2025-07-02T00:00:24.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1075
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Dead Drop scanning now rewards the correct amount
+  id: 641
+  time: '2025-07-02T02:31:40.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1077
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Super Surplus updated for 5x tc cost
+  id: 642
+  time: '2025-07-02T04:48:03.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1080
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: IMP Viper suit now highly resistant to heat
+  id: 643
+  time: '2025-07-02T06:00:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1078
+- author: sleepyyapril
+  changes:
+    - type: Tweak
+      message: >-
+        Fentanyl is no longer easier for rogues than anyone else, removing the
+        default recipe's need for carpotoxin.
+    - type: Tweak
+      message: >-
+        Fentanyl's sell price was halved, mostly as a balance for all sides
+        being able to get it much easier.
+    - type: Remove
+      message: 'The vestine recipe for fentanyl was removed. '
+  id: 644
+  time: '2025-07-02T07:23:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1083
+- author: crazy1112345
+  changes:
+    - type: Tweak
+      message: >-
+        Increased the Edison Power Plant gas sell multiplier to 1.5x, from
+        1.25x.
+    - type: Fix
+      message: Fixed various issues with Edison Power Plant.
+  id: 645
+  time: '2025-07-02T07:24:53.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1082
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Raised price of MR-8C, MR-8B, Ashstorm
+    - type: Tweak
+      message: MR-8C gets full-auto now.
+    - type: Tweak
+      message: TM has plastitanium outpost walls for exterior walls now.
+  id: 646
+  time: '2025-07-02T07:41:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1084
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        the Big One returns. Colonel-access locked. I do not care about the
+        balance consequences of this.
+    - type: Tweak
+      message: new texture for charon + speed buff for charon (900 -> 1250 m/s)
+  id: 647
+  time: '2025-07-02T12:16:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1089
