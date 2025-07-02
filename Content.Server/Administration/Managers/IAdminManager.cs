@@ -52,6 +52,16 @@ namespace Content.Server.Administration.Managers
         void UnStealth(ICommonSession session);
 
         /// <summary>
+        ///     Disable logging.
+        /// </summary>
+        void DisableLogging(ICommonSession session);
+
+        /// <summary>
+        ///     Enable logging.
+        /// </summary>
+        void EnableLogging(ICommonSession session);
+
+        /// <summary>
         ///     Re-loads the permissions of an player in case their admin data changed DB-side.
         /// </summary>
         /// <seealso cref="ReloadAdminsWithRank"/>

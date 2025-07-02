@@ -18,6 +18,11 @@ namespace Content.Shared.Administration
         public bool Stealth;
 
         /// <summary>
+        /// Whether admin logging is disabled.
+        /// </summary>
+        public bool LoggingDisabled;
+
+        /// <summary>
         ///     The admin's title.
         /// </summary>
         public string? Title;

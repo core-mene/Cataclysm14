@@ -4,10 +4,8 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Content.Server.Chat.Managers;
 using Content.Server.Database;
-using Content.Server.Players;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
-using Content.Shared.Info;
 using Content.Shared.Players;
 using Robust.Server.Console;
 using Robust.Server.Player;
@@ -150,6 +148,34 @@ namespace Content.Server.Administration.Managers
             _chat.DispatchServerMessage(session, Loc.GetString("admin-manager-unstealthed-message"));
             _chat.SendAdminAnnouncement(Loc.GetString("admin-manager-self-re-admin-message", ("newAdminName", session.Name)), flagBlacklist: AdminFlags.Stealth);
             _chat.SendAdminAnnouncement(Loc.GetString("admin-manager-self-disable-stealth", ("exStealthAdminName", session.Name)), flagWhitelist: AdminFlags.Stealth);
+        }
+
+        public void DisableLogging(ICommonSession session)
+        {
+            if (!_admins.TryGetValue(session, out var reg))
+            {
+                throw new ArgumentException($"Player {session} is not an admin");
+            }
+
+            if (reg.Data.LoggingDisabled)
+                return;
+
+            reg.Data.LoggingDisabled = true;
+            _chat.DispatchServerMessage(session, Loc.GetString("admin-manager-logging-disabled-message"));
+        }
+
+        public void EnableLogging(ICommonSession session)
+        {
+            if (!_admins.TryGetValue(session, out var reg))
+            {
+                throw new ArgumentException($"Player {session} is not an admin");
+            }
+
+            if (!reg.Data.LoggingDisabled)
+                return;
+
+            reg.Data.LoggingDisabled = false;
+            _chat.DispatchServerMessage(session, Loc.GetString("admin-manager-logging-enabled-message"));
         }
 
         public void ReAdmin(ICommonSession session)
