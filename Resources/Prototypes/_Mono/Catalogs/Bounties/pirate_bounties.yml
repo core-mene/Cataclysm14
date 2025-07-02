@@ -136,11 +136,11 @@
 #    id: LifeSupportCan
 
 - type: pirateBounty # Mono
-  id: PirateBountyEncryptionKeyTSFMC
+  id: PirateBountyEncryptionKeyFaction
   reward: 25
-  description: pirate-bounty-description-encryption-key-TSFMC
+  description: pirate-bounty-description-encryption-key-faction
   entries:
-  - name: pirate-bounty-item-encryption-key-TSFMC
+  - name: pirate-bounty-item-encryption-key-faction
     amount: 1
     id: EncryptionKeyFaction # Mono
 
