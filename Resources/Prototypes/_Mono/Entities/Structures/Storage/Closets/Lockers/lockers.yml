@@ -1,0 +1,18 @@
+- type: entity
+  id: LockerBaseMonolith
+  parent: LockerBase
+    -type:
+    sprite: _Mono/Structures/Storage/closet.rsi
+
+
+- type: entity
+  id: LockerDrakeIndustriesHauler
+  parent: LockerBaseMonolith
+  name: hauler's locker
+  description: Sure has a fancy color, truth be told it's just steel sprayed with Drake Industries' colors.
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: DI_locker
+    stateDoorOpen: DI_locker_open
+    stateDoorClosed: DI_locker_hauler_door
