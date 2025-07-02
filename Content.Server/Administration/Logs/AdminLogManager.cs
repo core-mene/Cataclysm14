@@ -1,29 +1,15 @@
-// SPDX-FileCopyrightText: 2021 Javier Guardia Fernández
-// SPDX-FileCopyrightText: 2022 Paul Ritter
-// SPDX-FileCopyrightText: 2022 metalgearsloth
-// SPDX-FileCopyrightText: 2022 mirrorcult
-// SPDX-FileCopyrightText: 2022 wrexbe
-// SPDX-FileCopyrightText: 2023 DrSmugleaf
-// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2025 ark1368
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
-using System.Collections.Concurrent;
+﻿using System.Collections.Concurrent;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
-using Content.Server.Administration.Managers;
 using Content.Server.Database;
 using Content.Server.GameTicking;
 using Content.Shared.Administration.Logs;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
 using Prometheus;
-using Robust.Server.Player;
 using Robust.Shared;
 using Robust.Shared.Configuration;
-using Robust.Shared.Network;
 using Robust.Shared.Reflection;
 using Robust.Shared.Timing;
 
@@ -39,8 +25,6 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
     [Dependency] private readonly IDynamicTypeFactory _typeFactory = default!;
     [Dependency] private readonly IReflectionManager _reflection = default!;
     [Dependency] private readonly IDependencyCollection _dependencies = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly IAdminManager _adminManager = default!;
 
     public const string SawmillId = "admin.logs";
 
@@ -347,22 +331,8 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
         }
 
         var (json, players) = ToJson(handler.Values);
-
-        foreach (var playerId in players)
-        {
-            var userId = new NetUserId(playerId);
-            if (_playerManager.TryGetSessionById(userId, out var session))
-            {
-                var adminData = _adminManager.GetAdminData(session);
-                if (adminData?.LoggingDisabled == true)
-                {
-                    handler.ToStringAndClear();
-                    return;
-                }
-            }
-        }
-
         var message = handler.ToStringAndClear();
+
         Add(type, impact, message, json, players);
     }
 

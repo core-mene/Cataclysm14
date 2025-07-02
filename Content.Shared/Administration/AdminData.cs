@@ -1,14 +1,4 @@
-// SPDX-FileCopyrightText: 2020 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2021 DrSmugleaf
-// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
-// SPDX-FileCopyrightText: 2021 Visne
-// SPDX-FileCopyrightText: 2024 nikthechampiongr
-// SPDX-FileCopyrightText: 2024 slarticodefast
-// SPDX-FileCopyrightText: 2025 ark1368
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
-
+﻿
 namespace Content.Shared.Administration
 {
     /// <summary>
@@ -26,11 +16,6 @@ namespace Content.Shared.Administration
         /// Whether the admin is in stealth mode and won't appear in adminwho to admins without the Stealth flag.
         /// </summary>
         public bool Stealth;
-
-        /// <summary>
-        /// Whether admin logging is disabled.
-        /// </summary>
-        public bool LoggingDisabled;
 
         /// <summary>
         ///     The admin's title.

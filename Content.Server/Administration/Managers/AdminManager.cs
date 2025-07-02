@@ -1,36 +1,13 @@
-// SPDX-FileCopyrightText: 2021 Acruid
-// SPDX-FileCopyrightText: 2021 DrSmugleaf
-// SPDX-FileCopyrightText: 2021 Galactic Chimp
-// SPDX-FileCopyrightText: 2021 Paul
-// SPDX-FileCopyrightText: 2021 Paul Ritter
-// SPDX-FileCopyrightText: 2021 mirrorcult
-// SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
-// SPDX-FileCopyrightText: 2022 Visne
-// SPDX-FileCopyrightText: 2022 wrexbe
-// SPDX-FileCopyrightText: 2023 Checkraze
-// SPDX-FileCopyrightText: 2023 Leon Friedrich
-// SPDX-FileCopyrightText: 2023 Moony
-// SPDX-FileCopyrightText: 2023 Ygg01
-// SPDX-FileCopyrightText: 2023 metalgearsloth
-// SPDX-FileCopyrightText: 2024 AJCM-git
-// SPDX-FileCopyrightText: 2024 LordCarve
-// SPDX-FileCopyrightText: 2024 Nemanja
-// SPDX-FileCopyrightText: 2024 Winkarst
-// SPDX-FileCopyrightText: 2024 nikthechampiongr
-// SPDX-FileCopyrightText: 2024 to4no_fix
-// SPDX-FileCopyrightText: 2025 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2025 ark1368
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using Content.Server.Chat.Managers;
 using Content.Server.Database;
+using Content.Server.Players;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
+using Content.Shared.Info;
 using Content.Shared.Players;
 using Robust.Server.Console;
 using Robust.Server.Player;
@@ -173,34 +150,6 @@ namespace Content.Server.Administration.Managers
             _chat.DispatchServerMessage(session, Loc.GetString("admin-manager-unstealthed-message"));
             _chat.SendAdminAnnouncement(Loc.GetString("admin-manager-self-re-admin-message", ("newAdminName", session.Name)), flagBlacklist: AdminFlags.Stealth);
             _chat.SendAdminAnnouncement(Loc.GetString("admin-manager-self-disable-stealth", ("exStealthAdminName", session.Name)), flagWhitelist: AdminFlags.Stealth);
-        }
-
-        public void DisableLogging(ICommonSession session)
-        {
-            if (!_admins.TryGetValue(session, out var reg))
-            {
-                throw new ArgumentException($"Player {session} is not an admin");
-            }
-
-            if (reg.Data.LoggingDisabled)
-                return;
-
-            reg.Data.LoggingDisabled = true;
-            _chat.DispatchServerMessage(session, Loc.GetString("admin-manager-logging-disabled-message"));
-        }
-
-        public void EnableLogging(ICommonSession session)
-        {
-            if (!_admins.TryGetValue(session, out var reg))
-            {
-                throw new ArgumentException($"Player {session} is not an admin");
-            }
-
-            if (!reg.Data.LoggingDisabled)
-                return;
-
-            reg.Data.LoggingDisabled = false;
-            _chat.DispatchServerMessage(session, Loc.GetString("admin-manager-logging-enabled-message"));
         }
 
         public void ReAdmin(ICommonSession session)
