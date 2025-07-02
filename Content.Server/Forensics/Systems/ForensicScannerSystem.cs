@@ -63,13 +63,13 @@ namespace Content.Server.Forensics
         private int _minFMCPayout = 6;
 
         private const int ActiveUnusedDeadDropSpesoReward = 250000; //Mono
-        private const float ActiveUnusedDeadDropFMCReward = 12.0f; //Mono
+        private const float ActiveUnusedDeadDropFMCReward = 60.0f; //Mono
         private const int ActiveUsedDeadDropSpesoReward = 50000; //Mono
-        private const float ActiveUsedDeadDropFMCReward = 3.0f; //Mono
+        private const float ActiveUsedDeadDropFMCReward = 15.0f; //Mono
         private const int InactiveUsedDeadDropSpesoReward = 25000; //Mono
-        private const float InactiveUsedDeadDropFMCReward = 2.0f; //Mono
+        private const float InactiveUsedDeadDropFMCReward = 10.0f; //Mono
         private const int DropPodSpesoReward = 75000; //Mono
-        private const float DropPodFMCReward = 3.0f; //Mono
+        private const float DropPodFMCReward = 15.0f; //Mono
         // End Frontier: payout constants
 
         public override void Initialize()
