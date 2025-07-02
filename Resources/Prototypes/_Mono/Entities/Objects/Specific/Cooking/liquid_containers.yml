@@ -43,10 +43,6 @@
   description: A paper cup for drinks.
   id: PaperCup
   components:
-  - type: Item
-    size: Tiny
-    shape:
-    - 0,0,0,1
   - type: Spillable
     solution: drink
   - type: Sprite
@@ -59,6 +55,9 @@
   - type: Item
     size: Normal
     sprite: _Mono/Objects/Misc/papercup.rsi
+    size: Tiny
+    shape:
+    - 0,0,0,1
   - type: SolutionContainerManager
     solutions:
       drink:
