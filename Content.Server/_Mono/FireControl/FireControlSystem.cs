@@ -385,17 +385,11 @@ public sealed partial class FireControlSystem : EntitySystem
         // Check if the weapon's grid is in FTL
         var grid = component.ConnectedGrid;
         if (grid != null && TryComp<FTLComponent>((EntityUid)grid, out var ftlComp))
-        {
-            // Cannot fire weapons during FTL travel
             return;
-        }
 
         // Check if the weapon's grid is pacified
         if (grid != null && TryComp<SpaceArtilleryDisabledGridComponent>((EntityUid)grid, out var pacifiedComp))
-        {
-            // Cannot fire weapons if pacified
             return;
-        }
 
         var targetCoords = GetCoordinates(coordinates);
 
