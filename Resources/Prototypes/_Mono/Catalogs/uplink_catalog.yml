@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Wearables
 - type: listing
   id: UplinkHardsuitSyndieMedic
@@ -7,9 +11,9 @@
   productEntity: ClothingBackpackDuffelSyndicateMedicHardsuitBundle
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 4
+    Telecrystal: 20
   cost:
-    Telecrystal: 8
+    Telecrystal: 40
   categories:
   - UplinkWearables
 
@@ -21,9 +25,9 @@
   productEntity: UplinkImplanter
   discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 1
+    Telecrystal: 5
   cost:
-    Telecrystal: 2
+    Telecrystal: 10
   categories:
   - UplinkImplants
   conditions:
@@ -43,7 +47,7 @@
   productEntity: SpaceCash10000
   icon: { sprite: Objects/Economy/cash.rsi, state: cash_1000000 }
   cost:
-    Telecrystal: 1
+    Telecrystal: 5
   categories:
   - UplinkDeception
   conditions:
@@ -59,7 +63,7 @@
   productEntity: SpaceCash100000
   icon: { sprite: _NF/Objects/Economy/cash.rsi, state: cash_100000 }
   cost:
-    Telecrystal: 10
+    Telecrystal: 50
   categories:
   - UplinkDeception
   conditions:

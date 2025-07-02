@@ -2,7 +2,6 @@
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 gus
-# SPDX-FileCopyrightText: 2025 monolith8319
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -81,6 +80,7 @@
   id: VendingMachineBarista
   name: Barista Vendor
   description: Sells a variety of coffees, teas, and pastries.
+  suffix: POI
   components:
   - type: VendingMachine
     pack: BaristaVendInventory
@@ -92,7 +92,7 @@
     # ejectState: eject-unshaded
     # denyState: deny-unshaded
     ejectDelay: 1.9
-    initialStockQuality: 0.33
+    initialStockQuality: 1
   - type: MarketModifier
     mod: 8
   - type: Advertise
@@ -113,3 +113,23 @@
     radius: 1.5
     energy: 1.6
     color: "#D82929"
+
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineBaristaShip
+  name: Barista Vendor
+  description: Sells a variety of coffees, teas, and pastries.
+  suffix: "0.35%"
+  components:
+  - type: VendingMachine
+    pack: BaristaVendInventory
+    dispenseOnHitChance: 0.25
+    dispenseOnHitThreshold: 2
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    # ejectState: eject-unshaded
+    # denyState: deny-unshaded
+    ejectDelay: 1.9
+    initialStockQuality: 0.35

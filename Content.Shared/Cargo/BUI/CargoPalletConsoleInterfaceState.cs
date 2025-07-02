@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2025 sleepyyapril
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Cargo.BUI;
@@ -20,10 +25,22 @@ public sealed class CargoPalletConsoleInterfaceState : BoundUserInterfaceState
     /// </summary>
     public bool Enabled;
 
-    public CargoPalletConsoleInterfaceState(int appraisal, int count, bool enabled)
+    /// <summary>
+    /// the multiplier for the given cargo sell
+    /// </summary>
+    public double TradeCrateMultiplier;
+
+    /// <summary>
+    /// the multiplier for the given cargo sell
+    /// </summary>
+    public double OtherMultiplier;
+
+    public CargoPalletConsoleInterfaceState(int appraisal, int count, bool enabled, double tradeCrateMultiplier = 1, double otherMultiplier = 1)
     {
         Appraisal = appraisal;
         Count = count;
         Enabled = enabled;
+        TradeCrateMultiplier = tradeCrateMultiplier;
+        OtherMultiplier = otherMultiplier;
     }
 }

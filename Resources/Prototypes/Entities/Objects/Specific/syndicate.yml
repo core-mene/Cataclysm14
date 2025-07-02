@@ -1,9 +1,25 @@
+# SPDX-FileCopyrightText: 2021 Alex Evgrashin
+# SPDX-FileCopyrightText: 2022 Moony
+# SPDX-FileCopyrightText: 2022 ZeroDayDaemon
+# SPDX-FileCopyrightText: 2022 corentt
+# SPDX-FileCopyrightText: 2022 keronshb
+# SPDX-FileCopyrightText: 2023 Dvir
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 Plykiya
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 
 - type: entity
   name: telecrystal
   parent: [BaseItem, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: Telecrystal
-  suffix: 20 TC
+  suffix: 100 TC # Mono
   description: It seems to be pulsing with suspiciously enticing energies.
   components:
   - type: Sprite
@@ -13,12 +29,12 @@
     sprite: Objects/Specific/Syndicate/telecrystal.rsi
     size: Tiny
   - type: Stack
-    count: 20
+    count: 100 # Mono
     stackType: Telecrystal
   - type: StaticPrice
     price: 0
   - type: StackPrice
-    price: 200
+    price: 40 # Mono
   - type: Currency
     price:
       Telecrystal: 1
@@ -29,15 +45,7 @@
 
 - type: entity
   parent: Telecrystal
-  id: Telecrystal1
-  suffix: 1 TC
-  components:
-  - type: Stack
-    count: 1
-
-- type: entity
-  parent: Telecrystal
-  id: Telecrystal5
+  id: Telecrystal5 # Mono
   suffix: 5 TC
   components:
   - type: Stack
@@ -45,11 +53,19 @@
 
 - type: entity
   parent: Telecrystal
-  id: Telecrystal10
-  suffix: 10 TC
+  id: Telecrystal25 # Mono
+  suffix: 25 TC
   components:
   - type: Stack
-    count: 10
+    count: 25
+
+- type: entity
+  parent: Telecrystal
+  id: Telecrystal50 # Mono
+  suffix: 50 TC
+  components:
+  - type: Stack
+    count: 50
 
 # Uplinks
 - type: entity
@@ -78,43 +94,43 @@
 
 - type: entity
   parent: BaseUplinkRadio
-  id: BaseUplinkRadio20TC
-  suffix: 20 TC
+  id: BaseUplinkRadio100TC # Mono
+  suffix: 100 TC
   components:
   - type: Store
     balance:
-      Telecrystal: 20
+      Telecrystal: 100
 
 - type: entity
   parent: BaseUplinkRadio
-  id: BaseUplinkRadio25TC
-  suffix: 25 TC
+  id: BaseUplinkRadio125TC # Mono
+  suffix: 125 TC
   components:
   - type: Store
     balance:
-      Telecrystal: 25
+      Telecrystal: 125
 
 #this uplink MUST be used for nukeops, as it has the tag for filtering the listing.
 - type: entity
   parent: BaseUplinkRadio
-  id: BaseUplinkRadio40TC
-  suffix: 40 TC, NukeOps
+  id: BaseUplinkRadio200TC # Mono
+  suffix: 200 TC, NukeOps
   components:
   - type: Store
     balance:
-      Telecrystal: 40
+      Telecrystal: 200 # Mono
   - type: Tag
     tags:
     - NukeOpsUplink
 
 - type: entity
   parent: BaseUplinkRadio
-  id: BaseUplinkRadio60TC
-  suffix: 60 TC, LoneOps
+  id: BaseUplinkRadio300TC # Mono
+  suffix: 300 TC, LoneOps # Mono
   components:
   - type: Store
     balance:
-      Telecrystal: 60
+      Telecrystal: 300 # Mono
   - type: Tag
     tags:
     - NukeOpsUplink

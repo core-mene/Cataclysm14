@@ -1,10 +1,20 @@
+# SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
+# SPDX-FileCopyrightText: 2025 Your Name
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: listing
   id: UplinkSecurityAnnie
   name:  uplink-security-annie-name
   description: uplink-security-annie-desc
   productEntity: WeaponRifleAnnie
   cost:
-    FederationMilitaryCredit: 15
+    FederationMilitaryCredit: 75
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -19,7 +29,37 @@
   description: uplink-security-eg4-desc
   productEntity: WeaponEnergyRevolver
   cost:
-    FederationMilitaryCredit: 7
+    FederationMilitaryCredit: 35
+  categories:
+  - UplinkSecurityWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityMR8C
+  name:  uplink-security-mr8c-name
+  description: uplink-security-mr8c-desc
+  productEntity: WeaponRifleMR8C
+  cost:
+    FederationMilitaryCredit: 75
+  categories:
+  - UplinkSecurityWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityMR8B
+  name:  uplink-security-mr8b-name
+  description: uplink-security-mr8b-desc
+  productEntity: WeaponLMGMR8B
+  cost:
+    FederationMilitaryCredit: 125
   categories:
   - UplinkSecurityWeapons
   conditions:
@@ -34,7 +74,7 @@
   description: uplink-security-ashstorm-desc
   productEntity: ClothingBackpackDuffelAshstormBundle
   cost:
-    FederationMilitaryCredit: 25
+    FederationMilitaryCredit: 125
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -50,7 +90,7 @@
   productEntity: ClothingBackpackDuffelSurgeryAdvancedFilled
   icon: { sprite: Objects/Specific/Medical/Surgery/scalpel.rsi, state: laser }
   cost:
-    FederationMilitaryCredit: 4
+    FederationMilitaryCredit: 20
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -71,7 +111,7 @@
   description: uplink-security-portable-recharger-desc
   productEntity: PortableRecharger
   cost:
-    FederationMilitaryCredit: 7
+    FederationMilitaryCredit: 35
   categories:
   - UplinkSecurityUtility
   conditions:
@@ -87,7 +127,7 @@
   productEntity: SpaceCash75000
   icon: { sprite: _NF/Objects/Economy/cash.rsi, state: cash_100000 }
   cost:
-    FederationMilitaryCredit: 10
+    FederationMilitaryCredit: 50
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -102,7 +142,7 @@
   description: uplink-subsonic-mag-desc
   productEntity: Magazine7.62x39mmSubsonic
   cost:
-    FederationMilitaryCredit: 1
+    FederationMilitaryCredit: 5
   categories:
   - UplinkSecurityAmmo
   conditions:
@@ -117,7 +157,52 @@
   description: uplink-subsonic-box-desc
   productEntity: AmmoBox7.62x39mmSubsonic
   cost:
-    FederationMilitaryCredit: 3
+    FederationMilitaryCredit: 15
+  categories:
+  - UplinkSecurityAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityMagazine8x65mm
+  name:  uplink-security-8x65mm-magazine-name
+  description: uplink-security-8x65mm-magazine-desc
+  productEntity: Magazine8x65mmSKR
+  cost:
+    FederationMilitaryCredit: 5
+  categories:
+  - UplinkSecurityAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityMagazineBox8x65mm
+  name: uplink-security-8x65mm-boxmag-name
+  description: uplink-security-8x65mm-boxmag-desc
+  productEntity: Magazine8x65mmSKRBox
+  cost:
+    FederationMilitaryCredit: 10
+  categories:
+  - UplinkSecurityAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityBoxSKR
+  name:  uplink-security-8x65mm-box-name
+  description: uplink-security-8x65mm-box-desc
+  productEntity: AmmoBox8x65mmSKR
+  cost:
+    FederationMilitaryCredit: 25
   categories:
   - UplinkSecurityAmmo
   conditions:
@@ -133,7 +218,7 @@
   productEntity: ClothingBeltSheathFilledNavy
   icon: { sprite: _Mono/Objects/Weapons/Melee/ccsabre.rsi, state: icon }
   cost:
-    FederationMilitaryCredit: 2 #From 10 to 2
+    FederationMilitaryCredit: 10
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -142,13 +227,52 @@
         tags:
           - SecurityUplink
 
+- type: listing
+  id: UplinkSecurityMediumVoucher
+  name:  uplink-security-medium-voucher-name
+  description: uplink-security-medium-voucher-desc
+  productEntity: ShipVoucherNfsdSergeant
+  cost:
+    FederationMilitaryCredit: 25
+  categories:
+  - UplinkSecurityVouchers
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityCapitalVoucher
+  name:  uplink-security-capital-voucher-name
+  description: uplink-security-capital-voucher-desc
+  productEntity: ShipVoucherNfsdBailiff
+  cost:
+    FederationMilitaryCredit: 125
+  categories:
+  - UplinkSecurityVouchers
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
+
 # - type: listing
 #   id: UplinkSecurityAuroraExosuit
 #   name:  uplink-exosuit-aurora-name
 #   description: uplink-exosuit-aurora-desc
 #   productEntity: ClothingOuterExosuitAurora
 #   cost:
-#     FederationMilitaryCredit: 25
+#     FederationMilitaryCredit: 125
 #   categories:
 #   - UplinkSecurityHardsuits
 #   conditions:

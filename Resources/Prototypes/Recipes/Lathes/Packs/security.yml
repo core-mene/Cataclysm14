@@ -1,3 +1,14 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 deltanedas
+# SPDX-FileCopyrightText: 2025 slarticodefast
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 ## Static recipes
 
 - type: latheRecipePack
@@ -48,7 +59,7 @@
 
 - type: latheRecipePack
   id: SecurityBoards
-  abstract: true # Frontier: finally, spammable shuttle guns
+  # abstract: true # Frontier: finally, spammable shuttle guns
   recipes:
   - ShuttleGunDusterCircuitboard
   - ShuttleGunFriendshipCircuitboard

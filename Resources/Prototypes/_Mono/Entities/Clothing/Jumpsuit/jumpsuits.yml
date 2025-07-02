@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformTSFMC
@@ -95,3 +102,18 @@
   - type: SuitSensor
     randomMode: false
     mode: SensorOff
+
+# Trauma Armed Forces
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitTAF
+  name: trauma armed forces jumpsuit
+  description: Standard fatigues of the Trauma Armed Forces.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/trauma.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/trauma.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals

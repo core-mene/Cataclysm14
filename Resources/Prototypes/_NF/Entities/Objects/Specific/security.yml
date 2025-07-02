@@ -1,8 +1,10 @@
+# FUCs->FMCs, value 5x normal frontier value
+
 - type: entity
-  name: Federation Military Credit
+  name: Federation Military Credit # Mono - Renamed from FUCs
   parent: BaseItem
-  id: FederationMilitaryCredit
-  suffix: 20 TC
+  id: FederationMilitaryCredit # Mono - Renamed from FUCs
+  suffix: 100 FMC # Mono
   description: A token awarded to TSF personnel for turning in contraband. It can be exchanged in an TSFMC uplink device for a variety of law enforcement tools.
   components:
   - type: Sprite
@@ -12,12 +14,12 @@
     sprite: _NF/Objects/Specific/Security/frontieruplinkcoin.rsi
     size: Tiny
   - type: Stack
-    count: 20
+    count: 100 # Mono
     stackType: FederationMilitaryCredit
   - type: StaticPrice
     price: 0
   - type: StackPrice
-    price: 200
+    price: 40 # Mono
   - type: Currency
     price:
       FederationMilitaryCredit: 1
@@ -25,7 +27,7 @@
 - type: entity
   parent: FederationMilitaryCredit
   id: FederationMilitaryCredit1
-  suffix: 1 TC
+  suffix: 1 FMC
   components:
   - type: Stack
     count: 1
@@ -33,18 +35,26 @@
 - type: entity
   parent: FederationMilitaryCredit
   id: FederationMilitaryCredit5
-  suffix: 5 TC
+  suffix: 5 FMC
   components:
   - type: Stack
     count: 5
 
 - type: entity
   parent: FederationMilitaryCredit
-  id: FederationMilitaryCredit10
-  suffix: 10 TC
+  id: FederationMilitaryCredit25
+  suffix: 25 FMC
   components:
   - type: Stack
-    count: 10
+    count: 25
+
+- type: entity
+  parent: FederationMilitaryCredit
+  id: FederationMilitaryCredit50
+  suffix: 50 FMC
+  components:
+  - type: Stack
+    count: 50
 
 # Uplinks
 - type: entity
@@ -84,31 +94,31 @@
 - type: entity
   parent: BaseSecurityUplinkRadio
   id: BaseSecurityUplinkRadioSheriff
-  suffix: Colonel 20
+  suffix: Colonel 100
   components:
   - type: Store
     balance:
-      FederationMilitaryCredit: 20
+      FederationMilitaryCredit: 100
 
 - type: entity
   parent: BaseSecurityUplinkRadio
   id: BaseSecurityUplinkRadioOfficer
-  suffix: Officer 15
+  suffix: Officer 75
   components:
   - type: Store
     balance:
-      FederationMilitaryCredit: 15
+      FederationMilitaryCredit: 75
 
 #Mono
 
 - type: entity
   parent: BaseSecurityUplinkRadio
   id: BaseSecurityUplinkRadioDeputy
-  suffix: Deputy 10
+  suffix: Deputy 50
   components:
   - type: Store
     balance:
-      FederationMilitaryCredit: 10
+      FederationMilitaryCredit: 50
 
 #Mono End
 

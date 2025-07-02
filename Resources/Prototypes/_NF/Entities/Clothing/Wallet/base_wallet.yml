@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 monolith8319
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: [BaseStorageItem, Clothing, RecyclableItemClothBasic]
   id: NFBaseWallet
@@ -25,6 +31,8 @@
     maxItemSize: Small
     grid:
     - 0,0,3,1
+    quickInsert: true # Mono
+    areaInsert: true # Mono
     whitelist:
       components:
       - Cash
@@ -35,6 +43,8 @@
     blacklist:
       tags:
       - Book
+  - type: UseDelay # Mono
+    delay: 0.5
   - type: Item
     size: Small
   - type: Clothing

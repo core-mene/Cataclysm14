@@ -1,3 +1,17 @@
+// SPDX-FileCopyrightText: 2023 Cheackraze
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2023 Mnemotechnican
+// SPDX-FileCopyrightText: 2024 GreaseMonk
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 SupernoobTheN1
+// SPDX-FileCopyrightText: 2025 ark1368
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using Content.Server.DoAfter;
 using Content.Server.EUI;
@@ -38,6 +52,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Content.Server.Ghost;
 using Content.Shared.Roles;
+using Content.Server._NF.Shuttles.Components;
 
 namespace Content.Server._NF.CryoSleep;
 
@@ -318,9 +333,32 @@ public sealed partial class CryoSleepSystem : SharedCryoSleepSystem
                         playerStation = playerJob.SpawnStation;
                     }
 
-                    // Only proceed if we found a valid station for this player
+                    // Check if any of the station's grids have ForceAnchor
+                    bool stationHasForceAnchor = false;
+
                     if (playerStation != null && EntityManager.EntityExists(playerStation.Value) &&
-                        _entityManager.TryGetComponent<StationJobsComponent>(playerStation.Value, out var stationJobs))
+                        _entityManager.TryGetComponent<StationDataComponent>(playerStation.Value, out var stationData))
+                    {
+                        foreach (var gridUid in stationData.Grids)
+                        {
+                            if (HasComp<ForceAnchorComponent>(gridUid))
+                            {
+                                stationHasForceAnchor = true;
+                                //Log.Info($"Found ForceAnchor on grid {ToPrettyString(gridUid)} for station {ToPrettyString(playerStation.Value)}");
+                                break;
+                            }
+                        }
+                        //Log.Info($"Station {ToPrettyString(playerStation.Value)} has ForceAnchor: {stationHasForceAnchor} (checked {stationData.Grids.Count} grids)");
+                    }
+                    else
+                    {
+                        //Log.Info($"Could not get StationDataComponent for station {(playerStation != null ? ToPrettyString(playerStation.Value) : "null")}");
+                    }
+
+                    // Only proceed if we found a valid station for this player and it has ForceAnchor
+                    if (playerStation != null && EntityManager.EntityExists(playerStation.Value) &&
+                        _entityManager.TryGetComponent<StationJobsComponent>(playerStation.Value, out var stationJobs) &&
+                        stationHasForceAnchor)
                     {
                         // For connected players, we check their job assignments
                         if (id != null && _stationJobs.TryGetPlayerJobs(playerStation.Value, id.Value, out var jobs, stationJobs))

@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 Whatstone
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Threading;
 using Content.Server._NF.Trade;
 using Content.Server.GameTicking;
@@ -37,6 +42,14 @@ public sealed partial class CargoSystem
             else if (_timing.CurTime > ent.Comp.ExpressDeliveryTime)
                 ev.Price -= ent.Comp.ExpressLatePenalty;
         }
+        // Mono Begin
+        var valueMultiplier = 1f;
+        if (TryComp<TradeCrateWildcardDestinationComponent>(owningStation, out var wildcardComp))
+        {
+            valueMultiplier = wildcardComp.ValueMultiplier;
+        }
+        ev.Price *= valueMultiplier;
+        // Mono End
         ev.Price = double.Max(0.0, ev.Price); // Ensure non-negative values.
     }
 

@@ -69,6 +69,11 @@ shipyard-console-class-Detective = Detective
 shipyard-console-class-Fighter = Fighter
 shipyard-console-class-Patrol = Patrol
 shipyard-console-class-Pursuit = Pursuit
+# Mono changes start
+shipyard-console-class-Corvette = Corvette
+shipyard-console-class-Frigate = Frigate
+shipyard-console-class-Destroyer = Destroyer
+shipyard-console-class-Cruiser = Cruiser
 
 shipyard-console-engine-All = All
 shipyard-console-engine-AME = AME

@@ -1,8 +1,14 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   name: MR-8C BR (8x65mm SKR)
-  parent: [BaseWeaponRifle, BaseGunWieldable, BaseC3Contraband]
+  parent: [BaseWeaponRifle, BaseGunWieldable, BaseC2ContrabandUnredeemable]
   id: WeaponRifleMR8C
-  description: The BR variant of the MR-8 series, firing with incredible accuracy. Chambered in 8x65mm SKR.
+  description: The BR variant of the MR-8 series, firing with incredible accuracy. Chambered in 8x65mm SKR. A label on the side reads "FOR MILITARY USE ONLY".
   components:
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Rifles/mr8c.rsi
@@ -24,7 +30,7 @@
     availableModes:
     - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/batrifle.ogg
+      path: /Audio/_DV/Weapons/Guns/Gunshots/jackdaw.ogg
   - type: ChamberMagazineAmmoProvider
   - type: ItemSlots
     slots:

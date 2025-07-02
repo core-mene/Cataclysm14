@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.GameTicking;
 using Content.Server._NF.Shipyard.Systems;
 using Content.Server.Mind;
@@ -26,10 +31,10 @@ public sealed class ShipOwnershipSystem : EntitySystem
     [Dependency] private readonly MindSystem _mind = default!;
 
     private readonly HashSet<EntityUid> _pendingDeletionShips = new();
-    
+
     // Timer for deletion checks
     private TimeSpan _nextDeletionCheckTime;
-    private const int DeletionCheckIntervalSeconds = 60;
+    private const int DeletionCheckIntervalSeconds = 600; // Mono
 
     public override void Initialize()
     {
@@ -41,7 +46,7 @@ public sealed class ShipOwnershipSystem : EntitySystem
         // Initialize tracking for ships
         SubscribeLocalEvent<ShipOwnershipComponent, ComponentStartup>(OnShipOwnershipStartup);
         SubscribeLocalEvent<ShipOwnershipComponent, ComponentShutdown>(OnShipOwnershipShutdown);
-        
+
         // Initialize the deletion check timer
         _nextDeletionCheckTime = _gameTiming.CurTime;
     }
@@ -80,10 +85,10 @@ public sealed class ShipOwnershipSystem : EntitySystem
         // Only check for ship deletion every DeletionCheckIntervalSeconds
         if (_gameTiming.CurTime < _nextDeletionCheckTime)
             return;
-            
+
         // Update next check time
         _nextDeletionCheckTime = _gameTiming.CurTime + TimeSpan.FromSeconds(DeletionCheckIntervalSeconds);
-        
+
         // Log that we're checking for ships to delete
         Logger.DebugS("shipOwnership", $"Checking for abandoned ships to delete");
 

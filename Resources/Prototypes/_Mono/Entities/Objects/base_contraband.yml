@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Your Name
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: BaseC2ContrabandUnredeemable
   id: BaseC2ContrabandMercenary
@@ -15,7 +24,7 @@
   - type: Contraband
     severity: Class3Chem
     turnInValues:
-      FederationMilitaryCredit: 0 # set to 0 due to TSF farming FMCs, should be simply locked away or destroyed If turnInValues gets set as double/float, could set it to ~0.2 or so
+      FederationMilitaryCredit: 1 # set to 1 now that FMC values are multiplied by 5
 
 # These are compatibility prototypes to work with ported definitions
 # They simply map to the appropriate NF/Mono contraband equivalents
