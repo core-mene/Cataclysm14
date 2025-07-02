@@ -1,13 +1,15 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 ark1368
+// SPDX-FileCopyrightText: 2025 gus
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Access.Components;
-using Content.Shared.Interaction;
 using Content.Shared.Shuttles.Components;
 using Content.Shared._NF.Shipyard.Components;
 using Content.Shared.Popups;
-using Robust.Shared.Player;
 using Robust.Shared.Timing;
-using Content.Shared.Access;
 using Content.Shared.Examine;
-using Robust.Shared.Audio.Systems;
 
 namespace Content.Shared.Shuttles.Systems;
 
@@ -35,7 +37,32 @@ public abstract class SharedShuttleConsoleLockSystem : EntitySystem
 
     private void OnExamined(EntityUid uid, ShuttleConsoleLockComponent component, ExaminedEvent args)
     {
-        args.PushMarkup(component.Locked ? Loc.GetString("shuttle-console-locked-examine") : Loc.GetString("shuttle-console-unlocked-examine"));
+        var effectiveLocked = GetEffectiveLockState(uid, component);
+        args.PushMarkup(effectiveLocked ? Loc.GetString("shuttle-console-locked-examine") : Loc.GetString("shuttle-console-unlocked-examine"));
+    }
+
+    /// <summary>
+    /// Gets the effective lock state for a console, considering grid-level locks when available
+    /// </summary>
+    public bool GetEffectiveLockState(EntityUid console, ShuttleConsoleLockComponent component)
+    {
+        // Get the grid this console is on
+        var transform = Transform(console);
+        if (transform.GridUid == null)
+            return component.Locked;
+
+        var gridUid = transform.GridUid.Value;
+
+        // If the grid has a deed and grid lock component, use grid lock state ONLY
+        if (TryComp<ShuttleDeedComponent>(gridUid, out _) &&
+            TryComp<ShipGridLockComponent>(gridUid, out var gridLock))
+        {
+            // Grid lock state takes complete precedence over individual console state
+            return gridLock.Locked;
+        }
+
+        // No grid lock, use individual console lock state
+        return component.Locked;
     }
 
     protected void UpdateAppearance(EntityUid uid, ShuttleConsoleLockComponent? component = null)
@@ -46,7 +73,47 @@ public abstract class SharedShuttleConsoleLockSystem : EntitySystem
         if (!TryComp<AppearanceComponent>(uid, out var appearance))
             return;
 
-        Appearance.SetData(uid, ShuttleConsoleLockVisuals.Locked, component.Locked, appearance);
+        var effectiveLocked = GetEffectiveLockState(uid, component);
+        Appearance.SetData(uid, ShuttleConsoleLockVisuals.Locked, effectiveLocked, appearance);
+    }
+
+    /// <summary>
+    /// Sets the lock state for a ship grid
+    /// </summary>
+    protected void SetGridLockState(EntityUid gridUid, bool locked, string? shuttleId = null)
+    {
+        if (!TryComp<ShipGridLockComponent>(gridUid, out var gridLock))
+        {
+            // Create the component if it doesn't exist
+            gridLock = AddComp<ShipGridLockComponent>(gridUid);
+        }
+
+        gridLock.Locked = locked;
+        if (shuttleId != null)
+            gridLock.ShuttleId = shuttleId;
+
+        Dirty(gridUid, gridLock);
+    }
+
+
+
+    /// <summary>
+    /// Ensures a grid has a ShipGridLockComponent if it has a deed
+    /// </summary>
+    protected void EnsureGridLockComponent(EntityUid gridUid, string? shuttleId = null)
+    {
+        // Only add to grids that have deeds
+        if (!TryComp<ShuttleDeedComponent>(gridUid, out var deed))
+            return;
+
+        // Add the component if it doesn't exist
+        if (!TryComp<ShipGridLockComponent>(gridUid, out var gridLock))
+        {
+            gridLock = AddComp<ShipGridLockComponent>(gridUid);
+            gridLock.Locked = true; // Ships start locked by default
+            gridLock.ShuttleId = shuttleId ?? deed.ShuttleUid?.ToString();
+            Dirty(gridUid, gridLock);
+        }
     }
 
     /// <summary>
