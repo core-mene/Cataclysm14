@@ -677,7 +677,7 @@
   id: UplinkPirateFragGrenade
   name: uplink-pirate-frag-grenade-name
   description: uplink-pirate-frag-grenade-desc
-  productEntity: Bullet40mmGrenadeFragmentation
+  productEntity: 40mmGrenadeFragmentation
   cost:
     Doubloon: 16
   categories:
@@ -692,7 +692,7 @@
   id: UplinkPirateBlastGrenade
   name: uplink-pirate-blast-grenade-name
   description: uplink-pirate-blast-grenade-desc
-  productEntity: Bullet40mmGrenadeThermobaric
+  productEntity: 40mmGrenadeThermobaric
   cost:
     Doubloon: 32
   categories:
@@ -941,14 +941,14 @@
 #      tags:
 #      - PirateUplink
 
-- type: listing # Mono revert, re-adds China Lake
+- type: listing
   id: UplinkPirateGrenadeLauncherBundle
   name: uplink-pirate-grenade-launcher-bundle-name
   description: uplink-pirate-grenade-launcher-bundle-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Launchers/china_lake.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateFilledGrenadeLauncher
   cost:
-    Telecrystal: 150 # Mono #25 Mono Edit
+    Doubloon: 150 # Mono #25 Mono Edit
   categories:
   - UplinkPirateWeapons
   - !type:StoreWhitelistCondition
