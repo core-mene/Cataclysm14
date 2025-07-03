@@ -9,6 +9,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Shared.Guidebook;
+using Content.Shared.Tag;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
 using Robust.Shared.Utility;
@@ -32,6 +33,12 @@ public sealed class VesselPrototype : IPrototype, IInheritingPrototype
     ///     Vessel name.
     /// </summary>
     [DataField] public string Name = string.Empty;
+
+    /// <summary>
+    ///     The amount of this ship that can active at any given time.
+    ///     0 for unlimited.
+    /// </summary>
+    [DataField("limit")] public int LimitActive;
 
     /// <summary>
     ///     Short description of the vessel.
@@ -105,6 +112,9 @@ public sealed class VesselPrototype : IPrototype, IInheritingPrototype
     /// </summary>
     [DataField]
     public float MinPriceMarkup = 1.05f;
+
+    [DataField]
+    public HashSet<ProtoId<TagPrototype>> Tags = new();
 
     /// <summary>
     /// Components to be added to any spawned grids.

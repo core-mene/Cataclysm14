@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2024 Salvantrix
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 sleepyyapril
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -12,7 +13,8 @@
   parent: BaseVesselAntag
   name: ASR Prowler
   description: A dedicated boarding ship, capable of hiding its radar signature fully. Incapable of mounting any ship weapons. Due to the resources required for its construction, procurement is only permitted via vouchers.
-  price: 600000
+  limit: 2
+  price: 300000
   category: Small
   group: BlackMarket
   access: VoucherProwler
