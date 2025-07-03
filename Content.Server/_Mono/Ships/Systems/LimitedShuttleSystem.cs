@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Server.GameTicking;
 using Content.Server.Power.Components;
 using Content.Shared._Mono.Ships.Components;
@@ -111,11 +112,8 @@ public sealed class LimitedShuttleSystem : EntitySystem
         if (!_shuttleDeed.HasOwner(vessel.Owner))
             return false;
 
-        foreach (var ent in powerEntities)
+        foreach (var ent in powerEntities.Where(ent => ent.Comp.NeedsPower))
         {
-            if (!ent.Comp.NeedsPower)
-                continue;
-
             if (ent.Comp.Powered) // should be powered even if not switched on.
                 powered++;
 
