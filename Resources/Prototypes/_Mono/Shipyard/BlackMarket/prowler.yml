@@ -11,8 +11,8 @@
   id: Prowler
   parent: BaseVesselAntag
   name: ASR Prowler
-  description: A dedicated boarding ship, capable of hiding its radar signature fully. Incapable of mounting any ship weapons. The radar-absorbent plating and machining used makes it quite expensive however.
-  price: 145460
+  description: A dedicated boarding ship, capable of hiding its radar signature fully. Incapable of mounting any ship weapons.
+  price: 55460
   category: Small
   group: BlackMarket
   access: RogueCommander
@@ -41,5 +41,3 @@
         - type: StationJobs
           availableJobs:
             Pirate: [ 0, 0 ]
-          tags:
-          - RogueCommander
