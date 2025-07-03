@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: EncryptionKey
   id: EncryptionKeyUssp
@@ -15,6 +20,8 @@
     layers:
     - state: crypt_rusted
     - state: sec_label
+  - type: PirateBountyItem
+    id: EncryptionKeyFaction
 
 - type: entity
   parent: EncryptionKey
@@ -33,3 +40,5 @@
     layers:
     - state: crypt_blue
     - state: sec_label
+  - type: PirateBountyItem
+    id: EncryptionKeyFaction

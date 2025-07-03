@@ -5492,3 +5492,72 @@ Entries:
   id: 647
   time: '2025-07-02T12:16:11.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1089
+- author: crazy1112345
+  changes:
+    - type: Add
+      message: Added the HES Arribane atmospherics ship. Viva Atmosia.
+  id: 648
+  time: '2025-07-02T21:05:57.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1041
+- author: BlueHNT
+  changes:
+    - type: Add
+      message: >-
+        Added a higher tier of tacsuits for redeeming as Rogue advanced tacsuits
+        like the TSF M92 or USSP Modsuits.
+    - type: Tweak
+      message: >-
+        Refactored Rogue Bounties to include USSP versions and renamed entires
+        from `TSF` to `Faction` based.
+    - type: Fix
+      message: >-
+        Fixed not being able to redeem cybernetic limbs as Rogue in the
+        bounties.
+  id: 649
+  time: '2025-07-02T21:11:08.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1094
+- author: HungryCuban
+  changes:
+    - type: Add
+      message: USSP can give access with card console
+    - type: Fix
+      message: Colonel could open Rogue locked doors
+  id: 650
+  time: '2025-07-02T21:12:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1088
+- author: UnicornOnLSD
+  changes:
+    - type: Add
+      message: Harmony Medical Entreprises now available to pick as in game company.
+  id: 651
+  time: '2025-07-02T21:12:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1070
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Ctla startup increased from 2.5 to 4.2, cooldown from 5 to 7.5, and
+        travel time from 10 to 15.
+  id: 652
+  time: '2025-07-02T21:14:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1093
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed some bugs with the Flyssa.
+  id: 653
+  time: '2025-07-02T21:58:43.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1101
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added Prowler as a fullcloak ship for rogues (and thus support for
+        future fullcloak ships)
+    - type: Tweak
+      message: Changed Colonel ship voucher to not be able to buy Flyssa.
+    - type: Tweak
+      message: Greatly increased Flyssa price. (~1.2m now after feedback)
+  id: 654
+  time: '2025-07-02T23:45:16.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1102
