@@ -476,7 +476,7 @@
   productEntity: RadAutoInjector
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: arithpen }
   cost:
-    FederationMilitaryCredit: 10
+    FederationMilitaryCredit: 18
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -496,7 +496,7 @@
   productEntity: PyraAutoInjector
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: pyrapen }
   cost:
-    FederationMilitaryCredit: 10
+    FederationMilitaryCredit: 18
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -504,10 +504,6 @@
       whitelist:
         tags:
           - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
-        - Brigmedic
 
 - type: listing
   id: UplinkSecurityPuncturasePen
@@ -516,7 +512,7 @@
   productEntity: PunctAutoInjector
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: punctpen }
   cost:
-    FederationMilitaryCredit: 10
+    FederationMilitaryCredit: 18
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -524,10 +520,6 @@
       whitelist:
         tags:
           - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
-        - Brigmedic
 
 - type: listing
   id: UplinkSecurityAntiPoisonPen
@@ -536,7 +528,7 @@
   productEntity: AntiPoisonMedipen
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: penacid }
   cost:
-    FederationMilitaryCredit: 10
+    FederationMilitaryCredit: 18
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -544,10 +536,6 @@
       whitelist:
         tags:
           - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
-        - Brigmedic
 
 - type: listing
   id: UplinkSecurityCompactDefibrillator
@@ -594,7 +582,7 @@
   productEntity: CombatMedipen
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: morphen }
   cost:
-    FederationMilitaryCredit: 5
+    FederationMilitaryCredit: 12
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -844,7 +832,7 @@
   productEntity: MedkitCombatFilled
   icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: blackkit } # Frontier: _NF prefix
   cost:
-    FederationMilitaryCredit: 10
+    FederationMilitaryCredit: 20
   categories:
     - UplinkSecurityUtility
   conditions:
