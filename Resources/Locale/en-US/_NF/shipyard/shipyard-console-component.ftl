@@ -23,7 +23,7 @@ shipyard-console-appraisal-label = Shuttle Resale Value:{" "}
 shipyard-console-no-voucher-redemptions = All voucher redemptions have been used.
 shipyard-console-invalid-voucher-type = This voucher cannot be used at this console.
 shipyard-console-denied = You cannot purchase this ship at this time.
-     = There are too many active shuttles of this type, try again later!
+shipyard-console-limited = There are too many active shuttles of this type, try again later!
 
 shipyard-console-contraband-onboard = Smuggled contraband detected onboard.
 shipyard-console-station-resources = Vital station resources detected onboard.

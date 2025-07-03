@@ -209,6 +209,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         {
             if (voucher!.RedemptionsLeft <= 0)
             {
+                TryQueueDel(shuttleUid);
                 ConsolePopup(player, Loc.GetString("shipyard-console-no-voucher-redemptions"));
                 PlayDenySound(player, shipyardConsoleUid, component);
                 if (voucher!.DestroyOnEmpty)
@@ -219,6 +220,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             }
             else if (voucher!.ConsoleType != (ShipyardConsoleUiKey)args.UiKey)
             {
+                TryQueueDel(shuttleUid);
                 ConsolePopup(player, Loc.GetString("shipyard-console-invalid-voucher-type"));
                 PlayDenySound(player, shipyardConsoleUid, component);
                 return;
@@ -230,6 +232,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         {
             if (bank.Balance <= vessel.Price)
             {
+                TryQueueDel(shuttleUid);
                 ConsolePopup(player, Loc.GetString("cargo-console-insufficient-funds", ("cost", vessel.Price)));
                 PlayDenySound(player, shipyardConsoleUid, component);
                 return;
@@ -237,6 +240,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
             if (!_bank.TryBankWithdraw(player, vessel.Price))
             {
+                TryQueueDel(shuttleUid);
                 ConsolePopup(player, Loc.GetString("cargo-console-insufficient-funds", ("cost", vessel.Price)));
                 PlayDenySound(player, shipyardConsoleUid, component);
                 return;
