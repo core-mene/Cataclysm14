@@ -117,3 +117,18 @@
   - type: SuitSensor
     randomMode: false
     mode: SensorVitals
+    
+# Drake Industries
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitDIHauler
+  name: hauler jumpsuit
+  description: A mechanic jumpsuit meant for heavy duty work, covered with rose gold stripes
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/di-hauler.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/di-hauler.rsi
+  - type: SuitSensor
+    randomMode: true
