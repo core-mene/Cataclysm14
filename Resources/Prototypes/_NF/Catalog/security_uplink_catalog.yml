@@ -374,7 +374,7 @@
   productEntity: WeaponLauncherRocketEmp
   icon: { sprite: Objects/Weapons/Guns/Launchers/rocket.rsi, state: base }
   cost:
-    FederationMilitaryCredit: 25
+    FederationMilitaryCredit: 100 # Cost increased pending removal or rebalancing
   categories:
     - UplinkSecurityWeapons
   conditions:
