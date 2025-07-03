@@ -38,7 +38,7 @@ public sealed class VesselPrototype : IPrototype, IInheritingPrototype
     ///     The amount of this ship that can active at any given time.
     ///     0 for unlimited.
     /// </summary>
-    [DataField] public int LimitActive;
+    [DataField("limit")] public int LimitActive;
 
     /// <summary>
     ///     Short description of the vessel.
