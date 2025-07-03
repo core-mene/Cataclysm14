@@ -177,6 +177,31 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             return;
         }
 
+        if (!TryPurchaseShuttle(station, vessel.ShuttlePath, out var shuttleUidOut))
+        {
+            PlayDenySound(player, shipyardConsoleUid, component);
+            return;
+        }
+
+        var shuttleUid = shuttleUidOut.Value;
+        if (!_entityManager.TryGetComponent<ShuttleComponent>(shuttleUid, out var shuttle))
+        {
+            ConsolePopup(player, Loc.GetString("cargo-console-insufficient-funds", ("cost", vessel.Price)));
+            PlayDenySound(player, shipyardConsoleUid, component);
+            return;
+        }
+
+        var ev = new AttemptShipyardShuttlePurchaseEvent(shuttleUid, args.Actor, vessel);
+        RaiseLocalEvent(ref ev);
+
+        if (ev.Cancelled)
+        {
+            PlayDenySound(player, shipyardConsoleUid, component);
+            ConsolePopup(player, Loc.GetString(ev.CancelReason));
+            TryQueueDel(shuttleUid);
+            return;
+        }
+
         // Keep track of whether or not a voucher was used.
         // TODO: voucher purchase should be done in a separate function.
         bool voucherUsed = false;
@@ -216,31 +241,6 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                 PlayDenySound(player, shipyardConsoleUid, component);
                 return;
             }
-        }
-
-        if (!TryPurchaseShuttle(station, vessel.ShuttlePath, out var shuttleUidOut))
-        {
-            PlayDenySound(player, shipyardConsoleUid, component);
-            return;
-        }
-
-        var shuttleUid = shuttleUidOut.Value;
-        if (!_entityManager.TryGetComponent<ShuttleComponent>(shuttleUid, out var shuttle))
-        {
-            ConsolePopup(player, Loc.GetString("cargo-console-insufficient-funds", ("cost", vessel.Price)));
-            PlayDenySound(player, shipyardConsoleUid, component);
-            return;
-        }
-
-        var ev = new AttemptShipyardShuttlePurchaseEvent(shuttleUid, args.Actor);
-        RaiseLocalEvent(ev);
-
-        if (ev.Cancelled)
-        {
-            PlayDenySound(player, shipyardConsoleUid, component);
-            ConsolePopup(player, Loc.GetString(ev.CancelReason));
-            TryQueueDel(shuttleUid);
-            return;
         }
 
         // Add company information to the shuttle from the ID card

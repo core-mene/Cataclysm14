@@ -2,13 +2,11 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using System.Linq;
-using Content.Server.GameTicking;
 using Content.Server.Power.Components;
+using Content.Server.Shuttles.Components;
 using Content.Shared._Mono.Ships.Components;
 using Content.Shared._Mono.Shipyard;
 using Content.Shared._NF.Shipyard;
-using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
 namespace Content.Server._Mono.Ships.Systems;
@@ -18,22 +16,21 @@ namespace Content.Server._Mono.Ships.Systems;
 /// </summary>
 public sealed class LimitedShuttleSystem : EntitySystem
 {
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly ShuttleDeedSystem _shuttleDeed = default!;
 
     private TimeSpan _lastUpdate = TimeSpan.Zero;
-    private TimeSpan _interval = TimeSpan.FromMinutes(1);
+    private readonly TimeSpan _interval = TimeSpan.FromMinutes(1);
 
-    private const double PercentageUnpoweredForInactive = 0.75;
+    private const double PoweredInactivityThreshold = 0.5;
 
     /// <inheritdoc/>
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<VesselComponent, AttemptShipyardShuttlePurchaseEvent>(OnAttemptShuttlePurchase);
+        SubscribeLocalEvent<AttemptShipyardShuttlePurchaseEvent>(OnAttemptShuttlePurchase);
         SubscribeLocalEvent<VesselComponent, ShipyardShuttlePurchaseEvent>(OnShuttlePurchase);
     }
 
@@ -77,17 +74,17 @@ public sealed class LimitedShuttleSystem : EntitySystem
         }
     }
 
-    private void OnAttemptShuttlePurchase(Entity<VesselComponent> ent, ref AttemptShipyardShuttlePurchaseEvent ev)
+    private void OnAttemptShuttlePurchase(ref AttemptShipyardShuttlePurchaseEvent ev)
     {
         var query = EntityQueryEnumerator<VesselComponent>();
         var shuttleCount = 0;
 
-        if (!_prototypeManager.TryIndex(ent.Comp.VesselId, out var vessel))
+        if (ev.Vessel.LimitActive <= 0)
             return;
 
         while (query.MoveNext(out var uid, out var targetVessel))
         {
-            if (targetVessel.VesselId != ent.Comp.VesselId)
+            if (targetVessel.VesselId != ev.Vessel.ID)
                 continue;
 
             // InactiveShipComponent isn't like a tag, it's more like ApcPowerReceiver. You need to check if it's inactive.
@@ -97,7 +94,7 @@ public sealed class LimitedShuttleSystem : EntitySystem
             shuttleCount++;
         }
 
-        if (shuttleCount >= vessel.LimitActive)
+        if (shuttleCount >= ev.Vessel.LimitActive)
         {
             ev.CancelReason = "shipyard-console-limited";
             ev.Cancel();
@@ -106,19 +103,23 @@ public sealed class LimitedShuttleSystem : EntitySystem
 
     private bool IsActive(Entity<VesselComponent?> vessel)
     {
-        var powerEntities = new HashSet<Entity<ApcPowerReceiverComponent>>();
-        _lookup.GetGridEntities(vessel.Owner, powerEntities);
+        var consoles = new HashSet<Entity<ShuttleConsoleComponent>>();
+        _lookup.GetGridEntities(vessel.Owner, consoles);
 
         var totalPowerEntities = 0;
         var powered = 0;
 
-        // If the deed has no owner, it's inactive.
-        if (!_shuttleDeed.HasOwner(vessel.Owner))
+        // If the deed has no owner or the ship has no consoles, it's inactive.
+        if (!_shuttleDeed.HasOwner(vessel.Owner)
+            || consoles.Count == 0)
             return false;
 
-        foreach (var ent in powerEntities.Where(ent => ent.Comp.NeedsPower))
+        foreach (var ent in consoles)
         {
-            if (ent.Comp.Powered) // should be powered even if not switched on.
+            if (!TryComp<ApcPowerReceiverComponent>(ent, out var powerReceiver))
+                continue;
+
+            if (powerReceiver.Powered) // should be powered even if not switched on.
                 powered++;
 
             totalPowerEntities++;
@@ -126,7 +127,7 @@ public sealed class LimitedShuttleSystem : EntitySystem
 
         var percentage = totalPowerEntities != 0 && powered != 0 ? powered / totalPowerEntities : 0;
 
-        if (percentage >= PercentageUnpoweredForInactive)
+        if (percentage >= PoweredInactivityThreshold)
             return true;
 
         return false;
