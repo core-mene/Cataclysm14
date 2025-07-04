@@ -121,7 +121,7 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
     ///     to make possible severing it.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float SeverIntegrity = 90;
+    public float SeverIntegrity = 130; // Mono 90->130
 
     /// <summary>
     ///     Shitmed Change: The ID of the base layer for this body part.
