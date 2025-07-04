@@ -24,6 +24,17 @@
 
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
+  id: HFSwordVT7
+  result: WeaponVT7
+  materials:
+    Steel: 1000
+    Plasteel: 7000
+    Plastic: 6000
+    Plasma: 10000
+    Uranium: 6000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
   id: EnergyShieldTSF
   result: EnergyShieldNfsd
   materials:
