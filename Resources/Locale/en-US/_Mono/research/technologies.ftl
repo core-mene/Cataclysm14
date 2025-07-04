@@ -7,6 +7,7 @@ research-technology-tsfmc-pocket-crowbar = Compact Prying Technology
 
 # T2 TSFMC
 research-technology-tsfmc-annie = Annie
+research-technology-tsfmc-nanofoam = Nanomaterial Growth
 research-technology-tsfmc-demag = System Reset Technology
 research-technology-tsfmc-eshield = Energy Shielding
 research-technology-tsfmc-advanced-meds = Reconstructive Technologies

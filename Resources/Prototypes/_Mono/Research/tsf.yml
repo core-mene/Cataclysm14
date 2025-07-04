@@ -135,3 +135,15 @@
   recipeUnlocks:
   - SutureTSF
   - MeshTSF
+
+- type: technology
+  id: TsfNanofoam
+  name: research-technology-tsfmc-nanofoam
+  icon:
+    sprite: Objects/Weapons/Grenades/metalfoam.rsi
+    state: icon
+  discipline: Tsfmc
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - NanolaminateFoamGrenadeTSF
