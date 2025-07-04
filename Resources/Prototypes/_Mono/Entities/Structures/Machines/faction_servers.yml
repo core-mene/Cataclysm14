@@ -1,7 +1,7 @@
 - type: entity
   id: BaseRdServerFaction
   parent: BaseMachinePowered
-  name: R&D server
+  name: BaseRdServerFaction
   description: Contains the collective knowledge of the faction.
   components:
   - type: Sprite
@@ -58,28 +58,20 @@
 
 - type: entity
   id: ResearchAndDevelopmentServerTSFMC
-  parent: BaseMachinePowered
+  parent: BaseRdServerFaction
   name: TSFMC R&D server
   description: Contains the collective knowledge of the TSFMC in this sector.
   components:
   - type: TechnologyDatabase
     supportedDisciplines:
-    - Industrial
-    - Arsenal
-    - Experimental
-    - CivilianServices
     - Tsfmc
 
 - type: entity
   id: ResearchAndDevelopmentServerRogues
-  parent: BaseMachinePowered
+  parent: BaseRdServerFaction
   name: Rogue R&D server
   description: Contains the collective knowledge of the Rogues in this sector.
   components:
   - type: TechnologyDatabase
     supportedDisciplines:
-    - Industrial
-    - Arsenal
-    - Experimental
-    - CivilianServices
     - Rogue
