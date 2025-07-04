@@ -122,6 +122,18 @@ public sealed class VesselPrototype : IPrototype, IInheritingPrototype
     [DataField]
     [AlwaysPushInheritance]
     public ComponentRegistry AddComponents { get; set; } = new();
+
+    /// <summary>
+    /// Whether this ship can suppress IFF flags of other ships.
+    /// </summary>
+    [DataField]
+    public bool CloakHunter;
+
+    /// <summary>
+    /// List of company names whose ships this vessel can suppress IFF flags for.
+    /// </summary>
+    [DataField]
+    public List<string> Company = new();
 }
 
 public enum VesselSize : byte
