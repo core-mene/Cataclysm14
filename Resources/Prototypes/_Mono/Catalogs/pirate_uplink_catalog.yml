@@ -1199,6 +1199,8 @@
         tags:
           - PirateUplink
 
+# Misc
+
 - type: listing
   id: UplinkPirateProwlerVoucher
   name: uplink-pirate-prowler-voucher-name
@@ -1206,6 +1208,36 @@
   productEntity: ShipVoucherProwler
   cost:
     Doubloon: 300
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateFactionRDServer
+  name: uplink-faction-server-name
+  description: uplink-faction-server-desc
+  productEntity: RDServerRogueFlatpack
+  cost:
+    Doubloon: 100
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateFactionLathe
+  name: uplink-faction-lathe-name
+  description: uplink-faction-lathe-desc
+  productEntity: FactionLatheFlatpack
+  cost:
+    Doubloon: 50
   categories:
   - UplinkPirateUtility
   conditions:

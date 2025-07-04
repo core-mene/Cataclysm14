@@ -266,6 +266,8 @@
         - Bailiff
         - Sheriff
 
+# Misc
+
 - type: listing
   id: UplinkSecurityFlyssaVoucher
   name:  uplink-security-flyssa-voucher-name
@@ -284,6 +286,36 @@
     whitelist:
     - Bailiff
     - Sheriff
+
+- type: listing
+  id: UplinkSecurityFactionRDServer
+  name:  uplink-faction-server-name
+  description: uplink-faction-server-desc
+  productEntity: RDServerTSFFlatpack
+  cost:
+    FederationMilitaryCredit: 100
+  categories:
+  - UplinkSecurityUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityFactionLathe
+  name:  uplink-faction-lathe-name
+  description: uplink-faction-lathe-desc
+  productEntity: FactionLatheFlatpack
+  cost:
+    FederationMilitaryCredit: 50
+  categories:
+  - UplinkSecurityUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
 
 # - type: listing
 #   id: UplinkSecurityAuroraExosuit
