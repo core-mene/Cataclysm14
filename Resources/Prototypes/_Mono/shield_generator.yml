@@ -9,14 +9,14 @@
   parent: ShieldGenerator
   name: FS-421 "Fortress" Shield Generator
   components:
-  - type: ShipShieldEmitter # TODO: Values need adjusted to be better than ShieldGenerator and make sense for a POI generator
-    healPerSecond: 250
-    damageExp: 1.1
-    baseDraw: 50000
+  - type: ShipShieldEmitter
+    healPerSecond: 5000
+    damageExp: 0.5
+    baseDraw: 80000
     maxDraw: 150000
-    unpoweredBonus: 6
-    damageLimit: 10000
-    damageOverloadTimePunishment: 100
+    unpoweredBonus: 8
+    damageLimit: 200000
+    damageOverloadTimePunishment: 30
     shieldColor: "#FF9933" # TODO: Possibly change the color from Orange
   - type: Sprite # TODO: Possibly replace the sprite
     sprite: _Mono/Structures/ShuttleComponents/shield.rsi
