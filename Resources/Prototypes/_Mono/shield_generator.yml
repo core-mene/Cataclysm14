@@ -17,17 +17,17 @@
     unpoweredBonus: 8
     damageLimit: 200000
     damageOverloadTimePunishment: 30
-    shieldColor: "#FF9933" # TODO: Possibly change the color from Orange
-  - type: Sprite # TODO: Possibly replace the sprite
-    sprite: _Mono/Structures/ShuttleComponents/shield.rsi
+    shieldColor: "#FF9933"
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/fobshield.rsi
     snapCardinals: true
     layers:
-    - state: control
-    - state: control_on
+    - state: fobshield
+    - state: fobshield_on
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
       visible: false
-      color: "#FF9933" # TODO: Possibly change the color from Orange
+      color: "#FF9933"
   - type: ApcPowerReceiver
     powerLoad: 40000
   - type: PointLight
@@ -35,7 +35,7 @@
     castShadows: true
     radius: 2
     energy: 1.5
-    color: "#FF9933" # TODO: Possibly change the color from Orange
+    color: "#FF9933"
 
 # High-End
 - type: entity
