@@ -1,0 +1,116 @@
+- type: technology
+  id: TsfBasicGuns
+  name: research-technology-tsfmc-guns
+  icon:
+    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    state: icon
+  discipline: Tsfmc
+  tier: 1
+  cost: 20000
+  recipeUnlocks:
+  - WeaponRifleLecterTSF
+  - WeaponRifleVulcanTSF
+  - WeaponSubMachineGunDrozdTSF
+
+- type: technology
+  id: TsfAnnie
+  name: research-technology-tsfmc-annie
+  icon:
+    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/annie.rsi
+    state: icon
+  discipline: Tsfmc
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - WeaponRifleAnnieTSF
+  technologyPrerequisites:
+  - TsfBasicGuns
+
+- type: technology
+  id: TsfMarsocGuns
+  name: research-technology-tsfmc-mr8
+  icon:
+    sprite: _Mono/Objects/Weapons/Guns/LMGs/mr8b.rsi
+    state: icon
+  discipline: Tsfmc
+  tier: 3
+  cost: 75000
+  recipeUnlocks:
+  - WeaponLMGMR8BTSF
+  - WeaponRifleMR8CTSF
+  technologyPrerequisites:
+  - TsfBasicGuns
+  - TsfAnnie
+
+- type: technology
+  id: TsfForensics
+  name: research-technology-tsfmc-forensics
+  icon:
+    sprite: _NF/Objects/Devices/forensic_scanner.rsi
+    state: forensicnew
+  discipline: Tsfmc
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - ForensicsScannerTSF
+
+- type: technology
+  id: TsfPocketCrowbar
+  name: research-technology-tsfmc-pocket-crowbar
+  icon:
+    sprite: _NF/Objects/Tools/crowbar.rsi
+    state: pocket-icon
+  discipline: Tsfmc
+  tier: 1
+  cost: 6500
+  recipeUnlocks:
+  - CrowbarPocketTSF
+
+- type: technology
+  id: TsfDemag
+  name: research-technology-tsfmc-demag
+  icon:
+    sprite: _NF/Objects/Tools/demag.rsi
+    state: icon
+  discipline: Tsfmc
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - DemagTSF
+
+- type: technology
+  id: TsfEshield
+  name: research-technology-tsfmc-eshield
+  icon:
+    sprite: _NF/Objects/Weapons/Melee/e_shield.rsi
+    state: eshield-on
+  discipline: Tsfmc
+  tier: 2
+  cost: 30000
+  recipeUnlocks:
+  - EnergyShieldTSF
+
+- type: technology
+  id: TsfFlyssa
+  name: research-technology-tsfmc-flyssa-voucher
+  icon:
+    sprite: _NF/Objects/Misc/shipyard_voucher.rsi
+    state: nfsd
+  discipline: Tsfmc
+  tier: 3
+  cost: 100000
+  recipeUnlocks:
+  - FlyssaVoucherTSF
+
+- type: technology
+  id: TsfMeds
+  name: research-technology-tsfmc-advanced-meds
+  icon:
+    sprite: Objects/Specific/Medical/firstaidkits.rsi
+    state: blackkit
+  discipline: Tsfmc
+  tier: 2
+  cost: 20000
+  recipeUnlocks:
+  - SutureTSF
+  - MeshTSF

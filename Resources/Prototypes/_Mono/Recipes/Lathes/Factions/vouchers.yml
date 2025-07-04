@@ -1,0 +1,35 @@
+- type: latheRecipe
+  abstract: true
+  id: BaseVoucherRecipe
+  completetime: 120
+
+
+- type: latheRecipe
+  parent: BaseVoucherRecipe
+  id: FlyssaVoucherTSF
+  result: ShipVoucherFlyssa
+  completetime: 600
+  materials:
+    Steel: 100000
+    Plasteel: 150000
+    Plastic: 50000
+    Glass: 50000
+    Plasma: 50000
+    Uranium: 10000
+    Silver: 10000
+    Gold: 10000
+
+- type: latheRecipe
+  parent: BaseVoucherRecipe
+  id: ProwlerVoucherRogue
+  result: ShipVoucherProwler
+  completetime: 240
+  materials:
+    Steel: 50000
+    Plasteel: 15000
+    Plastic: 30000
+    Glass: 10000
+    Plasma: 120000
+    Uranium: 20000
+    Silver: 15000
+    Gold: 15000
