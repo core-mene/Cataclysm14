@@ -274,7 +274,7 @@ namespace Content.Server.Power.EntitySystems
             if (!Resolve(uid, ref battery))
                 return false;
 
-            return battery.CurrentCharge / battery.MaxCharge >= 0.99f;
+            return battery.CurrentCharge >= battery.MaxCharge;
         }
 
         // Goobstation
