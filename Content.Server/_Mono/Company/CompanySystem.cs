@@ -35,7 +35,8 @@ public sealed class CompanySystem : EntitySystem
         "NFDetective",
         "PublicAffairsLiaison",
         "SecurityGuard",
-        "Cadet"
+        "Cadet",
+        "TsfEngineer"
     };
 
     private readonly HashSet<string> _rogueJobs = new()
