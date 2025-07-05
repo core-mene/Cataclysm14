@@ -36,6 +36,12 @@ uplink-pirate-hyperzine-desc = Combat stimulants that prevent stuns and increase
 uplink-pirate-surgery-name = Surgical Kit
 uplink-pirate-surgery-desc = A surgical kit containing the required minimum to save your friends or chop apart your enemy.
 
+uplink-pirate-omnizine-jug-name = Omnizine Jug
+uplink-pirate-omnizine-jug-desc = A jug of omnizine that can be used for making medipens and keeping your allies alive. Quietly imported from Harmony Medical Enterprises.
+
+uplink-pirate-medical-assembler-name = Medical Assembler Flatpack
+uplink-pirate-medical-assembler-desc = An assembler that can be used to make useful medical supplies.
+
 # MARK: Utility
 
 uplink-pirate-syndicate-magboots-name = Blood-red Magboots
