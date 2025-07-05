@@ -1,0 +1,52 @@
+# SPDX-FileCopyrightText: 2023 IHAN <IHAN>
+# SPDX-FileCopyrightText: 2023 Kennedy
+# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Long YM
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 KM-Catman
+# SPDX-FileCopyrightText: 2025 monolith8319
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: KM-Catman
+# Discord: mow_mow
+
+- type: vessel
+  id: Leaf
+  parent: BaseVessel
+  name: BBI Leaf
+  description: An unsurprisingly leaf-shaped botanical vessel. Comes with a moderate 20 trays. Wine not included.
+  price: 40000
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/_Mono/Shuttles/leaf.yml
+  guidebookPage: null
+  class:
+  - Civilian
+  - Botany
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Leaf
+  mapName: 'BBI Leaf'
+  mapPath: /Maps/_Mono/Shuttles/leaf.yml
+  minPlayers: 0
+  stations:
+    Leaf:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Leaf CIV{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

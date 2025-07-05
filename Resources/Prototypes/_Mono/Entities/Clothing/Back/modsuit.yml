@@ -1,5 +1,4 @@
 # SPDX-FileCopyrightText: 2025 Blu
-# SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 NotActuallyMarty
 # SPDX-FileCopyrightText: 2025 Redrover1760
 #
@@ -80,8 +79,6 @@
     clothingVisuals:
       back:
       - state: equipped-BACKPACK-sealed
-  - type: PirateBountyItem # Mono
-    id: ClothingOuterHardsuitTacsuit
 
 - type: entity
   parent: ClothingModsuitUSSPVaryag
@@ -175,8 +172,6 @@
   - type: Construction
     graph: Modsuit
     node: headofsecurity
-  - type: PirateBountyItem # Mono
-    id: ClothingOuterHardsuitTacsuitHighValue
 
 - type: entity
   parent: ClothingModsuitUSSPZastavnik

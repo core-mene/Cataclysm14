@@ -10,6 +10,3 @@ job-supervisors-ussp-sergeant = the Serzhants
 
 # MARK: MD
 job-name-md-medic = Emergency Responder
-
-# MARK: TSF
-job-name-tsf-engineer = TSFMC Engineer

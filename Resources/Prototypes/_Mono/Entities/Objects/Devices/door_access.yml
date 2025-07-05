@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsUSSP
@@ -25,11 +21,3 @@
   components:
   - type: AccessReader
     access: [["USSPCommand"]]
-
-- type: entity
-  parent: DoorElectronics
-  id: DoorElectronicsTsfEngineer
-  suffix: TSF Engineering, Locked
-  components:
-  - type: AccessReader
-    access: [["TsfmcEngineering"]]

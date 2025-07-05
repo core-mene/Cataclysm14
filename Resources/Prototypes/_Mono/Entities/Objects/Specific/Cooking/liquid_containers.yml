@@ -53,10 +53,8 @@
         map: ["enum.SolutionContainerLayers.Fill"]
         visible: false
   - type: Item
+    size: Normal
     sprite: _Mono/Objects/Misc/papercup.rsi
-    size: Small
-    shape:
-    - 0,0,0,1
   - type: SolutionContainerManager
     solutions:
       drink:

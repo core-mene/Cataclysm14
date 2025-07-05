@@ -1,1 +1,1 @@
-power-switch-component-toggle-verb = Toggle Power
+power-switch-component-toggle-verb = Toggle power

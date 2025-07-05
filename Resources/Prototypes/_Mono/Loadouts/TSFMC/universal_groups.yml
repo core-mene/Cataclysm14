@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: loadoutGroup
   id: TsfmcBackpack
   name: loadout-group-contractor-backpack
@@ -14,16 +10,6 @@
   - TsfmcClothingBackpack
 
 - type: loadoutGroup
-  id: TsfmcEngiModsuit
-  name: loadout-group-contractor-backpack
-  hidden: true # No point in showing this, it gets auto-selected.
-  minLimit: 1
-  loadouts:
-  - TsfmcEngiClothingModsuit
-  fallbacks:
-  - TsfmcEngiClothingModsuit
-
-- type: loadoutGroup
   id: TsfmcJumpsuit
   name: loadout-group-contractor-jumpsuit
   hidden: true # No point in showing this, it gets auto-selected.
@@ -32,16 +18,6 @@
   - TsfmcClothingJumpsuit
   fallbacks:
   - TsfmcClothingJumpsuit
-
-- type: loadoutGroup
-  id: TsfmcJumpsuitEngi
-  name: loadout-group-contractor-jumpsuit
-  hidden: true # No point in showing this, it gets auto-selected.
-  minLimit: 1
-  loadouts:
-  - TsfmcEngineeringClothingJumpsuit
-  fallbacks:
-  - TsfmcEngineeringClothingJumpsuit
 
 - type: loadoutGroup
   id: TsfmcShoes
@@ -82,16 +58,6 @@
   - TsfmcCombatWebbing
   fallbacks:
   - TsfmcCombatWebbing
-
-- type: loadoutGroup
-  id: TsfmcUtilBelt
-  name: loadout-group-contractor-belt
-  minLimit: 1
-  loadouts:
-  - TsfClothingBeltUtilityEngineering
-  - TsfClothingBeltUtilityEngineeringPro
-  fallbacks:
-  - TsfClothingBeltUtilityEngineering
 
 - type: loadoutGroup
   id: TsfmcBrigmedicBelt
@@ -173,10 +139,11 @@
 - type: loadoutGroup
   id: TsfmcOuterClothing
   name: loadout-group-contractor-outerclothing
+  hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
   - TsfmcVestSlim
   - TsfmcVestNormal
   fallbacks:
-  - TsfmcVestSlim
+  - TsfmcVestNormal
 

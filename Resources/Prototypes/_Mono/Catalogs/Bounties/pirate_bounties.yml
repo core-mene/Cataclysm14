@@ -1,35 +1,25 @@
-# SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-# - type: pirateBounty # Mono SCAF-> General Merc Suits including SCAF
-#   id: PirateBountyMercSuit
-#   reward: 30
-#   description: pirate-bounty-description-merc-suit
-#   entries:
-#   - name: pirate-bounty-item-merc-suit
-#     amount: 1
-#     id: ClothingOuterHardsuitMerc # Moved to PirateBountyTacsuit
+- type: pirateBounty # Mono SCAF-> General Merc Suits including SCAF
+  id: PirateBountyMercSuit
+  reward: 20
+  description: pirate-bounty-description-merc-suit
+  entries:
+  - name: pirate-bounty-item-merc-suit
+    amount: 1
+    id: ClothingOuterHardsuitMerc
 
 - type: pirateBounty
   id: PirateBountyTacsuit
   reward: 30
-  description: pirate-bounty-description-faction-tacsuit
+  description: pirate-bounty-description-tsfmctacsuit
   entries:
-  - name: pirate-bounty-item-faction-tacsuit
+  - name: pirate-bounty-item-tsfmc-tacsuit
     amount: 1
     id: ClothingOuterHardsuitTacsuit
-
-- type: pirateBounty # Mono
-  id: PirateBountyTacsuitHighValue
-  reward: 60
-  description: pirate-bounty-description-faction-tacsuit-high 
-  entries:
-  - name: pirate-bounty-item-faction-tacsuit-high
-    amount: 1
-    id: ClothingOuterHardsuitTacsuitHighValue
 
 - type: pirateBounty # Mono
   id: PirateBountyTSFEnergyWeapon
@@ -41,22 +31,22 @@
     id: TSFEnergyWeapon
 
 - type: pirateBounty # Mono
-  id: PirateBountyStandardFactionLongarm
+  id: PirateBountyStandardTSFLongarm
   reward: 20
-  description: pirate-bounty-description-standard-faction-longarm
+  description: pirate-bounty-description-standard-tsf-longarm
   entries:
-  - name: pirate-bounty-item-standard-faction-longarm
+  - name: pirate-bounty-item-standard-tsf-longarm
     amount: 1
-    id: StandardFactionLongarm
+    id: StandardTSFLongarm
 
 - type: pirateBounty # Mono
-  id: PirateBountyExperimentalFactionWeapon
+  id: PirateBountyExperimentalTSFWeapon
   reward: 60
-  description: pirate-bounty-description-experimental-faction-weapon
+  description: pirate-bounty-description-experimental-tsf-weapon
   entries:
-  - name: pirate-bounty-item-experimental-faction-weapon
+  - name: pirate-bounty-item-experimental-tsf-weapon
     amount: 1
-    id: ExperimentalFactionWeapon
+    id: ExperimentalTSFWeapon
 
 - type: pirateBounty
   id: PirateBountyShipWeapon
@@ -136,13 +126,13 @@
 #    id: LifeSupportCan
 
 - type: pirateBounty # Mono
-  id: PirateBountyEncryptionKeyFaction
+  id: PirateBountyEncryptionKeyTSFMC
   reward: 25
-  description: pirate-bounty-description-encryption-key-faction
+  description: pirate-bounty-description-encryption-key-TSFMC
   entries:
-  - name: pirate-bounty-item-encryption-key-faction
+  - name: pirate-bounty-item-encryption-key-TSFMC
     amount: 1
-    id: EncryptionKeyFaction # Mono
+    id: EncryptionKeyNfsd
 
 - type: pirateBounty
   id: PirateBountyTechfab
