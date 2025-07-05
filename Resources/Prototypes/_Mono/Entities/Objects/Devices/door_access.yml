@@ -21,3 +21,11 @@
   components:
   - type: AccessReader
     access: [["USSPCommand"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsTsfEngineer
+  suffix: TSF Engineering, Locked
+  components:
+  - type: AccessReader
+    access: [["TsfmcEngineering"]]

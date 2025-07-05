@@ -20,6 +20,16 @@
   - TsfmcClothingJumpsuit
 
 - type: loadoutGroup
+  id: TsfmcJumpsuitEngi
+  name: loadout-group-contractor-jumpsuit
+  hidden: true # No point in showing this, it gets auto-selected.
+  minLimit: 1
+  loadouts:
+  - TsfmcEngineeringClothingJumpsuit
+  fallbacks:
+  - TsfmcEngineeringClothingJumpsuit
+
+- type: loadoutGroup
   id: TsfmcShoes
   name: loadout-group-contractor-shoes
   hidden: true # No point in showing this, it gets auto-selected.
@@ -58,6 +68,16 @@
   - TsfmcCombatWebbing
   fallbacks:
   - TsfmcCombatWebbing
+
+- type: loadoutGroup
+  id: TsfmcUtilBelt
+  name: loadout-group-contractor-belt
+  hidden: true # No point in showing this, it gets auto-selected.
+  minLimit: 1
+  loadouts:
+  - ClothingBeltUtilityEngineering
+  fallbacks:
+  - ClothingBeltUtilityEngineering
 
 - type: loadoutGroup
   id: TsfmcBrigmedicBelt

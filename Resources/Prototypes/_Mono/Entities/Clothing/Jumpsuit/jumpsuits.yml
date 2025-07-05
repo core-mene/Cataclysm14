@@ -21,6 +21,20 @@
 
 - type: entity
   parent: ClothingUniformBase
+  id: ClothingUniformTSFMCEngi
+  name: TSFMC engineer uniform
+  description: A black and blue urban camo uniform. Its uncomfortable and cheap, and it probably doesn't blend in with anything other than a ship interior. This one has high-vis markings for engineers.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmcengi.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmcengi.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
   id: ClothingUniformUSSP
   name: USSP uniform
   description: Standard fatigues of the USSP military.

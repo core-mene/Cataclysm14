@@ -84,6 +84,8 @@
   canBeAntag: false
   accessGroups:
   - AllAccess
+  access: # Mono
+  - TsfmcEngineering
   special:
   - !type:AddComponentSpecial
     components:

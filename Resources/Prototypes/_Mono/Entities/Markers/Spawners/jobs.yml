@@ -65,3 +65,15 @@
     layers:
       - state: green
       - state: medic
+
+- type: entity
+  id: SpawnPointTsfEngi
+  parent: SpawnPointJobBase
+  name: TSF Engineer
+  components:
+  - type: SpawnPoint
+    job_id: TsfEngineer
+  - type: Sprite
+    sprite: _NF/Markers/jobs.rsi
+    layers:
+    - state: green

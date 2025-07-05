@@ -1,0 +1,41 @@
+- type: job
+  id: TsfEngineer
+  name: job-name-tsf-engineer
+  description: job-description-tsf-engineer
+  playTimeTracker: JobTSFEngi
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 21600 # 6 hours # mono
+  startingGear: TsfEngiGear
+  icon: JobIconTSFEngi
+  supervisors: job-supervisors-sergeant
+  weight: 130
+  displayWeight: 20
+  canBeAntag: false
+  access:
+  - TsfmcEngineering
+  accessGroups:
+  - TsfGeneralNoBrig
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: NpcFactionMember
+      factions:
+      - TSFMC
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: TsfEngiGear
+  equipment:
+    pocket1: WeaponPistolMk58 #WeaponPistolMk58Nonlethal
+    pocket2: Magazine9x19mmPistolFMJ
+  storage:
+    back:
+    - RadioHandheldNF # Mono
+    - NanolaminateFoamGrenade
+    - NanolaminateFoamGrenade
+    - RCDRecharging

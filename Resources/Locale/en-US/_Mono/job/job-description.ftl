@@ -7,3 +7,6 @@ job-description-ussp-rifleman = Serve the Union in space. Follow orders from you
 
 # MARK: MD
 job-description-md-medic = Traverse the space to provide life-saving care aboard a medical vessel. Stabilize crew with medicine, synthesize medicine, and revive the fallen. ensure the unrecoverable deceased are respectfully secured in the morgue and cloned.
+
+# MARK: TSF
+job-description-tsf-engineer = Maintain the integrity of the flagship, get laughed at for not being a real soldier.

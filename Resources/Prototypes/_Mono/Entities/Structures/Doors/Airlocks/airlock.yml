@@ -24,3 +24,12 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsUSSPCommand ]
+
+- type: entity
+  parent: AirlockNfsd
+  id: AirlockTsfEngineering
+  suffix: TSF Engineering, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsTsfEngineer ]
