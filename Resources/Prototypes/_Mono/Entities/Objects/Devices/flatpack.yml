@@ -134,3 +134,15 @@
   - type: Sprite
     layers:
     - state: science_server
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: MedicalAssemblerFlatpack
+  name: medical assembler flatpack
+  description: A flatpack used for constructing a medical assembler.
+  components:
+  - type: Flatpack
+    entity: MedicalAssembler
+  - type: StaticPrice
+    price: 1500
+

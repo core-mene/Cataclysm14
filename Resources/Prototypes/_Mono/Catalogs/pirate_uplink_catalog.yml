@@ -94,29 +94,12 @@
       - PirateUplink
 
 - type: listing
-  id: UplinkPirateCombatPen
-  name:  uplink-pirate-combat-pen-name
-  description: uplink-pirate-combat-pen-desc
-  productEntity: CombatMedipen
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: morphen }
+  id: UplinkPirateOmnizineJug
+  name: uplink-pirate-omnizine-jug-name
+  description: uplink-pirate-omnizine-jug-desc
+  productEntity: JugOmnizine
   cost:
-    Doubloon: 12
-  categories:
-    - UplinkPirateMedical
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-
-- type: listing
-  id: UplinkPirateAntiPoisonPen
-  name: uplink-pirate-anti-poison-pen-name
-  description: uplink-pirate-anti-poison-pen-desc
-  productEntity: AntiPoisonMedipen
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: penacid }
-  cost:
-    Doubloon: 18
+    Doubloon: 30
   categories:
   - UplinkPirateMedical
   conditions:
@@ -126,13 +109,12 @@
       - PirateUplink
 
 - type: listing
-  id: UplinkPiratePuncturasePen
-  name: uplink-pirate-puncturase-pen-name
-  description: uplink-pirate-puncturase-pen-desc
-  productEntity: PunctAutoInjector
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: punctpen }
+  id: UplinkPirateMedicalAssembler
+  name:  uplink-pirate-medical-assembler-name
+  description: uplink-pirate-medical-assembler-desc
+  productEntity: MedicalAssemblerFlatpack
   cost:
-    Doubloon: 18
+    Doubloon: 36
   categories:
   - UplinkPirateMedical
   conditions:
@@ -141,53 +123,101 @@
       tags:
       - PirateUplink
 
-- type: listing
-  id: UplinkPiratePyrazinePen
-  name: uplink-pirate-pyrazine-pen-name
-  description: uplink-pirate-pyrazine-pen-desc
-  productEntity: PyraAutoInjector
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: pyrapen }
-  cost:
-    Doubloon: 18
-  categories:
-  - UplinkPirateMedical
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
+#- type: listing
+#  id: UplinkPirateCombatPen
+#  name:  uplink-pirate-combat-pen-name
+#  description: uplink-pirate-combat-pen-desc
+#  productEntity: CombatMedipen
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: morphen }
+#  cost:
+#    Doubloon: 12
+#  categories:
+#    - UplinkPirateMedical
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - PirateUplink
 
-- type: listing
-  id: UplinkPirateRadPen
-  name: uplink-pirate-rad-pen-name
-  description: uplink-pirate-rad-pen-desc
-  productEntity: RadAutoInjector
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: arithpen }
-  cost:
-    Doubloon: 18
-  categories:
-  - UplinkPirateMedical
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
+#- type: listing
+#  id: UplinkPirateAntiPoisonPen
+#  name: uplink-pirate-anti-poison-pen-name
+#  description: uplink-pirate-anti-poison-pen-desc
+#  productEntity: AntiPoisonMedipen
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: penacid }
+#  cost:
+#    Doubloon: 18
+#  categories:
+#  - UplinkPirateMedical
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - PirateUplink
 
-- type: listing
-  id: UplinkPirateHyperzine
-  name: uplink-pirate-hyperzine-name
-  description: uplink-pirate-hyperzine-desc
-  productEntity: Stimpack
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: stimpen }
-  cost:
-    Doubloon: 20
-  categories:
-  - UplinkPirateMedical
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
+#- type: listing
+#  id: UplinkPiratePuncturasePen
+#  name: uplink-pirate-puncturase-pen-name
+#  description: uplink-pirate-puncturase-pen-desc
+#  productEntity: PunctAutoInjector
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: punctpen }
+#  cost:
+#    Doubloon: 18
+#  categories:
+#  - UplinkPirateMedical
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - PirateUplink
+
+#- type: listing
+#  id: UplinkPiratePyrazinePen
+#  name: uplink-pirate-pyrazine-pen-name
+#  description: uplink-pirate-pyrazine-pen-desc
+#  productEntity: PyraAutoInjector
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: pyrapen }
+#  cost:
+#    Doubloon: 18
+#  categories:
+#  - UplinkPirateMedical
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - PirateUplink
+
+#- type: listing
+#  id: UplinkPirateRadPen
+#  name: uplink-pirate-rad-pen-name
+#  description: uplink-pirate-rad-pen-desc
+#  productEntity: RadAutoInjector
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: arithpen }
+#  cost:
+#    Doubloon: 18
+#  categories:
+#  - UplinkPirateMedical
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - PirateUplink
+
+#- type: listing
+#  id: UplinkPirateHyperzine
+#  name: uplink-pirate-hyperzine-name
+#  description: uplink-pirate-hyperzine-desc
+#  productEntity: Stimpack
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: stimpen }
+#  cost:
+#    Doubloon: 20
+#  categories:
+#  - UplinkPirateMedical
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - PirateUplink
 
 - type: listing
   id: UplinkPirateSurgery

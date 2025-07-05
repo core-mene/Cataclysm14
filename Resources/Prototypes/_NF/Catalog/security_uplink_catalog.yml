@@ -469,14 +469,96 @@
 
 #Mono start
 
+#- type: listing
+#  id: UplinkSecurityRadPen
+#  name:  uplink-security-rad-pen-name
+#  description: uplink-security-rad-pen-desc
+#  productEntity: RadAutoInjector
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: arithpen }
+#  cost:
+#    FederationMilitaryCredit: 18
+#  categories:
+#    - UplinkSecurityUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
+#    - !type:BuyerJobCondition
+#      whitelist:
+#        - Sheriff
+#        - Brigmedic
+
+#- type: listing
+#  id: UplinkSecurityPyrazinePen
+#  name:  uplink-security-pyrazine-pen-name
+#  description: uplink-security-pyrazine-pen-desc
+#  productEntity: PyraAutoInjector
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: pyrapen }
+#  cost:
+#    FederationMilitaryCredit: 18
+#  categories:
+#    - UplinkSecurityUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
+
+#- type: listing
+#  id: UplinkSecurityPuncturasePen
+#  name:  uplink-security-puncturase-pen-name
+#  description: uplink-security-puncturase-pen-desc
+#  productEntity: PunctAutoInjector
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: punctpen }
+#  cost:
+#    FederationMilitaryCredit: 18
+#  categories:
+#    - UplinkSecurityUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
+
+#- type: listing
+#  id: UplinkSecurityAntiPoisonPen
+#  name:  uplink-security-anti-poison-pen-name
+#  description: uplink-security-anti-poison-pen-desc
+#  productEntity: AntiPoisonMedipen
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: penacid }
+#  cost:
+#    FederationMilitaryCredit: 18
+#  categories:
+#    - UplinkSecurityUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
+
 - type: listing
-  id: UplinkSecurityRadPen
-  name:  uplink-security-rad-pen-name
-  description: uplink-security-rad-pen-desc
-  productEntity: RadAutoInjector
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: arithpen }
+  id: UplinkSecurityOmnizineJug
+  name:  uplink-security-omnizine-jug-name
+  description: uplink-security-omnizine-jug-desc
+  productEntity: JugOmnizine
   cost:
-    FederationMilitaryCredit: 18
+    FederationMilitaryCredit: 30
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityMedicalAssembler
+  name:  uplink-security-medical-assembler-name
+  description: uplink-security-medical-assembler-desc
+  productEntity: MedicalAssemblerFlatpack
+  cost:
+    FederationMilitaryCredit: 8
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -488,54 +570,6 @@
       whitelist:
         - Sheriff
         - Brigmedic
-
-- type: listing
-  id: UplinkSecurityPyrazinePen
-  name:  uplink-security-pyrazine-pen-name
-  description: uplink-security-pyrazine-pen-desc
-  productEntity: PyraAutoInjector
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: pyrapen }
-  cost:
-    FederationMilitaryCredit: 18
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityPuncturasePen
-  name:  uplink-security-puncturase-pen-name
-  description: uplink-security-puncturase-pen-desc
-  productEntity: PunctAutoInjector
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: punctpen }
-  cost:
-    FederationMilitaryCredit: 18
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityAntiPoisonPen
-  name:  uplink-security-anti-poison-pen-name
-  description: uplink-security-anti-poison-pen-desc
-  productEntity: AntiPoisonMedipen
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: penacid }
-  cost:
-    FederationMilitaryCredit: 18
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
 
 - type: listing
   id: UplinkSecurityCompactDefibrillator
@@ -562,7 +596,7 @@
   description: uplink-security-syringe-case-desc
   productEntity: SyringeCaseAltFilled
   cost:
-    FederationMilitaryCredit: 40
+    FederationMilitaryCredit: 50
   categories:
     - UplinkSecurityUtility
   conditions:
