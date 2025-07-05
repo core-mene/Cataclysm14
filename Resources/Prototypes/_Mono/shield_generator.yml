@@ -1,3 +1,42 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 ark1368
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# POI
+- type: entity
+  id: ShieldGeneratorPOI
+  parent: ShieldGenerator
+  name: FS-421 "Fortress" Shield Generator
+  components:
+  - type: ShipShieldEmitter
+    healPerSecond: 5000
+    damageExp: 0.5
+    baseDraw: 80000
+    maxDraw: 150000
+    unpoweredBonus: 8
+    damageLimit: 200000
+    damageOverloadTimePunishment: 30
+    shieldColor: "#FF9933"
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/fobshield.rsi
+    snapCardinals: true
+    layers:
+    - state: fobshield
+    - state: fobshield_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
+      color: "#FF9933"
+  - type: ApcPowerReceiver
+    powerLoad: 40000
+  - type: PointLight
+    enabled: false
+    castShadows: true
+    radius: 2
+    energy: 1.5
+    color: "#FF9933"
+
 # High-End
 - type: entity
   id: ShieldGenerator

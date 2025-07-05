@@ -1,3 +1,4 @@
+// SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 ark1368
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -18,27 +19,49 @@ public sealed partial class ShipShieldEmitterComponent : Component
     [DataField]
     public float Damage = 0f;
 
+    /// <summary>
+    /// Exponential growth factor for power consumption based on damage.
+    /// Higher values make damage more punishing in terms of power consumption.
+    /// </summary>
     [DataField]
     public float DamageExp = 1.1f;
 
+    /// <summary>
+    /// Rate at which the emitter heals/reduces its damage per second when powered.
+    /// </summary>
     [DataField]
     public float HealPerSecond = 250f;
 
+    /// <summary>
+    /// Multiplier applied to healing rate when the emitter is in recharge mode.
+    /// </summary>
     [DataField]
     public float UnpoweredBonus = 6f;
 
+    /// <summary>
+    /// Maximum power consumption limit for the emitter in watts.
+    /// </summary>
     [DataField]
     public float MaxDraw = 150000f;
 
+    /// <summary>
+    /// Base power consumption of the emitter when undamaged, in watts.
+    /// </summary>
     [DataField]
     public float BaseDraw = 50000f;
 
     [DataField]
     public bool Recharging = false;
 
+    /// <summary>
+    /// Damage threshold that triggers overload protection.
+    /// </summary>
     [DataField]
     public float DamageLimit = 3500;
 
+    /// <summary>
+    /// Duration in seconds that the emitter remains in overload state after exceeding DamageLimit.
+    /// </summary>
     [DataField]
     public float DamageOverloadTimePunishment = 30;
 
