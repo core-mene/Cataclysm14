@@ -124,21 +124,21 @@
         - Bailiff
         - Sheriff
 
-- type: listing
-  id: UplinkSecurityHardsuitSyndieReverseEngineered
-  name:  uplink-security-hardsuit-experimental-name
-  description: uplink-security-hardsuit-experimental-desc
-  productEntity: ClothingOuterHardsuitNfsdExperimental
-  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_experimental.rsi, state: icon }
-  cost:
-    FederationMilitaryCredit: 125
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
+#- type: listing
+#  id: UplinkSecurityHardsuitSyndieReverseEngineered
+#  name:  uplink-security-hardsuit-experimental-name
+#  description: uplink-security-hardsuit-experimental-desc
+#  productEntity: ClothingOuterHardsuitNfsdExperimental
+#  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_experimental.rsi, state: icon }
+#  cost:
+#    FederationMilitaryCredit: 125
+#  categories:
+#    - UplinkSecurityHardsuits
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
 
 - type: listing
   id: UplinkSecurityHardsuitSheriff
