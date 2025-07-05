@@ -24,7 +24,7 @@
   id: Takeaway
   parent: BaseVessel
   name: UW Takeaway
-  description: An aptly named medium botanical-kitchen vessel with a customer-facing gantry for ordering to-go.
+  description: An aptly named medium botanical-kitchen vessel with a customer-facing gantry for ordering to-go. Also comes with dine-in.
   price: 62000
   category: Medium
   group: Shipyard
@@ -36,6 +36,7 @@
   - Botany
   engine:
   - Uranium
+  - Solar
 
 - type: gameMap
   id: Takeaway
