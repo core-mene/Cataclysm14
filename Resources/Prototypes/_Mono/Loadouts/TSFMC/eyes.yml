@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadout
   id: TsfmcHud
   equipment:
@@ -7,3 +11,22 @@
   id: TsfmcMedSec
   equipment:
     eyes: ClothingEyesHudMedSec
+
+- type: loadoutGroup
+  id: TsfmcEngiGlasses
+  name: loadout-group-contractor-glasses
+  loadouts:
+  - TsfmcEngiGoggles
+  - TsfmcDiagnostic
+  fallbacks:
+  - TsfmcEngiGoggles
+
+- type: loadout
+  id: TsfmcEngiGoggles
+  equipment:
+    eyes: ClothingEyesGlassesMeson
+
+- type: loadout
+  id: TsfmcDiagnostic
+  equipment:
+    eyes: ClothingEyesHudDiagnostic

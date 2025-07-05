@@ -1,3 +1,15 @@
+# SPDX-FileCopyrightText: 2024 Kesiath
+# SPDX-FileCopyrightText: 2024 TsjipTsjip
+# SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 BramvanZijp
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 KiraZen_
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Whatstone
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   name: energy gun
   parent: [BaseWeaponBattery, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
@@ -55,7 +67,7 @@
           Lethal: { state: mode-lethal }
           Special: { state: mode-stun } # Unused
   - type: PirateBountyItem # Mono
-    id: StandardTSFLongarm
+    id: StandardFactionLongarm
 
 
 - type: entity
@@ -187,4 +199,4 @@
   - type: StaticPrice
     price: 750
   - type: PirateBountyItem # Mono
-    id: ExperimentalTSFWeapon
+    id: ExperimentalFactionWeapon

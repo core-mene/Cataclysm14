@@ -1,6 +1,17 @@
+# SPDX-FileCopyrightText: 2023 Temoffy
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 RealJoesphStalin
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 chrome-cirrus
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: vendingMachineInventory
   id: AstroVendInventory
   startingInventory:
+    NFWeaponHoloflareGun: 5
     ClothingOuterHardsuitSpatio: 5
     ClothingShoesBootsMag: 15
     ClothingOuterEVASuitContractor: 10
@@ -37,6 +48,7 @@
 - type: vendingMachineInventory
   id: AstroVendPOIInventory
   startingInventory:
+    NFWeaponHoloflareGun: 4294967295 # Infinite
     ClothingOuterHardsuitSpatio: 4294967295 # Infinite
     ClothingShoesBootsMag: 4294967295 # Infinite
     ClothingOuterEVASuitContractor: 4294967295 # Infinite

@@ -1,0 +1,63 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: EnergySwordRogue
+  result: EnergySword
+  materials:
+    Steel: 1200
+    Plasteel: 3000
+    Plastic: 400
+    Plasma: 3000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipe
+  id: EnergyDaggerRogue
+  result: EnergyDaggerLoud
+  materials:
+    Steel: 1200
+    Plasteel: 1500
+    Plastic: 300
+    Plasma: 500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: HFSwordVT7
+  result: WeaponVT7
+  materials:
+    Steel: 1000
+    Plasteel: 7000
+    Plastic: 6000
+    Plasma: 10000
+    Uranium: 6000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: EnergyShieldTSF
+  result: EnergyShieldNfsd
+  materials:
+    Steel: 1500
+    Plasteel: 6500
+    Plastic: 800
+    Plasma: 4000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: EnergyShieldRogue
+  result: EnergyShield
+  materials:
+    Steel: 1500
+    Plasteel: 6500
+    Plastic: 800
+    Plasma: 4000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipe
+  id: CrowbarPocketTSF
+  result: CrowbarPocket
+  materials:
+    Steel: 1200
+    Plastic: 300

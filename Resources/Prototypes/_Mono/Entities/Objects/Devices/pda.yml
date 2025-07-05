@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: BasePDA
   id: BaseUSSPPDA
@@ -116,3 +121,29 @@
     accentHColor: "#447987"
   - type: Icon
     state: pda-hos
+
+- type: entity
+  parent: BaseSecurityPDA
+  id: TsfEngiPDA
+  name: TSFMC engineer PDA
+  description: Whosoever bears this PDA maintains the law.
+  components:
+  - type: Pda
+    id: TsfEngiIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookNfsdSop
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-cadet
+  - type: PdaBorderColor
+    borderColor: "#FFFDD0"
+    accentHColor: "#896b49"
+  - type: Icon
+    state: pda-cadet

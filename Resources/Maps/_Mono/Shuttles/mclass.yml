@@ -1,3 +1,30 @@
+# SPDX-FileCopyrightText: 2021 AJCM-git
+# SPDX-FileCopyrightText: 2021 Paul Ritter
+# SPDX-FileCopyrightText: 2021 wrexbe
+# SPDX-FileCopyrightText: 2022 20kdc
+# SPDX-FileCopyrightText: 2022 Kara
+# SPDX-FileCopyrightText: 2022 LittleBuilderJane
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 Alexander Evgrashin
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2023 Emisse
+# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Mr. Samuel
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2024 dustylens
+# SPDX-FileCopyrightText: 2025 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2025 Checkraze
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 ark1368
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 meta:
   format: 7
   category: Grid
@@ -2771,17 +2798,6 @@ entities:
     - type: Transform
       pos: 4.5,7.5
       parent: 1
-- proto: CircularShieldConsole
-  entities:
-  - uid: 357
-    components:
-    - type: Transform
-      pos: -0.5,14.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        348:
-        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
 - proto: ClosetO2N2Filled
   entities:
   - uid: 349

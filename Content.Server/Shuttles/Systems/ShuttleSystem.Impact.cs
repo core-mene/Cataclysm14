@@ -1,3 +1,18 @@
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2024 Mervill
+// SPDX-FileCopyrightText: 2024 TemporalOroboros
+// SPDX-FileCopyrightText: 2024 eoineoineoin
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 ark1368
+// SPDX-FileCopyrightText: 2025 gus
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Shuttles.Components;
 using Content.Server._NF.Shuttles.Components;
 using Content.Shared._Mono;
@@ -144,7 +159,10 @@ public sealed partial class ShuttleSystem
         var ourProtected = HasComp<GridGodModeComponent>(args.OurEntity) || HasComp<ForceAnchorComponent>(args.OurEntity);
         var otherProtected = HasComp<GridGodModeComponent>(args.OtherEntity) || HasComp<ForceAnchorComponent>(args.OtherEntity);
 
-        if (ourProtected || otherProtected)
+        // Check if the grids are docked together to prevent impact
+        var areGridsDocked = _dockSystem.AreGridsDocked(args.OurEntity, args.OtherEntity);
+
+        if (ourProtected || otherProtected || areGridsDocked)
             return;
 
         // Convert the collision point directly to tile indices

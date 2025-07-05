@@ -1,4 +1,13 @@
-﻿using Content.Shared.Body.Components;
+// SPDX-FileCopyrightText: 2022 Jezithyr
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Content.Shared.Body.Components;
 using Content.Shared.Body.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
@@ -121,7 +130,7 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
     ///     to make possible severing it.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float SeverIntegrity = 90;
+    public float SeverIntegrity = 130; // Mono 90->130
 
     /// <summary>
     ///     Shitmed Change: The ID of the base layer for this body part.

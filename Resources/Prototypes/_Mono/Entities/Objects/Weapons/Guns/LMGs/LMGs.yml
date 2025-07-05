@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -17,13 +20,13 @@
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
-    minAngle: -21
-    maxAngle: -47
+    minAngle: -20
+    maxAngle: -20
   - type: Gun
-    minAngle: 18
-    maxAngle: 50
-    angleIncrease: 6
-    angleDecay: 24
+    minAngle: 22
+    maxAngle: 40
+    angleIncrease: 2
+    angleDecay: 22
     fireRate: 8
     selectedMode: FullAuto
     availableModes:
@@ -68,6 +71,8 @@
     walkModifier: 0.8
     sprintModifier: 0.65
   - type: GunRequiresWield
+  - type: PirateBountyItem # Mono
+    id: ExperimentalFactionWeapon
 
 - type: entity
   name: MR-8B LWMMG (8x65mm SKR)
@@ -83,13 +88,13 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
-    minAngle: -33
-    maxAngle: -46
+    minAngle: -20
+    maxAngle: -20
   - type: Gun
-    minAngle: 34
-    maxAngle: 49
-    angleIncrease: 6
-    angleDecay: 24
+    minAngle: 24
+    maxAngle: 36
+    angleIncrease: 3
+    angleDecay: 34
     fireRate: 6 # 360 rpm
     selectedMode: FullAuto
     availableModes:
@@ -132,6 +137,8 @@
   - type: StaticPrice
     price: 2500
   - type: SpeedModifiedOnWield
-    walkModifier: 0.8
+    walkModifier: 0.85
     sprintModifier: 0.75
   - type: GunRequiresWield
+  - type: PirateBountyItem # Mono
+    id: ExperimentalFactionWeapon

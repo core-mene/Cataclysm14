@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
@@ -44,6 +45,8 @@
   - type: StaticPrice
     price: 1250
     vendPrice: 7500
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuit
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -83,6 +86,8 @@
   - type: StaticPrice
     price: 420
     vendPrice: 2500
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuit
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -122,6 +127,8 @@
   - type: StaticPrice
     price: 500
     vendPrice: 3000
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuit
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -152,14 +159,16 @@
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.45
   - type: ClothingSpeedModifier
-    walkModifier: 1.15
-    sprintModifier: 1.15
+    walkModifier: 1
+    sprintModifier: 1
   - type: ToggleableClothing
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitUsspM10
   - type: StaticPrice
     price: 1350
     vendPrice: 8000
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -199,6 +208,8 @@
   - type: StaticPrice
     price: 3300
     vendPrice: 20000
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -238,3 +249,5 @@
   - type: StaticPrice
     price: 4200
     vendPrice: 25000
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue

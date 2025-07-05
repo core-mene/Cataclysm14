@@ -56,6 +56,7 @@
 # SPDX-FileCopyrightText: 2024 username
 # SPDX-FileCopyrightText: 2024 whateverusername0 <whateveremail>
 # SPDX-FileCopyrightText: 2025 Aiden
+# SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 BramvanZijp
 # SPDX-FileCopyrightText: 2025 GoobBot
 # SPDX-FileCopyrightText: 2025 John
@@ -247,7 +248,7 @@
 #  - type: PirateBountyItem # Frontier - Mono
 #    id: Enforcer # Frontier - Mono
   - type: PirateBountyItem # Mono
-    id: StandardTSFLongarm
+    id: StandardFactionLongarm
 
 - type: entity
   parent: WeaponShotgunEnforcer
@@ -281,7 +282,7 @@
   - type: BallisticAmmoProvider # Goobstation
     autoCycle: false
   - type: PirateBountyItem # Mono
-    id: StandardTSFLongarm
+    id: StandardFactionLongarm
 
 - type: entity
   name: sawn-off shotgun (12 gauge)

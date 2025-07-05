@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: accessLevel
   id: USSP
   name: id-card-access-level-ussp
@@ -9,10 +14,6 @@
 - type: accessLevel
   id: USSPCommand
   name: id-card-access-level-ussp-command
-
-- type: accessLevel
-  id: USSPGadyuka
-  name: id-card-access-level-ussp-debug
 
 - type: accessGroup
   id: USSPAA

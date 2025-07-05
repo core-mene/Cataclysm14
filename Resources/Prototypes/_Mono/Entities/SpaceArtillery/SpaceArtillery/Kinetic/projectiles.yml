@@ -5,7 +5,6 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 core-mene
-# SPDX-FileCopyrightText: 2025 monolith8319
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -339,6 +338,47 @@
     totalIntensity: 750
     intensitySlope: 35
     maxIntensity: 50
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
+# 305mm Hades
+
+- type: entity
+  id: ShipHadesProjectile
+  name: HADES 305mm projectile
+  description: I feel a primal fear. The omen comes for me.
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 12500
+        Blunt: 15000
+        Ion: 30000
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+    scale: 3, 3
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 4.25
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 5
+  - type: PointLight
+    color: "#FCBA03"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBomb
+    totalIntensity: 1250
+    intensitySlope: 5
+    maxIntensity: 1450
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard

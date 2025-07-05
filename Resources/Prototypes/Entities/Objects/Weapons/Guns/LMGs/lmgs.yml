@@ -60,8 +60,8 @@
   - type: Gun
     minAngle: 24
     maxAngle: 45
-    angleIncrease: 4
-    angleDecay: 16
+    angleIncrease: 3
+    angleDecay: 20
     fireRate: 8
     projectileSpeed: 55 # Mono
     selectedMode: FullAuto
@@ -105,8 +105,8 @@
     taxAccounts:
       nfsd: 0.2
   - type: SpeedModifiedOnWield # Mono
-    walkModifier: 0.75
-    sprintModifier: 0.45
+    walkModifier: 0.9
+    sprintModifier: 0.75
   - type: GunRequiresWield # Mono
 
 - type: entity

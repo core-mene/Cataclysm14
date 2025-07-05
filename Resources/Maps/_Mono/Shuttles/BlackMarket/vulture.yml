@@ -1,3 +1,19 @@
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Scribbles0
+# SPDX-FileCopyrightText: 2023 TsjipTsjip
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 Mr. 27
+# SPDX-FileCopyrightText: 2024 QueerNB
+# SPDX-FileCopyrightText: 2024 ScarKy0
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 ark1368
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 revoemagcoconut
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 meta:
   format: 7
   category: Grid
@@ -940,7 +956,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 3
     components:
     - type: MetaData
@@ -953,7 +968,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 4
     components:
     - type: MetaData
@@ -966,7 +980,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 867
     components:
     - type: MetaData
@@ -979,7 +992,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AirAlarm
   entities:
   - uid: 5
@@ -6283,8 +6295,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 6.5,-13.5
       parent: 1
-    - type: CircularShield
-      width: 6.283185307179586 rad
     - type: Fixtures
       fixtures:
         fix1:
@@ -6319,19 +6329,6 @@ entities:
           friction: 0.4
     - type: ApcPowerReceiver
       powerLoad: 0
-- proto: CircularShieldConsole
-  entities:
-  - uid: 868
-    components:
-    - type: Transform
-      pos: 12.5,2.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        866:
-        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
-    - type: ApcPowerReceiver
-      powerLoad: 5
 - proto: ClothingHeadHelmetEVA
   entities:
   - uid: 869

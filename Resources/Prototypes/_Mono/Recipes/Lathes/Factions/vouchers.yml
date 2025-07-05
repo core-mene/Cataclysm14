@@ -1,0 +1,39 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: latheRecipe
+  abstract: true
+  id: BaseVoucherRecipe
+  completetime: 120
+
+
+- type: latheRecipe
+  parent: BaseVoucherRecipe
+  id: FlyssaVoucherTSF
+  result: ShipVoucherFlyssa
+  completetime: 10
+  materials:
+    Steel: 60000
+    Plasteel: 75000
+    Plastic: 50000
+    Glass: 10000
+    Plasma: 7500
+    Uranium: 5000
+    Silver: 10000
+    Gold: 5000
+
+- type: latheRecipe
+  parent: BaseVoucherRecipe
+  id: ProwlerVoucherRogue
+  result: ShipVoucherProwler
+  completetime: 5
+  materials:
+    Steel: 20000
+    Plasteel: 10000
+    Plastic: 30000
+    Glass: 10000
+    Plasma: 20000
+    Uranium: 20000
+    Silver: 15000
+    Gold: 15000

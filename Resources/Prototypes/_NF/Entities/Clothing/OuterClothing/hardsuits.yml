@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2024 Kesiath
 # SPDX-FileCopyrightText: 2024 Maxtone
 # SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 BramvanZijp
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Redrover1760
@@ -45,7 +46,7 @@
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitMercenary
   - type: PirateBountyItem # Mono
-    id: ClothingOuterHardsuitMerc
+    id: ClothingOuterHardsuitTacsuit
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.5
 
@@ -179,9 +180,9 @@
   description: The standard-issue TSFMC tacsuit for patrol duty. This bronze variant has private rank markings.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_bronze.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_bronze.rsi # Mono
   - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_bronze.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_bronze.rsi # Mono
   - type: ToggleableClothing
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdBronze
@@ -209,9 +210,9 @@
   description: The standard-issue TSFMC tacsuit for patrol duty. This silver variant has corporal rank markings.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_silver.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_silver.rsi # Mono
   - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_silver.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_silver.rsi # Mono
   - type: ToggleableClothing
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdSilver
@@ -223,9 +224,9 @@
   description: The standard-issue TSFMC tacsuit for patrol duty. This gold variant has senior rank markings.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_gold.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_gold.rsi # Mono
   - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_gold.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_gold.rsi # Mono
   - type: ToggleableClothing
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdGold
@@ -237,9 +238,9 @@
   description: A heavy tacsuit, capable of taking a lot of physical damage.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_sheriff.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_colonel.rsi # Mono
   - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_sheriff.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_colonel.rsi # Mono
   - type: ToggleableClothing
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdSheriff
@@ -259,6 +260,8 @@
     sprintModifier: 0.85
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.35
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue
 
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
@@ -267,9 +270,9 @@
   description: A variant of the M73 tacsuit for combat medical and NBC use. Provides greater caustic and radiation protection.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_brigmed.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_brigmed.rsi # Mono
   - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_brigmed.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_brigmed.rsi # Mono
   - type: ToggleableClothing
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdBrigmedic
@@ -293,9 +296,9 @@
   description: A experimental modification of the M92 tacsuit for spec-ops units of the TSFMC. Externally the same, internally its higher-quality alloys and fabric.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_experimental.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_experimental.rsi # Mono
   - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_experimental.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_experimental.rsi # Mono
   - type: ToggleableClothing
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdExperimental
@@ -320,6 +323,8 @@
     faction: NanoTrasen
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.3
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue
 
 #Security Combat Hardsuit
 - type: entity
@@ -329,9 +334,9 @@
   description: A heavily armored TSFMC suit. Space proof, with thick armor plating at the expense of mobility.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_combat.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_combat.rsi # Mono
   - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_combat.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_combat.rsi # Mono
   - type: ToggleableClothing
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdCombat
@@ -351,6 +356,8 @@
     sprintModifier: 0.8
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.35
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue
 
 #Security Command Hardsuit
 - type: entity
@@ -360,9 +367,9 @@
   description: A variant of the M93 tacsuit for high ranking officers. # Mono - Description Rewrite
   components:
   - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_command.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_command.rsi # Mono
   - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_command.rsi
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_command.rsi # Mono
   - type: ToggleableClothing
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdCommand
@@ -415,8 +422,8 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitScaf
-  - type: PirateBountyItem
-    id: ClothingOuterHardsuitMerc # Mono
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.5 # slightly worse than rogue one
 

@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # All Static Prices are multiplied by 12
 
 # Sidearms
@@ -46,7 +54,7 @@
   description: A C-20r that has been properly registered for private security and mercenary use. A fast firing sub-machine gun that is often used by the infamous rogue insurgency. Uses 9x19mm ammo.
   components:
   - type: PirateBountyItem
-    id: StandardTSFLongarm
+    id: StandardFactionLongarm
   - type: StaticPrice
     price: 2500
 

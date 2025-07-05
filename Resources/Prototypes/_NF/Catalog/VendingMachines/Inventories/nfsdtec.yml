@@ -1,3 +1,34 @@
+# SPDX-FileCopyrightText: 2019 DamianX
+# SPDX-FileCopyrightText: 2020 AJCM-git
+# SPDX-FileCopyrightText: 2020 Hugo Laloge
+# SPDX-FileCopyrightText: 2021 DrSmugleaf
+# SPDX-FileCopyrightText: 2021 Mith-randalf
+# SPDX-FileCopyrightText: 2021 Peptide90
+# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Visne
+# SPDX-FileCopyrightText: 2022 Andreas Kämper
+# SPDX-FileCopyrightText: 2022 Flipp Syder
+# SPDX-FileCopyrightText: 2022 Nairod
+# SPDX-FileCopyrightText: 2022 keronshb
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2023 Arendian
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2023 Whisper
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2024 Alekshhh
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Fahasor
+# SPDX-FileCopyrightText: 2024 Hanz
+# SPDX-FileCopyrightText: 2024 PoorMansDreams
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: vendingMachineInventory
   id: NfsdTechInventory
   startingInventory:
@@ -13,20 +44,20 @@
     Flash: 10
     FlashlightNfsdLite: 10
     HoloprojectorNfsd: 4
-    Tourniquet: 5
-    ClothingEyesGlassesSunglasses: 5
+    Tourniquet: 8
+    ClothingEyesGlassesSunglasses: 6
     RiotShield: 3
     RiotLaserShield: 3
     RiotBulletShield: 3
-    Stunbaton: 4
-    WeaponDisabler: 4
+    Stunbaton: 8
+    WeaponDisabler: 8
     WeaponCapacitorRechargerFlatpack: 10
     Multitool: 8
     ContrabandAppraisalTool: 5 # Frontier
     CrowbarRed: 10 # Frontier
-    ForensicScanner: 3 # Frontier
-    BoxForensicPad: 3 # Frontier
-    LogProbeCartridge: 3 # Frontier
+    ForensicScanner: 8 # Frontier
+    BoxForensicPad: 5 # Frontier
+    LogProbeCartridge: 5 # Frontier
     TrackingImplanter: 5 # Frontier
 #    MindShieldImplanter: 5 # Frontier
   # security officers need to follow a diet regimen!

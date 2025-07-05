@@ -1,3 +1,26 @@
+# SPDX-FileCopyrightText: 2021 AJCM-git
+# SPDX-FileCopyrightText: 2021 Paul Ritter
+# SPDX-FileCopyrightText: 2021 wrexbe
+# SPDX-FileCopyrightText: 2022 20kdc
+# SPDX-FileCopyrightText: 2022 Cheackraze
+# SPDX-FileCopyrightText: 2022 LittleBuilderJane
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2023 Dvir
+# SPDX-FileCopyrightText: 2023 Emisse
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2024 QueerNB
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 ark1368
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 meta:
   format: 7
   category: Grid
@@ -959,7 +982,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 3
     components:
     - type: MetaData
@@ -972,7 +994,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 4
     components:
     - type: MetaData
@@ -985,7 +1006,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 395
     components:
     - type: MetaData
@@ -998,7 +1018,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AirAlarm
   entities:
   - uid: 5
@@ -3109,14 +3128,6 @@ entities:
     components:
     - type: Transform
       pos: 6.5,2.5
-      parent: 1
-- proto: CircularShieldConsole
-  entities:
-  - uid: 396
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 4.5,2.5
       parent: 1
 - proto: CloningPod
   entities:

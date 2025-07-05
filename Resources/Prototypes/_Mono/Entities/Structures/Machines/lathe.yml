@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: FactionLathe
+  parent: BaseLatheLube
+  name: military multi-purpose assembler
+  description: Prints out items researched with TSFMC/Rogue R&D servers.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/techfab.rsi
+    layers:
+    - state: icon
+      map: [ "enum.LatheVisualLayers.IsRunning" ]
+    - state: unlit
+      shader: unshaded
+      map: [ "enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: MilitaryTechfabMachineCircuitboard
+  - type: Lathe
+    producingSound: /Audio/Machines/circuitprinter.ogg
+    idleState: icon
+    runningState: icon
+    dynamicPacks:
+    - MonoRogueWeaponsDynamicMelee
+    - MonoRogueWeaponsDynamicRanged
+    - MonoRogueVouchersDynamic
+    - MonoRogueMiscDynamic
+    - MonoRogueAmmo
+    - MonoTSFWeaponsDynamicMelee
+    - MonoTSFWeaponsDynamicRanged
+    - MonoTSFVouchersDynamic
+    - MonoTSFMiscDynamic
+    - MonoTSFAmmo
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Sheet
+      - RawMaterial
+      - Ingot
+  - type: RequireProjectileTarget

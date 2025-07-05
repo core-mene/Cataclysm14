@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # body part with regular organic destruction
 - type: entity
   abstract: true
@@ -11,19 +16,19 @@
     - trigger:
         !type:DamageTypeTrigger
         damageType: Blunt
-        damage: 110
+        damage: 160 # 110->160
       behaviors:
       - !type:GibPartBehavior { }
     - trigger:
         !type:DamageTypeTrigger
         damageType: Slash
-        damage: 150
+        damage: 180 # 150->180
       behaviors:
       - !type:GibPartBehavior { }
     - trigger:
         !type:DamageTypeTrigger
         damageType: Heat
-        damage: 200
+        damage: 230 # 200->230
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawnInContainer: true

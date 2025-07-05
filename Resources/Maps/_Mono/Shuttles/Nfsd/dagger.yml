@@ -1,3 +1,17 @@
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2023 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 TsjipTsjip
+# SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 ark1368
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 meta:
   format: 7
   category: Grid
@@ -632,7 +646,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AirAlarm
   entities:
   - uid: 605
@@ -2317,19 +2330,6 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 0
-- proto: CircularShieldConsole
-  entities:
-  - uid: 469
-    components:
-    - type: Transform
-      pos: -0.5,-6.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5
-    - type: DeviceLinkSource
-      linkedPorts:
-        361:
-        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
 - proto: ComputerGunneryConsole
   entities:
   - uid: 46

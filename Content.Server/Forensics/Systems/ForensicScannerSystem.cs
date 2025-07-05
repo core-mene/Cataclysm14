@@ -1,3 +1,35 @@
+// SPDX-FileCopyrightText: 2022 CommieFlowers
+// SPDX-FileCopyrightText: 2022 Rane
+// SPDX-FileCopyrightText: 2022 Vordenburg
+// SPDX-FileCopyrightText: 2022 ike709
+// SPDX-FileCopyrightText: 2022 rolfero
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Eoin Mcloughlin
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2023 eoineoineoin
+// SPDX-FileCopyrightText: 2023 faint
+// SPDX-FileCopyrightText: 2023 keronshb
+// SPDX-FileCopyrightText: 2023 themias
+// SPDX-FileCopyrightText: 2024 Ed
+// SPDX-FileCopyrightText: 2024 LordCarve
+// SPDX-FileCopyrightText: 2024 Mervill
+// SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2024 Shroomerian
+// SPDX-FileCopyrightText: 2024 SlamBamActionman
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2024 nikthechampiongr
+// SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 SupernoobTheN1
+// SPDX-FileCopyrightText: 2025 Your Name
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using System.Text;
 using Content.Server.Popups;
@@ -63,13 +95,13 @@ namespace Content.Server.Forensics
         private int _minFMCPayout = 6;
 
         private const int ActiveUnusedDeadDropSpesoReward = 250000; //Mono
-        private const float ActiveUnusedDeadDropFMCReward = 12.0f; //Mono
+        private const float ActiveUnusedDeadDropFMCReward = 60.0f; //Mono
         private const int ActiveUsedDeadDropSpesoReward = 50000; //Mono
-        private const float ActiveUsedDeadDropFMCReward = 3.0f; //Mono
+        private const float ActiveUsedDeadDropFMCReward = 15.0f; //Mono
         private const int InactiveUsedDeadDropSpesoReward = 25000; //Mono
-        private const float InactiveUsedDeadDropFMCReward = 2.0f; //Mono
+        private const float InactiveUsedDeadDropFMCReward = 10.0f; //Mono
         private const int DropPodSpesoReward = 75000; //Mono
-        private const float DropPodFMCReward = 3.0f; //Mono
+        private const float DropPodFMCReward = 15.0f; //Mono
         // End Frontier: payout constants
 
         public override void Initialize()

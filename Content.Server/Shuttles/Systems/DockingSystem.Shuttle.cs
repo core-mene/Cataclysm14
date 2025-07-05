@@ -1,3 +1,14 @@
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2024 Mervill
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 ShadowCommander
+// SPDX-FileCopyrightText: 2024 eoineoineoin
+// SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 ark1368
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using System.Numerics;
 using Content.Server.Shuttles.Components;
@@ -388,5 +399,26 @@ public sealed partial class DockingSystem
         _lookup.GetChildEntities(uid, _dockingSet);
 
         return _dockingSet.ToList();
+    }
+
+    /// <summary>
+    /// Mono: Checks if two grids are docked together by examining if any docking port on gridA is connected to any docking port on gridB.
+    /// </summary>
+    public bool AreGridsDocked(EntityUid gridA, EntityUid gridB)
+    {
+        var docksA = GetDocks(gridA);
+
+        foreach (var dockA in docksA)
+        {
+            if (!dockA.Comp.Docked || dockA.Comp.DockedWith == null)
+                continue;
+
+            // Get the grid that this dock is connected to
+            var connectedDockGrid = Transform(dockA.Comp.DockedWith.Value).GridUid;
+            if (connectedDockGrid == gridB)
+                return true;
+        }
+
+        return false;
     }
 }

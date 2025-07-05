@@ -41,13 +41,13 @@ uplink-security-mr8b-name = MR-8B LWMMG
 uplink-security-mr8b-desc = An expensive (relatively) light-weight GPMG branched off from the MR-8C. Compatible with both 8x65mm magazines and boxes.
 
 uplink-security-8x65mm-magazine-name = 8x65mm SKR Magazine
-uplink-security-8x65mm-magazine-desc = Compatible with the MR-8B and MR-8C. Contains 20 rounds.
+uplink-security-8x65mm-magazine-desc = Compatible with the MR-8B and MR-8C. Contains 25 rounds.
 
 uplink-security-8x65mm-boxmag-name = 8x65mm SKR Box Magazine
-uplink-security-8x65mm-boxmag-desc = Compatible with the MR-8B only. Contains 150 rounds.
+uplink-security-8x65mm-boxmag-desc = Compatible with the MR-8B only. Contains 75 rounds.
 
 uplink-security-8x65mm-box-name = 8x65mm SKR Box
-uplink-security-8x65mm-box-desc = Used to refill magazines/boxes for the MR-8C and MR-8B. Contains 60 rounds.
+uplink-security-8x65mm-box-desc = Used to refill magazines/boxes for the MR-8C and MR-8B. Contains 100 rounds.
 
 uplink-security-portable-recharger-name = Portable Recharger
 uplink-security-portable-recharger-desc = An experimental portable recharger equipped with an inbuilt microreactor.
@@ -72,3 +72,6 @@ uplink-security-medium-voucher-desc = A single use voucher for any small to medi
 
 uplink-security-capital-voucher-name = TSFMC Capital Ship Voucher
 uplink-security-capital-voucher-desc = A single use voucher for any small to capital sized ship.
+
+uplink-security-flyssa-voucher-name = TSFMC Flyssa Ship Voucher
+uplink-security-flyssa-voucher-desc = A single use voucher for the Flyssa.

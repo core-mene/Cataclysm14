@@ -135,6 +135,9 @@ uplink-pirate-burner-desc = A destructive 12.7x99mm rifle. Supports HE ammo. Hor
 uplink-pirate-blueprint-launcher-rocket-name = RPG-7 Blueprint
 uplink-pirate-blueprint-launcher-rocket-desc = A blueprint for RPG-7 and the ammo for it. Good for long term terrorism!
 
+uplink-pirate-grenade-launcher-bundle-name = China Lake Bundle
+uplink-pirate-grenade-launcher-bundle-desc = PLOOP!
+
 # MARK: Ammo
 
 uplink-pirate-box-magazine-pistol-name = Box of pistol 9x19mm magazines
@@ -178,6 +181,12 @@ uplink-pirate-box-highcal-he-desc = A box of explosive ammunition for the Burner
 
 uplink-pirate-emp-rocket-name = RPG-7 EMP Rocket
 uplink-pirate-emp-rocket-desc = A rocket with vengeance against anything electrical. Disables and drains electrical items in it's radius.
+
+uplink-pirate-frag-grenade-name = Frag Grenade
+uplink-pirate-frag-grenade-desc = A widely destructive 40mm fragmentation grenade for the China Lake. Destroys everything a wide area.
+
+uplink-pirate-blast-grenade-name = Blast Grenade
+uplink-pirate-blast-grenade-desc = A highly lethal 40mm thermobaric grenade for the China Lake. Highly destructive in a pinpoint radius.
 
 # MARK: Equipment
 
@@ -225,6 +234,8 @@ uplink-pirate-shrapnelgrenade-box-desc = A box containing 4 shrapnel grenades.
 uplink-pirate-explosivegrenade-box-name = Explosive Grenade Box
 uplink-pirate-explosivegrenade-box-desc = A box containing 4 explosive grenades.
 
+uplink-pirate-prowler-voucher-name = Prowler Ship Voucher
+uplink-pirate-prowler-voucher-desc = A single use voucher for a Prowler-pattern stealth craft.
 
 # MARK: $Gambling$
 

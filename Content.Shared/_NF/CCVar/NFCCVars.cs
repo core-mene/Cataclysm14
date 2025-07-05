@@ -1,3 +1,19 @@
+// SPDX-FileCopyrightText: 2023 Mnemotechnican
+// SPDX-FileCopyrightText: 2024 AndresE55
+// SPDX-FileCopyrightText: 2024 Checkraze
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+// SPDX-FileCopyrightText: 2024 GreaseMonk
+// SPDX-FileCopyrightText: 2024 Shroomerian
+// SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 Your Name
+// SPDX-FileCopyrightText: 2025 dustylens
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Robust.Shared.Configuration;
 
 namespace Content.Shared._NF.CCVar;
@@ -57,13 +73,13 @@ public sealed class NFCCVars
     /// The amount of time the bus waits at a station.
     /// </summary>
     public static readonly CVarDef<float> PublicTransitWaitTime =
-        CVarDef.Create("nf14.publictransit.wait_time", 180f, CVar.SERVERONLY);
+        CVarDef.Create("nf14.publictransit.wait_time", 120f, CVar.SERVERONLY);
 
     /// <summary>
     /// The amount of time the flies through FTL space.
     /// </summary>
     public static readonly CVarDef<float> PublicTransitFlyTime =
-        CVarDef.Create("nf14.publictransit.fly_time", 50f, CVar.SERVERONLY);
+        CVarDef.Create("nf14.publictransit.fly_time", 15f, CVar.SERVERONLY);
 
     /*
      *  World Gen

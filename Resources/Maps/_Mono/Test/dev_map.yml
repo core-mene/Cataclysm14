@@ -1,3 +1,34 @@
+# SPDX-FileCopyrightText: 2022 20kdc
+# SPDX-FileCopyrightText: 2023 DrSmugleaf
+# SPDX-FileCopyrightText: 2023 Emisse
+# SPDX-FileCopyrightText: 2023 Kevin Zheng
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2023 Morb
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 adamsong
+# SPDX-FileCopyrightText: 2023 avery
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2024 Brandon Hu
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Errant
+# SPDX-FileCopyrightText: 2024 GreaseMonk
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 Verm
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 eoineoineoin
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 ark1368
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 dustylens
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 meta:
   format: 7
   category: Map
@@ -403,7 +434,6 @@ entities:
       visibleFromOtherGrids: True
       shape: Ring
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 4
     components:
     - type: MetaData
@@ -416,7 +446,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 547
     components:
     - type: MetaData
@@ -429,7 +458,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AdvancedCapacitorStockPart
   entities:
   - uid: 5
@@ -3704,8 +3732,6 @@ entities:
     - type: Transform
       pos: -7.5,3.5
       parent: 2
-    - type: CircularShield
-      width: 6.283185307179586 rad
     - type: Fixtures
       fixtures:
         fix1:
@@ -3740,19 +3766,6 @@ entities:
           friction: 0.4
     - type: ApcPowerReceiver
       powerLoad: 0
-- proto: CircularShieldConsole
-  entities:
-  - uid: 548
-    components:
-    - type: Transform
-      pos: -6.5,3.5
-      parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 5
-    - type: DeviceLinkSource
-      linkedPorts:
-        546:
-        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
 - proto: ClosetEmergencyFilledRandom
   entities:
   - uid: 549

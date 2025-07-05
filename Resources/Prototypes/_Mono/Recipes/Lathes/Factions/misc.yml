@@ -1,0 +1,118 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: JawsOfLifeRogue
+  result: SyndicateJawsOfLife
+  completetime: 6
+  materials:
+    Steel: 1500
+    Glass: 1200
+    Plasma: 600
+    Gold: 100
+    Silver: 100
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: ForensicsScannerTSF
+  result: ForensicScanner
+  completetime: 3
+  materials:
+    Steel: 1500
+    Glass: 200
+    Plastic: 500
+    Gold: 50
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: DemagTSF
+  result: Demag
+  completetime: 10
+  materials:
+    Steel: 1500
+    Glass: 200
+    Plastic: 500
+    Gold: 500
+    Silver: 500
+    Plasma: 200
+    Uranium: 100
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: SutureTSF
+  result: MedicatedSuture
+  completetime: 15
+  materials:
+    Steel: 50
+    Plastic: 1200
+    Durathread: 600
+    Plasma: 50
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: MeshTSF
+  result: RegenerativeMesh
+  completetime: 15
+  materials:
+    Steel: 50
+    Plastic: 1200
+    Durathread: 50
+    Plasma: 600
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: HyposprayRogue
+  result: Hypospray
+  completetime: 15
+  materials:
+    Steel: 500
+    Plastic: 1200
+    Durathread: 100
+    Plasteel: 50
+    Glass: 400
+    Gold: 50
+    Silver: 50
+    Plasma: 600
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: EmagRogue
+  result: Emag
+  completetime: 20
+  materials:
+    Steel: 2500
+    Glass: 2000
+    Plastic: 500
+    Gold: 750
+    Silver: 750
+    Plasma: 600
+    Uranium: 200
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: AccessBreakerRogue
+  result: AccessBreaker
+  completetime: 20
+  materials:
+    Steel: 2500
+    Glass: 2000
+    Plastic: 500
+    Plasteel: 500
+    Gold: 750
+    Silver: 750
+    Plasma: 600
+    Uranium: 200
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: NanolaminateFoamGrenadeTSF
+  result: NanolaminateFoamGrenade
+  completetime: 2
+  materials:
+    Steel: 600
+    Glass: 200
+    Plastic: 200
+    Plasma: 100
+    Gold: 50

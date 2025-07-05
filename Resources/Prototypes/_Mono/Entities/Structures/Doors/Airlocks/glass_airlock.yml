@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: AirlockSecurityGlass
   id: AirlockUSSPGlass
@@ -24,3 +28,12 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsUSSPCommand ]
+
+- type: entity
+  parent: AirlockNfsdGlass
+  id: AirlockTsfEngineeringGlass
+  suffix: TSF Engineering, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsTsfEngineer ]

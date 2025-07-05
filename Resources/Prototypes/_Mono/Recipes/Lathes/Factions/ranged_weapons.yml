@@ -1,0 +1,163 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponLauncherRocket
+  result: WeaponLauncherRocket
+  materials:
+    Steel: 2250
+    Plasteel: 3500
+    Plastic: 500
+    Plasma: 1000
+
+# TSFMC basic ballistics
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRifleLecterTSF
+  result: WeaponRifleLecter
+  materials:
+    Steel: 1200
+    Plasteel: 1000
+    Plastic: 900
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRifleVulcanTSF
+  result: WeaponRifleVulcan
+  materials:
+    Steel: 1800
+    Plasteel: 1000
+    Plastic: 200
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponSubMachineGunDrozdTSF
+  result: WeaponSubMachineGunDrozd
+  materials:
+    Steel: 1000
+    Plasteel: 500
+    Plastic: 600
+
+# Rogues/TSF WSPR/Annie
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRifleWSPRRogue
+  result: WeaponRifleWSPR
+  materials:
+    Steel: 1500
+    Plasteel: 1200
+    Plastic: 900
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRifleAnnieTSF
+  result: WeaponRifleAnnie
+  materials:
+    Steel: 1500
+    Plasteel: 1200
+    Plastic: 900
+
+# TSF MR-8
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponLMGMR8BTSF
+  result: WeaponLMGMR8B
+  materials:
+    Steel: 8500
+    Plasteel: 5000
+    Plastic: 1500
+    Plasma: 800
+    Uranium: 500
+    Silver: 1500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRifleMR8CTSF
+  result: WeaponRifleMR8C
+  materials:
+    Steel: 6500
+    Plasteel: 2000
+    Plastic: 1500
+    Plasma: 800
+    Silver: 500
+
+# syndicate ballistics
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponSubMachineGunC20rRogue
+  result: WeaponSubMachineGunC20r
+  materials:
+    Steel: 700
+    Plasteel: 1000
+    Plastic: 4500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRevolverPythonRogue
+  result: WeaponRevolverPython
+  materials:
+    Steel: 1500
+    Plasteel: 2000
+    Plastic: 500
+    Silver: 200
+
+# advanced ballistics
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponSubMachineGunWt550Rogue
+  result: WeaponSubMachineGunWt550
+  materials:
+    Steel: 700
+    Plasteel: 750
+    Plastic: 2000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRifleAK502Rogue
+  result: WeaponRifleAK502
+  materials:
+    Steel: 1800
+    Plasteel: 800
+    Plastic: 1200
+    Silver: 100
+
+# cqc ballistics
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponSubMachineGunAtreidesRogue
+  result: WeaponSubMachineGunAtreides
+  materials:
+    Steel: 1200
+    Plasteel: 1500
+    Plastic: 1750
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponShotgunBulldogRogue
+  result: WeaponShotgunBulldog
+  materials:
+    Steel: 2500
+    Plasteel: 1200
+    Plastic: 800
+    Silver: 200
+
+# hristov
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponSniperHristovRogue
+  result: WeaponSniperHristov
+  materials:
+    Steel: 5500
+    Plasteel: 1900
+    Plastic: 500
+    Silver: 900
+    Uranium: 200

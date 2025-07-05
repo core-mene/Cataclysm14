@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
@@ -29,6 +30,7 @@
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
+    - FullAuto
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/jackdaw.ogg
   - type: ChamberMagazineAmmoProvider
@@ -132,6 +134,8 @@
   - type: StaticPrice
     price: 100
     vendPrice: 9000
+  - type: PirateBountyItem
+    id: StandardFactionLongarm
 
 #Mercenary vulcan
 - type: entity

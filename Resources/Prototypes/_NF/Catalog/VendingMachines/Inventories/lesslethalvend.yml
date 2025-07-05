@@ -1,11 +1,24 @@
+# SPDX-FileCopyrightText: 2023 IData-RedactedI
+# SPDX-FileCopyrightText: 2024 AndresE55
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 SirMcSlushers
+# SPDX-FileCopyrightText: 2024 Velcroboy
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: vendingMachineInventory
   id: LessLethalVendInventory
   startingInventory:
+  # Weapons
     WeaponDisabler: 10
-#    WeaponSniperMosinNonlethal: 10
     WeaponRevolverArgentiNonlethal: 10
     WeaponShotgunDoubleBarreledRubber: 10
-    NFWeaponHoloflareGun: 5
+    Stunbaton: 10
+  # Ammo boxes
     AmmoBox12_gaugeBeanbag: 8
     AmmoBox5.56x45mmRubber: 8
     AmmoBox6.35x40mmCaselessRubber: 10
@@ -25,11 +38,12 @@
 - type: vendingMachineInventory
   id: LessLethalVendPOIInventory
   startingInventory:
+  # Weapons
     WeaponDisabler: 4294967295 # Infinite
-#    WeaponSniperMosinNonlethal: 4294967295 # Infinite
     WeaponRevolverArgentiNonlethal: 4294967295 # Infinite
     WeaponShotgunDoubleBarreledRubber: 4294967295 # Infinite
-    NFWeaponHoloflareGun: 4294967295 # Infinite
+    Stunbaton: 4294967295 # Infinite
+  # Ammo boxes
     AmmoBox12_gaugeBeanbag: 4294967295 # Infinite
     AmmoBox5.56x45mmRubber: 4294967295 # Infinite
     AmmoBox6.35x40mmCaselessRubber: 4294967295 # Infinite

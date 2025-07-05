@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: 2025 UnicornOnLSD
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: LockerBaseMonolith
+  parent: LockerBase
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/Storage/closet.rsi #that path are for monolith exclusive lockers, modularity baby.
+    noRot: true
+    layers:
+    - state: generic #needed to copy paste default locker looks in _Mono/Structures/Storage/closet.rsi otherwise error message
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: generic_door #same as above
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: locked #same as above
+      sprite: Structures/Storage/closet.rsi #need to specify here so when the game wants to load this specific part for ALL our MEL (mono exclusive lockers teehee) it doesn't shit itself. 
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+    - state: welded
+      visible: false
+      sprite: Structures/Storage/closet.rsi #same as above
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: paper
+      visible: false
+      sprite: Structures/Storage/closet_labels.rsi #same as above
+      offset: "-0.065,0"
+      map: ["enum.PaperLabelVisuals.Layer"]
+
+- type: entity
+  id: LockerDrakeIndustriesHauler
+  parent: LockerBaseMonolith
+  name: hauler's locker
+  description: Sure has a fancy color, truth be told it's just steel sprayed with Drake Industries' colors.
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: DI_locker
+    stateDoorOpen: DI_locker_open
+    stateDoorClosed: DI_locker_hauler_door
