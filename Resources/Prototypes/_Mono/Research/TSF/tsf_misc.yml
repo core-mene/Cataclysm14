@@ -8,7 +8,7 @@
   icon:
     sprite: _NF/Objects/Devices/forensic_scanner.rsi
     state: forensicnew
-  discipline: Tsfmc
+  discipline: TsfmcGear
   tier: 1
   cost: 5000
   recipeUnlocks:
@@ -20,7 +20,7 @@
   icon:
     sprite: _NF/Objects/Tools/crowbar.rsi
     state: pocket-icon
-  discipline: Tsfmc
+  discipline: TsfmcGear
   tier: 1
   cost: 6500
   recipeUnlocks:
@@ -32,7 +32,7 @@
   icon:
     sprite: _NF/Objects/Tools/demag.rsi
     state: icon
-  discipline: Tsfmc
+  discipline: TsfmcGear
   tier: 2
   cost: 5000
   recipeUnlocks:
@@ -44,7 +44,7 @@
   icon:
     sprite: _NF/Objects/Weapons/Melee/e_shield.rsi
     state: eshield-on
-  discipline: Tsfmc
+  discipline: TsfmcWeaponry
   tier: 2
   cost: 30000
   recipeUnlocks:
@@ -56,8 +56,8 @@
   icon:
     sprite: _NF/Objects/Misc/shipyard_voucher.rsi
     state: nfsd
-  discipline: Tsfmc
-  tier: 3
+  discipline: TsfmcShipyard
+  tier: 1
   cost: 100000
   recipeUnlocks:
   - FlyssaVoucherTSF
@@ -68,7 +68,7 @@
   icon:
     sprite: Objects/Specific/Medical/firstaidkits.rsi
     state: blackkit
-  discipline: Tsfmc
+  discipline: TsfmcGear
   tier: 2
   cost: 20000
   recipeUnlocks:
@@ -81,7 +81,7 @@
   icon:
     sprite: Objects/Weapons/Grenades/metalfoam.rsi
     state: icon
-  discipline: Tsfmc
+  discipline: TsfmcGear
   tier: 2
   cost: 10000
   recipeUnlocks:

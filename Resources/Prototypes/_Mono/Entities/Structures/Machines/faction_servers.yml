@@ -69,8 +69,8 @@
   - type: TechnologyDatabase
     supportedDisciplines:
     - TsfmcWeaponry
-    - TsfmcGear
-    - TsfmcEquipment
+    - TsfmcGear # GEAR IS TOOLS!!
+    - TsfmcEquipment # EQUIPMENT IS ARMOR!!
     - TsfmcShipyard
 
 - type: entity
@@ -82,6 +82,6 @@
   - type: TechnologyDatabase
     supportedDisciplines:
     - RogueWeaponry
-    - RogueGear
-    - RogueEquipment
+    - RogueGear # GEAR IS TOOLS!!
+    - RogueEquipment # EQUIPMENT IS ARMOR!!
     - RogueShipyard

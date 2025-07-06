@@ -9,9 +9,9 @@
   icon:
     sprite: _NF/Objects/Misc/shipyard_voucher.rsi
     state: nfsd
-  discipline: Rogue
-  tier: 3
-  cost: 100000
+  discipline: RogueShipyard
+  tier: 1
+  cost: 50000
   recipeUnlocks:
   - ProwlerVoucherRogue
 
@@ -21,7 +21,7 @@
   icon:
     sprite: Objects/Tools/jaws_of_life.rsi
     state: syn_jaws_pry
-  discipline: Rogue
+  discipline: RogueGear
   tier: 1
   cost: 15000
   recipeUnlocks:
@@ -33,7 +33,7 @@
   icon:
     sprite: Objects/Specific/Medical/hypospray.rsi
     state: hypo
-  discipline: Rogue
+  discipline: RogueGear
   tier: 2
   cost: 25000
   recipeUnlocks:
@@ -45,7 +45,7 @@
   icon:
     sprite: Objects/Tools/emag.rsi
     state: icon
-  discipline: Rogue
+  discipline: RogueGear
   tier: 2
   cost: 25000
   recipeUnlocks:
@@ -57,7 +57,7 @@
   icon:
     sprite: Objects/Tools/access_breaker.rsi
     state: icon
-  discipline: Rogue
+  discipline: RogueGear
   tier: 3
   cost: 27500
   recipeUnlocks:

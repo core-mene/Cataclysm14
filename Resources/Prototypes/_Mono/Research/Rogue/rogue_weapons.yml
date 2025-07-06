@@ -4,7 +4,7 @@
   icon:
     sprite: Objects/Weapons/Melee/e_dagger_loud.rsi
     state: icon
-  discipline: Rogue
+  discipline: RogueWeaponry
   tier: 1
   cost: 25000
   recipeUnlocks:
@@ -16,7 +16,7 @@
   icon:
     sprite: Objects/Weapons/Melee/e_sword.rsi
     state: icon
-  discipline: Rogue
+  discipline: RogueWeaponry
   tier: 3
   cost: 75000
   recipeUnlocks:
@@ -31,7 +31,7 @@
   icon:
     sprite: _Mono/Objects/Weapons/Melee/murasama.rsi
     state: icon
-  discipline: Rogue
+  discipline: RogueWeaponry
   tier: 3
   cost: 85000
   recipeUnlocks:
@@ -45,7 +45,7 @@
   icon:
     sprite: Objects/Weapons/Guns/SMGs/c20r.rsi
     state: icon
-  discipline: Rogue
+  discipline: RogueWeaponry
   tier: 1
   cost: 20000
   recipeUnlocks:
@@ -64,7 +64,7 @@
   icon:
     sprite: Objects/Weapons/Guns/SMGs/wt550.rsi
     state: icon
-  discipline: Rogue
+  discipline: RogueWeaponry
   tier: 2
   cost: 35000
   recipeUnlocks:
@@ -85,7 +85,7 @@
   icon:
     sprite: Objects/Weapons/Guns/SMGs/atreides.rsi
     state: icon
-  discipline: Rogue
+  discipline: RogueWeaponry
   tier: 2
   cost: 35000
   recipeUnlocks:
@@ -108,8 +108,8 @@
   icon:
     sprite: Objects/Weapons/Guns/Snipers/hristov.rsi
     state: base
-  discipline: Rogue
-  tier: 2
+  discipline: RogueWeaponry
+  tier: 3
   cost: 35000
   recipeUnlocks:
   - WeaponSniperHristovRogue
