@@ -1,0 +1,36 @@
+- type: entity
+  id: MechPlasmaProjectile
+  name: plasma projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 1250
+        Structural: 4250
+        Heat: 350
+        Ion: 350
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/plasmashot.rsi
+    layers:
+    - state: plasmashot
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    radarColor: "#C92BCC"
+    scale: 2.5
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 2
+  - type: PointLight
+    radarColor: "#C92BCC"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 250
+    intensitySlope: 6
+    maxIntensity: 25
+    maxTileBreak: 1

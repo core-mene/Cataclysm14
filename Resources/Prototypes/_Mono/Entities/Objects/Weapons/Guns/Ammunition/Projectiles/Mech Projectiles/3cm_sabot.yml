@@ -1,0 +1,31 @@
+- type: entity
+  id: MechLightCoilgunProjectile
+  name: 3cm Sabot Sabot
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 300
+        Ion: 600
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    radarColor: "#CF0E0E"
+    scale: 4
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 1.5
+  - type: PointLight
+    color: "#19AFFF"
+  - type: EmpOnTrigger
+    range: 3
+    energyConsumption: 100000
+    disableDuration: 5

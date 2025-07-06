@@ -37,3 +37,11 @@ research-technology-rogue-prowler-voucher = Stealthcraft Technologies
 research-technology-rogue-energy-weapon = Advanced Plasma Weaponization
 research-technology-rogue-access-breaker = Advanced Hacking Procedures
 research-technology-rogue-hf-sword = Weaponised Resonance Technology
+
+# Space Mecha Technologies
+research-technology-broadsword = Armored Frame Production
+research-technology-halberd = Multirole Armored Frames
+research-technology-sabre = Gravity Adapted Armored Frames
+research-technology-flail = Armored Strike Frames
+research-technology-spyglass = EWACS Frames
+research-technology-mace = Rapid Strike Frames

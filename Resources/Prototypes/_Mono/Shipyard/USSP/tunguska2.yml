@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: vessel
+  id: TunguskaC
+  parent: BaseVesselAntag
+  name: NCS Tunguska-C
+  description: A refitted Seraphim with as many guns as it could sustain. Prepare for a onslaught of autocannon fire. Replaced it's main batteries with 2 mech bays for additional flexibility.
+  limit: 2
+  price: 215700
+  category: Large
+  group: Ussp
+  access: USSP
+  shuttlePath: /Maps/_Mono/Shuttles/USSP/tunguska2.yml
+  guidebookPage: Null
+  class:
+  - Patrol
+  - Capital
+  - Frigate
+  engine:
+  - AME
+
+- type: gameMap
+  id: TunguskaC
+  mapName: 'Tunguska-C'
+  mapPath: /Maps/_Mono/Shuttles/USSP/tunguska2.yml
+  minPlayers: 0
+  stations:
+    Tunguska:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Tunguska-C USSP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            USSPSergeant: [0, 0]
+            USSPCorporal: [0, 0]
+            USSPMedic: [0, 0]
+            USSPRifleman: [0, 0]

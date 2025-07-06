@@ -1,0 +1,41 @@
+# Author Info
+# GitHub: core-mene
+# Discord: core_mene / avtomata / zeranov
+# Edited by Fleetgothic
+# Shuttle Notes:
+#
+- type: vessel
+  id: flashpoint2
+  parent: BaseVessel
+  name: PBB Flashpoint MK2
+  description: The Plastitanium Big Boy Shipwork™ Flashpoint mercenary capital ship. This one is second hand and is missing some machinery. The former crew has stripped out most of the weapons and ammenities, converting this ship into a Heavy Carrier.
+  price: 254600 # plastitanium tax + guns and premium markup, slightly cheaper to account for being unarmed for the price.
+  category: Large
+  group: Expedition
+  access: Mercenary
+  shuttlePath: /Maps/_Mono/Shuttles/Expedition/flashpoint2.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: flashpoint2
+  mapName: 'PBB Flashpoint'
+  mapPath: /Maps/_Mono/Shuttles/Expedition/flashpoint2.yml
+  minPlayers: 0
+  stations:
+    flashpoint:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Flashpoint MK2 MIL{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

@@ -1,0 +1,34 @@
+# SPDX-FileCopyrightText: 2025 wewman222
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: BroadswordCentralElectronics
+  result: BroadswordCentralElectronics
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: BroadswordPeripheralsElectronics
+  result: BroadswordPeripheralsElectronics
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: BroadswordTargetingElectronics
+  result: BroadswordTargetingElectronics
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: FlailCentralElectronics
+  result: FlailCentralElectronics
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: FlailPeripheralsElectronics
+  result: FlailPeripheralsElectronics
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: FlailTargetingElectronics
+  result: FlailTargetingElectronics
+

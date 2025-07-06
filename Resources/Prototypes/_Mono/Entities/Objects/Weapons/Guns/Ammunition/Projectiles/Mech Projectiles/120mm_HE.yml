@@ -1,0 +1,24 @@
+- type: entity
+  id: 120mmBulletHE
+  parent: 90mmBulletExplosiveBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 3000
+        Blunt: 5000
+        Piercing: 3000
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+  - type: Explosive
+    explosionType: HardBomb
+    totalIntensity: 400 # totalIntensity goes first, please.
+    intensitySlope: 20
+    maxIntensity: 15
+  - type: TimedDespawn
+    lifetime: 10
+  - type: PointLight
+    color: orange

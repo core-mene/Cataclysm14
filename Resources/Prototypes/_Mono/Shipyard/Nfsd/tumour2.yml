@@ -1,0 +1,35 @@
+- type: vessel
+  id: Tumour2
+  parent: BaseVesselAntag
+  name: TSF-SKR Tumour
+  description: A ugly potato of a carrier. Refit carrying 2 S2 mechs for further flexibility. Little armament to defend itself, but carries lathes to support its mech's and other ships.
+  price: 44150
+  category: Medium
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_Mono/Shuttles/Nfsd/tumour2.yml
+  guidebookPage: Null
+  class:
+  - Pursuit
+  - Patrol
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Tumour2
+  mapName: 'Tumour MK2'
+  mapPath: /Maps/_Mono/Shuttles/Nfsd/tumour2.yml
+  minPlayers: 0
+  stations:
+    Tumour:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Tumour TSF MK2{1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          Deputy: [ 0, 0 ]
+
