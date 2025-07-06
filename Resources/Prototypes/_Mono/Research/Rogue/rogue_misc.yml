@@ -64,3 +64,15 @@
   - AccessBreakerRogue
   technologyPrerequisites:
   - RogueEmag
+
+- type: technology
+  id: RogueThermals
+  name: research-technology-rogue-thermals
+  icon:
+    sprite: _White/Clothing/Eyes/Goggles/thermal.rsi
+    state: icon
+  discipline: RogueGear
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+  - ClothingEyesThermalVisionGoggles

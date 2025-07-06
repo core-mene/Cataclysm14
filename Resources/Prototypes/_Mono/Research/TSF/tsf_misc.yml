@@ -57,7 +57,7 @@
     sprite: _NF/Objects/Misc/shipyard_voucher.rsi
     state: nfsd
   discipline: TsfmcShipyard
-  tier: 3
+  tier: 2
   cost: 100000
   recipeUnlocks:
   - FlyssaVoucherTSF
@@ -125,3 +125,27 @@
   cost: 15000
   recipeUnlocks:
     - OreProcessorIndustrialMachineCircuitboard
+
+- type: technology
+  id: TsfPortableRecharger
+  name: research-technology-tsfmc-portable-recharger
+  icon:
+    sprite: Objects/Power/portable_recharger.rsi
+    state: charging
+  discipline: TsfmcGear
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+    - PortableRecharger
+
+- type: technology
+  id: TsfNvd
+  name: research-technology-tsfmc-nvd
+  icon:
+    sprite: _White/Clothing/Eyes/Goggles/nightvision.rsi
+    state: icon
+  discipline: TsfmcGear
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+    - ClothingEyesNightVisionGoggles

@@ -14,6 +14,8 @@ research-technology-tsfmc-forensics = Forensics Analysis
 research-technology-tsfmc-pocket-crowbar = Compact Prying Technology
 research-technology-tsfmc-industrial-storage = Material Storage Solutions
 research-technology-tsfmc-industrial-processing = Industrial Processing
+research-technology-tsfmc-portable-recharger = Portable Recharger
+research-technology-tsfmc-nvd = Night Vision Devices
 
 # T2 TSFMC
 research-technology-tsfmc-annie = Annie
@@ -32,6 +34,7 @@ research-technology-tsfmc-synthalloy = Experimental Material Science
 research-technology-rogue-jaws = Advanced Jaws of Life
 research-technology-rogue-energy-dagger = Experimental Plasma Weaponization
 research-technology-rogue-basic-guns = Syndicate Ballistics
+research-technology-rogue-thermals = Thermal Imaging
 
 # T2 rogue
 research-technology-rogue-advanced-guns = Advanced Ballistics
