@@ -1,0 +1,56 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+
+
+- type: technology
+  id: UsspBasicGuns
+  name: research-technology-ussp-guns-basic
+  icon:
+    sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+    state: base
+  discipline: Ussp
+  tier: 1
+  cost: 20000
+  recipeUnlocks:
+  - WeaponRifleSVSUSSP
+  - WeaponSniperMosinUSSP
+  - Magazine7.62x54mmRFMJ
+  - SpeedLoader7.62x54mmRFMJ
+  - AmmoBox7.62x54mmRFMJ
+
+- type: technology
+  id: UsspMediumGuns
+  name: research-technology-ussp-guns-medium
+  icon:
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/ak502.rsi
+    state: icon
+  discipline: Ussp
+  tier: 2
+  cost: 20000
+  recipeUnlocks:
+  - WeaponRifleAK502USSP
+  - WeaponPistolN1984USSP
+  - Magazine7.62x39mmFMJ
+  - SpeedLoader45_magnumFMJ
+  - AmmoBox7.62x39mmFMJ
+  - AmmoBox45_magnumFMJ
+  technologyPrerequisites:
+  - UsspBasicGuns
+
+- type: technology
+  id: UsspAdvancedGuns
+  name: research-technology-ussp-guns-advanced
+  icon:
+    sprite: _Mono/Objects/Weapons/Guns/LMGs/dp29.rsi
+    state: icon
+  discipline: Ussp
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - WeaponDP29USSP
+  - MagazineDP29
+  technologyPrerequisites:
+  - UsspMediumGuns
+

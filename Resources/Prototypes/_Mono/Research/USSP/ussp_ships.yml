@@ -1,0 +1,42 @@
+- type: technology
+  id: UsspBasicShips
+  name: research-technology-ussp-ships-basic
+  icon:
+    sprite: _Mono/Research/Ussp/ships.rsi
+    state: icon-tier1
+  discipline: Ussp
+  tier: 1
+  cost: 50000
+  recipeUnlocks:
+  - GadyukaVoucherUssp
+  - NatiskVoucherUssp
+  - GruznykVoucherUssp
+
+- type: technology
+  id: UsspMediumShips
+  name: research-technology-ussp-ships-medium
+  icon:
+    sprite: _Mono/Research/Ussp/ships.rsi
+    state: icon-tier2
+  discipline: Ussp
+  tier: 2
+  cost: 70000
+  recipeUnlocks:
+  - DrakonVoucherUssp
+  - SekundaVoucherUssp
+  technologyPrerequisites:
+  - UsspBasicShips
+
+- type: technology
+  id: UsspAdvancedShips
+  name: research-technology-ussp-ships-advanced
+  icon:
+    sprite: _Mono/Research/Ussp/ships.rsi
+    state: icon-tier3
+  discipline: Ussp
+  tier: 3
+  cost: 90000
+  recipeUnlocks:
+  - TunguskaVoucherUssp
+  technologyPrerequisites:
+  - UsspMediumShips
