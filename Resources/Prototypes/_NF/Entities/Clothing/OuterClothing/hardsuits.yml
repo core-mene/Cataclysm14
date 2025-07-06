@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2024 Kesiath
 # SPDX-FileCopyrightText: 2024 Maxtone
 # SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 BramvanZijp
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Redrover1760
@@ -45,7 +46,7 @@
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitMercenary
   - type: PirateBountyItem # Mono
-    id: ClothingOuterHardsuitMerc
+    id: ClothingOuterHardsuitTacsuit
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.5
 
@@ -259,6 +260,8 @@
     sprintModifier: 0.85
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.35
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue
 
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
@@ -320,6 +323,8 @@
     faction: NanoTrasen
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.3
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue
 
 #Security Combat Hardsuit
 - type: entity
@@ -351,6 +356,8 @@
     sprintModifier: 0.8
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.35
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue
 
 #Security Command Hardsuit
 - type: entity
@@ -415,8 +422,8 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitScaf
-  - type: PirateBountyItem
-    id: ClothingOuterHardsuitMerc # Mono
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.5 # slightly worse than rogue one
 
