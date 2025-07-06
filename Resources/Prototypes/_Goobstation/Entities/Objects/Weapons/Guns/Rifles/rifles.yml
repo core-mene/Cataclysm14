@@ -12,8 +12,7 @@
   description: A beast designed to shoulder the weight of impossible missions. Uses 7.62x39mm ammo.
   components:
   - type: Sprite
-    scale: 0.8, 0.8
-    sprite: _Mono/Objects/Weapons/Guns/Rifles/MAnnie_icon.rsi #mono
+    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/annie.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
