@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/05/2025 19:46:00
-  entityCount: 2145
+  time: 07/06/2025 00:08:37
+  entityCount: 2133
 maps: []
 grids:
 - 1
@@ -1439,6 +1439,8 @@ entities:
     - type: NavMap
     - type: BecomesStation
       id: flashpoint
+    - type: ShipGridLock
+      locked: False
   - uid: 2
     components:
     - type: MetaData
@@ -1692,7 +1694,6 @@ entities:
       - 925
       - 928
       - 927
-      - 926
   - uid: 22
     components:
     - type: Transform
@@ -1715,7 +1716,6 @@ entities:
       devices:
       - 76
       - 1186
-      - 926
       - 927
       - 928
       - 953
@@ -1868,7 +1868,7 @@ entities:
       pos: 14.5,-6.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -8699.395
+      secondsUntilStateChange: -9445.277
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1896,7 +1896,7 @@ entities:
       pos: 19.5,-11.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -21643.074
+      secondsUntilStateChange: -22388.959
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1915,7 +1915,7 @@ entities:
       pos: 11.5,11.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -31682.047
+      secondsUntilStateChange: -32427.932
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1937,7 +1937,7 @@ entities:
       pos: 14.5,-25.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -24021.248
+      secondsUntilStateChange: -24767.133
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1948,7 +1948,7 @@ entities:
       pos: 12.5,-25.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -18585.635
+      secondsUntilStateChange: -19331.52
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1974,7 +1974,7 @@ entities:
       pos: 23.5,-14.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20217.834
+      secondsUntilStateChange: -20963.719
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1994,7 +1994,7 @@ entities:
       pos: 5.5,-14.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -8940.994
+      secondsUntilStateChange: -9686.877
       state: Opening
     - type: DeviceLinkSink
       invokeCounter: 4
@@ -2069,7 +2069,7 @@ entities:
       pos: 10.5,5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -37244.133
+      secondsUntilStateChange: -37990.016
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2081,7 +2081,7 @@ entities:
       pos: 11.5,5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -37244.664
+      secondsUntilStateChange: -37990.547
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2105,7 +2105,7 @@ entities:
       pos: 10.5,-1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -33731.645
+      secondsUntilStateChange: -34477.527
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2134,7 +2134,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -28032.176
+      secondsUntilStateChange: -28778.06
       state: Opening
   - uid: 65
     components:
@@ -3431,30 +3431,6 @@ entities:
       parent: 1
 - proto: BlastDoorOpen
   entities:
-  - uid: 288
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 11.5,5.5
-      parent: 1
-    - type: DeviceLinkSink
-      invokeCounter: 2
-  - uid: 289
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 10.5,5.5
-      parent: 1
-    - type: DeviceLinkSink
-      invokeCounter: 2
-  - uid: 290
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 12.5,5.5
-      parent: 1
-    - type: DeviceLinkSink
-      invokeCounter: 2
   - uid: 291
     components:
     - type: Transform
@@ -3689,6 +3665,11 @@ entities:
       parent: 1
 - proto: BroadswordCentralElectronics
   entities:
+  - uid: 1922
+    components:
+    - type: Transform
+      pos: 8.792435,2.4626086
+      parent: 1
   - uid: 2066
     components:
     - type: Transform
@@ -3698,6 +3679,11 @@ entities:
     components:
     - type: Transform
       pos: 7.7855873,-8.606597
+      parent: 1
+  - uid: 2104
+    components:
+    - type: Transform
+      pos: 9.198685,0.071983576
       parent: 1
   - uid: 2123
     components:
@@ -3709,96 +3695,32 @@ entities:
     - type: Transform
       pos: 8.954268,-18.58395
       parent: 1
-- proto: BroadswordHarness
+- proto: BroadswordChassis
   entities:
-  - uid: 1632
+  - uid: 1660
     components:
     - type: Transform
-      pos: 8.264265,-9.499134
+      pos: 8.160259,-6.4859266
       parent: 1
-  - uid: 1933
+  - uid: 2065
     components:
     - type: Transform
-      pos: 8.09239,-6.671009
+      pos: 8.089947,-9.696864
       parent: 1
 - proto: BroadswordHead
   entities:
-  - uid: 1605
-    components:
-    - type: Transform
-      pos: 7.4725094,-10.51533
-      parent: 1
   - uid: 1635
     components:
     - type: Transform
       pos: 7.43614,-5.952259
       parent: 1
-  - uid: 2106
-    components:
-    - type: Transform
-      pos: 7.7667685,-18.0527
-      parent: 1
-  - uid: 2116
-    components:
-    - type: Transform
-      pos: 8.313643,-18.037075
-      parent: 1
-- proto: BroadswordLArm
-  entities:
-  - uid: 1606
-    components:
-    - type: Transform
-      pos: 8.347509,-4.9840803
-      parent: 1
-  - uid: 1660
-    components:
-    - type: Transform
-      pos: 8.99864,-10.280384
-      parent: 1
-  - uid: 2117
-    components:
-    - type: Transform
-      pos: 9.579268,-17.70895
-      parent: 1
-  - uid: 2118
-    components:
-    - type: Transform
-      pos: 7.9386435,-17.20895
-      parent: 1
-  - uid: 2129
-    components:
-    - type: Transform
-      pos: 6.6261435,-17.6152
-      parent: 1
-  - uid: 2130
-    components:
-    - type: Transform
-      pos: 8.235518,-17.380825
-      parent: 1
-- proto: BroadswordLLeg
-  entities:
-  - uid: 1922
-    components:
-    - type: Transform
-      pos: 7.56114,-9.327259
-      parent: 1
-  - uid: 1929
-    components:
-    - type: Transform
-      pos: 8.983015,-6.577259
-      parent: 1
-  - uid: 2119
-    components:
-    - type: Transform
-      pos: 6.7980185,-18.8027
-      parent: 1
-  - uid: 2120
-    components:
-    - type: Transform
-      pos: 8.501143,-18.8652
-      parent: 1
 - proto: BroadswordPeripheralsElectronics
   entities:
+  - uid: 1605
+    components:
+    - type: Transform
+      pos: 8.46431,2.7282336
+      parent: 1
   - uid: 2068
     components:
     - type: Transform
@@ -3808,6 +3730,11 @@ entities:
     components:
     - type: Transform
       pos: 9.191837,-7.4651213
+      parent: 1
+  - uid: 2101
+    components:
+    - type: Transform
+      pos: 8.604935,0.40010858
       parent: 1
   - uid: 2125
     components:
@@ -3819,42 +3746,18 @@ entities:
     - type: Transform
       pos: 8.985518,-18.599575
       parent: 1
-- proto: BroadswordRArm
+- proto: BroadswordTargetingElectronics
   entities:
-  - uid: 1940
+  - uid: 1933
     components:
     - type: Transform
-      pos: 7.545515,-7.561634
+      pos: 8.573685,0.22823358
       parent: 1
   - uid: 2026
     components:
     - type: Transform
-      pos: 8.99864,-9.108509
+      pos: 8.65181,2.3532336
       parent: 1
-- proto: BroadswordRLeg
-  entities:
-  - uid: 2064
-    components:
-    - type: Transform
-      pos: 7.90489,-10.311634
-      parent: 1
-  - uid: 2065
-    components:
-    - type: Transform
-      pos: 8.608015,-7.249134
-      parent: 1
-  - uid: 2121
-    components:
-    - type: Transform
-      pos: 7.6730185,-18.7402
-      parent: 1
-  - uid: 2122
-    components:
-    - type: Transform
-      pos: 9.313643,-18.818325
-      parent: 1
-- proto: BroadswordTargetingElectronics
-  entities:
   - uid: 2070
     components:
     - type: Transform
@@ -5279,6 +5182,11 @@ entities:
       parent: 1
 - proto: CableApcStack10
   entities:
+  - uid: 1929
+    components:
+    - type: Transform
+      pos: 9.21431,1.9938586
+      parent: 1
   - uid: 2099
     components:
     - type: Transform
@@ -5288,6 +5196,11 @@ entities:
     components:
     - type: Transform
       pos: 6.1918373,-7.6369963
+      parent: 1
+  - uid: 2117
+    components:
+    - type: Transform
+      pos: 8.80806,-0.115516424
       parent: 1
   - uid: 2133
     components:
@@ -5876,6 +5789,11 @@ entities:
       parent: 1
 - proto: CapacitorStockPart
   entities:
+  - uid: 2064
+    components:
+    - type: Transform
+      pos: 9.104935,2.4938586
+      parent: 1
   - uid: 2072
     components:
     - type: Transform
@@ -5885,6 +5803,11 @@ entities:
     components:
     - type: Transform
       pos: 6.5512123,-10.402621
+      parent: 1
+  - uid: 2116
+    components:
+    - type: Transform
+      pos: 9.08931,0.6032336
       parent: 1
   - uid: 2131
     components:
@@ -7078,7 +7001,6 @@ entities:
       - 925
       - 928
       - 927
-      - 926
   - uid: 919
     components:
     - type: Transform
@@ -7097,7 +7019,6 @@ entities:
       parent: 1
     - type: DeviceList
       devices:
-      - 926
       - 927
       - 928
       - 953
@@ -7111,6 +7032,21 @@ entities:
       - 953
 - proto: Firelock
   entities:
+  - uid: 288
+    components:
+    - type: Transform
+      pos: 9.5,5.5
+      parent: 1
+  - uid: 289
+    components:
+    - type: Transform
+      pos: 12.5,5.5
+      parent: 1
+  - uid: 290
+    components:
+    - type: Transform
+      pos: 8.5,-1.5
+      parent: 1
   - uid: 924
     components:
     - type: Transform
@@ -7136,14 +7072,8 @@ entities:
   - uid: 926
     components:
     - type: Transform
-      pos: 12.5,5.5
+      pos: 11.5,-1.5
       parent: 1
-    - type: DeviceNetwork
-      deviceLists:
-      - 918
-      - 21
-      - 23
-      - 920
   - uid: 927
     components:
     - type: Transform
@@ -7438,12 +7368,17 @@ entities:
     - type: Transform
       pos: 6.8917685,-21.48261
       parent: 1
-- proto: FlailHarness
+- proto: FlailChassis
   entities:
-  - uid: 2135
+  - uid: 1606
     components:
     - type: Transform
-      pos: 7.9230185,-21.73261
+      pos: 7.9024467,-17.772299
+      parent: 1
+  - uid: 1632
+    components:
+    - type: Transform
+      pos: 7.9727592,-20.537924
       parent: 1
 - proto: FlailHead
   entities:
@@ -7452,40 +7387,12 @@ entities:
     - type: Transform
       pos: 8.563643,-22.373236
       parent: 1
-- proto: FlailLArm
-  entities:
-  - uid: 2142
-    components:
-    - type: Transform
-      pos: 9.688643,-20.38886
-      parent: 1
-- proto: FlailLLeg
-  entities:
-  - uid: 2141
-    components:
-    - type: Transform
-      pos: 7.0323935,-22.248236
-      parent: 1
 - proto: FlailPeripheralsElectronics
   entities:
   - uid: 2137
     components:
     - type: Transform
       pos: 6.9073935,-22.029486
-      parent: 1
-- proto: FlailRArm
-  entities:
-  - uid: 2140
-    components:
-    - type: Transform
-      pos: 6.7511435,-21.248236
-      parent: 1
-- proto: FlailRLeg
-  entities:
-  - uid: 2139
-    components:
-    - type: Transform
-      pos: 9.298018,-21.85761
       parent: 1
 - proto: FlailTargetingElectronics
   entities:
@@ -9991,17 +9898,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 16.5,-35.5
       parent: 1
-- proto: HalberdHarness
+- proto: HalberdChassis
   entities:
-  - uid: 2101
+  - uid: 2106
     components:
     - type: Transform
-      pos: 7.2667685,-17.52145
-      parent: 1
-  - uid: 2104
-    components:
-    - type: Transform
-      pos: 8.766768,-17.505825
+      pos: 10.246197,3.2699175
       parent: 1
 - proto: HeavyMechCannon
   entities:
@@ -11193,6 +11095,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 16.5,-9.5
       parent: 1
+- proto: SabreChassis
+  entities:
+  - uid: 1940
+    components:
+    - type: Transform
+      pos: 10.152447,1.0902299
+      parent: 1
 - proto: SalvageTechfabNF
   entities:
   - uid: 2103
@@ -11344,14 +11253,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 13.36828,3.400346
       parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        290:
-        - Pressed: Toggle
-        288:
-        - Pressed: Toggle
-        289:
-        - Pressed: Toggle
   - uid: 1457
     components:
     - type: MetaData
