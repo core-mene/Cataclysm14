@@ -8,6 +8,11 @@ research-discipline-rogue-gear = Rogue Gear
 research-discipline-rogue-equipment = Rogue Equipment
 research-discipline-rogue-shipyard = Rogue Heavy Industry
 
+research-discipline-ussp-weaponry = USSP Arsenal
+research-discipline-ussp-gear = USSP Gear
+research-discipline-ussp-equipment = USSP Equipment
+research-discipline-ussp-shipyard = USSP Heavy Industry
+
 # T1 TSFMC
 research-technology-tsfmc-guns = Ballistics Production
 research-technology-tsfmc-forensics = Forensics Analysis
