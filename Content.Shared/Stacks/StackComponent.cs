@@ -16,7 +16,7 @@ namespace Content.Shared.Stacks
         ///     Do NOT set this directly, use the <see cref="SharedStackSystem.SetCount"/> method instead.
         /// </summary>
         [DataField("count")]
-        public int Count { get; set; } = 30;
+        public int Count { get; set; } = 100;
 
         /// <summary>
         ///     Max amount of things that can be in the stack.
@@ -79,7 +79,7 @@ namespace Content.Shared.Stacks
         [ViewVariables(VVAccess.ReadWrite)]
         public List<string> LayerStates = new();
 
-        // Frontier: transforming Amount, MaxCount in speso stacks 
+        // Frontier: transforming Amount, MaxCount in speso stacks
         /// <summary>
         /// An optional function to adjust the layers used for a stack's appearance.
         /// </summary>
