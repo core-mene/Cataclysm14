@@ -255,7 +255,7 @@ public abstract class SharedImplanterSystem : EntitySystem
                 }
                 else
                 {
-                    DrawCatastrophicFailure(implanter, component, user);
+                    DrawFailure(implanter, target, user);
                 }
             }
 
@@ -264,7 +264,7 @@ public abstract class SharedImplanterSystem : EntitySystem
         }
         else
         {
-            DrawCatastrophicFailure(implanter, component, user);
+            DrawFailure(implanter, target, user);
         }
     }
 
@@ -287,12 +287,10 @@ public abstract class SharedImplanterSystem : EntitySystem
         RaiseLocalEvent(target, ref ev);
     }
 
-    private void DrawCatastrophicFailure(EntityUid implanter, ImplanterComponent component, EntityUid user)
+    private void DrawFailure(EntityUid implant, EntityUid target, EntityUid user) // Mono - removed backfire
     {
-        _damageableSystem.TryChangeDamage(user, component.DeimplantFailureDamage, ignoreResistances: true, origin: implanter);
-        var userName = Identity.Entity(user, EntityManager);
-        var failedCatastrophicallyMessage = Loc.GetString("implanter-draw-failed-catastrophically", ("user", userName));
-        _popup.PopupEntity(failedCatastrophicallyMessage, user, PopupType.MediumCaution);
+        var failedMessage = Loc.GetString("implanter-draw-failed");
+        _popup.PopupEntity(failedMessage, target, user);
     }
 
     private void ImplantMode(EntityUid uid, ImplanterComponent component)

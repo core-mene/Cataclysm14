@@ -38,6 +38,9 @@ uplink-pirate-surgery-desc = A surgical kit containing the required minimum to s
 
 # MARK: Utility
 
+uplink-pirate-empty-implanter-name = Empty Implanter
+uplink-pirate-empty-implanter-desc = A spare, empty implanter to remove implants with, including faction tracking implants. It does not backfire on you.
+
 uplink-pirate-syndicate-magboots-name = Blood-red Magboots
 uplink-pirate-syndicate-magboots-desc = A pair of boots that prevent slipping and, in zero gravity, allow you to move normally, at the cost of a slight slowdown. Additionally, they have jetpack functionality and come fueled, but don't last for long.
 

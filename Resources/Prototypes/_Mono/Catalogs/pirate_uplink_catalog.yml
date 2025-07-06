@@ -208,6 +208,21 @@
 #MARK: Utility
 
 - type: listing
+  id: UplinkPirateImplanterEmpty
+  name: uplink-pirate-empty-implanter-name
+  description: uplink-pirate-empty-implanter-desc
+  productEntity: Implanter
+  cost:
+    Doubloon: 1
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
   id: UplinkPirateRogueCommsComputerCircuitboard
   name: uplink-pirate-comms-computer-circuitboard-name
   description: uplink-pirate-comms-computer-circuitboard-desc

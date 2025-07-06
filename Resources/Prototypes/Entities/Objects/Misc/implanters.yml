@@ -52,7 +52,7 @@
       deimplantFailureDamage:
         types:
 #          Cellular: 5 # 50->5 - Mono
-          Heat: 10 # Mono
+          Heat: 0 # Mono
     - type: Sprite
       sprite: Objects/Specific/Medical/implanter.rsi
       state: implanter0
