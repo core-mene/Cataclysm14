@@ -1,28 +1,10 @@
-# SPDX-FileCopyrightText: 2023 Leon Friedrich
-# SPDX-FileCopyrightText: 2023 Nemanja
-# SPDX-FileCopyrightText: 2023 Scribbles0
-# SPDX-FileCopyrightText: 2023 TsjipTsjip
-# SPDX-FileCopyrightText: 2024 Kara
-# SPDX-FileCopyrightText: 2024 Mr. 27
-# SPDX-FileCopyrightText: 2024 QueerNB
-# SPDX-FileCopyrightText: 2024 ScarKy0
-# SPDX-FileCopyrightText: 2024 metalgearsloth
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 core-mene
-# SPDX-FileCopyrightText: 2025 revoemagcoconut
-# SPDX-FileCopyrightText: 2025 wewman222
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/06/2025 06:29:51
+  time: 07/06/2025 18:14:52
   entityCount: 2144
 maps: []
 grids:
@@ -1886,7 +1868,7 @@ entities:
       pos: 14.5,-6.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -9527.011
+      secondsUntilStateChange: -9607.128
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1914,7 +1896,7 @@ entities:
       pos: 19.5,-11.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -22470.693
+      secondsUntilStateChange: -22550.81
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1933,7 +1915,7 @@ entities:
       pos: 11.5,11.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -32509.666
+      secondsUntilStateChange: -32589.783
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1955,7 +1937,7 @@ entities:
       pos: 14.5,-25.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -24848.867
+      secondsUntilStateChange: -24928.984
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1966,7 +1948,7 @@ entities:
       pos: 12.5,-25.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -19413.254
+      secondsUntilStateChange: -19493.371
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1992,7 +1974,7 @@ entities:
       pos: 23.5,-14.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -21045.453
+      secondsUntilStateChange: -21125.57
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2012,7 +1994,7 @@ entities:
       pos: 5.5,-14.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -9768.61
+      secondsUntilStateChange: -9848.728
       state: Opening
     - type: DeviceLinkSink
       invokeCounter: 4
@@ -2087,7 +2069,7 @@ entities:
       pos: 10.5,5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -38071.75
+      secondsUntilStateChange: -38151.867
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2099,7 +2081,7 @@ entities:
       pos: 11.5,5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -38072.28
+      secondsUntilStateChange: -38152.4
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2123,7 +2105,7 @@ entities:
       pos: 10.5,-1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -34559.26
+      secondsUntilStateChange: -34639.38
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2152,7 +2134,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -28859.795
+      secondsUntilStateChange: -28939.912
       state: Opening
   - uid: 65
     components:
@@ -3708,11 +3690,6 @@ entities:
     - type: Transform
       pos: 7.2355185,-18.58395
       parent: 1
-  - uid: 2124
-    components:
-    - type: Transform
-      pos: 8.954268,-18.58395
-      parent: 1
 - proto: BroadswordChassis
   entities:
   - uid: 1660
@@ -3759,11 +3736,6 @@ entities:
     - type: Transform
       pos: 7.2823935,-18.630825
       parent: 1
-  - uid: 2126
-    components:
-    - type: Transform
-      pos: 8.985518,-18.599575
-      parent: 1
 - proto: BroadswordTargetingElectronics
   entities:
   - uid: 1933
@@ -3790,11 +3762,6 @@ entities:
     components:
     - type: Transform
       pos: 7.2980185,-18.6777
-      parent: 1
-  - uid: 2128
-    components:
-    - type: Transform
-      pos: 9.048018,-18.6777
       parent: 1
 - proto: CableApcExtension
   entities:
@@ -7384,7 +7351,12 @@ entities:
   - uid: 2136
     components:
     - type: Transform
-      pos: 6.8917685,-21.48261
+      pos: 9.684761,-18.736479
+      parent: 1
+  - uid: 2137
+    components:
+    - type: Transform
+      pos: 9.762886,-19.877104
       parent: 1
 - proto: FlailChassis
   entities:
@@ -7407,17 +7379,27 @@ entities:
       parent: 1
 - proto: FlailPeripheralsElectronics
   entities:
-  - uid: 2137
+  - uid: 2128
     components:
     - type: Transform
-      pos: 6.9073935,-22.029486
+      pos: 9.762886,-19.142729
       parent: 1
-- proto: FlailTargetingElectronics
-  entities:
   - uid: 2138
     components:
     - type: Transform
-      pos: 9.094893,-21.95136
+      pos: 9.747261,-19.533354
+      parent: 1
+- proto: FlailTargetingElectronics
+  entities:
+  - uid: 2124
+    components:
+    - type: Transform
+      pos: 10.325386,-19.564604
+      parent: 1
+  - uid: 2126
+    components:
+    - type: Transform
+      pos: 10.356636,-19.111479
       parent: 1
 - proto: FoodTinBeansTrash
   entities:
