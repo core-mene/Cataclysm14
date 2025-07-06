@@ -4,8 +4,8 @@
   id: UsspBasicGuns
   name: research-technology-ussp-guns-basic
   icon:
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
-    state: icon
+    sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+    state: base
   discipline: Ussp
   tier: 1
   cost: 20000
@@ -20,7 +20,7 @@
   id: UsspMediumGuns
   name: research-technology-ussp-guns-medium
   icon:
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/ak502.rsi
     state: icon
   discipline: Ussp
   tier: 2
@@ -39,7 +39,7 @@
   id: UsspAdvancedGuns
   name: research-technology-ussp-guns-advanced
   icon:
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    sprite: _Mono/Objects/Weapons/Guns/LMGs/dp29.rsi
     state: icon
   discipline: Ussp
   tier: 3
@@ -54,10 +54,10 @@
   id: UsspBasicExplosives
   name: research-technology-ussp-explosives
   icon:
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    sprite: Objects/Weapons/Bombs/seismic.rsi
     state: icon
   discipline: Ussp
-  tier: 1
+  tier: 2
   cost: 20000
   recipeUnlocks:
   - SeismicChargeUSSP
@@ -67,8 +67,8 @@
   id: UsspBasicShips
   name: research-technology-ussp-ships-basic
   icon:
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
-    state: icon
+    sprite: _Mono/Research/Ussp/ships.rsi
+    state: icon-tier1
   discipline: Ussp
   tier: 1
   cost: 50000
@@ -81,8 +81,8 @@
   id: UsspMediumShips
   name: research-technology-ussp-ships-medium
   icon:
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
-    state: icon
+    sprite: _Mono/Research/Ussp/ships.rsi
+    state: icon-tier2
   discipline: Ussp
   tier: 2
   cost: 70000
@@ -96,8 +96,8 @@
   id: UsspAdvancedShips
   name: research-technology-ussp-ships-advanced
   icon:
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
-    state: icon
+    sprite: _Mono/Research/Ussp/ships.rsi
+    state: icon-tier3
   discipline: Ussp
   tier: 3
   cost: 90000
@@ -139,7 +139,7 @@
   name: research-technology-ussp-suits-advanced
   icon:
     sprite: _Mono/Clothing/Head/Modsuits/ussp-varyag.rsi
-    state: icon
+    state: helmet
   discipline: Ussp
   tier: 3
   cost: 90000

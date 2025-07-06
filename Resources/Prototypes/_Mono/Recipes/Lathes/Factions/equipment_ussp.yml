@@ -1,15 +1,6 @@
-- type: latheRecipe
-  abstract: true
-  id: MonoBaseArmorRecipe
-  completetime: 5
-  categories:
-  - ArmorMono
-  materials:
-    Steel: 500
-    Plasteel: 500
 
 - type: latheRecipe
-  parent: MonoBaseArmorRecipe
+  parent: MonoHardsuitT1Recipe
   id: ClothingOuterHardsuitUsspL10UssP
   result: ClothingOuterHardsuitUsspL10
   materials:
@@ -18,7 +9,7 @@
     Cloth: 1500
 
 - type: latheRecipe
-  parent: MonoBaseArmorRecipe
+  parent: MonoHardsuitT1Recipe
   id: ClothingOuterHardsuitUsspL10AUssP
   result: ClothingOuterHardsuitUsspL10A
   materials:
@@ -27,7 +18,7 @@
     Cloth: 1500
 
 - type: latheRecipe
-  parent: MonoBaseArmorRecipe
+  parent: MonoHardsuitT2Recipe
   id: ClothingOuterHardsuitUsspL27UssP
   result: ClothingOuterHardsuitUsspL27
   materials:
@@ -36,7 +27,7 @@
     Cloth: 1500
 
 - type: latheRecipe
-  parent: MonoBaseArmorRecipe
+  parent: MonoHardsuitT2Recipe
   id: ClothingOuterHardsuitUsspM10UssP
   result: ClothingOuterHardsuitUsspM10
   materials:
@@ -46,7 +37,7 @@
     Gold: 1500
 
 - type: latheRecipe
-  parent: MonoBaseArmorRecipe
+  parent: MonoHardsuitT2Recipe
   id: ClothingModsuitChestplateUSSPVaryagUssP
   result: ClothingModsuitChestplateUSSPVaryag
   materials:
@@ -56,7 +47,7 @@
     Gold: 1500
 
 - type: latheRecipe
-  parent: MonoBaseArmorRecipe
+  parent: MonoHardsuitT2Recipe
   id: ClothingModsuitChestplateUSSPZastavnikUssP
   result: ClothingModsuitChestplateUSSPZastavnik
   materials:
