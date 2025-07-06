@@ -45,3 +45,13 @@ research-technology-sabre = Gravity Adapted Armored Frames
 research-technology-flail = Armored Strike Frames
 research-technology-spyglass = EWACS Frames
 research-technology-mace = Rapid Strike Frames
+
+# Faction Assembler Equipment
+
+research-technology-tsfmc-basic-equipment = Basic TSFMC Equipment
+research-technology-tsfmc-advanced-equipment = Advanced TSFMC Equipment
+research-technology-tsfmc-experimental-equipment = Experimental TSFMC Equipment
+
+research-technology-rogue-basic-equipment = Basic Rogue Equipment
+research-technology-rogue-advanced-equipment = Advanced Rogue Equipment
+research-technology-rogue-experimental-equipment = Experimental Rogue Equipment

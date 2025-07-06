@@ -994,38 +994,6 @@
       - PirateUplink
 
 - type: listing
-  id: UplinkViperStandardHardsuit
-  name: uplink-pirate-viper-group-standard-hardsuit-name
-  description: uplink-pirate-viper-group-standard-hardsuit-desc
-  productEntity: ClothingOuterHardsuitViperGroupStandard
-  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/viper_group_standard.rsi, state: icon }
-  cost:
-    Doubloon: 75
-  categories:
-  - UplinkPirateEquipment
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
-  id: UplinkViperMedicHardsuit
-  name: uplink-pirate-viper-group-medic-hardsuit-name
-  description: uplink-pirate-viper-group-medic-hardsuit-desc
-  productEntity: ClothingOuterHardsuitViperGroupMedic
-  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/viper_group_medic.rsi, state: icon }
-  cost:
-    Doubloon: 25
-  categories:
-  - UplinkPirateEquipment
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
   id: UplinkPirateWebVest
   name: uplink-pirate-webvest-name
   description: uplink-pirate-webvest-desc
