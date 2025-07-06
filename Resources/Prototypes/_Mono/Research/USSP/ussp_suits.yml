@@ -12,8 +12,8 @@
   tier: 1
   cost: 20000
   recipeUnlocks:
-  - ClothingOuterHardsuitUsspL10UssP
-  - ClothingOuterHardsuitUsspL10AUssP
+  - ClothingOuterHardsuitUsspL10USSP
+  - ClothingOuterHardsuitUsspL10AUSSP
 
 - type: technology
   id: UsspMediumSuits
@@ -25,8 +25,8 @@
   tier: 2
   cost: 50000
   recipeUnlocks:
-  - ClothingOuterHardsuitUsspL27UssP
-  - ClothingOuterHardsuitUsspM10UssP
+  - ClothingOuterHardsuitUsspL27USSP
+  - ClothingOuterHardsuitUsspM10USSP
   technologyPrerequisites:
   - UsspBasicSuits
 
@@ -40,7 +40,7 @@
   tier: 3
   cost: 90000
   recipeUnlocks:
-  - ClothingModsuitChestplateUSSPVaryagUssP
-  - ClothingModsuitChestplateUSSPZastavnikUssP
+  - ClothingModsuitUSSPVaryagUSSP
+  - ClothingModsuitUSSPZastavnikUSSP
   technologyPrerequisites:
   - UsspMediumSuits
