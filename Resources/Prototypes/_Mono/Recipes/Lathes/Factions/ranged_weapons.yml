@@ -68,11 +68,9 @@
   id: WeaponLMGMR8BTSF
   result: WeaponLMGMR8B
   materials:
-    Steel: 8500
-    Plasteel: 5000
-    Plastic: 1500
-    Plasma: 800
-    Uranium: 500
+    Steel: 6000
+    Plasteel: 3000
+    Synthalloy: 2500
     Silver: 1500
 
 - type: latheRecipe
@@ -80,11 +78,22 @@
   id: WeaponRifleMR8CTSF
   result: WeaponRifleMR8C
   materials:
-    Steel: 6500
+    Steel: 4000
     Plasteel: 2000
-    Plastic: 1500
-    Plasma: 800
+    Synthalloy: 1500
     Silver: 500
+
+# TSF ICWS
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRifleXlr556Tsf
+  result: WeaponRifleXlr556
+  materials:
+    Steel: 500
+    Plasteel: 1500
+    Synthalloy: 2500
+    Silver: 250
 
 # syndicate ballistics
 

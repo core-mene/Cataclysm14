@@ -1,0 +1,78 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: technology
+  id: RogueProwler
+  name: research-technology-rogue-prowler-voucher
+  icon:
+    sprite: _NF/Objects/Misc/shipyard_voucher.rsi
+    state: nfsd
+  discipline: RogueShipyard
+  tier: 1
+  cost: 50000
+  recipeUnlocks:
+  - ProwlerVoucherRogue
+
+- type: technology
+  id: RogueJaws
+  name: research-technology-rogue-jaws
+  icon:
+    sprite: Objects/Tools/jaws_of_life.rsi
+    state: syn_jaws_pry
+  discipline: RogueGear
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+  - JawsOfLifeRogue
+
+- type: technology
+  id: RogueHypospray
+  name: research-technology-rogue-hypospray
+  icon:
+    sprite: Objects/Specific/Medical/hypospray.rsi
+    state: hypo
+  discipline: RogueGear
+  tier: 2
+  cost: 25000
+  recipeUnlocks:
+  - HyposprayRogue
+
+- type: technology
+  id: RogueEmag
+  name: research-technology-rogue-emag
+  icon:
+    sprite: Objects/Tools/emag.rsi
+    state: icon
+  discipline: RogueGear
+  tier: 2
+  cost: 25000
+  recipeUnlocks:
+  - EmagRogue
+
+- type: technology
+  id: RogueEmag2
+  name: research-technology-rogue-access-breaker
+  icon:
+    sprite: Objects/Tools/access_breaker.rsi
+    state: icon
+  discipline: RogueGear
+  tier: 3
+  cost: 27500
+  recipeUnlocks:
+  - AccessBreakerRogue
+  technologyPrerequisites:
+  - RogueEmag
+
+- type: technology
+  id: RogueThermals
+  name: research-technology-rogue-thermals
+  icon:
+    sprite: _White/Clothing/Eyes/Goggles/thermal.rsi
+    state: icon
+  discipline: RogueGear
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+  - ClothingEyesThermalVisionGoggles

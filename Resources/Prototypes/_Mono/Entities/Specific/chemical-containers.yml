@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: Jug
+  suffix: omnizine
+  id: JugOmnizine
+  components:
+  - type: Label
+    currentLabel: reagent-name-omnizine
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        reagents:
+        - ReagentId: Omnizine
+          Quantity: 200
+  - type: StaticPrice
+    vendPrice: 288000 # 50% bump after conversion to spesos 1u = 0.48 * 200 = 96 * 2000 (1 DC/FMC) = 192000 + 50% = 288000

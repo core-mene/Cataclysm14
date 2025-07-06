@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: technology
+  id: RogueBasicEquipment
+  name: research-technology-rogue-basic-equipment
+  icon:
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/scaf_pirate.rsi
+    state: icon
+  discipline: RogueEquipment
+  tier: 1
+  cost: 20000
+  recipeUnlocks:
+  - ClothingOuterHardsuitPirateScafRogue
+  - ClothingOuterVestWebRogue
+
+- type: technology
+  id: RogueAdvancedEquipment
+  name: research-technology-rogue-advanced-equipment
+  icon:
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/viper_group_standard.rsi
+    state: icon
+  discipline: RogueEquipment
+  tier: 2
+  cost: 35000
+  recipeUnlocks:
+  - ClothingOuterHardsuitViperGroupStandardRogue
+  - ClothingOuterHardsuitViperGroupMedicRogue
+  - ClothingShoesBootsMagSyndieRogue
+  - ClothingMaskGasSyndicateRogue
+  technologyPrerequisites:
+  - RogueBasicEquipment

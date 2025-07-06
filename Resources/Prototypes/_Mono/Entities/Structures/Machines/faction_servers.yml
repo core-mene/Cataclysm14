@@ -6,6 +6,7 @@
   id: BaseRdServerFaction
   parent: BaseMachinePowered
   name: BaseRdServerFaction
+  categories: [ HideSpawnMenu ]
   description: Contains the collective knowledge of the faction.
   components:
   - type: Sprite
@@ -68,8 +69,10 @@
   components:
   - type: TechnologyDatabase
     supportedDisciplines:
-    - Tsfmc
-    - Arsenal
+    - TsfmcWeaponry
+    - TsfmcGear # GEAR IS TOOLS!!
+    - TsfmcEquipment # EQUIPMENT IS ARMOR!!
+    - TsfmcShipyard
 
 - type: entity
   id: ResearchAndDevelopmentServerRogues
@@ -79,5 +82,7 @@
   components:
   - type: TechnologyDatabase
     supportedDisciplines:
-    - Rogue
-    - Arsenal
+    - RogueWeaponry
+    - RogueGear # GEAR IS TOOLS!!
+    - RogueEquipment # EQUIPMENT IS ARMOR!!
+    - RogueShipyard

@@ -3,73 +3,12 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: technology
-  id: TsfBasicGuns
-  name: research-technology-tsfmc-guns
-  icon:
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
-    state: icon
-  discipline: Tsfmc
-  tier: 1
-  cost: 20000
-  recipeUnlocks:
-  - WeaponRifleLecterTSF
-  - WeaponRifleVulcanTSF
-  - WeaponSubMachineGunDrozdTSF
-  - Magazine5.56x45mmFMJ
-  - Magazine5.56x45mmEmpty
-  - AmmoBox5.56x45mmFMJ
-  - Magazine7.62x51mmFMJ
-  - Magazine7.62x51mmEmpty
-  - AmmoBox7.62x51mmFMJ
-  - Magazine45_ACPSubMachineGunFMJ
-  - Magazine45_ACPSubMachineGunEmpty
-  - AmmoBox45_ACPFMJ
-
-- type: technology
-  id: TsfAnnie
-  name: research-technology-tsfmc-annie
-  icon:
-    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/annie.rsi
-    state: icon
-  discipline: Tsfmc
-  tier: 2
-  cost: 15000
-  recipeUnlocks:
-  - WeaponRifleAnnieTSF
-  - Magazine7.62x39mmFMJ
-  - Magazine7.62x39mmEmpty
-  - AmmoBox7.62x39mmFMJ
-  technologyPrerequisites:
-  - TsfBasicGuns
-
-- type: technology
-  id: TsfMarsocGuns
-  name: research-technology-tsfmc-mr8
-  icon:
-    sprite: _Mono/Objects/Weapons/Guns/LMGs/mr8b.rsi
-    state: icon
-  discipline: Tsfmc
-  tier: 3
-  cost: 75000
-  recipeUnlocks:
-  - WeaponLMGMR8BTSF
-  - WeaponRifleMR8CTSF
-  - Magazine8x65mmSKR
-  - Magazine8x65mmEmpty
-  - Magazine8x65mmSKRBox
-  - Magazine8x65mmEmptyBox
-  - AmmoBox8x65mmSKR
-  technologyPrerequisites:
-  - TsfBasicGuns
-  - TsfAnnie
-
-- type: technology
   id: TsfForensics
   name: research-technology-tsfmc-forensics
   icon:
     sprite: _NF/Objects/Devices/forensic_scanner.rsi
     state: forensicnew
-  discipline: Tsfmc
+  discipline: TsfmcGear
   tier: 1
   cost: 5000
   recipeUnlocks:
@@ -81,7 +20,7 @@
   icon:
     sprite: _NF/Objects/Tools/crowbar.rsi
     state: pocket-icon
-  discipline: Tsfmc
+  discipline: TsfmcGear
   tier: 1
   cost: 6500
   recipeUnlocks:
@@ -93,7 +32,7 @@
   icon:
     sprite: _NF/Objects/Tools/demag.rsi
     state: icon
-  discipline: Tsfmc
+  discipline: TsfmcGear
   tier: 2
   cost: 5000
   recipeUnlocks:
@@ -105,7 +44,7 @@
   icon:
     sprite: _NF/Objects/Weapons/Melee/e_shield.rsi
     state: eshield-on
-  discipline: Tsfmc
+  discipline: TsfmcWeaponry
   tier: 2
   cost: 30000
   recipeUnlocks:
@@ -117,8 +56,8 @@
   icon:
     sprite: _NF/Objects/Misc/shipyard_voucher.rsi
     state: nfsd
-  discipline: Tsfmc
-  tier: 3
+  discipline: TsfmcShipyard
+  tier: 2
   cost: 100000
   recipeUnlocks:
   - FlyssaVoucherTSF
@@ -129,7 +68,7 @@
   icon:
     sprite: Objects/Specific/Medical/firstaidkits.rsi
     state: blackkit
-  discipline: Tsfmc
+  discipline: TsfmcGear
   tier: 2
   cost: 20000
   recipeUnlocks:
@@ -142,8 +81,71 @@
   icon:
     sprite: Objects/Weapons/Grenades/metalfoam.rsi
     state: icon
-  discipline: Tsfmc
+  discipline: TsfmcGear
   tier: 2
   cost: 10000
   recipeUnlocks:
   - NanolaminateFoamGrenadeTSF
+  technologyPrerequisites:
+    - TsfSynthalloy
+
+- type: technology
+  id: TsfSynthalloy
+  name: research-technology-tsfmc-synthalloy
+  icon:
+    sprite: _Mono/Objects/Materials/synthalloy.rsi
+    state: synthalloy
+  discipline: TsfmcGear
+  tier: 3
+  cost: 50000
+  recipeUnlocks:
+    - SynthalloyProductionTsf
+
+- type: technology
+  id: TsfIndustrialStorage
+  name: research-technology-tsfmc-industrial-storage
+  icon:
+    sprite: Structures/Machines/autolathe.rsi
+    state: icon
+  discipline: TsfmcShipyard
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+    - OreBoxFlatpackTSF
+    - MaterialBoxFlatpackTSF
+
+- type: technology
+  id: TsfIndustrialProcessing
+  name: research-technology-tsfmc-industrial-processing
+  icon:
+    sprite: Structures/Machines/ore_processor_industrial.rsi
+    state: icon
+  discipline: TsfmcShipyard
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+    - OreProcessorIndustrialMachineCircuitboard
+
+- type: technology
+  id: TsfPortableRecharger
+  name: research-technology-tsfmc-portable-recharger
+  icon:
+    sprite: Objects/Power/portable_recharger.rsi
+    state: charging
+  discipline: TsfmcGear
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+    - PortableRecharger
+
+- type: technology
+  id: TsfNvd
+  name: research-technology-tsfmc-nvd
+  icon:
+    sprite: _White/Clothing/Eyes/Goggles/nightvision.rsi
+    state: icon
+  discipline: TsfmcGear
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+    - ClothingEyesNightVisionGoggles
