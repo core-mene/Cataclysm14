@@ -55,9 +55,9 @@
   <GuideEntityEmbed Entity="ComputerPowerMonitoring"/>
   </Box>
 
-  - Check the fuel remaining in the generator unit.
   - Check power sourced by solar panels at power monitoring computer* (W).
   - Check the power monitoring computer's current network Load* (W).
+  - Check the fuel remaining in the generator unit.
   - Set the generator unit output power to cover solar power shortfall.
 
   ## 2. Atmospherics
@@ -72,8 +72,6 @@
 
   - Ensure O2 and N2 canisters are anchored to mixer connector ports.
   - Check that the mixer settings are suitable (~22% oxygen, ~78% nitrogen, 101.325 kpa).
-  - Find the filter leading into the nitrogen canister and set it to filter nitrogen.
-  - Find the filter leading into the oxygen canister and set it to filter oxygen.
   - Enable the gas mixer.
 
   ## 2.2. Waste Loop
@@ -88,13 +86,17 @@
   <Box>
   <GuideEntityEmbed Entity="Gyroscope"/>
   <GuideEntityEmbed Entity="GravityGeneratorMini"/>
+  <GuideEntityEmbed Entity="ButtonFrameCaution"/>
   </Box>
 
   - Check that the gyroscope is anchored, powered, and enabled.
   - Check that the mini gravity generator is anchored, powered, and enabled.
+  - Check that the thrusters are powered, and enabled.**
 
   ## Sidenotes
 
   * - Takeaway-class service shuttles are equipped with a power monitoring computer that can be used to appraise the ship's total power production and consumption. An unmodified Takeaway-class shuttle requires ~26.25 kW of power to remain operational.
+  
+  ** - The bridge houses a thruster power switch that enables conservation of power. The thrusters will be disabled when the indicator strobe is on. In the incident of external tampering, this switch can also be used to cycle and correct the thrusters. Take care to observe power draw at the power monitoring computer upon making changes. 
 
 </Document>
