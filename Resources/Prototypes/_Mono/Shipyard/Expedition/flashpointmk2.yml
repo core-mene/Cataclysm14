@@ -5,7 +5,7 @@
 # Shuttle Notes:
 #
 - type: vessel
-  id: flashpoint2
+  id: flashpointmk2
   parent: BaseVessel
   name: PBB Flashpoint MK2
   description: The Plastitanium Big Boy Shipwork™ Flashpoint mercenary capital ship. This one is second hand and is missing some machinery. The former crew has stripped out most of the weapons and ammenities, converting this ship into a Heavy Carrier.
@@ -13,7 +13,7 @@
   category: Large
   group: Expedition
   access: Mercenary
-  shuttlePath: /Maps/_Mono/Shuttles/Expedition/flashpoint2.yml
+  shuttlePath: /Maps/_Mono/Shuttles/Expedition/flashpointmk2.yml
   guidebookPage: Null
   class:
   - Expedition
@@ -21,12 +21,12 @@
   - AME
 
 - type: gameMap
-  id: flashpoint2
-  mapName: 'PBB Flashpoint'
-  mapPath: /Maps/_Mono/Shuttles/Expedition/flashpoint2.yml
+  id: flashpointmk2
+  mapName: 'PBB Flashpoint Mk2'
+  mapPath: /Maps/_Mono/Shuttles/Expedition/flashpointmk2.yml
   minPlayers: 0
   stations:
-    flashpoint:
+    flashpointmk2:
       stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup
