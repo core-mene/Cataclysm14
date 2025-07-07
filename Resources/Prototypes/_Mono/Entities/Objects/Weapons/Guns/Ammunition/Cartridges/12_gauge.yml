@@ -42,7 +42,7 @@
   - type: Tag
     tags:
     - Cartridge
-    - ShellShotgun12_gauge
+    - ShellShotgun12_gaugeBuckshot
   - type: CartridgeAmmo
     soundEject:
       collection: ShellEject
@@ -65,7 +65,7 @@
   - type: Tag
     tags:
     - Cartridge
-    - ShellShotgun12_gauge
+    - ShellShotgun12_gaugeBuckshot
     - ShellShotgun12_gaugeLight
   - type: Sprite
     layers:
@@ -98,7 +98,7 @@
   - type: Tag
     tags:
     - Cartridge
-    - ShellShotgun12_gauge
+    - ShellShotgun12_gaugeBuckshot
     - ShellShotgun12_gaugeLight
   - type: Sprite
     layers:
@@ -110,8 +110,8 @@
     state: "flare"
 
 - type: entity
-  id: ShellShotgun12_gauge
-  name: shotgun shell (12 gauge)
+  id: ShellShotgun12_gaugeBuckshot
+  name: shotgun shell (12 gauge buckshot)
   parent: BaseShellShotgun12_gauge # Frontier: remove BaseSecurityContraband
   components:
   - type: Sprite
@@ -157,7 +157,7 @@
   - type: Tag
     tags:
     - Cartridge
-    - ShellShotgun12_gauge
+    - ShellShotgun12_gaugeBuckshot
     - ShellShotgun12_gaugeLight
   - type: Sprite
     layers:
@@ -186,7 +186,7 @@
   - type: Tag
     tags:
     - Cartridge
-    - ShellShotgun12_gauge
+    - ShellShotgun12_gaugeBuckshot
     - ShellShotgun12_gaugeLight
   - type: Sprite
     layers:

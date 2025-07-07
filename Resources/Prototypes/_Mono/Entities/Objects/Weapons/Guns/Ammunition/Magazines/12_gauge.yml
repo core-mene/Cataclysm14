@@ -11,7 +11,7 @@
     mayTransfer: true
     whitelist:
       tags:
-        - ShellShotgun12_gauge
+        - ShellShotgun12_gaugeBuckshot
     capacity: 8
     soundRack:
       path: /Audio/Weapons/Guns/Cock/smg_cock.ogg
@@ -48,7 +48,7 @@
   parent: BaseMagazine12_gauge
   components:
   - type: BallisticAmmoProvider
-    proto: ShellShotgun12_gauge
+    proto: ShellShotgun12_gaugeBuckshot
   - type: Sprite
     layers:
     - state: pellets
