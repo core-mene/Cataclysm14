@@ -1,33 +1,16 @@
-# SPDX-FileCopyrightText: 2023 Cheackraze
-# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 TsjipTsjip
-# SPDX-FileCopyrightText: 2024 Whatstone
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Blu
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 LukeZurg22
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 ark1368
-# SPDX-FileCopyrightText: 2025 gus
-# SPDX-FileCopyrightText: 2025 starch
-# SPDX-FileCopyrightText: 2025 the-hivequeen
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Map
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/05/2025 01:17:26
+  time: 07/07/2025 16:52:42
   entityCount: 4983
-maps:
-- 1
+maps: []
 grids:
 - 2
-orphans: []
+orphans:
+- 2
 nullspace: []
 tilemap:
   2: Space
@@ -60,27 +43,13 @@ tilemap:
 entities:
 - proto: ""
   entities:
-  - uid: 1
-    components:
-    - type: MetaData
-      name: map 1234
-    - type: Transform
-    - type: Map
-      mapPaused: True
-    - type: PhysicsMap
-    - type: GridTree
-    - type: MovedGrids
-    - type: Broadphase
-    - type: Parallax
-      parallax: FrontierStation
-    - type: OccluderTree
   - uid: 2
     components:
     - type: MetaData
       name: Colonial Outpost
     - type: Transform
       pos: 12,-25
-      parent: 1
+      parent: invalid
     - type: MapGrid
       chunks:
         -1,0:
@@ -4482,8 +4451,8 @@ entities:
     - type: GridGodMode
       protectedEntities: []
     - type: GridPacifier
+      nextUpdate: 101.4336356
       exemptCompany1: TSF
-      nextUpdate: 916.4989126
       pendingEntities:
         4546: 911.4989126
         4537: 911.4989126
@@ -9460,9 +9429,13 @@ entities:
         3317: 911.4989126
         3318: 911.4989126
         3319: 911.4989126
+        invalid: 184.1998158
+        1: 126.8456893
       pacifiedEntities: []
     - type: GridRaider
       protectedEntities: []
+    - type: ShipGridLock
+      locked: False
   - uid: 3
     components:
     - type: MetaData
@@ -11499,6 +11472,13 @@ entities:
     components:
     - type: Transform
       pos: -13.5,34.5
+      parent: 2
+- proto: BorgCharger
+  entities:
+  - uid: 1
+    components:
+    - type: Transform
+      pos: -30.5,11.5
       parent: 2
 - proto: BoxEnvelope
   entities:
