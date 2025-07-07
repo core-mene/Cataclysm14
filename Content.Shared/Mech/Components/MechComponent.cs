@@ -3,6 +3,8 @@ using Content.Shared.Whitelist;
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
+using Content.Shared.Damage; //Monolith
+
 
 namespace Content.Shared.Mech.Components;
 
@@ -61,6 +63,18 @@ public sealed partial class MechComponent : Component
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public float MechToPilotDamageMultiplier;
+
+    /// <summary>
+    /// Monolith: The damage dealt by EMPs.
+    /// </summary>
+    [DataField]
+    public DamageSpecifier EMPdamage = new()
+    {
+        DamageDict = new()
+        {
+            { "Blunt", 600 },
+        }
+    };
 
     /// <summary>
     /// Whether the mech has been destroyed and is no longer pilotable.
