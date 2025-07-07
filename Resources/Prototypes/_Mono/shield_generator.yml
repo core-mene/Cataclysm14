@@ -97,8 +97,8 @@
     powerLoad: 60000
   - type: Appearance
   - type: ShipShieldEmitter
-    damageLimit: 25000
-    damageOverloadTimePunishment: 120
+    damageLimit: 50000
+    damageOverloadTimePunishment: 60
     shieldColor: "#FF3333"
     powerUpSound: !type:SoundPathSpecifier
         path: "/Audio/Effects/teleport_arrival.ogg"
@@ -116,13 +116,13 @@
   name: MS-250 "Aegis" Shield Generator
   components:
   - type: ShipShieldEmitter
-    healPerSecond: 200 # Base is 250
+    healPerSecond: 400 # Base is 250
     damageExp: 1.15 # Base is 1.1
     baseDraw: 40000 # Base is 50000
     maxDraw: 80000 # Base is 150000
     unpoweredBonus: 3 # Base is 6
-    damageLimit: 10000
-    damageOverloadTimePunishment: 100
+    damageLimit: 30000
+    damageOverloadTimePunishment: 50
     shieldColor: "#9933FF"
   - type: Sprite
     sprite: _Mono/Structures/ShuttleComponents/shield.rsi
@@ -150,13 +150,13 @@
   name: MS-100 "Sentinel" Shield Generator
   components:
   - type: ShipShieldEmitter
-    healPerSecond: 50
-    damageExp: 1.4
+    healPerSecond: 200 # Mono
+    damageExp: 1.2 # Mono
     baseDraw: 20000
     maxDraw: 60000
     unpoweredBonus: 2.5
-    damageLimit: 5000
-    damageOverloadTimePunishment: 80
+    damageLimit: 15000 # Mono
+    damageOverloadTimePunishment: 40 # Mono
     shieldColor: "#3399FF"
   - type: Sprite
     sprite: _Mono/Structures/ShuttleComponents/shield.rsi
