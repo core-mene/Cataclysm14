@@ -28,4 +28,4 @@ ussp-bounty-desc-potato = Food for the motherland.
 ussp-bounty-desc-vodka = Vodka, in full glass or bottle form.
 ussp-bounty-desc-biomass = 50 pieces of biomass.
 ussp-bounty-desc-civilian-mech = Any non-combat mech, except the small pet mechs.
-ussp-bounty-desc-military-desc = A mech worthy of Nova Cygni.
+ussp-bounty-desc-military-mech = A mech worthy of Nova Cygni.
