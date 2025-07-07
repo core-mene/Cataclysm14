@@ -551,6 +551,8 @@ public abstract class SharedMechSystem : EntitySystem
 
         if (TryComp<TransformComponent>(uid, out var xform) && xform.GridUid != null && component.PreventFireOnGrid)
         {
+            _popup.PopupEntity(Loc.GetString("gun-no-fire-station"), uid);
+
             args.Cancel();
             return;
         }
