@@ -548,6 +548,12 @@ public abstract class SharedMechSystem : EntitySystem
             return;
         }
 
+        if (TryComp<TransformComponent>(uid, out var xform) && xform.GridUid != null && component.PreventFireOnGrid)
+        {
+            args.Cancel();
+            return;
+        }
+
         var ev = new HandleMechEquipmentBatteryEvent();
         RaiseLocalEvent(uid, ev);
     }
