@@ -130,6 +130,18 @@
 
 - type: latheRecipe
   parent: BaseToolRecipe
+  id: MotionDetectorTSF
+  result: MotionDetector
+  completetime: 3
+  materials:
+    Steel: 500
+    Glass: 100
+    Plastic: 200
+    Gold: 50
+    Silver: 50
+
+- type: latheRecipe
+  parent: BaseToolRecipe
   id: MaterialBoxFlatpackTSF
   result: MaterialBoxFlatpack
   completetime: 5

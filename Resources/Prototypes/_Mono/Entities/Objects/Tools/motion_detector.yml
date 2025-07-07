@@ -14,7 +14,7 @@
   name: motion detector
   parent: BaseHandheldComputer
   id: MotionDetector
-  description: A handheld motion detector.
+  description: A handheld motion detector. Detects people not in the same company of the user.
   components:
   - type: Item
   - type: Sprite

@@ -21,6 +21,7 @@ research-technology-tsfmc-industrial-storage = Material Storage Solutions
 research-technology-tsfmc-industrial-processing = Industrial Processing
 research-technology-tsfmc-portable-recharger = Portable Recharger
 research-technology-tsfmc-nvd = Night Vision Devices
+research-technology-tsfmc-motion-detector = Biosignature IFF Technology
 
 # T2 TSFMC
 research-technology-tsfmc-annie = Annie
