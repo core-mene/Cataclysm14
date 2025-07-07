@@ -1,0 +1,62 @@
+# SPDX-FileCopyrightText: 2025 wewman222
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# MONOLITH MECHA EQUIPMENT
+- type: entity
+  id: LightMechMountEquipment
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Tag
+    tags:
+    - LightMechMount
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  id: MediumMechMountEquipment
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Tag
+    tags:
+    - MediumMechMount
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  id: HeavyMechMountEquipment
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Tag
+    tags:
+    - HeavyMechMount
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  id: LightMultiroleMountEquipment
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Tag
+    tags:
+    - LightMechMount
+    - MediumMechMount
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  id: EWARMechMountEquipment
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Tag
+    tags:
+    - EWARMechMount
+    - LightMechMount
+  - type: StaticPrice
+    price: 500
+

@@ -1,0 +1,99 @@
+# SPDX-FileCopyrightText: 2025 wewman222
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+#Light Weapons
+- type: latheRecipe
+  id: LightMechaAutocannon
+  result: LightMechaAutocannon
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plastic: 200
+
+- type: latheRecipe
+  id: LightMechaSMG
+  result: LightMechaSMG
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plastic: 200
+
+- type: latheRecipe
+  id: LightMechaShotgun
+  result: LightMechaShotgun
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plastic: 200
+
+#Medium Weapons
+- type: latheRecipe
+  id: MediumMechDMR
+  result: MediumMechDMR
+  completetime: 10
+  materials:
+    Steel: 2000
+    Plastic: 400
+
+- type: latheRecipe
+  id: MediumMechCoilgun
+  result: MediumMechCoilgun
+  completetime: 10
+  materials:
+    Steel: 2000
+    Plastic: 400
+    Glass: 1000
+
+- type: latheRecipe
+  id: MediumMechTOW
+  result: MediumMechTOW
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plastic: 200
+
+#Heavy Weapons
+- type: latheRecipe
+  id: HeavyMechRPG
+  result: HeavyMechRPG
+  completetime: 10
+  materials:
+    Steel: 6000
+    Plastic: 400
+
+- type: latheRecipe
+  id: HeavyMechCannon
+  result: HeavyMechCannon
+  completetime: 10
+  materials:
+    Steel: 6000
+    Plastic: 200
+
+- type: latheRecipe
+  id: HeavyMechProjector
+  result: HeavyMechProjector
+  completetime: 10
+  materials:
+    Steel: 6000
+    Plastic: 200
+
+- type: latheRecipe
+  id: EWACMechaFlares
+  result: EWACMechaFlares
+  completetime: 10
+  materials:
+    Steel: 4000
+    Plastic: 200
+    Gold: 5000
+    Silver: 3000
+
+
+- type: latheRecipe
+  id: EWACMechaJammer
+  result: EWACMechaJammer
+  completetime: 10
+  materials:
+    Steel: 3000
+    Plastic: 200
+    Gold: 2000

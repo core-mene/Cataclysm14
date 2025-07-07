@@ -13,6 +13,7 @@
 # SPDX-FileCopyrightText: 2023 lzk
 # SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
 # SPDX-FileCopyrightText: 2024 Saphire Lattice
+# SPDX-FileCopyrightText: 2024 starch
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Emisse
@@ -59555,7 +59556,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: WeaponRifleM90GrenadeLauncher
+- proto: WeaponRifleM90
   entities:
   - uid: 2573
     components:

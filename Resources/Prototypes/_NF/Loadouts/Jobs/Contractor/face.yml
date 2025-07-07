@@ -1,15 +1,23 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 #T0
 - type: loadout
   id: ContractorClothingMaskBreath
   storage:
-    back: 
+    back:
     - ClothingMaskBreath
 
 - type: loadout
   id: ContractorClothingMaskBreathMedical
   price: 200
   storage:
-    back: 
+    back:
     - ClothingMaskBreathMedical
 
 #T1
@@ -20,7 +28,7 @@
     proto: ContractorT1
   price: 200
   storage:
-    back: 
+    back:
     - ClothingMaskSterile
 
 - type: loadout
@@ -92,7 +100,7 @@
     proto: ContractorT2
   price: 1500
   storage:
-    back: 
+    back:
     - ClothingMaskMime
 
 - type: loadout
@@ -135,3 +143,32 @@
     back:
     - ClothingMaskClownBald
 
+- type: loadout
+  id: ContractorClothingMaskNeckGaiter
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1500
+  storage:
+    back:
+    - ClothingMaskNeckGaiter
+
+- type: loadout
+  id: ContractorClothingMaskNeckGaiterRed
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1500
+  storage:
+    back:
+    - ClothingMaskNeckGaiterRed
+
+- type: loadout
+  id: ContractorClothingMaskGasSecurity
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 2500
+  storage:
+    back:
+    - ClothingMaskGasSecurity

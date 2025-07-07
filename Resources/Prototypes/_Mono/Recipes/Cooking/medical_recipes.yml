@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: microwaveMealRecipe
   id: RecipeCombatMedipen
   name: combat medipen
@@ -9,4 +14,16 @@
   reagents:
     Omnizine: 25
     TranexamicAcid: 5
+  recipeType: MedicalAssembler
+
+- type: microwaveMealRecipe
+  id: RecipeHyperzineInjector
+  name: hyperzine injector
+  result: Stimpack
+  time: 5
+  group: Medicinal
+  solids:
+    BlankMediPen: 1
+  reagents:
+    Stimulants: 30
   recipeType: MedicalAssembler

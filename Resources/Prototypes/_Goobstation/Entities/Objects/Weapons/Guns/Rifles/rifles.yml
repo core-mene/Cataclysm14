@@ -1,4 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
@@ -18,6 +20,8 @@
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
+  - type: Item # Mono
+    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/annie.rsi
   - type: Clothing
     sprite: _Goobstation/Objects/Weapons/Guns/Rifles/annie.rsi
   - type: Gun
@@ -111,6 +115,101 @@
           tags:
             - Cartridge7.62x39mmSubsonic
             - Cartridge7.62x39mmFMJ
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: M-90 (7.62x51mm) # mono - 7.62x51mm
+  parent: [BaseWeaponRifle, BaseC3PirateContraband] # Mono - pirate contra
+  id: WeaponRifleM90
+  description: A M-90gl with the GL removed to take advantage of the compact bullpup design. Uses 7.62x51mm rifle ammo. # mono
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/m90.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Rifles/carbine.rsi
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine7.62x51mmFMJ
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - Magazine7.62x51mmFMJ
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge7.62x51mmFMJ # mono - 7.62x51mm
+        priority: 1
+        whitelist:
+          tags:
+          - Cartridge7.62x51mmFMJ # mono - 7.62x51mm
+  - type: Item # mono - large
+    size: Large
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: Burner (12.7x99mm)
+  parent: [BaseWeaponRifle, BaseC3PirateContrabandHighValue] # Mono - Changed to HighValue
+  id: WeaponRifleBurner
+  description: A high caliber syndicate gun chambered in 12.7x99mm, capable of firing anti-material and high explosive rounds.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/burner.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 1.7
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine12.7x99mm
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - Magazine12.7x99mm
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge12.7x99mm
+        priority: 1
+        whitelist:
+          tags:
+          - Cartridge12.7x99mm
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1

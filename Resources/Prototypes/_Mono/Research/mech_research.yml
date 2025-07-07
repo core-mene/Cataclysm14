@@ -1,0 +1,111 @@
+- type: technology
+  id: Broadsword
+  name: research-technology-broadsword
+  icon:
+    sprite: _Mono/Objects/Specific/Mech/mechaS2.rsi
+    state: broadsword
+  discipline: Arsenal
+  tier: 2
+  cost: 8000
+  recipeUnlocks:
+  - BroadswordHarness
+  - BroadswordHead
+  - BroadswordLArm
+  - BroadswordLLeg
+  - BroadswordRArm
+  - BroadswordRLeg
+  - BroadswordCentralElectronics
+  - BroadswordPeripheralsElectronics
+  - BroadswordTargetingElectronics
+  - LightMechaAutocannon
+  - LightMechaSMG
+  - LightMechaShotgun
+  - PowerCageMech
+  technologyPrerequisites:
+  - Gygax
+
+- type: technology
+  id: Halberd
+  name: research-technology-halberd
+  icon:
+    sprite: _Mono/Objects/Specific/Mech/mechaS2.rsi
+    state: broadsword
+  discipline: Arsenal
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - HalberdHarness
+  - MediumMechDMR
+  - MediumMechCoilgun
+  - MediumMechTOW
+  technologyPrerequisites:
+  - Broadsword
+
+- type: technology
+  id: Sabre
+  name: research-technology-sabre
+  icon:
+    sprite: _Mono/Objects/Specific/Mech/mechaS2.rsi
+    state: broadsword
+  discipline: Arsenal
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - SabreHarness
+  technologyPrerequisites:
+  - Broadsword
+
+- type: technology
+  id: Flail
+  name: research-technology-flail
+  icon:
+    sprite: _Mono/Objects/Specific/Mech/mechaS4.rsi
+    state: flail
+  discipline: Arsenal
+  tier: 3
+  cost: 12000
+  recipeUnlocks:
+  - FlailHarness
+  - FlailHead
+  - FlailLArm
+  - FlailLLeg
+  - FlailRArm
+  - FlailRLeg
+  - FlailCentralElectronics
+  - FlailPeripheralsElectronics
+  - FlailTargetingElectronics
+  - HeavyMechRPG
+  - HeavyMechCannon
+  - HeavyMechProjector
+  technologyPrerequisites:
+  - Broadsword
+
+- type: technology
+  id: Spyglass
+  name: research-technology-spyglass
+  icon:
+    sprite: _Mono/Objects/Specific/Mech/mechaS4.rsi
+    state: flail
+  discipline: Arsenal
+  tier: 3
+  cost: 13000
+  recipeUnlocks:
+  - SpyglassHarness
+  - EWACMechaFlares
+  - EWACMechaJammer
+  technologyPrerequisites:
+  - Flail
+
+- type: technology
+  id: Mace
+  name: research-technology-mace
+  icon:
+    sprite: _Mono/Objects/Specific/Mech/mechaS4.rsi
+    state: flail
+  discipline: Arsenal
+  tier: 3
+  cost: 9000
+  recipeUnlocks:
+  - MaceHarness
+  technologyPrerequisites:
+  - Flail

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -68,11 +69,9 @@
   id: WeaponLMGMR8BTSF
   result: WeaponLMGMR8B
   materials:
-    Steel: 8500
-    Plasteel: 5000
-    Plastic: 1500
-    Plasma: 800
-    Uranium: 500
+    Steel: 6000
+    Plasteel: 3000
+    Synthalloy: 2500
     Silver: 1500
 
 - type: latheRecipe
@@ -80,11 +79,22 @@
   id: WeaponRifleMR8CTSF
   result: WeaponRifleMR8C
   materials:
-    Steel: 6500
+    Steel: 4000
     Plasteel: 2000
-    Plastic: 1500
-    Plasma: 800
+    Synthalloy: 1500
     Silver: 500
+
+# TSF ICWS
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRifleXlr556Tsf
+  result: WeaponRifleXlr556
+  materials:
+    Steel: 500
+    Plasteel: 1500
+    Synthalloy: 2500
+    Silver: 250
 
 # syndicate ballistics
 
@@ -120,8 +130,8 @@
 
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
-  id: WeaponRifleAK502Rogue
-  result: WeaponRifleAK502
+  id: WeaponRifleM90Rogue
+  result: WeaponRifleM90
   materials:
     Steel: 1800
     Plasteel: 800
@@ -161,3 +171,51 @@
     Plastic: 500
     Silver: 900
     Uranium: 200
+
+# Ussp guns
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRifleSVSUSSP
+  result: WeaponRifleSVS
+  materials:
+    Steel: 100
+    Wood: 1000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponSniperMosinUSSP
+  result: WeaponSniperMosin
+  materials:
+    Steel: 100
+    Plasteel: 100
+    Wood: 1000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRifleAK502USSP
+  result: WeaponRifleAK502
+  materials:
+    Steel: 1800
+    Plasteel: 800
+    Plastic: 1200
+    Silver: 100
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponDP29USSP
+  result: WeaponDP29
+  materials:
+    Steel: 2500
+    Plasteel: 2000
+    Plastic: 1500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRevolverMatebaUSSP
+  result: WeaponRevolverMateba
+  materials:
+    Steel: 3000
+    Plasteel: 3000
+    Wood: 1000
+    Uranium: 1500

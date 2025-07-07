@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Schepka
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+#RD
+
 - type: thiefBackpackSet
   id: VoidsuitSelectorRDHardsuit
   name: selectable-set-rd-hardsuit-name
@@ -17,3 +24,25 @@
     state: control
   content:
   - ClothingModsuitResearchDirectorPowerCell
+
+#Captain
+
+- type: thiefBackpackSet
+  id: VoidsuitSelectorCapHardsuit
+  name: selectable-set-cap-hardsuit-name
+  description: selectable-set-cap-hardsuit-desc
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/capspace.rsi
+    state: icon
+  content:
+  - ClothingOuterHardsuitCap
+
+- type: thiefBackpackSet
+  id: VoidsuitSelectorCapModsuit
+  name: selectable-set-cap-modsuit-name
+  description: selectable-set-cap-modsuit-desc
+  sprite:
+    sprite: _Goobstation/Clothing/Back/Modsuits/captain.rsi
+    state: control
+  content:
+  - ClothingModsuitCaptainPowerCell

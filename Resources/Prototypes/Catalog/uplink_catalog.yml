@@ -72,6 +72,7 @@
 # SPDX-FileCopyrightText: 2024 AlexUm & XGabriel08X
 # SPDX-FileCopyrightText: 2024 Alzore
 # SPDX-FileCopyrightText: 2024 ArtisticRoomba
+# SPDX-FileCopyrightText: 2024 Aviu00
 # SPDX-FileCopyrightText: 2024 Boaz1111
 # SPDX-FileCopyrightText: 2024 ERROR404
 # SPDX-FileCopyrightText: 2024 Ed
@@ -255,7 +256,7 @@
   discountDownTo:
     Telecrystal: 15 # Mono #5->3 Mono Edit
   cost:
-    Telecrystal: 30 # Mono #8->6 Mono Edit
+    Telecrystal: 40 # Mono #8->6 Mono Edit
   categories:
   - UplinkWeaponry
 #  conditions: # Mono normal uplink
@@ -1737,9 +1738,9 @@
   productEntity: ClothingBackpackDuffelSyndicateHardsuitBundle
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 20 # Mono
+    Telecrystal: 30 # Mono
   cost:
-    Telecrystal: 35 # Mono # 8->7 Mono
+    Telecrystal: 50 # Mono
   categories:
   - UplinkWearables
 
@@ -1750,7 +1751,7 @@
   icon: { sprite: /Textures/Clothing/OuterClothing/Armor/syndie-raid.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateRaidBundle
   cost:
-    Telecrystal: 40 # Mono
+    Telecrystal: 50 # Mono
   categories:
   - UplinkWearables
 #  conditions: # Mono - Added to normal uplink why not
@@ -1767,9 +1768,9 @@
   productEntity: ClothingBackpackDuffelSyndicateEliteHardsuitBundle
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 35 # Mono
+    Telecrystal: 55 # Mono
   cost:
-    Telecrystal: 60 # Mono
+    Telecrystal: 80 # Mono
   categories:
   - UplinkWearables
 
@@ -1781,9 +1782,9 @@
   productEntity: CrateCybersunJuggernautBundle
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 40 # Mono
-  cost:
     Telecrystal: 60 # Mono
+  cost:
+    Telecrystal: 100 # Mono
   categories:
   - UplinkWearables
 

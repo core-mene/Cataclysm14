@@ -251,8 +251,8 @@
     unequipSound: /Audio/Mecha/mechmove03.ogg
     slots: [ outerClothing ]
   - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.85
+    walkModifier: 0.95 # Mono
+    sprintModifier: 0.95 # Mono
   - type: SealableClothing
     sealUpPopup: sealable-clothing-seal-up-chestplate
     sealDownPopup: sealable-clothing-seal-down-chestplate
@@ -264,7 +264,7 @@
       outerClothing-resomi:
       - state: equipped-OUTERCLOTHING-sealed-resomi
   - type: ExplosionResistance
-    damageCoefficient: 0.35
+    damageCoefficient: 0.25 # Mono
   - type: Armor
     modifiers:
       coefficients:
@@ -272,9 +272,9 @@
         Slash: 0.8
         Piercing: 0.85
         Heat: 0.7
-        Shock: 0.8
-        Caustic: 0.5
-        Radiation: 0.2
+        Shock: 0.4 # Mono
+        Caustic: 0.4 # Mono
+        Radiation: 0 # Mono
   - type: ComponentToggler
     components:
     - type: PressureProtection
@@ -284,9 +284,9 @@
       coolingCoefficient: 0.1
       heatingCoefficient: 0.4
   - type: StaminaDamageResistance
-    coefficient: 0.9
+    coefficient: 0.7 # Mono
   - type: FireProtection
-    reduction: 0.0
+    reduction: 0.5 # Mono
 
 - type: entity
   parent: ClothingOuterBase
