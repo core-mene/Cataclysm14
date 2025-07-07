@@ -16,7 +16,7 @@ namespace Content.Shared.Stacks
         ///     Do NOT set this directly, use the <see cref="SharedStackSystem.SetCount"/> method instead.
         /// </summary>
         [DataField("count")]
-        public int Count { get; set; } = 100;
+        public int Count { get; set; } = 50; // Mono
 
         /// <summary>
         ///     Max amount of things that can be in the stack.
