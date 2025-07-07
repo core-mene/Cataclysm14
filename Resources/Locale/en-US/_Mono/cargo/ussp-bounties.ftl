@@ -10,7 +10,7 @@ ussp-bounty-name-vt7 = VT-7 HF Blade/Energy Sword
 ussp-bounty-name-lasergun = Laser Weaponry
 ussp-bounty-name-potato = Potato
 ussp-bounty-name-vodka = Vodka
-ussp-bounty-name-biomass = 50 Biomass
+ussp-bounty-name-biomass = Biomass
 ussp-bounty-name-civilian-mech = Civilian Mech
 ussp-bounty-name-military-mech = Military Mech
 
@@ -26,6 +26,6 @@ ussp-bounty-desc-vt7 = Only the Rogue one counts. Don't want a war starting now!
 ussp-bounty-desc-lasergun = Anything that shoots a projectile with no travel time, and feeds from a battery.
 ussp-bounty-desc-potato = Food for the motherland.
 ussp-bounty-desc-vodka = Vodka, in full glass or bottle form.
-ussp-bounty-desc-biomass = 50 pieces of biomass exactly.
+ussp-bounty-desc-biomass = 50 pieces of biomass.
 ussp-bounty-desc-civilian-mech = Any non-combat mech, except the small pet mechs.
 ussp-bounty-desc-military-desc = A mech worthy of Nova Cygni.
