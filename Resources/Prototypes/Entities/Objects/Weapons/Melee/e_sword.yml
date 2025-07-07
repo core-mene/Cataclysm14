@@ -104,7 +104,9 @@
     sprite: Objects/Weapons/Melee/e_sword-inhands.rsi
   - type: PirateBountyItem # Mono
     id: TSFEnergyWeapon
-
+  - type: Tag  # Mono
+    tags:
+    - EnergySword
 
 - type: entity
   name: energy dagger

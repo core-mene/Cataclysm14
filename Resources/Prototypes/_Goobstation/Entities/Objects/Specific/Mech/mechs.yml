@@ -7,6 +7,9 @@
     equipmentWhitelist:
       tags:
       - CombatMech
+  - type: Tag
+    tags:
+    - MilitaryMechBounty
 
 - type: entity
   id: IndustrialMech
@@ -17,6 +20,9 @@
     equipmentWhitelist:
       tags:
       - IndustrialMech
+  - type: Tag
+    tags:
+    - CivilianMechBounty
 
 - type: entity
   id: SpecialMech
@@ -27,6 +33,9 @@
     equipmentWhitelist:
       tags:
       - SpecialMech
+  - type: Tag
+    tags:
+    - CivilianMechBounty
 
 - type: entity
   id: SmallMech
@@ -85,7 +94,7 @@
     - DoorBumpOpener
     - FootstepSound
     - RipleyMkII
-    
+
 - type: entity
   id: MechRipley2Battery
   parent: MechRipley2
@@ -204,7 +213,7 @@
         Blunt: 25
         Structural: 180
   - type: CanMoveInAir
-  - type: MovementAlwaysTouching        
+  - type: MovementAlwaysTouching
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 2.6
