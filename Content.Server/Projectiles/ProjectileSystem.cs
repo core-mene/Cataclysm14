@@ -293,9 +293,6 @@ public sealed class ProjectileSystem : SharedProjectileSystem
                 }
                 Dirty(uid, projectileComp); // Mark component as dirty if ProjectileSpent or PenetrationAmount changed
 
-                // Apply projectile triggers - Mono
-
-
                 // Post-hit effects if projectile is spent
                 if (projectileComp.ProjectileSpent)
                 {
@@ -305,7 +302,7 @@ public sealed class ProjectileSystem : SharedProjectileSystem
                         // Camera kick is tricky without the StartCollideEvent's body info directly.
                         // We can use the projectile's velocity before it's zeroed.
                         if (currentVelocity.LengthSquared() > 0f)
-                            _sharedCameraRecoil.KickCamera(hitEntity, currentVelocity.Normalized());
+                           _sharedCameraRecoil.KickCamera(hitEntity, currentVelocity.Normalized());
                     }
 
                     // Move projectile to exact hit point
