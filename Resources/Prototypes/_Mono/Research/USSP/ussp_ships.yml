@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: technology
+  id: UsspBasicShips
+  name: research-technology-ussp-ships-basic
+  icon:
+    sprite: _Mono/Interface/Misc/research_icons_ussp.rsi
+    state: icon-tier1
+  discipline: UsspShipyard
+  tier: 1
+  cost: 50000
+  recipeUnlocks:
+  - GadyukaVoucherUssp
+  - NatiskVoucherUssp
+  - GruznykVoucherUssp
+
+- type: technology
+  id: UsspMediumShips
+  name: research-technology-ussp-ships-medium
+  icon:
+    sprite: _Mono/Interface/Misc/research_icons_ussp.rsi
+    state: icon-tier2
+  discipline: UsspShipyard
+  tier: 2
+  cost: 70000
+  recipeUnlocks:
+  - DrakonVoucherUssp
+  - SekundaVoucherUssp
+  technologyPrerequisites:
+  - UsspBasicShips
+
+- type: technology
+  id: UsspAdvancedShips
+  name: research-technology-ussp-ships-advanced
+  icon:
+    sprite: _Mono/Interface/Misc/research_icons_ussp.rsi
+    state: icon-tier3
+  discipline: UsspShipyard
+  tier: 3
+  cost: 90000
+  recipeUnlocks:
+  - TunguskaVoucherUssp
+  technologyPrerequisites:
+  - UsspMediumShips

@@ -31,3 +31,52 @@
   - ClothingMaskGasSyndicateRogue
   technologyPrerequisites:
   - RogueBasicEquipment
+
+- type: technology
+  id: RogueSyndicateTacsuits
+  name: research-technology-rogue-syndicate-tacsuits
+  icon:
+    sprite: Clothing/OuterClothing/Hardsuits/syndicate.rsi
+    state: icon
+  discipline: RogueEquipment
+  tier: 2
+  cost: 75000
+  recipeUnlocks:
+  - ClothingOuterHardsuitSyndieRogue
+  - ClothingOuterHardsuitSyndieEliteRogue
+  technologyPrerequisites:
+  - RogueBasicEquipment
+  - RogueAdvancedEquipment
+
+- type: technology
+  id: RogueStealthsuit
+  name: research-technology-rogue-stealthsuit
+  icon:
+    sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/cybersunstealth.rsi
+    state: icon
+  discipline: RogueEquipment
+  tier: 2
+  cost: 20000
+  recipeUnlocks:
+  - ClothingOuterHardsuitCybersunStealthRogue
+  technologyPrerequisites:
+  - RogueBasicEquipment
+  - RogueAdvancedEquipment
+  - RogueSyndicateTacsuits
+
+- type: technology
+  id: RogueSyndicateTacsuitsT3
+  name: research-technology-rogue-syndicate-tacsuits-t3
+  icon:
+    sprite: Clothing/OuterClothing/Hardsuits/cybersun.rsi
+    state: icon
+  discipline: RogueEquipment
+  tier: 3
+  cost: 65000
+  recipeUnlocks:
+  - ClothingOuterHardsuitJuggernautRogue
+  - ClothingOuterHardsuitSyndieCommanderRogue
+  technologyPrerequisites:
+  - RogueBasicEquipment
+  - RogueAdvancedEquipment
+  - RogueSyndicateTacsuits

@@ -1,10 +1,17 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: cargoBounty
   id: USSPBountyArtifact
-  reward: 8500
-  description: ussp-bounty-description-artifact
+  reward: 30000
+  description: ussp-bounty-desc-artifact
   idPrefix: USSP
   entries:
-  - name: ussp-bounty-item-artifact
+  - name: ussp-bounty-name-artifact
     amount: 1
     whitelist:
       components:
@@ -12,11 +19,11 @@
 
 - type: cargoBounty
   id: USSPBountyBread
-  reward: 2000
-  description: ussp-bounty-description-bread
+  reward: 8000
+  description: ussp-bounty-desc-bread
   idPrefix: USSP
   entries:
-  - name: ussp-bounty-item-bread
+  - name: ussp-bounty-name-bread
     amount: 1
     whitelist:
       tags:
@@ -27,10 +34,10 @@
 
 - type: cargoBounty
   id: USSPBountySoup
-  reward: 6000
-  description: ussp-bounty-description-food-warm
+  reward: 12000
+  description: ussp-bounty-desc-food-warm
   entries:
-  - name: ussp-bounty-item-soup
+  - name: ussp-bounty-name-soup
     amount: 3
     whitelist:
       tags:
@@ -38,11 +45,11 @@
 
 - type: cargoBounty
   id: USSPBountyPizza
-  reward: 6000
-  description: ussp-bounty-description-food-warm
+  reward: 12000
+  description: ussp-bounty-desc-food-warm
   idPrefix: USSP
   entries:
-  - name: ussp-bounty-item-pizza
+  - name: ussp-bounty-name-pizza
     amount: 2
     whitelist:
       tags:
@@ -52,36 +59,84 @@
       - Slice
 
 - type: cargoBounty
-  id: USSPBountyHandheldRadio
-  reward: 8000
-  description: ussp-bounty-description-generic
+  id: USSPBountyVodka
+  reward: 12000
+  description: ussp-bounty-desc-vodka
   idPrefix: USSP
   entries:
-  - name: ussp-bounty-item-radio
-    amount: 8
+  - name: ussp-bounty-name-vodka
+    amount: 1
     whitelist:
       tags:
-      - HandicommsBounty
+      - VodkaBounty
+
+- type: cargoBounty
+  id: USSPBountyCivilianMech
+  reward: 50000
+  description: ussp-bounty-desc-civilian-mech
+  idPrefix: USSP
+  entries:
+  - name: ussp-bounty-name-civilian-mech
+    amount: 1
+    whitelist:
+      tags:
+      - CivilianMechBounty
+
+- type: cargoBounty
+  id: USSPBountyPotato
+  reward: 16000
+  description: ussp-bounty-desc-generic
+  idPrefix: USSP
+  entries:
+  - name: ussp-bounty-name-potato
+    amount: 5
+    whitelist:
+      tags:
+      - Potato
+
+- type: cargoBounty
+  id: USSPBountyBiomass
+  reward: 38000
+  description: ussp-bounty-desc-biomass
+  idPrefix: USSP
+  entries:
+  - name: ussp-bounty-name-biomass
+    amount: 50
+    whitelist:
+      tags:
+      - BiomassBounty
 
 - type: cargoBounty
   id: USSPRogueHardsuit
-  reward: 8000
-  description: ussp-bounty-description-rogue-hardsuit
+  reward: 32000
+  description: ussp-bounty-desc-rogue-hardsuit
   idPrefix: NC # nova cygni fyi
   entries:
-  - name: ussp-bounty-item-rogue-hardsuit
+  - name: ussp-bounty-name-rogue-hardsuit
     amount: 1
     whitelist:
       tags:
       - RogueHardsuit
 
 - type: cargoBounty
-  id: USSPKevlarVest
-  reward: 3500
-  description: ussp-bounty-description-kevlar
+  id: USSPBountyMilitaryMech
+  reward: 100000
+  description: ussp-bounty-desc-military-mech
   idPrefix: NC # nova cygni fyi
   entries:
-  - name: ussp-bounty-item-kevlar
+  - name: ussp-bounty-name-military-mech
+    amount: 1
+    whitelist:
+      tags:
+      - MilitaryMechBounty
+
+- type: cargoBounty
+  id: USSPKevlarVest
+  reward: 5000
+  description: ussp-bounty-desc-kevlar
+  idPrefix: NC # nova cygni fyi
+  entries:
+  - name: ussp-bounty-name-kevlar
     amount: 2
     whitelist:
       tags:
@@ -89,23 +144,24 @@
 
 - type: cargoBounty
   id: USSPVT7
-  reward: 15000
-  description: ussp-bounty-description-vt7
+  reward: 35000
+  description: ussp-bounty-desc-vt7
   idPrefix: NC # nova cygni fyi
   entries:
-  - name: ussp-bounty-item-vt7
+  - name: ussp-bounty-name-vt7
     amount: 1
     whitelist:
       tags:
       - VT7
+      - EnergySword
 
 - type: cargoBounty
   id: USSPBountyLaserGun
-  reward: 13500
-  description: ussp-bounty-description-lasergun
+  reward: 24000
+  description: ussp-bounty-desc-lasergun
   idPrefix: NC
   entries:
-  - name: ussp-bounty-item-lasergun
+  - name: ussp-bounty-name-lasergun
     amount: 2
     whitelist:
       components:

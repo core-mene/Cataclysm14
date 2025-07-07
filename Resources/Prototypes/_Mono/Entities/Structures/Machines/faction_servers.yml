@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -86,3 +87,42 @@
     - RogueGear # GEAR IS TOOLS!!
     - RogueEquipment # EQUIPMENT IS ARMOR!!
     - RogueShipyard
+
+- type: entity
+  id: ResearchAndDevelopmentServerUssp
+  parent: BaseRdServerFaction
+  name: USSP R&D server
+  description: Contains the collective knowledge of the USSP in this sector.
+  components:
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - Ussp
+    - UsspShipyard
+    - UsspEquipment
+    - UsspWeapons
+
+- type: entity
+  id: ResearchAndDevelopmentServerDebug
+  parent: BaseRdServerFaction
+  name: debug R&D server
+  description: Contains the collective knowledge of Everyone. Damn
+  components:
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - Industrial
+    - Arsenal
+    - Experimental
+    - CivilianServices
+    - TsfmcWeaponry
+    - TsfmcGear
+    - TsfmcEquipment
+    - TsfmcShipyard
+    - RogueWeaponry
+    - RogueGear
+    - RogueEquipment
+    - RogueShipyard
+    - Ussp
+    - UsspShipyard
+    - UsspEquipment
+    - UsspWeapons
+

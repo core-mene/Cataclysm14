@@ -40,6 +40,7 @@ using Content.Shared.Interaction;
 using Content.Shared.Mech;
 using Content.Shared.Mech.Components;
 using Content.Shared.Mech.EntitySystems;
+using Content.Shared.Mech.Equipment.Components; // Monolith
 using Content.Shared.Movement.Events;
 using Content.Shared.Popups;
 using Content.Shared.Shuttles.BUIStates;
@@ -324,7 +325,20 @@ public sealed partial class MechSystem : SharedMechSystem
 
     private void OnEmpAttempt(EntityUid uid, MechComponent comp, EmpAttemptEvent args) // Monolith
     {
-                base.BreakMech(uid, comp);
+        if (comp.Broken != true)
+            _damageable.TryChangeDamage(uid, comp.EMPdamage);
+
+        if (TryComp<BatteryComponent>(comp.BatterySlot.ContainedEntity, out var battery))
+        {
+            var maxCharge = battery.MaxCharge;
+            var currentCharge = battery.CurrentCharge;
+            var chargeDelta = maxCharge / 2;
+
+            if (chargeDelta > currentCharge)
+                chargeDelta = currentCharge;
+
+            TryChangeEnergy(uid, -chargeDelta, comp);
+        }
     }
 
     private void ToggleMechUi(EntityUid uid, MechComponent? component = null, EntityUid? user = null)

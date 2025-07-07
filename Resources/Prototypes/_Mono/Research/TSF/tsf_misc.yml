@@ -149,3 +149,15 @@
   cost: 15000
   recipeUnlocks:
     - ClothingEyesNightVisionGoggles
+
+- type: technology
+  id: TsfMotionDetector
+  name: research-technology-tsfmc-motion-detector
+  icon:
+    sprite: _RMC14/Objects/Tools/motion_detector.rsi
+    state: detector
+  discipline: TsfmcGear
+  tier: 1
+  cost: 20000
+  recipeUnlocks:
+  - MotionDetectorTSF

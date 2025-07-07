@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 ark1368
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -22,7 +24,7 @@ namespace Content.Server._Crescent.ShipShields;
 public sealed partial class ShipShieldsSystem : EntitySystem
 {
     private const string ShipShieldPrototype = "ShipShield";
-    private const float Padding = 10f;
+    private const float Padding = 50f;
     private const float CollisionThreshold = 50f;
     //private const float DeflectionSpread = 25f;
     private const float EmitterUpdateRate = 1.5f;

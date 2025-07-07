@@ -21,8 +21,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/01/2025 16:37:31
-  entityCount: 506
+  time: 07/07/2025 20:08:42
+  entityCount: 509
 maps: []
 grids:
 - 1
@@ -504,6 +504,8 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Rig
+    - type: ShipGridLock
+      locked: False
 - proto: AirAlarm
   entities:
   - uid: 2
@@ -1585,11 +1587,17 @@ entities:
       parent: 1
 - proto: ChairOfficeLight
   entities:
-  - uid: 188
+  - uid: 490
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 0.5,11.5
+      rot: 3.141592653589793 rad
+      pos: 0.0123003125,13.523154
+      parent: 1
+  - uid: 506
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 0.7935503,12.491904
       parent: 1
 - proto: ClosetWallO2N2Filled
   entities:
@@ -1603,7 +1611,8 @@ entities:
   - uid: 191
     components:
     - type: Transform
-      pos: 0.5,14.5
+      rot: -1.5707963267948966 rad
+      pos: 1.5,12.5
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 5
@@ -1634,13 +1643,12 @@ entities:
       - device-button-6
       - device-button-7
       - device-button-8
-- proto: ComputerTabletopStationRecords
+- proto: ComputerStationRecords
   entities:
-  - uid: 193
+  - uid: 388
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 1.5,12.5
+      pos: 0.5,14.5
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 5
@@ -2598,6 +2606,12 @@ entities:
       parent: 1
 - proto: Grille
   entities:
+  - uid: 276
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 2.5,11.5
+      parent: 1
   - uid: 310
     components:
     - type: Transform
@@ -2948,6 +2962,12 @@ entities:
       parent: 1
 - proto: ReinforcedWindow
   entities:
+  - uid: 188
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 2.5,11.5
+      parent: 1
   - uid: 362
     components:
     - type: Transform
@@ -2977,6 +2997,11 @@ entities:
       parent: 1
 - proto: ShuttersNormal
   entities:
+  - uid: 193
+    components:
+    - type: Transform
+      pos: 2.5,11.5
+      parent: 1
   - uid: 367
     components:
     - type: Transform
@@ -2996,6 +3021,20 @@ entities:
     components:
     - type: Transform
       pos: 2.5,12.5
+      parent: 1
+- proto: ShuttleGunKinetic
+  entities:
+  - uid: 277
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 3.5,10.5
+      parent: 1
+  - uid: 302
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 3.5,9.5
       parent: 1
 - proto: SignalButtonDirectional
   entities:
@@ -3074,6 +3113,8 @@ entities:
       linkedPorts:
         370:
         - Pressed: Toggle
+        193:
+        - Pressed: Toggle
 - proto: SignSpace
   entities:
   - uid: 378
@@ -3146,11 +3187,6 @@ entities:
       parent: 1
 - proto: TableReinforced
   entities:
-  - uid: 388
-    components:
-    - type: Transform
-      pos: 1.5,12.5
-      parent: 1
   - uid: 389
     components:
     - type: Transform
@@ -3726,11 +3762,6 @@ entities:
     - type: Transform
       pos: 0.5,10.5
       parent: 1
-  - uid: 490
-    components:
-    - type: Transform
-      pos: 2.5,11.5
-      parent: 1
   - uid: 491
     components:
     - type: Transform
@@ -3814,14 +3845,6 @@ entities:
     components:
     - type: Transform
       pos: 0.5,0.5
-      parent: 1
-- proto: WeaponTurretASM501
-  entities:
-  - uid: 506
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 3.5,10.5
       parent: 1
 - proto: WeaponTurretL85Autocannon
   entities:

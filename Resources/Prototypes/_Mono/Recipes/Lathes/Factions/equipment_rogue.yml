@@ -2,6 +2,15 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+# T1 scaf
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitPirateScafRogue
+  parent: MonoHardsuitT1Recipe
+  result: ClothingOuterHardsuitPirateScaf
+
+# T2 VG
+
 - type: latheRecipe
   id: ClothingOuterHardsuitViperGroupStandardRogue
   parent: MonoHardsuitT2Recipe
@@ -12,10 +21,38 @@
   parent: MonoHardsuitT2Recipe
   result: ClothingOuterHardsuitViperGroupMedic
 
+# T2 syndie
+
 - type: latheRecipe
-  id: ClothingOuterHardsuitPirateScafRogue
-  parent: MonoHardsuitT1Recipe
-  result: ClothingOuterHardsuitPirateScaf
+  id: ClothingOuterHardsuitSyndieRogue
+  parent: MonoHardsuitT2Recipe
+  result: ClothingOuterHardsuitSyndie
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitSyndieEliteRogue
+  parent: MonoHardsuitT2Recipe
+  result: ClothingOuterHardsuitSyndieElite
+
+# T2 stealthsuit
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitCybersunStealthRogue
+  parent: MonoHardsuitT3Recipe
+  result: ClothingOuterHardsuitCybersunStealth
+
+# T3 synthalloy
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitJuggernautRogue
+  parent: MonoHardsuitT3TsfRecipe
+  result: ClothingOuterHardsuitJuggernaut
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitSyndieCommanderRogue
+  parent: MonoHardsuitT3TsfRecipe
+  result: ClothingOuterHardsuitSyndieCommander
+
+# misc
 
 - type: latheRecipe
   id: ClothingMaskGasSyndicateRogue

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -27,12 +28,15 @@
     idleState: icon
     runningState: icon
     dynamicPacks:
+    # rogue start
     - MonoRogueWeaponsDynamicMelee
     - MonoRogueWeaponsDynamicRanged
     - MonoRogueVouchersDynamic
     - MonoRogueMiscDynamic
     - MonoRogueAmmo
     - MonoRogueGearDynamic
+    - MonoRogueGearProDynamic
+    # TSF start
     - MonoTSFWeaponsDynamicMelee
     - MonoTSFWeaponsDynamicRanged
     - MonoTSFVouchersDynamic
@@ -40,6 +44,12 @@
     - MonoTSFAmmo
     - MonoTSFGearDynamic
     - MonoTSFStructuresDynamic
+    # USSP start
+    - MonoUSSPVouchersDynamic
+    - MonoUSSPArmorDynamic
+    - MonoUSSPMiscDynamic
+    - MonoUSSPWeaponsDynamicRanged
+    - MonoUSSPAmmo
   - type: MaterialStorage
     whitelist:
       tags:

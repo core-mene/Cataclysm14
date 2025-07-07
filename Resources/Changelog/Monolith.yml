@@ -6233,3 +6233,237 @@ Entries:
   id: 720
   time: '2025-07-06T20:01:43.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1180
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: >-
+        Fixes the majority of collision issues from raycasting projectiles in
+        regards to triggered explosions failing. This should make high damage,
+        low firerate explosion shipguns much more usable. Aka Charons primarily,
+        Cyrexas, etc.
+  id: 721
+  time: '2025-07-07T04:30:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1193
+- author: Ark
+  changes:
+    - type: Tweak
+      message: You can now receive radio chatter in FTL.
+  id: 722
+  time: '2025-07-07T05:18:08.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1194
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: Adds a few final resomi hardsuit sprites
+  id: 723
+  time: '2025-07-07T05:19:27.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1189
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Makes shields MUCH bigger to compensate for absurdly fast projectiles
+    - type: Tweak
+      message: Makes shields a lot more tankier
+  id: 724
+  time: '2025-07-07T05:40:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1195
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: >-
+        Adds the M194 CHARONETTE mass driver. Its a smaller mass driver meant
+        for smaller craft.
+  id: 725
+  time: '2025-07-07T05:41:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1191
+- author: OneZerooo0
+  changes:
+    - type: Add
+      message: Added Steel Hammer Manufacturing to the company roster.
+  id: 726
+  time: '2025-07-07T05:46:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1098
+- author: grandalff
+  changes:
+    - type: Add
+      message: Added shield generator to Camelot.
+  id: 727
+  time: '2025-07-07T06:00:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1185
+- author: wewman222
+  changes:
+    - type: Remove
+      message: Mechs are now locked behind research.
+  id: 728
+  time: '2025-07-07T07:18:06.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1192
+- author: Ark
+  changes:
+    - type: Add
+      message: 'A handheld motion detector has been added. Alien: Isolation?'
+  id: 729
+  time: '2025-07-07T07:35:41.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1196
+- author: HungryCuban
+  changes:
+    - type: Add
+      message: Adds USSP tech disciplines
+    - type: Add
+      message: USSP server can be bought at the USSP vendor
+    - type: Tweak
+      message: USSP bounty alien artifact buffed to sell at 20k
+  id: 730
+  time: '2025-07-07T07:38:19.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1179
+- author: Ark
+  changes:
+    - type: Tweak
+      message: Conflict Rule 1 and 4 have been changed. Please make sure to read them!
+  id: 731
+  time: '2025-07-07T07:39:39.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1197
+- author: starch70
+  changes:
+    - type: Add
+      message: Added dedicated mining shipguns (currently only found on Splinter now)
+    - type: Add
+      message: Motion detector to T1 TSF gear research. Might move to T2.
+    - type: Tweak
+      message: Changed most materials to spawn in stacks of 50 instead of 30.
+    - type: Fix
+      message: >-
+        Fixed PTK-1500E and its projectiles not showing on mass scanner. Also
+        fixed PTK-1500E not having a ship gun type.
+  id: 732
+  time: '2025-07-07T08:49:31.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1198
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed motion detector recipe not being craftable.
+  id: 733
+  time: '2025-07-07T10:17:25.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1201
+- author: starch70
+  changes:
+    - type: Add
+      message: Ported original Goob M-90 to replace M-90GL in most places.
+    - type: Add
+      message: >-
+        Rogues can now research syndicate hardsuits/stealthsuit. Commander and
+        juggernaut will need synthalloy though.
+    - type: Add
+      message: Ported original Goob stealthsuit.
+    - type: Tweak
+      message: Changed M-90 and M-90GL to 7.62x51mm from 5.56x45mm
+    - type: Tweak
+      message: Replaced AK-502 recipe for Rogues with M-90.
+    - type: Tweak
+      message: >-
+        Adjusted the crafting time of some recipes (synthalloy changed from 4 to
+        1, hardsuit crafting time lowered, etc)
+  id: 734
+  time: '2025-07-07T15:10:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1202
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: Readds Nocturine recipe
+    - type: Tweak
+      message: Nocturine requires 18u to force someone to sleep now
+  id: 735
+  time: '2025-07-07T15:11:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1203
+- author: UnicornOnLSD
+  changes:
+    - type: Fix
+      message: fixed graphical bug with monolith based lockers
+  id: 736
+  time: '2025-07-07T16:33:04.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1206
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: Stuck a borg charger into CO for my borgmaxxing homies
+  id: 737
+  time: '2025-07-07T17:32:41.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1207
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: New USSP Bounties
+    - type: Tweak
+      message: Increased payout for USSP Bounties
+    - type: Fix
+      message: >-
+        Fixes some weird USSP loadout things, duplicate outerclothings, and USSP
+        Commissionar not getting modsuits as a bag option
+    - type: Tweak
+      message: >-
+        Replaces reinforced walls/glass with plastitanium up camelot around the
+        shipyard console and gunnery, fixes a light too
+  id: 738
+  time: '2025-07-07T19:49:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1205
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Only Colonel/Commander can adjust Rogue Outpost/TSFMC FOB job slots
+  id: 739
+  time: '2025-07-07T20:29:02.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1212
+- author: UnicornOnLSD
+  changes:
+    - type: Tweak
+      message: >-
+        DIS Rig's extra expensive missile rack got replaced with mining guns,
+        both economical and more balanced.
+  id: 740
+  time: '2025-07-07T20:38:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1211
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Improved motion detector, also uses the RMC14 SFX now for when it
+        detects motion.
+    - type: Fix
+      message: >-
+        Fixed motion detector not detecting NPCs, and fixes motion detector
+        detecting ghosts
+  id: 741
+  time: '2025-07-07T20:49:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1210
+- author: grandalff
+  changes:
+    - type: Tweak
+      message: >-
+        Changed my USSP ship (Sekunda and Gruznyk) company names, as turns out I
+        was plagirising Startch
+    - type: Tweak
+      message: Replaced Sekundas and Gruznyks thrusters and gyros with sec variant.
+    - type: Tweak
+      message: >-
+        Added defib to gruznyk, turned two thrusters, so theres some sideway
+        mobility even if the cargo thrusters are taken out.
+    - type: Add
+      message: >-
+        Made Sekunda fire safety adherent, aka added extinguishers and fire
+        locks.
+  id: 742
+  time: '2025-07-07T20:54:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1214
+- author: Scyron
+  changes:
+    - type: Tweak
+      message: Medium and heavy mech weapons can only be fired in space now!
+  id: 743
+  time: '2025-07-07T21:13:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1217
+- author: Scyron
+  changes:
+    - type: Tweak
+      message: Added popups to mech gun gravity override!
+  id: 744
+  time: '2025-07-07T21:55:42.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1218

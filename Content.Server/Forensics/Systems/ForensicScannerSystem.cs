@@ -94,8 +94,8 @@ namespace Content.Server.Forensics
         // Temporary values, sane defaults, will be overwritten by CVARs.
         private int _minFMCPayout = 6;
 
-        private const int ActiveUnusedDeadDropSpesoReward = 250000; //Mono
-        private const float ActiveUnusedDeadDropFMCReward = 60.0f; //Mono
+        private const int ActiveUnusedDeadDropSpesoReward = 150000; //Mono
+        private const float ActiveUnusedDeadDropFMCReward = 35.0f; //Mono
         private const int ActiveUsedDeadDropSpesoReward = 50000; //Mono
         private const float ActiveUsedDeadDropFMCReward = 15.0f; //Mono
         private const int InactiveUsedDeadDropSpesoReward = 25000; //Mono

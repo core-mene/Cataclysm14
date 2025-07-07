@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 wewman222
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -203,6 +205,7 @@
     - DoorBumpOpener
     - FootstepSound
     - Halberd
+    - MilitaryMechBounty
 
 - type: entity
   id: AFInterceptorG
@@ -242,7 +245,7 @@
     brokenState: broadsword-broken
     mechToPilotDamageMultiplier: 0
     airtight: false
-    maxIntegrity: 800
+    maxIntegrity: 500
     pilotWhitelist:
       components:
         - HumanoidAppearance
@@ -282,6 +285,7 @@
     - DoorBumpOpener
     - FootstepSound
     - Sabre
+    - MilitaryMechBounty
 
 #4x4 mechas
 - type: entity
@@ -363,6 +367,7 @@
     - DoorBumpOpener
     - FootstepSound
     - Flail
+    - MilitaryMechBounty
 
 - type: entity
   id: AFFlailE
@@ -443,6 +448,7 @@
     - DoorBumpOpener
     - FootstepSound
     - Spyglass
+    - MilitaryMechBounty
 
 - type: entity
   id: AFMace
@@ -524,3 +530,4 @@
     - DoorBumpOpener
     - FootstepSound
     - Mace
+    - MilitaryMechBounty
