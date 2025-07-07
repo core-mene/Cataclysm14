@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -136,3 +137,21 @@
     Steel: 600
     Glass: 50
     Plastic: 200
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: SeismicChargeUSSP
+  result: SeismicCharge
+  completetime: 2
+  materials:
+    Plastic: 100
+    Plasma: 200
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: TearGasGrenadeUSSP
+  result: TearGasGrenade
+  completetime: 2
+  materials:
+    Steel: 100
+    Plasma: 200

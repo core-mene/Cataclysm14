@@ -452,7 +452,7 @@
   description: uplink-security-omnizine-jug-desc
   productEntity: JugOmnizine
   cost:
-    FederationMilitaryCredit: 96
+    FederationMilitaryCredit: 60
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -460,6 +460,10 @@
       whitelist:
         tags:
           - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+        - Brigmedic
 
 - type: listing
   id: UplinkSecurityMedicalAssembler
@@ -513,26 +517,22 @@
       whitelist:
         tags:
           - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
-        - Brigmedic
 
-- type: listing
-  id: UplinkSecurityCombatPen
-  name:  uplink-security-combat-pen-name
-  description: uplink-security-combat-pen-desc
-  productEntity: CombatMedipen
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: morphen }
-  cost:
-    FederationMilitaryCredit: 12
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
+#- type: listing
+#  id: UplinkSecurityCombatPen
+#  name:  uplink-security-combat-pen-name
+#  description: uplink-security-combat-pen-desc
+#  productEntity: CombatMedipen
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: morphen }
+#  cost:
+#    FederationMilitaryCredit: 12
+#  categories:
+#    - UplinkSecurityUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
 
 - type: listing
   id: UplinkSecurityCyborgModule

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -170,3 +171,51 @@
     Plastic: 500
     Silver: 900
     Uranium: 200
+
+# Ussp guns
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRifleSVSUSSP
+  result: WeaponRifleSVS
+  materials:
+    Steel: 100
+    Wood: 1000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponSniperMosinUSSP
+  result: WeaponSniperMosin
+  materials:
+    Steel: 100
+    Plasteel: 100
+    Wood: 1000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRifleAK502USSP
+  result: WeaponRifleAK502
+  materials:
+    Steel: 1800
+    Plasteel: 800
+    Plastic: 1200
+    Silver: 100
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponDP29USSP
+  result: WeaponDP29
+  materials:
+    Steel: 2500
+    Plasteel: 2000
+    Plastic: 1500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRevolverMatebaUSSP
+  result: WeaponRevolverMateba
+  materials:
+    Steel: 3000
+    Plasteel: 3000
+    Wood: 1000
+    Uranium: 1500
