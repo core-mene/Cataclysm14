@@ -23,7 +23,7 @@
   - USSPJumpsuit
   - TsfmcGloves
   - USSPBackpackCorporal
-  - TsfmcOuterClothing
+  - USSPOuterClothing
   - TsfmcShoes
   - TsfmcFace
   - TsfmcBelt
@@ -33,7 +33,7 @@
   - ContractorWallet
   - ContractorEncryptionKey
   - NfsdSpeciesSpecific
-  - USSPOuterClothing
+
 
 - type: roleLoadout
   id: JobUSSPMedic
@@ -42,7 +42,7 @@
   - USSPJumpsuit
   - TsfmcBrigmedicGloves
   - USSPBackpack
-  - TsfmcOuterClothing
+  - USSPOuterClothing
   - TsfmcShoes
   - TsfmcFace
   - USSPEars
@@ -53,7 +53,6 @@
   - NfsdSpeciesSpecific
   - USSPMedhud
   - TsfmcBrigmedicBelt
-  - USSPOuterClothing
 
 - type: roleLoadout
   id: JobUSSPSergeant
@@ -79,8 +78,8 @@
   groups:
   - USSPJumpsuit
   - TsfmcGloves
-  - USSPBackpack
-  - TsfmcOuterClothing
+  - USSPBackpackSergeant
+  - USSPOuterClothingOfficer
   - TsfmcShoes
   - TsfmcFace
   - TsfmcBelt
@@ -91,4 +90,3 @@
   - ContractorEncryptionKey
   - NfsdSpeciesSpecific
   - USSPHeadCommissar
-  - USSPOuterClothingOfficer
