@@ -550,7 +550,8 @@
     sprite: Objects/Consumable/Drinks/vodkabottle.rsi
   - type: Sealable
   - type: Tag
-    tags: VodkaBounty
+    tags:
+    - VodkaBounty
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
