@@ -203,8 +203,8 @@ public sealed class RadioSystem : EntitySystem
             if (!HasComp<GhostComponent>(receiver) && GetFrequency(receiver, channel) != frequency) // Nuclear-14
                 continue; // Nuclear-14
 
-            if (!channel.LongRange && transform.MapID != sourceMapId && !radio.GlobalReceive)
-                continue;
+            // if (!channel.LongRange && transform.MapID != sourceMapId && !radio.GlobalReceive)
+            //     continue;
 
             // Check if within range for range-limited channels
             if (channel.MaxRange.HasValue && channel.MaxRange.Value > 0)

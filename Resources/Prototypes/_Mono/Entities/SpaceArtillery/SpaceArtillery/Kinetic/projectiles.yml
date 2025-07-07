@@ -9,6 +9,47 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+# CHARONETTE
+
+- type: entity
+  id: ShipMiniRailgunProjectile
+  name: M194 CHARONETTE 280mm 35.25 kg slug
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 8500
+        Blunt: 900
+        Ion: 600
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    radarColor: "#c51515"
+    scale: 3
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 1.6
+  - type: PointLight
+    color: "#19AFFF"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBomb
+    totalIntensity: 2000
+    intensitySlope: 8
+    maxIntensity: 800
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
+
 # CHARON
 
 - type: entity
