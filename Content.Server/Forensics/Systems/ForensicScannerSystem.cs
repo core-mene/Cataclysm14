@@ -95,7 +95,7 @@ namespace Content.Server.Forensics
         private int _minFMCPayout = 6;
 
         private const int ActiveUnusedDeadDropSpesoReward = 150000; //Mono
-        private const float ActiveUnusedDeadDropFMCReward = 40.0f; //Mono
+        private const float ActiveUnusedDeadDropFMCReward = 35.0f; //Mono
         private const int ActiveUsedDeadDropSpesoReward = 50000; //Mono
         private const float ActiveUsedDeadDropFMCReward = 15.0f; //Mono
         private const int InactiveUsedDeadDropSpesoReward = 25000; //Mono
