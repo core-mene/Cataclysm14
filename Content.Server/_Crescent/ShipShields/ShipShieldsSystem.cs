@@ -22,7 +22,7 @@ namespace Content.Server._Crescent.ShipShields;
 public sealed partial class ShipShieldsSystem : EntitySystem
 {
     private const string ShipShieldPrototype = "ShipShield";
-    private const float Padding = 40f;
+    private const float Padding = 50f;
     private const float CollisionThreshold = 50f;
     //private const float DeflectionSpread = 25f;
     private const float EmitterUpdateRate = 1.5f;
