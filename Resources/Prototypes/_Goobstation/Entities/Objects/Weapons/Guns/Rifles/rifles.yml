@@ -122,9 +122,9 @@
   - type: Appearance
 
 - type: entity
-  name: M-90
+  name: M-90 (7.62x51mm) # mono - 7.62x51mm
   parent: [BaseWeaponRifle, BaseC3PirateContraband] # Mono - pirate contra
-  id: WeaponRifleM90 (7.62x51mm) # mono - 7.62x51mm
+  id: WeaponRifleM90
   description: A M-90gl with the GL removed to take advantage of the compact bullpup design. Uses 7.62x51mm rifle ammo. # mono
   components:
   - type: Sprite
