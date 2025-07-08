@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitM73BronzeTsf
+  parent: MonoHardsuitT1Recipe
+  result: ClothingOuterHardsuitNfsdBronze
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitM73SilverTsf
+  parent: ClothingOuterHardsuitM73BronzeTsf
+  result: ClothingOuterHardsuitNfsdSilver
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitM73GoldTsf
+  parent: ClothingOuterHardsuitM73BronzeTsf
+  result: ClothingOuterHardsuitNfsdGold
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitM73BrigmedicTsf
+  parent: MonoHardsuitT1Recipe
+  result: ClothingOuterHardsuitNfsdBrigmedic
+  materials:
+    Glass: 200
+    Steel: 3000
+    Plastic: 1000
+    Plasteel: 4000
+    Durathread: 2250 # very slightly higher durathread cost
+    Silver: 500
+    Gold: 500
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitM93Tsf
+  parent: MonoHardsuitT2Recipe
+  result: ClothingOuterHardsuitNfsdCombat
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitM93CTsf
+  parent: ClothingOuterHardsuitM93Tsf
+  result: ClothingOuterHardsuitNfsdCommand
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitM92XTsf
+  parent: MonoHardsuitT3TsfRecipe
+  result: ClothingOuterHardsuitNfsdExperimental

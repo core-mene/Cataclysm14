@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: BannerNGC
   parent: BannerBase
@@ -5,8 +11,21 @@
   description: A banner proudly displaying the stars of the Trans-Solar Federation.
   components:
   - type: Sprite
-    sprite: _NF/Structures/Decoration/banner.rsi
+    sprite: _Mono/Structures/Decoration/banner.rsi
     state: ngc-banner
   - type: Construction
-    graph: BannersGraph
-    node: BannerSecurityNode
+    graph: MonoBannersGraph
+    node: BannerNGCNode
+
+- type: entity
+  id: BannerSHM
+  parent: BannerBase
+  name:  SHM banner
+  description: A banner effectively representing the iconography of Steel Hammer Manufacturing Inc.
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/Decoration/banner.rsi
+    state: shm-banner
+  - type: Construction
+    graph: MonoBannersGraph
+    node: BannerSHMNode

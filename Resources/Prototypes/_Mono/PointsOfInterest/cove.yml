@@ -53,6 +53,8 @@
             PirateCaptain: [ 1, 1 ]
             PirateFirstMate: [ 4, 4 ] # Mono
             Pirate: [ -1, -1 ] # Mono
+          tags:
+          - RogueCommander
         - type: StationDeadDropReporting
           messageSet: Pirate
         - type: StationDeadDropHintExempt

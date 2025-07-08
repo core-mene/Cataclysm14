@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -6,6 +7,7 @@
   id: BaseRdServerFaction
   parent: BaseMachinePowered
   name: BaseRdServerFaction
+  categories: [ HideSpawnMenu ]
   description: Contains the collective knowledge of the faction.
   components:
   - type: Sprite
@@ -68,8 +70,10 @@
   components:
   - type: TechnologyDatabase
     supportedDisciplines:
-    - Tsfmc
-    - Arsenal
+    - TsfmcWeaponry
+    - TsfmcGear # GEAR IS TOOLS!!
+    - TsfmcEquipment # EQUIPMENT IS ARMOR!!
+    - TsfmcShipyard
 
 - type: entity
   id: ResearchAndDevelopmentServerRogues
@@ -79,5 +83,46 @@
   components:
   - type: TechnologyDatabase
     supportedDisciplines:
-    - Rogue
+    - RogueWeaponry
+    - RogueGear # GEAR IS TOOLS!!
+    - RogueEquipment # EQUIPMENT IS ARMOR!!
+    - RogueShipyard
+
+- type: entity
+  id: ResearchAndDevelopmentServerUssp
+  parent: BaseRdServerFaction
+  name: USSP R&D server
+  description: Contains the collective knowledge of the USSP in this sector.
+  components:
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - Ussp
+    - UsspShipyard
+    - UsspEquipment
+    - UsspWeapons
+
+- type: entity
+  id: ResearchAndDevelopmentServerDebug
+  parent: BaseRdServerFaction
+  name: debug R&D server
+  description: Contains the collective knowledge of Everyone. Damn
+  components:
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - Industrial
     - Arsenal
+    - Experimental
+    - CivilianServices
+    - TsfmcWeaponry
+    - TsfmcGear
+    - TsfmcEquipment
+    - TsfmcShipyard
+    - RogueWeaponry
+    - RogueGear
+    - RogueEquipment
+    - RogueShipyard
+    - Ussp
+    - UsspShipyard
+    - UsspEquipment
+    - UsspWeapons
+

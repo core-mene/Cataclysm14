@@ -10,7 +10,7 @@
   graph:
   - node: start
     edges:
-    - to: flail
+    - to: spyglass
       steps:
       - tool: Anchoring
         doAfter: 1
@@ -191,7 +191,7 @@
       - tool: Welding
         doAfter: 1
 
-  - node: flail
+  - node: spyglass
     actions:
     - !type:BuildMech
       mechPrototype: AFFlailE

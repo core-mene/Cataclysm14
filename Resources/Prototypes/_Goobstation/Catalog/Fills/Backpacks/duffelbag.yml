@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledWSPR
@@ -22,3 +27,17 @@
       - id: Magazine12.7x99mmExplosive
       - id: Magazine12.7x99mm
       - id: AmmoBox12.7x99mm
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateStealthHardsuitBundle
+  name: cybersun stealthsuit bundle
+  description: "An advanced cybersun stealth hardsuit bundle."
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingOuterHardsuitCybersunStealth
+      - id: ClothingMaskGasSyndicate
+      - id: ClothingHandsGlovesCombat
+      - id: DoubleEmergencyOxygenTankFilled
+      - id: DoubleEmergencyNitrogenTankFilled

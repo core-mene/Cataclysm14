@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 gus
 # SPDX-FileCopyrightText: 2025 starch
@@ -95,6 +96,20 @@
 
 - type: entity
   parent: BaseNFFlatpack
+  id: RDServerUSSPFlatpack
+  name: ussp research and development server flatpack
+  description: A flatpack used for constructing a USSP research and development server.
+  components:
+  - type: Flatpack
+    entity: ResearchAndDevelopmentServerUssp
+  - type: StaticPrice
+    vendPrice: 1500
+  - type: Sprite
+    layers:
+    - state: science_server
+
+- type: entity
+  parent: BaseNFFlatpack
   id: RDServerRogueFlatpack
   name: rogue research and development server flatpack
   description: A flatpack used for constructing a Rogue research and development server.
@@ -130,7 +145,41 @@
   - type: Flatpack
     entity: FactionLathe
   - type: StaticPrice
-    price: 1500
+    vendPrice: 1500
   - type: Sprite
     layers:
     - state: science_server
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: MedicalAssemblerFlatpack
+  name: medical assembler flatpack
+  description: A flatpack used for constructing a medical assembler.
+  components:
+  - type: Flatpack
+    entity: MedicalAssembler
+  - type: StaticPrice
+    price: 1500
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: OreBoxFlatpack
+  name: ore box flatpack
+  description: A flatpack used for constructing an ore box.
+  components:
+  - type: Flatpack
+    entity: OreBox
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: MaterialBoxFlatpack
+  name: construction box flatpack
+  description: A flatpack used for constructing a construction box.
+  components:
+  - type: Flatpack
+    entity: ConstructionBox
+  - type: StaticPrice
+    price: 500
+

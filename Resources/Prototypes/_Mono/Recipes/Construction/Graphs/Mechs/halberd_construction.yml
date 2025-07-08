@@ -10,7 +10,7 @@
   graph:
   - node: start
     edges:
-    - to: broadsword
+    - to: halberd
       steps:
       - tool: Anchoring
         doAfter: 1
@@ -170,7 +170,7 @@
       - tool: Welding
         doAfter: 1
 
-  - node: broadsword
+  - node: halberd
     actions:
     - !type:BuildMech
       mechPrototype: AFInterceptorM

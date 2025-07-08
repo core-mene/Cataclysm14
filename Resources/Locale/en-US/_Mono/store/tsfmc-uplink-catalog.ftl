@@ -58,6 +58,13 @@ uplink-security-cash75000-desc = Cold, hard cash, in bulk.
 uplink-security-surgery-duffel-name = Advanced Surgery Kit
 uplink-security-surgery-duffel-desc = A duffel filled with advanced surgery tools, perfect for re-attaching some heads.
 
+uplink-security-omnizine-jug-name = Omnizine Jug
+uplink-security-omnizine-jug-desc = A jug of omnizine, used for making medipens and keeping your allies up. Imported from Harmony Medical Enterprises.
+
+uplink-security-medical-assembler-name = Medical Assembler Flatpack
+uplink-security-medical-assembler-desc = An assembler that can be used to make useful medical supplies.
+
+
 uplink-security-hfblade-name = HF-Katana
 uplink-security-hfblade-desc = A tool of justice.
 

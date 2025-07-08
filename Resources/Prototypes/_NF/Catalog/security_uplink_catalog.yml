@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2024 Salvantrix
 # SPDX-FileCopyrightText: 2024 Shroomerian
 # SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 EctoplasmIsGood
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Jakumba
@@ -66,98 +67,6 @@
       whitelist:
         tags:
           - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityHardsuitWarden
-  name:  uplink-security-hardsuit-warden-name
-  description: uplink-security-hardsuit-warden-desc
-  productEntity: ClothingOuterHardsuitNfsdGold
-  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_gold.rsi, state: icon }
-  cost:
-    FederationMilitaryCredit: 15
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
-
-- type: listing
-  id: UplinkSecurityCombatHardsuit
-  name:  uplink-security-hardsuit-combat-name
-  description: uplink-security-hardsuit-combat-desc
-  productEntity: ClothingOuterHardsuitNfsdCombat
-  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_combat.rsi, state: icon }
-  cost:
-    FederationMilitaryCredit: 50
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityCommandHardsuit
-  name:  uplink-security-hardsuit-command-name
-  description: uplink-security-hardsuit-command-desc
-  productEntity: ClothingOuterHardsuitNfsdCommand
-  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_command.rsi, state: icon }
-  cost:
-    FederationMilitaryCredit: 50
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - Sheriff
-
-#- type: listing
-#  id: UplinkSecurityHardsuitSyndieReverseEngineered
-#  name:  uplink-security-hardsuit-experimental-name
-#  description: uplink-security-hardsuit-experimental-desc
-#  productEntity: ClothingOuterHardsuitNfsdExperimental
-#  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_experimental.rsi, state: icon }
-#  cost:
-#    FederationMilitaryCredit: 125
-#  categories:
-#    - UplinkSecurityHardsuits
-#  conditions:
-#    - !type:StoreWhitelistCondition
-#      whitelist:
-#        tags:
-#          - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityHardsuitSheriff
-  name:  uplink-security-hardsuit-sheriff-name
-  description: uplink-security-hardsuit-sheriff-desc
-  productEntity: ClothingOuterHardsuitNfsdSheriff
-  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_colonel.rsi, state: icon }
-  cost:
-    FederationMilitaryCredit: 40
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
 
 - type: listing
   id: UplinkSecurityMK58
@@ -469,14 +378,81 @@
 
 #Mono start
 
+#- type: listing
+#  id: UplinkSecurityRadPen
+#  name:  uplink-security-rad-pen-name
+#  description: uplink-security-rad-pen-desc
+#  productEntity: RadAutoInjector
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: arithpen }
+#  cost:
+#    FederationMilitaryCredit: 18
+#  categories:
+#    - UplinkSecurityUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
+#    - !type:BuyerJobCondition
+#      whitelist:
+#        - Sheriff
+#        - Brigmedic
+
+#- type: listing
+#  id: UplinkSecurityPyrazinePen
+#  name:  uplink-security-pyrazine-pen-name
+#  description: uplink-security-pyrazine-pen-desc
+#  productEntity: PyraAutoInjector
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: pyrapen }
+#  cost:
+#    FederationMilitaryCredit: 18
+#  categories:
+#    - UplinkSecurityUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
+
+#- type: listing
+#  id: UplinkSecurityPuncturasePen
+#  name:  uplink-security-puncturase-pen-name
+#  description: uplink-security-puncturase-pen-desc
+#  productEntity: PunctAutoInjector
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: punctpen }
+#  cost:
+#    FederationMilitaryCredit: 18
+#  categories:
+#    - UplinkSecurityUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
+
+#- type: listing
+#  id: UplinkSecurityAntiPoisonPen
+#  name:  uplink-security-anti-poison-pen-name
+#  description: uplink-security-anti-poison-pen-desc
+#  productEntity: AntiPoisonMedipen
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: penacid }
+#  cost:
+#    FederationMilitaryCredit: 18
+#  categories:
+#    - UplinkSecurityUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
+
 - type: listing
-  id: UplinkSecurityRadPen
-  name:  uplink-security-rad-pen-name
-  description: uplink-security-rad-pen-desc
-  productEntity: RadAutoInjector
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: arithpen }
+  id: UplinkSecurityOmnizineJug
+  name:  uplink-security-omnizine-jug-name
+  description: uplink-security-omnizine-jug-desc
+  productEntity: JugOmnizine
   cost:
-    FederationMilitaryCredit: 18
+    FederationMilitaryCredit: 60
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -490,13 +466,12 @@
         - Brigmedic
 
 - type: listing
-  id: UplinkSecurityPyrazinePen
-  name:  uplink-security-pyrazine-pen-name
-  description: uplink-security-pyrazine-pen-desc
-  productEntity: PyraAutoInjector
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: pyrapen }
+  id: UplinkSecurityMedicalAssembler
+  name:  uplink-security-medical-assembler-name
+  description: uplink-security-medical-assembler-desc
+  productEntity: MedicalAssemblerFlatpack
   cost:
-    FederationMilitaryCredit: 18
+    FederationMilitaryCredit: 8
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -504,38 +479,10 @@
       whitelist:
         tags:
           - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityPuncturasePen
-  name:  uplink-security-puncturase-pen-name
-  description: uplink-security-puncturase-pen-desc
-  productEntity: PunctAutoInjector
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: punctpen }
-  cost:
-    FederationMilitaryCredit: 18
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
+    - !type:BuyerJobCondition
       whitelist:
-        tags:
-          - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityAntiPoisonPen
-  name:  uplink-security-anti-poison-pen-name
-  description: uplink-security-anti-poison-pen-desc
-  productEntity: AntiPoisonMedipen
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: penacid }
-  cost:
-    FederationMilitaryCredit: 18
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
+        - Sheriff
+        - Brigmedic
 
 - type: listing
   id: UplinkSecurityCompactDefibrillator
@@ -562,7 +509,7 @@
   description: uplink-security-syringe-case-desc
   productEntity: SyringeCaseAltFilled
   cost:
-    FederationMilitaryCredit: 40
+    FederationMilitaryCredit: 50
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -570,26 +517,22 @@
       whitelist:
         tags:
           - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
-        - Brigmedic
 
-- type: listing
-  id: UplinkSecurityCombatPen
-  name:  uplink-security-combat-pen-name
-  description: uplink-security-combat-pen-desc
-  productEntity: CombatMedipen
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: morphen }
-  cost:
-    FederationMilitaryCredit: 12
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
+#- type: listing
+#  id: UplinkSecurityCombatPen
+#  name:  uplink-security-combat-pen-name
+#  description: uplink-security-combat-pen-desc
+#  productEntity: CombatMedipen
+#  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: morphen }
+#  cost:
+#    FederationMilitaryCredit: 12
+#  categories:
+#    - UplinkSecurityUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
 
 - type: listing
   id: UplinkSecurityCyborgModule
@@ -1012,7 +955,7 @@
   productEntity: EnergyShieldNfsd
   icon: { sprite: _NF/Objects/Weapons/Melee/e_shield.rsi, state: eshield-on }
   cost:
-    FederationMilitaryCredit: 20
+    FederationMilitaryCredit: 40
   categories:
     - UplinkSecurityUtility
   conditions:

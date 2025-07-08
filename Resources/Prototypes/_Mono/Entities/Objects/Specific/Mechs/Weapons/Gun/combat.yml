@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 wewman222
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -6,7 +7,7 @@
 - type: entity
   id: LightMechaAutocannon
   name: LAC-29
-  description: The everyman's mecha rifle. Chambered in 20mm, with balanced stats to tackle both Armored Frames and do light damage against ships.
+  description: The everyman's mecha rifle. Chambered in 20mm, with balanced stats to tackle both Armored Frames and do light damage against ships. Fits on Light Hardpoints.
   suffix: Mech Weapon, Gun, Combat, Rifle
   parent: [ BaseMechWeaponRange, LightMechMountEquipment ]
   components:
@@ -16,8 +17,6 @@
   - type: Gun
     projectileSpeed: 180
     fireRate: 3
-    minAngle: 0
-    maxAngle: 5
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -26,15 +25,15 @@
   - type: Battery
     maxCharge: 180
   - type: ProjectileBatteryAmmoProvider
-    proto: 20mmBulletArmorPiercing
-    fireCost: 30
+    proto: Bullet20mm_ACPFMJ_Mech
+    fireCost: 60
   - type: Appearance
   - type: AmmoCounter
 
 - type: entity
   id: LightMechaSMG
   name: RAC-3
-  description: An uncommon choice of weaponry, it consists of a 6 barrelled gatling gun, chambered in .45 ACP. Overwhelms mecha with sheer firerate. Good for CQC.
+  description: An uncommon choice of weaponry, it consists of a 6 barrelled gatling gun, chambered in .45 ACP. Overwhelms mecha with sheer firerate. Good for CQC. Fits on Light Hardpoints.
   suffix: Mech Weapon, Gun, Combat, SMG
   parent: [ BaseMechWeaponRange, LightMechMountEquipment ]
   components:
@@ -44,8 +43,6 @@
   - type: Gun
     projectileSpeed: 180
     fireRate: 10
-    minAngle: 4
-    maxAngle: 15
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -55,7 +52,7 @@
     maxCharge: 100
   - type: ProjectileBatteryAmmoProvider
     proto: Bullet45_ACPFMJ
-    fireCost: 10
+    fireCost: 20
   - type: Appearance
   - type: AmmoCounter
 
@@ -63,7 +60,7 @@
 - type: entity
   id: LightMechaShotgun
   name: SH-35
-  description: A large mech-grade shotgun chambered in 0.5 gauge shells, perfect for CQC combat, the firerate leaves much to be desired however. Fits on Light Mounts.
+  description: A large mech-grade shotgun chambered in 0.5 gauge shells, perfect for CQC combat, the firerate leaves much to be desired however. Fits on Light Hardpoints.
   suffix: Mech Weapon, Gun, Combat, Shotgun
   parent: [ BaseMechWeaponRange, LightMechMountEquipment ]
   components:
@@ -82,7 +79,7 @@
     maxCharge: 100
   - type: ProjectileBatteryAmmoProvider
     proto: MechPelletShotgunSpread
-    fireCost: 50
+    fireCost: 100
   - type: Appearance
   - type: AmmoCounter
 
@@ -90,10 +87,12 @@
 - type: entity
   id: MediumMechDMR
   name: DMR-49
-  description: A heavy duty autocannon chambered in 57mm. General purpose Medium Mount gun.
+  description: A heavy duty autocannon chambered in 57mm. General purpose Medium Hardpoint gun.
   suffix: Mech Weapon, Gun, Combat, Cannon
   parent: [ BaseMechWeaponRange, MediumMechMountEquipment ]
   components:
+  - type: MechEquipment
+    preventFireOnGrid: true
   - type: Sprite
     sprite: _Mono/Objects/Specific/Mech/tgmc_mecha_weapons.rsi
     state: sniper64x32
@@ -109,7 +108,7 @@
     maxCharge: 200
   - type: ProjectileBatteryAmmoProvider
     proto: ShipDravonProjectile
-    fireCost: 100
+    fireCost: 200
   - type: Appearance
   - type: AmmoCounter
 
@@ -120,6 +119,8 @@
   suffix: Mech Weapon, Gun, Combat, Cannon
   parent: [ BaseMechWeaponRange, MediumMechMountEquipment ]
   components:
+  - type: MechEquipment
+    preventFireOnGrid: true
   - type: Sprite
     sprite: _Mono/Objects/Specific/Mech/tgmc_mecha_weapons.rsi
     state: laserrifle64x32
@@ -134,18 +135,20 @@
   - type: Battery
     maxCharge: 400
   - type: ProjectileBatteryAmmoProvider
-    proto: MechLightCoilgunProjectile
-    fireCost: 200
+    proto: MechCoilgunSabot
+    fireCost: 400
   - type: Appearance
   - type: AmmoCounter
 
 - type: entity
   id: MediumMechTOW
   name: ASM-55 TOW
-  description: Repurposed anti-tank missile. Wire guided computer is exchanged for a much more sophisticated targetting system, but the mobility leaves much to be desired. Fits in Medium Mounts.
+  description: Repurposed anti-tank missile. Wire guided computer is exchanged for a much more sophisticated targetting system, but the mobility leaves much to be desired. Fits in Medium Hardpoints.
   suffix: Mech Weapon, Gun, Combat, Cannon
   parent: [ BaseMechWeaponRange, MediumMechMountEquipment ]
   components:
+  - type: MechEquipment
+    preventFireOnGrid: true
   - type: Sprite
     sprite: _Mono/Objects/Specific/Mech/tgmc_mecha_weapons.rsi
     state: tow64x32
@@ -161,7 +164,7 @@
     maxCharge: 500
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMissileASM302
-    fireCost: 500
+    fireCost: 600
   - type: Appearance
   - type: AmmoCounter
 
@@ -173,6 +176,8 @@
   suffix: Mech Weapon, Gun, Combat, Missile
   parent: [ BaseMechWeaponRange, HeavyMechMountEquipment ]
   components:
+  - type: MechEquipment
+    preventFireOnGrid: true
   - type: Sprite
     sprite: _Mono/Objects/Specific/Mech/tgmc_mecha_weapons.rsi
     state: rpg64x32
@@ -187,7 +192,7 @@
     maxCharge: 1000
   - type: ProjectileBatteryAmmoProvider
     proto: 280mmRocket
-    fireCost: 750
+    fireCost: 1000
   - type: Appearance
   - type: AmmoCounter
 
@@ -198,13 +203,13 @@
   suffix: Mech Weapon, Gun, Combat, Cannon
   parent: [ BaseMechWeaponRange, HeavyMechMountEquipment ]
   components:
+  - type: MechEquipment
+    preventFireOnGrid: true
   - type: Sprite
     sprite: _Mono/Objects/Specific/Mech/tgmc_mecha_weapons.rsi
     state: heavycannon64x32
   - type: Gun
     projectileSpeed: 180
-    minAngle: 0
-    maxAngle: 30
     fireRate: 3
     burstFireRate: 3
     shotsPerBurst: 3
@@ -215,20 +220,22 @@
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/120mm_mortar.ogg
   - type: Battery
-    maxCharge: 150
+    maxCharge: 300
   - type: ProjectileBatteryAmmoProvider
     proto: 120mmBulletHE
-    fireCost: 50
+    fireCost: 100
   - type: Appearance
   - type: AmmoCounter
 
 - type: entity
   id: HeavyMechProjector
-  name: RAVAGER-type Plasma Weapon
-  description: Based on the MARAUDER, the Ravager sacrifices range for rate of fire. Extremely inaccurate, and subpar lensing causes the projectiles to dissipate only a few seconds away. Devastating up close.
+  name: RAVAGER-type Plasma Cannon
+  description: Based on the MARAUDER, the Ravager sacrifices range for rate of fire. Extremely inaccurate, and subpar lensing causes the projectiles to dissipate only a few seconds away. Devastating up close. Fits on Large Hardpoints.
   suffix: Mech Weapon, Gun, Combat, EnergyCannon
   parent: [ BaseMechWeaponRange, HeavyMechMountEquipment ]
   components:
+  - type: MechEquipment
+    preventFireOnGrid: true
   - type: Sprite
     sprite: _Mono/Objects/Specific/Mech/tgmc_mecha_weapons.rsi
     state: flamer64x32
@@ -243,10 +250,10 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
   - type: Battery
-    maxCharge: 150
+    maxCharge: 300
   - type: ProjectileBatteryAmmoProvider
     proto: MechPlasmaProjectile
-    fireCost: 75
+    fireCost: 150
   - type: Appearance
   - type: AmmoCounter
 
@@ -254,10 +261,12 @@
 - type: entity
   id: EWACMechaJammer
   name: E-58 "Blanket"
-  description: An extremely specialized jamming tool, fires a volley of flares with extremely large jamming signals to screen an advance.
+  description: An extremely specialized jamming tool, fires a volley of flares with extremely large jamming signals to screen an advance. Fits on EWAR Hardpoints.
   suffix: Mech Weapon, Gun, Combat, EWAR
   parent: [ BaseMechWeaponRange, EWARMechMountEquipment ]
   components:
+  - type: MechEquipment
+    preventFireOnGrid: true
   - type: Sprite
     sprite: Objects/Specific/Mech/mecha_equipment.rsi
     state: tesla
@@ -280,16 +289,16 @@
 - type: entity
   id: EWACMechaFlares
   name: E-58 "Spark"
-  description: A cheaper alternative to the Blanket, this emitter launches a volley of 5 flares to confuse enemy gunners.
+  description: A cheaper alternative to the Blanket, this emitter launches a volley of 5 flares to confuse enemy gunners. Fits on EWAR Hardpoints.
   suffix: Mech Weapon, Gun, Combat, EWAR
   parent: [ BaseMechWeaponRange, EWARMechMountEquipment ]
   components:
+  - type: MechEquipment
+    preventFireOnGrid: true
   - type: Sprite
     sprite: Objects/Specific/Mech/mecha_equipment.rsi
     state: tesla
   - type: Gun
-    minAngle: 0
-    maxAngle: 120
     projectileSpeed: 20
     fireRate: 20
     shotsPerBurst: 6

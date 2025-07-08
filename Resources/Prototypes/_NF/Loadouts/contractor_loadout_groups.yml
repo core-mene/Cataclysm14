@@ -1,3 +1,26 @@
+# SPDX-FileCopyrightText: 2024 AndresE55
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Hamblinius
+# SPDX-FileCopyrightText: 2024 KyuPolaris
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2024 Tabitha
+# SPDX-FileCopyrightText: 2024 immortalartisan
+# SPDX-FileCopyrightText: 2024 steinhauer.erhard
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Bonaout
+# SPDX-FileCopyrightText: 2025 Havaren
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Maxtone
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 dustylens
+# SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 the-hivequeen
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadoutGroup
   id: ContractorJumpsuit
   name: loadout-group-contractor-jumpsuit
@@ -205,6 +228,7 @@
   - ContractorClothingUniformJumpskirtBlueTurtleneckDress
   - ContractorClothingUniformJumpskirtYellowTurtleneckDress
   - ContractorClothingUniformJumpskirtYellowOldDress
+  - ContractorClothingUniformJabroni
 
   fallbacks:
   - ContractorClothingUniformJumpsuitColorGrey
@@ -783,7 +807,9 @@
   - ContractorClothingMaskScaredMime
   - ContractorClothingMaskSadMime
   - ContractorClothingMaskClown
-  - ContractorClothingMaskClownBald
+  - ContractorClothingMaskNeckGaiter
+  - ContractorClothingMaskNeckGaiterRed
+  - ContractorClothingMaskGasSecurity
   fallbacks:
   - ContractorClothingMaskBreath
 

@@ -207,9 +207,9 @@
     noRot: true
     state: broadsword0
   - type: Construction
-    graph: Broadsword
+    graph: Halberd
     node: start
-    defaultTarget: broadsword
+    defaultTarget: halberd
 
 
 - type: entity
@@ -275,7 +275,7 @@
   - type: Construction
     graph: Sabre
     node: start
-    defaultTarget: broadsword
+    defaultTarget: sabre
 
 #S4 Mechs
 - type: entity
@@ -533,7 +533,7 @@
   - type: Construction
     graph: Spyglass
     node: start
-    defaultTarget: flail
+    defaultTarget: spyglass
 
 - type: entity
   id: MaceChassis
@@ -553,4 +553,4 @@
   - type: Construction
     graph: Mace
     node: start
-    defaultTarget: flail
+    defaultTarget: mace

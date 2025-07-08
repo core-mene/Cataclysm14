@@ -10,7 +10,7 @@
   graph:
   - node: start
     edges:
-    - to: flail
+    - to: mace
       steps:
       - tool: Anchoring
         doAfter: 1
@@ -179,7 +179,7 @@
       - tool: Welding
         doAfter: 1
 
-  - node: flail
+  - node: mace
     actions:
     - !type:BuildMech
-      mechPrototype: AFFlail
+      mechPrototype: AFMace

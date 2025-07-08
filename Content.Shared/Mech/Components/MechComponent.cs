@@ -1,8 +1,23 @@
+// SPDX-FileCopyrightText: 2022 Nemanja
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 LordEclipse
+// SPDX-FileCopyrightText: 2023 brainfood1183
+// SPDX-FileCopyrightText: 2023 deltanedas
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 BeeRobynn
+// SPDX-FileCopyrightText: 2025 ScyronX
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.FixedPoint;
 using Content.Shared.Whitelist;
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
+using Content.Shared.Damage; //Monolith
+
 
 namespace Content.Shared.Mech.Components;
 
@@ -61,6 +76,18 @@ public sealed partial class MechComponent : Component
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public float MechToPilotDamageMultiplier;
+
+    /// <summary>
+    /// Monolith: The damage dealt by EMPs.
+    /// </summary>
+    [DataField]
+    public DamageSpecifier EMPdamage = new()
+    {
+        DamageDict = new()
+        {
+            { "Blunt", 600 },
+        }
+    };
 
     /// <summary>
     /// Whether the mech has been destroyed and is no longer pilotable.

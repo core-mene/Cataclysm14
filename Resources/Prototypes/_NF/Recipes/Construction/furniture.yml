@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Ghost-Prince
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Onezero0
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Beds
 - type: construction
   id: Mattres
@@ -699,7 +708,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 
 # Altars
 - type: construction
