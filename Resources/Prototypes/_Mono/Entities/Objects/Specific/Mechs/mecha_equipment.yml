@@ -36,17 +36,6 @@
   - type: StaticPrice
     price: 500
 
-- type: entity
-  id: LightMultiroleMountEquipment
-  abstract: true
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Tag
-    tags:
-    - LightMechMount
-    - MediumMechMount
-  - type: StaticPrice
-    price: 500
 
 - type: entity
   id: EWARMechMountEquipment
@@ -56,7 +45,16 @@
   - type: Tag
     tags:
     - EWARMechMount
-    - LightMechMount
   - type: StaticPrice
     price: 500
 
+- type: entity
+  id: IFFMechMountEquipment
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Tag
+    tags:
+    - IFFMechMount
+  - type: StaticPrice
+    price: 500
