@@ -1,6 +1,6 @@
 # Frontier
 job-name-bailiff = TSFMC Captain
-job-name-brigmedic = TSFMC Brigmedic
+job-name-brigmedic = TSFMC Corpsman
 job-name-cadet-nf = TSFMC Private
 job-name-contractor = Contractor
 job-name-deputy = TSFMC Corporal
@@ -38,6 +38,6 @@ job-name-senior-physician = Senior Physician
 job-name-senior-officer = TSFMC Lieutenant
 
 JobSeniorEngineer = Senior Engineer
-JobSeniorOfficer = Lieutenant
+JobSeniorOfficer = TSFMC Lieutenant
 JobSeniorPhysician = Senior Physician
 JobSeniorResearcher = Senior Researcher
