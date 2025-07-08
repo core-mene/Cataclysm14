@@ -15,8 +15,12 @@
     sprite: _Mono/Objects/Specific/Mech/tgmc_mecha_weapons.rsi
     state: assaultrifle64x32
   - type: Gun
-    projectileSpeed: 180
-    fireRate: 3
+    projectileSpeed: 70
+    fireRate: 4
+    minAngle: 0
+    maxAngle: 20
+    angleIncrease: 4
+    angleDecay: 20
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -41,8 +45,12 @@
     sprite: _Mono/Objects/Specific/Mech/tgmc_mecha_weapons.rsi
     state: smg64x32
   - type: Gun
-    projectileSpeed: 180
+    projectileSpeed: 60
     fireRate: 10
+    minAngle: 0
+    maxAngle: 40
+    angleIncrease: 2
+    angleDecay: 20
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -51,8 +59,9 @@
   - type: Battery
     maxCharge: 100
   - type: ProjectileBatteryAmmoProvider
-    proto: Bullet45_ACPFMJ
+    proto: Bullet45_ACPFMJ_Mech
     fireCost: 20
+
   - type: Appearance
   - type: AmmoCounter
 
@@ -68,8 +77,12 @@
     sprite: _Mono/Objects/Specific/Mech/tgmc_mecha_weapons.rsi
     state: shotgun64x32
   - type: Gun
-    projectileSpeed: 180
+    projectileSpeed: 60
     fireRate: 2
+    minAngle: 0
+    maxAngle: 30
+    angleIncrease: 10
+    angleDecay: 5
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -97,8 +110,12 @@
     sprite: _Mono/Objects/Specific/Mech/tgmc_mecha_weapons.rsi
     state: sniper64x32
   - type: Gun
-    projectileSpeed: 180
+    projectileSpeed: 90
     fireRate: 2
+    minAngle: 0
+    maxAngle: 20
+    angleIncrease: 2
+    angleDecay: 10
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -125,7 +142,7 @@
     sprite: _Mono/Objects/Specific/Mech/tgmc_mecha_weapons.rsi
     state: laserrifle64x32
   - type: Gun
-    projectileSpeed: 180
+    projectileSpeed: 150
     fireRate: 1
     selectedMode: SemiAuto
     availableModes:
@@ -153,7 +170,7 @@
     sprite: _Mono/Objects/Specific/Mech/tgmc_mecha_weapons.rsi
     state: tow64x32
   - type: Gun
-    projectileSpeed: 180
+    projectileSpeed: 40
     fireRate: 1
     selectedMode: SemiAuto
     availableModes:
@@ -209,11 +226,15 @@
     sprite: _Mono/Objects/Specific/Mech/tgmc_mecha_weapons.rsi
     state: heavycannon64x32
   - type: Gun
-    projectileSpeed: 180
+    projectileSpeed: 90
     fireRate: 3
     burstFireRate: 3
     shotsPerBurst: 3
     burstCooldown: 5
+    minAngle: 0
+    maxAngle: 30
+    angleIncrease: 10
+    angleDecay: 20
     selectedMode: Burst
     availableModes:
       - Burst
@@ -244,6 +265,8 @@
     minAngle: 0
     maxAngle: 40
     fireRate: 3
+    angleIncrease: 5
+    angleDecay: 10
     selectedMode: FullAuto
     availableModes:
       - FullAuto

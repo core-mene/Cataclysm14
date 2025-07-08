@@ -354,7 +354,7 @@
   description: A smaller, more compact railgun that fires a large slug at rapid velocity, capable of big damage to enemy ships. Medium linear accelerator, can be remotely activated or linked up to a GCS.
   components:
   - type: StaticPrice
-    price: 15000
+    price: 25000
   - type: Sprite
     sprite: _Mono/Objects/ShuttleWeapons/charonette.rsi
     layers:
@@ -419,7 +419,7 @@
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
-    shipClass: Medium
+    shipClass: Heavy
 
 # CHARON
 

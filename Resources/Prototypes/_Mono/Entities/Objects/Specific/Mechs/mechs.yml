@@ -14,6 +14,7 @@
     equipmentWhitelist:
       tags:
       - LightMechMount
+      - IFFMechMount
 
 - type: entity
   id: MediumMechMount
@@ -24,6 +25,19 @@
     equipmentWhitelist:
       tags:
       - MediumMechMount
+      - IFFMechMount
+
+- type: entity
+  id: LightMultiroleMount
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Mech
+    equipmentWhitelist:
+      tags:
+      - MediumMechMount
+      - LightMechMount
+      - IFFMechMount
 
 - type: entity
   id: HeavyMechMount
@@ -34,6 +48,20 @@
     equipmentWhitelist:
       tags:
       - HeavyMechMount
+      - IFFMechMount
+
+- type: entity
+  id: EWARMechMount
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Mech
+    equipmentWhitelist:
+      tags:
+      - EWARMechMount
+      - LightMechMount
+      - IFFMechMount
+
 
 # S2 Mechas
 - type: entity
@@ -73,6 +101,7 @@
     openState: broadsword-open
     brokenState: broadsword-broken
     mechToPilotDamageMultiplier: 0
+    maxEquipmentAmount: 3
     airtight: true
     maxIntegrity: 600
     pilotWhitelist:
@@ -100,7 +129,7 @@
     weightlessModifier: 40
   - type: RadarBlip
     radarColor: "#CF0E0E"
-    scale: 4
+    scale: 3
     requireNoGrid: true
     shape: square
   - type: Damageable
@@ -128,7 +157,7 @@
 
 - type: entity
   id: AFInterceptorM
-  parent: [ BaseMech, LightMultiroleMountEquipment, BaseRestrictedContraband ]
+  parent: [ BaseMech, LightMultiroleMount, BaseRestrictedContraband ]
   name: AF-28-M "Halberd"
   description: A modification of the Broadsword, the Halberd sacrifices armor and speed for heavier weapon mounts.
   components:
@@ -163,6 +192,7 @@
     openState: broadsword-open
     brokenState: broadsword-broken
     mechToPilotDamageMultiplier: 0
+    maxEquipmentAmount: 3
     airtight: true
     maxIntegrity: 450
     pilotWhitelist:
@@ -192,7 +222,7 @@
     damageModifierSet: MediumArmorNT
   - type: RadarBlip
     radarColor: "#CF0E0E"
-    scale: 4
+    scale: 3
     requireNoGrid: true
     shape: square
   - type: Repairable
@@ -209,7 +239,7 @@
 
 - type: entity
   id: AFInterceptorG
-  parent: [ BaseMech, LightMultiroleMountEquipment, BaseRestrictedContraband ]
+  parent: [ BaseMech, LightMultiroleMount, BaseRestrictedContraband ]
   name: AF-28-G "Sabre"
   description: A modification of the Broadsword, the Sabre sacrifices it's jetpack and spaceproof shielding to function on planets. Has two hardpoints, which can carry Light or Medium hardpoints.
   components:
@@ -244,6 +274,7 @@
     openState: broadsword-open
     brokenState: broadsword-broken
     mechToPilotDamageMultiplier: 0
+    maxEquipmentAmount: 3
     airtight: false
     maxIntegrity: 500
     pilotWhitelist:
@@ -272,7 +303,7 @@
     damageModifierSet: MediumArmorNT
   - type: RadarBlip
     radarColor: "#CF0E0E"
-    scale: 4
+    scale: 3
     requireNoGrid: true
     shape: square
   - type: Repairable
@@ -325,6 +356,7 @@
     openState: flail-open
     brokenState: flail-broken
     mechToPilotDamageMultiplier: 0
+    maxEquipmentAmount: 3
     airtight: true
     maxIntegrity: 900
     pilotWhitelist:
@@ -352,7 +384,7 @@
     weightlessModifier: 25
   - type: RadarBlip
     radarColor: "#CF0E0E"
-    scale: 4
+    scale: 3
     requireNoGrid: true
     shape: square
   - type: Damageable
@@ -371,7 +403,7 @@
 
 - type: entity
   id: AFFlailE
-  parent: [ BaseMech, EWARMechMountEquipment, BaseRestrictedContraband ]
+  parent: [ BaseMech, EWARMechMount, BaseRestrictedContraband ]
   name: ASF-59-E "Spyglass"
   description: An extremely specialized mech based off the Flail Chassis. Uses sophisticated radar systems to provide command and control capabilities, in addition to employing advanced EWAR weaponry.
   components:
@@ -406,6 +438,7 @@
     openState: flail-open
     brokenState: flail-broken
     mechToPilotDamageMultiplier: 0
+    maxEquipmentAmount: 3
     airtight: true
     maxIntegrity: 500
     pilotWhitelist:
@@ -433,7 +466,7 @@
     weightlessModifier: 20
   - type: RadarBlip
     radarColor: "#CF0E0E"
-    scale: 4
+    scale: 3
     requireNoGrid: true
     shape: square
   - type: Damageable
@@ -487,7 +520,7 @@
     openState: flail-open
     brokenState: flail-broken
     mechToPilotDamageMultiplier: 0
-    maxEquipmentAmount: 1
+    maxEquipmentAmount: 2
     airtight: true
     maxIntegrity: 600
     pilotWhitelist:
@@ -515,7 +548,7 @@
     weightlessModifier: 30
   - type: RadarBlip
     radarColor: "#CF0E0E"
-    scale: 4
+    scale: 3
     requireNoGrid: true
     shape: square
   - type: Damageable

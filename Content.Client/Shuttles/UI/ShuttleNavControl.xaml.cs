@@ -833,6 +833,10 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
             if (xform.MapID != consoleXform.MapID)
                 continue;
 
+            // Don't draw shields when in FTL
+            if (EntManager.HasComponent<FTLComponent>(parentXform.Owner))
+                continue;
+
             var shieldFixture = fixtures.Fixtures.TryGetValue("shield", out var fixture) ? fixture : null;
 
             if (shieldFixture == null || shieldFixture.Shape is not ChainShape)

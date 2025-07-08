@@ -28,6 +28,7 @@ using Content.Shared.Interaction;
 using Content.Shared._Mono.ShipGuns;
 using Content.Shared.Examine;
 using Content.Shared.UserInterface;
+using Content.Server.Salvage.Expeditions;
 
 namespace Content.Server._Mono.FireControl;
 
@@ -390,6 +391,13 @@ public sealed partial class FireControlSystem : EntitySystem
 
         // Check if the weapon's grid is pacified
         if (grid != null && TryComp<SpaceArtilleryDisabledGridComponent>((EntityUid)grid, out var pacifiedComp))
+            return;
+
+        // Check if the weapon is an expedition
+        if (grid != null &&
+            TryComp<TransformComponent>((EntityUid)grid, out var gridXform) &&
+            gridXform.MapUid != null &&
+            HasComp<SalvageExpeditionComponent>(gridXform.MapUid.Value))
             return;
 
         var targetCoords = GetCoordinates(coordinates);

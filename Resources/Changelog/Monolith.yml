@@ -6474,3 +6474,156 @@ Entries:
   id: 745
   time: '2025-07-08T01:38:04.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1209
+- author: grandalff
+  changes:
+    - type: Add
+      message: >-
+        Added Akula, a long range USSP Sniper ship. Comes with the new tiny
+        Charon - Charonette.
+  id: 746
+  time: '2025-07-08T02:46:36.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1199
+- author: HungryCuban
+  changes:
+    - type: Tweak
+      message: Adjust USSP research points cost
+  id: 747
+  time: '2025-07-08T04:08:23.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1222
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Fixed Resomi gasp and deathgasp not working.
+  id: 748
+  time: '2025-07-08T04:41:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1226
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Heads are very difficult to sever now, should help prevent explosions
+        resulting in people being super unrecoverable
+  id: 749
+  time: '2025-07-08T04:42:44.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1221
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: resomi cybersun stealth hardsuit sprite from goob
+  id: 750
+  time: '2025-07-08T04:44:38.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1225
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Nutrimax swabs are now less painful and Servicefab can print swabs and
+        syringes
+  id: 751
+  time: '2025-07-08T05:30:42.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1224
+- author: wewman222
+  changes:
+    - type: Add
+      message: IFF modules all mechs can slot in for custom radar blips.
+    - type: Fix
+      message: Odd bugs with ammo.
+  id: 752
+  time: '2025-07-08T05:37:30.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1220
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: Added that borg charger WITHOUT breaking CO
+  id: 753
+  time: '2025-07-08T05:46:26.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1223
+- author: starch70
+  changes:
+    - type: Add
+      message: Readded the Calypso (in a remapped version).
+    - type: Tweak
+      message: Brigmedic is now called Corpsman.
+    - type: Fix
+      message: Fixed TSFMC and Rogue PDA names using Frontier role names.
+    - type: Fix
+      message: TSFMC hardsuits should display the correct names now in uplink.
+    - type: Tweak
+      message: Made TSFMC/Security thrusters have more HP than normal ones.
+  id: 754
+  time: '2025-07-08T14:57:57.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1238
+- author: Ark
+  changes:
+    - type: Fix
+      message: Station AI no longer get vision from unpowered cameras.
+  id: 755
+  time: '2025-07-08T15:00:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1232
+- author: wewman222
+  changes:
+    - type: Fix
+      message: Fixes power cages, so they are craftable again.
+  id: 756
+  time: '2025-07-08T15:02:44.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1230
+- author: Ark
+  changes:
+    - type: Add
+      message: You are now able to toggle modsuit magboots.
+  id: 757
+  time: '2025-07-08T15:03:20.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1228
+- author: Ark
+  changes:
+    - type: Tweak
+      message: Shields will no longer show on mass scanner during FTL.
+  id: 758
+  time: '2025-07-08T15:03:48.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1229
+- author: Ark
+  changes:
+    - type: Tweak
+      message: Increased magnet pickup on lathes (0.30 -> 1.50).
+  id: 759
+  time: '2025-07-08T15:06:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1227
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: 2.5x all wall durability
+    - type: Tweak
+      message: C4/Breaching charges adjusted accordingly
+  id: 760
+  time: '2025-07-08T15:39:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1239
+- author: Danchi299
+  changes:
+    - type: Add
+      message: added weapons and ammo to Contractors and USSP loadout.
+    - type: Add
+      message: added AKM and Ammo for it to Rogue loadout.
+    - type: Tweak
+      message: Security Guard now starts with Rubber Bullets in their weapons
+    - type: Add
+      message: >-
+        added Ammo to Contractors, Pilots, Mercenaries, and Security Guard
+        loadout.
+    - type: Add
+      message: >-
+        added Double Barreled Shotgun and Disabler to Contractors and Pilots
+        loadout.
+    - type: Tweak
+      message: >-
+        Added Recharger Flatpacks to Rogues and TSF Loadouts for reloading
+        energy weapons.
+  id: 761
+  time: '2025-07-08T17:33:48.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1242
+- author: UnicornOnLSD
+  changes:
+    - type: Tweak
+      message: mining guns on DIS instead of stinky ass upstream mining PTKs
+  id: 762
+  time: '2025-07-08T17:45:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1241

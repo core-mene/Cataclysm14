@@ -8,10 +8,11 @@
 # SPDX-FileCopyrightText: 2025 Checkraze
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 ark1368
 # SPDX-FileCopyrightText: 2025 gus
 # SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 the-hivequeen
+# SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -21,8 +22,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/05/2025 01:17:26
-  entityCount: 4983
+  time: 07/08/2025 02:04:25
+  entityCount: 4984
 maps:
 - 1
 grids:
@@ -4482,8 +4483,8 @@ entities:
     - type: GridGodMode
       protectedEntities: []
     - type: GridPacifier
+      nextUpdate: 31.9974989
       exemptCompany1: TSF
-      nextUpdate: 916.4989126
       pendingEntities:
         4546: 911.4989126
         4537: 911.4989126
@@ -9460,9 +9461,13 @@ entities:
         3317: 911.4989126
         3318: 911.4989126
         3319: 911.4989126
+        invalid: 32.6333007
+        4984: 46.2333036
       pacifiedEntities: []
     - type: GridRaider
       protectedEntities: []
+    - type: ShipGridLock
+      locked: False
   - uid: 3
     components:
     - type: MetaData
@@ -11499,6 +11504,13 @@ entities:
     components:
     - type: Transform
       pos: -13.5,34.5
+      parent: 2
+- proto: BorgCharger
+  entities:
+  - uid: 4984
+    components:
+    - type: Transform
+      pos: -30.5,11.5
       parent: 2
 - proto: BoxEnvelope
   entities:
