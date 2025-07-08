@@ -16,10 +16,13 @@
 - type: loadoutGroup
   id: TsfmcEngiModsuit
   name: loadout-group-contractor-backpack
-  hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
   - TsfmcEngiClothingModsuit
+  - TsfmcEngiClothingModsuit2
+  - TsfmcClothingBackpack
+  - TsfmcClothingSatchel
+  - TsfmcClothingDuffel
   fallbacks:
   - TsfmcEngiClothingModsuit
 

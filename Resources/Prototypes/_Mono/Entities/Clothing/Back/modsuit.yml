@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 NotActuallyMarty
 # SPDX-FileCopyrightText: 2025 Redrover1760
-#
+# SPDX-FileCopyrightText: 2025 RealSchepka
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
@@ -285,6 +285,7 @@
           components:
             - PowerCell
 
+# Volta
 - type: entity
   parent: [Clothing, ContentsExplosionResistanceBase]
   id: ClothingModsuitVolta
@@ -331,10 +332,10 @@
     blockUnequipWhenAttached: true
     replaceCurrentClothing: true
     clothingPrototypes:
-      head: ClothingModsuitHelmetEngineer
-      gloves: ClothingModsuitGauntletsEngineer
-      outerClothing: ClothingModsuitChestplateEngineer
-      shoes: ClothingModsuitBootsEngineer
+      head: ClothingModsuitHelmetVolta
+      gloves: ClothingModsuitGauntletsVolta
+      outerClothing: ClothingModsuitChestplateVolta
+      shoes: ClothingModsuitBootsVolta
   - type: WiresPanel
   - type: ItemSlots
     slots:

@@ -114,3 +114,44 @@
     clothingVisuals:
       gloves:
       - state: equipped-HAND-sealed
+
+# Volta
+# Uses exact same gloves as sapper ones, feel free to make them more unique
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingModsuitGauntletsVolta
+  name: Volta Modsuit Gauntlets
+  description: Oil stained modular suit gloves for easily pushing buttons on an RCD.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Mono/Clothing/Hands/Modsuits/tsfmc-volta.rsi
+    layers:
+    - state: gauntlets
+    - state: gauntlets-sealed
+      visible: false
+      map: [ "sealed" ]
+  - type: Clothing
+    equipSound: /Audio/Mecha/mechmove03.ogg
+    unequipSound: /Audio/Mecha/mechmove03.ogg
+    slots: [ gloves ]
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-modular
+    fiberColor: fibers-black
+  - type: FingerprintMask
+  - type: SealableClothing
+    sealUpPopup: sealable-clothing-seal-up-gauntlets
+    sealDownPopup: sealable-clothing-seal-down-gauntlets
+  - type: SealableClothingVisuals
+    spriteLayer: sealed
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND-sealed
+      gloves-resomi:
+      - state: equipped-HAND-sealed-resomi
