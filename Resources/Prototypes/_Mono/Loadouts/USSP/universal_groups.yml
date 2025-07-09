@@ -27,14 +27,16 @@
   subgroups:
   - USSPBackpack
 
-- type: loadoutGroup
-  id: USSPBackpackCorporal
-  name: loadout-group-contractor-backpack
-  minLimit: 1
-  fallbacks:
-  - USSPBackpack
-  subgroups:
-  - USSPBackpack
+#- type: loadoutGroup
+#  id: USSPBackpackCorporal
+#  name: loadout-group-contractor-backpack
+#  minLimit: 1
+#  loadouts:
+#  - USSPModsuitUSSPVaryag
+#  fallbacks:
+#  - USSPBackpack
+#  subgroups:
+#  - USSPBackpack
 
 - type: loadoutGroup
   id: USSPOuterClothingOfficer
