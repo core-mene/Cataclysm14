@@ -27,7 +27,7 @@
       Nfsd:
         !type:SectorBankAccountInfo
         balance: 8000
-        increasePerSecond: 42 # ~150K per hour, about enough for minimum wage for the default TSFMC size
+        increasePerSecond: 65 # ~234K per hour, about enough for minimum wage for the default TSFMC size
       Medical:
         !type:SectorBankAccountInfo
         balance: 8000
