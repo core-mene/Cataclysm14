@@ -20,7 +20,7 @@ public sealed partial class CloakHeatComponent : Component
     /// Maximum time the Hide flag can be active before overheating.
     /// </summary>
     [DataField]
-    public TimeSpan MaxCloakTime = TimeSpan.FromMinutes(2);
+    public TimeSpan MaxCloakTime = TimeSpan.FromMinutes(4);
 
     /// <summary>
     /// Duration of the cooldown period after overheating.
@@ -58,7 +58,7 @@ public sealed partial class CloakHeatComponent : Component
     /// Rate at which heat builds up when cloaking is active (per second).
     /// </summary>
     [DataField]
-    public float HeatBuildupRate = 1f / 120f; // 1.0 heat over 2 minutes
+    public float HeatBuildupRate = 1f / 240f; // 1.0 heat over 4 minutes
 
     /// <summary>
     /// Rate at which heat dissipates when cloaking is inactive (per second).

@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 ScyronX
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -15,6 +16,20 @@
   - FactionEnergyGunLoadout
   fallbacks:
   - FactionC20RLoadout
+
+- type: loadoutGroup
+  id: RogueFirearmCommander
+  name: loadout-group-weapon
+  minLimit: 1
+  loadouts:
+  - FactionHawk4Pistol
+  - FactionC20RLoadout
+  - FactionWt550Loadout
+  - FactionLecterLoadout
+  - FactionAkmLoadout
+  - FactionEnergyGunLoadout
+  fallbacks:
+  - FactionHawk4Pistol
 
 - type: loadoutGroup
   id: RogueMag

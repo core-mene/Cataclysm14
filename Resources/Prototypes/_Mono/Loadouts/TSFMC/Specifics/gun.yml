@@ -5,6 +5,18 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: loadoutGroup
+  id: TsfmcFirearmColonel
+  name: loadout-group-weapon
+  minLimit: 1
+  loadouts:
+  - FactionFrostLoadout
+  - FactionDrozdLoadout
+  - FactionLecterLoadout
+  - FactionVulcanLoadout
+  fallbacks:
+  - FactionFrostLoadout
+
+- type: loadoutGroup
   id: TsfmcFirearm
   name: loadout-group-weapon
   minLimit: 1

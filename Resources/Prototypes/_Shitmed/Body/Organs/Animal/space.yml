@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: OrganAnimalLungs
   id: OrganSpaceAnimalLungs
@@ -75,7 +80,7 @@
       maxVisibility: 1.2
     - type: StealthOnMove
       passiveVisibilityRate: -0.25
-      movementVisibilityRate: 0.25
+      movementVisibilityRate: 0.28
     - type: PointLight # Mono
       radius: 1.2
       energy: 1.5

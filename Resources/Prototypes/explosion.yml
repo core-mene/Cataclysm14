@@ -1,21 +1,3 @@
-# SPDX-FileCopyrightText: 2022 Alex Evgrashin
-# SPDX-FileCopyrightText: 2022 Leon Friedrich
-# SPDX-FileCopyrightText: 2022 Moony
-# SPDX-FileCopyrightText: 2022 keronshb
-# SPDX-FileCopyrightText: 2023 Dawid Bla
-# SPDX-FileCopyrightText: 2023 Emisse
-# SPDX-FileCopyrightText: 2023 Kara
-# SPDX-FileCopyrightText: 2023 Nemanja
-# SPDX-FileCopyrightText: 2023 Skye
-# SPDX-FileCopyrightText: 2023 ThunderBear2006
-# SPDX-FileCopyrightText: 2023 eclips_e
-# SPDX-FileCopyrightText: 2023 metalgearsloth
-# SPDX-FileCopyrightText: 2024 Mr. 27
-# SPDX-FileCopyrightText: 2024 liltenhead
-# SPDX-FileCopyrightText: 2025 Redrover1760
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 #  Does not currently support prototype hot-reloading. See comments in c# file.
 
 - type: explosion
@@ -36,10 +18,10 @@
   id: DemolitionCharge
   damagePerIntensity:
     types:
-      Heat: 2
-      Blunt: 2
-      Piercing: 2
-      Structural: 125
+      Heat: 3
+      Blunt: 3
+      Piercing: 3
+      Structural: 50
   tileBreakChance: [ 0, 0.5, 1 ]
   tileBreakIntensity: [ 0, 10, 30 ]
   tileBreakRerollReduction: 20

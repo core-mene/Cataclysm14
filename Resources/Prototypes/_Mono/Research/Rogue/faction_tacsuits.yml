@@ -80,3 +80,18 @@
   - RogueBasicEquipment
   - RogueAdvancedEquipment
   - RogueSyndicateTacsuits
+
+- type: technology
+  id: RogueRx01
+  name: research-technology-rogue-rx01
+  icon:
+    sprite: _Mono/Clothing/Back/Modsuits/rogue.rsi
+    state: control
+  discipline: RogueEquipment
+  tier: 3
+  cost: 75000
+  recipeUnlocks:
+  - ClothingModsuitRoguePowerCellRogue
+  technologyPrerequisites:
+  - RogueBasicEquipment
+  - RogueAdvancedEquipment

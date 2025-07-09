@@ -6704,3 +6704,169 @@ Entries:
   id: 770
   time: '2025-07-09T00:10:16.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1251
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed MlA-73 firing sound not working.
+  id: 771
+  time: '2025-07-09T08:55:25.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1257
+- author: wewman222
+  changes:
+    - type: Tweak
+      message: Updated Mech armor and HP to be more durable.
+    - type: Tweak
+      message: Updated Mech fuel cells to contain much more energy
+  id: 772
+  time: '2025-07-09T08:56:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1254
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: 3x'd all values for power. 1 old power = 3 new power
+    - type: Tweak
+      message: Ultra power servers are anchorable now
+    - type: Tweak
+      message: >-
+        Flyssa station gunnery server replaced with omega class one with 150
+        'new' power or 50 'old' power. Unanchorable.
+    - type: Tweak
+      message: >-
+        Adds superlight and superheavy gun tiers. PTKs are super light and cost
+        1 'new' power or 0.333 old power, charons/hades/dymeres cost 6 old power
+        or 18 new power 
+    - type: Tweak
+      message: >-
+        Dagger has a medium power server now to account for charon changes,
+        Zenith/Nebula has ultra power server because sounds like good loot and
+        is fun, also might need it I didn't bother checking honestly. Serpent
+        gets an ultra server.
+    - type: Fix
+      message: Vulture now has enough power for its 12 PTKs. Yes, really.
+  id: 773
+  time: '2025-07-09T08:57:38.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1253
+- author: crazy1112345
+  changes:
+    - type: Tweak
+      message: >-
+        Updated the Arribane with M25 mining pulsers, more gas storage, and
+        misc. improvements/fixes.
+  id: 774
+  time: '2025-07-09T08:58:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1249
+- author: tonotom1
+  changes:
+    - type: Add
+      message: Uranium directional windows and diagonal walls are now constructable.
+  id: 775
+  time: '2025-07-09T10:20:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1258
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Faction leaders have unique weapons in loadout now (by request of lore
+        team)
+  id: 776
+  time: '2025-07-09T10:29:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1260
+- author: starch70
+  changes:
+    - type: Tweak
+      message: 2x fullcloak duration from 2 minutes to 4 minutes
+  id: 777
+  time: '2025-07-09T10:45:26.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1262
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Takeaway can no longer have its EVA-thru opened from the outside and has
+        received a bar sign at player request.
+  id: 778
+  time: '2025-07-09T11:25:37.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1263
+- author: RealSchepka
+  changes:
+    - type: Tweak
+      message: >-
+        Reduced TSF Engineer job slots on Halcyon by default from 4 to 1,
+        Colonel can still increase the job slots if needed.
+  id: 779
+  time: '2025-07-09T13:05:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1264
+- author: starch70
+  changes:
+    - type: Add
+      message: Readded RX-01 modsuit to Rogue T3 equipment research.
+    - type: Tweak
+      message: >-
+        Removed RX-01 modsuit speed bonus (replaced with slowdowns now), buffed
+        heat and fire resist.
+  id: 780
+  time: '2025-07-09T14:18:45.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1271
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Increased USSP research point costs.
+  id: 781
+  time: '2025-07-09T14:19:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1268
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: Ports over Oni code refactor from DeltaV, cleaning them up nicely
+  id: 782
+  time: '2025-07-09T14:20:34.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1265
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Omnizine overdose threshold changed to 100u
+  id: 783
+  time: '2025-07-09T14:21:20.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1266
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: TSFMC budget taxed less from contra crates being sold
+    - type: Tweak
+      message: tsfmc subsidies increased
+  id: 784
+  time: '2025-07-09T17:02:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1278
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Updates guidebook with Charonette and updates Charon guidebook
+  id: 785
+  time: '2025-07-09T17:03:31.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1275
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Tarnyxs duration decreased to 5 seconds from 7.5, battery drain for
+        systems decreased, firecost decreased
+    - type: Tweak
+      message: Rubicon emp duration increased from 5 seconds to 10, speed buffed
+    - type: Tweak
+      message: Tovek missile max speed decreased slightly
+    - type: Tweak
+      message: Pulsar M25 moved to superlight ship class
+    - type: Tweak
+      message: PTK shot capacity increased from 10 to 100
+  id: 786
+  time: '2025-07-09T17:04:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1274
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        USSP Zastavnik removed from loadout, USSP Varyag in loadout restricted
+        to Serzhant and Comissionair
+  id: 787
+  time: '2025-07-09T17:05:34.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1267

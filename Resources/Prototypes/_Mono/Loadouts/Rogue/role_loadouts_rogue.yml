@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 ScyronX
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: roleLoadout
   id: JobPirate
   groups:
@@ -43,6 +49,7 @@
   - RogueFirearm
   - RogueMag
   canCustomizeName: true
+
 - type: roleLoadout
   id: JobPirateCaptain
   groups:
@@ -62,6 +69,6 @@
   - MercenaryBelt
   - ContractorEncryptionKey
   - MercenaryGlasses
-  - RogueFirearm
+  - RogueFirearmCommander
   - RogueMag
   canCustomizeName: true
