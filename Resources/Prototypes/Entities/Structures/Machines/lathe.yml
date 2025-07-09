@@ -155,6 +155,7 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Southbridge
 # SPDX-FileCopyrightText: 2025 Velken
+# SPDX-FileCopyrightText: 2025 ark1368
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 deltanedas
 # SPDX-FileCopyrightText: 2025 deltanedas <@deltanedas:kde.org>
@@ -224,7 +225,7 @@
   - type: ResearchClient
   - type: TechnologyDatabase
   - type: MaterialStorageMagnetPickup # Frontier
-    range: 0.30 # Frontier
+    range: 1.50 # Mono
 
 # a lathe that can be sped up with space lube / slowed down with glue
 - type: entity
@@ -468,6 +469,7 @@
     - MonoAdvancedShuttleComponents # Mono
     - MechBoardsPlus
     - AiCoreBoard
+    - S2MechBoards
   - type: MaterialStorage
     whitelist:
       tags:
@@ -532,7 +534,7 @@
     # Mono - Space Mecha
     - S2Mechs
     - SpaceMechaWeapons
-    - S2MechBoards
+    - SpaceMechaIFF
   - type: MaterialStorage
     whitelist:
       tags:

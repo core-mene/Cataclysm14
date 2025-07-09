@@ -60,7 +60,7 @@
   - type: Machine
     board: MachineGCSLowCircuitboard
   - type: FireControlServer
-    processingPower: 8
+    processingPower: 24
   - type: Battery
     maxCharge: 125
     startingCharge: 125
@@ -79,7 +79,7 @@
   - type: Machine
     board: MachineGCSMediumCircuitboard
   - type: FireControlServer
-    processingPower: 14
+    processingPower: 42
   - type: Battery
     maxCharge: 250
     startingCharge: 250
@@ -98,7 +98,7 @@
   - type: Machine
     board: MachineGCSHighCircuitboard
   - type: FireControlServer
-    processingPower: 20
+    processingPower: 60
   - type: Battery
     maxCharge: 500
     startingCharge: 500
@@ -111,13 +111,13 @@
 
 - type: entity
   id: GunneryServerUltra
-  parent: [BaseStructureDisableToolUse, GunneryServerBase]
+  parent: [GunneryServerBase] # removed BaseStructureDisableToolUse
   name: ultra-high-power gunnery control server
   components:
   - type: Machine
     board: MachineGCSUltraCircuitboard
   - type: FireControlServer
-    processingPower: 30
+    processingPower: 90
   - type: Battery
     maxCharge: 1000
     startingCharge: 1000
@@ -127,7 +127,28 @@
     idleLoad: 50
     batteryRechargeRate: 2400
     batteryRechargeEfficiency: 0.95
-  - type: Anchorable # Sorry Tunguska, but I am NOT risking this being used for a missile bus.
+#  - type: Anchorable # Sorry Tunguska, but I am NOT risking this being used for a missile bus. - "what could go wrong" says redrover
+#    flags: Anchorable
+
+- type: entity
+  id: GunneryServerOmega
+  parent: [BaseStructureDisableToolUse, GunneryServerBase]
+  name: omega-high-power gunnery control server
+  components:
+  - type: Machine
+    board: MachineGCSUltraCircuitboard
+  - type: FireControlServer
+    processingPower: 150
+  - type: Battery
+    maxCharge: 2000
+    startingCharge: 2000
+  - type: ApcPowerReceiver
+    powerLoad: 4000
+  - type: ApcPowerReceiverBattery
+    idleLoad: 100
+    batteryRechargeRate: 4800
+    batteryRechargeEfficiency: 0.95
+  - type: Anchorable # Sorry Flyssa, but I am NOT risking this being used for a missile bus.
     flags: Anchorable
 
 - type: entity
@@ -138,7 +159,7 @@
   - type: Machine
     board: MachineGCSStationCircuitboard
   - type: FireControlServer
-    processingPower: 1000
+    processingPower: 3000
   - type: Battery
     maxCharge: 2500
     startingCharge: 2500
@@ -160,7 +181,7 @@
   - type: Machine
     board: MachineGCSStationCircuitboard
   - type: FireControlServer
-    processingPower: 1000
+    processingPower: 3000
     enforceMaxConsoles: true
     maxConsoles: 2
   - type: Battery

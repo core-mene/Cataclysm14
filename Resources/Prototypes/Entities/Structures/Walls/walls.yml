@@ -1,3 +1,85 @@
+# SPDX-FileCopyrightText: 2018 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2019 Acruid
+# SPDX-FileCopyrightText: 2019 DamianX
+# SPDX-FileCopyrightText: 2019 Injazz
+# SPDX-FileCopyrightText: 2019 L.E.D
+# SPDX-FileCopyrightText: 2020 AJCM-git
+# SPDX-FileCopyrightText: 2020 ComicIronic
+# SPDX-FileCopyrightText: 2020 Hugo Laloge
+# SPDX-FileCopyrightText: 2020 Paul Ritter
+# SPDX-FileCopyrightText: 2020 Peter Wedder
+# SPDX-FileCopyrightText: 2020 ShadowCommander
+# SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+# SPDX-FileCopyrightText: 2020 ike709
+# SPDX-FileCopyrightText: 2020 py01
+# SPDX-FileCopyrightText: 2021 20kdc
+# SPDX-FileCopyrightText: 2021 DrSmugleaf
+# SPDX-FileCopyrightText: 2021 Galactic Chimp
+# SPDX-FileCopyrightText: 2021 SETh lafuente
+# SPDX-FileCopyrightText: 2021 SethLafuente
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2021 mirrorcult
+# SPDX-FileCopyrightText: 2022 Alex Evgrashin
+# SPDX-FileCopyrightText: 2022 Chief-Engineer
+# SPDX-FileCopyrightText: 2022 ChilbroBaggins
+# SPDX-FileCopyrightText: 2022 CrudeWax
+# SPDX-FileCopyrightText: 2022 Fishfish458
+# SPDX-FileCopyrightText: 2022 Jacob Tong
+# SPDX-FileCopyrightText: 2022 Jeff
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 Moony
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 Scribbles0
+# SPDX-FileCopyrightText: 2022 Visne
+# SPDX-FileCopyrightText: 2022 fishfish458 <fishfish458>
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2023 Bixkitts
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2023 Emisse
+# SPDX-FileCopyrightText: 2023 FoxxoTrystan
+# SPDX-FileCopyrightText: 2023 NULL882
+# SPDX-FileCopyrightText: 2023 PixelTK
+# SPDX-FileCopyrightText: 2023 Puro
+# SPDX-FileCopyrightText: 2023 Velcroboy
+# SPDX-FileCopyrightText: 2023 Vordenburg
+# SPDX-FileCopyrightText: 2023 avery
+# SPDX-FileCopyrightText: 2023 brainfood1183
+# SPDX-FileCopyrightText: 2023 daerSeebaer
+# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 Flareguy
+# SPDX-FileCopyrightText: 2024 HS
+# SPDX-FileCopyrightText: 2024 Ilya246
+# SPDX-FileCopyrightText: 2024 JustinWinningham
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 Ko4ergaPunk
+# SPDX-FileCopyrightText: 2024 MACMAN2003
+# SPDX-FileCopyrightText: 2024 Nairod
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 Ps3Moira
+# SPDX-FileCopyrightText: 2024 SlamBamActionman
+# SPDX-FileCopyrightText: 2024 SonicHDC
+# SPDX-FileCopyrightText: 2024 Unisol
+# SPDX-FileCopyrightText: 2024 VividPups
+# SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2024 chromiumboy
+# SPDX-FileCopyrightText: 2024 degradka
+# SPDX-FileCopyrightText: 2024 keronshb
+# SPDX-FileCopyrightText: 2024 slarticodefast
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Southbridge
+# SPDX-FileCopyrightText: 2025 lzk
+# SPDX-FileCopyrightText: 2025 nathan736
+# SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 tonotom
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   abstract: true
   parent: BaseStructure
@@ -69,7 +151,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1200 # Mono - wall buff - 4x
+        damage: 3000 # Mono - wall buff - 4x
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -102,7 +184,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1200 # Mono - wall buff - 4x
+        damage: 3000 # Mono - wall buff - 4x
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -144,7 +226,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1200 # Mono - wall buff - 4x
+        damage: 3000 # Mono - wall buff - 4x
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -189,7 +271,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 400 # Mono - wall buff - 4x
+        damage: 1000 # Mono - wall buff - 4x
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -218,7 +300,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1200 # Mono - wall buff - 4x
+        damage: 3000 # Mono - wall buff - 4x
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -249,7 +331,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1200 # Mono - wall buff - 4x
+        damage: 3000 # Mono - wall buff - 4x
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -282,7 +364,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2400 # Mono - wall buff - 8x its diamonds bro
+        damage: 6000 # Mono - wall buff - 8x its diamonds bro
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -318,7 +400,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 900 # Mono - wall buff - 3x gold is brittle
+        damage: 2250 # Mono - wall buff - 3x gold is brittle
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -327,7 +409,7 @@
         acts: ["Destruction"]
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 375
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -367,7 +449,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 600 # Mono - wall buff - 2x
+        damage: 1500 # Mono - wall buff - 2x
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -403,7 +485,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1200 # Mono - wall buff - 4x
+        damage: 3000 # Mono - wall buff - 4x
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -412,7 +494,7 @@
         acts: ["Destruction"]
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 1500
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -450,7 +532,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1200 # Mono - wall buff - 4x
+        damage: 3000 # Mono - wall buff - 4x
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -459,7 +541,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 600 # Mono - wall buff - 4x
+        damage: 1500 # Mono - wall buff - 4x
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -523,7 +605,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 7500 # Mono - wall buff - 7.5x
+        damage: 17500 # Mono - wall buff - 7.5x
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -558,7 +640,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 3500 # Mono - wall buff - 2x
+        damage: 10000 # Mono - wall buff - 2x
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -567,7 +649,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 2000 # Mono - wall buff - 2x
+        damage: 7500 # Mono - wall buff - 2x
       behaviors:
       - !type:ChangeConstructionNodeBehavior
         node: girder
@@ -649,7 +731,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 3000 # Mono - wall buff - 5x
+        damage: 8000 # Mono - wall buff - 5x
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -658,7 +740,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 2000 # Mono - wall buff - 5x
+        damage: 5000 # Mono - wall buff - 5x
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -727,7 +809,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2500 # Mono - wall buff - 5x
+        damage: 6250 # Mono - wall buff - 5x
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -736,7 +818,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 1750 # Mono - wall buff - 5x
+        damage: 4375 # Mono - wall buff - 5x
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -771,6 +853,28 @@
   - type: Icon
     sprite: Structures/Walls/reinforced_diagonal.rsi
     state: state0
+  - type: Destructible # Mono - override HP stats from parent: WallShuttleDiagonal, matches reinforced wall
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 8000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 5000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
 
 # Riveting
 - type: entity
@@ -950,7 +1054,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 3600 # Mono - wall buff - 6x
+        damage: 9000 # Mono - wall buff - 6x
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -959,7 +1063,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 1800 # Mono - wall buff - 6x
+        damage: 4500 # Mono - wall buff - 6x
       behaviors:
       - !type:ChangeConstructionNodeBehavior
         node: girder
@@ -989,7 +1093,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 3600 # Mono - wall buff - 6x
+        damage: 9000 # Mono - wall buff - 6x
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -998,7 +1102,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 2400 # Mono - wall buff - 6x
+        damage: 6000 # Mono - wall buff - 6x
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -1068,7 +1172,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2400 # Mono - wall buff - 6x
+        damage: 6000 # Mono - wall buff - 6x
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -1077,7 +1181,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 1200 # Mono - wall buff - 6x
+        damage: 3000 # Mono - wall buff - 6x
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -1123,7 +1227,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1600 # Mono - wall buff - 4x
+        damage: 4000 # Mono - wall buff - 4x
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -1132,7 +1236,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 800 # Mono - wall buff - 4x
+        damage: 2000 # Mono - wall buff - 4x
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -1166,6 +1270,28 @@
   - type: Icon
     sprite: Structures/Walls/solid_diagonal.rsi
     state: state0
+  - type: Destructible # Mono - override HP stats from parent: WallShuttleDiagonal, matches reinforced wall
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 4000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 2000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
 
 - type: entity
   parent: WallSolid
@@ -1187,7 +1313,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1200 # Mono - wall buff - 4x
+        damage: 3000 # Mono - wall buff - 4x
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -1196,7 +1322,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 600 # Mono - wall buff - 4x
+        damage: 1500 # Mono - wall buff - 4x
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -1222,7 +1348,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 3000 # Mono - wall buff - 10x
+        damage: 7500 # Mono - wall buff - 10x
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -1231,7 +1357,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 2000 # Mono - wall buff - alot - uranium is dense
+        damage: 5000 # Mono - wall buff - alot - uranium is dense
       behaviors:
       - !type:PlaySoundBehavior
         sound:

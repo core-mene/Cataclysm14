@@ -82,7 +82,7 @@ JobChiefEngineer = Chief Engineer
 JobChiefMedicalOfficer = Chief Medical Officer
 JobClown = Clown
 JobDetective = Detective
-JobBrigmedic = Brigmedic
+JobBrigmedic = Corpsman
 JobERTChaplain = ERT Chaplain
 JobERTEngineer = ERT Engineer
 JobERTJanitor = ERT Janitor
@@ -91,8 +91,8 @@ JobERTMedical = ERT Medical
 JobERTSecurity = ERT Security
 # Frontier: Head of Personnel<Station Representative
 JobHeadOfPersonnel = Station Representative
-# Frontier: Head of Security<Sheriff
-JobHeadOfSecurity = Colonel
+# Mono: Head of Security<TSFMC Colonel
+JobHeadOfSecurity = TSFMC Colonel
 JobJanitor = Janitor
 JobLawyer = Lawyer
 JobLibrarian = Librarian
@@ -112,13 +112,13 @@ JobSalvageSpecialist = Salvage Specialist
 JobScientist = Scientist
 # Frontier: Security Cadet<Cadet
 JobSecurityCadet = Cadet
-# Frontier: Security Officer<Deputy
-JobSecurityOfficer = Deputy
+# Mono: Security Officer<TSFMC Corporal
+JobSecurityOfficer = TSFMC Corporal
 JobServiceWorker = Service Worker
 JobStationAi = Station AI
 JobStationEngineer = Station Engineer
 JobTechnicalAssistant = Technical Assistant
 JobVisitor = Visitor
-# Frontier: Warden<Bailiff
-JobWarden = Bailiff
+# Mono: Warden<TSFMC Captain
+JobWarden = TSFMC Captain
 JobZookeeper = Zookeeper

@@ -12,6 +12,7 @@
 # SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 the-hivequeen
 # SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -21,13 +22,13 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/07/2025 16:52:42
-  entityCount: 4983
-maps: []
+  time: 07/08/2025 02:04:25
+  entityCount: 4984
+maps:
+- 1
 grids:
 - 2
-orphans:
-- 2
+orphans: []
 nullspace: []
 tilemap:
   2: Space
@@ -60,13 +61,27 @@ tilemap:
 entities:
 - proto: ""
   entities:
+  - uid: 1
+    components:
+    - type: MetaData
+      name: map 1234
+    - type: Transform
+    - type: Map
+      mapPaused: True
+    - type: PhysicsMap
+    - type: GridTree
+    - type: MovedGrids
+    - type: Broadphase
+    - type: Parallax
+      parallax: FrontierStation
+    - type: OccluderTree
   - uid: 2
     components:
     - type: MetaData
       name: Colonial Outpost
     - type: Transform
       pos: 12,-25
-      parent: invalid
+      parent: 1
     - type: MapGrid
       chunks:
         -1,0:
@@ -4468,7 +4483,7 @@ entities:
     - type: GridGodMode
       protectedEntities: []
     - type: GridPacifier
-      nextUpdate: 101.4336356
+      nextUpdate: 31.9974989
       exemptCompany1: TSF
       pendingEntities:
         4546: 911.4989126
@@ -9446,8 +9461,8 @@ entities:
         3317: 911.4989126
         3318: 911.4989126
         3319: 911.4989126
-        invalid: 184.1998158
-        1: 126.8456893
+        invalid: 32.6333007
+        4984: 46.2333036
       pacifiedEntities: []
     - type: GridRaider
       protectedEntities: []
@@ -11492,7 +11507,7 @@ entities:
       parent: 2
 - proto: BorgCharger
   entities:
-  - uid: 1
+  - uid: 4984
     components:
     - type: Transform
       pos: -30.5,11.5

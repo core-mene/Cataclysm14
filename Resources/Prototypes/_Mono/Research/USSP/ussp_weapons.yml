@@ -1,8 +1,7 @@
 # SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
-
-
 
 - type: technology
   id: UsspBasicGuns
@@ -28,7 +27,7 @@
     state: icon
   discipline: UsspWeapons
   tier: 2
-  cost: 20000
+  cost: 35000
   recipeUnlocks:
   - WeaponRifleAK502USSP
   - WeaponRevolverMatebaUSSP
@@ -48,7 +47,7 @@
     state: icon
   discipline: UsspWeapons
   tier: 3
-  cost: 20000
+  cost: 80000
   recipeUnlocks:
   - WeaponDP29USSP
   - MagazineDP29
@@ -63,7 +62,7 @@
     state: base
   discipline: UsspWeapons
   tier: 3
-  cost: 20000
+  cost: 30000
   recipeUnlocks:
   - AmmoBox7.62x39mmSubsonic
   - AmmoBox45_magnumAP

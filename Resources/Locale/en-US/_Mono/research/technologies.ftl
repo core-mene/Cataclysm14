@@ -49,6 +49,7 @@ research-technology-rogue-hypospray = Rapid Reagent Administration
 research-technology-rogue-emag = Basic Hacking Procedures
 research-technology-rogue-hristov = Heavy Ballistics
 research-technology-rogue-stealthsuit = Metamaterial Fibers
+research-technology-rogue-subsonic = Subsonic Firearms
 
 # T3 rogue
 research-technology-rogue-prowler-voucher = Stealthcraft Technologies
@@ -57,6 +58,7 @@ research-technology-rogue-access-breaker = Advanced Hacking Procedures
 research-technology-rogue-hf-sword = Weaponised Resonance Technology
 research-technology-rogue-syndicate-tacsuits = Blood-Red Engineering
 research-technology-rogue-syndicate-tacsuits-t3 = Synthalloy Utilization
+research-technology-rogue-rx01 = RX-01 Modsuit
 
 # Space Mecha Technologies
 research-technology-broadsword = Armored Frame Production

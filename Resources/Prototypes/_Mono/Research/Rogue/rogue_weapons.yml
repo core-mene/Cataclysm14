@@ -122,3 +122,21 @@
   technologyPrerequisites:
   - RogueBasicGuns
   - RogueAdvancedGuns
+
+- type: technology
+  id: RogueSubsonic
+  name: research-technology-rogue-subsonic
+  icon:
+    sprite: _Mono/Objects/Weapons/Guns/SMGs/mla73.rsi
+    state: icon
+  discipline: RogueWeaponry
+  tier: 2
+  cost: 25000
+  recipeUnlocks:
+  - WeaponRifleWSPRRogue
+  - WeaponSubMachineGunMla73Rogue
+  - Magazine635x40mmCaseless
+  - AmmoBox635x40mmCaseless
+  technologyPrerequisites:
+  - RogueBasicGuns
+  - RogueAdvancedGuns

@@ -198,7 +198,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         {
             PlayDenySound(player, shipyardConsoleUid, component);
             ConsolePopup(player, Loc.GetString(ev.CancelReason));
-            TryQueueDel(shuttleUid);
+            Del(shuttleUid);
             return;
         }
 
@@ -209,18 +209,18 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         {
             if (voucher!.RedemptionsLeft <= 0)
             {
-                TryQueueDel(shuttleUid);
+                Del(shuttleUid);
                 ConsolePopup(player, Loc.GetString("shipyard-console-no-voucher-redemptions"));
                 PlayDenySound(player, shipyardConsoleUid, component);
                 if (voucher!.DestroyOnEmpty)
                 {
-                    QueueDel(targetId);
+                    Del(targetId);
                 }
                 return;
             }
             else if (voucher!.ConsoleType != (ShipyardConsoleUiKey)args.UiKey)
             {
-                TryQueueDel(shuttleUid);
+                Del(shuttleUid);
                 ConsolePopup(player, Loc.GetString("shipyard-console-invalid-voucher-type"));
                 PlayDenySound(player, shipyardConsoleUid, component);
                 return;
@@ -232,7 +232,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         {
             if (bank.Balance <= vessel.Price)
             {
-                TryQueueDel(shuttleUid);
+                Del(shuttleUid);
                 ConsolePopup(player, Loc.GetString("cargo-console-insufficient-funds", ("cost", vessel.Price)));
                 PlayDenySound(player, shipyardConsoleUid, component);
                 return;
@@ -240,7 +240,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
             if (!_bank.TryBankWithdraw(player, vessel.Price))
             {
-                TryQueueDel(shuttleUid);
+                Del(shuttleUid);
                 ConsolePopup(player, Loc.GetString("cargo-console-insufficient-funds", ("cost", vessel.Price)));
                 PlayDenySound(player, shipyardConsoleUid, component);
                 return;

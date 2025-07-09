@@ -1,3 +1,13 @@
+# SPDX-FileCopyrightText: 2023 AndresE55
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Whatstone
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: soundCollection
   id: AvaliScreams
   files:
@@ -16,7 +26,7 @@
     Scream:
       collection: AvaliScreams
     Laugh:
-      collection: AvaliLaugh 
+      collection: AvaliLaugh
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -51,6 +61,11 @@
       collection: Wurble
     Chirp:
       collection: ResomiChirp
+    Gasp:
+      collection: MaleGasp
+    DefaultDeathgasp:
+      collection: MaleDeathGasp
+
 
 - type: emoteSounds
   id: FemaleAvaliEmote
@@ -60,7 +75,7 @@
     Scream:
       collection: AvaliScreams
     Laugh:
-      collection: AvaliLaugh 
+      collection: AvaliLaugh
     Sneeze:
       collection: FemaleSneezes
     Cough:
@@ -95,3 +110,7 @@
       collection: Wurble
     Chirp:
       collection: ResomiChirp
+    Gasp:
+      collection: FemaleGasp
+    DefaultDeathgasp:
+      collection: FemaleDeathGasp
