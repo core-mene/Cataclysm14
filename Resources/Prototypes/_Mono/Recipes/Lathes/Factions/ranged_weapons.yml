@@ -51,7 +51,7 @@
   materials:
     Steel: 1500
     Plasteel: 1200
-    Plastic: 900
+    Plastic: 1500
 
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
@@ -61,6 +61,17 @@
     Steel: 1500
     Plasteel: 1200
     Plastic: 900
+
+# Rogues MlA-73
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponSubMachineGunMla73Rogue
+  result: WeaponSubMachineGunMla73
+  materials:
+    Steel: 1500
+    Plasteel: 800
+    Plastic: 1200
 
 # TSF MR-8
 

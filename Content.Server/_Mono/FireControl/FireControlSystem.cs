@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 RikuTheKiller
 // SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 ark1368
@@ -310,9 +311,11 @@ public sealed partial class FireControlSystem : EntitySystem
 
         return classComponent.Class switch
         {
-            ShipGunClass.Light => 1,
-            ShipGunClass.Medium => 2,
-            ShipGunClass.Heavy => 4,
+            ShipGunClass.Superlight => 1,
+            ShipGunClass.Light => 3,
+            ShipGunClass.Medium => 6,
+            ShipGunClass.Heavy => 9,
+            ShipGunClass.Superheavy => 12,
             _ => 0,
         };
     }

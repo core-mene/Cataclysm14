@@ -1,0 +1,57 @@
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  name: MlA-73 (6.35x40mm caseless)
+  parent: [BaseWeaponSubMachineGun, BaseGunWieldable, BaseC2Contraband] # Frontier: added BaseC2Contraband
+  id: WeaponSubMachineGunMla73
+  description: A reliable PDW design, commonly issued to pilots and AFV crewmen. This one has been modified with an integral suppressor.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/SMGs/mla73.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Guns/SMGs/mla73.rsi
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -34
+  - type: Gun
+    minAngle: 21
+    maxAngle: 38
+    angleIncrease: 5
+    angleDecay: 20
+    fireRate: 8
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine6.35x40mmCaseless
+        insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - Magazine6.35x40mmCaseless
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge6.35x40mmCaseless
+        priority: 1
+        whitelist:
+          tags:
+          - Cartridge6.35x40mmCaseless
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

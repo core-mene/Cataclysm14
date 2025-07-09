@@ -5,6 +5,7 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 grandalff
 # SPDX-FileCopyrightText: 2025 kyres1
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -206,7 +207,7 @@
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipTarnyxProjectile
-    fireCost: 17500 # low shot weapon moved back to the original spot
+    fireCost: 15000 # low shot weapon moved back to the original spot
   - type: RadarBlip
     radarColor: "#035EFC"
     scale: 2.5
@@ -343,7 +344,7 @@
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
-    shipClass: Heavy
+    shipClass: Superheavy
 
 # MiniCHARON
 
@@ -495,7 +496,7 @@
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
-    shipClass: Heavy
+    shipClass: Superheavy
 
 # Bofors 255mm
 

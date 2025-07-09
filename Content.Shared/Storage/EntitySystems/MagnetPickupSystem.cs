@@ -1,3 +1,20 @@
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 Stray-Pyramid
+// SPDX-FileCopyrightText: 2023 crystalHex
+// SPDX-FileCopyrightText: 2024 Kara
+// SPDX-FileCopyrightText: 2024 Mnemotechnican
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2024 TemporalOroboros
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 GreaseMonk
+// SPDX-FileCopyrightText: 2025 Kyle Tyo
+// SPDX-FileCopyrightText: 2025 Whatstone
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Storage.Components; // Frontier: Server<Shared
 using Content.Shared.Examine;
 using Content.Shared.Hands.Components;
@@ -150,10 +167,17 @@ public sealed class MagnetPickupSystem : EntitySystem
             foreach (var near in _lookup.GetEntitiesInRange(uid, comp.Range, LookupFlags.Dynamic | LookupFlags.Sundries))
             {
                 // Frontier: stop spamming bags
-                count++;
-
-                if (count > MaxEntitiesToInsert)
+                if (count >= MaxEntitiesToInsert)
                     break;
+
+                if (near == parentUid)
+                    continue;
+
+                if (!_physicsQuery.TryGetComponent(near, out var physics) || physics.BodyStatus != BodyStatus.OnGround)
+                    continue;
+
+                if (_whitelistSystem.IsWhitelistFail(storage.Whitelist, near))
+                    continue;
 
                 if (!TryComp<ItemComponent>(near, out var item))
                     continue;
@@ -161,16 +185,10 @@ public sealed class MagnetPickupSystem : EntitySystem
                 var itemSize = _item.GetItemShape((near, item)).GetArea();
                 if (itemSize > totalSlots - slotCount)
                     break;
+
+                // Count only objects we _could_ insert.
+                count++;
                 // End Frontier: stop spamming bags
-
-                if (_whitelistSystem.IsWhitelistFail(storage.Whitelist, near))
-                    continue;
-
-                if (!_physicsQuery.TryGetComponent(near, out var physics) || physics.BodyStatus != BodyStatus.OnGround)
-                    continue;
-
-                if (near == parentUid)
-                    continue;
 
                 // TODO: Probably move this to storage somewhere when it gets cleaned up
                 // TODO: This sucks but you need to fix a lot of stuff to make it better
@@ -181,7 +199,7 @@ public sealed class MagnetPickupSystem : EntitySystem
                 var nearCoords = _transform.ToCoordinates(moverCoords.EntityId, nearMap);
 
                 if (!_storage.Insert(uid, near, out var stacked, storageComp: storage, playSound: !playedSound))
-                    continue;
+                    break; // Frontier: continue<break
 
                 slotCount += itemSize; // Frontier: adjust size (assume it's in a new slot)
 

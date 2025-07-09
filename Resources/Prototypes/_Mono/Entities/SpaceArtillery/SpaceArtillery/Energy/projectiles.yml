@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 Disguised Bear
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
@@ -39,7 +40,7 @@
     radarColor: "#C92BCC"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
+    explosionType: DefaultShipGun
     totalIntensity: 250
     intensitySlope: 6
     maxIntensity: 25
@@ -112,7 +113,7 @@
   - type: EmpOnTrigger
     range: 4
     energyConsumption: 2700000
-    disableDuration: 5
+    disableDuration: 10
 
 
 # DYMERE
@@ -146,7 +147,7 @@
     color: "#6BC1FF"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBomb
+    explosionType: HardBombShipGun
     totalIntensity: 1250
     intensitySlope: 10
     maxIntensity: 55
