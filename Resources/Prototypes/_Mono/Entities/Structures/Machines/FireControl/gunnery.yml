@@ -111,7 +111,7 @@
 
 - type: entity
   id: GunneryServerUltra
-  parent: [BaseStructureDisableToolUse, GunneryServerBase]
+  parent: [GunneryServerBase] # removed BaseStructureDisableToolUse
   name: ultra-high-power gunnery control server
   components:
   - type: Machine
@@ -127,8 +127,27 @@
     idleLoad: 50
     batteryRechargeRate: 2400
     batteryRechargeEfficiency: 0.95
-  - type: Anchorable # Sorry Tunguska, but I am NOT risking this being used for a missile bus.
-    flags: Anchorable
+#  - type: Anchorable # Sorry Tunguska, but I am NOT risking this being used for a missile bus. - "what could go wrong" says redrover
+#    flags: Anchorable
+
+- type: entity
+  id: GunneryServerOmega
+  parent: [GunneryServerBase]
+  name: omega-high-power gunnery control server
+  components:
+  - type: Machine
+    board: MachineGCSUltraCircuitboard
+  - type: FireControlServer
+    processingPower: 150
+  - type: Battery
+    maxCharge: 2000
+    startingCharge: 2000
+  - type: ApcPowerReceiver
+    powerLoad: 4000
+  - type: ApcPowerReceiverBattery
+    idleLoad: 100
+    batteryRechargeRate: 4800
+    batteryRechargeEfficiency: 0.95
 
 - type: entity
   id: GunneryServerStation
