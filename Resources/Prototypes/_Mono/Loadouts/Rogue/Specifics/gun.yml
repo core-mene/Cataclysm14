@@ -17,6 +17,20 @@
   - FactionC20RLoadout
 
 - type: loadoutGroup
+  id: RogueFirearmCommander
+  name: loadout-group-weapon
+  minLimit: 1
+  loadouts:
+  - FactionHawk4Pistol
+  - FactionC20RLoadout
+  - FactionWt550Loadout
+  - FactionLecterLoadout
+  - FactionAkmLoadout
+  - FactionEnergyGunLoadout
+  fallbacks:
+  - FactionHawk4Pistol
+
+- type: loadoutGroup
   id: RogueMag
   name: loadout-group-magazine
   minLimit: 1

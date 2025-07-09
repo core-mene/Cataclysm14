@@ -1,0 +1,36 @@
+- type: entity
+  parent: [ WeaponPistolAnaconda, BaseC3PirateContraband ]
+  id: WeaponPistolHawk4
+  name: HAWK-4 I.S
+  description: A modified Anaconda which has been modified for the purpose of remaining stealthy and incorporating it into being an easy to use weapons. A laser and holographic sight alongside a matte black chassis with a custom-built integrated silencer make for an exceedingly deadly stealth weapon.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Pistols/hawk4.rsi
+    layers:
+    - state: icon
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Guns/Pistols/hawk4.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: Gun
+    fireRate: 4
+    projectileSpeed: 65
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+  - type: BasicEntityAmmoProvider
+    proto: BulletAnaconda
+    capacity: 15
+    count: 15
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 2
+    rechargeSound:
+      path: /Audio/Weapons/Guns/Cock/shotgun_close.ogg
+  - type: AmmoCounter
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
