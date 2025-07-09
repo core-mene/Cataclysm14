@@ -39,7 +39,7 @@
     radarColor: "#C92BCC"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
+    explosionType: DefaultShipGun
     totalIntensity: 250
     intensitySlope: 6
     maxIntensity: 25
@@ -146,7 +146,7 @@
     color: "#6BC1FF"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBomb
+    explosionType: HardBombShipGun
     totalIntensity: 1250
     intensitySlope: 10
     maxIntensity: 55
