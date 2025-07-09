@@ -842,12 +842,15 @@
     groups:
     - AllAccess
     - USSPAA # Mono
+    - AllVouchersAccess # Mono
     tags:
     - CentralCommand
     - NuclearOperative
     - SyndicateAgent
     - Wizard
     - Pirate # Mono
+    - TsfmcEngineering # Mono
+    - RogueCommander # Mono
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
