@@ -371,14 +371,14 @@
   description: uplink-pirate-radio-jammer-desc
   productEntity: RadioJammer
   cost:
-    Doubloon: 10
+    Doubloon: 30
   categories:
   - UplinkPirateUtility
   conditions:
   - !type:StoreWhitelistCondition
     whitelist:
       tags:
-      - PirateUplink
+      - PirateUplinkCommander
 
 - type: listing
   id: UplinkPirateHypopen
@@ -482,14 +482,14 @@
   description: uplink-pirate-voicemask-desc
   productEntity: ClothingMaskGasVoiceChameleon
   cost:
-    Doubloon: 20
+    Doubloon: 30
   categories:
   - UplinkPirateUtility
   conditions:
   - !type:StoreWhitelistCondition
     whitelist:
       tags:
-      - PirateUplink
+      - PirateUplinkCommander
 
 - type: listing
   id: UplinkPirateCash10000
