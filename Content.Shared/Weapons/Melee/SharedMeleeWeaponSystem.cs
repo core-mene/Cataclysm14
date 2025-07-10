@@ -27,6 +27,7 @@
 // SPDX-FileCopyrightText: 2024 themias
 // SPDX-FileCopyrightText: 2024 Джексон Миссиссиппи
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Avalon
 // SPDX-FileCopyrightText: 2025 SlamBamActionman
 // SPDX-FileCopyrightText: 2025 ark1368
 //
@@ -276,7 +277,16 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         var ev = new GetMeleeDamageEvent(uid, new(component.Damage * Damageable.UniversalMeleeDamageModifier), new(), user, component.ResistanceBypass);
         RaiseLocalEvent(uid, ref ev);
 
+        // Begin DeltaV additions
+        // Allow users of melee weapons to have bonuses applied
+        if (user != uid)
+        {
+            RaiseLocalEvent(user, ref ev);
+        }
+
+
         return DamageSpecifier.ApplyModifierSets(ev.Damage, ev.Modifiers);
+        // End DeltaV additions
     }
 
     public float GetAttackRate(EntityUid uid, EntityUid user, MeleeWeaponComponent? component = null)

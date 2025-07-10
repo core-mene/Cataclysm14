@@ -4,6 +4,18 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+- type: accessGroup
+  id: AllVouchersAccess
+  tags:
+  - USSPGadyuka
+  - USSPTunguska
+  - USSPGruznyk
+  - USSPDrakon
+  - USSPNatisk
+  - USSPSekunda
+  - VoucherProwler
+  - VoucherFlyssa
+
 - type: accessLevel
   id: USSPGadyuka
   name: id-card-access-level-voucher

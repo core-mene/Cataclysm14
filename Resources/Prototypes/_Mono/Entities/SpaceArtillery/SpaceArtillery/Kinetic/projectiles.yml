@@ -41,7 +41,7 @@
     color: "#19AFFF"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBomb
+    explosionType: HardBombShipGun
     totalIntensity: 2000
     intensitySlope: 8
     maxIntensity: 800
@@ -82,7 +82,7 @@
     color: "#19AFFF"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBomb
+    explosionType: HardBombShipGun
     totalIntensity: 5000
     intensitySlope: 8
     maxIntensity: 3000
@@ -166,7 +166,7 @@
     color: "#FCBA03"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBomb
+    explosionType: HardBombShipGun
     totalIntensity: 40
     intensitySlope: 5
     maxIntensity: 25
@@ -227,7 +227,7 @@
   components:
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
+    explosionType: DefaultShipGun
 
 # 150mm Tarnyx
 
@@ -260,8 +260,8 @@
     color: "#FB00FF"
   - type: EmpOnTrigger
     range: 10
-    energyConsumption: 2700000
-    disableDuration: 7.5
+    energyConsumption: 500000
+    disableDuration: 5.5
 
 # 220mm Cyrexa
 
@@ -295,7 +295,7 @@
     color: "#FCBA03"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBomb
+    explosionType: HardBombShipGun
     totalIntensity: 550
     intensitySlope: 5
     maxIntensity: 1150
@@ -335,7 +335,7 @@
     color: "#fc5a03"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBomb
+    explosionType: HardBombShipGun
     totalIntensity: 1000
     intensitySlope: 25
     maxIntensity: 75
@@ -375,7 +375,7 @@
     color: "#fc8c03"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBomb
+    explosionType: HardBombShipGun
     totalIntensity: 750
     intensitySlope: 35
     maxIntensity: 50
@@ -416,7 +416,7 @@
     color: "#FCBA03"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBomb
+    explosionType: HardBombShipGun
     totalIntensity: 1250
     intensitySlope: 5
     maxIntensity: 1450

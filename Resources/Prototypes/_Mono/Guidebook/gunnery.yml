@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Disguised Bear
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: guideEntry
   id: WeaponsSystems
   name: guide-entry-gunnery
@@ -7,6 +13,7 @@
   - L85Guide
   - AK570Guide
   - CHARONGuide
+  - CHARONETTEGuide
   - MARAUDERGuide
   - RUBICONGuide
   - ASM302Guide
@@ -45,6 +52,12 @@
   id: CHARONGuide
   name: guide-entry-charon
   text: "/ServerInfo/_Mono/Guidebook/Specifications/CHARON.xml"
+  priority: 1
+
+- type: guideEntry
+  id: CHARONETTEGuide
+  name: guide-entry-charonette
+  text: "/ServerInfo/_Mono/Guidebook/Specifications/CHARONETTE.xml"
   priority: 1
 
 - type: guideEntry

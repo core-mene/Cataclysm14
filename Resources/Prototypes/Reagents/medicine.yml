@@ -947,7 +947,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 0
-          max: 30
+          max: 100
         damage:
           groups:
             Burn: -3
@@ -957,7 +957,7 @@
       - !type:HealthChange # Mono - Added overdose
         conditions:
         - !type:ReagentThreshold
-          min: 30
+          min: 100
         damage:
           groups:
             Burn: 1

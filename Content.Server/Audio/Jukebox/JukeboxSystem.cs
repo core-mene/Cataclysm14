@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 ark1368
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Audio.Jukebox;
@@ -30,6 +37,8 @@ public sealed class JukeboxSystem : SharedJukeboxSystem
         SubscribeLocalEvent<JukeboxComponent, ComponentShutdown>(OnComponentShutdown);
 
         SubscribeLocalEvent<JukeboxComponent, PowerChangedEvent>(OnPowerChanged);
+
+        SubscribeLocalEvent<EntityTerminatingEvent>(OnEntityTerminating);
     }
 
     private void OnComponentInit(EntityUid uid, JukeboxComponent component, ComponentInit args)
@@ -57,16 +66,16 @@ public sealed class JukeboxSystem : SharedJukeboxSystem
             }
 
             var audioStream = Audio.PlayPvs(jukeboxProto.Path, uid, AudioParams.Default.WithMaxDistance(10f))?.Entity;
-            
+
             if (audioStream != null && Exists(audioStream.Value) && HasComp<MetaDataComponent>(audioStream.Value))
             {
                 component.AudioStream = audioStream;
-                
+
                 if (TryComp<TransformComponent>(component.AudioStream, out var xform))
                 {
                     xform.LocalPosition = component.AudioOffset;
                 }
-                
+
                 Dirty(uid, component);
             }
         }
@@ -85,7 +94,7 @@ public sealed class JukeboxSystem : SharedJukeboxSystem
         if (TryComp(args.Actor, out ActorComponent? actorComp))
         {
             var offset = actorComp.PlayerSession.Channel.Ping * 1.5f / 1000f;
-            
+
             if (component.AudioStream != null && Exists(component.AudioStream.Value) && HasComp<MetaDataComponent>(component.AudioStream.Value))
             {
                 Audio.SetPlaybackPosition(component.AudioStream, args.SongTime + offset);
@@ -114,17 +123,17 @@ public sealed class JukeboxSystem : SharedJukeboxSystem
         {
             Audio.SetState(entity.Comp.AudioStream, AudioState.Stopped);
         }
-        
+
         Dirty(entity);
     }
 
     private void OnJukeboxSelected(EntityUid uid, JukeboxComponent component, JukeboxSelectedMessage args)
     {
-        bool isPlaying = component.AudioStream != null && 
-                         Exists(component.AudioStream.Value) && 
-                         HasComp<MetaDataComponent>(component.AudioStream.Value) && 
+        bool isPlaying = component.AudioStream != null &&
+                         Exists(component.AudioStream.Value) &&
+                         HasComp<MetaDataComponent>(component.AudioStream.Value) &&
                          Audio.IsPlaying(component.AudioStream);
-                         
+
         if (!isPlaying)
         {
             component.SelectedSongId = args.SongId;
@@ -160,6 +169,26 @@ public sealed class JukeboxSystem : SharedJukeboxSystem
     private void OnComponentShutdown(EntityUid uid, JukeboxComponent component, ComponentShutdown args)
     {
         component.AudioStream = Audio.Stop(component.AudioStream);
+    }
+
+    /// <summary>
+    /// Handles entity deletion to clean up AudioStream references in JukeboxComponents.
+    /// </summary>
+    private void OnEntityTerminating(ref EntityTerminatingEvent args)
+    {
+        var terminatingEntity = args.Entity.Owner;
+
+        // Check all jukebox components to see if any reference the terminating entity
+        var query = EntityQueryEnumerator<JukeboxComponent>();
+        while (query.MoveNext(out var jukeboxUid, out var jukeboxComp))
+        {
+            // If this jukebox's AudioStream references the terminating entity, clear it
+            if (jukeboxComp.AudioStream == terminatingEntity)
+            {
+                jukeboxComp.AudioStream = null;
+                Dirty(jukeboxUid, jukeboxComp);
+            }
+        }
     }
 
     private void DirectSetVisualState(EntityUid uid, JukeboxVisualState state)

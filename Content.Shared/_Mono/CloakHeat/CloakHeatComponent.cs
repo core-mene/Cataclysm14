@@ -1,4 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 ark1368
+// SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -20,7 +23,7 @@ public sealed partial class CloakHeatComponent : Component
     /// Maximum time the Hide flag can be active before overheating.
     /// </summary>
     [DataField]
-    public TimeSpan MaxCloakTime = TimeSpan.FromMinutes(4);
+    public TimeSpan MaxCloakTime = TimeSpan.FromMinutes(1);
 
     /// <summary>
     /// Duration of the cooldown period after overheating.
@@ -58,7 +61,7 @@ public sealed partial class CloakHeatComponent : Component
     /// Rate at which heat builds up when cloaking is active (per second).
     /// </summary>
     [DataField]
-    public float HeatBuildupRate = 1f / 240f; // 1.0 heat over 4 minutes
+    public float HeatBuildupRate = 1f / 60f; // 1.0 heat over 1 minutes
 
     /// <summary>
     /// Rate at which heat dissipates when cloaking is inactive (per second).
