@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Disguised Bear
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # VESPERA
 
 - type: entity
@@ -32,7 +41,7 @@
     energy: 0.5
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
+    explosionType: DefaultShipGun
     totalIntensity: 75
     intensitySlope: 8
     maxIntensity: 25
@@ -80,7 +89,7 @@
     energy: 0.5
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
+    explosionType: DefaultShipGun
     totalIntensity: 150
     intensitySlope: 10
     maxIntensity: 55
@@ -128,7 +137,7 @@
     energy: 2
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
+    explosionType: DefaultShipGun
     maxIntensity: 6000
     intensitySlope: 30
     totalIntensity: 6000
@@ -180,7 +189,7 @@
     disableDuration: 5
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
+    explosionType: DefaultShipGun
     totalIntensity: 100
     intensitySlope: 10
     maxIntensity: 50
@@ -193,4 +202,4 @@
     detectionRange: 300
     scanArc: 50
     launchSpeed: 100
-    maxSpeed: 300
+    maxSpeed: 250

@@ -1,9 +1,13 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 ark1368
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using System.Numerics;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Systems;
+using Robust.Shared.Physics.Components;
 using Robust.Shared.Timing;
 
 namespace Content.Shared._Mono.CloakHeat.Systems;
@@ -15,6 +19,8 @@ public sealed class CloakHeatSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedShuttleSystem _shuttle = default!;
+
+    private bool isMoving;
 
     public override void Initialize()
     {
@@ -65,11 +71,14 @@ public sealed class CloakHeatSystem : EntitySystem
                 }
             }
 
+            if (TryComp<PhysicsComponent>(gridUid, out var pcomp))
+                isMoving = pcomp.LinearVelocity != Vector2.Zero;
+
             // Check if Hide flag is active on this grid
             bool hideActive = (iffComp.Flags & IFFFlags.Hide) != 0;
 
             // Update heat based on Hide flag status
-            if (hideActive)
+            if (hideActive && isMoving)
             {
                 // Build up heat
                 heatComp.CurrentHeat += heatComp.HeatBuildupRate * deltaTime;

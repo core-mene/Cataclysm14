@@ -181,7 +181,7 @@
     maxCharge: 500
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMissileASM302
-    fireCost: 600
+    fireCost: 500
   - type: Appearance
   - type: AmmoCounter
 
@@ -302,7 +302,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/lmg.ogg
   - type: Battery
-    maxCharge: 600
+    maxCharge: 500
   - type: ProjectileBatteryAmmoProvider
     proto: BlanketFlare
     fireCost: 500
