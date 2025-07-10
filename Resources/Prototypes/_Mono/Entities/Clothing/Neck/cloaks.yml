@@ -9,3 +9,12 @@
     sprite: _Mono/Clothing/Neck/Cloaks/ussp.rsi
   - type: StealTarget
     stealGroup: HeadCloak
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakBlack
+  name: black cloak
+  description: A black cloak, looks old.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Cloaks/blackcloak.rsi

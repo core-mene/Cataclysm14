@@ -145,6 +145,15 @@
     neck: ClothingNeckCloakCap
 
 - type: loadout
+  id: ContractorClothingNeckCloakBlack
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  equipment:
+    neck: ClothingNeckCloakBlack
+
+- type: loadout
   id: ContractorClothingNeckCloakMiner
   effects:
   - !type:GroupLoadoutEffect
