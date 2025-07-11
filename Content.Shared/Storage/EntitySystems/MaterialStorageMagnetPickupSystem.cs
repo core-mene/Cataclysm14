@@ -35,15 +35,10 @@ public sealed class MaterialStorageMagnetPickupSystem : EntitySystem
         base.Initialize();
         _physicsQuery = GetEntityQuery<PhysicsComponent>();
         SubscribeLocalEvent<MaterialStorageMagnetPickupComponent, MapInitEvent>(OnMagnetMapInit);
-        SubscribeLocalEvent<MaterialStorageMagnetPickupComponent, EntityUnpausedEvent>(OnMagnetUnpaused);
         SubscribeLocalEvent<MaterialStorageMagnetPickupComponent, ExaminedEvent>(OnExamined);  // Frontier
         SubscribeLocalEvent<MaterialStorageMagnetPickupComponent, GetVerbsEvent<AlternativeVerb>>(AddToggleMagnetVerb);    // Frontier
     }
 
-    private void OnMagnetUnpaused(EntityUid uid, MaterialStorageMagnetPickupComponent component, ref EntityUnpausedEvent args)
-    {
-        component.NextScan += args.PausedTime;
-    }
 
     private void OnMagnetMapInit(EntityUid uid, MaterialStorageMagnetPickupComponent component, MapInitEvent args)
     {
@@ -102,7 +97,7 @@ public sealed class MaterialStorageMagnetPickupSystem : EntitySystem
             if (comp.NextScan > currentTime) // Reversed - Mono
                 continue;
 
-            comp.NextScan += currentTime + ScanDelay; // Mono: no need to rerun if built late in-round
+            comp.NextScan = currentTime + ScanDelay; // Mono: no need to rerun if built late in-round
 
             // Frontier - magnet disabled
             if (!comp.MagnetEnabled)

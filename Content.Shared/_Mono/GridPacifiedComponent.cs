@@ -15,19 +15,13 @@ namespace Content.Shared._Mono;
 public sealed partial class GridPacifiedComponent : Component
 {
     /// <summary>
-    /// A way to override with VV
-    /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
-    public bool Override = false;
-
-    /// <summary>
-    /// A check for if an entity is pre-pacified
+    /// A check for if an entity is pre-pacified, such as by having the pacified trait.
     /// </summary>
     [DataField]
     public bool PrePacified = false;
 
     /// <summary>
-    /// Until what time an entity will be pacified for
+    /// Until what time an entity will be pacified for. The component is removed when this is exceeded.
     /// </summary>
     [DataField, AutoPausedField]
     public TimeSpan PacifiedTime;
@@ -45,7 +39,7 @@ public sealed partial class GridPacifiedComponent : Component
     public TimeSpan UpdateInterval = TimeSpan.FromSeconds(2);
 
     /// <summary>
-    /// The radius from a GridPacifier that a GridPacified entity is pacified.
+    /// The radius from a GridPacifier entity that a GridPacified entity is pacified.
     /// </summary>
     [DataField]
     public float PacifyRadius = 256f;

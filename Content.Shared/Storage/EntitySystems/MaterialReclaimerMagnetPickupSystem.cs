@@ -23,7 +23,6 @@ public sealed class MaterialReclaimerMagnetPickupSystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedMaterialReclaimerSystem _storage = default!;
-    [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
 
     private static readonly TimeSpan ScanDelay = TimeSpan.FromSeconds(1);
     private const int MaxEntitiesToInsert = 15; // Mono
@@ -34,15 +33,10 @@ public sealed class MaterialReclaimerMagnetPickupSystem : EntitySystem
         base.Initialize();
         _physicsQuery = GetEntityQuery<PhysicsComponent>();
         SubscribeLocalEvent<MaterialReclaimerMagnetPickupComponent, MapInitEvent>(OnMagnetMapInit);
-        SubscribeLocalEvent<MaterialReclaimerMagnetPickupComponent, EntityUnpausedEvent>(OnMagnetUnpaused);
         SubscribeLocalEvent<MaterialReclaimerMagnetPickupComponent, ExaminedEvent>(OnExamined);  // Frontier
         SubscribeLocalEvent<MaterialReclaimerMagnetPickupComponent, GetVerbsEvent<AlternativeVerb>>(AddToggleMagnetVerb);    // Frontier
     }
 
-    private void OnMagnetUnpaused(EntityUid uid, MaterialReclaimerMagnetPickupComponent component, ref EntityUnpausedEvent args)
-    {
-        component.NextScan += args.PausedTime;
-    }
 
     private void OnMagnetMapInit(EntityUid uid, MaterialReclaimerMagnetPickupComponent component, MapInitEvent args)
     {
@@ -101,7 +95,7 @@ public sealed class MaterialReclaimerMagnetPickupSystem : EntitySystem
             if (comp.NextScan > currentTime) // Reversed - Mono
                 continue;
 
-            comp.NextScan += currentTime + ScanDelay; // Mono: no need to rerun if built late in-round
+            comp.NextScan = currentTime + ScanDelay; // Mono: no need to rerun if built late in-round
 
             // Frontier - magnet disabled
             if (!comp.MagnetEnabled)
