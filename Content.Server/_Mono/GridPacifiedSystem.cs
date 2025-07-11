@@ -22,14 +22,9 @@ namespace Content.Server._Mono;
 /// </summary>
 public sealed class GridPacifiedSystem : EntitySystem
 {
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly SharedMindSystem _mind = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly PlayTimeTrackingManager _playTimeTracking = default!;
-    [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
 
     private static readonly TimeSpan RequiredPlaytime = TimeSpan.FromHours(1);
     public override void Initialize()
