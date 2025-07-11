@@ -41,6 +41,7 @@
   name: service techfab
   description: Prints equipment for service staff.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     netsync: false
     sprite: Structures/Machines/techfab.rsi
@@ -76,6 +77,7 @@
   name: engineering techfab
   description: Prints equipment for engineers.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     netsync: false
     sprite: Structures/Machines/techfab.rsi
@@ -108,6 +110,7 @@
   name: salvage techfab
   description: Prints equipment for salvagers.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     netsync: false
     sprite: _NF/Structures/Machines/techfab.rsi
@@ -143,6 +146,7 @@
   name: TSFMC techfab
   description: Prints equipment for use by TSFMC.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: _NF/Structures/Machines/techfab.rsi
     layers:
@@ -179,6 +183,7 @@
   name: mercenary techfab
   description: Prints the bare minimum of tools of the trade that any budget mercenary or private security could need. Nothing fancy.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: _NF/Structures/Machines/techfab.rsi
     layers:
@@ -219,6 +224,7 @@
   name: hacked mercenary techfab
   description: Prints the bare minimum of tools of the trade that any budget mercenary or private security could need. Nothing fancy.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: _NF/Structures/Machines/techfab.rsi
     layers:
@@ -311,6 +317,7 @@
   name: blueprint lithograph
   description: Prints blueprints.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: _NF/Structures/Machines/blueprint_printer.rsi
     snapCardinals: true
@@ -340,6 +347,7 @@
   name: scrap processor
   description: It produces sheets and ingots using scrap.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: _NF/Structures/Machines/scrap_processor.rsi
     layers:

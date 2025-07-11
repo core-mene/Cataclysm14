@@ -8,6 +8,7 @@
   placement:
     mode: SnapgridCenter
   components:
+    - type: StationAiWhitelist # Mono
     - type: AmbientSound
       volume: -7
       range: 3
@@ -144,6 +145,7 @@
   name: advanced SMES
   description: An even-higher-capacity superconducting magnetic energy storage (SMES) unit.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Power/smes.rsi
     snapCardinals: true

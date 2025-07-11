@@ -87,6 +87,7 @@
   name: artifact crusher
   description: Best not to let your fingers get stuck...
   components:
+  - type: StationAiWhitelist # Mono
   - type: ArtifactCrusher
     crushingWhitelist:
       components:

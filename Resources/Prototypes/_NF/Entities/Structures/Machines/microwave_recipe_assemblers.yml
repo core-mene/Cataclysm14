@@ -221,6 +221,7 @@
   name: medical assembler
   description: Great for medicine, apparently. You don't know how it works.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Microwave
     validRecipeTypes: MedicalAssembler
     beginCookingSound: /Audio/Machines/machine_switch.ogg

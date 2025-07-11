@@ -44,6 +44,7 @@
         - state: gasFilter
           map: [ "enum.SubfloorLayers.FirstLayer", "enabled" ]
     - type: Appearance
+    - type: StationAiWhitelist # Mono
     - type: GenericVisualizer
       visuals:
         enum.FilterVisuals.Enabled:
@@ -84,6 +85,7 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Piping/Atmospherics/gasfilter.rsi
     layers:
@@ -137,6 +139,7 @@
         - state: gasMixer
           map: [ "enum.SubfloorLayers.FirstLayer", "enabled" ]
     - type: Appearance
+    - type: StationAiWhitelist # Mono
     - type: GenericVisualizer
       visuals:
         enum.FilterVisuals.Enabled:
@@ -186,6 +189,7 @@
     - state: gasMixerF
       map: [ "enum.SubfloorLayers.FirstLayer", "enabled" ]
   - type: Appearance
+  - type: StationAiWhitelist # Mono
   - type: GenericVisualizer
     visuals:
       enum.FilterVisuals.Enabled:

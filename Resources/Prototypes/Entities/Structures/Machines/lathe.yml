@@ -268,6 +268,7 @@
   name: autolathe
   description: It produces basic items using metal and glass. Has the ability to process blueprints to print new recipes.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/autolathe.rsi
     snapCardinals: true
@@ -335,6 +336,7 @@
   name: hyper convection autolathe
   description: A highly-experimental autolathe that harnesses the power of extreme heat to slowly create objects more cost-effectively.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/autolathe_hypercon.rsi
   - type: Machine
@@ -346,6 +348,7 @@
   name: protolathe
   description: Converts raw materials into advanced items.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/protolathe.rsi
     snapCardinals: true
@@ -416,6 +419,7 @@
   name: hyper convection protolathe
   description: A highly-experimental protolathe that harnesses the power of extreme heat to slowly create objects more cost-effectively.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/protolathe_hypercon.rsi
   - type: Machine
@@ -427,6 +431,7 @@
   name: circuit imprinter
   description: Prints circuit boards for machines.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/circuit_imprinter.rsi
     snapCardinals: true
@@ -484,6 +489,7 @@
   name: hyper convection circuit imprinter
   description: A highly-experimental circuit imprinter that harnesses the power of extreme heat to slowly create objects more cost-effectively.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/circuit_imprinter_hypercon.rsi
   - type: Machine
@@ -495,6 +501,7 @@
   name: exosuit fabricator
   description: Creates parts for robotics and other mechanical needs.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/exosuit_fabricator.rsi
     layers:
@@ -551,6 +558,7 @@
   name: biocube fabricator
   description: Produces animal cubes using biomass.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/biofabricator.rsi
     snapCardinals: true
@@ -592,6 +600,7 @@
   name: security techfab
   description: Prints equipment for use by security crew.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/techfab.rsi
     layers:
@@ -641,6 +650,7 @@
   name: ammo techfab
   description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/techfab.rsi
     layers:
@@ -678,6 +688,7 @@
   name: medical techfab
   description: Prints equipment for use by the medbay.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/techfab.rsi
     layers:
@@ -723,6 +734,7 @@
   name: uniform printer
   description: Prints new or replacement uniforms.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Transform
     noRot: false
   - type: Sprite
@@ -772,6 +784,7 @@
   name: biogenerator
   description: Converts plants into biomass, which can be used to construct useful items.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/biofabricator.rsi
     snapCardinals: true
@@ -825,6 +838,7 @@
   name: ore processor
   description: It produces sheets and ingots using ores.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/ore_processor.rsi
     layers:
@@ -861,6 +875,7 @@
   name: industrial ore processor
   description: An ore processor specifically designed for mass-producing metals in industrial applications.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/ore_processor_industrial.rsi
   - type: Machine
@@ -879,6 +894,7 @@
   name: sheet-meister 2000
   description: A very sheety machine.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/sheetifier.rsi
     layers:
@@ -909,6 +925,7 @@
   name: cutter machine
   description: This is a cutter. It cuts. Add variety to your station floor with eye-pleasing patterns! Don't stick your fingers in.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Transform
     noRot: false
   - type: Sprite
@@ -957,6 +974,7 @@
   name: medical biofabricator
   description: Produces organs and other organic matter that can be surgically grafted onto patients with biomass.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: _Shitmed/Structures/Machines/limbgrower.rsi
     snapCardinals: true

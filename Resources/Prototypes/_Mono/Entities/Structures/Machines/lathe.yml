@@ -9,6 +9,7 @@
   name: military multi-purpose assembler
   description: Prints out items researched with TSFMC/Rogue R&D servers.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/techfab.rsi
     layers:

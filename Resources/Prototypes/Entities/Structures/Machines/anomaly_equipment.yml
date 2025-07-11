@@ -4,6 +4,7 @@
   name: anomaly vessel
   description: A container able to harness a scan of an anomaly and turn it into research data.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     noRot: true
     sprite: Structures/Machines/Anomaly/anomaly_vessel.rsi
@@ -94,6 +95,7 @@
   name: experimental anomaly vessel
   description: An advanced anomaly vessel capable of greater research potential at the cost of increased volatility and low-level radioactive decay into the environment.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     sprite: Structures/Machines/Anomaly/adv_anomaly_vessel.rsi
     offset: 0,0.5
@@ -120,6 +122,7 @@
   name: A.P.E.
   description: An Anomalous Particle Emitter, capable of shooting out unstable particles which can interface with anomalies.
   components:
+  - type: StationAiWhitelist # Mono
   - type: Sprite
     noRot: true
     sprite: Structures/Machines/Anomaly/ape.rsi
