@@ -36,7 +36,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 1.6
+    lifetime: 1.5
   - type: PointLight
     color: "#19AFFF"
   - type: ExplodeOnTrigger
@@ -83,8 +83,8 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBombShipGun
-    totalIntensity: 5000
-    intensitySlope: 50
+    totalIntensity: 3500
+    intensitySlope: 100
     maxIntensity: 3000
   - type: GatheringProjectile
   - type: MiningGatheringSoft
@@ -166,7 +166,7 @@
     color: "#FCBA03"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBombShipGun
+    explosionType: DefaultShipGun
     totalIntensity: 40
     intensitySlope: 5
     maxIntensity: 25
