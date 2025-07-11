@@ -48,5 +48,5 @@ public sealed partial class GridPacifiedComponent : Component
     /// The radius from a GridPacifier that a GridPacified entity is pacified.
     /// </summary>
     [DataField]
-    public float PacifyRadius = 512f;
+    public float PacifyRadius = 256f;
 }

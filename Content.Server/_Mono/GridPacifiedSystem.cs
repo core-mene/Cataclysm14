@@ -30,6 +30,7 @@ public sealed class GridPacifiedSystem : EntitySystem
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly PlayTimeTrackingManager _playTimeTracking = default!;
 
+    private ISawmill _logger = default!;
     private static readonly TimeSpan RequiredPlaytime = TimeSpan.FromHours(1);
     public override void Initialize()
     {
@@ -37,15 +38,21 @@ public sealed class GridPacifiedSystem : EntitySystem
 
         SubscribeLocalEvent<GridPacifiedComponent, ComponentStartup>(OnGridPacifiedStartup);
         SubscribeLocalEvent<GridPacifiedComponent, ComponentShutdown>(OnGridPacifiedShutdown);
-        SubscribeLocalEvent<PlayerAttachedEvent>(OnPlayerAttached);
-        SubscribeLocalEvent<PlayerDetachedEvent>(OnPlayerDetached);
+        SubscribeLocalEvent<ActorComponent, ComponentStartup>(OnActorStartup);
+        SubscribeLocalEvent<ActorComponent, ComponentShutdown>(OnActorShutdown);
     }
 
-    private void OnPlayerAttached(PlayerAttachedEvent ev)
+    private void OnActorStartup(EntityUid uid, ActorComponent component, ComponentStartup args)
     {
-        var uid = ev.Entity;
-        var player = ev.Player;
+        var player = component.PlayerSession;
         // Only affect players with less than 1 hour of overall playtime
+        var getTime = _playTimeTracking.TryGetTrackerTimes(player, out var time);
+
+        if (getTime == false)
+        {
+            _logger?.Info($"Could not find player tracker for: {uid} id: {player}");
+            return;
+        }
         var overallPlaytime = _playTimeTracking.GetOverallPlaytime(player);
         if (overallPlaytime < RequiredPlaytime)
         {
@@ -56,9 +63,8 @@ public sealed class GridPacifiedSystem : EntitySystem
         }
     }
 
-    private void OnPlayerDetached(PlayerDetachedEvent ev)
+    private void OnActorShutdown(EntityUid uid, ActorComponent component, ComponentShutdown args)
     {
-        var uid = ev.Entity;
         RemComp<GridPacifiedComponent>(uid);
         return;
     }
@@ -86,8 +92,8 @@ public sealed class GridPacifiedSystem : EntitySystem
         var curTime = _gameTiming.CurTime;
 
         // Find all entities with a GridPacifiedComponent
-        var query = EntityQueryEnumerator<GridPacifiedComponent, TransformComponent>();
-        while (query.MoveNext(out var uid, out var component, out var xform))
+        var query = EntityQueryEnumerator<GridPacifiedComponent, MobStateComponent, TransformComponent>();
+        while (query.MoveNext(out var uid, out var component, out var _, out var xform))
         {
             // Check if it's time for the periodic update
             if (curTime < component.NextUpdate)
@@ -111,11 +117,17 @@ public sealed class GridPacifiedSystem : EntitySystem
     private void ProcessPacificationRange(EntityUid uid, GridPacifiedComponent component, TransformComponent xform)
     {
         var uidPos = _transform.GetMapCoordinates(uid, xform);
+        _logger?.Info($"Found GridPacified Player: {uid} location: {uidPos}");
         var query = EntityQueryEnumerator<GridPacifierComponent, TransformComponent>();
         while (query.MoveNext(out var gridUid, out var gridComponent, out var gridXform))
         {
+            // Skip if the grid is on a different map
+            if (gridXform.MapUid != xform.MapUid)
+                continue;
+
             var gridPos = _transform.GetMapCoordinates(gridUid, gridXform);
             var distance = (gridPos.Position - uidPos.Position).Length();
+            _logger?.Info($"Found GridPacifier Grid: {gridUid} location: {gridPos}. Distance between gridpacified player and gridpacifier {distance}");
             if (component.PacifyRadius > distance)
             {
                 ApplyPacified(uid, component);
