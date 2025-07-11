@@ -51,7 +51,7 @@ public sealed class GridPacifiedSystem : EntitySystem
 
         if (getTime == false)
         {
-            _logger?.Info($"Could not find player tracker for: {uid} id: {player}");
+            _logger?.Info($"Could not find playtime for: {uid} id: {player}");
             return;
         }
         var overallPlaytime = _playTimeTracking.GetOverallPlaytime(player);
