@@ -432,7 +432,7 @@
   - type: StandingState
   - type: InputMover
   - type: MobMover
-  - type: ZombieImmune
+  #- type: ZombieImmune # Mono
   - type: Hands
   - type: Puller
   - type: NameIdentifier
@@ -493,7 +493,7 @@
     - Pacified
     - Drowsiness
     - Adrenaline
-  - type: ZombieImmune
+  #- type: ZombieImmune # Mono
   - type: NameIdentifier
     group: GenericNumber
   - type: NpcFactionMember

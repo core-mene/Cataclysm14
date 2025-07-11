@@ -44,6 +44,9 @@ uplink-pirate-medical-assembler-desc = An assembler that can be used to make use
 
 # MARK: Utility
 
+uplink-pirate-romerol-name = Romerol Syringe
+uplink-pirate-romerol-desc = A bioweapon used in previous wars, and heavily outlawed. Its obviously taken some effort to smuggle this one. Reanimates the dead.
+
 uplink-pirate-empty-implanter-name = Empty Implanter
 uplink-pirate-empty-implanter-desc = A spare, empty implanter to remove implants with, including faction tracking implants. It does not backfire on you.
 

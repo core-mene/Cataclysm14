@@ -1276,6 +1276,21 @@
       tags:
       - PirateUplink
 
+- type: listing
+  id: UplinkRomerol
+  name: uplink-pirate-romerol-name
+  description: uplink-pirate-romerol-desc
+  productEntity: SyringeRomerol
+  cost:
+    Doubloon: 250
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
 #MARK: $Gambling$
 
 #- type: listing
