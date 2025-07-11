@@ -17,6 +17,7 @@
 # SPDX-FileCopyrightText: 2024 checkraze
 # SPDX-FileCopyrightText: 2024 metalgearsloth
 # SPDX-FileCopyrightText: 2025 ArtisticRoomba
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 wewman222
 #
@@ -214,8 +215,8 @@
     - type: PowerSupplier
       supplyRampRate: 5000
       supplyRampTolerance: 1500
-    - type: MaterialStorageMagnetPickup # Frontier
-      range: 0.30 # Frontier
+#    - type: MaterialStorageMagnetPickup # Frontier
+#      range: 0.30 # Frontier
     - type: FuelGradeAdapter # Frontier
       inputMaterial: Plasma # Frontier
       outputMaterial: FuelGradePlasma # Frontier
@@ -278,8 +279,8 @@
     - type: PowerSupplier
       supplyRampRate: 7500
       supplyRampTolerance: 2500
-    - type: MaterialStorageMagnetPickup # Frontier
-      range: 0.30 # Frontier
+#    - type: MaterialStorageMagnetPickup # Frontier
+#      range: 0.30 # Frontier
     - type: FuelGradeAdapter # Frontier
       inputMaterial: Uranium # Frontier
       outputMaterial: FuelGradeUranium # Frontier
