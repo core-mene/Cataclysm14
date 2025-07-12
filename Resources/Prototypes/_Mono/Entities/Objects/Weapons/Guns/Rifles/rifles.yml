@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -67,16 +68,13 @@
     sprite: _Mono/Objects/Weapons/Guns/Rifles/mr8c.rsi
   - type: StaticPrice
     price: 1750
-
-    # uncomment all of the following and readd to the yaml when it stops making it shoot offset for some reason
-
-  #- type: SpeedModifiedOnWield
-  #  walkModifier: 0.95
-  #  sprintModifier: 0.95
-  #- type: CursorOffsetRequiresWield
-  #- type: EyeCursorOffset
-  #  maxOffset: 5
-  #  pvsIncrease: 0.5
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 5
+    pvsIncrease: 0.5
 
 - type: entity
   name: AK-502 (7.62x39mm)
