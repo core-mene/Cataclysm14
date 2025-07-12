@@ -1,40 +1,11 @@
-# SPDX-FileCopyrightText: 2021 AJCM-git
-# SPDX-FileCopyrightText: 2021 Paul Ritter
-# SPDX-FileCopyrightText: 2021 wrexbe
-# SPDX-FileCopyrightText: 2022 20kdc
-# SPDX-FileCopyrightText: 2022 Kara
-# SPDX-FileCopyrightText: 2022 LittleBuilderJane
-# SPDX-FileCopyrightText: 2022 Peptide90
-# SPDX-FileCopyrightText: 2022 metalgearsloth
-# SPDX-FileCopyrightText: 2022 mirrorcult
-# SPDX-FileCopyrightText: 2023 Alexander Evgrashin
-# SPDX-FileCopyrightText: 2023 AndresE55
-# SPDX-FileCopyrightText: 2023 Banshee
-# SPDX-FileCopyrightText: 2023 Cheackraze
-# SPDX-FileCopyrightText: 2023 Emisse
-# SPDX-FileCopyrightText: 2023 Leander-0
-# SPDX-FileCopyrightText: 2023 Mnemosyne
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 Mnemotechnican
-# SPDX-FileCopyrightText: 2024 TsjipTsjip
-# SPDX-FileCopyrightText: 2024 Whatstone
-# SPDX-FileCopyrightText: 2024 Wiebe Geertsma
-# SPDX-FileCopyrightText: 2024 dustylens
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 UnicornOnLSD
-# SPDX-FileCopyrightText: 2025 core-mene
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/11/2025 21:11:45
-  entityCount: 2769
+  time: 07/12/2025 00:23:11
+  entityCount: 2772
 maps: []
 grids:
 - 1
@@ -1370,7 +1341,7 @@ entities:
           temperature: 293.15
           moles:
           - 0
-          - 2500
+          - 6666.982
           - 0
           - 0
           - 0
@@ -1384,7 +1355,7 @@ entities:
         - volume: 2500
           temperature: 293.15
           moles:
-          - 2500
+          - 6666.982
           - 0
           - 0
           - 0
@@ -2801,14 +2772,14 @@ entities:
     - type: Transform
       pos: -11.5,-10.5
       parent: 1
-- proto: AtmosFixShuttleNitrogenMarker
+- proto: AtmosFixNitrogenMarker
   entities:
   - uid: 1081
     components:
     - type: Transform
       pos: 8.5,-45.5
       parent: 1
-- proto: AtmosFixShuttleOxygenMarker
+- proto: AtmosFixOxygenMarker
   entities:
   - uid: 1115
     components:
@@ -4796,6 +4767,11 @@ entities:
     components:
     - type: Transform
       pos: 9.5,-45.5
+      parent: 1
+  - uid: 2772
+    components:
+    - type: Transform
+      pos: -3.5,-41.5
       parent: 1
 - proto: CableHV
   entities:
@@ -12717,6 +12693,20 @@ entities:
     - type: Transform
       pos: 0.5,-32.5
       parent: 1
+- proto: NitrogenCanister
+  entities:
+  - uid: 2771
+    components:
+    - type: Transform
+      pos: 6.5,-5.5
+      parent: 1
+- proto: OxygenCanister
+  entities:
+  - uid: 2770
+    components:
+    - type: Transform
+      pos: 5.5,-5.5
+      parent: 1
 - proto: PaperBin10
   entities:
   - uid: 369
@@ -14033,6 +14023,28 @@ entities:
     - type: Transform
       pos: -0.25118297,-34.000984
       parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        1438:
+        - Pressed: Toggle
+        1435:
+        - Pressed: Toggle
+        1434:
+        - Pressed: Toggle
+        1436:
+        - Pressed: Toggle
+        1437:
+        - Pressed: Toggle
+        1433:
+        - Pressed: Toggle
+        1432:
+        - Pressed: Toggle
+        1431:
+        - Pressed: Toggle
+        1429:
+        - Pressed: Toggle
+        1430:
+        - Pressed: Toggle
   - uid: 2281
     components:
     - type: MetaData
@@ -14087,6 +14099,10 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -6.5,-45.5
       parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        1095:
+        - Pressed: Toggle
   - uid: 1232
     components:
     - type: Transform
@@ -15417,9 +15433,9 @@ entities:
         - Right: Reverse
         - Middle: Off
         10:
+        - Left: Forward
+        - Right: Reverse
         - Middle: Off
-        - Right: Forward
-        - Left: Reverse
         11:
         - Left: Forward
         - Right: Reverse
