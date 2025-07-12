@@ -35,6 +35,7 @@
   placement:
     mode: SnapgridCenter
   components:
+    - type: StationAiWhitelist # Mono
     - type: Sprite
       sprite: Structures/Piping/Atmospherics/gasfilter.rsi
       layers:
@@ -128,6 +129,7 @@
   placement:
     mode: SnapgridCenter
   components:
+    - type: StationAiWhitelist # Mono
     - type: Sprite
       sprite: Structures/Piping/Atmospherics/gasmixer.rsi
       layers:

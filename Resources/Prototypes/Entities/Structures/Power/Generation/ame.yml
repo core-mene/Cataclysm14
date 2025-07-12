@@ -44,6 +44,7 @@
     mode: SnapgridCenter
   components:
   - type: Clickable
+  - type: StationAiWhitelist # Mono
   - type: InteractionOutline
   - type: Sprite
     snapCardinals: true
