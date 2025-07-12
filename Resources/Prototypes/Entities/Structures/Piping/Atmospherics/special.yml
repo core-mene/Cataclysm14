@@ -48,6 +48,8 @@
           collection: MetalSlam
   - type: Anchorable # Mono
     delay: 6
+  - type: Pullable # Mono
+  - type: Rotatable # Mono
 
 - type: entity
   id: AtmosDeviceFanDirectional
@@ -90,3 +92,5 @@
           collection: MetalSlam
   - type: Anchorable # Mono
     delay: 6
+  - type: Pullable # Mono
+  - type: Rotatable # Mono
