@@ -20,6 +20,15 @@
     neck: ClothingNeckScarfStripedBlack
 
 - type: loadout
+  id: ContractorClothingNeckUNSAArmband
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 5
+  equipment:
+    neck: ClothingNeckUNSAArmband
+
+- type: loadout
   id: ContractorClothingNeckScarfStripedBlue
   effects:
   - !type:GroupLoadoutEffect
@@ -163,6 +172,15 @@
   price: 1000
   equipment:
     neck: ClothingNeckCloakCap
+
+- type: loadout
+  id: ContractorClothingNeckCloakBlack # Monolith
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  equipment:
+    neck: ClothingNeckCloakBlack
 
 - type: loadout
   id: ContractorClothingNeckCloakMiner

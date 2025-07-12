@@ -50,7 +50,7 @@
   parent: [ClothingOuterHardsuitBase, BaseC3SyndicateContraband]
   id: ClothingOuterHardsuitViperGroupMedic
   name: IMP mk.III viper hardsuit
-  description: A hardsuit adorned with signature markings of the Viper Group. The armor features various reinforced plating in vital areas.
+  description: A combat medical hardsuit adorned with signature markings of the Viper Group. The armor features various reinforced plating in vital areas.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/viper_group_medic.rsi
@@ -69,14 +69,14 @@
         Blunt: 0.55
         Slash: 0.55
         Piercing: 0.65
-        Heat: 0.35
+        Heat: 0.45
         Radiation: 0.33
         Caustic: 0.25
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.6
   - type: ClothingSpeedModifier
-    walkModifier: 1
-    sprintModifier: 1
+    walkModifier: 1.1
+    sprintModifier: 1.1
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototypes:

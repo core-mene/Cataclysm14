@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: BaseCarrierComputer
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyard]
@@ -13,6 +17,12 @@
         type: ShipyardConsoleBoundUserInterface
   - type: ShipyardListing
 
+# The empty console
+- type: entity
+  id: SellOnlyCarrierComputer
+  parent: BaseCarrierComputer
+  name: sell only shipyard console
+
 # EXAMPLE LISTING - DO NOT UNCOMMENT
 #- type: entity
 #  id: ExampleCarrierComputer
@@ -24,16 +34,6 @@
 #    - Ship1
 #    - Ship2
 #    - Ship3
-
-
-- type: entity
-  id: PirateCarrierComputer
-  parent: BaseCarrierComputer
-  name: pirate carrier console
-  components:
-  - type: ShipyardListing
-    shuttles:
-    - Veska
 
 - type: entity
   id: MiningCarrierComputer
@@ -47,7 +47,7 @@
 - type: entity
   id: HiveCarrierComputer
   parent: BaseCarrierComputer
-  name: skyfire carrier console
+  name: zephyr carrier console
   components:
   - type: ShipyardListing
     shuttles:

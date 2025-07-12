@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadout
   id: TsfmcHelmet
   equipment:
@@ -7,3 +12,13 @@
   id: TsfmcBeret
   equipment:
     head: ClothingHeadHatBeretCommander
+
+- type: loadout
+  id: TsfmcBeretEngineer
+  equipment:
+    head: ClothingHeadHatBeretEngineering
+
+- type: loadout
+  id: TsfmcBeretMedic
+  equipment:
+    head: ClothingHeadHatBeretBrigmedic

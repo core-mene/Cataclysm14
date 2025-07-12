@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 RikuTheKiller
 // SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 ark1368
@@ -28,6 +29,7 @@ using Content.Shared.Interaction;
 using Content.Shared._Mono.ShipGuns;
 using Content.Shared.Examine;
 using Content.Shared.UserInterface;
+using Content.Server.Salvage.Expeditions;
 
 namespace Content.Server._Mono.FireControl;
 
@@ -309,9 +311,11 @@ public sealed partial class FireControlSystem : EntitySystem
 
         return classComponent.Class switch
         {
-            ShipGunClass.Light => 1,
-            ShipGunClass.Medium => 2,
-            ShipGunClass.Heavy => 4,
+            ShipGunClass.Superlight => 1,
+            ShipGunClass.Light => 3,
+            ShipGunClass.Medium => 6,
+            ShipGunClass.Heavy => 9,
+            ShipGunClass.Superheavy => 12,
             _ => 0,
         };
     }
@@ -390,6 +394,13 @@ public sealed partial class FireControlSystem : EntitySystem
 
         // Check if the weapon's grid is pacified
         if (grid != null && TryComp<SpaceArtilleryDisabledGridComponent>((EntityUid)grid, out var pacifiedComp))
+            return;
+
+        // Check if the weapon is an expedition
+        if (grid != null &&
+            TryComp<TransformComponent>((EntityUid)grid, out var gridXform) &&
+            gridXform.MapUid != null &&
+            HasComp<SalvageExpeditionComponent>(gridXform.MapUid.Value))
             return;
 
         var targetCoords = GetCoordinates(coordinates);

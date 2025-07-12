@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2024 Leon Friedrich
+# SPDX-FileCopyrightText: 2024 starch
+# SPDX-FileCopyrightText: 2025 ActiveMammmoth
+# SPDX-FileCopyrightText: 2025 keronshb
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: ActionSummonGhosts
   name: Summon Ghosts
@@ -48,7 +55,7 @@
         orGroup: Guns
       - id: WeaponRifleAk
         orGroup: Guns
-      - id: WeaponRifleM90GrenadeLauncher
+      - id: WeaponRifleM90
         orGroup: Guns
       - id: WeaponRifleLecter
         orGroup: Guns

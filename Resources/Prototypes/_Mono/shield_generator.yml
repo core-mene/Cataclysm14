@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ark1368
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -97,7 +98,7 @@
     powerLoad: 60000
   - type: Appearance
   - type: ShipShieldEmitter
-    damageLimit: 25000
+    damageLimit: 50000
     damageOverloadTimePunishment: 120
     shieldColor: "#FF3333"
     powerUpSound: !type:SoundPathSpecifier
@@ -116,12 +117,12 @@
   name: MS-250 "Aegis" Shield Generator
   components:
   - type: ShipShieldEmitter
-    healPerSecond: 200 # Base is 250
+    healPerSecond: 400 # Base is 250
     damageExp: 1.15 # Base is 1.1
     baseDraw: 40000 # Base is 50000
     maxDraw: 80000 # Base is 150000
     unpoweredBonus: 3 # Base is 6
-    damageLimit: 10000
+    damageLimit: 30000
     damageOverloadTimePunishment: 100
     shieldColor: "#9933FF"
   - type: Sprite
@@ -150,12 +151,12 @@
   name: MS-100 "Sentinel" Shield Generator
   components:
   - type: ShipShieldEmitter
-    healPerSecond: 50
-    damageExp: 1.4
+    healPerSecond: 200 # Mono
+    damageExp: 1.2 # Mono
     baseDraw: 20000
     maxDraw: 60000
     unpoweredBonus: 2.5
-    damageLimit: 5000
+    damageLimit: 15000 # Mono
     damageOverloadTimePunishment: 80
     shieldColor: "#3399FF"
   - type: Sprite

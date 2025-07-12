@@ -1,9 +1,17 @@
+# SPDX-FileCopyrightText: 2023 AJCM-git
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 Onezero0
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: BaseComputer
   id: ComputerTechnologyDiskTerminal
-  categories: [ HideSpawnMenu ] # Frontier: no tech disks
-  name: tech disk terminal
-  description: A terminal used to print out technology disks.
+  name: research point disk terminal
+  description: A terminal used to print out research point disks.
   components:
   - type: Sprite
     noRot: true

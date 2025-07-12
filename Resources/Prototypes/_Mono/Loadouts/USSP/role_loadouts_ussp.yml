@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: roleLoadout
   id: JobUSSPRifleman
   groups:
@@ -15,6 +24,8 @@
   - ContractorWallet
   - ContractorEncryptionKey
   - NfsdSpeciesSpecific
+  - UsspFirearm
+  - UsspMag
 
 - type: roleLoadout
   id: JobUSSPCorporal
@@ -22,8 +33,8 @@
   - USSPHead
   - USSPJumpsuit
   - TsfmcGloves
-  - USSPBackpackCorporal
-  - TsfmcOuterClothing
+  - USSPBackpack
+  - USSPOuterClothing
   - TsfmcShoes
   - TsfmcFace
   - TsfmcBelt
@@ -33,7 +44,9 @@
   - ContractorWallet
   - ContractorEncryptionKey
   - NfsdSpeciesSpecific
-  - USSPOuterClothing
+  - UsspFirearm
+  - UsspMag
+
 
 - type: roleLoadout
   id: JobUSSPMedic
@@ -42,7 +55,7 @@
   - USSPJumpsuit
   - TsfmcBrigmedicGloves
   - USSPBackpack
-  - TsfmcOuterClothing
+  - USSPOuterClothing
   - TsfmcShoes
   - TsfmcFace
   - USSPEars
@@ -53,7 +66,8 @@
   - NfsdSpeciesSpecific
   - USSPMedhud
   - TsfmcBrigmedicBelt
-  - USSPOuterClothing
+  - UsspFirearm
+  - UsspMag
 
 - type: roleLoadout
   id: JobUSSPSergeant
@@ -61,7 +75,6 @@
   - USSPJumpsuit
   - TsfmcGloves
   - USSPBackpackSergeant
-  - TsfmcOuterClothing
   - TsfmcShoes
   - TsfmcFace
   - TsfmcBelt
@@ -73,14 +86,16 @@
   - NfsdSpeciesSpecific
   - USSPOuterClothingOfficer
   - USSPHeadOfficer
+  - UsspFirearm
+  - UsspMag
 
 - type: roleLoadout
   id: JobUSSPCommissar
   groups:
   - USSPJumpsuit
   - TsfmcGloves
-  - USSPBackpack
-  - TsfmcOuterClothing
+  - USSPBackpackSergeant
+  - USSPOuterClothingOfficer
   - TsfmcShoes
   - TsfmcFace
   - TsfmcBelt
@@ -91,4 +106,5 @@
   - ContractorEncryptionKey
   - NfsdSpeciesSpecific
   - USSPHeadCommissar
-  - USSPOuterClothingOfficer
+  - UsspFirearmCommissar
+  - UsspMagCommissar

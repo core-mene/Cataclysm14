@@ -1,3 +1,32 @@
+# SPDX-FileCopyrightText: 2022 Nemanja
+# SPDX-FileCopyrightText: 2023 DrSmugleaf
+# SPDX-FileCopyrightText: 2023 Dvir
+# SPDX-FileCopyrightText: 2023 Flareguy
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2023 Morb
+# SPDX-FileCopyrightText: 2023 OttoMaticode
+# SPDX-FileCopyrightText: 2023 brainfood1183
+# SPDX-FileCopyrightText: 2023 crazybrain23
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 Jophire
+# SPDX-FileCopyrightText: 2024 LittleNyanCat
+# SPDX-FileCopyrightText: 2024 Mr. 27
+# SPDX-FileCopyrightText: 2024 Tayrtahn
+# SPDX-FileCopyrightText: 2024 Token
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 deepdarkdepths
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 BeeRobynn
+# SPDX-FileCopyrightText: 2025 Havaren
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: BaseMech
   save: false
@@ -149,6 +178,7 @@
   - type: RadarConsole
     maxRange: 256
     followEntity: true
+  - type: Magboots # Monolith
 
 - type: entity
   id: MechRipley
@@ -183,6 +213,9 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.25
     baseSprintSpeed: 3.6
+  - type: Tag
+    tags:
+    - CivilianMechBounty # Mono
 
 - type: entity
   id: MechRipleyBattery
@@ -222,6 +255,9 @@
     pilotWhitelist:
       components:
       - HumanoidAppearance
+  - type: Tag
+    tags:
+    - CivilianMechBounty # Mono
 
 - type: entity
   parent: MechHonker

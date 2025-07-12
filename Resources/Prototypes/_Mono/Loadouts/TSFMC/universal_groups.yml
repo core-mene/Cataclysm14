@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 RealSchepka
+# SPDX-FileCopyrightText: 2025 Schepka
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -16,10 +19,13 @@
 - type: loadoutGroup
   id: TsfmcEngiModsuit
   name: loadout-group-contractor-backpack
-  hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
   - TsfmcEngiClothingModsuit
+  - TsfmcEngiClothingModsuit2
+  - TsfmcClothingBackpack
+  - TsfmcClothingSatchel
+  - TsfmcClothingDuffel
   fallbacks:
   - TsfmcEngiClothingModsuit
 
@@ -70,6 +76,7 @@
   loadouts:
   - TsfmcCombatGloves
   - TsfmcNitrileGloves
+  - TsfmcLatexGloves
   fallbacks:
   - TsfmcNitrileGloves
 
@@ -124,11 +131,28 @@
 - type: loadoutGroup
   id: TsfmcNeck
   name: loadout-group-contractor-neck
+  hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
-  - ContractorClothingNeckIFFCyan
-  fallbacks:
-  - ContractorClothingNeckIFFCyan
+  - TsfmcClothingNeckIFFCyan
+
+- type: loadoutGroup
+  id: TsfmcNeckEngi
+  name: loadout-group-contractor-neck
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - TsfmcClothingNeckIFFOrange
+  - TsfmcClothingNeckIFFCyan
+
+- type: loadoutGroup
+  id: TsfmcNeckMedic
+  name: loadout-group-contractor-neck
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - TsfmcClothingNeckIFFWhite
+  - TsfmcClothingNeckIFFCyan
 
 - type: loadoutGroup
   id: TsfmcBrigmedicGlasses
@@ -146,6 +170,20 @@
   loadouts:
   - TsfmcHelmet
   - TsfmcBeret
+
+- type: loadoutGroup
+  id: TsfmcHeadMedic
+  name: loadout-group-contractor-head
+  loadouts:
+  - TsfmcHelmet
+  - TsfmcBeret
+  - TsfmcBeretMedic
+
+- type: loadoutGroup
+  id: TsfmcHeadEngi
+  name: loadout-group-contractor-head
+  loadouts:
+  - TsfmcBeretEngineer
 
 # Grunt headsets
 - type: loadoutGroup

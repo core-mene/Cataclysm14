@@ -1,3 +1,22 @@
+// SPDX-FileCopyrightText: 2022 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 AJCM-git
+// SPDX-FileCopyrightText: 2023 Arendian
+// SPDX-FileCopyrightText: 2023 Kara
+// SPDX-FileCopyrightText: 2023 LordEclipse
+// SPDX-FileCopyrightText: 2023 MendaxxDev
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2024 DrSmugleaf
+// SPDX-FileCopyrightText: 2024 Ed
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 SlamBamActionman
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Avalon
+// SPDX-FileCopyrightText: 2025 Aviu00
+// SPDX-FileCopyrightText: 2025 GreaseMonk
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Weapons.Ranged.Systems;
@@ -144,6 +163,14 @@ public sealed partial class GunComponent : Component
     [ViewVariables]
     public EntityUid? Target = null;
 
+    // Begin DeltaV additions
+    /// <summary>
+    /// Who the gun is being held by
+    /// </summary>
+    [ViewVariables]
+    public EntityUid? Holder = null;
+    // End DeltaV additions
+
     /// <summary>
     ///     The base value for how many shots to fire per burst.
     /// </summary>
@@ -263,6 +290,20 @@ public sealed partial class GunComponent : Component
     /// </summary>
     [DataField]
     public Vector2 DefaultDirection = new Vector2(0, -1);
+
+    /// <summary>
+    /// Goobstation
+    /// Whether the system won't change gun target when we stop aiming at it while firing in burst mode.
+    /// </summary>
+    [DataField]
+    public bool LockOnTargetBurst;
+
+    /// <summary>
+    /// Goobstation
+    /// Muzzle flash will be rotated by this angle if the weapon is dropped
+    /// </summary>
+    [DataField]
+    public Angle MuzzleFlashRotationOffset;
 }
 
 [Flags]

@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ark1368
 # SPDX-FileCopyrightText: 2025 sleepyyapril
@@ -5,11 +7,13 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+#Ussp
+
 - type: entity
   parent: BaseShipVoucher
   id: ShipVoucherUSSP
   name: USSP gadyuka voucher
-  description: A small card that authorizes the acquisition of a Gadyuka for free.
+  description: A small card that authorizes the acquisition of a Gadyuka.
   components:
   - type: Sprite
     layers:
@@ -24,6 +28,92 @@
   - type: StaticPrice
     vendPrice: 12500
 
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherUSSPTunguska
+  name: USSP tunguska voucher
+  description: A small card that authorizes the acquisition of a Tunguska.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: USSP
+    companyName: USSP
+    access:
+    - USSPTunguska # SHITCODE!!!
+
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherUSSPDrakon
+  name: USSP drakon voucher
+  description: A small card that authorizes the acquisition of a Drakon.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: USSP
+    companyName: USSP
+    access:
+    - USSPDrakon # SHITCODE!!!
+
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherUSSPNatisk
+  name: USSP natisk voucher
+  description: A small card that authorizes the acquisition of a Natisk.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: USSP
+    companyName: USSP
+    access:
+    - USSPNatisk # SHITCODE!!!
+
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherUSSPGruznyk
+  name: USSP gruznyk voucher
+  description: A small card that authorizes the acquisition of a Gruznyk.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: USSP
+    companyName: USSP
+    access:
+    - USSPGruznyk # SHITCODE!!!
+
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherUSSPSekunda
+  name: USSP sekunda voucher
+  description: A small card that authorizes the acquisition of a Sekunda.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: USSP
+    companyName: USSP
+    access:
+    - USSPSekunda # SHITCODE!!!
+
+# Tsfmc
 - type: entity
   parent: ShipVoucherNfsdBailiff
   id: ShipVoucherTsfmcColonel

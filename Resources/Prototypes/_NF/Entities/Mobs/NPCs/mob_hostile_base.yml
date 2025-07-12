@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 AndresE55
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   save: false
   id: NFMobAtmos
@@ -432,7 +441,7 @@
   - type: StandingState
   - type: InputMover
   - type: MobMover
-  - type: ZombieImmune
+  #- type: ZombieImmune # Mono
   - type: Hands
   - type: Puller
   - type: NameIdentifier
@@ -493,7 +502,7 @@
     - Pacified
     - Drowsiness
     - Adrenaline
-  - type: ZombieImmune
+  #- type: ZombieImmune # Mono
   - type: NameIdentifier
     group: GenericNumber
   - type: NpcFactionMember

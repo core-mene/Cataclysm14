@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 cheetah1984
 # SPDX-FileCopyrightText: 2025 sleepyyapril
 # SPDX-FileCopyrightText: 2025 starch
@@ -62,8 +63,8 @@
 - type: roleLoadout
   id: JobBrigmedic
   groups:
-  - TsfmcHead
-  - TsfmcNeck
+  - TsfmcHeadMedic
+  - TsfmcNeckMedic
   - TsfmcJumpsuit
   - TsfmcBrigmedicGloves
   - TsfmcBackpack
@@ -158,14 +159,15 @@
   - ContractorFun
   - SeniorOfficerTrinkets
   - NfsdSpeciesSpecific
-  - TsfmcFirearm
+  - TsfmcFirearmColonel
   - TsfmcMag
   canCustomizeName: true
 
 - type: roleLoadout
   id: JobTsfEngineer
   groups:
-  - TsfmcNeck
+  - TsfmcHeadEngi
+  - TsfmcNeckEngi
   - TsfmcJumpsuitEngi
   - TsfmcGloves
   - TsfmcEngiModsuit

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -111,8 +112,58 @@
   result: NanolaminateFoamGrenade
   completetime: 2
   materials:
-    Steel: 600
-    Glass: 200
+    Steel: 300
+    Glass: 50
     Plastic: 200
-    Plasma: 100
+    Synthalloy: 200
     Gold: 50
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OreBoxFlatpackTSF
+  result: OreBoxFlatpack
+  completetime: 5
+  materials:
+    Steel: 600
+    Glass: 50
+    Plastic: 200
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: MotionDetectorTSF
+  result: MotionDetector
+  completetime: 3
+  materials:
+    Steel: 500
+    Glass: 100
+    Plastic: 200
+    Gold: 50
+    Silver: 50
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: MaterialBoxFlatpackTSF
+  result: MaterialBoxFlatpack
+  completetime: 5
+  materials:
+    Steel: 600
+    Glass: 50
+    Plastic: 200
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: SeismicChargeUSSP
+  result: SeismicCharge
+  completetime: 2
+  materials:
+    Plastic: 100
+    Plasma: 200
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: TearGasGrenadeUSSP
+  result: TearGasGrenade
+  completetime: 2
+  materials:
+    Steel: 100
+    Plasma: 200

@@ -58,6 +58,13 @@ uplink-security-cash75000-desc = Cold, hard cash, in bulk.
 uplink-security-surgery-duffel-name = Advanced Surgery Kit
 uplink-security-surgery-duffel-desc = A duffel filled with advanced surgery tools, perfect for re-attaching some heads.
 
+uplink-security-omnizine-jug-name = Omnizine Jug
+uplink-security-omnizine-jug-desc = A jug of omnizine, used for making medipens and keeping your allies up. Imported from Harmony Medical Enterprises.
+
+uplink-security-medical-assembler-name = Medical Assembler Flatpack
+uplink-security-medical-assembler-desc = An assembler that can be used to make useful medical supplies.
+
+
 uplink-security-hfblade-name = HF-Katana
 uplink-security-hfblade-desc = A tool of justice.
 
@@ -75,3 +82,9 @@ uplink-security-capital-voucher-desc = A single use voucher for any small to cap
 
 uplink-security-flyssa-voucher-name = TSFMC Flyssa Ship Voucher
 uplink-security-flyssa-voucher-desc = A single use voucher for the Flyssa.
+
+uplink-security-hardsuit-m82b-name = M82b Hardsuit
+uplink-security-hardsuit-m82b-desc = A variant of the M-82c for NBC protection, usually utilized by corpsmen.
+
+uplink-security-hardsuit-m82c-name = M82c Hardsuit
+uplink-security-hardsuit-m82c-desc = A basic protective system for dangerous environments (such as space). Takes the role of an armor vest in the average TSF marine's gear.

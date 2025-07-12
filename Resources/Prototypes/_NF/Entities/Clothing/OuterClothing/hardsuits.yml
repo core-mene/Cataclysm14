@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2024 Kesiath
 # SPDX-FileCopyrightText: 2024 Maxtone
 # SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 BramvanZijp
 # SPDX-FileCopyrightText: 2025 LukeZurg22
@@ -177,6 +178,7 @@
   parent: ClothingOuterHardsuitBaseNFNfsd
   id: ClothingOuterHardsuitNfsdBronze
   name: TSFMC M73 tacsuit
+  suffix: DEPRECATED, DO NOT MAP
   description: The standard-issue TSFMC tacsuit for patrol duty. This bronze variant has private rank markings.
   components:
   - type: Sprite
@@ -207,6 +209,7 @@
   parent: ClothingOuterHardsuitNfsdBronze
   id: ClothingOuterHardsuitNfsdSilver
   name: TSFMC M73 tacsuit
+  suffix: DEPRECATED, DO NOT MAP
   description: The standard-issue TSFMC tacsuit for patrol duty. This silver variant has corporal rank markings.
   components:
   - type: Sprite
@@ -221,6 +224,7 @@
   parent: ClothingOuterHardsuitNfsdBronze
   id: ClothingOuterHardsuitNfsdGold
   name: TSFMC M73 tacsuit
+  suffix: DEPRECATED, DO NOT MAP
   description: The standard-issue TSFMC tacsuit for patrol duty. This gold variant has senior rank markings.
   components:
   - type: Sprite
@@ -267,6 +271,7 @@
   parent: ClothingOuterHardsuitNfsdBronze
   id: ClothingOuterHardsuitNfsdBrigmedic
   name: TSFMC M73-M tacsuit
+  suffix: DEPRECATED, DO NOT MAP
   description: A variant of the M73 tacsuit for combat medical and NBC use. Provides greater caustic and radiation protection.
   components:
   - type: Sprite
@@ -331,6 +336,7 @@
   parent: ClothingOuterHardsuitBaseNFNfsd
   id: ClothingOuterHardsuitNfsdCombat
   name: TSFMC M93 tacsuit
+  suffix: DEPRECATED, DO NOT MAP
   description: A heavily armored TSFMC suit. Space proof, with thick armor plating at the expense of mobility.
   components:
   - type: Sprite
@@ -364,6 +370,7 @@
   parent: ClothingOuterHardsuitNfsdCombat # ClothingOuterHardsuitBaseNFNfsd>ClothingOuterHardsuitNfsdCombat
   id: ClothingOuterHardsuitNfsdCommand
   name: TSFMC M93-C tacsuit
+  suffix: DEPRECATED, DO NOT MAP
   description: A variant of the M93 tacsuit for high ranking officers. # Mono - Description Rewrite
   components:
   - type: Sprite

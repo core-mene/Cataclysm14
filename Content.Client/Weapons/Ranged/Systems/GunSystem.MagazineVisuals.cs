@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2022 Kara
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2024 DrSmugleaf
+// SPDX-FileCopyrightText: 2025 Aviu00
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Client.Weapons.Ranged.Components;
 using Content.Shared.Rounding;
 using Content.Shared.Weapons.Ranged.Systems;
@@ -54,6 +61,9 @@ public sealed partial class GunSystem
             }
 
             var step = ContentHelpers.RoundToLevels((int) current, (int) capacity, component.MagSteps);
+
+            if (component.ZeroNoAmmo && step == 0 && (int) current > 0) // Goobstation
+                step = Math.Min(1, component.MagSteps - 1);
 
             if (step == 0 && !component.ZeroVisible)
             {

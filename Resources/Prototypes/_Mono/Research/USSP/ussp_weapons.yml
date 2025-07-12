@@ -1,0 +1,70 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: technology
+  id: UsspBasicGuns
+  name: research-technology-ussp-guns-basic
+  icon:
+    sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+    state: base
+  discipline: UsspWeapons
+  tier: 1
+  cost: 20000
+  recipeUnlocks:
+  - WeaponRifleSVSUSSP
+  - WeaponSniperMosinUSSP
+  - Magazine7.62x54mmRFMJ
+  - SpeedLoader7.62x54mmRFMJ
+  - AmmoBox7.62x54mmRFMJ
+
+- type: technology
+  id: UsspMediumGuns
+  name: research-technology-ussp-guns-medium
+  icon:
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/ak502.rsi
+    state: icon
+  discipline: UsspWeapons
+  tier: 2
+  cost: 35000
+  recipeUnlocks:
+  - WeaponRifleAK502USSP
+  - WeaponRevolverMatebaUSSP
+  - Magazine7.62x39mmFMJ
+  - SpeedLoader45_magnumFMJ
+  - AmmoBox7.62x39mmFMJ
+  - AmmoBox45_magnumFMJ
+  - Magazine7.62x39mmEmpty
+  technologyPrerequisites:
+  - UsspBasicGuns
+
+- type: technology
+  id: UsspAdvancedGuns
+  name: research-technology-ussp-guns-advanced
+  icon:
+    sprite: _Mono/Objects/Weapons/Guns/LMGs/dp29.rsi
+    state: icon
+  discipline: UsspWeapons
+  tier: 3
+  cost: 80000
+  recipeUnlocks:
+  - WeaponDP29USSP
+  - MagazineDP29
+  technologyPrerequisites:
+  - UsspMediumGuns
+
+- type: technology
+  id: UsspAdvancedAmmo
+  name: research-technology-ussp-ammo-advanced
+  icon:
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/45_magnum.rsi
+    state: base
+  discipline: UsspWeapons
+  tier: 3
+  cost: 30000
+  recipeUnlocks:
+  - AmmoBox7.62x39mmSubsonic
+  - AmmoBox45_magnumAP
+  technologyPrerequisites:
+  - UsspAdvancedGuns

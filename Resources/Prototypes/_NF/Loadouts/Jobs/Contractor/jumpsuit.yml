@@ -1793,3 +1793,12 @@
   price: 1250
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorMaroon
+
+- type: loadout
+  id: ContractorClothingUniformJabroni
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT3
+  price: 1250
+  equipment:
+    jumpsuit: UniformJabroni

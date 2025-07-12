@@ -1,5 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -66,16 +68,13 @@
     sprite: _Mono/Objects/Weapons/Guns/Rifles/mr8c.rsi
   - type: StaticPrice
     price: 1750
-
-    # uncomment all of the following and readd to the yaml when it stops making it shoot offset for some reason
-
-  #- type: SpeedModifiedOnWield
-  #  walkModifier: 0.95
-  #  sprintModifier: 0.95
-  #- type: CursorOffsetRequiresWield
-  #- type: EyeCursorOffset
-  #  maxOffset: 5
-  #  pvsIncrease: 0.5
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 5
+    pvsIncrease: 0.5
 
 - type: entity
   name: AK-502 (7.62x39mm)
@@ -133,6 +132,71 @@
   - type: Appearance
   - type: StaticPrice
     price: 100
+    vendPrice: 9000
+  - type: PirateBountyItem
+    id: StandardFactionLongarm
+
+- type: entity
+  name: XLR-556 ICWS (5.56x45mm)
+  parent: [BaseWeaponRifle, BaseGunWieldable, BaseC2ContrabandUnredeemable]
+  id: WeaponRifleXlr556
+  description: A proposed "next-gen" rifle for TSF standard infantry.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/xlr556.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -47
+  - type: Gun
+    minAngle: 23
+    maxAngle: 73
+    angleIncrease: 9
+    angleDecay: 20
+    fireRate: 11 # 660 rpm
+    shotsPerBurst: 3
+    availableModes:
+    - Burst
+    - FullAuto
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Goobstation/Weapons/Guns/Gunshots/thock.ogg
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/xlr556.rsi
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine5.56x45mmFMJ
+        insertSound: /Audio/Weapons/Guns/MagIn/sfrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/hpistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - Magazine5.56x45mmFMJ
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge5.56x45mmFMJ
+        priority: 1
+        whitelist:
+          tags:
+          - Cartridge5.56x45mmFMJ
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3500
     vendPrice: 9000
   - type: PirateBountyItem
     id: StandardFactionLongarm

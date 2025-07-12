@@ -1,12 +1,17 @@
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadoutGroup
   id: TsfmcNeckCommander
   name: loadout-group-contractor-neck
   minLimit: 1
   loadouts:
-  - ContractorClothingNeckIFFCyan
+  - TsfmcClothingNeckIFFCyan
   - SheriffClothingNeckMantleSheriff
   fallbacks:
-  - ContractorClothingNeckIFFCyan
+  - TsfmcClothingNeckIFFCyan
 
 - type: loadoutGroup
   id: TsfmcEarsCommander

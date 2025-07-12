@@ -1,0 +1,80 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: technology
+  id: TsfBasicGuns
+  name: research-technology-tsfmc-guns
+  icon:
+    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    state: icon
+  discipline: TsfmcWeaponry
+  tier: 1
+  cost: 20000
+  recipeUnlocks:
+  - WeaponRifleLecterTSF
+  - WeaponRifleVulcanTSF
+  - WeaponSubMachineGunDrozdTSF
+  - Magazine5.56x45mmFMJ
+  - Magazine5.56x45mmEmpty
+  - AmmoBox5.56x45mmFMJ
+  - Magazine7.62x51mmFMJ
+  - Magazine7.62x51mmEmpty
+  - AmmoBox7.62x51mmFMJ
+  - Magazine45_ACPSubMachineGunFMJ
+  - Magazine45_ACPSubMachineGunEmpty
+  - AmmoBox45_ACPFMJ
+
+- type: technology
+  id: TsfAnnie
+  name: research-technology-tsfmc-annie
+  icon:
+    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/annie.rsi
+    state: icon
+  discipline: TsfmcWeaponry
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - WeaponRifleAnnieTSF
+  - Magazine7.62x39mmFMJ
+  - Magazine7.62x39mmEmpty
+  - AmmoBox7.62x39mmFMJ
+  technologyPrerequisites:
+  - TsfBasicGuns
+
+- type: technology
+  id: TsfMarsocGuns
+  name: research-technology-tsfmc-mr8
+  icon:
+    sprite: _Mono/Objects/Weapons/Guns/LMGs/mr8b.rsi
+    state: icon
+  discipline: TsfmcWeaponry
+  tier: 3
+  cost: 75000
+  recipeUnlocks:
+  - WeaponLMGMR8BTSF
+  - WeaponRifleMR8CTSF
+  - Magazine8x65mmSKR
+  - Magazine8x65mmEmpty
+  - Magazine8x65mmSKRBox
+  - Magazine8x65mmEmptyBox
+  - AmmoBox8x65mmSKR
+  technologyPrerequisites:
+  - TsfBasicGuns
+  - TsfSynthalloy
+
+- type: technology
+  id: TsfIcws
+  name: research-technology-tsfmc-xlr556
+  icon:
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/xlr556.rsi
+    state: icon
+  discipline: TsfmcWeaponry
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - WeaponRifleXlr556Tsf
+  technologyPrerequisites:
+  - TsfBasicGuns
+  - TsfSynthalloy
+  - TsfMarsocGuns

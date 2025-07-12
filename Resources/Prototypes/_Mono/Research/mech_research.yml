@@ -1,0 +1,129 @@
+# SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 wewman222
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: technology
+  id: Broadsword
+  name: research-technology-mech-base
+  icon:
+    sprite: _Mono/Objects/Specific/Mech/mechaS2.rsi
+    state: broadsword
+  discipline: Arsenal
+  tier: 3
+  cost: 50000
+  recipeUnlocks:
+  - BroadswordHarness
+  - BroadswordHead
+  - BroadswordLArm
+  - BroadswordLLeg
+  - BroadswordRArm
+  - BroadswordRLeg
+  - BroadswordCentralElectronics
+  - BroadswordPeripheralsElectronics
+  - BroadswordTargetingElectronics
+  - LightMechaAutocannon
+  - LightMechaSMG
+  - LightMechaShotgun
+  - PowerCageMech
+  - IFFMechaBlueSquare
+  - IFFMechaBlueCircle
+  - IFFMechaBlueTriangle
+  - IFFMechaRedSquare
+  - IFFMechaRedCircle
+  - IFFMechaRedTriangle
+  - IFFMechaYellowSquare
+  - IFFMechaYellowCircle
+  - IFFMechaYellowTriangle
+  - IFFMechaGreenSquare
+  - IFFMechaGreenCircle
+  - IFFMechaGreenTriangle
+  technologyPrerequisites:
+  - Gygax
+
+- type: technology
+  id: Halberd
+  name: research-technology-halberd
+  icon:
+    sprite: _Mono/Objects/Specific/Mech/mechaS2.rsi
+    state: broadsword
+  discipline: Arsenal
+  tier: 3
+  cost: 30000
+  recipeUnlocks:
+  - HalberdHarness
+  - MediumMechDMR
+  - MediumMechCoilgun
+  - MediumMechTOW
+  technologyPrerequisites:
+  - Broadsword
+
+- type: technology
+  id: Sabre
+  name: research-technology-sabre
+  icon:
+    sprite: _Mono/Objects/Specific/Mech/mechaS2.rsi
+    state: broadsword
+  discipline: Arsenal
+  tier: 3
+  cost: 50000 # gygax+ bro i've seen how fast that shit is in grav
+  recipeUnlocks:
+  - SabreHarness
+  technologyPrerequisites:
+  - Broadsword
+  - Halberd
+
+- type: technology
+  id: Flail
+  name: research-technology-flail
+  icon:
+    sprite: _Mono/Objects/Specific/Mech/mechaS4.rsi
+    state: flail
+  discipline: Arsenal
+  tier: 3
+  cost: 90000
+  recipeUnlocks:
+  - FlailHarness
+  - FlailHead
+  - FlailLArm
+  - FlailLLeg
+  - FlailRArm
+  - FlailRLeg
+  - FlailCentralElectronics
+  - FlailPeripheralsElectronics
+  - FlailTargetingElectronics
+  - HeavyMechRPG
+  - HeavyMechCannon
+  - HeavyMechProjector
+  technologyPrerequisites:
+  - Broadsword
+
+- type: technology
+  id: Spyglass
+  name: research-technology-spyglass
+  icon:
+    sprite: _Mono/Objects/Specific/Mech/mechaS4.rsi
+    state: flail
+  discipline: Arsenal
+  tier: 3
+  cost: 22500
+  recipeUnlocks:
+  - SpyglassHarness
+  - EWACMechaFlares
+  - EWACMechaJammer
+  technologyPrerequisites:
+  - Flail
+
+- type: technology
+  id: Mace
+  name: research-technology-mace
+  icon:
+    sprite: _Mono/Objects/Specific/Mech/mechaS4.rsi
+    state: flail
+  discipline: Arsenal
+  tier: 3
+  cost: 22500
+  recipeUnlocks:
+  - MaceHarness
+  technologyPrerequisites:
+  - Flail

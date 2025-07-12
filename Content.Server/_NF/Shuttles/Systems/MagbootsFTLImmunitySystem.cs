@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 ark1368
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server._NF.Shuttles.Components;
 using Content.Shared.Clothing;
 using Content.Shared.Inventory;
@@ -17,6 +22,9 @@ public sealed class MagbootsFTLImmunitySystem : EntitySystem
     // Track entities we've already processed to avoid redundant work
     private readonly HashSet<EntityUid> _processedEntities = new();
 
+    // Track the previous state of entities to detect changes
+    private readonly Dictionary<EntityUid, bool> _previousImmunityState = new();
+
     // Query for active magboots
     private EntityQuery<ItemToggleComponent> _toggleQuery;
 
@@ -28,12 +36,37 @@ public sealed class MagbootsFTLImmunitySystem : EntitySystem
         _toggleQuery = GetEntityQuery<ItemToggleComponent>();
     }
 
+    /// <summary>
+    /// Updates the FTL knockdown immunity status for an entity, but only if the state has changed.
+    /// </summary>
+    private void UpdateFTLImmunity(EntityUid entity, bool shouldHaveImmunity)
+    {
+        // Check if the state has actually changed to avoid unnecessary work
+        if (_previousImmunityState.TryGetValue(entity, out var previousState) && previousState == shouldHaveImmunity)
+            return;
+
+        // Update the tracked state
+        _previousImmunityState[entity] = shouldHaveImmunity;
+
+        if (shouldHaveImmunity)
+        {
+            EnsureComp<FTLKnockdownImmuneComponent>(entity);
+        }
+        else
+        {
+            RemComp<FTLKnockdownImmuneComponent>(entity);
+        }
+    }
+
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
         // Clear our tracking to start fresh each update
         _processedEntities.Clear();
+
+        // Track which entities should have immunity this update
+        var entitiesWithImmunity = new HashSet<EntityUid>();
 
         // Find all magboots components
         var query = EntityQueryEnumerator<MagbootsComponent>();
@@ -49,16 +82,32 @@ public sealed class MagbootsFTLImmunitySystem : EntitySystem
             // Find the entity wearing the magboots (if any)
             if (TryGetWearer(uid, magboots, out var wearer))
             {
-                // Apply or remove immunity based on magboots active state
                 if (isActive)
                 {
-                    EnsureComp<FTLKnockdownImmuneComponent>(wearer);
+                    entitiesWithImmunity.Add(wearer);
                 }
-                else
-                {
-                    RemComp<FTLKnockdownImmuneComponent>(wearer);
-                }
+                // Apply or remove immunity based on magboots active state
+                UpdateFTLImmunity(wearer, isActive);
             }
+        }
+
+        // Clean up immunity state for entities that no longer should have it
+        var toRemove = new List<EntityUid>();
+        foreach (var (entity, hadImmunity) in _previousImmunityState)
+        {
+            // If entity no longer exists or no longer should have immunity, clean it up
+            if (!EntityManager.EntityExists(entity) || (!entitiesWithImmunity.Contains(entity) && hadImmunity))
+            {
+                if (EntityManager.EntityExists(entity))
+                    RemComp<FTLKnockdownImmuneComponent>(entity);
+                toRemove.Add(entity);
+            }
+        }
+
+        // Remove cleaned up entities from tracking
+        foreach (var entity in toRemove)
+        {
+            _previousImmunityState.Remove(entity);
         }
     }
 
