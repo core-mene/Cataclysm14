@@ -36,7 +36,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 07/12/2025 21:25:58
-  entityCount: 6293
+  entityCount: 6292
 maps: []
 grids:
 - 1
@@ -2593,13 +2593,6 @@ entities:
     components:
     - type: Transform
       pos: 1.5,-3.5
-      parent: 1
-- proto: AirlockAtmosphericsLocked
-  entities:
-  - uid: 25
-    components:
-    - type: Transform
-      pos: 15.5,-8.5
       parent: 1
 - proto: AirlockCargo
   entities:
