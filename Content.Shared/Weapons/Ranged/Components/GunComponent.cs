@@ -12,6 +12,7 @@
 // SPDX-FileCopyrightText: 2024 checkraze
 // SPDX-FileCopyrightText: 2024 metalgearsloth
 // SPDX-FileCopyrightText: 2025 Avalon
+// SPDX-FileCopyrightText: 2025 Aviu00
 // SPDX-FileCopyrightText: 2025 GreaseMonk
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
