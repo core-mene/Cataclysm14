@@ -102,7 +102,7 @@
   name: Mateba (.45 magnum)
   parent: [BaseWeaponRevolver, BaseC2ContrabandUnredeemable] # Frontier: BaseMajorContraband<BaseC2ContrabandUnredeemable
   id: WeaponRevolverMateba
-  description: The iconic sidearm of the dreaded death squads. Uses .45 magnum ammo. On the handle is a label that says 'for authorized use only.'
+  description: A legendary sidearm from the Corporate Era, once used by corporate kill-teams, it now belongs to TSF Colonel's around the galaxy. Uses .45 magnum ammo. On the handle is a label that says 'for authorized use only.'
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/mateba.rsi
@@ -125,7 +125,7 @@
   name: Python (.45 magnum)
   parent: [BaseWeaponRevolver, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponRevolverPython
-  description: An illegal revolver favoured by Syndicate agents. Uses .45 magnum ammo. # Frontier
+  description: An revolver that is commonly found around Ashen Republic space, it's typically used by high-ranking insurgents. Uses .45 magnum ammo. # Frontier
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/python.rsi
