@@ -37,3 +37,12 @@
       !type:DepartmentTimeRequirement
       department: Civilian
       time: 360000 # 100 hrs
+
+- type: loadoutEffectGroup
+  id: MonoCivPro
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 1800000 # 500 hrs - ultimate flex
