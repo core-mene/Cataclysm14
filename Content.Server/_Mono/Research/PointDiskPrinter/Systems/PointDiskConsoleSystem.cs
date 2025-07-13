@@ -41,15 +41,15 @@ public sealed class PointDiskConsoleSystem : EntitySystem
             if (printing.FinishTime > _timing.CurTime)
                 continue;
 
-            //RemComp(uid, printing);
-            //if (console.Disk1K)
-                //Spawn(console.Disk1KPrototype, xform.Coordinates); // Uncomment when printing doesn't print all three at once
+            RemComp(uid, printing);
+            if (console.Disk1K)
+                Spawn(console.Disk1KPrototype, xform.Coordinates); // Uncomment when printing doesn't print all three at once
 
-            if (console.Disk5K)
+            else if (console.Disk5K)
                 Spawn(console.Disk5KPrototype, xform.Coordinates);
 
-            //if (console.Disk10K)
-                //Spawn(console.Disk10KPrototype, xform.Coordinates); // Uncomment when printing doesn't print all three at once
+            else (console.Disk10K)
+                Spawn(console.Disk10KPrototype, xform.Coordinates); // Uncomment when printing doesn't print all three at once
         }
     }
 
@@ -70,6 +70,7 @@ public sealed class PointDiskConsoleSystem : EntitySystem
         var printing = EnsureComp<PointDiskConsolePrintingComponent>(uid);
         printing.FinishTime = _timing.CurTime + component.PrintDuration;
         UpdateUserInterface(uid, component);
+        Spawn(console.Disk1KPrototype, xform.Coordinates);
     }
 
     private void OnPrint5KDisk(EntityUid uid, PointDiskConsoleComponent component, PointDiskConsolePrint5KDiskMessage args)
@@ -89,6 +90,7 @@ public sealed class PointDiskConsoleSystem : EntitySystem
         var printing = EnsureComp<PointDiskConsolePrintingComponent>(uid);
         printing.FinishTime = _timing.CurTime + component.PrintDuration;
         UpdateUserInterface(uid, component);
+        Spawn(console.Disk5KPrototype, xform.Coordinates);
     }
 
     private void OnPrint10KDisk(EntityUid uid, PointDiskConsoleComponent component, PointDiskConsolePrint10KDiskMessage args)
@@ -108,6 +110,7 @@ public sealed class PointDiskConsoleSystem : EntitySystem
         var printing = EnsureComp<PointDiskConsolePrintingComponent>(uid);
         printing.FinishTime = _timing.CurTime + component.PrintDuration;
         UpdateUserInterface(uid, component);
+        Spawn(console.Disk10KPrototype, xform.Coordinates);
     }
 
     private void OnPointsChanged(EntityUid uid, PointDiskConsoleComponent component, ref ResearchServerPointsChangedEvent args)
