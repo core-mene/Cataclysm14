@@ -71,11 +71,8 @@
 
 - type: startingGear
   id: SecurityGuardGear
-  equipment:
-    eyes: ClothingEyesGlassesSunglasses #ClothingEyesGlassesSecurity
   storage:
     back:
     - EncryptionKeyService
     - EncryptionKeySecurity
-    - Flash
     - ShipVoucherFrontierGuard

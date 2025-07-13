@@ -220,18 +220,21 @@
 - type: roleLoadout
   id: JobSecurityGuard
   groups:
-  - SecurityGuardHead
-  - SecurityGuardJumpsuit
+  # Mono Start
+  - MonoSecurityGuardOuterClothing
+  - MonoSecurityGuardBelt
+  - MonoSecurityGuardGaiter
+  - MonoSecurityGuardHud
+  - MonoSecurityGuardShoes
+  - MonoSecurityGuardJumpsuit
+  - MonoSecurityGuardBack
+  - SecurityGuardFirearm
+  - SecurityGuardPistol
+  - SecurityGuardAmmo
+  # Mono End
   - SecurityGuardGloves
-  - SecurityGuardBackpack
-  - SecurityGuardOuterClothing
-  - SecurityGuardShoes
-  - SecurityGuardFace
-  - SecurityGuardBelt
+  - SecurityGuardHead
   - SecurityGuardEars
-  - SecurityGuardFirearm # Mono
-  - SecurityGuardPistol # Mono
-  - SecurityGuardAmmo # Mono
   - NfsdBoxSurvival
   - SecurityGuardPDA
   - ContractorWallet
