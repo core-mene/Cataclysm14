@@ -41,15 +41,15 @@ public sealed class PointDiskConsoleSystem : EntitySystem
             if (printing.FinishTime > _timing.CurTime)
                 continue;
 
-            RemComp(uid, printing);
-            if (console.Disk1K)
-                Spawn(console.Disk1KPrototype, xform.Coordinates);
+            //RemComp(uid, printing);
+            //if (console.Disk1K)
+                //Spawn(console.Disk1KPrototype, xform.Coordinates); // Uncomment when printing doesn't print all three at once
 
             if (console.Disk5K)
                 Spawn(console.Disk5KPrototype, xform.Coordinates);
 
-            if (console.Disk10K)
-                Spawn(console.Disk10KPrototype, xform.Coordinates);
+            //if (console.Disk10K)
+                //Spawn(console.Disk10KPrototype, xform.Coordinates); // Uncomment when printing doesn't print all three at once
         }
     }
 
