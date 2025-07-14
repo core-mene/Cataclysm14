@@ -17,7 +17,6 @@
   - ContractorSpecialGunVector45Acp
   # USSP playtime guns
   - ContractorSpecialGunAk502
-  - ContractorSpecialGunSvs
   - ContractorSpecialGunBigLeady
   # Rogue playtime guns
   - ContractorSpecialGunAnaconda
@@ -38,7 +37,7 @@
     proto: MonoCivTSFVet
   price: 50000
   inhand:
-  - WeaponCaseShortEg4
+  - WeaponCaseShortEg4Registered
 
 - type: loadout
   id: ContractorSpecialGunAnnie
@@ -48,7 +47,7 @@
     proto: MonoCivTSFVet
   price: 85000
   inhand:
-  - WeaponCaseAnnie
+  - WeaponCaseAnnieRegistered
 
 - type: loadout
   id: ContractorSpecialGunVulcan
@@ -58,7 +57,7 @@
     proto: MonoCivTSFVet
   price: 50000
   inhand:
-  - WeaponCaseLongVulcanExpedition
+  - WeaponCaseLongVulcanRegistered
 
 - type: loadout
   id: ContractorSpecialGunEnforcer
@@ -68,7 +67,7 @@
     proto: MonoCivTSFVet
   price: 50000
   inhand:
-  - WeaponCaseLongEnforcerExpedition
+  - WeaponCaseLongEnforcerRegistered
 
 - type: loadout
   id: ContractorSpecialGunVector9mm
@@ -78,7 +77,7 @@
     proto: MonoCivTSFVet
   price: 85000
   inhand:
-  - WeaponCaseVector9mm
+  - WeaponCaseVector9mmRegistered
 
 - type: loadout
   id: ContractorSpecialGunVector45Acp
@@ -88,7 +87,7 @@
     proto: MonoCivTSFVet
   price: 85000
   inhand:
-  - WeaponCaseVector45Acp
+  - WeaponCaseVector45AcpRegistered
 
 
 # USSP playtime weapons
@@ -101,17 +100,7 @@
     proto: MonoCivUsspVet
   price: 75000
   inhand:
-  - WeaponCaseAk502
-
-- type: loadout
-  id: ContractorSpecialGunSvs
-  name: SVS gun case
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MonoCivUsspVet
-  price: 20000
-  inhand:
-  - WeaponCaseLongSVSExpedition
+  - WeaponCaseAk502Registered
 
 - type: loadout
   id: ContractorSpecialGunBigLeady
@@ -121,7 +110,7 @@
     proto: MonoCivUsspVet
   price: 65000
   inhand:
-  - WeaponCaseBigLeady
+  - WeaponCaseBigLeadyRegistered
 
 # Rogue playtime weapons
 
@@ -133,7 +122,7 @@
     proto: MonoCivRogueDefector
   price: 50000
   inhand:
-  - WeaponCaseShortAnaconda
+  - WeaponCaseShortAnacondaRegistered
 
 - type: loadout
   id: ContractorSpecialGunMla73
@@ -143,7 +132,7 @@
     proto: MonoCivRogueDefector
   price: 75000
   inhand:
-  - WeaponCaseMla73
+  - WeaponCaseMla73Registered
 
 - type: loadout
   id: ContractorSpecialGunWspr
@@ -153,7 +142,7 @@
     proto: MonoCivRogueDefector
   price: 85000
   inhand:
-  - WeaponCaseWspr
+  - WeaponCaseWsprRegistered
 
 # Misc playtime weapons
 
@@ -165,7 +154,7 @@
     proto: MonoCivSkilled
   price: 125000
   inhand:
-  - WeaponCaseAbielle
+  - WeaponCaseAbielleRegistered
 
 - type: loadout
   id: ContractorSpecialGunMla34
@@ -175,7 +164,7 @@
     proto: MonoCivSkilled
   price: 125000
   inhand:
-  - WeaponCaseMla34
+  - WeaponCaseMla34Registered
 
 - type: loadout
   id: ContractorSpecialGunMla79
@@ -185,4 +174,4 @@
     proto: MonoCivPro
   price: 500000
   inhand:
-  - WeaponCaseMla79
+  - WeaponCaseMla79Registered
