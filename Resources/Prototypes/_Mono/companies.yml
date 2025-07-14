@@ -74,6 +74,35 @@
 # DO NOT TOUCH
 
 # ====TSF / Protag. Companies====
+
+# Core corporations
+
+- type: company
+  id: DrakeIndustries
+  form: Protagonist
+  name: Drake Industries
+  description: drake-industries-description
+  color: "#C97D7D"
+  image: /Textures/_Mono/Companies/drake_industries.png
+
+- type: company
+  id: SteelHammerManufacturing
+  form: Protagonist
+  name: Steel Hammer Manufacturing
+  description: steel-hammer-description
+  color: "#92a2a1"
+  image: /Textures/_Mono/Companies/steel_hammer.png
+
+- type: company
+  id: HarmonyMedicalEnterprises
+  form: Protagonist
+  name: Harmony Medical Enterprises
+  description: harmony-medical-enterprises-description
+  color: "#FC7303"
+  image: /Textures/_Mono/Companies/HME.png
+
+# Major corporations
+
 - type: company
   id: DarkMatterEnterprises
   form: Protagonist
@@ -89,28 +118,7 @@
   description: aetherion-dynamics-description
   color: "#7E72B2"
 
-- type: company
-  id: ZealotsOfBalaam
-  form: Protagonist
-  name: Zealots Of Balaam
-  description: zealots-of-balaam-description
-  color: "#BC7F58"
-
-- type: company
-  id: DrakeIndustries
-  form: Protagonist
-  name: Drake Industries
-  description: drake-industries-description
-  color: "#C97D7D"
-  image: /Textures/_Mono/Companies/drake_industries.png
-
-- type: company
-  id: HarmonyMedicalEnterprises
-  form: Protagonist
-  name: Harmony Medical Enterprises
-  description: harmony-medical-enterprises-description
-  color: "#FC7303"
-  image: /Textures/_Mono/Companies/HME.png
+# Minor corporations
 
 - type: company
   id: UniversalStatesOfAmerica
@@ -127,16 +135,23 @@
   description: civil-defense-milita-description
   color: "#666600"
 
-# core corporations
+# Religious groups
 
 - type: company
-  id: SteelHammerManufacturing
+  id: ZealotsOfBalaam
   form: Protagonist
-  name: Steel Hammer Manufacturing
-  description: steel-hammer-description
-  color: "#92a2a1"
-  image: /Textures/_Mono/Companies/steel_hammer.png
+  name: Zealots Of Balaam
+  description: zealots-of-balaam-description
+  color: "#BC7F58"
 
+- type: company
+  id: TheCultOfTheMachineGod
+  form: Protagonist
+  name: The Cult of the Machine God
+  description: the-cult-of-the-machine-god-description
+  color: "#DEBC50"
+  image: /Textures/_Mono/Companies/CMG.png
+  
 # ====Rogue / Antag. Companies====
 - type: company
   id: TheViperGroup
