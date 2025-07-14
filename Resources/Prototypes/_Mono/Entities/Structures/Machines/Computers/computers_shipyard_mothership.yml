@@ -54,3 +54,13 @@
   - type: ShipyardListing
     shuttles:
     - Zephyr
+
+- type: entity
+  id: WindreignCarrierComputer
+  parent: BaseCarrierComputer
+  name: windreign shipyard console
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Antlion
+    - StratoRat
