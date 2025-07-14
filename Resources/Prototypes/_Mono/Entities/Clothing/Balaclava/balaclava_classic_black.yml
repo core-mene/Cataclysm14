@@ -24,3 +24,11 @@
       balaclava:
       - state: equipped-BALACLAVA
         color: "#3e3e48"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#3e3e48"
+      right:
+      - state: inhand-right
+        color: "#3e3e48"
