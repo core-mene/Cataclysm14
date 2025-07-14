@@ -102,3 +102,15 @@
       amount: 1
     - id: MagazineSmart
       amount: 4
+
+- type: entity
+  parent: WeaponCaseHeavy
+  id: WeaponCaseMla79
+  suffix: Dungeon, MlA-79
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSmartLmg
+      amount: 1
+    - id: MagazineSmartLMG
+      amount: 6
