@@ -8,4 +8,4 @@ reagent-name-mesotaxinide = mesotaxinide
 reagent-desc-mesotaxinide = A refined chemical from Ambuzol+ capable of healing large amounts of toxin damage easily.
 
 reagent-name-letoferol = letoferol
-reagent-desc-letoferol = A highly illegal bioweapon developed as a refined form of Romerol.
+reagent-desc-letoferol = A highly illegal bioweapon developed as a refined form of Romerol. Turns the user into more than just a mindless zombie. The usage of this is considered a violation of humanoid rights everywhere.

@@ -138,38 +138,21 @@
   color: "#a84387"
   worksOnTheDead: true
   metabolisms:
-    Medicine:
-      metabolismRate: 0.5
+    Poison:
+      metabolismRate: 0.2
       effects:
-      - !type:CauseZombieInfection
-        conditions:
-        - !type:ReagentThreshold
-          min: 0.5
-      - !type:HealthChange
-        damage:
-          types:
-            Cellular: 3.5
-            Poison: 4
-            Caustic: 8
-      - !type:HealthChange
-        conditions:
-        - !type:OrganType
-          type: Yowie
-          shouldHave: false
-        - !type:ReagentThreshold
-          min: 15
-        damage:
-          groups:
-            Brute: -0.25
-      - !type:Jitter
-        conditions:
-        - !type:ReagentThreshold
-          min: 15
-      - !type:ChemVomit
-        conditions:
-        - !type:OrganType
-          type: Yowie
-          shouldHave: false
-        - !type:ReagentThreshold
-          min: 15
-        probability: 0.85
+        - !type:HealthChange
+          damage:
+            types:
+              Cellular: 0.5
+        - !type:Polymorph
+          prototype: LetoferolMutation
+          conditions:
+            - !type:ReagentThreshold
+              min: 6
+        - !type:AdjustReagent
+          reagent: Letoferol
+          amount: -2.5
+          conditions:
+            - !type:ReagentThreshold
+              min: 6

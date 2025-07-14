@@ -1,0 +1,158 @@
+- type: entity
+  parent:
+  - MobNonHumanHostileBase
+  - MobHumanoidHostileAISimpleMelee
+  id: MonoBaseMobFleshLetoferol
+  name: letoferol flesh
+  description: A shambling mass of flesh, made with the horrors of Letoferol.
+  abstract: true
+  components:
+  - type: NpcFactionMember
+    factions:
+    - AberrantFleshExpeditionNF
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _NF/Mobs/Aliens/flesh.rsi
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      250: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      50: 0.7
+      120: 0.5
+  - type: Stamina
+    critThreshold: 150
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 4
+  - type: Bloodstream
+    bloodMaxVolume: 200
+  - type: MeleeWeapon
+    attackRate: 1.5
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 30
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Blunt: 12
+        Slash: 20
+        Structural: 50
+  - type: ReplacementAccent
+    accent: genericAggressive
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        reagents:
+        - ReagentId: Letoferol
+          Quantity: 90
+  - type: MeleeChemicalInjector
+    solution: melee
+    transferAmount: 3.5
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.5
+    baseSprintSpeed : 4.25
+  - type: Hands
+  - type: ComplexInteraction
+  - type: Ensnareable
+    sprite: Objects/Misc/ensnare.rsi
+    state: icon
+  - type: Tag
+    tags:
+    - CanPilot
+  - type: Targeting
+  - type: Puller
+    needsHands: false
+  - type: Body
+    prototype: Skeleton
+    requiredLegs: 2
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Letoferol, Romerol ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          groups:
+            Burn: -2
+            Brute: -1.5
+    - reagents: [ Mesotaxinide ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          groups:
+            Burn: 6
+            Brute: 7
+          types:
+            Caustic: 20
+            Cellular: 5
+  - type: PlayerToolModifier
+    pryTimeMultiplier: 0.4
+  - type: PlayerAccuracyModifier
+    spreadMultiplier: 12
+    maxSpreadAngle: 180
+  - type: BonusMeleeDamage
+    damageModifierSet:
+      coefficients:
+        Blunt: 1.4
+        Slash: 1.2
+        Piercing: 0.65 # spear is clunky
+
+- type: entity
+  parent: MonoBaseMobFleshLetoferol
+  id: MobLetoferolHorror
+  name: letoferol flesh creature
+  description:
+  components:
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.7
+    baseSprintSpeed : 4.65
+  - type: Sprite
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: horror
+      color: "#eaff00"
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: horror
+      Dead:
+        Base: dead
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      400: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      120: 0.7
+      250: 0.5
+  - type: MeleeWeapon
+    autoAttack: true
+    attackRate: 0.3
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 60
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 14
+        Blunt: 21
+        Poison: 10
+        Pierce: 5
+        Structural: 75
