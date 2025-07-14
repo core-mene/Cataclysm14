@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Dvir
 # SPDX-FileCopyrightText: 2025 Redrover1760
@@ -9,10 +10,10 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  name: Vulcan (7.62x51mm)
+  name: FCM Vulcan (7.62x51mm)
   parent: [BaseWeaponLightMachineGun, BaseGunWieldable, BaseC1Contraband] # Frontier: add BaseC1Contraband
   id: WeaponRifleVulcan
-  description: One of the heaviest small arms to grace Security's armory, this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World". Uses 7.62x51mm ammo.
+  description: One of the heaviest small arms to grace Security's armory, the FCM "Vulcan" (Fusil de Combat Moyen), this rifle is a modern take on a classic, manufactured by Herstal Light Arms, informally dubbed the "Right Arm of the Free World". Uses 7.62x51mm ammo.
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi
@@ -29,7 +30,7 @@
     maxAngle: 20
     angleIncrease: 5
     angleDecay: 25
-    fireRate: 3
+    fireRate: 4.5
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -103,7 +104,7 @@
     pvsIncrease: 0.15 # Frontier
 
 - type: entity
-  name: CAWS-25 Jackdaw (6.35x40mm)
+  name: CS CAWS-25 Jackdaw (6.35x40mm)
   parent: [BaseWeaponRifle, BaseGunWieldable, BaseC3Contraband] # Frontier: add BaseC3Contraband
   id: WeaponRifleJackdaw
   description: The beginning of the end is heralded by the song of a Jackdaw. Uses 6.35x40mm Caseless ammo.

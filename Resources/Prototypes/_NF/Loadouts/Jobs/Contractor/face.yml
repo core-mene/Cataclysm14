@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2024 ErhardSteinhauer
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 UnicornOnLSD
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -63,6 +64,8 @@
     back:
     - ClothingMaskGasExplorer
 
+
+
 - type: loadout
   id: ContractorClothingMaskGasCaptain
   effects:
@@ -83,6 +86,15 @@
     back:
     - ClothingMaskGasAtmos
 
+- type: loadout
+  id: ContractorClothingMaskDrakeIndustries
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1250
+  storage:
+    back:
+    - ClothingMaskDrakeIndustries
 - type: loadout
   id: ContractorClothingMaskPlague
   effects:

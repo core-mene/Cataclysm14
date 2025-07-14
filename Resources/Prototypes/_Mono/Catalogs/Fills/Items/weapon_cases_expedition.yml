@@ -1,0 +1,168 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Handguns
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseShortAnaconda
+  suffix: Dungeon, Anaconda
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponPistolAnaconda
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseShortEg4
+  suffix: Dungeon, EG-4
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponEnergyRevolver
+      amount: 1
+
+# Longarms
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseMla73
+  suffix: Dungeon, MlA-73
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSubMachineGunMla73
+      amount: 1
+    - id: Magazine6.35x40mmCaseless
+      amount: 2
+    - id: AmmoBox6.35x40mmCaseless
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseMr8c
+  suffix: Dungeon, MR-8C
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleMR8C
+      amount: 1
+    - id: Magazine8x65mmSKR
+      amount: 2
+    - id: AmmoBox8x65mmSKR
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseAbielle
+  suffix: Dungeon, Abielle Smartgun
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSubMachineSmart
+      amount: 1
+    - id: MagazineSmart
+      amount: 4
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseWspr
+  suffix: Dungeon, WSPR
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleWSPR
+      amount: 1
+    - id: Magazine7.62x39mmSubsonic
+      amount: 4
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseAnnie
+  suffix: Dungeon, Annie
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleAnnie
+      amount: 1
+    - id: Magazine7.62x39mmFMJ
+      amount: 2
+    - id: AmmoBox7.62x39mmBigFMJ
+      amount: 2
+
+# All after this are for loadouts/special mapping (not exped loot)
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseMla34
+  suffix: MlA-34
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleMla34
+      amount: 1
+    - id: MagazineSmart
+      amount: 4
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseAk502
+  suffix: AK-502
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleAK502
+      amount: 1
+    - id: Magazine7.62x39mmFMJ
+      amount: 2
+    - id: AmmoBox7.62x39mmBigFMJ
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseBigLeady
+  suffix: Big Leady
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponShotgunBigLeady
+      amount: 1
+    - id: AmmoBox23x75mmBuckshot
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseVector9mm
+  suffix: Vector, 9mm
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSubMachineGunVector9x19mm
+      amount: 1
+    - id: Magazine9x19mmSubMachineGunFMJ
+      amount: 4
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseVector45Acp
+  suffix: Vector, .45 ACP
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSubMachineGunVector45_ACP
+      amount: 1
+    - id: Magazine45_ACPSubMachineGunFMJ
+      amount: 4
+
+- type: entity
+  parent: WeaponCaseHeavy
+  id: WeaponCaseMla79
+  suffix: MlA-79
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSmartLmg
+      amount: 1
+    - id: MagazineSmartLMG
+      amount: 6

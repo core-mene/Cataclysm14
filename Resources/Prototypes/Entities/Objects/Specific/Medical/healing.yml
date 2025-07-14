@@ -41,8 +41,14 @@
         Caustic: -10 #Was 5 per type & 1.5 caustic, Buffed due to limb damage changes (Goobstation)
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
     healingEndSound:
       path: "/Audio/Items/Medical/ointment_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
   - type: Stack
     stackType: Ointment
     count: 15 #Was 10, Buffed due to limb damage changes (Goobstation)
@@ -92,8 +98,14 @@
         Caustic: -20 #Was 10 per type, Buffed due to limb damage changes (Goobstation)
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
     healingEndSound:
       path: "/Audio/Items/Medical/ointment_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
   - type: Stack
     stackType: RegenerativeMesh
     count: 15 #Was 10, Buffed due to limb damage changes (Goobstation)
@@ -129,8 +141,14 @@
         Brute: -45 # was 5 for each, Buffed due to limb damage changes (Goobstation)
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
   - type: Stack
     stackType: Brutepack
     count: 15 #Was 10, Buffed due to limb damage changes (Goobstation)
@@ -179,8 +197,14 @@
     bloodlossModifier: -10 # a suture should stop ongoing bleeding
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
   - type: Stack
     stackType: MedicatedSuture
     count: 15 #Was 10, Buffed due to surgery changes (Goobstation)
@@ -217,8 +241,14 @@
     ModifyBloodLevel: 30 #used to restore 5% blood per use, now restores about 10% blood per use on standard Buffed due to Limb Damage Changes (Goobstation)
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
   - type: Stack
     stackType: Bloodpack
     count: 15 #Was 10, Buffed due to limb damage changes (Goobstation)
@@ -239,25 +269,33 @@
   name: tourniquet
   description: Stops bleeding! Hopefully.
   components:
-  - type: Tag
-    tags:
-    - SecBeltEquip
-  - type: Sprite
-    state: tourniquet
-  - type: Healing
-    damageContainers:
-    - Biological
-    damage:
-      groups:
-        Brute: 5 # Tourniquets HURT!
-      types:
-        Asphyxiation: 5 # Essentially Stopping all blood reaching a part of your body
-    bloodlossModifier: -10 # Tourniquets stop bleeding
-    delay: 0.5
-    healingBeginSound:
-      path: "/Audio/Items/Medical/brutepack_begin.ogg"
-    healingEndSound:
-      path: "/Audio/Items/Medical/brutepack_end.ogg"
+    - type: Tag
+      tags:
+        - SecBeltEquip
+    - type: Sprite
+      state: tourniquet
+    - type: Item
+      heldPrefix: tourniquet
+    - type: Healing
+      damageContainers:
+        - Biological
+      damage:
+        groups:
+          Brute: 5 # Tourniquets HURT!
+        types:
+          Asphyxiation: 5 # Essentially Stopping all blood reaching a part of your body
+      bloodlossModifier: -10 # Tourniquets stop bleeding
+      delay: 0.5
+      healingBeginSound:
+        path: "/Audio/Items/Medical/brutepack_begin.ogg"
+        params:
+          volume: 1.0
+          variation: 0.125
+      healingEndSound:
+        path: "/Audio/Items/Medical/brutepack_end.ogg"
+        params:
+          volume: 1.0
+          variation: 0.125
 
 - type: entity
   name: roll of gauze
@@ -284,8 +322,14 @@
     bloodlossModifier: -10
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
   - type: Stack
     stackType: Gauze
     count: 15 #Was 10, Buffed due to limb damage changes (Goobstation)
@@ -345,8 +389,14 @@
     selfHealPenaltyMultiplier: 0
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
     healingEndSound:
       path: "/Audio/Items/Medical/ointment_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
 
 # Pills
 - type: entity

@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2025 UnicornOnLSD
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: ClothingBeltDrakeIndustries
+  name: drake industries webbing
+  parent: NFClothingBeltStorageBase
+  description: Much less durable than the leather regular salvage rigs are made of, at least it comes in black. Painted with Drake Industries' colors.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Belt/diwebbing.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Belt/diwebbing.rsi

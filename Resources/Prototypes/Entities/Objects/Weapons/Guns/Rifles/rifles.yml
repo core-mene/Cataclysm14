@@ -31,7 +31,9 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 BramvanZijp
+# SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 UltimateJester
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
@@ -96,10 +98,10 @@
       nfsd: 0.2
 
 - type: entity
-  name: AKM (7.62x39mm)
+  name: LWC AKM (7.62x39mm)
   parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband
   id: WeaponRifleAk
-  description: An iconic weapon of war. Uses 7.62x39mm ammo. An illegal firearm often used by Syndicate agents.
+  description: An old Pre-Fracture Era rifle. Uses 7.62x39mm ammo. When the Fracture began to spread across the Old Earth territories, few weapons were as reliable as the AKM
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Rifles/ak.rsi
@@ -148,10 +150,10 @@
     id: AKM # Frontier
 
 - type: entity
-  name: M-90gl (7.62x51mm)
+  name: PA M-90gl (7.62x51mm)
   parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponRifleM90GrenadeLauncher
-  description: An older bullpup carbine model, with an attached underbarrel grenade launcher. Uses 7.62x51mm ammo. An illegal firearm often used by Syndicate agents.
+  description: An older bullpup carbine model, with an attached underbarrel grenade launcher. Uses 7.62x51mm ammo.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Rifles/carbine.rsi
@@ -192,7 +194,7 @@
   - type: Appearance
 
 - type: entity
-  name: Lecter (5.56x45mm)
+  name: PA MR-8 Lecter (5.56x45mm)
   parent: [BaseWeaponRifle, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponRifleLecter
   description: A high end military grade assault rifle. Uses 5.56x45mm ammo. On the receiver is a label that says 'for authorized use only.'

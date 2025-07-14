@@ -1,3 +1,27 @@
+// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+// SPDX-FileCopyrightText: 2020 chairbender
+// SPDX-FileCopyrightText: 2020 zumorica
+// SPDX-FileCopyrightText: 2021 20kdc
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2021 DrSmugleaf
+// SPDX-FileCopyrightText: 2021 metalgearsloth
+// SPDX-FileCopyrightText: 2021 pointer-to-null
+// SPDX-FileCopyrightText: 2022 Alex Evgrashin
+// SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2023 Kara
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2024 Cojoke
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2025 J
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Administration;
 using Content.Server.Interaction;
 using Content.Server.Popups;
@@ -225,7 +249,7 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
     {
         var metadataQuery = EntityManager.GetEntityQuery<MetaDataComponent>();
 
-        if (Deleted(uid, metadataQuery))
+        if (Deleted(uid))
             return Array.Empty<(NetEntity, string)>();
 
         var list = new ValueList<(NetEntity, string)>();
@@ -380,7 +404,6 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
         }
 
         var activeQuery = EntityManager.GetEntityQuery<ActiveInstrumentComponent>();
-        var metadataQuery = EntityManager.GetEntityQuery<MetaDataComponent>();
         var transformQuery = EntityManager.GetEntityQuery<TransformComponent>();
 
         var query = AllEntityQuery<ActiveInstrumentComponent, InstrumentComponent>();
@@ -388,7 +411,7 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
         {
             if (instrument.Master is {} master)
             {
-                if (Deleted(master, metadataQuery))
+                if (Deleted(master))
                 {
                     Clean(uid, instrument);
                 }

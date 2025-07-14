@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 sleepyyapril
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -5,8 +6,8 @@
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitTrauma
-  name: trauma armed forces T-23 tacsuit
-  description: The standard combat suit for the Trauma Armed Forces. It has an integrated limited-range mass scanner in the helmet.
+  name: armed trauma unit T-23 tacsuit
+  description: The standard combat suit for the Armed Trauma Unit. It has an integrated limited-range mass scanner in the helmet.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/trauma.rsi
@@ -43,8 +44,8 @@
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitTraumaLeader
-  name: trauma armed forces T-53 tacsuit
-  description: Developed for extracting mission-critical patients under heavy fire, this is the standard gear of the Trauma Armed Forces' leader, with heavy plating and an integrated long-range mass scanner to match.
+  name: armed trauma unit T-53 tacsuit
+  description: Developed for extracting mission-critical patients under heavy fire, this is the standard gear of the Armed Trauma Unit's captain, with heavy plating and an integrated long-range mass scanner to match.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/trauma_leader.rsi

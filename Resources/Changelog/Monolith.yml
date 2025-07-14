@@ -7114,3 +7114,268 @@ Entries:
   id: 816
   time: '2025-07-12T00:33:53.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1335
+- author: ark1368
+  changes:
+    - type: Add
+      message: Ported smart weaponry from Goob.
+  id: 817
+  time: '2025-07-12T03:49:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1339
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Mechs arent as easy to research/build anymore.
+    - type: Tweak
+      message: >-
+        Mech weapons have had their damage values lowered, and should no longer
+        have access to a missile more powerful than a Wizden Syndicate Bomb.
+  id: 818
+  time: '2025-07-12T04:55:59.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1340
+- author: Mr T
+  changes:
+    - type: Add
+      message: AIs can now interact with alot of more entitys/objects!
+  id: 819
+  time: '2025-07-12T05:14:26.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1337
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Limbs have different sever/gib damage amounts based off type of limb
+  id: 820
+  time: '2025-07-12T05:16:49.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1252
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added more Mono/Goob specific guns to Expedition loot tables (Smart SMG,
+        MR-8C, Anaconda, EG-4, WSPR, Annie, MlA-73)
+  id: 821
+  time: '2025-07-12T05:21:50.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1341
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Smart SMG has offset (like Hristov/MR-8C) now.
+    - type: Fix
+      message: >-
+        Ported bugfixes for Smart SMG laser (such as being able to target
+        yourself)
+  id: 822
+  time: '2025-07-12T15:44:21.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1342
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added MlA-79 smart LMG as rare expedition loot. Credits to RMC14 for
+        sprites.
+  id: 823
+  time: '2025-07-12T16:43:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1344
+- author: core-mene
+  changes:
+    - type: Tweak
+      message: doubled pistol mags capacity
+    - type: Tweak
+      message: laser pointer real for some guns
+    - type: Add
+      message: Civilian version of the vulcan
+    - type: Add
+      message: KS23-like 4 gauge shotguns for mercenary and USSP
+    - type: Remove
+      message: Starch type balancing
+  id: 824
+  time: '2025-07-12T18:26:45.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1188
+- author: UnicornOnLSD
+  changes:
+    - type: Add
+      message: >-
+        Drake Industries merch is all over the sector. Show proudly who you're
+        working for (all clothing & new company badge available in loadouts or
+        affiliated DIS ships.)
+  id: 825
+  time: '2025-07-12T18:31:17.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1347
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        XLR-556 has smartgun firing noise now, and now counts to experimental
+        faction weapon bounty instead of standard faction longarm bounty.
+    - type: Tweak
+      message: Smartgun ammo isnt abysmally low damage now (10 pierce -> 16 pierce)
+  id: 826
+  time: '2025-07-12T21:39:10.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1352
+- author: UnicornOnLSD
+  changes:
+    - type: Tweak
+      message: DIS Olympus PROPERLY has it's distro workign now
+  id: 827
+  time: '2025-07-12T21:44:57.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1353
+- author: BlueHNT
+  changes:
+    - type: Tweak
+      message: >-
+        Changed priorities of ADS Laws to stop station strikes and civilian
+        casualties
+  id: 828
+  time: '2025-07-12T22:17:20.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1354
+- author: starch70
+  changes:
+    - type: Add
+      message: Mechs are in their own research discipline now.
+  id: 829
+  time: '2025-07-13T00:50:00.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1343
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added special gun cases locked behind faction playtimes for civ roles
+        (Merc, Contractor, Pilot) (separate from primary loadout group, go to
+        the bottom-most category to see them)
+  id: 830
+  time: '2025-07-13T00:57:25.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1358
+- author: UnicornOnLSD
+  changes:
+    - type: Tweak
+      message: >-
+        DIS Olympus has a disposal system now, where to throw all your non
+        profits. Hurray.
+  id: 831
+  time: '2025-07-13T00:58:17.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1356
+- author: UnicornOnLSD
+  changes:
+    - type: Add
+      message: Adds the DIS Antlion, a small mining carrier drone
+  id: 832
+  time: '2025-07-13T16:25:22.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1364
+- author: UnicornOnLSD
+  changes:
+    - type: Tweak
+      message: >-
+        DIS Pluto got an relook from DIS' brightest shipmakers. (see PR for new
+        looks)
+  id: 833
+  time: '2025-07-13T16:26:43.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1369
+- author: sleepyyapril
+  changes:
+    - type: Tweak
+      message: Fentanyl now requires Cognizine instead of oil.
+  id: 834
+  time: '2025-07-13T16:27:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1366
+- author: grandalff
+  changes:
+    - type: Tweak
+      message: >-
+        Comrades! USSP is determine Akula is waste too much resource for such
+        small size on armor, so we remove many plastitanium wall and change for
+        reinforced one, so plastitanium used to bigger ships! Za rodynu!
+  id: 835
+  time: '2025-07-13T16:28:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1367
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Tiny changes: Sellsword lightbulb not occluded by gravity generator
+        anymore and Takeaway got atmos can floor decals
+  id: 836
+  time: '2025-07-13T16:29:09.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1365
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Halcyon tweaks
+  id: 837
+  time: '2025-07-13T18:20:04.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1371
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        AK-502 and MlA-34 sprites colors adjusted a bit. Probably isn't too
+        noticeable.
+    - type: Tweak
+      message: >-
+        MlA-79 smart LMG loadout option is now a pro ultra-flex move. (500hrs
+        civ + 500k)
+  id: 838
+  time: '2025-07-13T19:22:09.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1361
+- author: starch70
+  changes:
+    - type: Add
+      message: Redid security guard gear appearance.
+  id: 839
+  time: '2025-07-13T19:36:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1360
+- author: UnicornOnLSD
+  changes:
+    - type: Tweak
+      message: >-
+        DIS Olympus has had it's emergency cabinets filled and disposal system
+        fixed
+  id: 840
+  time: '2025-07-13T21:25:36.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1372
+- author: UltimateJester
+  changes:
+    - type: Tweak
+      message: The guidebook now includes up-to-date entries, more updates to come!
+  id: 841
+  time: '2025-07-13T21:39:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1377
+- author: UltimateJester
+  changes:
+    - type: Tweak
+      message: Renamed various weapon descriptions to reflect the lore, RP upon you.
+  id: 842
+  time: '2025-07-13T21:39:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1376
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Larped up weapon names a bit (minus generic weapons such as laser
+        rifles, kammerers, etc)
+  id: 843
+  time: '2025-07-13T22:30:10.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1379
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added some chems I guess. (celoxradine, rhymatine, mesotaxinide,
+        letoferol)
+  id: 844
+  time: '2025-07-13T22:31:06.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1363
+- author: starch70
+  changes:
+    - type: Add
+      message: Remapped the rogue base (again 4x)
+  id: 845
+  time: '2025-07-13T22:34:00.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1378
+- author: starch70
+  changes:
+    - type: Remove
+      message: ASM-501 and VESPERA are now unanchorable.
+    - type: Tweak
+      message: Sellsword now has a VESPERA instead of a ASM-501
+  id: 846
+  time: '2025-07-13T23:22:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1381

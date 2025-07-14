@@ -1,0 +1,143 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: loadoutGroup
+  id: MonoSecurityGuardOuterClothing
+  name: loadout-group-contractor-outerclothing
+  hidden: true # No point in showing this, it gets auto-selected.
+  minLimit: 1
+  loadouts:
+  - MonoSecurityGuardVestSlim
+  fallbacks:
+  - MonoSecurityGuardVestSlim
+
+- type: loadout
+  id: MonoSecurityGuardVestSlim
+  equipment:
+    outerClothing: ClothingOuterArmorBasicSlim
+
+- type: loadoutGroup
+  id: MonoSecurityGuardBelt
+  name: loadout-group-contractor-belt
+  minLimit: 1
+  loadouts:
+  - MonoSecurityGuardWebbing
+  - MonoSecurityGuardAssaultBelt
+  - MonoSecurityGuardSecurityCarrier
+  fallbacks:
+  - MonoSecurityGuardSecurityCarrier
+
+- type: loadout
+  id: MonoSecurityGuardWebbing
+  name: security carrier (filled)
+  equipment:
+    belt: ClothingBeltSecurityWebbingFilled
+
+- type: loadout
+  id: MonoSecurityGuardSecurityCarrier
+  name: chest rig
+  equipment:
+    belt: ClothingBeltMilitaryWebbing
+
+- type: loadout
+  id: MonoSecurityGuardAssaultBelt
+  name: assault belt
+  equipment:
+    belt: ClothingBeltAssault
+
+- type: loadoutGroup
+  id: MonoSecurityGuardGaiter
+  name: loadout-group-contractor-face
+  loadouts:
+  - MonoSecurityGuardNeckGaiter
+  - MonoSecurityGuardNeckGaiterRed
+  fallbacks:
+  - MonoSecurityGuardNeckGaiter
+
+- type: loadout
+  id: MonoSecurityGuardNeckGaiter
+  storage:
+    back:
+    - ClothingMaskNeckGaiter
+
+- type: loadout
+  id: MonoSecurityGuardNeckGaiterRed
+  storage:
+    back:
+    - ClothingMaskNeckGaiterRed
+
+- type: loadoutGroup
+  id: MonoSecurityGuardHud
+  name: loadout-group-contractor-glasses
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - MonoSecHUD
+  fallbacks:
+  - MonoSecHUD
+
+- type: loadout
+  id: MonoSecHUD
+  equipment:
+    eyes: ClothingEyesHudSecurity
+
+- type: loadoutGroup
+  id: MonoSecurityGuardShoes
+  name: loadout-group-contractor-shoes
+  hidden: true # No point in showing this, it gets auto-selected.
+  minLimit: 1
+  loadouts:
+  - MonoSecurityGuardJackboots
+  fallbacks:
+  - MonoSecurityGuardJackboots
+
+- type: loadout
+  id: MonoSecurityGuardJackboots
+  equipment:
+    shoes: ClothingShoesBootsJackFilled
+
+- type: loadoutGroup
+  id: MonoSecurityGuardJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  minLimit: 1
+  loadouts:
+  - MonoSecJumpsuitRed
+  - MonoSecJumpsuitMaroon
+  fallbacks:
+  - MonoSecJumpsuitRed
+
+- type: loadout
+  id: MonoSecJumpsuitRed
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryColorRed
+
+- type: loadout
+  id: MonoSecJumpsuitMaroon
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryColorMaroon
+
+- type: loadoutGroup
+  id: MonoSecurityGuardBack
+  name: loadout-group-contractor-backpack
+  minLimit: 1
+  loadouts:
+  - MonoSecurityGuardBackpack
+  - MonoSecurityGuardSatchel
+  - MonoSecurityGuardDuffel
+  fallbacks:
+  - MonoSecurityGuardBackpack
+
+- type: loadout
+  id: MonoSecurityGuardBackpack
+  equipment:
+    back: NFClothingBackpack
+
+- type: loadout
+  id: MonoSecurityGuardSatchel
+  equipment:
+    back: ClothingBackpackSatchel
+
+- type: loadout
+  id: MonoSecurityGuardDuffel
+  equipment:
+    back: NFClothingDuffel

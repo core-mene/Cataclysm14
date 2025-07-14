@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Author Info
 # GitHub: starch70
 # Discord: _starch_
@@ -18,6 +22,9 @@
   addComponents:
   - type: IFF
     color: "#ccaa55"
+  - type: SolarPoweredGrid
+    trackOnInit: true
+    doNotCull: true
 
 - type: gameMap
   id: Lancelot
@@ -29,8 +36,8 @@
       stationProto: RecordsFrontierOutpostCargo
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Camelot Station'
+          mapNameTemplate: 'Lancelot Mining Outpost'
         - type: StationDeadDrop
-          maxDeadDrops: 2
+          maxDeadDrops: 6
         - type: TradeCrateWildcardDestination
-          valueMultiplier: 0.5
+          valueMultiplier: 1.5

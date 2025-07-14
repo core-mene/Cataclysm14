@@ -1,3 +1,13 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 FireFoxPhoenix
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: vendingMachineInventory
   id: WeaponryWorksVendInventory
   startingInventory:
@@ -71,8 +81,10 @@
     WeaponSubMachineGunC20rPMC: 4294967295
     WeaponSubMachineGunWt550PMC: 4294967295
     WeaponRifleLecterPMC: 4294967295
+    WeaponRifleVulcanFCMC: 4294967295
     WeaponSubMachineGunDrozdPMC: 4294967295
 # Shotguns
+    WeaponShotgunBigJohnny: 4294967295
     WeaponShotgunEnforcerPMC: 4294967295
     WeaponShotgunKammererPMC: 4294967295
 # Energy
@@ -97,15 +109,30 @@
     Magazine5.56x45mmFMJ: 4294967295 # 5.56x45mm Lecter
     Magazine7.62x39mmLowCapacityFMJ: 4294967295 # 7.62x39mm Gestio/AKM
     Magazine7.62x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
+    Magazine7.62x51mmLowCapacityFMJ: 4294967295 # 7.62x51mm Vulcan
+    Magazine7.62x51mmFMJ: 4294967295 # 7.62x51mm Vulcan
     Magazine7.62x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
     SpeedLoader7.62x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
     SpeedLoader7.62x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
     SpeedLoader45_magnumFMJ: 4294967295 # .45 magnum revolvers
 # Ammo
+    AmmoBox5.56x45mmFMJ: 4294967295 # 5.56x45mm
     AmmoBox5.56x45mmBigFMJ: 4294967295 # 5.56x45mm
+    AmmoBox7.62x39mmFMJ: 4294967295 # 7.62x39mm
     AmmoBox7.62x39mmBigFMJ: 4294967295 # 7.62x39mm
+    AmmoBox7.62x51mmFMJ: 4294967295 # 7.62x51mm
+    AmmoBox7.62x51mmBigFMJ: 4294967295 # 7.62x51mm
+    AmmoBox7.62x54mmRFMJ: 4294967295 # 7.62x54mmR
+    AmmoBox7.62x54mmRBigFMJ: 4294967295 # 7.62x54mmR
+    AmmoBox9x19mmFMJ: 4294967295 # 9x19mm
     AmmoBox9x19mmBigFMJ: 4294967295 # 9x19mm
+    AmmoBox45_ACPFMJ: 4294967295 # .45 ACP
+    AmmoBox45_ACPBigFMJ: 4294967295 # .45 ACP
     AmmoBox45_magnumFMJ: 4294967295 # .45 magnum
+    AmmoBox45_magnumBigFMJ: 4294967295 # .45 magnum
     AmmoBox12_gaugeSlug: 4294967295 # 12 gauge
     AmmoBox12_gaugeBuckshot: 4294967295 # 12 gauge
     AmmoBox12_gaugeBeanbag: 4294967295 # 12 gauge
+    AmmoBox23x75mmSlug: 4294967295 # 4 gauge
+    AmmoBox23x75mmBuckshot: 4294967295 # 4 gauge
+    AmmoBox23x75mmBeanbag: 4294967295 # 4 gauge

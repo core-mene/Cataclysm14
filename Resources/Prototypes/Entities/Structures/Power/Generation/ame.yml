@@ -32,6 +32,7 @@
 # SPDX-FileCopyrightText: 2024 Plykiya
 # SPDX-FileCopyrightText: 2024 Sergey Dikiy
 # SPDX-FileCopyrightText: 2025 ArtisticRoomba
+# SPDX-FileCopyrightText: 2025 MrTswe
 # SPDX-FileCopyrightText: 2025 Redrover1760
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -44,6 +45,7 @@
     mode: SnapgridCenter
   components:
   - type: Clickable
+  - type: StationAiWhitelist # Mono
   - type: InteractionOutline
   - type: Sprite
     snapCardinals: true

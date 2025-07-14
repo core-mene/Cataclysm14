@@ -5,6 +5,8 @@
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 Bonaout
 # SPDX-FileCopyrightText: 2025 ScyronX
+# SPDX-FileCopyrightText: 2025 UnicornOnLSD
+# SPDX-FileCopyrightText: 2025 gixer94
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -17,6 +19,15 @@
   price: 500
   equipment:
     neck: ClothingNeckScarfStripedBlack
+
+- type: loadout
+  id: ContractorClothingNeckUNSAArmband
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 5
+  equipment:
+    neck: ClothingNeckUNSAArmband
 
 - type: loadout
   id: ContractorClothingNeckScarfStripedBlue
@@ -80,6 +91,15 @@
   price: 500
   equipment:
     neck: ClothingNeckLawyerbadge
+    
+- type: loadout
+  id: ContractorClothingNeckDrakeIndustriesBadge
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    neck: ClothingNeckDrakeIndustriesBadge
 
 - type: loadout
   id: ContractorClothingNeckHeadphones

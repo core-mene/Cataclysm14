@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Empty mags
 - type: entity
   id: BaseMagazine7.62x39mm
@@ -293,4 +297,24 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
 
-
+- type: entity
+  id: MagazineDP29
+  name: "DP-29 magazine (7.62x39mm)"
+  parent: BaseMagazine7.62x39mm
+  components:
+  - type: Tag
+    tags:
+      - MagazineDP29
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x39mmFMJ
+    capacity: 48
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/dp29.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+  - type: Appearance
+  - type: StaticPrice
+    price: 50
+    vendPrice: 5000

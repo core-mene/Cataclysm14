@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Aviu00
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Mech Weapons
 - type: latheRecipe
   id: WeaponMechCombatImmolationGun
@@ -89,3 +94,22 @@
     Steel: 1500
     Glass: 750
     Silver: 150
+
+# Smartgun
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponSubMachineSmart
+  result: WeaponSubMachineSmart
+  materials:
+    Steel: 1800
+    Plastic: 750
+    Silver: 500
+    Gold: 500
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineSmart
+  result: MagazineSmart
+  materials:
+    Steel: 550

@@ -1,8 +1,16 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 UnicornOnLSD
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadout
   id: PilotClothingUniformJumpsuitPilot
   price: 0
   equipment:
-    jumpsuit: ClothingUniformJumpsuitPilot
+    jumpsuit: ClothingUniformJumpsuitPilot 
 
 # T3 "Military"
 - type: loadout
@@ -14,6 +22,15 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryPilot
 
+- type: loadout
+  id: PilotClothingUniformDrakeIndustriesTrucker
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 675
+  equipment:
+    jumpsuit: ClothingUniformDrakeIndustriesTrucker
+ 
 - type: loadout
   id: PilotClothingUniformJumpsuitMilitaryContractor
   effects:

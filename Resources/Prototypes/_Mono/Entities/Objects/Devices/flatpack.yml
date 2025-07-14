@@ -95,6 +95,17 @@
     price: 500
 
 - type: entity
+  parent: BaseFlatpack
+  id: AtmosDeviceFanDirectionalFlatpack
+  name: directional fan flatpack
+  description: A flatpack used for constructing a directional fan.
+  components:
+  - type: Flatpack
+    entity: AtmosDeviceFanDirectional
+  - type: StaticPrice
+    price: 400
+
+- type: entity
   parent: BaseNFFlatpack
   id: RDServerUSSPFlatpack
   name: ussp research and development server flatpack

@@ -12,6 +12,7 @@
 // SPDX-FileCopyrightText: 2024 checkraze
 // SPDX-FileCopyrightText: 2024 metalgearsloth
 // SPDX-FileCopyrightText: 2025 Avalon
+// SPDX-FileCopyrightText: 2025 Aviu00
 // SPDX-FileCopyrightText: 2025 GreaseMonk
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -289,6 +290,20 @@ public sealed partial class GunComponent : Component
     /// </summary>
     [DataField]
     public Vector2 DefaultDirection = new Vector2(0, -1);
+
+    /// <summary>
+    /// Goobstation
+    /// Whether the system won't change gun target when we stop aiming at it while firing in burst mode.
+    /// </summary>
+    [DataField]
+    public bool LockOnTargetBurst;
+
+    /// <summary>
+    /// Goobstation
+    /// Muzzle flash will be rotated by this angle if the weapon is dropped
+    /// </summary>
+    [DataField]
+    public Angle MuzzleFlashRotationOffset;
 }
 
 [Flags]
