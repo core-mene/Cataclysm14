@@ -1,32 +1,11 @@
-# SPDX-FileCopyrightText: 2023 Leon Friedrich
-# SPDX-FileCopyrightText: 2023 Nemanja
-# SPDX-FileCopyrightText: 2023 Scribbles0
-# SPDX-FileCopyrightText: 2023 brainfood1183
-# SPDX-FileCopyrightText: 2023 deltanedas
-# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 Emisse
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 Kara
-# SPDX-FileCopyrightText: 2024 Maxtone
-# SPDX-FileCopyrightText: 2024 Mr. Samuel
-# SPDX-FileCopyrightText: 2024 Salvantrix
-# SPDX-FileCopyrightText: 2024 metalgearsloth
-# SPDX-FileCopyrightText: 2025 Alice "Arimah" Heurlin
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 Tych0
-# SPDX-FileCopyrightText: 2025 UnicornOnLSD
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/13/2025 12:24:04
-  entityCount: 273
+  time: 07/14/2025 09:31:00
+  entityCount: 270
 maps: []
 grids:
 - 2
@@ -651,14 +630,6 @@ entities:
     - type: Transform
       pos: -2.5,5.5
       parent: 2
-- proto: BlastDoor
-  entities:
-  - uid: 166
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 2.5,1.5
-      parent: 2
 - proto: BlastDoorOpen
   entities:
   - uid: 45
@@ -673,29 +644,23 @@ entities:
       rot: 3.141592653589793 rad
       pos: -1.5,5.5
       parent: 2
+  - uid: 97
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 2.5,1.5
+      parent: 2
   - uid: 111
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 0.5,0.5
-      parent: 2
-  - uid: 130
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 0.5,-0.5
+      pos: 0.5,1.5
       parent: 2
   - uid: 159
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.5,5.5
-      parent: 2
-  - uid: 247
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 0.5,1.5
       parent: 2
 - proto: CableApcExtension
   entities:
@@ -1216,11 +1181,10 @@ entities:
       parent: 2
 - proto: ExtinguisherCabinetFilled
   entities:
-  - uid: 97
+  - uid: 46
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,-1.5
+      pos: 1.5,-1.5
       parent: 2
 - proto: FaxMachineShip
   entities:
@@ -1836,31 +1800,19 @@ entities:
       canCollide: False
 - proto: SignalButtonDirectional
   entities:
-  - uid: 46
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 1.5,-1.5
-      parent: 2
-    - type: DeviceLinkSource
-      linkedPorts:
-        166:
-        - Pressed: Toggle
   - uid: 232
     components:
     - type: MetaData
-      name: Docks lock
+      name: cargo belt blast doors
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.24873245,2.4991827
       parent: 2
     - type: DeviceLinkSource
       linkedPorts:
-        247:
-        - Pressed: Toggle
         111:
         - Pressed: Toggle
-        130:
+        97:
         - Pressed: Toggle
   - uid: 256
     components:
