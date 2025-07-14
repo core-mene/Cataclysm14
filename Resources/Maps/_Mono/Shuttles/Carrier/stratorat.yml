@@ -1,34 +1,11 @@
-# SPDX-FileCopyrightText: 2022 20kdc
-# SPDX-FileCopyrightText: 2022 Nemanja
-# SPDX-FileCopyrightText: 2022 Peptide90
-# SPDX-FileCopyrightText: 2022 metalgearsloth
-# SPDX-FileCopyrightText: 2022 retequizzle
-# SPDX-FileCopyrightText: 2023 Dawid Bla
-# SPDX-FileCopyrightText: 2023 Leon Friedrich
-# SPDX-FileCopyrightText: 2024 Emisse
-# SPDX-FileCopyrightText: 2024 Kara
-# SPDX-FileCopyrightText: 2024 Mangohydra
-# SPDX-FileCopyrightText: 2024 Nairod
-# SPDX-FileCopyrightText: 2024 QueerNB
-# SPDX-FileCopyrightText: 2024 Ubaser
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 RealSchepka
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 compilatron
-# SPDX-FileCopyrightText: 2025 crazy1112345
-# SPDX-FileCopyrightText: 2025 significant harassment
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/14/2025 00:03:04
-  entityCount: 222
+  time: 07/14/2025 02:59:19
+  entityCount: 223
 maps: []
 grids:
 - 1
@@ -187,7 +164,8 @@ entities:
             2: 5732
             1: 16384
           0,1:
-            1: 39
+            1: 35
+            3: 4
             2: 20224
           -1,1:
             1: 622
@@ -249,6 +227,21 @@ entities:
           - 0
           - 0
           - 0
+        - volume: 2500
+          temperature: 293.1499
+          moles:
+          - 20.078888
+          - 75.53487
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
@@ -256,15 +249,24 @@ entities:
       locked: False
 - proto: ActionToggleInternals
   entities:
-  - uid: 4
+  - uid: 6
     mapInit: true
     paused: true
     components:
     - type: Transform
-      parent: 3
+      parent: 5
     - type: InstantAction
       originalIconColor: '#FFFFFFFF'
-      container: 3
+      container: 5
+  - uid: 9
+    mapInit: true
+    paused: true
+    components:
+    - type: Transform
+      parent: 8
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 8
 - proto: AirCanister
   entities:
   - uid: 10
@@ -309,7 +311,7 @@ entities:
       pos: -0.5,-4.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -777.00885
+      secondsUntilStateChange: -862.12195
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -660,13 +662,11 @@ entities:
       parent: 1
 - proto: CableApcStack10
   entities:
-  - uid: 5
+  - uid: 223
     components:
     - type: Transform
-      parent: 2
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
+      pos: 1.2671058,3.798305
+      parent: 1
 - proto: CableHV
   entities:
   - uid: 82
@@ -870,7 +870,7 @@ entities:
       parent: 1
 - proto: GasDepositLocatorUnpowered
   entities:
-  - uid: 6
+  - uid: 3
     components:
     - type: Transform
       parent: 2
@@ -1269,25 +1269,42 @@ entities:
       startingCharge: 0
     - type: ApcPowerReceiver
       powerLoad: 5
-- proto: LockerWallColorGenericBlack
+- proto: LockerMaterials
   entities:
   - uid: 2
     components:
     - type: Transform
-      pos: 2.5,5.5
+      pos: 2.5,4.5
       parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14914
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
           showEnts: False
           occludes: True
           ents:
-          - 8
-          - 5
-          - 9
-          - 7
           - 3
-          - 6
+          - 4
+          - 5
+          - 7
+          - 8
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -1310,21 +1327,12 @@ entities:
       parent: 1
 - proto: NitrogenTankFilled
   entities:
-  - uid: 7
-    components:
-    - type: Transform
-      parent: 2
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: OxygenTankFilled
-  entities:
-  - uid: 3
+  - uid: 5
     components:
     - type: Transform
       parent: 2
     - type: GasTank
-      toggleActionEntity: 4
+      toggleActionEntity: 6
     - type: Physics
       canCollide: False
     - type: ActionsContainer
@@ -1332,11 +1340,28 @@ entities:
       containers:
         actions: !type:Container
           ents:
-          - 4
+          - 6
+    - type: InsideEntityStorage
+- proto: OxygenTankFilled
+  entities:
+  - uid: 8
+    components:
+    - type: Transform
+      parent: 2
+    - type: GasTank
+      toggleActionEntity: 9
+    - type: Physics
+      canCollide: False
+    - type: ActionsContainer
+    - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents:
+          - 9
     - type: InsideEntityStorage
 - proto: Pickaxe
   entities:
-  - uid: 8
+  - uid: 7
     components:
     - type: Transform
       parent: 2
@@ -1484,7 +1509,7 @@ entities:
       parent: 1
 - proto: SheetSteel10
   entities:
-  - uid: 9
+  - uid: 4
     components:
     - type: Transform
       parent: 2
