@@ -11,6 +11,7 @@
   - MobNonHumanHostileBase
   - MobHumanoidHostileAISimpleMelee
   - MobLaserReflect
+  - StripableInventoryBase
   id: MonoBaseMobFleshLetoferol
   name: chimera fleshbeast
   description: A once sentient being covered in putrid flesh and bone. You can see a glimpse of humanity left in its eyes, like whoever it was is still awake.
@@ -70,9 +71,31 @@
     baseSprintSpeed : 4.25
   - type: Hands
   - type: ComplexInteraction
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Electrocution
+    - Drunk
+    - SlurredSpeech
+    - Muted
+    - TemporaryBlindness
+    - StaminaModifier
+    - Flashed
+    - RadiationProtection
   - type: Ensnareable
     sprite: Objects/Misc/ensnare.rsi
     state: icon
+  - type: Climbing
+  - type: Storage
+    clickInsert: false
+    openOnActivate: false
+    grid:
+    - 0,0,4,4
+    maxItemSize: Huge
+    storageInsertSound:
+      path: /Audio/Voice/Slime/slime_squish.ogg
   - type: Tag
     tags:
     - CanPilot
@@ -81,10 +104,11 @@
     allowedStates:
     - Alive
     damage:
-      types:
-        Heat: -0.25
       groups:
-        Brute: -0.25
+        Brute: -0.45
+        Burn: -0.45
+        Toxic: -0.1
+        Genetic: -0.1
   - type: Targeting
   - type: Puller
     needsHands: false
@@ -93,10 +117,10 @@
     requiredLegs: 2
   - type: Reactive
     groups:
-      Flammable: [ Touch ]
-      Extinguish: [ Touch ]
+      Flammable: [Touch]
+      Extinguish: [Touch]
     reactions:
-    - reagents: [ Letoferol, Romerol ]
+    - reagents: [Letoferol, Romerol]
       methods: [ Touch ]
       effects:
       - !type:HealthChange
@@ -105,8 +129,8 @@
           groups:
             Burn: -2
             Brute: -1.5
-    - reagents: [ Mesotaxinide ]
-      methods: [ Touch ]
+    - reagents: [Mesotaxinide]
+      methods: [Touch, Ingestion]
       effects:
       - !type:HealthChange
         scaleByQuantity: true
@@ -134,7 +158,6 @@
   parent: MonoBaseMobFleshLetoferol
   id: MobLetoferolHorror
   name: chimera fleshbeast
-  description:
   components:
   - type: MovementSpeedModifier
     baseWalkSpeed : 2.7
@@ -163,6 +186,7 @@
     speedModifierThresholds:
       120: 0.7
       250: 0.5
+      300: 0.25
   - type: MeleeWeapon
     autoAttack: true
     attackRate: 1.2
@@ -219,7 +243,7 @@
   - type: ProjectileSpread
     proto: LetoferolHorrorSpike
     count: 5
-    spread: 4
+    spread: 12
 
 - type: entity
   id: LetoferolHorrorSpike
@@ -240,7 +264,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 6
+        Piercing: 11
 
 - type: entity
   id: ActionLetoferolSpike
