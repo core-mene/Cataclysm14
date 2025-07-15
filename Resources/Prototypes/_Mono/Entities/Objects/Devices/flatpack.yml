@@ -59,7 +59,7 @@
   - type: Flatpack
     entity: MachineFTLDrive
   - type: StaticPrice
-    price: 1700
+    vendPrice: 100000
 
 - type: entity
   parent: BaseFlatpack
@@ -70,7 +70,7 @@
   - type: Flatpack
     entity: MachineFTLDrive50
   - type: StaticPrice
-    price: 3000
+    vendPrice: 200000
 
 - type: entity
   parent: BaseFlatpack
@@ -81,7 +81,7 @@
   - type: Flatpack
     entity: MachineFTLDrive25S
   - type: StaticPrice
-    price: 5000
+    vendPrice: 300000
 
 - type: entity
   parent: BaseFlatpack
