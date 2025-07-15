@@ -1,0 +1,11 @@
+- type: entity
+  parent: BaseBlueprint
+  id: BlueprintWarlordSuit
+  name: PMC combat suit WarlorD blueprint
+  description: A blueprint with a schematic of an Warlord suit. It can be inserted into an autolathe or a techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - MonoHardsuitWarlordRecipe
+  - type: StaticPrice
+    vendPrice: 30000
