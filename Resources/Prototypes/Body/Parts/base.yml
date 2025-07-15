@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2024 Jezithyr
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Shitmed Change: this entire file is reorganized for shitmed:
 # Instead of random species parts inheriting BaseItem and copy pasting stuff,
 # EVERYTHING inherits either BasePart or BasePartInorganic.
@@ -89,6 +97,7 @@
     partType: Head
     toolName: "a head" # Shitmed Change
     vital: true
+    severIntegrity: 400 # Mono
     organs: # Shitmed Change
       brain:
         id: brain
@@ -99,9 +108,39 @@
   - type: Tag
     tags:
       - Head
+  - type: Destructible # Mono
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 500 # 110->500
+      behaviors:
+      - !type:GibPartBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Slash
+        damage: 600 # 150->600
+      behaviors:
+      - !type:GibPartBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 700 # 200->700
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          Ash:
+            min: 1
+            max: 1
+      - !type:BurnBodyBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MeatLaserImpact
 
 - type: entity
   abstract: true
+  parent: MajorLimb # Mono
   id: BaseLeftArm
   name: "left arm"
   components:
@@ -120,6 +159,7 @@
 
 - type: entity
   abstract: true
+  parent: MajorLimb # Mono
   id: BaseRightArm
   name: "right arm"
   components:
@@ -135,9 +175,11 @@
       right hand:
         id: right hand
         type: Hand
+    severIntegrity: 160 # Mono
 
 - type: entity
   abstract: true
+  parent: MinorLimb # Mono
   id: BaseLeftHand
   name: "left hand"
   components:
@@ -152,6 +194,7 @@
 
 - type: entity
   abstract: true
+  parent: MinorLimb # Mono
   id: BaseRightHand
   name: "right hand"
   components:
@@ -166,6 +209,7 @@
 
 - type: entity
   abstract: true
+  parent: MajorLimb # Mono
   id: BaseLeftLeg
   name: "left leg"
   components:
@@ -185,6 +229,7 @@
 
 - type: entity
   abstract: true
+  parent: MajorLimb # Mono
   id: BaseRightLeg
   name: "right leg"
   components:
@@ -204,6 +249,7 @@
 
 - type: entity
   abstract: true
+  parent: MinorLimb # Mono
   id: BaseLeftFoot
   name: "left foot"
   components:
@@ -218,6 +264,7 @@
 
 - type: entity
   abstract: true
+  parent: MinorLimb # Mono
   id: BaseRightFoot
   name: "right foot"
   components:
@@ -229,3 +276,74 @@
     partType: Foot
     symmetry: Right
     toolName: "a right foot" # Shitmed Change
+
+- type: entity # Mono
+  abstract: true
+  id: MajorLimb
+  components:
+  - type: BodyPart
+    severIntegrity: 160
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 190 # 110->190
+      behaviors:
+      - !type:GibPartBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Slash
+        damage: 210 # 150->210
+      behaviors:
+      - !type:GibPartBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 250 # 200->250
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          Ash:
+            min: 1
+            max: 1
+      - !type:BurnBodyBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MeatLaserImpact
+
+
+- type: entity # Mono
+  abstract: true
+  id: MinorLimb
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 150 # 110->150
+      behaviors:
+      - !type:GibPartBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Slash
+        damage: 180 # 150->180
+      behaviors:
+      - !type:GibPartBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 230 # 200->230
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          Ash:
+            min: 1
+            max: 1
+      - !type:BurnBodyBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MeatLaserImpact

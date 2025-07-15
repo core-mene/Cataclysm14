@@ -1,0 +1,43 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: starch70
+# Discord: _starch_
+
+# Maintainer Info
+# GitHub: starch70
+# Discord: _starch_
+
+# Notes:
+- type: pointOfInterest
+  id: Lancelot
+  parent: BasePOI
+  name: 'Lancelot Mining Outpost'
+  minimumDistance: 19650
+  maximumDistance: 25400
+  spawnGroup: Required
+  gridPath: /Maps/_Mono/POI/lancelot.yml
+  addComponents:
+  - type: IFF
+    color: "#ccaa55"
+  - type: SolarPoweredGrid
+    trackOnInit: true
+    doNotCull: true
+
+- type: gameMap
+  id: Lancelot
+  mapName: 'Lancelot Mining Outpost'
+  mapPath: /Maps/_Mono/POI/lancelot.yml
+  minPlayers: 0
+  stations:
+    Lancelot:
+      stationProto: RecordsFrontierOutpostCargo
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Lancelot Mining Outpost'
+        - type: StationDeadDrop
+          maxDeadDrops: 6
+        - type: TradeCrateWildcardDestination
+          valueMultiplier: 1.5

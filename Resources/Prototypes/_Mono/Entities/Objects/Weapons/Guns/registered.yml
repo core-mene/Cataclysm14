@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 Redrover1760
@@ -14,7 +15,6 @@
   parent:
   - BaseC2ContrabandMercenary
   - WeaponPistolViper
-  name: PMC Viper (9x19mm)
   id: WeaponPistolViperPMC
   description: A Viper that has been properly registered for private security and mercenary use. A small underpowered gun retrofitted with a fully automatic receiver. It is favored by Syndicate agents for being easily concealable. Uses 9x19mm ammo.
   components:
@@ -27,7 +27,6 @@
   parent:
   - BaseC2ContrabandMercenary
   - WeaponSubMachineGunWt550
-  name: PMC WT-550 (4.6x30mm)
   id: WeaponSubMachineGunWt550PMC
   description: A WT-550 that has been properly registered for private security and mercenary use. A compact personal defense sub-machine gun. Lightweight build allows for ease of use without wielding a grip. Uses 4.6x30mm ammo.'
   components:
@@ -38,7 +37,6 @@
   parent:
   - BaseC2ContrabandMercenary
   - WeaponSubMachineGunDrozd
-  name: PMC Drozd (.45 ACP)
   id: WeaponSubMachineGunDrozdPMC
   description: A Drozd that has been properly registered for private security and mercenary use. An old and cheap fully automatic Heavy SMG. Beloved by Mercenaries for it's affordability. Uses .45 ACP ammo.
   components:
@@ -49,7 +47,6 @@
   parent:
   - BaseC2ContrabandMercenary
   - WeaponSubMachineGunC20r
-  name: PMC C-20r (9x19mm)
   id: WeaponSubMachineGunC20rPMC
   description: A C-20r that has been properly registered for private security and mercenary use. A fast firing sub-machine gun that is often used by the infamous rogue insurgency. Uses 9x19mm ammo.
   components:
@@ -64,7 +61,6 @@
   parent:
   - BaseC2ContrabandMercenary
   - WeaponRifleLecter
-  name: PMC Lecter (5.56x45mm)
   id: WeaponRifleLecterPMC
   description: A Lecter that has been properly registered for private security and mercenary use. A high end military grade assault rifle. Is a common primary carried by Trans-Solar Federation Marines due to it's high accuracy and cheap manufacturing costs. Uses 5.56x45mm ammo.
   components:
@@ -77,7 +73,6 @@
   parent:
   - BaseC2ContrabandMercenary
   - WeaponShotgunKammerer
-  name: PMC Kammerer (12 gauge)
   id: WeaponShotgunKammererPMC
   description: A Kammerer that has been properly registered for private security and mercenary use. An old yet faithfully designed shotgun. Is a favorite among Mercenaries on many worlds. Uses 12 gauge shotgun shells.
   components:
@@ -88,7 +83,6 @@
   parent:
   - BaseC2ContrabandMercenary
   - WeaponShotgunEnforcer
-  name: PMC Enforcer (12 gauge)
   id: WeaponShotgunEnforcerPMC
   description: An Enforcer that has been properly registered for private security and mercenary use. A premium semi-automatic shotgun, and the pride of all security forces. Uses 12 gauge shotgun shells.
   components:
@@ -101,7 +95,6 @@
   parent:
   - BaseC2ContrabandMercenary
   - WeaponEnergyGun
-  name: PMC Energy Gun
   id: WeaponEnergyGunPMC
   description: An Energy Gun that has been properly registered for private security and mercenary use. A Shellguard EG-7 model. It is beloved by NanoTrasen Private Security for being a versatile weapon that merges disabler and laser.
   components:
@@ -112,7 +105,6 @@
   parent:
   - BaseC2ContrabandMercenary
   - WeaponLaserCarbine
-  name: PMC Laser Rifle
   id: WeaponLaserCarbinePMC
   description: A Laser Rifle that has been properly registered for private security and mercenary use. A Shellguard LG-6 model. It is a simple laser carbine and the workhorse of many Private Security organizations.
   components:
@@ -123,7 +115,6 @@
   parent:
   - BaseC2ContrabandMercenary
   - WeaponLaserCannon
-  name: PMC Laser Cannon
   id: WeaponLaserCannonPMC
   description: A Laser Cannon that has been properly registered for private security and mercenary use. An offering from local R&D. It is a heavy duty accelerated laser cannon.
   components:
@@ -134,7 +125,6 @@
   parent:
   - BaseC2ContrabandMercenary
   - WeaponDisablerSMG
-  name: PMC Disabler SMG
   id: WeaponDisablerSMGPMC
   description: A Disabler SMG that has been properly registered for private security and mercenary use. An upscaled version of Shellguard disabler. Featuring the ability to pepper a large area with incapacitating shots for crowd suppression and riot control.
   components:

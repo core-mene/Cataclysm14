@@ -1,3 +1,20 @@
+# SPDX-FileCopyrightText: 2023 Kesiath
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 blueDev2
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 BramvanZijp
+# SPDX-FileCopyrightText: 2025 GreaseMonk
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 dustylens
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: MusicBasePDA
   abstract: true
@@ -119,8 +136,8 @@
 - type: entity
   parent: [BaseSecurityPDA, BaseCommandContraband]
   id: SheriffPDA
-  name: colonel PDA
-  description: Whosoever bears this PDA is the law.
+  name: TSFMC colonel PDA
+  description: A standard TSFMC personal computer.
   components:
   - type: Pda
     id: ShriffIDCard
@@ -160,8 +177,8 @@
 - type: entity
   parent: BaseSecurityPDA
   id: CadetPDA
-  name: cadet PDA
-  description: Whosoever bears this PDA could be the law.
+  name: TSF private PDA
+  description: A standard TSFMC personal computer.
   components:
   - type: Pda
     id: CadetIDCard
@@ -186,8 +203,8 @@
 - type: entity
   parent: BaseSecurityPDA
   id: DeputyPDA
-  name: deputy PDA
-  description: Whosoever bears this PDA is close to being the law.
+  name: TSF corporal PDA
+  description: A standard TSFMC personal computer.
   components:
   - type: Pda
     id: DeputyIDCard
@@ -212,8 +229,8 @@
 - type: entity
   parent: BaseSecurityPDA
   id: BrigmedicNFPDA
-  name: brigmedic PDA
-  description: Whosoever bears this PDA heals the law.
+  name: TSF corpsman PDA
+  description: A standard TSFMC personal computer.
   components:
   - type: Pda
     id: BrigmedicNFIDCard
@@ -238,8 +255,8 @@
 - type: entity
   parent: BaseSecurityPDA
   id: SergeantPDA
-  name: sergeant PDA
-  description: Whosoever bears this PDA puts the law on their back.
+  name: TSF lieutenant PDA
+  description: A standard TSFMC personal computer.
   components:
   - type: Pda
     id: SergeantIDCard
@@ -264,8 +281,8 @@
 - type: entity
   parent: BaseSecurityPDA
   id: BailiffPDA
-  name: bailiff PDA
-  description: Whosoever bears this PDA puts the law on their back.
+  name: TSF captain PDA
+  description: A standard TSFMC personal computer.
   components:
   - type: Pda
     id: BailiffIDCard
@@ -381,7 +398,7 @@
 - type: entity
   parent: PiratePDA
   id: PirateNFPDA
-  name: pirate PDA
+  name: rogue PDA
   components:
   - type: Pda
     id: PirateNFIDCard
@@ -394,7 +411,7 @@
 - type: entity
   parent: PiratePDA
   id: PirateCaptainNFPDA
-  name: pirate captain PDA
+  name: rogue commander PDA
   components:
   - type: Pda
     id: PirateCaptainNFIDCard
@@ -407,7 +424,7 @@
 - type: entity
   parent: PiratePDA
   id: PirateFirstMateNFPDA
-  name: pirate first mate PDA
+  name: rogue commandant PDA
   components:
   - type: Pda
     id: PirateFirstMateNFIDCard

@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 #SOFTSUITS
 - type: entity
   parent: [ SuitStorageWallmount, StorageFillEVASuitGoblin ]
@@ -358,3 +367,19 @@
 - type: entity
   id: SuitStorageWallmountNfsdCommand
   parent: [SuitStorageWallmount, SuitStorageNfsdCommand]
+
+# M82c/b
+
+- type: entity
+  parent: [ SuitStorageWallmount, SuitStorageM82c ]
+  id: SuitStorageWallmountM82c
+
+- type: entity
+  parent: [ SuitStorageWallmount, SuitStorageM82b ]
+  id: SuitStorageWallmountM82b
+
+# M86
+
+- type: entity
+  parent: [ SuitStorageWallmount, SuitStorageM86 ]
+  id: SuitStorageWallmountM86

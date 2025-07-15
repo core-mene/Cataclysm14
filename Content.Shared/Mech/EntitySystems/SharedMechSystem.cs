@@ -16,6 +16,7 @@
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 BeeRobynn
 // SPDX-FileCopyrightText: 2025 Blu
+// SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 wewman222
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -545,6 +546,14 @@ public abstract class SharedMechSystem : EntitySystem
         {
             if (!_canUseMechGunOutside)
                 args.Cancel();
+            return;
+        }
+
+        if (TryComp<TransformComponent>(uid, out var xform) && xform.GridUid != null && component.PreventFireOnGrid)
+        {
+            _popup.PopupEntity(Loc.GetString("gun-no-fire-station"), uid);
+
+            args.Cancel();
             return;
         }
 

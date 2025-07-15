@@ -1,3 +1,18 @@
+// SPDX-FileCopyrightText: 2021 20kdc
+// SPDX-FileCopyrightText: 2021 DrSmugleaf
+// SPDX-FileCopyrightText: 2021 Paul
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2022 Leon Friedrich
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 Kara
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 Vasilis
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2025 J
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Construction;
 using Content.Shared.Containers.ItemSlots;
 using JetBrains.Annotations;
@@ -33,12 +48,14 @@ namespace Content.Server.Containers
 
         private void OnDeconstruct(EntityUid uid, EmptyOnMachineDeconstructComponent component, MachineDeconstructedEvent ev)
         {
-            if (!EntityManager.TryGetComponent<ContainerManagerComponent>(uid, out var mComp))
+            if (!TryComp<ContainerManagerComponent>(uid, out var mComp))
                 return;
-            var baseCoords = EntityManager.GetComponent<TransformComponent>(uid).Coordinates;
+
+            var baseCoords = Transform(uid).Coordinates;
+
             foreach (var v in component.Containers)
             {
-                if (mComp.TryGetContainer(v, out var container))
+                if (_container.TryGetContainer(uid, v, out var container, mComp))
                 {
                     _container.EmptyContainer(container, true, baseCoords);
                 }

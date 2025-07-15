@@ -3,24 +3,14 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: latheRecipe
-  id: ClothingOuterHardsuitM73BronzeTsf
+  id: ClothingOuterHardsuitM82cTsf
   parent: MonoHardsuitT1Recipe
-  result: ClothingOuterHardsuitNfsdBronze
+  result: ClothingOuterHardsuitM82c
 
 - type: latheRecipe
-  id: ClothingOuterHardsuitM73SilverTsf
-  parent: ClothingOuterHardsuitM73BronzeTsf
-  result: ClothingOuterHardsuitNfsdSilver
-
-- type: latheRecipe
-  id: ClothingOuterHardsuitM73GoldTsf
-  parent: ClothingOuterHardsuitM73BronzeTsf
-  result: ClothingOuterHardsuitNfsdGold
-
-- type: latheRecipe
-  id: ClothingOuterHardsuitM73BrigmedicTsf
+  id: ClothingOuterHardsuitM82bTsf
   parent: MonoHardsuitT1Recipe
-  result: ClothingOuterHardsuitNfsdBrigmedic
+  result: ClothingOuterHardsuitM82b
   materials:
     Glass: 200
     Steel: 3000
@@ -31,14 +21,9 @@
     Gold: 500
 
 - type: latheRecipe
-  id: ClothingOuterHardsuitM93Tsf
+  id: ClothingOuterHardsuitM86Tsf
   parent: MonoHardsuitT2Recipe
-  result: ClothingOuterHardsuitNfsdCombat
-
-- type: latheRecipe
-  id: ClothingOuterHardsuitM93CTsf
-  parent: ClothingOuterHardsuitM93Tsf
-  result: ClothingOuterHardsuitNfsdCommand
+  result: ClothingOuterHardsuitM86
 
 - type: latheRecipe
   id: ClothingOuterHardsuitM92XTsf

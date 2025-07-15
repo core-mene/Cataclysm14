@@ -1,38 +1,19 @@
-- type: entity
-  parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
-  id: BaseAmmoProvider
-  abstract: true
-  components:
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-  - type: Item
-    size: Normal
-  - type: Sprite
-    sprite: Objects/Storage/boxes.rsi
+# SPDX-FileCopyrightText: 2024 Boaz1111
+# SPDX-FileCopyrightText: 2024 Cojoke
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Plykiya
+# SPDX-FileCopyrightText: 2024 SpaceRox1244
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 Ps3Moira
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: [BaseAmmoProvider, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
-  id: AmmoProviderShotgunShell
-  abstract: true
-  components:
-    - type: Sprite
-      sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/12_gauge.rsi
-    - type: BallisticAmmoProvider
-      mayTransfer: true
-      whitelist:
-        tags:
-        - ShellShotgun12_gauge
-      capacity: 32 # Mono 16->32
-    - type: MagazineVisuals
-      magState: mag
-      steps: 5
-      zeroVisible: false
-    - type: Appearance
-
-# Shotgun Shells
-- type: entity
-  parent: AmmoProviderShotgunShell
+  parent: AmmoProvider12_gaugeShotgunShell
   id: AmmoBox12_gaugeBeanbag
   name: shotgun shell box (12 gauge beanbag)
   components:
@@ -52,11 +33,11 @@
 
 - type: entity
   name: shotgun shell box (12 gauge buckshot)
-  parent: AmmoProviderShotgunShell
+  parent: AmmoProvider12_gaugeShotgunShell
   id: AmmoBox12_gaugeBuckshot
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgun12_gauge
+      proto: ShellShotgun12_gaugeBuckshot
     - type: Sprite
       layers:
       - state: base
@@ -67,7 +48,7 @@
 
 - type: entity
   name: shotgun shell box (12 gauge slug)
-  parent: AmmoProviderShotgunShell
+  parent: AmmoProvider12_gaugeShotgunShell
   id: AmmoBox12_gaugeSlug
   components:
     - type: BallisticAmmoProvider
@@ -86,7 +67,7 @@
 
 - type: entity
   name: flare shell box (12 gauge flare)
-  parent: AmmoProviderShotgunShell
+  parent: AmmoProvider12_gaugeShotgunShell
   id: AmmoBox12_gaugeFlare
   components:
     - type: BallisticAmmoProvider
@@ -105,7 +86,7 @@
 
 - type: entity
   name: shotgun shell box (12 gauge incendiary)
-  parent: AmmoProviderShotgunShell
+  parent: AmmoProvider12_gaugeShotgunShell
   id: AmmoBox12_gaugeIncendiary
   components:
     - type: BallisticAmmoProvider
@@ -124,7 +105,7 @@
 
 - type: entity
   name: shotgun shell box (12 gauge uranium)
-  parent: AmmoProviderShotgunShell
+  parent: AmmoProvider12_gaugeShotgunShell
   id: AmmoBox12_gaugeUranium
   components:
     - type: BallisticAmmoProvider
@@ -143,7 +124,7 @@
 
 - type: entity
   name: shotgun shell box (12 gauge practice)
-  parent: AmmoProviderShotgunShell
+  parent: AmmoProvider12_gaugeShotgunShell
   id: AmmoBox12_gaugePractice
   components:
     - type: BallisticAmmoProvider
@@ -162,7 +143,7 @@
 
 - type: entity
   name: shotgun shell box (12 gauge tranquilizer)
-  parent: AmmoProviderShotgunShell
+  parent: AmmoProvider12_gaugeShotgunShell
   id: AmmoBox12_gaugeTranquilizer
   components:
     - type: BallisticAmmoProvider

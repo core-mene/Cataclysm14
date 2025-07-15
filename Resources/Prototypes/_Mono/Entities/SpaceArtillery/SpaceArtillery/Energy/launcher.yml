@@ -137,7 +137,7 @@
   - type: ShipGunType
     shipType: Energy
   - type: ShipGunClass
-    shipClass: Light
+    shipClass: Superlight
 
 # RUBICON
 
@@ -163,7 +163,7 @@
     range: 500
   - type: Gun
     fireRate: 0.2
-    projectileSpeed: 120
+    projectileSpeed: 180
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
     soundEmpty:
@@ -260,4 +260,4 @@
   - type: ShipGunType
     shipType: Energy
   - type: ShipGunClass
-    shipClass: Medium
+    shipClass: Superheavy

@@ -8,7 +8,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  name: Annie (7.62x39mm)
+  name: VFD M27 Annie (7.62x39mm)
   parent: [BaseC2ContrabandUnredeemable, BaseWeaponRifle] # Mono - C2 contra
   id: WeaponRifleAnnie
   description: A beast designed to shoulder the weight of impossible missions. Uses 7.62x39mm ammo.
@@ -70,7 +70,7 @@
     id: ExperimentalFactionWeapon
 
 - type: entity
-  name: WSPR (7.62x39mm)
+  name: CS KMP-WSPR (7.62x39mm)
   parent: [BaseC3PirateContraband, BaseWeaponRifle] # Mono - C3
   id: WeaponRifleWSPR
   description: A cutting-edge rifle from Cybersun, versatile, reliable, and Syndicate-approved. Uses 7.62x39mm subsonic ammo.
@@ -122,7 +122,7 @@
   - type: Appearance
 
 - type: entity
-  name: M-90 (7.62x51mm) # mono - 7.62x51mm
+  name: PA M-90 (7.62x51mm) # mono - 7.62x51mm
   parent: [BaseWeaponRifle, BaseC3PirateContraband] # Mono - pirate contra
   id: WeaponRifleM90
   description: A M-90gl with the GL removed to take advantage of the compact bullpup design. Uses 7.62x51mm rifle ammo. # mono
@@ -168,7 +168,7 @@
   - type: Appearance
 
 - type: entity
-  name: Burner (12.7x99mm)
+  name: CS Burner (12.7x99mm)
   parent: [BaseWeaponRifle, BaseC3PirateContrabandHighValue] # Mono - Changed to HighValue
   id: WeaponRifleBurner
   description: A high caliber syndicate gun chambered in 12.7x99mm, capable of firing anti-material and high explosive rounds.

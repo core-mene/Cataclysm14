@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 wewman222
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -6,131 +7,163 @@
 - type: latheRecipe
   id: BroadswordHarness
   result: BroadswordHarness
-  completetime: 10
+  completetime: 25
   materials:
-    Steel: 3500
+    Steel: 7000
     Glass: 3000
+    Plasteel: 3000
+    Plastic: 2000
 
 - type: latheRecipe
   id: BroadswordHead
   result: BroadswordHead
-  completetime: 10
+  completetime: 25
   materials:
     Steel: 2500
     Glass: 600
     Uranium: 100
+    Plasteel: 500
+    Plastic: 300
 
 - type: latheRecipe
   id: BroadswordLArm
   result: BroadswordLArm
-  completetime: 10
+  completetime: 25
   materials:
     Steel: 2000
+    Plasteel: 700
+    Plastic: 300
 
 - type: latheRecipe
   id: BroadswordLLeg
   result: BroadswordLLeg
-  completetime: 10
+  completetime: 25
   materials:
     Steel: 2000
+    Plasteel: 700
+    Plastic: 300
 
 - type: latheRecipe
   id: BroadswordRLeg
   result: BroadswordRLeg
-  completetime: 10
+  completetime: 25
   materials:
     Steel: 2200
+    Plasteel: 700
+    Plastic: 300
 
 - type: latheRecipe
   id: BroadswordRArm
   result: BroadswordRArm
-  completetime: 10
+  completetime: 25
   materials:
     Steel: 2200
+    Plasteel: 700
+    Plastic: 300
 
 - type: latheRecipe
   id: HalberdHarness
   result: HalberdHarness
-  completetime: 10
+  completetime: 25
   materials:
-    Steel: 4000
+    Steel: 7000
     Glass: 3000
+    Plasteel: 3000
+    Plastic: 2000
 
 - type: latheRecipe
   id: SabreHarness
   result: SabreHarness
-  completetime: 10
+  completetime: 25
   materials:
-    Steel: 3500
+    Steel: 7000
     Glass: 3000
+    Plasteel: 3000
+    Plastic: 2000
 
 #S4 Mechs
 - type: latheRecipe
   id: FlailHarness
   result: FlailHarness
-  completetime: 10
+  completetime: 40
   materials:
-    Steel: 8000
+    Steel: 12000
     Glass: 3000
+    Plasteel: 3000
+    Plastic: 3000
 
 - type: latheRecipe
   id: FlailHead
   result: FlailHead
-  completetime: 10
+  completetime: 40
   materials:
-    Steel: 3500
+    Steel: 5500
     Glass: 250
     Diamond: 200
+    Plasteel: 800
+    Plastic: 1000
 
 - type: latheRecipe
   id: FlailLArm
   result: FlailLArm
-  completetime: 10
+  completetime: 40
   materials:
     Steel: 4000
+    Plasteel: 1000
+    Plastic: 1500
 
 - type: latheRecipe
   id: FlailLLeg
   result: FlailLLeg
-  completetime: 10
+  completetime: 40
   materials:
     Steel: 2500
+    Plasteel: 1000
+    Plastic: 1500
 
 - type: latheRecipe
   id: FlailRLeg
   result: FlailRLeg
-  completetime: 10
+  completetime: 40
   materials:
     Steel: 2500
+    Plasteel: 1000
+    Plastic: 1500
 
 - type: latheRecipe
   id: FlailRArm
   result: FlailRArm
-  completetime: 10
+  completetime: 40
   materials:
     Steel: 4000
+    Plasteel: 1000
+    Plastic: 1500
 
 - type: latheRecipe
   id: SpyglassHarness
   result: SpyglassHarness
-  completetime: 10
+  completetime: 40
   materials:
-    Steel: 8000
+    Steel: 12000
     Glass: 3000
-    Diamond: 200
+    Plasteel: 3000
+    Plastic: 3000
+    Diamond: 100
 
 - type: latheRecipe
   id: MaceHarness
   result: MaceHarness
-  completetime: 10
+  completetime: 40
   materials:
-    Steel: 6500
-    Glass: 1500
+    Steel: 12000
+    Glass: 3000
+    Plasteel: 1500
+    Plastic: 3000
 
 - type: latheRecipe
   id: PowerCageMech
   result: PowerCageMech
-  completetime: 10
+  completetime: 25
   materials:
     Steel: 600
     Glass: 800

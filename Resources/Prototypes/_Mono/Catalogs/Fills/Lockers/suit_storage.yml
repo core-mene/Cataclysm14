@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: SuitStorageUssp
   parent: SuitStorageBase
@@ -30,3 +35,45 @@
         - id: ClothingShoesBootsMagSecurity
   - type: AccessReader
     access: [["USSPCommand"]]
+
+- type: entity
+  id: SuitStorageM82c
+  parent: SuitStorageBase
+  suffix: M82c Hardsuit
+  components:
+  - type: StorageFill
+    contents:
+    - id: OxygenTankFilled
+    - id: NitrogenTankFilled
+    - id: ClothingOuterHardsuitM82c
+    - id: JetpackMiniFilled
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  id: SuitStorageM82b
+  parent: SuitStorageBase
+  suffix: M82b Hardsuit
+  components:
+  - type: StorageFill
+    contents:
+    - id: OxygenTankFilled
+    - id: NitrogenTankFilled
+    - id: ClothingOuterHardsuitM82b
+    - id: JetpackMiniFilled
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  id: SuitStorageM86
+  parent: SuitStorageBase
+  suffix: M86 Hardsuit
+  components:
+  - type: StorageFill
+    contents:
+    - id: OxygenTankFilled
+    - id: NitrogenTankFilled
+    - id: ClothingOuterHardsuitM86
+    - id: JetpackMiniFilled
+  - type: AccessReader
+    access: [["Security"]]

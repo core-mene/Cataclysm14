@@ -1,4 +1,29 @@
-﻿- type: constructionGraph
+# SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+# SPDX-FileCopyrightText: 2021 20kdc
+# SPDX-FileCopyrightText: 2021 DrSmugleaf
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2021 metalgearsloth
+# SPDX-FileCopyrightText: 2022 ChilbroBaggins
+# SPDX-FileCopyrightText: 2022 CommieFlowers
+# SPDX-FileCopyrightText: 2022 Francesco
+# SPDX-FileCopyrightText: 2022 Jeff
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 rolfero
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2023 Mr0maks
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Velcroboy
+# SPDX-FileCopyrightText: 2023 brainfood1183
+# SPDX-FileCopyrightText: 2024 JustinWinningham
+# SPDX-FileCopyrightText: 2024 Nairod
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 tonotom
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: constructionGraph
   id: Girder
   start: start
   graph:
@@ -149,6 +174,20 @@
             - material: Steel
               amount: 2
               doAfter: 1
+              
+        #Mono - create diagonal wall
+        - to: wallSolidDiagonal
+          completed:
+            - !type:SnapToGrid
+              southRotation: false
+          conditions:
+            - !type:EntityAnchored { }
+          steps:
+            - tool: Cutting
+              doAfter: 1
+            - material: Steel
+              amount: 2
+              doAfter: 1
 
     - node: wall
       entity: WallSolid
@@ -273,6 +312,19 @@
             - tool: Screwing
               doAfter: 1
 
+    #Mono - diagonal wall node
+    - node: wallSolidDiagonal
+      entity: WallSolidDiagonal
+      edges:
+        - to: girder
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 2
+          steps:
+            - tool: Welding
+              doAfter: 10
+
     - node: reinforcedGirder
       entity: ReinforcedGirder
       edges:
@@ -283,6 +335,20 @@
           conditions:
             - !type:EntityAnchored { }
           steps:
+            - material: Plasteel
+              amount: 2
+              doAfter: 1
+              
+        #Mono - create diagonal reinforced wall
+        - to: wallReinforcedDiagonal
+          completed:
+            - !type:SnapToGrid
+              southRotation: false
+          conditions:
+            - !type:EntityAnchored { }
+          steps:
+            - tool: Screwing
+              doAfter: 1
             - material: Plasteel
               amount: 2
               doAfter: 1
@@ -456,6 +522,35 @@
           #To-Do: Add deconstruct visuals
             - tool: Welding
               doAfter: 5
+            - tool: Cutting
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+            - tool: Welding
+              doAfter: 5
+            - tool: Prying
+              doAfter: 1
+            - tool: Anchoring
+              doAfter: 1
+            - tool: Welding
+              doAfter: 10
+            - tool: Prying
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+            - tool: Cutting
+              doAfter: 1
+
+    #Mono - diagonal reinforced wall node
+    - node: wallReinforcedDiagonal
+      entity: WallReinforcedDiagonal
+      edges:
+        - to: reinforcedGirder
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPlasteel1
+              amount: 2
+          steps:
             - tool: Cutting
               doAfter: 1
             - tool: Screwing

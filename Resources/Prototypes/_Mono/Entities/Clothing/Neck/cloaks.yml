@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 ScyronX
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 
 - type: entity
   parent: [ClothingNeckBase] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
@@ -9,3 +14,21 @@
     sprite: _Mono/Clothing/Neck/Cloaks/ussp.rsi
   - type: StealTarget
     stealGroup: HeadCloak
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakBlack
+  name: black cloak
+  description: A black cloak, looks old.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Cloaks/blackcloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakRogueCommander
+  name: Rogue commander's cloak
+  description: An Ashenveil Cell-Comm cloak, only given to those who have proven their loyalty and worth to the cause. Some say Ashenveil never would've formed beyond a prisoner colony if it wasn't for the Syndicate Remnants elevating them.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Cloaks/ashenveilcloak.rsi

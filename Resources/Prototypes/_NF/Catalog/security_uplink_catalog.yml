@@ -21,11 +21,11 @@
 # FUC->FMC. FMC cost 5x - Mono
 
 - type: listing
-  id: UplinkSecurityHardsuit
-  name:  uplink-security-hardsuit-name
-  description: uplink-security-hardsuit-desc
-  productEntity: ClothingOuterHardsuitNfsdBronze
-  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_bronze.rsi, state: icon }
+  id: UplinkClothingOuterHardsuitM82c
+  name: uplink-security-hardsuit-m82c-name
+  description: uplink-security-hardsuit-m82c-desc
+  productEntity: ClothingOuterHardsuitM82c
+  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/m82c.rsi, state: icon }
   cost:
     FederationMilitaryCredit: 10
   categories:
@@ -37,27 +37,11 @@
           - SecurityUplink
 
 - type: listing
-  id: UplinkSecurityHardsuitPatrol
-  name:  uplink-security-hardsuit-patrol-name
-  description: uplink-security-hardsuit-patrol-desc
-  productEntity: ClothingOuterHardsuitNfsdSilver
-  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_silver.rsi, state: icon }
-  cost:
-    FederationMilitaryCredit: 10
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityHardsuitBrigmedic
-  name:  uplink-security-hardsuit-brigmedic-name
-  description: uplink-security-hardsuit-brigmedic-desc
-  productEntity: ClothingOuterHardsuitNfsdBrigmedic
-  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_brigmed.rsi, state: icon }
+  id: UplinkClothingOuterHardsuitM82b
+  name: uplink-security-hardsuit-m82b-name
+  description: uplink-security-hardsuit-m82b-desc
+  productEntity: ClothingOuterHardsuitM82b
+  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/m82b.rsi, state: icon }
   cost:
     FederationMilitaryCredit: 10
   categories:

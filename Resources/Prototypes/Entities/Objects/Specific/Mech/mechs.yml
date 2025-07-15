@@ -213,6 +213,9 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.25
     baseSprintSpeed: 3.6
+  - type: Tag
+    tags:
+    - CivilianMechBounty # Mono
 
 - type: entity
   id: MechRipleyBattery
@@ -252,6 +255,9 @@
     pilotWhitelist:
       components:
       - HumanoidAppearance
+  - type: Tag
+    tags:
+    - CivilianMechBounty # Mono
 
 - type: entity
   parent: MechHonker

@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 RikuTheKiller
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 
 namespace Content.Server._Mono.Projectiles.TargetSeeking;
@@ -61,6 +67,12 @@ public sealed partial class TargetSeekingComponent : Component
     /// </summary>
     [DataField]
     public float CurrentSpeed;
+
+    /// <summary>
+    /// The amount of time in seconds left the missile starts searching for targets. // Mono
+    /// </summary>
+    [DataField]
+    public float TrackDelay = 0f;
 
     /// <summary>
     /// Field of view in degrees for target detection.

@@ -722,6 +722,21 @@
 #      - PirateUplink
 
 - type: listing
+  id: UplinkPirateSniperAmmo
+  name: uplink-pirate-sniper-ammo-name
+  description: uplink-pirate-sniper-ammo-desc
+  productEntity: AmmoBox14.5x114mm
+  cost:
+    Doubloon: 12 # Mono
+  categories:
+  - UplinkPirateAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
   id: UplinkPirateFragGrenade
   name: uplink-pirate-frag-grenade-name
   description: uplink-pirate-frag-grenade-desc
@@ -1253,6 +1268,21 @@
   productEntity: FactionLatheFlatpack
   cost:
     Doubloon: 50
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkRomerol
+  name: uplink-pirate-romerol-name
+  description: uplink-pirate-romerol-desc
+  productEntity: SyringeRomerol
+  cost:
+    Doubloon: 250
   categories:
   - UplinkPirateUtility
   conditions:

@@ -1,3 +1,11 @@
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2025 SX-7
+// SPDX-FileCopyrightText: 2025 SlamBamActionman
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
@@ -63,4 +71,16 @@ public sealed class ContentEyeSystem : SharedContentEyeSystem
             UpdateEyeOffset((entity, eyeComponent));
         }
     }
+
+    // <Goob - grabbed wizden PR #35087> {please remove this when you merge stable}
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+        var eyeEntities = AllEntityQuery<ContentEyeComponent, EyeComponent>();
+        while (eyeEntities.MoveNext(out var entity, out ContentEyeComponent? contentComponent, out EyeComponent? eyeComponent))
+        {
+            UpdateEyeOffset((entity, eyeComponent));
+        }
+    }
+    // </Goob - grabbed wizden PR #35087>
 }

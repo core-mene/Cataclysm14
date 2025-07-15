@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadoutGroup
   id: USSPBackpack
   name: loadout-group-contractor-backpack
@@ -14,23 +21,22 @@
   name: loadout-group-contractor-backpack
   minLimit: 1
   loadouts:
-  - USSPModsuitUSSPZastavnik
   - USSPModsuitUSSPVaryag
   fallbacks:
   - USSPBackpack
-  subgroups: 
+  subgroups:
   - USSPBackpack
 
-- type: loadoutGroup
-  id: USSPBackpackCorporal
-  name: loadout-group-contractor-backpack
-  minLimit: 1
-  loadouts:
-  - USSPModsuitUSSPVaryag
-  fallbacks:
-  - USSPBackpack
-  subgroups: 
-  - USSPBackpack
+#- type: loadoutGroup
+#  id: USSPBackpackCorporal
+#  name: loadout-group-contractor-backpack
+#  minLimit: 1
+#  loadouts:
+#  - USSPModsuitUSSPVaryag
+#  fallbacks:
+#  - USSPBackpack
+#  subgroups:
+#  - USSPBackpack
 
 - type: loadoutGroup
   id: USSPOuterClothingOfficer
@@ -38,12 +44,16 @@
   loadouts:
   - USSPClothingCoat
   - USSPClothingL10A
+  subgroups:
+  - TsfmcOuterClothing
 
 - type: loadoutGroup
   id: USSPOuterClothing
   name: loadout-group-contractor-outerclothing
   loadouts:
   - USSPClothingL10
+  subgroups:
+  - TsfmcOuterClothing
 
 - type: loadoutGroup
   id: USSPJumpsuit
