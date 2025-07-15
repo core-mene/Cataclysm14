@@ -32,7 +32,7 @@
       range: 25000
       cooldown: 45
       hyperSpaceTime: 15
-      startupTime: 45
+      startupTime: 30
     - type: ApcPowerReceiver
       powerLoad: 2000
     - type: PointLight
@@ -119,9 +119,9 @@
       color: "#7E16F7"
   - type: FTLDrive
     range: 25000
-    cooldown: 30
+    cooldown: 20
     hyperSpaceTime: 7.5
-    startupTime: 30
+    startupTime: 20
   - type: ApcPowerReceiver
     powerLoad: 4000
   - type: PointLight
