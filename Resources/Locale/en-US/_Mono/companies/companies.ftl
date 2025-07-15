@@ -38,7 +38,6 @@ nosske-eien-rnd-description = Renowned in other sectors for their cutting edge t
 blackhawkpmc-description = The Blackhawk Military Contracting group (BMC) is a premium mercenary group operating in the Colossus sector. Mercenaries in the group are expected to be trained and professional. They perform mercenary tasks ranging from asset protection to assassination whilst upholding their reputation. The group is fairly new, created by a group of independent mercenaries looking to build a powerful mercenary group. As of now, recruitment operations are on the rise. Blackhawk PMC offers a range of services, from providing private security to full assasinations. Blackhawk mercenaries wear green and often avoid drawing attention to themselves. Fight anyone for anything to make money.
 
 
-
 # Religious groups
 
 zealots-of-balaam-description = The Zealots and pilgrims of Balaam are luddites with a extreme aversion to the use of Hi-tech. They are overtly isolationist, preferring to raid convoys that move too far into space. As a follower of the blessed god, work underneath a senior zealot to help them levy their tithes. Never listen to the blasphemy of the other companies. Kill those who profane Balaam's eye with the use of shield tech and FTL, heavy industry is not safe either.
@@ -49,4 +48,3 @@ cult-of-the-machine-god-description = The flesh is weak. To walk the path of the
 # Hostile/rogue affiliated companies
 
 viper-group-description = Formerly a privateering company domineered by military discipline with the sole mission of intercepting, disrupting and confiscating through TSF shipping routes along the fringes of USSP-TSF space in Sector 2. The Viper Group (VG) abruptly switched allegiances after a substantial number of tragic events in series. The TSF had offered the former-USSP backed organization substantial payment for subterfuge operations against the USSP, only to reveal them to the USSP soon after. Driven away by false bribes and murderous betrayal, TVG leadership was left to fester; often violently switching hands until “greed is good” eventually became the unspoken oath of membership. equitable relations with the Rogue Sector quickly expedited their arrival to rogue space. If you yearn for danger and wealth, join The Viper Group!
-
