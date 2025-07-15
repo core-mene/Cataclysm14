@@ -15,12 +15,12 @@ public sealed partial class AmeFuelContainerComponent : Component
     /// <summary>
     /// The amount of fuel in the container.
     /// </summary>
-    [DataField("fuelamount", required: true), ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
-    public int FuelAmount; // mono
+   [DataField, ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+    public int FuelAmount = 1250; // mono
 
     /// <summary>
     /// The maximum fuel capacity of the container.
     /// </summary>
-    [DataField("fuelcapacity", required: true), ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
-    public int FuelCapacity; // mono
+    [DataField, ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+    public int FuelCapacity = 1250; // mono
 }
