@@ -1,3 +1,22 @@
+// SPDX-FileCopyrightText: 2022 Rane
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2023 Daniil Sikinami
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2023 brainfood1183
+// SPDX-FileCopyrightText: 2023 deltanedas
+// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2024 AJCM-git
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2024 themias
+// SPDX-FileCopyrightText: 2025 HacksLua
+// SPDX-FileCopyrightText: 2025 ScyronX
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using Content.Shared._NF.Vehicle.Components;
 using Content.Shared.Access.Components;
@@ -108,7 +127,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
     }
 
     // Umbra: vehicle changes
-    protected virtual void OnUnstrapped(EntityUid uid, VehicleComponent component, ref UnstrappedEvent args) //Lua: private void<protected virtual void
+    private void OnUnstrapped(EntityUid uid, VehicleComponent component, ref UnstrappedEvent args)
     {
         // Remove rider
         var riderUid = args.Buckle.Owner;
@@ -157,7 +176,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         }
     }
 
-    protected virtual void OnStrapped(EntityUid uid, VehicleComponent component, ref StrappedEvent args) //Lua: private void<protected virtual void
+    private void OnStrapped(EntityUid uid, VehicleComponent component, ref StrappedEvent args)
     {
         var riderUid = args.Buckle.Owner;
 

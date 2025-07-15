@@ -49,12 +49,15 @@
 // SPDX-FileCopyrightText: 2024 chavonadelal
 // SPDX-FileCopyrightText: 2024 ike709
 // SPDX-FileCopyrightText: 2024 whatston3
+// SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Winkarst
 // SPDX-FileCopyrightText: 2025 ark1368
 // SPDX-FileCopyrightText: 2025 pathetic meowmeow
+// SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using System.Collections.Immutable;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -72,6 +75,7 @@ using Content.Shared.ActionBlocker;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Chat;
+using Content.Shared.CollectiveMind;
 using Content.Shared.Database;
 using Content.Shared.Examine;
 using Content.Shared.Ghost;
@@ -314,6 +318,9 @@ public sealed partial class ChatSystem : SharedChatSystem
             case InGameICChatType.Emote:
                 SendEntityEmote(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker);
                 break;
+            case InGameICChatType.CollectiveMind:
+                SendCollectiveMindChat(source, message, false);
+                break;
         }
     }
 
@@ -466,6 +473,55 @@ public sealed partial class ChatSystem : SharedChatSystem
     #endregion
 
     #region Private API
+
+    public void SendCollectiveMindChat(EntityUid source, string message, bool hideChat)
+    {
+        if (!TryComp<CollectiveMindComponent>(source, out var sourseCollectiveMindComp) || !_prototypeManager.TryIndex<RadioChannelPrototype>(sourseCollectiveMindComp.Channel, out var radioChannelProto))
+            return;
+
+        var clients = Filter.Empty();
+        var mindQuery = EntityQueryEnumerator<CollectiveMindComponent, ActorComponent>();
+        while (mindQuery.MoveNext(out var uid, out var collectMindComp, out var actorComp))
+        {
+            if (collectMindComp.Channel == sourseCollectiveMindComp.Channel)
+            {
+                clients.AddPlayer(actorComp.PlayerSession);
+            }
+        }
+
+        var admins = _adminManager.ActiveAdmins.Select(p => p.Channel);
+        string messageWrap;
+        string adminMessageWrap;
+
+        messageWrap = Loc.GetString("chat-manager-send-collective-mind-chat-wrap-message",
+            ("message", message),
+            ("channel", sourseCollectiveMindComp.Channel));
+
+        adminMessageWrap = Loc.GetString("chat-manager-send-collective-mind-chat-wrap-message-admin",
+            ("source", source),
+            ("message", message),
+            ("channel", sourseCollectiveMindComp.Channel));
+
+        _adminLogger.Add(LogType.Chat, LogImpact.Low, $"CollectiveMind chat from {ToPrettyString(source):Player}: {message}");
+
+        _chatManager.ChatMessageToManyFiltered(clients,
+            ChatChannel.CollectiveMind,
+            message,
+            messageWrap,
+            source,
+            hideChat,
+            true,
+            radioChannelProto.Color);
+
+        _chatManager.ChatMessageToMany(ChatChannel.CollectiveMind,
+            message,
+            adminMessageWrap,
+            source,
+            hideChat,
+            true,
+            admins,
+            radioChannelProto.Color);
+    }
 
     private void SendEntitySpeak(
         EntityUid source,
@@ -1037,7 +1093,8 @@ public enum InGameICChatType : byte
 {
     Speak,
     Emote,
-    Whisper
+    Whisper,
+    CollectiveMind
 }
 
 /// <summary>

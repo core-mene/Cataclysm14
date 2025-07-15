@@ -7521,3 +7521,47 @@ Entries:
   id: 861
   time: '2025-07-15T13:14:06.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1422
+- author: HungryCuban
+  changes:
+    - type: Add
+      message: PMC combat suit WarlorD, a new option for mercs
+  id: 862
+  time: '2025-07-15T17:34:38.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1412
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Missiles now have a set delay depending on missile that delays locking
+        onto targets (aka won't lock onto ships within close range). Missile
+        detection range and scaning arc buffed in exchange. Check guidebook for
+        exact numbers per missile type.
+  id: 863
+  time: '2025-07-15T17:35:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1418
+- author: ScyronX
+  changes:
+    - type: Remove
+      message: Removed radar blips from jetpacks and vehicles!
+  id: 864
+  time: '2025-07-15T17:45:37.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1398
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Chimeras now have an internal 5x5 storage, and access to a collective
+        mind ("+" prefix)
+    - type: Tweak
+      message: >-
+        Changed up the Chimera bone spike gun, Chimeras can now regen more
+        damage types (genetic and toxin)
+    - type: Tweak
+      message: >-
+        Mesotaxinide description now makes it more obvious that it can do
+        caustic to Chimeras.
+    - type: Fix
+      message: Fixed a lot of bugs with Chimeras.
+  id: 865
+  time: '2025-07-15T18:08:31.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1417
