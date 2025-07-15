@@ -112,10 +112,12 @@
     - Alive
     - Critical
     damage:
+      types:
+        Radiation: -0.1
+        Poison: -0.1
       groups:
         Brute: -0.45
         Burn: -0.45
-        Poison: -0.1
         Genetic: -0.1
   - type: Targeting
   - type: Puller
