@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2021 Paul Ritter
+﻿# SPDX-FileCopyrightText: 2021 Paul Ritter
 # SPDX-FileCopyrightText: 2022 DrSmugleaf
 # SPDX-FileCopyrightText: 2022 Jezithyr
 # SPDX-FileCopyrightText: 2022 Justin Trotter
@@ -161,14 +161,14 @@
       stripTime: 6
       uiWindowPos: 2,2
       strippingWindowPos: 2,3
-      displayName: Left armband
+      displayName: Left_armband
     - name: rightarmband
       slotTexture: armband_right
       slotFlags: ARMBANDRIGHT
       stripTime: 6
       uiWindowPos: 0,2
       strippingWindowPos: 2,3
-      displayName: Right armband
+      displayName: Right_armband
     - name: helmetcover
       slotTexture: helmet_cover
       slotFlags: HELMETCOVER
@@ -184,5 +184,5 @@
       uiWindowPos: 0,5
       strippingWindowPos: 2,3
       dependsOn: helmetcover
-      displayName: Helmet attachment
+      displayName: Helmet_attachment
     #End Mono

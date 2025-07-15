@@ -1,0 +1,112 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+
+#ski mask no hole + ghost
+
+- type: entity
+  parent: ClothingBalaclavaBase
+  id: ClothingBalaclavaSkiMaskBlack
+  name: black ski mask balaclava
+  description: A black balaclava to make you look menacing.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Balaclavas/balaclava_ski_mask.rsi
+    color: "#3e3e48"
+  - type: Clothing
+    sprite: _Mono/Clothing/Balaclavas/balaclava_ski_mask.rsi
+    clothingVisuals:
+      balaclava:
+      - state: equipped-BALACLAVA
+        color: "#3e3e48"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#3e3e48"
+      right:
+      - state: inhand-right
+        color: "#3e3e48"
+
+#ski mask + hole
+
+
+- type: entity
+  parent: ClothingBalaclavaBase
+  id: ClothingBalaclavaSkiMaskMouthBlack
+  name: black ski mask balaclava (mouth)
+  description: A black balaclava to make you look menacing.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Balaclavas/balaclava_ski_mask_mouth.rsi
+    color: "#3e3e48"
+  - type: Clothing
+    sprite: _Mono/Clothing/Balaclavas/balaclava_ski_mask_mouth.rsi
+    clothingVisuals:
+      balaclava:
+      - state: equipped-BALACLAVA
+        color: "#3e3e48"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#3e3e48"
+      right:
+      - state: inhand-right
+        color: "#3e3e48"
+
+
+#classic mask no hole
+
+
+- type: entity
+  parent: ClothingBalaclavaBase
+  id: ClothingBalaclavaClassicBlack
+  name: black classic balaclava
+  description: A black balaclava to make you look menacing.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Balaclavas/balaclava_classic.rsi
+    color: "#3e3e48"
+  - type: Clothing
+    sprite: _Mono/Clothing/Balaclavas/balaclava_classic.rsi
+    clothingVisuals:
+      balaclava:
+      - state: equipped-BALACLAVA
+        color: "#3e3e48"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#3e3e48"
+      right:
+      - state: inhand-right
+        color: "#3e3e48"
+
+
+#classic mask + hole
+
+- type: entity
+  parent: ClothingBalaclavaBase
+  id: ClothingBalaclavaClassicMouthBlack
+  name: black classic balaclava (mouth)
+  description: A black balaclava to make you look menacing.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Balaclavas/balaclava_classic_mouth.rsi
+    color: "#3e3e48"
+  - type: Clothing
+    sprite: _Mono/Clothing/Balaclavas/balaclava_classic_mouth.rsi
+    clothingVisuals:
+      balaclava:
+      - state: equipped-BALACLAVA
+        color: "#3e3e48"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#3e3e48"
+      right:
+      - state: inhand-right
+        color: "#3e3e48"
