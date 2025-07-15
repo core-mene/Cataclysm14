@@ -123,7 +123,7 @@
   - type: Puller
     needsHands: false
   - type: Body
-    prototype: Skeleton
+    prototype: Chimera
     requiredLegs: 2
   - type: Reactive
     groups:
@@ -165,6 +165,12 @@
         Heat: 0.5 # fire is scary (esword is op)
   - type: CollectiveMind
     channel: Letoferol
+  - type: Flammable
+    fireSpread: true
+    canResistFire: true
+    damage: #per second, scales with number of fire 'stacks'
+      types:
+        Heat: 8
 
 - type: entity
   parent: MonoBaseMobFleshLetoferol

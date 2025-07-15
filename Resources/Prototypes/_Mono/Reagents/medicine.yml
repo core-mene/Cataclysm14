@@ -126,6 +126,11 @@
         conditions:
         - !type:ReagentThreshold
           min: 40
+      - !type:RevertPolymorph
+        prototype: LetoferolMutationNatural
+        conditions:
+        - !type:ReagentThreshold
+          min: 2
 
 # romerol plus real
 
