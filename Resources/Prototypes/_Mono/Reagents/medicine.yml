@@ -169,7 +169,7 @@
   worksOnTheDead: true
   metabolisms:
     Poison:
-      metabolismRate: 0.2
+      metabolismRate: 0.1
       effects:
       - !type:HealthChange
         damage:
@@ -179,10 +179,10 @@
         prototype: LetoferolMutationNatural
         conditions:
         - !type:ReagentThreshold
-          min: 20
+          min: 9
       - !type:AdjustReagent
         reagent: NaturalLetoferol
         amount: -2.5
         conditions:
         - !type:ReagentThreshold
-          min: 20
+          min: 9
