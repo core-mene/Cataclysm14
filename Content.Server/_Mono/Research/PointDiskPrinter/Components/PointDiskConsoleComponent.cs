@@ -37,15 +37,6 @@ public sealed partial class PointDiskConsoleComponent : Component
     [DataField("diskPrototype10K", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>)), ViewVariables(VVAccess.ReadWrite)]
     public string Disk10KPrototype = "ResearchDisk10000";
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public bool Disk1K = true;
-
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public bool Disk5K = true;
-
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public bool Disk10K = true;
-
     /// <summary>
     /// How long it takes to print <see cref="PointDiskPrototype"/>
     /// </summary>

@@ -42,14 +42,14 @@ public sealed class PointDiskConsoleSystem : EntitySystem
                 continue;
 
             RemComp(uid, printing);
-            if (console.Disk1K)
-                Spawn(console.Disk1KPrototype, xform.Coordinates); // Uncomment when printing doesn't print all three at once
+            if (printing.Disk1K)
+                Spawn(console.Disk1KPrototype, xform.Coordinates);
 
-            else if (console.Disk5K)
+            if (printing.Disk5K)
                 Spawn(console.Disk5KPrototype, xform.Coordinates);
 
-            else (console.Disk10K)
-                Spawn(console.Disk10KPrototype, xform.Coordinates); // Uncomment when printing doesn't print all three at once
+            if (printing.Disk10K)
+                Spawn(console.Disk10KPrototype, xform.Coordinates);
         }
     }
 
@@ -67,10 +67,11 @@ public sealed class PointDiskConsoleSystem : EntitySystem
         _research.ModifyServerPoints(server.Value, -component.PricePer1KDisk, serverComp);
         _audio.PlayPvs(component.PrintSound, uid);
 
+
         var printing = EnsureComp<PointDiskConsolePrintingComponent>(uid);
+        printing.Disk1K = true;
         printing.FinishTime = _timing.CurTime + component.PrintDuration;
         UpdateUserInterface(uid, component);
-        Spawn(console.Disk1KPrototype, xform.Coordinates);
     }
 
     private void OnPrint5KDisk(EntityUid uid, PointDiskConsoleComponent component, PointDiskConsolePrint5KDiskMessage args)
@@ -88,9 +89,9 @@ public sealed class PointDiskConsoleSystem : EntitySystem
         _audio.PlayPvs(component.PrintSound, uid);
 
         var printing = EnsureComp<PointDiskConsolePrintingComponent>(uid);
+        printing.Disk5K = true;
         printing.FinishTime = _timing.CurTime + component.PrintDuration;
         UpdateUserInterface(uid, component);
-        Spawn(console.Disk5KPrototype, xform.Coordinates);
     }
 
     private void OnPrint10KDisk(EntityUid uid, PointDiskConsoleComponent component, PointDiskConsolePrint10KDiskMessage args)
@@ -108,9 +109,9 @@ public sealed class PointDiskConsoleSystem : EntitySystem
         _audio.PlayPvs(component.PrintSound, uid);
 
         var printing = EnsureComp<PointDiskConsolePrintingComponent>(uid);
+        printing.Disk10K = true;
         printing.FinishTime = _timing.CurTime + component.PrintDuration;
         UpdateUserInterface(uid, component);
-        Spawn(console.Disk10KPrototype, xform.Coordinates);
     }
 
     private void OnPointsChanged(EntityUid uid, PointDiskConsoleComponent component, ref ResearchServerPointsChangedEvent args)
