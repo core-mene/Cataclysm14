@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -149,13 +150,13 @@
           prototype: LetoferolMutation
           conditions:
             - !type:ReagentThreshold
-              min: 6
+              min: 24
         - !type:AdjustReagent
           reagent: Letoferol
           amount: -2.5
           conditions:
             - !type:ReagentThreshold
-              min: 6
+              min: 24
 
 - type: reagent
   id: NaturalLetoferol
