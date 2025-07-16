@@ -1,16 +1,16 @@
 meta:
   format: 7
-  category: Grid
+  category: Map
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 04/27/2025 19:28:26
+  time: 07/16/2025 20:43:48
   entityCount: 368
-maps: []
+maps:
+- 118
 grids:
 - 2
-orphans:
-- 2
+orphans: []
 nullspace: []
 tilemap:
   1: Space
@@ -31,7 +31,7 @@ entities:
       name: GNG Duran
     - type: Transform
       pos: -0.5416667,-0.48436418
-      parent: invalid
+      parent: 118
     - type: MapGrid
       chunks:
         0,0:
@@ -309,6 +309,18 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Duran
+  - uid: 118
+    components:
+    - type: MetaData
+      name: Map Entity
+    - type: Transform
+    - type: Map
+      mapPaused: True
+    - type: PhysicsMap
+    - type: GridTree
+    - type: MovedGrids
+    - type: Broadphase
+    - type: OccluderTree
 - proto: AirAlarm
   entities:
   - uid: 167
@@ -778,15 +790,15 @@ entities:
     - type: Transform
       pos: -4.5,2.5
       parent: 2
-  - uid: 118
-    components:
-    - type: Transform
-      pos: -5.5,1.5
-      parent: 2
   - uid: 125
     components:
     - type: Transform
       pos: -6.5,1.5
+      parent: 2
+  - uid: 163
+    components:
+    - type: Transform
+      pos: -6.5,2.5
       parent: 2
   - uid: 212
     components:
@@ -931,6 +943,20 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
+- proto: ComputerIFF
+  entities:
+  - uid: 164
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 6.5,-0.5
+      parent: 2
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 64.33388
+    - type: ApcPowerReceiverBattery
+      enabled: True
 - proto: ComputerSalvageExpedition
   entities:
   - uid: 32
@@ -950,6 +976,8 @@ entities:
     - type: Transform
       pos: 6.5,2.5
       parent: 2
+    - type: ShuttleConsoleLock
+      locked: False
     - type: ApcPowerReceiver
       powerLoad: 5
     - type: Battery
@@ -1098,12 +1126,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -3.5,2.5
       parent: 2
-- proto: FaxMachineShip
+- proto: FaxMachineBase
   entities:
   - uid: 174
     components:
     - type: Transform
-      pos: 6.5,-0.5
+      pos: 5.5,-0.5
       parent: 2
 - proto: Firelock
   entities:
@@ -1618,13 +1646,6 @@ entities:
     - type: Transform
       pos: -4.5,2.5
       parent: 2
-- proto: PowerCellRecharger
-  entities:
-  - uid: 164
-    components:
-    - type: Transform
-      pos: 5.5,-0.5
-      parent: 2
 - proto: Poweredlight
   entities:
   - uid: 120
@@ -2003,11 +2024,6 @@ entities:
     - type: Transform
       pos: 5.5,-0.5
       parent: 2
-  - uid: 163
-    components:
-    - type: Transform
-      pos: 6.5,-0.5
-      parent: 2
   - uid: 229
     components:
     - type: Transform
@@ -2066,8 +2082,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 9.5,1.5
       parent: 2
-    - type: Thruster
-      enabled: False
     - type: ApcPowerReceiver
       powerLoad: 1
   - uid: 180
