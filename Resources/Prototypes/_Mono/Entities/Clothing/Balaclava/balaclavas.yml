@@ -13,21 +13,21 @@
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Balaclavas/balaclava_ski_mask.rsi
-    color: "#3e3e48"
+    color: "#1F1F1F"
   - type: Clothing
     sprite: _Mono/Clothing/Balaclavas/balaclava_ski_mask.rsi
     clothingVisuals:
       balaclava:
       - state: equipped-BALACLAVA
-        color: "#3e3e48"
+        color: "#1F1F1F"
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
-        color: "#3e3e48"
+        color: "#1F1F1F"
       right:
       - state: inhand-right
-        color: "#3e3e48"
+        color: "#1F1F1F"
 
 - type: entity
   parent: ClothingBalaclavaBase
@@ -275,21 +275,21 @@
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Balaclavas/balaclava_ski_mask_mouth.rsi
-    color: "#3e3e48"
+    color: "#1F1F1F"
   - type: Clothing
     sprite: _Mono/Clothing/Balaclavas/balaclava_ski_mask_mouth.rsi
     clothingVisuals:
       balaclava:
       - state: equipped-BALACLAVA
-        color: "#3e3e48"
+        color: "#1F1F1F"
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
-        color: "#3e3e48"
+        color: "#1F1F1F"
       right:
       - state: inhand-right
-        color: "#3e3e48"
+        color: "#1F1F1F"
 
 - type: entity
   parent: ClothingBalaclavaBase
@@ -537,21 +537,21 @@
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Balaclavas/balaclava_classic.rsi
-    color: "#3e3e48"
+    color: "#1F1F1F"
   - type: Clothing
     sprite: _Mono/Clothing/Balaclavas/balaclava_classic.rsi
     clothingVisuals:
       balaclava:
       - state: equipped-BALACLAVA
-        color: "#3e3e48"
+        color: "#1F1F1F"
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
-        color: "#3e3e48"
+        color: "#1F1F1F"
       right:
       - state: inhand-right
-        color: "#3e3e48"
+        color: "#1F1F1F"
 
 - type: entity
   parent: ClothingBalaclavaBase
@@ -799,21 +799,21 @@
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Balaclavas/balaclava_classic_mouth.rsi
-    color: "#3e3e48"
+    color: "#1F1F1F"
   - type: Clothing
     sprite: _Mono/Clothing/Balaclavas/balaclava_classic_mouth.rsi
     clothingVisuals:
       balaclava:
       - state: equipped-BALACLAVA
-        color: "#3e3e48"
+        color: "#1F1F1F"
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
-        color: "#3e3e48"
+        color: "#1F1F1F"
       right:
       - state: inhand-right
-        color: "#3e3e48"
+        color: "#1F1F1F"
 
 - type: entity
   parent: ClothingBalaclavaBase

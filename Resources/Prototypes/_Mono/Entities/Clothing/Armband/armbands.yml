@@ -20,6 +20,22 @@
       rightarmband:
       - state: equipped-ARMBANDRIGHT
 
+- type: entity
+  parent: ClothingArmbandBase
+  id: ClothingArmbandUSA
+  name: USA armband
+  description: An armband bearing the flag of the United States of America, worn by true patriots.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Armbands/armband_USA.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Armbands/armband_USA.rsi
+    clothingVisuals:
+      leftarmband:
+      - state: equipped-ARMBANDLEFT
+      rightarmband:
+      - state: equipped-ARMBANDRIGHT
+
 #colored armbands
 
 - type: entity
