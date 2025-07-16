@@ -126,6 +126,46 @@
         conditions:
         - !type:ReagentThreshold
           min: 40
+      - !type:RevertPolymorph
+        prototype: LetoferolMutationNatural
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+      - !type:AdjustReagent
+        reagent: Letoferol
+        amount: -7.5
+      - !type:AdjustReagent
+        reagent: NaturalLetoferol
+        amount: -7.5
+
+# cheap alternative to mesotaxinide
+
+- type: reagent
+  id: Mesophenerol
+  name: reagent-name-mesophenerol
+  group: Special
+  desc: reagent-desc-mesophenerol
+  physicalDesc: reagent-physical-desc-translucent
+  flavor: medicine
+  color: "#4ca832"
+  worksOnTheDead: true
+  metabolisms:
+    Medicine:
+      metabolismRate: 1
+      effects:
+      - !type:RevertPolymorph
+        prototype: LetoferolMutationNatural
+        conditions:
+        - !type:ReagentThreshold
+          min: 40
+      - !type:AdjustReagent
+        reagent: Letoferol
+        amount: -3
+      - !type:AdjustReagent
+        reagent: NaturalLetoferol
+        amount: -3
+
+
 
 # romerol plus real
 

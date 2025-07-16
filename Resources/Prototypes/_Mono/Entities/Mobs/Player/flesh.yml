@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Your Name
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -23,12 +25,10 @@
     drawdepth: Mobs
     sprite: _NF/Mobs/Aliens/flesh.rsi
   - type: MobState
-    allowedStates:
-    - Alive
-    - Dead
   - type: MobThresholds
     thresholds:
       0: Alive
+      200: Critical
       400: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
@@ -41,7 +41,7 @@
     - id: FoodMeat
       amount: 4
   - type: Bloodstream
-    bloodReagent: Blood
+    bloodReagent: NaturalLetoferol
     bloodMaxVolume: 300
   - type: MeleeWeapon
     attackRate: 1.5
@@ -62,6 +62,20 @@
         reagents:
         - ReagentId: NaturalLetoferol
           Quantity: 90
+  - type: SolutionRegeneration
+    solution: melee
+    generated:
+      reagents:
+      - ReagentId: NaturalLetoferol
+        Quantity: 90
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
   - type: MeleeChemicalInjector
     solution: melee
     transferAmount: 2.5
@@ -70,33 +84,61 @@
     baseSprintSpeed : 4.25
   - type: Hands
   - type: ComplexInteraction
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Electrocution
+    - Drunk
+    - SlurredSpeech
+    - Muted
+    - TemporaryBlindness
+    - StaminaModifier
+    - Flashed
+    - RadiationProtection
   - type: Ensnareable
     sprite: Objects/Misc/ensnare.rsi
     state: icon
+  - type: Climbing
+  - type: Storage
+    clickInsert: false
+    openOnActivate: false
+    grid:
+    - 0,0,4,4
+    maxItemSize: Huge
+    storageInsertSound:
+      path: /Audio/Voice/Slime/slime_squish.ogg
   - type: Tag
     tags:
     - CanPilot
+    - FootstepSound
     - DoorBumpOpener
   - type: PassiveDamage
     allowedStates:
     - Alive
+    - Critical
     damage:
       types:
-        Heat: -0.25
+        Radiation: -0.1
+        Poison: -0.1
       groups:
-        Brute: -0.25
+        Airloss: -0.45
+        Brute: -0.45
+        Burn: -0.45
+        Genetic: -0.1
   - type: Targeting
   - type: Puller
     needsHands: false
   - type: Body
-    prototype: Skeleton
+    prototype: Chimera
     requiredLegs: 2
   - type: Reactive
     groups:
-      Flammable: [ Touch ]
-      Extinguish: [ Touch ]
+      Flammable: [Touch]
+      Extinguish: [Touch]
     reactions:
-    - reagents: [ Letoferol, Romerol ]
+    - reagents: [Letoferol, Romerol]
       methods: [ Touch ]
       effects:
       - !type:HealthChange
@@ -105,8 +147,8 @@
           groups:
             Burn: -2
             Brute: -1.5
-    - reagents: [ Mesotaxinide ]
-      methods: [ Touch ]
+    - reagents: [Mesotaxinide]
+      methods: [Touch]
       effects:
       - !type:HealthChange
         scaleByQuantity: true
@@ -129,12 +171,19 @@
         Slash: 1.2
         Piercing: 0.65 # spear is clunky
         Heat: 0.5 # fire is scary (esword is op)
+  - type: CollectiveMind
+    channel: Letoferol
+  - type: Flammable
+    fireSpread: true
+    canResistFire: true
+    damage: #per second, scales with number of fire 'stacks'
+      types:
+        Heat: 8
 
 - type: entity
   parent: MonoBaseMobFleshLetoferol
   id: MobLetoferolHorror
   name: chimera fleshbeast
-  description:
   components:
   - type: MovementSpeedModifier
     baseWalkSpeed : 2.7
@@ -157,12 +206,14 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      500: Dead
+      500: Critical
+      800: Dead
     allowRevives: true
   - type: SlowOnDamage
     speedModifierThresholds:
       120: 0.7
       250: 0.5
+      300: 0.25
   - type: MeleeWeapon
     autoAttack: true
     attackRate: 1.2
@@ -172,9 +223,7 @@
     animation: WeaponArcClaw
     damage:
       types:
-        Slash: 17
-        Poison: 4
-        Pierce: 2
+        Slash: 14
         Structural: 75
   - type: ActionGun
     action: ActionLetoferolSpike
@@ -218,8 +267,8 @@
   components:
   - type: ProjectileSpread
     proto: LetoferolHorrorSpike
-    count: 5
-    spread: 4
+    count: 7
+    spread: 17
 
 - type: entity
   id: LetoferolHorrorSpike
@@ -227,16 +276,16 @@
   parent: DartAberrantFleshHorrorSpike
   categories: [ HideSpawnMenu ]
   components:
-  # - type: SolutionContainerManager
-  #   solutions:
-  #     ammo:
-  #       maxVol: 3
-  #       reagents:
-  #       - ReagentId: NaturalLetoferol
-  #         Quantity: 1.5
-  # - type: SolutionContainerVisuals
-  #   maxFillLevels: 1
-  #   fillBaseName: spikeSolution
+  - type: SolutionContainerManager
+    solutions:
+       ammo:
+         maxVol: 3
+         reagents:
+         - ReagentId: NaturalLetoferol
+           Quantity: 0.25
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    fillBaseName: spikeSolution
   - type: Projectile
     damage:
       types:
@@ -246,7 +295,7 @@
   id: ActionLetoferolSpike
   categories: [ HideSpawnMenu ]
   name: "[color=yellow]Bone Spike[/color]"
-  description: "Shoot a short salvo of bone spikes laced with letoferol. [color=yellow]5 second cooldown.[/color]"
+  description: "Shoot a short salvo of bone spikes laced with [color=yellow]letoferol[/color]."
   components:
   - type: WorldTargetAction
     icon: { sprite : _NF/Mobs/Aliens/flesh.rsi, state: spike }

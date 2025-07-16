@@ -22,7 +22,9 @@ Ship weapons only fire if they are selected and if your cursor on the [color=ora
     <GuideEntityEmbed Entity="WeaponTurretVanyk"/>
   </Box>
 
-Missiles will only track grids with a shuttle console, and are immediately pointed towards their tracked target upon firing. Take into account the detection angle of your missiles, you can fire a lot farther than what the FOV of your turrets will allow if you do.
+Missiles will only track grids with a shuttle console, and are immediately pointed towards their tracked target upon detecting a target. Take into account the detection angle of your missiles, you can fire a lot farther than what the FOV of your turrets will allow if you do.
+
+Most missiles have a tracking delay before attempting to seek out targets, and will not lock onto targets around 200 meters or less away from the origin ship, depending on the missile size.
 
 ## Shield Generators
 

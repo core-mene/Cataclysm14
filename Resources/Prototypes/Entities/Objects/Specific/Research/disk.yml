@@ -1,3 +1,17 @@
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2023 Ed
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 crazybrain23
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Killerqu00
+# SPDX-FileCopyrightText: 2025 Onezero0
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: BaseItem
   id: ResearchDisk
@@ -47,37 +61,38 @@
   - type: ResearchDisk
     unlockAllTech: true
 
-- type: entity
-  parent: BaseItem
-  id: TechnologyDisk
-  name: technology disk
-  description: A disk for the R&D server containing research technology.
-  categories: [ HideSpawnMenu ] # Frontier: no tech disks
-  components:
-  - type: Sprite
-    sprite: Objects/Misc/module.rsi
-    layers:
-    - state: datadisk_base
-      map: ["enum.DamageStateVisualLayers.Base"]
-    - state: datadisk_label
-  - type: RandomSprite
-    available:
-    - enum.DamageStateVisualLayers.Base:
-        datadisk_base: Sixteen
-  - type: TechnologyDisk
-    tierWeightPrototype: TechDiskTierWeights # Frontier
-  - type: StaticPrice
-    price: 0.01 # Frontier 100<0.01 - research points are a means to an end, not an end of their own
-  - type: StealTarget
-    stealGroup: TechnologyDisk
-  - type: PirateBountyItem # Frontier
-    id: TechnologyDisk # Frontier
+# MONO: commented out to avoid linter fail
+#- type: entity
+#  parent: BaseItem
+#  id: TechnologyDisk
+#  name: technology disk
+#  description: A disk for the R&D server containing research technology.
+#  categories: [ HideSpawnMenu ] # Frontier: no tech disks
+#  components:
+#  - type: Sprite
+#    sprite: Objects/Misc/module.rsi
+#    layers:
+#    - state: datadisk_base
+#      map: ["enum.DamageStateVisualLayers.Base"]
+#    - state: datadisk_label
+#  - type: RandomSprite
+#    available:
+#    - enum.DamageStateVisualLayers.Base:
+#        datadisk_base: Sixteen
+#  - type: TechnologyDisk
+#    tierWeightPrototype: TechDiskTierWeights # Frontier
+#  - type: StaticPrice
+#    price: 0.01 # Frontier 100<0.01 - research points are a means to an end, not an end of their own
+#  - type: StealTarget
+#    stealGroup: TechnologyDisk
+#  - type: PirateBountyItem # Frontier
+#    id: TechnologyDisk # Frontier
 
-- type: entity
-  parent: TechnologyDisk
-  id: TechnologyDiskRare
-  suffix: rare.
-  categories: [ HideSpawnMenu ] # Frontier: no tech disks
-  components:
-  - type: TechnologyDisk
-    tierWeightPrototype: RareTechDiskTierWeights
+# - type: entity
+#  parent: TechnologyDisk
+#  id: TechnologyDiskRare
+#  suffix: rare.
+#  categories: [ HideSpawnMenu ] # Frontier: no tech disks
+#  components:
+#  - type: TechnologyDisk
+#    tierWeightPrototype: RareTechDiskTierWeights

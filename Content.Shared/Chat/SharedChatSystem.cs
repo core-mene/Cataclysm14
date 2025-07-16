@@ -1,3 +1,23 @@
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2023 Alex Evgrashin
+// SPDX-FileCopyrightText: 2023 HerCoyote23
+// SPDX-FileCopyrightText: 2023 Interrobang01
+// SPDX-FileCopyrightText: 2023 Kara
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2023 Vordenburg
+// SPDX-FileCopyrightText: 2023 gus
+// SPDX-FileCopyrightText: 2023 router
+// SPDX-FileCopyrightText: 2024 Checkraze
+// SPDX-FileCopyrightText: 2024 Kot
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 SlamBamActionman
+// SPDX-FileCopyrightText: 2024 Thomas
+// SPDX-FileCopyrightText: 2024 Vasilis
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Collections.Frozen;
 using System.Text.RegularExpressions;
 using Content.Shared.Popups;
@@ -22,6 +42,7 @@ public abstract class SharedChatSystem : EntitySystem
     public const char EmotesAltPrefix = '*';
     public const char AdminPrefix = ']';
     public const char WhisperPrefix = ',';
+    public const char CollectiveMindPrefix = '+';
     public const char DefaultChannelKey = 'h';
 
     [ValidatePrototypeId<RadioChannelPrototype>]
