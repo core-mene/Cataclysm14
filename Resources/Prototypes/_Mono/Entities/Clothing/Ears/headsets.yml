@@ -73,3 +73,33 @@
       key_slots:
       - EncryptionKeyCommon
       - EncryptionKeyUssp
+      
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetDrakeIndustries
+  name:  D.I headset
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Ears/Headsets/di.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Ears/Headsets/di.rsi
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyDrakeIndustries
+      
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetDrakeIndustriesAlt
+  name: D.I headset
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Ears/Headsets/di.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Ears/Headsets/di.rsi
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyDrakeIndustries
