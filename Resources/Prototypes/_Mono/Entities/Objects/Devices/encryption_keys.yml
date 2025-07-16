@@ -42,3 +42,22 @@
     - state: sec_label
   - type: PirateBountyItem
     id: EncryptionKeyFaction
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyDrakeIndustries
+  name: DI encryption key
+  description: An encryption key for Drake Industries' communications channel.
+  components:
+  - type: EncryptionKey
+    channels:
+    - DI
+    defaultChannel: DI
+  - type: Item
+    sprite: _Mono/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _Mono/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_scifi
+    - state: di_label
+    

@@ -1,0 +1,28 @@
+# Drake Industries 
+
+- type: accessLevel
+  id: DI
+  name: id-card-access-level-di
+  
+- type: accessLevel
+  id: DISecurity
+  name: id-card-access-level-di-sec
+  
+- type: accessLevel
+  id: DICommand
+  name: id-card-access-level-di-command
+  
+- type: accessGroup
+  id: DIWatchdog
+  tags:
+  - DI
+  - DISecurity
+  - Mercenary
+
+- type: accessGroup
+  id: DIOverseer
+  tags:
+  - DI
+  - DISecurity
+  - DICommand
+  - Mercenary
