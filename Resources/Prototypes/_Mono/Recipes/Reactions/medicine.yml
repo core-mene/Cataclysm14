@@ -59,6 +59,18 @@
     Mesotaxinide: 5
 
 - type: reaction
+  id: MesotaxinideAlternative
+  reactants:
+    Bicaridine:
+      amount: 2
+    ProtoLetoferol:
+      amount: 5
+    Rhymatine:
+      amount: 0.5
+  products:
+    Mesotaxinide: 7.5
+
+- type: reaction
   id: Mesophenerol
   reactants:
     Bicaridine:
@@ -84,3 +96,28 @@
       amount: 2
   products:
     Letoferol: 5
+
+- type: reaction
+  id: LetoferolBreakdown
+  source: true
+  requiredMixerCategories:
+  - Electrolysis
+  reactants:
+    Letoferol:
+      amount: 3
+  products:
+    ProtoLetoferol: 1
+    Carbon: 2
+
+- type: reaction
+  id: NaturalLetoferolBreakdown
+  source: true
+  requiredMixerCategories:
+  - Electrolysis
+  reactants:
+    NaturalLetoferol:
+      amount: 1
+  products:
+    ProtoLetoferol: 2
+    Carbon: 2
+    Protein: 3

@@ -15,3 +15,6 @@ reagent-desc-letoferol = A highly illegal bioweapon developed as a refined form 
 
 reagent-name-nat-letoferol = natural Letoferol
 reagent-desc-nat-letoferol = A version of letoferol produced by organic means. Its much more refined, and its effects are permanent, however it takes more to convert someone.
+
+reagent-name-nat-protoletoferol = protoletoferol
+reagent-desc-nat-protoletoferol = Letoferol neutralized via electrolysis. Used as a precursor for the chemicals to cure it. Its too dead to do anything to you now.

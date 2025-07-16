@@ -203,7 +203,7 @@
   name: reagent-name-nat-letoferol
   group: Special
   desc: reagent-desc-nat-letoferol
-  physicalDesc: reagent-physical-desc-necrotic
+  physicalDesc: reagent-physical-desc-opaque
   flavor: acid
   color: "#ebba34"
   worksOnTheDead: true
@@ -226,3 +226,20 @@
         conditions:
         - !type:ReagentThreshold
           min: 15
+
+- type: reagent
+  id: ProtoLetoferol
+  name: reagent-name-protoletoferol
+  group: Special
+  desc: reagent-desc-protoletoferol
+  physicalDesc: reagent-physical-desc-opaque
+  flavor: acid
+  color: "#a85832"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1
