@@ -2,34 +2,35 @@
 # GitHub: starch70
 # Discord: _starch_
 
-# Shuttle Notes: its the goob nukeops shuttle exterior (docking ports are a bit different)
+# Shuttle Notes:
 #
 - type: vessel
-  id: Picses
+  id: Sirius
   parent: BaseVessel
-  name: SKR Picses
-  description: A compact but capable expedition ship, with durable hull plating too. This ship has a military IFF designation.
-  price: 77150
+  name: SKR Sirius
+  description: An expedition ship outfitted with 4 57mms, 2 90mms, and a full chemistry setup.
+  price: 80750
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/_Mono/Shuttles/Expedition/picses.yml
+  shuttlePath: /Maps/_Mono/Shuttles/Expedition/sirius.yml
   guidebookPage: null
   class:
   - Expedition
+  - Chemistry
   engine:
   - AME
 
 - type: gameMap
-  id: Picses
-  mapName: 'Picses'
-  mapPath: /Maps/_Mono/Shuttles/Expedition/picses.yml
+  id: Sirius
+  mapName: 'Sirius'
+  mapPath: /Maps/_Mono/Shuttles/Expedition/sirius.yml
   minPlayers: 0
   stations:
-    Picses:
+    Sirius:
       stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Picses MIL{1}'
+          mapNameTemplate: 'Sirius EXP{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
