@@ -12,7 +12,7 @@
   root: torso
   slots:
     head:
-      part: HeadSkeleton
+      part: HeadSkeletonChimera
       connections:
       - torso
       organs:
@@ -33,26 +33,26 @@
         liver: OrganHumanLiver
         kidneys: OrganHumanKidneys
     right arm:
-      part: RightArmSkeleton
+      part: RightArmSkeletonChimera
       connections:
       - right hand
     left arm:
-      part: LeftArmSkeleton
+      part: LeftArmSkeletonChimera
       connections:
       - left hand
     right hand:
-      part: RightHandSkeleton
+      part: RightHandSkeletonChimera
     left hand:
-      part: LeftHandSkeleton
+      part: LeftHandSkeletonChimera
     right leg:
-      part: RightLegSkeleton
+      part: RightLegSkeletonChimera
       connections:
       - right foot
     left leg:
-      part: LeftLegSkeleton
+      part: LeftLegSkeletonChimera
       connections:
       - left foot
     right foot:
-      part: RightFootSkeleton
+      part: RightFootSkeletonChimera
     left foot:
-      part: LeftFootSkeleton
+      part: LeftFootSkeletonChimera
