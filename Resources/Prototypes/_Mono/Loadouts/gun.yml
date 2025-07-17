@@ -332,6 +332,20 @@
     back:
     - BoxMagazine7.62x51mmFMJ
 
+- type: loadout #Bandit
+  id: FactionBanditLoadout
+  price: 3000
+  storage:
+    back:
+    - WeaponRifleMR3C
+
+- type: loadout #Bandit Ammo
+  id: Faction8x65mmAmmoLoadout
+  price: 0
+  storage:
+    back:
+    - BoxMagazine8x65mmFMJ
+
 - type: loadout #AKM
   id: FactionAkmLoadout
   price: 5000
