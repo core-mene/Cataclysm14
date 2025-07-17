@@ -56,3 +56,21 @@
     maxItemSize: Small
     grid:
     - 0,0,1,1
+
+- type: entity
+  parent: [ClothingHelmetAttachmentBase, ClothingBackpack]
+  id: ClothingHelmetAttachmentGogglesCoverRedDigital
+  name: red digital goggles cover
+  description: Goggles cover to fit your goggle when not in use.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/HelmetAttachment/goggles_cover_digital_red.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/HelmetAttachment/goggles_cover_digital_red.rsi
+    clothingVisuals:
+      helmetattachment:
+      - state: equipped-HELMETATTACHMENT
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,1,1

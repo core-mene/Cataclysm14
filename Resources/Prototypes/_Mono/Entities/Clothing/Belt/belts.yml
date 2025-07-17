@@ -13,6 +13,8 @@
   - type: Clothing
     sprite: _Mono/Clothing/Belt/diwebbing.rsi
 
+#small chest rigs
+
 - type: entity
   parent: [NFClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseC1Contraband]
   id: ClothingBeltWebbingsNormalBlack
@@ -64,6 +66,8 @@
     sprite: _Mono/Clothing/Belt/webbings_normal_olive.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.5
+
+#Big chest rigs
 
 - type: entity
   parent: [NFClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseC1Contraband]

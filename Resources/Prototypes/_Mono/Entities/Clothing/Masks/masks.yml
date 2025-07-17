@@ -31,3 +31,18 @@
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5
+
+#tactical gas masks
+
+- type: entity
+  parent: ClothingMaskGasExplorer
+  id: ClothingMaskSOM40
+  name: SOM-40 gasmask
+  description: The Special. Operation. Mask. number 40. A tactical combat gas mask.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Mask/SOM40.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Mask/SOM40.rsi
+  - type: IdentityBlocker
+    coverage: MOUTH
