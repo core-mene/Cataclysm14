@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: WeaponTurretLaserTSFMC
   name: laser turret
@@ -30,3 +35,12 @@
   - type: NpcFactionMember
     factions:
     - TSFMCTurret
+
+- type: entity
+  parent: BaseWeaponBallisticTurret
+  id: WeaponTurretUSSP
+  suffix: USSP
+  components:
+  - type: NpcFactionMember
+    factions:
+    - USSPTurret

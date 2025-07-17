@@ -1,8 +1,16 @@
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 Eden077
+# SPDX-FileCopyrightText: 2025 UltimateJester
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
-  name: Mk32 "Universal" (9x19mm)
+  name: MA Mk32 "Universal" (9x19mm)
   parent: [BaseWeaponPistol, BaseC1Contraband]
-  id: WeaponPistolMk32 
-  description: A cheap, civilian grade, ubiquitous sidearm, produced by a NanoTrasen subsidiary. Uses 9x19mm ammo.
+  id: WeaponPistolMk32
+  description: A cheap, civilian grade, ubiquitous sidearm, produced by Midnight Arms Co. While it shares similarities to the MK58, it has been fully improved upon from it's Corporate War counterpart. Uses 9x19mm ammo.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/mk32.rsi
@@ -45,7 +53,7 @@
       gun_chamber: !type:ContainerSlot
 
 - type: entity
-  name: Pollock (9x19mm)
+  name: LWC C17 Pollock (9x19mm)
   parent: [BaseWeaponPistol, BaseC1Contraband]
   id: WeaponPistolPollock
   description: A compact and mass-produced combat pistol. Uses 9x19mm ammo.

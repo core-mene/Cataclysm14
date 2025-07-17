@@ -21,7 +21,7 @@
   id: Cove
   parent: BasePOI
   name: Rogue Insurgency Hideout
-  minimumDistance: 19500 # Mono
+  minimumDistance: 22500 # Mono
   maximumDistance: 24000 # Mono
   spawnGamePreset: [ NFPirate ]
   spawnGroup: Required
@@ -40,7 +40,7 @@
   minPlayers: 0
   stations:
     Cove:
-      stationProto: RecordsFrontierOutpost
+      stationProto: RecordsFrontierOutpostCargo
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Rogue Insurgency Hideout'

@@ -19,8 +19,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/12/2025 15:09:11
-  entityCount: 747
+  time: 07/14/2025 09:45:22
+  entityCount: 743
 maps: []
 grids:
 - 1
@@ -1067,9 +1067,19 @@ entities:
   - uid: 66
     components:
     - type: Transform
-      pos: 2.5,3.5
+      pos: -1.5,1.5
       parent: 1
   - uid: 67
+    components:
+    - type: Transform
+      pos: 2.5,1.5
+      parent: 1
+  - uid: 69
+    components:
+    - type: Transform
+      pos: 2.5,3.5
+      parent: 1
+  - uid: 373
     components:
     - type: Transform
       pos: -1.5,3.5
@@ -1078,18 +1088,6 @@ entities:
     components:
     - type: Transform
       pos: 5.5,-12.5
-      parent: 1
-- proto: BlastDoorOpen
-  entities:
-  - uid: 68
-    components:
-    - type: Transform
-      pos: -1.5,1.5
-      parent: 1
-  - uid: 69
-    components:
-    - type: Transform
-      pos: 2.5,1.5
       parent: 1
 - proto: CableApcExtension
   entities:
@@ -2166,15 +2164,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingOuterDrakeIndustriesTruckerPuffyVest
-  entities:
-  - uid: 718
-    components:
-    - type: Transform
-      parent: 709
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingOuterHardsuitSpatio
   entities:
   - uid: 716
@@ -2236,24 +2225,6 @@ entities:
     components:
     - type: Transform
       parent: 733
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: ClothingUniformDrakeIndustriesHauler
-  entities:
-  - uid: 747
-    components:
-    - type: Transform
-      parent: 733
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: ClothingUniformDrakeIndustriesTrucker
-  entities:
-  - uid: 732
-    components:
-    - type: Transform
-      parent: 709
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
@@ -3600,14 +3571,13 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 734
-          - 735
-          - 736
-          - 743
-          - 744
-          - 745
           - 746
-          - 747
+          - 745
+          - 744
+          - 743
+          - 736
+          - 735
+          - 734
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -3644,14 +3614,12 @@ entities:
           occludes: True
           ents:
           - 710
-          - 713
-          - 714
-          - 715
-          - 716
-          - 717
-          - 718
           - 719
-          - 732
+          - 717
+          - 716
+          - 715
+          - 714
+          - 713
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -3711,15 +3679,21 @@ entities:
   - uid: 643
     components:
     - type: Transform
+      anchored: True
       pos: 2.5,-14.5
       parent: 1
+    - type: Physics
+      bodyType: Static
 - proto: OxygenCanister
   entities:
   - uid: 642
     components:
     - type: Transform
+      anchored: True
       pos: 1.5,-14.5
       parent: 1
+    - type: Physics
+      bodyType: Static
 - proto: Paper
   entities:
   - uid: 722
@@ -3735,15 +3709,15 @@ entities:
         Optimal default power output is 26kW.
 - proto: PlasticFlapsAirtightClear
   entities:
+  - uid: 68
+    components:
+    - type: Transform
+      pos: 2.5,1.5
+      parent: 1
   - uid: 372
     components:
     - type: Transform
       pos: -1.5,1.5
-      parent: 1
-  - uid: 373
-    components:
-    - type: Transform
-      pos: 2.5,1.5
       parent: 1
 - proto: PlasticFlapsAirtightOpaque
   entities:
@@ -3807,12 +3781,9 @@ entities:
   - uid: 384
     components:
     - type: Transform
-      anchored: False
       rot: 1.5707963267948966 rad
       pos: 7.5,-6.5
       parent: 1
-    - type: Physics
-      bodyType: Dynamic
   - uid: 385
     components:
     - type: Transform
@@ -4104,17 +4075,20 @@ entities:
   - uid: 425
     components:
     - type: Transform
-      pos: 7.5,-2.5
+      rot: -1.5707963267948966 rad
+      pos: 7.5,-4.5
       parent: 1
   - uid: 426
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
       pos: 7.5,-3.5
       parent: 1
   - uid: 427
     components:
     - type: Transform
-      pos: 7.5,-4.5
+      rot: -1.5707963267948966 rad
+      pos: 7.5,-2.5
       parent: 1
   - uid: 428
     components:
@@ -4136,11 +4110,11 @@ entities:
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        427:
+        425:
         - Pressed: Toggle
         426:
         - Pressed: Toggle
-        425:
+        427:
         - Pressed: Toggle
   - uid: 432
     components:
@@ -4149,25 +4123,13 @@ entities:
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        68:
-        - Pressed: Toggle
-        69:
-        - Pressed: Toggle
-        15:
-        - Pressed: DoorBolt
-        16:
-        - Pressed: DoorBolt
-  - uid: 433
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,1.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
         66:
         - Pressed: Toggle
         67:
+        - Pressed: Toggle
+        373:
+        - Pressed: Toggle
+        69:
         - Pressed: Toggle
   - uid: 434
     components:
@@ -4411,13 +4373,13 @@ entities:
         - Right: Reverse
         - Middle: Off
         230:
-        - Left: Forward
+        - Left: Reverse
         - Right: Reverse
         - Middle: Off
         242:
-        - Left: Forward
         - Right: Reverse
         - Middle: Off
+        - Left: Reverse
         222:
         - Left: Forward
         - Right: Reverse
@@ -4454,11 +4416,11 @@ entities:
         - Right: Reverse
         - Middle: Off
         243:
-        - Left: Forward
+        - Left: Reverse
         - Right: Reverse
         - Middle: Off
         228:
-        - Left: Forward
+        - Left: Reverse
         - Right: Reverse
         - Middle: Off
         224:
@@ -4493,11 +4455,11 @@ entities:
         - Right: Reverse
         - Middle: Off
         228:
-        - Left: Forward
+        - Left: Reverse
         - Right: Reverse
         - Middle: Off
         243:
-        - Left: Forward
+        - Left: Reverse
         - Right: Reverse
         - Middle: Off
         231:
@@ -4532,11 +4494,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         230:
-        - Left: Forward
+        - Left: Reverse
         - Right: Reverse
         - Middle: Off
         242:
-        - Left: Forward
+        - Left: Reverse
         - Right: Reverse
         - Middle: Off
         222:

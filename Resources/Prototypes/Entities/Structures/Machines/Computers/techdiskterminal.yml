@@ -4,14 +4,16 @@
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2024 metalgearsloth
 # SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 significant harassment
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+# mono: changed to print out research point disks
 - type: entity
   parent: BaseComputer
   id: ComputerTechnologyDiskTerminal
-  name: research point disk terminal
-  description: A terminal used to print out research point disks.
+  name: research disk terminal # mono
+  description: A terminal used to print out research point disks. # mono
   components:
   - type: Sprite
     noRot: true
@@ -21,15 +23,16 @@
       state: icon
     - map: ["computerLayerScreen"]
       state: unshaded
-  - type: DiskConsole
+  # - type: DiskConsole
+  - type: PointDiskConsole # mono
   - type: ResearchClient
   - type: ActivatableUI
-    key: enum.DiskConsoleUiKey.Key
+    key: enum.PointDiskConsoleUiKey.Key # mono
   - type: ActivatableUIRequiresPower
   - type: UserInterface
     interfaces:
-      enum.DiskConsoleUiKey.Key:
-        type: DiskConsoleBoundUserInterface
+      enum.PointDiskConsoleUiKey.Key:
+        type: PointDiskConsoleBoundUserInterface # mono
       enum.ResearchClientUiKey.Key:
         type: ResearchClientBoundUserInterface
   - type: ExtensionCableReceiver
@@ -40,15 +43,15 @@
     energy: 0.5
     color: "#b53ca1"
 
-- type: weightedRandom
-  id: TechDiskTierWeights
-  weights:
-    1: 25
-    2: 10
-    3: 1
+# - type: weightedRandom
+#  id: TechDiskTierWeights
+#  weights:
+#    1: 25
+#    2: 10
+#    3: 1
 
-- type: weightedRandom
-  id: RareTechDiskTierWeights
-  weights:
-    2: 19
-    3: 1
+# - type: weightedRandom
+#  id: RareTechDiskTierWeights
+#  weights:
+#    2: 19
+#    3: 1

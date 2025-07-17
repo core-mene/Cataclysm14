@@ -8,7 +8,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  name: MR-8C BR (8x65mm SKR)
+  name: VFD MR-8C BR (8x65mm SKR)
   parent: [BaseWeaponRifle, BaseGunWieldable, BaseC2ContrabandUnredeemable]
   id: WeaponRifleMR8C
   description: The BR variant of the MR-8 series, firing with incredible accuracy. Chambered in 8x65mm SKR. A label on the side reads "FOR MILITARY USE ONLY".
@@ -77,7 +77,7 @@
     pvsIncrease: 0.5
 
 - type: entity
-  name: AK-502 (7.62x39mm)
+  name: NCI AK-502 (7.62x39mm)
   parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponRifleAK502
   description: A standard-issue USSP combat rifle. Uses 7.62x39mm ammo.
@@ -137,7 +137,7 @@
     id: StandardFactionLongarm
 
 - type: entity
-  name: XLR-556 ICWS (5.56x45mm)
+  name: VFD XLR-556 ICWS (5.56x45mm)
   parent: [BaseWeaponRifle, BaseGunWieldable, BaseC2ContrabandUnredeemable]
   id: WeaponRifleXlr556
   description: A proposed "next-gen" rifle for TSF standard infantry.
@@ -164,7 +164,7 @@
     - FullAuto
     - SemiAuto
     soundGunshot:
-      path: /Audio/_Goobstation/Weapons/Guns/Gunshots/thock.ogg
+      path: /Audio/_Goobstation/Weapons/Guns/Gunshots/smartgun_shoot.ogg
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/Rifles/xlr556.rsi
   - type: ItemSlots
@@ -199,7 +199,7 @@
     price: 3500
     vendPrice: 9000
   - type: PirateBountyItem
-    id: StandardFactionLongarm
+    id: ExperimentalFactionWeapon
 
 #Mercenary vulcan
 - type: entity
@@ -250,3 +250,75 @@
   - type: StaticPrice
     price: 4000
     vendPrice: 33200
+
+- type: entity
+  name: SKR-WS MLA-34 smartgun (.160 smart) # TODO - make like 5.56 level smartgun ammo for these
+  parent: [BaseWeaponRifle, BaseGunWieldable, BaseC2Contraband]
+  id: WeaponRifleMla34
+  description: A limited-production special smartgun made as a self-defense weapon for untrained ship crew.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/mla34.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -32
+  - type: Gun
+    minAngle: 45
+    maxAngle: 74
+    angleIncrease: 12
+    angleDecay: 20
+    cameraRecoilScalar: 0
+    fireRate: 4.5
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_Goobstation/Weapons/Guns/Gunshots/smartgun_shoot.ogg
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/mla34.rsi
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineSmart
+        insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MagazineSmart
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeSmart
+        priority: 1
+        whitelist:
+          tags:
+          - CartridgeSmart
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 10000
+    vendPrice: 25000
+  - type: PirateBountyItem
+    id: ExperimentalFactionWeapon
+  - type: SmartGun
+    requiresWield: true
+  - type: LaserPointer
+    targetedColor: "#ff0037"
+    defaultColor: "#03c2fc"
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 1.5
+    pvsIncrease: 0.5

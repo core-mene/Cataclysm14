@@ -1,0 +1,10 @@
+station-beacon-ussp-shipyard = USSP Shipyard
+station-beacon-ussp-docks = USSP Docks
+station-beacon-ussp-control = USSP Control Room
+station-beacon-ussp-reception = USSP Reception
+station-beacon-ussp-dorms = USSP Dorms
+station-beacon-ussp-commissar = Commissar
+station-beacon-ussp-armory = USSP Armory
+station-beacon-ussp-cargo = USSP Cargo
+station-beacon-ussp-brig = USSP Brig
+station-beacon-ussp-servers = USSP Servers

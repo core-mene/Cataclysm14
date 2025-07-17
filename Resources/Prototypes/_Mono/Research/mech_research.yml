@@ -4,13 +4,143 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: technology
+  id: RipleyAPLU
+  name: research-technology-ripley-aplu
+  icon:
+    sprite: Objects/Specific/Mech/mecha.rsi
+    state: ripley
+  discipline: MechaEngineering
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - RipleyHarness
+  - RipleyLArm
+  - RipleyRArm
+  - RipleyLLeg
+  - RipleyRLeg
+  - RipleyCentralElectronics
+  - RipleyPeripheralsElectronics
+  - MechEquipmentGrabber
+
+- type: technology
+  id: Ripley2
+  name: research-technology-ripley-mkii
+  icon:
+    sprite: Objects/Specific/Mech/mecha.rsi
+    state: ripleymkii
+  discipline: MechaEngineering
+  tier: 1
+  cost: 8000
+  recipeUnlocks:
+  - RipleyMKIIHarness
+  - RipleyUpgradeKit
+  technologyPrerequisites:
+  - RipleyAPLU
+
+- type: technology
+  id: Clarke
+  name: research-technology-clarke
+  icon:
+    sprite: Objects/Specific/Mech/mecha.rsi
+    state: clarke
+  discipline: MechaEngineering
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - ClarkeHarness
+  - ClarkeHead
+  - ClarkeLArm
+  - ClarkeRArm
+  - ClarkeTreads
+  - ClarkeCentralElectronics
+  - ClarkePeripheralsElectronics
+  technologyPrerequisites:
+  - Ripley2
+
+- type: technology
+  id: HONKWeapons
+  name: research-technology-honk-weapons
+  icon:
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_bananamrtr
+  discipline: MechaEngineering
+  tier: 1
+  cost: 6000
+  recipeUnlocks:
+  - MechEquipmentHonkerBananaMortar
+  - MechEquipmentHonkerMousetrapMortar
+
+- type: technology
+  id: Gygax
+  name: research-technology-gygax
+  icon:
+    sprite: Objects/Specific/Mech/mecha.rsi
+    state: gygax
+  discipline: MechaEngineering
+  tier: 1
+  cost: 12000
+  recipeUnlocks:
+  - GygaxHarness
+  - GygaxArmor
+  - GygaxHead
+  - GygaxLArm
+  - GygaxLLeg
+  - GygaxRArm
+  - GygaxRLeg
+  - GygaxCentralElectronics
+  - GygaxPeripheralsElectronics
+  - GygaxTargetingElectronics
+  - WeaponMechCombatUltraRifle
+  technologyPrerequisites:
+  - Ripley2
+
+- type: technology
+  id: ExplosiveMechAmmunition
+  name: research-technology-explosive-mech-ammunition
+  icon:
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_missilerack
+  discipline: MechaEngineering
+  tier: 1
+  cost: 12000
+  recipeUnlocks:
+  - WeaponMechCombatMissileRack8
+  technologyPrerequisites:
+  - ExplosiveTechnology
+
+- type: technology
+  id: Durand
+  name: research-technology-durand
+  icon:
+    sprite: Objects/Specific/Mech/mecha.rsi
+    state: durand
+  discipline: MechaEngineering
+  tier: 1
+  cost: 13000
+  recipeUnlocks:
+  - DurandHarness
+  - DurandArmor
+  - DurandHead
+  - DurandLArm
+  - DurandLLeg
+  - DurandRArm
+  - DurandRLeg
+  - DurandCentralElectronics
+  - DurandPeripheralsElectronics
+  - DurandTargetingElectronics
+  - WeaponMechCombatShotgun
+  - WeaponMechCombatShotgunIncendiary
+  technologyPrerequisites:
+  - Gygax
+
+- type: technology
   id: Broadsword
   name: research-technology-mech-base
   icon:
     sprite: _Mono/Objects/Specific/Mech/mechaS2.rsi
     state: broadsword
-  discipline: Arsenal
-  tier: 3
+  discipline: MechaEngineering
+  tier: 2
   cost: 50000
   recipeUnlocks:
   - BroadswordHarness
@@ -40,6 +170,7 @@
   - IFFMechaGreenTriangle
   technologyPrerequisites:
   - Gygax
+  - ExplosiveTechnology
 
 - type: technology
   id: Halberd
@@ -47,8 +178,8 @@
   icon:
     sprite: _Mono/Objects/Specific/Mech/mechaS2.rsi
     state: broadsword
-  discipline: Arsenal
-  tier: 3
+  discipline: MechaEngineering
+  tier: 1
   cost: 30000
   recipeUnlocks:
   - HalberdHarness
@@ -57,6 +188,8 @@
   - MediumMechTOW
   technologyPrerequisites:
   - Broadsword
+  - Gygax
+  - ExplosiveTechnology
 
 - type: technology
   id: Sabre
@@ -64,14 +197,16 @@
   icon:
     sprite: _Mono/Objects/Specific/Mech/mechaS2.rsi
     state: broadsword
-  discipline: Arsenal
-  tier: 3
-  cost: 50000 # gygax+ bro i've seen how fast that shit is in grav
+  discipline: MechaEngineering
+  tier: 2
+  cost: 30000 # gygax+ bro i've seen how fast that shit is in grav
   recipeUnlocks:
   - SabreHarness
   technologyPrerequisites:
   - Broadsword
   - Halberd
+  - Durand
+  - Gygax
 
 - type: technology
   id: Flail
@@ -79,9 +214,9 @@
   icon:
     sprite: _Mono/Objects/Specific/Mech/mechaS4.rsi
     state: flail
-  discipline: Arsenal
+  discipline: MechaEngineering
   tier: 3
-  cost: 90000
+  cost: 70000
   recipeUnlocks:
   - FlailHarness
   - FlailHead
@@ -104,8 +239,8 @@
   icon:
     sprite: _Mono/Objects/Specific/Mech/mechaS4.rsi
     state: flail
-  discipline: Arsenal
-  tier: 3
+  discipline: MechaEngineering
+  tier: 2
   cost: 22500
   recipeUnlocks:
   - SpyglassHarness
@@ -120,8 +255,8 @@
   icon:
     sprite: _Mono/Objects/Specific/Mech/mechaS4.rsi
     state: flail
-  discipline: Arsenal
-  tier: 3
+  discipline: MechaEngineering
+  tier: 2
   cost: 22500
   recipeUnlocks:
   - MaceHarness

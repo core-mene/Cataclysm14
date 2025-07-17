@@ -90,3 +90,27 @@
       amount: 2
     - id: AmmoBox7.62x39mmBigFMJ
       amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseMla34
+  suffix: Dungeon, MlA-34
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleMla34
+      amount: 1
+    - id: MagazineSmart
+      amount: 4
+
+- type: entity
+  parent: WeaponCaseHeavy
+  id: WeaponCaseMla79
+  suffix: Dungeon, MlA-79
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSmartLmg
+      amount: 1
+    - id: MagazineSmartLMG
+      amount: 6

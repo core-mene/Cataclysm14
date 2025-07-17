@@ -3,10 +3,10 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  name: MlA-79 smart LMG (.160 smart)
+  name: SKR-WS MLA-79 smart LMG (.160 smart)
   parent: [BaseWeaponLightMachineGun, BaseGunWieldable, BaseC2Contraband]
   id: WeaponSmartLmg
-  description: A military prototype that saw rare use in front-lines field testing. Most have been lost to time.
+  description: A military prototype that saw rare use in front-lines field testing. This is a refined version for standard production.
   components:
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/SmartGuns/ml79a.rsi
@@ -16,22 +16,18 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
-    minAngle: -22
+    minAngle: -5
     maxAngle: -37
   - type: Gun
-    minAngle: 22
-    maxAngle: 40
+    minAngle: 27
+    maxAngle: 73
     angleIncrease: 2
     angleDecay: 22
     fireRate: 8
-    burstFireRate: 40
-    shotsPerBurst: 10
-    lockOnTargetBurst: true
     cameraRecoilScalar: 0
     selectedMode: FullAuto
     availableModes:
     - FullAuto
-    - Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/m41.ogg
   - type: ChamberMagazineAmmoProvider

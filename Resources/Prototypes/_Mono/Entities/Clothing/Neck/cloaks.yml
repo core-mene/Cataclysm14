@@ -23,3 +23,12 @@
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Neck/Cloaks/blackcloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakRogueCommander
+  name: Rogue commander's cloak
+  description: An Ashenveil Cell-Comm cloak, only given to those who have proven their loyalty and worth to the cause. Some say Ashenveil never would've formed beyond a prisoner colony if it wasn't for the Syndicate Remnants elevating them.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Cloaks/ashenveilcloak.rsi

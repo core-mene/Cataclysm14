@@ -110,11 +110,14 @@ public sealed partial class ShipShieldsSystem : EntitySystem
     {
         base.Initialize();
         SubscribeLocalEvent<ShipShieldComponent, StartCollideEvent>(OnCollide);
+        SubscribeLocalEvent<ShipShieldEmitterComponent, ComponentShutdown>(OnEmitterShutdown); // Mono
 
         InitializeCommands();
         InitializeEmitters();
     }
 
+
+    // Mono notes: THIS CODE BASICALLY DOES NOT WORK (especially for raycasted projectiles)
     private void OnCollide(EntityUid uid, ShipShieldComponent component, StartCollideEvent args)
     {
         if (Transform(args.OtherEntity).Anchored)
@@ -167,6 +170,16 @@ public sealed partial class ShipShieldsSystem : EntitySystem
         {
             var ev = new ShieldDeflectedEvent(args.OtherEntity);
             RaiseLocalEvent(component.Source.Value, ref ev);
+        }
+    }
+
+    private void OnEmitterShutdown(EntityUid uid, ShipShieldEmitterComponent emitter, ComponentShutdown args) // Mono 
+    {
+        if (emitter.Shielded != null)
+        {
+            UnshieldEntity(emitter.Shielded.Value);
+            emitter.Shield = null;
+            emitter.Shielded = null;
         }
     }
 
@@ -223,8 +236,8 @@ public sealed partial class ShipShieldsSystem : EntitySystem
         internalPoly.Set(roughPoly);
 
         _fixtureSystem.TryCreateFixture(shield, internalPoly, "internalShield",
-            hard: false,
-            collisionLayer: (int) CollisionGroup.FullTileLayer,
+            hard: false, // To be set to Hard once code is made to actually make this shit work
+            collisionLayer: (int)CollisionGroup.BulletImpassable, // Mono - Only blocks bullets
             body: shieldPhysics);
 
         _physicsSystem.WakeBody(shield, body: shieldPhysics);

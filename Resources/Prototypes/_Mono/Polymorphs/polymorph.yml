@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Your Name
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: polymorph
+  id: LetoferolMutation
+  configuration:
+    entity: MobLetoferolHorror
+    forced: true
+    inventory: Drop
+    transferName: true
+    revertOnCrit: false
+    revertOnDeath: true
+    polymorphSound: /Audio/Effects/Fluids/splat.ogg
+    exitPolymorphSound: /Audio/Effects/Fluids/glug.ogg
+    allowRepeatedMorphs: true
+
+- type: polymorph
+  id: LetoferolMutationNatural
+  configuration:
+    entity: MobLetoferolHorror
+    forced: true
+    inventory: Drop
+    transferName: true
+    revertOnCrit: false
+    revertOnDeath: false
+    polymorphSound: /Audio/Effects/Fluids/splat.ogg
+    exitPolymorphSound: /Audio/Effects/Fluids/glug.ogg
+    allowRepeatedMorphs: true

@@ -1,3 +1,27 @@
+# SPDX-FileCopyrightText: 2023 Emisse
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2024 Cojoke
+# SPDX-FileCopyrightText: 2024 CookieMasterT
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 MilenVolf
+# SPDX-FileCopyrightText: 2024 Milon
+# SPDX-FileCopyrightText: 2024 Mr. 27
+# SPDX-FileCopyrightText: 2024 Naive817
+# SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2024 ScarKy0
+# SPDX-FileCopyrightText: 2024 The Canned One
+# SPDX-FileCopyrightText: 2024 deltanedas
+# SPDX-FileCopyrightText: 2024 liltenhead
+# SPDX-FileCopyrightText: 2024 marbow
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 JonahDes
+# SPDX-FileCopyrightText: 2025 SarahRaven
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: BorgChassisSelectable
   parent: BaseBorgChassisNT
@@ -100,7 +124,7 @@
       map: ["light"]
       visible: false
   - type: BorgChassis
-    maxModules: 3
+    maxModules: 5
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -132,7 +156,7 @@
       map: ["light"]
       visible: false
   - type: BorgChassis
-    maxModules: 3
+    maxModules: 5
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -173,7 +197,7 @@
       map: ["light"]
       visible: false
   - type: BorgChassis
-    maxModules: 3
+    maxModules: 5
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -209,7 +233,7 @@
       map: ["light"]
       visible: false
   - type: BorgChassis
-    maxModules: 5 # the sixth one broke lol
+    maxModules: 6 # the seventh one broke lol
     moduleWhitelist:
       tags:
       - BorgModuleGeneric

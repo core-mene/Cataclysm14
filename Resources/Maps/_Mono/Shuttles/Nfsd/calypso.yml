@@ -2068,7 +2068,7 @@ entities:
     - type: Transform
       pos: -0.5,1.5
       parent: 1
-- proto: ComputerAdvancedRadar
+- proto: ComputerIFF
   entities:
   - uid: 300
     components:
@@ -2113,7 +2113,7 @@ entities:
       - device-button-6
       - device-button-7
       - device-button-8
-- proto: ComputerTabletopIFF
+- proto: FaxMachineShip
   entities:
   - uid: 303
     components:
@@ -2121,10 +2121,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -1.5,-1.5
       parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5
-    - type: Battery
-      startingCharge: 0
 - proto: ComputerTabletopStationRecords
   entities:
   - uid: 304

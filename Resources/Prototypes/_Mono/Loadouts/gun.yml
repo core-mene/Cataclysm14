@@ -215,58 +215,58 @@
 
 # Rifles
 
-- type: loadout #Lecter Rubber
+- type: loadout #Lecter
   id: SecurityGuardLecterLoadout
   price: 0
   storage:
     back:
-    - WeaponRifleLecterRubber
+    - WeaponRifleLecter
 
-- type: loadout #Lecter Rubber Ammo
+- type: loadout #Lecter Ammo
   id: SecurityGuard5.56x45mmAmmoLoadout
   price: 0
   storage:
     back:
-    - BoxMagazine5.56x45mmRubber
+    - BoxMagazine5.56x45mmFMJ
 
 # Shotguns
 
-- type: loadout #Kammerer Beanbag
+- type: loadout #Kammerer
   id: SecurityGuardKammererLoadout
   price: 0
   storage:
     back:
-    - WeaponShotgunKammererNonlethal
+    - WeaponShotgunKammerer
 
-- type: loadout #Enforcer Beanbag
+- type: loadout #Enforcer
   id: SecurityGuardEnforcerLoadout
   price: 0
   storage:
     back:
-    - WeaponShotgunEnforcerRubber
+    - WeaponShotgunEnforcer
 
-- type: loadout #Beanbag Shells
+- type: loadout # Shells
   id: SecurityGuardBeanbagAmmoLoadout
   price: 0
   storage:
     back:
-    - AmmoBox12_gaugeBeanbag
+    - AmmoBox12_gaugeBuckshot
 
 # SMGs
 
-- type: loadout #Drozd Rubber
+- type: loadout #Drozd
   id: SecurityGuardDrozdLoadout
   price: 0
   storage:
     back:
-    - WeaponSubMachineGunDrozdRubber
+    - WeaponSubMachineGunDrozd
 
 - type: loadout #Drozd Rubber Ammo
   id: SecurityGuardAcpSmgAmmoRubberLoadout
   price: 2000
   storage:
     back:
-    - BoxMagazine45_ACPSubMachineGunRubber
+    - BoxMagazine45_ACPSubMachineGunFMJ
 
 # Energy
 
@@ -331,6 +331,20 @@
   storage:
     back:
     - BoxMagazine7.62x51mmFMJ
+
+- type: loadout #Bandit
+  id: FactionBanditLoadout
+  price: 3000
+  storage:
+    back:
+    - WeaponRifleMR3C
+
+- type: loadout #Bandit Ammo
+  id: Faction8x65mmAmmoLoadout
+  price: 0
+  storage:
+    back:
+    - BoxMagazine8x65mmFMJ
 
 - type: loadout #AKM
   id: FactionAkmLoadout

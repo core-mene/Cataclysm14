@@ -32,7 +32,7 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/08/2025 19:05:17
+  time: 07/13/2025 08:59:21
   entityCount: 977
 maps: []
 grids:
@@ -127,6 +127,16 @@ entities:
             id: Bot
           decals:
             15: -6,-6
+        - node:
+            color: '#1861D5FF'
+            id: BotGreyscale
+          decals:
+            222: 6,0
+        - node:
+            color: '#951710FF'
+            id: BotGreyscale
+          decals:
+            223: 7,1
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkInnerNe

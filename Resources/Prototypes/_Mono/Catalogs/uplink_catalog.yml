@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -71,3 +72,13 @@
       blacklist:
         components:
           - SurplusBundle
+
+- type: listing
+  id: UplinkLetoferolSyringe
+  name: uplink-letoferol-name
+  description: uplink-letoferol-desc
+  productEntity: SyringeLetoferol
+  cost:
+    Telecrystal: 350
+  categories:
+  - UplinkDeception

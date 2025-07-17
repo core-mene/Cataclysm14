@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
 # SPDX-FileCopyrightText: 2025 sleepyyapril
@@ -121,9 +122,9 @@
 # Trauma Armed Forces
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitTAF
-  name: trauma armed forces jumpsuit
-  description: Standard fatigues of the Trauma Armed Forces.
+  id: ClothingUniformJumpsuitATU
+  name: armed trauma unit jumpsuit
+  description: Standard fatigues of the Armed Trauma Unit.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Uniforms/Jumpsuit/trauma.rsi
@@ -204,7 +205,7 @@
         color: "#cd6b6b"
   - type: SuitSensor
     randomMode: true
-    
+
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformDrakeIndustriesWatchdog

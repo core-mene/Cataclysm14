@@ -8,12 +8,12 @@
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 # Upstream
 - type: entity
-  name: Lecter (5.56x45mm)
   parent: WeaponRifleLecter
   id: WeaponRifleLecterRubber
   suffix: Non-lethal
@@ -40,7 +40,6 @@
 
 #Delta-V
 - type: entity
-  name: FCM Vulcan (7.62x51mm)
   parent: WeaponRifleVulcan
   id: WeaponRifleVulcanRubber
   suffix: Non-lethal
@@ -68,10 +67,10 @@
 
 # Frontier
 - type: entity
-  name: Gestio (7.62x39mm)
+  name: PA Gestio (7.62x39mm)
   parent: [ BaseWeaponRifle, BaseC1Contraband ]
   id: WeaponRifleGestio
-  description: An old burst-fire rifle made by Silver Industries that never left trials. Accepts low capacity 7.62x39mm magazines.
+  description: An old burst-fire rifle that never left trials. Accepts low capacity 7.62x39mm magazines.
   components:
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Rifles/gestio.rsi
@@ -153,8 +152,8 @@
 - type: entity
   parent: [ BaseWeaponRifle, BaseC1Contraband ]
   id: WeaponRifleNovaliteC1
-  name: Novalite C1 (5.56x45mm)
-  description: A modification to the Lecter from SW LLC, a civilian grade semi-automatic rifle with an internal magazine. Uses 5.56x45mm ammo.
+  name: LWC Novalite C1 (5.56x45mm)
+  description: A modification to the Lecter from LWC, a civilian grade semi-automatic rifle with an internal magazine. Uses 5.56x45mm ammo.
   components:
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Rifles/novalitec1.rsi
@@ -230,7 +229,7 @@
 
 - type: entity
   id: WeaponRifleSVS
-  name: SVS-42 (7.62x54mmR)
+  name: NCI SVS-42 (7.62x54mmR)
   parent: [ BaseWeaponRifle, BaseGunMelee, BaseC1Contraband ]
   description: "Originally designed by Samonov, this old surplus rifle looks like it's seen a few wars. Uses low capacity 10 rounder 7.62x54mmR magazines. Equipped with bayonet."
   components:

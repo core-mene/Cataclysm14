@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -5,9 +6,9 @@
 - type: latheRecipePack
   id: MonoRogueAmmo
   recipes:
-  - Magazine7.62x39mmFMJ # AKM/WSPR
+  - Magazine7.62x39mmFMJ # AKM
   - Magazine7.62x39mmEmpty # AKM/WSPR
-  - AmmoBox7.62x39mmFMJ # AKM/WSPR
+  - AmmoBox7.62x39mmFMJ # AKM
   - Magazine7.62x51mmFMJ # M-90
   - Magazine7.62x51mmEmpty # M-90
   - AmmoBox7.62x51mmFMJ # M-90
@@ -31,3 +32,5 @@
   - AmmoBox145x114mmBig # Hristov
   - Magazine635x40mmCaseless # MlA-73
   - AmmoBox635x40mmCaseless # MlA-73
+  - Magazine7.62x39mmSubsonic # WSPR
+  - AmmoBox7.62x39mmSubsonic # WSPR
