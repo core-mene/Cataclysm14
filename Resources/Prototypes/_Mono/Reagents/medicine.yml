@@ -190,13 +190,13 @@
           prototype: LetoferolMutation
           conditions:
             - !type:ReagentThreshold
-              min: 24
+              min: 5
         - !type:AdjustReagent
           reagent: Letoferol
-          amount: -2.5
+          amount: -0.5
           conditions:
             - !type:ReagentThreshold
-              min: 24
+              min: 5
 
 - type: reagent
   id: NaturalLetoferol
