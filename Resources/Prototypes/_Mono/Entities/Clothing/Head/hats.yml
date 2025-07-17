@@ -9,6 +9,17 @@
 
 - type: entity
   parent: ClothingHeadBaseButcherable
+  id: ClothingHeadHatWideBrimmedWhite
+  name: white wide-brimmed hat
+  description: Works great as frisbee substitute.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Head/Hats/greyscale_widebrim_hat.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Head/Hats/greyscale_widebrim_hat.rsi
+
+- type: entity
+  parent: ClothingHeadBaseButcherable
   id: ClothingHeadHatWideBrimmedPurple
   name: purple wide-brimmed hat
   description: Works great as frisbee substitute.

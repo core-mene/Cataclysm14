@@ -535,6 +535,15 @@
 # Mono Begin
 
 - type: loadout
+  id: ContractorClothingHeadHatWideBrimmedWhite
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1250
+  equipment:
+    head: ClothingHeadHatWideBrimmedWhite
+
+- type: loadout
   id: ContractorClothingHeadHatWideBrimmedPurple
   effects:
   - !type:GroupLoadoutEffect
