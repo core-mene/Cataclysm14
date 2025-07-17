@@ -1,8 +1,8 @@
 - type: entity
-  parent: [BaseWeaponRifle, BaseC2ContrabandUnredeemable]
-  id: WeaponRifleMR3C
-  name: SKR-WS MR-3C DMR
-  description: A precise and reliable bullpup, developed as a production model from early MR-8C prototypes.
+  parent: [BaseWeaponRifle, BaseC2ContrabandUnredeemable] # Mono
+  id: WeaponRifleMR3C # Mono
+  name: SKR-WS MR-3C DMR # Mono
+  description: A precise and reliable bullpup, developed as a production model from early MR-8C prototypes. # Mono
   components:
   - type: Sprite
     sprite: _Harmony/Objects/Weapons/Guns/Rifles/bandit.rsi
@@ -13,12 +13,12 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _Harmony/Objects/Weapons/Guns/Rifles/bandit.rsi
-  - type: GunWieldBonus
+  - type: GunWieldBonus # Mono
     minAngle: -32
     maxAngle: -51
   - type: Gun
-    minAngle: 32
-    maxAngle: 54
+    minAngle: 32 # Mono
+    maxAngle: 54 # Mono
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -32,21 +32,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine8x65mmSKR
+        startingItem: Magazine8x65mmSKR # Mono
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - Magazine8x65mmSKR
+          - Magazine8x65mmSKR # Mono
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge8x65mmSKR
+        startingItem: Cartridge8x65mmSKR # Mono
         priority: 1
         whitelist:
           tags:
-          - Cartridge8x65mmSKR
+          - Cartridge8x65mmSKR # Mono
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -56,3 +56,9 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+    # Mono start
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 6.5
+    pvsIncrease: 0.65
+    # Mono end
