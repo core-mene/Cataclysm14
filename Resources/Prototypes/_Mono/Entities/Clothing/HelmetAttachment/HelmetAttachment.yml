@@ -74,11 +74,11 @@
     maxItemSize: Small
     grid:
     - 0,0,1,1
-# NVGs and potentially thermals
+# NVGs and thermals
 
 - type: entity
   parent: ClothingHelmetAttachmentBase
-  id: ClothingEyesNVGsBasicOptoelectronics
+  id: ClothingHelmetAttachmentNVGsBasic
   name: basic night vision goggles
   description: A pair of basic optoelectronics night vision goggles with high sensibility to flashes.
   components:
@@ -97,7 +97,7 @@
 
 - type: entity
   parent: ClothingHelmetAttachmentBase
-  id: ClothingEyesInfraredBasicOptoelectronics
+  id: ClothingHelmetAttachmentInfraredBasic
   name: basic thermal vision goggles
   description: A pair of basic thermal vision goggles with high sensibility to flashes.
   components:

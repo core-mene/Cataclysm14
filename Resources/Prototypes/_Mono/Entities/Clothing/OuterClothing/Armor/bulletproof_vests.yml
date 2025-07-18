@@ -28,6 +28,9 @@
     coefficient: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.90
+  - type: StaticPrice
+    price: 5000
+    vendPrice: 8000
 
 #medium bulletproof stats -> as protective as normal/medium + some added blunt/slash
 - type: entity
@@ -57,6 +60,9 @@
     sprintModifier: 0.95
   - type: ExplosionResistance
     damageCoefficient: 0.80
+  - type: StaticPrice
+    price: 6000
+    vendPrice: 11500
 
 #heavy bulletproof stats -> less protective than jugg and slower
 - type: entity
@@ -87,6 +93,9 @@
     walkModifier: 0.65
   - type: ExplosionResistance
     damageCoefficient: 0.60
+  - type: StaticPrice
+    price: 10000
+    vendPrice: 15000
 
 #polyvalent bulletproof stats -> slightly less protective than light but added blunt/sharp
 - type: entity
@@ -114,6 +123,9 @@
     coefficient: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.90
+  - type: StaticPrice
+    price: 4000
+    vendPrice: 7000
 
 #stabproof -> good against slash, decent at blunt, mediocre at piercing
 - type: entity
@@ -141,3 +153,6 @@
     coefficient: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.90
+  - type: StaticPrice
+    price: 4000
+    vendPrice: 6000

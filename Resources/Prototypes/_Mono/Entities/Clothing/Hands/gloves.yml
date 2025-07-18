@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+#tactical gloves
+
 - type: entity
   parent: [ ClothingHandsGlovesCombat, BaseC1Contraband ] # BaseSecurityEngineeringContraband<BaseC1Contraband
   id: ClothingHandsGlovesTacticalCombatTan
@@ -25,6 +27,9 @@
       right:
       - state: inhand-right
         color: "#d2B48C"
+  - type: StaticPrice
+    price: 1500
+    vendPrice: 1950
 
 - type: entity
   parent: [ ClothingHandsGlovesCombat, BaseC1Contraband ] # BaseSecurityEngineeringContraband<BaseC1Contraband
@@ -49,6 +54,9 @@
       right:
       - state: inhand-right
         color: "#2F2F2F"
+  - type: StaticPrice
+    price: 1500
+    vendPrice: 1950
 
 - type: entity
   parent: [ ClothingHandsGlovesCombat, BaseC1Contraband ] # BaseSecurityEngineeringContraband<BaseC1Contraband
@@ -73,6 +81,9 @@
       right:
       - state: inhand-right
         color: "#4A5A49"
+  - type: StaticPrice
+    price: 1500
+    vendPrice: 1950
 
 - type: entity
   parent: [ ClothingHandsGlovesCombat, BaseC1Contraband ] # BaseSecurityEngineeringContraband<BaseC1Contraband
@@ -97,6 +108,9 @@
       right:
       - state: inhand-right
         color: "#636B2F"
+  - type: StaticPrice
+    price: 1500
+    vendPrice: 1950
 
 - type: entity
   parent: [ ClothingHandsGlovesCombat, BaseC1Contraband ] # BaseSecurityEngineeringContraband<BaseC1Contraband
@@ -121,6 +135,9 @@
       right:
       - state: inhand-right
         color: "#81613C"
+  - type: StaticPrice
+    price: 1500
+    vendPrice: 1950
 
 - type: entity
   parent: [ ClothingHandsGlovesCombat, BaseC1Contraband ] # BaseSecurityEngineeringContraband<BaseC1Contraband
@@ -135,3 +152,6 @@
     clothingVisuals:
       gloves:
       - state: equipped-HAND
+  - type: StaticPrice
+    price: 1500
+    vendPrice: 1950
