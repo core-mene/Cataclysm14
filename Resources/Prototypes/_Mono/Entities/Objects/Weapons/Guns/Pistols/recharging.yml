@@ -38,6 +38,8 @@
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
+  - type: Wieldable
+  - type: LaserPointer
 
 - type: entity
   id: BulletHawk
