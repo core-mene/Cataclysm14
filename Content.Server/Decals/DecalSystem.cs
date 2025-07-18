@@ -12,8 +12,9 @@
 // SPDX-FileCopyrightText: 2024 Leon Friedrich
 // SPDX-FileCopyrightText: 2024 MilenVolf
 // SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2024 Tayrtahn
 // SPDX-FileCopyrightText: 2025 J
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 Tayrtahn
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
