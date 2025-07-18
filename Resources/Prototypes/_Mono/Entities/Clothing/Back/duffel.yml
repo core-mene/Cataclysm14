@@ -114,6 +114,30 @@
 
 - type: entity
   parent: NFClothingDuffel
+  id: ClothingBackpackDuffelTacticalDuffelCoyoteBrown
+  name: coyote brown tactical duffel
+  description: One heavy sack. Some effort was put in to make it lighter to no avail.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Back/Duffels/duffel_any.rsi
+    color: "#7b5c39"
+  - type: Clothing
+    sprite: _Mono/Clothing/Back/Duffels/duffel_any.rsi
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#7b5c39"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#7b5c39"
+      right:
+      - state: inhand-right
+        color: "#7b5c39"
+
+- type: entity
+  parent: NFClothingDuffel
   id: ClothingBackpackDuffelTacticalDuffelWhite
   name: white tactical duffel
   description: One heavy sack. Some effort was put in to make it lighter to no avail.

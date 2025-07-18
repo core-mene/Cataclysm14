@@ -100,6 +100,30 @@
 
 - type: entity
   parent: ClothingShoesBootsJackFilled
+  id: ClothingShoesTacticalSwatCoyoteBrown
+  name: coyote brown tactical swat boots
+  description: A pair of tactical swat boots for when you want to turn up the heat.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Shoes/Boots/swat_any.rsi
+    color: "#81613C"
+  - type: Clothing
+    sprite: _Mono/Clothing/Shoes/Boots/swat_any.rsi
+    clothingVisuals:
+      shoes:
+      - state: equipped-FEET
+        color: "#81613C"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#81613C"
+      right:
+      - state: inhand-right
+        color: "#81613C"
+
+- type: entity
+  parent: ClothingShoesBootsJackFilled
   id: ClothingShoesTacticalSwatWhite
   name: white tactical swat boots
   description: A pair of tactical swat boots for when you want to turn up the heat.

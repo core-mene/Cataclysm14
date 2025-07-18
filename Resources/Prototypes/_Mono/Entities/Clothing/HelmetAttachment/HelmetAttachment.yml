@@ -74,3 +74,45 @@
     maxItemSize: Small
     grid:
     - 0,0,1,1
+# NVGs and potentially thermals
+
+- type: entity
+  parent: ClothingHelmetAttachmentBase
+  id: ClothingEyesNVGsBasicOptoelectronics
+  name: basic night vision goggles
+  description: A pair of basic optoelectronics night vision goggles with high sensibility to flashes.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/HelmetAttachment/basic_optoelectronics_nvgs.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/HelmetAttachment/basic_optoelectronics_nvgs.rsi
+    clothingVisuals:
+      helmetattachment:
+      - state: equipped-HELMETATTACHMENT
+  - type: NightVision
+    flashDurationMultiplier: 3
+    isEquipment: true
+  - type: IdentityBlocker
+    coverage: EYES
+
+- type: entity
+  parent: ClothingHelmetAttachmentBase
+  id: ClothingEyesInfraredBasicOptoelectronics
+  name: basic thermal vision goggles
+  description: A pair of basic thermal vision goggles with high sensibility to flashes.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/HelmetAttachment/basic_optoelectronics_infrared.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/HelmetAttachment/basic_optoelectronics_infrared.rsi
+    clothingVisuals:
+      helmetattachment:
+      - state: equipped-HELMETATTACHMENT
+  - type: ThermalVision
+    flashDurationMultiplier: 3
+    pulseTime: 4
+    isEquipment: true
+    toggleAction: PulseThermalVision
+    color: "#888888"
+  - type: IdentityBlocker
+    coverage: EYES

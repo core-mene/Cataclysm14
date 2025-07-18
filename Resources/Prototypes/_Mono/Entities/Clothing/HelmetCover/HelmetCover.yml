@@ -6,14 +6,36 @@
 
 - type: entity
   parent: ClothingHelmetCoverBase
-  id: ClothingHelmetCoverCCE
-  name: CCE helmet cover
+  id: ClothingHelmetCoverCCEBase
+  name: CCE helmet cover (base)
   description: A CCE central european camouflage helmet cover for your tactical fashion needs or to mount attachments.
   components:
   - type: Sprite
-    sprite: _Mono/Clothing/HelmetCover/cover_CCE.rsi
+    sprite: _Mono/Clothing/HelmetCover/cover_CCE_base.rsi
   - type: Clothing
-    sprite: _Mono/Clothing/HelmetCover/cover_CCE.rsi
+    sprite: _Mono/Clothing/HelmetCover/cover_CCE_base.rsi
+    clothingVisuals:
+      helmetcover:
+      - state: equipped-HELMETCOVER
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#2F2F2F"
+      right:
+      - state: inhand-right
+        color: "#2F2F2F"
+
+- type: entity
+  parent: ClothingHelmetCoverBase
+  id: ClothingHelmetCoverCCEDesert
+  name: CCE helmet cover (desert)
+  description: A Desert CCE central european camouflage helmet cover for your tactical fashion needs or to mount attachments.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/HelmetCover/cover_CCE_desert.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/HelmetCover/cover_CCE_desert.rsi
     clothingVisuals:
       helmetcover:
       - state: equipped-HELMETCOVER
@@ -51,18 +73,13 @@
 - type: entity
   parent: ClothingHelmetCoverBase
   id: ClothingHelmetCoverHelmetMount
-  name: helmet mount
+  name: helmet attachment mount
   description: A simple helmet mount to put attachment on your helmet.
   components:
   - type: Sprite
-    sprite: _Mono/Clothing/HelmetCover/mount.rsi
+    sprite: _Mono/Clothing/HelmetCover/attachment_mount.rsi
     color: "#2F2F2F"
     scale: 1.3,1.3
-  - type: Clothing
-    sprite: _Mono/Clothing/HelmetCover/mount.rsi
-    clothingVisuals:
-      helmetcover:
-      - state: equipped-HELMETCOVER
 
 #colored helmet covers
 
