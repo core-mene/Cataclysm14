@@ -37,3 +37,15 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsTsfEngineer ]
+
+# Drake Industries
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockDrakeIndustriesGlass
+  suffix: DI, Glass
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/Doors/Airlocks/Glass/di.rsi
+  - type: Wires
+    layoutId: AirlockSecurity

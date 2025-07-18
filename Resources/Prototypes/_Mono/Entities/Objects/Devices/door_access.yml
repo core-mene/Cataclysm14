@@ -42,15 +42,13 @@
   id: DoorElectronicsDrakeIndustries
   suffix: DI, Locked
   components:
-  - type: Sprite
-    sprite: _Mono/Structures/Doors/Airlocks/Standard/di.rsi
   - type: AccessReader
     access: [["DI"]]
 
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsDrakeIndustriesWatchdog
-  suffix: DI Watchdog, Locked
+  suffix: DI, Locked, Watchdog
   components:
   - type: AccessReader
     access: [["DISecurity"]]
@@ -58,7 +56,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsDrakeIndustriesOverseer
-  suffix: DI Overseer, Locked
+  suffix: DI, Locked, Overseer
   components:
   - type: AccessReader
     access: [["DICommand"]]

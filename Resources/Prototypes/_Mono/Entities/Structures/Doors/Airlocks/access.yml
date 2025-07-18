@@ -19,3 +19,67 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsSecurity ]
+
+# DI
+
+- type: entity
+  parent: AirlockDrakeIndustries
+  id: AirlockDrakeIndustriesLocked
+  suffix: DI, Locked
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/Doors/Airlocks/Standard/di.rsi
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsDrakeIndustries ]
+
+- type: entity
+  parent: AirlockDrakeIndustries
+  id: AirlockDrakeIndustriesLockedWatchdog
+  suffix: DI, Locked, Watchdog
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsDrakeIndustriesWatchdog ]
+
+- type: entity
+  parent: AirlockDrakeIndustries
+  id: AirlockDrakeIndustriesLockedOverseer
+  suffix: DI, Locked, Overseer
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsDrakeIndustriesOverseer ]
+      
+# Glass
+
+# DI 
+
+- type: entity
+  parent: AirlockDrakeIndustriesGlass
+  id: AirlockDrakeIndustriesGlassLocked
+  suffix: DI, Glass, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsDrakeIndustries ]
+  - type: Sprite
+    sprite: _Mono/Structures/Doors/Airlocks/Glass/di.rsi
+    
+- type: entity
+  parent: AirlockDrakeIndustriesGlass
+  id: AirlockDrakeIndustriesGlassLockedWatchdog
+  suffix: DI, Glass, Locked, Watchdog
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsDrakeIndustriesWatchdog ]
+
+- type: entity
+  parent: AirlockDrakeIndustriesGlass
+  id: AirlockDrakeIndustriesGlassLockedOverseer
+  suffix: DI, Glass, Locked, Overseer
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsDrakeIndustriesOverseer ]
