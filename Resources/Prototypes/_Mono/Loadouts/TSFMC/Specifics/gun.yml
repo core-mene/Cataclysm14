@@ -13,6 +13,7 @@
   - FactionDrozdLoadout
   - FactionLecterLoadout
   - FactionVulcanLoadout
+  - FactionBanditLoadout
   fallbacks:
   - FactionFrostLoadout
 
@@ -25,6 +26,7 @@
   - FactionLecterLoadout
   - FactionVulcanLoadout
   - FactionEnergyGunLoadout
+  - FactionBanditLoadout
   fallbacks:
   - FactionDrozdLoadout
 
@@ -39,5 +41,6 @@
   - Faction5.56x45mmAmmoLoadout #Lecter
   - Faction7.62x51mmAmmoLoadout #Vulcan
   - FactionRechargerLoadout #Energy
+  - Faction8x65mmAmmoLoadout #Bandit
   fallbacks:
   - FactionAcpSmgAmmoLoadout #Drozd

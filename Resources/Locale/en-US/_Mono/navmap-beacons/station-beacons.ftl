@@ -1,5 +1,6 @@
 station-beacon-ussp-shipyard = USSP Shipyard
-station-beacon-ussp-docks = USSP Docks
+station-beacon-ussp-dock-alpha = USSP Dock Alpha
+station-beacon-ussp-dock-beta = USSP Dock Beta
 station-beacon-ussp-control = USSP Control Room
 station-beacon-ussp-reception = USSP Reception
 station-beacon-ussp-dorms = USSP Dorms

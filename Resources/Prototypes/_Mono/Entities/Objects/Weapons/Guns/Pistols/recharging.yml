@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -38,6 +39,8 @@
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
+  - type: Wieldable
+  - type: LaserPointer
 
 - type: entity
   id: BulletHawk

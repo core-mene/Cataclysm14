@@ -161,7 +161,7 @@
       amount: 2
 
 - type: entity
-  parent: WeaponCaseHeavy
+  parent: WeaponCaseLong
   id: WeaponCaseLongVulcanRegistered
   suffix: Loadout, Vulcan
   components:
@@ -170,4 +170,16 @@
     - id: WeaponRifleVulcanRegistered
       amount: 1
     - id: Magazine7.62x51mmFMJ
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongMR3CRegistered
+  suffix: Loadout, MR-3C
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleMR3CRegistered
+      amount: 1
+    - id: Magazine8x65mmSKR
       amount: 2

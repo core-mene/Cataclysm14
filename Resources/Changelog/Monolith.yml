@@ -7798,3 +7798,154 @@ Entries:
   id: 885
   time: '2025-07-17T07:11:53.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1452
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        WSPR only can fire subsonic ammo, subsonic ammo damage 18>23, two more
+        than FMJ variant
+    - type: Tweak
+      message: >-
+        Subsonic ammo costs slightly less in rogue uplink, removed from tsfmc
+        uplink (annie doesn't use it anymore anyways). Made clear it only is for
+        the WSPR
+  id: 886
+  time: '2025-07-17T18:03:38.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1409
+- author: ScyronX
+  changes:
+    - type: Add
+      message: Added toggleable IFF signature to jumpsuits!
+  id: 887
+  time: '2025-07-17T18:04:31.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1458
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed Fracture not being able to be bought. Go find a new ship. Chuds.
+  id: 888
+  time: '2025-07-17T19:20:10.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1460
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Bandit is now in roundstart TSF loadouts, and in civ special guns.
+    - type: Fix
+      message: Fixed minor issues with Bandit DMR
+    - type: Fix
+      message: MR-8 in Lecter name switched to M-6. I forgot we already had a MR-8.
+  id: 889
+  time: '2025-07-17T19:36:49.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1459
+- author: starch70
+  changes:
+    - type: Add
+      message: Ported Harmony better Hristov SFX. Actually a CM13 sound. I don't care.
+  id: 890
+  time: '2025-07-17T19:37:13.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1454
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Added station beacons and a botany/kitchen/bar area to insurgency
+        hideout. Also expanded the asteroid east to make space for that.
+  id: 891
+  time: '2025-07-17T21:56:48.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1462
+- author: UltimateJester
+  changes:
+    - type: Tweak
+      message: Renames spesos to credits, it sounds cooler and it fits precious lore
+  id: 892
+  time: '2025-07-17T23:46:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1423
+- author: Scyron
+  changes:
+    - type: Tweak
+      message: buffed 7.62x39 damage to be higher then 5.56x45!
+  id: 893
+  time: '2025-07-18T00:43:03.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1466
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: The EG-4 has been tuned, increasing its damage output
+  id: 894
+  time: '2025-07-18T00:45:54.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1467
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Docked FTL should be more consistent.
+  id: 895
+  time: '2025-07-18T14:38:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1472
+- author: Rubeebeebee
+  changes:
+    - type: Add
+      message: >-
+        the MIL-Arkansaw, a Cult of the Machine God ARK ship, made to be a
+        capital sized mech carrier. 
+  id: 896
+  time: '2025-07-18T15:01:30.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1457
+- author: ScyronX
+  changes:
+    - type: Fix
+      message: Fixed RX-01 magboot sprite.
+  id: 897
+  time: '2025-07-18T15:02:07.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1471
+- author: starch70
+  changes:
+    - type: Add
+      message: Added a new IFF-hidden POI. It'll spawn 4.5km-7.5km away from 0, 0.
+  id: 898
+  time: '2025-07-18T15:03:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1469
+- author: Rubeebeebee
+  changes:
+    - type: Add
+      message: Added the HES Phaeron, a heavy-duty gas tanker.
+  id: 899
+  time: '2025-07-18T15:09:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1401
+- author: Rubeebeebee
+  changes:
+    - type: Add
+      message: 'the MIL-Twilight MkII, a Zealot of Baalam exped ship. '
+  id: 900
+  time: '2025-07-18T15:47:27.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1429
+- author: BoskiYourk
+  changes:
+    - type: Tweak
+      message: >-
+        Updated the Bar/Kitchen and Atmos on Baikal. Baikal's armory is now
+        locked to basic USSP instead of USSP command. Updated dock station
+        beacons. Docks are now visible through mass scanners.
+    - type: Fix
+      message: Fixed multiple power issues on Baikal
+  id: 901
+  time: '2025-07-18T15:57:26.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1468
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Buffed MLA-34 and MLA-79 smartgun firerates. (MLA34 buffed to 8 RPS,
+        MLA79 buffed to 9.5 RPS). Also buffed homing capability of
+        smart-bullets.
+  id: 902
+  time: '2025-07-18T15:58:18.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1463
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        With the dust settled, the Sellsword can return to a lower price
+        bracket.
+  id: 903
+  time: '2025-07-18T16:03:25.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1470
