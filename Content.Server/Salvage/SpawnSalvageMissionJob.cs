@@ -53,7 +53,6 @@ using Content.Shared.Shuttles.Components;
 using Content.Shared.Storage;
 using Content.Server.Weather;
 using Content.Shared.Weather;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.Mapping;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
