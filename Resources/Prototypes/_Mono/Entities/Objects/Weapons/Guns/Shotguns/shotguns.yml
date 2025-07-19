@@ -77,7 +77,7 @@
   parent: [BaseWeaponShotgun, BaseGunWieldable, Class2Restricted] 
   id: WeaponShotgunDrakeIndustriesHokkaido
   description: Commissioned by Drake Industries to Midnight Armaments Co. The Hokkaido is a devious close-quarters death machine seeking to paste-ify any would be raiders seeking precious cargo. Uses 12 gauge shotgun shells.
-  components: # Seeking to be a very limited access, hard hitting shotgun. Do NOT fuck with it in CQC. Meant to be pump but since the pump hard caps the RoF at 2.0, none for now.
+  components: # Basically an upgrade to the enforcer. Was meant to be pump but since it hard caps the RoF to 2.0, won't until that's fixed.
   - type: Item
     size: Normal
     shape:
@@ -91,7 +91,7 @@
   - type: BallisticAmmoProvider
     capacity: 12 # shotgun was inspired from has 15 but balance so for now 12.
   - type: Gun
-    fireRate: 2.4
+    fireRate: 2.5
   - type: StaticPrice
     price: 5000
     
