@@ -210,6 +210,10 @@
     Poison:
       metabolismRate: 0.2
       effects:
+      - !type:CreateEntityTileReaction
+        entity: ChimeraFleshKudzu
+        maxOnTileWhitelist:
+          tags: [ ChimeraFloor ]
       - !type:HealthChange
         damage:
           types:
