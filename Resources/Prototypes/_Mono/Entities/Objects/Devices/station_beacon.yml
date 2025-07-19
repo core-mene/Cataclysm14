@@ -13,11 +13,20 @@
 
 - type: entity
   parent: DefaultStationBeacon
-  id: DefaultStationBeaconUSSPDocks
+  id: DefaultStationBeaconUSSPDockAlpha
   suffix: USSP Docks
   components:
   - type: NavMapBeacon
-    defaultText: station-beacon-ussp-docks
+    defaultText: station-beacon-ussp-dock-alpha
+    color: "#b40044"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconUSSPDockBeta
+  suffix: USSP Docks
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-ussp-dock-beta
     color: "#b40044"
 
 - type: entity

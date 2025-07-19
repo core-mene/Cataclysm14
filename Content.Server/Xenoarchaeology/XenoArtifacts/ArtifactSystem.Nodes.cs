@@ -171,7 +171,7 @@ public sealed partial class ArtifactSystem
         var allComponents = effect.Components.Concat(effect.PermanentComponents).Concat(trigger.Components);
         foreach (var (name, entry) in allComponents)
         {
-            var reg = _componentFactory.GetRegistration(name);
+            var reg = Factory.GetRegistration(name);
 
             if (node.Discovered && EntityManager.HasComponent(uid, reg.Type))
             {
@@ -182,7 +182,7 @@ public sealed partial class ArtifactSystem
                 EntityManager.RemoveComponent(uid, reg.Type);
             }
 
-            var comp = (Component)_componentFactory.GetComponent(reg);
+            var comp = (Component) Factory.GetComponent(reg);
 
             var temp = (object)comp;
             _serialization.CopyTo(entry.Component, ref temp);
@@ -217,7 +217,7 @@ public sealed partial class ArtifactSystem
             // if the entity prototype contained the component originally
             if (entityPrototype?.Components.TryGetComponent(name, out var entry) ?? false)
             {
-                var comp = (Component)_componentFactory.GetComponent(name);
+                var comp = (Component) Factory.GetComponent(name);
                 var temp = (object)comp;
                 _serialization.CopyTo(entry, ref temp);
                 EntityManager.RemoveComponent(uid, temp!.GetType());
@@ -225,7 +225,7 @@ public sealed partial class ArtifactSystem
                 continue;
             }
 
-            EntityManager.RemoveComponentDeferred(uid, _componentFactory.GetRegistration(name).Type);
+            EntityManager.RemoveComponentDeferred(uid, Factory.GetRegistration(name).Type);
         }
 
         component.CurrentNodeId = null;

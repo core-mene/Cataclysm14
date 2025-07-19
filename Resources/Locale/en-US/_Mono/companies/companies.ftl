@@ -25,7 +25,7 @@ horizon-energy-description = The lead in gas extraction, from the monolith's val
 
 # Minor companies
 
-universal-states-of-america-description = The Universal States of America is a group of fanatical mercenaries that wish to bring the values of the ancient United States to the 25th century. They practically function as a PMC group, outsourcing patriotic militiamen as mercenaries, under the name 'Vanguards' to fund their dreams of creating a vast and powerful nation akin to the U.S.A, a dream in which they will most likely never fulfill. But, in their eyes, logic and common sense are no match for freedom. Exercise your right to the Second Amendment, scream at a chef because he calls his fries Space Fries instead of Freedom Fries, and make it known that you are a gun-lovin', weak-defendin', burger eatin', space truckin', Universal frickin' patriot! 
+universal-states-of-america-description = The Universal States of America is a group of fanatical mercenaries that wish to bring the values of the ancient United States to the 25th century. They practically function as a PMC group, outsourcing patriotic militiamen as mercenaries, under the name 'Vanguards' to fund their dreams of creating a vast and powerful nation akin to the U.S.A, a dream in which they will most likely never fulfill. But, in their eyes, logic and common sense are no match for freedom. Exercise your right to the Second Amendment, scream at a chef because he calls his fries Space Fries instead of Freedom Fries, and make it known that you are a gun-lovin', weak-defendin', burger eatin', space truckin', Universal frickin' patriot!
 
 civil-defense-milita-description = A fairly new company founded within the Colossus Sector, the Civil Defense Militia was formed to protect the civilian populace and its interests. Answering to high ranking individuals decided through their reputation, the militia partakes in acts of selflessness such as defending major points of interests and maintaining ceasefires so that civilians may safely partake in trade among the system. The C.D.M. consists of volunteer contractors and mercenaries and have access only to the equipment available to them. For the people. Defend and partake not in senseless acts of violence. You are the defender of those who cannot defend themselves.
 
@@ -37,12 +37,15 @@ nosske-eien-rnd-description = Renowned in other sectors for their cutting edge t
 
 blackhawkpmc-description = The Blackhawk Military Contracting group (BMC) is a premium mercenary group operating in the Colossus sector. Mercenaries in the group are expected to be trained and professional. They perform mercenary tasks ranging from asset protection to assassination whilst upholding their reputation. The group is fairly new, created by a group of independent mercenaries looking to build a powerful mercenary group. As of now, recruitment operations are on the rise. Blackhawk PMC offers a range of services, from providing private security to full assasinations. Blackhawk mercenaries wear green and often avoid drawing attention to themselves. Fight anyone for anything to make money.
 
-
 # Religious groups
 
 zealots-of-balaam-description = The Zealots and pilgrims of Balaam are luddites with a extreme aversion to the use of Hi-tech. They are overtly isolationist, preferring to raid convoys that move too far into space. As a follower of the blessed god, work underneath a senior zealot to help them levy their tithes. Never listen to the blasphemy of the other companies. Kill those who profane Balaam's eye with the use of shield tech and FTL, heavy industry is not safe either.
 
 cult-of-the-machine-god-description = The flesh is weak. To walk the path of the Cult of the Machine God is to reject the chaos of flesh and embrace the divine order of logic. The faithful act with precision and purpose, never swayed by emotion or impulse. Advancement comes not through passion, but through calculated improvement and unwavering discipline. Those who command in the Cult do so through algorithmic clarity, deploying Ascended operatives with mechanical efficiency and spreading influence through hidden Devotees or roaming Vessels led by Techpriests. Whether enforcing doctrine in distant sectors or executing cold, strategic dominion, every action must serve the grand equation. In all things, reason must rule, and through it, the Machine God's will is made manifest...
+
+# Black Market companies
+
+paycheck-bratva-description = The Paycheck Bratva are an organized crime network originating from USSP territory, having bled into Colossus sector ever since the space superpower moved there. It is mainly specialised in high profile drug trade, smuggling and big impact robberies, alongside hits on targets with various attached prices. Alongside this they operate on a simplistic code: Always shoot to kill if shots are fired, never partake in drugs much less their own, and kill the ones who spilled Paycheck Bratva blood. All and all an intimidating force, clad in kevlar vests and suit and ties and balaclavas or similar masks, a faction for thugs and professional robbers alike indeed.
 
 
 # Hostile/rogue affiliated companies

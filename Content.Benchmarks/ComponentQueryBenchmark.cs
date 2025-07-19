@@ -1,4 +1,9 @@
-﻿#nullable enable
+// SPDX-FileCopyrightText: 2024 ElectroJr
+// SPDX-FileCopyrightText: 2025 Leon Friedrich
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+#nullable enable
 using System;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -29,7 +34,7 @@ namespace Content.Benchmarks;
 [CategoriesColumn]
 public class ComponentQueryBenchmark
 {
-    public const string Map = "Maps/atlas.yml";
+    public const string Map = "Maps/saltern.yml";
 
     private TestPair _pair = default!;
     private IEntityManager _entMan = default!;
