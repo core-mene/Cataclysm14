@@ -73,11 +73,11 @@
   - type: LaserPointer
   
 - type: entity
-  name: M.A Hokkaido-12G  (12 gauge)
+  name: M.A.W Hokkaido-12G  (12 gauge)
   parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC2ContrabandUnredeemable] 
   id: WeaponShotgunDrakeIndustriesHokkaido
-  description: Commissioned by Drake Industries to Midnight Armaments Co. The Hokkaido is a devious close-quarters death machine seeking to destroy any would be raiders seeking precious cargo. Uses 12 gauge shotgun shells.
-  components: # Seeking to be a very limited access, better enforcer. Do NOT fuck with it in CQC.
+  description: Commissioned by Drake Industries to Midnight Armaments Co. The Hokkaido is a devious close-quarters death machine seeking to paste-ify any would be raiders seeking precious cargo. Uses 12 gauge shotgun shells.
+  components: # Seeking to be a very limited access, hard hitting pump shotgun. Do NOT fuck with it in CQC.
   - type: Item
     size: Normal
     shape:
@@ -89,6 +89,8 @@
     sprite: _Mono/Objects/Weapons/Guns/Shotguns/Hokkaido.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: BallisticAmmoProvider
-    capacity: 12 # shotgun was inspired from has 15 but we're making an upgraded enforcer here, so for now 12.
+    capacity: 12 # shotgun was inspired from has 15 but balance so for now 12 sounds fine with the pump system.
   - type: Gun
     fireRate: 2.6
+  - type: BallisticAmmoProvider # Goobstation
+    autoCycle: false # needs to be pumped
