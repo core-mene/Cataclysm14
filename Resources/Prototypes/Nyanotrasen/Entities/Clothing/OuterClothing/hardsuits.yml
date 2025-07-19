@@ -8,9 +8,14 @@
     sprite: Nyanotrasen/Clothing/OuterClothing/ReverseEngineering/syndicate.rsi
   - type: Clothing
     sprite:  Nyanotrasen/Clothing/OuterClothing/ReverseEngineering/syndicate.rsi
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitSyndieReverseEngineered
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 - type: entity
   parent: ClothingOuterHardsuitJuggernaut
@@ -23,7 +28,12 @@
     sprite: Nyanotrasen/Clothing/OuterClothing/ReverseEngineering/juggernaut.rsi
   - type: Clothing
     sprite:  Nyanotrasen/Clothing/OuterClothing/ReverseEngineering/juggernaut.rsi
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitJuggernautReverseEngineered
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
 
