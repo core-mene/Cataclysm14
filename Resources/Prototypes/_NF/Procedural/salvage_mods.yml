@@ -129,7 +129,7 @@
   id: SnowfallHeavy
   desc: salvage-weather-mod-heavy-snowfall
   weather: SnowfallHeavy
-  cost: 2
+  cost: 1
   biomes:
   - Snow
 
@@ -137,6 +137,7 @@
   id: SnowfallMedium
   desc: salvage-weather-mod-medium-snowfall
   weather: SnowfallMedium
+  cost: 1
   biomes:
   - Grasslands
   - Snow
@@ -145,6 +146,7 @@
   id: SnowfallLight
   desc: salvage-weather-mod-light-snowfall
   weather: SnowfallLight
+  cost: 1
   biomes:
   - Grasslands
   - Snow
@@ -153,7 +155,7 @@
   id: AshfallHeavy
   desc: salvage-weather-mod-heavy-ashfall
   weather: AshfallHeavy
-  cost: 6
+  cost: 4
   biomes:
   - Lava
 
@@ -161,7 +163,7 @@
   id: Ashfall
   desc: salvage-weather-mod-medium-ashfall
   weather: Ashfall
-  cost: 4
+  cost: 2
   biomes:
   - Asteroid
   - Lava
@@ -172,19 +174,19 @@
   id: AshfallLight
   desc: salvage-weather-mod-light-ashfall
   weather: AshfallLight
-  cost: 3
+  cost: 2
 
 - type: salvageWeatherMod
   id: Fallout
   desc: salvage-weather-mod-fallout
   weather: Fallout
-  cost: 4
+  cost: 2
 
 - type: salvageWeatherMod
   id: SandstormHeavy
   desc: salvage-weather-mod-heavy-sandstorm
   weather: SandstormHeavy
-  cost: 3
+  cost: 1
   biomes:
   - Asteroid
   - LowDesert

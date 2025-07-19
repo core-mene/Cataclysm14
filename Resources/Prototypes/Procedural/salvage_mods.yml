@@ -9,7 +9,6 @@
   id: Caves
   desc: salvage-biome-mod-caves
   biome: Caves
-  cost: 1 # Frontier
 
 - type: salvageBiomeMod
   id: Grasslands
@@ -19,13 +18,12 @@
 - type: salvageBiomeMod
   id: Snow
   desc: salvage-biome-mod-snow
-  cost: 1
   biome: Snow
 
 - type: salvageBiomeMod
   id: Lava
   desc: salvage-biome-mod-lava
-  cost: 2
+  cost: 1
   biome: Lava
 
 #- type: salvageBiomeMod
@@ -39,8 +37,6 @@
   id: Daylight
   desc: salvage-light-mod-daylight
   color: "#D8B059"
-  biomes:
-    - Grasslands
 
 - type: salvageLightMod
   id: Lavalight
