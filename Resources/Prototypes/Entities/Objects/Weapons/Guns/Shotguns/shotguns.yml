@@ -368,7 +368,7 @@
 
 - type: entity
   name: improvised shotgun (12 gauge)
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC1Contraband] # Frontier: BaseMinorContraband<BaseC1Contraband
+  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC2ContrabandMercenary] # Frontier: BaseMinorContraband<BaseC1Contraband
   id: WeaponShotgunImprovised
   description: A shitty, but legal, hand-made shotgun that uses 12 gauge shotgun shells. It can only hold one round in the chamber.
   components:
