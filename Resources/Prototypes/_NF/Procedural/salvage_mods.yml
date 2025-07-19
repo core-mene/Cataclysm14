@@ -119,7 +119,7 @@
 
 - type: salvageWeatherMod
   id: Hail
-  desc: salvage-weather-mod-heavy-hail
+  desc: salvage-weather-mod-hail
   weather: Hail
   cost: 2
   biomes:
@@ -165,9 +165,7 @@
   weather: Ashfall
   cost: 2
   biomes:
-  - Asteroid
   - Lava
-  - LowDesert
   - Shadow
 
 - type: salvageWeatherMod
@@ -188,16 +186,13 @@
   weather: SandstormHeavy
   cost: 1
   biomes:
-  - Asteroid
-  - LowDesert
+  - Caves
 
 - type: salvageWeatherMod
   id: Sandstorm
   desc: salvage-weather-mod-sandstorm
   weather: Sandstorm
   biomes:
-  - Asteroid
-  - LowDesert
   - Caves
 
 - type: salvageWeatherMod
@@ -206,9 +201,7 @@
   weather: Rain
   biomes:
   - Grasslands
-  - Asteroid
   - Shadow
-  - LowDesert
   - Lava # primordial planet or something idk
 
 - type: salvageWeatherMod
@@ -217,7 +210,6 @@
   weather: Storm
   biomes:
   - Grasslands
-  - Asteroid
   - Shadow
 
 # Air mixtures
