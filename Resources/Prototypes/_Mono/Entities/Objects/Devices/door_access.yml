@@ -51,7 +51,7 @@
   suffix: DI, Locked, Watchdog
   components:
   - type: AccessReader
-    access: [["DISecurity"]]
+    access: [["DIHigh"]]
 
 - type: entity
   parent: DoorElectronics

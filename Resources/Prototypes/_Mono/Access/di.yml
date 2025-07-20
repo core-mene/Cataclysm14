@@ -4,35 +4,55 @@
 
 # Drake Industries 
 
+- type: accessLevel 
+  id: DILow #base company granted access (likely some ships and fluff), for future use
+  name: id-card-access-level-di-low
+
 - type: accessLevel
-  id: DI
+  id: DI #base doors and grunt locker
   name: id-card-access-level-di
   
 - type: accessLevel
-  id: DIPilot
+  id: DIPilot #trucker locker
   name: id-card-access-level-di-pilot
   
 - type: accessLevel
-  id: DISecurity
-  name: id-card-access-level-di-security
+  id: DIHigh #security gear area, watchdog locker
+  name: id-card-access-level-di-high
   
 - type: accessLevel
-  id: DICommand
+  id: DICommand #overseer chamber, overseer locker, vault etc.
   name: id-card-access-level-di-command
 
+
 - type: accessGroup
-  id: DISec
+  id: DIGruntAccess
   tags:
+  - DILow
+  - DI
+
+- type: accessGroup
+  id: DITruckerAccess
+  tags:
+  - DILow
   - DI
   - DIPilot
-  - DISecurity
+
+- type: accessGroup
+  id: DIWatchdogAccess
+  tags:
+  - DILow
+  - DI
+  - DIPilot
+  - DIHigh
   - Mercenary
 
 - type: accessGroup
-  id: DIAA
+  id: DIOverseerAccess
   tags:
+  - DILow
   - DI
-  - DICommand
   - DIPilot
-  - DISecurity
+  - DIHigh
+  - DICommand
   - Mercenary

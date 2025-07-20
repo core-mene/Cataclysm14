@@ -15,16 +15,9 @@
   canBeAntag: false
   weight: 10
   displayWeight: 10
-  #special:
-  # - !type:AddComponentSpecial
-    # components:
-    # - type: NpcFactionMember
-      # factions:
-      # - DI
   accessGroups:
   - GeneralAccess
-  access:
-  - DI
+  - DIGruntAccess
 
 - type: startingGear
   id: DIGruntGear

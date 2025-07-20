@@ -46,7 +46,7 @@
   - type: EntityStorageVisuals
     stateDoorClosed: DI_locker_watchdog_door
   - type: AccessReader
-    access: [["DISecurity"]]
+    access: [["DIHigh"]]
 
 - type: entity
   id: LockerDrakeIndustriesOverseer

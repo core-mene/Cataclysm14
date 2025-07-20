@@ -11,8 +11,15 @@
   - !type:DepartmentTimeRequirement
     department: DrakeIndustries
     time: 18000 # 5 hours
-  - !type:OverallPlaytimeRequirement
-    time: 18000 # 5 hours
+  # - !type:RoleTimeRequirement TODO add for later once faction is settled in proper
+      # role: JobDIGrunt
+      # time: 3600 # 1 hr
+  # - !type:RoleTimeRequirement
+      # role: JobDITrucker
+      # time: 3600 # 1 hr
+  # - !type:RoleTimeRequirement
+      # role: JobDIWatchdog
+      # time: 3600 # 1 hr
   startingGear: DIOverseerGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
@@ -21,15 +28,9 @@
   canBeAntag: false
   weight: 30
   displayWeight: 30
-  #special:
-  # - !type:AddComponentSpecial
-    # components:
-    # - type: NpcFactionMember
-      # factions:
-      # - DI
   accessGroups:
   - GeneralAccess
-  - DIAA
+  - DIOverseerAccess
 
 - type: startingGear
   id: DIOverseerGear

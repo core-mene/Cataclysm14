@@ -19,17 +19,9 @@
   canBeAntag: false
   weight: 15
   displayWeight: 15
-  #special:
-  # - !type:AddComponentSpecial
-    # components:
-    # - type: NpcFactionMember
-      # factions:
-      # - DI
   accessGroups:
   - GeneralAccess
-  access:
-  - DI
-  - DIPilot
+  - DITruckerAccess
 
 - type: startingGear
   id: DITruckerGear
