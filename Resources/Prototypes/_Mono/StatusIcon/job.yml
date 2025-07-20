@@ -13,20 +13,20 @@
 # Drake Industries
 
 - type: jobIcon
-  parent: JobIcon
-  id: JobIconDIGrunt
-  icon:
-    sprite: /Textures/_Mono/Interface/Misc/job_icons.rsi
-    state: DIGrunt
-  jobName: job-name-di-grunt
-
-- type: jobIcon
   parent: JobIconDIGrunt
   id: JobIconDIOverseer
   icon:
     sprite: /Textures/_Mono/Interface/Misc/job_icons.rsi
     state: DIOverseer
   jobName: job-name-di-overseer
+
+- type: jobIcon
+  parent: JobIconDIGrunt
+  id: JobIconDIWatchdog
+  icon:
+    sprite: /Textures/_Mono/Interface/Misc/job_icons.rsi
+    state: DIWatchdog
+  jobName: job-name-di-watchdog
 
 - type: jobIcon
   parent: JobIconDIGrunt
@@ -37,9 +37,11 @@
   jobName: job-name-di-trucker
 
 - type: jobIcon
-  parent: JobIconDIGrunt
-  id: JobIconDIWatchdog
+  parent: JobIcon
+  id: JobIconDIGrunt
   icon:
     sprite: /Textures/_Mono/Interface/Misc/job_icons.rsi
-    state: DIWatchdog
-  jobName: job-name-di-watchdog
+    state: DIGrunt
+  jobName: job-name-di-grunt
+
+
