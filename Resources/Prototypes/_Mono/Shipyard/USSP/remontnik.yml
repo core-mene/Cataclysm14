@@ -1,0 +1,44 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: vessel
+  id: Remontnik
+  parent: BaseVesselAntag
+  name: PPU Remontnik
+  description: A USSP mining and engineering ship, built for either kitting out friendly vessels, or repairing and using all vessels.
+  price: 95000
+  category: Medium
+  group: Ussp
+  access: USSP
+  shuttlePath: /Maps/_Mono/Shuttles/USSP/remontnik.yml
+  guidebookPage: Null
+  class:
+  - Engineering
+  - Mining
+  engine:
+  - AME
+
+- type: gameMap
+  id: Remontnik
+  mapName: 'Remontnik'
+  mapPath: /Maps/_Mono/Shuttles/USSP/remontnik.yml
+  minPlayers: 0
+  stations:
+    Remontnik:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Remontnik USSP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            USSPSergeant: [0, 0]
+            USSPCorporal: [0, 0]
+            USSPMedic: [0, 0]
+            USSPRifleman: [0, 0]
+            USSPCommissar: [0, 0]
