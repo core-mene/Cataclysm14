@@ -27,6 +27,10 @@
   - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryMedic
   - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryCaptain
   - MercenaryClothingUniformJumpsitDrakeIndustriesWatchdog
+  - MercenaryClothingUniformJumpsuitBH
+  - MercenaryClothingUniformJumpskirtBH
+  - MercenaryClothingUniformJumpsuitBHGrey
+  - MercenaryClothingUniformJumpskirtBHGrey
   subgroups:
   - PilotJumpsuit
   - ContractorJumpsuit
@@ -38,6 +42,7 @@
   id: MercenaryBackpack
   name: loadout-group-contractor-backpack
   loadouts:
+  - MercenaryClothingModsuitSecurityPowerCell # Mono
   - MercenaryClothingBackpackMercenary
   - MercenaryClothingBackpackDuffelMercenary
   - MercenaryClothingBackpackSatchelMercenary
@@ -58,11 +63,23 @@
   loadouts:
   - MercenaryClothingOuterVestWebMercenary
   - MercenaryClothingOuterVestWebMercenaryBlack
+  - MercenaryClothingOuterVestDetective # Mono
   - MercenaryClothingOuterArmorPunkGreen # Punkish (Static visuals)
   - MercenaryClothingOuterArmorPunkOrange # Punkish (Static visuals)
   - MercenaryClothingOuterArmorPunkRed # Punkish (Static visuals)
   - MercenaryClothingOuterArmorPunkRandomized # Punkish (Randomized visuals)
   - MercenaryClothingOuterArmorCaptainCarapace
+  - MercenaryClothingOuterArmorBasic # Mono
+  - MercenaryClothingOuterArmorBasicSlim # Mono
+  - MercenaryClothingOuterArmorRiot # Mono
+  - MercenaryClothingOuterArmorBulletproof # Mono
+  - MercenaryClothingOuterArmorBone # Mono
+  - MercenaryClothingOuterCoatBHTrench # Mono
+  - MercenaryClothingOuterArmorCult # Mono
+  - MercenaryClothingOuterArmorHeavy # Mono
+  - MercenaryClothingOuterHardsuitMercenary # Mono
+  - MercenaryClothingOuterHardsuitScaf # Mono
+  - MercenaryClothingOuterHardsuitMercenaryWarlord # Mono
   subgroups:
   - PilotOuterClothing
   - ContractorOuterClothing
@@ -92,6 +109,7 @@
   - MercenaryClothingHeadBandMercenary
   - MercenaryClothingHeadHatBeretMercenary
   - MercenaryClothingHeadHatBeretCommander
+  - MercenaryClothingHeadHelmetMercenaryBlack
   - SecurityHelmet
   - SecurityBeret
   subgroups:
