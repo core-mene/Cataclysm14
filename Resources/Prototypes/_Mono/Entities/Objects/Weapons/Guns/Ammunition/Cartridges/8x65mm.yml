@@ -1,3 +1,24 @@
+# SPDX-FileCopyrightText: 2020 AJCM-git
+# SPDX-FileCopyrightText: 2020 Swept
+# SPDX-FileCopyrightText: 2021 Leon Friedrich
+# SPDX-FileCopyrightText: 2021 Paul Ritter
+# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2022 Kara
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 T-Stalker
+# SPDX-FileCopyrightText: 2022 Visne
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 Dvir
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 Winkarst
+# SPDX-FileCopyrightText: 2025 BramvanZijp
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: BaseCartridge8x65mmSKR
   name: cartridge (8x65mm SKR)
@@ -22,8 +43,38 @@
 
 - type: entity
   id: Cartridge8x65mmSKR
-  name: cartridge (8x65mm SKR)
+  name: cartridge (8x65mm SKR FMJ)
   parent: BaseCartridge8x65mmSKR
   components:
   - type: CartridgeAmmo
     proto: Bullet8x65mmSKR
+
+- type: entity
+  id: Cartridge8x65mmSKRPractice
+  name: cartridge (8x65mm SKR practice)
+  parent: BaseCartridge8x65mmSKR
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet8x65mmSKRPractice
+  - type: Sprite
+    layers:
+    - state: base
+      map: [ "enum.AmmoVisualLayers.Base" ]
+    - state: tip
+      map: [ "enum.AmmoVisualLayers.Tip" ]
+      color: "#38b1d6"
+
+- type: entity
+  id: Cartridge8x65mmSKRIncendiary
+  name: cartridge (8x65mm SKR incendiary)
+  parent: BaseCartridge8x65mmSKR
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet8x65mmSKRIncendiary
+  - type: Sprite
+    layers:
+    - state: base
+      map: [ "enum.AmmoVisualLayers.Base" ]
+    - state: tip
+      map: [ "enum.AmmoVisualLayers.Tip" ]
+      color: "#f53b31"

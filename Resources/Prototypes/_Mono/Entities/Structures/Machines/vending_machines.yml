@@ -134,3 +134,30 @@
     # denyState: deny-unshaded
     ejectDelay: 1.9
     initialStockQuality: 0.35
+
+- type: entity
+  parent: [VendingMachineAstroVend, BaseStructureDisableAnchoring]
+  id: VendingMachinePMCclothingsPOI
+  name: Uncle Boris's surplus clothing vend
+  description: Sells various PMC and military surplus gears.
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: PMCclothings
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: MarketModifier
+    mod: 2
+  - type: Sprite
+    sprite: _Mono/Structures/Machines/VendingMachines/boris_surplus.rsi
+    layers:
+    - state: "off"
+      map: [ "enum.VendingMachineVisualLayers.Base" ]
+    - state: "off"
+      map: [ "enum.VendingMachineVisualLayers.BaseUnshaded" ]
+      shader: unshaded
+    - state: panel
+      map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+  - type: AccessReader
+    access: [["Mercenary"], ["Security"]]
