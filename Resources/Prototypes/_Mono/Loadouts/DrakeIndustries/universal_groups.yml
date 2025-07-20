@@ -140,3 +140,10 @@
   - DIShotgunWatchdog
   fallbacks:
   - DIShotgunWatchdog
+
+- type: loadoutGroup
+  id: DIAmmo
+  name: loadout-group-magazine
+  minLimit: 1
+  loadouts:
+  - MercenaryBuckshotAmmoLoadout #Buckshot
