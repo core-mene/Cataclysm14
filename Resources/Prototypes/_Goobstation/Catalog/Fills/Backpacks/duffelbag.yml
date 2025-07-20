@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -7,12 +8,14 @@
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledWSPR
   name: WSPR bundle
-  description: "A bundle carrying the syndicate's WSPR assault rifle, packed with 2 spare magazines."
+  description: "A bundle carrying the syndicate's WSPR assault rifle, packed with 4 spare magazines and two ammo boxes."
   components:
   - type: StorageFill
     contents:
       - id: WeaponRifleWSPR
       - id: Magazine7.62x39mmSubsonic
+        amount: 4 # Mono 2->4
+      - id: AmmoBox7.62x39mmSubsonic # Mono
         amount: 2
 
 - type: entity

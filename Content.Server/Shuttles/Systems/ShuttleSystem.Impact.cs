@@ -17,6 +17,7 @@ using Content.Server.Shuttles.Components;
 using Content.Server._NF.Shuttles.Components;
 using Content.Shared._Mono;
 using Content.Shared.Atmos.Components;
+using Content.Shared.Atmos.Components;
 using Content.Shared.Audio;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing;
@@ -123,93 +124,94 @@ public sealed partial class ShuttleSystem
         // TODO: Would also be nice to have a continuous sound for scraping.
         var ourXform = Transform(args.OurEntity);
         var otherXform = Transform(args.OtherEntity);
-        var worldPoint = args.WorldPoint;
+        var worldPoints = args.WorldPoints;
 
-        var ourPoint = _transform.ToCoordinates((args.OurEntity, ourXform), new MapCoordinates(worldPoint, ourXform.MapID));
-        var otherPoint = _transform.ToCoordinates((args.OtherEntity, otherXform), new MapCoordinates(worldPoint, otherXform.MapID));
-
-        var ourVelocity = _physics.GetLinearVelocity(args.OurEntity, ourPoint.Position, ourBody, ourXform);
-        var otherVelocity = _physics.GetLinearVelocity(args.OtherEntity, otherPoint.Position, otherBody, otherXform);
-        var jungleDiff = (ourVelocity - otherVelocity).Length();
-
-        // this is cursed but makes it so that collisions of small grid with large grid count the inertia as being approximately the small grid's
-        var effectiveInertiaMult = (ourBody.FixturesMass * otherBody.FixturesMass) / (ourBody.FixturesMass + otherBody.FixturesMass);
-        var effectiveInertia = jungleDiff * effectiveInertiaMult;
-
-        // TODO: squish damage so that a tiny splinter grid can't stop 2 big grids by being in the way
-        if (jungleDiff < _minimumImpactVelocity && effectiveInertia < _minimumImpactInertia
-            || ourXform.MapUid == null
-            || float.IsNaN(jungleDiff))
+        for (var i = 0; i < worldPoints.Length; i++)
         {
-            return;
+            var worldPoint = worldPoints[i];
+
+            var ourPoint = _transform.ToCoordinates((args.OurEntity, ourXform), new MapCoordinates(worldPoint, ourXform.MapID));
+            var otherPoint = _transform.ToCoordinates((args.OtherEntity, otherXform), new MapCoordinates(worldPoint, otherXform.MapID));
+
+            var ourVelocity = _physics.GetLinearVelocity(args.OurEntity, ourPoint.Position, ourBody, ourXform);
+            var otherVelocity = _physics.GetLinearVelocity(args.OtherEntity, otherPoint.Position, otherBody, otherXform);
+            var jungleDiff = (ourVelocity - otherVelocity).Length();
+
+            // this is cursed but makes it so that collisions of small grid with large grid count the inertia as being approximately the small grid's
+            var effectiveInertiaMult = (ourBody.FixturesMass * otherBody.FixturesMass) / (ourBody.FixturesMass + otherBody.FixturesMass);
+            var effectiveInertia = jungleDiff * effectiveInertiaMult;
+
+            // TODO: squish damage so that a tiny splinter grid can't stop 2 big grids by being in the way
+            if (jungleDiff < _minimumImpactVelocity && effectiveInertia < _minimumImpactInertia
+                || ourXform.MapUid == null
+                || float.IsNaN(jungleDiff))
+            {
+                continue;
+            }
+
+            // Play impact sound
+            var coordinates = new EntityCoordinates(ourXform.MapUid.Value, worldPoint);
+
+            var volume = MathF.Min(10f, MathF.Pow(jungleDiff, 0.5f) - 5f);
+            var audioParams = AudioParams.Default.WithVariation(SharedContentAudioSystem.DefaultVariation).WithVolume(volume);
+            _audio.PlayPvs(_shuttleImpactSound, coordinates, audioParams);
+
+            // if we're not enabled, stop after playing sound
+            if (!_enabled)
+                continue;
+
+
+            // Check if either grid has GridGodMode or ForceAnchor protection
+            var ourProtected = HasComp<GridGodModeComponent>(args.OurEntity) || HasComp<ForceAnchorComponent>(args.OurEntity);
+            var otherProtected = HasComp<GridGodModeComponent>(args.OtherEntity) || HasComp<ForceAnchorComponent>(args.OtherEntity);
+
+            // Check if the grids are docked together to prevent impact
+            var areGridsDocked = _dockSystem.AreGridsDocked(args.OurEntity, args.OtherEntity);
+
+            if (ourProtected || otherProtected || areGridsDocked)
+                continue;
+
+            // Convert the collision point directly to tile indices
+            var ourTile = new Vector2i((int)Math.Floor(ourPoint.X / ourGrid.TileSize), (int)Math.Floor(ourPoint.Y / ourGrid.TileSize));
+            var otherTile = new Vector2i((int)Math.Floor(otherPoint.X / otherGrid.TileSize), (int)Math.Floor(otherPoint.Y / otherGrid.TileSize));
+
+            var ourMass = GetRegionMass(args.OurEntity, ourGrid, ourTile, _impactRadius, out var ourTiles);
+            var otherMass = GetRegionMass(args.OtherEntity, otherGrid, otherTile, _impactRadius, out var otherTiles);
+
+            // just in case
+            if (ourTiles == 0 || otherTiles == 0)
+                continue;
+
+            Log.Info($"Shuttle impact of {ToPrettyString(args.OurEntity)} with {ToPrettyString(args.OtherEntity)}; our mass: {ourMass}, other: {otherMass}, velocity {jungleDiff}, impact point {worldPoint}");
+
+            // E = MV^2/2
+            var energyMult = MathF.Pow(jungleDiff, 2) / 2;
+            // mass-based damage reduction to grid with more mass so that plastitanium block rammer doesn't die to lattice
+            var ourMassDR = MathF.Max(otherMass / ourMass, 1f);
+            var otherMassDR = MathF.Max(ourMass / otherMass, 1f);
+            // multiplier to make large grids not just bonk against each other
+            var inertiaMult = MathF.Pow(effectiveInertiaMult / _baseShuttleMass, _inertiaScaling);
+            var toUsEnergy = otherMass * energyMult * inertiaMult * ourMassDR;
+            var toOtherEnergy = ourMass * energyMult * inertiaMult * otherMassDR;
+
+            var impact = LogImpact.High;
+            // if impact isn't tiny, log it as extreme
+            if (toUsEnergy + toOtherEnergy > 2f * _tileBreakEnergyMultiplier * _platingMass)
+                impact = LogImpact.Extreme;
+            // TODO: would be nice for it to also log who is piloting the grid(s)
+            if (CheckShouldLog(args.OurEntity) && CheckShouldLog(args.OtherEntity))
+                _logger.Add(LogType.ShuttleImpact, impact, $"Shuttle impact of {ToPrettyString(args.OurEntity)} with {ToPrettyString(args.OtherEntity)} at {worldPoint}");
+
+            _impactedAt[args.OurEntity] = _gameTiming.CurTime;
+            _impactedAt[args.OtherEntity] = _gameTiming.CurTime;
+
+            // uses local region mass for slowdown calculation so lattice doesn't have same slowdown as wall block
+            var totalInertia = ourVelocity * ourMass + otherVelocity * otherMass;
+            var inelasticVel = totalInertia / (ourMass + otherMass);
+
+            DoGridImpact((args.OurEntity, ourGrid, ourXform, ourBody), args.OurFixture, inelasticVel, ourVelocity, ourTile, ourTiles, toUsEnergy);
+            DoGridImpact((args.OtherEntity, otherGrid, otherXform, otherBody), args.OtherFixture, inelasticVel, otherVelocity, otherTile, otherTiles, toOtherEnergy);
         }
-
-        // Play impact sound
-        var coordinates = new EntityCoordinates(ourXform.MapUid.Value, worldPoint);
-
-        var volume = MathF.Min(10f, MathF.Pow(jungleDiff, 0.5f) - 5f);
-        var audioParams = AudioParams.Default.WithVariation(SharedContentAudioSystem.DefaultVariation).WithVolume(volume);
-        _audio.PlayPvs(_shuttleImpactSound, coordinates, audioParams);
-
-        // if we're not enabled, stop after playing sound
-        if (!_enabled)
-            return;
-
-        // Check if either grid has GridGodMode or ForceAnchor protection
-        var ourProtected = HasComp<GridGodModeComponent>(args.OurEntity) || HasComp<ForceAnchorComponent>(args.OurEntity);
-        var otherProtected = HasComp<GridGodModeComponent>(args.OtherEntity) || HasComp<ForceAnchorComponent>(args.OtherEntity);
-
-        // Check if the grids are docked together to prevent impact
-        var areGridsDocked = _dockSystem.AreGridsDocked(args.OurEntity, args.OtherEntity);
-
-        if (ourProtected || otherProtected || areGridsDocked)
-            return;
-
-        // Convert the collision point directly to tile indices
-        var ourTile = new Vector2i((int)Math.Floor(ourPoint.X / ourGrid.TileSize), (int)Math.Floor(ourPoint.Y / ourGrid.TileSize));
-        var otherTile = new Vector2i((int)Math.Floor(otherPoint.X / otherGrid.TileSize), (int)Math.Floor(otherPoint.Y / otherGrid.TileSize));
-
-        var ourMass = GetRegionMass(args.OurEntity, ourGrid, ourTile, _impactRadius, out var ourTiles);
-        var otherMass = GetRegionMass(args.OtherEntity, otherGrid, otherTile, _impactRadius, out var otherTiles);
-
-        // just in case
-        if (ourTiles == 0 || otherTiles == 0)
-            return;
-
-        var logMessage = "Shuttle impact of " + ToPrettyString(args.OurEntity) + " with " + ToPrettyString(args.OtherEntity) +
-                        "; our mass: " + ourMass + ", other: " + otherMass +
-                        ", velocity " + jungleDiff + ", impact point " + worldPoint;
-        Log.Info(logMessage);
-
-        // E = MV^2/2
-        var energyMult = MathF.Pow(jungleDiff, 2) / 2;
-        // mass-based damage reduction to grid with more mass so that plastitanium block rammer doesn't die to lattice
-        var ourMassDR = MathF.Max(otherMass / ourMass, 1f);
-        var otherMassDR = MathF.Max(ourMass / otherMass, 1f);
-        // multiplier to make large grids not just bonk against each other
-        var inertiaMult = MathF.Pow(effectiveInertiaMult / _baseShuttleMass, _inertiaScaling);
-        var toUsEnergy = otherMass * energyMult * inertiaMult * ourMassDR;
-        var toOtherEnergy = ourMass * energyMult * inertiaMult * otherMassDR;
-
-        var impact = LogImpact.High;
-        // if impact isn't tiny, log it as extreme
-        if (toUsEnergy + toOtherEnergy > 2f * _tileBreakEnergyMultiplier * _platingMass)
-            impact = LogImpact.Extreme;
-        // TODO: would be nice for it to also log who is piloting the grid(s)
-        if (CheckShouldLog(args.OurEntity) && CheckShouldLog(args.OtherEntity))
-        {
-            _logger.Add(LogType.ShuttleImpact, impact, $"Shuttle impact of {ToPrettyString(args.OurEntity)} with {ToPrettyString(args.OtherEntity)}; our mass: {ourMass}, other: {otherMass}, velocity {jungleDiff}, impact point {worldPoint}");
-        }
-
-        _impactedAt[args.OurEntity] = _gameTiming.CurTime;
-        _impactedAt[args.OtherEntity] = _gameTiming.CurTime;
-
-        // uses local region mass for slowdown calculation so lattice doesn't have same slowdown as wall block
-        var totalInertia = ourVelocity * ourMass + otherVelocity * otherMass;
-        var inelasticVel = totalInertia / (ourMass + otherMass);
-
-        DoGridImpact((args.OurEntity, ourGrid, ourXform, ourBody), args.OurFixture, inelasticVel, ourVelocity, ourTile, ourTiles, toUsEnergy);
-        DoGridImpact((args.OtherEntity, otherGrid, otherXform, otherBody), args.OtherFixture, inelasticVel, otherVelocity, otherTile, otherTiles, toOtherEnergy);
     }
 
     private void DoGridImpact(Entity<MapGridComponent, TransformComponent, PhysicsComponent> ent,

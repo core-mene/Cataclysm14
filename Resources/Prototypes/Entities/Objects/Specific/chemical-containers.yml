@@ -1,3 +1,30 @@
+# SPDX-FileCopyrightText: 2023 Chris
+# SPDX-FileCopyrightText: 2023 CrigCrag
+# SPDX-FileCopyrightText: 2023 Fahasor
+# SPDX-FileCopyrightText: 2023 IProduceWidgets
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2023 freeman2651
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Errant
+# SPDX-FileCopyrightText: 2024 Kevin Zheng
+# SPDX-FileCopyrightText: 2024 Nairod
+# SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2024 Plykiya
+# SPDX-FileCopyrightText: 2024 SlamBamActionman
+# SPDX-FileCopyrightText: 2024 Tayrtahn
+# SPDX-FileCopyrightText: 2024 Verm
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 liltenhead
+# SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2024 themias
+# SPDX-FileCopyrightText: 2025 Solaris
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   name: jug
   parent: [BaseItem, RecyclableItemPlasticMedium] # Frontier: addded RecyclableItemPlasticMedium
@@ -9,7 +36,7 @@
         beaker:
           maxVol: 200
     - type: Sprite
-      sprite: Objects/Specific/Chemistry/jug.rsi
+      sprite: _DV/Objects/Specific/Chemistry/jug.rsi # DeltaV - Resprited some medical items
       layers:
         - state: jug
         - state: jug1
@@ -17,7 +44,7 @@
           visible: false
     - type: Item
       size: Normal
-      sprite: Objects/Specific/Chemistry/jug.rsi
+      sprite: _DV/Objects/Specific/Chemistry/jug.rsi # DeltaV - Resprited some medical items
     - type: MixableSolution
       solution: beaker
     - type: RefillableSolution

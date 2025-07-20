@@ -1,4 +1,14 @@
-﻿#nullable enable
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 ElectroJr
+// SPDX-FileCopyrightText: 2024 MilenVolf
+// SPDX-FileCopyrightText: 2024 Vasilis
+// SPDX-FileCopyrightText: 2024 deltanedas
+// SPDX-FileCopyrightText: 2025 Leon Friedrich
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+#nullable enable
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -111,9 +121,16 @@ public sealed partial class TestPair
         HashSet<string>? ignored = null,
         bool ignoreAbstract = true,
         bool ignoreTestPrototypes = true)
-        where T : IComponent
+        where T : IComponent, new()
     {
-        var id = Server.ResolveDependency<IComponentFactory>().GetComponentName(typeof(T));
+        if (!Server.ResolveDependency<IComponentFactory>().TryGetRegistration<T>(out var reg)
+            && !Client.ResolveDependency<IComponentFactory>().TryGetRegistration<T>(out reg))
+        {
+            Assert.Fail($"Unknown component: {typeof(T).Name}");
+            return new();
+        }
+
+        var id = reg.Name;
         var list = new List<(EntityPrototype, T)>();
         foreach (var proto in Server.ProtoMan.EnumeratePrototypes<EntityPrototype>())
         {

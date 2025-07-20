@@ -1,4 +1,14 @@
-﻿using System.Linq;
+// SPDX-FileCopyrightText: 2024 Checkraze
+// SPDX-FileCopyrightText: 2024 Hannah Giovanna Dawson
+// SPDX-FileCopyrightText: 2024 Myzumi
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 deltanedas
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Security.Cryptography;
@@ -54,7 +64,6 @@ public sealed partial class ServerApi : IPostInjectInit
     [Dependency] private readonly IGameMapManager _gameMapManager = default!;
     [Dependency] private readonly IServerNetManager _netManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IComponentFactory _componentFactory = default!;
     [Dependency] private readonly ITaskManager _taskManager = default!;
     [Dependency] private readonly EntityManager _entityManager = default!;
     [Dependency] private readonly ILogManager _logManager = default!;
@@ -476,7 +485,7 @@ public sealed partial class ServerApi : IPostInjectInit
             if (gameRule.Abstract)
                 continue;
 
-            if (gameRule.HasComponent<GameRuleComponent>(_componentFactory))
+            if (gameRule.HasComponent<GameRuleComponent>(_entityManager.ComponentFactory))
                 gameRules.Add(gameRule.ID);
         }
 

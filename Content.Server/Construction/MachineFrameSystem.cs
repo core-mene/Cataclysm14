@@ -1,3 +1,18 @@
+// SPDX-FileCopyrightText: 2022 CommieFlowers
+// SPDX-FileCopyrightText: 2022 DrSmugleaf
+// SPDX-FileCopyrightText: 2022 Kara
+// SPDX-FileCopyrightText: 2022 rolfero
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2023 c4llv07e
+// SPDX-FileCopyrightText: 2024 AJCM-git
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Construction.Components;
 using Content.Server.Stack;
 using Content.Shared.Construction.Components;
@@ -14,7 +29,6 @@ namespace Content.Server.Construction;
 
 public sealed class MachineFrameSystem : EntitySystem
 {
-    [Dependency] private readonly IComponentFactory _factory = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly TagSystem _tag = default!;
     [Dependency] private readonly StackSystem _stack = default!;
@@ -87,7 +101,7 @@ public sealed class MachineFrameSystem : EntitySystem
             if (component.ComponentProgress[compName] >= info.Amount)
                 continue;
 
-            var registration = _factory.GetRegistration(compName);
+            var registration = Factory.GetRegistration(compName);
 
             if (!HasComp(args.Used, registration.Type))
                 continue;
@@ -401,7 +415,7 @@ public sealed class MachineFrameSystem : EntitySystem
             // I have many regrets.
             foreach (var (compName, _) in component.ComponentRequirements)
             {
-                var registration = _factory.GetRegistration(compName);
+                var registration = Factory.GetRegistration(compName);
 
                 if (!HasComp(part, registration.Type))
                     continue;

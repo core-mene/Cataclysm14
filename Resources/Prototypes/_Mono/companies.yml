@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 DieselMohawk
 # SPDX-FileCopyrightText: 2025 Disguised Bear
 # SPDX-FileCopyrightText: 2025 Ghost581
 # SPDX-FileCopyrightText: 2025 HacksLua
@@ -14,6 +15,7 @@
 # SPDX-FileCopyrightText: 2025 gixer94
 # SPDX-FileCopyrightText: 2025 marklyfie4
 # SPDX-FileCopyrightText: 2025 marklyfied
+# SPDX-FileCopyrightText: 2025 pumpkin-pwr
 # SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -136,6 +138,7 @@
   color: "#69E37F"
   image: /Textures/_Mono/Companies/horizon_energy.png
 
+
 # Minor companies
 
 - type: company
@@ -176,7 +179,8 @@
   description: blackhawkpmc-description
   color: "#419E23"
   image: /Textures/_Mono/Companies/BMC.png
-  
+
+
 # Religious groups
 
 - type: company
@@ -193,6 +197,23 @@
   description: cult-of-the-machine-god-description
   color: "#DEBC50"
   image: /Textures/_Mono/Companies/CMG.png
+
+- type: company
+  id: TheHive
+  form: Protagonist
+  name: The Hive
+  description: The-Hive-description
+  color: "#5918a8"
+  
+# Black Market Companies
+
+- type: company
+  id: paycheckbratva
+  form: Antagonist
+  name: Paycheck Bratva
+  description: paycheck-bratva-description
+  color: "#7a0303"
+
   
 # ====Rogue / Antag. Companies====
 - type: company

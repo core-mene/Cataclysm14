@@ -1,3 +1,16 @@
+// SPDX-FileCopyrightText: 2021 Paul
+// SPDX-FileCopyrightText: 2022 Paul Ritter
+// SPDX-FileCopyrightText: 2022 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Emisse
+// SPDX-FileCopyrightText: 2025 Leon Friedrich
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Globalization;
 using System.Linq;
 using System.Numerics;
@@ -29,7 +42,7 @@ namespace Content.Shared.Decals
             IDependencyCollection dependencies, SerializationHookContext hookCtx, ISerializationContext? context = null,
             ISerializationManager.InstantiationDelegate<DecalGridChunkCollection>? _ = default)
         {
-            node.TryGetValue(new ValueDataNode("version"), out var versionNode);
+            node.TryGetValue("version", out var versionNode);
             var version = ((ValueDataNode?) versionNode)?.AsInt() ?? 1;
             Dictionary<Vector2i, DecalChunk> dictionary;
             uint nextIndex = 0;
@@ -49,7 +62,7 @@ namespace Content.Shared.Decals
 
                     foreach (var (decalUidNode, decalData) in deckNodes)
                     {
-                        var dUid = serializationManager.Read<uint>(decalUidNode, hookCtx, context);
+                        var dUid = uint.Parse(decalUidNode, CultureInfo.InvariantCulture);
                         var coords = serializationManager.Read<Vector2>(decalData, hookCtx, context);
 
                         var chunkOrigin = SharedMapSystem.GetChunkIndices(coords, SharedDecalSystem.ChunkSize);
@@ -132,7 +145,7 @@ namespace Content.Shared.Decals
                 {
                     var decal = decalLookup[uid];
                     // Inline coordinates
-                    decks.Add(serializationManager.WriteValue(uid, alwaysWrite, context), serializationManager.WriteValue(decal.Coordinates, alwaysWrite, context));
+                    decks.Add(uid.ToString(), serializationManager.WriteValue(decal.Coordinates, alwaysWrite, context));
                 }
 
                 lookupNode.Add("decals", decks);

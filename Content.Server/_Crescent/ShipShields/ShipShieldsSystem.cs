@@ -301,7 +301,7 @@ public sealed partial class ShipShieldsSystem : EntitySystem
 
         _fixtureSystem.TryCreateFixture(uid, chain, name,
             hard: false,
-            collisionLayer: (int) CollisionGroup.FullTileLayer,
+            collisionLayer: (int) CollisionGroup.BulletImpassable, // Mono - Only blocks bullets
             body: physics);
 
         return chain;

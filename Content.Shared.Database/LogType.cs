@@ -477,7 +477,6 @@ public enum LogType
     /// Shuttle info was changed.
     /// </summary>
     ShuttleInfoChanged = 208,
-
     /// <summary>
     /// Damaging grid collision has occurred.
     /// </summary>

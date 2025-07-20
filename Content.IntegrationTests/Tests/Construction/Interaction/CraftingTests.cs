@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2024 Hanz
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using Content.IntegrationTests.Tests.Interaction;
 using Content.Shared.DoAfter;
@@ -53,6 +60,9 @@ public sealed class CraftingTests : InteractionTest
         await SpawnTarget(ShardGlass);
         await CraftItem(Spear);
         await FindEntity(Spear);
+
+        // Reset target because entitylookup will dump this.
+        Target = null;
 
         // Player's hands should be full of the remaining rods, except those dropped during the failed crafting attempt.
         // Spear and left over stacks should be on the floor.

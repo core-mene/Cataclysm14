@@ -1,23 +1,3 @@
-// SPDX-FileCopyrightText: 2023 Cheackraze
-// SPDX-FileCopyrightText: 2023 Checkraze
-// SPDX-FileCopyrightText: 2024 Dvir
-// SPDX-FileCopyrightText: 2024 Ed
-// SPDX-FileCopyrightText: 2024 Leon Friedrich
-// SPDX-FileCopyrightText: 2024 MilenVolf
-// SPDX-FileCopyrightText: 2024 Nemanja
-// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2024 Plykiya
-// SPDX-FileCopyrightText: 2024 TemporalOroboros
-// SPDX-FileCopyrightText: 2024 deltanedas
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 J
-// SPDX-FileCopyrightText: 2025 Redrover1760
-// SPDX-FileCopyrightText: 2025 ScarKy0
-// SPDX-FileCopyrightText: 2025 Tayrtahn
-// SPDX-FileCopyrightText: 2025 metalgearsloth
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using System.Linq;
 using System.Numerics;
 using System.Threading.Tasks;
@@ -351,6 +331,7 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
     {
         base.Update(frameTime);
         var biomes = AllEntityQuery<BiomeComponent>();
+
 
         while (biomes.MoveNext(out var biome))
         {
@@ -1031,7 +1012,7 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
             return;
 
         EnsureComp<MapGridComponent>(mapUid);
-        var biome = (BiomeComponent)EntityManager.ComponentFactory.GetComponent(typeof(BiomeComponent));
+        var biome = EntityManager.ComponentFactory.GetComponent<BiomeComponent>();
         seed ??= _random.Next();
         SetSeed(mapUid, biome, seed.Value, false);
         SetTemplate(mapUid, biome, biomeTemplate, false);
@@ -1055,6 +1036,9 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
         EnsureComp<RoofComponent>(mapUid);
 
         EnsureComp<LightCycleComponent>(mapUid);
+
+        EnsureComp<SunShadowComponent>(mapUid);
+        EnsureComp<SunShadowCycleComponent>(mapUid);
 
         var moles = new float[Atmospherics.AdjustedNumberOfGases];
         moles[(int)Gas.Oxygen] = 21.824779f;

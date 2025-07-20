@@ -8,7 +8,6 @@ using YamlDotNet.Core.Tokens;
 namespace Content.Shared._Goobstation.Clothing.Systems;
 public sealed class ClothingGrantingSystem : EntitySystem
 {
-    [Dependency] private readonly IComponentFactory _componentFactory = default!;
     [Dependency] private readonly ISerializationManager _serializationManager = default!;
     [Dependency] private readonly TagSystem _tagSystem = default!;
 
@@ -34,7 +33,7 @@ public sealed class ClothingGrantingSystem : EntitySystem
 
         foreach (var (name, data) in component.Components)
         {
-            var newComp = (Component) _componentFactory.GetComponent(name);
+            var newComp = (Component) Factory.GetComponent(name);
 
             if (HasComp(args.Equipee, newComp.GetType()))
                 continue;
@@ -54,7 +53,7 @@ public sealed class ClothingGrantingSystem : EntitySystem
             if (!component.Active.TryGetValue(name, out _))
                 continue;
 
-            var newComp = (Component) _componentFactory.GetComponent(name);
+            var newComp = (Component) Factory.GetComponent(name);
 
             RemComp(args.Equipee, newComp.GetType());
             component.Active[name] = false;

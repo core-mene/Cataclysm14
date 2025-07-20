@@ -45,6 +45,7 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Killerqu00
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Solaris
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -56,10 +57,10 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: Objects/Specific/Medical/medical.rsi
+    sprite: _DV/Objects/Specific/medical.rsi # DeltaV - Resprited some medical items
   - type: Item
     size: Small
-    sprite: Objects/Specific/Medical/medical.rsi
+    sprite: _DV/Objects/Specific/medical.rsi # DeltaV - Resprited some medical items
     heldPrefix: ointment
   # Inherited
   - type: StaticPrice

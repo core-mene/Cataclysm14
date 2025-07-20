@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2024 DrSmugleaf
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 #nullable enable
 using System.Collections.Generic;
 using System.Linq;
@@ -134,7 +141,7 @@ public abstract partial class InteractionTest
                 StackComponent? stack = null;
                 await server.WaitPost(() =>
                 {
-                    entProto.TryGetComponent(factory.GetComponentName(typeof(StackComponent)), out stack);
+                    entProto.TryGetComponent(factory.GetComponentName<StackComponent>(), out stack);
                 });
 
                 if (stack == null)

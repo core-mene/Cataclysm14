@@ -1,0 +1,62 @@
+# SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Your Name
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# TODO - new sprites
+
+- type: entity
+  parent: MonoBaseMobFleshLetoferol
+  id: MobLetoferolHorror
+  name: chimera fleshbeast
+  components:
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.7
+    baseSprintSpeed : 4.65
+  - type: Sprite
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: horror
+      color: "#eaff00"
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: horror
+      Dead:
+        Base: dead
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      500: Critical
+      800: Dead
+    allowRevives: true
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      120: 0.7
+      250: 0.5
+      300: 0.25
+  - type: MeleeWeapon
+    autoAttack: true
+    attackRate: 1.2
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 60
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 14
+        Structural: 75
+  - type: ActionGun
+    action: ActionLetoferolSpike
+    gunProto: LetoferolSpikeGun
+  - type: ThermalVision
+    lightRadius: 15
+    color: "#f22e55"
+    activateSound: null
+    deactivateSound: null

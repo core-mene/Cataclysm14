@@ -34,7 +34,7 @@
       stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Picses MIL{1}'
+          mapNameTemplate: 'Picses EXP{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

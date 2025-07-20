@@ -1,3 +1,48 @@
+// SPDX-FileCopyrightText: 2019 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2019 Silver
+// SPDX-FileCopyrightText: 2020 AJCM-git
+// SPDX-FileCopyrightText: 2020 Alex S
+// SPDX-FileCopyrightText: 2020 Clyybber
+// SPDX-FileCopyrightText: 2020 ColdAutumnRain
+// SPDX-FileCopyrightText: 2020 Exp
+// SPDX-FileCopyrightText: 2020 F77F
+// SPDX-FileCopyrightText: 2020 FL-OZ
+// SPDX-FileCopyrightText: 2020 Jackson Lewis
+// SPDX-FileCopyrightText: 2020 Memory
+// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+// SPDX-FileCopyrightText: 2020 chairbender
+// SPDX-FileCopyrightText: 2020 py01
+// SPDX-FileCopyrightText: 2020 scuffedjays
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2021 Galactic Chimp
+// SPDX-FileCopyrightText: 2021 Kara D
+// SPDX-FileCopyrightText: 2021 Mads Glahder
+// SPDX-FileCopyrightText: 2021 Metal Gear Sloth
+// SPDX-FileCopyrightText: 2021 metalgearsloth
+// SPDX-FileCopyrightText: 2022 Júlio César Ueti
+// SPDX-FileCopyrightText: 2022 Paul Ritter
+// SPDX-FileCopyrightText: 2022 ShadowCommander
+// SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2023 Chief-Engineer
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 PixelTK
+// SPDX-FileCopyrightText: 2023 Theomund
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2023 chromiumboy
+// SPDX-FileCopyrightText: 2023 keronshb
+// SPDX-FileCopyrightText: 2024 Kara
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 TemporalOroboros
+// SPDX-FileCopyrightText: 2024 nikthechampiongr
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -24,7 +69,6 @@ namespace Content.Server.Construction
 {
     public sealed partial class ConstructionSystem
     {
-        [Dependency] private readonly IComponentFactory _factory = default!;
         [Dependency] private readonly InventorySystem _inventorySystem = default!;
         [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
         [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!;
@@ -210,7 +254,7 @@ namespace Content.Server.Construction
                     case ArbitraryInsertConstructionGraphStep arbitraryStep:
                         foreach (var entity in new HashSet<EntityUid>(EnumerateNearby(user)))
                         {
-                            if (!arbitraryStep.EntityValid(entity, EntityManager, _factory))
+                            if (!arbitraryStep.EntityValid(entity, EntityManager, Factory))
                                 continue;
 
                             if (used.Contains(entity))
@@ -510,7 +554,7 @@ namespace Content.Server.Construction
                 switch (step)
                 {
                     case EntityInsertConstructionGraphStep entityInsert:
-                        if (entityInsert.EntityValid(holding, EntityManager, _factory))
+                        if (entityInsert.EntityValid(holding, EntityManager, Factory))
                             valid = true;
                         break;
                     case ToolConstructionGraphStep _:

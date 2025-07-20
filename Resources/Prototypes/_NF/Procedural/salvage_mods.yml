@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Biome mods
 - type: salvageBiomeMod
   id: Shadow
@@ -116,16 +125,101 @@
   cost: 1
 
 # Weather mods
+
+- type: salvageWeatherMod
+  id: Hail
+  desc: salvage-weather-mod-hail
+  weather: Hail
+  cost: 2
+  biomes:
+  - Snow
+
 - type: salvageWeatherMod
   id: SnowfallHeavy
   desc: salvage-weather-mod-heavy-snowfall
   weather: SnowfallHeavy
   cost: 1
+  biomes:
+  - Snow
+
+- type: salvageWeatherMod
+  id: SnowfallMedium
+  desc: salvage-weather-mod-medium-snowfall
+  weather: SnowfallMedium
+  cost: 1
+  biomes:
+  - Grasslands
+  - Snow
+
+- type: salvageWeatherMod
+  id: SnowfallLight
+  desc: salvage-weather-mod-light-snowfall
+  weather: SnowfallLight
+  cost: 1
+  biomes:
+  - Grasslands
+  - Snow
+
+- type: salvageWeatherMod
+  id: AshfallHeavy
+  desc: salvage-weather-mod-heavy-ashfall
+  weather: AshfallHeavy
+  cost: 4
+  biomes:
+  - Lava
+
+- type: salvageWeatherMod
+  id: Ashfall
+  desc: salvage-weather-mod-medium-ashfall
+  weather: Ashfall
+  cost: 2
+  biomes:
+  - Lava
+  - Shadow
+
+- type: salvageWeatherMod
+  id: AshfallLight
+  desc: salvage-weather-mod-light-ashfall
+  weather: AshfallLight
+  cost: 2
+
+- type: salvageWeatherMod
+  id: Fallout
+  desc: salvage-weather-mod-fallout
+  weather: Fallout
+  cost: 2
+
+- type: salvageWeatherMod
+  id: SandstormHeavy
+  desc: salvage-weather-mod-heavy-sandstorm
+  weather: SandstormHeavy
+  cost: 1
+  biomes:
+  - Caves
+
+- type: salvageWeatherMod
+  id: Sandstorm
+  desc: salvage-weather-mod-sandstorm
+  weather: Sandstorm
+  biomes:
+  - Caves
 
 - type: salvageWeatherMod
   id: Rain
   desc: salvage-weather-mod-rain
   weather: Rain
+  biomes:
+  - Grasslands
+  - Shadow
+  - Lava # primordial planet or something idk
+
+- type: salvageWeatherMod
+  id: Storm
+  desc: salvage-weather-mod-storm
+  weather: Storm
+  biomes:
+  - Grasslands
+  - Shadow
 
 # Air mixtures
 - type: salvageAirMod
