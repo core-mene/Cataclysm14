@@ -22,11 +22,11 @@
   weight: 30
   displayWeight: 30
   #special:
-  #- !type:AddComponentSpecial
-    #components:
-    #- type: NpcFactionMember todo company member DI
-    #  factions:
-    #  - USSP
+  # - !type:AddComponentSpecial
+    # components:
+    # - type: NpcFactionMember
+      # factions:
+      # - DI
   accessGroups:
   - GeneralAccess
   - DIAA
@@ -34,9 +34,5 @@
 - type: startingGear
   id: DIOverseerGear
   equipment:
-    pocket1: WeaponPistolPollock
+    pocket1: WeaponPistolMk32
     pocket2: Magazine9x19mmPistolFMJ
-  storage:
-    back:
-    - MedkitCombatFilled
-    - RadioHandheldNF

@@ -1,0 +1,142 @@
+#uniforms
+- type: loadoutGroup
+  id: DIJumpsuitGrunt
+  name: loadout-group-contractor-jumpsuit
+  hidden: true # No point in showing this, it gets auto-selected.
+  minLimit: 1
+  loadouts:
+  - DIClothingJumpsuitGrunt
+  fallbacks:
+  - DIClothingJumpsuitGrunt
+ 
+- type: loadoutGroup
+  id: DIJumpsuitTrucker
+  name: loadout-group-contractor-jumpsuit
+  hidden: true # No point in showing this, it gets auto-selected.
+  minLimit: 1
+  loadouts:
+  - DIClothingJumpsuitTrucker
+  fallbacks:
+  - DIClothingJumpsuitTrucker
+  
+- type: loadoutGroup
+  id: DIJumpsuitWatchdog
+  name: loadout-group-contractor-jumpsuit
+  hidden: true # No point in showing this, it gets auto-selected.
+  minLimit: 1
+  loadouts:
+  - DIClothingJumpsuitWatchdog
+  fallbacks:
+  - DIClothingJumpsuiWatchdog
+  
+- type: loadoutGroup 
+  id: DIJumpsuitOverseer
+  name: loadout-group-contractor-jumpsuit
+  minLimit: 1
+  loadouts: #TODO make a unique uniform jumpsuit/jumpskirt for Overseers to choose from
+  - DIClothingJumpsuitGrunt
+  - DIClothingJumpsuitWatchdog
+  - DIClothingJumpsuitTrucker
+  fallbacks:
+  - DIClothingJumpsuitWatchdog
+  
+#backpacks
+
+- type: loadoutGroup
+  id: DIBackpack
+  name: loadout-group-contractor-backpack
+  minLimit: 1
+  loadouts:
+  - DIClothingBackpack
+  - DIClothingSatchel
+  - DIClothingDuffel
+  - DIClothingMessenger
+  fallbacks:
+  - DIClothingBackpack
+
+#headsets
+
+- type: loadoutGroup
+  id: DIEars
+  name: loadout-group-contractor-ears
+  minLimit: 1
+  loadouts:
+  - DIHeadset
+  - DIHeadsetAlt
+  fallbacks:
+  - DIHeadset
+
+#belts
+
+- type: loadoutGroup
+  id: DIBelt
+  name: loadout-group-contractor-belt
+  minLimit: 1
+  loadouts:
+  - DIWebbing
+  - DIWebbingFilledTools
+  fallbacks:
+  - DIWebbing
+  
+#masks
+
+- type: loadoutGroup
+  id: DIMaskBase
+  name: loadout-group-contractor-face
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - DIGasmask
+  fallbacks:
+  - DIGasmask
+
+- type: loadoutGroup
+  id: DIMaskSec
+  name: loadout-group-contractor-face
+  loadouts:
+  - DIGasmask
+  - DIGasmaskWatchdog
+  fallbacks:
+  - DIGasmaskWatchdog
+
+#outer
+
+- type: loadoutGroup
+  id: DIOuterClothing
+  name: loadout-group-contractor-outerclothing
+  loadouts:
+  - DIVestTrucker
+  fallbacks:
+  - DIVestTrucker
+
+#neck
+
+- type: loadoutGroup
+  id: DINeck
+  name: loadout-group-contractor-neck
+  hidden: true # No point in showing this, it gets auto-selected.
+  minLimit: 1
+  loadouts:
+  - DIClothingNeckBadge
+  
+#shoes
+
+- type: loadoutGroup
+  id: DIShoes
+  name: loadout-group-contractor-shoes
+  minLimit: 1
+  loadouts:
+  - DIJackboots
+  - DIMagboots
+  fallbacks:
+  - DIJackboots
+  
+# GUN
+
+- type: loadoutGroup
+  id: DIGun
+  name: loadout-group-weapon
+  minLimit: 0
+  loadouts:
+  - DIShotgunWatchdog
+  fallbacks:
+  - DIShotgunWatchdog

@@ -10,7 +10,8 @@
   requirements:
   - !type:RoleTimeRequirement
       role: JobMercenary
-      time: 10800 # 3 hours
+      time: 10800 # 3 hours     
+  startingGear: DIWatchdogGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
   icon: "JobIconDIWatchdog"
@@ -19,11 +20,11 @@
   weight: 25
   displayWeight: 25
   #special:
-  #- !type:AddComponentSpecial
-    #components:
-    #- type: NpcFactionMember todo company member DI
-    #  factions:
-    #  - USSP
+  # - !type:AddComponentSpecial
+    # components:
+    # - type: NpcFactionMember
+      # factions:
+      # - DI
   accessGroups:
   - GeneralAccess
   - DISec
@@ -31,9 +32,5 @@
 - type: startingGear
   id: DIWatchdogGear
   equipment:
-    pocket1: WeaponPistolPollock
+    pocket1: WeaponPistolMk32
     pocket2: Magazine9x19mmPistolFMJ
-  storage:
-    back:
-    - MedkitCombatFilled
-    - RadioHandheldNF

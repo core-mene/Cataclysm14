@@ -1,0 +1,80 @@
+# Grunt
+- type: roleLoadout
+  id: JobDIGrunt
+  groups:
+  - DIJumpsuitGrunt
+  - TsfmcGloves
+  - DIBackpack
+  #- DIOuterClothing TODO add hardsuits, maybe special harness for grunt
+  - DIShoes
+  - DIMaskBase
+  - DIBelt
+  - DIEars
+  - DINeck
+  - NfsdBoxSurvival
+  - DIGruntPDA
+  - ContractorWallet
+  - ContractorEncryptionKey
+  - NfsdSpeciesSpecific
+  - ContractorTrinkets
+# Trucker
+- type: roleLoadout
+  id: JobDITrucker
+  groups:
+  - DIJumpsuitTrucker
+  - TsfmcGloves
+  - DIBackpack
+  - DIOuterClothing
+  - DIShoes
+  - DIMaskBase
+  - DIBelt
+  - DIEars
+  - DINeck
+  - NfsdBoxSurvival
+  - DITruckerPDA
+  - ContractorWallet
+  - ContractorEncryptionKey
+  - NfsdSpeciesSpecific
+  - ContractorTrinkets
+ 
+# Watchdog
+- type: roleLoadout
+  id: JobDIWatchdog
+  groups:
+  - DIJumpsuitWatchdog
+  - TsfmcGloves
+  - DIBackpack
+  #- DIOuterClothing TODO add hardsuits + armor
+  - DIShoes
+  - DIMaskSec
+  - DIBelt
+  - DIEars
+  - DINeck
+  - NfsdBoxSurvival
+  - DIWatchdogPDA
+  - ContractorWallet
+  - ContractorEncryptionKey
+  - NfsdSpeciesSpecific
+  - ContractorTrinkets
+  - DIGun #Only Nokkaido for now
+  
+# Overseer
+- type: roleLoadout
+  id: JobDIOverseer
+  groups:
+  - DIJumpsuitOverseer
+  - TsfmcGloves
+  - DIBackpack
+  #- DIOuterClothing TODO add hardsuits + armor
+  - DIShoes
+  - DIMaskSec
+  - DIBelt
+  - DIEars
+  - DINeck
+  - NfsdBoxSurvival
+  - DIOverseerPDA
+  - ContractorWallet
+  - ContractorEncryptionKey
+  - NfsdSpeciesSpecific
+  - ContractorTrinkets
+  - DIGun
