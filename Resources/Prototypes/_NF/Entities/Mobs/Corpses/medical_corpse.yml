@@ -79,7 +79,7 @@
   - type: Butcherable
     butcheringType: Spike
     spawned:
-    - id: FoodMeatBase #Mono - FoodMeatRotten >> FoodMeatBase
+    - id: FoodMeatRawBase #Mono - FoodMeatRotten >> FoodMeatBase
       amount: 5
   - type: TriggerOnBeingGibbed
   - type: GibOnTrigger
