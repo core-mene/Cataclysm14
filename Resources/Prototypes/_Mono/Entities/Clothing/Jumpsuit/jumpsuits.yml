@@ -256,3 +256,19 @@
         color: "#cd6b6b"
       - state: equipped-decor-shoulder-patch
         color: "#cd6b6b"
+#UNSA
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformUNSA
+  name: patriotic sleeveless tee
+  description: A sleeveless white teeshirt emblazoned with the star of the UNSA paired with generic military surplus pants. A popular choice by Vanguards.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/unsa.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/unsa.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+
