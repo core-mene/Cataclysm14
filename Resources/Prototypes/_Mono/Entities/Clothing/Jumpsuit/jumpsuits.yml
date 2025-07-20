@@ -140,14 +140,14 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformDrakeIndustriesHauler
-  name: hauler jumpsuit
+  id: ClothingUniformDrakeIndustriesGrunt
+  name: grunt jumpsuit
   description: Durable overalls with zippers here and there. It bears the colors of Drake Industries.
   components:
   - type: Sprite
-    sprite: _Mono/Clothing/Uniforms/Jumpsuit/di-hauler.rsi
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/di-grunt.rsi
   - type: Clothing
-    sprite: _Mono/Clothing/Uniforms/Jumpsuit/di-hauler.rsi
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/di-grunt.rsi
   - type: SuitSensor
     randomMode: true
 
