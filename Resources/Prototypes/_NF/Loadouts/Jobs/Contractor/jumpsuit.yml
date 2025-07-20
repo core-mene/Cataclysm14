@@ -1561,14 +1561,14 @@
     jumpsuit: ClothingUniformJumpsuitMilitaryQM
 
 - type: loadout
-  id: ContractorClothingUniformDrakeIndustriesHauler
-  name: hauler jumpsuit
+  id: ContractorClothingUniformDrakeIndustriesGrunt
+  name: grunt jumpsuit
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
   price: 1250
   equipment:
-    jumpsuit: ClothingUniformDrakeIndustriesHauler
+    jumpsuit: ClothingUniformDrakeIndustriesGrunt
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryParamedic
