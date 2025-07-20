@@ -1,3 +1,13 @@
+// SPDX-FileCopyrightText: 2020 DrSmugleaf
+// SPDX-FileCopyrightText: 2020 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2022 Paul Ritter
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using BenchmarkDotNet.Attributes;
 using Robust.Shared.Analyzers;
 using Robust.Shared.Maths;
@@ -44,7 +54,7 @@ namespace Content.Benchmarks
             for (var i = 0; i < Aabbs1.Length; i++)
             {
                 var aabb = Aabbs1[i];
-                _b2Tree.CreateProxy(aabb, i);
+                _b2Tree.CreateProxy(aabb, uint.MaxValue, i);
                 _tree.Add(i);
             }
         }

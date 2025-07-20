@@ -1,3 +1,20 @@
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 Vordenburg
+// SPDX-FileCopyrightText: 2023 deltanedas
+// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+// SPDX-FileCopyrightText: 2024 GreaseMonk
+// SPDX-FileCopyrightText: 2024 MilenVolf
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 chavonadelal
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Dataset;
 using Content.Shared.Random;
 using Content.Shared.Random.Helpers;
@@ -118,6 +135,13 @@ public abstract partial class SharedSalvageSystem : EntitySystem
             mods.Add(Loc.GetString(temp.Description));
         }
 
+        // only show the description if there is an atmosphere since wont matter otherwise
+        var weather = GetBiomeMod<SalvageWeatherMod>(biome.ID, rand, ref rating);
+        if (weather.Description != string.Empty && !air.Space)
+        {
+            mods.Add(Loc.GetString(weather.Description));
+        }
+
         var light = GetBiomeMod<SalvageLightMod>(biome.ID, rand, ref rating);
         if (light.Description != string.Empty)
         {
@@ -136,7 +160,7 @@ public abstract partial class SharedSalvageSystem : EntitySystem
         }
 
         var rewards = GetRewards(difficulty, rand);
-        return new SalvageMission(seed, difficulty, dungeon.ID, faction.ID, config, biome.ID, air.ID, temp.Temperature, light.Color, duration, rewards, mods);
+        return new SalvageMission(seed, difficulty, dungeon.ID, faction.ID, config, biome.ID, weather.ID, air.ID, temp.Temperature, light.Color, duration, rewards, mods);
     }
 
     public T GetBiomeMod<T>(string biome, System.Random rand, ref float rating) where T : class, IPrototype, IBiomeSpecificMod

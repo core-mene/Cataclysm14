@@ -30,3 +30,26 @@
     damage:
       types:
         Piercing: 32
+
+- type: entity
+  id: Bullet8x65mmSKRPractice
+  name: bullet (8x65mm SKR practice)
+  parent: BaseBulletPractice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 5
+
+- type: entity
+  id: Bullet8x65mmSKRIncendiary
+  parent: BaseBulletIncendiary
+  name: bullet (8x65mm SKR incendiary)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 5
+        Heat: 32

@@ -1,3 +1,32 @@
+// SPDX-FileCopyrightText: 2019 DamianX
+// SPDX-FileCopyrightText: 2019 ZelteHonor
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2021 DrSmugleaf
+// SPDX-FileCopyrightText: 2021 Swept
+// SPDX-FileCopyrightText: 2021 mirrorcult
+// SPDX-FileCopyrightText: 2022 Andreas Kämper
+// SPDX-FileCopyrightText: 2022 Fishfish458
+// SPDX-FileCopyrightText: 2022 Flipp Syder
+// SPDX-FileCopyrightText: 2022 Paul Ritter
+// SPDX-FileCopyrightText: 2022 fishfish458 <fishfish458>
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2023 Dvir
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 ike709
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Cojoke
+// SPDX-FileCopyrightText: 2024 GreaseMonk
+// SPDX-FileCopyrightText: 2024 James Simonson
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 Winkarst
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.VendingMachines;
@@ -22,8 +51,6 @@ namespace Content.Client.VendingMachines.UI
     {
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly IEntityManager _entityManager = default!;
-        [Dependency] private readonly IComponentFactory _componentFactory = default!; // Frontier
-
         private readonly Dictionary<EntProtoId, EntityUid> _dummies = [];
 
         public event Action<GUIBoundKeyEventArgs, ListData>? OnItemSelected;
@@ -138,7 +165,7 @@ namespace Content.Client.VendingMachines.UI
                 // determined dynamically by their contents/inventory), it then falls back to the default mystery
                 // hardcoded value of 20xMarketModifier.
                 var cost = 20;
-                if (prototype != null && prototype.TryGetComponent<StaticPriceComponent>(out var priceComponent, _componentFactory))
+                if (prototype != null && prototype.TryGetComponent<StaticPriceComponent>(out var priceComponent, _entityManager.ComponentFactory))
                 {
                     if (priceComponent.Price != 0)
                     {
@@ -147,8 +174,8 @@ namespace Content.Client.VendingMachines.UI
                     }
                     else
                     {
-                        if (prototype.TryGetComponent<StackPriceComponent>(out var stackPrice, _componentFactory)
-                            && prototype.TryGetComponent<StackComponent>(out var stack, _componentFactory))
+                        if (prototype.TryGetComponent<StackPriceComponent>(out var stackPrice, _entityManager.ComponentFactory)
+                            && prototype.TryGetComponent<StackComponent>(out var stack, _entityManager.ComponentFactory))
                         {
                             var price = stackPrice.Price * stack.Count;
                             cost = (int)(price * priceModifier);
@@ -160,7 +187,7 @@ namespace Content.Client.VendingMachines.UI
                 else
                     cost = (int)(cost * priceModifier);
 
-                if (prototype != null && prototype.TryGetComponent<SolutionContainerManagerComponent>(out var priceSolutions, _componentFactory))
+                if (prototype != null && prototype.TryGetComponent<SolutionContainerManagerComponent>(out var priceSolutions, _entityManager.ComponentFactory))
                 {
                     if (priceSolutions.Solutions != null)
                     {
@@ -186,11 +213,11 @@ namespace Content.Client.VendingMachines.UI
                 {
                     var price = 0.0;
 
-                    if (prototype.TryGetComponent<StaticPriceComponent>(out var staticComp, _componentFactory) && staticComp.VendPrice > 0.0)
+                    if (prototype.TryGetComponent<StaticPriceComponent>(out var staticComp, _entityManager.ComponentFactory) && staticComp.VendPrice > 0.0)
                     {
                         price += staticComp.VendPrice;
                     }
-                    else if (prototype.TryGetComponent<StackPriceComponent>(out var stackComp, _componentFactory) && stackComp.VendPrice > 0.0)
+                    else if (prototype.TryGetComponent<StackPriceComponent>(out var stackComp, _entityManager.ComponentFactory) && stackComp.VendPrice > 0.0)
                     {
                         price += stackComp.VendPrice;
                     }

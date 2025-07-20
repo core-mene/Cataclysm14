@@ -1,0 +1,83 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: reagent
+  id: Letoferol
+  name: reagent-name-letoferol
+  group: Special
+  desc: reagent-desc-letoferol
+  physicalDesc: reagent-physical-desc-necrotic
+  flavor: acid
+  color: "#a84387"
+  worksOnTheDead: true
+  metabolisms:
+    Poison:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cellular: 0.5
+      - !type:Polymorph
+        prototype: LetoferolMutation
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+      - !type:AdjustReagent
+        reagent: Letoferol
+        amount: -0.5
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+
+- type: reagent
+  id: NaturalLetoferol
+  name: reagent-name-nat-letoferol
+  group: Special
+  desc: reagent-desc-nat-letoferol
+  physicalDesc: reagent-physical-desc-opaque
+  flavor: acid
+  color: "#ebba34"
+  worksOnTheDead: true
+  tileReactions:
+  - !type:CreateEntityTileReaction
+    entity: ChimeraFleshKudzu
+    maxOnTileWhitelist:
+      tags: [ ChimeraFloor ]
+  metabolisms:
+    Poison:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cellular: 0.5
+      - !type:Polymorph
+        prototype: LetoferolMutationNatural
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+      - !type:AdjustReagent
+        reagent: NaturalLetoferol
+        amount: -2.5
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+
+- type: reagent
+  id: ProtoLetoferol
+  name: reagent-name-protoletoferol
+  group: Special
+  desc: reagent-desc-protoletoferol
+  physicalDesc: reagent-physical-desc-opaque
+  flavor: acid
+  color: "#a85832"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1

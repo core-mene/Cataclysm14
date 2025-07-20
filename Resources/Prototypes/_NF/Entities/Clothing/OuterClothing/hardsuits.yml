@@ -10,6 +10,7 @@
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -43,9 +44,14 @@
     walkModifier: 0.9
     sprintModifier: 0.8
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitMercenary
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: PirateBountyItem # Mono
     id: ClothingOuterHardsuitTacsuit
   - type: StaminaDamageResistance # Mono - Stamres
@@ -61,9 +67,14 @@
     sprite: _NF/Clothing/OuterClothing/Hardsuits/private_security.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/private_security.rsi
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitPrivateSecurity
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 # Pilot Hardsuit - Spationaut stats
 - type: entity
@@ -91,9 +102,14 @@
     walkModifier: 0.9
     sprintModifier: 0.8
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitPilot
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.6
 
@@ -108,9 +124,14 @@
     sprite: _NF/Clothing/OuterClothing/Hardsuits/ERTSuits/ertmailcarrier.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/ERTSuits/ertmailcarrier.rsi
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitERTMailCarrier
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 # MAXIM Nerfed: used best stats from spationaut, mining and luxury hardsuits, additionally increased caustic resistance
 - type: entity
@@ -138,9 +159,14 @@
     walkModifier: 0.95 #0.8->0.95
     sprintModifier: 0.95 #0.9->0.95
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitMaximPrototype
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.6
 
@@ -185,9 +211,14 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_bronze.rsi # Mono
   - type: Clothing
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_bronze.rsi # Mono
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdBronze
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: ExplosionResistance
     damageCoefficient: 0.5
   - type: Armor # Mono - Armor Value Changes
@@ -216,9 +247,14 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_silver.rsi # Mono
   - type: Clothing
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_silver.rsi # Mono
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdSilver
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
@@ -231,9 +267,14 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_gold.rsi # Mono
   - type: Clothing
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_gold.rsi # Mono
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdGold
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 - type: entity
   parent: ClothingOuterHardsuitBaseNFNfsd
@@ -245,9 +286,14 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_colonel.rsi # Mono
   - type: Clothing
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_colonel.rsi # Mono
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdSheriff
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: ExplosionResistance
     damageCoefficient: 0.5
   - type: Armor # Mono - Armor Value Changes
@@ -278,9 +324,14 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_brigmed.rsi # Mono
   - type: Clothing
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_brigmed.rsi # Mono
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdBrigmedic
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: Armor # Mono - Armor Value Changes
     modifiers:
       coefficients:
@@ -304,9 +355,14 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_experimental.rsi # Mono
   - type: Clothing
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_experimental.rsi # Mono
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdExperimental
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: PressureProtection
     highPressureMultiplier: 0.2
     lowPressureMultiplier: 1000
@@ -343,9 +399,14 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_combat.rsi # Mono
   - type: Clothing
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_combat.rsi # Mono
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdCombat
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: ExplosionResistance
     damageCoefficient: 0.35
   - type: Armor # Mono - Armor Value Changes
@@ -377,9 +438,14 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_command.rsi # Mono
   - type: Clothing
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_command.rsi # Mono
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdCommand
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
 #  - type: ExplosionResistance # Mono - Inherents ClothingOuterHardsuitNfsdCombat
 #    damageCoefficient: 0.35
 #  - type: Armor
@@ -426,9 +492,14 @@
     walkModifier: 0.88
     sprintModifier: 0.88
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitScaf
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: PirateBountyItem # Mono
     id: ClothingOuterHardsuitTacsuitHighValue
   - type: StaminaDamageResistance # Mono - Stamres
@@ -465,9 +536,14 @@
   - type: FootstepModifier
     footstepSoundCollection:
       path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitTacticalMaid
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.4
 
@@ -481,9 +557,14 @@
     sprite: _NF/Clothing/OuterClothing/Hardsuits/pirate_elite.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/pirate_elite.rsi
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitPirateElite
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: ExplosionResistance
     damageCoefficient: 0.4
   - type: Armor

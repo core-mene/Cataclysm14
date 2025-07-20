@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -40,9 +41,14 @@
   - type: HeldSpeedModifier
   - type: StasisProtection
   - type: StasisBlinkProvider
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitChronolegioneer
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 - type: entity
   parent: ClothingOuterHardsuitChronolegioneer
@@ -84,9 +90,14 @@
     walkModifier: 0.8
     sprintModifier: 0.85
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitCybersunStealth
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: Tag
     tags:
     - Hardsuit

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 HungryCuban
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -23,6 +24,10 @@
         Piercing: 0.95
         Heat: 0.95
   - type: FlashImmunity
+  - type: NightVision
+    flashDurationMultiplier: 2
+    color: "#bd4139"
+    isEquipment: true
   - type: RadarConsole
     maxRange: 350
     followEntity: true

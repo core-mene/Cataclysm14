@@ -21,7 +21,6 @@ namespace Content.Server.Xenoarchaeology.XenoArtifacts;
 
 public sealed partial class ArtifactSystem : EntitySystem
 {
-    [Dependency] private readonly IComponentFactory _componentFactory = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IRobustRandom _random = default!;

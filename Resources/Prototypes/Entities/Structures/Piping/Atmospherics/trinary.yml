@@ -18,7 +18,9 @@
 # SPDX-FileCopyrightText: 2024 chromiumboy
 # SPDX-FileCopyrightText: 2024 Łukasz Mędrek
 # SPDX-FileCopyrightText: 2025 ArtisticRoomba
+# SPDX-FileCopyrightText: 2025 Dinner
 # SPDX-FileCopyrightText: 2025 MrTswe
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Whatstone
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -61,7 +63,11 @@
     mode: SnapgridCenter
   components:
     - type: StationAiWhitelist # Mono
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
     - type: Sprite
+      drawdepth: FloorObjects #imp
       sprite: Structures/Piping/Atmospherics/gasfilter.rsi
       layers:
         - sprite: Structures/Piping/Atmospherics/pipe.rsi
@@ -110,7 +116,11 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: SubFloorHide
+    visibleLayers:
+    - enum.SubfloorLayers.FirstLayer
   - type: Sprite
+    drawdepth: FloorObjects #imp
     sprite: Structures/Piping/Atmospherics/gasfilter.rsi
     layers:
     - sprite: Structures/Piping/Atmospherics/pipe.rsi
@@ -155,7 +165,11 @@
     mode: SnapgridCenter
   components:
     - type: StationAiWhitelist # Mono
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
     - type: Sprite
+      drawdepth: FloorObjects #imp
       sprite: Structures/Piping/Atmospherics/gasmixer.rsi
       layers:
         - sprite: Structures/Piping/Atmospherics/pipe.rsi
@@ -205,6 +219,7 @@
     mode: SnapgridCenter
   components:
   - type: Sprite
+    drawdepth: FloorObjects #imp
     sprite: Structures/Piping/Atmospherics/gasmixer.rsi
     layers:
     - sprite: Structures/Piping/Atmospherics/pipe.rsi
@@ -254,6 +269,8 @@
     - type: SubFloorHide
       blockInteractions: false
       blockAmbience: false
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
     - type: NodeContainer
       nodes:
         inlet:
@@ -269,6 +286,7 @@
           nodeGroupID: Pipe
           pipeDirection: South
     - type: Sprite
+      drawdepth: FloorObjects #imp
       sprite: Structures/Piping/Atmospherics/pneumaticvalve.rsi
       layers:
         - sprite: Structures/Piping/Atmospherics/pipe.rsi

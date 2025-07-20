@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  abstract: true
+  parent: [Clothing, RecyclableItemClothSmall] # Frontier: added RecyclableItemClothSmall
+  id: ClothingHelmetCoverBase
+  components:
+  - type: Item
+    size: Small
+  - type: Clothing
+    quickEquip: true
+    slots:
+    - HELMETCOVER
+  - type: Sprite
+    state: icon
+  - type: Tag
+    tags:
+    - Kevlar
+  - type: StaticPrice
+    price: 1200
+    vendPrice: 1700
+
+#not that awful solution
+- type: entity
+  parent: ClothingHelmetCoverBase
+  id: ClothingHeadHelmetCoverBlock
+  name: Blocked
+  description: Can't fit anything there
+  components:
+  - type: Sprite
+    sprite: Markers/cross.rsi

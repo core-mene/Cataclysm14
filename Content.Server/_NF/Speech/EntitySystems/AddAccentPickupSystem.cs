@@ -8,7 +8,6 @@ namespace Content.Server._NF.Speech.EntitySystems;
 
 public sealed class AddAccentPickupSystem : EntitySystem
 {
-    [Dependency] private readonly IComponentFactory _componentFactory = default!;
 
     public override void Initialize()
     {
@@ -21,12 +20,12 @@ public sealed class AddAccentPickupSystem : EntitySystem
     private void OnPickup(EntityUid uid, AddAccentPickupComponent component, ref PickedUpEvent args)
     {
         // does the user already has this accent?
-        var componentType = _componentFactory.GetRegistration(component.Accent).Type;
+        var componentType = Factory.GetRegistration(component.Accent).Type;
         if (HasComp(args.User, componentType))
             return;
 
         // add accent to the user
-        var accentComponent = (Component)_componentFactory.GetComponent(componentType);
+        var accentComponent = (Component) Factory.GetComponent(componentType);
         AddComp(args.User, accentComponent);
 
         // snowflake case for replacement accent
@@ -44,7 +43,7 @@ public sealed class AddAccentPickupSystem : EntitySystem
             return;
 
         // try to remove accent
-        var componentType = _componentFactory.GetRegistration(component.Accent).Type;
+        var componentType = Factory.GetRegistration(component.Accent).Type;
         RemComp(args.User, componentType);
 
         component.IsActive = false;
@@ -68,7 +67,7 @@ public sealed class AddAccentPickupSystem : EntitySystem
 
     private void ToggleAccent(EntityUid uid, AddAccentPickupComponent component)
     {
-        var componentType = _componentFactory.GetRegistration(component.Accent).Type;
+        var componentType = Factory.GetRegistration(component.Accent).Type;
         if (component.IsActive)
         {
             // try to remove the accent if it's enabled
@@ -84,7 +83,7 @@ public sealed class AddAccentPickupSystem : EntitySystem
                 return;
 
             // add accent to the user
-            var accentComponent = (Component)_componentFactory.GetComponent(componentType);
+            var accentComponent = (Component) Factory.GetComponent(componentType);
             AddComp(component.Holder, accentComponent);
 
             // snowflake case for replacement accent

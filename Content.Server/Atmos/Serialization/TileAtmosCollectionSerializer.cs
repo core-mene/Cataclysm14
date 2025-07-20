@@ -1,4 +1,13 @@
-﻿using System.Globalization;
+// SPDX-FileCopyrightText: 2022 Paul Ritter
+// SPDX-FileCopyrightText: 2022 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Jezithyr
+// SPDX-FileCopyrightText: 2025 Leon Friedrich
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using System.Globalization;
 using Content.Shared.Atmos;
 using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.Manager;
@@ -25,7 +34,7 @@ public sealed partial class TileAtmosCollectionSerializer : ITypeSerializer<Dict
         SerializationHookContext hookCtx, ISerializationContext? context = null,
         ISerializationManager.InstantiationDelegate<Dictionary<Vector2i, TileAtmosphere>>? instanceProvider = null)
     {
-        node.TryGetValue(new ValueDataNode("version"), out var versionNode);
+        node.TryGetValue("version", out var versionNode);
         var version = ((ValueDataNode?) versionNode)?.AsInt() ?? 1;
         Dictionary<Vector2i, TileAtmosphere> tiles = new();
 
@@ -59,7 +68,7 @@ public sealed partial class TileAtmosCollectionSerializer : ITypeSerializer<Dict
             var dataNode = (MappingDataNode) node["data"];
             var chunkSize = serializationManager.Read<int>(dataNode["chunkSize"], hookCtx, context);
 
-            dataNode.TryGetValue(new ValueDataNode("uniqueMixes"), out var mixNode);
+            dataNode.TryGet("uniqueMixes", out var mixNode);
             var unique = mixNode == null ? null : serializationManager.Read<List<GasMixture>?>(mixNode, hookCtx, context);
 
             if (unique != null)
@@ -67,7 +76,7 @@ public sealed partial class TileAtmosCollectionSerializer : ITypeSerializer<Dict
                 var tileNode = (MappingDataNode) dataNode["tiles"];
                 foreach (var (chunkNode, valueNode) in tileNode)
                 {
-                    var chunkOrigin = serializationManager.Read<Vector2i>(chunkNode, hookCtx, context);
+                    var chunkOrigin = serializationManager.Read<Vector2i>(tileNode.GetKeyNode(chunkNode), hookCtx, context);
                     var chunk = serializationManager.Read<TileAtmosChunk>(valueNode, hookCtx, context);
 
                     foreach (var (mix, data) in chunk.Data)

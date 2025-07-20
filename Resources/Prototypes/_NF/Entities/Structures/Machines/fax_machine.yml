@@ -1,3 +1,14 @@
+# SPDX-FileCopyrightText: 2023 Alexander Evgrashin
+# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Tych0
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: FaxMachineBase
   id: FaxMachineShip
@@ -14,8 +25,8 @@
   components:
   - type: FaxMachine
     useStationName: true
-  - type: ApcPowerReceiver
-    powerDisabled: true #starts off
+  #- type: ApcPowerReceiver # Mono - comment out this
+  #  powerDisabled: true #starts off
 
 # Outpost
 - type: entity
@@ -81,8 +92,8 @@
   components:
   - type: FaxMachine
     name: "Listening Point: Bravo"
-  - type: ApcPowerReceiver
-    powerDisabled: true #starts off
+  #- type: ApcPowerReceiver # Mono - comment out
+  #  powerDisabled: true #starts off
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -246,8 +257,8 @@
   components:
   - type: FaxMachine
     name: "Unknown"
-  - type: ApcPowerReceiver
-    powerDisabled: false #starts off
+  #- type: ApcPowerReceiver # Mono - comment out
+  #  powerDisabled: false #starts off
 
 # Ships
 - type: entity

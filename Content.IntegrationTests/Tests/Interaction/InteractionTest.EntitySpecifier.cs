@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2024 DrSmugleaf
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 #nullable enable
 using Content.Shared.Stacks;
 using Robust.Shared.GameObjects;
@@ -77,7 +84,7 @@ public abstract partial class InteractionTest
             StackComponent? stack = null;
             await server.WaitPost(() =>
             {
-                entProto.TryGetComponent(factory.GetComponentName(typeof(StackComponent)), out stack);
+                entProto.TryGetComponent(factory.GetComponentName<StackComponent>(), out stack);
             });
 
             if (stack != null)
@@ -107,7 +114,7 @@ public abstract partial class InteractionTest
         StackComponent? stack = null;
         await Server.WaitPost(() =>
         {
-            entProto.TryGetComponent(Factory.GetComponentName(typeof(StackComponent)), out stack);
+            entProto.TryGetComponent(Factory.GetComponentName<StackComponent>(), out stack);
         });
 
         if (stack != null)
