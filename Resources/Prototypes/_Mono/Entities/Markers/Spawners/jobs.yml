@@ -94,42 +94,31 @@
   - type: SpawnPoint
     job_id: DIGrunt
   - type: Sprite
-    sprite: _NF/Markers/jobs.rsi
+    sprite: _Mono/Markers/jobs.rsi
     layers:
     - state: green
+    - state: DI_marker
 
 - type: entity
   id: SpawnPointDrakeIndustriesTrucker
-  parent: SpawnPointJobBase
+  parent: SpawnPointDrakeIndustriesGrunt
   name: DI Trucker
   components:
   - type: SpawnPoint
     job_id: DITrucker
-  - type: Sprite
-    sprite: _NF/Markers/jobs.rsi
-    layers:
-    - state: green
     
 - type: entity
   id: SpawnPointDrakeIndustriesWatchdog
-  parent: SpawnPointJobBase
+  parent: SpawnPointDrakeIndustriesGrunt
   name: DI Watchdog
   components:
   - type: SpawnPoint
     job_id: DIWatchdog
-  - type: Sprite
-    sprite: _NF/Markers/jobs.rsi
-    layers:
-    - state: green
     
 - type: entity
   id: SpawnPointDrakeIndustriesOverseer
-  parent: SpawnPointJobBase
+  parent: SpawnPointDrakeIndustriesGrunt
   name: DI Overseer
   components:
   - type: SpawnPoint
     job_id: DIOverseer
-  - type: Sprite
-    sprite: _NF/Markers/jobs.rsi
-    layers:
-    - state: green
