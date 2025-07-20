@@ -13,9 +13,8 @@
   parent: ClothingBeltDrakeIndustries
   suffix: Filled, Tools
   components:
-  - type: ContainerFill
-    containers:
-      item:
+  - type: StorageFill
+    contents:
       - id: Crowbar
       - id: Wrench
       - id: Screwdriver

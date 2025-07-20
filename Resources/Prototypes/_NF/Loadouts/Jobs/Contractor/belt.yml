@@ -93,9 +93,16 @@
 
 - type: loadout
   id: ContractorClothingBeltDrakeIndustries
-  price: 750
+  price: 500
   equipment:
     belt: ClothingBeltDrakeIndustries
+
+- type: loadout
+  id: ContractorClothingBeltDrakeIndustriesFilledTools
+  name: drake industries webbing (filled, tools)
+  price: 1500
+  equipment:
+    belt: ClothingBeltDrakeIndustriesFilledTools
 #T1
 - type: loadout
   id: ContractorBoxFolderClipboard
