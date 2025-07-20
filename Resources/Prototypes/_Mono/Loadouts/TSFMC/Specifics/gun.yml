@@ -28,7 +28,7 @@
   - FactionEnergyGunLoadout
   - FactionBanditLoadout
   fallbacks:
-  - FactionDrozdLoadout
+  - FactionLecterLoadout
 
 - type: loadoutGroup
   id: TsfmcMag
@@ -43,4 +43,4 @@
   - FactionRechargerLoadout #Energy
   - Faction8x65mmAmmoLoadout #Bandit
   fallbacks:
-  - FactionAcpSmgAmmoLoadout #Drozd
+  - Faction5.56x45mmAmmoLoadout #Lecter
