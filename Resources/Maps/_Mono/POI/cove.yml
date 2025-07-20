@@ -26,7 +26,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/20/2025 15:37:31
+  time: 07/20/2025 16:00:27
   entityCount: 4730
 maps: []
 grids:
@@ -12825,10 +12825,10 @@ entities:
       - 1953
 - proto: FireAxeCabinetFilled
   entities:
-  - uid: 1915
+  - uid: 3788
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
+      rot: 1.5707963267948966 rad
       pos: -14.5,5.5
       parent: 1
 - proto: Firelock
@@ -23597,6 +23597,12 @@ entities:
       parent: 1
 - proto: WallReinforced
   entities:
+  - uid: 1915
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -14.5,5.5
+      parent: 1
   - uid: 3502
     components:
     - type: Transform
@@ -25082,11 +25088,6 @@ entities:
     components:
     - type: Transform
       pos: -21.5,4.5
-      parent: 1
-  - uid: 3788
-    components:
-    - type: Transform
-      pos: -14.5,5.5
       parent: 1
   - uid: 3789
     components:
