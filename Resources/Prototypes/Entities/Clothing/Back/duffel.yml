@@ -67,7 +67,7 @@
 - type: entity
   parent: [NFClothingDuffel, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband, ClothingBackpackDuffel<NFClothingDuffel
   id: ClothingBackpackDuffelSecurity
-  name: security duffel bag
+  name: tactical duffel bag # Mono
   description: A large duffel bag for holding extra security related goods.
   components:
     - type: Sprite

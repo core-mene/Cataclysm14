@@ -60,7 +60,7 @@
 - type: entity
   parent: [NFClothingBackpack, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband, ClothingBackpack<NFClothingBackpack
   id: ClothingBackpackSecurity
-  name: security backpack
+  name: tactical backpack # Mono
   description: It's a very robust backpack.
   components:
   - type: Sprite
