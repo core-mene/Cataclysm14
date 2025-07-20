@@ -62,6 +62,13 @@ public sealed class CompanySystem : EntitySystem
         "USSPMedic",
         "USSPRifleman"
     };
+	private readonly HashSet<string> _diJobs = new()
+    {
+        "DIOverseer",
+        "DIWatchdog",
+        "DITrucker",
+        "DIGrunt"
+    };
 
     private readonly HashSet<string> _mdJobs = new()
     {
@@ -117,6 +124,12 @@ public sealed class CompanySystem : EntitySystem
         {
             // Assign USSP company
             companyComp.CompanyName = "USSP";
+        }
+		// Check if player's job is one of the DI jobs
+        else if (args.JobId != null && _diJobs.Contains(args.JobId))
+        {
+            // Assign DI company
+            companyComp.CompanyName = "DrakeIndustries";
         }
         else if (args.JobId != null && _mdJobs.Contains(args.JobId))
         {
