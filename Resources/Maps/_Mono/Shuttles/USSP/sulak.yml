@@ -20,7 +20,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/21/2025 09:49:29
+  time: 07/21/2025 10:00:15
   entityCount: 843
 maps: []
 grids:
@@ -2645,10 +2645,9 @@ entities:
       startingCharge: 0
 - proto: DefibrillatorCabinetFilled
   entities:
-  - uid: 744
+  - uid: 502
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: 6.5,7.5
       parent: 1
 - proto: FireAlarm
