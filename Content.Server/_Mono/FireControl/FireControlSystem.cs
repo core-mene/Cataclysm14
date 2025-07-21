@@ -422,6 +422,7 @@ public sealed partial class FireControlSystem : EntitySystem
                 if (destinationMapCoords.MapId == currentMapCoords.MapId && currentMapCoords.MapId != MapId.Nullspace)
                 {
                     var diff = destinationMapCoords.Position - currentMapCoords.Position;
+                    if (TryComp<FireControlRotateComponent>(localWeapon, out var rotateEnabled))
                     if (diff.LengthSquared() > 0.01f)
                     {
                         // Only rotate the gun if it has line of sight to the target

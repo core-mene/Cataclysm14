@@ -43,13 +43,12 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Luna "YuNii" Henrich
 # SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 monolith8319
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: [MobObserverBase, InventoryBase]
+  parent: [MobObserverBase, InventoryBase, ShowSecurityIcons, ShowMedicalIcons] # Mono - sec/med icons
   id: AdminObserver
   name: admin observer
   categories: [ HideSpawnMenu ]
@@ -159,6 +158,11 @@
     prototypes: [ NFMobAghostGear ] # Frontier MobAghostGear<NFMobAghostGear
   - type: BypassInteractionChecks
   - type: BankAccount # Frontier
+  - type: ShowHealthBars # Monolith
+    damageContainers:
+    - Biological
+    - Inorganic
+  - type: ShowSyndicateIcons # Monolith
 
 - type: entity
   id: ActionAGhostShowSolar

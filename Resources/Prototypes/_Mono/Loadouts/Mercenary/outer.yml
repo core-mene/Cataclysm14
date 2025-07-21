@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 IndependentSpacer
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -45,3 +46,10 @@
   price: 250
   equipment:
     outerClothing: ClothingOuterArmorBPVestStabproof
+
+- type: loadout
+  id: MercenaryClothingOuterHardsuitMercenaryWarlord
+  price: 50000
+  equipment:
+    outerClothing: ClothingOuterHardsuitMercenaryWarlord
+    

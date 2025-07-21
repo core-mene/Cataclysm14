@@ -111,8 +111,8 @@
   description: midnight-arms-co-description
   color: "#FF2E2E"
   image: /Textures/_Mono/Companies/MACo.png
-  
-  
+
+
 # Major companies
 
 - type: company
@@ -129,7 +129,7 @@
   name: Aetherion Dynamics
   description: aetherion-dynamics-description
   color: "#7E72B2"
-  
+
 - type: company
   id: HorizonEnergy
   form: Protagonist
@@ -155,7 +155,7 @@
   name: Civil Defense Militia
   description: civil-defense-milita-description
   color: "#666600"
-  
+
 - type: company
   id: UllmanIndustries
   form: Protagonist
@@ -163,7 +163,7 @@
   description: ullman-industries-description
   color: "#52326A"
   image: /Textures/_Mono/Companies/ullman_industries.png
-  
+
 - type: company
   id: NosskeEienResearchandDevelopment
   form: Protagonist
@@ -204,7 +204,7 @@
   name: The Hive
   description: The-Hive-description
   color: "#5918a8"
-  
+
 # Black Market Companies
 
 - type: company
@@ -214,7 +214,19 @@
   description: paycheck-bratva-description
   color: "#7a0303"
 
-  
+- type: company
+  id: cerberussurplusprovisions
+  form: Antagonist
+  name: Cerberus Surplus Provisionaries
+  description: cerberus-surplus-provisions
+  color: "#aa1010"
+  image: /Textures/_Mono/Companies/CSP.png
+  logins:
+    - GoobieWoob
+    - Coolzman
+    - Lumpy_the_Clown
+    - coolfied
+
 # ====Rogue / Antag. Companies====
 - type: company
   id: TheViperGroup

@@ -8250,3 +8250,101 @@ Entries:
   id: 933
   time: '2025-07-20T19:41:04.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1508
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        TSFMC and Security backpack are now 2 different bags. Security backpack
+        renamed to tactical backpack and doesn't have the blue accent.
+  id: 934
+  time: '2025-07-20T23:02:20.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1520
+- author: starch70
+  changes:
+    - type: Add
+      message: Added ASM-220 torpedo VLS. Currently only mapped on Calypso.
+    - type: Tweak
+      message: Replaced Calypso ASM-302 pods with 2x VLS.
+    - type: Tweak
+      message: >-
+        Charons (and new ASM-220) are now manually loaded. Research the ammo for
+        both in your faction R&D server. Station/ADS Charons remain unaffected.
+        Dagger, Anaconda, Calypso, and Serpent have had mapping changes to
+        account for this.
+    - type: Tweak
+      message: >-
+        Buffed Charon explosion & projectile damage to compensate for manual
+        loading. Have fun going through 3 layers of plastitanium now.
+  id: 935
+  time: '2025-07-21T00:31:19.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1524
+- author: IndependentSpacer
+  changes:
+    - type: Tweak
+      message: Added the WarlorD suit as a loadout option for mercs
+  id: 936
+  time: '2025-07-21T01:33:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1527
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: Cadavers found on wrecks once again give usable meat. Cannibals rejoice.
+  id: 937
+  time: '2025-07-21T01:36:53.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1528
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        TARNYX now needs manual reload, w/ a round capacity of 3 shells. Also
+        new AP shells for TARNYX. I wouldn't suggest using them. Don't worry.
+        The shells are cheap.
+    - type: Tweak
+      message: >-
+        Torpedo research moved to T2. Also switched the icon out so it wasnt
+        stupidly big.
+    - type: Tweak
+      message: >-
+        Tweaked scale of ASM-220 torpedo sprites, and changed the ECM torpedo
+        sprite.
+    - type: Tweak
+      message: TARNYX firerate doubled.
+  id: 938
+  time: '2025-07-21T05:12:43.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1529
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Buy confirmation button for buying ships
+  id: 939
+  time: '2025-07-21T05:35:00.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1530
+- author: starch70
+  changes:
+    - type: Add
+      message: FTL Start and FTL Loop now use NSV-13 SFX.
+    - type: Add
+      message: >-
+        Computers now make ambient beeps and buzzes and whatnot. Alien type
+        shit.
+  id: 940
+  time: '2025-07-21T09:13:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1532
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Mech integrities have been buffed, so they should be more durable now.
+    - type: Tweak
+      message: >-
+        All S2/S4 mech weapons have been buffed in some way (more firerate,
+        better accuracy, projectile speed, etc)
+  id: 941
+  time: '2025-07-21T09:15:20.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1535
+- author: DVDPlayerOfDiscordFame
+  changes:
+    - type: Add
+      message: Ported Impstation muzzle flashes.
+  id: 942
+  time: '2025-07-21T09:16:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1534
