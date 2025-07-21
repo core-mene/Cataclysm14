@@ -49,7 +49,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: [MobObserverBase, InventoryBase]
+  parent: [MobObserverBase, InventoryBase, ShowSecurityIcons, ShowMedicalIcons] # Mono - sec/med icons
   id: AdminObserver
   name: admin observer
   categories: [ HideSpawnMenu ]
@@ -159,6 +159,11 @@
     prototypes: [ NFMobAghostGear ] # Frontier MobAghostGear<NFMobAghostGear
   - type: BypassInteractionChecks
   - type: BankAccount # Frontier
+  - type: ShowHealthBars # Monolith
+    damageContainers:
+    - Biological
+    - Inorganic
+  - type: ShowSyndicateIcons # Monolith
 
 - type: entity
   id: ActionAGhostShowSolar
