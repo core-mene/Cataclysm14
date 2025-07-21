@@ -1,0 +1,42 @@
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitDrakeIndustriesWyvern #TL:DR lightweight suit with okay resistances (focus on brute & explo)
+  name: wyvern pattern hardsuit
+  description: Originally designed by the science department of Drake Industries and further polished by NE-RD. It remains nimble yet robust. With a focus on blunt force protection, at the cost of having open spaces to slash.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/Drake_Industries/di-wyvern-pattern.rsi
+  - type: Item
+    size: Huge
+  - type: Clothing
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/Drake_Industries/di-wyvern-pattern.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.6
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6 #+ brute
+        Slash: 0.8 #- slash tradeoff
+        Piercing: 0.7
+        Heat: 0.7
+        Radiation: 0.5 
+        Caustic: 0.7
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitDrakeIndustriesWyvern
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
+  - type: StaticPrice
+    price: 2000
+    vendPrice: 10000
