@@ -45,6 +45,7 @@
     powerChargeRate: 350
     powerUsePassive: 500
     powerUseActive: 0
+  - type: FireControlRotate
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMediumPlasmaProjectile
@@ -96,6 +97,7 @@
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
+  - type: FireControlRotate
   - type: Gun
     fireRate: 4.0
     projectileSpeed: 40
@@ -159,6 +161,7 @@
     maxCharge: 40000
     startingCharge: 40000
   - type: ExaminableBattery
+  - type: FireControlRotate
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
@@ -221,6 +224,7 @@
     scale: 1, 1
   - type: Appearance
   - type: AmmoCounter
+  - type: FireControlRotate
   - type: Battery
     maxCharge: 40800
     startingCharge: 40800

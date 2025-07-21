@@ -1,8 +1,13 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: vessel
   id: Fracture
   parent: BaseVesselAntag
   name: TSF-SKR Fracture
-  description: A beefed up hull similar in signature to the Legionnaire. Carries weapons suitable for hunting and disabling ships quite larger than it.
+  description: A beefed up hull similar in signature to the Legionnaire. Carries weapons suitable for hunting and disabling ships quite larger than it. Does not come with ammo for 150mm TARNYXs.
   price: 108200
   category: Medium
   group: Security

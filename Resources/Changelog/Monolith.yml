@@ -8190,3 +8190,183 @@ Entries:
   id: 927
   time: '2025-07-20T07:32:59.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1506
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Protein can once again be centrifuged from blood and slimepeople are
+        food faucets again. Nature is recovering.
+  id: 928
+  time: '2025-07-20T14:41:07.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1509
+- author: Rubeebeebee
+  changes:
+    - type: Add
+      message: SEC-Sunrise
+  id: 929
+  time: '2025-07-20T15:38:34.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1416
+- author: Rubeebeebee
+  changes:
+    - type: Add
+      message: >-
+        The Sabine MkII, a zealot of balaam MIL class ship, made for hit-and-run
+        tactics. 
+  id: 930
+  time: '2025-07-20T15:49:21.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1477
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        TSFMC now uses black combat gloves and chest rigs, and can equip
+        balaclavas, neck gaiters, and large chest rigs in loadout.
+    - type: Add
+      message: >-
+        Mercenaries now have the new duffels, gloves, chest rigs, armor vests,
+        jumpsuits, ballistic goggles/glasses, and ski-masks in loadout now.
+    - type: Tweak
+      message: Faction loadout Lecters are now free, and default for TSFMC.
+  id: 931
+  time: '2025-07-20T19:36:57.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1513
+- author: core-mene
+  changes:
+    - type: Fix
+      message: Arachnid UI (STILL GOTTA RESIZE STRIPPING UI TO ACCESS NEW SLOTS)
+    - type: Fix
+      message: PDA slot not existing in strip menu
+  id: 932
+  time: '2025-07-20T19:38:42.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1510
+- author: Honestly101
+  changes:
+    - type: Add
+      message: Added Potted plants and other items to Rogue hideout.
+    - type: Add
+      message: Added Garry to Rogue hideout, he watches the rogue commander sleep.
+    - type: Fix
+      message: Fixed disposal pipes and atmos pipes in Rogue hideout.
+  id: 933
+  time: '2025-07-20T19:41:04.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1508
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        TSFMC and Security backpack are now 2 different bags. Security backpack
+        renamed to tactical backpack and doesn't have the blue accent.
+  id: 934
+  time: '2025-07-20T23:02:20.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1520
+- author: starch70
+  changes:
+    - type: Add
+      message: Added ASM-220 torpedo VLS. Currently only mapped on Calypso.
+    - type: Tweak
+      message: Replaced Calypso ASM-302 pods with 2x VLS.
+    - type: Tweak
+      message: >-
+        Charons (and new ASM-220) are now manually loaded. Research the ammo for
+        both in your faction R&D server. Station/ADS Charons remain unaffected.
+        Dagger, Anaconda, Calypso, and Serpent have had mapping changes to
+        account for this.
+    - type: Tweak
+      message: >-
+        Buffed Charon explosion & projectile damage to compensate for manual
+        loading. Have fun going through 3 layers of plastitanium now.
+  id: 935
+  time: '2025-07-21T00:31:19.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1524
+- author: IndependentSpacer
+  changes:
+    - type: Tweak
+      message: Added the WarlorD suit as a loadout option for mercs
+  id: 936
+  time: '2025-07-21T01:33:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1527
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: Cadavers found on wrecks once again give usable meat. Cannibals rejoice.
+  id: 937
+  time: '2025-07-21T01:36:53.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1528
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        TARNYX now needs manual reload, w/ a round capacity of 3 shells. Also
+        new AP shells for TARNYX. I wouldn't suggest using them. Don't worry.
+        The shells are cheap.
+    - type: Tweak
+      message: >-
+        Torpedo research moved to T2. Also switched the icon out so it wasnt
+        stupidly big.
+    - type: Tweak
+      message: >-
+        Tweaked scale of ASM-220 torpedo sprites, and changed the ECM torpedo
+        sprite.
+    - type: Tweak
+      message: TARNYX firerate doubled.
+  id: 938
+  time: '2025-07-21T05:12:43.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1529
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Buy confirmation button for buying ships
+  id: 939
+  time: '2025-07-21T05:35:00.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1530
+- author: starch70
+  changes:
+    - type: Add
+      message: FTL Start and FTL Loop now use NSV-13 SFX.
+    - type: Add
+      message: >-
+        Computers now make ambient beeps and buzzes and whatnot. Alien type
+        shit.
+  id: 940
+  time: '2025-07-21T09:13:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1532
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Mech integrities have been buffed, so they should be more durable now.
+    - type: Tweak
+      message: >-
+        All S2/S4 mech weapons have been buffed in some way (more firerate,
+        better accuracy, projectile speed, etc)
+  id: 941
+  time: '2025-07-21T09:15:20.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1535
+- author: DVDPlayerOfDiscordFame
+  changes:
+    - type: Add
+      message: Ported Impstation muzzle flashes.
+  id: 942
+  time: '2025-07-21T09:16:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1534
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        It is now statistically possible to find bluespace, diamond, and
+        bananium on wrecks. High value tech disk are up too.
+    - type: Tweak
+      message: >-
+        Reintroduced liquid oxygen, nitrogen, and carbon dioxide canisters to
+        random gas can spawns.
+  id: 943
+  time: '2025-07-21T16:49:04.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1540
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Monkey cubes and crayons are now nutriment-bearing again. Ook ook
+        crunch.
+  id: 944
+  time: '2025-07-21T16:51:54.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1538
