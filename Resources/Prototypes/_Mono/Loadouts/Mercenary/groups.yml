@@ -23,6 +23,10 @@
   - MercenaryClothingUniformJumpsuitCombatSuitDigitalBlue
   - MercenaryClothingUniformJumpsuitCombatSuitDigitalRed
   - MercenaryClothingUniformJumpsuitCombatSuitDigitalGreenTan
+  - MercenaryClothingUniformJumpsuitBH
+  - MercenaryClothingUniformJumpskirtBH
+  - MercenaryClothingUniformJumpsuitBHGrey
+  - MercenaryClothingUniformJumpskirtBHGrey
 
 - type: loadoutGroup # ONLY TO BE USED AS A SUBGROUP FOR _NF MERCENARY GROUPS
   id: MonoMercenaryChestrig
@@ -55,12 +59,16 @@
   loadouts:
   - MercenaryVestSlim
   - MercenaryVestNormal
+  - MercenaryClothingOuterCoatBHTrench 
+  - MercenaryClothingOuterVestDetective
   - MercenaryClothingOuterArmorBPVestLight
   - MercenaryClothingOuterArmorBPVestMedium
   - MercenaryClothingOuterArmorBPVestHeavy
   - MercenaryClothingOuterArmorBPVestPolyvalent
   - MercenaryClothingOuterArmorBPVestStabproof
+  - MercenaryClothingOuterHardsuitMercenary 
   - MercenaryClothingOuterHardsuitMercenaryWarlord
+  - MercenaryClothingOuterHardsuitScaf 
 
 - type: loadoutGroup
   id: MonoMercenaryGloves # ONLY TO BE USED AS A SUBGROUP FOR _NF MERCENARY GROUPS
@@ -77,6 +85,7 @@
   id: MonoMercenaryBackpack # ONLY TO BE USED AS A SUBGROUP FOR _NF MERCENARY GROUPS
   name: loadout-group-contractor-backpack
   loadouts:
+  - MercenaryClothingModsuitSecurityPowerCell # Mono
   - MercenaryClothingBackpackDuffelTacticalDuffelTan
   - MercenaryClothingBackpackDuffelTacticalDuffelOlive
   - MercenaryClothingBackpackDuffelTacticalDuffelBlack
