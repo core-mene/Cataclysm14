@@ -6,6 +6,7 @@
 # SPDX-FileCopyrightText: 2025 Bonaout
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 gixer94
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -21,13 +22,13 @@
     neck: ClothingNeckScarfStripedBlack
 
 - type: loadout
-  id: ContractorClothingNeckUNSAArmband
+  id: ContractorClothingArmbandUNSA
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
   price: 5
   equipment:
-    neck: ClothingNeckUNSAArmband
+    neck: ClothingArmbandUNSA
 
 - type: loadout
   id: ContractorClothingNeckScarfStripedBlue

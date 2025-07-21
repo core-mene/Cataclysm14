@@ -105,7 +105,6 @@
         whitelist:
           tags:
             - Magazine7.62x39mmSubsonic
-            - Magazine7.62x39mmFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
@@ -114,7 +113,6 @@
         whitelist:
           tags:
             - Cartridge7.62x39mmSubsonic
-            - Cartridge7.62x39mmFMJ
   - type: MagazineVisuals
     magState: mag
     steps: 1

@@ -34,6 +34,7 @@
 # SPDX-FileCopyrightText: 2025 GreaseMonk
 # SPDX-FileCopyrightText: 2025 JonahDes
 # SPDX-FileCopyrightText: 2025 KiraZen_
+# SPDX-FileCopyrightText: 2025 SRV
 # SPDX-FileCopyrightText: 2025 SarahRaven
 # SPDX-FileCopyrightText: 2025 ScarKy0
 # SPDX-FileCopyrightText: 2025 deltanedas
@@ -385,8 +386,31 @@
     items:
     - SheetSteelLingering0
     - SheetGlassLingering0
+    - SheetPlasticLingering0
+    - SheetPlasteelLingering0
     - PartRodMetalLingering0
-    - FloorTileItemSteelLingering0
+    - FloorTileItemSteelLingering0 
+    - FloorTileItemDarkLingering0
+    - FloorTileItemWhiteLingering0
+  # Frontier: droppable borg items
+  - type: DroppableBorgModule
+    moduleId: Construction
+    items:
+    - id: ConstructionBag
+      whitelist:
+        components:
+        - ConstructionBag
+    - id: APCElectronics
+      whitelist:
+        components:
+          - ComputerBoard 
+          - MachineBoard 
+          - BaseElectronics
+    - id: CapacitorStockPart
+      whitelist:
+        components:
+          - MachinePart
+  # End Frontier: droppable borg items
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: construction-module }
 

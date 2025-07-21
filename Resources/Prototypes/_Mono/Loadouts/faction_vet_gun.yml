@@ -15,6 +15,7 @@
   - ContractorSpecialGunEnforcer
   - ContractorSpecialGunVector9mm
   - ContractorSpecialGunVector45Acp
+  - ContractorSpecialGunBandit
   # USSP playtime guns
   - ContractorSpecialGunAk502
   - ContractorSpecialGunBigLeady
@@ -89,6 +90,15 @@
   inhand:
   - WeaponCaseVector45AcpRegistered
 
+- type: loadout
+  id: ContractorSpecialGunBandit
+  name: MR-3C bandit gun case
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MonoCivTSFVet
+  price: 70000
+  inhand:
+  - WeaponCaseLongMR3CRegistered
 
 # USSP playtime weapons
 

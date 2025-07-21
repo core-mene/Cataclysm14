@@ -36,7 +36,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 07/12/2025 21:25:58
-  entityCount: 6292
+  entityCount: 6293
 maps: []
 grids:
 - 1
@@ -2593,6 +2593,13 @@ entities:
     components:
     - type: Transform
       pos: 1.5,-3.5
+      parent: 1
+- proto: AirlockAtmosphericsLocked
+  entities:
+  - uid: 25
+    components:
+    - type: Transform
+      pos: 15.5,-8.5
       parent: 1
 - proto: AirlockCargo
   entities:
@@ -18982,7 +18989,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -2.5,3.5
       parent: 1
-- proto: PlastitaniumWindowOutpost
+- proto: PlastitaniumWindow
   entities:
   - uid: 2900
     components:
@@ -20159,7 +20166,7 @@ entities:
     - type: Transform
       pos: -3.6426344,-61.449554
       parent: 1
-- proto: SyringeLetoferol
+- proto: SyringeRomerol
   entities:
   - uid: 3106
     components:
@@ -21417,7 +21424,7 @@ entities:
     - type: Transform
       pos: -9.5,-43.5
       parent: 1
-- proto: WallPlastitaniumOutpost
+- proto: WallPlastitanium
   entities:
   - uid: 103
     components:
@@ -24869,7 +24876,7 @@ entities:
     - type: Transform
       pos: -21.5,-76.5
       parent: 1
-- proto: WallPlastitaniumDiagonalOutpost
+- proto: WallPlastitaniumDiagonal
   entities:
   - uid: 4011
     components:

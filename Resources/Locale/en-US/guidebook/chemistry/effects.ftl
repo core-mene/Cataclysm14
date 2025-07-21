@@ -279,6 +279,12 @@ reagent-effect-guidebook-make-polymorph =
         *[other] polymorph
     } the metabolizer into a { $entityname }
 
+reagent-effect-guidebook-revert-polymorph =
+    { $chance ->
+        [1] Reverts
+        *[other] reverts
+    } the metabolizer from a { $entityname }
+
 reagent-effect-guidebook-modify-bleed-amount =
     { $chance ->
         [1] { $deltasign ->

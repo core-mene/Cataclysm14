@@ -1,3 +1,13 @@
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Ed
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using System.Linq;
 using Content.Shared.Light.Components;
 using Content.Shared.Light.EntitySystems;
 using Content.Shared.Maps;
@@ -27,7 +37,9 @@ public abstract class SharedWeatherSystem : EntitySystem
     {
         base.Initialize();
         _blockQuery = GetEntityQuery<BlockWeatherComponent>();
+
         SubscribeLocalEvent<WeatherComponent, EntityUnpausedEvent>(OnWeatherUnpaused);
+        SubscribeLocalEvent<WeatherComponent, ComponentShutdown>(OnWeatherRemoved);
     }
 
     private void OnWeatherUnpaused(EntityUid uid, WeatherComponent component, ref EntityUnpausedEvent args)
@@ -139,9 +151,9 @@ public abstract class SharedWeatherSystem : EntitySystem
                     var elapsed = Timing.CurTime - startTime;
 
                     if (elapsed < WeatherComponent.StartupTime)
-                    {
                         SetState(uid, WeatherState.Starting, comp, weather, weatherProto);
-                    }
+                    else
+                        SetState(uid, WeatherState.Running, comp, weather, weatherProto);
                 }
 
                 // Run whatever code we need.
@@ -211,15 +223,15 @@ public abstract class SharedWeatherSystem : EntitySystem
         Dirty(uid, component);
     }
 
-    protected virtual void EndWeather(EntityUid uid, WeatherComponent component, string proto)
+    protected virtual WeatherData? EndWeather(EntityUid uid, WeatherComponent component, ProtoId<WeatherPrototype> proto)
     {
         if (!component.Weather.TryGetValue(proto, out var data))
-            return;
+            return null;
 
-        _audio.Stop(data.Stream);
-        data.Stream = null;
         component.Weather.Remove(proto);
         Dirty(uid, component);
+
+        return data;
     }
 
     protected virtual bool SetState(EntityUid uid, WeatherState state, WeatherComponent component, WeatherData weather, WeatherPrototype weatherProto)
@@ -231,6 +243,8 @@ public abstract class SharedWeatherSystem : EntitySystem
         Dirty(uid, component);
         return true;
     }
+
+    private void OnWeatherRemoved(Entity<WeatherComponent> weatherEnt, ref ComponentShutdown args) => weatherEnt.Comp.Weather.ToList().ForEach(w => EndWeather(weatherEnt.Owner, weatherEnt.Comp, w.Key));
 
     [Serializable, NetSerializable]
     protected sealed class WeatherComponentState : ComponentState

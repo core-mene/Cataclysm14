@@ -637,7 +637,7 @@
   description: uplink-subsonic-mag-desc
   productEntity: Magazine7.62x39mmSubsonic
   cost:
-    Doubloon: 5
+    Doubloon: 4
   categories:
   - UplinkPirateAmmo
   conditions:
@@ -652,7 +652,7 @@
   description: uplink-subsonic-box-desc
   productEntity: AmmoBox7.62x39mmSubsonic
   cost:
-    Doubloon: 10
+    Doubloon: 7
   categories:
   - UplinkPirateAmmo
   conditions:
@@ -1276,20 +1276,20 @@
       tags:
       - PirateUplink
 
-- type: listing
-  id: UplinkRomerol
-  name: uplink-pirate-romerol-name
-  description: uplink-pirate-romerol-desc
-  productEntity: SyringeRomerol
-  cost:
-    Doubloon: 250
-  categories:
-  - UplinkPirateUtility
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
+#- type: listing
+#  id: UplinkRomerol
+#  name: uplink-pirate-romerol-name
+#  description: uplink-pirate-romerol-desc
+#  productEntity: SyringeRomerol
+#  cost:
+#    Doubloon: 250
+#  categories:
+#  - UplinkPirateUtility
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - PirateUplink
 
 #MARK: $Gambling$
 

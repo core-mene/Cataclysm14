@@ -15,6 +15,7 @@
   - WeaponRifleLecterTSF
   - WeaponRifleVulcanTSF
   - WeaponSubMachineGunDrozdTSF
+  - WeaponRifleMR3CTSF
   - Magazine5.56x45mmFMJ
   - Magazine5.56x45mmEmpty
   - AmmoBox5.56x45mmFMJ
@@ -24,6 +25,9 @@
   - Magazine45_ACPSubMachineGunFMJ
   - Magazine45_ACPSubMachineGunEmpty
   - AmmoBox45_ACPFMJ
+  - Magazine8x65mmSKR
+  - Magazine8x65mmEmpty
+  - AmmoBox8x65mmSKR
 
 - type: technology
   id: TsfAnnie
@@ -54,11 +58,8 @@
   recipeUnlocks:
   - WeaponLMGMR8BTSF
   - WeaponRifleMR8CTSF
-  - Magazine8x65mmSKR
-  - Magazine8x65mmEmpty
   - Magazine8x65mmSKRBox
   - Magazine8x65mmEmptyBox
-  - AmmoBox8x65mmSKR
   technologyPrerequisites:
   - TsfBasicGuns
   - TsfSynthalloy

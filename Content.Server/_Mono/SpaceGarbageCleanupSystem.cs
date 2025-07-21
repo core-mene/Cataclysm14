@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 ScyronX
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Light.Components;
 using Content.Server.Nutrition.Components;
 using Content.Server.Shuttles.Components;
@@ -62,28 +68,8 @@ public sealed class SpaceGarbageCleanupSystem : EntitySystem
             if (_container.IsEntityInContainer(uid))
                 continue;
 
-            // Skip deletion if the entity has a LightBulb component
-            if (HasComp<LightBulbComponent>(uid))
-                continue;
-
-            // Skip deletion if the entity has a Food component. Protect my pizzas!
-            if (HasComp<FoodComponent>(uid))
-                continue;
-
-            // Skip deletion if the entity has a Utensil component. Protect my sporks!
-            if (HasComp<UtensilComponent>(uid))
-                continue;
-
-            // Skip deletion if the entity has a Hypospray component. Protect my medipens!
-            if (HasComp<HyposprayComponent>(uid))
-                continue;
-
-            // Skip deletion if the entity has an ExpendableLightComponent.
-            if (HasComp<ExpendableLightComponent>(uid))
-                continue;
-
-            // Skip drinks or empty containers, they are pretty useful.
-            if (HasComp<DrinkComponent>(uid))
+            // Skip deletion if entity is on a grid.
+            if (TryComp<TransformComponent>(uid, out var xform) && xform.GridUid != null)
                 continue;
 
             // Adds entity to logging

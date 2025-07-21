@@ -1,3 +1,22 @@
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 Emisse
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 Wiebe Geertsma
+# SPDX-FileCopyrightText: 2024 chavonadelal
+# SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Markers
 - type: entity
   id: SalvageShuttleMarker
@@ -9,7 +28,6 @@
   id: Caves
   desc: salvage-biome-mod-caves
   biome: Caves
-  cost: 1 # Frontier
 
 - type: salvageBiomeMod
   id: Grasslands
@@ -19,13 +37,12 @@
 - type: salvageBiomeMod
   id: Snow
   desc: salvage-biome-mod-snow
-  cost: 1
   biome: Snow
 
 - type: salvageBiomeMod
   id: Lava
   desc: salvage-biome-mod-lava
-  cost: 2
+  cost: 1
   biome: Lava
 
 #- type: salvageBiomeMod
@@ -39,8 +56,6 @@
   id: Daylight
   desc: salvage-light-mod-daylight
   color: "#D8B059"
-  biomes:
-    - Grasslands
 
 - type: salvageLightMod
   id: Lavalight

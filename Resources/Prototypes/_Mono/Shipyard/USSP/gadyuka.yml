@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 grandalff
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: vessel
   id: Gadyuka
   parent: BaseVesselAntag
@@ -13,7 +19,9 @@
   - Pursuit
   engine:
   - Uranium
-
+  cloakHunter: true
+  company:
+  - USSP
 - type: gameMap
   id: Gadyuka
   mapName: 'Gadyuka'

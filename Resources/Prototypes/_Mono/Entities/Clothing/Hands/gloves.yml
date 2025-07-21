@@ -1,0 +1,157 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+#tactical gloves
+
+- type: entity
+  parent: [ ClothingHandsGlovesCombat, BaseC1Contraband ] # BaseSecurityEngineeringContraband<BaseC1Contraband
+  id: ClothingHandsGlovesTacticalCombatTan
+  name: tan tactical combat gloves
+  description: These tactical gloves are fireproof and shock resistant.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Hands/Gloves/tactical_combat_any.rsi
+    color: "#d2B48C"
+  - type: Clothing
+    sprite: _Mono/Clothing/Hands/Gloves/tactical_combat_any.rsi
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+        color: "#d2B48C"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#d2B48C"
+      right:
+      - state: inhand-right
+        color: "#d2B48C"
+  - type: StaticPrice
+    price: 1500
+    vendPrice: 1950
+
+- type: entity
+  parent: [ ClothingHandsGlovesCombat, BaseC1Contraband ] # BaseSecurityEngineeringContraband<BaseC1Contraband
+  id: ClothingHandsGlovesTacticalCombatBlack
+  name: black tactical combat gloves
+  description: These tactical gloves are fireproof and shock resistant.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Hands/Gloves/tactical_combat_any.rsi
+    color: "#2F2F2F"
+  - type: Clothing
+    sprite: _Mono/Clothing/Hands/Gloves/tactical_combat_any.rsi
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+        color: "#2F2F2F"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#2F2F2F"
+      right:
+      - state: inhand-right
+        color: "#2F2F2F"
+  - type: StaticPrice
+    price: 1500
+    vendPrice: 1950
+
+- type: entity
+  parent: [ ClothingHandsGlovesCombat, BaseC1Contraband ] # BaseSecurityEngineeringContraband<BaseC1Contraband
+  id: ClothingHandsGlovesTacticalCombatRangerGreen
+  name: ranger green tactical combat gloves
+  description: These tactical gloves are fireproof and shock resistant.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Hands/Gloves/tactical_combat_any.rsi
+    color: "#4A5A49"
+  - type: Clothing
+    sprite: _Mono/Clothing/Hands/Gloves/tactical_combat_any.rsi
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+        color: "#4A5A49"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#4A5A49"
+      right:
+      - state: inhand-right
+        color: "#4A5A49"
+  - type: StaticPrice
+    price: 1500
+    vendPrice: 1950
+
+- type: entity
+  parent: [ ClothingHandsGlovesCombat, BaseC1Contraband ] # BaseSecurityEngineeringContraband<BaseC1Contraband
+  id: ClothingHandsGlovesTacticalCombatOlive
+  name: olive tactical combat gloves
+  description: These tactical gloves are fireproof and shock resistant.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Hands/Gloves/tactical_combat_any.rsi
+    color: "#636B2F"
+  - type: Clothing
+    sprite: _Mono/Clothing/Hands/Gloves/tactical_combat_any.rsi
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+        color: "#636B2F"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#636B2F"
+      right:
+      - state: inhand-right
+        color: "#636B2F"
+  - type: StaticPrice
+    price: 1500
+    vendPrice: 1950
+
+- type: entity
+  parent: [ ClothingHandsGlovesCombat, BaseC1Contraband ] # BaseSecurityEngineeringContraband<BaseC1Contraband
+  id: ClothingHandsGlovesTacticalCombatCoyoteBrown
+  name: coyote brown tactical combat gloves
+  description: These tactical gloves are fireproof and shock resistant.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Hands/Gloves/tactical_combat_any.rsi
+    color: "#81613C"
+  - type: Clothing
+    sprite: _Mono/Clothing/Hands/Gloves/tactical_combat_any.rsi
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+        color: "#81613C"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#81613C"
+      right:
+      - state: inhand-right
+        color: "#81613C"
+  - type: StaticPrice
+    price: 1500
+    vendPrice: 1950
+
+- type: entity
+  parent: [ ClothingHandsGlovesCombat, BaseC1Contraband ] # BaseSecurityEngineeringContraband<BaseC1Contraband
+  id: ClothingHandsGlovesTacticalCombatWhite
+  name: white tactical combat gloves
+  description: These tactical gloves are fireproof and shock resistant.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Hands/Gloves/tactical_combat_any.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Hands/Gloves/tactical_combat_any.rsi
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+  - type: StaticPrice
+    price: 1500
+    vendPrice: 1950

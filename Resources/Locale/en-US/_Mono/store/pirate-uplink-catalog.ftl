@@ -180,10 +180,10 @@ uplink-pirate-box-smg-magazine-name = Box of 9x19mm SMG magazines
 uplink-pirate-box-smg-magazine-desc = A box filled with 3 9x19mm smg magazines.
 
 uplink-subsonic-mag-name = 7.62x39mm subsonic rifle mag
-uplink-subsonic-mag-desc = Supports the WSPR and Annie.
+uplink-subsonic-mag-desc = Supports the WSPR.
 
 uplink-subsonic-box-name = 7.62x39mm subsonic rifle box
-uplink-subsonic-box-desc = A box of ammo for the WSPR and Annie.
+uplink-subsonic-box-desc = A box of ammo for the WSPR.
 
 uplink-pirate-box-highcal-name = 12.7x99mm box
 uplink-pirate-box-highcal-desc = A box of general-purpose ammunition for the Burner heavy rifle.

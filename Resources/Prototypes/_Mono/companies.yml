@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 DieselMohawk
 # SPDX-FileCopyrightText: 2025 Disguised Bear
 # SPDX-FileCopyrightText: 2025 Ghost581
 # SPDX-FileCopyrightText: 2025 HacksLua
@@ -14,6 +15,7 @@
 # SPDX-FileCopyrightText: 2025 gixer94
 # SPDX-FileCopyrightText: 2025 marklyfie4
 # SPDX-FileCopyrightText: 2025 marklyfied
+# SPDX-FileCopyrightText: 2025 pumpkin-pwr
 # SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -75,6 +77,44 @@
 # DO NOT TOUCH
 
 # ====TSF / Protag. Companies====
+
+# Core companies
+
+- type: company
+  id: DrakeIndustries
+  form: Protagonist
+  name: Drake Industries
+  description: drake-industries-description
+  color: "#C97D7D"
+  image: /Textures/_Mono/Companies/drake_industries.png
+
+- type: company
+  id: SteelHammerManufacturing
+  form: Protagonist
+  name: Steel Hammer Manufacturing
+  description: steel-hammer-description
+  color: "#92a2a1"
+  image: /Textures/_Mono/Companies/steel_hammer.png
+
+- type: company
+  id: HarmonyMedicalEnterprises
+  form: Protagonist
+  name: Harmony Medical Enterprises
+  description: harmony-medical-enterprises-description
+  color: "#FC7303"
+  image: /Textures/_Mono/Companies/HME.png
+
+- type: company
+  id: MidnightArmsCo
+  form: Protagonist
+  name: Midnight Arms Co.
+  description: midnight-arms-co-description
+  color: "#FF2E2E"
+  image: /Textures/_Mono/Companies/MACo.png
+
+
+# Major companies
+
 - type: company
   id: DarkMatterEnterprises
   form: Protagonist
@@ -91,27 +131,15 @@
   color: "#7E72B2"
 
 - type: company
-  id: ZealotsOfBalaam
+  id: HorizonEnergy
   form: Protagonist
-  name: Zealots Of Balaam
-  description: zealots-of-balaam-description
-  color: "#BC7F58"
+  name: Horizon Energy
+  description: horizon-energy-description
+  color: "#69E37F"
+  image: /Textures/_Mono/Companies/horizon_energy.png
 
-- type: company
-  id: DrakeIndustries
-  form: Protagonist
-  name: Drake Industries
-  description: drake-industries-description
-  color: "#C97D7D"
-  image: /Textures/_Mono/Companies/drake_industries.png
 
-- type: company
-  id: HarmonyMedicalEnterprises
-  form: Protagonist
-  name: Harmony Medical Enterprises
-  description: harmony-medical-enterprises-description
-  color: "#FC7303"
-  image: /Textures/_Mono/Companies/HME.png
+# Minor companies
 
 - type: company
   id: UniversalStatesOfAmerica
@@ -129,24 +157,75 @@
   color: "#666600"
 
 - type: company
+  id: UllmanIndustries
+  form: Protagonist
+  name: Ullman Industries
+  description: ullman-industries-description
+  color: "#52326A"
+  image: /Textures/_Mono/Companies/ullman_industries.png
+
+- type: company
+  id: NosskeEienResearchandDevelopment
+  form: Protagonist
+  name: Nosske-Eien Research and Development
+  description: nosske-eien-rnd-description
+  color: "#9573AF"
+  image: /Textures/_Mono/Companies/ne_rd.png
+
+- type: company
   id: blackhawkpmc
   form: Protagonist
   name: Blackhawk Military Contracting
   description: blackhawkpmc-description
-  color: "#419e23"
+  color: "#419E23"
   image: /Textures/_Mono/Companies/BMC.png
 
-# core corporations
+
+# Religious groups
 
 - type: company
-  id: SteelHammerManufacturing
+  id: ZealotsOfBalaam
   form: Protagonist
-  name: Steel Hammer Manufacturing
-  description: steel-hammer-description
-  color: "#92a2a1"
-  image: /Textures/_Mono/Companies/steel_hammer.png
+  name: Zealots Of Balaam
+  description: zealots-of-balaam-description
+  color: "#BC7F58"
 
+- type: company
+  id: CultOfTheMachineGod
+  form: Protagonist
+  name: Cult of the Machine God
+  description: cult-of-the-machine-god-description
+  color: "#DEBC50"
+  image: /Textures/_Mono/Companies/CMG.png
 
+- type: company
+  id: TheHive
+  form: Protagonist
+  name: The Hive
+  description: The-Hive-description
+  color: "#5918a8"
+
+# Black Market Companies
+
+- type: company
+  id: paycheckbratva
+  form: Antagonist
+  name: Paycheck Bratva
+  description: paycheck-bratva-description
+  color: "#7a0303"
+
+- type: company
+  id: cerberussurplusprovisions
+  form: Antagonist
+  name: Cerberus Surplus Provisionaries
+  description: cerberus-surplus-provisions
+  color: "#aa1010"
+  image: /Textures/_Mono/Companies/CSP.png
+  logins:
+    - GoobieWoob
+    - Coolzman
+    - Lumpy_the_Clown
+    - coolfied
 
 # ====Rogue / Antag. Companies====
 - type: company
@@ -175,4 +254,3 @@
   - Scyron
   - SwadianSupremacy
   - Traildog
-

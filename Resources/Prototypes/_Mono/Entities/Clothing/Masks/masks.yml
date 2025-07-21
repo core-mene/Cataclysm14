@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
+# SPDX-FileCopyrightText: 2025 core-mene
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -31,3 +32,53 @@
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5
+
+#tactical gas masks
+
+- type: entity
+  parent: ClothingMaskGasExplorer
+  id: ClothingMaskSOM40
+  name: S.O.M. 40 gasmask
+  description: Special. Operation. Mask. number 40. A tactical combat gas mask made to fit over a balaclava.
+  components:
+  - type: StaticPrice
+    price: 1100
+    vendPrice: 1470
+  - type: Sprite
+    sprite: _Mono/Clothing/Mask/SOM40.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Mask/SOM40.rsi
+  - type: IdentityBlocker
+    coverage: MOUTH
+
+- type: entity
+  parent: ClothingMaskGasExplorer
+  id: ClothingMaskSOM41
+  name: S.O.M. 41 gasmask
+  description: Special. Operation. Mask. number 41. A tactical combat gas mask made to fit over a balaclava.
+  components:
+  - type: StaticPrice
+    price: 1100
+    vendPrice: 1470
+  - type: Sprite
+    sprite: _Mono/Clothing/Mask/SOM41.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Mask/SOM41.rsi
+  - type: IdentityBlocker
+    coverage: MOUTH
+
+- type: entity
+  parent: ClothingMaskGasExplorer
+  id: ClothingMaskSOM42
+  name: S.O.M. 42 gasmask
+  description: Special. Operation. Mask. number 42. A tactical combat gas mask made to fit over a balaclava.
+  components:
+  - type: StaticPrice
+    price: 1100
+    vendPrice: 1470
+  - type: Sprite
+    sprite: _Mono/Clothing/Mask/SOM42.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Mask/SOM42.rsi
+  - type: IdentityBlocker
+    coverage: MOUTH

@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: ComputerShipyardUSSP
   parent: [BaseStructureDisableToolUse, BaseStructureDestructible, ComputerShipyardBase]
@@ -26,3 +31,59 @@
     secretShipyardChannel: Nfsd
     ignoreBaseSaleRate: true # Fixed 70% sale rate.
     canTransferDeed: false
+
+- type: entity
+  id: ComputerShipyardSHM
+  parent: [BaseStructureDisableToolUse, BaseStructureDestructible, ComputerShipyardBase]
+  name: SHM shipyard console
+  description: Used to transfer ships from the SHM employ reserves.
+  components:
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.SHM
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.SHM:
+        type: ShipyardConsoleBoundUserInterface
+  - type: Sprite
+    sprite: _Mono/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_not_rot
+    - map: ["computerLayerKeyboard"]
+      state: gunnery_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_SHM
+    - map: ["computerLayerKeys"]
+      state: gunnery_keys
+    - type: ShipyardConsole
+      shipyardChannel: SHM
+      secretShipyardChannel: Nfsd
+      canTransferDeed: false
+
+- type: entity
+  id: ComputerShipyardDrakeIndustries
+  parent: [BaseStructureDisableToolUse, BaseStructureDestructible, ComputerShipyardBase]
+  name: drake industries shipyard console
+  description: Used by Drake Industries affiliates to purchase specialty cargo shuttles.
+  components:
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.DrakeIndustries
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.DrakeIndustries:
+        type: ShipyardConsoleBoundUserInterface
+  - type: Sprite
+    sprite: _Mono/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_not_rot
+    - map: ["computerLayerKeyboard"]
+      state: gunnery_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_DrakeIndustries
+    - map: ["computerLayerKeys"]
+      state: gunnery_keys
+    - type: ShipyardConsole
+      shipyardChannel: SHM
+      secretShipyardChannel: Nfsd
+      canTransferDeed: false

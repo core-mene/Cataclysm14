@@ -12,3 +12,6 @@ uplink-faction-server-desc = A R&D server outfitted for your faction's disciplin
 
 uplink-faction-lathe-name = Military Multipurpose Assembler
 uplink-faction-lathe-desc = A lathe capable of assembling recipes researched from your faction's R&D server.
+
+uplink-letoferol-name = Letoferol Syringe
+uplink-letoferol-desc = One letoferol syringe can destroy an entire sector.

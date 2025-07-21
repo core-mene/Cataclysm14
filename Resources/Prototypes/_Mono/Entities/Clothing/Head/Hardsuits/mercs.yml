@@ -1,12 +1,13 @@
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 HungryCuban
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: [ClothingHeadHardsuitBase, BaseC3SyndicateContraband]
+  parent: [ClothingHeadHardsuitBase, BaseC3SyndicateContraband, ClothingHeadSuitWithLightBase]
   id: ClothingHelmetHardsuitMercenaryWarlord
-  name: WarlorD helmet
-  description: A heavy headgear piece accompanying the WarlorD suit, it offers flash inmunity aswell mass scanner support at the expenses of lacking a light emmiter.
+  name: WL-01 helmet
+  description: A heavy headgear piece accompanying the Warlord suit, it offers flash inmunity aswell mass scanner support.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Head/Hardsuits/merc_warlordsuit.rsi
@@ -23,6 +24,9 @@
         Piercing: 0.95
         Heat: 0.95
   - type: FlashImmunity
+  - type: ToggleableLightVisuals
+  - type: PointLight
+    color: "#e24242"
   - type: RadarConsole
     maxRange: 350
     followEntity: true

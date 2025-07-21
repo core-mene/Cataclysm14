@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 ark1368
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -13,6 +15,7 @@ using System.Numerics;
 using Content.Client.Resources;
 using Robust.Client.Physics;
 using Robust.Shared.Prototypes;
+using System.Runtime.InteropServices;
 
 namespace Content.Client._Crescent.ShipShields;
 
@@ -23,7 +26,9 @@ public sealed class ShipShieldOverlay : Overlay
     private readonly FixtureSystem _fixture;
     private readonly SharedPhysicsSystem _physics;
     private readonly ShaderInstance _unshadedShader;
-    public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowFOV;
+    private readonly List<DrawVertexUV2D> _verts = new(128); // Mono
+
+    public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowWorld;
 
     public ShipShieldOverlay(IEntityManager entityManager, IPrototypeManager prototypeManager, IResourceCache resourceCache)
     {
@@ -46,7 +51,7 @@ public sealed class ShipShieldOverlay : Overlay
         var enumerator = _entManager.AllEntityQueryEnumerator<ShipShieldVisualsComponent, FixturesComponent, TransformComponent>();
         while (enumerator.MoveNext(out var uid, out var visuals, out var fixtures, out var xform))
         {
-            // VANTABLACK OVERDRAW FROM THE DEPTHS OF LAGHELL
+
             if (xform.MapID != args.MapId)
                 continue;
 
@@ -54,21 +59,25 @@ public sealed class ShipShieldOverlay : Overlay
 
             var fixture = _fixture.GetFixtureOrNull(uid, "shield", fixtures);
 
-            if (fixture == null || fixture.Shape is not ChainShape)
+            if (fixture == null || fixture.Shape is not ChainShape chain)
                 continue;
-
-            var chain = (ChainShape) fixture.Shape;
 
             var texture = _resourceCache.GetTexture("/Textures/_Crescent/ShipShields/shieldtex.png");
 
-            DrawShield(handle, uid, chain, xform, texture, visuals.ShieldColor);
+            DrawShield(handle, uid, chain, xform, texture, visuals.ShieldColor, _verts);
+            _verts.Clear(); // Clear for next shield - Mono
         }
     }
 
-    private void DrawShield(DrawingHandleWorld handle, EntityUid uid, ChainShape chain, TransformComponent xform, Texture tex, Color color)
+    private void DrawShield(
+        DrawingHandleWorld handle,
+        EntityUid uid,
+        ChainShape chain,
+        TransformComponent xform,
+        Texture tex,
+        Color color,
+        List<DrawVertexUV2D> verts)
     {
-        List<DrawVertexUV2D> verts = new List<DrawVertexUV2D>();
-
         // The vertices of this fixture are defined relative to local position,
         // so we'll have to add them to this and then use the matrix to put them back in world position.
         var localPos = xform.LocalPosition;
@@ -76,7 +85,7 @@ public sealed class ShipShieldOverlay : Overlay
         // If "Transforms" ever get deprecated go ahead and check how DebugPHysicsSystem is drawing chains in this hellworld future
         var transform = _physics.GetPhysicsTransform(uid);
 
-        for (int i = 1; i <= chain.Count; i++)
+        for (int i = 1; i < chain.Count; i++)
         {
             // top left corner
             var leftVertex = VertexToWorldPos(chain.Vertices[i - 1], transform);
@@ -103,17 +112,15 @@ public sealed class ShipShieldOverlay : Overlay
             verts.Add(new DrawVertexUV2D(rightCorner, new Vector2(1, 0)));
         }
 
-        handle.DrawPrimitives(DrawPrimitiveTopology.TriangleList, texture: tex, verts.ToArray().AsSpan(), color);
+        handle.DrawPrimitives(DrawPrimitiveTopology.TriangleList, texture: tex, CollectionsMarshal.AsSpan(verts), color);
     }
 
-    private Vector2 VertexToWorldPos(Vector2 vertexPos, Transform transform)
+    private static Vector2 VertexToWorldPos(Vector2 vertexPos, Transform transform)
     {
-        var vertLocation = Transform.Mul(transform, vertexPos);
-
-        return vertLocation;
+        return Transform.Mul(transform, vertexPos);
     }
 
-    private Vector2 Corner(Vector2 localPos, Vector2 vertexPos, Transform transform, float radius = 1.3f)
+    private static Vector2 Corner(Vector2 localPos, Vector2 vertexPos, Transform transform, float radius = 1.3f)
     {
         var localXform = Transform.Mul(transform, localPos);
         var cornerPos = Vector2.Subtract(vertexPos, localXform);

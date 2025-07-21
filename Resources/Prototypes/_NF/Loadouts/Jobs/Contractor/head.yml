@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Hamblinius
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Bonaout
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadout
   id: ContractorClothingHeadHelmetEVALarge
   price: 250
@@ -522,6 +531,64 @@
   price: 1250
   equipment:
     head: ClothingHeadHatWideBrimmed
+
+# Mono Begin
+
+- type: loadout
+  id: ContractorClothingHeadHatWideBrimmedWhite
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1250
+  equipment:
+    head: ClothingHeadHatWideBrimmedWhite
+
+- type: loadout
+  id: ContractorClothingHeadHatWideBrimmedPurple
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1250
+  equipment:
+    head: ClothingHeadHatWideBrimmedPurple
+
+- type: loadout
+  id: ContractorClothingHeadHatWideBrimmedRed
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1250
+  equipment:
+    head: ClothingHeadHatWideBrimmedRed
+
+- type: loadout
+  id: ContractorClothingHeadHatWideBrimmedGreen
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1250
+  equipment:
+    head: ClothingHeadHatWideBrimmedGreen
+
+- type: loadout
+  id: ContractorClothingHeadHatWideBrimmedBlue
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1250
+  equipment:
+    head: ClothingHeadHatWideBrimmedBlue
+
+- type: loadout
+  id: ContractorClothingHeadHatWideBrimmedYellow
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1250
+  equipment:
+    head: ClothingHeadHatWideBrimmedYellow
+
+# Mono End
 
 - type: loadout
   id: ContractorClothingHeadHatWitchhunter

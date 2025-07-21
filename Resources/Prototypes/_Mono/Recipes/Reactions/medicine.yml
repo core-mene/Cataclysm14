@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -58,6 +59,32 @@
     Mesotaxinide: 5
 
 - type: reaction
+  id: MesotaxinideAlternative
+  reactants:
+    Bicaridine:
+      amount: 2
+    ProtoLetoferol:
+      amount: 5
+    Rhymatine:
+      amount: 0.5
+  products:
+    Mesotaxinide: 7.5
+
+- type: reaction
+  id: Mesophenerol
+  reactants:
+    Bicaridine:
+      amount: 2
+    Dylovene:
+      amount: 2
+    Kelotane:
+      amount: 2
+    Dexalin:
+      amount: 2
+  products:
+    Mesophenerol: 6
+
+- type: reaction
   id: Letoferol
   minTemp: 352
   reactants:
@@ -69,3 +96,28 @@
       amount: 2
   products:
     Letoferol: 5
+
+- type: reaction
+  id: LetoferolBreakdown
+  source: true
+  requiredMixerCategories:
+  - Electrolysis
+  reactants:
+    Letoferol:
+      amount: 3
+  products:
+    ProtoLetoferol: 1
+    Carbon: 2
+
+- type: reaction
+  id: NaturalLetoferolBreakdown
+  source: true
+  requiredMixerCategories:
+  - Electrolysis
+  reactants:
+    NaturalLetoferol:
+      amount: 4
+  products:
+    ProtoLetoferol: 2
+    Carbon: 0.5
+    Protein: 1.5
