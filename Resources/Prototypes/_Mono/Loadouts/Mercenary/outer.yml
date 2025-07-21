@@ -15,6 +15,18 @@
   equipment:
     outerClothing: ClothingOuterArmorBasic
 
+- type: loadout
+  id: MercenaryClothingOuterVestDetective
+  price: 250
+  equipment:
+    outerClothing: ClothingOuterVestDetective
+
+- type: loadout
+  id: MercenaryClothingOuterCoatBHTrench
+  price: 750
+  equipment:
+    outerClothing: ClothingOuterCoatBHTrench
+
 # Mono vests
 
 - type: loadout
@@ -48,8 +60,20 @@
     outerClothing: ClothingOuterArmorBPVestStabproof
 
 - type: loadout
+  id: MercenaryClothingOuterHardsuitMercenary
+  price: 20000
+  equipment:
+    outerClothing: ClothingOuterHardsuitMercenary
+
+- type: loadout
+  id: MercenaryClothingOuterHardsuitScaf
+  price: 60000
+  equipment:
+    outerClothing: ClothingOuterHardsuitScaf
+
+- type: loadout
   id: MercenaryClothingOuterHardsuitMercenaryWarlord
-  price: 50000
+  price: 60000
   equipment:
     outerClothing: ClothingOuterHardsuitMercenaryWarlord
     
