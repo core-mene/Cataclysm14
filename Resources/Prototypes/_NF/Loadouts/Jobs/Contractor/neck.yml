@@ -92,7 +92,7 @@
   price: 500
   equipment:
     neck: ClothingNeckLawyerbadge
-    
+
 - type: loadout
   id: ContractorClothingNeckDrakeIndustriesBadge
   effects:
@@ -183,6 +183,15 @@
   price: 1000
   equipment:
     neck: ClothingNeckCloakBlack
+
+- type: loadout
+  id: ContractorClothingNeckCloakCOG # Monolith
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  equipment:
+    neck: ClothingNeckCloakCOG
 
 - type: loadout
   id: ContractorClothingNeckCloakMiner
