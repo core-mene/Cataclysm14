@@ -92,7 +92,7 @@
         Base: dead
   - type: Puller
   - type: Butcherable
-    butcheringType: Spike
+    butcheringType: Knife # Mono
     spawned:
     - id: FoodMeatXeno
       amount: 5
@@ -298,7 +298,7 @@
     damage:
      groups:
        Brute: 12
-    attackRate: 2.5
+    attackRate: 2
   - type: Fixtures
     fixtures:
       fix1:
@@ -357,7 +357,7 @@
     capacity: 1
     count: 1
   - type: Gun
-    fireRate: 1.5
+    fireRate: 1
     useKey: false
     selectedMode: FullAuto
     availableModes:

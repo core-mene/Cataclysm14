@@ -563,6 +563,7 @@
     count: 3
     slice: FoodMeatXenoCutlet
 
+
 - type: entity
   name: raw rouny meat
   # not raw since rouny best
@@ -591,6 +592,7 @@
     graph: RounySteak
     node: start
     defaultTarget: rouny steak
+
 
 - type: entity
   name: killer tomato meat
@@ -1468,6 +1470,8 @@
     graph: XenoCutlet
     node: start
     defaultTarget: xeno cutlet
+  - type: StaticPrice
+    price: 250
 
 - type: entity
   name: raw killer tomato cutlet
