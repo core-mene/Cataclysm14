@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
 # SPDX-FileCopyrightText: 2025 core-mene
 #
@@ -32,6 +33,19 @@
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5
+
+- type: entity
+  parent: ClothingMaskGasExplorer
+  id: ClothingMaskCOG
+  name: depricated cult mask
+  description: A metal mask with a damaged right eye. The functioning one glows with a blue hue.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Mask/cogmask.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Mask/cogmask.rsi
+  - type: IdentityBlocker
+    coverage: MOUTH
 
 #tactical gas masks
 

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 core-mene
 #
@@ -32,3 +33,21 @@
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Neck/Cloaks/ashenveilcloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakCOG
+  name: depricated cult robe
+  description: A robe resembling the attire of the Cult of the Machine God. It's tarnished beyond repair and has pieces of metal for a mantle designed to attach to the wearers back.
+  components:
+  - type: Sprite
+    scale: 0.6, 0.6
+    sprite: _Mono/Clothing/Neck/Cloaks/cogcloakicon.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Neck/Cloaks/cogcloak.rsi
+  - type: ToggleableClothing
+    requiredSlot: neck
+    blockUnequipWhenAttached: false
+    replaceCurrentClothing: true
+    clothingPrototypes:
+      head: ClothingHeadHatCOG
