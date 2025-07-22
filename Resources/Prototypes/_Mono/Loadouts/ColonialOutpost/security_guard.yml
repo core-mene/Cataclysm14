@@ -15,7 +15,7 @@
 - type: loadout
   id: MonoSecurityGuardVestSlim
   equipment:
-    outerClothing: ClothingOuterArmorBasicSlim
+    outerClothing: ClothingOuterArmorBPVestPolyvalent
 
 - type: loadoutGroup
   id: MonoSecurityGuardBelt
@@ -25,8 +25,9 @@
   - MonoSecurityGuardWebbing
   - MonoSecurityGuardAssaultBelt
   - MonoSecurityGuardSecurityCarrier
+  - MonoSecurityGuardSecurityCarrierLarge
   fallbacks:
-  - MonoSecurityGuardSecurityCarrier
+  - MonoSecurityGuardWebbing
 
 - type: loadout
   id: MonoSecurityGuardWebbing
@@ -36,9 +37,13 @@
 
 - type: loadout
   id: MonoSecurityGuardSecurityCarrier
-  name: chest rig
   equipment:
-    belt: ClothingBeltMilitaryWebbing
+    belt: ClothingBeltWebbingsNormalBlack
+
+- type: loadout
+  id: MonoSecurityGuardSecurityCarrierLarge
+  equipment:
+    belt: ClothingBeltWebbingsBigBlack
 
 - type: loadout
   id: MonoSecurityGuardAssaultBelt
@@ -130,14 +135,14 @@
 - type: loadout
   id: MonoSecurityGuardBackpack
   equipment:
-    back: NFClothingBackpack
+    back: ClothingBackpackSecurity
 
 - type: loadout
   id: MonoSecurityGuardSatchel
   equipment:
-    back: ClothingBackpackSatchel
+    back: ClothingBackpackSatchelSecurity
 
 - type: loadout
   id: MonoSecurityGuardDuffel
   equipment:
-    back: NFClothingDuffel
+    back: ClothingBackpackDuffelSecurity
