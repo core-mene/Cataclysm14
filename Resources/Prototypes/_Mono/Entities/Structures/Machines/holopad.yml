@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: HolopadUSSPBaikal
+  suffix: USSP Baikal, POI
+  components:
+  - type: Label
+    currentLabel: holopad-ussp-baikal
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: HolopadCommissarBaikal
+  suffix: USSP Commissar
+  components:
+  - type: Label
+    currentLabel: holopad-ussp-commissar

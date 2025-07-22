@@ -5,6 +5,7 @@
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Jakumba
 # SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 sleepyyapril
@@ -288,6 +289,9 @@
   - type: EyeCursorOffset
     maxOffset: 1.5
     pvsIncrease: 0.15
+  - type: SpeedModifiedOnWield # Mono
+    walkModifier: 0.95
+    sprintModifier: 0.95
   - type: AltFireMelee
     attackType: Light
   - type: PirateBountyItem # Mono

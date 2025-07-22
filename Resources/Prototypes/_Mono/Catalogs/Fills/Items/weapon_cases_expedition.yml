@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -117,3 +118,27 @@
       amount: 1
     - id: MagazineSmartLMG
       amount: 6
+
+- type: entity
+  parent: WeaponCaseHeavy
+  id: WeaponCaseDP29
+  suffix: Dungeon, DP-29
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponDP29
+      amount: 1
+    - id: MagazineDP29
+      amount: 6
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseBigLeady
+  suffix: Dungeon, Big Leady
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponShotgunBigLeadyRegistered
+      amount: 1
+    - id: AmmoBox23x75mmBuckshot
+      amount: 2

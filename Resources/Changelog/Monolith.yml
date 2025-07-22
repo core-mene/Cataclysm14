@@ -8386,3 +8386,57 @@ Entries:
   id: 946
   time: '2025-07-21T17:23:48.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1526
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Various scoped weapons now have a small to medium slowdown depending on
+        scope range, should make it feel better to use with your screen not
+        moving as fast.
+    - type: Tweak
+      message: Hristov is now bolt action, adds a bit more fire-rate.
+  id: 947
+  time: '2025-07-21T22:56:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1545
+- author: BoskiYourk
+  changes:
+    - type: Add
+      message: Added USSP Holopad Prototypes to be Mapped on Baikal.
+    - type: Tweak
+      message: Updates Baikal's Armory, Engineering, and Chemistry rooms.
+  id: 948
+  time: '2025-07-21T22:57:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1546
+- author: core-mene
+  changes:
+    - type: Fix
+      message: Large chest rig not fitting medium items
+    - type: Fix
+      message: Being unable to eat with BPHelmetLight
+    - type: Tweak
+      message: S.O.M. masks now dissapear when untoggled
+    - type: Tweak
+      message: all hardsuits can now be removed without having to untoggle helmet
+  id: 949
+  time: '2025-07-21T22:59:30.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1542
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: binoculars added to tools loadout, bountyvend, and tsfmc vend
+    - type: Add
+      message: Donuts to TSFMCvend contra inventory
+  id: 950
+  time: '2025-07-21T23:00:06.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1544
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: >-
+        Adds a bunch of armors and drip to starting merc loadout, includes a sec
+        modsuit.
+    - type: Add
+      message: Also adds sec modsuit to security guard loadout
+  id: 951
+  time: '2025-07-22T00:23:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1514
