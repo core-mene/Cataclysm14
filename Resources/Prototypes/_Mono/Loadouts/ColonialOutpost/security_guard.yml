@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -15,7 +16,7 @@
 - type: loadout
   id: MonoSecurityGuardVestSlim
   equipment:
-    outerClothing: ClothingOuterArmorBasicSlim
+    outerClothing: ClothingOuterArmorBPVestPolyvalent
 
 - type: loadoutGroup
   id: MonoSecurityGuardBelt
@@ -25,8 +26,9 @@
   - MonoSecurityGuardWebbing
   - MonoSecurityGuardAssaultBelt
   - MonoSecurityGuardSecurityCarrier
+  - MonoSecurityGuardSecurityCarrierLarge
   fallbacks:
-  - MonoSecurityGuardSecurityCarrier
+  - MonoSecurityGuardWebbing
 
 - type: loadout
   id: MonoSecurityGuardWebbing
@@ -36,9 +38,13 @@
 
 - type: loadout
   id: MonoSecurityGuardSecurityCarrier
-  name: chest rig
   equipment:
-    belt: ClothingBeltMilitaryWebbing
+    belt: ClothingBeltWebbingsNormalBlack
+
+- type: loadout
+  id: MonoSecurityGuardSecurityCarrierLarge
+  equipment:
+    belt: ClothingBeltWebbingsBigBlack
 
 - type: loadout
   id: MonoSecurityGuardAssaultBelt
@@ -124,20 +130,21 @@
   - MonoSecurityGuardBackpack
   - MonoSecurityGuardSatchel
   - MonoSecurityGuardDuffel
+  - MercenaryClothingModsuitSecurityPowerCell
   fallbacks:
   - MonoSecurityGuardBackpack
 
 - type: loadout
   id: MonoSecurityGuardBackpack
   equipment:
-    back: NFClothingBackpack
+    back: ClothingBackpackSecurity
 
 - type: loadout
   id: MonoSecurityGuardSatchel
   equipment:
-    back: ClothingBackpackSatchel
+    back: ClothingBackpackSatchelSecurity
 
 - type: loadout
   id: MonoSecurityGuardDuffel
   equipment:
-    back: NFClothingDuffel
+    back: ClothingBackpackDuffelSecurity

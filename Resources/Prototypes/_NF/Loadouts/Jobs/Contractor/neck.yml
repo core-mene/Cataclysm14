@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2024 Salvantrix
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 Bonaout
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
 # SPDX-FileCopyrightText: 2025 core-mene
@@ -21,8 +22,8 @@
   equipment:
     neck: ClothingNeckScarfStripedBlack
 
-- type: loadout
-  id: ContractorClothingArmbandUNSA
+- type: loadout # Mono
+  id: ContractorClothingNeckArmbandUNSA
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1

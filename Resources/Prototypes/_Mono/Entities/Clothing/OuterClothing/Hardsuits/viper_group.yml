@@ -39,7 +39,7 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitViperGroupStandard
@@ -86,7 +86,7 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitViperGroupMedic

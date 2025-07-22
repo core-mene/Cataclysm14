@@ -58,8 +58,8 @@
         !type:String
         pda-mercenary
   - type: PdaBorderColor
-    borderColor: "#717059"
-    accentVColor: "#A32D26"
+    borderColor: "#48484b"
+    accentVColor: "#424d2c"
   - type: Icon
     state: pda-mercenary
 
@@ -75,12 +75,11 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-pilot
+        pda-tourist
   - type: PdaBorderColor
-    borderColor: "#717059"
-    accentVColor: "#A32D26"
+    borderColor: "#3b3b3b"
   - type: Icon
-    state: pda-pilot
+    state: pda-tourist
 
 - type: entity
   parent: BaseSecurityPDA
@@ -94,12 +93,12 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-stc
+        pda-cargo-assistant
   - type: PdaBorderColor
-    borderColor: "#F2F2F2"
-    accentVColor: "#FE4900"
+    borderColor: "#bdbdbd"
+    accentVColor: "#8f7145"
   - type: Icon
-    state: pda-stc
+    state: pda-cargo-assistant
 
 - type: entity
   parent: BaseSecurityPDA
@@ -113,11 +112,11 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-security
+        pda-interncadet
   - type: PdaBorderColor
-    borderColor: "#A32D26"
+    borderColor: "#757575"
   - type: Icon
-    state: pda-security
+    state: pda-interncadet
 
 - type: entity
   parent: ERTLeaderPDA
@@ -158,12 +157,11 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-sheriff
+        pda-hos
   - type: PdaBorderColor
-    borderColor: "#FFFDD0"
-    accentHColor: "#896b49"
+    borderColor: "#48484b"
   - type: Icon
-    state: pda-sheriff
+    state: pda-hos
   - type: CartridgeLoader # Extended with the ledger
     preinstalled:
     - CrewManifestCartridge
@@ -193,12 +191,11 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-cadet
+        pda-interncadet
   - type: PdaBorderColor
-    borderColor: "#FFFDD0"
-    accentHColor: "#896b49"
+    borderColor: "#48484b"
   - type: Icon
-    state: pda-cadet
+    state: pda-interncadet
 
 - type: entity
   parent: BaseSecurityPDA
@@ -219,12 +216,11 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-deputy
+        pda-security
   - type: PdaBorderColor
-    borderColor: "#FFFDD0"
-    accentHColor: "#896b49"
+    borderColor: "#48484b"
   - type: Icon
-    state: pda-deputy
+    state: pda-security
 
 - type: entity
   parent: BaseSecurityPDA
@@ -245,12 +241,11 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-brigmed
+        pda-corpsman
   - type: PdaBorderColor
-    borderColor: "#FFFDD0"
-    accentHColor: "#896b49"
+    borderColor: "#48484b"
   - type: Icon
-    state: pda-brigmed
+    state: pda-corpsman
 
 - type: entity
   parent: BaseSecurityPDA
@@ -271,12 +266,11 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-sergeant
+        pda-seniorofficer
   - type: PdaBorderColor
-    borderColor: "#FFFDD0"
-    accentHColor: "#896b49"
+    borderColor: "#48484b"
   - type: Icon
-    state: pda-sergeant
+    state: pda-seniorofficer
 
 - type: entity
   parent: BaseSecurityPDA
@@ -297,12 +291,11 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-bailiff
+        pda-warden
   - type: PdaBorderColor
-    borderColor: "#FFFDD0"
-    accentHColor: "#896b49"
+    borderColor: "#48484b"
   - type: Icon
-    state: pda-bailiff
+    state: pda-warden
 
 - type: entity
   parent: BaseSecurityPDA
@@ -323,11 +316,11 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-nfdetective
+        pda-detective
   - type: PdaBorderColor
-    borderColor: "#774705"
+    borderColor: "#48484b"
   - type: Icon
-    state: pda-nfdetective
+    state: pda-detective
 
 - type: entity
   parent: BaseSecurityPDA
@@ -354,12 +347,12 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-pal
+        pda-prosecutor
   - type: PdaBorderColor
     borderColor: "#FFFDD0"
     accentHColor: "#896b49"
   - type: Icon
-    state: pda-pal
+    state: pda-prosecutor
 
 - type: entity
   parent: [BaseSecurityPDA, BaseCommandContraband]
@@ -379,12 +372,12 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-sr
+        pda-hop
   - type: PdaBorderColor
     borderColor: "#789876"
     accentHColor: "#447987"
   - type: Icon
-    state: pda-sr
+    state: pda-hop
   - type: CartridgeLoader
     preinstalled:
     - CrewManifestCartridge
@@ -406,7 +399,7 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-pirate
+        pda-syndi
 
 - type: entity
   parent: PiratePDA
@@ -419,7 +412,7 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-pirate
+        pda-syndi-agent
 
 - type: entity
   parent: PiratePDA
@@ -432,7 +425,7 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-pirate
+        pda-syndi
 
 - type: entity
   parent: PassengerPDA
@@ -487,15 +480,15 @@
         - Write
   - type: PdaBorderColor
     borderColor: "#789876"
-    accentHColor: "#447987"
+    accentVColor: "#447987"
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-doc
+        pda-cmo
   - type: Icon
     sprite: _NF/Objects/Devices/pda.rsi
-    state: pda-doc
+    state: pda-cmo
   - type: CartridgeLoader
     preinstalled:
     - CrewManifestCartridge
