@@ -6,7 +6,7 @@
   parent: BaseHealingItem
   id: ResinJelly
   name: resin jelly
-  description: An odd jelly, applying it will stimulate health, but it looks a little painful.
+  description: An odd jelly, applying it will rapidly stimulate limb health at the cost of pain.
   components:
   - type: Sprite
     sprite: _Mono\Objects\Specific\Xeno\xeno_materials.rsi # DeltaV - Resprited some medical items
@@ -21,6 +21,7 @@
       types:
         Brute: -100 # was 10 for each, now 20 for each type in the group, Buffed due to surgery changes (Goobstation)
         Burn: -100 # was 10 for each, now 20 for each type in the group, Buffed due to surgery changes (Goobstation)
+        Bloodloss: -50
         Poison: 5  # was 10 for each, now 20 for each type in the group, Buffed due to surgery changes (Goobstation)
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
