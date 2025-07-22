@@ -4,9 +4,9 @@
 
 - type: entity
   parent: ClothingOuterHardsuitBase
-  id: ClothingOuterHardsuitDrakeIndustriesWyvern #TL:DR lightweight suit with okay resistances (focus on brute & explo)
+  id: ClothingOuterHardsuitDrakeIndustriesWyvern #TL:DR Lightweight suit but weak against slash (cause light plating makes for easy cutting duh)
   name: wyvern pattern hardsuit
-  description: Originally designed by the science department of Drake Industries and further polished by NE-RD. It remains nimble yet robust. With a focus on blunt force protection, at the cost of having open spaces to slash.
+  description:  The standard duty space can for D.I members. Featuring agility and blunt force trauma protection at the cost of having gaps in the armor. Originally designed by the science department of Drake Industries and further polished by NE-RD.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/Drake_Industries/di-wyvern-pattern.rsi
@@ -18,16 +18,16 @@
     highPressureMultiplier: 0.05
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.6
+    damageCoefficient: 0.5
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.6 #+ brute
-        Slash: 0.8 #- slash tradeoff
-        Piercing: 0.7
-        Heat: 0.7
-        Radiation: 0.5 
-        Caustic: 0.7
+        Blunt: 0.5
+        Slash: 0.8 # weak af slash
+        Piercing: 0.7 #whatever bullets
+        Heat: 0.4 #the swimsuit under the plates is kinda goated tho
+        Radiation: 0.5 #idfk metal = semi rad proof
+        Caustic: 0.7 #not against cancer
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.6
   - type: ClothingSpeedModifier

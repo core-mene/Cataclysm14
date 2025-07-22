@@ -19,3 +19,18 @@
       board: [ DoorElectronicsUSSP ]
   - type: Wires
     layoutId: AirlockCommand
+
+# DI
+
+- type: entity
+  parent: AirlockExternalGlass
+  id: AirlockExternalGlassDrakeIndustriesLocked
+  suffix: External, Glass, DI, Locked
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/Doors/Airlocks/Glass/di-external.rsi
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsDrakeIndustries ]
+  - type: Wires
+    layoutId: AirlockCommand

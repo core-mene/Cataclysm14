@@ -56,3 +56,23 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
+
+# DI
+
+- type: entity
+  parent: AirlockShuttle
+  id: AirlockExternalGlassShuttleUSSPLocked
+  suffix: DI, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsDrakeIndustries ]
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleUSSPLocked
+  suffix: DI, Glass, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsDrakeIndustries ]
