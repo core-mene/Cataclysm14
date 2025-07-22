@@ -207,9 +207,6 @@
     - NewsReaderCartridge
     - BountyContractsCartridge
     - AstroNavCartridge
-  - type: PdaBorderColor
-    borderColor: "#693f3f"
-    accentVColor: "#ffc24f"
     
 - type: entity
   parent: BaseDrakeIndustriesPDA
@@ -225,6 +222,9 @@
         pda-grunt
   - type: Icon
     state: pda-grunt
+  - type: PdaBorderColor
+    borderColor: "#693f3f"
+    accentVColor: "#ffc24f"
 
 - type: entity
   parent: BaseDrakeIndustriesPDA
@@ -241,7 +241,10 @@
         pda-trucker
   - type: Icon
     state: pda-trucker
-
+  - type: PdaBorderColor
+    borderColor: "#693f3f"
+    accentVColor: "#ffc24f"
+    
 - type: entity
   parent: BaseDrakeIndustriesPDA
   id: DrakeIndustriesWatchdogPDA
@@ -257,7 +260,10 @@
         pda-watchdog
   - type: Icon
     state: pda-watchdog
-
+  - type: PdaBorderColor
+    borderColor: "#693f3f"
+    accentVColor: "#ffc24f"
+    
 - type: entity
   parent: BaseDrakeIndustriesPDA
   id: DrakeIndustriesOverseerPDA
@@ -273,3 +279,7 @@
         pda-overseer
   - type: Icon
     state: pda-overseer
+  - type: PdaBorderColor
+    borderColor: "#693f3f"
+    accentVColor: "#ffc24f"
+    
