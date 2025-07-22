@@ -20,7 +20,7 @@
   # - !type:RoleTimeRequirement
       # role: JobDIWatchdog
       # time: 3600 # 1 hr
-  startingGear: DIOverseerGear
+  #startingGear: DIOverseerGear nothing special for now
   alwaysUseSpawner: true
   hideConsoleVisibility: true
   icon: "JobIconDIOverseer"
@@ -32,8 +32,3 @@
   - GeneralAccess
   - DIOverseerAccess
 
-- type: startingGear
-  id: DIOverseerGear
-  equipment:
-    pocket1: WeaponPistolMk32
-    pocket2: Magazine9x19mmPistolFMJ

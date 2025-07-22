@@ -11,7 +11,7 @@
   - !type:RoleTimeRequirement
       role: JobMercenary
       time: 10800 # 3 hours     
-  startingGear: DIWatchdogGear
+  #startingGear: DIWatchdogGear nothing special for now
   alwaysUseSpawner: true
   hideConsoleVisibility: true
   icon: "JobIconDIWatchdog"
@@ -23,8 +23,3 @@
   - GeneralAccess
   - DIWatchdogAccess
 
-- type: startingGear
-  id: DIWatchdogGear
-  equipment:
-    pocket1: WeaponPistolMk32
-    pocket2: Magazine9x19mmPistolFMJ

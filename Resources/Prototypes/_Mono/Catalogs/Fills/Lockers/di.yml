@@ -14,7 +14,6 @@
       - id: ClothingBeltDrakeIndustriesFilledTools
       - id: ClothingNeckDrakeIndustriesBadge
       - id: ClothingShoesBootsMagDrakeIndustries
-      - id: DoubleEmergencyAirTank
 
 - type: entity
   id: LockerDrakeIndustriesTruckerFilled
@@ -27,7 +26,6 @@
       - id: ClothingNeckDrakeIndustriesBadge
       - id: ClothingShoesBootsMagDrakeIndustries
       - id: ClothingOuterDrakeIndustriesTruckerPuffyVest
-      - id: DoubleEmergencyAirTank
       
 - type: entity
   id: LockerDrakeIndustriesWatchdogFilled
@@ -40,11 +38,91 @@
       - id: ClothingNeckDrakeIndustriesBadge
       - id: ClothingOuterDrakeIndustriesArmorRiot
       - id: ClothingShoesBootsMagDrakeIndustries
-      - id: DoubleEmergencyAirTank
+      - id: Crowbar #want goons not able to pry doors open, sir ?
       #mercenary locker content
       - id: PinpointerUniversal  
       - id: HandHeldMassScanner
       - id: WeaponGrapplingGun
       - id: BoxZiptie
 
-# TODO HARDSUIT FILLED VERSIONS FOR EACH
+- type: entity
+  parent: LockerDrakeIndustriesOverseer
+  id: LockerDrakeIndustriesOverseerFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents: 
+      - id: ClothingBeltDrakeIndustries
+      - id: ClothingNeckDrakeIndustriesBadge
+      - id: ClothingShoesBootsMagDrakeIndustries
+      #todo add cape (bedsheet)
+
+# Hardsuit filled versions
+
+- type: entity
+  parent: LockerDrakeIndustriesGrunt
+  id: LockerDrakeIndustriesGruntFilledHardsuit
+  suffix: Filled, Hardsuit
+  components:
+  - type: StorageFill
+    contents: 
+      - id: ClothingBeltDrakeIndustriesFilledTools
+      - id: ClothingNeckDrakeIndustriesBadge
+      - id: ClothingShoesBootsMagDrakeIndustries
+      # hardsuit stuff
+      - id: DoubleEmergencyAirTank
+      - id: JetpackMiniFilled
+      - id: ClothingOuterHardsuitDrakeIndustriesWyvern
+
+- type: entity
+  parent: LockerDrakeIndustriesTrucker
+  id: LockerDrakeIndustriesTruckerFilledHardsuit
+  suffix: Filled, Hardsuit
+  components:
+  - type: StorageFill
+    contents: 
+      - id: ClothingBeltDrakeIndustries
+      - id: ClothingNeckDrakeIndustriesBadge
+      - id: ClothingShoesBootsMagDrakeIndustries
+      - id: ClothingOuterDrakeIndustriesTruckerPuffyVest
+      # hardsuit stuff
+      - id: DoubleEmergencyAirTank
+      - id: JetpackMiniFilled
+      - id: ClothingOuterHardsuitDrakeIndustriesWyvern
+
+- type: entity
+  parent: LockerDrakeIndustriesWatchdog
+  id: LockerDrakeIndustriesWatchdogFilledHardsuit
+  suffix: Filled, Hardsuit
+  components:
+  - type: StorageFill
+    contents: 
+      - id: ClothingBeltDrakeIndustries
+      - id: ClothingNeckDrakeIndustriesBadge
+      - id: ClothingOuterDrakeIndustriesArmorRiot
+      - id: ClothingShoesBootsMagDrakeIndustries
+      - id: Crowbar #want goons not able to pry doors open, sir ?
+      #mercenary locker content
+      - id: PinpointerUniversal  
+      - id: HandHeldMassScanner
+      - id: WeaponGrapplingGun
+      - id: BoxZiptie
+      # hardsuit stuff
+      - id: DoubleEmergencyAirTank
+      - id: JetpackMiniFilled
+      - id: ClothingOuterHardsuitDrakeIndustriesWyvern # todo change to watchdog hardsuit ONCE MADE
+      
+- type: entity
+  parent: LockerDrakeIndustriesOverseer
+  id: LockerDrakeIndustriesOverseerFilledHardsuit
+  suffix: Filled, Hardsuit
+  components:
+  - type: StorageFill
+    contents: 
+      - id: ClothingBeltDrakeIndustries
+      - id: ClothingNeckDrakeIndustriesBadge
+      - id: ClothingShoesBootsMagDrakeIndustries
+      # hardsuit stuff
+      - id: DoubleEmergencyAirTank
+      - id: JetpackMiniFilled
+      - id: ClothingOuterHardsuitDrakeIndustriesWyvern # todo change to overseer luxury hardsuit ONCE MADE

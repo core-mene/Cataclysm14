@@ -77,3 +77,21 @@
     - id: JetpackMiniFilled
   - type: AccessReader
     access: [["Security"]]
+
+# DI
+
+- type: entity
+  id: SuitStorageDrakeIndustriesWyvern
+  parent: SuitStorageBase
+  suffix: Wyvern Hardsuit
+  components:
+  - type: StorageFill
+    contents:
+    - id: DoubleEmergencyAirTank
+    - id: JetpackMiniFilled
+    - id: ClothingOuterHardsuitDrakeIndustriesWyvern
+    - id: ClothingShoesBootsMagDrakeIndustries
+  - type: AccessReader
+    access: [["DI"]]
+   
+# todo add suit storages for watchdog and overseer once suits are in

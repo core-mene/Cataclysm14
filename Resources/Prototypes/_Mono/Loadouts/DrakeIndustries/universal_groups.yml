@@ -77,6 +77,50 @@
   - DIWebbingFilledTools
   fallbacks:
   - DIWebbing
+
+- type: loadoutGroup
+  id: DIBeltSec
+  name: loadout-group-contractor-belt
+  minLimit: 1
+  loadouts:
+  - MercenaryClothingBeltWebbingsNormalBlack
+  - MercenaryClothingBeltWebbingsBigBlack
+  subgroups:
+  - DIBelt
+
+#gloves
+
+- type: loadoutGroup
+  id: DIGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 1
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - MercenaryClothingHandsGlovesCombat
+  fallback:
+  - MercenaryClothingHandsGlovesCombat
+  
+- type: loadoutGroup
+  id: DIGlovesSec
+  name: loadout-group-contractor-gloves
+  minLimit: 1
+  loadouts:
+  - MercenaryClothingHandsGlovesCombat
+  - MercenaryClothingHandsGlovesTacticalCombatBlack
+  fallback:
+  - MercenaryClothingHandsGlovesCombat
+
+# balaclavas
+
+- type: loadoutGroup
+  id: DIBalaclava
+  name: loadout-group-contractor-balaclava
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - MercenaryClothingBalaclavaSkiMaskBlack
+  - MercenaryClothingBalaclavaSkiMaskGray
+  - MercenaryClothingBalaclavaSkiMaskWhite
   
 #masks
 
@@ -101,10 +145,21 @@
 #outer
 
 - type: loadoutGroup
-  id: DIOuterClothing
+  id: DIOuterClothingHardsuit
   name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - DIHardsuitWyvern
+  fallbacks:
+  - DIHardsuitWyvern
+
+- type: loadoutGroup
+  id: DIOuterClothingTrucker
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
   loadouts:
   - DIVestTrucker
+  - DIHardsuitWyvern
   fallbacks:
   - DIVestTrucker
 
@@ -113,7 +168,9 @@
   name: loadout-group-contractor-outerclothing
   minLimit: 1
   loadouts:
+  - MercenaryClothingOuterVestWebMercenaryBlack
   - DIArmorWatchdogRiot
+  - DIHardsuitWyvern
   fallbacks:
   - DIArmorWatchdogRiot
 
@@ -149,10 +206,3 @@
   - DIShotgunWatchdog
   fallbacks:
   - DIShotgunWatchdog
-
-- type: loadoutGroup
-  id: DIAmmo
-  name: loadout-group-magazine
-  minLimit: 1
-  loadouts:
-  - MercenaryBuckshotAmmoLoadout #Buckshot

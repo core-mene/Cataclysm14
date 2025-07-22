@@ -5,9 +5,10 @@
   - DIJumpsuitGrunt
   - DIBackpack
   - DIBelt
+  - DIOuterClothingHardsuit
   - DIMaskBase
   - DIEars
-  - TsfmcGloves
+  - DIGloves
   - DIShoes
   - DINeck
   - DIGruntPDA
@@ -23,10 +24,10 @@
   - DIJumpsuitTrucker
   - DIBackpack
   - DIBelt
-  - DIOuterClothing
+  - DIOuterClothingTrucker
   - DIMaskBase
   - DIEars
-  - TsfmcGloves
+  - DIGloves
   - DIShoes
   - DINeck
   - DITruckerPDA
@@ -42,15 +43,18 @@
   groups:
   - DIJumpsuitWatchdog
   - DIBackpack
-  - DIBelt
+  - DIBeltSec
   - DIOuterClothingSec
-  - DIGun #Hokkaido for now
-  - DIAmmo #Buckshot for Hokkaido
+  - MonoMercenaryBallisticGoggles
   - DIMaskSec
   - DIEars
-  - TsfmcGloves
+  - DIGlovesSec
   - DIShoes
+  - DIBalaclava
   - DINeck
+  - DIGun #Hokkaido for now
+  - MercenaryPistol
+  - MercenaryMag 
   - DIWatchdogPDA
   - NfsdBoxSurvival
   - ContractorWallet
@@ -65,15 +69,17 @@
   groups:
   - DIJumpsuitOverseer
   - DIBackpack
-  - DIBelt
+  - DIBeltSec
   - DIOuterClothingSec
-  - DIGun
-  - DIAmmo
   - DIMaskSec
   - DIEars
-  - TsfmcGloves
+  - DIGlovesSec
   - DIShoes
+  - DIBalaclava
   - DINeck
+  - DIGun 
+  - MercenaryPistol
+  - MercenaryMag 
   - DIOverseerPDA
   - NfsdBoxSurvival
   - ContractorWallet
