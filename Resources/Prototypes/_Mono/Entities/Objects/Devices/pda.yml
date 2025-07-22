@@ -197,7 +197,7 @@
 - type: entity
   parent: BasePDAMono
   id: BaseDrakeIndustriesPDA
-  description: A standard DI personal computer. It's running a modified version of the standard PDA OS.
+  description: A standard DI personal computer, running a modified version of the standard PDA OS.
   abstract: true
   components:
   - type: CartridgeLoader
@@ -207,6 +207,9 @@
     - NewsReaderCartridge
     - BountyContractsCartridge
     - AstroNavCartridge
+  - type: PdaBorderColor
+    borderColor: "#693f3f"
+    accentVColor: "#ffc24f"
     
 - type: entity
   parent: BaseDrakeIndustriesPDA
@@ -220,9 +223,6 @@
       enum.PdaVisuals.PdaType:
         !type:String
         pda-grunt
-  - type: PdaBorderColor
-    borderColor: "#717059"
-    accentVColor: "#A32D26"
   - type: Icon
     state: pda-grunt
 
@@ -230,7 +230,7 @@
   parent: BaseDrakeIndustriesPDA
   id: DrakeIndustriesTruckerPDA
   name: trucker PDA
-  description: A standard DI personal computer, it's equipped with an extended antenna for easy data transfers. It's running a modified version of the standard PDA OS.
+  description: A standard DI personal computer, running a modified version of the standard PDA OS.
   components:
   - type: Pda
     id: DrakeIndustriesTruckerIDCard
@@ -239,9 +239,6 @@
       enum.PdaVisuals.PdaType:
         !type:String
         pda-trucker
-  - type: PdaBorderColor
-    borderColor: "#717059"
-    accentVColor: "#A32D26"
   - type: Icon
     state: pda-trucker
 
@@ -249,7 +246,7 @@
   parent: BaseDrakeIndustriesPDA
   id: DrakeIndustriesWatchdogPDA
   name: watchdog PDA
-  description: A standard DI personal computer, with steel plating in the corners to be effectively drop-proof. It's running a modified, meaner and simpler version of the standard PDA OS.
+  description: A reinforced DI personal computer. Comes with metal corners and extra thick screen protection. It's running a simpler, meaner version of the standard PDA OS.
   components:
   - type: Pda
     id: DrakeIndustriesWatchdogIDCard
@@ -258,9 +255,6 @@
       enum.PdaVisuals.PdaType:
         !type:String
         pda-watchdog
-  - type: PdaBorderColor
-    borderColor: "#717059"
-    accentVColor: "#A32D26"
   - type: Icon
     state: pda-watchdog
 
@@ -268,7 +262,7 @@
   parent: BaseDrakeIndustriesPDA
   id: DrakeIndustriesOverseerPDA
   name: overseer PDA
-  description: A standard DI personal computer, accompanied by a real gold trimming and miniature dish for top notch data reception. It's running a modified, more elegant and advanced version of the standard PDA OS.
+  description: An expensive DI personal computer, accompanied by a real gold trimming and made out of a material soft to the touch. It's running a modified, more elegant and advanced version of the standard PDA OS.
   components:
   - type: Pda
     id: DrakeIndustriesOverseerIDCard
@@ -277,8 +271,5 @@
       enum.PdaVisuals.PdaType:
         !type:String
         pda-overseer
-  - type: PdaBorderColor
-    borderColor: "#717059"
-    accentVColor: "#A32D26"
   - type: Icon
     state: pda-overseer
