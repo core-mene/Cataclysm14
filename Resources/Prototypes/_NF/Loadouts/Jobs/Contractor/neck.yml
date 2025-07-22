@@ -30,6 +30,15 @@
   price: 5
   equipment:
     neck: ClothingArmbandUNSA
+    
+- type: loadout
+  id: ContractorClothingNeckDrakeIndustriesBadge
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 5
+  equipment:
+    neck: ClothingNeckDrakeIndustriesBadge
 
 - type: loadout
   id: ContractorClothingNeckScarfStripedBlue
@@ -93,15 +102,6 @@
   price: 500
   equipment:
     neck: ClothingNeckLawyerbadge
-
-- type: loadout
-  id: ContractorClothingNeckDrakeIndustriesBadge
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
-  price: 500
-  equipment:
-    neck: ClothingNeckDrakeIndustriesBadge
 
 - type: loadout
   id: ContractorClothingNeckHeadphones
