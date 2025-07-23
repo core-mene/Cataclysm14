@@ -7,6 +7,7 @@
 // SPDX-FileCopyrightText: 2023 csqrb
 // SPDX-FileCopyrightText: 2024 DrSmugleaf
 // SPDX-FileCopyrightText: 2025 Mora
+// SPDX-FileCopyrightText: 2025 Redrover1760
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
