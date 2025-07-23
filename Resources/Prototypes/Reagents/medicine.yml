@@ -225,12 +225,15 @@
   color: "#ffaa00"
   metabolisms:
     Medicine:
-      metabolismRate: 0.1 # Mono
+      metabolismRate: 0.05 # Mono
       effects:
       - !type:HealthChange
         damage:
           groups:
-            Brute: -3 # Mono
+            Brute: -2.5 # Mono
+      - !type:MovespeedModifier # Mono
+        walkSpeedModifier: 0.4
+        sprintSpeedModifier: 0.45
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -305,9 +308,7 @@
             max: 213.0
           damage:
             types:
-             Cellular: -4 # Frontier: -2<-4
-            groups: # Frontier
-                Brute: 1 # Frontier
+             Cellular: -4 # Mono - removed brute side effect
 
 - type: reagent
   id: Dermaline
@@ -319,14 +320,17 @@
   color: "#215263"
   metabolisms:
     Medicine:
-      metabolismRate: 0.1 # Mono
+      metabolismRate: 0.075 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
-            Heat: -2
-            Shock: -1.5 # Mono
-            Cold: -2.5 # Mono
+            Heat: -1 # Mono
+            Shock: -1.25 # Mono
+            Cold: -1 # Mono
+      - !type:MovespeedModifier # Mono
+        walkSpeedModifier: 0.55
+        sprintSpeedModifier: 0.5
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -360,8 +364,8 @@
       - !type:HealthChange
         damage:
           types:
-            Asphyxiation: -1.5 # Mono
-            Bloodloss: -1.25 # Mono
+            Asphyxiation: -3.5 # Mono
+            Bloodloss: -2.25 # Mono
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -842,7 +846,7 @@
       - !type:HealthChange
         damage:
           types:
-            Poison: -1.5 # mono
+            Poison: -3 # mono
       - !type:AdjustReagent
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -901,7 +905,10 @@
       # Medium-large quantities can hurt you instead,
       # but still technically stop your bleeding.
       - !type:ModifyBleedAmount
-        amount: -3 # Mono
+        amount: -4 # Mono
+      - !type:MovespeedModifier # Mono
+        walkSpeedModifier: 1.05
+        sprintSpeedModifier: 1.05
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
@@ -934,6 +941,9 @@
             Heat: -0.65 # Mono
             Shock: -0.3 # Mono
             Cold: -0.3 # Mono
+      - !type:MovespeedModifier # Mono
+        walkSpeedModifier: 0.7
+        sprintSpeedModifier: 0.65
 
 - type: reagent
   id: Lipozine
@@ -970,10 +980,13 @@
           max: 100
         damage:
           groups:
-            Burn: -1 # mono
+            Burn: -2 # mono
             Toxin: -1 # mono
             Airloss: -3
-            Brute: -1 # mono
+            Brute: -2 # mono
+      - !type:MovespeedModifier # Mono
+        walkSpeedModifier: 0.75
+        sprintSpeedModifier: 0.7
       - !type:HealthChange # Mono - Added overdose
         conditions:
         - !type:ReagentThreshold
@@ -1127,7 +1140,10 @@
       - !type:HealthChange
         damage:
           types:
-            Caustic: -1.5 # Mono
+            Caustic: -2.5 # Mono
+      - !type:MovespeedModifier # Mono
+        walkSpeedModifier: 0.7
+        sprintSpeedModifier: 0.7
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -1184,12 +1200,15 @@
   color: "#283332"
   metabolisms:
     Medicine:
-      metabolismRate: 0.025 # Mono
+      metabolismRate: 0.2 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
-            Slash: -2.5 # mono
+            Slash: -4 # mono
+      - !type:MovespeedModifier # Mono
+        walkSpeedModifier: 0.75
+        sprintSpeedModifier: 0.75
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -1211,12 +1230,15 @@
   color: "#b9bf93"
   metabolisms:
     Medicine:
-      metabolismRate: 0.025 # Mono
+      metabolismRate: 0.2 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
-            Piercing: -3.5 # mono
+            Piercing: -4 # mono
+      - !type:MovespeedModifier # Mono
+        walkSpeedModifier: 0.65
+        sprintSpeedModifier: 0.6
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -1238,12 +1260,15 @@
   color: "#ff3636"
   metabolisms:
     Medicine:
-      metabolismRate: 0.07 # Mono
+      metabolismRate: 0.2 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
-            Blunt: -3 # mono
+            Blunt: -4 # mono
+      - !type:MovespeedModifier # Mono
+        walkSpeedModifier: 0.75
+        sprintSpeedModifier: 0.75
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -1277,11 +1302,11 @@
           max: 50
         damage:
           types:
-            Blunt: -0.05 # Mono
-            Poison: -0.05 # Mono
-            Heat: -0.05 # Mono
-            Shock: -0.05 # Mono
-            Cold: -0.05 # Mono
+            Blunt: -0.1 # Mono
+            Poison: -0.1 # Mono
+            Heat: -0.1 # Mono
+            Shock: -0.1 # Mono
+            Cold: -0.1 # Mono
   reactiveEffects:
     Extinguish:
       methods: [ Touch ]
@@ -1312,13 +1337,16 @@
   color: "#aa4308"
   metabolisms:
     Medicine:
-      metabolismRate: 0.1 # slow metabolism to not be a godly combat med, its for treating burn victims efficiently
+      metabolismRate: 0.05 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
-            Heat: -1
+            Heat: -4 # Mono
       # od causes massive bleeding
+      - !type:MovespeedModifier # Mono
+        walkSpeedModifier: 0.75
+        sprintSpeedModifier: 0.7
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
