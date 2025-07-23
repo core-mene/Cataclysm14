@@ -9,23 +9,25 @@
   description: An odd jelly, applying it will rapidly stimulate limb health at the cost of pain.
   components:
   - type: Sprite
-    sprite: _Mono/Objects/Specific/Xeno/xeno_materials.rsi 
+    sprite: _Mono/Objects/Specific/Xeno/xeno_materials.rsi
     state: resin_jelly
   - type: Item
     size: Small
-    sprite: _DV/Objects/Specific/medical.rsi 
+    sprite: _DV/Objects/Specific/medical.rsi
     heldPrefix: ointment
   - type: Healing
     damageContainers:
     - Biological
     damage:
       groups:
-        Brute: -120 # 40 per type~?
-        Burn: -150 # 40 per type
+        Brute: -50 # Nerfed because xenos are ez to get
       types:
         Bloodloss: -50
-        Poison: 5  
-    bloodlossModifier: -10
+        Heat: -35
+        Cold: -20
+        Poison: 5
+        Caustic: 5
+    bloodlossModifier: -3.5
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
       params:
@@ -48,7 +50,7 @@
   - type: StaticPrice
     price: 2500
   - type: Sprite
-    sprite: _Mono/Objects/Specific/Xeno/xeno_materials.rsi 
+    sprite: _Mono/Objects/Specific/Xeno/xeno_materials.rsi
     state: chitin-chunk
   - type: Item
     size: Small

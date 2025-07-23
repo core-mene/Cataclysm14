@@ -281,10 +281,10 @@
           damage:
           # todo scale with temp like SS13
             groups:
-              Airloss: -10 # Frontier: -6<-10
-              # Brute: -4 # Frontier
-              # Burn: -6 # Frontier
-              # Toxin: -4 # Frontier
+              Airloss: -8 # Mono
+              Brute: -5 # Mono
+              Burn: -6 # Mono
+              Toxin: -4 # Mono
 
 - type: reagent
   id: Doxarubixadone
@@ -1439,10 +1439,11 @@
             max: 213.0
           damage:
             groups:
-              Brute: -4
-              Burn: -5
+              Brute: -12 # Mono
+              Burn: -9 # Mono
             types:
-              Poison: -2
+              Poison: -4 # Mono
+              Radiation: -4 # Mono
 
 - type: reagent
   id : Aloxadone
@@ -1462,9 +1463,9 @@
           max: 213.0
         damage:
           types:
-            Heat: -3.0
-            Shock: -3.0
-            Caustic: -1.0
+            Heat: -7 # Mono
+            Shock: -7 # Mono
+            Caustic: -7 # Mono
 
 - type: reagent
   id: Mannitol # currently this is just a way to create psicodine
