@@ -79,7 +79,6 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
     private readonly HashSet<EntityUid> _handledEntities = new();
     private const float DefaultLoadRange = 16f;
     private float _loadRange = DefaultLoadRange;
-    private readonly TimeSpan _maximumProcessTime = TimeSpan.FromMilliseconds(8);
     private static readonly ProtoId<TagPrototype> AllowBiomeLoadingTag = "AllowBiomeLoading";
 
     private List<(Vector2i, Tile)> _tiles = new();
@@ -350,7 +349,6 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
     {
         base.Update(frameTime);
         var biomes = AllEntityQuery<BiomeComponent>();
-        var overallWatch = new Stopwatch(); // Mono
 
         while (biomes.MoveNext(out var biome))
         {
@@ -403,11 +401,8 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
 
         var loadBiomes = AllEntityQuery<BiomeComponent, MapGridComponent>();
 
-        overallWatch.Start(); // Mono
         while (loadBiomes.MoveNext(out var gridUid, out var biome, out var grid))
         {
-            if (overallWatch.Elapsed > _maximumProcessTime) // Mono
-                return;
 
             // If not MapInit don't run it.
             if (biome.LifeStage < ComponentLifeStage.Running)
