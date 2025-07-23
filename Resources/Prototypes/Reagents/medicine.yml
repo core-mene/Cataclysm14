@@ -97,11 +97,12 @@
   color: "#3a1d8a"
   metabolisms:
     Medicine:
+      metabolismRate: 0.1 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
-            Poison: -1.5 # Was 1, Slight Buff as it should heal for half the amount as Dip or Stelli(GoobStation)
+            Poison: -2 # Was 1, Slight Buff as it should heal for half the amount as Dip or Stelli(GoobStation)
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -152,6 +153,7 @@
   color: "#64ffe6"
   metabolisms:
     Medicine:
+      metabolismRate: 0.1
       effects:
       - !type:AdjustReagent
         reagent: Histamine
@@ -203,6 +205,7 @@
   color: "#bd5902"
   metabolisms:
     Medicine:
+      metabolismRate: 0.05 # Mono
       effects:
       - !type:HealthChange
         damage:
@@ -221,11 +224,12 @@
   color: "#ffaa00"
   metabolisms:
     Medicine:
+      metabolismRate: 0.2 # Mono
       effects:
       - !type:HealthChange
         damage:
           groups:
-            Brute: -2.5 # Was 2, Buffed due to limb damage changes(GoobStation)
+            Brute: -3 # Mono
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -314,13 +318,14 @@
   color: "#215263"
   metabolisms:
     Medicine:
+      metabolismRate: 0.1 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
             Heat: -2
-            Shock: -2
-            Cold: -2 # Was 1.5, Buffed due to limb damage changes(GoobStation)
+            Shock: -1 # Mono
+            Cold: -3 # Mono
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -349,6 +354,7 @@
   color: "#0041a8"
   metabolisms:
     Medicine:
+      metabolismRate: 0.05 # Mono
       effects:
       - !type:HealthChange
         damage:
@@ -377,6 +383,7 @@
   color: "#4da0bd"
   metabolisms:
     Medicine:
+      metabolismRate: 0.075 # Mono
       effects:
       - !type:HealthChange
         damage:
@@ -413,6 +420,7 @@
   color: "#d2fffa"
   metabolisms:
     Medicine:
+      metabolismRate: 0.4 # Mono
       effects:
       - !type:HealthChange
         conditions:
@@ -427,8 +435,8 @@
             Asphyxiation: -3
             Poison: -0.5
           groups:
-            Brute: -1
-            Burn: -1 # Was .5, Buffed due to limb damage changes(GoobStation)
+            Brute: -0.75 # mono
+            Burn: -0.9 # mono
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -484,11 +492,12 @@
   color: "#4cb580"
   metabolisms:
     Medicine:
+      metabolismRate: 0.05 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
-            Radiation: -1
+            Radiation: -0.5 # mono
       - !type:ChemVomit
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -540,6 +549,7 @@
   color: "#731024"
   metabolisms:
     Medicine:
+      metabolismRate: 0.3 # Mono
       effects:
       - !type:HealthChange
         conditions:
@@ -562,6 +572,7 @@
   color: "#bf3d19"
   metabolisms:
     Medicine:
+      metabolismRate: 0.125 # Mono
       effects:
       - !type:HealthChange
         damage:
@@ -595,11 +606,12 @@
   color: "#ff7db5"
   metabolisms:
     Medicine:
+      metabolismRate: 0.15 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
-            Cold: -4
+            Cold: -1.75 # mono
       - !type:AdjustTemperature
         conditions:
         - !type:Temperature
@@ -629,6 +641,7 @@
   color: "#ff867d"
   metabolisms:
     Medicine:
+      metabolismRate: 0.4 # Mono
       effects:
       - !type:HealthChange
         conditions:
@@ -638,7 +651,7 @@
         probability: 0.3
         damage:
           types:
-            Heat: 0.5
+            Heat: 0.1 # mono
       - !type:ChemVomit
         probability: 0.15
         conditions:
@@ -712,13 +725,14 @@
   color: "#9423FF"
   metabolisms:
     Medicine:
+      metabolismRate: 0.085 # Mono
       effects:
       - !type:HealthChange
         damage:
           groups:
-            Brute: -3.5
+            Brute: -1.2 # mono
           types:
-            Asphyxiation: -2.5
+            Asphyxiation: -0.9 # mono
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -805,6 +819,7 @@
   color: "#f4dab8"
   metabolisms:
     Medicine:
+      metabolismRate: 0.09 # Mono
       effects:
       - !type:HealthChange
         damage:
@@ -821,11 +836,12 @@
   color: "#2b2f77"
   metabolisms:
     Medicine:
+      metabolismRate: 0.045 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
-            Poison: -4
+            Poison: -1.5 # mono
       - !type:AdjustReagent
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -879,18 +895,19 @@
   color: "#ba7d7d"
   metabolisms:
     Medicine:
+      metabolismRate: 0.25 # Mono
       effects:
       # Medium-large quantities can hurt you instead,
       # but still technically stop your bleeding.
       - !type:ModifyBleedAmount
-        amount: -1.5
+        amount: -0.75 # Mono
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
           min: 15
         damage:
           types:
-            Bloodloss: 3
+            Bloodloss: 1.5 # Mono
 
 - type: reagent
   id: Tricordrazine
@@ -902,6 +919,7 @@
   color: "#00e5ff"
   metabolisms:
     Medicine:
+      metabolismRate: 0.05 # mono note - VERY OUT-OF-COMBAT CHEM SIR!
       effects:
       - !type:HealthChange
         conditions:
@@ -909,12 +927,12 @@
           max: 50
         damage:
           groups:
-            Brute: -1
+            Brute: -0.75 # Mono
           types:
-            Poison: -0.5 ##Should be about what it was when it healed the toxin group
-            Heat: -0.5
-            Shock: -0.5
-            Cold: -0.5 # Was .33, Buffed due to limb damage changes(GoobStation)
+            Poison: -0.6 # Mono
+            Heat: -0.65 # Mono
+            Shock: -0.3 # Mono
+            Cold: -0.3 # Mono
 
 - type: reagent
   id: Lipozine
@@ -942,6 +960,7 @@
   color: "#fcf7f9"
   metabolisms:
     Medicine:
+      metabolismRate: 0.04 # Mono
       effects:
       - !type:HealthChange # Mono
         conditions:
@@ -950,10 +969,10 @@
           max: 100
         damage:
           groups:
-            Burn: -3
-            Toxin: -3
+            Burn: -1 # mono
+            Toxin: -1 # mono
             Airloss: -3
-            Brute: -3 # Was 2, Buffed due to limb damage changes(GoobStation)
+            Brute: -1 # mono
       - !type:HealthChange # Mono - Added overdose
         conditions:
         - !type:ReagentThreshold
@@ -975,6 +994,7 @@
   color: "#520e30"
   metabolisms:
     Medicine:
+      metabolismRate: 0.15 # Mono
       effects:
       - !type:HealthChange
         conditions:
@@ -1101,11 +1121,12 @@
   color: "#e0a5b9"
   metabolisms:
     Medicine:
+      metabolismRate: 0.2 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
-            Caustic: -3
+            Caustic: -1.5 # Mono
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -1162,11 +1183,12 @@
   color: "#283332"
   metabolisms:
     Medicine:
+      metabolismRate: 0.025 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
-            Slash: -4 # Was 3, Buffed due to limb damage changes(GoobStation)
+            Slash: -1.5 # mono
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -1188,12 +1210,12 @@
   color: "#b9bf93"
   metabolisms:
     Medicine:
+      metabolismRate: 0.025 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
-            Piercing: -4
-            Blunt: 0.1
+            Piercing: -1.5 # mono
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -1215,11 +1237,12 @@
   color: "#ff3636"
   metabolisms:
     Medicine:
+      metabolismRate: 0.07 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
-            Blunt: -4 # Was 3, Buffed due to limb damage changes(GoobStation)
+            Blunt: -2 # mono
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -1245,6 +1268,7 @@
       - !type:SatiateThirst
         factor: 3
     Medicine:
+      metabolismRate: 0.015 # Mono
       effects:
       - !type:HealthChange
         conditions:
@@ -1252,11 +1276,11 @@
           max: 50
         damage:
           types:
-            Blunt: -0.2
-            Poison: -0.2
-            Heat: -0.2
-            Shock: -0.2
-            Cold: -0.2
+            Blunt: -0.05 # Mono
+            Poison: -0.05 # Mono
+            Heat: -0.05 # Mono
+            Shock: -0.05 # Mono
+            Cold: -0.05 # Mono
   reactiveEffects:
     Extinguish:
       methods: [ Touch ]
@@ -1333,6 +1357,7 @@
   color: "#8147ff"
   metabolisms:
     Medicine:
+      metabolismRate: 0.2 # Mono
       effects:
       # heals shocks and removes shock chems
       - !type:HealthChange
@@ -1442,7 +1467,7 @@
             Caustic: -1.0
 
 - type: reagent
-  id : Mannitol # currently this is just a way to create psicodine
+  id: Mannitol # currently this is just a way to create psicodine
   name: reagent-name-mannitol
   group: Medicine
   desc: reagent-desc-mannitol

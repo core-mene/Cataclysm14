@@ -91,6 +91,7 @@
       amount: 0.1
   metabolisms:
     Medicine:
+      metabolismRate: 0.5 # Mono
       effects:
       - !type:HealthChange
         damage:
@@ -123,6 +124,7 @@
     - !type:RobustHarvest {}
   metabolisms:
     Poison:
+      metabolismRate: 0.035 # Mono
       effects:
       - !type:HealthChange
         damage:

@@ -212,14 +212,15 @@
         factor: 1.5
     # Dragon doesn't require airloss healing, so omnizine is still best for humans.
     Medicine:
+      metabolismRate: 0.25 # Mono
       effects:
       - !type:ModifyBloodLevel
         amount: 3
       - !type:HealthChange
         damage:
           groups:
-            Burn: -5
-            Brute: -5
+            Burn: -2.5 # Mono
+            Brute: -3 # Mono
             Toxin: -2
           types:
             Bloodloss: -5
