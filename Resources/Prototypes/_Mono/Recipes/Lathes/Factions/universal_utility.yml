@@ -10,3 +10,12 @@
     Plasteel: 1500
     Steel: 500
     Plasma: 1500
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: TourniquetUniversal
+  result: Tourniquet
+  completetime: 1
+  materials:
+    Steel: 100
+    Cloth: 100

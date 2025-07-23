@@ -27,6 +27,9 @@
     producingSound: /Audio/Machines/circuitprinter.ogg
     idleState: icon
     runningState: icon
+    staticPacks:
+    - TopicalsStatic
+    - SurgeryStatic
     dynamicPacks:
     # rogue start
     - MonoRogueWeaponsDynamicMelee
