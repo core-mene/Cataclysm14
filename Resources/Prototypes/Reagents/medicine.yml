@@ -225,7 +225,7 @@
   color: "#ffaa00"
   metabolisms:
     Medicine:
-      metabolismRate: 0.05 # Mono
+      metabolismRate: 0.1 # Mono
       effects:
       - !type:HealthChange
         damage:
@@ -320,17 +320,17 @@
   color: "#215263"
   metabolisms:
     Medicine:
-      metabolismRate: 0.075 # Mono
+      metabolismRate: 0.15 # Mono
       effects:
       - !type:HealthChange
         damage:
           types:
-            Heat: -1 # Mono
-            Shock: -1.25 # Mono
-            Cold: -1 # Mono
+            Heat: -0.5 # Mono
+            Shock: -0.75 # Mono
+            Cold: -0.5 # Mono
       - !type:MovespeedModifier # Mono
-        walkSpeedModifier: 0.55
-        sprintSpeedModifier: 0.5
+        walkSpeedModifier: 0.5
+        sprintSpeedModifier: 0.45
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
