@@ -83,6 +83,9 @@ public sealed partial class AtmosphereSystem
        mixtures[11].AdjustMoles(Gas.WaterVapor, Atmospherics.NitrogenMolesStandard);
        mixtures[11].Temperature = 340f; // Sauna
 
+       // Mono: Monolith Prismatic Plasma (GM)
+       mixtures[4].AdjustMoles(Gas.PrismaticPlasma, Atmospherics.MolesCellGasMiner);
+
        foreach (var arg in args)
        {
            if (!NetEntity.TryParse(arg, out var netEntity) || !TryGetEntity(netEntity, out var euid))

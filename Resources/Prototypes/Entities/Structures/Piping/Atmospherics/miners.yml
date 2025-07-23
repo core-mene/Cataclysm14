@@ -147,3 +147,16 @@
   components:
     - type: GasMiner
       spawnGas: NitrousOxide
+
+# _Mono
+
+- type: entity
+  name: prismatic vein
+  parent: GasMinerBase
+  suffix: 20 kpa
+  id: GasMinerPrismaticPlasma
+  components:
+  - type: GasMiner
+    spawnGas: PrismaticPlasma
+    maxExternalPressure: 300
+    spawnAmount: 20

@@ -32,6 +32,7 @@ namespace Content.Server.Atmos.Portable
             Gas.Ammonia,
             Gas.NitrousOxide,
             Gas.Frezon
+            Gas.PrismaticPlasma
         };
 
         [ViewVariables(VVAccess.ReadWrite)]

@@ -23,6 +23,7 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
             Gas.Ammonia,
             Gas.NitrousOxide,
             Gas.Frezon
+            Gas.PrismaticPlasma
         };
 
         // Presets for 'dumb' air alarm modes

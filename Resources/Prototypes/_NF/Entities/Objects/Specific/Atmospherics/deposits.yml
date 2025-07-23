@@ -455,8 +455,8 @@
   description: A fracture in the dark, tenebrous structure of the monolithic anomaly. From within, there are faint, multicolored traces of light seeping out; Maybe you can extract some gas from this, with the right equipment.
   suffix: Monolith Prismatic Plasma, Small
   components:
-  - type: RandomGasDeposit
-    depositPrototype: MonolithPrismaticPlasma
+  #- type: RandomGasDeposit
+  #  depositPrototype: MonolithPrismaticPlasma
   - type: Sprite
     color: "#BE6EE6"
 
@@ -467,8 +467,8 @@
   description: A significant fracture in the dark, tenebrous structure of the monolithic anomaly. From deep within, there is a large pool of multicolored light seeping out; You can extract a lot of gas from this, with the right equipment.
   suffix: Monolith Prismatic Plasma, Large
   components:
-  - type: RandomGasDeposit
-    depositPrototype: MonolithPrismaticPlasma
+  #- type: RandomGasDeposit
+  #  depositPrototype: MonolithPrismaticPlasma
   - type: Sprite
     color: "#BE6EE6"
 
