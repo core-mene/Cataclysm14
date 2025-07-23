@@ -132,7 +132,7 @@
   parent: BaseWall
   id: WallMonolithEpidermis
   name: monolith epidermis
-  description: A mysterious, hardened shell of an anomalous object. It's hard to tell whether it is made of some kind of alien resin, metal, or technology. # Frontier
+  description: A mysterious, hardened shell of an anomalous object. It's hard to tell whether it is made of some kind of alien resin, metal, or technology.
   suffix: indestructible
   components:
   - type: Tag
@@ -140,7 +140,7 @@
     - Wall
   - type: Sprite
     sprite: _Mono/Structures/Walls/Monolith_Epidermis.rsi
-    color: "#cdf3cd" # Frontier
+    color: "#000000"
   - type: Icon
     sprite: _Mono/Structures/Walls/Monolith_Epidermis.rsi
   - type: IconSmooth
