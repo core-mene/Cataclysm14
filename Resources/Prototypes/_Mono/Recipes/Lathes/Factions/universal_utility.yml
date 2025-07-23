@@ -3,15 +3,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: latheRecipe
-  id: HighGradeAMEFuel
-  result: AmeJarHighCapacity
-  completetime: 4
-  materials:
-    Plasteel: 1500
-    Steel: 500
-    Plasma: 1500
-
-- type: latheRecipe
   parent: BaseToolRecipe
   id: TourniquetUniversal
   result: Tourniquet
