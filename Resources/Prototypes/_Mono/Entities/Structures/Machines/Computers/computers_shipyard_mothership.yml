@@ -54,3 +54,12 @@
   - type: ShipyardListing
     shuttles:
     - Zephyr
+
+- type: entity
+  id: EvacCarrierComputer
+  parent: BaseCarrierComputer
+  name: Evac_pod console
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - evac_pod
