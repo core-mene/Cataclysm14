@@ -21,14 +21,14 @@
     - Biological
     damage:
       groups:
-        Brute: -50 # Nerfed because xenos are ez to get
+        Brute: -90 # Doesnt stack
       types:
         Bloodloss: -50
-        Heat: -35
-        Cold: -20
+        Heat: -60
+        Cold: -60
         Poison: 5
         Caustic: 5
-    bloodlossModifier: -3.5
+    bloodlossModifier: -7.5
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
       params:

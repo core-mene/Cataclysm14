@@ -84,14 +84,15 @@
   - type: Item
     heldPrefix: ointment
   - type: Healing
+    delay: 6 # Mono
     damageContainers:
     - Biological
     damage:
       types:
-        Heat: -6 # Mono
-        Cold: -4 # Mono
+        Heat: -20 # Mono
+        Cold: -15 # Mono
         Shock: -15
-        Caustic: -6 # Mono
+        Caustic: -15 # Mono
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
       params:
@@ -104,7 +105,7 @@
         variation: 0.125
   - type: Stack
     stackType: Ointment
-    count: 15 #Was 10, Buffed due to limb damage changes (Goobstation)
+    count: 10
   - type: StackPrice
     price: 15 # Mono - 5->15
 
@@ -141,14 +142,15 @@
   - type: Item
     heldPrefix: regenerative-mesh
   - type: Healing
+    delay: 8 # Mono
     damageContainers:
     - Biological
     damage:
       types:
-        Heat: -12 # Mono
-        Cold: -7 # Mono
-        Shock: -20 # Mono
-        Caustic: -12 # Mono
+        Heat: -25 # Mono
+        Cold: -25 # Mono
+        Shock: -25 # Mono
+        Caustic: -40 # Mono
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
       params:
@@ -161,7 +163,7 @@
         variation: 0.125
   - type: Stack
     stackType: RegenerativeMesh
-    count: 15 #Was 10, Buffed due to limb damage changes (Goobstation)
+    count: 6 # Mono
   - type: StackPrice
     price: 80 # Mono - 20->80
 
@@ -187,11 +189,13 @@
   - type: Sprite
     state: brutepack
   - type: Healing
+    delay: 8 # Mono
     damageContainers:
     - Biological
     damage:
       groups:
-        Brute: -30 # Mono
+        Brute: -60 # Mono
+    bloodlossModifier: -1 # Mono
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -204,7 +208,7 @@
         variation: 0.125
   - type: Stack
     stackType: Brutepack
-    count: 15 #Was 10, Buffed due to limb damage changes (Goobstation)
+    count: 10
   - type: StackPrice
     price: 15 # Mono - 5->15
 
@@ -242,12 +246,13 @@
     heldPrefix: medicated-suture
     storedRotation: -90
   - type: Healing
+    delay: 8 # Mono
     damageContainers:
     - Biological
     damage:
       groups:
-        Brute: -48 # Mono
-    bloodlossModifier: -2.25 # Mono - tourniquet up
+        Brute: -90 # Mono
+    bloodlossModifier: -6 # Mono - tourniquet up, no more full bloodloss stop
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -260,7 +265,7 @@
         variation: 0.125
   - type: Stack
     stackType: MedicatedSuture
-    count: 15 #Was 10, Buffed due to surgery changes (Goobstation)
+    count: 6
   - type: StackPrice
     price: 80 # Mono - 40->80
 
@@ -304,7 +309,7 @@
         variation: 0.125
   - type: Stack
     stackType: Bloodpack
-    count: 15 #Was 10, Buffed due to limb damage changes (Goobstation)
+    count: 10
   - type: StackPrice
     price: 25 # Mono - 10->25
 
@@ -338,7 +343,7 @@
           Slash: 2.5 # Mono
           Blunt: 2.5 # Mono
       bloodlossModifier: -15 # mono - this WILL stop bleeding
-      delay: 0.15 # Mono
+      delay: 0.1 # Mono
       healingBeginSound:
         path: "/Audio/Items/Medical/brutepack_begin.ogg"
         params:
@@ -366,13 +371,17 @@
     graph: Gauze
     node: gauze
   - type: Healing
+    delay: 6 # Mono
     damageContainers:
     - Biological
     damage:
       types:
-        Slash: -10 # Mono
-        Piercing: -15 # Mono
-    bloodlossModifier: -2 # Mono
+        Slash: -15 # Mono
+        Piercing: -25 # Mono
+      groups:
+        Brute: -10 # Mono
+        Burn: -6 # Mono
+    bloodlossModifier: -4 # Mono
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -385,7 +394,7 @@
         variation: 0.125
   - type: Stack
     stackType: Gauze
-    count: 15 #Was 10, Buffed due to limb damage changes (Goobstation)
+    count: 10
   - type: StackPrice
     price: 15 # Mono 10->15
 
