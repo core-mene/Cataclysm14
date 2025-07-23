@@ -50,10 +50,12 @@
     - MonoUSSPMiscDynamic
     - MonoUSSPWeaponsDynamicRanged
     - MonoUSSPAmmo
-    # Universal shit (stuff like shipgun ammo)
+    # Universal shipgun ammo
     - UniversalRailgunAmmo
     - UniversalTorpedoAmmo
     - UniversalShellAmmo
+    # Universal utility
+    - UniversalUtility
   - type: MaterialStorage
     whitelist:
       tags:

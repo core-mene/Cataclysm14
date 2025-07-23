@@ -1,21 +1,39 @@
+# SPDX-FileCopyrightText: 2020 Paul Ritter
+# SPDX-FileCopyrightText: 2020 ancientpower
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2022 Visne
+# SPDX-FileCopyrightText: 2023 Dvir
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 TemporalOroboros
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # New Frontiers - FuelVend - Expensive AME jars
 # This code is licensed under AGPLv3. See LICENSE
 - type: entity
   parent: BaseItem
   id: AmeJar
   name: AME fuel jar
-  description: A hermetically sealed jar containing antimatter for use in an antimatter reactor.
+  description: A mass-produced magnetically sealed jar containing antimatter for usage as fuel in an antimatter reactor.
   components:
   - type: Item
-    size: Normal
+    size: Large # Mono
     sprite: Objects/Power/AME/ame_jar.rsi
   - type: Sprite
     sprite: Objects/Power/AME/ame_jar.rsi
     state: jar
   - type: AmeFuelContainer
+    fuelAmount: 400
+    fuelCapacity: 400
   - type: StaticPrice
     price: 400
-    vendPrice: 4000 # Frontier: FuelVend price
+    vendPrice: 6500 # Mono - its FUCKING ANTIMATTER
   - type: GuideHelp
     guides: [ AME, Power ]
   - type: Tag # Frontier

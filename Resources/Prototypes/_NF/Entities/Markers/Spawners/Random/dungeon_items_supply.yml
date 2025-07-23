@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Clutter
 - type: entity
   name: random clutter
@@ -67,6 +73,8 @@
     - OreBagOfHolding
     - HandHeldMassScanner
     - SpawnDungeonLootHardsuitsSalvage
+    - AmeJarHighCapacity # Mono
+    - AmeJar # Mono
     rareChance: 0.05
 
 # Clothes
@@ -293,6 +301,8 @@
     - ShuttleGunSvalinnMachineGunCircuitboard
     #- SecurityTechFabCircuitboard
     - ComputerIFFCircuitboard
+    - AmeJarHighCapacity # Mono
+    - AmeJar # Mono
     rareChance: 0.03
 
 - type: entity

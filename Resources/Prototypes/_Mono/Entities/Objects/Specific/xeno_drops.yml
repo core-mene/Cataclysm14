@@ -19,11 +19,13 @@
     damageContainers:
     - Biological
     damage:
-      types:
+      groups:
         Brute: -120 # 40 per type~?
-        Burn: -120 # 40 or 60 per type?
+        Burn: -150 # 40 per type
+      types:
         Bloodloss: -50
         Poison: 5  
+    bloodlossModifier: -10
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
       params:

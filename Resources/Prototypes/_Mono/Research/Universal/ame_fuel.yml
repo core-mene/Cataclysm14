@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: technology
+  id: UniversalAmeFuelHighcap
+  name: research-technology-universal-highcap-antimatter
+  icon:
+    sprite: _Mono/Objects/Power/AME/ame_jar.rsi
+    state: jar
+  discipline: FactionUniversal
+  tier: 2
+  cost: 30000
+  recipeUnlocks:
+  - HighGradeAMEFuel
