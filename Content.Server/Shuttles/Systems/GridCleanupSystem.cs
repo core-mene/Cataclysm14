@@ -7,7 +7,7 @@ using Content.Shared.Mobs.Components;
 namespace Content.Server.Shuttles.Systems;
 
 /// <summary>
-/// This system cleans up small grid fragments that have less than a specified number of tiles after a delay.
+/// This system cleans up small grid fragments that have less than a specified number of tiles after a delay. TODO: Move to Mono Namespace
 /// </summary>
 public sealed class GridCleanupSystem : EntitySystem
 {
