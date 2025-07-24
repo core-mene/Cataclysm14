@@ -195,32 +195,38 @@
     price: 625
 
 - type: entity
-  name: PA MR-5 Drozd (.45 ACP)
+  name: TCA M-5 Drozd (.45 ACP)
   parent: [BaseWeaponSubMachineGun, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponSubMachineGunDrozd
   description: An SMG that once found use among NT security forces, now has found itself as one of the most reliable boarding and anti-boarding weapons on the market. Uses .45 ACP ammo.
   components:
+    - type: Item # Mono
+      size: Large
+      sprite: _Mono/Objects/Weapons/Guns/SMGs/drozd_inhands_32x.rsi
     - type: Sprite
-      sprite: _NF/Objects/Weapons/Guns/SMGs/drozd.rsi # Frontier: add _NF prefix
+      sprite: _Mono/Objects/Weapons/Guns/SMGs/drozd.rsi # Mono
       layers:
         - state: base
           map: ["enum.GunVisualLayers.Base"]
         - state: mag-0
           map: ["enum.GunVisualLayers.Mag"]
     - type: Clothing
-      sprite: _NF/Objects/Weapons/Guns/SMGs/drozd.rsi # Frontier: add _NF prefix
+      sprite: _Mono/Objects/Weapons/Guns/SMGs/drozd_inhands_32x.rsi # Mono
     - type: Wieldable
       unwieldOnUse: false
     - type: GunWieldBonus
       minAngle: -19
       maxAngle: -16
+    - type: ChamberMagazineAmmoProvider # Mono
+      soundRack:
+        path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
     - type: Gun
       minAngle: 21
       maxAngle: 32
       fireRate: 6
       burstFireRate: 12
       soundGunshot:
-        path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+        path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/smg.ogg # Mono
       availableModes:
       - Burst
       - FullAuto
@@ -232,8 +238,8 @@
         gun_magazine:
           name: Magazine
           startingItem: Magazine45_ACPSubMachineGunFMJ
-          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-          ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+          insertSound: /Audio/_Mono/Weapons/Guns/SmallArms/MagIn/skm_magin.ogg # Mono
+          ejectSound: /Audio/_Mono/Weapons/Guns/SmallArms/MagOut/m16_magout.ogg # Mono
           priority: 2
           whitelist:
             tags:

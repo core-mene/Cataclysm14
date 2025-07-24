@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 HungryCuban
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -11,12 +12,15 @@
   - WeaponDP29USSP
   - WeaponRifleSVSUSSP
   - WeaponSniperMosinUSSP
+  - WeaponShotgunBigLeadyUSSP
 
 - type: latheRecipePack
   id: MonoUSSPMiscDynamic
   recipes:
   - SeismicChargeUSSP
   - TearGasGrenadeUSSP
+  - GrenadeShrapnelUSSP
+  - GrenadeIncendiaryUSSP
 
 - type: latheRecipePack
   id: MonoUSSPArmorDynamic

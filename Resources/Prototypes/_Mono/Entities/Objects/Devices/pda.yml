@@ -16,6 +16,22 @@
     - NewsReaderCartridge
     - BountyContractsCartridge
     - AstroNavCartridge
+  - type: Sprite
+    sprite: Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: Objects/Devices/pda.rsi
+    state: pda
 
 - type: entity
   parent: BasePDA
@@ -31,6 +47,22 @@
     - BountyContractsCartridge
     - AstroNavCartridge
     - MedTekCartridge
+  - type: Sprite
+    sprite: Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: Objects/Devices/pda.rsi
+    state: pda
 
 - type: entity
   parent: BaseUSSPPDA
@@ -141,9 +173,9 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-cadet
+        pda-lifesupporttech
   - type: PdaBorderColor
-    borderColor: "#FFFDD0"
-    accentHColor: "#896b49"
+    borderColor: "#edb015"
+    accentHColor: "#ed2715"
   - type: Icon
-    state: pda-cadet
+    state: pda-lifesupporttech

@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2023 Emisse
+# SPDX-FileCopyrightText: 2024 Kesiath
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 SlamBamActionman
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: parallax
   id: FrontierStation
   layers:
@@ -15,7 +23,7 @@
         !type:ImageParallaxTextureSource
         path: "/Textures/_NF/Parallaxes/FrontierParallaxNeb.png"
       slowness: 0.998046875
-      scale: "1, 1"    
+      scale: "1, 1"
     - texture:
         !type:GeneratedParallaxTextureSource
         id: "hq_wizard_stars"
