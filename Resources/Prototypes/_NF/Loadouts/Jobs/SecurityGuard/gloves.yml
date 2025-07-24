@@ -1,7 +1,20 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadout
   id: CombatGloves
   equipment:
     gloves: ClothingHandsGlovesCombat
+
+# Mono Start
+- type: loadout
+  id: SecurityCombatGlovesBlack
+  equipment:
+    gloves: ClothingHandsGlovesTacticalCombatBlack
+# Mono End
 
 - type: loadout
   id: ColorBlackGloves

@@ -8,22 +8,22 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  name: VFD M27 Annie (7.62x39mm)
+  name: TCA M27 Annie (7.62x39mm)
   parent: [BaseC2ContrabandUnredeemable, BaseWeaponRifle] # Mono - C2 contra
   id: WeaponRifleAnnie
   description: A beast designed to shoulder the weight of impossible missions. Uses 7.62x39mm ammo.
   components:
   - type: Sprite
-    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/annie.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/annie.rsi # Mono
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Item # Mono
-    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/annie.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/annie_inhands_32x.rsi
   - type: Clothing
-    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/annie.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/annie_inhands_32x.rsi
   - type: Gun
     availableModes:
     - FullAuto
@@ -37,14 +37,14 @@
       path: /Audio/_Goobstation/Weapons/Guns/Gunshots/thock.ogg
   - type: ChamberMagazineAmmoProvider
     soundRack:
-      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+      path: /Audio/Weapons/Guns/Cock/batrifle_cock.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: Magazine7.62x39mmFMJ
-        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        insertSound: /Audio/_Mono/Weapons/Guns/SmallArms/MagIn/amr_magin.ogg # Mono
+        ejectSound: /Audio/_Mono/Weapons/Guns/SmallArms/MagOut/cm82_magout.ogg # Mono
         priority: 2
         whitelist:
           tags:
@@ -86,12 +86,11 @@
     sprite: _Goobstation/Objects/Weapons/Guns/Rifles/wspr.rsi
   - type: Gun
     availableModes:
-    - FullAuto
     - Burst
     selectedMode: Burst
-    burstFireRate: 16
-    burstCooldown: 0.5
-    projectileSpeed: 40 # Mono
+    burstFireRate: 20 # Mono
+    burstCooldown: 0.4 # Mono
+    projectileSpeed: 45 # Mono
     soundGunshot:
       path: /Audio/_Goobstation/Weapons/Guns/Gunshots/bwuh.ogg
   - type: ItemSlots
@@ -123,24 +122,33 @@
   name: PA M-90 (7.62x51mm) # mono - 7.62x51mm
   parent: [BaseWeaponRifle, BaseC3PirateContraband] # Mono - pirate contra
   id: WeaponRifleM90
-  description: A M-90gl with the GL removed to take advantage of the compact bullpup design. Uses 7.62x51mm rifle ammo. # mono
+  description: A compact bullpup design. Uses 7.62x51mm rifle ammo. # mono
   components:
+  - type: Item # Mono
+    size: Large
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/m90_inhands_32x.rsi
   - type: Sprite
-    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/m90.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/m90.rsi # Mono
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: Objects/Weapons/Guns/Rifles/carbine.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/m90_inhands_32x.rsi # Mono
+  - type: ChamberMagazineAmmoProvider # Mono
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/light_rifle_2.ogg # Mono
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: Magazine7.62x51mmFMJ
-        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        insertSound: /Audio/_Mono/Weapons/Guns/SmallArms/MagIn/cm82_magin.ogg # Mono
+        ejectSound: /Audio/_Mono/Weapons/Guns/SmallArms/MagOut/cm82_magout.ogg # Mono
         priority: 2
         whitelist:
           tags:
@@ -153,8 +161,6 @@
         whitelist:
           tags:
           - Cartridge7.62x51mmFMJ # mono - 7.62x51mm
-  - type: Item # mono - large
-    size: Large
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

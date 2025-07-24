@@ -75,15 +75,15 @@ public abstract partial class SharedSalvageSystem : EntitySystem
         switch (rating)
         {
             case DifficultyRating.Minimal:
-                return 4;
-            case DifficultyRating.Minor:
-                return 6;
-            case DifficultyRating.Moderate:
                 return 8;
-            case DifficultyRating.Hazardous:
-                return 10;
-            case DifficultyRating.Extreme:
+            case DifficultyRating.Minor:
                 return 12;
+            case DifficultyRating.Moderate:
+                return 16;
+            case DifficultyRating.Hazardous:
+                return 20;
+            case DifficultyRating.Extreme:
+                return 30;
             default:
                 throw new ArgumentOutOfRangeException(nameof(rating), rating, null);
         }

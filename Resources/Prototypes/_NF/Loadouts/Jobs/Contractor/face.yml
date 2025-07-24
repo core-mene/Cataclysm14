@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2024 Dvir
 # SPDX-FileCopyrightText: 2024 ErhardSteinhauer
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
 #
@@ -64,7 +65,15 @@
     back:
     - ClothingMaskGasExplorer
 
-
+- type: loadout # MONO
+  id: ContractorClothingMaskCOG
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  storage:
+    back:
+    - ClothingMaskCOG
 
 - type: loadout
   id: ContractorClothingMaskGasCaptain

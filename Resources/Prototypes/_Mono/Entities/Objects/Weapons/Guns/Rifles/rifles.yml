@@ -34,8 +34,10 @@
     - SemiAuto
     - FullAuto
     soundGunshot:
-      path: /Audio/_DV/Weapons/Guns/Gunshots/jackdaw.ogg
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/heavy_rifle_1.ogg
   - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/batrifle_cock.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -69,8 +71,8 @@
   - type: StaticPrice
     price: 1750
   - type: SpeedModifiedOnWield
-    walkModifier: 0.95
-    sprintModifier: 0.95
+    walkModifier: 0.75
+    sprintModifier: 0.75
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
     maxOffset: 5
@@ -100,6 +102,9 @@
     fireRate: 5 # 300 rpm
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/batrifle.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/Rifles/ak502.rsi
   - type: ItemSlots
@@ -165,6 +170,9 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/_Goobstation/Weapons/Guns/Gunshots/smartgun_shoot.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/Rifles/xlr556.rsi
   - type: ItemSlots
@@ -278,6 +286,9 @@
     - FullAuto
     soundGunshot:
       path: /Audio/_Goobstation/Weapons/Guns/Gunshots/smartgun_shoot.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/Rifles/mla34.rsi
   - type: ItemSlots
@@ -322,3 +333,6 @@
   - type: EyeCursorOffset
     maxOffset: 1.5
     pvsIncrease: 0.5
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.95
+    sprintModifier: 0.95

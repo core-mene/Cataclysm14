@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Aviu00
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -89,3 +90,6 @@
   - type: EyeCursorOffset
     maxOffset: 1.5
     pvsIncrease: 0.15
+  - type: SpeedModifiedOnWield # Mono
+    walkModifier: 0.95
+    sprintModifier: 0.95

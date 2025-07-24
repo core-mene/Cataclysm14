@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 BlueHNT
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: guideEntry
   id: MonolithRuleset
   name: guide-entry-monolith-rules
@@ -9,14 +15,14 @@
     - MonolithRuleCoreTwoRespect
     - MonolithRuleCoreThreeCheatingExploits
     - MonolithRuleCoreFourAlternativeAccounts
+    - MonolithRuleCoreFiveLanguages
     - MonolithRuleRoleplayOneBreakCharacter
     - MonolithRuleRoleplayTwoTextChat
     - MonolithRuleRoleplayThreeProperGrammar
-    - MonolithRuleRoleplayFourSpeakEnglish
-    - MonolithRuleRoleplayFiveCharacterActions
-    - MonolithRuleRoleplaySixEroticRoleplay
-    - MonolithRuleRoleplaySevenMetagame
-    - MonolithRuleRoleplayEightSafeZones
+    - MonolithRuleRoleplayFourCharacterActions
+    - MonolithRuleRoleplayFiveEroticRoleplay
+    - MonolithRuleRoleplaySixMetagame
+    - MonolithRuleRoleplaySevenSafeZones
     - MonolithRuleConflictOneRandomDeathmatch
     - MonolithRuleConflictTwoNewLife
     - MonolithRuleConflictThreeFairPlay
@@ -48,6 +54,12 @@
   text: "/ServerInfo/_Mono/Guidebook/Rules/Four_AlternativeAccounts.xml"
   ruleEntry: true
 
+- type: guideEntry
+  id: MonolithRuleCoreFiveLanguages
+  name: guide-entry-monolith-rule-core-five-languages
+  text: "/ServerInfo/_Mono/Guidebook/Rules/Five_Languages.xml"
+  ruleEntry: true
+
 # /Core Rules
 
 #MARK: Roleplay Rules
@@ -71,33 +83,27 @@
   ruleEntry: true
 
 - type: guideEntry
-  id: MonolithRuleRoleplayFourSpeakEnglish
-  name: guide-entry-monolith-rule-roleplay-four-speak-english
-  text: "/ServerInfo/_Mono/Guidebook/Rules/Roleplay/Four_SpeakEnglish.xml"
+  id: MonolithRuleRoleplayFourCharacterActions
+  name: guide-entry-monolith-rule-roleplay-four-character-actions
+  text: "/ServerInfo/_Mono/Guidebook/Rules/Roleplay/Four_CharacterActions.xml"
   ruleEntry: true
 
 - type: guideEntry
-  id: MonolithRuleRoleplayFiveCharacterActions
-  name: guide-entry-monolith-rule-roleplay-five-character-actions
-  text: "/ServerInfo/_Mono/Guidebook/Rules/Roleplay/Five_CharacterActions.xml"
+  id: MonolithRuleRoleplayFiveEroticRoleplay
+  name: guide-entry-monolith-rule-roleplay-five-erotic-roleplay
+  text: "/ServerInfo/_Mono/Guidebook/Rules/Roleplay/Five_EroticRoleplay.xml"
   ruleEntry: true
 
 - type: guideEntry
-  id: MonolithRuleRoleplaySixEroticRoleplay
-  name: guide-entry-monolith-rule-roleplay-six-erotic-roleplay
-  text: "/ServerInfo/_Mono/Guidebook/Rules/Roleplay/Six_EroticRoleplay.xml"
+  id: MonolithRuleRoleplaySixMetagame
+  name: guide-entry-monolith-rule-roleplay-six-metagame
+  text: "/ServerInfo/_Mono/Guidebook/Rules/Roleplay/Six_Metagame.xml"
   ruleEntry: true
 
 - type: guideEntry
-  id: MonolithRuleRoleplaySevenMetagame
-  name: guide-entry-monolith-rule-roleplay-seven-metagame
-  text: "/ServerInfo/_Mono/Guidebook/Rules/Roleplay/Seven_Metagame.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: MonolithRuleRoleplayEightSafeZones
-  name: guide-entry-monolith-rule-roleplay-eight-safe-zones
-  text: "/ServerInfo/_Mono/Guidebook/Rules/Roleplay/Eight_SafeZones.xml"
+  id: MonolithRuleRoleplaySevenSafeZones
+  name: guide-entry-monolith-rule-roleplay-seven-safe-zones
+  text: "/ServerInfo/_Mono/Guidebook/Rules/Roleplay/Seven_SafeZones.xml"
   ruleEntry: true
 
 # /Roleplay Rules

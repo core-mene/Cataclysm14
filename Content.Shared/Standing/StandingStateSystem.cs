@@ -1,3 +1,25 @@
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2021 Clyybber
+// SPDX-FileCopyrightText: 2021 Galactic Chimp
+// SPDX-FileCopyrightText: 2021 Paul
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 Visne
+// SPDX-FileCopyrightText: 2022 Alex Evgrashin
+// SPDX-FileCopyrightText: 2022 Fishfish458
+// SPDX-FileCopyrightText: 2022 Francesco
+// SPDX-FileCopyrightText: 2022 Jacob Tong
+// SPDX-FileCopyrightText: 2022 Leon Friedrich
+// SPDX-FileCopyrightText: 2022 fishfish458 <fishfish458>
+// SPDX-FileCopyrightText: 2022 keronshb
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 SlamBamActionman
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 // HEAVILY EDITED
 // if wizden ever does something to this system we're FUCKED
 // regards.
@@ -14,6 +36,7 @@ using Robust.Shared.Physics;
 using Robust.Shared.Physics.Systems;
 
 namespace Content.Shared.Standing;
+
 public sealed class StandingStateSystem : EntitySystem
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
@@ -24,6 +47,30 @@ public sealed class StandingStateSystem : EntitySystem
 
     // If StandingCollisionLayer value is ever changed to more than one layer, the logic needs to be edited.
     private const int StandingCollisionLayer = (int) CollisionGroup.MidImpassable;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+        SubscribeLocalEvent<StandingStateComponent, AttemptMobCollideEvent>(OnMobCollide);
+        SubscribeLocalEvent<StandingStateComponent, AttemptMobTargetCollideEvent>(OnMobTargetCollide);
+    }
+
+    private void OnMobTargetCollide(Entity<StandingStateComponent> ent, ref AttemptMobTargetCollideEvent args)
+    {
+        if (!ent.Comp.Standing)
+        {
+            args.Cancelled = true;
+        }
+    }
+
+    private void OnMobCollide(Entity<StandingStateComponent> ent, ref AttemptMobCollideEvent args)
+    {
+        if (!ent.Comp.Standing)
+        {
+            args.Cancelled = true;
+        }
+    }
+
     public bool IsDown(EntityUid uid, StandingStateComponent? standingState = null)
     {
         if (!Resolve(uid, ref standingState, false))
@@ -56,7 +103,8 @@ public sealed class StandingStateSystem : EntitySystem
         // and ultimately this is just to avoid boilerplate in Down callers + keep their behavior consistent.
         if (dropHeldItems && hands != null)
         {
-            RaiseLocalEvent(uid, new DropHandItemsEvent(), false);
+            var ev = new DropHandItemsEvent();
+            RaiseLocalEvent(uid, ref ev, false);
         }
 
         if (!force)
@@ -145,30 +193,55 @@ public sealed class StandingStateSystem : EntitySystem
         return true;
     }
 }
-public sealed class DropHandItemsEvent : EventArgs
-{
-}
+
+[ByRefEvent]
+public record struct DropHandItemsEvent();
+
 /// <summary>
 /// Subscribe if you can potentially block a down attempt.
 /// </summary>
 public sealed class DownAttemptEvent : CancellableEntityEventArgs
 {
 }
+
 /// <summary>
 /// Subscribe if you can potentially block a stand attempt.
 /// </summary>
 public sealed class StandAttemptEvent : CancellableEntityEventArgs
 {
 }
+
 /// <summary>
 /// Raised when an entity becomes standing
 /// </summary>
 public sealed class StoodEvent : EntityEventArgs
 {
 }
+
 /// <summary>
 /// Raised when an entity is not standing
 /// </summary>
 public sealed class DownedEvent : EntityEventArgs
 {
 }
+
+/// <summary>
+/// Raised after an entity falls down.
+/// </summary>
+public sealed class FellDownEvent : EntityEventArgs
+{
+    public EntityUid Uid { get; }
+
+    public FellDownEvent(EntityUid uid)
+    {
+        Uid = uid;
+    }
+}
+
+/// <summary>
+/// Raised on the entity being thrown due to the holder falling down.
+/// </summary>
+[ByRefEvent]
+public record struct FellDownThrowAttemptEvent(EntityUid Thrower, bool Cancelled = false);
+
+

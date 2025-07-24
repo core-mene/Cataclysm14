@@ -38,7 +38,7 @@
     sprintModifier: 1.15
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitTrauma
@@ -82,7 +82,7 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitTraumaLeader

@@ -46,7 +46,7 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitMercenary
@@ -69,7 +69,7 @@
     sprite: _NF/Clothing/OuterClothing/Hardsuits/private_security.rsi
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitPrivateSecurity
@@ -104,7 +104,7 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitPilot
@@ -126,7 +126,7 @@
     sprite: _NF/Clothing/OuterClothing/Hardsuits/ERTSuits/ertmailcarrier.rsi
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitERTMailCarrier
@@ -161,7 +161,7 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitMaximPrototype
@@ -213,7 +213,7 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_bronze.rsi # Mono
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdBronze
@@ -249,7 +249,7 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_silver.rsi # Mono
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdSilver
@@ -269,7 +269,7 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_gold.rsi # Mono
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdGold
@@ -288,7 +288,7 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_colonel.rsi # Mono
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdSheriff
@@ -326,7 +326,7 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_brigmed.rsi # Mono
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdBrigmedic
@@ -357,7 +357,7 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_experimental.rsi # Mono
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdExperimental
@@ -401,7 +401,7 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_combat.rsi # Mono
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdCombat
@@ -440,7 +440,7 @@
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_command.rsi # Mono
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdCommand
@@ -494,7 +494,7 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitScaf
@@ -538,7 +538,7 @@
       path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitTacticalMaid
@@ -559,7 +559,7 @@
     sprite: _NF/Clothing/OuterClothing/Hardsuits/pirate_elite.rsi
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitPirateElite

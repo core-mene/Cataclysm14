@@ -125,13 +125,14 @@
     sprite: Objects/Weapons/Guns/Snipers/hristov.rsi
   - type: GunRequiresWield
   - type: Gun
-    fireRate: 0.4
+    fireRate: 0.75
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
     soundGunshot:
       path: /Audio/_Harmony/Weapons/Guns/Gunshots/hristov_fire_alt.ogg # harmony - changed audio path
   - type: BallisticAmmoProvider
+    autoCycle: false
     whitelist:
       tags:
       - Cartridge14.5x114mm

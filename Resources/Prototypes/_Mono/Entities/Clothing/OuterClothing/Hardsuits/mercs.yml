@@ -6,8 +6,8 @@
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitMercenaryWarlord
-  name: PMC combat suit WarlorD
-  description: A former state-of-the-art technology in military equipment, now widespread among the mercenaries and black markets due to its schematics being revealed to the public, the warlord combat suit has been modified to withstand space depressurized atmosphere, rating it space capable.
+  name: PMC WL-01
+  description: Nicknamed "Warlord",a former state-of-the-art technology in military equipment, now widespread among the mercenaries and black markets due to its schematics being revealed to the public, the warlord combat suit has been modified to withstand space depressurized atmosphere, rating it space capable.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/merc_warlordsuit.rsi
@@ -29,11 +29,11 @@
         Caustic: 0.8
   - type: ClothingSpeedModifier
     walkModifier: 0.95
-    sprintModifier: 0.9
+    sprintModifier: 0.95
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHelmetHardsuitMercenaryWarlord

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -5,7 +6,7 @@
 
 - type: technology
   id: UsspBasicExplosives
-  name: research-technology-ussp-explosives
+  name: research-technology-ussp-explosives-basic
   icon:
     sprite: Objects/Weapons/Bombs/seismic.rsi
     state: icon
@@ -15,3 +16,16 @@
   recipeUnlocks:
   - SeismicChargeUSSP
   - TearGasGrenadeUSSP
+
+- type: technology
+  id: UsspMediumExplosives
+  name: research-technology-ussp-explosives-medium
+  icon:
+    sprite: Objects/Weapons/Grenades/shrapnelgrenade.rsi
+    state: icon
+  discipline: Ussp
+  tier: 2
+  cost: 50000
+  recipeUnlocks:
+  - GrenadeShrapnelUSSP
+  - GrenadeIncendiaryUSSP

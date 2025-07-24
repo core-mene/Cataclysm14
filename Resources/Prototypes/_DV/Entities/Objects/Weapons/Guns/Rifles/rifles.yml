@@ -102,6 +102,9 @@
   - type: EyeCursorOffset # Frontier
     maxOffset: 1.5 # Frontier
     pvsIncrease: 0.15 # Frontier
+  - type: SpeedModifiedOnWield # Mono
+    walkModifier: 0.95
+    sprintModifier: 0.95
 
 - type: entity
   name: CS CAWS-25 Jackdaw (6.35x40mm)

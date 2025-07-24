@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 halycon
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -66,4 +67,7 @@
   - type: EyeCursorOffset
     maxOffset: 6.5
     pvsIncrease: 0.65
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.75
+    sprintModifier: 0.75
     # Mono end

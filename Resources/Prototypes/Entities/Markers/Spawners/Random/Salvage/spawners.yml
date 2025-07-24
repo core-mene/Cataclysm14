@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2025 AndresE55
+# SPDX-FileCopyrightText: 2025 tonotom
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entityTable
   id: SalvageScrapSpawnerCommon
   table: !type:GroupSelector
@@ -409,12 +416,12 @@
       - id: StorageCanister # Frontier
       - id: AmmoniaCanister # Frontier
       - id: WaterVaporCanister # Frontier
-#      - id: LiquidCarbonDioxideCanister # Frontier: Abused to hell
-#        weight: 0.01 # Frontier
-#      - id: LiquidNitrogenCanister # Frontier: Abused to hell
-#        weight: 0.01 # Frontier
-#      - id: LiquidOxygenCanister # Frontier: Abused to hell
-#        weight: 0.01 # Frontier
+      - id: LiquidCarbonDioxideCanister
+        weight: 0.01 # Frontier
+      - id: LiquidNitrogenCanister
+        weight: 0.01 # Frontier
+      - id: LiquidOxygenCanister
+        weight: 0.01 # Frontier
 
 - type: entityTable
   id: SalvageMagnetMobTable
