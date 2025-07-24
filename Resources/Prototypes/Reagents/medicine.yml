@@ -935,15 +935,15 @@
           max: 50
         damage:
           groups:
-            Brute: -0.75 # Mono
+            Brute: -0.9 # Mono
           types:
-            Poison: -0.6 # Mono
-            Heat: -0.65 # Mono
-            Shock: -0.3 # Mono
-            Cold: -0.3 # Mono
+            Poison: -0.8 # Mono
+            Heat: -0.7 # Mono
+            Shock: -0.4 # Mono
+            Cold: -0.5 # Mono
       - !type:MovespeedModifier # Mono
-        walkSpeedModifier: 0.7
-        sprintSpeedModifier: 0.65
+        walkSpeedModifier: 0.9
+        sprintSpeedModifier: 0.85
 
 - type: reagent
   id: Lipozine
