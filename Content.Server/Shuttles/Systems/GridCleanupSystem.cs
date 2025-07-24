@@ -183,13 +183,13 @@ public sealed class GridCleanupSystem : EntitySystem
             var mobQuery = AllEntityQuery<MobStateComponent, TransformComponent>();
             while (mobQuery.MoveNext(out var mobUid, out _, out var mobxform))
             {
-                if (mobxform.GridUid == null || mobxform.MapUid == null || xform.GridUid == xform.GridUid)
+                if (mobxform.GridUid == null || mobxform.MapUid == null)
+                    continue;
+                if (xform.GridUid == xform.GridUid)
                 {
                     Logger.DebugS("salvage", $"Update: Mob {mobUid}} detected on {gridUid}, removing grid from cleanup queue");
                     toRemove.Add(gridUid);
-                    continue;
                 }
-
             }
 
             // Delete the grid immediately to prevent the possibility of a mob entering after deletion is queued
