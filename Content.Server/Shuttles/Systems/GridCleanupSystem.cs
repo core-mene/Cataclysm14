@@ -185,7 +185,7 @@ public sealed class GridCleanupSystem : EntitySystem
             {
                 if (mobxform.GridUid == null || mobxform.MapUid == null)
                     continue;
-                if (xform.GridUid == xform.GridUid)
+                if (mobxform.GridUid == xform.GridUid)
                 {
                     Logger.DebugS("salvage", $"Update: Mob {mobUid}} detected on {gridUid}, removing grid from cleanup queue");
                     toRemove.Add(gridUid);
