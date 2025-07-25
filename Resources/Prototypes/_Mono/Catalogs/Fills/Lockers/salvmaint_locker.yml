@@ -708,7 +708,7 @@
       - id: Emag
       - id: ChameleonProjector
       #Chameleon shit
-      - !type:GroupSelector
+      - !type:AllSelector
         children:
         - id: SyndicateBusinessCard #Saves you the misery of needing to check EVERY SINGLE gas mask/black shoe
         - !type:GroupSelector
