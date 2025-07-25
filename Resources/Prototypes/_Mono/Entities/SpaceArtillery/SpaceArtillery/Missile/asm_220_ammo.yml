@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 pheenty
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -81,9 +82,10 @@
   - type: Projectile
     damage:
       types:
-        Structural: 3500
-        Blunt: 2000
-        Heat: 500
+        Structural: 350
+        Blunt: 200
+        Heat: 50
+        Ion: 1000
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/mini_rocket.rsi
     layers:
@@ -106,9 +108,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBombShipGun
-    maxIntensity: 5000
-    intensitySlope: 30
-    totalIntensity: 2000
+    maxIntensity: 300
+    intensitySlope: 4
+    totalIntensity: 1000
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
   - type: TargetSeeking
@@ -119,14 +121,14 @@
     maxSpeed: 250
     trackDelay: 3
   - type: EmpOnTrigger
-    range: 20
+    range: 7
     energyConsumption: 2900000
     disableDuration: 10
 
 - type: entity
   id: Asm220TorpedoECM
   name: ASM-220 ECM torpedo
-  description: Compared to a standard HE torpedo, this has around ~1/3rd of the explosive mass, as an EMP payload has been installed inside.
+  description: Compared to a standard HE torpedo, this one is much more destructive to electronics due to an EMP payload installed inside, though it's almost completely harmless to the hull.
   parent: BaseGrenade
   components:
   - type: Tag
@@ -146,6 +148,6 @@
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: EmpDescription
-    range: 20
+    range: 7
     energyConsumption: 2900000
     disableDuration: 10

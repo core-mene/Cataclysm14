@@ -19,12 +19,14 @@
   class:
   - Capital
   - Destroyer
+  - Medical
+  - Chemistry
   engine:
   - AME
 
 - type: gameMap
   id: Flyssa
-  mapName: 'Flyssa'
+  mapName: 'TSF-SKR Flyssa-K'
   mapPath: /Maps/_Mono/Shuttles/Capitals/flyssa.yml
   minPlayers: 0
   stations:
@@ -32,7 +34,7 @@
       stationProto: StandardFrontierSecurityVessel
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'Flyssa TSF{1}'
+        mapNameTemplate: 'Flyssa TSFN{1}'
         nameGenerator:
           !type:NanotrasenNameGenerator
           prefixCreator: '14'

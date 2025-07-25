@@ -493,8 +493,8 @@
         Radiation: 0.5
         Caustic: 0.6
   - type: ClothingSpeedModifier
-    walkModifier: 0.8
-    sprintModifier: 0.8
+    walkModifier: 0.9 # Mono
+    sprintModifier: 0.9 # Mono
   - type: HeldSpeedModifier
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.3

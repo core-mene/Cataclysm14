@@ -86,12 +86,11 @@
     sprite: _Goobstation/Objects/Weapons/Guns/Rifles/wspr.rsi
   - type: Gun
     availableModes:
-    - FullAuto
     - Burst
     selectedMode: Burst
-    burstFireRate: 16
-    burstCooldown: 0.5
-    projectileSpeed: 40 # Mono
+    burstFireRate: 20 # Mono
+    burstCooldown: 0.4 # Mono
+    projectileSpeed: 45 # Mono
     soundGunshot:
       path: /Audio/_Goobstation/Weapons/Guns/Gunshots/bwuh.ogg
   - type: ItemSlots

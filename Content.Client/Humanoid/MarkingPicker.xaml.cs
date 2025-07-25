@@ -1,3 +1,16 @@
+// SPDX-FileCopyrightText: 2022 Flipp Syder
+// SPDX-FileCopyrightText: 2023 DEATHB4DEFEAT
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 Morb
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2023 csqrb
+// SPDX-FileCopyrightText: 2024 DrSmugleaf
+// SPDX-FileCopyrightText: 2025 Mora
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
@@ -410,6 +423,7 @@ public sealed partial class MarkingPicker : Control
             CMarkingColors.AddChild(colorContainer);
 
             ColorSelectorSliders colorSelector = new ColorSelectorSliders();
+            colorSelector.SelectorType = ColorSelectorSliders.ColorSelectorType.Hsv; // defaults color selector to HSV
             colorSliders.Add(colorSelector);
 
             colorContainer.AddChild(new Label { Text = $"{stateNames[i]} color:" });

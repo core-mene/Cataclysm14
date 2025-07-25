@@ -1,3 +1,12 @@
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2024 Kara
+// SPDX-FileCopyrightText: 2024 SlamBamActionman
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Maps;
 using Content.Shared.Chemistry.Reaction;
 using Content.Shared.Chemistry.Reagent;
@@ -19,7 +28,7 @@ public sealed partial class PryTileReaction : ITileReaction
         List<ReagentData>? data)
     {
         var sys = entityManager.System<TileSystem>();
-        sys.PryTile(tile);
+        sys.DeconstructTile(tile); // Mono - change from PryTile
         return reactVolume;
     }
 }

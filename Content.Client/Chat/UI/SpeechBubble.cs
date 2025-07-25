@@ -1,3 +1,32 @@
+// SPDX-FileCopyrightText: 2020 ColdAutumnRain
+// SPDX-FileCopyrightText: 2020 Hugo Laloge
+// SPDX-FileCopyrightText: 2020 Visne
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2021 Clyybber
+// SPDX-FileCopyrightText: 2021 E F R
+// SPDX-FileCopyrightText: 2021 ShadowCommander
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2022 20kdc
+// SPDX-FileCopyrightText: 2022 DrSmugleaf
+// SPDX-FileCopyrightText: 2022 Jezithyr
+// SPDX-FileCopyrightText: 2022 Leon Friedrich
+// SPDX-FileCopyrightText: 2022 Michael Phillips
+// SPDX-FileCopyrightText: 2022 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2023 Vasilis
+// SPDX-FileCopyrightText: 2023 deathride58
+// SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2024 SlamBamActionman
+// SPDX-FileCopyrightText: 2024 TemporalOroboros
+// SPDX-FileCopyrightText: 2024 Winkarst
+// SPDX-FileCopyrightText: 2024 chromiumboy
+// SPDX-FileCopyrightText: 2024 maylokana
+// SPDX-FileCopyrightText: 2025 Tayrtahn
+// SPDX-FileCopyrightText: 2025 noirogen
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using Content.Client.Chat.Managers;
 using Content.Shared.CCVar;
@@ -14,6 +43,7 @@ namespace Content.Client.Chat.UI
 {
     public abstract class SpeechBubble : Control
     {
+        [Dependency] private readonly IGameTiming _timing = default!;
         [Dependency] private readonly IEyeManager _eyeManager = default!;
         [Dependency] private readonly IEntityManager _entityManager = default!;
         [Dependency] protected readonly IConfigurationManager ConfigManager = default!;
@@ -30,12 +60,12 @@ namespace Content.Client.Chat.UI
         /// <summary>
         ///     The total time a speech bubble stays on screen.
         /// </summary>
-        private const float TotalTime = 4;
+        private static readonly TimeSpan TotalTime = TimeSpan.FromSeconds(4);
 
         /// <summary>
         ///     The amount of time at the end of the bubble's life at which it starts fading.
         /// </summary>
-        private const float FadeTime = 0.25f;
+        private static readonly TimeSpan FadeTime = TimeSpan.FromSeconds(0.25f);
 
         /// <summary>
         ///     The distance in world space to offset the speech bubble from the center of the entity.
@@ -50,7 +80,10 @@ namespace Content.Client.Chat.UI
 
         private readonly EntityUid _senderEntity;
 
-        private float _timeLeft = TotalTime;
+        /// <summary>
+        /// The time at which this bubble will die.
+        /// </summary>
+        private TimeSpan _deathTime;
 
         public float VerticalOffset { get; set; }
         private float _verticalOffsetAchieved;
@@ -99,6 +132,7 @@ namespace Content.Client.Chat.UI
             bubble.Measure(Vector2Helpers.Infinity);
             ContentSize = bubble.DesiredSize;
             _verticalOffsetAchieved = -ContentSize.Y;
+            _deathTime = _timing.RealTime + TotalTime;
         }
 
         protected abstract Control BuildBubble(ChatMessage message, string speechStyleClass, Color? fontColor = null);
@@ -107,8 +141,8 @@ namespace Content.Client.Chat.UI
         {
             base.FrameUpdate(args);
 
-            _timeLeft -= args.DeltaSeconds;
-            if (_entityManager.Deleted(_senderEntity) || _timeLeft <= 0)
+            var timeLeft = (float)(_deathTime - _timing.RealTime).TotalSeconds;
+            if (_entityManager.Deleted(_senderEntity) || timeLeft <= 0)
             {
                 // Timer spawn to prevent concurrent modification exception.
                 Timer.Spawn(0, Die);
@@ -131,10 +165,10 @@ namespace Content.Client.Chat.UI
                 return;
             }
 
-            if (_timeLeft <= FadeTime)
+            if (timeLeft <= FadeTime.TotalSeconds)
             {
                 // Update alpha if we're fading.
-                Modulate = Color.White.WithAlpha(_timeLeft / FadeTime);
+                Modulate = Color.White.WithAlpha(timeLeft / (float)FadeTime.TotalSeconds);
             }
             else
             {
@@ -144,7 +178,7 @@ namespace Content.Client.Chat.UI
 
             var baseOffset = 0f;
 
-           if (_entityManager.TryGetComponent<SpeechComponent>(_senderEntity, out var speech))
+            if (_entityManager.TryGetComponent<SpeechComponent>(_senderEntity, out var speech))
                 baseOffset = speech.SpeechBubbleOffset;
 
             var offset = (-_eyeManager.CurrentEye.Rotation).ToWorldVec() * -(EntityVerticalOffset + baseOffset);
@@ -175,9 +209,9 @@ namespace Content.Client.Chat.UI
         /// </summary>
         public void FadeNow()
         {
-            if (_timeLeft > FadeTime)
+            if (_deathTime > _timing.RealTime)
             {
-                _timeLeft = FadeTime;
+                _deathTime = _timing.RealTime + FadeTime;
             }
         }
 

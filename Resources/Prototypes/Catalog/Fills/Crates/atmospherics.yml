@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2025 SarahRaven
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: CrateTeg
+  parent: CrateEngineering
+  name: atmospherics TEG crate
+  description: Contains components required to create a Thermoelectric Generator.
+  components:
+  - type: StorageFill
+    contents:
+      - id: TegCirculatorFlatpack 
+        amount: 2
+      - id: TegCenterFlatpack 
+        amount: 1
+
+
