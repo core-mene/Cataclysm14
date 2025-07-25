@@ -116,6 +116,19 @@
       types:
         Blunt: 25
         Structural: 0
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 4800
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
   - type: RadarConsole
     maxRange: 256
     followEntity: true
@@ -207,6 +220,19 @@
       types:
         Blunt: 25
         Structural: 0
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 3600
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
   - type: RadarConsole
     maxRange: 256
     followEntity: true
@@ -289,6 +315,19 @@
       types:
         Blunt: 25
         Structural: 0
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
   # Terrible radar, mostly good for navigating planets
   - type: RadarConsole
     maxRange: 56
@@ -371,6 +410,19 @@
       types:
         Blunt: 50
         Structural: 0
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 8000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
   - type: RadarConsole
     maxRange: 256
     followEntity: true
@@ -453,6 +505,19 @@
       types:
         Blunt: 50
         Structural: 0
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 4500
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
   - type: RadarConsole
     maxRange: 768 #It's a radar/EWAC platform.
     followEntity: true
@@ -535,6 +600,19 @@
       types:
         Blunt: 50
         Structural: 0
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 4000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
   - type: RadarConsole
     maxRange: 256
     followEntity: true
