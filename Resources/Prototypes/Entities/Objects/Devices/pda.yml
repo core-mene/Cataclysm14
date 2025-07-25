@@ -700,6 +700,7 @@
     accentHColor: "#447987"
   - type: Icon
     state: pda-ce
+  - type: Geiger # Mono
 
 - type: entity
   parent: BasePDA
@@ -719,6 +720,7 @@
     accentVColor: "#A32D26"
   - type: Icon
     state: pda-engineer
+  - type: Geiger # Mono
 
 - type: entity
   parent: BaseMedicalPDA
@@ -960,6 +962,7 @@
     maxScanRange: 999
     scanDelay: 0
     silent: true
+  - type: Geiger # Mono
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     notificationsEnabled: false
@@ -1122,6 +1125,7 @@
       - LogProbeCartridge
       - AstroNavCartridge
       - MailMetricsCartridge # Frontier
+  - type: Geiger # Mono
 
 - type: entity
   parent: ERTLeaderPDA
@@ -1142,6 +1146,7 @@
   components:
   - type: Pda
     id: ERTEngineerIDCard
+  - type: Geiger # Mono
 
 - type: entity
   parent: ERTLeaderPDA
@@ -1364,6 +1369,7 @@
     accentVColor: "#CD6900"
   - type: Icon
     state: pda-seniorengineer
+  - type: Geiger # Mono
 
 - type: entity
   parent: BasePDA
