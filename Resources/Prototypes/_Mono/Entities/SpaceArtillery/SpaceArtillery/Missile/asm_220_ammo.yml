@@ -29,7 +29,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 10
+    lifetime: 25
   - type: PointLight
     radius: 5
     color: orange
@@ -37,18 +37,51 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBombShipGun
-    totalIntensity: 250
-    intensitySlope: 5
-    maxIntensity: 1000
+    maxIntensity: 2000
+    intensitySlope: 30
+    totalIntensity: 7000
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
   - type: TargetSeeking
-    acceleration: 125
+    acceleration: 5
     detectionRange: 750
     scanArc: 75
-    launchSpeed: 70
-    maxSpeed: 250
+    launchSpeed: 25
+    maxSpeed: 70
     trackDelay: 3
+  # destructible components below
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 50
+        layer:
+        - WallLayer
+        mask:
+        - MachineMask
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Meteor
+    damageTypes:
+      types:
+        Blunt: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:ExplodeBehavior
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
 
 - type: entity
   id: Asm220TorpedoHE
@@ -102,7 +135,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 10
+    lifetime: 15
   - type: PointLight
     radius: 5
     color: orange
@@ -116,16 +149,49 @@
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
   - type: TargetSeeking
-    acceleration: 125
+    acceleration: 5
     detectionRange: 750
     scanArc: 75
-    launchSpeed: 70
-    maxSpeed: 250
+    launchSpeed: 25
+    maxSpeed: 70
     trackDelay: 3
   - type: EmpOnTrigger
     range: 7
     energyConsumption: 2900000
     disableDuration: 10
+  # destructible components below
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 10
+        layer:
+        - WallLayer
+        mask:
+        - MachineMask
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Meteor
+    damageTypes:
+      types:
+        Blunt: 0.5
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:ExplodeBehavior
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
 
 - type: entity
   id: Asm220TorpedoECM
@@ -146,7 +212,7 @@
     layers:
     - state: ecm
       map: ["enum.AmmoVisualLayers.Base"]
-    scale: 0.7, 1
+    scale: 0.55, 0.725
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: EmpDescription
