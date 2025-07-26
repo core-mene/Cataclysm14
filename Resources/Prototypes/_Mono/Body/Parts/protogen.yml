@@ -7,7 +7,7 @@
   abstract: true
   components:
   - type: Icon # Shitmed Change
-    sprite: Mobs/Species/Protogen/parts.rsi
+    sprite: _Mono/Mobs/Species/Protogen/parts.rsi
   - type: BodyPart # Shitmed Change
     species: Protogen
   - type: Extractable
@@ -24,7 +24,7 @@
   parent: [PartProtogen, BaseTorso]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Protogen/parts.rsi
+    sprite: _Mono/Mobs/Species/Protogen/parts.rsi
     state: "torso_m"
   - type: Extractable
     juiceSolution:
@@ -41,7 +41,7 @@
   parent: [PartProtogen, BaseHead]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Protogen/parts.rsi
+    sprite: _Mono/Mobs/Species/Protogen/parts.rsi
     state: "head_m"
   - type: Extractable
     juiceSolution:
@@ -57,7 +57,7 @@
   parent: [PartProtogen, BaseLeftArm]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Protogen/parts.rsi
+    sprite: _Mono/Mobs/Species/Protogen/parts.rsi
     state: "l_arm"
 
 - type: entity
@@ -66,7 +66,7 @@
   parent: [PartProtogen, BaseRightArm]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Protogen/parts.rsi
+    sprite: _Mono/Mobs/Species/Protogen/parts.rsi
     state: "r_arm"
 
 - type: entity
@@ -75,7 +75,7 @@
   parent: [PartProtogen, BaseLeftHand]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Protogen/parts.rsi
+    sprite: _Mono/Mobs/Species/Protogen/parts.rsi
     state: "l_hand"
 
 - type: entity
@@ -84,7 +84,7 @@
   parent: [PartProtogen, BaseRightHand]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Protogen/parts.rsi
+    sprite: _Mono/Mobs/Species/Protogen/parts.rsi
     state: "r_hand"
 
 - type: entity
@@ -93,7 +93,7 @@
   parent: [PartProtogen, BaseLeftLeg]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Protogen/parts.rsi
+    sprite: _Mono/Mobs/Species/Protogen/parts.rsi
     state: "l_leg"
 
 - type: entity
@@ -102,7 +102,7 @@
   parent: [PartProtogen, BaseRightLeg]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Protogen/parts.rsi
+    sprite: _Mono/Mobs/Species/Protogen/parts.rsi
     state: "r_leg"
 
 - type: entity
@@ -111,7 +111,7 @@
   parent: [PartProtogen, BaseLeftFoot]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Protogen/parts.rsi
+    sprite: _Mono/Mobs/Species/Protogen/parts.rsi
     state: "l_foot"
 
 - type: entity
@@ -120,5 +120,5 @@
   parent: [PartProtogen, BaseRightFoot]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Protogen/parts.rsi
+    sprite: _Mono/Mobs/Species/Protogen/parts.rsi
     state: "r_foot"
