@@ -107,6 +107,7 @@
   components:
     - type: GasMiner
       spawnGas: Plasma
+      maxExternalPressure: 50 # Mono
 
 - type: entity
   name: tritium gas miner
@@ -115,6 +116,7 @@
   components:
     - type: GasMiner
       spawnGas: Tritium
+      maxExternalPressure: 50 # Mono
 
 - type: entity
   name: frezon gas miner
@@ -123,6 +125,7 @@
   components:
     - type: GasMiner
       spawnGas: Frezon
+      maxExternalPressure: 50 # Mono
 
 - type: entity
   name: water vapor gas miner
