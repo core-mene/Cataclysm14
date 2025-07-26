@@ -204,7 +204,7 @@
   - type: Flatpack
     entity: TegCirculator
   - type: StaticPrice
-    price: 1000 
+    price: 1000
 
 - type: entity
   parent: BaseNFFlatpack
@@ -215,5 +215,16 @@
   - type: Flatpack
     entity: TegCenter
   - type: StaticPrice
-    price: 2000 
+    price: 2000
+
+- type: entity
+  parent: BaseFlatpack
+  id: LaserDrillFlatpack
+  name: laser drill flatpack
+  description: A flatpack used for constructing an automated laser drill.
+  components:
+  - type: Flatpack
+    entity: LaserDrill
+  - type: StaticPrice
+    price: 3000
 

@@ -2,7 +2,7 @@
   id: LaserDrill
   name: automated laser drill
   parent: BaseMachine
-  description: A large automated drill that digs up random materials when powered with 10 kW of HV.
+  description: A large automated drill that digs up random materials when powered with 10 kW of HV. Only works on expedition planets.
   components:
   - type: BatterySelfRecharger
     autoRecharge: true
@@ -52,7 +52,7 @@
         shape:
           !type:PhysShapeAabb
           bounds: "-0.40,-0.40,0.40,0.40"
-        density: 90
+        density: 750
         mask:
         - MachineMask
         layer:
@@ -61,14 +61,17 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 25
+        damage: 500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: PointLight
     radius: 0.8
     energy: 0.5
-    color: "#ff0000"
+    color: "#00AACC"
+  - type: Construction
+    graph: LaserDrill
+    node: laserDrill
 
 - type: entity
   name: random ores
@@ -147,3 +150,21 @@
   components:
   - type: Stack
     count: 15
+
+- type: constructionGraph
+  id: LaserDrill
+  start: start
+  graph:
+  - node: start
+  - node: laserDrill
+    entity: LaserDrill
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: LaserDrillFlatpack
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Welding
+        doAfter: 3
