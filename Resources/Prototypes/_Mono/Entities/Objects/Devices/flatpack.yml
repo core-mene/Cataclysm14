@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 SRV
 # SPDX-FileCopyrightText: 2025 SarahRaven
+# SPDX-FileCopyrightText: 2025 cheetah1984
 # SPDX-FileCopyrightText: 2025 gus
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -173,6 +174,17 @@
     entity: MedicalAssembler
   - type: StaticPrice
     price: 1500
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: MaterialSiloFlatpack
+  name: Material Silo flatpack
+  description: A flatpack used for constructing a Material Silo.
+  components:
+  - type: Flatpack
+    entity: MachineMaterialSilo
+  - type: StaticPrice
+    price: 400
 
 - type: entity
   parent: BaseNFFlatpack
