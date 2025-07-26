@@ -6,14 +6,14 @@
   id: LaserDrill
   name: automated laser drill
   parent: BaseMachine
-  description: A large automated drill that digs up random materials when powered with 10 kW of HV. Only works on expedition planets.
+  description: A large automated drill that digs up random materials when powered with 30 kW of HV. Only works on expedition planets.
   components:
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: -1000000
   - type: PowerConsumer
     voltage: High
-    drawRate: 10000
+    drawRate: 30000
   - type: TelecrystalMiner # Trust the process sir, its definitely not a hijacked version of Goob TC miner
     prototypes:
     - SpawnLootOres15
