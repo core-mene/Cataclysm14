@@ -14,7 +14,7 @@
   id: LockerDrakeIndustriesGrunt
   parent: MonoLockerBaseSecure
   name: grunt's locker
-  description: Sure has a fancy color, truth be told it's just steel sprayed with Drake Industries' colors. This ones bears the symbol of a hauler.
+  description: Sure has a fancy color, truth be told it's just steel sprayed with Drake Industries' colors. This ones bears the symbol of a grunt.
   components:
   - type: Appearance
   - type: EntityStorageVisuals
@@ -52,10 +52,10 @@
   id: LockerDrakeIndustriesOverseer
   parent: LockerDrakeIndustriesGrunt
   name: overseer's locker
-  description: Sure has a fancy color, truth be told it's just steel sprayed with Drake Industries' colors. This ones bears the symbol of a watchdog.
+  description: Sure has a fancy color, truth be told it's just steel sprayed with Drake Industries' colors. This ones bears the symbol of an overseer.
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateDoorClosed: DI_locker_watchdog_door
+    stateDoorClosed: DI_locker_overseer_door
   - type: AccessReader
     access: [["DICommand"]]
