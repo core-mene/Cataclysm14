@@ -43,12 +43,12 @@
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
   - type: TargetSeeking
-    acceleration: 125
+    acceleration: 60
     detectionRange: 750
-    scanArc: 75
-    launchSpeed: 70
-    maxSpeed: 250
-    trackDelay: 3
+    scanArc: 40
+    launchSpeed: 20
+    maxSpeed: 150
+    trackDelay: 2
 
 - type: entity
   id: Asm220TorpedoHE
@@ -114,12 +114,12 @@
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
   - type: TargetSeeking
-    acceleration: 125
+    acceleration: 60
     detectionRange: 750
-    scanArc: 75
-    launchSpeed: 70
-    maxSpeed: 250
-    trackDelay: 3
+    scanArc: 40
+    launchSpeed: 20
+    maxSpeed: 150
+    trackDelay: 2
   - type: EmpOnTrigger
     range: 7
     energyConsumption: 2900000
