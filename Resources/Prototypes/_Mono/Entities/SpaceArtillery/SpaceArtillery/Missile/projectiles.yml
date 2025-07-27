@@ -34,7 +34,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 3.5
+    lifetime: 5
   - type: PointLight
     radius: 3.5
     color: orange
@@ -83,7 +83,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 3
+    lifetime: 6
   - type: PointLight
     radius: 3.5
     color: orange
@@ -132,7 +132,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 10
+    lifetime: 15
   - type: PointLight
     radius: 5
     color: orange
@@ -181,7 +181,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 4.2
+    lifetime: 6
   - type: PointLight
     radius: 3.5
     color: orange
