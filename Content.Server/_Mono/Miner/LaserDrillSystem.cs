@@ -15,9 +15,9 @@ using Content.Server.Stack;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Random;
 
-namespace Content.Server._Goobstation.Miner;
+namespace Content.Server._Mono.Miner;
 
-public sealed class TelecrystalMinerSystem : EntitySystem
+public sealed class LaserDrillSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly SharedTransformSystem _xform = default!;
@@ -33,10 +33,10 @@ public sealed class TelecrystalMinerSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<TelecrystalMinerComponent, MapInitEvent>(OnStartup);
+        SubscribeLocalEvent<LaserDrillComponent, MapInitEvent>(OnStartup);
     }
 
-    private void OnStartup(EntityUid uid, TelecrystalMinerComponent component, MapInitEvent args)
+    private void OnStartup(EntityUid uid, LaserDrillComponent component, MapInitEvent args)
     {
         var originStation = _station.GetOwningStation(uid);
 
@@ -53,7 +53,7 @@ public sealed class TelecrystalMinerSystem : EntitySystem
 
     public override void Update(float frameTime)
     {
-        var query = EntityQueryEnumerator<TelecrystalMinerComponent, BatteryComponent, PowerConsumerComponent>();
+        var query = EntityQueryEnumerator<LaserDrillComponent, BatteryComponent, PowerConsumerComponent>();
         var currentTime = _gameTiming.CurTime;
 
         while (query.MoveNext(out var entity, out var miner, out var battery, out var powerConsumer))
@@ -77,18 +77,18 @@ public sealed class TelecrystalMinerSystem : EntitySystem
                 continue;
 
             miner.LastUpdate = currentTime;
-            miner.AccumulatedTC += 1;
+            miner.AccumulatedOre += 1;
 
-            if (!_containerSystem.TryGetContainer(entity, "tc_slot", out var container))
+            if (!_containerSystem.TryGetContainer(entity, "output_slot", out var container))
                 continue;
 
             if (container.ContainedEntities.Count == 0)
             {
-                var newTC = _entityManager.SpawnEntity(_random.Pick(miner.Prototypes), Transform(entity).Coordinates);
-                if (TryComp(newTC, out StackComponent? newStack))
+                var newSpawn = _entityManager.SpawnEntity(_random.Pick(miner.Prototypes), Transform(entity).Coordinates);
+                if (TryComp(newSpawn, out StackComponent? newStack))
                 {
-                    _stackSystem.SetCount(newTC, 1);
-                    _containerSystem.Insert(newTC, container);
+                    _stackSystem.SetCount(newSpawn, 1);
+                    _containerSystem.Insert(newSpawn, container);
                 }
             }
             else if (TryComp(container.ContainedEntities[0], out StackComponent? stack))
@@ -96,7 +96,7 @@ public sealed class TelecrystalMinerSystem : EntitySystem
                 _stackSystem.SetCount(container.ContainedEntities[0], stack.Count + 1);
             }
 
-            miner.AccumulatedTC = 0;
+            miner.AccumulatedOre = 0;
             _audio.PlayPvs(miner.MiningSound, entity);
         }
     }

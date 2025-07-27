@@ -7,16 +7,16 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._Goobstation.Miner;
+namespace Content.Server._Mono.Miner;
 
 [RegisterComponent]
-public sealed partial class TelecrystalMinerComponent : Component
+public sealed partial class LaserDrillComponent : Component
 {
     /// <summary>
-    /// How much TC does this thing have in its buffer
+    /// How much ore does this thing have in its buffer. Why does this exist?
     /// </summary>
-    [DataField("accumulatedTC")]
-    public float AccumulatedTC = 0f;
+    [DataField("accumulatedOre")]
+    public float AccumulatedOre = 0f;
 
     /// <summary>
     /// Time since last update
