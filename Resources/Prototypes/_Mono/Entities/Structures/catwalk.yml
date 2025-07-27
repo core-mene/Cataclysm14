@@ -11,7 +11,6 @@
   components:
   - type: Clickable
   - type: Sprite
-    noRot: true
     sprite: _Mono/Structures/steel_catwalk.rsi
     state: catwalk_preview
     drawdepth: FloorTiles
@@ -64,7 +63,6 @@
   parent: CatwalkMono
   components:
   - type: Sprite
-    noRot: true
     sprite: _Mono/Structures/dark_steel_catwalk.rsi
     state: catwalk_preview
     drawdepth: FloorTiles
@@ -80,7 +78,6 @@
   parent: CatwalkMono
   components:
   - type: Sprite
-    noRot: true
     sprite: _Mono/Structures/white_steel_catwalk.rsi
     state: catwalk_preview
     drawdepth: FloorTiles
