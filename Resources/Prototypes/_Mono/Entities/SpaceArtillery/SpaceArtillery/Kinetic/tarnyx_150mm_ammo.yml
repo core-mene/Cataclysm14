@@ -27,7 +27,7 @@
     requireNoGrid: true
     shape: circle
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 10
   - type: PointLight
     color: "#FB00FF"
   - type: EmpOnTrigger
@@ -86,7 +86,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 10
 
 - type: entity
   id: 150mmApShell
