@@ -13,7 +13,7 @@ public sealed partial class SectorPirateBountyDatabaseComponent : Component
     /// Maximum amount of bounties a station can have.
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public int MaxBounties = 6;
+    public int MaxBounties = 8;
 
     /// <summary>
     /// A list of all the bounties currently active for a station.
@@ -43,5 +43,5 @@ public sealed partial class SectorPirateBountyDatabaseComponent : Component
     /// The time between cancelling bounties.
     /// </summary>
     [DataField]
-    public TimeSpan CancelDelay = TimeSpan.FromMinutes(30);
+    public TimeSpan CancelDelay = TimeSpan.FromMinutes(15);
 }
