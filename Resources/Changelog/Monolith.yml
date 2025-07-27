@@ -8880,3 +8880,67 @@ Entries:
   id: 997
   time: '2025-07-26T02:48:27.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1615
+- author: ScyronX
+  changes:
+    - type: Remove
+      message: Removed whitelist requirement from TSFMC and Rogue factions.
+  id: 998
+  time: '2025-07-26T07:33:44.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1621
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added a few new maint tiles for mapping, as well as 3 mono-catwalks for
+        white, normal, and dark steel (you can build these too).
+    - type: Add
+      message: >-
+        Monolith-specific tiles (such as the Tunguska's cargo bay tiles) now
+        actually drop their own tile items instead of generic steel.
+    - type: Tweak
+      message: Updated white and normal steel mono tile sprites.
+  id: 999
+  time: '2025-07-26T13:48:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1624
+- author: UnicornOnLSD
+  changes:
+    - type: Tweak
+      message: >-
+        DIS shipset has had it's company specific gear replaced with regular
+        one. 
+  id: 1000
+  time: '2025-07-26T13:55:41.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1622
+- author: cheetah1984
+  changes:
+    - type: Add
+      message: Ported the wizden local material silo
+  id: 1001
+  time: '2025-07-26T14:07:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1620
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added automated ore drills (only works on exped planets/ships on exped)
+        that generate 15 of a random ore (minus bluespace/bananiun) every 5
+        seconds when fed with 50 kW of HV. Buy at exped lodge flatpackvend.
+  id: 1002
+  time: '2025-07-26T20:18:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1623
+- author: Rubeebeebee
+  changes:
+    - type: Add
+      message: UNSA Fortunate, a MIL ship made for boarding
+  id: 1003
+  time: '2025-07-26T20:20:02.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1558
+- author: Onezero0
+  changes:
+    - type: Tweak
+      message: >-
+        You can now shoot down ASM-220 torpedoes, L85 isn't just useful for
+        lagging out the server anymore.
+  id: 1004
+  time: '2025-07-26T23:03:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1627
