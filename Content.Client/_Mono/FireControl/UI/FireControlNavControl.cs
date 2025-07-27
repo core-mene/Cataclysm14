@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 RikuTheKiller
 // SPDX-FileCopyrightText: 2025 ark1368
 //
@@ -68,7 +69,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
     private float _lastCursorUpdateTime = 0f;
     private const float CursorUpdateInterval = 0.1f; // 10 updates per second
 
-    public FireControlNavControl() : base(64f, 768f, 768f)
+    public FireControlNavControl() : base(64f, 512f, 512f)
     {
         IoCManager.InjectDependencies(this);
         _shuttles = EntManager.System<SharedShuttleSystem>();

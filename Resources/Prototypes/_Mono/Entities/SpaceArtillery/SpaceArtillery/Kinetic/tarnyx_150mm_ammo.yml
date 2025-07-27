@@ -1,4 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -27,7 +29,7 @@
     requireNoGrid: true
     shape: circle
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 7
   - type: PointLight
     color: "#FB00FF"
   - type: EmpOnTrigger
@@ -86,7 +88,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 7
 
 - type: entity
   id: 150mmApShell
