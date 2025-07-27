@@ -1,7 +1,54 @@
+// SPDX-FileCopyrightText: 2019 DamianX
+// SPDX-FileCopyrightText: 2019 Injazz
+// SPDX-FileCopyrightText: 2019 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2019 Silver
+// SPDX-FileCopyrightText: 2019 ZelteHonor
+// SPDX-FileCopyrightText: 2019 moneyl
+// SPDX-FileCopyrightText: 2020 4dplanner
+// SPDX-FileCopyrightText: 2020 ColdAutumnRain
+// SPDX-FileCopyrightText: 2020 FL-OZ
+// SPDX-FileCopyrightText: 2020 Jackson Lewis
+// SPDX-FileCopyrightText: 2020 Memory
+// SPDX-FileCopyrightText: 2020 Metal Gear Sloth
+// SPDX-FileCopyrightText: 2020 Tyler Young
+// SPDX-FileCopyrightText: 2020 Vince
+// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+// SPDX-FileCopyrightText: 2020 Ygg01
+// SPDX-FileCopyrightText: 2020 chairbender
+// SPDX-FileCopyrightText: 2020 zumorica
+// SPDX-FileCopyrightText: 2021 DrSmugleaf
+// SPDX-FileCopyrightText: 2021 Galactic Chimp
+// SPDX-FileCopyrightText: 2021 Paul Ritter
+// SPDX-FileCopyrightText: 2021 ShadowCommander
+// SPDX-FileCopyrightText: 2021 Swept
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 Visne
+// SPDX-FileCopyrightText: 2021 tmtmtl30
+// SPDX-FileCopyrightText: 2022 Acruid
+// SPDX-FileCopyrightText: 2022 Radrark
+// SPDX-FileCopyrightText: 2022 Rane
+// SPDX-FileCopyrightText: 2022 keronshb
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2023 Doru991
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 router
+// SPDX-FileCopyrightText: 2024 Errant
+// SPDX-FileCopyrightText: 2024 Ilya246
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2024 {Koks}
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Systems;
+using Content.Shared.Friction;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Shuttles.Components;

@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: BaseMagazine5.7x28mm
   name: pistol magazine (5.7x28mm FMJ)
@@ -12,7 +16,7 @@
     whitelist:
       tags:
         - Cartridge5.7x28mmFMJ
-    capacity: 10
+    capacity: 17
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -45,7 +49,7 @@
     whitelist:
       tags:
         - Cartridge5.7x28mmFMJ
-    capacity: 16
+    capacity: 28
   - type: Item
     size: Small
   - type: ContainerContainer

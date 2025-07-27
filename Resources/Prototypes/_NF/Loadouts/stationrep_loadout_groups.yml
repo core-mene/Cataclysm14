@@ -1,3 +1,15 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Hamblinius
+# SPDX-FileCopyrightText: 2024 VividPups
+# SPDX-FileCopyrightText: 2024 steinhauer.erhard
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Whatstone
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadoutGroup
   id: StationRepJumpsuit
   name: loadout-group-contractor-jumpsuit
@@ -87,17 +99,3 @@
   - StationRepNFPouchSr
   subgroups:
   - ContractorTrinkets
-
-# Begin Mono
-
-- type: loadoutGroup
-  id: StationRepFirearm
-  name: loadout-group-sr-weapon
-  minLimit: 0
-  maxLimit: 1
-  loadouts:
-  - StationRepEnergyGunLoadout
-  fallbacks:
-  - StationRepEnergyGunLoadout
-
-# End Mono

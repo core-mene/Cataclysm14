@@ -1,0 +1,174 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: LaserDrill
+  name: automated laser drill
+  parent: BaseMachine
+  description: A large automated drill that digs up random materials when powered with 50 kW of HV. Only works on expedition planets.
+  components:
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: -1000000
+  - type: PowerConsumer
+    voltage: High
+    drawRate: 50000
+  - type: TelecrystalMiner # Trust the process sir, its definitely not a hijacked version of Goob TC miner
+    prototypes:
+    - SpawnLootOres15
+    miningInterval: 15
+  - type: Battery
+    maxCharge: 1000
+    pricePerJoule: 0.0003
+  - type: Sprite
+    offset: 0,0.5
+    noRot: true
+    sprite: _Mono/Structures/Machines/laserdrill.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: icon
+    - map: ["computerLayerScreen"]
+      state: unlit
+  - type: ItemSlots
+    slots:
+      tc_slot:
+        name: Telecrystal
+        insertSound:
+          path: /Audio/Machines/cutter.ogg
+        ejectSound:
+          path: /Audio/Machines/tray_eject.ogg
+        whitelist:
+          tags:
+          - Ore
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Transform
+    anchored: true
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.40,-0.40,0.40,0.40"
+        density: 750
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: PointLight
+    radius: 0.8
+    energy: 0.5
+    color: "#00AACC"
+  - type: Construction
+    graph: LaserDrill
+    node: laserDrill
+
+- type: entity
+  name: random ores
+  id: SpawnLootOres15
+  parent: MarkerBasePlaceFree
+  suffix: "Laser Drill, 15"
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Objects/Materials/ore.rsi
+      state: plasma
+    - sprite: _NF/Markers/general.rsi
+      state: questionmark
+      color: red
+  - type: RandomSpawner
+    prototypes:
+    - GoldOre15
+    - SteelOre15
+    - PlasmaOre15
+    - SilverOre15
+    - SpaceQuartz15
+    - UraniumOre15
+    - Coal15
+    chance: 0.95
+    offset: 0.0
+    rarePrototypes:
+    - BananiumOre1
+    rareChance: 0.05
+
+- type: entity
+  parent: GoldOre
+  id: GoldOre15
+  suffix: Fifteen
+  components:
+  - type: Stack
+    count: 15
+
+- type: entity
+  parent: SteelOre
+  id: SteelOre15
+  suffix: Fifteen
+  components:
+  - type: Stack
+    count: 15
+
+- type: entity
+  parent: PlasmaOre
+  id: PlasmaOre15
+  suffix: Fifteen
+  components:
+  - type: Stack
+    count: 15
+
+- type: entity
+  parent: SilverOre
+  id: SilverOre15
+  suffix: Fifteen
+  components:
+  - type: Stack
+    count: 15
+
+- type: entity
+  parent: SpaceQuartz
+  id: SpaceQuartz15
+  suffix: Fifteen
+  components:
+  - type: Stack
+    count: 15
+
+- type: entity
+  parent: UraniumOre
+  id: UraniumOre15
+  suffix: Fifteen
+  components:
+  - type: Stack
+    count: 15
+
+- type: constructionGraph
+  id: LaserDrill
+  start: start
+  graph:
+  - node: start
+  - node: laserDrill
+    entity: LaserDrill
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: LaserDrillFlatpack
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Welding
+        doAfter: 3

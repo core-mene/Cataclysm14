@@ -5,9 +5,12 @@
 # SPDX-FileCopyrightText: 2024 ErhardSteinhauer
 # SPDX-FileCopyrightText: 2024 TsjipTsjip
 # SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2024 starch
+# SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 ark1368
 # SPDX-FileCopyrightText: 2025 core-mene
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -11261,16 +11264,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -20.5,0.5
       parent: 1
-- proto: CircularShieldConsole
-  entities:
-  - uid: 1863
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -21.5,1.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5
 - proto: ClothingHeadHatBizarreSoft
   entities:
   - uid: 1864
@@ -34999,7 +34992,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 18.5,18.5
       parent: 1
-- proto: WeaponRifleM90GrenadeLauncher
+- proto: WeaponRifleM90
   entities:
   - uid: 1881
     components:

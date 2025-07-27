@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: accessLevel
   id: USSP
   name: id-card-access-level-ussp
@@ -10,10 +16,6 @@
   id: USSPCommand
   name: id-card-access-level-ussp-command
 
-- type: accessLevel
-  id: USSPGadyuka
-  name: id-card-access-level-ussp-debug
-
 - type: accessGroup
   id: USSPAA
   tags:
@@ -24,6 +26,11 @@
   - Cryogenics
   # SHIPS BECAUSE VOUCHER SHITCODE - DO NOT USE THESE FOR **ANYTHING**!!!
   - USSPGadyuka
+  - USSPTunguska
+  - USSPDrakon
+  - USSPNatisk
+  - USSPSekunda
+  - USSPGruznyk
 
 - type: accessGroup
   id: USSPHigh
@@ -33,6 +40,11 @@
   - Mercenary
   # SHIPS BECAUSE VOUCHER SHITCODE - DO NOT USE THESE FOR **ANYTHING**!!!
   - USSPGadyuka
+  - USSPTunguska
+  - USSPDrakon
+  - USSPNatisk
+  - USSPSekunda
+  - USSPGruznyk
 
 - type: accessGroup
   id: USSPLow
@@ -41,3 +53,8 @@
   - Mercenary
   # SHIPS BECAUSE VOUCHER SHITCODE - DO NOT USE THESE FOR **ANYTHING**!!!
   - USSPGadyuka
+  - USSPTunguska
+  - USSPDrakon
+  - USSPNatisk
+  - USSPSekunda
+  - USSPGruznyk

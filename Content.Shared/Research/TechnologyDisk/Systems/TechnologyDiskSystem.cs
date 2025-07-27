@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Lathe;
@@ -74,8 +81,7 @@ public sealed class TechnologyDiskSystem : EntitySystem
             }
         }
         _popup.PopupClient(Loc.GetString("tech-disk-inserted"), target, args.User);
-        if (_net.IsServer)
-            QueueDel(ent);
+        PredictedQueueDel(ent.Owner);
         args.Handled = true;
     }
 

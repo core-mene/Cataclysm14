@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Robust.Client.Graphics;
 
 namespace Content.Client.Light.EntitySystems;
@@ -16,6 +21,7 @@ public sealed class PlanetLightSystem : EntitySystem
         _overlayMan.AddOverlay(new RoofOverlay(EntityManager));
         _overlayMan.AddOverlay(new TileEmissionOverlay(EntityManager));
         _overlayMan.AddOverlay(new LightBlurOverlay());
+        _overlayMan.AddOverlay(new SunShadowOverlay());
         _overlayMan.AddOverlay(new AfterLightTargetOverlay());
     }
 
@@ -31,6 +37,7 @@ public sealed class PlanetLightSystem : EntitySystem
         _overlayMan.RemoveOverlay<RoofOverlay>();
         _overlayMan.RemoveOverlay<TileEmissionOverlay>();
         _overlayMan.RemoveOverlay<LightBlurOverlay>();
+        _overlayMan.RemoveOverlay<SunShadowOverlay>();
         _overlayMan.RemoveOverlay<AfterLightTargetOverlay>();
     }
 }

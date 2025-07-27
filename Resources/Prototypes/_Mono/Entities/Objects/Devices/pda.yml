@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: BasePDA
   id: BaseUSSPPDA
@@ -11,6 +16,22 @@
     - NewsReaderCartridge
     - BountyContractsCartridge
     - AstroNavCartridge
+  - type: Sprite
+    sprite: Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: Objects/Devices/pda.rsi
+    state: pda
 
 - type: entity
   parent: BasePDA
@@ -26,6 +47,22 @@
     - BountyContractsCartridge
     - AstroNavCartridge
     - MedTekCartridge
+  - type: Sprite
+    sprite: Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: Objects/Devices/pda.rsi
+    state: pda
 
 - type: entity
   parent: BaseUSSPPDA
@@ -116,3 +153,30 @@
     accentHColor: "#447987"
   - type: Icon
     state: pda-hos
+
+- type: entity
+  parent: BaseSecurityPDA
+  id: TsfEngiPDA
+  name: TSFMC engineer PDA
+  description: A standard TSFMC personal computer.
+  components:
+  - type: Pda
+    id: TsfEngiIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookNfsdSop
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-lifesupporttech
+  - type: PdaBorderColor
+    borderColor: "#edb015"
+    accentHColor: "#ed2715"
+  - type: Icon
+    state: pda-lifesupporttech
+  - type: Geiger # Mono

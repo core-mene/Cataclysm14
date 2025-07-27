@@ -1,3 +1,24 @@
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2021 metalgearsloth
+# SPDX-FileCopyrightText: 2021 mirrorcult
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Scribbles0
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2024 Guillaume E
+# SPDX-FileCopyrightText: 2024 Ilya246
+# SPDX-FileCopyrightText: 2024 JIPDawg
+# SPDX-FileCopyrightText: 2024 Mervill
+# SPDX-FileCopyrightText: 2024 degradka
+# SPDX-FileCopyrightText: 2025 ArtisticRoomba
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   abstract: true
   name: gas miner
@@ -107,6 +128,7 @@
   components:
     - type: GasMiner
       spawnGas: Plasma
+      maxExternalPressure: 50 # Mono
 
 - type: entity
   name: tritium gas miner
@@ -115,6 +137,7 @@
   components:
     - type: GasMiner
       spawnGas: Tritium
+      maxExternalPressure: 50 # Mono
 
 - type: entity
   name: frezon gas miner
@@ -123,6 +146,7 @@
   components:
     - type: GasMiner
       spawnGas: Frezon
+      maxExternalPressure: 50 # Mono
 
 - type: entity
   name: water vapor gas miner

@@ -1,4 +1,13 @@
-﻿using System.Linq;
+// SPDX-FileCopyrightText: 2022 Alex Evgrashin
+// SPDX-FileCopyrightText: 2022 Moony
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2025 SlamBamActionman
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using System.Linq;
 using Content.Client.PDA;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Clothing.EntitySystems;
@@ -12,7 +21,6 @@ namespace Content.Client.Clothing.Systems;
 public sealed class ChameleonClothingSystem : SharedChameleonClothingSystem
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
-    [Dependency] private readonly IComponentFactory _factory = default!;
 
     private static readonly SlotFlags[] IgnoredSlots =
     {
@@ -48,14 +56,14 @@ public sealed class ChameleonClothingSystem : SharedChameleonClothingSystem
     {
         base.UpdateSprite(uid, proto);
         if (TryComp(uid, out SpriteComponent? sprite)
-            && proto.TryGetComponent(out SpriteComponent? otherSprite, _factory))
+            && proto.TryGetComponent(out SpriteComponent? otherSprite, Factory))
         {
             sprite.CopyFrom(otherSprite);
         }
 
         // Edgecase for PDAs to include visuals when UI is open
         if (TryComp(uid, out PdaBorderColorComponent? borderColor)
-            && proto.TryGetComponent(out PdaBorderColorComponent? otherBorderColor, _factory))
+            && proto.TryGetComponent(out PdaBorderColorComponent? otherBorderColor, Factory))
         {
             borderColor.BorderColor = otherBorderColor.BorderColor;
             borderColor.AccentHColor = otherBorderColor.AccentHColor;
@@ -89,7 +97,7 @@ public sealed class ChameleonClothingSystem : SharedChameleonClothingSystem
             // check if this is valid clothing
             if (!IsValidTarget(proto))
                 continue;
-            if (!proto.TryGetComponent(out ClothingComponent? item, _factory))
+            if (!proto.TryGetComponent(out ClothingComponent? item, Factory))
                 continue;
 
             // sort item by their slot flags

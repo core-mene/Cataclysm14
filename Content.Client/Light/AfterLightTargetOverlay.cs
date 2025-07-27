@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
@@ -54,6 +59,6 @@ public sealed class AfterLightTargetOverlay : Overlay
 
                 worldHandle.SetTransform(localMatrix);
                 worldHandle.DrawTextureRectRegion(lightOverlay.EnlargedLightTarget.Texture, bounds, subRegion: subRegion);
-            }, null);
+            }, Color.Transparent);
     }
 }

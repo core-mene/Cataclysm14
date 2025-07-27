@@ -1,3 +1,14 @@
+// SPDX-FileCopyrightText: 2021 Javier Guardia Fernández
+// SPDX-FileCopyrightText: 2022 Nemanja
+// SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using Content.Server.Construction.Components;
 using Content.Shared.Construction.Prototypes;
@@ -103,7 +114,7 @@ namespace Content.IntegrationTests.Tests.Construction
             var protoMan = server.ResolveDependency<IPrototypeManager>();
             var compFact = server.ResolveDependency<IComponentFactory>();
 
-            var name = compFact.GetComponentName(typeof(ConstructionComponent));
+            var name = compFact.GetComponentName<ConstructionComponent>();
             Assert.Multiple(() =>
             {
                 foreach (var proto in protoMan.EnumeratePrototypes<EntityPrototype>())

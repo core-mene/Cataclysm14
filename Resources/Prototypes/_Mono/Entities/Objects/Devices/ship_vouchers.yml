@@ -1,30 +1,19 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ark1368
 # SPDX-FileCopyrightText: 2025 sleepyyapril
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-- type: entity
-  parent: BaseShipVoucher
-  id: ShipVoucherDebug
-  name: evil debug pirate ship voucher
-  description: put in console = free ship!!
-  components:
-  - type: Sprite
-    layers:
-    - state: blue
-    - state: voucherbailiff
-  - type: ShipyardVoucher
-    destroyOnEmpty: true
-    consoleType: BlackMarket
-    access:
-    - Pirate
+#Ussp
 
 - type: entity
   parent: BaseShipVoucher
   id: ShipVoucherUSSP
-  name: USSP Gadyuka voucher
-  description: A small card that authorizes the acquisition of a Gadyuka for free.
+  name: USSP gadyuka voucher
+  description: A small card that authorizes the acquisition of a Gadyuka.
   components:
   - type: Sprite
     layers:
@@ -33,11 +22,98 @@
   - type: ShipyardVoucher
     destroyOnEmpty: true
     consoleType: USSP
+    companyName: USSP
     access:
     - USSPGadyuka # SHITCODE!!!
   - type: StaticPrice
     vendPrice: 12500
 
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherUSSPTunguska
+  name: USSP tunguska voucher
+  description: A small card that authorizes the acquisition of a Tunguska.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: USSP
+    companyName: USSP
+    access:
+    - USSPTunguska # SHITCODE!!!
+
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherUSSPDrakon
+  name: USSP drakon voucher
+  description: A small card that authorizes the acquisition of a Drakon.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: USSP
+    companyName: USSP
+    access:
+    - USSPDrakon # SHITCODE!!!
+
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherUSSPNatisk
+  name: USSP natisk voucher
+  description: A small card that authorizes the acquisition of a Natisk.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: USSP
+    companyName: USSP
+    access:
+    - USSPNatisk # SHITCODE!!!
+
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherUSSPGruznyk
+  name: USSP gruznyk voucher
+  description: A small card that authorizes the acquisition of a Gruznyk.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: USSP
+    companyName: USSP
+    access:
+    - USSPGruznyk # SHITCODE!!!
+
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherUSSPSekunda
+  name: USSP sekunda voucher
+  description: A small card that authorizes the acquisition of a Sekunda.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: USSP
+    companyName: USSP
+    access:
+    - USSPSekunda # SHITCODE!!!
+
+# Tsfmc
 - type: entity
   parent: ShipVoucherNfsdBailiff
   id: ShipVoucherTsfmcColonel
@@ -50,10 +126,48 @@
     - state: voucherbailiff
   - type: ShipyardVoucher
     redemptionsLeft: 2
-    access:
+    access: # note - removed HOS/colonel access to prevent free flyssa (its only ship that uses HOS access, so it should be fine)
     - Armory
-    - Sergeant # Frontier
-    - Bailiff # Frontier
-    - HeadOfSecurity # Monolith
-    accessGroups: # Frontier
-    - GeneralNfsdAccess # Frontier
+    - Sergeant
+    - Bailiff
+    accessGroups:
+    - GeneralNfsdAccess
+
+
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherProwler
+  name: rogue prowler voucher
+  description: A small card that authorizes the procurement of a Prowler.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: BlackMarket
+    companyName: Rogue
+    access:
+    - VoucherProwler # SHITCODE!!!
+  - type: StaticPrice
+    vendPrice: 250000
+
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherFlyssa
+  name: TSF flyssa voucher
+  description: A small card that authorizes the procurement of a Flyssa.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: Security
+    companyName: TSF
+    access:
+    - VoucherFlyssa # SHITCODE!!!
+  - type: StaticPrice
+    vendPrice: 500000

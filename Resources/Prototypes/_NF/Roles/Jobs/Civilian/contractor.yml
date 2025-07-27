@@ -1,9 +1,17 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: job
   id: Contractor
   name: job-name-contractor
   description: job-description-contractor
   playTimeTracker: JobPassenger
-  startingGear: ContractorGear
   icon: "JobIconContractor"
   supervisors: job-supervisors-hire
   displayWeight: 40 # Top
@@ -13,9 +21,3 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
-
-- type: startingGear
-  id: ContractorGear
-  storage:
-    back:
-    - WeaponPistolMk32

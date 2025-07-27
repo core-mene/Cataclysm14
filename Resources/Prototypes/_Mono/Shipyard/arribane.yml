@@ -1,0 +1,59 @@
+# SPDX-FileCopyrightText: 2023 IHAN <IHAN>
+# SPDX-FileCopyrightText: 2023 Kennedy
+# SPDX-FileCopyrightText: 2023 PECK
+# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
+# SPDX-FileCopyrightText: 2024 Debug
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Carolyn3114
+# SPDX-FileCopyrightText: 2025 KM-Catman
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 bluebrouny
+# SPDX-FileCopyrightText: 2025 crazy1112345
+# SPDX-FileCopyrightText: 2025 significant harassment
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: crazy1112345
+# Discord: crazy1112345
+
+# Shuttle Notes:
+# It is pretty ugly and non-shuttlelike in silloughete, but purpose built for atmos and not much else.
+- type: vessel
+  id: Arribane
+  parent: BaseVessel
+  name: HES Arribane
+  description: A shuttle purpose built by Horizon Energy for atmospheric work and gas mining. Living quarters are cramped, but comfortable.
+  price: 97500
+  category: Large
+  group: Shipyard
+  shuttlePath: /Maps/_Mono/Shuttles/arribane.yml
+  guidebookPage: Null
+  class:
+  - Atmospherics
+  engine:
+  - AME
+
+- type: gameMap
+  id: Arribane
+  mapName: 'HES Arribane'
+  mapPath: /Maps/_Mono/Shuttles/arribane.yml
+  minPlayers: 0
+  stations:
+    Arribane:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Arribane CIV{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

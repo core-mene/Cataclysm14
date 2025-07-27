@@ -26,7 +26,6 @@ namespace Content.Server.Shuttles.Systems;
 public sealed partial class ShuttleConsoleSystem
 {
     [Dependency] private readonly IMapManager _mapManager = default!;
-    [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly SharedShuttleSystem _sharedShuttle = default!;
 
     private const float ShuttleFTLRange = 256f;
@@ -230,7 +229,7 @@ public sealed partial class ShuttleConsoleSystem
                 continue;
             }
 
-            _popupSystem.PopupEntity(Loc.GetString("shuttle-ftl-proximity"), ent.Owner, PopupType.Medium);
+            _popup.PopupEntity(Loc.GetString("shuttle-ftl-proximity"), ent.Owner, PopupType.Medium);
             UpdateConsoles(shuttleUid.Value);
             return;
         }

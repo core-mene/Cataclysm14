@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: LockableButtonUSSP
+  suffix: USSP
+  parent: LockableButton
+  components:
+  - type: AccessReader
+    access: [["USSP"]]

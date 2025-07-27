@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using System.Numerics;
 using Content.Client.Stealth;
@@ -93,6 +98,10 @@ public sealed class ThermalVisionOverlay : Overlay
 
             if (_container.TryGetOuterContainer(uid, xform, out var container))
             {
+                continue; // Mono
+
+                // Mono edit, Thermals don't reveal people in lockers
+                /*
                 var owner = container.Owner;
                 if (_entity.TryGetComponent<SpriteComponent>(owner, out var ownerSprite)
                     && _entity.TryGetComponent<TransformComponent>(owner, out var ownerXform))
@@ -101,6 +110,8 @@ public sealed class ThermalVisionOverlay : Overlay
                     sprite = ownerSprite;
                     xform = ownerXform;
                 }
+                */
+                // Mono End
             }
 
             if (_entries.Any(e => e.Ent.Owner == entity))

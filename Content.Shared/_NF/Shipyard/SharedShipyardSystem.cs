@@ -1,3 +1,14 @@
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 Mnemotechnican
+// SPDX-FileCopyrightText: 2024 Tych0
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2025 Onezero0
+// SPDX-FileCopyrightText: 2025 dustylens
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared._NF.Shipyard;
 using JetBrains.Annotations;
@@ -19,7 +30,10 @@ public enum ShipyardConsoleUiKey : byte
     Scrap,
     Sr,
     Medical,
-    Ussp, // mono
+    // Mono start
+    Ussp,
+    SHM,
+    DrakeIndustries,
     // Add ships to this key if they are only available from mothership consoles. Shipyards using it are inherently empty and are populated using the ShipyardListingComponent.
     Custom
 }

@@ -5,8 +5,8 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 grandalff
 # SPDX-FileCopyrightText: 2025 kyres1
-# SPDX-FileCopyrightText: 2025 monolith8319
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -30,6 +30,7 @@
     startingCharge: 20000
   - type: ExaminableBattery
   - type: Appearance
+  - type: FireControlRotate
   - type: AutoShootGun
   - type: GunSignalControl
   - type: WirelessNetworkConnection
@@ -82,6 +83,7 @@
     layers:
     - state: space_artillery
   - type: Appearance
+  - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
     maxCharge: 30000
@@ -130,6 +132,7 @@
     layers:
     - state: space_artillery
   - type: Appearance
+  - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
     maxCharge: 40000
@@ -168,54 +171,6 @@
   - type: ShipGunClass
     shipClass: Medium
 
-# TARNYX EMP 150mm
-
-- type: entity
-  id: WeaponTurretTarnyx
-  name: ADBX-31 TARNYX 150mm EMP Cannon
-  parent: BallisticArtilleryUnanchorable
-  description: A heavy EMP cannon made by Aetherion Dynamics, designed to disable large sections of enemy ships with a single, powerful shot. Effective in asymmetric combat. Can be remotely activated or linked up to a GCS.
-  components:
-  - type: StaticPrice
-    price: 10000
-  - type: Sprite
-    sprite: _Mono/Objects/ShuttleWeapons/tarnyx.rsi
-    layers:
-    - state: space_artillery
-  - type: Appearance
-  - type: AmmoCounter
-  - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
-  - type: ExaminableBattery
-  - type: WirelessNetworkConnection
-    range: 500
-  - type: Gun
-    fireRate: 0.05
-    projectileSpeed: 400
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
-    soundEmpty:
-      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
-  - type: BatterySelfRecharger
-    autoRecharge: true
-    autoRechargeRate: 214
-  - type: SpaceArtillery
-    powerChargeRate: 214
-    powerUsePassive: 3500
-    powerUseActive: 0
-  - type: Actions
-  - type: ProjectileBatteryAmmoProvider
-    proto: ShipTarnyxProjectile
-    fireCost: 17500 # low shot weapon moved back to the original spot
-  - type: RadarBlip
-    radarColor: "#035EFC"
-    scale: 2.5
-  - type: ShipGunType
-    shipType: Ballistic
-  - type: ShipGunClass
-    shipClass: Heavy
-
 # CYREXA 220mm
 
 - type: entity
@@ -232,6 +187,7 @@
     - state: space_artillery
     scale: 1, 1
   - type: Appearance
+  - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
     maxCharge: 12000
@@ -276,58 +232,147 @@
   - type: RadarBlip
     radarColor: "#FF0000"
     scale: 2
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 15000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
     shipClass: Medium
 
-# CHARON
+# HADES 305mm
 
 - type: entity
-  id: WeaponTurretCharon
-  name: M381 CHARON mass driver
+  id: WeaponTurretHades
+  name: HADES 305mm cannon
   parent: BallisticArtilleryUnanchorable
-  description: A capital-class railgun that fires a massive slug at extreme velocity, capable of catastrophic damage to enemy ships. Heavy linear accelerator, can be remotely activated or linked up to a GCS.
+  description: One of the largest chemical-based kinetic weapons in the sector. Its power is only rivaled by mass drivers such as the M381.
   components:
   - type: StaticPrice
     price: 40000
   - type: Sprite
-    sprite: _Mono/Objects/ShuttleWeapons/charon.rsi
+    sprite: _Mono/Objects/ShuttleWeapons/hades.rsi
+    layers:
+    - state: space_artillery
+    scale: 1.15, 1.15
+  - type: Appearance
+  - type: FireControlRotate
+  - type: AmmoCounter
+  - type: Battery
+    maxCharge: 12000
+    startingCharge: 12000
+  - type: ExaminableBattery
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.6,-0.6,0.6,0.6"
+        density: 1500
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Gun
+    projectileSpeed: 450
+    fireRate: 0.2
+    burstCooldown: 10
+    burstFireRate: 2
+    shotsPerBurst: 2
+    selectedMode: Burst
+    availableModes: Burst
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 12000
+  - type: SpaceArtillery
+    powerChargeRate: 12000
+    powerUsePassive: 1500
+    powerUseActive: 0
+  - type: Actions
+  - type: ProjectileBatteryAmmoProvider
+    proto: ShipHadesProjectile
+    fireCost: 6000
+  - type: RadarBlip
+    radarColor: "#FF0000"
+    scale: 2.5
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: ShipGunType
+    shipType: Ballistic
+  - type: ShipGunClass
+    shipClass: Superheavy
+
+# MiniCHARON
+
+- type: entity
+  id: WeaponTurretCharonette
+  name: M194 CHARONETTE mass driver
+  parent: BallisticArtilleryUnanchorable
+  description: A smaller, more compact railgun that fires a large slug at rapid velocity, capable of big damage to enemy ships. Medium linear accelerator, can be remotely activated or linked up to a GCS.
+  components:
+  - type: StaticPrice
+    price: 25000
+  - type: Sprite
+    sprite: _Mono/Objects/ShuttleWeapons/charonette.rsi
     layers:
     - state: space_artillery
   - type: Appearance
+  - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 20000
+    startingCharge: 20000
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
     fireRate: 0.05
-    projectileSpeed: 900
+    projectileSpeed: 800
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/leviathan_fire.ogg
     soundEmpty:
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 350
+    autoRechargeRate: 150
   - type: SpaceArtillery
-    powerChargeRate: 350
-    powerUsePassive: 1000
-    powerUseActive: 7500
+    powerChargeRate: 150
+    powerUsePassive: 600
+    powerUseActive: 4000
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
-    proto: ShipRailgunProjectile
-    fireCost: 1500
+    proto: ShipMiniRailgunProjectile
+    fireCost: 1000
   - type: Fixtures
     fixtures:
       fix1:
         shape:
           !type:PhysShapeAabb
           bounds: "-0.5,-0.5,0.5,0.5"
-        density: 1500
+        density: 1000
         mask:
         - MachineMask
         layer:
@@ -336,13 +381,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 6000
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-    - trigger:
-        !type:DamageTrigger
-        damage: 1500
+        damage: 12500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -350,8 +389,8 @@
         sound:
           collection: MetalBreak
   - type: RadarBlip
-    radarColor: "#CF0E0E"
-    scale: 3
+    radarColor: "#d53a3a"
+    scale: 2
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
@@ -373,6 +412,7 @@
     - state: space_artillery
     scale: 1, 1
   - type: Appearance
+  - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
     maxCharge: 40000
@@ -434,6 +474,7 @@
     - state: space_artillery
     scale: 1, 1
   - type: Appearance
+  - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
     maxCharge: 40000

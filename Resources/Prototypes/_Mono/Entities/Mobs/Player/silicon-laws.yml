@@ -1,4 +1,12 @@
-﻿# Redacted
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 KiraZen_
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Redacted
 - type: siliconLaw
   id: Redacted1
   order: 1
@@ -98,12 +106,18 @@
   order: 3
   lawString: law-tsfmc-3
 
+- type: siliconLaw
+  id: TSFMC4
+  order: 4
+  lawString: law-tsfmc-4
+
 - type: siliconLawset
   id: TSFMCLawset
   laws:
   - TSFMC1
   - TSFMC2
   - TSFMC3
+  - TSFMC4
   obeysTo: laws-owner-crew
 
 # Freeman lawset

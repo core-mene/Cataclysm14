@@ -1,7 +1,13 @@
+// SPDX-FileCopyrightText: 2022 20kdc
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Pieter-Jan Briers
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Threading;
 using System.Threading.Tasks;
 using Robust.Client.Graphics;
-using Robust.Shared.Graphics;
 
 namespace Content.Client.Parallax.Data
 {
@@ -13,6 +19,13 @@ namespace Content.Client.Parallax.Data
         /// Note that this should be cached, but not necessarily *here*.
         /// </summary>
         Task<Texture> GenerateTexture(CancellationToken cancel = default);
+
+        /// <summary>
+        /// Called when the parallax texture is no longer necessary, and may be unloaded.
+        /// </summary>
+        void Unload(IDependencyCollection dependencies)
+        {
+        }
     }
 }
 

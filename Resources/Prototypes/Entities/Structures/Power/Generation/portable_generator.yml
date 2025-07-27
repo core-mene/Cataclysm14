@@ -1,3 +1,28 @@
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2023 DrSmugleaf
+# SPDX-FileCopyrightText: 2023 Morb
+# SPDX-FileCopyrightText: 2023 chromiumboy
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2024 Cojoke
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Flareguy
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2024 SpeltIncorrectyl
+# SPDX-FileCopyrightText: 2024 Tayrtahn
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 ArtisticRoomba
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 wewman222
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 #
 # You can use this Desmos sheet to calculate fuel burn rate values:
 # https://www.desmos.com/calculator/qcektq5dqs
@@ -169,7 +194,7 @@
       fuelMaterial: FuelGradePlasma # Frontier: Plasma<FuelGradePlasma
       multiplier: 0.01
     - type: MaterialStorage
-      storageLimit: 2000 # mono
+      storageLimit: 10000 # mono
       materialWhiteList: [Plasma, FuelGradePlasma] # Frontier: add FuelGradePlasma
     - type: PortableGenerator
       startChance: 0.8
@@ -190,8 +215,8 @@
     - type: PowerSupplier
       supplyRampRate: 5000
       supplyRampTolerance: 1500
-    - type: MaterialStorageMagnetPickup # Frontier
-      range: 0.30 # Frontier
+#    - type: MaterialStorageMagnetPickup # Frontier
+#      range: 0.30 # Frontier
     - type: FuelGradeAdapter # Frontier
       inputMaterial: Plasma # Frontier
       outputMaterial: FuelGradePlasma # Frontier
@@ -238,7 +263,7 @@
       fuelMaterial: FuelGradeUranium # Frontier: Uranium<FuelGradeUranium
       multiplier: 0.01
     - type: MaterialStorage
-      storageLimit: 2000 # mono
+      storageLimit: 10000 # mono
       materialWhiteList: [Uranium, FuelGradeUranium] # Frontier: add FuelGradeUranium
     - type: PortableGenerator
     - type: UpgradePowerSupplier
@@ -254,8 +279,8 @@
     - type: PowerSupplier
       supplyRampRate: 7500
       supplyRampTolerance: 2500
-    - type: MaterialStorageMagnetPickup # Frontier
-      range: 0.30 # Frontier
+#    - type: MaterialStorageMagnetPickup # Frontier
+#      range: 0.30 # Frontier
     - type: FuelGradeAdapter # Frontier
       inputMaterial: Uranium # Frontier
       outputMaterial: FuelGradeUranium # Frontier

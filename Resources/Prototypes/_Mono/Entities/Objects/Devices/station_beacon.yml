@@ -1,0 +1,102 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconUSSPShipyard
+  suffix: USSP Shipyard
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-ussp-shipyard
+    color: "#b40044"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconUSSPDockAlpha
+  suffix: USSP Docks
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-ussp-dock-alpha
+    color: "#b40044"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconUSSPDockBeta
+  suffix: USSP Docks
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-ussp-dock-beta
+    color: "#b40044"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconUSSPControl
+  suffix: USSP Control Room
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-ussp-control
+    color: "#b40044"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconUSSPReception
+  suffix: USSP Reception
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-ussp-reception
+    color: "#b40044"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconUSSPDorms
+  suffix: USSP Dorms
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-ussp-dorms
+    color: "#b40044"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconUSSPCommissar
+  suffix: USSP Commissar
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-ussp-commissar
+    color: "#b40044"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconUSSPArmory
+  suffix: USSP Armory
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-ussp-armory
+    color: "#b40044"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconUSSPCargo
+  suffix: USSP Cargo
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-ussp-cargo
+    color: "#b40044"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconUSSPBrig
+  suffix: USSP Brig
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-ussp-brig
+    color: "#b40044"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconUSSPServers
+  suffix: USSP Servers
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-ussp-servers
+    color: "#b40044"

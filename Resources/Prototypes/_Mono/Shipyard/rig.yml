@@ -5,7 +5,9 @@
 # SPDX-FileCopyrightText: 2024 Long YM
 # SPDX-FileCopyrightText: 2024 Maxtone
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 KM-Catman
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
+# SPDX-FileCopyrightText: 2025 plethorian
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -20,14 +22,13 @@
   id: Rig
   parent: BaseVessel
   name: DIS Rig
-  description: A hybrid cruiser straight from the DIS. Both capable to hold sizeable cargo and process ores in bulk. In sum, a flying refinery.
-  price: 59900
+  description: A heavy-class flying refinery straight from the DIS. Originally used as a marketing tool to encourage opportunistic newcomers to mine cheaply for the company, thanks to it's mining platform and industrial ore processor it took a hold on the public market.
+  price: 68000
   category: Medium
   group: Shipyard
   shuttlePath: /Maps/_Mono/Shuttles/rig.yml
   guidebookPage: null
   class:
-  - Cargo
   - Salvage
   engine:
   - Uranium

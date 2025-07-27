@@ -1,5 +1,9 @@
 # SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 UltimateJester
+# SPDX-FileCopyrightText: 2025 UnicornOnLSD
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 sleepyyapril
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -8,13 +12,41 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformTSFMC
-  name: TSFMC uniform
-  description: A black and blue urban camo uniform. Its uncomfortable and cheap, and it probably doesn't blend in with anything other than a ship interior.
+  name: TSFMC type-45U combat uniform
+  description: A combat uniform in TSF Type-45U urban camouflage. Its outfitted with a blue TSF flag armband.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmc.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmc.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformTSFMCDesert
+  name: TSFMC type-47D combat uniform
+  description: A combat uniform in TSF Type-47D urban camouflage. Its outfitted with a blue TSF flag armband.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmc_digital.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmc_digital.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformTSFMCEngi
+  name: TSFMC engineer uniform
+  description: A black and blue urban camo uniform. Its uncomfortable and cheap, and it probably doesn't blend in with anything other than a ship interior. This one has high-vis markings for engineers.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmcengi.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmcengi.rsi
   - type: SuitSensor
     randomMode: false
     mode: SensorVitals
@@ -106,14 +138,415 @@
 # Trauma Armed Forces
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitTAF
-  name: trauma armed forces jumpsuit
-  description: Standard fatigues of the Trauma Armed Forces.
+  id: ClothingUniformJumpsuitATU
+  name: armed trauma unit jumpsuit
+  description: Standard fatigues of the Armed Trauma Unit.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Uniforms/Jumpsuit/trauma.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Uniforms/Jumpsuit/trauma.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+# Drake Industries
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformDrakeIndustriesHauler
+  name: hauler jumpsuit
+  description: Durable overalls with zippers here and there. It bears the colors of Drake Industries.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/di-hauler.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/di-hauler.rsi
+  - type: SuitSensor
+    randomMode: true
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformDrakeIndustriesTrucker
+  name: trucker jumpsuit
+  description: This one has pocket for your smokes. Oh wait, no, it's a false pocket. Well, at least it's fashionable. It bears the colors of Drake Industries.
+  suffix: Military
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    layers:
+    - state: icon-base-bottom
+      color: "#496ea0"
+    - state: icon-base-top-jumpsuit
+      color: "#496ea0"
+    - state: icon-belt
+      color: "#cd6b6b"
+    - state: icon-belt-buckle
+    - state: icon-decor-shoulder-patch
+      color: "#cd6b6b"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base-bottom
+        color: "#496ea0"
+      - state: inhand-left-base-top-jumpsuit
+        color: "#496ea0"
+      - state: inhand-left-belt
+        color: "#cd6b6b"
+      - state: inhand-left-belt-buckle
+      - state: inhand-left-decor-shoulder-patch
+        color: "#cd6b6b"
+      right:
+      - state: inhand-right-base-bottom
+        color: "#496ea0"
+      - state: inhand-right-base-top-jumpsuit
+        color: "#496ea0"
+      - state: inhand-right-belt
+        color: "#cd6b6b"
+      - state: inhand-right-belt-buckle
+      - state: inhand-right-decor-shoulder-patch
+        color: "#cd6b6b"
+  - type: Clothing
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-base-bottom
+        color: "#496ea0"
+      - state: equipped-base-top-jumpsuit
+        color: "#496ea0"
+      - state: equipped-belt
+        color: "#cd6b6b"
+      - state: equipped-belt-buckle
+      - state: equipped-decor-shoulder-patch
+        color: "#cd6b6b"
+  - type: SuitSensor
+    randomMode: true
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformDrakeIndustriesWatchdog
+  name: watchdog jumpsuit
+  description: A sleek tracksuit designed to have decent camouflage in dark spaces. It bears the colors of Drake Industries.
+  suffix: Military
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    layers:
+    - state: icon-base-bottom
+      color: "#424242"
+    - state: icon-base-top-jumpsuit
+      color: "#424242"
+    - state: icon-decor-department
+      color: "#cd6b6b"
+    - state: icon-decor-shoulder-patch
+      color: "#cd6b6b"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base-bottom
+        color: "#424242"
+      - state: inhand-left-base-top-jumpsuit
+        color: "#424242"
+      - state: inhand-left-decor-department
+        color: "#cd6b6b"
+      - state: inhand-left-decor-shoulder-patch
+        color: "#cd6b6b"
+      right:
+      - state: inhand-right-base-bottom
+        color: "#424242"
+      - state: inhand-right-base-top-jumpsuit
+        color: "#424242"
+      - state: inhand-right-decor-department
+        color: "#cd6b6b"
+      - state: inhand-right-decor-shoulder-patch
+        color: "#cd6b6b"
+  - type: Clothing
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-base-bottom
+        color: "#424242"
+      - state: equipped-base-top-jumpsuit
+        color: "#424242"
+      - state: equipped-decor-department
+        color: "#cd6b6b"
+      - state: equipped-decor-shoulder-patch
+        color: "#cd6b6b"
+
+#PMC camo suits
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitCCEBasic
+  name: CCE combat uniform (basic)
+  description: Woodland CCE camouflaged combat suit. Camo in space... This one has been lightly used and retain its original camo.
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/CCE/CCE_base.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/CCE/CCE_base.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitCCEWorn
+  name: CCE combat uniform (worn)
+  description: Woodland CCE camouflaged combat suit. Camo in space... This one has been used quite a lot and has darkenned over time.
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/CCE/CCE_worn.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/CCE/CCE_worn.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitCCEBleached
+  name: CCE combat uniform (bleached)
+  description: Woodland CCE camouflaged combat suit. Camo in space... This one has been bleached for some reasons.
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/CCE/CCE_bleached.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/CCE/CCE_bleached.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitCCEDesert
+  name: CCE combat uniform (desert)
+  description: Desert CCE camouflaged combat suit. Camo in space... This one has been lightly used and retain its original camo.
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/CCE/CCE_desert.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/CCE/CCE_desert.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitGrassland
+  name: Grassland combat uniform
+  description: Grassland camouflaged combat suit. Camo in space... This one has been lightly used and retain its original camo.
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/grassland.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/grassland.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitMudland
+  name: Mudland combat uniform
+  description: Mudland camouflaged combat suit. Camo in space... This one has been lightly used and retain its original camo.
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/mudland.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/mudland.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitMisko
+  name: Misko combat uniform
+  description: Misko camouflaged combat suit. Camo in space... This one has been lightly used and retain its original camo.
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/misko.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/misko.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitLampartFlag
+  name: Lampart combat uniform
+  description: Lampart camouflaged combat suit with some odd flag stitched to it. Camo in space... This one has been lightly used and retain its original camo.
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/lampart_flag.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/lampart_flag.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitLampart
+  name: Lampart combat uniform
+  description: Lampart camouflaged combat suit. Camo in space... This one has been lightly used and retain its original camo.
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/lampart.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/lampart.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitSummerFloraFlag
+  name: Summer flora combat uniform
+  description: Summer flora camouflaged combat suit with some odd flag stitched to it. Camo in space... This one has been lightly used and retain its original camo.
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/summer_flora_flag.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/summer_flora_flag.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitSummerFlora
+  name: Summer flora combat uniform
+  description: Summer flora camouflaged combat suit. Camo in space... This one has been lightly used and retain its original camo.
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/summer_flora.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/summer_flora.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitUrbanWhite
+  name: white urban combat uniform
+  description: Misko camouflaged combat suit. Camo in space... This one has been lightly used and retain its original camo.
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/white_urban.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/white_urban.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitDigitalBlack
+  name: black digital combat uniform
+  description: Digital camouflaged combat suit. Camo in space...
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/Digital/digital_any.rsi
+    color: "#2F2F2F"
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/Digital/digital_any.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        color: "#2F2F2F"
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitDigitalBlue
+  name: blue digital combat uniform
+  description: Digital camouflaged combat suit. Camo in space...
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/Digital/digital_blue.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/Digital/digital_blue.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitDigitalRed
+  name: red digital combat uniform
+  description: Digital camouflaged combat suit. Camo in space...
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/Digital/digital_red.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/Digital/digital_red.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCombatSuitDigitalGreenTan
+  name: green and tan digital combat uniform
+  description: Digital camouflaged combat suit. Camo in space...
+  components:
+  - type: StaticPrice
+    price: 700
+    vendPrice: 1150
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/Digital/digital_green_and_tan.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/combat-suits/Digital/digital_green_and_tan.rsi
   - type: SuitSensor
     randomMode: false
     mode: SensorVitals

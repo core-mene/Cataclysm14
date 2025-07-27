@@ -1,4 +1,10 @@
-﻿using Content.Shared.CartridgeLoader.Cartridges;
+// SPDX-FileCopyrightText: 2023 Chief-Engineer
+// SPDX-FileCopyrightText: 2025 J
+// SPDX-FileCopyrightText: 2025 deltanedas
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Content.Shared.CartridgeLoader.Cartridges;
 ﻿using Content.Shared.Paper;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
@@ -26,7 +32,7 @@ public sealed partial class LogProbeCartridgeComponent : Component
     /// The sound to make when we scan something with access
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public SoundSpecifier SoundScan = new SoundPathSpecifier("/Audio/Machines/scan_finish.ogg");
+    public SoundSpecifier SoundScan = new SoundPathSpecifier("/Audio/Machines/scan_finish.ogg", AudioParams.Default.WithVariation(0.25f));
 
     /// <summary>
     /// Paper to spawn when printing logs.

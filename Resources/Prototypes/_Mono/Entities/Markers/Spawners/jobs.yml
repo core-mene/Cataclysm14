@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: SpawnPointUSSPRifleman
   parent: SpawnPointJobBase
@@ -65,3 +70,15 @@
     layers:
       - state: green
       - state: medic
+
+- type: entity
+  id: SpawnPointTsfEngi
+  parent: SpawnPointJobBase
+  name: TSF Engineer
+  components:
+  - type: SpawnPoint
+    job_id: TsfEngineer
+  - type: Sprite
+    sprite: _NF/Markers/jobs.rsi
+    layers:
+    - state: green

@@ -1,5 +1,11 @@
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared;
 using Content.Shared.Light.Components;
+using Content.Shared.Light.EntitySystems;
 using Robust.Shared.Random;
 
 namespace Content.Server.Light.EntitySystems;
@@ -15,8 +21,7 @@ public sealed class LightCycleSystem : SharedLightCycleSystem
 
         if (ent.Comp.InitialOffset)
         {
-            ent.Comp.Offset = _random.Next(ent.Comp.Duration);
-            Dirty(ent);
+            SetOffset(ent, _random.Next(ent.Comp.Duration));
         }
     }
 }

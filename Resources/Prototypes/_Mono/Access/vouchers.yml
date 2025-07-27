@@ -1,0 +1,49 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: accessGroup
+  id: AllVouchersAccess
+  tags:
+  - USSPGadyuka
+  - USSPTunguska
+  - USSPGruznyk
+  - USSPDrakon
+  - USSPNatisk
+  - USSPSekunda
+  - VoucherProwler
+  - VoucherFlyssa
+
+- type: accessLevel
+  id: USSPGadyuka
+  name: id-card-access-level-voucher
+
+- type: accessLevel
+  id: USSPTunguska
+  name: id-card-access-level-voucher
+
+- type: accessLevel
+  id: USSPGruznyk
+  name: id-card-access-level-voucher
+
+- type: accessLevel
+  id: USSPDrakon
+  name: id-card-access-level-voucher
+
+- type: accessLevel
+  id: USSPNatisk
+  name: id-card-access-level-voucher
+
+- type: accessLevel
+  id: USSPSekunda
+  name: id-card-access-level-voucher
+
+- type: accessLevel
+  id: VoucherProwler
+  name: id-card-access-level-voucher
+
+- type: accessLevel
+  id: VoucherFlyssa
+  name: id-card-access-level-voucher

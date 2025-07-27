@@ -1,96 +1,49 @@
-# the GUNS
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
 
-#Rifles
+- type: loadoutGroup
+  id: MercenaryFirearm
+  name: loadout-group-weapon
+  minLimit: 0
+  loadouts:
+  - MercenaryKammererLoadout
+  - MercenaryEnforcerLoadout
+  - MercenaryLecterLoadout
+  - MercenaryDrozdLoadout
+  - MercenaryWt550Loadout
+  - MercenaryC20rLoadout
+  - MercenaryDisablerSMGLoadout
+  - MercenaryLaserCarbineLoadout
+  - MercenaryEnergyGunLoadout
+  - MercenaryLaserCannonLoadout
 
-- type: loadout
-  id: MercenaryDrozdLoadout
-  price: 25000
-  storage:
-    back:
-    - WeaponSubMachineGunDrozdPMC
+- type: loadoutGroup
+  id: MercenaryPistol
+  name: loadout-group-pistol
+  minLimit: 1
+  loadouts:
+  - ContractorMk32Loadout
+  - MercenaryMk58Loadout
+  - MercenaryViperLoadout
+  - MercenarySawedOffLoadout
+  fallbacks:
+  - ContractorMk32Loadout
 
-- type: loadout
-  id: MercenaryLecterLoadout
-  price: 25000
-  storage:
-    back:
-    - WeaponRifleLecterPMC
-
-- type: loadout
-  id: MercenaryKammererLoadout
-  price: 15000
-  storage:
-    back:
-    - WeaponShotgunKammererPMC
-
-- type: loadout
-  id: MercenaryEnforcerLoadout
-  price: 27000
-  storage:
-    back:
-    - WeaponShotgunEnforcerPMC
-
-- type: loadout
-  id: MercenaryC20rLoadout
-  price: 44000
-  storage:
-    back:
-    - WeaponSubMachineGunC20rPMC
-
-- type: loadout
-  id: MercenaryWt550Loadout
-  price: 32000
-  storage:
-    back:
-    - WeaponSubMachineGunWt550PMC
-
-- type: loadout
-  id: MercenaryEnergyGunLoadout
-  price: 18000
-  storage:
-    back:
-    - WeaponEnergyGunPMC
-
-- type: loadout
-  id: MercenaryLaserCarbineLoadout
-  price: 13000
-  storage:
-    back:
-    - WeaponLaserCarbinePMC
-
-- type: loadout
-  id: MercenaryLaserCannonLoadout
-  price: 21000
-  storage:
-    back:
-    - WeaponLaserCannonPMC
-
-- type: loadout
-  id: MercenaryDisablerSMGLoadout
-  price: 10000
-  storage:
-    back:
-    - WeaponDisablerSMGPMC
-
-#Pistols
-
-- type: loadout
-  id: MercenaryViperLoadout
-  price: 5000
-  storage:
-    back:
-    - WeaponPistolViperPMC
-
-- type: loadout
-  id: MercenaryMk32Loadout
-  price: 2500
-  storage:
-    back:
-    - WeaponPistolMk32
-
-- type: loadout
-  id: MercenarySawedOffLoadout
-  price: 12000
-  storage:
-    back:
-    - WeaponShotgunSawn
+- type: loadoutGroup
+  id: MercenaryMag
+  name: loadout-group-magazine
+  minLimit: 1
+  loadouts:
+  - Mercenary9x19mmPistolAmmoLoadout #MK32 Universal / Viper Ammo
+  - MercenaryAcpPistolAmmoLoadout #MK58
+  - MercenaryBuckshotAmmoLoadout #Buckshot
+  - MercenarySlugAmmoLoadout #Slugs
+  - Mercenary5.56x45mmAmmoLoadout #Lecter
+  - MercenaryAcpSubAmmoLoadout #Drozd
+  - Mercenary4.6x30mmTopAmmoLoadout #WT550
+  - Mercenary9x19SmgAmmoLoadout #C20r
+  - MercenaryRechargerLoadout #Energy
+  fallbacks:
+  - Mercenary9x19mmPistolAmmoLoadout #MK32 Universal / Viper Ammo

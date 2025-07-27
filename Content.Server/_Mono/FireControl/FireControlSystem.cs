@@ -1,8 +1,10 @@
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 RikuTheKiller
 // SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 ark1368
 // SPDX-FileCopyrightText: 2025 sleepyyapril
+// SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -19,6 +21,7 @@ using Robust.Shared.Physics.Systems;
 using System.Linq;
 using Content.Shared.Physics;
 using System.Numerics;
+using Content.Server._Mono.SpaceArtillery;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Shuttles.Components;
 using Robust.Shared.Timing;
@@ -26,6 +29,7 @@ using Content.Shared.Interaction;
 using Content.Shared._Mono.ShipGuns;
 using Content.Shared.Examine;
 using Content.Shared.UserInterface;
+using Content.Server.Salvage.Expeditions;
 
 namespace Content.Server._Mono.FireControl;
 
@@ -307,9 +311,11 @@ public sealed partial class FireControlSystem : EntitySystem
 
         return classComponent.Class switch
         {
-            ShipGunClass.Light => 1,
-            ShipGunClass.Medium => 2,
-            ShipGunClass.Heavy => 4,
+            ShipGunClass.Superlight => 1,
+            ShipGunClass.Light => 3,
+            ShipGunClass.Medium => 6,
+            ShipGunClass.Heavy => 9,
+            ShipGunClass.Superheavy => 12,
             _ => 0,
         };
     }
@@ -384,10 +390,18 @@ public sealed partial class FireControlSystem : EntitySystem
         // Check if the weapon's grid is in FTL
         var grid = component.ConnectedGrid;
         if (grid != null && TryComp<FTLComponent>((EntityUid)grid, out var ftlComp))
-        {
-            // Cannot fire weapons during FTL travel
             return;
-        }
+
+        // Check if the weapon's grid is pacified
+        if (grid != null && TryComp<SpaceArtilleryDisabledGridComponent>((EntityUid)grid, out var pacifiedComp))
+            return;
+
+        // Check if the weapon is an expedition
+        if (grid != null &&
+            TryComp<TransformComponent>((EntityUid)grid, out var gridXform) &&
+            gridXform.MapUid != null &&
+            HasComp<SalvageExpeditionComponent>(gridXform.MapUid.Value))
+            return;
 
         var targetCoords = GetCoordinates(coordinates);
 
@@ -408,6 +422,7 @@ public sealed partial class FireControlSystem : EntitySystem
                 if (destinationMapCoords.MapId == currentMapCoords.MapId && currentMapCoords.MapId != MapId.Nullspace)
                 {
                     var diff = destinationMapCoords.Position - currentMapCoords.Position;
+                    if (TryComp<FireControlRotateComponent>(localWeapon, out var rotateEnabled))
                     if (diff.LengthSquared() > 0.01f)
                     {
                         // Only rotate the gun if it has line of sight to the target

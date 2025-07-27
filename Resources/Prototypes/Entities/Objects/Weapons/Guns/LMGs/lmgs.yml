@@ -28,7 +28,9 @@
 # SPDX-FileCopyrightText: 2024 WarMechanic
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2024 nikthechampiongr
+# SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 UltimateJester
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -60,8 +62,8 @@
   - type: Gun
     minAngle: 24
     maxAngle: 45
-    angleIncrease: 4
-    angleDecay: 16
+    angleIncrease: 3
+    angleDecay: 20
     fireRate: 8
     projectileSpeed: 55 # Mono
     selectedMode: FullAuto
@@ -105,15 +107,15 @@
     taxAccounts:
       nfsd: 0.2
   - type: SpeedModifiedOnWield # Mono
-    walkModifier: 0.75
-    sprintModifier: 0.45
+    walkModifier: 0.9
+    sprintModifier: 0.75
   - type: GunRequiresWield # Mono
 
 - type: entity
-  name: L6 SAW (7.62x39mm)
+  name: PA L6B SAW (7.62x39mm)
   id: WeaponLightMachineGunL6
   parent: [BaseWeaponLightMachineGun, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
-  description: A rather traditionally made LMG with a pleasantly lacquered wooden pistol grip. Uses 7.62x39mm ammo. An illegal firearm often used by Syndicate agents.
+  description: A rather traditionally made LMG with a pleasantly lacquered wooden pistol grip. Uses 7.62x39mm ammo. No longer in production, it serves as a remnant of humanity's greed and ambition during The Fracture.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/LMGs/l6.rsi
@@ -129,10 +131,10 @@
   - type: Appearance
 
 - type: entity
-  name: L6C ROW (7.62x39mm)
+  name: PA L6C ROW (7.62x39mm)
   id: WeaponLightMachineGunL6C
   parent: [BaseItem, BaseC3SyndicateContraband] # Frontier: added BaseC3SyndicateContraband
-  description: A L6 SAW for use by cyborgs. Creates 7.62x39mm ammo on the fly from an internal ammo fabricator, which slowly self-charges. An illegal firearm often used by Syndicate agents.
+  description: A L6 SAW for use by cyborgs. Creates 7.62x39mm ammo on the fly from an internal ammo fabricator, which slowly self-charges.
   components:
     - type: Gun
       minAngle: 4

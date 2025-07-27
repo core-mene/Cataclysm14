@@ -1,3 +1,16 @@
+// SPDX-FileCopyrightText: 2021 DrSmugleaf
+// SPDX-FileCopyrightText: 2021 Javier Guardia Fernández
+// SPDX-FileCopyrightText: 2021 Paul Ritter
+// SPDX-FileCopyrightText: 2021 Swept
+// SPDX-FileCopyrightText: 2021 metalgearsloth
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 #nullable enable
 using System.Collections.Generic;
 using System.Linq;
@@ -85,7 +98,7 @@ namespace Content.IntegrationTests.Tests
             var entMan = server.ResolveDependency<IEntityManager>();
             var protoMan = server.ResolveDependency<IPrototypeManager>();
             var compFact = server.ResolveDependency<IComponentFactory>();
-            var id = compFact.GetComponentName(typeof(StorageFillComponent));
+            var id = compFact.GetComponentName<StorageFillComponent>();
 
             var itemSys = entMan.System<SharedItemSystem>();
 
@@ -173,7 +186,7 @@ namespace Content.IntegrationTests.Tests
             var entMan = server.ResolveDependency<IEntityManager>();
             var protoMan = server.ResolveDependency<IPrototypeManager>();
             var compFact = server.ResolveDependency<IComponentFactory>();
-            var id = compFact.GetComponentName(typeof(StorageFillComponent));
+            var id = compFact.GetComponentName<StorageFillComponent>();
 
             var itemSys = entMan.System<SharedItemSystem>();
 

@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Shuttles.Components;
 using Robust.Shared.Map;
 
@@ -24,5 +29,9 @@ public sealed class DockingConfig
     public Box2 Area;
 
     public EntityCoordinates Coordinates;
+
+    /// <summary>
+    /// Local angle of the docking grid relative to the target grid.
+    /// </summary>
     public Angle Angle;
 }

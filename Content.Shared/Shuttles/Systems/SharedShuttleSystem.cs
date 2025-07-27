@@ -1,3 +1,18 @@
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 Jake Huxell
+// SPDX-FileCopyrightText: 2024 Julian Giebel
+// SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2024 SlamBamActionman
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 RikuTheKiller
+// SPDX-FileCopyrightText: 2025 gus
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared._Mono.Ships;
 using Content.Shared.Containers.ItemSlots;
@@ -22,7 +37,7 @@ public abstract partial class SharedShuttleSystem : EntitySystem
     [Dependency] private readonly SharedPowerReceiverSystem _powerReceiverSystem = default!;
 
     public const float FTLRange = 0f;
-    public const float FTLBufferRange = 8f;
+    public const float FTLBufferRange = 20f;
 
     private EntityQuery<MapGridComponent> _gridQuery;
     private EntityQuery<PhysicsComponent> _physicsQuery;

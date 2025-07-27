@@ -1,3 +1,77 @@
+# SPDX-FileCopyrightText: 2020 AJCM-git
+# SPDX-FileCopyrightText: 2020 DrSmugleaf
+# SPDX-FileCopyrightText: 2020 Exp
+# SPDX-FileCopyrightText: 2020 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2020 Ygg01
+# SPDX-FileCopyrightText: 2020 py01
+# SPDX-FileCopyrightText: 2021 Galactic Chimp
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Tarlan2
+# SPDX-FileCopyrightText: 2022 Alex Evgrashin
+# SPDX-FileCopyrightText: 2022 FunkySphere
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 Moony
+# SPDX-FileCopyrightText: 2022 Paul Ritter
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 Ripmorld
+# SPDX-FileCopyrightText: 2022 ShadowCommander
+# SPDX-FileCopyrightText: 2022 T-Stalker
+# SPDX-FileCopyrightText: 2022 TaralGit
+# SPDX-FileCopyrightText: 2022 Visne
+# SPDX-FileCopyrightText: 2022 ZeroDayDaemon
+# SPDX-FileCopyrightText: 2022 and_a
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2023 AndresE55
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2023 Chief-Engineer
+# SPDX-FileCopyrightText: 2023 CrigCrag
+# SPDX-FileCopyrightText: 2023 Dvir
+# SPDX-FileCopyrightText: 2023 Emisse
+# SPDX-FileCopyrightText: 2023 IData-RedactedI
+# SPDX-FileCopyrightText: 2023 Stanislav4ix
+# SPDX-FileCopyrightText: 2023 Whisper
+# SPDX-FileCopyrightText: 2023 brainfood1183
+# SPDX-FileCopyrightText: 2023 chromiumboy
+# SPDX-FileCopyrightText: 2023 crazybrain23
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2024 Alzore
+# SPDX-FileCopyrightText: 2024 ArtisticRoomba
+# SPDX-FileCopyrightText: 2024 Boaz1111
+# SPDX-FileCopyrightText: 2024 Dae
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Errant
+# SPDX-FileCopyrightText: 2024 IProduceWidgets
+# SPDX-FileCopyrightText: 2024 Ian
+# SPDX-FileCopyrightText: 2024 K-Dynamic
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 Kesiath
+# SPDX-FileCopyrightText: 2024 Nairod
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 Plykiya
+# SPDX-FileCopyrightText: 2024 Psychpsyo
+# SPDX-FileCopyrightText: 2024 RiceMar1244
+# SPDX-FileCopyrightText: 2024 SonicHDC
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 Zadeon
+# SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2024 degradka
+# SPDX-FileCopyrightText: 2024 vanx
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 BramvanZijp
+# SPDX-FileCopyrightText: 2025 Eden077
+# SPDX-FileCopyrightText: 2025 GaussiArson
+# SPDX-FileCopyrightText: 2025 Ignaz "Ian" Kraft
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 UltimateJester
+# SPDX-FileCopyrightText: 2025 keronshb
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: BaseWeaponBattery
   parent: BaseItem
@@ -258,12 +332,14 @@
   - type: HitscanBatteryAmmoProvider
     proto: RedLaser
     fireCost: 62.5
+  - type: PirateBountyItem # Mono
+    id: StandardFactionLongarm
 
 - type: entity
-  name: pulse pistol
+  name: LWC pulse pistol
   parent: [BaseWeaponBatterySmall, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
   id: WeaponPulsePistol
-  description: A state of the art energy pistol favoured as a sidearm by the NT operatives. On the handle is a label that says 'for authorized use only.'
+  description: A state of the art energy pistol favoured as a sidearm by the TSFN and TSFMC. On the handle is a label that says 'for authorized use only.'
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/pulse_pistol.rsi
@@ -293,13 +369,13 @@
     maxCharge: 2000
     startingCharge: 2000
   - type: PirateBountyItem # Mono
-    id: StandardTSFLongarm
+    id: ExperimentalFactionWeapon
 
 - type: entity
-  name: pulse carbine
+  name: LWC pulse carbine
   parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
   id: WeaponPulseCarbine
-  description: A high tech energy carbine favoured by the NT-ERT operatives. On the handle is a label that says 'for authorized use only.'
+  description: A high tech energy carbine favoured by The Agency and the ever-elusive Winter Solstice. On the handle is a label that says 'for authorized use only.'
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi
@@ -331,10 +407,10 @@
     maxCharge: 5000
     startingCharge: 5000
   - type: PirateBountyItem # Mono
-    id: ExperimentalTSFWeapon
+    id: ExperimentalFactionWeapon
 
 - type: entity
-  name: pulse rifle
+  name: NT pulse rifle
   parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
   id: WeaponPulseRifle
   description: A weapon that is almost as infamous as its users. On the handle is a label that says 'for authorized use only.'
@@ -365,7 +441,7 @@
     maxCharge: 40000
     startingCharge: 40000
   - type: PirateBountyItem # Mono
-    id: ExperimentalTSFWeapon
+    id: ExperimentalFactionWeapon
 
 - type: entity
   name: laser cannon
@@ -648,7 +724,7 @@
     weight: 0.0002 # 5,000 times less likely than 1 regular animal
     # not putting a BlockMovement component here cause that's funny.
   - type: PirateBountyItem # Mono
-    id: ExperimentalTSFWeapon
+    id: ExperimentalFactionWeapon
 
 - type: entity
   name: advanced laser pistol
@@ -778,7 +854,7 @@
     price: 750
 
 - type: entity
-  name: energy shotgun
+  name: NT energy shotgun
   parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable] # Frontier: BaseGrandTheftContraband<BaseC2ContrabandUnredeemable
   id: WeaponEnergyShotgun
   description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.

@@ -1,3 +1,14 @@
+// SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 eoineoineoin
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 LukeZurg22
+// SPDX-FileCopyrightText: 2025 RikuTheKiller
+// SPDX-FileCopyrightText: 2025 ark1368
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Buffers;
 using System.Numerics;
 using Content.Client.Shuttles.Systems;
@@ -683,9 +694,10 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
     /// </summary>
     protected void DrawData(DrawingHandleScreen handle, string text, Color color)
     {
+        var margin = 5f;
         var font = _font;
         var dimensions = handle.GetDimensions(font, text, 1f);
-        var position = new Vector2(15f, Height - dimensions.Y - 15f);
+        var position = new Vector2(margin, PixelHeight - dimensions.Y - margin);
         handle.DrawString(font, position, text, color);
     }
 }

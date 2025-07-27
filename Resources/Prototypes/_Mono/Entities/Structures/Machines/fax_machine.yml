@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Outpost
+- type: entity
+  parent: [BaseStructureDisableToolUse, FaxMachineBase]
+  id: FaxMachineUSSP
+  suffix: POI, USSP
+  components:
+  - type: FaxMachine
+    name: "USSP Station Baikal"
+
+- type: entity
+  parent: [BaseStructureDisableToolUse, FaxMachineBase]
+  id: FaxMachineUSSPCommisar
+  suffix: POI, USSP Commisar
+  components:
+  - type: FaxMachine
+    name: "USSP Station Baikal Commisar"

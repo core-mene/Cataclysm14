@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 gus
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: MachineFTLDrive
   parent: BaseMachinePowered
@@ -105,9 +113,9 @@
       color: "#7E16F7"
   - type: FTLDrive
     range: 5000
-    cooldown: 5
-    hyperSpaceTime: 10
-    startupTime: 2.25
+    cooldown: 7.5
+    hyperSpaceTime: 15
+    startupTime: 4.2
   - type: ApcPowerReceiver
     powerLoad: 4000
   - type: PointLight

@@ -1,3 +1,16 @@
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 Visne
+// SPDX-FileCopyrightText: 2022 Acruid
+// SPDX-FileCopyrightText: 2022 Leon Friedrich
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2024 Jezithyr
+// SPDX-FileCopyrightText: 2024 MilenVolf
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using Content.Shared.CCVar;
 using Content.Shared.Gravity;
@@ -47,13 +60,14 @@ namespace Content.Shared.Friction
             _gridQuery = GetEntityQuery<MapGridComponent>();
         }
 
-        public override void UpdateBeforeMapSolve(bool prediction, PhysicsMapComponent mapComponent, float frameTime)
+        public override void UpdateBeforeSolve(bool prediction, float frameTime)
         {
-            base.UpdateBeforeMapSolve(prediction, mapComponent, frameTime);
+            base.UpdateBeforeSolve(prediction, frameTime);
 
-            foreach (var body in mapComponent.AwakeBodies)
+            foreach (var ent in PhysicsSystem.AwakeBodies)
             {
-                var uid = body.Owner;
+                var uid = ent.Owner;
+                var body = ent.Comp1;
 
                 // Only apply friction when it's not a mob (or the mob doesn't have control)
                 if (prediction && !body.Predict ||
@@ -66,13 +80,10 @@ namespace Content.Shared.Friction
                 if (body.LinearVelocity.Equals(Vector2.Zero) && body.AngularVelocity.Equals(0f))
                     continue;
 
-                if (!_xformQuery.TryGetComponent(uid, out var xform))
-                {
-                    Log.Error($"Unable to get transform for {ToPrettyString(uid)} in tilefrictioncontroller");
-                    continue;
-                }
+                var xform = ent.Comp2;
 
                 var surfaceFriction = GetTileFriction(uid, body, xform);
+
                 var bodyModifier = 1f;
 
                 if (_frictionQuery.TryGetComponent(uid, out var frictionComp))

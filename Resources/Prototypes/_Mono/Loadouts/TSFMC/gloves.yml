@@ -1,9 +1,19 @@
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadout
   id: TsfmcCombatGloves
   equipment:
-    gloves: ClothingHandsGlovesCombat
+    gloves: ClothingHandsGlovesTacticalCombatBlack
 
 - type: loadout
   id: TsfmcNitrileGloves
   equipment:
     gloves: ClothingHandsGlovesNitrile
+
+- type: loadout
+  id: TsfmcLatexGloves
+  equipment:
+    gloves: ClothingHandsGlovesLatex

@@ -1,3 +1,51 @@
+# SPDX-FileCopyrightText: 2020 AJCM-git
+# SPDX-FileCopyrightText: 2020 DrSmugleaf
+# SPDX-FileCopyrightText: 2020 Paul Ritter
+# SPDX-FileCopyrightText: 2020 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2020 Swept
+# SPDX-FileCopyrightText: 2020 py01
+# SPDX-FileCopyrightText: 2021 Galactic Chimp
+# SPDX-FileCopyrightText: 2022 Fishfish458
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 ScalyChimp
+# SPDX-FileCopyrightText: 2022 Scribbles0
+# SPDX-FileCopyrightText: 2022 Veritius
+# SPDX-FileCopyrightText: 2022 Visne
+# SPDX-FileCopyrightText: 2022 fishfish458 <fishfish458>
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2022 sewerpig
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2023 Dawid Bla
+# SPDX-FileCopyrightText: 2023 IProduceWidgets
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 TaralGit
+# SPDX-FileCopyrightText: 2023 and_a
+# SPDX-FileCopyrightText: 2023 brainfood1183
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2024 Boaz1111
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Jonathan Argo
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 Kesiath
+# SPDX-FileCopyrightText: 2024 RiceMar1244
+# SPDX-FileCopyrightText: 2024 VividPups
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2024 nikthechampiongr
+# SPDX-FileCopyrightText: 2024 vanx
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 SlamBamActionman
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 halycon
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   name: BaseWeaponSniper
   parent: BaseItem
@@ -43,7 +91,7 @@
       nfsd: 0.2
 
 - type: entity
-  name: Kardashev-Mosin (7.62x54mmR)
+  name: NCI Kardashev-Mosin (7.62x54mmR)
   parent: [BaseWeaponSniper, BaseGunWieldable, BaseGunMelee, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added BaseGunMelee
   id: WeaponSniperMosin
   description: A weapon for hunting, or endless trench warfare. Uses 7.62x54mmR ammo. Equipped with bayonet. # Frontier: bayonet
@@ -62,9 +110,11 @@
       - Cartridge7.62x54mmRFMJ
     capacity: 5
     proto: Cartridge7.62x54mmRFMJ
+  - type: PirateBountyItem # Mono
+    id: StandardFactionLongarm
 
 - type: entity
-  name: Hristov (14.5x114mm)
+  name: SKR-WS M96 Hristov (14.5x114mm)
   parent: [BaseWeaponSniper, BaseGunWieldable, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponSniperHristov
   description: A portable anti-material rifle. Fires high velocity 14.5mm shells. Uses 14.5x114mm ammo.
@@ -75,13 +125,14 @@
     sprite: Objects/Weapons/Guns/Snipers/hristov.rsi
   - type: GunRequiresWield
   - type: Gun
-    fireRate: 0.4
+    fireRate: 0.75
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+      path: /Audio/_Harmony/Weapons/Guns/Gunshots/hristov_fire_alt.ogg # harmony - changed audio path
   - type: BallisticAmmoProvider
+    autoCycle: false
     whitelist:
       tags:
       - Cartridge14.5x114mm
@@ -92,8 +143,8 @@
     sprintModifier: 0.25
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 3
-    pvsIncrease: 0.3
+    maxOffset: 7 # Mono - Sniper Buff
+    pvsIncrease: 0.7 # Mono - Sniper Buff
   - type: StaticPrice # Mono
     price: 1250
 

@@ -21,6 +21,7 @@ device-frequency-prototype-name-surveillance-camera-service = Service Cameras
 device-frequency-prototype-name-surveillance-camera-medical = Medical Cameras
 device-frequency-prototype-name-surveillance-camera-general = General Cameras
 device-frequency-prototype-name-surveillance-camera-entertainment = Entertainment Cameras
+device-frequency-prototype-name-surveillance-camera-tsf = TSFMC Cameras
 
 # prefixes for randomly generated device addresses
 device-address-prefix-vent = VNT-

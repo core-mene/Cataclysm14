@@ -1,9 +1,18 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: vendingMachineInventory
   id: NFSalvageEquipmentInventory
   startingInventory:
+    NFWeaponHoloflareGun: 4
     WeaponProtoKineticAccelerator: 4
     WeaponCrusher: 6
     WeaponCrusherDagger: 8
+    WeaponGrapplingGun: 10
     Pickaxe: 10
     OreBag: 6
     Floodlight: 10
@@ -14,9 +23,11 @@
 - type: vendingMachineInventory
   id: NFSalvageEquipmentPOIInventory
   startingInventory:
+    NFWeaponHoloflareGun: 4294967295 # Infinite
     WeaponProtoKineticAccelerator: 4294967295 # Infinite
     WeaponCrusher: 4294967295 # Infinite
     WeaponCrusherDagger: 4294967295 # Infinite
+    WeaponGrapplingGun: 4294967295 # Infinite
     Pickaxe: 4294967295 # Infinite
     OreBag: 4294967295 # Infinite
     Floodlight: 4294967295 # Infinite

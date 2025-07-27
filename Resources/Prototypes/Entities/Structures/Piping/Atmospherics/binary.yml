@@ -1,3 +1,39 @@
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2021 ike709
+# SPDX-FileCopyrightText: 2022 Jack Fox
+# SPDX-FileCopyrightText: 2022 Moony
+# SPDX-FileCopyrightText: 2022 TekuNut
+# SPDX-FileCopyrightText: 2022 wrexbe
+# SPDX-FileCopyrightText: 2023 AJCM-git
+# SPDX-FileCopyrightText: 2023 Ilya246
+# SPDX-FileCopyrightText: 2023 Julian Giebel
+# SPDX-FileCopyrightText: 2023 Kevin Zheng
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2023 Tom Leys
+# SPDX-FileCopyrightText: 2023 daerSeebaer
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 Arimah
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 Partmedia
+# SPDX-FileCopyrightText: 2024 ScarKy0
+# SPDX-FileCopyrightText: 2024 august-sun
+# SPDX-FileCopyrightText: 2024 chromiumboy
+# SPDX-FileCopyrightText: 2024 slarticodefast
+# SPDX-FileCopyrightText: 2025 ArtisticRoomba
+# SPDX-FileCopyrightText: 2025 Dinner
+# SPDX-FileCopyrightText: 2025 MrTswe
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 justdie12
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: [RecyclableItemSteelSmall, GasPipeBase] # Frontier: add RecyclableItemSteelSmall
   abstract: true
@@ -31,6 +67,7 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: StationAiWhitelist # Mono
   - type: ExtensionCableReceiver
   - type: LightningTarget
     priority: 1
@@ -39,7 +76,11 @@
   - type: Rotatable
   - type: Transform
     noRot: false
+  - type: SubFloorHide
+    visibleLayers:
+    - enum.SubfloorLayers.FirstLayer
   - type: Sprite
+    drawdepth: FloorObjects #imp
     sprite: Structures/Piping/Atmospherics/pump.rsi
     layers:
     - sprite: Structures/Piping/Atmospherics/pipe.rsi
@@ -87,6 +128,7 @@
   placement:
     mode: SnapgridCenter
   components:
+    - type: StationAiWhitelist # Mono
     - type: ExtensionCableReceiver
     - type: LightningTarget
       priority: 1
@@ -95,7 +137,11 @@
     - type: Rotatable
     - type: Transform
       noRot: false
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
     - type: Sprite
+      drawdepth: FloorObjects #imp
       sprite: Structures/Piping/Atmospherics/pump.rsi
       layers:
         - sprite: Structures/Piping/Atmospherics/pipe.rsi
@@ -149,6 +195,9 @@
   placement:
     mode: SnapgridCenter
   components:
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
     - type: Sprite
       sprite: Structures/Piping/Atmospherics/pump.rsi
       layers:
@@ -184,8 +233,12 @@
     mode: SnapgridCenter
   components:
     # TODO ATMOS: Give unique sprite.
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
     - type: Sprite
       sprite: Structures/Piping/Atmospherics/pump.rsi
+      drawdepth: FloorObjects #imp
       layers:
         - sprite: Structures/Piping/Atmospherics/pipe.rsi
           state: pipeStraight
@@ -237,7 +290,11 @@
     mode: SnapgridCenter
   components:
   - type: StationAiWhitelist
+  - type: SubFloorHide
+    visibleLayers:
+    - enum.SubfloorLayers.FirstLayer
   - type: Sprite
+    drawdepth: FloorObjects #imp
     sprite: Structures/Piping/Atmospherics/pump.rsi
     layers:
     - sprite: Structures/Piping/Atmospherics/pipe.rsi
@@ -300,7 +357,11 @@
   placement:
     mode: SnapgridCenter
   components:
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
     - type: Sprite
+      drawdepth: FloorObjects #imp
       sprite: Structures/Piping/Atmospherics/gascanisterport.rsi
       layers:
         - sprite: Structures/Piping/Atmospherics/pipe.rsi
@@ -334,6 +395,9 @@
   placement:
     mode: SnapgridCenter
   components:
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
     - type: Sprite
       drawdepth: FloorObjects
       sprite: _NF/Structures/Piping/Atmospherics/vent.rsi # Frontier
@@ -501,6 +565,9 @@
   id: HeatExchangerBend
   suffix: Bend
   components:
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
     - type: Sprite
       layers:
       - sprite: Structures/Piping/Atmospherics/pipe.rsi

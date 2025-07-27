@@ -1,3 +1,33 @@
+# SPDX-FileCopyrightText: 2021 AJCM-git
+# SPDX-FileCopyrightText: 2021 Paul Ritter
+# SPDX-FileCopyrightText: 2021 wrexbe
+# SPDX-FileCopyrightText: 2022 20kdc
+# SPDX-FileCopyrightText: 2022 Kara
+# SPDX-FileCopyrightText: 2022 LittleBuilderJane
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 Alexander Evgrashin
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2023 Emisse
+# SPDX-FileCopyrightText: 2023 YumiGumi
+# SPDX-FileCopyrightText: 2023 crystalHex
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Minty Moo
+# SPDX-FileCopyrightText: 2024 TsjipTsjip
+# SPDX-FileCopyrightText: 2024 dustylens
+# SPDX-FileCopyrightText: 2025 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2025 Checkraze
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 ark1368
+# SPDX-FileCopyrightText: 2025 nathan736
+# SPDX-FileCopyrightText: 2025 revoemagcoconut
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 meta:
   format: 7
   category: Grid
@@ -479,7 +509,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 3
     components:
     - type: MetaData
@@ -492,7 +521,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 4
     components:
     - type: MetaData
@@ -505,7 +533,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 5
     components:
     - type: MetaData
@@ -518,7 +545,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 6
     components:
     - type: MetaData
@@ -531,7 +557,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 7
     components:
     - type: MetaData
@@ -544,7 +569,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 8
     components:
     - type: MetaData
@@ -557,7 +581,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 9
     components:
     - type: MetaData
@@ -570,7 +593,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 10
     components:
     - type: MetaData
@@ -583,7 +605,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 11
     components:
     - type: MetaData
@@ -596,7 +617,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 12
     components:
     - type: MetaData
@@ -609,7 +629,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 13
     components:
     - type: MetaData
@@ -622,7 +641,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 497
     components:
     - type: MetaData
@@ -635,7 +653,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AirAlarm
   entities:
   - uid: 14
@@ -3225,8 +3242,6 @@ entities:
     - type: Transform
       pos: -4.5,3.5
       parent: 1
-    - type: CircularShield
-      width: 6.283185307179586 rad
     - type: Fixtures
       fixtures:
         fix1:
@@ -3261,19 +3276,6 @@ entities:
           friction: 0.4
     - type: ApcPowerReceiver
       powerLoad: 0
-- proto: CircularShieldConsole
-  entities:
-  - uid: 498
-    components:
-    - type: Transform
-      pos: 3.5,6.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        496:
-        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
-    - type: ApcPowerReceiver
-      powerLoad: 5
 - proto: ClosetToolFilled
   entities:
   - uid: 499

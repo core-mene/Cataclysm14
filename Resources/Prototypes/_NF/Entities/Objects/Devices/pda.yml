@@ -1,3 +1,20 @@
+# SPDX-FileCopyrightText: 2023 Kesiath
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 blueDev2
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 BramvanZijp
+# SPDX-FileCopyrightText: 2025 GreaseMonk
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 dustylens
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: MusicBasePDA
   abstract: true
@@ -41,8 +58,8 @@
         !type:String
         pda-mercenary
   - type: PdaBorderColor
-    borderColor: "#717059"
-    accentVColor: "#A32D26"
+    borderColor: "#48484b"
+    accentVColor: "#424d2c"
   - type: Icon
     state: pda-mercenary
 
@@ -58,12 +75,11 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-pilot
+        pda-tourist
   - type: PdaBorderColor
-    borderColor: "#717059"
-    accentVColor: "#A32D26"
+    borderColor: "#3b3b3b"
   - type: Icon
-    state: pda-pilot
+    state: pda-tourist
 
 - type: entity
   parent: BaseSecurityPDA
@@ -77,12 +93,12 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-stc
+        pda-cargo-assistant
   - type: PdaBorderColor
-    borderColor: "#F2F2F2"
-    accentVColor: "#FE4900"
+    borderColor: "#bdbdbd"
+    accentVColor: "#8f7145"
   - type: Icon
-    state: pda-stc
+    state: pda-cargo-assistant
 
 - type: entity
   parent: BaseSecurityPDA
@@ -96,11 +112,11 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-security
+        pda-interncadet
   - type: PdaBorderColor
-    borderColor: "#A32D26"
+    borderColor: "#757575"
   - type: Icon
-    state: pda-security
+    state: pda-interncadet
 
 - type: entity
   parent: ERTLeaderPDA
@@ -119,8 +135,8 @@
 - type: entity
   parent: [BaseSecurityPDA, BaseCommandContraband]
   id: SheriffPDA
-  name: colonel PDA
-  description: Whosoever bears this PDA is the law.
+  name: TSFMC colonel PDA
+  description: A standard TSFMC personal computer.
   components:
   - type: Pda
     id: ShriffIDCard
@@ -141,12 +157,11 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-sheriff
+        pda-hos
   - type: PdaBorderColor
-    borderColor: "#FFFDD0"
-    accentHColor: "#896b49"
+    borderColor: "#48484b"
   - type: Icon
-    state: pda-sheriff
+    state: pda-hos
   - type: CartridgeLoader # Extended with the ledger
     preinstalled:
     - CrewManifestCartridge
@@ -160,8 +175,8 @@
 - type: entity
   parent: BaseSecurityPDA
   id: CadetPDA
-  name: cadet PDA
-  description: Whosoever bears this PDA could be the law.
+  name: TSF private PDA
+  description: A standard TSFMC personal computer.
   components:
   - type: Pda
     id: CadetIDCard
@@ -176,18 +191,17 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-cadet
+        pda-interncadet
   - type: PdaBorderColor
-    borderColor: "#FFFDD0"
-    accentHColor: "#896b49"
+    borderColor: "#48484b"
   - type: Icon
-    state: pda-cadet
+    state: pda-interncadet
 
 - type: entity
   parent: BaseSecurityPDA
   id: DeputyPDA
-  name: deputy PDA
-  description: Whosoever bears this PDA is close to being the law.
+  name: TSF corporal PDA
+  description: A standard TSFMC personal computer.
   components:
   - type: Pda
     id: DeputyIDCard
@@ -202,18 +216,17 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-deputy
+        pda-security
   - type: PdaBorderColor
-    borderColor: "#FFFDD0"
-    accentHColor: "#896b49"
+    borderColor: "#48484b"
   - type: Icon
-    state: pda-deputy
+    state: pda-security
 
 - type: entity
   parent: BaseSecurityPDA
   id: BrigmedicNFPDA
-  name: brigmedic PDA
-  description: Whosoever bears this PDA heals the law.
+  name: TSF corpsman PDA
+  description: A standard TSFMC personal computer.
   components:
   - type: Pda
     id: BrigmedicNFIDCard
@@ -228,18 +241,17 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-brigmed
+        pda-corpsman
   - type: PdaBorderColor
-    borderColor: "#FFFDD0"
-    accentHColor: "#896b49"
+    borderColor: "#48484b"
   - type: Icon
-    state: pda-brigmed
+    state: pda-corpsman
 
 - type: entity
   parent: BaseSecurityPDA
   id: SergeantPDA
-  name: sergeant PDA
-  description: Whosoever bears this PDA puts the law on their back.
+  name: TSF lieutenant PDA
+  description: A standard TSFMC personal computer.
   components:
   - type: Pda
     id: SergeantIDCard
@@ -254,18 +266,17 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-sergeant
+        pda-seniorofficer
   - type: PdaBorderColor
-    borderColor: "#FFFDD0"
-    accentHColor: "#896b49"
+    borderColor: "#48484b"
   - type: Icon
-    state: pda-sergeant
+    state: pda-seniorofficer
 
 - type: entity
   parent: BaseSecurityPDA
   id: BailiffPDA
-  name: bailiff PDA
-  description: Whosoever bears this PDA puts the law on their back.
+  name: TSF captain PDA
+  description: A standard TSFMC personal computer.
   components:
   - type: Pda
     id: BailiffIDCard
@@ -280,12 +291,11 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-bailiff
+        pda-warden
   - type: PdaBorderColor
-    borderColor: "#FFFDD0"
-    accentHColor: "#896b49"
+    borderColor: "#48484b"
   - type: Icon
-    state: pda-bailiff
+    state: pda-warden
 
 - type: entity
   parent: BaseSecurityPDA
@@ -306,11 +316,11 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-nfdetective
+        pda-detective
   - type: PdaBorderColor
-    borderColor: "#774705"
+    borderColor: "#48484b"
   - type: Icon
-    state: pda-nfdetective
+    state: pda-detective
 
 - type: entity
   parent: BaseSecurityPDA
@@ -337,12 +347,12 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-pal
+        pda-prosecutor
   - type: PdaBorderColor
     borderColor: "#FFFDD0"
     accentHColor: "#896b49"
   - type: Icon
-    state: pda-pal
+    state: pda-prosecutor
 
 - type: entity
   parent: [BaseSecurityPDA, BaseCommandContraband]
@@ -362,12 +372,12 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-sr
+        pda-hop
   - type: PdaBorderColor
     borderColor: "#789876"
     accentHColor: "#447987"
   - type: Icon
-    state: pda-sr
+    state: pda-hop
   - type: CartridgeLoader
     preinstalled:
     - CrewManifestCartridge
@@ -381,7 +391,7 @@
 - type: entity
   parent: PiratePDA
   id: PirateNFPDA
-  name: pirate PDA
+  name: rogue PDA
   components:
   - type: Pda
     id: PirateNFIDCard
@@ -389,12 +399,13 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-pirate
+        pda-syndi
+  - type: Geiger # Mono
 
 - type: entity
   parent: PiratePDA
   id: PirateCaptainNFPDA
-  name: pirate captain PDA
+  name: rogue commander PDA
   components:
   - type: Pda
     id: PirateCaptainNFIDCard
@@ -402,12 +413,13 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-pirate
+        pda-syndi-agent
+  - type: Geiger # Mono
 
 - type: entity
   parent: PiratePDA
   id: PirateFirstMateNFPDA
-  name: pirate first mate PDA
+  name: rogue commandant PDA
   components:
   - type: Pda
     id: PirateFirstMateNFIDCard
@@ -415,7 +427,8 @@
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-pirate
+        pda-syndi
+  - type: Geiger # Mono
 
 - type: entity
   parent: PassengerPDA
@@ -470,15 +483,15 @@
         - Write
   - type: PdaBorderColor
     borderColor: "#789876"
-    accentHColor: "#447987"
+    accentVColor: "#447987"
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
-        pda-doc
+        pda-cmo
   - type: Icon
     sprite: _NF/Objects/Devices/pda.rsi
-    state: pda-doc
+    state: pda-cmo
   - type: CartridgeLoader
     preinstalled:
     - CrewManifestCartridge

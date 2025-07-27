@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 ScyronX
+// SPDX-FileCopyrightText: 2025 mikusssssss
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Bed.Sleep;
@@ -733,6 +739,8 @@ public abstract partial class SharedSurgerySystem
         if (TryComp(user, out SurgerySpeedModifierComponent? surgerySpeedMod)
             && surgerySpeedMod is not null)
             duration = duration / surgerySpeedMod.SpeedModifier;
+        if (user == body)
+            duration = duration * 4;
 
         var doAfter = new DoAfterArgs(EntityManager, user, TimeSpan.FromSeconds(duration), ev, body, part)
         {

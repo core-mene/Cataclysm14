@@ -1,66 +1,19 @@
-# Tier 1
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Aviu00
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: technology
-  id: Gygax
-  name: research-technology-gygax
+  id: SmartWeaponry
+  name: research-technology-smart-weaponry
   icon:
-    sprite: Objects/Specific/Mech/mecha.rsi
-    state: gygax
+    sprite: _Goobstation/Objects/Weapons/Guns/SMGs/smartgun.rsi
+    state: icon
   discipline: Arsenal
-  tier: 1
-  cost: 5000
+  tier: 3
+  cost: 15000
   recipeUnlocks:
-  - GygaxHarness
-  - GygaxArmor
-  - GygaxHead
-  - GygaxLArm
-  - GygaxLLeg
-  - GygaxRArm
-  - GygaxRLeg
-  - GygaxCentralElectronics
-  - GygaxPeripheralsElectronics
-  - GygaxTargetingElectronics
-  - WeaponMechCombatUltraRifle
-  technologyPrerequisites:
-  - Ripley2
-
-# Tier 2
-
-- type: technology
-  id: ExplosiveMechAmmunition
-  name: research-technology-explosive-mech-ammunition
-  icon:
-    sprite: Objects/Specific/Mech/mecha_equipment.rsi
-    state: mecha_missilerack
-  discipline: Arsenal
-  tier: 2
-  cost: 12000
-  recipeUnlocks:
-  - WeaponMechCombatMissileRack8
-  technologyPrerequisites:
-  - ExplosiveTechnology
-
-- type: technology
-  id: Durand
-  name: research-technology-durand
-  icon:
-    sprite: Objects/Specific/Mech/mecha.rsi
-    state: durand
-  discipline: Arsenal
-  tier: 2
-  cost: 13000
-  recipeUnlocks:
-  - DurandHarness
-  - DurandArmor
-  - DurandHead
-  - DurandLArm
-  - DurandLLeg
-  - DurandRArm
-  - DurandRLeg
-  - DurandCentralElectronics
-  - DurandPeripheralsElectronics
-  - DurandTargetingElectronics
-  - WeaponMechCombatShotgun
-  - WeaponMechCombatShotgunIncendiary
-  technologyPrerequisites:
-  - Gygax
+  - WeaponSubMachineSmart
+  - MagazineSmart
+  - MagazineSmartLMG

@@ -16,15 +16,6 @@ namespace Content.Server._Mono.Ships.Systems;
 public sealed class CrewedShuttleSystem : EntitySystem
 {
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
-
-    /// <inheritdoc/>
-    public override void Initialize()
-    {
-        base.Initialize();
-
-
-    }
-
     public bool AnyConsoleActiveByPlayer<T>(Entity<CrewedShuttleComponent?> shuttle, Enum key, EntityUid actor)  where T : IComponent
     {
         if (!Resolve(shuttle.Owner, ref shuttle.Comp, false))

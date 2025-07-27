@@ -1,3 +1,11 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Blu
+// SPDX-FileCopyrightText: 2025 HacksLua
+// SPDX-FileCopyrightText: 2025 LukeZurg22
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared._Mono.Company;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
@@ -35,7 +43,8 @@ public sealed class CompanySystem : EntitySystem
         "NFDetective",
         "PublicAffairsLiaison",
         "SecurityGuard",
-        "Cadet"
+        "Cadet",
+        "TsfEngineer"
     };
 
     private readonly HashSet<string> _rogueJobs = new()

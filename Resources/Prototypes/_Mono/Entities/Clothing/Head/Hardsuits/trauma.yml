@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 sleepyyapril
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -5,8 +6,8 @@
 - type: entity
   parent: [ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase, ShowMedicalIcons]
   id: ClothingHeadHelmetHardsuitTrauma
-  name: trauma armed forces T-23 tacsuit helmet
-  description: The standard combat suit of the Trauma Armed Forces, outfitted with a limited-range radar hud as well as a medical hud.
+  name: armed trauma unit T-23 tacsuit helmet
+  description: The standard combat suit of the Armed Trauma Unit, outfitted with a limited-range radar hud as well as a medical hud.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Head/Hardsuits/trauma.rsi
@@ -47,8 +48,8 @@
 - type: entity
   parent: [ClothingHeadHardsuitBase, ShowMedicalIcons]
   id: ClothingHeadHelmetHardsuitTraumaLeader
-  name: trauma armed forces T-53 tacsuit helmet
-  description: The commander's tacsuit in the Trauma Armed Forces, outfitted with a medical and long-range radar hud as well as thermals and night vision.
+  name: armed trauma unit T-53 tacsuit helmet
+  description: The commander's tacsuit in the Armed Trauma Unit, outfitted with a medical and long-range radar hud as well as thermals and night vision.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Head/Hardsuits/trauma_leader.rsi

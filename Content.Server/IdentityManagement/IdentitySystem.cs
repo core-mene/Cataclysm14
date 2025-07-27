@@ -1,3 +1,22 @@
+// SPDX-FileCopyrightText: 2022 Flipp Syder
+// SPDX-FileCopyrightText: 2022 Nemanja
+// SPDX-FileCopyrightText: 2022 Rane
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Morb
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2024 Arendian
+// SPDX-FileCopyrightText: 2024 Kara
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 chavonadelal
+// SPDX-FileCopyrightText: 2024 nikthechampiongr
+// SPDX-FileCopyrightText: 2025 12rabbits
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 J
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Access.Systems;
 using Content.Server.Administration.Logs;
 using Content.Server.CriminalRecords.Systems;
@@ -27,6 +46,7 @@ public sealed class IdentitySystem : SharedIdentitySystem
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly HumanoidAppearanceSystem _humanoid = default!;
     [Dependency] private readonly CriminalRecordsConsoleSystem _criminalRecordsConsole = default!;
+    [Dependency] private readonly GrammarSystem _grammarSystem = default!;
     [Dependency] private readonly InventorySystem _inventorySystem = default!; // Goobstation - Update component state on component toggle
 
     private HashSet<EntityUid> _queuedIdentityUpdates = new();
@@ -116,7 +136,7 @@ public sealed class IdentitySystem : SharedIdentitySystem
 
             // If presumed name is null and we're using that, we set proper noun to be false ("the old woman")
             if (name != representation.TrueName && representation.PresumedName == null)
-                identityGrammar.ProperNoun = false;
+                _grammarSystem.SetProperNoun((uid, grammar), false);
 
             Dirty(ident, identityGrammar);
         }

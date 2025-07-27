@@ -1,3 +1,14 @@
+// SPDX-FileCopyrightText: 2022 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 Tony
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2025 ScyronX
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Clothing.EntitySystems;
 using Content.Shared.Inventory;
 using Robust.Shared.Containers;
@@ -91,6 +102,12 @@ public sealed partial class ToggleableClothingComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public bool ReplaceCurrentClothing = false;
+
+    /// <summary>
+    ///     Monolith - Variable deciding wether the ToggleClothingAction uses radial menu.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool UseRadialMenu = false;
 }
 
 [Serializable, NetSerializable]

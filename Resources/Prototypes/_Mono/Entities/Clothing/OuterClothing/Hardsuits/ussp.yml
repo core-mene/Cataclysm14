@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
@@ -38,12 +39,19 @@
     walkModifier: 0.9
     sprintModifier: 0.85
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: false
+    replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitUsspL27
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaticPrice
     price: 1250
     vendPrice: 7500
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuit
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -77,12 +85,19 @@
     walkModifier: 0.95
     sprintModifier: 0.95
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: false
+    replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitUsspL10
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaticPrice
     price: 420
     vendPrice: 2500
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuit
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -116,12 +131,19 @@
     walkModifier: 0.95
     sprintModifier: 0.95
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: false
+    replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitUsspL10A
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaticPrice
     price: 500
     vendPrice: 3000
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuit
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -152,14 +174,21 @@
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.45
   - type: ClothingSpeedModifier
-    walkModifier: 1.15
-    sprintModifier: 1.15
-  - type: ToggleableClothing
+    walkModifier: 1
+    sprintModifier: 1
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: false
+    replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitUsspM10
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaticPrice
     price: 1350
     vendPrice: 8000
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -193,12 +222,19 @@
     walkModifier: 0.95
     sprintModifier: 0.95
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: false
+    replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitUsspL30
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaticPrice
     price: 3300
     vendPrice: 20000
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -232,9 +268,16 @@
     walkModifier: 0.90
     sprintModifier: 0.90
   - type: HeldSpeedModifier
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: false
+    replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitOfficerCombat
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaticPrice
     price: 4200
     vendPrice: 25000
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue

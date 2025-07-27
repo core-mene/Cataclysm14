@@ -1,0 +1,56 @@
+# SPDX-FileCopyrightText: 2023 IHAN <IHAN>
+# SPDX-FileCopyrightText: 2023 Kennedy
+# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Long YM
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 KM-Catman
+# SPDX-FileCopyrightText: 2025 RealSchepka
+# SPDX-FileCopyrightText: 2025 Schepka
+# SPDX-FileCopyrightText: 2025 UnicornOnLSD
+# SPDX-FileCopyrightText: 2025 plethorian
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: RealSchepka
+# Discord: schepka
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Shareholder
+  parent: BaseVessel
+  name: DME Shareholder
+  description: Cheap and affordable salvage vessel that comes with a comfortable lounge at the cost of leaving no budget for the rest.
+  price: 19000
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/_Mono/Shuttles/shareholder.yml
+  guidebookPage: null
+  class:
+  - Salvage
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Shareholder
+  mapName: 'DME Shareholder'
+  mapPath: /Maps/_Mono/Shuttles/shareholder.yml
+  minPlayers: 0
+  stations:
+    Shareholder:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Shareholder CIV{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

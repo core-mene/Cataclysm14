@@ -1,6 +1,9 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 NotActuallyMarty
+# SPDX-FileCopyrightText: 2025 RealSchepka
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Schepka
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -147,14 +150,17 @@
   - type: StaminaDamageResistance
     coefficient: 0.3
   - type: FireProtection
-    reduction: 0.5
+    reduction: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
   - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.40
         Slash: 0.45
         Piercing: 0.35
-        Heat: 0.45
+        Heat: 0.30
         Radiation: 0.45
         Caustic: 0.40
   - type: ComponentToggler
@@ -165,3 +171,62 @@
     - type: TemperatureProtection
       coolingCoefficient: 0.1
       heatingCoefficient: 0.4
+
+# Volta
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingModsuitChestplateVolta
+  name: Volta Modsuit Chestplate
+  description: Reinforced military modification of Sapper Modsuit, featuring better bullet resistance.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Appearance
+  - type: AllowSuitStorage
+  - type: Sprite
+    sprite: _Mono/Clothing/OuterClothing/Modsuits/tsfmc-volta.rsi
+    layers:
+    - state: chestplate
+    - state: chestplate-sealed
+      visible: false
+      map: [ "sealed" ]
+  - type: Clothing
+    equipSound: /Audio/Mecha/mechmove03.ogg
+    unequipSound: /Audio/Mecha/mechmove03.ogg
+    slots: [ outerClothing ]
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: SealableClothing
+    sealUpPopup: sealable-clothing-seal-up-chestplate
+    sealDownPopup: sealable-clothing-seal-down-chestplate
+  - type: SealableClothingVisuals
+    spriteLayer: sealed
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING-sealed
+      outerClothing-resomi:
+      - state: equipped-OUTERCLOTHING-sealed-resomi
+  - type: ExplosionResistance
+    damageCoefficient: 0.3
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.8
+        Piercing: 0.6
+        Heat: 0.5
+        Shock: 0.9
+        Radiation: 0.7
+  - type: ComponentToggler
+    components:
+    - type: PressureProtection
+      highPressureMultiplier: 0.3
+      lowPressureMultiplier: 1000
+    - type: TemperatureProtection
+      coolingCoefficient: 0.1
+      heatingCoefficient: 0.4
+  - type: StaminaDamageResistance
+    coefficient: 0.9
+  - type: FireProtection
+    reduction: 0.0

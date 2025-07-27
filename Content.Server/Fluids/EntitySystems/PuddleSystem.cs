@@ -1,3 +1,32 @@
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2022 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2022 Willhelm53
+// SPDX-FileCopyrightText: 2022 Ygg01
+// SPDX-FileCopyrightText: 2022 keronshb
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Emisse
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 PixelTK
+// SPDX-FileCopyrightText: 2023 Psychpsyo
+// SPDX-FileCopyrightText: 2023 Slava0135
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 Vasilis
+// SPDX-FileCopyrightText: 2023 brainfood1183
+// SPDX-FileCopyrightText: 2024 Arendian
+// SPDX-FileCopyrightText: 2024 Cojoke
+// SPDX-FileCopyrightText: 2024 Ed
+// SPDX-FileCopyrightText: 2024 Kara
+// SPDX-FileCopyrightText: 2024 SlamBamActionman
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 mr-bo-jangles
+// SPDX-FileCopyrightText: 2025 J
+// SPDX-FileCopyrightText: 2025 Zachary Higgs
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using Content.Server.Administration.Logs;
 using Content.Server.Chemistry.TileReactions;
@@ -56,6 +85,7 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
     [Dependency] private readonly StepTriggerSystem _stepTrigger = default!;
     [Dependency] private readonly SpeedModifierContactsSystem _speedModContacts = default!;
     [Dependency] private readonly TileFrictionController _tile = default!;
+    [Dependency] private readonly SharedTransformSystem _transform = default!;
 
     [ValidatePrototypeId<ReagentPrototype>]
     private const string Blood = "Blood";
@@ -626,7 +656,8 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
             return false;
         }
 
-        var gridUid = coordinates.GetGridUid(EntityManager);
+        var gridUid = _transform.GetGrid(coordinates);
+
         if (!TryComp<MapGridComponent>(gridUid, out var mapGrid))
         {
             puddleUid = EntityUid.Invalid;

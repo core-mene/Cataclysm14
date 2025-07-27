@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: technology
   id: ShuttleArmamentComponentsResearch
   name: research-technology-shuttle-armaments-components
@@ -8,8 +15,8 @@
   tier: 3
   cost: 20000
   recipeUnlocks:
-  - ShieldControlComputerCircuitboard
-  - MachineShieldMS225Circuitboard
+#  - ShieldControlComputerCircuitboard
+#  - MachineShieldMS225Circuitboard
   - GunneryControlComputerCircuitboard
   - MachineGCSLowCircuitboard
   - MachineGCSMediumCircuitboard

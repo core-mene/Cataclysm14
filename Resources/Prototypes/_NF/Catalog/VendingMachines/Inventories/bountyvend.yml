@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: vendingMachineInventory
   id: BountyVendInventory
   startingInventory:
@@ -6,6 +15,8 @@
     HandheldGPSBasic: 3
     JetpackMiniFilled: 5
     WeaponDisabler: 10
+    Stunbaton: 10
+    Handcuffs: 20 # Mono
     Zipties: 20
     Flash: 10
     ClothingEyesGlassesSunglasses: 6
@@ -25,6 +36,7 @@
     ClothingHeadHatBH: 3
     ClothingNeckMantleBH: 3
     ClothingShoesBootsJack: 3
+    Binoculars: 4 # Mono
 
 - type: vendingMachineInventory
   id: BountyVendPOIInventory
@@ -34,6 +46,8 @@
     HandheldGPSBasic: 4294967295 # Frontier: 3<Infinite
     JetpackMiniFilled: 4294967295 # Frontier: 5<Infinite
     WeaponDisabler: 4294967295 # Frontier: 10<Infinite
+    Stunbaton: 4294967295 # Frontier: 10<Infinite
+    Handcuffs: 4294967295 # Mono: Infinite
     Zipties: 4294967295 # Frontier: 20<Infinite
     Flash: 4294967295 # Frontier: 10<Infinite
     ClothingEyesGlassesSunglasses: 4294967295 # Frontier: 6<Infinite
@@ -41,6 +55,7 @@
     BoxForensicPad: 4294967295 # Frontier: 6<Infinite
     LogProbeCartridge: 4294967295 # Frontier: 3<Infinite
     ContrabandAppraisalTool: 4294967295 # Frontier: 10<Infinite
+    BlueprintWarlordSuit: 4294967295 # Mono: Infinite
 #Bounty hunter
     ClothingOuterEVASuitMercenary: 4294967295 # Frontier: 4<Infinite
     ClothingOuterEVASuitPrivateSec: 4294967295 # Frontier: 4<Infinite
@@ -53,3 +68,4 @@
     ClothingHeadHatBH: 4294967295 # Frontier: 3<Infinite
     ClothingNeckMantleBH: 4294967295 # Frontier: Infinite
     ClothingShoesBootsJack: 4294967295 # Frontier: Infinite
+    Binoculars: 4294967295 # Mono: Infinite

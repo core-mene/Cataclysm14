@@ -1,3 +1,40 @@
+// SPDX-FileCopyrightText: 2022 Justin Trotter
+// SPDX-FileCopyrightText: 2022 LittleBuilderJane
+// SPDX-FileCopyrightText: 2022 SpaceManiac
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2023 Cheackraze
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Kevin Zheng
+// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2023 TheEmber
+// SPDX-FileCopyrightText: 2023 Tom Leys
+// SPDX-FileCopyrightText: 2023 Varen
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2023 deltanedas
+// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 Gansu
+// SPDX-FileCopyrightText: 2024 IProduceWidgets
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 Mervill
+// SPDX-FileCopyrightText: 2024 MilenVolf
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2024 PopGamer46
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 TemporalOroboros
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2024 no
+// SPDX-FileCopyrightText: 2024 slarticodefast
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 gus
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Numerics;
@@ -62,12 +99,24 @@ public sealed partial class ShuttleSystem
     /// <summary>
     /// Space between grids within hyperspace.
     /// </summary>
-    private const float Buffer = 5f;
+    private const float Buffer = 100f;
 
     /// <summary>
     /// How many times we try to proximity warp close to something before falling back to map-wideAABB.
     /// </summary>
     private const int FTLProximityIterations = 15; // Frontier: 5<15
+
+    // Frontier: coordinate rollover
+    /// <summary>
+    /// Maximum X coordinate before rolling over.
+    /// </summary>
+    private const float MaxCoord = 20000f;
+
+    /// <summary>
+    /// Amount to subtract from X coordinate on rollover.
+    /// </summary>
+    private const float CoordRollover = 40000f;
+    // End Frontier: coordinate rollover
 
     private readonly HashSet<EntityUid> _lookupEnts = new();
     private readonly HashSet<EntityUid> _immuneEnts = new();
@@ -648,7 +697,8 @@ public sealed partial class ShuttleSystem
         // Create visualizer if it doesn't exist
         if (comp.VisualizerProto != null && comp.VisualizerEntity == null)
         {
-            comp.VisualizerEntity = SpawnAtPosition(comp.VisualizerProto, comp.TargetCoordinates);
+            comp.VisualizerEntity = SpawnAttachedTo(entity.Comp1.VisualizerProto, entity.Comp1.TargetCoordinates);
+            DebugTools.Assert(Transform(comp.VisualizerEntity.Value).ParentUid == entity.Comp1.TargetCoordinates.EntityId);
             var visuals = Comp<FtlVisualizerComponent>(comp.VisualizerEntity.Value);
             visuals.Grid = entity.Owner;
             Dirty(comp.VisualizerEntity.Value, visuals);
@@ -1091,7 +1141,7 @@ public sealed partial class ShuttleSystem
         // Set position
         var mapCoordinates = _transform.ToMapCoordinates(config.Coordinates);
         var mapUid = _mapSystem.GetMap(mapCoordinates.MapId);
-        _transform.SetCoordinates(shuttle.Owner, shuttle.Comp, new EntityCoordinates(mapUid, mapCoordinates.Position), rotation: config.Angle);
+        _transform.SetCoordinates(shuttle.Owner, shuttle.Comp, new EntityCoordinates(mapUid, mapCoordinates.Position), rotation: config.Angle + _transform.GetWorldRotation(config.Coordinates.EntityId));
 
         // Connect everything
         foreach (var (dockAUid, dockBUid, dockA, dockB) in config.Docks)
@@ -1495,6 +1545,11 @@ public sealed partial class ShuttleSystem
         // Reset rotation so they always face the same direction.
         xform.LocalRotation = Angle.Zero;
         _index += width + Buffer;
+
+        // Frontier: rollover coordinates
+        if (_index > MaxCoord)
+            _index -= CoordRollover;
+        // End Frontier
 
         // Move all docked shuttles maintaining their relative positions
         foreach (var dockedUid in dockedShuttles)

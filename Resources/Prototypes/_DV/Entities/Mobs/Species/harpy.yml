@@ -1,3 +1,14 @@
+# SPDX-FileCopyrightText: 2024 BorisTakerman
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   save: false
   name: Urist McHarpy
@@ -48,6 +59,7 @@
     - map: [ "undershirt" ]
     - map: [ "socks" ]
     - map: [ "jumpsuit" ]
+    - map: [ "balaclava" ]
     - map: ["enum.HumanoidVisualLayers.LFoot"]
     - map: ["enum.HumanoidVisualLayers.RFoot"]
     - map: ["enum.HumanoidVisualLayers.LHand"]
@@ -69,6 +81,8 @@
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    - map: [ "helmetcover" ]
+    - map: [ "helmetattachment" ]
     - map: [ "pocket1" ]
     - map: [ "pocket2" ]
     - map: [ "clownedon" ] # Dynamically generated
@@ -180,6 +194,7 @@
     - map: [ "undershirt" ]
     - map: [ "socks" ]
     - map: [ "jumpsuit" ]
+    - map: [ "balaclava" ]
     - map: ["enum.HumanoidVisualLayers.LFoot"]
     - map: ["enum.HumanoidVisualLayers.RFoot"]
     - map: ["enum.HumanoidVisualLayers.LHand"]
@@ -197,6 +212,8 @@
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
     - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    - map: [ "helmetcover" ]
+    - map: [ "helmetattachment" ]
     - map: [ "pocket1" ]
     - map: [ "pocket2" ]
     - map: [ "clownedon" ] # Dynamically generated

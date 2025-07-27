@@ -1,3 +1,13 @@
+# SPDX-FileCopyrightText: 2022 Flipp Syder
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2023 Dvir
+# SPDX-FileCopyrightText: 2024 Velcroboy
+# SPDX-FileCopyrightText: 2024 Winkarst
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 Onezero0
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   abstract: true
   parent: [ BaseMachinePowered, ConstructibleMachine ]
@@ -44,6 +54,7 @@
         - SurveillanceCameraGeneral
         - SurveillanceCameraMedical
         - SurveillanceCameraCommand
+        - SurveillanceCameraTSF
 
 - type: entity
   parent: SurveillanceCameraRouterBase
@@ -165,3 +176,13 @@
   components:
     - type: SurveillanceCameraRouter
       subnetFrequency: SurveillanceCameraEntertainment
+
+# mono
+- type: entity
+  parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterTSF
+  name: tsfmc camera router
+  suffix: TSFMC
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraTSF

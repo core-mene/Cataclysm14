@@ -1,3 +1,24 @@
+// SPDX-FileCopyrightText: 2023 Cheackraze
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2023 deltanedas
+// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2024 Checkraze
+// SPDX-FileCopyrightText: 2024 ElectroJr
+// SPDX-FileCopyrightText: 2024 Kara
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 MilenVolf
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 SlamBamActionman
+// SPDX-FileCopyrightText: 2024 Vasilis
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 GreaseMonk
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using System.Numerics;
 using System.Threading;
@@ -29,6 +50,8 @@ using Content.Shared.Salvage.Expeditions;
 using Content.Shared.Salvage.Expeditions.Modifiers;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Storage;
+using Content.Server.Weather;
+using Content.Shared.Weather;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
@@ -45,6 +68,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
     private readonly IPrototypeManager _prototypeManager;
     private readonly AnchorableSystem _anchorable;
     private readonly BiomeSystem _biome;
+    private readonly WeatherSystem _weather;
     private readonly DungeonSystem _dungeon;
     private readonly MetaDataSystem _metaData;
     private readonly ShuttleSystem _shuttle;
@@ -71,6 +95,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
         IPrototypeManager protoManager,
         AnchorableSystem anchorable,
         BiomeSystem biome,
+        WeatherSystem weather,
         DungeonSystem dungeon,
         ShuttleSystem shuttle,
         StationSystem stationSystem,
@@ -89,6 +114,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
         _prototypeManager = protoManager;
         _anchorable = anchorable;
         _biome = biome;
+        _weather = weather;
         _dungeon = dungeon;
         _shuttle = shuttle;
         _stationSystem = stationSystem;
@@ -160,6 +186,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
         var mission = _entManager.System<SharedSalvageSystem>()
             .GetMission(_missionParams.MissionType, _missionParams.Difficulty, _missionParams.Seed);
 
+        var missionWeather = _prototypeManager.Index<SalvageWeatherMod>(mission.Weather);
         var missionBiome = _prototypeManager.Index<SalvageBiomeMod>(mission.Biome);
         BiomeComponent? biome = null;
 
@@ -184,6 +211,13 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
             var atmos = _entManager.EnsureComponent<MapAtmosphereComponent>(mapUid);
             _entManager.System<AtmosphereSystem>().SetMapSpace(mapUid, air.Space, atmos);
             _entManager.System<AtmosphereSystem>().SetMapGasMixture(mapUid, new GasMixture(moles, mission.Temperature), atmos);
+
+            if (!air.Space)
+            {
+                var weather = _entManager.EnsureComponent<WeatherComponent>(mapUid);
+                _entManager.System<WeatherSystem>().SetWeather(mapId, _prototypeManager.Index<WeatherPrototype>(missionWeather.WeatherPrototype), null);
+                _entManager.Dirty(mapUid, weather);
+            }
 
             if (mission.Color != null)
             {

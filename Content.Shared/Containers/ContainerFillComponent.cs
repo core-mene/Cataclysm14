@@ -1,3 +1,11 @@
+// SPDX-FileCopyrightText: 2022 Paul Ritter
+// SPDX-FileCopyrightText: 2022 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Leon Friedrich
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Storage;
 using Content.Shared.Storage.Components;
 using Robust.Shared.Prototypes;
@@ -49,13 +57,11 @@ public sealed class ContainerFillSerializer : ITypeValidator<Dictionary<string, 
 
         foreach (var (key, val) in node.Children)
         {
-            var keyVal = serializationManager.ValidateNode<string>(key, context);
-
             var listVal = (val is SequenceDataNode seq)
                 ? ListSerializer.Validate(serializationManager, seq, dependencies, context)
                 : new ErrorNode(val, "ContainerFillComponent prototypes must be a sequence/list");
 
-            mapping.Add(keyVal, listVal);
+            mapping.Add(new ValidatedValueNode(node.GetKeyNode(key)), listVal);
         }
 
         return new ValidatedMappingNode(mapping);

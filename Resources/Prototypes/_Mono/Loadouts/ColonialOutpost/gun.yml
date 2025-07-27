@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: loadoutGroup
+  id: ColonialLiaisonFirearm
+  name: loadout-group-weapon
+  minLimit: 1
+  loadouts:
+  - SecurityGuardDisablerSMGLoadout
+  - SecurityGuardEnergyGunLoadout
+
+- type: loadoutGroup
+  id: SecurityGuardFirearm
+  name: loadout-group-weapon
+  minLimit: 0
+  loadouts:
+  - SecurityGuardLecterLoadout
+  - SecurityGuardDrozdLoadout
+  - SecurityGuardKammererLoadout
+  - SecurityGuardEnforcerLoadout
+  - SecurityGuardDisablerSMGLoadout
+  - SecurityGuardEnergyGunLoadout
+
+- type: loadoutGroup
+  id: SecurityGuardPistol
+  name: loadout-group-pistol
+  minLimit: 1
+  loadouts:
+  - SecurityGuardMk58Loadout #MK58
+
+- type: loadoutGroup
+  id: SecurityGuardAmmo
+  name: loadout-group-magazine
+  minLimit: 1
+  loadouts:
+  - SecurityGuardAcpPistolRubberAmmoLoadout #MK58
+  - SecurityGuard5.56x45mmAmmoLoadout #Lecter
+  - SecurityGuardAcpSmgAmmoRubberLoadout #Drozd
+  - SecurityGuardBeanbagAmmoLoadout #Beanbag

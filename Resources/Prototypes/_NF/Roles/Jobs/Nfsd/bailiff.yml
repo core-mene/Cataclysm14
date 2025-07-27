@@ -82,6 +82,7 @@
   - Bailiff
   - Medical
   - Chemistry
+  - TsfmcEngineering # Mono
   accessGroups:
   - GeneralNfsdAccess
   special:
@@ -102,8 +103,8 @@
     pocket1: WeaponPistolMk58 #WeaponPistolMk58Nonlethal
   storage:
     back:
-    - Magazine9x19mmPistolFMJ
+    - Magazine45_ACPPistolFMJ
     - BaseSecurityUplinkRadioOfficer
-    - ShipVoucherNfsdBailiff
+#    - ShipVoucherNfsdBailiff # Mono
     - RubberStampBailiff
     - RadioHandheldNF # Mono

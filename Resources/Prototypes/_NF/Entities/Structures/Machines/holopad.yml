@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2025 Alkheemist
+# SPDX-FileCopyrightText: 2025 Checkraze
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: HolopadLongRange
   id: NFHolopadShip
@@ -25,9 +33,9 @@
   suffix: Ship, Antag
   components:
   - type: Holopad
-    useStationName: false
-  - type: ApcPowerReceiver
-    powerDisabled: true #starts off
+    useStationName: true # mono
+  #- type: ApcPowerReceiver # Mono - comment out
+  #  powerDisabled: true #starts off
 
 - type: entity
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, NFHolopadShip]

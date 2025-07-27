@@ -1,3 +1,36 @@
+// SPDX-FileCopyrightText: 2021 Alex Evgrashin
+// SPDX-FileCopyrightText: 2021 Paul Ritter
+// SPDX-FileCopyrightText: 2022 Jezithyr
+// SPDX-FileCopyrightText: 2022 KIBORG04
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 Ahion
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 chromiumboy
+// SPDX-FileCopyrightText: 2023 keronshb
+// SPDX-FileCopyrightText: 2024 BombasterDS
+// SPDX-FileCopyrightText: 2024 GreaseMonk
+// SPDX-FileCopyrightText: 2024 Jake Huxell
+// SPDX-FileCopyrightText: 2024 Julian Giebel
+// SPDX-FileCopyrightText: 2024 Kara
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 Pspritechologist
+// SPDX-FileCopyrightText: 2024 Qulibly
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 chavonadelal
+// SPDX-FileCopyrightText: 2024 eoineoineoin
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2024 nikthechampiongr
+// SPDX-FileCopyrightText: 2024 slarticodefast
+// SPDX-FileCopyrightText: 2024 themias
+// SPDX-FileCopyrightText: 2025 Ignaz "Ian" Kraft
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 ScyronX
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using Content.Server.Access.Systems;
 using Content.Server.DeviceNetwork;
@@ -27,6 +60,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using System.Numerics; //Frontier modification
 using Content.Server.Salvage.Expeditions;
+using Content.Server._Mono.Radar; // Monolith
 using Content.Server.Explosion.EntitySystems;
 using Content.Server._NF.Medical.SuitSensors; // Frontier modification
 
@@ -222,8 +256,20 @@ public sealed class SuitSensorSystem : EntitySystem
             default:
                 return;
         }
-
+        // Mono Begin
+        string radarMsg;
+        switch (component.IFFSignatureEnabled)
+        {
+            case true:
+                radarMsg = "suit-sensor-signature-examine-on";
+                break;
+            case false:
+                radarMsg = "suit-sensor-signature-examine-off";
+                break;
+        }
+        // Mono End
         args.PushMarkup(Loc.GetString(msg));
+        args.PushMarkup(Loc.GetString(radarMsg)); // Mono
     }
 
     private void OnVerb(EntityUid uid, SuitSensorComponent component, GetVerbsEvent<Verb> args)
@@ -250,6 +296,18 @@ public sealed class SuitSensorSystem : EntitySystem
             CreateVerb(uid, component, args.User, SuitSensorMode.SensorVitals),
             CreateVerb(uid, component, args.User, SuitSensorMode.SensorCords)
         });
+
+        // Monolith IFF signature edit Start
+        var verb = new Verb
+        {
+            Text = Loc.GetString("suit-sensor-signature-toggle", ("status", GetStatusSignatureName(component))),
+            Act = () =>
+            {
+                TryToggleSignature(uid, component);
+            }
+        };
+        args.Verbs.Add(verb);
+        // End
     }
 
     private void OnInsert(EntityUid uid, SuitSensorComponent component, EntGotInsertedIntoContainerMessage args)
@@ -325,6 +383,24 @@ public sealed class SuitSensorSystem : EntitySystem
         return Loc.GetString(name);
     }
 
+    // Mono Begin
+    private string GetStatusSignatureName(SuitSensorComponent component)
+    {
+        string signatureName;
+        switch (component.IFFSignatureEnabled)
+        {
+            case true:
+                signatureName = "suit-sensor-signature-verb-disable";
+                break;
+            case false:
+                signatureName = "suit-sensor-signature-verb-enable";
+                break;
+        }
+
+        return Loc.GetString(signatureName);
+    }
+    // Mono End
+
     public void TrySetSensor(Entity<SuitSensorComponent> sensors, SuitSensorMode mode, EntityUid userUid)
     {
         var comp = sensors.Comp;
@@ -344,6 +420,26 @@ public sealed class SuitSensorSystem : EntitySystem
             };
 
             _doAfterSystem.TryStartDoAfter(doAfterArgs);
+        }
+    }
+
+    // Monolith - Radar signature toggle verb
+    public void TryToggleSignature(EntityUid uid, SuitSensorComponent comp)
+    {
+        if (comp.IFFSignatureEnabled || HasComp<RadarBlipComponent>(uid))
+        {
+            comp.IFFSignatureEnabled = false;
+            RemComp<RadarBlipComponent>(uid);
+            _popupSystem.PopupEntity(Loc.GetString("suit-sensor-signature-toggled-off"), uid);
+        }
+        else
+        {
+            comp.IFFSignatureEnabled = true;
+            var blip = EnsureComp<RadarBlipComponent>(uid);
+            blip.RadarColor = Color.Cyan;
+            blip.Scale = 0.5f;
+            blip.VisibleFromOtherGrids = true;
+            _popupSystem.PopupEntity(Loc.GetString("suit-sensor-signature-toggled-on"), uid);
         }
     }
 

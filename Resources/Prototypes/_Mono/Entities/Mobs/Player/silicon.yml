@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2025 BeeRobynn
+# SPDX-FileCopyrightText: 2025 KiraZen_
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: dataset
   id: MonoRedactedBorgNameset
   values:
@@ -415,7 +423,7 @@
   components:
   - type: Sprite
   - type: SiliconLawProvider
-    laws: VesselLawset
+    laws: TSFMCLawset
   - type: GhostRole
     name: ghost-role-information-tsfmc-core
     description: ghost-role-information-tsfmc-core-description

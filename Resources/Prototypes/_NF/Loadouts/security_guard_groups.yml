@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadoutGroup
   id: SecurityGuardGloves
   name: loadout-group-contractor-gloves
@@ -5,8 +14,9 @@
   - CombatGloves
   - ColorBlackGloves
   - FingerlessGloves
+  - SecurityCombatGlovesBlack # Mono
   fallbacks:
-  - CombatGloves
+  - SecurityCombatGlovesBlack # Mono
 
 - type: loadoutGroup
   id: SecurityGuardHead
@@ -91,34 +101,3 @@
   - SecurityClothingMaskGasSecurity
   fallbacks:
   - SecurityClothingMaskGasSecurity
-
-# Mono Begin
-
-- type: loadoutGroup
-  id: SecurityGuardFirearm
-  name: loadout-group-mercenary-weapon
-  minLimit: 0
-  loadouts:
-  - SecurityGuardWt550Loadout
-  - SecurityGuardKammererLoadout
-  - SecurityGuardEnforcerLoadout
-  - SecurityGuardLecterLoadout
-  - SecurityGuardDrozdLoadout
-  - SecurityGuardEnergyGunLoadout
-  - SecurityGuardLaserCarbineLoadout
-  - SecurityGuardLaserCannonLoadout
-  - SecurityGuardDisablerSMGLoadout
-  fallbacks:
-  - SecurityGuardWt550Loadout
-
-- type: loadoutGroup
-  id: SecurityGuardPistol
-  name: loadout-group-mercenary-pistol
-  minLimit: 0
-  loadouts:
-  - SecurityGuardMk32Loadout
-  - SecurityGuardSawedOffLoadout
-  fallbacks:
-  - SecurityGuardMk32Loadout
-
-# Mono End

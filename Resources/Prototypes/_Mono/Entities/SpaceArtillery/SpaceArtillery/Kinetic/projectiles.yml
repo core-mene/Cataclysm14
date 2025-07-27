@@ -5,25 +5,24 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 core-mene
-# SPDX-FileCopyrightText: 2025 monolith8319
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-# CHARON
+# CHARONETTE
 
 - type: entity
-  id: ShipRailgunProjectile
-  name: M381 CHARON 280mm 75.25 kg slug
+  id: ShipMiniRailgunProjectile
+  name: M194 CHARONETTE 280mm 10.25 kg slug
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
     damage:
       types:
-        Structural: 10000
-        Blunt: 2250
-        Ion: 1250
+        Structural: 15000
+        Blunt: 3000
+        Ion: 600
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
     layers:
@@ -32,8 +31,8 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    radarColor: "#CF0E0E"
-    scale: 4
+    radarColor: "#c51515"
+    scale: 3
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
@@ -42,10 +41,10 @@
     color: "#19AFFF"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBomb
-    totalIntensity: 5000
-    intensitySlope: 8
-    maxIntensity: 3000
+    explosionType: HardBombShipGun
+    totalIntensity: 2500
+    intensitySlope: 50
+    maxIntensity: 800
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
@@ -126,7 +125,7 @@
     color: "#FCBA03"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBomb
+    explosionType: DefaultShipGun
     totalIntensity: 40
     intensitySlope: 5
     maxIntensity: 25
@@ -187,41 +186,7 @@
   components:
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
-
-# 150mm Tarnyx
-
-- type: entity
-  id: ShipTarnyxProjectile
-  name: TARNYX 150mm projectile
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Projectile
-    damage:
-      types:
-        Structural: 1000
-        Ion: 10000
-  - type: Sprite
-    sprite: _Mono/Objects/SpaceArtillery/150_shell.rsi
-    layers:
-    - state: 150-shell
-  - type: Ammo
-    muzzleFlash: null
-  - type: ShipWeaponProjectile
-  - type: RadarBlip
-    radarColor: "#035EFC"
-    scale: 1.5
-    requireNoGrid: true
-    shape: circle
-  - type: TimedDespawn
-    lifetime: 3
-  - type: PointLight
-    color: "#FB00FF"
-  - type: EmpOnTrigger
-    range: 10
-    energyConsumption: 2700000
-    disableDuration: 7.5
+    explosionType: DefaultShipGun
 
 # 220mm Cyrexa
 
@@ -255,7 +220,7 @@
     color: "#FCBA03"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBomb
+    explosionType: HardBombShipGun
     totalIntensity: 550
     intensitySlope: 5
     maxIntensity: 1150
@@ -295,7 +260,7 @@
     color: "#fc5a03"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBomb
+    explosionType: HardBombShipGun
     totalIntensity: 1000
     intensitySlope: 25
     maxIntensity: 75
@@ -335,10 +300,51 @@
     color: "#fc8c03"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBomb
+    explosionType: HardBombShipGun
     totalIntensity: 750
     intensitySlope: 35
     maxIntensity: 50
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
+# 305mm Hades
+
+- type: entity
+  id: ShipHadesProjectile
+  name: HADES 305mm projectile
+  description: I feel a primal fear. The omen comes for me.
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 12500
+        Blunt: 15000
+        Ion: 30000
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+    scale: 3, 3
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 4.25
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 5
+  - type: PointLight
+    color: "#FCBA03"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 1250
+    intensitySlope: 5
+    maxIntensity: 1450
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard

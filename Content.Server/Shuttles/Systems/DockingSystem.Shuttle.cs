@@ -1,3 +1,16 @@
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2024 Mervill
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 ShadowCommander
+// SPDX-FileCopyrightText: 2024 eoineoineoin
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 ark1368
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using System.Numerics;
 using Content.Server.Shuttles.Components;
@@ -85,7 +98,7 @@ public sealed partial class DockingSystem
             return false;
 
         shuttleDockedAABB = matty.TransformBox(shuttleAABB);
-        gridRotation = (targetGridRotation + offsetAngle).Reduced();
+        gridRotation = offsetAngle.Reduced();
         return true;
     }
 
@@ -132,6 +145,7 @@ public sealed partial class DockingSystem
         EntityUid targetGrid,
         EntityCoordinates coordinates,
         Angle angle,
+        bool fallback = true,
         DockType dockType = DockType.Airlock) // Frontier
     {
         var gridDocks = GetDocks(targetGrid);
@@ -145,6 +159,11 @@ public sealed partial class DockingSystem
             {
                 return config;
             }
+        }
+
+        if (fallback && configs.Count > 0)
+        {
+            return configs.First();
         }
 
         return null;
@@ -215,7 +234,8 @@ public sealed partial class DockingSystem
                     var spawnPosition = new EntityCoordinates(targetGridXform.MapUid!.Value, _transform.ToMapCoordinates(gridPosition).Position);
 
                     // TODO: use tight bounds
-                    var dockedBounds = new Box2Rotated(shuttleAABB.Translated(spawnPosition.Position), targetAngle, spawnPosition.Position);
+                    var targetWorldAngle = (targetGridAngle + targetAngle).Reduced(); // Frontier
+                    var dockedBounds = new Box2Rotated(shuttleAABB.Translated(spawnPosition.Position), targetWorldAngle, spawnPosition.Position); // Frontier: targetAngle<targetWorldAngle
 
                     // Check if there's no intersecting grids (AKA oh god it's docking at cargo).
                     grids.Clear();
@@ -388,5 +408,26 @@ public sealed partial class DockingSystem
         _lookup.GetChildEntities(uid, _dockingSet);
 
         return _dockingSet.ToList();
+    }
+
+    /// <summary>
+    /// Mono: Checks if two grids are docked together by examining if any docking port on gridA is connected to any docking port on gridB.
+    /// </summary>
+    public bool AreGridsDocked(EntityUid gridA, EntityUid gridB)
+    {
+        var docksA = GetDocks(gridA);
+
+        foreach (var dockA in docksA)
+        {
+            if (!dockA.Comp.Docked || dockA.Comp.DockedWith == null)
+                continue;
+
+            // Get the grid that this dock is connected to
+            var connectedDockGrid = Transform(dockA.Comp.DockedWith.Value).GridUid;
+            if (connectedDockGrid == gridB)
+                return true;
+        }
+
+        return false;
     }
 }

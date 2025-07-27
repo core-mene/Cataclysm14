@@ -1,9 +1,21 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Hamblinius
+# SPDX-FileCopyrightText: 2024 steinhauer.erhard
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 UnicornOnLSD
+# SPDX-FileCopyrightText: 2025 Whatstone
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadoutGroup
   id: PilotJumpsuit
   name: loadout-group-contractor-jumpsuit
   loadouts:
   - PilotClothingUniformJumpsuitPilot
   - PilotClothingUniformJumpsuitMilitaryPilot
+  - PilotClothingUniformDrakeIndustriesTrucker
   - PilotClothingUniformJumpsuitMilitaryContractor
   - PilotClothingUniformJumpsuitMilitaryContractorTac
   subgroups:
@@ -24,14 +36,16 @@
   - ContractorBackpack
   fallbacks:
   - PilotClothingBackpackPilot
-  
+
 - type: loadoutGroup
   id: PilotOuterClothing
   name: loadout-group-contractor-outerclothing
   minLimit: 0
   loadouts:
   - PilotClothingOuterCoatBomber
+  - PilotClothingOuterDrakeIndustriesTruckerPuffyVest
   - PilotClothingOuterHardsuitPilot
+  
   subgroups:
   - ContractorOuterClothing
 
@@ -91,7 +105,7 @@
   - ContractorPDA
   fallbacks:
   - PilotPilotPDA
-  
+
 - type: loadoutGroup
   id: PilotGlasses
   name: loadout-group-contractor-glasses

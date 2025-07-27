@@ -1,0 +1,136 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: BaseRdServerFaction
+  parent: BaseMachinePowered
+  name: BaseRdServerFaction
+  categories: [ HideSpawnMenu ]
+  description: Contains the collective knowledge of the faction.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/server.rsi
+    layers:
+    - state: server
+    - state: variant-research
+    - state: server_o
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: ResearchServer
+  - type: ResearchPointSource
+    pointspersecond: 30
+    active: true
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - Industrial
+    - Arsenal
+    - Experimental
+    - CivilianServices
+  - type: ApcPowerReceiver
+    powerLoad: 500
+  - type: ExtensionCableReceiver
+  - type: WiresPanel
+  - type: WiresVisuals
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1800
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+  - type: Appearance
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -9
+    range: 5
+    sound:
+      path: /Audio/Ambience/Objects/server_fans.ogg
+  - type: GuideHelp
+    guides:
+    - Science
+
+- type: entity
+  id: ResearchAndDevelopmentServerTSFMC
+  parent: BaseRdServerFaction
+  name: TSFMC R&D server
+  description: Contains the collective knowledge of the TSFMC in this sector.
+  components:
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - TsfmcWeaponry
+    - TsfmcGear # GEAR IS TOOLS!!
+    - TsfmcEquipment # EQUIPMENT IS ARMOR!!
+    - TsfmcShipyard
+    - FactionUniversal
+
+- type: entity
+  id: ResearchAndDevelopmentServerRogues
+  parent: BaseRdServerFaction
+  name: Rogue R&D server
+  description: Contains the collective knowledge of the Rogues in this sector.
+  components:
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - RogueWeaponry
+    - RogueGear # GEAR IS TOOLS!!
+    - RogueEquipment # EQUIPMENT IS ARMOR!!
+    - RogueShipyard
+    - FactionUniversal
+
+- type: entity
+  id: ResearchAndDevelopmentServerUssp
+  parent: BaseRdServerFaction
+  name: USSP R&D server
+  description: Contains the collective knowledge of the USSP in this sector.
+  components:
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - Ussp
+    - UsspShipyard
+    - UsspEquipment
+    - UsspWeapons
+    - FactionUniversal
+
+- type: entity
+  id: ResearchAndDevelopmentServerDebug
+  parent: BaseRdServerFaction
+  name: debug R&D server
+  description: Contains the collective knowledge of Everyone. Damn
+  components:
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - Industrial
+    - Arsenal
+    - Experimental
+    - CivilianServices
+    - TsfmcWeaponry
+    - TsfmcGear
+    - TsfmcEquipment
+    - TsfmcShipyard
+    - RogueWeaponry
+    - RogueGear
+    - RogueEquipment
+    - RogueShipyard
+    - Ussp
+    - UsspShipyard
+    - UsspEquipment
+    - UsspWeapons
+    - FactionUniversal
+    - MechaEngineering
+

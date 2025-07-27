@@ -1,3 +1,13 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 SupernoobTheN1
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Pirate loadouts
 
 - type: loadoutGroup
@@ -85,6 +95,7 @@
   id: PirateCaptainOuterClothing
   name: loadout-group-contractor-outerclothing
   hidden: false
+  minLimit: 0
   loadouts:
   - PirateCaptainClothingOuterCoatPirate
   subgroups: # mono
@@ -137,6 +148,7 @@
 - type: loadoutGroup
   id: PirateFirstMateOuterClothing
   name: loadout-group-contractor-outerclothing
+  minLimit: 0
   loadouts:
   - PirateFirstMateClothingOuterCoatGentle
   subgroups: # mono

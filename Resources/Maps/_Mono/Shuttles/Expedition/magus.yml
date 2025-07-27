@@ -1,3 +1,20 @@
+# SPDX-FileCopyrightText: 2023 Alexander Evgrashin
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2023 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2023 terezi4real
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2025 Checkraze
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 ark1368
+# SPDX-FileCopyrightText: 2025 pathetic meowmeow
+# SPDX-FileCopyrightText: 2025 revoemagcoconut
+# SPDX-FileCopyrightText: 2025 significant harassment
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 meta:
   format: 7
   category: Grid
@@ -445,7 +462,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 546
     components:
     - type: MetaData
@@ -458,7 +474,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 556
     components:
     - type: MetaData
@@ -471,7 +486,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 611
     components:
     - type: MetaData
@@ -484,7 +498,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 632
     components:
     - type: MetaData
@@ -497,7 +510,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 635
     components:
     - type: MetaData
@@ -510,7 +522,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 650
     components:
     - type: MetaData
@@ -523,7 +534,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 653
     components:
     - type: MetaData
@@ -536,7 +546,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AirAlarm
   entities:
   - uid: 536
@@ -2051,8 +2060,6 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 0
-    - type: CircularShield
-      width: 6.283185307179586 rad
     - type: Fixtures
       fixtures:
         fix1:
@@ -2085,20 +2092,6 @@ entities:
           hard: False
           restitution: 0
           friction: 0.4
-- proto: CircularShieldConsole
-  entities:
-  - uid: 417
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.5,-0.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5
-    - type: DeviceLinkSource
-      linkedPorts:
-        203:
-        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
 - proto: ClosetWallO2N2Filled
   entities:
   - uid: 432

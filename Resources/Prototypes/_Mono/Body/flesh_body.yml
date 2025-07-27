@@ -1,0 +1,58 @@
+# SPDX-FileCopyrightText: 2022 DrSmugleaf
+# SPDX-FileCopyrightText: 2022 Jezithyr
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: body
+  id: Chimera
+  name: "chimera endoskeleton"
+  root: torso
+  slots:
+    head:
+      part: HeadSkeletonChimera
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    torso:
+      part: TorsoSkeleton
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      - head # Shitmed
+      organs:
+        heart: OrganHumanHeart
+        lungs: OrganHumanLungs
+        stomach: OrganHumanStomach
+        liver: OrganHumanLiver
+        kidneys: OrganHumanKidneys
+    right arm:
+      part: RightArmSkeletonChimera
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmSkeletonChimera
+      connections:
+      - left hand
+    right hand:
+      part: RightHandSkeletonChimera
+    left hand:
+      part: LeftHandSkeletonChimera
+    right leg:
+      part: RightLegSkeletonChimera
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegSkeletonChimera
+      connections:
+      - left foot
+    right foot:
+      part: RightFootSkeletonChimera
+    left foot:
+      part: LeftFootSkeletonChimera

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 sleepyyapril
 #
@@ -8,3 +9,34 @@ ShipyardLiquidatorInfo: null # missing from map
 StationEfficiencyCircuitBoard : null # item removed by wizden
 40mmGrenadeIncendiary: null # item removed
 40mmGrenadeStinger: null # item removed
+CircularShieldConsole: null # entity removed
+CircularShieldBase: ShieldGeneratorSmall
+
+# Frontier NFSD hardsuits to Mono TSF revamp hardsuits - fuck these shit ass rank specific hardsuits absolute bloat
+
+# T1 wall suitstorages
+SuitStorageWallmountCadet: SuitStorageWallmountM82c
+SuitStorageWallmountDeputy: SuitStorageWallmountM82c
+SuitStorageWallmountSergeant: SuitStorageWallmountM82c
+SuitStorageWallmountBailiff: SuitStorageWallmountM82c
+SuitStorageWallmountBrigmedic: SuitStorageWallmountM82b
+# T1 suitstorages
+SuitStorageCadet: SuitStorageM82c
+SuitStorageDeputy: SuitStorageM82c
+SuitStorageSergeant: SuitStorageM82c
+SuitStorageBailiff: SuitStorageM82c
+SuitStorageBrigmedic: SuitStorageM82b
+# T1 hardsuits
+ClothingOuterHardsuitNfsdBronze: ClothingOuterHardsuitM82c
+ClothingOuterHardsuitNfsdSilver: ClothingOuterHardsuitM82c
+ClothingOuterHardsuitNfsdGold: ClothingOuterHardsuitM82c
+ClothingOuterHardsuitNfsdBrigmedic: ClothingOuterHardsuitM82b
+# T2 wall suitstorages
+SuitStorageWallmountNfsdCombat: SuitStorageWallmountM86
+SuitStorageWallmountNfsdCommand: SuitStorageWallmountM86
+# T2 suitstorages
+SuitStorageNfsdCombat: SuitStorageM86
+SuitStorageNfsdCommand: SuitStorageM86
+# T2 hardsuits
+ClothingOuterHardsuitNfsdCombat: ClothingOuterHardsuitM86
+ClothingOuterHardsuitNfsdCommand: ClothingOuterHardsuitM86

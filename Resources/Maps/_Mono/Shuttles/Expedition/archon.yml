@@ -1,3 +1,21 @@
+# SPDX-FileCopyrightText: 2023 cynical24
+# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Mr. Samuel
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2024 TsjipTsjip
+# SPDX-FileCopyrightText: 2024 Tych0
+# SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2025 Checkraze
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 Maxtone
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 ark1368
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 meta:
   format: 7
   category: Grid
@@ -479,7 +497,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 3
     components:
     - type: MetaData
@@ -492,7 +509,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 207
     components:
     - type: MetaData
@@ -505,7 +521,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AirAlarm
   entities:
   - uid: 4
@@ -1607,8 +1622,6 @@ entities:
     - type: Transform
       pos: 3.5,0.5
       parent: 1
-    - type: CircularShield
-      width: 6.283185307179586 rad
     - type: Fixtures
       fixtures:
         fix1:
@@ -1641,18 +1654,6 @@ entities:
           hard: False
           restitution: 0
           friction: 0.4
-- proto: CircularShieldConsole
-  entities:
-  - uid: 208
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 7.5,3.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        206:
-        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
 - proto: ComputerGunneryConsole
   entities:
   - uid: 209

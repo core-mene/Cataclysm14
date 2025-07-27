@@ -1,0 +1,81 @@
+# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 GreaseMonk
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2024 Shroomerian
+# SPDX-FileCopyrightText: 2024 TsjipTsjip
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 RealSchepka
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Schepka
+# SPDX-FileCopyrightText: 2025 SuperJoelDood
+# SPDX-FileCopyrightText: 2025 significant harassment
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: onezerooo0, Redrover1760
+# Discord: onezero00, Gnarlysheep
+# -
+# Maintainer Info
+# GitHub: Redrover1760
+# Discord: Gnarlysheep
+# I'm not a maintainer lmao, but rover is
+# so true fluffan
+
+# Notes: Wow.
+#
+- type: pointOfInterest
+  id: TSFMCHalcyon
+  parent: BasePOI
+  name: 'TSFMC Flagship Halcyon'
+  minimumDistance: 2500 # Mono
+  maximumDistance: 4000 # Mono
+  spawnGroup: Required
+  gridPath: /Maps/_Mono/POI/tsfmchalcyon.yml
+  addComponents:
+  - type: IFF
+    color: "#047abd"
+    readOnly: true
+  - type: SolarPoweredGrid
+    doNotCull: true
+  - type: DeedlessShuttle
+
+- type: gameMap
+  id: TSFMCHalcyon
+  mapName: 'TSFMC Flagship Halcyon'
+  mapPath: /Maps/_Mono/POI/tsfmchalcyon.yml
+  minPlayers: 0
+  randomRotation: false
+  stations:
+    TSFMCHalcyon:
+      stationProto: SecurityFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'TSFMC Flagship Halcyon'
+        - type: ExtraStationInformation
+          iconPath: /Textures/_NF/Structures/Decoration/banner.rsi/nfsd-banner.png
+          stationSubtext: 'frontier-lobby-nfsd-subtext'
+          stationDescription: 'frontier-lobby-nfsd-description'
+          lobbySortOrder: 2
+        - type: StationJobs
+          availableJobs:
+            Sheriff: [ 1, 1 ]
+            Bailiff: [ 1, 1 ]
+            SeniorOfficer: [ 4, 4 ] # Mono
+            Brigmedic: [ 2, 2 ] # Mono
+            #NFDetective: [ 0, 0 ] # Mono - comment out
+            Deputy: [ -1, -1 ] # Mono
+            Cadet: [ 3, 3 ] # Mono
+            TsfEngineer: [ 3, 3 ]
+            # Others:
+            #PublicAffairsLiaison: [ 1, 1 ] # Mono - comment out
+          tags:
+          - HeadOfPersonnel
+          - HeadOfSecurity
+        - type: StationDeadDropReporting
+          messageSet: Nfsd
+        - type: StationDeadDropHintExempt

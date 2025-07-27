@@ -36,7 +36,19 @@ uplink-pirate-hyperzine-desc = Combat stimulants that prevent stuns and increase
 uplink-pirate-surgery-name = Surgical Kit
 uplink-pirate-surgery-desc = A surgical kit containing the required minimum to save your friends or chop apart your enemy.
 
+uplink-pirate-omnizine-jug-name = Omnizine Jug
+uplink-pirate-omnizine-jug-desc = A jug of omnizine that can be used for making medipens and keeping your allies alive. Quietly imported from Harmony Medical Enterprises.
+
+uplink-pirate-medical-assembler-name = Medical Assembler Flatpack
+uplink-pirate-medical-assembler-desc = An assembler that can be used to make useful medical supplies.
+
 # MARK: Utility
+
+uplink-pirate-romerol-name = Romerol Syringe
+uplink-pirate-romerol-desc = A bioweapon used in previous wars, and heavily outlawed. Its obviously taken some effort to smuggle this one. Reanimates the dead.
+
+uplink-pirate-empty-implanter-name = Empty Implanter
+uplink-pirate-empty-implanter-desc = A spare, empty implanter to remove implants with, including faction tracking implants. It does not backfire on you.
 
 uplink-pirate-syndicate-magboots-name = Blood-red Magboots
 uplink-pirate-syndicate-magboots-desc = A pair of boots that prevent slipping and, in zero gravity, allow you to move normally, at the cost of a slight slowdown. Additionally, they have jetpack functionality and come fueled, but don't last for long.
@@ -135,6 +147,9 @@ uplink-pirate-burner-desc = A destructive 12.7x99mm rifle. Supports HE ammo. Hor
 uplink-pirate-blueprint-launcher-rocket-name = RPG-7 Blueprint
 uplink-pirate-blueprint-launcher-rocket-desc = A blueprint for RPG-7 and the ammo for it. Good for long term terrorism!
 
+uplink-pirate-grenade-launcher-bundle-name = China Lake Bundle
+uplink-pirate-grenade-launcher-bundle-desc = PLOOP!
+
 # MARK: Ammo
 
 uplink-pirate-box-magazine-pistol-name = Box of pistol 9x19mm magazines
@@ -165,10 +180,10 @@ uplink-pirate-box-smg-magazine-name = Box of 9x19mm SMG magazines
 uplink-pirate-box-smg-magazine-desc = A box filled with 3 9x19mm smg magazines.
 
 uplink-subsonic-mag-name = 7.62x39mm subsonic rifle mag
-uplink-subsonic-mag-desc = Supports the WSPR and Annie.
+uplink-subsonic-mag-desc = Supports the WSPR.
 
 uplink-subsonic-box-name = 7.62x39mm subsonic rifle box
-uplink-subsonic-box-desc = A box of ammo for the WSPR and Annie.
+uplink-subsonic-box-desc = A box of ammo for the WSPR.
 
 uplink-pirate-box-highcal-name = 12.7x99mm box
 uplink-pirate-box-highcal-desc = A box of general-purpose ammunition for the Burner heavy rifle.
@@ -176,8 +191,17 @@ uplink-pirate-box-highcal-desc = A box of general-purpose ammunition for the Bur
 uplink-pirate-box-highcal-he-name = HE 12.7x99mm box
 uplink-pirate-box-highcal-he-desc = A box of explosive ammunition for the Burner heavy rifle.
 
+uplink-pirate-sniper-ammo-name = 14.5x114mm box
+uplink-pirate-sniper-ammo-desc = A box of high caliber sniper rounds for the Hristov.
+
 uplink-pirate-emp-rocket-name = RPG-7 EMP Rocket
 uplink-pirate-emp-rocket-desc = A rocket with vengeance against anything electrical. Disables and drains electrical items in it's radius.
+
+uplink-pirate-frag-grenade-name = Frag Grenade
+uplink-pirate-frag-grenade-desc = A widely destructive 40mm fragmentation grenade for the China Lake. Destroys everything a wide area.
+
+uplink-pirate-blast-grenade-name = Blast Grenade
+uplink-pirate-blast-grenade-desc = A highly lethal 40mm thermobaric grenade for the China Lake. Highly destructive in a pinpoint radius.
 
 # MARK: Equipment
 
@@ -225,6 +249,8 @@ uplink-pirate-shrapnelgrenade-box-desc = A box containing 4 shrapnel grenades.
 uplink-pirate-explosivegrenade-box-name = Explosive Grenade Box
 uplink-pirate-explosivegrenade-box-desc = A box containing 4 explosive grenades.
 
+uplink-pirate-prowler-voucher-name = Prowler Ship Voucher
+uplink-pirate-prowler-voucher-desc = A single use voucher for a Prowler-pattern stealth craft.
 
 # MARK: $Gambling$
 

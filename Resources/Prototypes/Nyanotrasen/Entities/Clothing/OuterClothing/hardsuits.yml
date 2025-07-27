@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: ClothingOuterHardsuitSyndie
   id: ClothingOuterHardsuitSyndieReverseEngineered
@@ -8,9 +15,14 @@
     sprite: Nyanotrasen/Clothing/OuterClothing/ReverseEngineering/syndicate.rsi
   - type: Clothing
     sprite:  Nyanotrasen/Clothing/OuterClothing/ReverseEngineering/syndicate.rsi
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: false
+    replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitSyndieReverseEngineered
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 - type: entity
   parent: ClothingOuterHardsuitJuggernaut
@@ -23,7 +35,12 @@
     sprite: Nyanotrasen/Clothing/OuterClothing/ReverseEngineering/juggernaut.rsi
   - type: Clothing
     sprite:  Nyanotrasen/Clothing/OuterClothing/ReverseEngineering/juggernaut.rsi
-  - type: ToggleableClothing
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: false
+    replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitJuggernautReverseEngineered
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
 

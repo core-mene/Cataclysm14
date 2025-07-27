@@ -1,3 +1,14 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 SRV
+# SPDX-FileCopyrightText: 2025 SarahRaven
+# SPDX-FileCopyrightText: 2025 cheetah1984
+# SPDX-FileCopyrightText: 2025 gus
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: BaseFlatpack
   id: L58Flatpack
@@ -85,3 +96,149 @@
     entity: ComputerMassMedia
   - type: StaticPrice
     price: 500
+
+- type: entity
+  parent: BaseFlatpack
+  id: AtmosDeviceFanDirectionalFlatpack
+  name: directional fan flatpack
+  description: A flatpack used for constructing a directional fan.
+  components:
+  - type: Flatpack
+    entity: AtmosDeviceFanDirectional
+  - type: StaticPrice
+    price: 400
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: RDServerUSSPFlatpack
+  name: ussp research and development server flatpack
+  description: A flatpack used for constructing a USSP research and development server.
+  components:
+  - type: Flatpack
+    entity: ResearchAndDevelopmentServerUssp
+  - type: StaticPrice
+    vendPrice: 1500
+  - type: Sprite
+    layers:
+    - state: science_server
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: RDServerRogueFlatpack
+  name: rogue research and development server flatpack
+  description: A flatpack used for constructing a Rogue research and development server.
+  components:
+  - type: Flatpack
+    entity: ResearchAndDevelopmentServerRogues
+  - type: StaticPrice
+    price: 1500
+  - type: Sprite
+    layers:
+    - state: science_server
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: RDServerTSFFlatpack
+  name: TSF research and development server flatpack
+  description: A flatpack used for constructing a TSF research and development server.
+  components:
+  - type: Flatpack
+    entity: ResearchAndDevelopmentServerTSFMC
+  - type: StaticPrice
+    price: 1500
+  - type: Sprite
+    layers:
+    - state: science_server
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: FactionLatheFlatpack
+  name: military multipurpose assembler flatpack
+  description: A flatpack used for constructing a techfab for manufacturing faction-specific recipes.
+  components:
+  - type: Flatpack
+    entity: FactionLathe
+  - type: StaticPrice
+    vendPrice: 1500
+  - type: Sprite
+    layers:
+    - state: science_server
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: MedicalAssemblerFlatpack
+  name: medical assembler flatpack
+  description: A flatpack used for constructing a medical assembler.
+  components:
+  - type: Flatpack
+    entity: MedicalAssembler
+  - type: StaticPrice
+    price: 1500
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: MaterialSiloFlatpack
+  name: Material Silo flatpack
+  description: A flatpack used for constructing a Material Silo.
+  components:
+  - type: Flatpack
+    entity: MachineMaterialSilo
+  - type: StaticPrice
+    price: 400
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: OreBoxFlatpack
+  name: ore box flatpack
+  description: A flatpack used for constructing an ore box.
+  components:
+  - type: Flatpack
+    entity: OreBox
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: MaterialBoxFlatpack
+  name: construction box flatpack
+  description: A flatpack used for constructing a construction box.
+  components:
+  - type: Flatpack
+    entity: ConstructionBox
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: TegCirculatorFlatpack
+  name: TEG circulator flatpack
+  description: A flatpack used for constructing a TEG circulator.
+  components:
+  - type: Flatpack
+    entity: TegCirculator
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: TegCenterFlatpack
+  name: TEG center flatpack
+  description: A flatpack used for constructing a TEG center.
+  components:
+  - type: Flatpack
+    entity: TegCenter
+  - type: StaticPrice
+    price: 2000
+
+- type: entity
+  parent: BaseFlatpack
+  id: LaserDrillFlatpack
+  name: laser drill flatpack
+  description: A flatpack used for constructing an automated laser drill.
+  components:
+  - type: Flatpack
+    entity: LaserDrill
+  - type: StaticPrice
+    price: 3000
+    vendPrice: 20000
+

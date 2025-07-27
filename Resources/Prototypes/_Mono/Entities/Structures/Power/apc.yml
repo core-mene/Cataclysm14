@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: BaseAPC
+  id: APCBasicTSF
+  suffix: Basic, 50kJ, TSFMC Engineering Locked
+  components:
+  - type: Battery
+    maxCharge: 50000
+    startingCharge: 50000
+  - type: BatteryDrinkerSource # EE IPCs
+    maxAmount: 5000
+  - type: AccessReader
+    access: [["TsfmcEngineering"]]

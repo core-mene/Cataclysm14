@@ -1,3 +1,12 @@
+// SPDX-FileCopyrightText: 2024 DrSmugleaf
+// SPDX-FileCopyrightText: 2024 Ed
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 #nullable enable
 using Content.Shared.CCVar;
 using Robust.Shared;
@@ -39,6 +48,7 @@ public static partial class PoolManager
         (CVars.NetBufferSize.Name, "0"),
         (CCVars.InteractionRateLimitCount.Name, "9999999"),
         (CCVars.InteractionRateLimitPeriod.Name, "0.1"),
+        (CCVars.MovementMobPushing.Name, "false"),
         (CCVars.GameLobbyDefaultPreset.Name, "secret"), // Frontier: Adventure takes ages, default to secret
         (CCVars.StaticStorageUI.Name, "true"),// Frontier: causes storage test failures
         (CCVars.StorageLimit.Name, "1")// Frontier: test failures with multiple storage enabled

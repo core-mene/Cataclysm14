@@ -1,3 +1,29 @@
+// SPDX-FileCopyrightText: 2022 Acruid
+// SPDX-FileCopyrightText: 2022 Jezithyr
+// SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 themias
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2023 Chief-Engineer
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2023 ShadowCommander
+// SPDX-FileCopyrightText: 2023 Tom Leys
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2023 crazybrain23
+// SPDX-FileCopyrightText: 2023 deltanedas
+// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2023 vanx
+// SPDX-FileCopyrightText: 2023 vanx <#vanxxxx>
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 Winkarst
+// SPDX-FileCopyrightText: 2025 J
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Administration.Logs;
 using Content.Server.GameTicking;
 using Content.Server.Ghost;
@@ -215,7 +241,7 @@ public sealed class MindSystem : SharedMindSystem
             // not implicitly via optional arguments.
 
             var position = Deleted(mind.OwnedEntity)
-                ? _gameTicker.GetObserverSpawnPoint().ToMap(EntityManager, _transform)
+                ? _transform.ToMapCoordinates(_gameTicker.GetObserverSpawnPoint())
                 : _transform.GetMapCoordinates(mind.OwnedEntity.Value);
 
             entity = Spawn(GameTicker.ObserverPrototypeName, position);
@@ -336,7 +362,7 @@ public sealed class MindSystem : SharedMindSystem
         if (_players.TryGetSessionById(userId.Value, out var ret))
         {
             mind.Session = ret;
-            _pvsOverride.AddSessionOverride(netMind, ret);
+            _pvsOverride.AddSessionOverride(mindId, ret);
             _players.SetAttachedEntity(ret, mind.CurrentEntity);
         }
     }

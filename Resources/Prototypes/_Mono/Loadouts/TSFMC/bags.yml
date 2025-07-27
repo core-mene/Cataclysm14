@@ -1,14 +1,30 @@
+# SPDX-FileCopyrightText: 2025 RealSchepka
+# SPDX-FileCopyrightText: 2025 Schepka
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadout
   id: TsfmcClothingBackpack
   equipment:
-    back: ClothingBackpackSecurity
+    back: ClothingBackpackTsfmc
 
 - type: loadout
   id: TsfmcClothingSatchel
   equipment:
-    back: ClothingBackpackSatchelSecurity
+    back: ClothingBackpackSatchelTsfmc
 
 - type: loadout
   id: TsfmcClothingDuffel
   equipment:
-    back: ClothingBackpackDuffelSecurity
+    back: ClothingBackpackDuffelTsfmc
+
+- type: loadout
+  id: TsfmcEngiClothingModsuit2
+  equipment:
+    back: ClothingModsuitEngineerPowerCell
+
+- type: loadout
+  id: TsfmcEngiClothingModsuit
+  equipment:
+    back: ClothingModsuitVoltaPowerCell

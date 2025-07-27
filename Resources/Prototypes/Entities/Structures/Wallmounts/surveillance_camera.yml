@@ -1,3 +1,17 @@
+# SPDX-FileCopyrightText: 2022 Flipp Syder
+# SPDX-FileCopyrightText: 2022 Mervill
+# SPDX-FileCopyrightText: 2022 Visne
+# SPDX-FileCopyrightText: 2023 DrSmugleaf
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2024 Ilya246
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 KiraZen_
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 Spessmann
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   abstract: true
   id: SurveillanceCameraBase
@@ -230,3 +244,17 @@
     mode: SnapgridCenter
     snap:
       - Wallmount
+
+# mono
+- type: entity
+  parent: SurveillanceCameraBase
+  id: SurveillanceCameraTSF
+  name: camera
+  suffix: TSF
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: SurveillanceCameraTSF
+    transmitFrequencyId: SurveillanceCamera
+  - type: SurveillanceCamera
+    networkSet: true
