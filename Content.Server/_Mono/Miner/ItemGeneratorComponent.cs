@@ -10,13 +10,8 @@ using Robust.Shared.Prototypes;
 namespace Content.Server._Mono.Miner;
 
 [RegisterComponent]
-public sealed partial class LaserDrillComponent : Component
+public sealed partial class ItemGeneratorComponent : Component
 {
-    /// <summary>
-    /// How much ore does this thing have in its buffer. Why does this exist?
-    /// </summary>
-    [DataField("accumulatedOre")]
-    public float AccumulatedOre = 0f;
 
     /// <summary>
     /// Time since last update
@@ -25,27 +20,27 @@ public sealed partial class LaserDrillComponent : Component
     public TimeSpan LastUpdate = TimeSpan.Zero;
 
     /// <summary>
-    /// Miner working SFX
+    /// Generator working SFX
     /// </summary>
     [DataField("miningSound")]
     public SoundSpecifier MiningSound = new SoundPathSpecifier("/Audio/Machines/circuitprinter.ogg");
 
     /// <summary>
-    /// How often the miner produces TC (in seconds)
+    /// Time between item generation actions
     /// </summary>
     [DataField("miningInterval")]
     public float MiningInterval = 10.0f;
 
     /// <summary>
-    /// Power consumption
+    /// Power consumption in watts
     /// </summary>
     [DataField("powerDraw")]
     public float PowerDraw = 30000f;
 
     /// <summary>
-    /// List of entities that can be spawned by this component. One will be randomly
-    /// chosen for each entity spawned. When multiple entities are spawned at once,
-    /// each will be randomly chosen separately.
+    /// List of entities that can be spawned by this component.
+    /// If you don't want it spawning inside the generator's container, set it to spawn a random spawner instead.
+    /// Each will be randomly chosen separately.
     /// </summary>
     [DataField]
     public List<EntProtoId> Prototypes = [];
@@ -62,4 +57,7 @@ public sealed partial class LaserDrillComponent : Component
     ///     If this doesn't exist, then the origin grid and map will be filled in, instead.
     /// </summary>
     public EntityUid? OriginStation;
+
+    [DataField]
+    public bool RequireExpedition = false;
 }

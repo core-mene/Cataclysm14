@@ -17,7 +17,7 @@ using Robust.Shared.Random;
 
 namespace Content.Server._Mono.Miner;
 
-public sealed class LaserDrillSystem : EntitySystem
+public sealed class ItemGeneratorSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly SharedTransformSystem _xform = default!;
@@ -33,10 +33,10 @@ public sealed class LaserDrillSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<LaserDrillComponent, MapInitEvent>(OnStartup);
+        SubscribeLocalEvent<ItemGeneratorComponent, MapInitEvent>(OnStartup);
     }
 
-    private void OnStartup(EntityUid uid, LaserDrillComponent component, MapInitEvent args)
+    private void OnStartup(EntityUid uid, ItemGeneratorComponent component, MapInitEvent args)
     {
         var originStation = _station.GetOwningStation(uid);
 
@@ -53,7 +53,7 @@ public sealed class LaserDrillSystem : EntitySystem
 
     public override void Update(float frameTime)
     {
-        var query = EntityQueryEnumerator<LaserDrillComponent, BatteryComponent, PowerConsumerComponent>();
+        var query = EntityQueryEnumerator<ItemGeneratorComponent, BatteryComponent, PowerConsumerComponent>();
         var currentTime = _gameTiming.CurTime;
 
         while (query.MoveNext(out var entity, out var miner, out var battery, out var powerConsumer))
@@ -61,7 +61,7 @@ public sealed class LaserDrillSystem : EntitySystem
             // checking station
             var xformQuery = GetEntityQuery<TransformComponent>();
             var xform = xformQuery.GetComponent(entity);
-            if (!HasComp<SalvageExpeditionComponent>(xform.MapUid))
+            if (miner.RequireExpedition && !HasComp<SalvageExpeditionComponent>(xform.MapUid))
             {
                 continue;
             }
@@ -77,7 +77,6 @@ public sealed class LaserDrillSystem : EntitySystem
                 continue;
 
             miner.LastUpdate = currentTime;
-            miner.AccumulatedOre += 1;
 
             if (!_containerSystem.TryGetContainer(entity, "output_slot", out var container))
                 continue;
@@ -96,7 +95,6 @@ public sealed class LaserDrillSystem : EntitySystem
                 _stackSystem.SetCount(container.ContainedEntities[0], stack.Count + 1);
             }
 
-            miner.AccumulatedOre = 0;
             _audio.PlayPvs(miner.MiningSound, entity);
         }
     }

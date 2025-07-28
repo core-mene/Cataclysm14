@@ -14,11 +14,12 @@
   - type: PowerConsumer
     voltage: High
     drawRate: 50000
-  - type: LaserDrill
+  - type: ItemGenerator
     prototypes:
     - SpawnLootOres15
     miningInterval: 15
     powerDraw: 50000
+    requireExpedition: true
   - type: Battery
     maxCharge: 1000
     pricePerJoule: 0.0003
