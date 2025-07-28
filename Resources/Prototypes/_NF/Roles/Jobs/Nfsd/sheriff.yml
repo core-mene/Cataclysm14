@@ -42,7 +42,6 @@
 # SPDX-FileCopyrightText: 2024 deltanedas
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 mikusssssss
 # SPDX-FileCopyrightText: 2025 sleepyyapril
@@ -74,6 +73,7 @@
     - !type:RoleTimeRequirement
       role: JobWarden
       time: 10800 # 3 hours # mono
+  whitelisted: true
   startingGear: SheriffGear
   alwaysUseSpawner: true
   icon: JobIconSheriff
