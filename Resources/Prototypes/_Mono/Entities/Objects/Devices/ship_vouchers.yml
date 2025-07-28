@@ -11,6 +11,24 @@
 
 - type: entity
   parent: BaseShipVoucher
+  id: ShipVoucherUSSPAll
+  name: USSP shuttle voucher
+  description: A small card that authorizes the acquisition of any USSP shuttle, only issued to Kommisars.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: USSP
+    companyName: USSP
+    access:
+    - USSP
+    - USSPCommand
+
+- type: entity
+  parent: BaseShipVoucher
   id: ShipVoucherUSSP
   name: USSP gadyuka voucher
   description: A small card that authorizes the acquisition of a Gadyuka.
