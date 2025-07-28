@@ -1,50 +1,11 @@
-# SPDX-FileCopyrightText: 2022 0x6273
-# SPDX-FileCopyrightText: 2022 20kdc
-# SPDX-FileCopyrightText: 2022 Francesco
-# SPDX-FileCopyrightText: 2022 Kara
-# SPDX-FileCopyrightText: 2022 LittleBuilderJane
-# SPDX-FileCopyrightText: 2022 Nairod
-# SPDX-FileCopyrightText: 2022 metalgearsloth
-# SPDX-FileCopyrightText: 2023 Debug
-# SPDX-FileCopyrightText: 2023 Leon Friedrich
-# SPDX-FileCopyrightText: 2023 Nemanja
-# SPDX-FileCopyrightText: 2023 TsjipTsjip
-# SPDX-FileCopyrightText: 2023 avery
-# SPDX-FileCopyrightText: 2023 lzk
-# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
-# SPDX-FileCopyrightText: 2024 AndresE55
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 Emisse
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 GreaseMonk
-# SPDX-FileCopyrightText: 2024 Maxtone
-# SPDX-FileCopyrightText: 2024 PECK
-# SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
-# SPDX-FileCopyrightText: 2024 ThatOneGoblin25
-# SPDX-FileCopyrightText: 2024 Whatstone
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Blu
-# SPDX-FileCopyrightText: 2025 BoskiYourk
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 WreakHavocOnTheMiddleClass
-# SPDX-FileCopyrightText: 2025 core-mene
-# SPDX-FileCopyrightText: 2025 dustylens
-# SPDX-FileCopyrightText: 2025 significant harassment
-# SPDX-FileCopyrightText: 2025 sleepyyapril
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
-  engineVersion: 260.2.0
+  engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/21/2025 20:26:01
-  entityCount: 11372
+  time: 07/28/2025 14:49:41
+  entityCount: 11373
 maps: []
 grids:
 - 1
@@ -5593,7 +5554,7 @@ entities:
       pos: 87.5,60.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -15327.569
+      secondsUntilStateChange: -15428.943
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -5771,7 +5732,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -49262.96
+      secondsUntilStateChange: -49364.336
       state: Opening
   - uid: 7012
     components:
@@ -6223,7 +6184,7 @@ entities:
       pos: 73.5,43.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -3787.909
+      secondsUntilStateChange: -3889.2825
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -50528,6 +50489,13 @@ entities:
     components:
     - type: Transform
       pos: 82.5,44.5
+      parent: 1
+- proto: ShipVoucherUSSPAll
+  entities:
+  - uid: 11373
+    components:
+    - type: Transform
+      pos: 83.38524,67.485085
       parent: 1
 - proto: Shiv
   entities:
