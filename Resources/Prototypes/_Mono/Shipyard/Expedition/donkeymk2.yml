@@ -1,0 +1,48 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Rubeebee
+# SPDX-FileCopyrightText: 2025 Rubeebeebee
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: Rubeebeebee
+# Discord: rubeebee
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Donkeymk2
+  parent: BaseVessel
+  name: PRT Donkey MkII
+  description: A pirate retrofit of an old CIV cargo freighter, this ship is going through it's second life as a missile boat for any mercenaries willing to risk it's CIV hull to use it's awesome guns. This ship has an Military IFF.
+  price: 210000 # while it can spew an awesome amount of firepower, its relatively slow, and stil has a CIV class hull (albiet tough, for a CIV hull.) 
+  category: Large
+  group: Expedition
+  access: Mercenary
+  shuttlePath: /Maps/_Mono/Shuttles/Expedition/donkeymk2.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  - Pursuit
+  engine:
+  - Bananium
+
+- type: gameMap
+  id: Donkeymk2
+  mapName: 'PRT Donkey MkII'
+  mapPath: /Maps/_Mono/Shuttles/Expedition/donkeymk2.yml
+  minPlayers: 0
+  stations:
+    Donkeymk2:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Donkey MkII MIL{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
