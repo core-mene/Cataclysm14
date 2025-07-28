@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/28/2025 21:11:59
+  time: 07/28/2025 21:55:30
   entityCount: 633
 maps: []
 grids:
@@ -4050,14 +4050,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: WeaponTurretAK570
-  entities:
-  - uid: 8
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,-1.5
-      parent: 1
 - proto: WeaponTurretL85Autocannon
   entities:
   - uid: 209
@@ -4089,6 +4081,14 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 5.5,-2.5
+      parent: 1
+- proto: WeaponTurretTovek
+  entities:
+  - uid: 8
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,-1.5
       parent: 1
 - proto: WindoorSecure
   entities:
