@@ -4,13 +4,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: speechSounds
-  id: MaleAvali
+  id: MaleAvali # Dude I have no idea at this point anything but horrible sound design thanks Floof - Mono
   saySound:
-    path: /Audio/_Starlight/Voice/Resomi/resomi_chirp1.ogg
+    path: /Audio/_Mono/Voices/goonstation/roach.ogg
   askSound:
-    path: /Audio/_Starlight/Voice/Resomi/resomi_chirp4.ogg
+    path: /Audio/_Mono/Voices/goonstation/roach_ask.ogg
   exclaimSound:
-    path: /Audio/_Starlight/Voice/Resomi/resomi_chirp3.ogg
+    path: /Audio/_Mono/Voices/goonstation/roach_exclaim.ogg
 
 # Unused but if we get diff supprot for it can add in
 - type: speechSounds
