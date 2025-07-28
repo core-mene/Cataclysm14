@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/28/2025 17:14:26
-  entityCount: 3127
+  time: 07/28/2025 17:54:14
+  entityCount: 3125
 maps: []
 grids:
 - 1
@@ -13875,12 +13875,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 6.5,-11.5
       parent: 1
-  - uid: 1842
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 2.5,9.5
-      parent: 1
   - uid: 1843
     components:
     - type: Transform
@@ -13910,12 +13904,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -2.5,-11.5
-      parent: 1
-  - uid: 1875
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 3.5,9.5
       parent: 1
 - proto: GrilleDiagonal
   entities:
@@ -14611,10 +14599,10 @@ entities:
         [head=3][color=blue]Diplomacy and Civilian Work[/color][/head]
 
 
-        If diplomats or civilians visit, they are to stay in the lower section of the ship, in the civilian area, up to the black airtight hatch doors. This is for their own safety, as the main hall has a turret which can pose a threat to them. [bold]There is a USSP locked button with a grey outline in the lounge, near a trash cart; pressing it will open and hold all doors allowed for non-USSP members. Pressing it again will toggle holding, but wont close the doors[/bold]. This is to be done if civilians are expected to work there or if there are visiting diplomats. Any doors which are preferred closed require to be closing manually after hitting the button.
+        If diplomats or civilians visit, they are to stay in the lower section of the ship, in the civilian area, up to the black airtight hatch doors. This is for their and our own safety, as the main hall has a turret which can pose a threat to diplomats and us. [bold]There is a USSP locked button with a grey outline in the lounge, near a trash cart; pressing it will open and hold all doors allowed for non-USSP members. Pressing it again will toggle holding, but wont close the doors[/bold]. This is to be done if civilians are expected to work there or if there are visiting diplomats. Any doors which are preferred closed require to be closing manually after hitting the button.
 
 
-        [bold][color=#8B0000]Under NO circumstances are diplomats or civilians to attempt to approach the staff hallway beyond the airtight hatch, as the outside is guarded by turrets which WILL kill them. This sadly means medical is off limits for civilians and diplomats, unless turrets are destroyed or walled off.[/bold][/color]
+        [bold][color=#8B0000]Under NO circumstances are diplomats to attempt to approach the staff hallway beyond the airtight hatch, as the outside is guarded by turrets which WILL kill them. This sadly means medical is off limits for all diplomats or TSF/Rogue visitors, unless turrets are destroyed or walled off.[/bold][/color]
 
 
         [head=2][color=red]Active Combat and Emergencies[/color][/head]
@@ -14638,7 +14626,7 @@ entities:
         [head=3][color=purple]Boarding[/color][/head]
 
 
-        [bold]If the ship is boarded, all essential (pilot, commander)[/bold] and non-combat (civilian) [bold]personnel are to bunker down in [/bold]either engineering, the armory or [bold]the bridge.[/bold] The bridge has blast doors to prevent boarders quickly gaining access, and a turret guarding the exterior. Armory has turret inside, and engineering has secure doors. Civilians and visitors are to lock themselves in the botanical area (comes with a panic button) as turrets will execute them if they approach the staff areas.
+        [bold]If the ship is boarded, all essential (pilot, commander)[/bold] and non-combat (civilian) [bold]personnel are to bunker down in [/bold]either engineering, the armory or [bold]the bridge.[/bold] The bridge has blast doors to prevent boarders quickly gaining access, and a turret guarding the exterior. Armory has turret inside, and engineering has secure doors. Dimplomats and TSF/Rogue visitors are to lock themselves in the botanical area (comes with a panic button, use it thrice to close and bolt the door shut) as turrets will execute them if they approach the staff areas.
 
 
         [bold]All combatants are to terminate the boarders, hiding will not be tolerated. Make Nova Cygni proud.[/bold]
@@ -15713,18 +15701,6 @@ entities:
       parent: 1
 - proto: ReinforcedWindow
   entities:
-  - uid: 321
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 2.5,9.5
-      parent: 1
-  - uid: 1821
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 3.5,9.5
-      parent: 1
   - uid: 1822
     components:
     - type: Transform
@@ -19028,6 +19004,11 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -4.5,-10.5
       parent: 1
+  - uid: 321
+    components:
+    - type: Transform
+      pos: 2.5,9.5
+      parent: 1
   - uid: 1123
     components:
     - type: Transform
@@ -19039,6 +19020,11 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 5.5,-9.5
+      parent: 1
+  - uid: 1821
+    components:
+    - type: Transform
+      pos: 3.5,9.5
       parent: 1
   - uid: 1921
     components:
