@@ -59,7 +59,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.49,-0.49,0.49,-0.25"
+          bounds: "-0.49,-0.49,0.49,-0.425"
         density: 1000
         mask:
         - MidImpassable
@@ -105,7 +105,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.49,-0.49,0.49,-0.25"
+          bounds: "-0.49,-0.49,0.49,-0.425"
         density: 1000
         mask:
         - MidImpassable
@@ -114,7 +114,7 @@
       fix2:
         shape:
           !type:PhysShapeAabb
-          bounds: "0.49,0.49,0.25,-0.49"
+          bounds: "0.49,0.49,0.425,-0.49"
         density: 1000
         mask:
         - MidImpassable
@@ -160,7 +160,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.49,0.49,-0.25,0.25"
+          bounds: "-0.49,0.49,-0.425,0.425"
         density: 1000
         mask:
         - MidImpassable
@@ -206,7 +206,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.49,-0.49,0.49,-0.25"
+          bounds: "-0.49,-0.49,0.49,-0.425"
         density: 1000
         mask:
           - MidImpassable
@@ -215,7 +215,7 @@
       fix2:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.49,-0.49,-0.25,0.49"
+          bounds: "-0.49,-0.49,-0.425,0.49"
         density: 1000
         mask:
           - MidImpassable
@@ -224,7 +224,7 @@
       fix3:
         shape:
           !type:PhysShapeAabb
-          bounds: "0.25,-0.49,0.49,0.49"
+          bounds: "0.425,-0.49,0.49,0.49"
         density: 1000
         mask:
           - MidImpassable
