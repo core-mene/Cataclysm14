@@ -5,16 +5,15 @@
   id: Tiran
   parent: BaseVesselAntag
   name: PPU Tiran
-  description: A sector Capital and flagship destroyer, built as a floating city. Slow, but comes with similar grade arnament and hull thickness (to vitals) as Serpent, except slightly superior. Minimum crew is 3, recommended is 5+, can support civilians and diplomats.
+  description: A sector Capital and flagship destroyer, available to only USSP Serzchants and Kommisars, built as a floating city. Slow, but comes with similar grade arnament and hull thickness (to reach vitals) as Serpent, except slightly superior arnament wise. Minimum crew is 3 (2 is possible, but very ill advised), recommended is 5+, can support civilians and diplomats. Comes with SoP.
   limit: 1
   price: 400000 #original is like 350, I tried to reduce plasti walls too.
   category: Large
   group: Ussp
-  access: USSPCommand
+  access: USSPHigh
   shuttlePath: /Maps/_Mono/Shuttles/USSP/tiran.yml
   guidebookPage: Null
   class:
-  - Patrol
   - Capital
   - Frigate
   engine:
