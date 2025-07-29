@@ -1,0 +1,41 @@
+
+# Author Info
+# GitHub: UnicornOnLSD
+# Discord: unicornonlsd
+
+# Shuttle Notes: basically pluto but with VERY VERY LIGHT ship weaponry and instead of cargo a boarding bay for them crimers.
+#                
+- type: vessel
+  id: PlutoPaycheckBravta
+  parent: BaseVessel
+  name: DIS Pluto
+  description: A gross refitting of the classic Pluto done by the Paycheck Bravta, intended to be used as a fast, somewhat camouflaged robbery ship. The cockpit was made sturdier with plating, at the cost of being much more cramped, at least it has an IFF console. The cargo bay was turned into a boarding pad. FTL capable, and equipped with two frontal facing dravons.
+  price: 38800
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/_Mono/Shuttles/pluto_var_paycheckbravta.yml
+  guidebookPage: Null
+  class:
+  - Cargo
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: PlutoPaycheckBravta
+  mapName: 'DIS-P Pluto' #added P for Paycheck Bravta, but only one letter to show it's a retrofit.
+  mapPath: /Maps/_Mono/Shuttles/pluto.yml
+  minPlayers: 0
+  stations:
+    PlutoPaycheckBravta:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Pluto CIV-P{1}' #Would be too easy if you could just appear as a civ, P stands for Paycheck Bravta. Might change later if black market ships get a proper tag.
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
