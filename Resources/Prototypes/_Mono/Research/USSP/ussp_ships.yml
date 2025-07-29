@@ -45,3 +45,18 @@
   - TunguskaVoucherUssp
   technologyPrerequisites:
   - UsspMediumShips
+
+- type: technology
+  id: UsspLedokol
+  name: research-technology-ussp-ships-ledokol
+  icon:
+    sprite: _Mono/Interface/Misc/research_icons_ussp.rsi
+    state: icon-tier4
+  discipline: UsspShipyard
+  tier: 3
+  cost: 100000
+  recipeUnlocks:
+  - LedokolVoucherUssp
+  - LedokolRamVoucherUssp
+  technologyPrerequisites:
+  - UsspAdvancedShips
