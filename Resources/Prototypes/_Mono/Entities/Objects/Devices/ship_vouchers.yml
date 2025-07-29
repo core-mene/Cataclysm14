@@ -113,6 +113,57 @@
     access:
     - USSPSekunda # SHITCODE!!!
 
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherUSSPLedokol
+  name: USSP ledokol voucher
+  description: A small card that authorizes the acquisition of a Ledokol.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: USSP
+    companyName: USSP
+    access:
+    - USSPLedokol # SHITCODE!!!
+
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherUSSPLedokolRam
+  name: USSP ledokol voucher
+  description: A small card that authorizes the acquisition of a Ledokol.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: Custom
+    companyName: USSP
+    access:
+    - USSPLedokolRam # SHITCODE!!!
+
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherUSSPLedokolAttatchment
+  name: USSP ledokol voucher
+  description: A small card that authorizes the acquisition of a Ledokol.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: voucherstationguard
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: Custom
+    companyName: USSP
+    access:
+    - USSPLedokolAttatchment # SHITCODE!!!
+
 # Tsfmc
 - type: entity
   parent: ShipVoucherNfsdBailiff

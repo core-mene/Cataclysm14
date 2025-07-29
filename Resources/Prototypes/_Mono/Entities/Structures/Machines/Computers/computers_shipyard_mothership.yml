@@ -54,3 +54,14 @@
   - type: ShipyardListing
     shuttles:
     - Zephyr
+
+- type: entity
+  id: LedokolAttatchmentComputer
+  parent: BaseCarrierComputer
+  name: ledokol attatchemnt console
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Molotok
+    - Kopye
+    - Kupol
