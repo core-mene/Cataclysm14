@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: BoxSurvival
   id: BoxSurvivalNFOxygen
@@ -8,8 +15,7 @@
       - id: EmergencyOxygenTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
-      - id: FoodPSB
-      - id: DrinkWaterBottleFull
+      - id: MonoMRE # Mono - replace PSB and water bottle w/ MRE
       - id: Flare
   - type: Sprite
     layers:
@@ -26,8 +32,7 @@
       - id: EmergencyNitrogenTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
-      - id: FoodPSB
-      - id: DrinkWaterBottleFull
+      - id: MonoMRE # Mono - replace PSB and water bottle w/ MRE
       - id: Flare
   - type: Sprite
     layers:
@@ -44,8 +49,7 @@
       - id: DoubleEmergencyOxygenTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
-      - id: FoodPSB
-      - id: DrinkWaterBottleFull
+      - id: MonoMRE # Mono - replace PSB and water bottle w/ MRE
       - id: CrowbarPocket
   - type: Sprite
     layers:
@@ -62,8 +66,7 @@
       - id: DoubleEmergencyNitrogenTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
-      - id: FoodPSB
-      - id: DrinkWaterBottleFull
+      - id: MonoMRE # Mono - replace PSB and water bottle w/ MRE
       - id: CrowbarPocket
   - type: Sprite
     layers:

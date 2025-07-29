@@ -1,11 +1,22 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: vendingMachineInventory
   id: NfsdDrobeInventory
   startingInventory:
     ClothingBackpackSecurity: 10
     ClothingBackpackSatchelSecurity: 10
     ClothingBackpackDuffelSecurity: 10
-    ClothingHandsGlovesCombat: 30
+    ClothingBackpackTsfmc: 10
+    ClothingBackpackSatchel: 10
+    ClothingBackpackDuffelTsfmc: 10
+    ClothingHandsGlovesTacticalCombatBlack: 30
     ClothingUniformTSFMC: 30
+    ClothingUniformTSFMCDesert: 30
     ClothingNeckIFFCyan: 30
     ClothingHeadsetTsfmc: 30
     ClothingMaskGasSecurity: 30
@@ -17,5 +28,6 @@
     ClothingShoesBootsMagSecurity: 3
     ClothingEyesHudNfsd: 10
     ClothingEyesHudMedSec: 2
-    ClothingBeltMilitaryWebbing: 28
-    ClothingBeltMilitaryWebbingMed: 2
+    ClothingBeltWebbingsNormalTSFMC: 15
+    ClothingBeltWebbingsBigTSFMC: 12
+    ClothingBeltMilitaryWebbingMed: 3

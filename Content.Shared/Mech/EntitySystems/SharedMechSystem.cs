@@ -17,6 +17,7 @@
 // SPDX-FileCopyrightText: 2025 BeeRobynn
 // SPDX-FileCopyrightText: 2025 Blu
 // SPDX-FileCopyrightText: 2025 ScyronX
+// SPDX-FileCopyrightText: 2025 starch
 // SPDX-FileCopyrightText: 2025 wewman222
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -93,7 +94,7 @@ public abstract class SharedMechSystem : EntitySystem
         SubscribeLocalEvent<MechComponent, GetAdditionalAccessEvent>(OnGetAdditionalAccess);
         SubscribeLocalEvent<MechComponent, DragDropTargetEvent>(OnDragDrop);
         SubscribeLocalEvent<MechComponent, CanDropTargetEvent>(OnCanDragDrop);
-        SubscribeLocalEvent<MechComponent, GotEmaggedEvent>(OnEmagged);
+        //SubscribeLocalEvent<MechComponent, GotEmaggedEvent>(OnEmagged);
 
         SubscribeLocalEvent<MechPilotComponent, GetMeleeWeaponEvent>(OnGetMeleeWeapon);
         SubscribeLocalEvent<MechPilotComponent, CanAttackFromContainerEvent>(OnCanAttackFromContainer);
@@ -593,15 +594,14 @@ public abstract class SharedMechSystem : EntitySystem
 
         args.CanDrop |= !component.Broken && CanInsert(uid, args.Dragged, component);
     }
-
-    private void OnEmagged(EntityUid uid, MechComponent component, ref GotEmaggedEvent args) // Goobstation
-    {
-        if (!component.BreakOnEmag)
-            return;
-        args.Handled = true;
-        component.EquipmentWhitelist = null;
-        Dirty(uid, component);
-    }
+    //private void OnEmagged(EntityUid uid, MechComponent component, ref GotEmaggedEvent args) // Goobstation
+    //{
+    //    if (!component.BreakOnEmag)
+    //        return;
+    //    args.Handled = true;
+    //    component.EquipmentWhitelist = null;
+    //    Dirty(uid, component);
+    //}
 }
 
 /// <summary>

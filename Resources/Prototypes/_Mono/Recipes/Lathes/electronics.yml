@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 sleepyyapril
@@ -59,3 +60,18 @@
   parent: BaseGoldCircuitboardRecipe
   id: ComputerIFFCircuitboard
   result: ComputerIFFCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: MachineShieldMS100Circuitboard
+  result: MachineShieldMS100Circuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: MachineShieldMS250Circuitboard
+  result: MachineShieldMS250Circuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: MachineShieldMS500Circuitboard
+  result: MachineShieldMS500Circuitboard

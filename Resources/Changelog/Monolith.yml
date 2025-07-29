@@ -8780,3 +8780,414 @@ Entries:
   id: 989
   time: '2025-07-25T09:57:19.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1578
+- author: Nope1356
+  changes:
+    - type: Tweak
+      message: >-
+        Rewrote description to be less murder murder kill kill stabby stab. Too
+        provocative and encouraged killing literally everyone. Do Not Fucking
+        Kill Everyone You Idiotic Luddites.
+  id: 990
+  time: '2025-07-25T16:54:41.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1611
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added an alternate jumpsuit option for TSF in a nice desert tan. Also
+        added blue armbands to TSF jumpsuits.
+    - type: Add
+      message: >-
+        TSFMC gets unique chest rigs now. and TSFMCdrobe has been updated for
+        new TSF drip.
+    - type: Add
+      message: >-
+        TSF can now get tactical backpacks in loadout, and helmets/hats aren't
+        required now. Get kevlar on your head anyways.
+    - type: Tweak
+      message: >-
+        Changed TSFMC and Rogues department name (the category in crew
+        monitoring/character creator)
+  id: 991
+  time: '2025-07-25T18:51:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1605
+- author: starch70
+  changes:
+    - type: Add
+      message: Engineering, Rogue, and Admin PDAs now have inbuilt geiger counters.
+    - type: Tweak
+      message: >-
+        Changed bananium generators to not use geiger counter SFX. What was that
+        even about.
+  id: 992
+  time: '2025-07-25T18:53:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1603
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Plasma, Frezon, and Tritium made less valuable.
+  id: 993
+  time: '2025-07-25T21:19:13.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1613
+- author: Rubeebeebee
+  changes:
+    - type: Add
+      message: >-
+        The Sabine MkII, a zealot of balaam MIL class ship, made for hit-and-run
+        tactics. 
+    - type: Tweak
+      message: >-
+        updated the decals and floor tile choices to be more pretty, also
+        removed 2 thrusters from the back as requested
+    - type: Tweak
+      message: >-
+        UPDATED THE ARMORY (now contains 1x kammerer, 1x breaching hammer, and
+        2x buckshot shells) + BRIDGE WINDOWS
+  id: 994
+  time: '2025-07-26T00:57:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1608
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Jumpsuit IFF signature renamed to Radar Signature
+    - type: Tweak
+      message: >-
+        It is now, very clear if your jumpsuit radar signature is active, on the
+        pop up message when enabled or disabled, on examining the jumpsuit, and
+        on right click.
+  id: 995
+  time: '2025-07-26T01:30:50.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1616
+- author: starch70
+  changes:
+    - type: Add
+      message: Added Shirokami to medical dispatch shipyard.
+    - type: Tweak
+      message: >-
+        Nerfed Lancelot cargo sell rates, and reduced plasma gas miner max kPa
+        from 300 to 50.
+  id: 996
+  time: '2025-07-26T02:47:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1619
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Added blast doors to Flyssa docks.
+    - type: Fix
+      message: >-
+        Fixed Flyssa not having interior cameras for AI, and fixed Flyssa chem
+        not having a sink.
+  id: 997
+  time: '2025-07-26T02:48:27.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1615
+- author: ScyronX
+  changes:
+    - type: Remove
+      message: Removed whitelist requirement from TSFMC and Rogue factions.
+  id: 998
+  time: '2025-07-26T07:33:44.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1621
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added a few new maint tiles for mapping, as well as 3 mono-catwalks for
+        white, normal, and dark steel (you can build these too).
+    - type: Add
+      message: >-
+        Monolith-specific tiles (such as the Tunguska's cargo bay tiles) now
+        actually drop their own tile items instead of generic steel.
+    - type: Tweak
+      message: Updated white and normal steel mono tile sprites.
+  id: 999
+  time: '2025-07-26T13:48:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1624
+- author: UnicornOnLSD
+  changes:
+    - type: Tweak
+      message: >-
+        DIS shipset has had it's company specific gear replaced with regular
+        one. 
+  id: 1000
+  time: '2025-07-26T13:55:41.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1622
+- author: cheetah1984
+  changes:
+    - type: Add
+      message: Ported the wizden local material silo
+  id: 1001
+  time: '2025-07-26T14:07:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1620
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added automated ore drills (only works on exped planets/ships on exped)
+        that generate 15 of a random ore (minus bluespace/bananiun) every 5
+        seconds when fed with 50 kW of HV. Buy at exped lodge flatpackvend.
+  id: 1002
+  time: '2025-07-26T20:18:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1623
+- author: Rubeebeebee
+  changes:
+    - type: Add
+      message: UNSA Fortunate, a MIL ship made for boarding
+  id: 1003
+  time: '2025-07-26T20:20:02.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1558
+- author: Onezero0
+  changes:
+    - type: Tweak
+      message: >-
+        You can now shoot down ASM-220 torpedoes, L85 isn't just useful for
+        lagging out the server anymore.
+  id: 1004
+  time: '2025-07-26T23:03:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1627
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        PSBs and water bottles in survival-boxes have been replaced with a more
+        space-efficient MRE.
+    - type: Tweak
+      message: >-
+        Adjusted the color of dark steel tiles and trims, so they should be
+        unified now (minus commercial dark steel tiles). No more dark steel mono
+        tiles looking out of place.
+  id: 1005
+  time: '2025-07-27T01:14:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1630
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: minimum range to FTL away from other ships is now 256m
+  id: 1006
+  time: '2025-07-27T02:16:06.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1092
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Mass scanners/ship consoles/etc reduced to 512m. Only advanced radar is
+        768m range, again. 
+    - type: Tweak
+      message: >-
+        Re-adds advanced radar to places it was removed from. The mass scanner
+        console is a shit sprite anyways.
+  id: 1007
+  time: '2025-07-27T04:05:59.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1633
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Projectile speeds of shipguns and ship missiles halved.
+  id: 1008
+  time: '2025-07-27T04:11:45.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1638
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Updated the hallways of Rogue Insurgency hideout (and some other parts).
+        Mostly just visual updates. No more piss lighting hallways.
+  id: 1009
+  time: '2025-07-27T07:52:54.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1639
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed gas miners being anchorable.
+    - type: Fix
+      message: Fixed Mono catwalks being rotatable.
+  id: 1010
+  time: '2025-07-27T07:53:24.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1640
+- author: changed TWO
+  changes: []
+  id: 1011
+  time: '2025-07-27T10:47:04.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1645
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Space heaters and racks now use shiptest sprites. Pretty useless change
+        to log.
+  id: 1012
+  time: '2025-07-27T10:50:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1643
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added a lot more sounds to the ambient computer SFX because hearing the
+        same 10 beeps got old.
+    - type: Tweak
+      message: Sfx volume reduced slightly, computer beeps less often
+  id: 1013
+  time: '2025-07-27T18:14:06.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1647
+- author: starch70
+  changes:
+    - type: Fix
+      message: You can no longer use emags on mechs (no more 120mm on ripleys)
+  id: 1014
+  time: '2025-07-27T20:34:00.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1648
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: >-
+        WSPR now shows its theoretical firerate on examine with well timed
+        bursts of a 7.5 firerate instead of 5 firerate. (This does not actually
+        change how the weapon handles at all)
+  id: 1015
+  time: '2025-07-27T20:35:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1651
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Lecter spawns in weapon cases now.
+    - type: Tweak
+      message: Heavy weapon cases have more space now.
+  id: 1016
+  time: '2025-07-27T20:36:13.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1650
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Salvage wreck maints lockers more common and loot pool expanded.
+        Hopefully they should be a bit more fun to open.
+    - type: Tweak
+      message: >-
+        Unremoved exped cloning scanner, syndiedrobe and salvage high cap
+        welding fuel, PACMAN
+    - type: Tweak
+      message: >-
+        Actual salvage bananium, bluespace, and diamonds rates were higher than
+        planned and had to be reduced. Sorry.
+    - type: Tweak
+      message: >-
+        Cargo crates from wrecks have been revised to be much more rewarding and
+        less disruptive to the salvage gameloop.
+    - type: Add
+      message: >-
+        Pill bottle with ten strange pills. Yes, all random. This can be found
+        in the rare salvmaint gacha pool.
+  id: 1017
+  time: '2025-07-27T21:17:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1606
+- author: starch70
+  changes:
+    - type: Remove
+      message: Retired Orit, Miriam, and Eden.
+    - type: Fix
+      message: >-
+        Fixed a minor typo in Tzipora description. Also fixed it being exped
+        capable.
+  id: 1018
+  time: '2025-07-27T21:20:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1646
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added tech disks to exped & salvage loot. Various faction, mech, and civ
+        equipment (like bags of holding, RCDs, and speed-boots, less efficient
+        synthalloy) can be researched via these. Now I can get my free auth
+        disruptor as TSF. Ez.
+    - type: Remove
+      message: >-
+        Removed bags of holding and speed boots from research (now in tech
+        disks!)
+  id: 1019
+  time: '2025-07-28T04:52:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1663
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Minor halcyon tweaks
+  id: 1020
+  time: '2025-07-28T13:29:10.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1662
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Updated railing sprite to use you-know-what sprites. Reduced railing
+        hitbox size so now Onis and whatnot aren't defeated by railings.
+  id: 1021
+  time: '2025-07-28T21:30:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1665
+- author: Scyron
+  changes:
+    - type: Remove
+      message: Removed fail roleplay.
+  id: 1022
+  time: '2025-07-29T03:33:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1671
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added a tech disk printer & a new POI that uses the tech disk printer.
+        Come to Sevastopol w/ spare AME fuel for Fragfest 2425. No you can't
+        steal it - only a real fragger deserves the right to print speed boots.
+    - type: Tweak
+      message: Indestructible walls arent fucking green anymore.
+    - type: Tweak
+      message: Buffed shields.
+    - type: Fix
+      message: >-
+        Fixed the laser part of laser drills being affected by shading. Now it
+        glows in the dark!
+  id: 1023
+  time: '2025-07-29T03:40:46.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1673
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Merc, TSF, and Security techfabs can now make SOME faction recipes
+        (mostly the guns and tools, not armor and vouchers and whatnot). Not
+        ALL. Merc techfabs can also make smartguns now.
+    - type: Add
+      message: >-
+        Added a lot more tech disks to the pool, mainly for rogue weapons, FTL
+        drives, advanced tools/microreactors, and finally adding a way to get
+        the higher-power shield gens (MS-250 and MS-500)
+    - type: Tweak
+      message: >-
+        Shield gens are deconstructible machines again w/ machine boards. Still
+        as expensive as the old ones were.
+    - type: Fix
+      message: Fixed Bandit tech disk referencing Lecter in description.
+    - type: Fix
+      message: >-
+        Finally fucking fixed shield gens not working for the Rogue ship shield
+        system bounty.
+  id: 1024
+  time: '2025-07-29T15:39:02.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1674
+- author: Nelliel-ss14
+  changes:
+    - type: Add
+      message: >-
+        The Intermission, new large service medical vessel fitted out to save
+        lives and save appetites.
+  id: 1025
+  time: '2025-07-29T15:44:00.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1612
+- author: OneZerooo0
+  changes:
+    - type: Remove
+      message: Removed laser drill flatpacks from the Expeditionary Flatpack vender
+    - type: Tweak
+      message: >-
+        Expedition ore mining drills have been buffed to mining ore every 10
+        seconds, and can now be found in Expeditions!
+  id: 1026
+  time: '2025-07-29T19:34:24.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1675

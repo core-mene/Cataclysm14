@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ark1368
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -11,12 +12,12 @@
   name: FS-421 "Fortress" Shield Generator
   components:
   - type: ShipShieldEmitter
-    healPerSecond: 5000
+    healPerSecond: 10000
     damageExp: 0.5
     baseDraw: 80000
     maxDraw: 150000
     unpoweredBonus: 8
-    damageLimit: 200000
+    damageLimit: 1000000
     damageOverloadTimePunishment: 30
     shieldColor: "#FF9933"
   - type: Sprite
@@ -98,8 +99,13 @@
     powerLoad: 60000
   - type: Appearance
   - type: ShipShieldEmitter
-    damageLimit: 50000
-    damageOverloadTimePunishment: 120
+    damageLimit: 150000
+    damageOverloadTimePunishment: 40
+    healPerSecond: 1750 # Base is 250
+    damageExp: 1.15 # Base is 1.1
+    baseDraw: 40000 # Base is 50000
+    maxDraw: 80000 # Base is 150000
+    unpoweredBonus: 7 # Base is 6
     shieldColor: "#FF3333"
     powerUpSound: !type:SoundPathSpecifier
         path: "/Audio/Effects/teleport_arrival.ogg"
@@ -109,6 +115,20 @@
         path: "/Audio/Effects/teleport_departure.ogg"
         params:
           pitch: 0.5
+  - type: Machine
+    board: MachineShieldMS500Circuitboard
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_board
+    - machine_parts
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: PirateBountyItem
+    id: ShipShield
 
 # Medium-End
 - type: entity
@@ -117,12 +137,12 @@
   name: MS-250 "Aegis" Shield Generator
   components:
   - type: ShipShieldEmitter
-    healPerSecond: 400 # Base is 250
+    healPerSecond: 1000 # Base is 250
     damageExp: 1.15 # Base is 1.1
-    baseDraw: 40000 # Base is 50000
-    maxDraw: 80000 # Base is 150000
-    unpoweredBonus: 3 # Base is 6
-    damageLimit: 30000
+    baseDraw: 30000 # Base is 50000
+    maxDraw: 60000 # Base is 150000
+    unpoweredBonus: 4 # Base is 6
+    damageLimit: 65000
     damageOverloadTimePunishment: 100
     shieldColor: "#9933FF"
   - type: Sprite
@@ -143,6 +163,20 @@
     radius: 2
     energy: 1.5
     color: "#9933FF"
+  - type: Machine
+    board: MachineShieldMS250Circuitboard
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_board
+    - machine_parts
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: PirateBountyItem
+    id: ShipShield
 
 # Low-End
 - type: entity
@@ -151,12 +185,12 @@
   name: MS-100 "Sentinel" Shield Generator
   components:
   - type: ShipShieldEmitter
-    healPerSecond: 200 # Mono
+    healPerSecond: 300 # Mono
     damageExp: 1.2 # Mono
     baseDraw: 20000
     maxDraw: 60000
-    unpoweredBonus: 2.5
-    damageLimit: 15000 # Mono
+    unpoweredBonus: 3 # Mono
+    damageLimit: 25000 # Mono
     damageOverloadTimePunishment: 80
     shieldColor: "#3399FF"
   - type: Sprite
@@ -177,3 +211,17 @@
     radius: 2
     energy: 1.5
     color: "#3399FF"
+  - type: Machine
+    board: MachineShieldMS100Circuitboard
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_board
+    - machine_parts
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: PirateBountyItem
+    id: ShipShield

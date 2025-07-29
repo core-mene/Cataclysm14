@@ -1,5 +1,7 @@
 # SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -21,46 +23,40 @@
   table: !type:GroupSelector
     children:
     # Mats
-    #MONO CHANGES (Uncommented weights *60 for digit brevity)
+    #MONO CHANGES (Uncommented weights *10 for digit brevity)
     - id: SheetSteel
-      weight: 9
+      weight: 1.5
     - id: SheetGlass
-      weight: 9
+      weight: 1.5
     - id: SheetPlasma
-      weight: 6
     - id: IngotGold
-      weight: 6 
     - id: IngotSilver
-      weight: 6 
     - id: SheetPlastic
-      weight: 6 
     - id: SheetUranium
-      weight: 6 
     - id: SheetPlasteel
-      weight: 6 
     - id: MaterialWoodPlank
-      weight: 6 
     - id: MaterialCloth
-      weight: 6
     - id: MaterialDurathread
-      weight: 1 #0.01 >> 1
+      weight: 0.1 #0.01 >> 0.1
+    - id: SpawnLootTechDisksT1 # Mono
+      weight: 0.05
     - id: MaterialCardboard
-      weight: 0.6
+      weight: 0.1
     - id: SheetPaper
-      weight: 0.6
+      weight: 0.1
     - id: SheetBrass
-      weight: 0.6
+      weight: 0.1
     - id: MaterialBananium
-      weight: 1 #0.00001 >> 1
+      weight: 0.06 #0.00001 >> 0.06
     - id: MaterialDiamond5 # MaterialDiamond >> MaterialDiamond5
-      weight: 0.3 #0.0000001 >> 0.3 
+      weight: 0.02 #0.0000001 >> 0.02
     - id: MaterialBluespace
-      weight: 0.3 #0.00000001 Yes they meant it >> 0.3
+      weight: 0.02 #0.00000001 Yes they meant it >> 0.02
       # Disk
     - id: ResearchDisk5000
-      weight: 0.6 #0.001 >> 0.6
+      weight: 0.1 #0.001 >> 0.1
     - id: ResearchDisk10000
-      weight: 0.3 #0.0005 >> 0.3
+      weight: 0.05 #0.0005 >> 0.5
     #END MONO CHANGES
 
 - type: entity

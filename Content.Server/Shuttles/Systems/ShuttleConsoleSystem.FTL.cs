@@ -28,8 +28,8 @@ public sealed partial class ShuttleConsoleSystem
     [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly SharedShuttleSystem _sharedShuttle = default!;
 
-    private const float ShuttleFTLRange = 100f;
-    private const float ShuttleFTLMassThreshold = 50f;
+    private const float ShuttleFTLRange = 256f;
+    private const float ShuttleFTLMassThreshold = 100f;
 
     private void InitializeFTL()
     {

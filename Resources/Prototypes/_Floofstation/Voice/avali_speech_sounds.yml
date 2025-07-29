@@ -1,11 +1,16 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: speechSounds
   id: MaleAvali
   saySound:
-    path: /Audio/_Floofstation/Voice/Avali/avali_1.ogg
+    path: /Audio/_Starlight/Voice/Resomi/resomi_chirp1.ogg
   askSound:
-    path: /Audio/_Floofstation/Voice/Avali/avali_1_ask.ogg
+    path: /Audio/_Starlight/Voice/Resomi/resomi_chirp4.ogg
   exclaimSound:
-    path: /Audio/_Floofstation/Voice/Avali/avali_1_exclaim.ogg
+    path: /Audio/_Starlight/Voice/Resomi/resomi_chirp3.ogg
 
 # Unused but if we get diff supprot for it can add in
 - type: speechSounds

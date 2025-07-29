@@ -400,6 +400,7 @@
       enum.PdaVisuals.PdaType:
         !type:String
         pda-syndi
+  - type: Geiger # Mono
 
 - type: entity
   parent: PiratePDA
@@ -413,6 +414,7 @@
       enum.PdaVisuals.PdaType:
         !type:String
         pda-syndi-agent
+  - type: Geiger # Mono
 
 - type: entity
   parent: PiratePDA
@@ -426,6 +428,7 @@
       enum.PdaVisuals.PdaType:
         !type:String
         pda-syndi
+  - type: Geiger # Mono
 
 - type: entity
   parent: PassengerPDA

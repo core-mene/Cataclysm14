@@ -18,6 +18,7 @@
 # SPDX-FileCopyrightText: 2024 TsjipTsjip
 # SPDX-FileCopyrightText: 2024 dustylens
 # SPDX-FileCopyrightText: 2025 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Checkraze
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
@@ -3283,7 +3284,7 @@ entities:
     - type: Transform
       pos: -10.5,2.5
       parent: 1
-- proto: ComputerRadar
+- proto: ComputerAdvancedRadar
   entities:
   - uid: 500
     components:

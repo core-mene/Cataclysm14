@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2024 Nemanja
 # SPDX-FileCopyrightText: 2025 AndresE55
 # SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -403,8 +404,11 @@
       children:
       - id: AirCanister
       - id: NitrogenCanister
+        weight: 0.98 # Mono
       - id: OxygenCanister
+        weight: 0.98 # Mono
       - id: CarbonDioxideCanister
+        weight: 0.98 # Mono
       - id: PlasmaCanister
         weight: 0.25
       - id: NitrousOxideCanister
@@ -417,11 +421,11 @@
       - id: AmmoniaCanister # Frontier
       - id: WaterVaporCanister # Frontier
       - id: LiquidCarbonDioxideCanister
-        weight: 0.01 # Frontier
+        weight: 0.02 # Mono
       - id: LiquidNitrogenCanister
-        weight: 0.01 # Frontier
+        weight: 0.02 # Mono
       - id: LiquidOxygenCanister
-        weight: 0.01 # Frontier
+        weight: 0.02 # Mono
 
 - type: entityTable
   id: SalvageMagnetMobTable

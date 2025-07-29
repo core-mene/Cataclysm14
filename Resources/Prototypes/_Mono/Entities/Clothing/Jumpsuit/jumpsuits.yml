@@ -12,13 +12,27 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformTSFMC
-  name: TSFMC uniform
-  description: A black and blue urban camo uniform. Its uncomfortable and cheap, and it probably doesn't blend in with anything other than a ship interior.
+  name: TSFMC type-45U combat uniform
+  description: A combat uniform in TSF Type-45U urban camouflage. Its outfitted with a blue TSF flag armband.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmc.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmc.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformTSFMCDesert
+  name: TSFMC type-47D combat uniform
+  description: A combat uniform in TSF Type-47D urban camouflage. Its outfitted with a blue TSF flag armband.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmc_digital.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmc_digital.rsi
   - type: SuitSensor
     randomMode: false
     mode: SensorVitals

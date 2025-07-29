@@ -8,6 +8,7 @@
 # SPDX-FileCopyrightText: 2024 Salvantrix
 # SPDX-FileCopyrightText: 2024 dustylens
 # SPDX-FileCopyrightText: 2025 Alkheemist
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 starch
@@ -1695,7 +1696,7 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-- proto: ComputerRadar
+- proto: ComputerAdvancedRadar
   entities:
   - uid: 230
     components:
@@ -1744,7 +1745,7 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-- proto: ComputerWallmountRadar
+- proto: ComputerWallmountAdvancedRadar
   entities:
   - uid: 535
     components:

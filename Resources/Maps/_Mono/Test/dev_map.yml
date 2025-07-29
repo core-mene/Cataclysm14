@@ -21,6 +21,7 @@
 # SPDX-FileCopyrightText: 2024 eoineoineoin
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 dustylens
@@ -4203,7 +4204,7 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-- proto: ComputerRadar
+- proto: ComputerAdvancedRadar
   entities:
   - uid: 643
     components:

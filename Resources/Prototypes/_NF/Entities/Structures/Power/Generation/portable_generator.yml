@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 dustylens
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Base generator for powered on, anchored versions for shuttles
 - type: entity
   id: BaseGeneratorShuttle
@@ -102,7 +109,7 @@
       volume: 1
       enabled: false
       sound:
-        path: /Audio/Items/Geiger/ext.ogg
+        path: /Audio/Ambience/Objects/engine_hum.ogg # Mono
     - type: PowerSupplier
       supplyRampRate: 10000
       supplyRampTolerance: 3000
@@ -164,7 +171,7 @@
       state: portgen2
     - type: AmbientSound
       sound:
-        path: /Audio/Items/Geiger/high.ogg
+        path: /Audio/Ambience/Objects/engine_hum.ogg
 
 - type: entity
   parent:
