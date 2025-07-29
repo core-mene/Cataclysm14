@@ -14,8 +14,9 @@
 # SPDX-FileCopyrightText: 2024 Winkarst
 # SPDX-FileCopyrightText: 2024 chromiumboy
 # SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 ark1368
-# SPDX-FileCopyrightText: 2025 monolith8319
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -59,7 +60,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.49,-0.49,0.49,-0.25"
+          bounds: "-0.49,-0.49,0.49,-0.425"
         density: 1000
         mask:
         - MidImpassable
@@ -105,7 +106,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.49,-0.49,0.49,-0.25"
+          bounds: "-0.49,-0.49,0.49,-0.425"
         density: 1000
         mask:
         - MidImpassable
@@ -114,7 +115,7 @@
       fix2:
         shape:
           !type:PhysShapeAabb
-          bounds: "0.49,0.49,0.25,-0.49"
+          bounds: "0.49,0.49,0.425,-0.49"
         density: 1000
         mask:
         - MidImpassable
@@ -160,7 +161,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.49,0.49,-0.25,0.25"
+          bounds: "-0.49,0.49,-0.425,0.425"
         density: 1000
         mask:
         - MidImpassable
@@ -206,7 +207,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.49,-0.49,0.49,-0.25"
+          bounds: "-0.49,-0.49,0.49,-0.425"
         density: 1000
         mask:
           - MidImpassable
@@ -215,7 +216,7 @@
       fix2:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.49,-0.49,-0.25,0.49"
+          bounds: "-0.49,-0.49,-0.425,0.49"
         density: 1000
         mask:
           - MidImpassable
@@ -224,7 +225,7 @@
       fix3:
         shape:
           !type:PhysShapeAabb
-          bounds: "0.25,-0.49,0.49,0.49"
+          bounds: "0.425,-0.49,0.49,0.49"
         density: 1000
         mask:
           - MidImpassable

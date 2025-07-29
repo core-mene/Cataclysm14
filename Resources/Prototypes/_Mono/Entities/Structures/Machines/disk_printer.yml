@@ -1,0 +1,99 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: TechDiskPrinter
+  name: tech disk printer
+  parent: [BaseStructureDisableToolUse, BaseMachine]
+  description: A machine that automatically prints tech disks every 7.5 minutes from automatically scavenged pre-Fracture data. Needs 120kW of HV power to function.
+  components:
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: -1000000
+  - type: PowerConsumer
+    voltage: High
+    drawRate: 120000
+  - type: ItemGenerator
+    prototypes:
+    - SpawnLootTechDisksT1
+    - SpawnLootTechDisksT2Faction
+    - SpawnLootTechDisksT3Fracture
+    miningInterval: 450
+    powerDraw: 120000
+    requireExpedition: false
+  - type: Battery
+    maxCharge: 7500
+    pricePerJoule: 0.0003
+  - type: Sprite
+    sprite: _Mono/Structures/Machines/diskprinter.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: icon
+    - map: ["computerLayerScreen"]
+      state: unlit
+      shader: unshaded
+  - type: ItemSlots
+    slots:
+      output_slot:
+        name: Container
+        insertSound:
+          path: /Audio/Machines/cutter.ogg
+        ejectSound:
+          path: /Audio/Machines/tray_eject.ogg
+        whitelist:
+          tags:
+          - TechDiskMono
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Transform
+    anchored: true
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "1.5,1.5,-1.5,0.25"
+        density: 1500
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+      fix2:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "1.5,0.25,0.6,-1.5"
+        density: 1500
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+      fix3:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,0.25,-0.6,-1.5"
+        density: 1500
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: PointLight
+    radius: 0.8
+    energy: 0.5
+    color: "#00AACC"

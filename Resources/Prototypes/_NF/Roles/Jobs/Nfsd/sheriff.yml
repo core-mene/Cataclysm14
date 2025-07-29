@@ -74,6 +74,7 @@
     - !type:RoleTimeRequirement
       role: JobWarden
       time: 10800 # 3 hours # mono
+  whitelisted: true
   startingGear: SheriffGear
   alwaysUseSpawner: true
   icon: JobIconSheriff

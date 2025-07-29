@@ -9112,3 +9112,37 @@ Entries:
   id: 1020
   time: '2025-07-28T13:29:10.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1662
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Updated railing sprite to use you-know-what sprites. Reduced railing
+        hitbox size so now Onis and whatnot aren't defeated by railings.
+  id: 1021
+  time: '2025-07-28T21:30:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1665
+- author: Scyron
+  changes:
+    - type: Remove
+      message: Removed fail roleplay.
+  id: 1022
+  time: '2025-07-29T03:33:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1671
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added a tech disk printer & a new POI that uses the tech disk printer.
+        Come to Sevastopol w/ spare AME fuel for Fragfest 2425. No you can't
+        steal it - only a real fragger deserves the right to print speed boots.
+    - type: Tweak
+      message: Indestructible walls arent fucking green anymore.
+    - type: Tweak
+      message: Buffed shields.
+    - type: Fix
+      message: >-
+        Fixed the laser part of laser drills being affected by shading. Now it
+        glows in the dark!
+  id: 1023
+  time: '2025-07-29T03:40:46.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1673
