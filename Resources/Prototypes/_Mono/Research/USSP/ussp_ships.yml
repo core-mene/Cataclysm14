@@ -14,9 +14,7 @@
   tier: 1
   cost: 45000
   recipeUnlocks:
-  - GadyukaVoucherUssp
-  - NatiskVoucherUssp
-  - GruznykVoucherUssp
+  - BasicVoucherUssp
 
 - type: technology
   id: UsspMediumShips
@@ -28,8 +26,7 @@
   tier: 2
   cost: 65000
   recipeUnlocks:
-  - DrakonVoucherUssp
-  - SekundaVoucherUssp
+  - IntermediateVoucherUssp
   technologyPrerequisites:
   - UsspBasicShips
 
@@ -43,7 +40,7 @@
   tier: 3
   cost: 95000
   recipeUnlocks:
-  - TunguskaVoucherUssp
+  - AdvancedVoucherUssp
   technologyPrerequisites:
   - UsspMediumShips
 

@@ -11,8 +11,8 @@
 #Ussp
 - type: latheRecipe
   parent: BaseVoucherRecipe
-  id: GadyukaVoucherUssp
-  result: ShipVoucherUSSP
+  id: BasicVoucherUssp
+  result: ShipVoucherUSSPBasic
   completetime: 100
   materials:
     Steel: 5000
@@ -25,8 +25,8 @@
 
 - type: latheRecipe
   parent: BaseVoucherRecipe
-  id: DrakonVoucherUssp
-  result: ShipVoucherUSSPDrakon
+  id: IntermediateVoucherUssp
+  result: ShipVoucherUSSPIntermediate
   completetime: 100
   materials:
     Steel: 15000
@@ -40,51 +40,8 @@
 
 - type: latheRecipe
   parent: BaseVoucherRecipe
-  id: NatiskVoucherUssp
-  result: ShipVoucherUSSPNatisk
-  completetime: 100
-  materials:
-    Steel: 9500
-    Plasteel: 6000
-    Glass: 7000
-    Plasma: 5000
-    Uranium: 6000
-    Silver: 6000
-    Gold: 5000
-
-- type: latheRecipe
-  parent: BaseVoucherRecipe
-  id: SekundaVoucherUssp
-  result: ShipVoucherUSSPSekunda
-  completetime: 100
-  materials:
-    Steel: 15000
-    Plasteel: 10000
-    Plastic: 1000
-    Glass: 1000
-    Plasma: 10000
-    Uranium: 10000
-    Silver: 5000
-    Gold: 5000
-
-- type: latheRecipe
-  parent: BaseVoucherRecipe
-  id: GruznykVoucherUssp
-  result: ShipVoucherUSSPGruznyk
-  completetime: 100
-  materials:
-    Steel: 5000
-    Plasteel: 5000
-    Glass: 5000
-    Plasma: 5000
-    Uranium: 5000
-    Silver: 5000
-    Gold: 5000
-
-- type: latheRecipe
-  parent: BaseVoucherRecipe
-  id: TunguskaVoucherUssp
-  result: ShipVoucherUSSPTunguska
+  id: AdvancedVoucherUssp
+  result: ShipVoucherUSSPAdvanced
   completetime: 100
   materials:
     Steel: 60000

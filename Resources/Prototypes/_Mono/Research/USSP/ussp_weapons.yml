@@ -21,6 +21,40 @@
   - AmmoBox7.62x54mmRFMJ
 
 - type: technology
+  id: UsspPracticeAmmo
+  name: research-technology-faction-practice-ammo
+  icon:
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/8x65mm_practice.rsi
+    state: base
+  discipline: UsspWeapons
+  tier: 1
+  cost: 2000
+  recipeUnlocks:
+  - Magazine7.62x39mmPractice
+  - AmmoBox7.62x39mmPractice
+  - Magazine7.62x54mmRPractice
+  - AmmoBox7.62x54mmRPractice
+  - SpeedLoader45_magnumPractice
+  - AmmoBox45_magnumPractice
+
+- type: technology
+  id: UsspIncendiaryAmmo
+  name: research-technology-faction-incendiary-ammo
+  icon:
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/8x65mm_incendiary.rsi
+    state: base
+  discipline: UsspWeapons
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - Magazine7.62x39mmIncendiary
+  - AmmoBox7.62x39mmIncendiary
+  - Magazine7.62x54mmRIncendiary
+  - AmmoBox7.62x54mmRIncendiary
+  - SpeedLoader45_magnumIncendiary
+  - AmmoBox45_magnumIncendiary
+
+- type: technology
   id: UsspMediumGuns
   name: research-technology-ussp-guns-medium
   icon:
