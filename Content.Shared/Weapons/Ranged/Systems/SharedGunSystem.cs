@@ -511,7 +511,7 @@ public abstract partial class SharedGunSystem : EntitySystem
 
         var targetMapVelocity = gunVelocity + direction.Normalized() * speed;
         var currentMapVelocity = Physics.GetMapLinearVelocity(uid, physics);
-        var finalLinear = physics.LinearVelocity + targetMapVelocity - currentMapVelocity * 2;
+        var finalLinear = physics.LinearVelocity + targetMapVelocity - currentMapVelocity * 2; // Mono, multiples currentMapVelocity by 2
         Physics.SetLinearVelocity(uid, finalLinear, body: physics);
         // hullrot edit , do not let these slow down >:( SPCR 2025
         Physics.SetAngularDamping(uid, physics, 0);
