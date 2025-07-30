@@ -1,6 +1,8 @@
 // SPDX-FileCopyrightText: 2025 starch
 //
-// SPDX-License-Identifier: AGPL-3.0-or-later
+// SPDX-License-Identifier: MIT
+
+// all code made by MilonPL (github), only change here is removing the caliber inspect
 
 using System;
 using System.Diagnostics.CodeAnalysis;
