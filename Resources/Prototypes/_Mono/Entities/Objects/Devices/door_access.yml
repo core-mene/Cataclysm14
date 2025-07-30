@@ -44,19 +44,3 @@
   components:
   - type: AccessReader
     access: [["DI"]]
-
-- type: entity
-  parent: DoorElectronics
-  id: DoorElectronicsDrakeIndustriesWatchdog
-  suffix: DI, Locked, Watchdog
-  components:
-  - type: AccessReader
-    access: [["DIHigh"]]
-
-- type: entity
-  parent: DoorElectronics
-  id: DoorElectronicsDrakeIndustriesOverseer
-  suffix: DI, Locked, Overseer
-  components:
-  - type: AccessReader
-    access: [["DICommand"]]

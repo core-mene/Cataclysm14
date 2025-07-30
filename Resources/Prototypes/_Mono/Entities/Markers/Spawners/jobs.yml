@@ -87,38 +87,14 @@
 # Drake Industries
 
 - type: entity
-  id: SpawnPointDrakeIndustriesGrunt
+  id: SpawnPointDrakeIndustriesEmployee
   parent: SpawnPointJobBase
-  name: DI Grunt
+  name: DI Employee
   components:
   - type: SpawnPoint
-    job_id: DIGrunt
+    job_id: DIEmployee
   - type: Sprite
     sprite: _Mono/Markers/jobs.rsi
     layers:
     - state: green
     - state: DI_marker
-
-- type: entity
-  id: SpawnPointDrakeIndustriesTrucker
-  parent: SpawnPointDrakeIndustriesGrunt
-  name: DI Trucker
-  components:
-  - type: SpawnPoint
-    job_id: DITrucker
-    
-- type: entity
-  id: SpawnPointDrakeIndustriesWatchdog
-  parent: SpawnPointDrakeIndustriesGrunt
-  name: DI Watchdog
-  components:
-  - type: SpawnPoint
-    job_id: DIWatchdog
-    
-- type: entity
-  id: SpawnPointDrakeIndustriesOverseer
-  parent: SpawnPointDrakeIndustriesGrunt
-  name: DI Overseer
-  components:
-  - type: SpawnPoint
-    job_id: DIOverseer

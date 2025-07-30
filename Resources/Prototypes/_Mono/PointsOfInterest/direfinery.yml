@@ -40,9 +40,6 @@
           lobbySortOrder: 6
         - type: StationJobs
           availableJobs:
-            DIOverseer: [1, 1]
-            DIWatchdog: [4, 4]
-            DITrucker: [6, 6]
-            DIGrunt: [-1, -1]
+            DIEmployee: [-1, -1]
           tags:
-          - DICommand
+          - DI

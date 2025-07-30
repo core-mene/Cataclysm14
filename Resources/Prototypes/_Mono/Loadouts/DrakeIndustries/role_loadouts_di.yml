@@ -1,87 +1,20 @@
-# Grunt
-- type: roleLoadout
-  id: JobDIGrunt
-  groups:
-  - DIJumpsuitGrunt
-  - DIBackpack
-  - DIBelt
-  - DIOuterClothingHardsuit
-  - DIMaskBase
-  - DIEars
-  - ContractorGlasses
-  - DIGloves
-  - DIShoes
-  - DINeck
-  - DIGruntPDA
-  - NfsdBoxSurvival
-  - ContractorWallet
-  - ContractorEncryptionKey
-  - NfsdSpeciesSpecific
-  - ContractorTrinkets
-# Trucker
-- type: roleLoadout
-  id: JobDITrucker
-  groups:
-  - DIJumpsuitTrucker
-  - DIBackpack
-  - DIBelt
-  - DIOuterClothingTrucker
-  - DIMaskBase
-  - DIEars
-  - ContractorGlasses
-  - DIGloves
-  - DIShoes
-  - DINeck
-  - DITruckerPDA
-  - NfsdBoxSurvival
-  - ContractorWallet
-  - ContractorEncryptionKey
-  - NfsdSpeciesSpecific
-  - ContractorTrinkets
- 
-# Watchdog
-- type: roleLoadout
-  id: JobDIWatchdog
-  groups:
-  - DIJumpsuitWatchdog
-  - DIBackpack
-  - DIBeltSec
-  - DIOuterClothingSec
-  - DIMaskSec
-  - DIEars
-  - ContractorGlasses
-  - DIGlovesSec
-  - DIShoes
-  - DINeck
-  - DIGun #Hokkaido for now
-  - MercenaryPistol
-  - MercenaryMag 
-  - DIWatchdogPDA
-  - NfsdBoxSurvival
-  - ContractorWallet
-  - ContractorEncryptionKey
-  - NfsdSpeciesSpecific
-  - ContractorTrinkets
-  
-  
-# Overseer /// Will need much more fluff long term, actually expensive, good looking gear to contrast with the rest of DI's cheap looking stuff. For now cosmetic freedom
 - type: roleLoadout 
-  id: JobDIOverseer 
+  id: JobDIEmployee
   groups:
-  - DIJumpsuitOverseer
+  - DIPDA
+  - DIJumpsuit
   - DIBackpack
-  - DIBeltSec
-  - DIOuterClothingSec
-  - DIMaskSec
+  - DIBelt
+  - DIOuterClothing
+  - DIMask
+  - DIShoes
+  - DIGloves
   - DIEars
   - ContractorGlasses
-  - DIGlovesSec
-  - DIShoes
   - DINeck
   - DIGun 
   - MercenaryPistol
   - MercenaryMag 
-  - DIOverseerPDA
   - NfsdBoxSurvival
   - ContractorWallet
   - ContractorEncryptionKey

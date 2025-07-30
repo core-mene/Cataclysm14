@@ -13,7 +13,4 @@ job-description-tsf-engineer = Maintain the integrity of the flagship, get laugh
 
 # MARK: DI
 
-job-description-di-grunt = The cogs of the machine. Push crates, keep the ship systems in check. 
-job-description-di-overseer = Organise cargo runs, maintain the company's reputation, manage payments & order your crew around in promises of those sweet credits.
-job-description-di-trucker = Chart & plan high-speed courses to deliver the cargo in time.
-job-description-di-watchdog = Keep the cargo and crew safe, liquidate any would be trouble-makers rising against the company.
+job-description-di-employee = A cog in the machine of profit. Be it a grunt, trucker or watchdog, you're here to make yourself rich, and the company even richer.

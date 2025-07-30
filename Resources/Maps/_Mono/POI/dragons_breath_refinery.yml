@@ -1,32 +1,11 @@
-# SPDX-FileCopyrightText: 2023 Banshee
-# SPDX-FileCopyrightText: 2023 Cheackraze
-# SPDX-FileCopyrightText: 2023 Leon Friedrich
-# SPDX-FileCopyrightText: 2023 Nemanja
-# SPDX-FileCopyrightText: 2023 Scribbles0
-# SPDX-FileCopyrightText: 2023 Shodhans
-# SPDX-FileCopyrightText: 2023 metalgearsloth
-# SPDX-FileCopyrightText: 2023 unknown
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 Maxtone
-# SPDX-FileCopyrightText: 2024 Tabitha
-# SPDX-FileCopyrightText: 2024 checkraze
-# SPDX-FileCopyrightText: 2025 Alice "Arimah" Heurlin
-# SPDX-FileCopyrightText: 2025 Alkheemist
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 UnicornOnLSD
-# SPDX-FileCopyrightText: 2025 dustylens
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/27/2025 16:12:10
-  entityCount: 3697
+  time: 07/30/2025 21:17:25
+  entityCount: 3694
 maps: []
 grids:
 - 1
@@ -2393,24 +2372,6 @@ entities:
     - type: Transform
       pos: -7.5,3.5
       parent: 1
-- proto: AirlockDrakeIndustriesGlass
-  entities:
-  - uid: 1483
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -15.5,2.5
-      parent: 1
-  - uid: 2498
-    components:
-    - type: Transform
-      pos: -3.5,-15.5
-      parent: 1
-  - uid: 3124
-    components:
-    - type: Transform
-      pos: 10.5,-0.5
-      parent: 1
 - proto: AirlockDrakeIndustriesGlassLocked
   entities:
   - uid: 89
@@ -2418,10 +2379,25 @@ entities:
     - type: Transform
       pos: 5.5,13.5
       parent: 1
+  - uid: 239
+    components:
+    - type: Transform
+      pos: -3.5,-15.5
+      parent: 1
+  - uid: 261
+    components:
+    - type: Transform
+      pos: -15.5,2.5
+      parent: 1
   - uid: 292
     components:
     - type: Transform
       pos: 2.5,8.5
+      parent: 1
+  - uid: 513
+    components:
+    - type: Transform
+      pos: 10.5,-0.5
       parent: 1
   - uid: 550
     components:
@@ -2443,18 +2419,15 @@ entities:
     - type: Transform
       pos: 10.5,-10.5
       parent: 1
+  - uid: 1483
+    components:
+    - type: Transform
+      pos: 8.5,-2.5
+      parent: 1
   - uid: 3058
     components:
     - type: Transform
       pos: 4.5,10.5
-      parent: 1
-- proto: AirlockDrakeIndustriesGlassLockedOverseer
-  entities:
-  - uid: 513
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 8.5,-2.5
       parent: 1
 - proto: AirlockDrakeIndustriesLocked
   entities:
@@ -2493,14 +2466,12 @@ entities:
     - type: Transform
       pos: 16.5,-9.5
       parent: 1
-- proto: AirlockDrakeIndustriesLockedWatchdog
-  entities:
-  - uid: 239
+  - uid: 1904
     components:
     - type: Transform
       pos: 6.5,10.5
       parent: 1
-  - uid: 261
+  - uid: 2485
     components:
     - type: Transform
       pos: 11.5,10.5
@@ -20303,58 +20274,22 @@ entities:
     - type: Transform
       pos: -9.5,-26.5
       parent: 1
-- proto: SpawnPointDrakeIndustriesGrunt
+- proto: SpawnPointDrakeIndustriesEmployee
   entities:
-  - uid: 1904
-    components:
-    - type: Transform
-      pos: 6.5,4.5
-      parent: 1
   - uid: 2486
     components:
     - type: Transform
-      pos: 6.5,0.5
+      pos: 6.5,3.5
+      parent: 1
+  - uid: 2487
+    components:
+    - type: Transform
+      pos: 8.5,0.5
       parent: 1
   - uid: 2488
     components:
     - type: Transform
-      pos: 7.5,1.5
-      parent: 1
-  - uid: 2494
-    components:
-    - type: Transform
-      pos: 13.5,-7.5
-      parent: 1
-- proto: SpawnPointDrakeIndustriesOverseer
-  entities:
-  - uid: 2493
-    components:
-    - type: Transform
-      pos: 7.5,-4.5
-      parent: 1
-- proto: SpawnPointDrakeIndustriesTrucker
-  entities:
-  - uid: 2485
-    components:
-    - type: Transform
-      pos: 14.5,0.5
-      parent: 1
-  - uid: 2491
-    components:
-    - type: Transform
-      pos: 13.5,-0.5
-      parent: 1
-  - uid: 2492
-    components:
-    - type: Transform
-      pos: 14.5,8.5
-      parent: 1
-- proto: SpawnPointDrakeIndustriesWatchdog
-  entities:
-  - uid: 2487
-    components:
-    - type: Transform
-      pos: 7.5,12.5
+      pos: 14.5,-0.5
       parent: 1
   - uid: 2489
     components:
@@ -20365,6 +20300,16 @@ entities:
     components:
     - type: Transform
       pos: 2.5,11.5
+      parent: 1
+  - uid: 2491
+    components:
+    - type: Transform
+      pos: 13.5,-7.5
+      parent: 1
+  - uid: 2493
+    components:
+    - type: Transform
+      pos: 14.5,8.5
       parent: 1
 - proto: StairDark
   entities:
@@ -20456,6 +20401,15 @@ entities:
     components:
     - type: Transform
       pos: 12.5,5.5
+      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
+  - uid: 2492
+    components:
+    - type: Transform
+      pos: 8.5,-17.5
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 5
@@ -21081,13 +21035,6 @@ entities:
           - Reverse
         - - Middle
           - Off
-- proto: VendingMachineAstroVendPOI
-  entities:
-  - uid: 1048
-    components:
-    - type: Transform
-      pos: 3.5,-19.5
-      parent: 1
 - proto: VendingMachineCigsPOI
   entities:
   - uid: 828
@@ -21125,6 +21072,13 @@ entities:
     components:
     - type: Transform
       pos: 7.5,-11.5
+      parent: 1
+- proto: VendingMachineSalvagePOI
+  entities:
+  - uid: 1048
+    components:
+    - type: Transform
+      pos: 3.5,-19.5
       parent: 1
 - proto: VendingMachineTankDispenserEVAPOI
   entities:

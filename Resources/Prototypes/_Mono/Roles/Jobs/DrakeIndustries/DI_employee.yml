@@ -3,24 +3,24 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: job
-  id: DIGrunt
-  name: job-name-di-grunt
-  description: job-description-di-grunt
-  playTimeTracker: JobDIGrunt
-  startingGear: DIGruntGear
+  id: DIEmployee
+  name: job-name-di-employee
+  description: job-description-di-employee
+  playTimeTracker: JobDIEmployee
+  startingGear: DIEmployeeGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
-  icon: "JobIconDIGrunt"
+  icon: "JobIconDIEmployee"
   supervisors: job-supervisors-di-overseer
   canBeAntag: false
   weight: 10
   displayWeight: 10
   accessGroups:
   - GeneralAccess
-  - DIGruntAccess
+  - DIEmployeeAccess
 
 - type: startingGear
-  id: DIGruntGear
+  id: DIEmployeeGear
   equipment:
     pocket1: WeaponPistolMk32
     pocket2: Magazine9x19mmPistolFMJ

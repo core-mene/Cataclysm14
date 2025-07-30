@@ -4,55 +4,12 @@
 
 # Drake Industries 
 
-- type: accessLevel 
-  id: DILow #base company granted access (likely some ships and fluff), for future use
-  name: id-card-access-level-di-low
-
 - type: accessLevel
-  id: DI #base doors and grunt locker
+  id: DI #base access for all DI CONTRACTED members.
   name: id-card-access-level-di
-  
-- type: accessLevel
-  id: DIPilot #trucker locker
-  name: id-card-access-level-di-pilot
-  
-- type: accessLevel
-  id: DIHigh #security gear area, watchdog locker
-  name: id-card-access-level-di-high
-  
-- type: accessLevel
-  id: DICommand #overseer chamber, overseer locker, vault etc.
-  name: id-card-access-level-di-command
-
 
 - type: accessGroup
-  id: DIGruntAccess
+  id: DIEmployeeAccess
   tags:
-  - DILow
   - DI
-
-- type: accessGroup
-  id: DITruckerAccess
-  tags:
-  - DILow
-  - DI
-  - DIPilot
-
-- type: accessGroup
-  id: DIWatchdogAccess
-  tags:
-  - DILow
-  - DI
-  - DIPilot
-  - DIHigh
-  - Mercenary
-
-- type: accessGroup
-  id: DIOverseerAccess
-  tags:
-  - DILow
-  - DI
-  - DIPilot
-  - DIHigh
-  - DICommand
-  - Mercenary
+  - Mercenary #This role is meant to include corporate security, so logical to have it.

@@ -30,11 +30,8 @@
   name: trucker's locker
   description: Sure has a fancy color, truth be told it's just steel sprayed with Drake Industries' colors. This ones bears the symbol of a trucker.
   components:
-  - type: Appearance
   - type: EntityStorageVisuals
     stateDoorClosed: DI_locker_trucker_door
-  - type: AccessReader
-    access: [["DIPilot"]]
 
 - type: entity
   id: LockerDrakeIndustriesWatchdog
@@ -42,11 +39,8 @@
   name: watchdog's locker
   description: Sure has a fancy color, truth be told it's just steel sprayed with Drake Industries' colors. This ones bears the symbol of a watchdog.
   components:
-  - type: Appearance
   - type: EntityStorageVisuals
     stateDoorClosed: DI_locker_watchdog_door
-  - type: AccessReader
-    access: [["DIHigh"]]
 
 - type: entity
   id: LockerDrakeIndustriesOverseer
@@ -54,8 +48,5 @@
   name: overseer's locker
   description: Sure has a fancy color, truth be told it's just steel sprayed with Drake Industries' colors. This ones bears the symbol of an overseer.
   components:
-  - type: Appearance
   - type: EntityStorageVisuals
     stateDoorClosed: DI_locker_overseer_door
-  - type: AccessReader
-    access: [["DICommand"]]

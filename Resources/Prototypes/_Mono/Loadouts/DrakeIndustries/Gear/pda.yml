@@ -1,64 +1,21 @@
-# grunt
-
 - type: loadout
   id: DIGruntPDA
   equipment:
     id: DrakeIndustriesPDAGrunt
-
-- type: loadoutGroup
-  id: DIGruntPDA
-  name: loadout-group-contractor-id
-  hidden: true # No point in showing this, it gets auto-selected.
-  loadouts:
-  - DIGruntPDA
-  fallbacks:
-  - DIGruntPDA
-
-# trucker
-
+    
 - type: loadout
   id: DITruckerPDA
   equipment:
     id: DrakeIndustriesPDATrucker
-
-- type: loadoutGroup
-  id: DITruckerPDA
-  name: loadout-group-contractor-id
-  hidden: true # No point in showing this, it gets auto-selected.
-  loadouts:
-  - DITruckerPDA
-  fallbacks:
-  - DITruckerPDA
-
-# watchdog
 
 - type: loadout
   id: DIWatchdogPDA
   equipment:
     id: DrakeIndustriesPDAWatchdog
 
-- type: loadoutGroup
-  id: DIWatchdogPDA
-  name: loadout-group-contractor-id
-  hidden: true # No point in showing this, it gets auto-selected.
-  loadouts:
-  - DIWatchdogPDA
-  fallbacks:
-  - DIWatchdogPDA
-
-# overseer
 
 - type: loadout
   id: DIOverseerPDA
   equipment:
     id: DrakeIndustriesPDAOverseer
-
-- type: loadoutGroup
-  id: DIOverseerPDA
-  name: loadout-group-contractor-id
-  hidden: true # No point in showing this, it gets auto-selected.
-  loadouts:
-  - DIOverseerPDA
-  fallbacks:
-  - DIOverseerPDA
 
