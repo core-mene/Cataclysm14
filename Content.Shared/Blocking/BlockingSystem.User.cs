@@ -9,6 +9,8 @@
 // SPDX-FileCopyrightText: 2023 themias
 // SPDX-FileCopyrightText: 2024 Aviu00
 // SPDX-FileCopyrightText: 2024 nikthechampiongr
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
