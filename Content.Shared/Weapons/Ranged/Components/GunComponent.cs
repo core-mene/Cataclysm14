@@ -11,9 +11,11 @@
 // SPDX-FileCopyrightText: 2024 SlamBamActionman
 // SPDX-FileCopyrightText: 2024 checkraze
 // SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Avalon
 // SPDX-FileCopyrightText: 2025 Aviu00
 // SPDX-FileCopyrightText: 2025 GreaseMonk
+// SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -264,6 +266,13 @@ public sealed partial class GunComponent : Component
     [AutoNetworkedField]
     public SelectiveFire AvailableModes = SelectiveFire.SemiAuto;
 
+
+    /// <summary>
+    /// Frontier: add gun caliber text
+    /// </summary>
+    [DataField]
+    public LocId? ExamineCaliber;
+    
     /// <summary>
     /// What firemode is currently selected.
     /// </summary>

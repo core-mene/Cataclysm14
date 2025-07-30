@@ -19,11 +19,17 @@
     - TechDiskCivBluespaceBags
     - TechDiskRCD
     - TechDiskMechCiv
-    chance: 0.95
+    - TechDiskCivMS250
+    - TechDiskCivCTLA50
+    - TechDiskCivShipComps
+    - TechDiskCivBackpackWaterTank
+    chance: 1
     offset: 0.0
     rarePrototypes:
     - SpawnLootTechDisksT2Faction
     - SpawnLootTechDisksT2Mech
+    - TechDiskCivMicroreactors
+    - TechDiskCivAdvancedTools
     rareChance: 0.3
 
 - type: entity
@@ -45,13 +51,18 @@
     - TechDiskTSFBandit
     - TechDiskTSFLecter
     - TechDiskTSFDrozd
-    chance: 0.95
+    - TechDiskC20r
+    - TechDiskM90
+    - TechDiskMla73
+    chance: 1
     offset: 0.0
     rarePrototypes:
     - TechDiskRogueToolsAdvanced
     - TechDiskTSFICWS
     - TechDiskTSFAnnie
     - TechDiskEnergyWeapons
+    - TechDiskBulldog
+    - TechDiskHristov
     - SpawnLootTechDisksT3Fracture
     rareChance: 0.15
 
@@ -79,7 +90,7 @@
     - TechDiskMechWeaponsLight
     - TechDiskMechWeaponsMedium
     - TechDiskMechWeaponsHeavy
-    chance: 0.95
+    chance: 1
     offset: 0.0
     rarePrototypes:
     - SpawnLootTechDisksT3Fracture
@@ -104,7 +115,7 @@
     - TechDiskMechS4Spec
     - TechDiskMechS2Base
     - TechDiskMechS2Spec
-    chance: 0.95
+    chance: 1
     offset: 0.0
     rarePrototypes:
     - SpawnLootTechDisksT3Fracture
@@ -127,5 +138,7 @@
     - TechDiskSynthalloy
     - TechDiskSpeedBoots
     - TechDiskBluespaceBags
-    chance: 0.95
+    - TechDiskShields
+    - TechDiskFtl
+    chance: 1
     offset: 0.0

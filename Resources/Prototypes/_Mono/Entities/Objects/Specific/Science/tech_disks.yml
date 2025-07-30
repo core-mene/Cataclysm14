@@ -23,6 +23,9 @@
     - state: protect
     - state: holo
       shader: unshaded
+    - type: Tag
+      tags:
+      - TechDiskMono
 
 # Mecha tech disks
 
@@ -426,6 +429,126 @@
 
 - type: entity
   parent: BaseItem
+  id: TechDiskCivMicroreactors
+  name: civilian high-efficiency power cells tech disk
+  description: A disk capable of adding microreactors and hyper-capacity cells to a server's recipes.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base"]
+      color: "#395933"
+    - state: label
+    - state: protect
+    - state: civilian
+  - type: TechnologyDisk
+    recipes:
+    - PowerCellMicroreactor
+    - PowerCellHyperNF
+
+- type: entity
+  parent: BaseItem
+  id: TechDiskCivAdvancedTools
+  name: civilian power tools tech disk
+  description: A disk capable of adding jaws of life and power drills to a server's recipes.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base"]
+      color: "#395933"
+    - state: label
+    - state: protect
+    - state: civilian
+  - type: TechnologyDisk
+    recipes:
+    - JawsOfLife
+    - PowerDrill
+
+- type: entity
+  parent: BaseItem
+  id: TechDiskCivBackpackWaterTank
+  name: civilian power washer tech disk
+  description: A disk capable of adding high-capacity fluid sprays & tanks to a server's recipes. It would never be used for a flamethrower, I swear!
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base"]
+      color: "#395933"
+    - state: label
+    - state: protect
+    - state: civilian
+  - type: TechnologyDisk
+    recipes:
+    - WeaponSprayNozzle
+    - ClothingBackpackWaterTank
+
+- type: entity
+  parent: BaseItem
+  id: TechDiskCivShipComps
+  name: civilian ship components tech disk
+  description: A disk capable of adding basic shields and FTL drives to a server's recipes.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base"]
+      color: "#395933"
+    - state: label
+    - state: protect
+    - state: civilian
+  - type: TechnologyDisk
+    recipes:
+    - MachineDriveCTLA25Circuitboard
+    - MachineShieldMS100Circuitboard
+
+- type: entity
+  parent: BaseItem
+  id: TechDiskCivCTLA50
+  name: civilian CTLA-50 tech disk
+  description: A disk capable of adding CTLA-50/25 FTL drives to a server's recipes.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base"]
+      color: "#395933"
+    - state: label
+    - state: protect
+    - state: civilian
+  - type: TechnologyDisk
+    recipes:
+    - MachineDriveCTLA50Circuitboard
+    - MachineDriveCTLA25Circuitboard
+
+- type: entity
+  parent: BaseItem
+  id: TechDiskCivMS250
+  name: civilian MS-250 shield tech disk
+  description: A disk capable of adding MS-250/MS-100 shield boards to a server's recipes.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base"]
+      color: "#395933"
+    - state: label
+    - state: protect
+    - state: civilian
+  - type: TechnologyDisk
+    recipes:
+    - MachineShieldMS250Circuitboard
+    - MachineShieldMS100Circuitboard
+
+- type: entity
+  parent: BaseItem
   id: TechDiskSpeedBoots
   name: pre-fracture speed manipulation tech disk
   description: A disk capable of adding speed boots to a server's recipes.
@@ -443,6 +566,50 @@
   - type: TechnologyDisk
     recipes:
     - ClothingShoesBootsSpeed
+
+- type: entity
+  parent: BaseItem
+  id: TechDiskFtl
+  name: pre-fracture bluespace drive tech disk
+  description: A disk capable of adding FTL drives to a server's recipes.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base"]
+      color: "#d4d4d4"
+    - state: label
+    - state: protect
+    - state: holo
+      shader: unshaded
+  - type: TechnologyDisk
+    recipes:
+    - MachineDriveCTLA25sCircuitboard
+    - MachineDriveCTLA50Circuitboard
+    - MachineDriveCTLA25Circuitboard
+
+- type: entity
+  parent: BaseItem
+  id: TechDiskShields
+  name: pre-fracture shield technology tech disk
+  description: A disk capable of adding ship shield tech to a server's recipes.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base"]
+      color: "#d4d4d4"
+    - state: label
+    - state: protect
+    - state: holo
+      shader: unshaded
+  - type: TechnologyDisk
+    recipes:
+    - MachineShieldMS500Circuitboard
+    - MachineShieldMS250Circuitboard
+    - MachineShieldMS100Circuitboard
 
 - type: entity
   parent: BaseItem
@@ -509,6 +676,8 @@
     - EnergySwordRogue
     - EnergyDaggerRogue
     - EnergyShieldRogue
+
+# tsf stuff
 
 - type: entity
   parent: BaseItem
@@ -580,7 +749,7 @@
   parent: BaseItem
   id: TechDiskTSFBandit
   name: TSF Bandit faction tech disk
-  description: A disk capable of adding the M-6 Lecter and its ammo to a server's recipes, for faction techfabs.
+  description: A disk capable of adding the MR-3 Bandit and its ammo to a server's recipes, for faction techfabs.
   components:
   - type: Sprite
     sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
@@ -621,6 +790,8 @@
     - Magazine5.56x45mmEmpty
     - AmmoBox5.56x45mmFMJ
 
+# universal stuff
+
 - type: entity
   parent: BaseItem
   id: TechDiskUniversalShipAmmo
@@ -644,10 +815,12 @@
     - 150mmApShellUniversal
     - 150mmEmpShellUniversal
 
+# rogue stuff
+
 - type: entity
   parent: BaseItem
   id: TechDiskRogueTools
-  name: Ashen Republic equipment faction tech disk
+  name: ASR equipment faction tech disk
   description: A disk capable of adding various tools of Rogues to a server's recipes, for faction techfabs.
   components:
   - type: Sprite
@@ -668,7 +841,7 @@
 - type: entity
   parent: BaseItem
   id: TechDiskRogueToolsAdvanced
-  name: high-tech Ashen Republic equipment faction tech disk
+  name: high-tech ASR equipment faction tech disk
   description: A disk capable of adding the hacking equipment of Rogues to a server's recipes, for faction techfabs.
   components:
   - type: Sprite
@@ -685,3 +858,112 @@
     recipes:
     - EmagRogue
     - AccessBreakerRogue
+
+- type: entity
+  parent: BaseItem
+  id: TechDiskC20r
+  name: ASR C-20r faction tech disk
+  description: A disk capable of adding the C-20r and its ammo to a server's recipes, for faction techfabs.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base"]
+      color: "#454545"
+    - state: label
+    - state: protect
+    - state: gun
+  - type: TechnologyDisk
+    recipes:
+    - WeaponSubMachineGunC20rRogue
+    - Magazine9x19mmSubMachineGunFMJ
+    - Magazine9x19mmSubMachineGunEmpty
+    - AmmoBox9x19mmFMJ
+
+- type: entity
+  parent: BaseItem
+  id: TechDiskM90
+  name: ASR M-90 faction tech disk
+  description: A disk capable of adding the M-90 and its ammo to a server's recipes, for faction techfabs.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base"]
+      color: "#454545"
+    - state: label
+    - state: protect
+    - state: gun
+  - type: TechnologyDisk
+    recipes:
+    - WeaponRifleM90Rogue
+    - Magazine7.62x51mmFMJ
+    - Magazine7.62x51mmEmpty
+    - AmmoBox7.62x51mmFMJ
+
+- type: entity
+  parent: BaseItem
+  id: TechDiskBulldog
+  name: ASR bulldog faction tech disk
+  description: A disk capable of adding the Bulldog and its ammo to a server's recipes, for faction techfabs.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base"]
+      color: "#454545"
+    - state: label
+    - state: protect
+    - state: gun
+  - type: TechnologyDisk
+    recipes:
+    - WeaponShotgunBulldogRogue
+    - Magazine12_gaugeBuckshot
+    - Magazine12_gaugeSlug
+    - Magazine12_gaugeEmpty
+    - AmmoBox12_gaugeBuckshot
+    - AmmoBox12_gaugeSlug
+
+- type: entity
+  parent: BaseItem
+  id: TechDiskHristov
+  name: ASR Hristov faction tech disk
+  description: A disk capable of adding the Hristov and its ammo to a server's recipes, for faction techfabs.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base"]
+      color: "#454545"
+    - state: label
+    - state: protect
+    - state: gun
+  - type: TechnologyDisk
+    recipes:
+    - WeaponSniperHristovRogue
+    - AmmoBox145x114mmBig
+
+- type: entity
+  parent: BaseItem
+  id: TechDiskMla73
+  name: ASR MLA-73 faction tech disk
+  description: A disk capable of adding the MLA-73 and its ammo to a server's recipes, for faction techfabs.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base"]
+      color: "#454545"
+    - state: label
+    - state: protect
+    - state: gun
+  - type: TechnologyDisk
+    recipes:
+    - WeaponSubMachineGunMla73Rogue
+    - Magazine635x40mmCaseless
+    - AmmoBox635x40mmCaseless

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Armor;
 using Content.Shared.Damage.Events;
 using Content.Shared.Inventory;
@@ -20,12 +24,10 @@ public sealed partial class StaminaDamageResistanceSystem : EntitySystem
     }
     private void OnExamine(Entity<StaminaDamageResistanceComponent> ent, ref ArmorExamineEvent args)
     {
-        var percentage = (1 - ent.Comp.Coefficient) * 100;
-
-        if (percentage == 0)
-            return;
 
         args.Msg.PushNewline();
-        args.Msg.AddMarkupOrThrow(Loc.GetString("armor-examine-stamina", ("num", percentage)));
+        // Mono - fix floating point error stuff guh
+        args.Msg.AddMarkupOrThrow(Loc.GetString("armor-examine-stamina",
+            ("num", MathF.Round((1f - ent.Comp.Coefficient) * 100, 1)))); // behold my line of 4 )
     }
 }

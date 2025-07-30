@@ -1,3 +1,19 @@
+// SPDX-FileCopyrightText: 2022 Moony
+// SPDX-FileCopyrightText: 2022 Paul Ritter
+// SPDX-FileCopyrightText: 2022 Sam Weaver
+// SPDX-FileCopyrightText: 2022 ShadowCommander
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 Darkie
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 LordCarve
+// SPDX-FileCopyrightText: 2024 themias
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Text.Json.Serialization;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.FixedPoint;
@@ -296,6 +312,49 @@ namespace Content.Shared.Damage
             GetDamagePerGroup(protoManager, dict);
             return dict;
         }
+
+        // Goobstation - partial AP. Returns new armor modifier set.
+        public static DamageModifierSet PenetrateArmor(DamageModifierSet modifierSet, float penetration)
+        {
+            if (penetration == 0f ||
+                penetration > 0f && (modifierSet.IgnoreArmorPierceFlags & (int) PartialArmorPierceFlags.Positive) != 0 ||
+                penetration < 0f && (modifierSet.IgnoreArmorPierceFlags & (int) PartialArmorPierceFlags.Negative) != 0)
+                return modifierSet;
+
+            var result = new DamageModifierSet();
+            if (penetration >= 1f)
+                return result;
+
+            var inversePen = 1f - penetration;
+
+            foreach (var (type, coef) in modifierSet.Coefficients)
+            {
+                // Negative coefficients are not modified by this,
+                // coefficients above 1 will actually be lowered which is not desired
+                if (coef is <= 0 or >= 1)
+                {
+                    result.Coefficients.Add(type, coef);
+                    continue;
+                }
+
+                result.Coefficients.Add(type, MathF.Pow(coef, inversePen));
+            }
+
+            foreach (var (type, flat) in modifierSet.FlatReduction)
+            {
+                // Negative flat reductions are not modified by this
+                if (flat <= 0)
+                {
+                    result.FlatReduction.Add(type, flat);
+                    continue;
+                }
+
+                result.FlatReduction.Add(type, flat * inversePen);
+            }
+
+            return result;
+        }
+
 
         /// <inheritdoc cref="GetDamagePerGroup(Robust.Shared.Prototypes.IPrototypeManager)"/>
         public void GetDamagePerGroup(IPrototypeManager protoManager, Dictionary<string, FixedPoint2> dict)

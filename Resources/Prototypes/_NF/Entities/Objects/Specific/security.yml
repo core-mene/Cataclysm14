@@ -1,3 +1,16 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 SupernoobTheN1
+# SPDX-FileCopyrightText: 2025 Your Name
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # FUCs->FMCs, value 5x normal frontier value
 
 - type: entity
@@ -94,11 +107,11 @@
 - type: entity
   parent: BaseSecurityUplinkRadio
   id: BaseSecurityUplinkRadioSheriff
-  suffix: Colonel 100
+  suffix: Colonel 125
   components:
   - type: Store
     balance:
-      FederationMilitaryCredit: 100
+      FederationMilitaryCredit: 125
 
 - type: entity
   parent: BaseSecurityUplinkRadio
@@ -114,11 +127,11 @@
 - type: entity
   parent: BaseSecurityUplinkRadio
   id: BaseSecurityUplinkRadioDeputy
-  suffix: Deputy 50
+  suffix: Marine 75
   components:
   - type: Store
     balance:
-      FederationMilitaryCredit: 50
+      FederationMilitaryCredit: 75
 
 #Mono End
 

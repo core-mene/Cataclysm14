@@ -9,6 +9,8 @@
 // SPDX-FileCopyrightText: 2023 themias
 // SPDX-FileCopyrightText: 2024 Aviu00
 // SPDX-FileCopyrightText: 2024 nikthechampiongr
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -70,7 +72,9 @@ public sealed partial class BlockingSystem
 
             var blockFraction = blocking.IsBlocking ? blocking.ActiveBlockFraction : blocking.PassiveBlockFraction;
             blockFraction = Math.Clamp(blockFraction, 0, 1);
-            _damageable.TryChangeDamage(component.BlockingItem, blockFraction * args.OriginalDamage);
+            _damageable.TryChangeDamage(component.BlockingItem,
+                blockFraction * args.OriginalDamage,
+                armorPenetration: args.ArmorPenetration); // Goob edit
 
             var modify = new DamageModifierSet();
             foreach (var key in dmgComp.Damage.DamageDict.Keys)
@@ -78,7 +82,8 @@ public sealed partial class BlockingSystem
                 modify.Coefficients.TryAdd(key, 1 - blockFraction);
             }
 
-            args.Damage = DamageSpecifier.ApplyModifierSet(args.Damage, modify);
+            args.Damage = DamageSpecifier.ApplyModifierSet(args.Damage,
+                DamageSpecifier.PenetrateArmor(modify ,args.ArmorPenetration)); // Goob edit
 
             if (blocking.IsBlocking && !args.Damage.Equals(args.OriginalDamage))
             {

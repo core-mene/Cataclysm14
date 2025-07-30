@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -17,7 +18,7 @@
   - type: ItemGenerator
     prototypes:
     - SpawnLootOres15
-    miningInterval: 15
+    miningInterval: 10
     powerDraw: 50000
     requireExpedition: true
   - type: Battery
@@ -32,6 +33,7 @@
       state: icon
     - map: ["computerLayerScreen"]
       state: unlit
+      shader: unshaded
   - type: ItemSlots
     slots:
       output_slot:
