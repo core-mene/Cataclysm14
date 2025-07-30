@@ -25,6 +25,8 @@
   - type: Gun
     minAngle: 32 # Mono
     maxAngle: 54 # Mono
+    angleIncrease: 14
+    angleDecay: 5
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto

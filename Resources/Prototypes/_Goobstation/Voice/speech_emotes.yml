@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: emote
   id: Trill
   name: chat-emote-name-trill
@@ -57,3 +62,22 @@
     - wurbles
     - wurbling
     - wurbled
+
+- type: emote # Mono
+  id: Bagawk
+  name: chat-emote-name-bagawk
+  category: Vocal
+  available: false
+  icon: _Goobstation/Interface/Emotes/caw.png
+  whitelist:
+    components:
+      - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["chat-emote-msg-bagawk"]
+  chatTriggers:
+    - bagawk
+    - bagawks
+    - bawk
+    - bawks

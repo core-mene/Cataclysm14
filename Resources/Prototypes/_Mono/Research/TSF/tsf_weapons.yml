@@ -50,16 +50,16 @@
   id: TsfMarsocGuns
   name: research-technology-tsfmc-mr8
   icon:
-    sprite: _Mono/Objects/Weapons/Guns/LMGs/mr8b.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/mr8c.rsi
     state: icon
   discipline: TsfmcWeaponry
   tier: 3
-  cost: 75000
+  cost: 40000 # Raise back to 75k when MR-8B is balanced (never)
   recipeUnlocks:
-  - WeaponLMGMR8BTSF
+  #- WeaponLMGMR8BTSF
   - WeaponRifleMR8CTSF
-  - Magazine8x65mmSKRBox
-  - Magazine8x65mmEmptyBox
+  #- Magazine8x65mmSKRBox
+  #- Magazine8x65mmEmptyBox
   technologyPrerequisites:
   - TsfBasicGuns
   - TsfSynthalloy

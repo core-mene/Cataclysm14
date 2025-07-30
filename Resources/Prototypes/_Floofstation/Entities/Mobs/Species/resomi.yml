@@ -53,7 +53,7 @@
   - type: Speech
     speechVerb: Parrot
     speechSounds: MaleAvali
-    allowedEmotes: ['Chirp', 'Trill', 'Warble', 'Wurble'] #goob
+    allowedEmotes: ['Chirp', 'Trill', 'Warble', 'Wurble', 'Bagawk'] #goob
   - type: ResomiAccent
   - type: Vocal
     sounds:
@@ -375,6 +375,7 @@
     - map: [ "enum.HumanoidVisualLayers.RHand" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]   # Tail changed to be below outerclothing and above limbs
     - map: [ "jumpsuit" ]                         # Jumpsuit above tail & limbs
+    - map: [ "balaclava" ]
     - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
       color: "#ffffff"
       sprite: Objects/Misc/handcuffs.rsi
@@ -392,6 +393,8 @@
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
     - map: [ "maskalt" ]                          # gooblayer
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
+    - map: [ "helmetcover" ]
+    - map: [ "helmetattachment" ]
     - map: [ "mask" ]
     - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
     - map: [ "suitstorage" ]

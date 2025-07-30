@@ -9191,3 +9191,143 @@ Entries:
   id: 1026
   time: '2025-07-29T19:34:24.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1675
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Shuttle impact force is now proportional to direction of impact.
+  id: 1027
+  time: '2025-07-30T02:53:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1683
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Guns on grids will now properly inherit the veloctiy of the grid. Yes.
+        All guns. Ship guns included.
+  id: 1028
+  time: '2025-07-30T03:06:40.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1686
+- author: starch70
+  changes:
+    - type: Add
+      message: Ported weapon inspects from Frontier.
+    - type: Fix
+      message: Fixed stamina damage resistance inspect being a bit overly specific.
+  id: 1029
+  time: '2025-07-30T03:25:53.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1687
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed ship combat guidebook page still referring to old shield gen.
+  id: 1030
+  time: '2025-07-30T03:43:26.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1688
+- author: BoskiYourk
+  changes:
+    - type: Tweak
+      message: Updates chemistry on Baikal. Fixes other miscellaneous things on Baikal.
+  id: 1031
+  time: '2025-07-30T03:43:59.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1689
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: ASM-220 missile health decreased
+  id: 1032
+  time: '2025-07-30T03:46:09.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1681
+- author: UnicornOnLSD
+  changes:
+    - type: Tweak
+      message: DIS Olympus has had it's propulsion improved. Who needs brakes anyways ?
+    - type: Tweak
+      message: Antlion is now properly marked as DIS.
+  id: 1033
+  time: '2025-07-30T03:49:10.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1679
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: Adds vox emotes.
+    - type: Add
+      message: Bagawk emote.
+  id: 1034
+  time: '2025-07-30T06:14:42.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1691
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Wearing a muzzle now reduces the sound of vocal emotes
+  id: 1035
+  time: '2025-07-30T06:15:17.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1690
+- author: BlueHNT
+  changes:
+    - type: Tweak
+      message: >-
+        Refined ADS Law 3 - [SECTOR INTEGRITY]. ADS can now request overly armed
+        civilians to disarm their vessel as apart of the law.
+  id: 1036
+  time: '2025-07-30T07:16:18.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1654
+- author: starch70
+  changes:
+    - type: Add
+      message: TSF can equip black ski-masks too now.
+    - type: Tweak
+      message: >-
+        Removed TSF Captain and Cadet, increased playtime requirements for TSF
+        roles. Corporal renamed to Marine, Lieutenant renamed to Fireteam
+        Leader, remaining mentions of Brigmed switched to Corpsman.
+    - type: Tweak
+      message: TSF uplink now starts with 25 more FMC (both Colonel and Marine)
+    - type: Fix
+      message: Fixed balaclavas showing on the wrong layer in loadouts.
+    - type: Fix
+      message: >-
+        Fixed normal-sized TSF webbing equipped sprite not having the blue
+        marking stripe.
+  id: 1037
+  time: '2025-07-30T07:34:40.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1693
+- author: starch70
+  changes:
+    - type: Add
+      message: Ported Partial AP
+    - type: Remove
+      message: Removed MR-8B LWWMG. Pending rework if you're lucky.
+    - type: Tweak
+      message: >-
+        MR-8C is now semi-auto only, and MR-3/8C now have actual angle
+        increase/decay values set. 8x65mm damage lowered to 27.5 pierce per
+        shot, but now has 65% AP.
+    - type: Tweak
+      message: >-
+        Lowered MR-8C research cost to 40k points to compensate for MR-8B
+        (temporary, maybe not) removal.
+  id: 1038
+  time: '2025-07-30T10:53:45.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1694
+- author: crazy1112345
+  changes:
+    - type: Add
+      message: >-
+        The HES Windreign atmospheric carrier has made its way to the sector!
+        HES is still in a testing phase of the vessel, and has requested any
+        complaints be sent in for review. It seems the nicer gas feeder for it
+        still hasn't arrived...
+    - type: Add
+      message: >-
+        The HES Strato-Rat, a small, minimalistic gas mining feeder for the HES
+        Windreign.
+  id: 1039
+  time: '2025-07-30T20:35:46.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1383
+- author: Rubeebeebee
+  changes:
+    - type: Add
+      message: added the MIL-Claymore
+  id: 1040
+  time: '2025-07-30T20:39:06.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1456
