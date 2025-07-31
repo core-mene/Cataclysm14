@@ -1,0 +1,57 @@
+# SPDX-FileCopyrightText: 2023 IHAN <IHAN>
+# SPDX-FileCopyrightText: 2023 Kennedy
+# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Long YM
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Leon Krol
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Vinny Shick
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: Leon-Krol
+# Discord: Vinny Shick 
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Tokarev
+  parent: BaseVessel
+  name: VIN Tokarev
+  description: A multipurpose ship that can acompany medical staff in exploring the new frontier in research while allways being ready to help those in need.
+  price: 120000
+  category: Large
+  group: Medical
+  shuttlePath: /Maps/_Mono/Shuttles/tokarev.yml
+  guidebookPage: null
+  class:
+  - Science
+  - Medical
+  engine:
+  - AME
+
+- type: gameMap
+  id: Tokarev
+  mapName: 'VIN Tokarev'
+  mapPath: /Maps/_Mono/Shuttles/tokarev.yml
+  minPlayers: 0
+  stations:
+    Tokarev:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Tokarev MED{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            MdMedic: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

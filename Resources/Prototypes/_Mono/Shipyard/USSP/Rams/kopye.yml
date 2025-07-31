@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: vessel
+  id: Kopye
+  parent: BaseVesselAntag
+  name: BYP Kopye
+  description: A thin, pointed ram made to fit the connection port of the Ledokol.
+  price: 45000
+  category: Large
+  group: Custom
+  access: USSPLedokolRam
+  shuttlePath: /Maps/_Mono/Shuttles/USSP/Ledokol/Attatchments/kopye.yml
+  guidebookPage: Null
+
+- type: gameMap
+  id: Kopye
+  mapName: 'Kopye'
+  mapPath: /Maps/_Mono/Shuttles/USSP/Ledokol/Attatchments/kopye.yml
+  minPlayers: 0
+  stations:
+    Kopye:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Kopye USSP Ram{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

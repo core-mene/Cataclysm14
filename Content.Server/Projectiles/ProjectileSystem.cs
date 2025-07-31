@@ -77,7 +77,7 @@ public sealed class ProjectileSystem : SharedProjectileSystem
     /// Minimum velocity for a projectile to be considered for raycast hit detection.
     /// Projectiles slower than this will rely on standard StartCollideEvent.
     /// </summary>
-    private const float MinRaycastVelocity = 100f;
+    private const float MinRaycastVelocity = 75f; // 100->75 Mono
 
     public override void Initialize()
     {

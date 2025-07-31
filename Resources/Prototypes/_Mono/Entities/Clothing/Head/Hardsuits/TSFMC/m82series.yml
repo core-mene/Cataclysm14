@@ -7,7 +7,7 @@
   parent: [ClothingHeadHardsuitBase, BaseC2ContrabandUnredeemable]
   id: ClothingHeadHelmetHardsuitM82
   name: M82 helmet
-  description: The interchangeable helmet system for the majority of M82 hardsuits.
+  description: The interchangeable helmet system for the majority of M82 hardsuits. Outfitted with a basic NVG system.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Head/Hardsuits/m82.rsi
@@ -16,6 +16,10 @@
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
+  - type: NightVision
+    flashDurationMultiplier: 3.5
+    isEquipment: true
+    color: "#516573"
   - type: Armor
     modifiers:
       coefficients:

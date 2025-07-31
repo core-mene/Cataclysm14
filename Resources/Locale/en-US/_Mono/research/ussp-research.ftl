@@ -18,5 +18,6 @@ research-technology-ussp-explosives-medium = USSP Weaponized Explosives
 # T3 USSP
 research-technology-ussp-guns-advanced = USSP Advanced Armaments
 research-technology-ussp-ships-advanced = USSP Tier III Ships
+research-technology-ussp-ships-ledokol = USSP Ledokol
 research-technology-ussp-suits-advanced = USSP Advanced Equipment
 research-technology-ussp-ammo-advanced = USSP Advanced Ammunition

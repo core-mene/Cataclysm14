@@ -1,37 +1,38 @@
 # SPDX-FileCopyrightText: 2025 BoskiYourk
-# SPDX-FileCopyrightText: 2025 HungryCuban
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: vessel
-  id: Natisk
+  id: Ledokol
   parent: BaseVesselAntag
-  name: NCS Natisk
-  description: A tank with a layer of reinforced walls under its exterior hull, ensuring its able to send out obscene amounts of firepower.
-  price: 53500
-  category: Medium
+  name: BYP Ledokol
+  description: A massive shuttle originally made for ramming through compact debris fields. Trades off fire-power for thrust-power.
+  limit: 1
+  price: 425000
+  category: Large
   group: Ussp
-  access: USSPBasic
-  shuttlePath: /Maps/_Mono/Shuttles/USSP/natisk.yml
+  access: USSPLedokol
+  shuttlePath: /Maps/_Mono/Shuttles/USSP/Ledokol/ledokol.yml
   guidebookPage: Null
   class:
-  - Pursuit
+  - Capital
+  - Frigate
+  - Medical
+  - Chemistry
   engine:
   - AME
 
 - type: gameMap
-  id: Natisk
-  mapName: 'Natisk'
-  mapPath: /Maps/_Mono/Shuttles/USSP/natisk.yml
+  id: Ledokol
+  mapName: 'Ledokol'
+  mapPath: /Maps/_Mono/Shuttles/USSP/Ledokol/ledokol.yml
   minPlayers: 0
   stations:
-    Natisk:
+    Ledokol:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Natisk USSP{1}'
+          mapNameTemplate: 'Ledokol USSP{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
@@ -41,3 +42,4 @@
             USSPCorporal: [0, 0]
             USSPMedic: [0, 0]
             USSPRifleman: [0, 0]
+            USSPCommissar: [0, 0]

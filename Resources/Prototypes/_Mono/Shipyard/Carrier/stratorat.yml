@@ -1,36 +1,35 @@
-# SPDX-FileCopyrightText: 2025 UnicornOnLSD
 # SPDX-FileCopyrightText: 2025 crazy1112345
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: vessel
-  id: Antlion
+  id: StratoRat
   parent: BaseVessel
-  name: DIS Antlion
-  description: A mining drone commissioned by Horizon Energy to the DIS. Basically a chunk of metal with a mining pulser slapped onto it. EVA suit and oxygen not included.
-  price: 6250
+  name: HES Strato-Rat
+  description: A extremley basic, cost cutting gas mining vessel. Features a 120 KMol gas chamber, and single M25 Mining Pulser.
+  price: 15000
   category: Micro
   group: Custom
   mapchecker_group_override: Shipyard  # Treat this as a Shipyard vessel for mapchecker purposes
-  shuttlePath: /Maps/_Mono/Shuttles/Carrier/antlion.yml
+  shuttlePath: /Maps/_Mono/Shuttles/Carrier/stratorat.yml
   guidebookPage: Null
   class:
-  - Salvage
+  - Atmospherics
   engine:
   - APU
 
 - type: gameMap
-  id: Antlion
-  mapName: 'Antlion'
-  mapPath: /Maps/_Mono/Shuttles/Carrier/antlion.yml
+  id: StratoRat
+  mapName: 'HES Strato-Rat'
+  mapPath: /Maps/_Mono/Shuttles/Carrier/stratorat.yml
   minPlayers: 0
   stations:
-    Antlion:
+    StratoRat:
       stationProto: StandardFrontierVessel
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'Antlion DIS{1}'
+        mapNameTemplate: 'Strato-Rat SNB{1}'
         nameGenerator:
           !type:NanotrasenNameGenerator
           prefixCreator: '14'

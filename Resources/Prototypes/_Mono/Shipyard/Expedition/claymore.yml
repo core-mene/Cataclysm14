@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: 2025 Rubeebee
+# SPDX-FileCopyrightText: 2025 Rubeebeebee
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: Rubeebeebee
+# Discord: Rubeebee
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: claymore
+  parent: BaseVessel
+  name: ZOB Claymore
+  description: A full frontal assault capital ship, made by the Zealots of Balaam in order to enact the will of their prophet. Features a devastating front facing armnament, much to the detriment of everything else. Any mercenary looking to unleash an awesome frontal barrage can use this ship for their own purposes. 
+  price: 201100 # BIG GUNS AT THE FRONT, WEAK ARMOR ON THE SIDES AND BACK
+  category: Large
+  group: Expedition
+  access: Mercenary
+  shuttlePath: /Maps/_Mono/Shuttles/Expedition/claymore.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  engine:
+  - Bananium
+
+- type: gameMap
+  id: claymore
+  mapName: 'ZOB Claymore'
+  mapPath: /Maps/_Mono/Shuttles/Expedition/claymore.yml
+  minPlayers: 0
+  stations:
+    claymore:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Claymore MIL{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

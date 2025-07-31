@@ -1,42 +1,39 @@
 # SPDX-FileCopyrightText: 2025 BoskiYourk
+# SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 grandalff
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-# SPDX-FileCopyrightText: 2025 grandalff
-# discord: grandalff_karkov
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: vessel
-  id: Akula
+  id: Sulak
   parent: BaseVesselAntag
-  name: PPU Akula
-  description: A USSP long range harasser, meant for hit and runs. Comes with a charonette (mini charon), two dravons and CTLA-25.
-  price: 64000
+  name: NCS Sulak
+  description: A medium sized destroyer armed with a Charon Massdriver for taking down large targets.
+  price: 142500
   category: Medium
   group: Ussp
-  access: USSPIntermediate
-  shuttlePath: /Maps/_Mono/Shuttles/USSP/akula.yml
+  access: USSPAdvanced
+  shuttlePath: /Maps/_Mono/Shuttles/USSP/sulak.yml
   guidebookPage: Null
   class:
-  - Patrol
+  - Pursuit
+  - Corvette
   engine:
-  - Uranium
+  - AME
 
 - type: gameMap
-  id: Akula
-  mapName: 'Akula'
-  mapPath: /Maps/_Mono/Shuttles/USSP/akula.yml
+  id: Sulak
+  mapName: 'Sulak'
+  mapPath: /Maps/_Mono/Shuttles/USSP/sulak.yml
   minPlayers: 0
   stations:
-    Akula:
+    Sulak:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Akula USSP{1}'
+          mapNameTemplate: 'Sulak USSP{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
@@ -46,4 +43,3 @@
             USSPCorporal: [0, 0]
             USSPMedic: [0, 0]
             USSPRifleman: [0, 0]
-            USSPCommissar: [0, 0]
