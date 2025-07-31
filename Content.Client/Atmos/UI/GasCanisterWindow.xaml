@@ -78,13 +78,8 @@
             </PanelContainer>
             <BoxContainer Orientation="Horizontal">
                 <BoxContainer Orientation="Vertical" VerticalAlignment="Center" VerticalExpand="False">
-                    <PanelContainer VerticalExpand="False">
-                        <PanelContainer.PanelOverride>
-                            <graphics:StyleBoxFlat BorderThickness="3" BorderColor="#212121" BackgroundColor="#111111" />
-                        </PanelContainer.PanelOverride>
                     <Label Text="{Loc comp-gas-canister-ui-release-pressure}"/>
                     <Control VerticalExpand="False"/>
-                </PanelContainer>
                 </BoxContainer>
                 <PanelContainer VerticalExpand="False" HorizontalExpand="True">
                     <PanelContainer.PanelOverride>
