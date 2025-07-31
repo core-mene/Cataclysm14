@@ -1,0 +1,40 @@
+# Author Info
+# GitHub: Rubeebeebee
+# Discord: rubeebee
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Elektritchka
+  parent: BaseVessel
+  name: UNR Eletritchka
+  description:  An unregistered combat outfited electric train, armored and made space faring by the Paycheck Bratva, for the end of illegal activities. Usually found in the hands of ne'er do wells. Runs on bananium generators, and has a MIL IFF.
+  price: 79000 # its cheap since if in combat, it can easily be broken in half. Also sub-par guns.
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/_Mono/Shuttles/Expedition/elektritchka.yml
+  guidebookPage: null
+  class:
+  - Expedition
+  engine:
+  - Bananium
+
+- type: gameMap
+  id: Elektritchka
+  mapName: 'UNR Elektritcha'
+  mapPath: /Maps/_Mono/Shuttles/Expedition/Elektritchka.yml
+  minPlayers: 0
+  stations:
+    Elektritchka:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Elektritchka EXP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
