@@ -5,6 +5,11 @@
                       xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
                       MinSize="480 400" Title="Canister">
     <BoxContainer Orientation="Vertical" Margin="5 5 5 5" SeparationOverride="10">
+        <PanelContainer VerticalExpand="True" HorizontalExpand="True">
+            <PanelContainer.PanelOverride>
+                <graphics:StyleBoxFlat BorderThickness="3" BorderColor="#35434d" BackgroundColor="#191919"/>
+            </PanelContainer.PanelOverride>
+            <BoxContainer Orientation="Vertical" Margin="5 5 5 5" SeparationOverride="10">
         <BoxContainer Orientation="Vertical" VerticalExpand="True">
             <PanelContainer VerticalExpand="True">
                 <PanelContainer.PanelOverride>
@@ -106,5 +111,7 @@
                 </controls:StripeBack>
             </PanelContainer>
         </BoxContainer>
+            </BoxContainer>
+        </PanelContainer>
     </BoxContainer>
 </controls:FancyWindow>
