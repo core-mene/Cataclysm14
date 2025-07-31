@@ -26,10 +26,14 @@
                         PlaceHolder="{Loc 'lathe-menu-search-designs'}"
                         HorizontalExpand="True">
                     </LineEdit>
+                </BoxContainer>
+                <BoxContainer Orientation="Horizontal"
+                              HorizontalExpand="True">
                     <OptionButton
                         Name="FilterOption"
                         MinWidth="100"
-                        StyleClasses="ButtonSquare"/>
+                        StyleClasses="ButtonSquare"
+                        HorizontalExpand="True"/>
                 </BoxContainer>
                 <BoxContainer Orientation="Vertical"
                     MinHeight="225"
