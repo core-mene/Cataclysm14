@@ -233,7 +233,7 @@
           bounds: "-0.75,-0.75,0.75,0.75"
         density: 1500
   - type: Gun
-    projectileSpeed: 150
+    projectileSpeed: 80
     fireRate: 0.75
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/laserfire.ogg
@@ -253,8 +253,8 @@
     proto: ShipDymereProjectile
     fireCost: 2400
   - type: RadarBlip
-    radarColor: "#C92BCC"
-    scale: 3
+    radarColor: "#eb3276"
+    scale: 4
   - type: ShipGunType
     shipType: Energy
   - type: ShipGunClass
