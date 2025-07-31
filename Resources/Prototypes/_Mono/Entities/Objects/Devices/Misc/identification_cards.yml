@@ -119,10 +119,10 @@
 - type: entity
   parent: IDCardStandard
   id: DrakeIndustriesGruntIDCard
-  name: DI grunt ID card
+  name: Grunt ID card
   components:
   - type: PresetIdCard
-    job: DIGrunt
+    job: DIEmployee
   - type: Sprite
     sprite: _Mono/Objects/Misc/id_cards.rsi
     layers:
@@ -136,10 +136,10 @@
 - type: entity
   parent: IDCardStandard
   id: DrakeIndustriesTruckerIDCard
-  name: DI trucker ID card
+  name: Trucker ID card
   components:
   - type: PresetIdCard
-    job: DITrucker
+    job: DIEmployee
   - type: Sprite
     sprite: _Mono/Objects/Misc/id_cards.rsi
     layers:
@@ -153,10 +153,10 @@
 - type: entity
   parent: IDCardStandard
   id: DrakeIndustriesWatchdogIDCard
-  name: DI watchdog ID card
+  name: Watchdog ID card
   components:
   - type: PresetIdCard
-    job: DIWatchdog
+    job: DIEmployee
   - type: Sprite
     sprite: _Mono/Objects/Misc/id_cards.rsi
     layers:
@@ -170,10 +170,10 @@
 - type: entity
   parent: IDCardStandard
   id: DrakeIndustriesOverseerIDCard
-  name: DI overseer ID card
+  name: Overseer ID card
   components:
   - type: PresetIdCard
-    job: DIOverseer
+    job: DIEmployee
   - type: Sprite
     sprite: _Mono/Objects/Misc/id_cards.rsi
     layers:
