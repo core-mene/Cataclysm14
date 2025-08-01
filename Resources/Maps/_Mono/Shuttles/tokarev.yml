@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/01/2025 07:18:18
-  entityCount: 1408
+  time: 08/01/2025 07:50:09
+  entityCount: 1418
 maps: []
 grids:
 - 1
@@ -2338,7 +2338,7 @@ entities:
       pos: -6.5,14.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -5351.6113
+      secondsUntilStateChange: -6405.8706
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2389,7 +2389,7 @@ entities:
       pos: 1.5,10.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -1464.1848
+      secondsUntilStateChange: -2518.4436
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2419,7 +2419,7 @@ entities:
       pos: 2.5,9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -14599.595
+      secondsUntilStateChange: -15653.854
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -5830,10 +5830,15 @@ entities:
       parent: 1007
     - type: Physics
       canCollide: False
-  - uid: 1405
+  - uid: 1408
     components:
     - type: Transform
-      pos: 6.5210247,16.631973
+      pos: 4.315211,15.544663
+      parent: 1
+  - uid: 1409
+    components:
+    - type: Transform
+      pos: 4.674586,15.685288
       parent: 1
 - proto: CurtainsOrangeOpen
   entities:
@@ -6053,6 +6058,13 @@ entities:
     - type: Transform
       pos: -3.4963408,19.598614
       parent: 1
+- proto: GasAnalyzer
+  entities:
+  - uid: 1417
+    components:
+    - type: Transform
+      pos: 4.551303,15.509123
+      parent: 1
 - proto: GasFilter
   entities:
   - uid: 627
@@ -6094,6 +6106,16 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 4.5,3.5
       parent: 1
+- proto: GasPassiveGate
+  entities:
+  - uid: 1412
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 4.5,12.5
+      parent: 1
+    - type: AtmosPipeColor
+      color: '#0055CCFF'
 - proto: GasPassiveVent
   entities:
   - uid: 656
@@ -6226,6 +6248,14 @@ entities:
       parent: 1
     - type: AtmosPipeColor
       color: '#03FCD3FF'
+  - uid: 1415
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 7.5,12.5
+      parent: 1
+    - type: AtmosPipeColor
+      color: '#03FCD3FF'
 - proto: GasPipeFourway
   entities:
   - uid: 666
@@ -6256,6 +6286,13 @@ entities:
       parent: 1
     - type: AtmosPipeColor
       color: '#990000FF'
+  - uid: 1395
+    components:
+    - type: Transform
+      pos: 7.5,14.5
+      parent: 1
+    - type: AtmosPipeColor
+      color: '#03FCD3FF'
 - proto: GasPipeStraight
   entities:
   - uid: 227
@@ -6367,13 +6404,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 1.5,11.5
-      parent: 1
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-  - uid: 682
-    components:
-    - type: Transform
-      pos: 1.5,12.5
       parent: 1
     - type: AtmosPipeColor
       color: '#0055CCFF'
@@ -6800,6 +6830,38 @@ entities:
       parent: 1
     - type: AtmosPipeColor
       color: '#03FCD3FF'
+  - uid: 1410
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 2.5,12.5
+      parent: 1
+    - type: AtmosPipeColor
+      color: '#0055CCFF'
+  - uid: 1411
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 3.5,12.5
+      parent: 1
+    - type: AtmosPipeColor
+      color: '#0055CCFF'
+  - uid: 1413
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 5.5,12.5
+      parent: 1
+    - type: AtmosPipeColor
+      color: '#03FCD3FF'
+  - uid: 1414
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,12.5
+      parent: 1
+    - type: AtmosPipeColor
+      color: '#03FCD3FF'
 - proto: GasPipeTJunction
   entities:
   - uid: 722
@@ -6901,14 +6963,14 @@ entities:
       parent: 1
     - type: AtmosPipeColor
       color: '#03FCD3FF'
-  - uid: 1403
+  - uid: 1388
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 7.5,14.5
+      rot: 1.5707963267948966 rad
+      pos: 1.5,12.5
       parent: 1
     - type: AtmosPipeColor
-      color: '#03FCD3FF'
+      color: '#0055CCFF'
   - uid: 1404
     components:
     - type: Transform
@@ -6969,6 +7031,20 @@ entities:
       rot: 3.141592653589793 rad
       pos: 10.5,16.5
       parent: 1
+    - type: GasThermoMachine
+      targetTemperature: 100
+- proto: GasValve
+  entities:
+  - uid: 1416
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 7.5,13.5
+      parent: 1
+    - type: AtmosPipeColor
+      color: '#03FCD3FF'
+    - type: GasValve
+      open: False
 - proto: GasVentPump
   entities:
   - uid: 749
@@ -7703,6 +7779,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: -2.7368555,12.476245
       parent: 1
+  - uid: 1418
+    components:
+    - type: Transform
+      pos: 4.434209,15.634123
+      parent: 1
+    - type: Paper
+      content: "Cryo pod instructions:\n\n1. Wrench the air cannister in \n2. Enable gas pump\n3. Enable Gas Filters (remember to filter out both carbon dioxide and nitrogen oxide. It should already be set like that, just turn both filters on and you're good to go.)\n4. Turn on the manual valve (this valve is connected to the ship's distro.)\n5. Turn off the manual valve once the gas pressure reading (use the gas analyzer provided) inside the cryo tube is 101~KPA, along those lines. It just needs to be a survivable pressure for humanoids to use the cryo tube. \n6. Insert Cryoxadone beaker into cryo tube (there should already be one pre-installed, but double check to be sure.)\n7. Heal thy patients. \n\nP.S- Double check if the freezer outside is on, make sure it is on, and the temperature is set to 100K "
 - proto: PaperOffice
   entities:
   - uid: 849
@@ -8079,11 +8162,10 @@ entities:
       parent: 1
 - proto: Rack
   entities:
-  - uid: 1395
+  - uid: 1403
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 6.5,16.5
+      pos: 4.5,15.5
       parent: 1
 - proto: Railing
   entities:
@@ -9048,12 +9130,12 @@ entities:
       rot: 3.141592653589793 rad
       pos: -7.5,1.5
       parent: 1
-- proto: TowelColorLightBlue
+- proto: TowelColorBlue
   entities:
-  - uid: 1408
+  - uid: 682
     components:
     - type: Transform
-      pos: 6.5366497,16.678848
+      pos: 4.502711,15.622788
       parent: 1
 - proto: VendingMachineChemicals
   entities:
@@ -9062,19 +9144,19 @@ entities:
     - type: Transform
       pos: 3.5,22.5
       parent: 1
+- proto: VendingMachineMedical
+  entities:
+  - uid: 1406
+    components:
+    - type: Transform
+      pos: 6.5,13.5
+      parent: 1
 - proto: VendingMachineTankDispenserEVA
   entities:
   - uid: 1051
     components:
     - type: Transform
       pos: -0.5,18.5
-      parent: 1
-- proto: VendingMachineWallMedical
-  entities:
-  - uid: 1388
-    components:
-    - type: Transform
-      pos: 7.5,11.5
       parent: 1
 - proto: WallPlastitanium
   entities:
@@ -10818,7 +10900,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -13637.529
+      secondsUntilStateChange: -14691.788
       state: Opening
     - type: Airlock
       autoClose: False
@@ -10832,15 +10914,15 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -13633.796
+      secondsUntilStateChange: -14688.055
       state: Opening
     - type: Airlock
       autoClose: False
 - proto: Wrench
   entities:
-  - uid: 1406
+  - uid: 1405
     components:
     - type: Transform
-      pos: 6.5678997,16.553848
+      pos: 4.502711,15.575913
       parent: 1
 ...
