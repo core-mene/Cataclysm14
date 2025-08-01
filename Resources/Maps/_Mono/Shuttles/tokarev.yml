@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/01/2025 07:50:09
+  time: 08/01/2025 08:05:27
   entityCount: 1418
 maps: []
 grids:
@@ -2338,7 +2338,7 @@ entities:
       pos: -6.5,14.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -6405.8706
+      secondsUntilStateChange: -6488.23
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2389,7 +2389,7 @@ entities:
       pos: 1.5,10.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -2518.4436
+      secondsUntilStateChange: -2600.8032
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2419,7 +2419,7 @@ entities:
       pos: 2.5,9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -15653.854
+      secondsUntilStateChange: -15736.213
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -7782,10 +7782,10 @@ entities:
   - uid: 1418
     components:
     - type: Transform
-      pos: 4.434209,15.634123
+      pos: 4.5125246,15.622411
       parent: 1
     - type: Paper
-      content: "Cryo pod instructions:\n\n1. Wrench the air cannister in \n2. Enable gas pump\n3. Enable Gas Filters (remember to filter out both carbon dioxide and nitrogen oxide. It should already be set like that, just turn both filters on and you're good to go.)\n4. Turn on the manual valve (this valve is connected to the ship's distro.)\n5. Turn off the manual valve once the gas pressure reading (use the gas analyzer provided) inside the cryo tube is 101~KPA, along those lines. It just needs to be a survivable pressure for humanoids to use the cryo tube. \n6. Insert Cryoxadone beaker into cryo tube (there should already be one pre-installed, but double check to be sure.)\n7. Heal thy patients. \n\nP.S- Double check if the freezer outside is on, make sure it is on, and the temperature is set to 100K "
+      content: "Cryo pod instructions:\n\n1. Wrench the air cannister in \n2. Enable gas pump\n3. Enable Gas Filters (remember to filter out both carbon dioxide and nitrogen oxide. It should already be set like that, just turn both filters on and you're good to go.)\n4. Turn on the manual valve (this valve is connected to the ship's distro.)\n5. Insert Cryoxadone beaker into cryo tube (there should already be one pre-installed, but double check to be sure.)\n6. Heal thy patients. \n\nP.S- Double check if the freezer outside is on, make sure it is on, and the temperature is set to 100K "
 - proto: PaperOffice
   entities:
   - uid: 849
@@ -10900,7 +10900,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -14691.788
+      secondsUntilStateChange: -14774.147
       state: Opening
     - type: Airlock
       autoClose: False
@@ -10914,7 +10914,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -14688.055
+      secondsUntilStateChange: -14770.414
       state: Opening
     - type: Airlock
       autoClose: False
