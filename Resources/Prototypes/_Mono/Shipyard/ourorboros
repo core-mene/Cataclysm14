@@ -1,0 +1,41 @@
+# Author Info
+# GitHub: thoughtlessuser
+# Discord: thoughtlessuser
+
+# Shuttle Notes: This is my first ever ship PR so if it messes up I can confidently say I have no idea why
+#
+- type: vessel
+  id: Ouroboros
+  parent: BaseVessel
+  name: EXP Ouroboros
+  description: One of the only publicized Cerberus Surplus ships on the market for freelance use. Intended for marketing and expeditionary use.
+  price: 85000
+  category: Medium
+  group: Shipyard
+  access: Mercenary
+  shuttlePath: /Maps/_Mono/Shuttles/ouroborosmerc.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: Ouroboros
+  mapName: 'EXP Ouroboros'
+  mapPath: /Maps/_Mono/Shuttles/ouroborosmerc.yml
+  minPlayers: 0
+  stations:
+    Ouroboros:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Ouroboros EXP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
