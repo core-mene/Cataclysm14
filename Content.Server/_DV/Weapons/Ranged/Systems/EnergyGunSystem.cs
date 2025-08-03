@@ -1,3 +1,11 @@
+// SPDX-FileCopyrightText: 2023 chromiumboy
+// SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Popups;
 using Content.Server._DV.Weapons.Ranged.Components;
 using Content.Shared.Database;
@@ -135,7 +143,7 @@ public sealed class EnergyGunSystem : EntitySystem
 
             if (TryComp<AppearanceComponent>(uid, out var _) && TryComp<ItemComponent>(uid, out var item))
             {
-                _item.SetHeldPrefix(uid, component.CurrentFireMode.State, component: item);
+                _item.SetHeldPrefix(uid, component.CurrentFireMode.State, false, item);
                 switch (component.CurrentFireMode.State)
                 {
                     case "disabler":

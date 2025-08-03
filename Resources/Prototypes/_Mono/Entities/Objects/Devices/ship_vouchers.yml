@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ark1368
@@ -11,9 +12,9 @@
 
 - type: entity
   parent: BaseShipVoucher
-  id: ShipVoucherUSSP
-  name: USSP gadyuka voucher
-  description: A small card that authorizes the acquisition of a Gadyuka.
+  id: ShipVoucherUSSPBasic
+  name: USSP basic shuttle voucher
+  description: A small card that authorizes the acquisition of a basic USSP shuttle.
   components:
   - type: Sprite
     layers:
@@ -24,15 +25,13 @@
     consoleType: USSP
     companyName: USSP
     access:
-    - USSPGadyuka # SHITCODE!!!
-  - type: StaticPrice
-    vendPrice: 12500
+    - USSPBasic # SHITCODE!!!
 
 - type: entity
   parent: BaseShipVoucher
-  id: ShipVoucherUSSPTunguska
-  name: USSP tunguska voucher
-  description: A small card that authorizes the acquisition of a Tunguska.
+  id: ShipVoucherUSSPIntermediate
+  name: USSP intermediate shuttle voucher
+  description: A small card that authorizes the acquisition of an intermediate USSP shuttle.
   components:
   - type: Sprite
     layers:
@@ -43,13 +42,13 @@
     consoleType: USSP
     companyName: USSP
     access:
-    - USSPTunguska # SHITCODE!!!
+    - USSPIntermediate # SHITCODE!!!
 
 - type: entity
   parent: BaseShipVoucher
-  id: ShipVoucherUSSPDrakon
-  name: USSP drakon voucher
-  description: A small card that authorizes the acquisition of a Drakon.
+  id: ShipVoucherUSSPAdvanced
+  name: USSP advanced shuttle voucher
+  description: A small card that authorizes the acquisition of an advanced USSP shuttle.
   components:
   - type: Sprite
     layers:
@@ -60,13 +59,13 @@
     consoleType: USSP
     companyName: USSP
     access:
-    - USSPDrakon # SHITCODE!!!
+    - USSPAdvanced # SHITCODE!!!
 
 - type: entity
   parent: BaseShipVoucher
-  id: ShipVoucherUSSPNatisk
-  name: USSP natisk voucher
-  description: A small card that authorizes the acquisition of a Natisk.
+  id: ShipVoucherUSSPLedokol
+  name: USSP ledokol voucher
+  description: A small card that authorizes the acquisition of a Ledokol.
   components:
   - type: Sprite
     layers:
@@ -77,13 +76,13 @@
     consoleType: USSP
     companyName: USSP
     access:
-    - USSPNatisk # SHITCODE!!!
+    - USSPLedokol # SHITCODE!!!
 
 - type: entity
   parent: BaseShipVoucher
-  id: ShipVoucherUSSPGruznyk
-  name: USSP gruznyk voucher
-  description: A small card that authorizes the acquisition of a Gruznyk.
+  id: ShipVoucherUSSPLedokolRam
+  name: USSP ledokol ram voucher
+  description: A small card that authorizes the acquisition of a Ledokol ram.
   components:
   - type: Sprite
     layers:
@@ -91,16 +90,16 @@
     - state: voucherstationguard
   - type: ShipyardVoucher
     destroyOnEmpty: true
-    consoleType: USSP
+    consoleType: Custom
     companyName: USSP
     access:
-    - USSPGruznyk # SHITCODE!!!
+    - USSPLedokolRam # SHITCODE!!!
 
 - type: entity
   parent: BaseShipVoucher
-  id: ShipVoucherUSSPSekunda
-  name: USSP sekunda voucher
-  description: A small card that authorizes the acquisition of a Sekunda.
+  id: ShipVoucherUSSPLedokolAttatchment
+  name: USSP ledokol attatchment voucher
+  description: A small card that authorizes the acquisition of a Ledokol attatchment.
   components:
   - type: Sprite
     layers:
@@ -108,10 +107,10 @@
     - state: voucherstationguard
   - type: ShipyardVoucher
     destroyOnEmpty: true
-    consoleType: USSP
+    consoleType: Custom
     companyName: USSP
     access:
-    - USSPSekunda # SHITCODE!!!
+    - USSPLedokolAttatchment # SHITCODE!!!
 
 # Tsfmc
 - type: entity

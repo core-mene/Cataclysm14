@@ -1,3 +1,55 @@
+# SPDX-FileCopyrightText: 2021 SETh lafuente
+# SPDX-FileCopyrightText: 2021 SethLafuente
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 SweptWasTaken
+# SPDX-FileCopyrightText: 2021 Tarlan2
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2022 Kara
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 Ripmorld
+# SPDX-FileCopyrightText: 2022 ZeroDayDaemon
+# SPDX-FileCopyrightText: 2022 keronshb
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2023 Boaz1111
+# SPDX-FileCopyrightText: 2023 Emisse
+# SPDX-FileCopyrightText: 2023 Gagarinten-Noverdo
+# SPDX-FileCopyrightText: 2023 HerCoyote23
+# SPDX-FileCopyrightText: 2023 Kevin Zheng
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2023 Moony
+# SPDX-FileCopyrightText: 2023 Nim
+# SPDX-FileCopyrightText: 2023 Puro
+# SPDX-FileCopyrightText: 2023 Scribbles0
+# SPDX-FileCopyrightText: 2023 Stanislav4ix
+# SPDX-FileCopyrightText: 2023 Vordenburg
+# SPDX-FileCopyrightText: 2023 Whisper
+# SPDX-FileCopyrightText: 2023 chromiumboy
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2023 lapatison
+# SPDX-FileCopyrightText: 2023 liltenhead
+# SPDX-FileCopyrightText: 2024 Alzore
+# SPDX-FileCopyrightText: 2024 BramvanZijp
+# SPDX-FileCopyrightText: 2024 Cojoke
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 Flareguy
+# SPDX-FileCopyrightText: 2024 Ghagliiarghii
+# SPDX-FileCopyrightText: 2024 Nairod
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 Plykiya
+# SPDX-FileCopyrightText: 2024 icekot8
+# SPDX-FileCopyrightText: 2024 slarticodefast
+# SPDX-FileCopyrightText: 2024 takemysoult
+# SPDX-FileCopyrightText: 2024 to4no_fix
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 deltanedas
+# SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 āda
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Base prototypes
 
 - type: latheRecipe
@@ -67,6 +119,10 @@
   parent: BaseWeaponRecipeLong
   id: WeaponLaserCarbine
   result: WeaponLaserCarbine
+  categories: # Mono
+  - Weapons
+  - Energy
+  - Rifles
   materials:
     Steel: 2000
     Glass: 800
@@ -76,6 +132,10 @@
   parent: BaseWeaponRecipeLong
   id: WeaponAdvancedLaser
   result: WeaponAdvancedLaser
+  categories: # Mono
+  - Weapons
+  - Energy
+  - Sidearms
   materials:
     Steel: 1500
     Glass: 1000
@@ -85,6 +145,11 @@
   parent: BaseWeaponRecipeLong
   id: WeaponLaserCannon
   result: WeaponLaserCannon
+  categories: # Mono
+  - Weapons
+  - Energy
+  - Rifles
+  - AntiMaterial
   materials:
     Steel: 1250
     Plastic: 750
@@ -94,6 +159,10 @@
   parent: BaseWeaponRecipeLong
   id: WeaponLaserSvalinn
   result: WeaponLaserSvalinn
+  categories: # Mono
+  - Weapons
+  - Energy
+  - Sidearms
   materials:
     Steel: 2000
     Gold: 500
@@ -102,6 +171,10 @@
   parent: BaseWeaponRecipeLong
   id: WeaponXrayCannon
   result: WeaponXrayCannon
+  categories: # Mono
+  - Weapons
+  - Energy
+  - AntiMaterial
   materials:
     Steel: 1500
     Glass: 500
@@ -170,6 +243,9 @@
   parent: BaseAmmoRecipe
   id: AmmoBox12_gaugeTranquilizer
   result: AmmoBox12_gaugeTranquilizer
+  categories: # Mono
+  - MiscAmmo
+  - Ammo
   materials:
     Plastic: 240
     Steel: 160
@@ -238,6 +314,10 @@
   parent: WeaponDisabler
   id: WeaponDisablerSMG
   result: WeaponDisablerSMG
+  categories: # Mono
+  - Weapons
+  - Energy
+  - SMGs
   materials:
     Steel: 1000
     Glass: 500
@@ -254,6 +334,9 @@
 - type: latheRecipe
   id: 40mmGrenadeEMP
   result: 40mmGrenadeEMP
+  categories: # Mono
+  - MiscAmmo
+  - Ammo
   completetime: 3
   materials:
     Steel: 150
@@ -263,6 +346,9 @@
 - type: latheRecipe
   id: 40mmGrenadeThermobaric
   result: 40mmGrenadeThermobaric
+  categories: # Mono
+  - MiscAmmo
+  - Ammo
   completetime: 3
   materials:
     Steel: 450
@@ -272,6 +358,9 @@
 - type: latheRecipe
   id: 40mmGrenadeFlash
   result: 40mmGrenadeFlash
+  categories: # Mono
+  - MiscAmmo
+  - Ammo
   completetime: 3
   materials:
     Steel: 150
@@ -288,10 +377,6 @@
     Plastic: 1000
     Plasma: 500
     Glass: 500
-
-# mono changes start
-
-# mono changes end
 
 # Shitmed Recipes
 

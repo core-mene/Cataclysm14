@@ -9,6 +9,9 @@
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
   id: CartridgeRocket
+  categories:
+  - MiscAmmo
+  - Ammo
   result: CartridgeRocket
   materials:
     Steel: 250
@@ -18,6 +21,9 @@
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineSmartLMG
+  categories:
+  - MiscAmmo
+  - Ammo
   result: MagazineSmartLMG
   materials:
     Steel: 1000

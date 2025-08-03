@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Base prototypes
 
 - type: latheRecipe
@@ -5,6 +14,7 @@
   id: NFBaseEVASuitRecipe
   categories:
   - EVASuits
+  - ArmorNF # Mono
   applyMaterialDiscount: false
   completetime: 5
   materials:
@@ -40,6 +50,10 @@
   abstract: true
   id: NFBaseHardSuitArmoredRecipe
   parent: NFBaseEVASuitRecipe
+  categories: # Mono
+  - CombatEva
+  - EVASuits
+  - ArmorNF
   completetime: 8
   materials:
     Glass: 500
@@ -53,6 +67,9 @@
   abstract: true
   id: NFBaseMagBootsRecipe
   parent: NFBaseEVASuitRecipe
+  categories: # Mono
+  - Tools
+  - ClothesNF
   completetime: 8
   materials:
     Silver: 1000
@@ -314,6 +331,9 @@
   id: ClothingOuterHardsuitCap
   parent: NFBaseHardSuitArmoredRecipe
   result: ClothingOuterHardsuitCap
+  categories: # Mono
+  - ArmorNF
+  - EVASuits
 
 - type: latheRecipe
   id: ClothingOuterHardsuitScaf
@@ -324,11 +344,17 @@
   id: ClothingOuterHardsuitEngineeringWhite
   parent: NFBaseHardSuitArmoredRecipe
   result: ClothingOuterHardsuitEngineeringWhite
+  categories: # Mono
+  - ArmorNF
+  - EVASuits
 
 - type: latheRecipe
   id: ClothingOuterHardsuitMedical
   parent: NFBaseHardSuitArmoredRecipe
   result: ClothingOuterHardsuitMedical
+  categories: # Mono
+  - ArmorNF
+  - EVASuits
   materials:
     Glass: 500
     Plastic: 2000
@@ -342,11 +368,17 @@
   id: ClothingOuterHardsuitRd
   parent: NFBaseHardSuitArmoredRecipe
   result: UndeterminedVoidsuitRD
+  categories: # Mono
+  - ArmorNF
+  - EVASuits
 
 - type: latheRecipe
   id: ClothingOuterHardsuitLuxury
   parent: NFBaseHardSuitArmoredRecipe
   result: ClothingOuterHardsuitLuxury
+  categories: # Mono
+  - ArmorNF
+  - EVASuits
 
 - type: latheRecipe
   id: ClothingOuterHardsuitMaximPrototype

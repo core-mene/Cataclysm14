@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -6,10 +7,10 @@
   id: WeaponTurretASM220
   name: ASM-220 torpedo VLS
   parent: BallisticArtilleryUnanchorableCartridge
-  description: A heavy torpedo VLS relying on manual loading to work. Its missiles are very effective however.
+  description: A heavy torpedo VLS relying on manual loading to work, usually done at harbor. However, it has high-yield missiles for its size.
   components:
   - type: StaticPrice
-    price: 5000
+    price: 10000
   - type: Sprite
     sprite: _Mono/Objects/ShuttleWeapons/asm220.rsi
     layers:
@@ -35,6 +36,17 @@
     capacity: 4
     soundInsert:
       path: /Audio/Items/rped.ogg
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
   - type: Actions
   - type: RadarBlip
     radarColor: "#ff9d00"

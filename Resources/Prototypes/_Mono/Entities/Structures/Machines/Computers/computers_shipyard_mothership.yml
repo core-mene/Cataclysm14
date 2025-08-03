@@ -1,4 +1,6 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
+# SPDX-FileCopyrightText: 2025 crazy1112345
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -54,3 +56,25 @@
   - type: ShipyardListing
     shuttles:
     - Zephyr
+
+- type: entity
+  id: LedokolAttatchmentComputer
+  parent: BaseCarrierComputer
+  name: ledokol attatchment console
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Molotok
+    - Kopye
+    - Kupol
+
+- type: entity
+  id: WindreignCarrierComputer
+  parent: BaseCarrierComputer
+  name: windreign shipyard console
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Antlion
+    - StratoRat
+

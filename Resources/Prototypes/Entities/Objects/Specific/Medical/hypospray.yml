@@ -215,8 +215,8 @@
           Quantity: 12
         - ReagentId: TranexamicAcid
           Quantity: 3
-  - type: Tag
-    tags: []
+  - type: Tag # Mono
+    tags: [SurvivalBox]
 
 - type: entity
   name: poison auto-injector
@@ -467,8 +467,8 @@
             Quantity: 10
           - ReagentId: Barozine
             Quantity: 20
-  - type: Tag
-    tags: []
+  - type: Tag # Mono
+    tags: [SurvivalBox]
 
 - type: entity
   name: hyperzine injector

@@ -4,11 +4,12 @@
 // SPDX-FileCopyrightText: 2024 Mervill
 // SPDX-FileCopyrightText: 2024 TemporalOroboros
 // SPDX-FileCopyrightText: 2024 eoineoineoin
-// SPDX-FileCopyrightText: 2024 metalgearsloth
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 ark1368
 // SPDX-FileCopyrightText: 2025 gus
+// SPDX-FileCopyrightText: 2025 metalgearsloth
 // SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -125,6 +126,7 @@ public sealed partial class ShuttleSystem
         var ourXform = Transform(args.OurEntity);
         var otherXform = Transform(args.OtherEntity);
         var worldPoints = args.WorldPoints;
+        var worldNormal = args.WorldNormal;
 
         for (var i = 0; i < worldPoints.Length; i++)
         {
@@ -135,7 +137,14 @@ public sealed partial class ShuttleSystem
 
             var ourVelocity = _physics.GetLinearVelocity(args.OurEntity, ourPoint.Position, ourBody, ourXform);
             var otherVelocity = _physics.GetLinearVelocity(args.OtherEntity, otherPoint.Position, otherBody, otherXform);
-            var jungleDiff = (ourVelocity - otherVelocity).Length();
+            var topDiff = (ourVelocity - otherVelocity);
+            var jungleDiff = topDiff.Length();
+
+            // Get the velocity in relation to the contact normal
+            // If this still causes issues see https://box2d.org/posts/2020/06/ghost-collisions/
+            // This should only be a potential problem on chunk seams.
+            var dotProduct = MathF.Abs(Vector2.Dot(topDiff.Normalized(), worldNormal.Normalized()));
+            jungleDiff *= dotProduct;
 
             // this is cursed but makes it so that collisions of small grid with large grid count the inertia as being approximately the small grid's
             var effectiveInertiaMult = (ourBody.FixturesMass * otherBody.FixturesMass) / (ourBody.FixturesMass + otherBody.FixturesMass);

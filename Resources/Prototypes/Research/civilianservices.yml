@@ -29,6 +29,7 @@
 # SPDX-FileCopyrightText: 2025 Southbridge
 # SPDX-FileCopyrightText: 2025 dustylens
 # SPDX-FileCopyrightText: 2025 mikus
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -46,13 +47,13 @@
   recipeUnlocks:
   - BorgModuleGardening
   - BorgModuleHarvesting
-  - PlantBagOfHolding #DeltaV
+  #- PlantBagOfHolding
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
   - PlantAnalyzer # Frontier
   - NFBlueprintPlantAnalyzerEmpty # Frontier
-  - NFBlueprintPlantBagOfHolding # Frontier
+  #- NFBlueprintPlantBagOfHolding # Frontier
 
 - type: technology
   id: CritterMechs
@@ -273,17 +274,17 @@
   # recipeUnlocks:
   # - CargoTelepadMachineCircuitboard
 
-- type: technology
-  id: QuantumFiberWeaving
-  name: research-technology-quantum-fiber-weaving
-  icon:
-    sprite: Clothing/Shoes/Boots/speedboots.rsi
-    state: icon
-  discipline: CivilianServices
-  tier: 3
-  cost: 15000 # Frontier - 10000<15000
-  recipeUnlocks:
-  - ClothingShoesBootsSpeed
+#- type: technology
+#  id: QuantumFiberWeaving
+#  name: research-technology-quantum-fiber-weaving
+#  icon:
+#    sprite: Clothing/Shoes/Boots/speedboots.rsi
+#    state: icon
+#  discipline: CivilianServices
+#  tier: 3
+#  cost: 15000 # Frontier - 10000<15000
+#  recipeUnlocks:
+#  - ClothingShoesBootsSpeed
 
 - type: technology
   id: BluespaceChemistry

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -5,6 +6,8 @@
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: BaseShipgunAmmoRecipe
+  categories:
+  - ShipAmmo
   abstract: true
   materials:
     Steel: 2000
@@ -37,6 +40,26 @@
     Silver: 100 # electronics
 
 - type: latheRecipe
+  parent: BaseShipgunAmmoRecipe
+  id: BaseLightOrdinanceAmmoRecipe
+  abstract: true
+  materials:
+    Steel: 1200
+    Plasma: 400 # explosive payload
+    Silver: 200 # electronics/misc
+
+- type: latheRecipe
+  parent: BaseShipgunAmmoRecipe
+  id: BaseLightOrdinanceAdvancedAmmoRecipe
+  abstract: true
+  materials:
+    Steel: 1200
+    Plasma: 600 # explosive payload/advanced
+    Glass: 400 # opticals/misc
+    Gold: 200 # more electronics/misc
+    Silver: 200 # electronics/misc
+
+- type: latheRecipe
   id: CharonSlugUniversal
   parent: BaseRailgunSlugRecipe
   result: CharonSlugAmmo
@@ -60,3 +83,18 @@
   id: 150mmEmpShellUniversal
   parent: Base150mmShellAmmoRecipe
   result: 150mmEmpShell
+
+- type: latheRecipe
+  id: GPOL50BombUniversal
+  parent: BaseLightOrdinanceAmmoRecipe
+  result: LightFighterOrdinanceGPOItem
+
+- type: latheRecipe
+  id: ZenithRocketUniversal
+  parent: BaseLightOrdinanceAmmoRecipe
+  result: LightFighterOrdinanceZenithItem
+
+- type: latheRecipe
+  id: QuasarAcceleratorUniversal
+  parent: BaseLightOrdinanceAdvancedAmmoRecipe
+  result: LightFighterOrdinanceQuasarItem

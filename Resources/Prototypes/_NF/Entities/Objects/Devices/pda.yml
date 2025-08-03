@@ -200,7 +200,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: DeputyPDA
-  name: TSF corporal PDA
+  name: TSF marine PDA
   description: A standard TSFMC personal computer.
   components:
   - type: Pda
@@ -250,7 +250,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: SergeantPDA
-  name: TSF lieutenant PDA
+  name: TSF fireteam leader PDA
   description: A standard TSFMC personal computer.
   components:
   - type: Pda

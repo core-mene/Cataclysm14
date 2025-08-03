@@ -568,7 +568,6 @@
     - Wall
   - type: Sprite
     sprite: Structures/Walls/plastitanium.rsi
-    color: "#cdf3cd" # Frontier
   - type: Icon
     sprite: Structures/Walls/plastitanium.rsi
   - type: IconSmooth
@@ -598,8 +597,6 @@
   description: Keeps the air in and the greytide out. # Frontier: restore base value
   suffix: ""
   components:
-  - type: Sprite # Frontier
-    color: "#ffffff" # Frontier
   - type: Tag
     tags:
     - Wall
@@ -681,7 +678,6 @@
     - Wall
     - Diagonal
   - type: Sprite
-    color: "#cdf3cd" # Frontier
     drawdepth: Walls
     sprite: Structures/Walls/plastitanium_diagonal.rsi
     state: state0

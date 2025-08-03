@@ -1,4 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Ted Lukin
 # SPDX-FileCopyrightText: 2025 pheenty
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -12,8 +16,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 3500
-        Blunt: 2000
+        Structural: 6500
+        Blunt: 10000
         Heat: 500
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/mini_rocket.rsi
@@ -29,7 +33,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 10
+    lifetime: 25
   - type: PointLight
     radius: 5
     color: orange
@@ -43,12 +47,45 @@
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
   - type: TargetSeeking
-    acceleration: 125
+    acceleration: 5
     detectionRange: 750
     scanArc: 75
-    launchSpeed: 70
-    maxSpeed: 250
+    launchSpeed: 25
+    maxSpeed: 70
     trackDelay: 3
+  # destructible components below
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 50
+        layer:
+        - WallLayer
+        mask:
+        - MachineMask
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Meteor
+    damageTypes:
+      types:
+        Blunt: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:ExplodeBehavior
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
 
 - type: entity
   id: Asm220TorpedoHE
@@ -72,6 +109,8 @@
     scale: 0.55, 0.725
   - type: Appearance
   - type: SpentAmmoVisuals
+
+# HE end
 
 - type: entity
   id: ShipMissileASM220ECM
@@ -100,7 +139,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 10
+    lifetime: 15
   - type: PointLight
     radius: 5
     color: orange
@@ -114,16 +153,49 @@
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
   - type: TargetSeeking
-    acceleration: 125
+    acceleration: 5
     detectionRange: 750
     scanArc: 75
-    launchSpeed: 70
-    maxSpeed: 250
+    launchSpeed: 25
+    maxSpeed: 70
     trackDelay: 3
   - type: EmpOnTrigger
     range: 7
     energyConsumption: 2900000
     disableDuration: 10
+  # destructible components below
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 10
+        layer:
+        - WallLayer
+        mask:
+        - MachineMask
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Meteor
+    damageTypes:
+      types:
+        Blunt: 0.5
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:ExplodeBehavior
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
 
 - type: entity
   id: Asm220TorpedoECM
@@ -151,3 +223,5 @@
     range: 7
     energyConsumption: 2900000
     disableDuration: 10
+
+# ECM end

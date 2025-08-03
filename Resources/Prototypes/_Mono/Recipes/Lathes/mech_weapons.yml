@@ -8,6 +8,9 @@
 - type: latheRecipe
   abstract: true
   id: BaseMechLightWeapon
+  categories:
+  - MonoMechGear
+  - MonoMechLightWeapons
   completetime: 15
   materials:
     Steel: 1200
@@ -35,6 +38,9 @@
 - type: latheRecipe
   abstract: true
   id: BaseMechMediumWeapon
+  categories:
+  - MonoMechGear
+  - MonoMechMediumWeapons
   completetime: 17.5
   materials:
     Steel: 1500
@@ -62,6 +68,9 @@
 - type: latheRecipe
   abstract: true
   id: BaseMechHeavyWeapon
+  categories:
+  - MonoMechGear
+  - MonoMechHeavyWeapons
   completetime: 17.5
   materials:
     Steel: 3500
@@ -94,7 +103,6 @@
     Gold: 200
     Silver: 1500
 
-
 - type: latheRecipe
   parent: BaseMechHeavyWeapon
   id: EWACMechaJammer
@@ -110,6 +118,8 @@
 - type: latheRecipe
   abstract: true
   id: BaseMechIFF
+  categories:
+  - MonoMechGear
   completetime: 5
   materials:
     Steel: 400

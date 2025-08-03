@@ -8,6 +8,9 @@
   parent: BaseToolRecipe
   id: JawsOfLifeRogue
   result: SyndicateJawsOfLife
+  categories:
+  - Tools
+  - FactionEquipment
   completetime: 6
   materials:
     Steel: 1500
@@ -20,6 +23,9 @@
   parent: BaseToolRecipe
   id: ForensicsScannerTSF
   result: ForensicScanner
+  categories:
+  - Tools
+  - FactionEquipment
   completetime: 3
   materials:
     Steel: 1500
@@ -31,6 +37,9 @@
   parent: BaseToolRecipe
   id: DemagTSF
   result: Demag
+  categories:
+  - Tools
+  - FactionEquipment
   completetime: 10
   materials:
     Steel: 1500
@@ -45,6 +54,8 @@
   parent: BaseToolRecipe
   id: SutureTSF
   result: MedicatedSuture
+  categories:
+  - FactionEquipment
   completetime: 15
   materials:
     Steel: 50
@@ -56,6 +67,8 @@
   parent: BaseToolRecipe
   id: MeshTSF
   result: RegenerativeMesh
+  categories:
+  - FactionEquipment
   completetime: 15
   materials:
     Steel: 50
@@ -67,6 +80,9 @@
   parent: BaseToolRecipe
   id: HyposprayRogue
   result: Hypospray
+  categories:
+  - Tools
+  - FactionEquipment
   completetime: 15
   materials:
     Steel: 500
@@ -82,6 +98,9 @@
   parent: BaseToolRecipe
   id: EmagRogue
   result: Emag
+  categories:
+  - Tools
+  - FactionEquipment
   completetime: 20
   materials:
     Steel: 2500
@@ -96,6 +115,9 @@
   parent: BaseToolRecipe
   id: AccessBreakerRogue
   result: AccessBreaker
+  categories:
+  - Tools
+  - FactionEquipment
   completetime: 20
   materials:
     Steel: 2500
@@ -111,6 +133,9 @@
   parent: BaseToolRecipe
   id: NanolaminateFoamGrenadeTSF
   result: NanolaminateFoamGrenade
+  categories:
+  - Tools
+  - FactionEquipment
   completetime: 2
   materials:
     Steel: 300
@@ -123,6 +148,9 @@
   parent: BaseToolRecipe
   id: OreBoxFlatpackTSF
   result: OreBoxFlatpack
+  categories:
+  - Tools
+  - FactionEquipment
   completetime: 5
   materials:
     Steel: 600
@@ -133,6 +161,9 @@
   parent: BaseToolRecipe
   id: MotionDetectorTSF
   result: MotionDetector
+  categories:
+  - Tools
+  - FactionEquipment
   completetime: 3
   materials:
     Steel: 500
@@ -145,6 +176,9 @@
   parent: BaseToolRecipe
   id: MaterialBoxFlatpackTSF
   result: MaterialBoxFlatpack
+  categories:
+  - Tools
+  - FactionEquipment
   completetime: 5
   materials:
     Steel: 600
@@ -155,6 +189,10 @@
   parent: BaseToolRecipe
   id: SeismicChargeUSSP
   result: SeismicCharge
+  categories:
+  - FactionEquipment
+  - Weapons
+  - Explosive
   completetime: 2
   materials:
     Plastic: 100
@@ -164,6 +202,10 @@
   parent: BaseToolRecipe
   id: TearGasGrenadeUSSP
   result: TearGasGrenade
+  categories:
+  - FactionEquipment
+  - Weapons
+  - Explosive
   completetime: 2
   materials:
     Steel: 100
@@ -173,6 +215,10 @@
   parent: BaseToolRecipe
   id: GrenadeShrapnelUSSP
   result: GrenadeShrapnel
+  categories:
+  - FactionEquipment
+  - Weapons
+  - Explosive
   completetime: 2
   materials:
     Steel: 500
@@ -182,6 +228,10 @@
   parent: BaseToolRecipe
   id: GrenadeIncendiaryUSSP
   result: GrenadeIncendiary
+  categories:
+  - FactionEquipment
+  - Weapons
+  - Explosive
   completetime: 2
   materials:
     Steel: 500

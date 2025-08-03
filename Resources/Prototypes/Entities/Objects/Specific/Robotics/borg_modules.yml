@@ -32,6 +32,7 @@
 # SPDX-FileCopyrightText: 2024 pigeonpeas
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 GreaseMonk
+# SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 JonahDes
 # SPDX-FileCopyrightText: 2025 KiraZen_
 # SPDX-FileCopyrightText: 2025 SRV
@@ -369,6 +370,7 @@
     - GasAnalyzer
     - GeigerCounter
     - MaintenanceJack # Frontier
+    - RPED
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: adv-tools-module }
 
@@ -389,7 +391,7 @@
     - SheetPlasticLingering0
     - SheetPlasteelLingering0
     - PartRodMetalLingering0
-    - FloorTileItemSteelLingering0 
+    - FloorTileItemSteelLingering0
     - FloorTileItemDarkLingering0
     - FloorTileItemWhiteLingering0
   # Frontier: droppable borg items
@@ -403,13 +405,17 @@
     - id: APCElectronics
       whitelist:
         components:
-          - ComputerBoard 
-          - MachineBoard 
+          - ComputerBoard
+          - MachineBoard
           - BaseElectronics
     - id: CapacitorStockPart
       whitelist:
         components:
           - MachinePart
+    - id: Beaker
+      whitelist:
+        tags:
+        - GlassBeaker
   # End Frontier: droppable borg items
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: construction-module }
@@ -871,7 +877,7 @@
     - id: OrganHumanBrain
       whitelist:
         components:
-        - Organ 
+        - Organ
         - BodyPart
     # End Frontier -> GoobStation -> Monolith: droppable borg items
   - type: BorgModuleIcon
@@ -900,7 +906,7 @@
     - id: OrganHumanBrain
       whitelist:
         components:
-        - Organ 
+        - Organ
         - BodyPart
     # End Frontier -> GoobStation -> Monolith: droppable borg items
   - type: BorgModuleIcon

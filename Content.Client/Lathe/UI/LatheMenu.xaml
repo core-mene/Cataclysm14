@@ -1,7 +1,7 @@
-<DefaultWindow
-    xmlns="https://spacestation14.io"
+<controls:FancyWindow xmlns="https://spacestation14.io"
     xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
     xmlns:ui="clr-namespace:Content.Client.Materials.UI"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     Title="{Loc 'lathe-menu-title'}"
     MinSize="550 450"
     SetSize="750 500">
@@ -16,21 +16,39 @@
             HorizontalExpand="True">
             <BoxContainer
                 Orientation="Vertical"
-                VerticalExpand="True"
+                VerticalExpand="False"
                 HorizontalExpand="True"
                 SeparationOverride="5">
+                <PanelContainer VerticalExpand="False">
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#111111" />
+                    </PanelContainer.PanelOverride>
+                    <controls:StripeBack MinSize="48 48">
                 <BoxContainer Orientation="Horizontal"
-                    HorizontalExpand="True">
-                    <LineEdit
-                        Name="SearchBar"
-                        PlaceHolder="{Loc 'lathe-menu-search-designs'}"
-                        HorizontalExpand="True">
-                    </LineEdit>
+                    HorizontalExpand="True"
+                    Margin="2 2 2 2">
+                    <LineEdit Name="SearchBar"
+                              PlaceHolder="{Loc 'lathe-menu-search-designs'}"
+                              MinSize="120 0" HorizontalExpand="True"/>
+                </BoxContainer>
+                    </controls:StripeBack>
+                </PanelContainer>
+                <PanelContainer VerticalExpand="False">
+                    <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BorderThickness="3" BorderColor="#212121" BackgroundColor="#111111"/>
+                </PanelContainer.PanelOverride>
+                <BoxContainer Orientation="Horizontal"
+                              VerticalExpand="False"
+                              HorizontalExpand="True"
+                              Margin="2 2 2 2">
                     <OptionButton
                         Name="FilterOption"
                         MinWidth="100"
-                        StyleClasses="ButtonSquare"/>
+                        StyleClasses="ButtonSquare"
+                        VerticalExpand="False"
+                        HorizontalExpand="True"/>
                 </BoxContainer>
+                </PanelContainer>
                 <BoxContainer Orientation="Vertical"
                     MinHeight="225"
                     VerticalExpand="True"
@@ -38,9 +56,9 @@
                     SizeFlagsStretchRatio="4">
                     <PanelContainer VerticalExpand="True">
                         <PanelContainer.PanelOverride>
-                            <gfx:StyleBoxFlat BackgroundColor="#1B1B1E" />
+                            <gfx:StyleBoxFlat BorderThickness="3" BorderColor="#212121" BackgroundColor="#111111"/>
                         </PanelContainer.PanelOverride>
-                        <ScrollContainer VerticalExpand="True" HScrollEnabled="False">
+                        <ScrollContainer VerticalExpand="True" HScrollEnabled="False" Margin="7 7 7 7">
                             <BoxContainer
                                 Name="RecipeList"
                                 Orientation="Vertical"
@@ -74,12 +92,8 @@
                     Orientation="Horizontal"
                     Align="End"
                     HorizontalExpand="True">
-                    <Button
-                        Name="ServerListButton"
-                        Text="{Loc 'lathe-menu-server-list'}"
-                        TextAlign="Center"
-                        Mode="Press">
-                    </Button>
+                    <Button Name="ServerListButton" Access="Public" Text="{Loc 'lathe-menu-server-list'}"
+                            StyleClasses="ButtonSquare OpenRight" HorizontalExpand="False" Margin="0 0"/>
                 </BoxContainer>
                 <Label Text="{Loc 'lathe-menu-queue-title'}" Margin="5 5 5 5" HorizontalAlignment="Center"/>
                 <BoxContainer
@@ -112,6 +126,7 @@
                     </PanelContainer>
                 </BoxContainer>
                 <ScrollContainer VerticalExpand="True" HScrollEnabled="False">
+                    <controls:StripeBack MinSize="48 48">
                     <BoxContainer
                         Name="QueueList"
                         Orientation="Vertical"
@@ -119,6 +134,7 @@
                         VerticalExpand="True"
                         RectClipContent="True">
                     </BoxContainer>
+                    </controls:StripeBack>
                 </ScrollContainer>
             </BoxContainer>
             <BoxContainer
@@ -126,15 +142,20 @@
             HorizontalExpand="True"
             Orientation="Vertical">
             <Label Text="{Loc 'lathe-menu-materials-title'}" Margin="5 5 5 5" HorizontalAlignment="Center"/>
-            <BoxContainer
-                Orientation="Vertical"
-                VerticalExpand="True"
-                HorizontalExpand="True">
-                <ui:MaterialStorageControl Name="MaterialsList" SizeFlagsStretchRatio="8"/>
-            </BoxContainer>
+            <PanelContainer VerticalExpand="True">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BorderThickness="9" BorderColor="#212121" BackgroundColor="#111111"/>
+                </PanelContainer.PanelOverride>
+                <BoxContainer
+                    Orientation="Vertical"
+                    VerticalExpand="True"
+                    HorizontalExpand="True">
+                    <ui:MaterialStorageControl Name="MaterialsList" SizeFlagsStretchRatio="8"/>
+                </BoxContainer>
+            </PanelContainer>
         </BoxContainer>
         </BoxContainer>
 
     </BoxContainer>
 
-</DefaultWindow>
+</controls:FancyWindow>

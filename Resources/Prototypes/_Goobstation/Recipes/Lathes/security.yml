@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Aviu00
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -101,6 +102,11 @@
   parent: BaseWeaponRecipeLong
   id: WeaponSubMachineSmart
   result: WeaponSubMachineSmart
+  categories: # Mono
+  - SMGs
+  - SmartGuns
+  - Ballistic
+  - Weapons
   materials:
     Steel: 1800
     Plastic: 750
@@ -111,5 +117,8 @@
   parent: BaseAmmoRecipe
   id: MagazineSmart
   result: MagazineSmart
+  categories: # Mono
+  - MiscAmmo
+  - Ammo
   materials:
     Steel: 550

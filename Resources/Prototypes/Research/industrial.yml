@@ -189,9 +189,9 @@
   # - Fulton # Frontier
   # - FultonBeacon # Frontier
   - BorgModuleJetpack # Frontier
-  - NFBlueprintPowerDrill # Frontier
-  - NFBlueprintJawsOfLife # Frontier
-  - NFBlueprintWelderExperimental # Frontier
+  #- NFBlueprintPowerDrill # Frontier
+  #- NFBlueprintJawsOfLife # Frontier
+  #- NFBlueprintWelderExperimental # Frontier
 
 - type: technology
   id: MassExcavation
@@ -203,10 +203,10 @@
   tier: 2
   cost: 12500
   recipeUnlocks:
-  - OreBagOfHolding
+  #- OreBagOfHolding
   - MiningDrillDiamond
   - AdvancedMineralScannerEmpty
-  - NFBlueprintOreBagOfHolding # Frontier
+  #- NFBlueprintOreBagOfHolding # Frontier
   - NFBlueprintMiningDrillDiamond # Frontier
   - NFBlueprintAdvancedMineralScannerEmpty # Frontier
   - BorgModuleAdvancedMining # Frontier
@@ -214,24 +214,24 @@
 
 # Tier 3
 
-- type: technology
-  id: BluespaceStorage
-  name: research-technology-bluespace-storage
-  icon:
-    sprite: Clothing/Back/Backpacks/holding.rsi
-    state: holding
-  discipline: Industrial
-  tier: 3
-  cost: 15000
-  recipeUnlocks:
-  - ClothingBackpackHolding
-  - ClothingBackpackSatchelHolding
-  - ClothingBackpackDuffelHolding
-  - ClothingBackpackMessengerHolding # Frontier
-  - NFBlueprintClothingBackpackHolding # Frontier
-  - NFBlueprintClothingBackpackSatchelHolding # Frontier
-  - NFBlueprintClothingBackpackDuffelHolding # Frontier
-  - NFBlueprintClothingBackpackMessengerHolding # Frontier
+#- type: technology
+#  id: BluespaceStorage
+#  name: research-technology-bluespace-storage
+#  icon:
+#    sprite: Clothing/Back/Backpacks/holding.rsi
+#    state: holding
+#  discipline: Industrial
+#  tier: 3
+#  cost: 15000
+#  recipeUnlocks:
+#  - ClothingBackpackHolding
+#  - ClothingBackpackSatchelHolding
+#  - ClothingBackpackDuffelHolding
+#  - ClothingBackpackMessengerHolding # Frontier
+#  - NFBlueprintClothingBackpackHolding # Frontier
+#  - NFBlueprintClothingBackpackSatchelHolding # Frontier
+#  - NFBlueprintClothingBackpackDuffelHolding # Frontier
+#  - NFBlueprintClothingBackpackMessengerHolding # Frontier
 
 - type: technology
   id: PortableFission

@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Base prototypes
 
 - type: latheRecipe
@@ -26,6 +32,9 @@
   abstract: true
   id: NFBaseMaskArmoredRecipe
   parent: NFBaseArmorRecipe
+  categories: # Mono
+  - ArmorNF
+  - ClothesNF
   completetime: 2
   materials:
     Durathread: 300

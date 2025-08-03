@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
@@ -7,37 +8,37 @@
 - type: accessGroup
   id: AllVouchersAccess
   tags:
-  - USSPGadyuka
-  - USSPTunguska
-  - USSPGruznyk
-  - USSPDrakon
-  - USSPNatisk
-  - USSPSekunda
+  - USSPBasic
+  - USSPIntermediate
+  - USSPAdvanced
+  - USSPLedokol
+  - USSPLedokolRam
+  - USSPLedokolAttatchment
   - VoucherProwler
   - VoucherFlyssa
 
 - type: accessLevel
-  id: USSPGadyuka
+  id: USSPBasic
   name: id-card-access-level-voucher
 
 - type: accessLevel
-  id: USSPTunguska
+  id: USSPIntermediate
   name: id-card-access-level-voucher
 
 - type: accessLevel
-  id: USSPGruznyk
+  id: USSPAdvanced
   name: id-card-access-level-voucher
 
 - type: accessLevel
-  id: USSPDrakon
+  id: USSPLedokol
   name: id-card-access-level-voucher
 
 - type: accessLevel
-  id: USSPNatisk
+  id: USSPLedokolRam
   name: id-card-access-level-voucher
 
 - type: accessLevel
-  id: USSPSekunda
+  id: USSPLedokolAttatchment
   name: id-card-access-level-voucher
 
 - type: accessLevel

@@ -2,11 +2,16 @@
                 xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
                 xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
                 HorizontalExpand="True">
+    <PanelContainer.PanelOverride>
+        <gfx:StyleBoxFlat BorderThickness="3" BorderColor="#101010" BackgroundColor="#242424"/>
+    </PanelContainer.PanelOverride>
     <BoxContainer Orientation="Horizontal"
                   HorizontalExpand="True">
         <Label Name="VesselName"
             Access="Public"
-            HorizontalExpand="True" />
+            HorizontalExpand="True"
+            HorizontalAlignment="Left"
+            Margin="5 0 2 0" />
         <Label Name="Price"
             Access="Public"
             MinWidth="80"
@@ -18,19 +23,14 @@
             ToolTip=""
             Text="{Loc 'shipyard-console-purchase-available'}"
             ConfirmationText="{Loc 'shipyard-console-confirm-unassign'}"
-            StyleClasses="LabelSubText"
+            StyleClasses="ButtonSquare"
             MinWidth="130"
             HorizontalAlignment="Right" /> <!-- 130 px: approximate width of "Purchase"-->
         <Button Name="Guidebook"
             Access="Public"
-            Text="{Loc 'shipyard-console-guidebook'}" 
-            StyleClasses="LabelSubText"
+            Text="{Loc 'shipyard-console-guidebook'}"
+            StyleClasses="ButtonSquare"
             Margin="0 0 12 0"
             HorizontalAlignment="Right" /> <!-- Left margin only -->
-        <PanelContainer>
-            <PanelContainer.PanelOverride>
-                <gfx:StyleBoxFlat BackgroundColor="#252825" />
-            </PanelContainer.PanelOverride>
-        </PanelContainer>
     </BoxContainer>
 </PanelContainer>

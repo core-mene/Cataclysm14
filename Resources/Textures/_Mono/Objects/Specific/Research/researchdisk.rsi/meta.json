@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from SS13 Shiptest.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "nt"
+    },
+    {
+      "name": "generic"
+    },
+    {
+      "name": "sci"
+    },
+    {
+      "name": "med"
+    },
+    {
+      "name": "sec"
+    },
+    {
+      "name": "engineering"
+    },
+    {
+      "name": "cargo"
+    },
+    {
+      "name": "service"
+    },
+    {
+      "name": "civilian"
+    },
+    {
+      "name": "ammo"
+    },
+    {
+      "name": "gun"
+    },
+    {
+      "name": "design",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "holo",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "dna",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "rd_major"
+    },
+    {
+      "name": "syndicate"
+    },
+    {
+      "name": "beaker"
+    },
+    {
+      "name": "label"
+    },
+    {
+      "name": "protect"
+    }
+  ]
+}
