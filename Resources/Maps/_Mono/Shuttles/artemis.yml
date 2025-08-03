@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/02/2025 06:25:04
-  entityCount: 425
+  time: 08/03/2025 05:24:53
+  entityCount: 426
 maps: []
 grids:
 - 1
@@ -1709,6 +1709,18 @@ entities:
       - device-button-6
       - device-button-7
       - device-button-8
+- proto: ComputerTabletopCrewMonitoring
+  entities:
+  - uid: 426
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 1.5,7.5
+      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
 - proto: ComputerTabletopStationRecords
   entities:
   - uid: 141
@@ -2242,13 +2254,17 @@ entities:
   - uid: 130
     components:
     - type: Transform
-      pos: 1.3174579,7.810999
-      parent: 1
+      parent: 121
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
   - uid: 131
     components:
     - type: Transform
-      pos: 1.8018329,7.779749
-      parent: 1
+      parent: 116
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: JetpackMiniFilled
   entities:
   - uid: 119
@@ -2396,13 +2412,17 @@ entities:
   - uid: 132
     components:
     - type: Transform
-      pos: 1.3575457,7.5252094
-      parent: 1
+      parent: 116
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
   - uid: 133
     components:
     - type: Transform
-      pos: 1.7169207,7.4783344
-      parent: 1
+      parent: 121
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: PortableGeneratorSuperPacmanShuttle
   entities:
   - uid: 107
@@ -2835,11 +2855,13 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 127
+          - 131
+          - 132
           - 118
-          - 120
-          - 119
           - 117
+          - 119
+          - 120
+          - 127
   - uid: 121
     components:
     - type: Transform
@@ -2869,11 +2891,13 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 123
+          - 133
+          - 130
           - 126
-          - 125
-          - 124
           - 122
+          - 124
+          - 125
+          - 123
 - proto: Table
   entities:
   - uid: 112
