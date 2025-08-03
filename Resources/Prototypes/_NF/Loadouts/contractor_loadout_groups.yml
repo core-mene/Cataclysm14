@@ -892,12 +892,13 @@
   - ClothingNeckAutismPin
   - ClothingNeckGoldAutismPin
 
-- type: loadoutGroup
+- type: loadoutGroup # Mono - removed standard supply boxes.
   id: ContractorBoxSurvival
   name: loadout-group-contractor-survival-box
+  hidden: true # Mono
   minLimit: 1
   loadouts:
-  - ContractorBoxSurvivalNFOxygenExtended
+  - ContractorBoxSurvivalNFOxygenExtended 
   - ContractorBoxSurvivalNFNitrogenExtended
   fallbacks:
   - ContractorBoxSurvivalNFOxygenExtended
