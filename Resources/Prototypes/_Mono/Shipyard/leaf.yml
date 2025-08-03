@@ -1,0 +1,42 @@
+# Author Info
+# GitHub: Rubeebeebee
+# Discord: rubeebee
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Leaf
+  parent: BaseVessel
+  name: Leaf
+  description: A retired balaamite warship, it is now living it's twilight years as a botany/chemistry ship. 
+  price: 59000
+  category: Medium
+  group: Medical
+  shuttlePath: /Maps/_Mono/Shuttles/leaf.yml
+  guidebookPage: null
+  class:
+  - Botany
+  - Chemistry
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Leaf
+  mapName: 'Leaf'
+  mapPath: /Maps/_Mono/Shuttles/leaf.yml
+  minPlayers: 0
+  stations:
+    Leaf:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Leaf MED{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            MdMedic: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
