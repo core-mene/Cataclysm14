@@ -6,6 +6,9 @@
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
   id: EnergySwordRogue
+  categories:
+  - Energy
+  - Weapons
   result: EnergySword
   materials:
     Steel: 1200
@@ -16,6 +19,9 @@
 - type: latheRecipe
   parent: BaseWeaponRecipe
   id: EnergyDaggerRogue
+  categories:
+  - Energy
+  - Weapons
   result: EnergyDaggerLoud
   materials:
     Steel: 1200
@@ -26,6 +32,9 @@
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
   id: HFSwordVT7
+  categories:
+  - Energy
+  - Weapons
   result: WeaponVT7
   materials:
     Steel: 1000
@@ -37,6 +46,9 @@
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
   id: EnergyShieldTSF
+  categories:
+  - Energy
+  - Weapons
   result: EnergyShieldNfsd
   materials:
     Steel: 1500
@@ -47,6 +59,9 @@
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
   id: EnergyShieldRogue
+  categories:
+  - Energy
+  - Weapons
   result: EnergyShield
   materials:
     Steel: 1500
@@ -57,6 +72,8 @@
 - type: latheRecipe
   parent: BaseWeaponRecipe
   id: CrowbarPocketTSF
+  categories:
+  - FactionEquipment
   result: CrowbarPocket
   materials:
     Steel: 1200

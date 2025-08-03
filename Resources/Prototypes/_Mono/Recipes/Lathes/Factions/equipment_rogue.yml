@@ -63,16 +63,26 @@
 
 - type: latheRecipe
   id: ClothingMaskGasSyndicateRogue
+  categories:
+  - ClothesNF
+  - FactionEquipment
   parent: NFBaseMaskArmoredRecipe
   result: ClothingMaskGasSyndicate
 
 - type: latheRecipe
   id: ClothingOuterVestWebRogue
+  categories:
+  - ArmorNF
+  - ClothesNF
+  - FactionEquipment
   parent: NFBaseArmorRecipe
   result: ClothingOuterVestWeb
 
 - type: latheRecipe
   id: ClothingShoesBootsMagSyndieRogue
+  categories:
+  - ClothesNF
+  - FactionEquipment
   result: ClothingShoesBootsMagSyndie
   completetime: 5
   materials:

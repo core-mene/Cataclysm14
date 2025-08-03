@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -6,6 +7,10 @@
   id: MonoHardsuitWarlordRecipe
   parent: NFBaseEVASuitRecipe
   completetime: 30
+  categories:
+  - CombatEva
+  - EVASuits
+  - ArmorNF
   result: ClothingOuterHardsuitMercenaryWarlord
   materials:
     Glass: 2000

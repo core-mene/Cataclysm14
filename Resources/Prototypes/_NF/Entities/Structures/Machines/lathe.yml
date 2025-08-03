@@ -167,6 +167,15 @@
     dynamicPacks:
     - NFNfsdTechfabDeprecated
     - AdvancedAmmoRecipePack
+    # Mono start
+    - MonoTSFWeaponsDynamicMelee
+    - MonoTSFWeaponsDynamicRanged
+    - MonoTSFMiscDynamic
+    - MonoTSFAmmo
+    - UniversalShellAmmo
+    - UniversalRailgunAmmo
+    - UniversalTorpedoAmmo
+    # Mono end
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFNfsdTechfabDeprecatedEmag
@@ -204,6 +213,20 @@
     dynamicPacks:
     - NFMercenaryTechfabDeprecated
     - AdvancedAmmoRecipePack
+    # Mono start
+    - MonoTSFWeaponsDynamicMelee
+    - MonoTSFWeaponsDynamicRanged
+    - MonoTSFMiscDynamic
+    - MonoTSFAmmo
+    - MonoRogueWeaponsDynamicMelee
+    - MonoRogueWeaponsDynamicRanged
+    - MonoRogueMiscDynamic
+    - MonoRogueAmmo
+    - MonoUSSPMiscDynamic
+    - MonoUSSPWeaponsDynamicRanged
+    - MonoUSSPAmmo
+    - UniversalShellAmmo
+    # Mono end
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFMercenaryTechfabDeprecatedEmag
@@ -254,6 +277,21 @@
     dynamicPacks:
     - NFHackedMercenaryTechfabDeprecated
     - AdvancedAmmoRecipePack
+    - SmartGun # Goobstation
+    # Mono start
+    - MonoTSFWeaponsDynamicMelee
+    - MonoTSFWeaponsDynamicRanged
+    - MonoTSFMiscDynamic
+    - MonoTSFAmmo
+    - MonoRogueWeaponsDynamicMelee
+    - MonoRogueWeaponsDynamicRanged
+    - MonoRogueMiscDynamic
+    - MonoRogueAmmo
+    - MonoUSSPMiscDynamic
+    - MonoUSSPWeaponsDynamicRanged
+    - MonoUSSPAmmo
+    - UniversalShellAmmo
+    # Mono end
   - type: PirateBountyItem # Mono
     id: Techfab
 

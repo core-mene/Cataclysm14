@@ -1,14 +1,29 @@
 <controls:FancyWindow xmlns="https://spacestation14.io"
                       xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
                       xmlns:ui="clr-namespace:Content.Client.Shuttles.UI"
+                      xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
                       Title="{Loc 'shuttle-console-window-title'}"
-                      SetSize="960 782"
-                      MinSize="960 782">
+                      SetSize="1000 910"
+                      MinSize="1000 910">
     <BoxContainer Orientation="Vertical">
+        <PanelContainer VerticalExpand="True" HorizontalExpand="True" Margin="0 8 0 2">
+            <PanelContainer.PanelOverride>
+                <graphics:StyleBoxFlat BorderThickness="7" BorderColor="#252525" BackgroundColor="#3d474d"/>
+            </PanelContainer.PanelOverride>
+            <PanelContainer VerticalExpand="True" HorizontalExpand="True" Margin="4 4 4 4">
+                <PanelContainer.PanelOverride>
+                    <graphics:StyleBoxFlat BorderThickness="2" BorderColor="#333333" BackgroundColor="#181818"/>
+                </PanelContainer.PanelOverride>
+        <BoxContainer Orientation="Vertical" HorizontalAlignment="Center">
         <!-- Top row mode buttons -->
+        <PanelContainer VerticalExpand="False" HorizontalExpand="True" SetWidth="970">
+            <PanelContainer.PanelOverride>
+                <graphics:StyleBoxFlat BorderThickness="2" BorderColor="#333333" BackgroundColor="#121212"/>
+            </PanelContainer.PanelOverride>
         <BoxContainer Name="ModeButtons"
                        Orientation="Horizontal"
                        HorizontalAlignment="Stretch"
+                       HorizontalExpand="True"
                        MinSize="52 52"
                        Margin="5">
             <Button Name="NavModeButton"
@@ -16,20 +31,21 @@
                     HorizontalExpand="True"
                     VerticalExpand="True"
                     Text="NAV"
-                    Margin="5"/>
+                    StyleClasses="ButtonSquare"/>
             <Button Name="MapModeButton"
                     ToggleMode="True"
                     HorizontalExpand="True"
                     VerticalExpand="True"
                     Text="MAP"
-                    Margin="5"/>
+                    StyleClasses="ButtonSquare"/>
             <Button Name="DockModeButton"
                     ToggleMode="True"
                     HorizontalExpand="True"
                     VerticalExpand="True"
                     Text="DOCK"
-                    Margin="5"/>
+                    StyleClasses="ButtonSquare"/>
         </BoxContainer>
+        </PanelContainer>
         <!-- Contents box -->
         <BoxContainer Name="Contents"
                       HorizontalAlignment="Stretch"
@@ -39,5 +55,8 @@
             <ui:MapScreen Name="MapContainer" Visible="False"/>
             <ui:DockingScreen Name="DockContainer" Visible="False"/>
         </BoxContainer>
+        </BoxContainer>
+            </PanelContainer>
+        </PanelContainer>
     </BoxContainer>
 </controls:FancyWindow>

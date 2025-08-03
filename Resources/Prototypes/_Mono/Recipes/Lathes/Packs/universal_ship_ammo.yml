@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -18,3 +19,14 @@
   recipes:
   - 150mmApShellUniversal
   - 150mmEmpShellUniversal
+
+- type: latheRecipePack
+  id: UniversalLightOrdinance
+  recipes:
+  - GPOL50BombUniversal
+  - ZenithRocketUniversal
+
+- type: latheRecipePack
+  id: UniversalAdvancedLightOrdinance
+  recipes:
+  - QuasarAcceleratorUniversal

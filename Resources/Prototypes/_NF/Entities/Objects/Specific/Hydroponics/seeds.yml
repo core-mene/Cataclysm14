@@ -1,3 +1,14 @@
+# SPDX-FileCopyrightText: 2023 Dvir
+# SPDX-FileCopyrightText: 2023 terezi4real
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Iocanthos
+# SPDX-FileCopyrightText: 2024 RichardRahl123
+# SPDX-FileCopyrightText: 2024 dustylens
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 tonotom
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: SeedBase
   name: packet of speso seeds
@@ -246,4 +257,5 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
-  preventSwabbing: true # they're bees
+#Mono - antifun disabled: we can just pretend bees are affected because they eat pollen so we can keep the FUN aspects of botany intact
+#  preventSwabbing: true # they're bees

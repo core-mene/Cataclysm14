@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 KiraZen_
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Clutter
 - type: entity
   name: random clutter
@@ -28,6 +36,7 @@
     - SpawnDungeonLootClothesScience
     - SpawnDungeonLootRnDDisk
     - SpawnDungeonLootVendingRestocks
+    - SpawnLootTechDisksT1 # Mono
     chance: 1
     offset: 0.0
     rarePrototypes:
@@ -326,6 +335,7 @@
     - NTDefaultCircuitBoard
     - CorporateCircuitBoard
     - AsimovCircuitBoard
+    - SpawnLootTechDisksT1 # Mono
     chance: 0.9
     offset: 0.0
     rarePrototypes:

@@ -1,4 +1,6 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -22,6 +24,42 @@
       board: [ DoorElectronicsUSSP ]
 
 - type: entity
+  parent: AirlockExternalShuttleUSSPLocked
+  id: AirlockShuttleUSSPOutpostLocked
+  suffix: OUTPOST ONLY, USSP, Docking, Locked
+  components:
+  - type: Destructible # Mono - buff docking port health
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25000 # 10x buff
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      # TODO this should go to the broken node first
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+
+- type: entity
+  parent: AirlockExternalGlassShuttleUSSPLocked
+  id: AirlockGlassShuttleUSSPOutpostLocked
+  suffix: OUTPOST ONLY, USSP, Docking, Locked
+  components:
+  - type: Destructible # Mono - buff docking port health
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25000 # 10x buff
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      # TODO this should go to the broken node first
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+
+- type: entity
   id: AirlockGlassShuttleNfsdOutpost
   parent: AirlockGlassShuttleNfsd
   suffix: OUTPOST ONLY, TSFMC, Glass, Docking
@@ -43,6 +81,42 @@
   id: AirlockShuttleNfsdOutpost
   parent: AirlockShuttleNfsd
   suffix: OUTPOST ONLY, TSFMC, Docking
+  components:
+  - type: Destructible # Mono - buff docking port health
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25000 # 10x buff
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      # TODO this should go to the broken node first
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+
+- type: entity
+  parent: AirlockShuttle
+  id: AirlockShuttleOutpost
+  suffix: OUTPOST ONLY
+  components:
+  - type: Destructible # Mono - buff docking port health
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25000 # 10x buff
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      # TODO this should go to the broken node first
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockGlassShuttleOutpost
+  suffix: OUTPOST ONLY
   components:
   - type: Destructible # Mono - buff docking port health
     thresholds:

@@ -25,6 +25,7 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 36000 # 10 hours # mono end
+  whitelisted: true
   startingGear: PirateCaptainNFGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true

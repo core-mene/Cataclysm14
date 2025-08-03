@@ -17,6 +17,56 @@
   - EnergyDaggerRogue
 
 - type: technology
+  id: RoguePracticeAmmo
+  name: research-technology-faction-practice-ammo
+  icon:
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/8x65mm_practice.rsi
+    state: base
+  discipline: RogueWeaponry
+  tier: 1
+  cost: 2000
+  recipeUnlocks:
+  - Magazine7.62x39mmPractice
+  - AmmoBox7.62x39mmPractice
+  - Magazine7.62x51mmPractice
+  - AmmoBox7.62x51mmPractice
+  - SpeedLoader45_magnumPractice
+  - AmmoBox45_magnumPractice
+  - Magazine9x19mmSubMachineGunPractice
+  - AmmoBox9x19mmPractice
+  - Magazine5.7x28mmSubMachineGunPractice
+  - AmmoBox5.7x28mmPractice
+  - Magazine4.6x30mmSubMachineGunPractice
+  - AmmoBox4.6x30mmPractice
+  - Magazine12_gaugePractice
+  - AmmoBox12_gaugePractice
+
+- type: technology
+  id: RogueIncendiaryAmmo
+  name: research-technology-faction-incendiary-ammo
+  icon:
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/8x65mm_incendiary.rsi
+    state: base
+  discipline: RogueWeaponry
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - Magazine7.62x39mmIncendiary
+  - AmmoBox7.62x39mmIncendiary
+  - Magazine7.62x51mmIncendiary
+  - AmmoBox7.62x51mmIncendiary
+  - SpeedLoader45_magnumIncendiary
+  - AmmoBox45_magnumIncendiary
+  - Magazine9x19mmSubMachineGunIncendiary
+  - AmmoBox9x19mmIncendiary
+  - Magazine5.7x28mmSubMachineGunIncendiary
+  - AmmoBox5.7x28mmIncendiary
+  - Magazine4.6x30mmSubMachineGunIncendiary
+  - AmmoBox4.6x30mmIncendiary
+  - Magazine12_gaugeIncendiary
+  - AmmoBox12_gaugeIncendiary
+
+- type: technology
   id: RogueEsword
   name: research-technology-rogue-energy-weapon
   icon:

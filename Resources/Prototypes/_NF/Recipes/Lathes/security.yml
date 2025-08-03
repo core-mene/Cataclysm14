@@ -1,3 +1,16 @@
+# SPDX-FileCopyrightText: 2024 AndresE55
+# SPDX-FileCopyrightText: 2024 Dmitri
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 FireFoxPhoenix
+# SPDX-FileCopyrightText: 2025 GreaseMonk
+# SPDX-FileCopyrightText: 2025 blackknight954
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Base prototypes can be found in \Resources\Prototypes\Recipes\Lathes\security.yml
 
 # Recipes
@@ -6,6 +19,9 @@
   id: CrossbowBolt
   parent: BaseAmmoRecipe
   result: CrossbowBolt
+  categories: # Mono
+  - MiscAmmo
+  - Ammo
   materials:
     Steel: 20
 
@@ -13,14 +29,19 @@
   id: CrossbowBoltBroadhead
   parent: BaseAmmoRecipe
   result: CrossbowBoltBroadhead
+  categories: # Mono
+  - MiscAmmo
+  - Ammo
   materials:
     Steel: 25
-    
+
 - type: latheRecipe
   id: WeaponPistolPollock
   result: WeaponPistolPollock
   categories:
   - Weapons
+  - Sidearms # Mono
+  - Ballistic # Mono
   completetime: 3
   materials:
     Steel: 1000

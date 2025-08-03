@@ -91,6 +91,7 @@
     burstFireRate: 20 # Mono
     burstCooldown: 0.4 # Mono
     projectileSpeed: 45 # Mono
+    fireRate: 7.5 # Mono, does nothing because its burst only but it makes it clear it can fire at this rate.
     soundGunshot:
       path: /Audio/_Goobstation/Weapons/Guns/Gunshots/bwuh.ogg
   - type: ItemSlots

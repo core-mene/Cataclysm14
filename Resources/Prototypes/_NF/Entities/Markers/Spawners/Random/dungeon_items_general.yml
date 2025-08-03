@@ -1,3 +1,15 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 dustylens
+# SPDX-FileCopyrightText: 2025 KiraZen_
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # An assortment of randomised dungeon loot spawners to be used instead of static spawns
 # Base
 - type: entity
@@ -534,7 +546,7 @@
     - VendingMachineMagivend
     - VendingMachineArcadia
     - VendingMachineBountyVendPunk
-    # - VendingMachineSyndieDrobe # A bit less Syndicate loot
+    - VendingMachineSyndieDrobe #Mono in
     - VendingMachineSyndieContraband
     - SpawnDungeonMachineFrame
     rareChance: 0.03
@@ -733,10 +745,10 @@
     offset: 0.0
     rarePrototypes:
     - CloningPodMachineCircuitboard
-#    - MedicalScannerMachineCircuitboard
+    - MedicalScannerMachineCircuitboard #Mono in: Needed for cloning
     - StasisBedMachineCircuitboard
 #    - GasRecyclerMachineCircuitboard
-    - BodyScannerComputerCircuitboard
+#    - BodyScannerComputerCircuitboard #Mono out: Currently serves no use
     - CloningConsoleComputerCircuitboard
     rareChance: 0.01
 
@@ -1054,6 +1066,7 @@
     - ComputerResearchAndDevelopmentFlatpack
     - ResearchAndDevelopmentServerFlatpack
     - MercenaryTechFabFlatpack
+    - LaserDrillFlatpack
     chance: 0.95
     offset: 0.0
     rarePrototypes:

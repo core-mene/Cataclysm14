@@ -9,6 +9,7 @@ bank-atm-menu-no-deposit = Empty
 bank-atm-menu-deposit-button = Deposit
 bank-atm-reason-label = For:{" "}
 bank-atm-description-label = Description:{" "}
+bank-atm-menu-withdraw-amount = Withdraw Amount
 
 vending-machine-menu-cash-slot-label = Cash Slot:{" "}
 

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 wewman222
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -5,30 +6,42 @@
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
   id: BroadswordCentralElectronics
+  categories:
+  - S2Mechs
   result: BroadswordCentralElectronics
 
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
   id: BroadswordPeripheralsElectronics
+  categories:
+  - S2Mechs
   result: BroadswordPeripheralsElectronics
 
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
   id: BroadswordTargetingElectronics
+  categories:
+  - S2Mechs
   result: BroadswordTargetingElectronics
 
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
   id: FlailCentralElectronics
+  categories:
+  - S4Mechs
   result: FlailCentralElectronics
 
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
   id: FlailPeripheralsElectronics
+  categories:
+  - S4Mechs
   result: FlailPeripheralsElectronics
 
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
   id: FlailTargetingElectronics
+  categories:
+  - S4Mechs
   result: FlailTargetingElectronics
 

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -13,9 +14,7 @@
   tier: 1
   cost: 45000
   recipeUnlocks:
-  - GadyukaVoucherUssp
-  - NatiskVoucherUssp
-  - GruznykVoucherUssp
+  - BasicVoucherUssp
 
 - type: technology
   id: UsspMediumShips
@@ -27,8 +26,7 @@
   tier: 2
   cost: 65000
   recipeUnlocks:
-  - DrakonVoucherUssp
-  - SekundaVoucherUssp
+  - IntermediateVoucherUssp
   technologyPrerequisites:
   - UsspBasicShips
 
@@ -42,6 +40,21 @@
   tier: 3
   cost: 95000
   recipeUnlocks:
-  - TunguskaVoucherUssp
+  - AdvancedVoucherUssp
   technologyPrerequisites:
   - UsspMediumShips
+
+- type: technology
+  id: UsspLedokol
+  name: research-technology-ussp-ships-ledokol
+  icon:
+    sprite: _Mono/Interface/Misc/research_icons_ussp.rsi
+    state: icon-tier4
+  discipline: UsspShipyard
+  tier: 3
+  cost: 100000
+  recipeUnlocks:
+  - LedokolVoucherUssp
+  - LedokolRamVoucherUssp
+  technologyPrerequisites:
+  - UsspAdvancedShips

@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: soundCollection
   id: Trill
   files:
@@ -12,3 +17,8 @@
   id: Wurble
   files:
     - /Audio/_Goobstation/Voice/Resomi/wurble.ogg
+
+- type: soundCollection # Mono
+  id: Bagawk
+  files:
+    - /Audio/_Mono/Voice/bagawk.ogg

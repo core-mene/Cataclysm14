@@ -38,6 +38,9 @@
   engine:
   - Uranium
   - Solar
+  addComponents:
+  - type: SolarPoweredGrid
+    doNotCull: true
 
 - type: gameMap
   id: Takeaway

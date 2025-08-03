@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
+# SPDX-FileCopyrightText: 2025 Honestly101
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: vessel
+  id: Sulak
+  parent: BaseVesselAntag
+  name: NCS Sulak
+  description: A medium sized destroyer armed with a Charon Massdriver for taking down large targets.
+  price: 142500
+  category: Medium
+  group: Ussp
+  access: USSPAdvanced
+  shuttlePath: /Maps/_Mono/Shuttles/USSP/sulak.yml
+  guidebookPage: Null
+  class:
+  - Pursuit
+  - Corvette
+  engine:
+  - AME
+
+- type: gameMap
+  id: Sulak
+  mapName: 'Sulak'
+  mapPath: /Maps/_Mono/Shuttles/USSP/sulak.yml
+  minPlayers: 0
+  stations:
+    Sulak:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Sulak USSP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            USSPSergeant: [0, 0]
+            USSPCorporal: [0, 0]
+            USSPMedic: [0, 0]
+            USSPRifleman: [0, 0]
