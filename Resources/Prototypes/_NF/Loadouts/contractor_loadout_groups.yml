@@ -897,13 +897,11 @@
   name: loadout-group-contractor-survival-box
   minLimit: 1
   loadouts:
-  - ContractorBoxSurvivalNFOxygen
-  - ContractorBoxSurvivalNFNitrogen
   - ContractorBoxSurvivalNFOxygenExtended
   - ContractorBoxSurvivalNFNitrogenExtended
   fallbacks:
-  - ContractorBoxSurvivalNFOxygen
-  - ContractorBoxSurvivalNFNitrogen
+  - ContractorBoxSurvivalNFOxygenExtended
+  - ContractorBoxSurvivalNFNitrogenExtended
 
 - type: loadoutGroup
   id: ContractorEncryptionKey
