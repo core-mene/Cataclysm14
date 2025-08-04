@@ -1,32 +1,11 @@
-# SPDX-FileCopyrightText: 2023 Cheackraze
-# SPDX-FileCopyrightText: 2023 Dawid Bla
-# SPDX-FileCopyrightText: 2023 IHAN <IHAN>
-# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
-# SPDX-FileCopyrightText: 2023 deltanedas
-# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
-# SPDX-FileCopyrightText: 2023 lzk
-# SPDX-FileCopyrightText: 2023 metalgearsloth
-# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
-# SPDX-FileCopyrightText: 2024 AndresE55
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 Shroomerian
-# SPDX-FileCopyrightText: 2024 TsjipTsjip
-# SPDX-FileCopyrightText: 2024 Whatstone
-# SPDX-FileCopyrightText: 2024 chrome-cirrus
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 Rubeebeebee
-# SPDX-FileCopyrightText: 2025 dustylens
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/03/2025 01:03:01
-  entityCount: 2232
+  time: 08/04/2025 02:13:20
+  entityCount: 2235
 maps: []
 grids:
 - 1
@@ -7705,6 +7684,20 @@ entities:
     - type: Transform
       pos: 18.5,1.5
       parent: 1
+- proto: DefibrillatorCabinetFilled
+  entities:
+  - uid: 2234
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -3.5,3.5
+      parent: 1
+  - uid: 2235
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -13.5,4.5
+      parent: 1
 - proto: DrinkBahamaMama
   entities:
   - uid: 895
@@ -13650,6 +13643,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -2.5,11.5
+      parent: 1
+- proto: WallWeaponCapacitorRecharger
+  entities:
+  - uid: 2233
+    components:
+    - type: Transform
+      pos: -7.5,2.5
       parent: 1
 - proto: WallWeaponCapacitorRechargerOmnidirectional
   entities:
