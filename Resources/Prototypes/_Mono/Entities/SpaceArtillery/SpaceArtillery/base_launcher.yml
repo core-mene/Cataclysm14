@@ -6,7 +6,7 @@
 # Base
 
 - type: entity
-  id: BallisticArtilleryUnanchorable
+  id: BallisticArtilleryBase
   abstract: true
   placement:
     mode: SnapgridCenter
@@ -75,8 +75,15 @@
     shipClass: Medium
 
 - type: entity
+  id: BallisticArtilleryUnanchorable
+  parent: BallisticArtilleryBase
+  abstract: true
+  components:
+  - type: RequiresGrid
+
+- type: entity
   id: BallisticArtillery
-  parent: BallisticArtilleryUnanchorable
+  parent: BallisticArtilleryBase
   abstract: true
   components:
   - type: Anchorable
@@ -86,7 +93,7 @@
     id: ShipWeapon
 
 - type: entity
-  id: BallisticArtilleryUnanchorableCartridge
+  id: BallisticArtilleryBaseCartridge
   abstract: true
   placement:
     mode: SnapgridCenter
@@ -162,7 +169,7 @@
 
 - type: entity
   id: BallisticArtilleryCartridge
-  parent: BallisticArtilleryUnanchorableCartridge
+  parent: BallisticArtilleryBaseCartridge
   abstract: true
   components:
   - type: Anchorable
@@ -172,7 +179,14 @@
     id: ShipWeapon
 
 - type: entity
-  id: BallisticArtilleryUnanchorableMagazine
+  id: BallisticArtilleryUnanchorableCartridge
+  parent: BallisticArtilleryBaseCartridge
+  abstract: true
+  components:
+  - type: RequiresGrid
+
+- type: entity
+  id: BallisticArtilleryBaseMagazine
   abstract: true
   placement:
     mode: SnapgridCenter
@@ -256,7 +270,7 @@
 
 - type: entity
   id: BallisticArtilleryMagazine
-  parent: BallisticArtilleryUnanchorableMagazine
+  parent: BallisticArtilleryBaseMagazine
   abstract: true
   components:
   - type: Anchorable
@@ -264,3 +278,10 @@
   - type: Pullable
   - type: PirateBountyItem # not putting this on the other, because like. how do you get a cyrexa for your bounty. thats stupid.
     id: ShipWeapon
+
+- type: entity
+  id: BallisticArtilleryUnanchorableMagazine
+  parent: BallisticArtilleryBaseMagazine
+  abstract: true
+  components:
+  - type: RequiresGrid

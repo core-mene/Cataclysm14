@@ -1,5 +1,44 @@
+# SPDX-FileCopyrightText: 2019 moneyl
+# SPDX-FileCopyrightText: 2020 AJCM-git
+# SPDX-FileCopyrightText: 2021 Elijahrane
+# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2022 EmoGarbage404
+# SPDX-FileCopyrightText: 2022 Kara
+# SPDX-FileCopyrightText: 2022 Kara D
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 Moony
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 Alekshhh
+# SPDX-FileCopyrightText: 2023 Boaz1111
+# SPDX-FileCopyrightText: 2023 CrigCrag
+# SPDX-FileCopyrightText: 2023 Dynexust
+# SPDX-FileCopyrightText: 2023 GoodWheatley
+# SPDX-FileCopyrightText: 2023 Interrobang01
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Maxtone
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Ubaser
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 Emisse
+# SPDX-FileCopyrightText: 2024 Gotimanga
+# SPDX-FileCopyrightText: 2024 Skye
+# SPDX-FileCopyrightText: 2024 Token
+# SPDX-FileCopyrightText: 2024 Velcroboy
+# SPDX-FileCopyrightText: 2024 deltanedas
+# SPDX-FileCopyrightText: 2024 icekot8
+# SPDX-FileCopyrightText: 2024 neuPanda
+# SPDX-FileCopyrightText: 2024 potato1234_x
+# SPDX-FileCopyrightText: 2024 slarticodefast
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: reaction
   id: Dylovene
+  requiredMixerCategories: # Mono
+  - Electrolysis
   reactants:
     Silicon:
       amount: 1
@@ -36,6 +75,8 @@
 
 - type: reaction
   id: Arithrazine
+  requiredMixerCategories: # Mono
+  - Electrolysis
   reactants:
     Hyronalin:
       amount: 1
@@ -46,6 +87,9 @@
 
 - type: reaction
   id: Bicaridine
+  requiredMixerCategories: # Mono
+  - Centrifuge
+  minTemp: 315 # Mono
   reactants:
     Inaprovaline:
       amount: 1
@@ -92,6 +136,7 @@
 
 - type: reaction
   id: Dermaline
+  minTemp: 365 # Mono
   reactants:
     Kelotane:
       amount: 1
@@ -115,6 +160,9 @@
 
 - type: reaction
   id: DexalinPlus
+  requiredMixerCategories: # Mono
+  - Centrifuge
+  minTemp: 350 # Mono
   reactants:
     Dexalin:
       amount: 1
@@ -127,6 +175,7 @@
 
 - type: reaction
   id: Hyronalin
+  minTemp: 320 # Mono
   reactants:
     Radium:
       amount: 1
@@ -161,6 +210,8 @@
 
 - type: reaction
   id: TranexamicAcid
+  requiredMixerCategories: # Mono
+  - Centrifuge
   reactants:
     Inaprovaline:
       amount: 1
@@ -173,6 +224,8 @@
 
 - type: reaction
   id: Kelotane
+  requiredMixerCategories: # Mono
+  - Centrifuge
   reactants:
     Silicon:
       amount: 1
@@ -411,6 +464,8 @@
 - type: reaction
   id: Lacerinol
   impact: Medium
+  requiredMixerCategories: # Mono
+  - Centrifuge
   minTemp: 335
   reactants:
     Bicaridine: # Bicaridine is a conflicting brute medication and if mixed incorrectly will make Razorium. This is intended.
@@ -423,6 +478,8 @@
 - type: reaction
   id: Puncturase
   impact: Medium
+  requiredMixerCategories: # Mono
+  - Electrolysis
   minTemp: 325
   reactants:
     Bicaridine: # Bicaridine is a conflicting brute medication and if mixed incorrectly will make Razorium. This is intended.
@@ -561,7 +618,7 @@
   id: Opporozidone
   minTemp: 400 #Maybe if a method of reducing reagent temp exists one day, this could be -50
   reactants:
-    Cognizine: 
+    Cognizine:
       amount: 1
     Plasma:
       amount: 2

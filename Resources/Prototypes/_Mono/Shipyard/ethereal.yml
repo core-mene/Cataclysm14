@@ -5,54 +5,52 @@
 # SPDX-FileCopyrightText: 2024 Long YM
 # SPDX-FileCopyrightText: 2024 Maxtone
 # SPDX-FileCopyrightText: 2024 Whatstone
-# SPDX-FileCopyrightText: 2025 Junerisms
+# SPDX-FileCopyrightText: 2025 Nelliel
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Rubeebeebee
+# SPDX-FileCopyrightText: 2025 Vinny Shick
+# SPDX-FileCopyrightText: 2025 bluebrouny
 # SPDX-FileCopyrightText: 2025 plethorian
 # SPDX-FileCopyrightText: 2025 starch
-# SPDX-FileCopyrightText: 2025 tonotom
-# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 # Author Info
-# GitHub: tonotom1
-# Discord: rws
+# GitHub: Rubeebeebee
+# Discord: rubeebee
 
 # Shuttle Notes:
-# hi
-
 - type: vessel
-  id: Takeaway
+  id: Ethereal
   parent: BaseVessel
-  name: UW Takeaway
-  description: An aptly named medium botanical-kitchen vessel with a customer-facing gantry for ordering to-go. Also comes with dine-in.
-  price: 62000
-  category: Medium
+  name: NS Ethereal
+  description: A science vessel shaped like a butterfly. Comes facilities to accomodate botany and artifact research, as well as chemistry. Comes with a pool & bar. 
+  price: 120000
+  category: Large
   group: Shipyard
-  shuttlePath: /Maps/_Mono/Shuttles/takeaway.yml
-  guidebookPage: ShipyardTakeaway
+  shuttlePath: /Maps/_Mono/Shuttles/ethereal.yml
+  guidebookPage: null
   class:
-  - Civilian
-  - Kitchen
-  - Botany
+  - Science
   engine:
-  - Uranium
+  - AME
   - Solar
   addComponents:
   - type: SolarPoweredGrid
     doNotCull: true
 
+
 - type: gameMap
-  id: Takeaway
-  mapName: 'UW Takeaway'
-  mapPath: /Maps/_Mono/Shuttles/takeaway.yml
+  id: Ethereal
+  mapName: 'NS Ethereal'
+  mapPath: /Maps/_Mono/Shuttles/ethereal.yml
   minPlayers: 0
   stations:
-    Takeaway:
+    Ethereal:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Takeaway CIV{1}'
+          mapNameTemplate: 'Ethereal CIV{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

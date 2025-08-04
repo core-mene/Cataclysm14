@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: TourniquetUniversal
+  result: Tourniquet
+  completetime: 1
+  materials:
+    Steel: 100
+    Cloth: 100

@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: SurgeryStepBase
   categories: [ HideSpawnMenu ]
@@ -324,14 +329,14 @@
   - type: SurgeryStep
     tool:
     - type: Tending
-    duration: 1
+    duration: 2.5 # Mono
   - type: Sprite
     sprite: _Shitmed/Objects/Specific/Medical/Surgery/hemostat.rsi
     state: hemostat
   - type: SurgeryTendWoundsEffect
     damage:
       groups:
-        Brute: -5
+        Brute: -25 # Mono
   - type: SurgeryRepeatableStep
 
 - type: entity
@@ -343,7 +348,7 @@
   - type: SurgeryStep
     tool:
     - type: Tending
-    duration: 1
+    duration: 2.5 # Mono
   - type: Sprite
     sprite: _Shitmed/Objects/Specific/Medical/Surgery/hemostat.rsi
     state: hemostat
@@ -351,7 +356,7 @@
     mainGroup: Burn
     damage:
       groups:
-        Burn: -5
+        Burn: -25 # Mono
   - type: SurgeryRepeatableStep
 
 - type: entity

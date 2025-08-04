@@ -30,6 +30,9 @@
     producingSound: /Audio/Machines/circuitprinter.ogg
     idleState: icon
     runningState: icon
+    staticPacks:
+    - TopicalsStatic
+    - SurgeryStatic
     dynamicPacks:
     # rogue start
     - MonoRogueWeaponsDynamicMelee
@@ -58,10 +61,9 @@
     - MonoUSSPSpecialAmmo
     # Universal shit (stuff like shipgun ammo)
     - UniversalRailgunAmmo
-    - UniversalTorpedoAmmo
+    - UniversalMissileAmmo
     - UniversalShellAmmo
-    - UniversalLightOrdinance
-    - UniversalAdvancedLightOrdinance
+    - UniversalOrdinance
   - type: MaterialStorage
     whitelist:
       tags:

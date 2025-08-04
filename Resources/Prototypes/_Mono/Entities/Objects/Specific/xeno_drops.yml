@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -9,23 +10,25 @@
   description: An odd jelly, applying it will rapidly stimulate limb health at the cost of pain.
   components:
   - type: Sprite
-    sprite: _Mono/Objects/Specific/Xeno/xeno_materials.rsi 
+    sprite: _Mono/Objects/Specific/Xeno/xeno_materials.rsi
     state: resin_jelly
   - type: Item
     size: Small
-    sprite: _DV/Objects/Specific/medical.rsi 
+    sprite: _DV/Objects/Specific/medical.rsi
     heldPrefix: ointment
   - type: Healing
     damageContainers:
     - Biological
     damage:
       groups:
-        Brute: -120 # 40 per type~?
-        Burn: -150 # 40 per type
+        Brute: -90 # Doesnt stack
       types:
         Bloodloss: -50
-        Poison: 5  
-    bloodlossModifier: -10
+        Heat: -60
+        Cold: -60
+        Poison: 5
+        Caustic: 5
+    bloodlossModifier: -7.5
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
       params:
@@ -48,7 +51,7 @@
   - type: StaticPrice
     price: 2500
   - type: Sprite
-    sprite: _Mono/Objects/Specific/Xeno/xeno_materials.rsi 
+    sprite: _Mono/Objects/Specific/Xeno/xeno_materials.rsi
     state: chitin-chunk
   - type: Item
     size: Small

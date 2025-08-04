@@ -1,3 +1,30 @@
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2021 metalgearsloth
+# SPDX-FileCopyrightText: 2021 mirrorcult
+# SPDX-FileCopyrightText: 2022 Alex Evgrashin
+# SPDX-FileCopyrightText: 2022 Flipp Syder
+# SPDX-FileCopyrightText: 2022 Moony
+# SPDX-FileCopyrightText: 2022 Nemanja
+# SPDX-FileCopyrightText: 2022 Sam Weaver
+# SPDX-FileCopyrightText: 2022 ShadowCommander
+# SPDX-FileCopyrightText: 2023 Doru991
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 Maxtone
+# SPDX-FileCopyrightText: 2023 Sailor
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2024 Alpha-Two
+# SPDX-FileCopyrightText: 2024 Eris
+# SPDX-FileCopyrightText: 2024 Errant
+# SPDX-FileCopyrightText: 2024 Flesh
+# SPDX-FileCopyrightText: 2024 IlyaElDunaev
+# SPDX-FileCopyrightText: 2024 Tayrtahn
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: reagent
   id: EZNutrient
   name: reagent-name-e-z-nutrient
@@ -91,6 +118,7 @@
       amount: 0.1
   metabolisms:
     Medicine:
+      metabolismRate: 0.5 # Mono
       effects:
       - !type:HealthChange
         damage:
@@ -123,6 +151,7 @@
     - !type:RobustHarvest {}
   metabolisms:
     Poison:
+      metabolismRate: 0.035 # Mono
       effects:
       - !type:HealthChange
         damage:
