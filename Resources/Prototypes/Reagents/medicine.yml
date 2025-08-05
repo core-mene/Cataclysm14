@@ -228,7 +228,7 @@
   metabolisms:
     Medicine:
       effects:
-      - !type:EvenHealthChange
+      - !type:HealthChange
         damage:
           groups:
             Brute: -2
