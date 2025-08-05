@@ -8,7 +8,7 @@
   parent: [ WeaponPistolAnaconda, BaseC3PirateContraband ]
   id: WeaponPistolHawk4
   name: LWC HAWK-4 I.S
-  description: A modified Anaconda which has been modified for the purpose of remaining stealthy and incorporating it into being an easy to use weapons. A laser and holographic sight alongside a matte black chassis with a custom-built integrated silencer make for an exceedingly deadly stealth weapon.
+  description: A modified, heavy Anaconda for the purpose of assassinating high value targets. This rare prototype is capable of printing armor penetrating bullets. A laser and holographic sight alongside a matte black chassis with a custom-built integrated silencer make for an exceedingly deadly stealth weapon, only fit for a true Commander of the Ashen Republic.
   components:
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Pistols/hawk4.rsi
@@ -52,4 +52,5 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 45
+        Piercing: 40
+    armorPenetration: 0.5

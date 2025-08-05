@@ -1,0 +1,61 @@
+# SPDX-FileCopyrightText: 2023 IHAN <IHAN>
+# SPDX-FileCopyrightText: 2023 Kennedy
+# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Long YM
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Nelliel
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Rubeebeebee
+# SPDX-FileCopyrightText: 2025 Vinny Shick
+# SPDX-FileCopyrightText: 2025 bluebrouny
+# SPDX-FileCopyrightText: 2025 plethorian
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: Rubeebeebee
+# Discord: rubeebee
+
+# Shuttle Notes:
+- type: vessel
+  id: Ethereal
+  parent: BaseVessel
+  name: NS Ethereal
+  description: A science vessel shaped like a butterfly. Comes facilities to accomodate botany and artifact research, as well as chemistry. Comes with a pool & bar. 
+  price: 120000
+  category: Large
+  group: Shipyard
+  shuttlePath: /Maps/_Mono/Shuttles/ethereal.yml
+  guidebookPage: null
+  class:
+  - Science
+  engine:
+  - AME
+  - Solar
+  addComponents:
+  - type: SolarPoweredGrid
+    doNotCull: true
+
+
+- type: gameMap
+  id: Ethereal
+  mapName: 'NS Ethereal'
+  mapPath: /Maps/_Mono/Shuttles/ethereal.yml
+  minPlayers: 0
+  stations:
+    Ethereal:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Ethereal CIV{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

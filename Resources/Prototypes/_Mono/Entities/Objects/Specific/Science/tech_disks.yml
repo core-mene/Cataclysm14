@@ -814,6 +814,35 @@
     - ASM220TorpedoECMUniversal
     - 150mmApShellUniversal
     - 150mmEmpShellUniversal
+    - GPOL50BombUniversal
+    - ZenithRocketUniversal
+
+- type: entity
+  parent: BaseItem
+  id: TechDiskUniversalShipAmmoAdvanced
+  name: advanced universal ship ammo faction tech disk
+  description: A disk capable of adding 150mm shells, M381 slugs, and ASM-220 torpedoes to a server's recipes, for faction techfabs. This one has advanced stuff too!
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Specific/Research/researchdisk.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base"]
+      color: "#454545"
+    - state: label
+    - state: protect
+    - state: ammo
+  - type: TechnologyDisk
+    recipes:
+    - CharonSlugUniversal
+    - ASM220TorpedoHEUniversal
+    - ASM220TorpedoECMUniversal
+    - ASM220TorpedoLOSATUniversal
+    - 150mmApShellUniversal
+    - 150mmEmpShellUniversal
+    - GPOL50BombUniversal
+    - ZenithRocketUniversal
+    - QuasarAcceleratorUniversal
 
 # rogue stuff
 
