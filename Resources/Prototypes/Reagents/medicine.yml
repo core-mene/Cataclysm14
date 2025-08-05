@@ -161,8 +161,8 @@
         key: Jitter
         time: 3.0
         type: Remove
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectDrowsiness
+      - !type:GenericStatusEffect
+        key: Drowsiness
         time: 1.5
         type: Add
         refresh: false
