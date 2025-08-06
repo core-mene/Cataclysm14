@@ -42,15 +42,23 @@
   - type: MeleeWeapon
     wideAnimationRotation: -45
     swingLeft: true
-    attackRate: 0.75
+    attackRate: 0.66 #Mono 0.75 >> 0.66
     damage:
       types:
-        Blunt: 10
+        Blunt: 12 #Mono 10 >> 12
         Structural: 5
     soundHit:
       collection: MetalThud
+  - type: Wieldable #Mono
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 16
+        Structural: 15 #Mono end
   - type: Item
-    size: Huge
+    size: Large #Mono: Huge > Large
+    shape: 
+    - 0,0,1,3 #Mono end
   - type: Clothing
     sprite: Objects/Weapons/Melee/fireaxe.rsi
     quickEquip: false
@@ -60,6 +68,9 @@
   - type: Tool
     qualities:
       - Axing
+      - Prying #Mono
+    useSound: #Mono
+      path: /Audio/Items/crowbar.ogg #Mono
   - type: ToolTileCompatible
   - type: UseDelay
     delay: 1
