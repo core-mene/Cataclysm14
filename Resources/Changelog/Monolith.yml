@@ -9673,3 +9673,101 @@ Entries:
   id: 1081
   time: '2025-08-03T06:25:38.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1749
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed USSP roles getting TSF chest rigs.
+  id: 1082
+  time: '2025-08-03T21:59:28.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1761
+- author: Rubeebeebee
+  changes:
+    - type: Add
+      message: defibs to the Ethereal
+    - type: Tweak
+      message: the description to the ethereal, removing references to making anomalies
+  id: 1083
+  time: '2025-08-04T12:58:27.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1762
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Fax machine UI visuals updated.
+  id: 1084
+  time: '2025-08-04T13:00:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1765
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Missile scan arcs decreased to decrease friendly fire, guidebook
+        updated.
+  id: 1085
+  time: '2025-08-04T16:49:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1759
+- author: starch70
+  changes:
+    - type: Add
+      message: Added ASM-220 LOSAT missiles to T3 universal faction tech.
+    - type: Tweak
+      message: >-
+        Added fighter ordinance to the ship weapon ammo tech disks. Added a
+        rarer variant of the ship ammo tech disk with the T3 ammo types
+        included.
+    - type: Fix
+      message: Fixed label for ship weapon ammo category simply saying "Ship Weapon"
+    - type: Fix
+      message: >-
+        Fixed fighter ordinance not being in other techfabs that could make ship
+        weapon ammo.
+    - type: Tweak
+      message: >-
+        MLA-73 disk moved to T3 in Sevastopol tech disk spawner loot pools from
+        T2.
+    - type: Tweak
+      message: Unanchorable ship weapons will delete when not on a grid now.
+    - type: Tweak
+      message: Fan health reduced to 500 from 1000
+    - type: Fix
+      message: Catwalks floating when off grids.
+  id: 1086
+  time: '2025-08-04T16:53:50.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1760
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Proper cryo lag fix. Probably.
+  id: 1087
+  time: '2025-08-05T02:58:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1772
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Ported recent wizden chem rebalances (and uncucked cryoxadone). Some
+        chems should heal more but slower over time, and Bicaridine wont make
+        Razorium with other brute chems anymore.
+  id: 1088
+  time: '2025-08-05T18:23:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1776
+- author: Catazeus
+  changes:
+    - type: Add
+      message: Ported Funky mindshield icon resprite.
+  id: 1089
+  time: '2025-08-06T00:00:53.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1777
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Ramming damage halved.
+  id: 1090
+  time: '2025-08-06T00:15:17.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1779
+- author: Onezero0
+  changes:
+    - type: Tweak
+      message: Edited the TSFMC Halcyon a bit. Have fun, LARPers.
+  id: 1091
+  time: '2025-08-06T01:18:24.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1778

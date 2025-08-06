@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: loadout
+  id: USSPCombatWebbing
+  name: chest rig
+  equipment:
+    belt: ClothingBeltMilitaryWebbing
+
+- type: loadout
+  id: USSPCombatWebbingLarge
+  name: large chest rig
+  equipment:
+    belt: ClothingBeltWebbingsBigBase
+
+# Brigmedic
+- type: loadout
+  id: USSPCombatWebbingMedical
+  name: chest rig (medical)
+  equipment:
+    belt: ClothingBeltMilitaryWebbingMed

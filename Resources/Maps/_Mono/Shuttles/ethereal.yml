@@ -25,8 +25,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/03/2025 01:03:01
-  entityCount: 2232
+  time: 08/04/2025 02:13:20
+  entityCount: 2235
 maps: []
 grids:
 - 1
@@ -7705,6 +7705,20 @@ entities:
     - type: Transform
       pos: 18.5,1.5
       parent: 1
+- proto: DefibrillatorCabinetFilled
+  entities:
+  - uid: 2234
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -3.5,3.5
+      parent: 1
+  - uid: 2235
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -13.5,4.5
+      parent: 1
 - proto: DrinkBahamaMama
   entities:
   - uid: 895
@@ -13650,6 +13664,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -2.5,11.5
+      parent: 1
+- proto: WallWeaponCapacitorRecharger
+  entities:
+  - uid: 2233
+    components:
+    - type: Transform
+      pos: -7.5,2.5
       parent: 1
 - proto: WallWeaponCapacitorRechargerOmnidirectional
   entities:

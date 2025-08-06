@@ -22,7 +22,7 @@ lathe-category-incen-ammo = Incendiary Ammo
 lathe-category-uranium-ammo = Uranium Ammo
 lathe-category-practice-ammo = Practice Ammo
 lathe-category-misc-ammo = Misc. Ammo
-lathe-category-ship-ammo = Ship Weapon
+lathe-category-ship-ammo = Ship Weapon Ammo
 
 # Weapons
 lathe-category-guns-rifles = Rifles

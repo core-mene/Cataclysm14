@@ -27,6 +27,29 @@
   subgroups:
   - USSPBackpack
 
+- type: loadoutGroup
+  id: USSPBelt
+  name: loadout-group-contractor-belt
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - USSPCombatWebbing
+  - USSPCombatWebbingLarge
+  fallbacks:
+  - USSPCombatWebbing
+
+- type: loadoutGroup
+  id: USSPBeltMedic
+  name: loadout-group-contractor-belt
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - USSPCombatWebbing
+  - USSPCombatWebbingLarge
+  - USSPCombatWebbingMedical
+  fallbacks:
+  - USSPCombatWebbingMedical
+
 #- type: loadoutGroup
 #  id: USSPBackpackCorporal
 #  name: loadout-group-contractor-backpack
