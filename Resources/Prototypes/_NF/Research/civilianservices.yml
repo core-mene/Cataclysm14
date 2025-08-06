@@ -73,8 +73,6 @@
   - MedicalAssemblerMachineCircuitboard
   - HotplateMachineCircuitboard
 
-# Tier 3
-
 - type: technology
   id: AdvancedPersonalPropulsion
   name: research-technology-advanced-personal-propulsion
@@ -82,8 +80,8 @@
     sprite: Objects/Tanks/Jetpacks/void.rsi
     state: icon
   discipline: CivilianServices
-  tier: 3
-  cost: 15000
+  tier: 2 # 3->2 - Mono
+  cost: 7500 # 15000->7500 - Mono
   recipeUnlocks:
   - JetpackVoid
 
