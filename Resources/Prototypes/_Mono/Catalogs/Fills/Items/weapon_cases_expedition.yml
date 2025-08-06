@@ -142,3 +142,17 @@
       amount: 1
     - id: AmmoBox23x75mmBuckshot
       amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongAK220
+  suffix: Dungeon, AK-220
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSubMachineGunAK220
+      amount: 1
+    - id: Magazine9x19mmSubMachineGunFMJ
+      amount: 2
+    - id: AmmoBox9x19mmFMJ
+      amount: 2
