@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Coenx-flex
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using Content.Shared.Actions;
 using Content.Shared.Body.Components;
