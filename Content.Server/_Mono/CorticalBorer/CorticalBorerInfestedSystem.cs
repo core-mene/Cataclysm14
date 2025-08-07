@@ -4,6 +4,7 @@
 
 using Content.Shared._Mono.CorticalBorer;
 using Content.Shared.Examine;
+using Content.Shared.Mobs;
 using Robust.Server.Containers;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
@@ -14,12 +15,14 @@ public sealed class CorticalBorerInfestedSystem : EntitySystem
 {
     [Dependency] private readonly ContainerSystem _container = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly CorticalBorerSystem _borer = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
     {
         SubscribeLocalEvent<CorticalBorerInfestedComponent, MapInitEvent>(OnInit);
         SubscribeLocalEvent<CorticalBorerInfestedComponent, ExaminedEvent>(OnExaminedInfested);
+        SubscribeLocalEvent<CorticalBorerInfestedComponent, MobStateChangedEvent>(OnStateChange);
     }
 
     private void OnInit(Entity<CorticalBorerInfestedComponent> infested, ref MapInitEvent args)
@@ -39,5 +42,14 @@ public sealed class CorticalBorerInfestedSystem : EntitySystem
         var timeRemaining = Math.Floor((cte - _timing.CurTime).TotalSeconds);
         args.PushMarkup(Loc.GetString("cortical-borer-self-examine", ("chempoints", infected.Comp.Borer.Comp.ChemicalPoints)));
         args.PushMarkup(Loc.GetString("infested-control-examined", ("timeremaining", timeRemaining)));
+    }
+
+    private void OnStateChange(Entity<CorticalBorerInfestedComponent> infected, ref MobStateChangedEvent args)
+    {
+        if (args.NewMobState != MobState.Dead)
+            return;
+
+        if(infected.Comp.ControlTimeEnd.HasValue)
+            _borer.EndControl(infected.Comp.Borer);
     }
 }

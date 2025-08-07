@@ -301,6 +301,10 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
         if (!TryComp<CorticalBorerInfestedComponent>(host, out var infestedComp))
             return;
 
+        // not controlling anyone
+        if (infestedComp.ControlTimeEnd is null)
+            return;
+
         // remove all the actions set to remove
         foreach (var ability in infestedComp.RemoveAbilities)
         {
