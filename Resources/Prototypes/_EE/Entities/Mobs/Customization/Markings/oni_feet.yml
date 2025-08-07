@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2024 Adeinitas
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: marking
+  id: OniTwoToedFeet
+  bodyPart: RFoot # Can't be LFoot to avoid visual glitches
+  markingCategory: Legs
+  speciesRestriction: [Oni]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#454545"
+  sprites:
+  - sprite: Einstein-Engines/Mobs/Customization/oni_feet.rsi
+    state: two_toes

@@ -5,7 +5,7 @@
     xmlns:co="clr-namespace:Content.Client.UserInterface.Controls"
     xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
     SetSize="360 400"
-    MinSize="300 320"> <!-- Frontier: added SetSize, MinSize, remove MinHeight="210" -->
+    MinSize="360 320"> <!-- Frontier: added SetSize, MinSize, remove MinHeight="210" -->
     <BoxContainer Orientation="Vertical">
         <PanelContainer VerticalExpand="True" HorizontalExpand="True" Margin="6 6 6 6">
             <PanelContainer.PanelOverride>

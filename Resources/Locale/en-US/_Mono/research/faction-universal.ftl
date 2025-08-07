@@ -2,6 +2,7 @@ research-discipline-faction-universal = Universal Faction Research
 
 research-technology-universal-railgun-ammo = Linear Accelerator Ammo
 research-technology-universal-asm220-ammo = ASM-220 Torpedo Production
+research-technology-universal-asm220-advanced = ASM-220 Advanced Munitions
 research-technology-universal-150mm-ammo = 150mm Shell Production
 
 research-technology-universal-light-fighter-ordinance = Light Fighter Ordinance Production

@@ -39,11 +39,13 @@
 # SPDX-FileCopyrightText: 2024 themias
 # SPDX-FileCopyrightText: 2024 xprospero
 # SPDX-FileCopyrightText: 2025 Julian Giebel
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Southbridge
 # SPDX-FileCopyrightText: 2025 centcomofficer24
 # SPDX-FileCopyrightText: 2025 lzk
 # SPDX-FileCopyrightText: 2025 slarticodefast
 # SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -464,8 +466,8 @@
       #Survival box
       - !type:GroupSelector
         children:
-        - id: BoxSurvivalNFOxygen
-        - id: BoxSurvivalNFNitrogen
+        - id: BoxSurvivalMonoOxygenExtended
+        - id: BoxSurvivalMonoNitrogenExtended
       #Salvagecore bevvy
       - !type:GroupSelector
         children:

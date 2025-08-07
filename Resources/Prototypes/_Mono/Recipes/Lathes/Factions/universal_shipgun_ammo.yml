@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -73,6 +74,18 @@
   id: ASM220TorpedoECMUniversal
   parent: BaseTorpedoRecipe
   result: Asm220TorpedoECM
+
+- type: latheRecipe
+  id: ASM220TorpedoLOSATUniversal
+  parent: BaseTorpedoRecipe
+  result: Asm220TorpedoLOSAT
+  materials:
+    Steel: 1200 # shell/casing
+    Plasteel: 600 # penetrator
+    Synthalloy: 200 # penetrator
+    Glass: 400 # opticals
+    Gold: 200 # electronics
+    Silver: 200 # electronics
 
 - type: latheRecipe
   id: 150mmApShellUniversal

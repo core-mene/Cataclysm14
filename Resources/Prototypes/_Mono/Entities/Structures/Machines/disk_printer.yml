@@ -16,9 +16,8 @@
     drawRate: 120000
   - type: ItemGenerator
     prototypes:
-    - SpawnLootTechDisksT1
-    - SpawnLootTechDisksT2Faction
-    - SpawnLootTechDisksT3Fracture
+    - SpawnLootTechDisksPrinterT1
+    - SpawnLootTechDisksPrinterT2
     miningInterval: 450
     powerDraw: 120000
     requireExpedition: false
@@ -97,3 +96,115 @@
     radius: 0.8
     energy: 0.5
     color: "#00AACC"
+
+- type: entity
+  name: tech disk printer disks
+  id: SpawnLootTechDisksPrinterT1
+  parent: MarkerBasePlaceFree
+  suffix: "Tech Disk Printer T1"
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: _NF/Markers/general.rsi
+      state: questionmark
+      color: red
+  - type: RandomSpawner
+    prototypes:
+    - TechDiskCivBluespaceBags
+    - TechDiskRCD
+    - TechDiskMechCiv
+    - TechDiskCivMS250
+    - TechDiskCivCTLA50
+    - TechDiskCivShipComps
+    - TechDiskCivBackpackWaterTank
+    - TechDiskTSFLecter
+    - TechDiskTSFDrozd
+    - TechDiskC20r
+    - TechDiskUniversalShipAmmo
+    - ResearchDisk5000
+    - ResearchDisk10000
+    chance: 0.95
+    offset: 0.0
+    rarePrototypes:
+    - SpawnLootTechDisksPrinterT2
+    - SpawnLootTechDisksT2Mech
+    rareChance: 0.15
+
+- type: entity
+  name: tech disk printer disks
+  id: SpawnLootTechDisksPrinterT2
+  parent: MarkerBasePlaceFree
+  suffix: "Tech Disk Printer T2"
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: _NF/Markers/general.rsi
+      state: questionmark
+      color: red
+  - type: RandomSpawner
+    prototypes:
+    - TechDiskM90
+    - TechDiskRogueTools
+    - TechDiskTSFAnnie
+    - TechDiskBulldog
+    - TechDiskShields
+    - TechDiskFtl
+    chance: 0.95
+    offset: 0.0
+    rarePrototypes:
+    - SpawnLootTechDisksPrinterT3
+    rareChance: 0.15
+
+- type: entity
+  name: tech disk printer disks
+  id: SpawnLootTechDisksPrinterT3
+  parent: MarkerBasePlaceFree
+  suffix: "Tech Disk Printer T3"
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: _NF/Markers/general.rsi
+      state: questionmark
+      color: red
+  - type: RandomSpawner
+    prototypes:
+    - TechDiskTSFICWS
+    - TechDiskEnergyWeapons
+    - TechDiskHristov
+    - TechDiskMla73
+    - TechDiskSynthalloy
+    - TechDiskUniversalShipAmmoAdvanced
+    chance: 0.95
+    offset: 0.0
+    rarePrototypes:
+    - SpawnLootTechDisksPrinterT4
+    rareChance: 0.15
+
+- type: entity
+  name: tech disk printer disks
+  id: SpawnLootTechDisksPrinterT4
+  parent: MarkerBasePlaceFree
+  suffix: "Tech Disk Printer T4"
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: _NF/Markers/general.rsi
+      state: questionmark
+      color: red
+  - type: RandomSpawner
+    prototypes:
+    - TechDiskBluespaceBags
+    - TechDiskSynthalloy
+    chance: 0.95
+    offset: 0.0
+    rarePrototypes:
+    - TechDiskSpeedBoots
+    rareChance: 0.1

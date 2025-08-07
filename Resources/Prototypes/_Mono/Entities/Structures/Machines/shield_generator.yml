@@ -17,7 +17,7 @@
     baseDraw: 80000
     maxDraw: 150000
     unpoweredBonus: 8
-    damageLimit: 1000000
+    damageLimit: 150000
     damageOverloadTimePunishment: 30
     shieldColor: "#FF9933"
   - type: Sprite
@@ -99,7 +99,7 @@
     powerLoad: 60000
   - type: Appearance
   - type: ShipShieldEmitter
-    damageLimit: 150000
+    damageLimit: 65000
     damageOverloadTimePunishment: 40
     healPerSecond: 1750 # Base is 250
     damageExp: 1.15 # Base is 1.1
@@ -142,7 +142,7 @@
     baseDraw: 30000 # Base is 50000
     maxDraw: 60000 # Base is 150000
     unpoweredBonus: 4 # Base is 6
-    damageLimit: 65000
+    damageLimit: 40000
     damageOverloadTimePunishment: 100
     shieldColor: "#9933FF"
   - type: Sprite
@@ -190,7 +190,7 @@
     baseDraw: 20000
     maxDraw: 60000
     unpoweredBonus: 3 # Mono
-    damageLimit: 25000 # Mono
+    damageLimit: 20000 # Mono
     damageOverloadTimePunishment: 80
     shieldColor: "#3399FF"
   - type: Sprite
