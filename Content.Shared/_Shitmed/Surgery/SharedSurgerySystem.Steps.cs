@@ -32,6 +32,7 @@ using Content.Shared.Popups;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Toolshed.TypeParsers;
 using System.Linq;
+using Content.Shared._Mono.CorticalBorer;
 
 namespace Content.Shared._Shitmed.Medical.Surgery;
 
@@ -53,6 +54,7 @@ public abstract partial class SharedSurgerySystem
 
         SubSurgery<SurgeryTendWoundsEffectComponent>(OnTendWoundsStep, OnTendWoundsCheck);
         SubSurgery<SurgeryStepCavityEffectComponent>(OnCavityStep, OnCavityCheck);
+        SubSurgery<SurgeryStepRemoveCorticalBorerComponent>(OnCorticalBorerRemovalStep, OnCorticalBorerRemovalCheck); // mono
         SubSurgery<SurgeryAddPartStepComponent>(OnAddPartStep, OnAddPartCheck);
         SubSurgery<SurgeryAffixPartStepComponent>(OnAffixPartStep, OnAffixPartCheck);
         SubSurgery<SurgeryRemovePartStepComponent>(OnRemovePartStep, OnRemovePartCheck);
@@ -423,6 +425,25 @@ public abstract partial class SharedSurgerySystem
             && !itemComp.Slots[partComp.ContainerName].HasItem
             || ent.Comp.Action == "Remove"
             && itemComp.Slots[partComp.ContainerName].HasItem)
+            args.Cancelled = true;
+    }
+
+    // 2 mono function
+    private void OnCorticalBorerRemovalStep(Entity<SurgeryStepRemoveCorticalBorerComponent> ent, ref SurgeryStepEvent args)
+    {
+        if (!TryComp(args.Part, out BodyPartComponent? partComp) || partComp.PartType != BodyPartType.Head)
+            return;
+
+        if (partComp.InfestationSlot.Item is not null &&
+            TryComp<CorticalBorerComponent>(partComp.InfestationSlot.Item, out var borerComponent))
+            _corticalBorer.TryEjectBorer((partComp.InfestationSlot.Item.Value, borerComponent), args.User);
+    }
+
+    private void OnCorticalBorerRemovalCheck(Entity<SurgeryStepRemoveCorticalBorerComponent> ent, ref SurgeryStepCompleteCheckEvent args)
+    {
+        if (!TryComp(args.Part, out BodyPartComponent? partComp)
+            || !TryComp(args.Part, out ItemSlotsComponent? itemComp)
+            || itemComp.Slots[partComp.ContainerName].HasItem)
             args.Cancelled = true;
     }
 

@@ -20,6 +20,7 @@ using Content.Shared.Humanoid;
 using Content.Shared.Inventory;
 using Content.Shared.Random;
 using Content.Shared._Shitmed.Targeting.Events;
+using Content.Shared.Containers.ItemSlots;
 
 namespace Content.Shared.Body.Systems;
 
@@ -51,6 +52,13 @@ public partial class SharedBodySystem
             // This seems to be an issue due to wiz-merge, on my old branch it was properly instantiating
             // ItemInsertionSlot's container on both ends. It does show up properly on ItemSlotsComponent though.
             _slots.AddItemSlot(ent, ent.Comp.ContainerName, ent.Comp.ItemInsertionSlot);
+            Dirty(ent, ent.Comp);
+        }
+
+        // Mono change
+        if (ent.Comp.PartType == BodyPartType.Head)
+        {
+            _slots.AddItemSlot(ent, ent.Comp.ContainerName, ent.Comp.InfestationSlot);
             Dirty(ent, ent.Comp);
         }
 

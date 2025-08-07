@@ -962,6 +962,9 @@ public sealed partial class ChatSystem : SharedChatSystem
         var sourceMapId = transformSource.MapID;
         var sourceCoords = transformSource.Coordinates;
 
+        var resEv = new ReceiverOverrideEvent(source);
+        RaiseLocalEvent(source, resEv);
+
         foreach (var player in _playerManager.Sessions)
         {
             if (player.AttachedEntity is not { Valid: true } playerEntity)
@@ -974,8 +977,16 @@ public sealed partial class ChatSystem : SharedChatSystem
 
             var observer = ghostHearing.HasComponent(playerEntity);
 
+            if (resEv.ReciverUidOverride is not null)
+            {
+                if (resEv.ReciverUidOverride.Contains(playerEntity))
+                {
+                    recipients.Add(player, new ICChatRecipientData(0, observer));
+                    continue;
+                }
+            }
             // even if they are a ghost hearer, in some situations we still need the range
-            if (sourceCoords.TryDistance(EntityManager, transformEntity.Coordinates, out var distance) && distance < voiceGetRange)
+            else if (sourceCoords.TryDistance(EntityManager, transformEntity.Coordinates, out var distance) && distance < voiceGetRange)
             {
                 recipients.Add(player, new ICChatRecipientData(distance, observer));
                 continue;
@@ -1047,6 +1058,15 @@ public sealed class TransformSpeechEvent : EntityEventArgs
         Sender = sender;
         Message = message;
     }
+}
+
+/// <summary>
+/// Mono change: Raised in order to change who will receive the message
+/// </summary>
+public sealed class ReceiverOverrideEvent(EntityUid sender) : EntityEventArgs
+{
+    public EntityUid Sender;
+    public List<EntityUid>? ReciverUidOverride;
 }
 
 public sealed class CheckIgnoreSpeechBlockerEvent : EntityEventArgs

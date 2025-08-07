@@ -11,6 +11,7 @@ using Content.Shared.Interaction.Events;
 using Content.Shared.Popups;
 using Content.Shared.Verbs;
 using Content.Shared.Whitelist;
+using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
@@ -310,6 +311,33 @@ namespace Content.Shared.Containers.ItemSlots
         }
 
         /// <summary>
+        ///     Mono Function: Same thing as Insert but allows you to set the audio rather than the slot setting the audio
+        /// </summary>
+        private void InsertSetAudio(EntityUid uid,
+            ItemSlot slot,
+            EntityUid item,
+            EntityUid? user,
+            SoundSpecifier? sound = null,
+            bool excludeUserAudio = false)
+        {
+            bool? inserted = slot.ContainerSlot != null ? _containers.Insert(item, slot.ContainerSlot) : null;
+            // ContainerSlot automatically raises a directed EntInsertedIntoContainerMessage
+
+            // Logging
+            if (inserted != null && inserted.Value && user != null)
+            {
+                // Frontier modification: adds extra things to the log
+                var extraLogs = LoggingExtensions.GetExtraLogs(EntityManager, item);
+
+                _adminLogger.Add(LogType.Action,
+                    LogImpact.Low,
+                    $"{ToPrettyString(user.Value)} inserted {ToPrettyString(item)}{extraLogs} into {slot.ContainerSlot?.ID + " slot of "}{ToPrettyString(uid)}");
+            }
+
+            _audioSystem.PlayPredicted(sound, uid, excludeUserAudio ? user : null);
+        }
+
+        /// <summary>
         ///     Check whether a given item can be inserted into a slot. Unless otherwise specified, this will return
         ///     false if the slot is already filled.
         /// </summary>
@@ -384,6 +412,24 @@ namespace Content.Shared.Containers.ItemSlots
                 return false;
 
             Insert(uid, slot, item, user, excludeUserAudio: excludeUserAudio);
+            return true;
+        }
+
+        /// <summary>
+        ///     Mono Function: Try insert but sets the audio rather than the itemslot
+        /// </summary>
+        /// <returns>False if failed to insert item</returns>
+        public bool TryInsertSetAudio(EntityUid uid,
+            ItemSlot slot,
+            EntityUid item,
+            EntityUid? user,
+            SoundSpecifier? sound = null,
+            bool excludeUserAudio = false)
+        {
+            if (!CanInsert(uid, item, user, slot))
+                return false;
+
+            InsertSetAudio(uid, slot, item, user, sound, excludeUserAudio: excludeUserAudio);
             return true;
         }
 
@@ -563,6 +609,23 @@ namespace Content.Shared.Containers.ItemSlots
         }
 
         /// <summary>
+        ///     Mono Function: Eject but plays inputted sound rather than eject sound
+        /// </summary>
+        private void EjectSetAudio(EntityUid uid, ItemSlot slot, EntityUid item, EntityUid? user, SoundSpecifier? sound = null, bool excludeUserAudio = false)
+        {
+            bool? ejected = slot.ContainerSlot != null ? _containers.Remove(item, slot.ContainerSlot) : null;
+            // ContainerSlot automatically raises a directed EntRemovedFromContainerMessage
+
+            // Logging
+            if (ejected != null && ejected.Value && user != null)
+                _adminLogger.Add(LogType.Action,
+                    LogImpact.Low,
+                    $"{ToPrettyString(user.Value)} ejected {ToPrettyString(item)} from {slot.ContainerSlot?.ID + " slot of "}{ToPrettyString(uid)}");
+
+            _audioSystem.PlayPredicted(sound, uid, excludeUserAudio ? user : null);
+        }
+
+        /// <summary>
         ///     Try to eject an item from a slot.
         /// </summary>
         /// <returns>False if item slot is locked or has no item inserted</returns>
@@ -585,6 +648,32 @@ namespace Content.Shared.Containers.ItemSlots
                 return false;
 
             Eject(uid, slot, item!.Value, user, excludeUserAudio);
+            return true;
+        }
+
+        /// <summary>
+        ///     Mono Function: TryEject but plays sound rather than item slot eject sound
+        /// </summary>
+        public bool TryEjectSetAudio(EntityUid uid,
+            ItemSlot slot,
+            EntityUid? user,
+            [NotNullWhen(true)] out EntityUid? item,
+            SoundSpecifier? sound = null,
+            bool excludeUserAudio = false)
+        {
+            item = null;
+
+            // This handles logic with the slot itself
+            if (!CanEject(uid, user, slot))
+                return false;
+
+            item = slot.Item;
+
+            // This handles user logic
+            if (user != null && item != null && !_actionBlockerSystem.CanPickup(user.Value, item.Value))
+                return false;
+
+            EjectSetAudio(uid, slot, item!.Value, user, sound, excludeUserAudio);
             return true;
         }
 
@@ -621,6 +710,20 @@ namespace Content.Shared.Containers.ItemSlots
         public bool TryEjectToHands(EntityUid uid, ItemSlot slot, EntityUid? user, bool excludeUserAudio = false)
         {
             if (!TryEject(uid, slot, user, out var item, excludeUserAudio))
+                return false;
+
+            if (user != null)
+                _handsSystem.PickupOrDrop(user.Value, item.Value);
+
+            return true;
+        }
+
+        /// <summary>
+        ///     Mono Function: TryEjectToHand but sets the sound rather than the item slot
+        /// </summary>
+        public bool TryEjectToHandsSetAudio(EntityUid uid, ItemSlot slot, EntityUid? user, SoundSpecifier? sound = null, bool excludeUserAudio = false)
+        {
+            if (!TryEjectSetAudio(uid, slot, user, out var item, sound, excludeUserAudio))
                 return false;
 
             if (user != null)
