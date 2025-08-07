@@ -6,6 +6,7 @@
   id: BaseShellShotgun23x75mm
   name: shotgun shell (4 gauge)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: added BaseC1Contraband
+  description: Large shotgun round. Kicks like a mule, and will tear a chunk out of anything that doesnt have the armor to protect it.
   abstract: true
   components:
   - type: Tag

@@ -2,6 +2,7 @@
   id: BaseCartridge7.62x51mm
   name: cartridge (7.62x51mm FMJ)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  description: A decently sized full-power round.
   abstract: true
   components:
   - type: Tag

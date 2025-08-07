@@ -37,6 +37,7 @@
   id: BaseShellShotgun12_gauge
   name: shotgun shell (12 gauge)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: added BaseC1Contraband
+  description: Standard shotgun round practically everywhere.
   abstract: true
   components:
   - type: Tag

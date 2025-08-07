@@ -2,6 +2,7 @@
   id: BaseCartridge5.56x45mm
   name: cartridge (5.56x45mm FMJ)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  description: An extremely-common intermediate cartridge for rifles.
   abstract: true
   components:
   - type: Tag
