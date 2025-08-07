@@ -5,23 +5,26 @@
 - type: latheRecipePack
   id: MonoTSFAmmo
   recipes:
-  - Magazine8x65mmSKR
-  - Magazine8x65mmEmpty
-  #- Magazine8x65mmSKRBox
-  #- Magazine8x65mmEmptyBox
-  - AmmoBox8x65mmSKR
-  - Magazine7.62x51mmFMJ
-  - Magazine7.62x51mmEmpty
-  - AmmoBox7.62x51mmFMJ
-  - Magazine5.56x45mmFMJ
-  - Magazine5.56x45mmEmpty
-  - AmmoBox5.56x45mmFMJ
-  - Magazine45_ACPSubMachineGunFMJ
-  - Magazine45_ACPSubMachineGunEmpty
-  - AmmoBox45_ACPFMJ
-  - Magazine7.62x39mmFMJ
-  - Magazine7.62x39mmEmpty
-  - AmmoBox7.62x39mmFMJ
+  - Magazine8x65mmSKR # MR-8C/Bandit
+  - Magazine8x65mmEmpty # MR-8C/Bandit
+  #- Magazine8x65mmSKRBox # MR-8B
+  #- Magazine8x65mmEmptyBox # MR-8B
+  - AmmoBox8x65mmSKR # MR-8C/Bandit
+  - Magazine7.62x51mmFMJ # Vulcan
+  - Magazine7.62x51mmEmpty # Vulcan
+  - AmmoBox7.62x51mmFMJ # Vulcan
+  - Magazine5.56x45mmFMJ # XLR
+  - Magazine5.56x45mmEmpty # XLR
+  - AmmoBox5.56x45mmFMJ # XLR
+  - Magazine68x52mmFMJ # Lecter
+  - Magazine68x52mmEmpty # Lecter
+  - AmmoBox68x52mmFMJ # Lecter
+  - Magazine45_ACPSubMachineGunFMJ # Drozd
+  - Magazine45_ACPSubMachineGunEmpty # Drozd
+  - AmmoBox45_ACPFMJ # Drozd
+  - Magazine7.62x39mmFMJ # Annie
+  - Magazine7.62x39mmEmpty # Annie
+  - AmmoBox7.62x39mmFMJ # Annie
 
 - type: latheRecipePack
   id: MonoTSFSpecialAmmo
@@ -41,6 +44,8 @@
   - AmmoBox7.62x39mmPractice
   - Magazine7.62x51mmPractice
   - AmmoBox7.62x51mmPractice
+  - Magazine68x52mmPractice
+  - AmmoBox68x52mmPractice
   - Magazine45_ACPPistolPractice
   - Magazine45_ACPSubMachineGunPractice
   - AmmoBox45_ACPPractice

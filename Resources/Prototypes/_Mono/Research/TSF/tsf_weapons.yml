@@ -16,9 +16,9 @@
   - WeaponRifleVulcanTSF
   - WeaponSubMachineGunDrozdTSF
   - WeaponRifleMR3CTSF
-  - Magazine5.56x45mmFMJ
-  - Magazine5.56x45mmEmpty
-  - AmmoBox5.56x45mmFMJ
+  - Magazine68x52mmFMJ
+  - Magazine68x52mmEmpty
+  - AmmoBox68x52mmFMJ
   - Magazine7.62x51mmFMJ
   - Magazine7.62x51mmEmpty
   - AmmoBox7.62x51mmFMJ
@@ -45,6 +45,8 @@
   - AmmoBox7.62x39mmPractice
   - Magazine7.62x51mmPractice
   - AmmoBox7.62x51mmPractice
+  - Magazine68x52mmPractice
+  - AmmoBox68x52mmPractice
   - Magazine45_ACPPistolPractice
   - Magazine45_ACPSubMachineGunPractice
   - AmmoBox45_ACPPractice
@@ -115,6 +117,9 @@
   cost: 15000
   recipeUnlocks:
   - WeaponRifleXlr556Tsf
+  - Magazine5.56x45mmFMJ
+  - Magazine5.56x45mmEmpty
+  - AmmoBox5.56x45mmFMJ
   technologyPrerequisites:
   - TsfBasicGuns
   - TsfSynthalloy
