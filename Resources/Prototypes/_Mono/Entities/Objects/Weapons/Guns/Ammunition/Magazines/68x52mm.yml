@@ -95,6 +95,20 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
+  id: Magazine68x52mmCaselessEmpty
+  name: "magazine (6.8x52mm STANAG Caseless any)"
+  parent: BaseMagazine68x52mmCaseless
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+  - type: Sprite
+    layers:
+    - state: practice
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
   id: Magazine68x52mmCaselessShort
   name: "short magazine (6.8x52mm STANAG Caseless)"
   parent: BaseMagazine68x52mmCaselessShort

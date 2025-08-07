@@ -15,6 +15,7 @@
     damage:
       types:
         Piercing: 30
+    armorPenetration: 0.15
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/smartgun.rsi
     layers:
@@ -22,4 +23,3 @@
       shader: unshaded
   - type: HomingProjectile
     homingSpeed: 1280 # Mono
-    armorPenetration: 0.15
