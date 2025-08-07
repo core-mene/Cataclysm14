@@ -24,3 +24,12 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsUSSPCommand ]
+
+- type: entity
+  parent: AirlockHatchSyndicate
+  id: AirlockHatchRogueCommanderLocked
+  suffix: Rogue, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsRogueCommander ]

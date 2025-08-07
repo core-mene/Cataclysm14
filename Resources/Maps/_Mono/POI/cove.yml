@@ -26,8 +26,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/06/2025 21:45:57
-  entityCount: 4842
+  time: 08/07/2025 10:03:24
+  entityCount: 4841
 maps: []
 grids:
 - 1
@@ -2083,7 +2083,8 @@ entities:
             0: 61440
           -3,-2:
             0: 59407
-            7: 1536
+            7: 512
+            8: 1024
           -2,-3:
             0: 61440
           -2,-2:
@@ -2243,6 +2244,21 @@ entities:
           - 0
         - volume: 2500
           temperature: 293.14996
+          moles:
+          - 21.824879
+          - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.1499
           moles:
           - 21.824879
           - 82.10312
@@ -2781,6 +2797,19 @@ entities:
     - type: Transform
       pos: -1.5,17.5
       parent: 1
+- proto: AirlockHatchRogueCommanderLocked
+  entities:
+  - uid: 93
+    components:
+    - type: Transform
+      pos: -8.5,2.5
+      parent: 1
+    - type: Door
+      secondsUntilStateChange: -474.38763
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
 - proto: AirlockHatchRogueLocked
   entities:
   - uid: 57
@@ -2828,6 +2857,12 @@ entities:
     - type: Transform
       pos: 3.5,17.5
       parent: 1
+    - type: Door
+      secondsUntilStateChange: -165.35461
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
   - uid: 66
     components:
     - type: Transform
@@ -2914,6 +2949,12 @@ entities:
     - type: Transform
       pos: -9.5,-0.5
       parent: 1
+    - type: Door
+      secondsUntilStateChange: -471.421
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
   - uid: 83
     components:
     - type: Transform
@@ -2954,6 +2995,12 @@ entities:
     - type: Transform
       pos: -4.5,14.5
       parent: 1
+    - type: Door
+      secondsUntilStateChange: -21.321432
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
   - uid: 91
     components:
     - type: Transform
@@ -2964,17 +3011,6 @@ entities:
     - type: Transform
       pos: -12.5,28.5
       parent: 1
-  - uid: 93
-    components:
-    - type: Transform
-      pos: -8.5,2.5
-      parent: 1
-    - type: Door
-      secondsUntilStateChange: -12.317997
-      state: Opening
-    - type: DeviceLinkSource
-      lastSignals:
-        DoorStatus: True
   - uid: 94
     components:
     - type: Transform
@@ -11154,6 +11190,15 @@ entities:
     components:
     - type: Transform
       pos: -6.5,26.5
+      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
+  - uid: 3107
+    components:
+    - type: Transform
+      pos: -7.5,5.5
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 5
@@ -21441,57 +21486,42 @@ entities:
     - type: Transform
       pos: -19.5,9.5
       parent: 1
-- proto: SpawnPointPirateCaptain
-  entities:
   - uid: 3099
     components:
     - type: Transform
-      pos: -15.5,21.5
+      pos: -19.5,10.5
       parent: 1
   - uid: 3100
     components:
     - type: Transform
-      pos: -17.5,21.5
-      parent: 1
-  - uid: 3101
-    components:
-    - type: Transform
-      pos: -8.5,4.5
+      pos: 9.5,14.5
       parent: 1
   - uid: 3102
     components:
     - type: Transform
-      pos: 9.5,14.5
+      pos: -17.5,9.5
       parent: 1
   - uid: 3103
     components:
     - type: Transform
-      pos: -7.5,-3.5
+      pos: -8.5,-4.5
       parent: 1
   - uid: 3104
     components:
     - type: Transform
-      pos: -8.5,-4.5
+      pos: -7.5,-3.5
       parent: 1
   - uid: 3105
     components:
     - type: Transform
       pos: 17.5,21.5
       parent: 1
-  - uid: 3106
+- proto: SpawnPointPirateCaptain
+  entities:
+  - uid: 3101
     components:
     - type: Transform
-      pos: 13.5,28.5
-      parent: 1
-  - uid: 3107
-    components:
-    - type: Transform
-      pos: -19.5,10.5
-      parent: 1
-  - uid: 3108
-    components:
-    - type: Transform
-      pos: -17.5,9.5
+      pos: -8.5,4.5
       parent: 1
 - proto: SpawnPointPirateFirstMate
   entities:
@@ -21801,6 +21831,11 @@ entities:
       parent: 1
 - proto: SuitStorageEVAPirate
   entities:
+  - uid: 3106
+    components:
+    - type: Transform
+      pos: -9.5,-5.5
+      parent: 1
   - uid: 3153
     components:
     - type: Transform
@@ -21813,10 +21848,10 @@ entities:
       parent: 1
 - proto: SuitStorageSyndieCommander
   entities:
-  - uid: 3152
+  - uid: 3108
     components:
     - type: Transform
-      pos: -9.5,-5.5
+      pos: -9.5,5.5
       parent: 1
 - proto: SyringeCaseAltFilled
   entities:

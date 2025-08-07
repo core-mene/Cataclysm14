@@ -33,3 +33,11 @@
   components:
   - type: AccessReader
     access: [["TsfmcEngineering"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsRogueCommander
+  suffix: Rogue Command, Locked
+  components:
+  - type: AccessReader
+    access: [["RogueCommander"]]
