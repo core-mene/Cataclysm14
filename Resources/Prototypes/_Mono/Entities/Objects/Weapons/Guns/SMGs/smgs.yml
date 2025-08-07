@@ -169,3 +169,65 @@
   - type: LaserPointer
     targetedColor: "#FF0000"
     defaultColor: "#FF0000"
+
+# merc guns
+
+- type: entity
+  name: LWC Knallstock (9x19mm/.45 ACP)
+  parent: [ BaseWeaponSubMachineGun, BaseGunWieldable, BaseC2Contraband ] # Frontier: added BaseC2Contraband
+  id: WeaponSubMachineGunKnallstock
+  description: A rugged and reliable SMG using large, rapid fire bursts. Accepts 9x19 or .45 ACP pistol magazines. Watch out for its ammo consumption.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/SMGs/knallstock.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: GunWieldBonus
+    minAngle: -17
+    maxAngle: -18
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Guns/SMGs/knallstock.rsi
+  - type: Gun
+    fireRate: 6
+    minAngle: 21
+    maxAngle: 32
+    selectedMode: Burst
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+    availableModes:
+    - Burst
+    - FullAuto
+    burstCooldown: 0.4
+    burstFireRate: 13
+    shotsPerBurst: 4
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine45_ACPPistolFMJ
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - Magazine45_ACPPistolFMJ
+          - Magazine9x19mmPistolFMJ
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge45_ACPFMJ
+        priority: 1
+        whitelist:
+          tags:
+          - Cartridge45_ACPFMJ
+          - Cartridge9x19mmFMJ
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: true
+  - type: LaserPointer
+    targetedColor: "#62ab3a"
+    defaultColor: "#62ab3a"
+  - type: Appearance
