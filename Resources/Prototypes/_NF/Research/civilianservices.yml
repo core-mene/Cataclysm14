@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 chrome-cirrus
+# SPDX-FileCopyrightText: 2025 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Tier 1
 
 - type: technology
@@ -73,8 +81,6 @@
   - MedicalAssemblerMachineCircuitboard
   - HotplateMachineCircuitboard
 
-# Tier 3
-
 - type: technology
   id: AdvancedPersonalPropulsion
   name: research-technology-advanced-personal-propulsion
@@ -82,8 +88,8 @@
     sprite: Objects/Tanks/Jetpacks/void.rsi
     state: icon
   discipline: CivilianServices
-  tier: 3
-  cost: 15000
+  tier: 2 # 3->2 - Mono
+  cost: 7500 # 15000->7500 - Mono
   recipeUnlocks:
   - JetpackVoid
 

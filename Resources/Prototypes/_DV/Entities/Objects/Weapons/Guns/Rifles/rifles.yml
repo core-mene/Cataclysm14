@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Dvir
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 sleepyyapril
@@ -23,14 +24,14 @@
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
-    minAngle: -19
-    maxAngle: -16
+    minAngle: -12
+    maxAngle: -18
   - type: Gun
     minAngle: 13
     maxAngle: 20
     angleIncrease: 5
     angleDecay: 25
-    fireRate: 4.5
+    fireRate: 4
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto

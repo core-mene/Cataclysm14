@@ -17,11 +17,13 @@
   name: 'Lancelot Mining Outpost'
   minimumDistance: 19650
   maximumDistance: 25400
-  spawnGroup: Required
-  gridPath: /Maps/_Mono/POI/lancelot.yml
+  spawnGroup: Optional
+  gridPath: /Maps/_Mono/POI/Dungeons/lancelot.yml
   addComponents:
   - type: IFF
     color: "#ccaa55"
+    flags: [HideLabel]
+    readOnly: true
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
@@ -29,7 +31,7 @@
 - type: gameMap
   id: Lancelot
   mapName: 'Lancelot Mining Outpost'
-  mapPath: /Maps/_Mono/POI/lancelot.yml
+  mapPath: /Maps/_Mono/POI/Dungeons/lancelot.yml
   minPlayers: 0
   stations:
     Lancelot:
@@ -37,7 +39,6 @@
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Lancelot Mining Outpost'
-        - type: StationDeadDrop
-          maxDeadDrops: 6
+        - type: StationDeadDropHintExempt
         - type: TradeCrateWildcardDestination
           valueMultiplier: 0.1

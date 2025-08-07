@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2023 IData-RedactedI
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Honestly101
+# SPDX-FileCopyrightText: 2025 dustylens
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: latheRecipe
   id: SalvageTechFabCircuitboardNF
   parent: BaseCircuitboardRecipe
@@ -73,6 +82,14 @@
   id: ThrusterNfsdMachineCircuitboard
   parent: BaseCircuitboardRecipe
   result: ThrusterNfsdMachineCircuitboard
+  materials:
+    Steel: 400
+    Glass: 900
+
+- type: latheRecipe
+  id: ThrusterUSSPMachineCircuitboard
+  parent: BaseCircuitboardRecipe
+  result: ThrusterUSSPMachineCircuitboard
   materials:
     Steel: 400
     Glass: 900

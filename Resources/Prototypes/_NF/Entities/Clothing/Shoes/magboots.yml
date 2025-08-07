@@ -1,3 +1,13 @@
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: [ClothingShoesBootsMag, ClothingShoesBootsCombat]
   id: ClothingShoesBootsMagSecurity
@@ -11,6 +21,8 @@
     sprite: _NF/Clothing/Shoes/Boots/magboots-security.rsi
   - type: Magboots
     magbootsAlert: MagbootsSecurity
+  - type: ClothingSlowOnDamageModifier # Mono
+    modifier: 0.75 # Mono
 
 - type: entity
   parent: ClothingShoesBootsMagSecurity
@@ -53,9 +65,9 @@
     sprite: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi
   - type: Magboots
     magbootsAlert: MagbootsNfsd
-  - type: ClothingSpeedModifier
-    walkModifier: 0.95
-    sprintModifier: 0.9
+#  - type: ClothingSpeedModifier
+#    walkModifier: 0.95
+#    sprintModifier: 0.9
 
 - type: entity
   parent: [BaseC3PirateContraband, ClothingShoesBootsMagNfsd]

@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -23,10 +24,22 @@
     state: space_artillery
   discipline: FactionUniversal
   tier: 2
-  cost: 40000
+  cost: 30000
   recipeUnlocks:
   - ASM220TorpedoHEUniversal
   - ASM220TorpedoECMUniversal
+
+- type: technology
+  id: UniversalTorpedoAmmoAdvanced
+  name: research-technology-universal-asm220-advanced
+  icon:
+    sprite: _Mono/Objects/ShuttleWeapons/asm220.rsi
+    state: space_artillery
+  discipline: FactionUniversal
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - ASM220TorpedoLOSATUniversal
 
 - type: technology
   id: Universal150mmAmmo

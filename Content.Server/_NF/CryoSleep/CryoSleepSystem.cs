@@ -102,6 +102,8 @@ public sealed partial class CryoSleepSystem : SharedCryoSleepSystem
         InitReturning();
     }
 
+    private Vector2 _cryoCoords = Vector2.Zero; // Mono - Initial cryo body location in the cryo map.
+    private readonly Vector2 _cryoDistance = Vector2.Create(0, 1); // Mono - Amount to increment body location after each cryo.
     private EntityUid GetStorageMap()
     {
         if (Deleted(_storageMap))
@@ -397,7 +399,8 @@ public sealed partial class CryoSleepSystem : SharedCryoSleepSystem
         var storage = GetStorageMap();
         var bodyTransform = Transform(bodyId);
         _container.Remove(bodyId, cryo.BodyContainer, reparent: false, force: true);
-        bodyTransform.Coordinates = new EntityCoordinates(storage, Vector2.Zero);
+        bodyTransform.Coordinates = new EntityCoordinates(storage, _cryoCoords); // Mono, replaced Vector.Zero with _cryoCoords. Sets body to this location on cryomap.
+        _cryoCoords = Vector2.Add(_cryoCoords, _cryoDistance); // Mono - Increments for next body.
 
         RaiseLocalEvent(bodyId, new CryosleepEnterEvent(cryopod, mind?.UserId), true);
 

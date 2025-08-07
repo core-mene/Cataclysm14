@@ -1,7 +1,10 @@
 # SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
+
+# USSP
 
 - type: entity
   id: SuitStorageUssp
@@ -14,7 +17,7 @@
         - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitUsspL27
         - id: ClothingMaskGasSecurity
-        - id: JetpackMiniFilled
+        - id: JetpackVoidFilled
         - id: ClothingShoesBootsMagSecurity
   - type: AccessReader
     access: [["USSP"]]
@@ -31,10 +34,12 @@
         - id: ClothingOuterHardsuitOfficerCombat
         - id: ClothingOuterHardsuitUsspL30
         - id: ClothingMaskGasSecurity
-        - id: JetpackMiniFilled
+        - id: JetpackVoidFilled
         - id: ClothingShoesBootsMagSecurity
   - type: AccessReader
     access: [["USSPCommand"]]
+
+# TSFMC
 
 - type: entity
   id: SuitStorageM82c
@@ -46,7 +51,8 @@
     - id: OxygenTankFilled
     - id: NitrogenTankFilled
     - id: ClothingOuterHardsuitM82c
-    - id: JetpackMiniFilled
+    - id: JetpackSecurityFilled
+    - id: ClothingShoesBootsMagSecurity
   - type: AccessReader
     access: [["Security"]]
 
@@ -60,7 +66,8 @@
     - id: OxygenTankFilled
     - id: NitrogenTankFilled
     - id: ClothingOuterHardsuitM82b
-    - id: JetpackMiniFilled
+    - id: JetpackSecurityFilled
+    - id: ClothingShoesBootsMagSecurity
   - type: AccessReader
     access: [["Security"]]
 
@@ -74,6 +81,39 @@
     - id: OxygenTankFilled
     - id: NitrogenTankFilled
     - id: ClothingOuterHardsuitM86
-    - id: JetpackMiniFilled
+    - id: JetpackSecurityFilled
+    - id: ClothingShoesBootsMagSecurity
   - type: AccessReader
     access: [["Security"]]
+
+# Syndicate
+
+#Commander Blood-red hardsuit
+- type: entity
+  id: SuitStorageSyndieCommander
+  parent: SuitStorageBase
+  suffix: Syndicate Commander Hardsuit
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
+        - id: ClothingOuterHardsuitSyndieCommander
+        - id: ClothingShoesBootsMagSyndie
+        - id: ClothingMaskGasSyndicate
+        - id: JetpackBlackFilled # Frontier
+
+#Blood-red medic hardsuit
+- type: entity
+  id: SuitStorageSyndieMedic
+  parent: SuitStorageBase
+  suffix: Syndicate Medic Hardsuit
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
+        - id: ClothingOuterHardsuitSyndieMedic
+        - id: ClothingShoesBootsMagSyndie
+        - id: ClothingMaskGasSyndicate
+        - id: JetpackBlackFilled # Frontier

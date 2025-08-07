@@ -59,6 +59,8 @@
     clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
+  - type: ClothingSlowOnDamageModifier
+    modifier: 0.75
 
 - type: entity
   parent: ClothingShoesBase
@@ -102,6 +104,8 @@
     clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
+  - type: ClothingSlowOnDamageModifier
+    modifier: 0.75
 
 - type: entity
   parent: ClothingShoesBase
@@ -145,6 +149,8 @@
     clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
+  - type: ClothingSlowOnDamageModifier
+    modifier: 0.75
 
 # Volta
 - type: entity
@@ -181,3 +187,5 @@
     clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
+  - type: ClothingSlowOnDamageModifier
+    modifier: 0.75

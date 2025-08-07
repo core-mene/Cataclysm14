@@ -1,3 +1,38 @@
+# SPDX-FileCopyrightText: 2022 Emisse
+# SPDX-FileCopyrightText: 2022 Jezithyr
+# SPDX-FileCopyrightText: 2022 Moony
+# SPDX-FileCopyrightText: 2022 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 Visne
+# SPDX-FileCopyrightText: 2022 ZeroDayDaemon
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 DrSmugleaf
+# SPDX-FileCopyrightText: 2023 Ed
+# SPDX-FileCopyrightText: 2023 Ilya246
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Menshin
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Puro
+# SPDX-FileCopyrightText: 2023 Ubaser
+# SPDX-FileCopyrightText: 2023 crazybrain23
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2023 sTiKyt
+# SPDX-FileCopyrightText: 2024 ArZarLordOfMango
+# SPDX-FileCopyrightText: 2024 Cojoke
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 Leon Friedrich
+# SPDX-FileCopyrightText: 2024 Nairod
+# SPDX-FileCopyrightText: 2024 Ty Ashley
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 beck-thompson
+# SPDX-FileCopyrightText: 2024 deltanedas
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: [ClothingShoesBase, BaseToggleClothing]
   id: ClothingShoesBootsMagBase
@@ -20,8 +55,8 @@
     - type: NoSlip
   - type: Magboots
   - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.8
+    walkModifier: 0.9 # Mono
+    sprintModifier: 0.85 # 0.8->0.85 - Mono
   - type: Appearance
   - type: GenericVisualizer
     visuals:
@@ -95,8 +130,8 @@
   - type: Clothing
     sprite: Clothing/Shoes/Boots/magboots-syndicate.rsi
   - type: ClothingSpeedModifier
-    walkModifier: 0.95
-    sprintModifier: 0.9
+    walkModifier: 0.9
+    sprintModifier: 0.85 # 0.9->0.85 Mono
   - type: GasTank
     outputPressure: 42.6
     air:
@@ -109,6 +144,8 @@
   - type: Item
     sprite: null
     size: Normal
+  - type: ClothingSlowOnDamageModifier # Mono
+    modifier: 0.75 # Mono
 
 - type: entity
   id: ActionToggleMagboots

@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Dmitri
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 GreaseMonk
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   name: shipyard RCD
   parent: RCD
@@ -49,8 +58,16 @@
         Structural: 5
     soundHit:
       collection: MetalThud
+  - type: Wieldable #Mono
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 18
+        Structural: 5 #Mono end
   - type: Item
-    size: Huge
+    size: Large #Mono: Huge > Large
+    shape: 
+    - 0,0,1,3 #Mono end
   - type: Clothing
     sprite: Objects/Weapons/Melee/fireaxe.rsi
     quickEquip: false
@@ -60,6 +77,9 @@
   - type: Tool
     qualities:
       - Axing
+      - Prying #Mono
+    useSound: #Mono
+      path: /Audio/Items/crowbar.ogg #Mono
   - type: ToolTileCompatible
   - type: UseDelay
     delay: 1

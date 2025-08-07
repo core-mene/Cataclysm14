@@ -11,32 +11,31 @@
 # GitHub: starch70
 # Discord: _starch_
 
-# Notes:
+# Notes: upgraded zenith as a ruin w/ tech disks
 - type: pointOfInterest
-  id: Polaris
+  id: Zenith
   parent: BasePOI
-  name: 'Polaris Bioresearch Center'
-  minimumDistance: 5500
-  maximumDistance: 12500
-  spawnGroup: Required
-  gridPath: /Maps/_Mono/POI/polaris.yml
+  name: 'ADS Zenith CK-395'
+  minimumDistance: 12500
+  maximumDistance: 16500
+  spawnGroup: Optional
+  gridPath: /Maps/_Mono/POI/Dungeons/zenith_poi.yml
   addComponents:
   - type: IFF
-    color: "#C83737"
+    color: "#328da8"
     flags: [HideLabel]
-    readOnly: true
 
 - type: gameMap
-  id: Polaris
-  mapName: 'Polaris Bioresearch Center'
-  mapPath: /Maps/_Mono/POI/polaris.yml
+  id: Zenith
+  mapName: 'ADS Zenith CK-395'
+  mapPath: /Maps/_Mono/POI/Dungeons/zenith_poi.yml
   minPlayers: 0
   stations:
-    Polaris:
+    Zenith:
       stationProto: StandardFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Polaris Bioresearch Center'
+          mapNameTemplate: 'ADS Zenith CK-395'
         - type: StationJobs
           availableJobs: {}
         - type: StationDeadDropHintExempt

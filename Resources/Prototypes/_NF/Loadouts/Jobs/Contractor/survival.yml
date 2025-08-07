@@ -1,49 +1,26 @@
-#T0
-- type: loadout
-  id: ContractorBoxSurvivalNFOxygen
-  name: oxygen survival box
-  hideEffects:
-  - !type:GroupLoadoutEffect
-    proto: OxygenBreatherNF
-  storage:
-    back:
-    - BoxSurvivalNFOxygen
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
 
-- type: loadout
-  id: ContractorBoxSurvivalNFNitrogen
-  name: nitrogen survival box
-  hideEffects:
-  - !type:GroupLoadoutEffect
-    proto: NitrogenBreatherNF
-  storage:
-    back:
-    - BoxSurvivalNFNitrogen
-
-#T1
+#Survival boxes all replaced with mono versions with extended tanks.
 - type: loadout
   id: ContractorBoxSurvivalNFOxygenExtended
   name: extended-oxygen survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: OxygenBreatherNF
-  price: 1000
   storage:
     back:
-    - BoxSurvivalNFOxygenExtended
+    - BoxSurvivalMonoOxygenExtended
 
 - type: loadout
   id: ContractorBoxSurvivalNFNitrogenExtended
   name: extended-nitrogen survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NitrogenBreatherNF
-  price: 1000
   storage:
     back:
-    - BoxSurvivalNFNitrogenExtended
+    - BoxSurvivalMonoNitrogenExtended

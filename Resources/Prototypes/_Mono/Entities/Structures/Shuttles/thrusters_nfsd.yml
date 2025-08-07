@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2025 Honestly101
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: ThrusterLargeNfsd
+  parent: ThrusterLarge
+  suffix: TSFMC
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/Shuttles/thrusternfsd_large.rsi

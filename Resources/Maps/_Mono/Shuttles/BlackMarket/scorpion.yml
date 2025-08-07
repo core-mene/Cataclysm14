@@ -8,6 +8,7 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 Rubeebeebee
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -16,11 +17,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 260.2.0
+  engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/20/2025 06:21:14
-  entityCount: 849
+  time: 08/02/2025 08:00:55
+  entityCount: 852
 maps: []
 grids:
 - 1
@@ -2859,6 +2860,13 @@ entities:
     - type: Transform
       pos: 0.5,-2.5
       parent: 1
+- proto: FaxMachineBase
+  entities:
+  - uid: 852
+    components:
+    - type: Transform
+      pos: 2.5,-1.5
+      parent: 1
 - proto: FireAlarm
   entities:
   - uid: 390
@@ -3900,6 +3908,13 @@ entities:
     - type: Transform
       pos: 0.5,5.5
       parent: 1
+- proto: NFHolopadShip
+  entities:
+  - uid: 850
+    components:
+    - type: Transform
+      pos: 0.5,8.5
+      parent: 1
 - proto: NitrogenCanister
   entities:
   - uid: 518
@@ -4131,6 +4146,13 @@ entities:
     components:
     - type: Transform
       pos: -1.5,7.5
+      parent: 1
+- proto: Table
+  entities:
+  - uid: 851
+    components:
+    - type: Transform
+      pos: 2.5,-1.5
       parent: 1
 - proto: TableFolding
   entities:

@@ -16,9 +16,13 @@
   recipeUnlocks:
   - WeaponRifleSVSUSSP
   - WeaponSniperMosinUSSP
+  - WeaponSubMachineGunAK220USSP
   - Magazine7.62x54mmRFMJ
   - SpeedLoader7.62x54mmRFMJ
   - AmmoBox7.62x54mmRFMJ
+  - Magazine9x19mmSubMachineGunFMJ
+  - Magazine9x19mmSubMachineGunEmpty
+  - AmmoBox9x19mmFMJ
 
 - type: technology
   id: UsspPracticeAmmo
@@ -36,6 +40,8 @@
   - AmmoBox7.62x54mmRPractice
   - SpeedLoader45_magnumPractice
   - AmmoBox45_magnumPractice
+  - Magazine9x19mmSubMachineGunPractice
+  - AmmoBox9x19mmPractice
 
 - type: technology
   id: UsspIncendiaryAmmo
@@ -53,6 +59,8 @@
   - AmmoBox7.62x54mmRIncendiary
   - SpeedLoader45_magnumIncendiary
   - AmmoBox45_magnumIncendiary
+  - Magazine9x19mmSubMachineGunIncendiary
+  - AmmoBox9x19mmIncendiary
 
 - type: technology
   id: UsspMediumGuns

@@ -1,4 +1,10 @@
-﻿- type: entity
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
   parent: ClothingShoesBootsMag
   id: ClothingShoesBootsChrono
   name: futuristic boots
@@ -20,6 +26,8 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepHeavySuit
+  - type: ClothingSlowOnDamageModifier # Mono
+    modifier: 0.25 # Mono
 
 - type: entity
   parent: ClothingShoesBootsChrono
