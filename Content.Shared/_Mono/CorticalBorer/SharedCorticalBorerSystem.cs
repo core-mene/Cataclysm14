@@ -71,11 +71,9 @@ public partial class SharedCorticalBorerSystem : EntitySystem
         // Make sure the infected person is infected right
         var infestedComp = EnsureComp<CorticalBorerInfestedComponent>(target);
         infestedComp.Borer = ent;
-        Dirty(new Entity<CorticalBorerInfestedComponent>(target, infestedComp));
 
         // Set up the Borer
         comp.Host = target;
-        Dirty(ent);
     }
 
     public bool TryEjectBorer(Entity<CorticalBorerComponent> ent, EntityUid? user = null)
