@@ -202,6 +202,7 @@ public sealed partial class CorticalBorerSystem
 
         _vomit.Vomit(host, -20, -20); // half as much chem vomit, a lot that is coming up is the egg
         LayEgg(borer);
+        UpdateChems(borer, -borer.Comp.EggCost);
 
         args.Handled = true;
     }

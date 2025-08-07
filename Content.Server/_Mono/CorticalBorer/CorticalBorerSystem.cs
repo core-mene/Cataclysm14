@@ -187,7 +187,7 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
         CorticalBorerChemicalPrototype? chemProto = null;
         foreach (var chem in _proto.EnumeratePrototypes<CorticalBorerChemicalPrototype>())
         {
-            if (chem.Reagent == message.ChemProtoId)
+            if (chem.Reagent.ToLower() == message.ChemProtoId)
             {
                 chemProto = chem;
                 break;
