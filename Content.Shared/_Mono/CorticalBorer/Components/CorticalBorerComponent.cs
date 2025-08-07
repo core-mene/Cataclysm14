@@ -3,7 +3,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Mono.CorticalBorer;
 
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class CorticalBorerComponent : Component
 {
     /// <summary>
@@ -16,6 +16,7 @@ public sealed partial class CorticalBorerComponent : Component
     /// Current number of chemical points this Borer has, used to level up and buy chems
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
+    [AutoNetworkedField]
     public int ChemicalPoints = 50;
 
     /// <summary>

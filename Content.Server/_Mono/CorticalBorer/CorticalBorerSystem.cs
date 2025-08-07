@@ -48,7 +48,6 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
         SubscribeLocalEvent<CorticalBorerComponent, ReceiverOverrideEvent>(OnSpeakAttempt);
         SubscribeLocalEvent<InventoryComponent, InfestHostAttempt>(OnInfestHostAttempt);
 
-        SubscribeLocalEvent<CorticalBorerInfestedComponent, ExaminedEvent>(OnExaminedInfested);
     }
 
     private void OnStartup(Entity<CorticalBorerComponent> ent, ref ComponentStartup args)
@@ -93,6 +92,8 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
             comp.ChemicalPoints = 0;
 
         comp.ChemicalPoints += change;
+
+        Dirty(ent);
     }
 
     public void OnSpeakAttempt(Entity<CorticalBorerComponent> ent, ref ReceiverOverrideEvent args)
@@ -105,19 +106,6 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
         listenerList.Add(ent.Owner);
 
         args.ReciverUidOverride = listenerList;
-    }
-
-    private void OnExaminedInfested(Entity<CorticalBorerInfestedComponent> infected, ref ExaminedEvent args)
-    {
-        if (!args.IsInDetailsRange
-            || args.Examined != args.Examiner)
-            return;
-
-        if (infected.Comp.ControlTimeEnd is not { } cte)
-            return;
-
-        var timeRemaining = Math.Floor((cte - _timing.CurTime).TotalSeconds);
-        args.PushMarkup(Loc.GetString("infested-control-examined", ("timeremaining", timeRemaining)));
     }
 
     public void OnInfestHostAttempt(Entity<InventoryComponent> entity, ref InfestHostAttempt args)
