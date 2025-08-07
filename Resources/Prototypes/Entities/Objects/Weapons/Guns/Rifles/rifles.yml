@@ -150,10 +150,10 @@
     id: AKM # Frontier
 
 - type: entity
-  name: TCA M-6 Lecter (5.56x45mm)
+  name: TCA M-6 Lecter (6.8x52mm Caseless)
   parent: [BaseWeaponRifle, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponRifleLecter
-  description: A high end military grade assault rifle. Uses 5.56x45mm ammo. On the receiver is a label that says 'for authorized use only.'
+  description: A high end military grade assault rifle. Uses standard TSF caseless ammo. On the receiver is a label that says 'for authorized use only.'
   components:
   - type: Item # Mono
     size: Huge
@@ -177,21 +177,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine5.56x45mmFMJ
+        startingItem: Magazine68x52mmCaseless # Mono
         insertSound: /Audio/_Mono/Weapons/Guns/SmallArms/MagIn/m16_magin.ogg # Mono
         ejectSound: /Audio/_Mono/Weapons/Guns/SmallArms/MagOut/skm_magout.ogg # Mono
         priority: 2
         whitelist:
           tags:
-            - Magazine5.56x45mmFMJ
+            - Magazine68x52mmCaseless # Mono
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge5.56x45mmFMJ
+        startingItem: Cartridge68x52mmCaseless # Mono
         priority: 1
         whitelist:
           tags:
-            - Cartridge5.56x45mmFMJ
+            - Cartridge68x52mmCaseless # Mono
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

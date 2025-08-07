@@ -23,21 +23,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine5.56x45mmRubber
+        startingItem: Magazine68x52mmCaselessRubber
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine5.56x45mmFMJ
+            - Magazine68x52mmCaseless
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge5.56x45mmRubber
+        startingItem: Cartridge68x52mmCaselessRubber
         priority: 1
         whitelist:
           tags:
-            - Cartridge5.56x45mmFMJ
+            - Cartridge68x52mmCaseless
 
 #Delta-V
 - type: entity

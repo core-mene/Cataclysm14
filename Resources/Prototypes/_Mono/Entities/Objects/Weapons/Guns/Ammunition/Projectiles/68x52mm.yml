@@ -20,3 +20,14 @@
     damage:
       types:
         Blunt: 2
+
+- type: entity
+  id: Bullet68x52mmCaselessRubber
+  name: bullet (6.8x52mm Caseless rubber)
+  parent: BaseBulletRubber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3
