@@ -62,7 +62,7 @@
       allowedTiles:
         - FloorAsteroidSand
       entities:
-        - WallRockSand
+        - MonoPlanetmapOreSand
     - !type:BiomeDummyLayer
       id: Loot
     # Fill layer
@@ -151,7 +151,7 @@
         cellularDistanceFunction: Euclidean
         cellularReturnType: Distance2
       entities:
-        - WallRock
+        - MonoPlanetmapOreBase
     - !type:BiomeDummyLayer
       id: Loot
     # Water
@@ -278,7 +278,7 @@
         cellularDistanceFunction: Euclidean
         cellularReturnType: Distance2
       entities:
-        - WallRockBasalt
+        - MonoPlanetmapOreBasalt
     - !type:BiomeDummyLayer
       id: Loot
     # Fill basalt
@@ -386,7 +386,7 @@
         cellularDistanceFunction: Euclidean
         cellularReturnType: Distance2
       entities:
-        - WallRockSnow
+        - MonoPlanetmapOreSnow
     # Ice tiles
     - !type:BiomeTileLayer
       tile: FloorIce
@@ -475,7 +475,7 @@
       allowedTiles:
         - FloorChromite
       entities:
-        - WallRockChromite
+        - MonoPlanetmapOreChromite
     # chasm time
 #    - !type:BiomeEntityLayer
 #      allowedTiles:
@@ -538,7 +538,7 @@
       allowedTiles:
         - FloorAsteroidSand
       entities:
-        - WallRock
+        - MonoPlanetmapOreBase
     - !type:BiomeDummyLayer
       id: Loot
     - !type:BiomeTileLayer
