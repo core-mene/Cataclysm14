@@ -367,23 +367,23 @@
     highPressureMultiplier: 0.2
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.3
+    damageCoefficient: 0.4
   - type: Armor # Mono - Armor Value Changes
     modifiers:
       coefficients:
-        Blunt: 0.3
-        Slash: 0.3
-        Piercing: 0.25
-        Heat: 0.25
-        Radiation: 0.2
-        Caustic: 0.2
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.4
+        Heat: 0.45
+        Radiation: 0.6
+        Caustic: 0.55
   - type: ClothingSpeedModifier # Mono - Armor Value Changes
     walkModifier: 0.85
-    sprintModifier: 0.7
+    sprintModifier: 0.85
   - type: FactionClothing
     faction: NanoTrasen
   - type: StaminaDamageResistance # Mono - Stamres
-    coefficient: 0.3
+    coefficient: 0.5
   - type: PirateBountyItem # Mono
     id: ClothingOuterHardsuitTacsuitHighValue
 
