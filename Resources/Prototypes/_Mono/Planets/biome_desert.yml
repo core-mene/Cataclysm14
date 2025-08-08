@@ -16,7 +16,7 @@
     - FloorDesert
     - FloorDesertRocky
     - FloorDesertPlanet
-    - FloorAsteroidSandUnvariantized
+    - FloorAsteroidSandUnvariantizedPlanet
     entities:
     - FloraRockSolid
   # Rock decals
@@ -25,8 +25,8 @@
     - FloorDesert
     - FloorDesertRocky
     - FloorDesertPlanet
-    - FloorAsteroidSandUnvariantized
-    - FloorAsteroidSand
+    - FloorAsteroidSandUnvariantizedPlanet
+    - FloorAsteroidSandPlanet
     threshold: 0.9
     divisions: 1
     noise:
@@ -74,7 +74,7 @@
   # Large rock areas
   - !type:BiomeEntityLayer
     allowedTiles:
-    - FloorAsteroidSandUnvariantized
+    - FloorAsteroidSandUnvariantizedPlanet
     threshold: -0.40
     noise:
       seed: 0
@@ -93,7 +93,7 @@
   # Base tiles
   - !type:BiomeTileLayer
     threshold: -1
-    tile: FloorAsteroidSand
+    tile: FloorAsteroidSandPlanet
   # Apply planet desert tile as noise so it doesnt look flat and boring
   - !type:BiomeTileLayer
     threshold: -0.40
@@ -109,7 +109,7 @@
       cellularReturnType: Distance2
   # Unvariantized tile for rock walls to be placed on
   - !type:BiomeTileLayer
-    tile: FloorAsteroidSandUnvariantized
+    tile: FloorAsteroidSandUnvariantizedPlanet
     threshold: -0.30
     noise:
       seed: 0
