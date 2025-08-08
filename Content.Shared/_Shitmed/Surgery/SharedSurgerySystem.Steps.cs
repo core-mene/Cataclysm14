@@ -432,31 +432,14 @@ public abstract partial class SharedSurgerySystem
     // 2 mono function
     private void OnCorticalBorerRemovalStep(Entity<SurgeryStepRemoveCorticalBorerComponent> ent, ref SurgeryStepEvent args)
     {
-        if (!TryComp(args.Part, out BodyPartComponent? partComp) || partComp.PartType != BodyPartType.Head)
-            return;
-
-        Entity<CorticalBorerComponent>? borer = null;
-
-        if (partComp.InfestationContainer.ContainedEntities.Count != 0)
-        {
-            foreach (var contained in partComp.InfestationContainer.ContainedEntities)
-            {
-                if (TryComp<CorticalBorerComponent>(contained, out var borerComponent))
-                {
-                    borer = (contained, borerComponent);
-                    break;
-                }
-            }
-        }
-
-        if(borer.HasValue)
-            _corticalBorer.TryEjectBorer(borer.Value);
+        if (TryComp<CorticalBorerInfestedComponent>(args.Body, out var infested) &&
+            infested.InfestationContainer.ContainedEntities.Count != 0)
+            _corticalBorer.TryEjectBorer(infested.Borer);
     }
 
     private void OnCorticalBorerRemovalCheck(Entity<SurgeryStepRemoveCorticalBorerComponent> ent, ref SurgeryStepCompleteCheckEvent args)
     {
-        if (!HasComp<BodyPartComponent>(args.Part) ||
-            HasComp<CorticalBorerInfestedComponent>(args.Body))
+        if (HasComp<CorticalBorerInfestedComponent>(args.Body))
             args.Cancelled = true;
     }
 

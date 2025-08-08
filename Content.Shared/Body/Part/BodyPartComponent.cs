@@ -120,11 +120,6 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
     public ItemSlot ItemInsertionSlot = new();
 
     /// <summary>
-    ///     Mono change: Slot for evil bugs, like the Cortical Borer
-    /// </summary>
-    public Container InfestationContainer = new();
-
-    /// <summary>
     ///     Shitmed Change: Current species. Dictates things like body part sprites.
     /// </summary>
     [DataField, AutoNetworkedField]

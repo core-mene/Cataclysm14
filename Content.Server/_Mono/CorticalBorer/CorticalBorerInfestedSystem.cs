@@ -3,6 +3,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Shared._Mono.CorticalBorer;
+using Content.Shared._Shitmed.Body.Events;
+using Content.Shared.Body.Part;
 using Content.Shared.Examine;
 using Content.Shared.Mobs;
 using Robust.Server.Containers;
@@ -22,13 +24,16 @@ public sealed class CorticalBorerInfestedSystem : EntitySystem
     {
         SubscribeLocalEvent<CorticalBorerInfestedComponent, MapInitEvent>(OnInit);
         SubscribeLocalEvent<CorticalBorerInfestedComponent, ExaminedEvent>(OnExaminedInfested);
-        SubscribeLocalEvent<CorticalBorerInfestedComponent, MobStateChangedEvent>(OnStateChange);
         SubscribeLocalEvent<CorticalBorerInfestedComponent, ComponentShutdown>(OnComponentShutdown);
+
+        SubscribeLocalEvent<CorticalBorerInfestedComponent, BodyPartRemovedEvent>(OnBodyPartRemoved);
+        SubscribeLocalEvent<CorticalBorerInfestedComponent, MobStateChangedEvent>(OnStateChange);
     }
 
     private void OnInit(Entity<CorticalBorerInfestedComponent> infested, ref MapInitEvent args)
     {
         infested.Comp.ControlContainer = _container.EnsureContainer<Container>(infested, "ControlContainer");
+        infested.Comp.InfestationContainer = _container.EnsureContainer<Container>(infested, "InfestationContainer");
     }
 
     private void OnExaminedInfested(Entity<CorticalBorerInfestedComponent> infected, ref ExaminedEvent args)
@@ -58,5 +63,15 @@ public sealed class CorticalBorerInfestedSystem : EntitySystem
     {
         if(infected.Comp.ControlTimeEnd.HasValue)
             _borer.EndControl(infected.Comp.Borer);
+    }
+
+    private void OnBodyPartRemoved(Entity<CorticalBorerInfestedComponent> infected, ref BodyPartRemovedEvent args)
+    {
+        if (TryComp<BodyPartComponent>(args.Part, out var part) &&
+            part.PartType == BodyPartType.Head)
+        {
+            _borer.EndControl(infected.Comp.Borer);
+            _borer.TryEjectBorer(infected.Comp.Borer);
+        }
     }
 }

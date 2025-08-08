@@ -18,6 +18,11 @@ public sealed partial class CorticalBorerInfestedComponent : Robust.Shared.GameO
     public Entity<CorticalBorerComponent> Borer = new();
 
     /// <summary>
+    ///     Container for borer
+    /// </summary>
+    public Container InfestationContainer = new();
+
+    /// <summary>
     /// is the person under the borer's control
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]

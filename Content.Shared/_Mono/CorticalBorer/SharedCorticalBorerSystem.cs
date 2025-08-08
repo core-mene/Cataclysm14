@@ -13,6 +13,7 @@ using Content.Shared.MedicalScanner;
 using Content.Shared.Popups;
 using Content.Shared.StatusEffect;
 using Content.Shared.Coordinates;
+using Content.Shared.IdentityManagement;
 using Robust.Shared.Containers;
 using Robust.Shared.Serialization;
 
@@ -62,48 +63,33 @@ public partial class SharedCorticalBorerSystem : EntitySystem
         if (!TryComp<BodyComponent>(target, out var body))
             return;
 
-        var headSlots = _bodySystem.GetBodyChildrenOfType(target, BodyPartType.Head, body);
-        var head = headSlots.FirstOrDefault().Component; // just get into the first head why not
+        var hasHead = _bodySystem.GetBodyChildrenOfType(target, BodyPartType.Head, body).Count() != 0;
 
         // if we don't get a head don't try to stick the borer in it
-        if (head == null)
+        if (!hasHead)
+        {
+            _popup.PopupEntity(Loc.GetString("cortical-borer-headless", ("target", Identity.Entity(target, EntityManager))), ent.Owner, ent.Owner, PopupType.Medium);
             return;
-
-        // Make sure they get into the target
-        if (!_container.Insert(uid, head.InfestationContainer))
-            return;
+        }
 
         // Make sure the infected person is infected right
         var infestedComp = EnsureComp<CorticalBorerInfestedComponent>(target);
-        infestedComp.Borer = ent;
+
+        // Make sure they get into the target
+        if (!_container.Insert(uid, infestedComp.InfestationContainer))
+        {
+            RemCompDeferred<CorticalBorerInfestedComponent>(target); // oh no it didn't work somehow so remove the comp you just added...
+            return;
+        }
 
         // Set up the Borer
+        infestedComp.Borer = ent;
         comp.Host = target;
     }
 
-    public bool TryEjectBorer(Entity<CorticalBorerComponent> ent, EntityUid? user = null)
+    public bool TryEjectBorer(Entity<CorticalBorerComponent> ent)
     {
         if (ent.Comp.Host is not { } host)
-            return false;
-
-        if (!TryComp<BodyComponent>(host, out var body))
-            return false;
-
-        var headSlots = _bodySystem.GetBodyChildrenOfType(host, BodyPartType.Head, body);
-        BodyPartComponent? head = null;
-
-        // check every head because what if it's not in the first one somehow
-        foreach (var (uid, comp) in headSlots)
-        {
-            if (_container.ContainsEntity(uid, ent))
-            {
-                head = comp;
-                break;
-            }
-        }
-
-        // if its somehow not there
-        if (head == null)
             return false;
 
         // Make sure they get out of the host
