@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server._DV.Station.Systems;
 using Content.Shared._DV.Planet;
 using Robust.Shared.Prototypes;
