@@ -54,9 +54,11 @@ using Content.Server.Weather;
 using Content.Shared.Weather;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
+using Robust.Shared.Physics.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Robust.Shared.GameObjects;
 
 namespace Content.Server.Salvage;
 
@@ -86,6 +88,13 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
     private EntityUid mapUid = EntityUid.Invalid;
 #pragma warning restore IDE1006
     // End Frontier
+
+    // Mono
+    private const float MassConstant = 50000f; // Arbitrary, at this value massMultiplier = 0.65
+    private const float MassMultiplierMin = 0.5f;
+    private const float MassMultiplierMax = 5f;
+    private const float StartupTime = 5.5f;
+    private const float HyperSpaceTime = 50f;
 
     public SpawnSalvageMissionJob(
         double maxTime,
@@ -313,7 +322,8 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
         if (shuttleUid is { Valid: true })
         {
             var shuttle = _entManager.GetComponent<ShuttleComponent>(shuttleUid.Value);
-            _shuttle.FTLToCoordinates(shuttleUid.Value, shuttle, new EntityCoordinates(mapUid, coords), 0f, 5.5f, 50f);
+            MassAdjustFTLExpedStartup(shuttleUid, out var massStartupTime);
+            _shuttle.FTLToCoordinates(shuttleUid.Value, shuttle, new EntityCoordinates(mapUid, coords), 0f, massStartupTime, HyperSpaceTime);
         }
 
         List<Vector2i> reservedTiles = new();
@@ -362,6 +372,18 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
             await SpawnDungeonLoot(dungeon, missionBiome, lootProto, mapUid, grid, random, reservedTiles);
         }
         return true;
+    }
+
+    private void MassAdjustFTLExpedStartup(EntityUid? shuttleUid, out float massStartupTime)
+    {
+        var massMultiplier = 1f;
+        if (_entManager.TryGetComponent(shuttleUid, out PhysicsComponent? shuttlePhysics))
+        {
+            var mass = shuttlePhysics.Mass;
+            massMultiplier = float.Log(float.Sqrt(mass / MassConstant + float.E));
+            massMultiplier = float.Clamp(massMultiplier, MassMultiplierMin, MassMultiplierMax);
+        }
+        massStartupTime = StartupTime * massMultiplier;
     }
 
     private async Task SpawnDungeonLoot(Dungeon? dungeon, SalvageBiomeMod biomeMod, SalvageLootPrototype loot, EntityUid gridUid, MapGridComponent grid, Random random, List<Vector2i> reservedTiles)
