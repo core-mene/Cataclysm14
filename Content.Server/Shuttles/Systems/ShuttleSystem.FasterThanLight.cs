@@ -725,7 +725,7 @@ public sealed partial class ShuttleSystem
             massAdjustedCooldown = drive.Cooldown;
             return;
         }
-        var adjustedMass = shuttlePhysics.Mass / drive.DriveMassMultiplier;
+        var adjustedMass = shuttlePhysics.Mass * drive.DriveMassMultiplier;
         var massMultiplier = float.Log(float.Sqrt(adjustedMass / MassConstant + float.E));
         massMultiplier = float.Clamp(massMultiplier, MassMultiplierMin, MassMultiplierMax);
         massAdjustedCooldown = drive.Cooldown * massMultiplier;

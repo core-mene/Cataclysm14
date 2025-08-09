@@ -265,7 +265,7 @@ public sealed partial class ShuttleConsoleSystem
             massAdjustedStartupTime = drive.StartupTime;
             return;
         }
-        var adjustedMass = shuttlePhysics.Mass / drive.DriveMassMultiplier;
+        var adjustedMass = shuttlePhysics.Mass * drive.DriveMassMultiplier;
         var massMultiplier = float.Log(float.Sqrt(adjustedMass / MassConstant + float.E));
         massMultiplier = float.Clamp(massMultiplier, MassMultiplierMin, MassMultiplierMax);
         massAdjustedStartupTime = drive.StartupTime * massMultiplier;

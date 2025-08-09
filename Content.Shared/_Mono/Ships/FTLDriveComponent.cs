@@ -47,9 +47,8 @@ public sealed partial class FTLDriveComponent : Component
     public bool MassAffectedDrive = true;
 
     /// <summary>
-    /// A multiplier of the effective mass a ship will have from mass calculations.
-    /// Set MassAffectedDrive to false instead of setting this to Zero.
-    /// i.e. 2f = 2 times the mass for calculations.
+    /// A multiplier of the effective mass a ship will have for mass calculations.
+    /// Ships with mass zero will have half the FTL times.
     /// </summary>
     [DataField]
     [AutoNetworkedField]
