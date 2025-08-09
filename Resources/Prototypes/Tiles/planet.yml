@@ -26,6 +26,8 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
+  barestepSounds:
+    collection: FootstepAsteroid
   heatCapacity: 10000
   weather: true
   indestructible: true
@@ -59,6 +61,8 @@
   baseTurf: FloorAsteroidSandUnvariantizedPlanet
   footstepSounds:
     collection: FootstepAsteroid
+  barestepSounds:
+    collection: FootstepAsteroid
   heatCapacity: 10000
   weather: true
   indestructible: true
@@ -90,6 +94,8 @@
   isSubfloor: true
   baseTurf: FloorAsteroidSandUnvariantizedPlanet
   footstepSounds:
+    collection: FootstepAsteroid
+  barestepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
   weather: true
@@ -131,6 +137,8 @@
   baseTurf: FloorAsteroidSandUnvariantizedPlanet
   footstepSounds:
     collection: FootstepAsteroid
+  barestepSounds:
+    collection: FootstepAsteroid
   heatCapacity: 10000
   weather: true
   indestructible: true
@@ -151,6 +159,8 @@
   baseTurf: FloorAsteroidSandUnvariantizedPlanet
   footstepSounds:
     collection: FootstepAsteroid
+  barestepSounds:
+    collection: FootstepAsteroid
   heatCapacity: 10000
   weather: true
   indestructible: true
@@ -161,6 +171,8 @@
   sprite: /Textures/Tiles/Asteroid/asteroid0.png
   isSubfloor: true
   footstepSounds:
+    collection: FootstepAsteroid
+  barestepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
   weather: true
@@ -187,6 +199,8 @@
   - 0.0116
   isSubfloor: true
   footstepSounds:
+    collection: FootstepAsteroid
+  barestepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
   weather: true
@@ -221,6 +235,8 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepGrass
+  barestepSounds:
+    collection: FootstepGrass
   itemDrop: FloorTileItemGrass
   heatCapacity: 10000
   weather: true
@@ -233,6 +249,8 @@
   sprite: /Textures/Tiles/Planet/basalt.png
   isSubfloor: true
   footstepSounds:
+    collection: FootstepAsteroid
+  barestepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
   weather: true
@@ -271,6 +289,8 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepSnow
+  barestepSounds:
+    collection: FootstepSnow
   heatCapacity: 10000
   weather: true
   indestructible: true
@@ -302,6 +322,8 @@
     West: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_west.png
   isSubfloor: true
   footstepSounds:
+    collection: FootstepSnow
+  barestepSounds:
     collection: FootstepSnow
   heatCapacity: 10000
   weather: true
