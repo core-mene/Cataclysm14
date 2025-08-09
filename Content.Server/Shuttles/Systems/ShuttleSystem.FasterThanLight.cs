@@ -85,7 +85,7 @@ public sealed partial class ShuttleSystem
         Params = AudioParams.Default.WithVolume(-5f),
     };
 
-    private const float MassConstant = 50000f; // Arbitrary, at this value massMultiplier = 0.65
+    private const float MassConstant = 50f; // Arbitrary, at this value massMultiplier = 0.65
     private const float MassMultiplierMin = 0.5f;
     private const float MassMultiplierMax = 5f;
 

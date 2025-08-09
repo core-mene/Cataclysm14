@@ -90,7 +90,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
     // End Frontier
 
     // Mono
-    private const float MassConstant = 50000f; // Arbitrary, at this value massMultiplier = 0.65
+    private const float MassConstant = 50f; // Arbitrary, at this value massMultiplier = 0.65
     private const float MassMultiplierMin = 0.5f;
     private const float MassMultiplierMax = 5f;
     private const float StartupTime = 5.5f;
