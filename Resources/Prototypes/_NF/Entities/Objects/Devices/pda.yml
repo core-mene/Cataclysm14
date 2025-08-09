@@ -432,11 +432,11 @@
 
 - type: entity
   parent: PassengerPDA
-  id: ContractorPDA
-  name: contractor PDA
+  id: SpacerPDA
+  name: spacer PDA
   components:
   - type: Pda
-    id: ContractorIDCard
+    id: SpacerIDCard
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -448,7 +448,7 @@
   id: ClearNFPDA
   components:
   - type: Pda
-    id: ContractorIDCard
+    id: SpacerIDCard
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:

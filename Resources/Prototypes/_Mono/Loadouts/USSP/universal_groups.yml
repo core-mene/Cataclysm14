@@ -7,7 +7,7 @@
 
 - type: loadoutGroup
   id: USSPBackpack
-  name: loadout-group-contractor-backpack
+  name: loadout-group-spacer-backpack
   minLimit: 1
   loadouts:
   - USSPBackpack
@@ -18,7 +18,7 @@
 
 - type: loadoutGroup
   id: USSPBackpackSergeant
-  name: loadout-group-contractor-backpack
+  name: loadout-group-spacer-backpack
   minLimit: 1
   loadouts:
   - USSPModsuitUSSPVaryag
@@ -29,7 +29,7 @@
 
 - type: loadoutGroup
   id: USSPBelt
-  name: loadout-group-contractor-belt
+  name: loadout-group-spacer-belt
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -40,7 +40,7 @@
 
 - type: loadoutGroup
   id: USSPBeltMedic
-  name: loadout-group-contractor-belt
+  name: loadout-group-spacer-belt
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -52,7 +52,7 @@
 
 #- type: loadoutGroup
 #  id: USSPBackpackCorporal
-#  name: loadout-group-contractor-backpack
+#  name: loadout-group-spacer-backpack
 #  minLimit: 1
 #  loadouts:
 #  - USSPModsuitUSSPVaryag
@@ -63,7 +63,7 @@
 
 - type: loadoutGroup
   id: USSPOuterClothingOfficer
-  name: loadout-group-contractor-outerclothing
+  name: loadout-group-spacer-outerclothing
   loadouts:
   - USSPClothingCoat
   - USSPClothingL10A
@@ -72,7 +72,7 @@
 
 - type: loadoutGroup
   id: USSPOuterClothing
-  name: loadout-group-contractor-outerclothing
+  name: loadout-group-spacer-outerclothing
   loadouts:
   - USSPClothingL10
   subgroups:
@@ -80,7 +80,7 @@
 
 - type: loadoutGroup
   id: USSPJumpsuit
-  name: loadout-group-contractor-jumpsuit
+  name: loadout-group-spacer-jumpsuit
   hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
@@ -90,7 +90,7 @@
 
 - type: loadoutGroup
   id: USSPMedhud
-  name: loadout-group-contractor-glasses
+  name: loadout-group-spacer-glasses
   hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
@@ -100,14 +100,14 @@
 
 - type: loadoutGroup
   id: USSPHead
-  name: loadout-group-contractor-head
+  name: loadout-group-spacer-head
   loadouts:
   - USSPHelmet
   - USSPBeret
 
 - type: loadoutGroup
   id: USSPEars
-  name: loadout-group-contractor-ears
+  name: loadout-group-spacer-ears
   hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
@@ -117,7 +117,7 @@
 
 - type: loadoutGroup
   id: USSPEarsCommand
-  name: loadout-group-contractor-ears
+  name: loadout-group-spacer-ears
   hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
@@ -127,12 +127,12 @@
 
 - type: loadoutGroup
   id: USSPHeadCommissar
-  name: loadout-group-contractor-head
+  name: loadout-group-spacer-head
   loadouts:
   - USSPCommissarCap
 
 - type: loadoutGroup
   id: USSPHeadOfficer
-  name: loadout-group-contractor-head
+  name: loadout-group-spacer-head
   loadouts:
   - USSPOfficerCap

@@ -7,7 +7,7 @@
 
 - type: loadoutGroup
   id: TsfmcBackpack
-  name: loadout-group-contractor-backpack
+  name: loadout-group-spacer-backpack
   minLimit: 1
   loadouts:
   - TsfmcClothingBackpack
@@ -21,7 +21,7 @@
 
 - type: loadoutGroup
   id: TsfmcEngiModsuit
-  name: loadout-group-contractor-backpack
+  name: loadout-group-spacer-backpack
   minLimit: 1
   loadouts:
   - TsfmcEngiClothingModsuit
@@ -37,7 +37,7 @@
 
 - type: loadoutGroup
   id: TsfmcJumpsuit
-  name: loadout-group-contractor-jumpsuit
+  name: loadout-group-spacer-jumpsuit
   minLimit: 1
   loadouts:
   - TsfmcClothingJumpsuit
@@ -47,7 +47,7 @@
 
 - type: loadoutGroup
   id: TsfmcJumpsuitEngi
-  name: loadout-group-contractor-jumpsuit
+  name: loadout-group-spacer-jumpsuit
   minLimit: 1
   loadouts:
   - TsfmcEngineeringClothingJumpsuit
@@ -58,7 +58,7 @@
 
 - type: loadoutGroup
   id: TsfmcShoes
-  name: loadout-group-contractor-shoes
+  name: loadout-group-spacer-shoes
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -69,7 +69,7 @@
 
 - type: loadoutGroup
   id: TsfmcGloves
-  name: loadout-group-contractor-gloves
+  name: loadout-group-spacer-gloves
   hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
@@ -79,7 +79,7 @@
 
 - type: loadoutGroup
   id: TsfmcBrigmedicGloves
-  name: loadout-group-contractor-gloves
+  name: loadout-group-spacer-gloves
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -91,7 +91,7 @@
 
 - type: loadoutGroup
   id: TsfmcBelt
-  name: loadout-group-contractor-belt
+  name: loadout-group-spacer-belt
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -102,7 +102,7 @@
 
 - type: loadoutGroup
   id: TsfmcUtilBelt
-  name: loadout-group-contractor-belt
+  name: loadout-group-spacer-belt
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -113,7 +113,7 @@
 
 - type: loadoutGroup
   id: TsfmcBrigmedicBelt
-  name: loadout-group-contractor-belt
+  name: loadout-group-spacer-belt
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -125,7 +125,7 @@
 
 - type: loadoutGroup
   id: TsfmcFace
-  name: loadout-group-contractor-face
+  name: loadout-group-spacer-face
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -136,7 +136,7 @@
 
 - type: loadoutGroup
   id: TsfmcBalaclava
-  name: loadout-group-contractor-balaclava
+  name: loadout-group-spacer-balaclava
   minLimit: 0
   maxLimit: 1
   loadouts:
@@ -145,7 +145,7 @@
 
 - type: loadoutGroup
   id: TsfmcGlasses
-  name: loadout-group-contractor-glasses
+  name: loadout-group-spacer-glasses
   hidden: true # No point in showing this, it gets auto-selected.
   loadouts:
   - TsfmcHud
@@ -154,7 +154,7 @@
 
 - type: loadoutGroup
   id: TsfmcNeck
-  name: loadout-group-contractor-neck
+  name: loadout-group-spacer-neck
   hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
@@ -162,7 +162,7 @@
 
 - type: loadoutGroup
   id: TsfmcNeckEngi
-  name: loadout-group-contractor-neck
+  name: loadout-group-spacer-neck
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -171,7 +171,7 @@
 
 - type: loadoutGroup
   id: TsfmcNeckMedic
-  name: loadout-group-contractor-neck
+  name: loadout-group-spacer-neck
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -180,7 +180,7 @@
 
 - type: loadoutGroup
   id: TsfmcBrigmedicGlasses
-  name: loadout-group-contractor-glasses
+  name: loadout-group-spacer-glasses
   hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
@@ -190,7 +190,7 @@
 
 - type: loadoutGroup
   id: TsfmcHead
-  name: loadout-group-contractor-head
+  name: loadout-group-spacer-head
   minLimit: 0
   loadouts:
   - TsfmcHelmet
@@ -198,7 +198,7 @@
 
 - type: loadoutGroup
   id: TsfmcHeadMedic
-  name: loadout-group-contractor-head
+  name: loadout-group-spacer-head
   minLimit: 0
   loadouts:
   - TsfmcHelmet
@@ -207,7 +207,7 @@
 
 - type: loadoutGroup
   id: TsfmcHeadEngi
-  name: loadout-group-contractor-head
+  name: loadout-group-spacer-head
   minLimit: 0
   loadouts:
   - TsfmcBeretEngineer
@@ -215,7 +215,7 @@
 # Grunt headsets
 - type: loadoutGroup
   id: TsfmcEars
-  name: loadout-group-contractor-ears
+  name: loadout-group-spacer-ears
   hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
@@ -226,7 +226,7 @@
 # Senior officer headsets
 - type: loadoutGroup
   id: TsfmcEarsSenior
-  name: loadout-group-contractor-ears
+  name: loadout-group-spacer-ears
   hidden: true # No point in showing this, it gets auto-selected.
   minLimit: 1
   loadouts:
@@ -237,7 +237,7 @@
 # vests
 - type: loadoutGroup
   id: TsfmcOuterClothing
-  name: loadout-group-contractor-outerclothing
+  name: loadout-group-spacer-outerclothing
   minLimit: 1
   loadouts:
   - TsfmcVestSlim

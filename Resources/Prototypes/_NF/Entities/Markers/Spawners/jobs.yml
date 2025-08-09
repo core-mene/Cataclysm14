@@ -1,10 +1,10 @@
 - type: entity
-  id: SpawnPointContractor
+  id: SpawnPointSpacer
   parent: SpawnPointPassenger
-  name: contractor
+  name: spacer
   components:
   - type: SpawnPoint
-    job_id: Contractor
+    job_id: Spacer
 
 - type: entity
   id: SpawnPointMercenary

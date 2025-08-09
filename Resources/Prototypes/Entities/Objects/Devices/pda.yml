@@ -1566,7 +1566,7 @@
 - type: entity
   parent: BasePDA
   id: ChameleonPDA
-  name: contractor PDA # Frontier passenger<contractor
+  name: spacer PDA # Frontier passenger<spacer
   description: Why isn't it gray?
   suffix: Chameleon
   components:
@@ -1577,7 +1577,7 @@
     - DoorBumpOpener
   - type: ChameleonClothing
     slot: [idcard]
-    default: ContractorPDA # Frontier PassengerPDA<ContractorPDA
+    default: SpacerPDA # Frontier PassengerPDA<SpacerPDA
     requireTag: WhitelistChameleonPDA
   - type: UserInterface
     interfaces:

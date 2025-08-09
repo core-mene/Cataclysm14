@@ -8,21 +8,21 @@
 # Sidearms
 
 - type: loadout #MK32 Universal
-  id: ContractorMk32Loadout
+  id: SpacerMk32Loadout
   price: 0
   storage:
     back:
     - WeaponPistolMk32
 
 - type: loadout #MK32 Universal Ammo
-  id: Contractor9x19mmPistolAmmoLoadout
+  id: Spacer9x19mmPistolAmmoLoadout
   price: 5000
   storage:
     back:
     - BoxMagazine9x19mmFMJ
 
 - type: loadout #Disabler
-  id: ContractorDisablerLoadout
+  id: SpacerDisablerLoadout
   price: 0
   storage:
     back:
@@ -31,14 +31,14 @@
 # Shotguns
 
 - type: loadout #Double Barrel Beanbag
-  id: ContractorDoubleBarreledLoadout
+  id: SpacerDoubleBarreledLoadout
   price: 10000
   storage:
     back:
     - WeaponShotgunDoubleBarreledRubber
 
 - type: loadout #Beanbag Shells
-  id: ContractorBeanbagAmmoLoadout
+  id: SpacerBeanbagAmmoLoadout
   price: 5000
   storage:
     back:

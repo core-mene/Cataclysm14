@@ -649,9 +649,9 @@
 ## CONTRACTORS
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitMilitaryContractor
+  id: ClothingUniformJumpsuitMilitarySpacer
   name: contractor jumpsuit
-  description: A sturdy jumpsuit, commonly issued to NT contractors.
+  description: A sturdy jumpsuit, commonly issued to contractors.
   suffix: Military
   components:
   - type: Sprite
@@ -692,9 +692,9 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitMilitaryContractorTac
+  id: ClothingUniformJumpsuitMilitarySpacerTac
   name: contractor jumpsuit
-  description: A sturdy jumpsuit, commonly issued to NT contractors.
+  description: A sturdy jumpsuit, commonly issued to contractors.
   suffix: Military, Tac
   components:
   - type: Sprite
@@ -1537,7 +1537,7 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitMilitaryService
   name: service worker jumpsuit
-  description: A standard issue jumpsuit for NT service workers.
+  description: A standard issue jumpsuit for service workers.
   suffix: Military
   components:
   - type: Sprite

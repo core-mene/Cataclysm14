@@ -12,7 +12,7 @@
 
 - type: loadoutGroup
   id: StationRepJumpsuit
-  name: loadout-group-contractor-jumpsuit
+  name: loadout-group-spacer-jumpsuit
   loadouts:
   - StationRepClothingUniformJumpsuitSr
   - StationRepClothingUniformJumpskirtSr
@@ -23,38 +23,38 @@
 
 - type: loadoutGroup
   id: StationRepOuterClothing
-  name: loadout-group-contractor-outerclothing
+  name: loadout-group-spacer-outerclothing
   minLimit: 0
   loadouts:
   - StationRepClothingOuterArmorSrCarapace
   - StationRepClothingOuterJacketSr
-  - ContractorClothingOuterCoatExpensive #We let them drip out a little if they want
-  - ContractorClothingOuterCoatSpaceAsshole
+  - SpacerClothingOuterCoatExpensive #We let them drip out a little if they want
+  - SpacerClothingOuterCoatSpaceAsshole
 
 - type: loadoutGroup
   id: StationRepBackpack
-  name: loadout-group-contractor-backpack
+  name: loadout-group-spacer-backpack
   loadouts:
   - StationRepClothingBackpackMessengerSr
   - StationRepClothingBackpackIan
   subgroups:
-  - ContractorBackpack
+  - SpacerBackpack
   fallbacks:
   - StationRepClothingBackpackMessengerSr
 
 - type: loadoutGroup
   id: StationRepHead
-  name: loadout-group-contractor-head
+  name: loadout-group-spacer-head
   minLimit: 0
   loadouts:
   - StationRepClothingHeadHatSrCap
   - StationRepClothingHeadHatSrBeret
   subgroups:
-  - ContractorHead
+  - SpacerHead
 
 - type: loadoutGroup
   id: StationRepEars
-  name: loadout-group-contractor-ears
+  name: loadout-group-spacer-ears
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -62,20 +62,20 @@
   subgroups:
   - MercenaryEars
   - PilotEars
-  - ContractorEars
+  - SpacerEars
   fallbacks:
   - StationRepClothingHeadsetAltCentComCommon
 
 - type: loadoutGroup
   id: StationRepGloves
-  name: loadout-group-contractor-gloves
+  name: loadout-group-spacer-gloves
   minLimit: 0
   loadouts:
   - StationRepClothingHandsGlovesSr
 
 - type: loadoutGroup
   id: StationRepNeck
-  name: loadout-group-contractor-neck
+  name: loadout-group-spacer-neck
   minLimit: 0
   loadouts:
   - StationRepClothingNeckCloakSr
@@ -83,7 +83,7 @@
 
 - type: loadoutGroup
   id: StationRepPDA
-  name: loadout-group-contractor-id
+  name: loadout-group-spacer-id
   hidden: true # No point in showing this, it gets auto-selected.
   loadouts:
   - StationRepSrPDA
@@ -92,10 +92,10 @@
 
 - type: loadoutGroup
   id: StationRepTrinkets
-  name: loadout-group-contractor-trinkets
+  name: loadout-group-spacer-trinkets
   minLimit: 0
   maxLimit: 3
   loadouts:
   - StationRepNFPouchSr
   subgroups:
-  - ContractorTrinkets
+  - SpacerTrinkets

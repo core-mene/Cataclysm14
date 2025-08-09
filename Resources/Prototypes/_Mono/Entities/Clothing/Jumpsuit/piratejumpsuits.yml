@@ -55,12 +55,12 @@
   id: PirateClothingUniformJumpsuitPilot
 
 - type: entity
-  parent: [ ClothingUniformJumpsuitMilitaryContractor , SensorOff ]
-  id: PirateClothingUniformJumpsuitMilitaryContractor
+  parent: [ ClothingUniformJumpsuitMilitarySpacer , SensorOff ]
+  id: PirateClothingUniformJumpsuitMilitarySpacer
 
 - type: entity
-  parent: [ ClothingUniformJumpsuitMilitaryContractorTac , SensorOff ]
-  id: PirateClothingUniformJumpsuitMilitaryContractorTac
+  parent: [ ClothingUniformJumpsuitMilitarySpacerTac , SensorOff ]
+  id: PirateClothingUniformJumpsuitMilitarySpacerTac
 
 - type: entity
   parent: [ ClothingUniformJumpsuitAtmos , SensorOff ]

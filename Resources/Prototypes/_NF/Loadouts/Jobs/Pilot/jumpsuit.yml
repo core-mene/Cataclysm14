@@ -17,7 +17,7 @@
   id: PilotClothingUniformJumpsuitMilitaryPilot
   effects:
   - !type:GroupLoadoutEffect
-    proto: ContractorT1
+    proto: SpacerT1
   price: 675
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryPilot
@@ -26,25 +26,25 @@
   id: PilotClothingUniformDrakeIndustriesTrucker
   effects:
   - !type:GroupLoadoutEffect
-    proto: ContractorT1
+    proto: SpacerT1
   price: 675
   equipment:
     jumpsuit: ClothingUniformDrakeIndustriesTrucker
  
 - type: loadout
-  id: PilotClothingUniformJumpsuitMilitaryContractor
+  id: PilotClothingUniformJumpsuitMilitarySpacer
   effects:
   - !type:GroupLoadoutEffect
-    proto: ContractorT1
+    proto: SpacerT1
   price: 1250
   equipment:
-    jumpsuit: ClothingUniformJumpsuitMilitaryContractor
+    jumpsuit: ClothingUniformJumpsuitMilitarySpacer
 
 - type: loadout
-  id: PilotClothingUniformJumpsuitMilitaryContractorTac
+  id: PilotClothingUniformJumpsuitMilitarySpacerTac
   effects:
   - !type:GroupLoadoutEffect
-    proto: ContractorT1
+    proto: SpacerT1
   price: 1250
   equipment:
-    jumpsuit: ClothingUniformJumpsuitMilitaryContractorTac
+    jumpsuit: ClothingUniformJumpsuitMilitarySpacerTac

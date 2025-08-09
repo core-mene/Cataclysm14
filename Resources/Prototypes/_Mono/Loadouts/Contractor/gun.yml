@@ -3,20 +3,20 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: loadoutGroup
-  id: ContractorFirearm
+  id: SpacerFirearm
   name: loadout-group-pistol
   minLimit: 1
   loadouts:
-  - ContractorMk32Loadout
-  - ContractorDisablerLoadout
-  - ContractorDoubleBarreledLoadout
+  - SpacerMk32Loadout
+  - SpacerDisablerLoadout
+  - SpacerDoubleBarreledLoadout
   fallbacks:
-  - ContractorMk32Loadout
+  - SpacerMk32Loadout
 
 - type: loadoutGroup
-  id: ContractorMag
+  id: SpacerMag
   name: loadout-group-magazine
   minLimit: 0
   loadouts:
-  - Contractor9x19mmPistolAmmoLoadout #MK32 Universal
-  - ContractorBeanbagAmmoLoadout #Beanbag
+  - Spacer9x19mmPistolAmmoLoadout #MK32 Universal
+  - SpacerBeanbagAmmoLoadout #Beanbag
