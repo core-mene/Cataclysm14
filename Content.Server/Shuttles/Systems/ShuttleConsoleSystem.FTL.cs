@@ -242,8 +242,12 @@ public sealed partial class ShuttleConsoleSystem
 
         var ev = new ShuttleConsoleFTLTravelStartEvent(ent.Owner);
         RaiseLocalEvent(ref ev);
-        if(_sharedShuttle.TryGetFTLDrive(shuttleUid.Value, out _, out var drive))
+        if (_sharedShuttle.TryGetFTLDrive(shuttleUid.Value, out _, out var drive)) // Mono Begin
+        {
+            var massAdjustedStartupTime = drive.StartupTime * 5;
+            var massAdjustedHyperSpaceTime = drive.HyperSpaceTime * 5;
             _shuttle.FTLToCoordinates(shuttleUid.Value, shuttleComp, adjustedCoordinates, targetAngle, drive.StartupTime, drive.HyperSpaceTime);
+        }
     }
 
     private void UpdateConsoles(EntityUid uid, ShuttleComponent? component = null)
