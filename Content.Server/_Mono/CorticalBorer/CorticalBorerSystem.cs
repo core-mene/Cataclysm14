@@ -4,6 +4,7 @@
 
 using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
+using Content.Server.Chat.Systems;
 using Content.Server.DoAfter;
 using Content.Server.Medical;
 using Content.Server.Medical.Components;
@@ -46,6 +47,7 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
         SubscribeLocalEvent<CorticalBorerComponent, CorticalBorerDispenserSetInjectAmountMessage>(OnSetInjectAmountMessage);
 
         SubscribeLocalEvent<InventoryComponent, InfestHostAttempt>(OnInfestHostAttempt);
+        SubscribeLocalEvent<CorticalBorerComponent, CheckTargetedSpeechEvent>(OnSpeakEvent);
 
     }
 
@@ -77,6 +79,15 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
         {
             if (_timing.CurTime >= comp.ControlTimeEnd)
                 EndControl(comp.Borer);
+        }
+    }
+
+    private void OnSpeakEvent(Entity<CorticalBorerComponent> ent, ref CheckTargetedSpeechEvent args)
+    {
+        if (ent.Comp.Host.HasValue)
+        {
+            args.Targets.Add(ent);
+            args.Targets.Add(ent.Comp.Host.Value);
         }
     }
 

@@ -10,7 +10,7 @@
   components:
   - type: GhostRole
     makeSentient: true
-    allowSpeech: true
+    allowSpeech: False
     allowMovement: true
     name: cortical-borer-ghostrole-name
     description: cortical-borer-ghostrole-desc
@@ -70,6 +70,8 @@
         type: HealthAnalyzerBoundUserInterface
   - type: CollectiveMind
     channel: CorticalBorer
+  - type: Speech
+    enabled: false
   - type: HealthAnalyzer
     silent: true
     MaxScanRange: .5

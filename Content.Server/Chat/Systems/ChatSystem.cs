@@ -296,6 +296,16 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (string.IsNullOrEmpty(message))
             return;
 
+        // Mono Change: Is this being sent direct
+        var targetEv = new CheckTargetedSpeechEvent();
+        RaiseLocalEvent(source, targetEv);
+
+        if (targetEv.Targets.Count > 0)
+        {
+            SendEntityDirect(source, message, range, nameOverride, targetEv.Targets);
+            return;
+        }
+
         // This message may have a radio prefix, and should then be whispered to the resolved radio channel
         if (checkRadioPrefix)
         {
@@ -684,6 +694,70 @@ public sealed partial class ChatSystem : SharedChatSystem
             }
     }
 
+    private void SendEntityDirect(
+        EntityUid source,
+        string originalMessage,
+        ChatTransmitRange range,
+        string? nameOverride,
+        List<EntityUid> recipients,
+        bool hideLog = false,
+        bool ignoreActionBlocker = false)
+    {
+        var message = TransformSpeech(source, FormattedMessage.RemoveMarkupOrThrow(originalMessage));
+        if (message.Length == 0)
+            return;
+
+        string name;
+        if (nameOverride != null)
+        {
+            name = nameOverride;
+        }
+        else
+        {
+            var nameEv = new TransformSpeakerNameEvent(source, Name(source));
+            RaiseLocalEvent(source, nameEv);
+            name = nameEv.VoiceName;
+        }
+        name = FormattedMessage.EscapeText(name);
+
+        var wrappedMessage = Loc.GetString("chat-manager-entity-whisper-wrap-message",
+            ("entityName", name), ("message", FormattedMessage.EscapeText(message)));
+
+        foreach (var (session, data) in GetRecipients(source, WhisperMuffledRange))
+        {
+            EntityUid listener;
+
+            if (session.AttachedEntity is not { Valid: true } playerEntity)
+                continue;
+            listener = session.AttachedEntity.Value;
+
+            if (MessageRangeCheck(session, data, range) != MessageRangeCheckResult.Full ||
+                !recipients.Contains(listener) &&
+                !HasComp<GhostComponent>(listener))
+                continue;
+
+            _chatManager.ChatMessageToOne(ChatChannel.CollectiveMind, message, wrappedMessage, source, false, session.Channel);
+        }
+
+        if (!hideLog)
+            if (originalMessage == message)
+            {
+                if (name != Name(source))
+                    _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Direct messaged from {ToPrettyString(source):user} as {name}: {originalMessage}.");
+                else
+                    _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Direct messaged from {ToPrettyString(source):user}: {originalMessage}.");
+            }
+            else
+            {
+                if (name != Name(source))
+                    _adminLogger.Add(LogType.Chat, LogImpact.Low,
+                        $"Direct messaged from {ToPrettyString(source):user} as {name}, original: {originalMessage}, transformed: {message}.");
+                else
+                    _adminLogger.Add(LogType.Chat, LogImpact.Low,
+                        $"Direct messaged from {ToPrettyString(source):user}, original: {originalMessage}, transformed: {message}.");
+            }
+    }
+
     private void SendEntityEmote(
         EntityUid source,
         string action,
@@ -1059,6 +1133,11 @@ public sealed class CheckIgnoreSpeechBlockerEvent : EntityEventArgs
         Sender = sender;
         IgnoreBlocker = ignoreBlocker;
     }
+}
+
+public sealed class CheckTargetedSpeechEvent : EntityEventArgs
+{
+    public List<EntityUid> Targets = new List<EntityUid>();
 }
 
 /// <summary>
