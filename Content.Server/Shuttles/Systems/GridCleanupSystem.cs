@@ -48,9 +48,7 @@ public sealed class GridCleanupSystem : EntitySystem
         if (TryComp<MapGridComponent>(ev.EntityUid, out var grid))
             CheckGrid((ev.EntityUid, grid));
         if (HasComp<PlanetMapComponent>(ev.EntityUid))
-        {
             _pendingCleanup.Remove(ev.EntityUid);
-        }
     }
 
     private void OnTileChanged(Entity<MapGridComponent> ent, ref TileChangedEvent args)
