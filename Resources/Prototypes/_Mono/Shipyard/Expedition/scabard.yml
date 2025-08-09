@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: 2025 Rubeebee
+# SPDX-FileCopyrightText: 2025 Rubeebeebee
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: Rubeebeebee
+# Discord: Rubeebee
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Scabard
+  parent: BaseVessel
+  name: COG Scabard
+  description: The Scabard is COG ship for smaller crews, made to house a mech for any expeditions into planetary forays. Comes with an R&D server, mech manufacturing capabilities, but no science bays. 
+  price: 69000 # Funny number hahahahaha
+  category: Large
+  group: Expedition
+  shuttlePath: /Maps/_Mono/Shuttles/Expedition/scabard.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: Scabard
+  mapName: 'COG Scabard'
+  mapPath: /Maps/_Mono/Shuttles/Expedition/scabard.yml
+  minPlayers: 0
+  stations:
+    Scabard:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Scabard EXP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
