@@ -11,10 +11,10 @@ namespace Content.Server._Goobstation.MobCaller;
 public sealed partial class MobCallerComponent : Component
 {
     /// <summary>
-    /// With what periodicity to spawn mobs.
+    /// Chance to spawn the mob, per second.
     /// </summary>
     [DataField]
-    public TimeSpan SpawnSpacing = TimeSpan.FromSeconds(30);
+    public float SpawnChance = 0.005f; // ~1/200s
 
     /// <summary>
     /// What prototype to spawn.
@@ -82,12 +82,6 @@ public sealed partial class MobCallerComponent : Component
     /// </summary>
     [DataField]
     public bool NeedPower = true;
-
-    /// <summary>
-    /// Progress towards spawning the next entity.
-    /// </summary>
-    [DataField]
-    public TimeSpan SpawnAccumulator = TimeSpan.FromSeconds(0);
 
     /// <summary>
     /// Entities spawned by us.

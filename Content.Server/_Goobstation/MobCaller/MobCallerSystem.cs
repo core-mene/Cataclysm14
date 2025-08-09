@@ -63,11 +63,8 @@ public sealed partial class MobCallerSystem : EntitySystem
             )
                 continue;
 
-            caller.SpawnAccumulator += TimeSpan.FromSeconds(frameTime);
-            if (caller.SpawnAccumulator < caller.SpawnSpacing)
+            if (!_random.Prob(caller.SpawnChance * frameTime))
                 continue;
-
-            caller.SpawnAccumulator -= caller.SpawnSpacing;
 
             // prune spawned entities list
             // has to be for-loop and not foreach since we may modify it on the fly
@@ -80,8 +77,13 @@ public sealed partial class MobCallerSystem : EntitySystem
                     i--;
                     continue;
                 }
+                // if it's fine also lazily reset its follow target in case HTN decides to wipe it
+                else
+                {
+                    _npc.SetBlackboard(spawned, NPCBlackboard.FollowTarget, new EntityCoordinates(uid, Vector2.Zero));
+                }
             }
-            // check happens after we increment accumulator, this is intentional
+
             if (caller.SpawnedEntities.Count >= caller.MaxAlive)
                 continue;
 
