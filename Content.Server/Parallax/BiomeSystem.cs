@@ -18,6 +18,7 @@
 using System.Linq;
 using System.Numerics;
 using System.Threading.Tasks;
+using Content.Server._Mono.Planets;
 using Content.Server.Atmos;
 using Content.Server.Atmos.Components;
 using Content.Server.Atmos.EntitySystems;
@@ -1029,6 +1030,7 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
             return;
 
         EnsureComp<MapGridComponent>(mapUid);
+        EnsureComp<PlanetMapComponent>(mapUid);
         var biome = EntityManager.ComponentFactory.GetComponent<BiomeComponent>();
         seed ??= _random.Next();
         SetSeed(mapUid, biome, seed.Value, false);

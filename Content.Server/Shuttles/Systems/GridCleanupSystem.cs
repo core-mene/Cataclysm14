@@ -3,6 +3,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Server._Mono.Planets;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
@@ -14,7 +15,7 @@ namespace Content.Server.Shuttles.Systems;
 /// TODO: Move to Mono Namespace
 
 /// <summary>
-/// This system cleans up small grid fragments that have less than a specified number of tiles after a delay. 
+/// This system cleans up small grid fragments that have less than a specified number of tiles after a delay.
 /// </summary>
 public sealed class GridCleanupSystem : EntitySystem
 {
@@ -46,6 +47,10 @@ public sealed class GridCleanupSystem : EntitySystem
         // Check newly created grids
         if (TryComp<MapGridComponent>(ev.EntityUid, out var grid))
             CheckGrid((ev.EntityUid, grid));
+        if (HasComp<PlanetMapComponent>(ev.EntityUid))
+        {
+            _pendingCleanup.Remove(ev.EntityUid);
+        }
     }
 
     private void OnTileChanged(Entity<MapGridComponent> ent, ref TileChangedEvent args)
@@ -88,6 +93,13 @@ public sealed class GridCleanupSystem : EntitySystem
             return;
         }
 
+        // Skip if this is a planet expedition grid
+        if (HasComp<PlanetMapComponent>(gridUid))
+        {
+            Logger.DebugS("salvage", $"CheckGrid: Skipping grid {gridUid} with PlanetMapComponent");
+            return;
+        }
+
         // Skip if the parent map has a SalvageExpeditionComponent
         var transform = Transform(gridUid);
         var mapId = transform.MapID;
@@ -96,6 +108,12 @@ public sealed class GridCleanupSystem : EntitySystem
         if (HasComp<SalvageExpeditionComponent>(mapUid))
         {
             Logger.DebugS("salvage", $"CheckGrid: Skipping grid {gridUid} on expedition map {mapUid}");
+            return;
+        }
+
+        if (HasComp<PlanetMapComponent>(mapUid))
+        {
+            Logger.DebugS("salvage", $"CheckGrid: Skipping grid {gridUid} on planet map {mapUid}");
             return;
         }
 
@@ -152,6 +170,14 @@ public sealed class GridCleanupSystem : EntitySystem
                 continue;
             }
 
+            // Skip if this is a planet grid
+            if (HasComp<PlanetMapComponent>(gridUid))
+            {
+                Logger.DebugS("salvage", $"Update: Removing planet grid {gridUid} from cleanup queue");
+                toRemove.Add(gridUid);
+                continue;
+            }
+
             // Skip if the parent map has an expedition component
             var xform = Transform(gridUid);
             var mapId = xform.MapID;
@@ -160,6 +186,13 @@ public sealed class GridCleanupSystem : EntitySystem
             if (HasComp<SalvageExpeditionComponent>(mapUid))
             {
                 Logger.DebugS("salvage", $"Update: Removing grid {gridUid} on expedition map {mapUid} from cleanup queue");
+                toRemove.Add(gridUid);
+                continue;
+            }
+
+            if (HasComp<PlanetMapComponent>(mapUid))
+            {
+                Logger.DebugS("salvage", $"Update: Removing grid {gridUid} on planet map {mapUid} from cleanup queue");
                 toRemove.Add(gridUid);
                 continue;
             }
