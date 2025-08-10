@@ -22,7 +22,7 @@
     - to: start
       completed:
       - !type:SpawnPrototype
-        prototype: Steel
+        prototype: MetalRod
         amount: 1
       - !type:DeleteEntity {}
       steps:
@@ -48,7 +48,7 @@
     - to: start
       completed:
       - !type:SpawnPrototype
-        prototype: Steel
+        prototype: MetalRod
         amount: 1
       - !type:DeleteEntity {}
       steps:
