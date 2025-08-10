@@ -48,6 +48,24 @@ public sealed partial record PolymorphConfiguration
     public int Delay = 60;
 
     /// <summary>
+    /// Whether or not the target is polymorphed above critical status.
+    /// </summary>
+    [DataField(serverOnly: true)]
+    public bool PolymorphInAlive = true;
+
+    /// <summary>
+    /// Whether or not the target is polymorphed below critical status but above dead status.
+    /// </summary>
+    [DataField(serverOnly: true)]
+    public bool PolymorphInCrit = true;
+
+    /// <summary>
+    /// Whether or not the target is polymorphed while dead.
+    /// </summary>
+    [DataField(serverOnly: true)]
+    public bool PolymorphInDeath = false;
+
+    /// <summary>
     /// The duration of the transformation in seconds
     /// can be null if there is not one
     /// </summary>
