@@ -1,3 +1,20 @@
+// SPDX-FileCopyrightText: 2021 Galactic Chimp
+// SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2021 Silver
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 mirrorcult
+// SPDX-FileCopyrightText: 2021 pointer-to-null
+// SPDX-FileCopyrightText: 2022 keronshb
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 Slava0135
+// SPDX-FileCopyrightText: 2023 brainfood1183
+// SPDX-FileCopyrightText: 2023 deltanedas
+// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Princess Cheeseballs
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Stunnable;
 using Content.Shared.Damage.Components;
 using Content.Shared.Effects;
@@ -33,6 +50,7 @@ public sealed class DamageOnHighSpeedImpactSystem : EntitySystem
         if (!EntityManager.HasComponent<DamageableComponent>(uid))
             return;
 
+        //TODO: This should solve after physics solves
         var speed = args.OurBody.LinearVelocity.Length();
 
         if (speed < component.MinimumSpeed)

@@ -56,6 +56,10 @@
   id: Daylight
   desc: salvage-light-mod-daylight
   color: "#D8B059"
+  biomes:
+  - Caves
+  - Grasslands
+  - Snow
 
 - type: salvageLightMod
   id: Lavalight
@@ -68,6 +72,12 @@
   id: Evening
   desc: salvage-light-mod-evening
   color: "#2b3143"
+  biomes:
+  - Caves
+  - Grasslands
+  - Snow
+  - Shadow
+  - Desert
 
 - type: salvageLightMod
   id: Night
@@ -89,6 +99,7 @@
   biomes:
     - Caves
     #- LowDesert
+    - Desert
     - Grasslands
     - Lava
     - Shadow # Frontier

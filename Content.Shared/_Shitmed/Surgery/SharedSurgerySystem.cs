@@ -1,5 +1,7 @@
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Coenx-flex
+// SPDX-FileCopyrightText: 2025 Cojoke
+// SPDX-FileCopyrightText: 2025 Redrover1760
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -70,6 +72,8 @@ public abstract partial class SharedSurgerySystem : EntitySystem
         SubscribeLocalEvent<SurgeryOrganConditionComponent, SurgeryValidEvent>(OnOrganConditionValid);
         SubscribeLocalEvent<SurgeryWoundedConditionComponent, SurgeryValidEvent>(OnWoundedValid);
         SubscribeLocalEvent<SurgeryPartRemovedConditionComponent, SurgeryValidEvent>(OnPartRemovedConditionValid);
+        SubscribeLocalEvent<SurgeryBodyConditionComponent, SurgeryValidEvent>(OnBodyConditionValid);
+        SubscribeLocalEvent<SurgeryOrganSlotConditionComponent, SurgeryValidEvent>(OnOrganSlotConditionValid);
         SubscribeLocalEvent<SurgeryPartPresentConditionComponent, SurgeryValidEvent>(OnPartPresentConditionValid);
         SubscribeLocalEvent<SurgeryMarkingConditionComponent, SurgeryValidEvent>(OnMarkingPresentValid);
         SubscribeLocalEvent<SurgeryBodyComponentConditionComponent, SurgeryValidEvent>(OnBodyComponentConditionValid);
@@ -236,6 +240,17 @@ public abstract partial class SharedSurgerySystem : EntitySystem
             else if (!ent.Comp.Inverse)
                 args.Cancelled = true;
         }
+    }
+
+    private void OnBodyConditionValid(Entity<SurgeryBodyConditionComponent> ent, ref SurgeryValidEvent args)
+    {
+        if (TryComp<BodyComponent>(args.Body, out var body) && body.Prototype is {} bodyId)
+            args.Cancelled |= ent.Comp.Accepted.Contains(bodyId) ^ !ent.Comp.Inverse;
+    }
+
+    private void OnOrganSlotConditionValid(Entity<SurgeryOrganSlotConditionComponent> ent, ref SurgeryValidEvent args)
+    {
+        args.Cancelled |= _body.CanInsertOrgan(args.Part, ent.Comp.OrganSlot) ^ !ent.Comp.Inverse;
     }
 
     private void OnPartRemovedConditionValid(Entity<SurgeryPartRemovedConditionComponent> ent, ref SurgeryValidEvent args)

@@ -117,7 +117,7 @@ public abstract partial class SharedSalvageSystem : EntitySystem
         // - Lighting
         // - Atmos
         var faction = GetMod<SalvageFactionPrototype>(rand, ref rating);
-        var biome = GetMod<SalvageBiomeMod>(rand, ref rating);
+        var biome = GetMod<SalvageBiomeModPrototype>(rand, ref rating);
         var air = GetBiomeMod<SalvageAirMod>(biome.ID, rand, ref rating);
         var dungeon = GetBiomeMod<SalvageDungeonModPrototype>(biome.ID, rand, ref rating);
 

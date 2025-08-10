@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: CarpCallerMachineCircuitboard
+  name: carp caller machine board
+  components:
+  - type: Sprite
+    state: science
+  - type: MachineBoard
+    prototype: MachineCarpCaller
+    requirements:
+      Capacitor: 2
+      Manipulator: 2
+    stackRequirements:
+      Plasma: 2

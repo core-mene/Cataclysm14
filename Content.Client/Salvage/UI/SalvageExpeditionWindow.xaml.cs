@@ -1,3 +1,14 @@
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2023 deltanedas
+// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2024 GreaseMonk
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using Content.Client.Computer;
 using Content.Client.Stylesheets;
@@ -173,7 +184,7 @@ public sealed partial class SalvageExpeditionWindow : FancyWindow,
 
             lBox.AddChild(new Label
             {
-                Text = Loc.GetString(_prototype.Index<SalvageBiomeMod>(biome).ID),
+                Text = Loc.GetString(_prototype.Index<SalvageBiomeModPrototype>(biome).ID),
                 FontColorOverride = StyleNano.NanoGold,
                 HorizontalAlignment = HAlignment.Left,
                 Margin = new Thickness(0f, 0f, 0f, 5f),

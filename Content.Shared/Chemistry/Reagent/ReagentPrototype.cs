@@ -1,5 +1,44 @@
+// SPDX-FileCopyrightText: 2019 moneyl
+// SPDX-FileCopyrightText: 2020 Injazz
+// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+// SPDX-FileCopyrightText: 2020 nuke
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2021 Paul
+// SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2021 TemporalOroboros
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 ike709
+// SPDX-FileCopyrightText: 2021 py01
+// SPDX-FileCopyrightText: 2022 Alex Evgrashin
+// SPDX-FileCopyrightText: 2022 Flipp Syder
+// SPDX-FileCopyrightText: 2022 Moony
+// SPDX-FileCopyrightText: 2022 Paul Ritter
+// SPDX-FileCopyrightText: 2022 Rane
+// SPDX-FileCopyrightText: 2022 Sam Weaver
+// SPDX-FileCopyrightText: 2022 ShadowCommander
+// SPDX-FileCopyrightText: 2022 corentt
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 Slava0135
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2023 deltanedas
+// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2024 Adrian16199
+// SPDX-FileCopyrightText: 2024 Flesh
+// SPDX-FileCopyrightText: 2024 Kara
+// SPDX-FileCopyrightText: 2024 SlamBamActionman
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 themias
+// SPDX-FileCopyrightText: 2025 Princess Cheeseballs
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Collections.Frozen;
 using System.Linq;
+using Content.Shared.FixedPoint;
 using System.Text.Json.Serialization;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Body.Prototypes;
@@ -7,20 +46,20 @@ using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reaction;
 using Content.Shared.EntityEffects;
 using Content.Shared.Database;
-using Content.Shared.FixedPoint;
 using Content.Shared.Nutrition;
+using Content.Shared.Prototypes;
+using Content.Shared.Slippery;
 using Robust.Shared.Audio;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
 using Robust.Shared.Utility;
 
 namespace Content.Shared.Chemistry.Reagent
 {
-    [Prototype("reagent")]
+    [Prototype]
     [DataDefinition]
     public sealed partial class ReagentPrototype : IPrototype, IInheritingPrototype
     {
@@ -100,10 +139,22 @@ namespace Content.Shared.Chemistry.Reagent
         public bool MetamorphicChangeColor { get; private set; } = true;
 
         /// <summary>
-        /// If this reagent is part of a puddle is it slippery.
+        /// If not null, makes something slippery. Also defines slippery interactions like stun time and launch mult.
         /// </summary>
         [DataField]
-        public bool Slippery;
+        public SlipperyEffectEntry? SlipData;
+
+        /// <summary>
+        /// The speed at which the reagent evaporates over time.
+        /// </summary>
+        [DataField]
+        public FixedPoint2 EvaporationSpeed = FixedPoint2.Zero;
+
+        /// <summary>
+        /// If this reagent can be used to mop up other reagents.
+        /// </summary>
+        [DataField]
+        public bool Absorbent = false;
 
         /// <summary>
         /// How easily this reagent becomes fizzy when aggitated.
@@ -118,6 +169,13 @@ namespace Content.Shared.Chemistry.Reagent
         /// </summary>
         [DataField]
         public float Viscosity;
+
+        /// <summary>
+        /// Linear Friction Multiplier for a reagent
+        /// 0 - frictionless, 1 - no effect on friction
+        /// </summary>
+        [DataField]
+        public float Friction = 1.0f;
 
         /// <summary>
         /// Should this reagent work on the dead?
@@ -206,7 +264,7 @@ namespace Content.Shared.Chemistry.Reagent
                 .ToDictionary(x => x.Key, x => x.Item2);
             if (proto.PlantMetabolisms.Count > 0)
             {
-                PlantMetabolisms = new List<string> (proto.PlantMetabolisms
+                PlantMetabolisms = new List<string>(proto.PlantMetabolisms
                     .Select(x => x.GuidebookEffectDescription(prototype, entSys))
                     .Where(x => x is not null)
                     .Select(x => x!)

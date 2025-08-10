@@ -30,6 +30,7 @@
 // SPDX-FileCopyrightText: 2024 slarticodefast
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 Princess Cheeseballs
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 gus
 //
@@ -65,6 +66,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Utility;
 using FTLMapComponent = Content.Shared.Shuttles.Components.FTLMapComponent;
 using Content.Server.Salvage.Expeditions;
+using Content.Shared._Mono.Ships;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -83,6 +85,10 @@ public sealed partial class ShuttleSystem
     {
         Params = AudioParams.Default.WithVolume(-5f),
     };
+
+    private const float MassConstant = 50f; // Arbitrary, at this value massMultiplier = 0.65
+    private const float MassMultiplierMin = 0.5f;
+    private const float MassMultiplierMax = 5f;
 
     public float DefaultStartupTime;
     public float DefaultTravelTime;
@@ -712,6 +718,21 @@ public sealed partial class ShuttleSystem
         _console.RefreshShuttleConsoles(entity.Owner);
     }
 
+    // Mono Begin
+    private void MassAdjustFTLCooldown(PhysicsComponent shuttlePhysics, FTLDriveComponent drive, out float massAdjustedCooldown)
+    {
+        if (drive.MassAffectedDrive == false)
+        {
+            massAdjustedCooldown = drive.Cooldown;
+            return;
+        }
+        var adjustedMass = shuttlePhysics.Mass * drive.DriveMassMultiplier;
+        var massMultiplier = float.Log(float.Sqrt(adjustedMass / MassConstant + float.E));
+        massMultiplier = float.Clamp(massMultiplier, MassMultiplierMin, MassMultiplierMax);
+        massAdjustedCooldown = drive.Cooldown * massMultiplier;
+    }
+    // Mono End
+
     /// <summary>
     ///  Shuttle arrived.
     /// </summary>
@@ -729,7 +750,11 @@ public sealed partial class ShuttleSystem
         _dockSystem.SetDockBolts(entity, false);
 
         if (TryGetFTLDrive(entity, out _, out var globalDrive))
-            globalFtlCooldown = globalDrive.Cooldown;
+        {
+            MassAdjustFTLCooldown(body, globalDrive, out var massAdjustedCooldown);
+            globalFtlCooldown = massAdjustedCooldown;
+        }
+
 
         // Get all docked shuttles
         var dockedShuttles = new HashSet<EntityUid>();
@@ -761,8 +786,6 @@ public sealed partial class ShuttleSystem
         // Handle physics for main shuttle
         _physics.SetLinearVelocity(uid, Vector2.Zero, body: body);
         _physics.SetAngularVelocity(uid, 0f, body: body);
-        _physics.SetLinearDamping(uid, body, entity.Comp2.LinearDamping);
-        _physics.SetAngularDamping(uid, body, entity.Comp2.AngularDamping);
 
         var target = comp.TargetCoordinates;
         MapId mapId;
@@ -839,8 +862,11 @@ public sealed partial class ShuttleSystem
                 _physics.SetLinearVelocity(dockedUid, Vector2.Zero, body: dockedBody);
                 _physics.SetAngularVelocity(dockedUid, 0f, body: dockedBody);
                 var dockedShuttle = Comp<ShuttleComponent>(dockedUid);
-                _physics.SetLinearDamping(dockedUid, dockedBody, dockedShuttle.LinearDamping);
-                _physics.SetAngularDamping(dockedUid, dockedBody, dockedShuttle.AngularDamping);
+                if (TryGetFTLDrive(dockedUid, out _, out var drive))
+                {
+                    MassAdjustFTLCooldown(dockedBody, drive, out var massAdjustedCooldown);
+                    ftlCooldown = massAdjustedCooldown;
+                }
                 if (HasComp<MapGridComponent>(xform.MapUid))
                 {
                     Disable(dockedUid, component: dockedBody);
@@ -850,9 +876,6 @@ public sealed partial class ShuttleSystem
                     Enable(dockedUid, component: dockedBody, shuttle: dockedShuttle);
                 }
             }
-
-            if (TryGetFTLDrive(dockedUid, out _, out var drive))
-                ftlCooldown = drive.Cooldown;
 
             // Put linked shuttles in cooldown state instead of immediately removing the component
             if (ftlCooldown > 0f && TryComp<FTLComponent>(dockedUid, out var dockedFtl))
@@ -1582,8 +1605,6 @@ public sealed partial class ShuttleSystem
                 Enable(dockedUid, component: dockedBody);
                 _physics.SetLinearVelocity(dockedUid, new Vector2(0f, 20f), body: dockedBody);
                 _physics.SetAngularVelocity(dockedUid, 0f, body: dockedBody);
-                _physics.SetLinearDamping(dockedUid, dockedBody, 0f);
-                _physics.SetAngularDamping(dockedUid, dockedBody, 0f);
             }
 
             // Refresh consoles for this docked shuttle as well
@@ -1595,8 +1616,6 @@ public sealed partial class ShuttleSystem
         Enable(uid, component: body);
         _physics.SetLinearVelocity(uid, new Vector2(0f, 20f), body: body);
         _physics.SetAngularVelocity(uid, 0f, body: body);
-        _physics.SetLinearDamping(uid, body, 0f);
-        _physics.SetAngularDamping(uid, body, 0f);
 
         _dockSystem.SetDockBolts(uid, true);
         _console.RefreshShuttleConsoles(uid);

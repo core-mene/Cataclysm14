@@ -45,7 +45,6 @@
   metamorphicChangeColor: false
   recognizable: true
   physicalDesc: reagent-physical-desc-ferrous
-  slippery: false
   metabolisms:
     Drink:
       effects:
@@ -59,7 +58,7 @@
       effects:
         - !type:AdjustReagent
           reagent: UncookedAnimalProteins
-          amount: 0.01 # Frontier - 0.1<0.01
+          amount: 0.1
     Medicine:
       effects:
       - !type:HealthChange
@@ -88,7 +87,6 @@
   color: "#808A51"
   recognizable: true
   physicalDesc: reagent-physical-desc-slimy
-  slippery: false
 
 - type: reagent
   id: Slime
@@ -99,7 +97,6 @@
   color: "#2cf274"
   recognizable: true
   physicalDesc: reagent-physical-desc-viscous
-  slippery: false
   viscosity: 0.25
   tileReactions:
     - !type:SpillTileReaction
@@ -123,18 +120,17 @@
   color: "#cd7314"
   recognizable: true
   physicalDesc: reagent-physical-desc-sticky
-  slippery: false
   viscosity: 0.10
   tileReactions:
     - !type:SpillTileReaction
-#  metabolisms: # Frontier
-#    Food: # Frontier
-#      # Sweet! # Frontier
-#      effects: # Frontier
-#      - !type:SatiateHunger # Frontier
-#        factor: 1 # Frontier
-#      - !type:SatiateThirst # Frontier
-#        factor: 1 # Frontier
+  metabolisms:
+    Food:
+      # Sweet!
+      effects:
+      - !type:SatiateHunger
+        factor: 1
+      - !type:SatiateThirst
+        factor: 1
   footstepSound:
     collection: FootstepBlood
     params:
@@ -150,7 +146,6 @@
   color: "#162581"
   recognizable: true
   physicalDesc: reagent-physical-desc-metallic
-  slippery: false
 
 - type: reagent
   parent: Blood
@@ -162,7 +157,6 @@
   color: "#7a8bf2"
   recognizable: true
   physicalDesc: reagent-physical-desc-pungent
-  slippery: false
 
 - type: reagent
   id: ZombieBlood
@@ -172,7 +166,6 @@
   physicalDesc: reagent-physical-desc-necrotic
   flavor: bitter
   color: "#2b0700"
-  slippery: false
   metabolisms:
     Drink:
       # Disgusting!
@@ -242,7 +235,6 @@
   flavor: terrible
   color: "#d8d8b0"
   physicalDesc: reagent-physical-desc-exotic-smelling
-  slippery: false
   footstepSound:
     collection: FootstepBlood
     params:
@@ -256,7 +248,9 @@
   flavor: terrible
   color: "#87ab08"
   physicalDesc: reagent-physical-desc-pungent
-  slippery: true
+  slipData:
+    requiredSlipSpeed: 4.0 #It's not as slippery as water
+  friction: 0.4
   metabolisms:
     Drink:
       effects:
@@ -278,7 +272,6 @@
   physicalDesc: reagent-physical-desc-neural
   flavor: mindful
   color: "#C584B8"
-  slippery: false
   metabolisms:
     Drink:
       effects:

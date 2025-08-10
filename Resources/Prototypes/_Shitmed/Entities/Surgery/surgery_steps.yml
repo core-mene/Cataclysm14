@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Coenx-flex
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: SurgeryStepBase
   categories: [ HideSpawnMenu ]
@@ -440,6 +445,22 @@
     sprite: _Shitmed/Objects/Specific/Medical/Surgery/manipulation.rsi
     state: insertion
   - type: SurgeryAddOrganStep
+  - type: SurgeryStepEmoteEffect
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepOpenOrganSlot
+  name: Carve out a cavity
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SurgeryStep
+    tool:
+    - type: Scalpel
+    duration: 6
+  - type: Sprite
+    sprite: _Shitmed/Objects/Specific/Medical/Surgery/manipulation.rsi
+    state: insertion
+  - type: SurgeryAddOrganSlotStep
   - type: SurgeryStepEmoteEffect
 
 - type: entity

@@ -1,13 +1,31 @@
+// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2021 Kara D
+// SPDX-FileCopyrightText: 2021 Paul
+// SPDX-FileCopyrightText: 2021 Paul Ritter
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 Ygg01
+// SPDX-FileCopyrightText: 2022 Leon Friedrich
+// SPDX-FileCopyrightText: 2022 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Slava0135
+// SPDX-FileCopyrightText: 2024 Arendian
+// SPDX-FileCopyrightText: 2024 Ed
+// SPDX-FileCopyrightText: 2024 Kara
+// SPDX-FileCopyrightText: 2024 SlamBamActionman
+// SPDX-FileCopyrightText: 2025 Princess Cheeseballs
+// SPDX-FileCopyrightText: 2025 Zachary Higgs
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Fluids.EntitySystems;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reaction;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.FixedPoint;
-using Content.Shared.Movement.Components;
-using Content.Shared.Movement.Systems;
-using Content.Shared.Slippery;
-using Content.Shared.StepTrigger.Components;
-using Content.Shared.StepTrigger.Systems;
 using JetBrains.Annotations;
 using Robust.Shared.Map;
 
@@ -17,44 +35,17 @@ namespace Content.Server.Chemistry.TileReactions
     [DataDefinition]
     public sealed partial class SpillTileReaction : ITileReaction
     {
-        [DataField("launchForwardsMultiplier")] public float LaunchForwardsMultiplier = 1;
-        [DataField("requiredSlipSpeed")] public float RequiredSlipSpeed = 6;
-        [DataField("paralyzeTime")] public float ParalyzeTime = 1;
-
-        /// <summary>
-        /// <see cref="SlipperyComponent.SuperSlippery"/>
-        /// </summary>
-        [DataField("superSlippery")] public bool SuperSlippery;
-
         public FixedPoint2 TileReact(TileRef tile,
             ReagentPrototype reagent,
             FixedPoint2 reactVolume,
             IEntityManager entityManager,
             List<ReagentData>? data)
         {
-            if (reactVolume < 5)
-                return FixedPoint2.Zero;
+            var spillSystem = entityManager.System<PuddleSystem>();
 
-            if (entityManager.EntitySysManager.GetEntitySystem<PuddleSystem>()
-                .TrySpillAt(tile, new Solution(reagent.ID, reactVolume, data), out var puddleUid, false, false))
-            {
-                var slippery = entityManager.EnsureComponent<SlipperyComponent>(puddleUid);
-                slippery.LaunchForwardsMultiplier = LaunchForwardsMultiplier;
-                slippery.ParalyzeTime = ParalyzeTime;
-                slippery.SuperSlippery = SuperSlippery;
-                entityManager.Dirty(puddleUid, slippery);
-
-                var step = entityManager.EnsureComponent<StepTriggerComponent>(puddleUid);
-                entityManager.EntitySysManager.GetEntitySystem<StepTriggerSystem>().SetRequiredTriggerSpeed(puddleUid, RequiredSlipSpeed, step);
-
-                var slow = entityManager.EnsureComponent<SpeedModifierContactsComponent>(puddleUid);
-                var speedModifier = 1 - reagent.Viscosity;
-                entityManager.EntitySysManager.GetEntitySystem<SpeedModifierContactsSystem>().ChangeModifiers(puddleUid, speedModifier, slow);
-
-                return reactVolume;
-            }
-
-            return FixedPoint2.Zero;
+            return spillSystem.TrySpillAt(tile, new Solution(reagent.ID, reactVolume, data), out _, sound: false, tileReact: false)
+                ? reactVolume
+                : FixedPoint2.Zero;
         }
     }
 }

@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.NPC.Queries.Considerations;
 using Content.Server.NPC.Queries.Queries;
 using Robust.Shared.Prototypes;
@@ -9,7 +15,7 @@ namespace Content.Server.NPC.Queries;
 /// Each query is run in turn to get the final available results.
 /// These results are then run through the considerations.
 /// </summary>
-[Prototype("utilityQuery")]
+[Prototype]
 public sealed partial class UtilityQueryPrototype : IPrototype
 {
     [IdDataField]

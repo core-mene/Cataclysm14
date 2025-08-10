@@ -1,3 +1,43 @@
+// SPDX-FileCopyrightText: 2019 Ephememory
+// SPDX-FileCopyrightText: 2019 Injazz
+// SPDX-FileCopyrightText: 2019 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2019 PrPleGoo
+// SPDX-FileCopyrightText: 2019 Silver
+// SPDX-FileCopyrightText: 2020 Rohesie
+// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2021 Galactic Chimp
+// SPDX-FileCopyrightText: 2021 Kara D
+// SPDX-FileCopyrightText: 2021 Paul
+// SPDX-FileCopyrightText: 2021 Swept
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 moonheart08
+// SPDX-FileCopyrightText: 2022 Jacob Tong
+// SPDX-FileCopyrightText: 2022 Moony
+// SPDX-FileCopyrightText: 2022 Morb
+// SPDX-FileCopyrightText: 2022 Paul Ritter
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 20kdc
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Ilya246
+// SPDX-FileCopyrightText: 2023 Kara
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2023 Vordenburg
+// SPDX-FileCopyrightText: 2023 Ygg01
+// SPDX-FileCopyrightText: 2023 deltanedas
+// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 PECK
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Princess Cheeseballs
+// SPDX-FileCopyrightText: 2025 Tayrtahn
+// SPDX-FileCopyrightText: 2025 mikusssssss
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Atmos;
 using Content.Shared.Light.Components;
 using Content.Shared.Movement.Systems;
@@ -73,7 +113,10 @@ namespace Content.Shared.Maps
         /// </summary>
         [DataField("barestepSounds")] public SoundSpecifier? BarestepSounds { get; private set; } = new SoundCollectionSpecifier("BarestepHard");
 
-        [DataField("friction")] public float Friction { get; set; } = 0.2f;
+        /// <summary>
+        /// Base friction modifier for this tile.
+        /// </summary>
+        [DataField("friction")] public float Friction { get; set; } = 1f;
 
         [DataField("variants")] public byte Variants { get; set; } = 1;
 

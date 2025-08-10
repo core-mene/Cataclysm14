@@ -10,7 +10,9 @@
 # SPDX-FileCopyrightText: 2024 Salvantrix
 # SPDX-FileCopyrightText: 2024 TsjipTsjip
 # SPDX-FileCopyrightText: 2024 Wiebe Geertsma
+# SPDX-FileCopyrightText: 2025 Arcticular
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
@@ -26,7 +28,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/06/2025 21:45:57
+  time: 08/08/2025 00:54:46
   entityCount: 4842
 maps: []
 grids:
@@ -1963,7 +1965,8 @@ entities:
           -2,0:
             0: 47359
           -2,1:
-            0: 43195
+            0: 43163
+            6: 32
           -2,2:
             0: 65450
           -2,-1:
@@ -1997,7 +2000,7 @@ entities:
             0: 1024
           8,3:
             0: 7
-            6: 8
+            7: 8
           5,5:
             0: 57308
           5,6:
@@ -2083,7 +2086,8 @@ entities:
             0: 61440
           -3,-2:
             0: 59407
-            7: 1536
+            8: 512
+            9: 1024
           -2,-3:
             0: 61440
           -2,-2:
@@ -2229,6 +2233,21 @@ entities:
         - volume: 2500
           temperature: 293.15
           moles:
+          - 21.6852
+          - 81.57766
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.15
+          moles:
           - 0
           - 0
           - 0
@@ -2243,6 +2262,21 @@ entities:
           - 0
         - volume: 2500
           temperature: 293.14996
+          moles:
+          - 21.824879
+          - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.1499
           moles:
           - 21.824879
           - 82.10312
@@ -2781,6 +2815,19 @@ entities:
     - type: Transform
       pos: -1.5,17.5
       parent: 1
+- proto: AirlockHatchRogueCommanderLocked
+  entities:
+  - uid: 93
+    components:
+    - type: Transform
+      pos: -8.5,2.5
+      parent: 1
+    - type: Door
+      secondsUntilStateChange: -517.1948
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
 - proto: AirlockHatchRogueLocked
   entities:
   - uid: 57
@@ -2828,6 +2875,12 @@ entities:
     - type: Transform
       pos: 3.5,17.5
       parent: 1
+    - type: Door
+      secondsUntilStateChange: -208.1618
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
   - uid: 66
     components:
     - type: Transform
@@ -2914,6 +2967,12 @@ entities:
     - type: Transform
       pos: -9.5,-0.5
       parent: 1
+    - type: Door
+      secondsUntilStateChange: -514.22815
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
   - uid: 83
     components:
     - type: Transform
@@ -2954,6 +3013,12 @@ entities:
     - type: Transform
       pos: -4.5,14.5
       parent: 1
+    - type: Door
+      secondsUntilStateChange: -64.128624
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
   - uid: 91
     components:
     - type: Transform
@@ -2964,17 +3029,6 @@ entities:
     - type: Transform
       pos: -12.5,28.5
       parent: 1
-  - uid: 93
-    components:
-    - type: Transform
-      pos: -8.5,2.5
-      parent: 1
-    - type: Door
-      secondsUntilStateChange: -12.317997
-      state: Opening
-    - type: DeviceLinkSource
-      lastSignals:
-        DoorStatus: True
   - uid: 94
     components:
     - type: Transform
@@ -11154,6 +11208,15 @@ entities:
     components:
     - type: Transform
       pos: -6.5,26.5
+      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
+  - uid: 3107
+    components:
+    - type: Transform
+      pos: -7.5,5.5
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 5
@@ -19828,14 +19891,25 @@ entities:
     - type: Transform
       pos: -6.5,5.5
       parent: 1
+    - type: ContainerContainer
+      containers:
+        entity_storage: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 3152
+        paper_label: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
     - type: EntityStorage
       air:
         volume: 200
         immutable: False
         temperature: 293.14923
         moles:
-        - 1.7459903
-        - 6.568249
+        - 1.8856695
+        - 7.0937095
         - 0
         - 0
         - 0
@@ -21441,57 +21515,42 @@ entities:
     - type: Transform
       pos: -19.5,9.5
       parent: 1
-- proto: SpawnPointPirateCaptain
-  entities:
   - uid: 3099
     components:
     - type: Transform
-      pos: -15.5,21.5
+      pos: -19.5,10.5
       parent: 1
   - uid: 3100
     components:
     - type: Transform
-      pos: -17.5,21.5
-      parent: 1
-  - uid: 3101
-    components:
-    - type: Transform
-      pos: -8.5,4.5
+      pos: 9.5,14.5
       parent: 1
   - uid: 3102
     components:
     - type: Transform
-      pos: 9.5,14.5
+      pos: -17.5,9.5
       parent: 1
   - uid: 3103
     components:
     - type: Transform
-      pos: -7.5,-3.5
+      pos: -8.5,-4.5
       parent: 1
   - uid: 3104
     components:
     - type: Transform
-      pos: -8.5,-4.5
+      pos: -7.5,-3.5
       parent: 1
   - uid: 3105
     components:
     - type: Transform
       pos: 17.5,21.5
       parent: 1
-  - uid: 3106
+- proto: SpawnPointPirateCaptain
+  entities:
+  - uid: 3101
     components:
     - type: Transform
-      pos: 13.5,28.5
-      parent: 1
-  - uid: 3107
-    components:
-    - type: Transform
-      pos: -19.5,10.5
-      parent: 1
-  - uid: 3108
-    components:
-    - type: Transform
-      pos: -17.5,9.5
+      pos: -8.5,4.5
       parent: 1
 - proto: SpawnPointPirateFirstMate
   entities:
@@ -21801,6 +21860,11 @@ entities:
       parent: 1
 - proto: SuitStorageEVAPirate
   entities:
+  - uid: 3106
+    components:
+    - type: Transform
+      pos: -9.5,-5.5
+      parent: 1
   - uid: 3153
     components:
     - type: Transform
@@ -21813,10 +21877,10 @@ entities:
       parent: 1
 - proto: SuitStorageSyndieCommander
   entities:
-  - uid: 3152
+  - uid: 3108
     components:
     - type: Transform
-      pos: -9.5,-5.5
+      pos: -9.5,5.5
       parent: 1
 - proto: SyringeCaseAltFilled
   entities:
@@ -30348,6 +30412,15 @@ entities:
     - type: Transform
       pos: -5.519909,-2.366984
       parent: 1
+- proto: WeaponPistolHawk4
+  entities:
+  - uid: 3152
+    components:
+    - type: Transform
+      parent: 2833
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: WeaponTurretDravon
   entities:
   - uid: 4813

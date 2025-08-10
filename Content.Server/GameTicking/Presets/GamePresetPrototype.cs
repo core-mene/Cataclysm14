@@ -1,3 +1,16 @@
+// SPDX-FileCopyrightText: 2022 Paul Ritter
+// SPDX-FileCopyrightText: 2022 Putnam3145
+// SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 
 using Content.Server.Maps;
 using Robust.Shared.Prototypes;
@@ -9,7 +22,7 @@ namespace Content.Server.GameTicking.Presets
     /// <summary>
     ///     A round-start setup preset, such as which antagonists to spawn.
     /// </summary>
-    [Prototype("gamePreset")]
+    [Prototype]
     public sealed partial class GamePresetPrototype : IPrototype
     {
         [IdDataField]

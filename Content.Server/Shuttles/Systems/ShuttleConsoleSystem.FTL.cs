@@ -11,6 +11,7 @@
 
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
+using Content.Shared._Mono.Ships;
 using Content.Shared.Popups;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Events;
@@ -31,6 +32,9 @@ public sealed partial class ShuttleConsoleSystem
     private const float ShuttleFTLRange = 256f;
     private const float ShuttleFTLMassThreshold = 100f;
 
+    private const float MassConstant = 50f; // Arbitrary, at this value massMultiplier = 0.65
+    private const float MassMultiplierMin = 0.5f;
+    private const float MassMultiplierMax = 5f;
     private void InitializeFTL()
     {
         SubscribeLocalEvent<FTLBeaconComponent, ComponentStartup>(OnBeaconStartup);
@@ -242,10 +246,32 @@ public sealed partial class ShuttleConsoleSystem
 
         var ev = new ShuttleConsoleFTLTravelStartEvent(ent.Owner);
         RaiseLocalEvent(ref ev);
-        if(_sharedShuttle.TryGetFTLDrive(shuttleUid.Value, out _, out var drive))
-            _shuttle.FTLToCoordinates(shuttleUid.Value, shuttleComp, adjustedCoordinates, targetAngle, drive.StartupTime, drive.HyperSpaceTime);
+        if (_sharedShuttle.TryGetFTLDrive(shuttleUid.Value, out _, out var drive)) // Mono Begin
+        {
+            MassAdjustFTLStart(shuttlePhysics,
+                drive,
+                out var massAdjustedStartupTime,
+                out var massAdjustedHyperSpaceTime);
+            _shuttle.FTLToCoordinates(shuttleUid.Value, shuttleComp, adjustedCoordinates, targetAngle, massAdjustedStartupTime, massAdjustedHyperSpaceTime);
+        }
     }
 
+    // Mono Begin
+    private void MassAdjustFTLStart(PhysicsComponent shuttlePhysics, FTLDriveComponent drive, out float massAdjustedStartupTime, out float massAdjustedHyperSpaceTime)
+    {
+        if (drive.MassAffectedDrive == false)
+        {
+            massAdjustedHyperSpaceTime = drive.HyperSpaceTime;
+            massAdjustedStartupTime = drive.StartupTime;
+            return;
+        }
+        var adjustedMass = shuttlePhysics.Mass * drive.DriveMassMultiplier;
+        var massMultiplier = float.Log(float.Sqrt(adjustedMass / MassConstant + float.E));
+        massMultiplier = float.Clamp(massMultiplier, MassMultiplierMin, MassMultiplierMax);
+        massAdjustedStartupTime = drive.StartupTime * massMultiplier;
+        massAdjustedHyperSpaceTime = drive.HyperSpaceTime * massMultiplier;
+    }
+    // Mono End
     private void UpdateConsoles(EntityUid uid, ShuttleComponent? component = null)
     {
         if (!Resolve(uid, ref component))
