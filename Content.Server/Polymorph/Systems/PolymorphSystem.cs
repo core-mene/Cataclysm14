@@ -196,9 +196,9 @@ public sealed partial class PolymorphSystem : EntitySystem
         if (!TryComp<MobStateComponent>(uid, out var mob))
             return null;
         // Mono Begin - If polymorph only works in a certain life state, check that state.
-        if (!configuration.PolymorphInAlive && !_mobState.IsAlive(uid, mob) ||
-            !configuration.PolymorphInCrit && !_mobState.IsIncapacitated(uid, mob) ||
-            !configuration.PolymorphInDeath && !_mobState.IsDead(uid, mob))
+        if (!configuration.PolymorphTheLiving && !_mobState.IsAlive(uid, mob) ||
+            !configuration.PolymorphTheCritical && !_mobState.IsIncapacitated(uid, mob) ||
+            !configuration.PolymorphTheDead && !_mobState.IsDead(uid, mob))
             return null;
         // Mono End
 

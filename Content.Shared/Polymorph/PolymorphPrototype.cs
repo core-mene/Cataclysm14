@@ -51,19 +51,19 @@ public sealed partial record PolymorphConfiguration
     /// Whether or not the target is polymorphed above critical status.
     /// </summary>
     [DataField(serverOnly: true)]
-    public bool PolymorphInAlive = true;
+    public bool PolymorphTheLiving = true;
 
     /// <summary>
     /// Whether or not the target is polymorphed below critical status but above dead status.
     /// </summary>
     [DataField(serverOnly: true)]
-    public bool PolymorphInCrit = true;
+    public bool PolymorphTheCritical = true;
 
     /// <summary>
     /// Whether or not the target is polymorphed while dead.
     /// </summary>
     [DataField(serverOnly: true)]
-    public bool PolymorphInDeath = false;
+    public bool PolymorphTheDead = false;
 
     /// <summary>
     /// The duration of the transformation in seconds
