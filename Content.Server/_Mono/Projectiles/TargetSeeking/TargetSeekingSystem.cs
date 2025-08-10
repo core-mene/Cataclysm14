@@ -93,8 +93,12 @@ public sealed class TargetSeekingSystem : EntitySystem
             _physics.SetLinearVelocity(uid, body.LinearVelocity + _transform.GetWorldRotation(xform).ToWorldVec() * acceleration, body: body);
 
             // Damping applied for missiles above max speed.
-            if (body.LinearVelocity.Length() > seekingComp.MaxSpeed)
+            if (body.LinearVelocity.Length() >= seekingComp.MaxSpeed)
                 _physics.SetLinearDamping(uid, body, seekingComp.Acceleration * frameTime * 1.5f);
+            else
+            {
+                _physics.SetLinearDamping(uid, body, 0.2f);
+            }
 
             // Skip seeking behavior if disabled (e.g., after entering an enemy grid)
             if (seekingComp.SeekingDisabled)
