@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -33,3 +34,11 @@
   components:
   - type: AccessReader
     access: [["TsfmcEngineering"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsRogueCommander
+  suffix: Rogue Command, Locked
+  components:
+  - type: AccessReader
+    access: [["RogueCommander"]]

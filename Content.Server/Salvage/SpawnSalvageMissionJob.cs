@@ -15,6 +15,7 @@
 // SPDX-FileCopyrightText: 2024 metalgearsloth
 // SPDX-FileCopyrightText: 2025 Dvir
 // SPDX-FileCopyrightText: 2025 GreaseMonk
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -54,9 +55,11 @@ using Content.Server.Weather;
 using Content.Shared.Weather;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
+using Robust.Shared.Physics.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Robust.Shared.GameObjects;
 
 namespace Content.Server.Salvage;
 
@@ -86,6 +89,13 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
     private EntityUid mapUid = EntityUid.Invalid;
 #pragma warning restore IDE1006
     // End Frontier
+
+    // Mono
+    private const float MassConstant = 50f; // Arbitrary, at this value massMultiplier = 0.65
+    private const float MassMultiplierMin = 0.5f;
+    private const float MassMultiplierMax = 5f;
+    private const float StartupTime = 5.5f;
+    private const float HyperSpaceTime = 50f;
 
     public SpawnSalvageMissionJob(
         double maxTime,
@@ -187,7 +197,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
             .GetMission(_missionParams.MissionType, _missionParams.Difficulty, _missionParams.Seed);
 
         var missionWeather = _prototypeManager.Index<SalvageWeatherMod>(mission.Weather);
-        var missionBiome = _prototypeManager.Index<SalvageBiomeMod>(mission.Biome);
+        var missionBiome = _prototypeManager.Index<SalvageBiomeModPrototype>(mission.Biome);
         BiomeComponent? biome = null;
 
         if (missionBiome.BiomePrototype != null)
@@ -313,7 +323,8 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
         if (shuttleUid is { Valid: true })
         {
             var shuttle = _entManager.GetComponent<ShuttleComponent>(shuttleUid.Value);
-            _shuttle.FTLToCoordinates(shuttleUid.Value, shuttle, new EntityCoordinates(mapUid, coords), 0f, 5.5f, 50f);
+            MassAdjustFTLExpedStartup(shuttleUid, out var massStartupTime);
+            _shuttle.FTLToCoordinates(shuttleUid.Value, shuttle, new EntityCoordinates(mapUid, coords), 0f, massStartupTime, HyperSpaceTime);
         }
 
         List<Vector2i> reservedTiles = new();
@@ -364,7 +375,19 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
         return true;
     }
 
-    private async Task SpawnDungeonLoot(Dungeon? dungeon, SalvageBiomeMod biomeMod, SalvageLootPrototype loot, EntityUid gridUid, MapGridComponent grid, Random random, List<Vector2i> reservedTiles)
+    private void MassAdjustFTLExpedStartup(EntityUid? shuttleUid, out float massStartupTime)
+    {
+        var massMultiplier = 1f;
+        if (_entManager.TryGetComponent(shuttleUid, out PhysicsComponent? shuttlePhysics))
+        {
+            var mass = shuttlePhysics.Mass;
+            massMultiplier = float.Log(float.Sqrt(mass / MassConstant + float.E));
+            massMultiplier = float.Clamp(massMultiplier, MassMultiplierMin, MassMultiplierMax);
+        }
+        massStartupTime = StartupTime * massMultiplier;
+    }
+
+    private async Task SpawnDungeonLoot(Dungeon? dungeon, SalvageBiomeModPrototype biomeMod, SalvageLootPrototype loot, EntityUid gridUid, MapGridComponent grid, Random random, List<Vector2i> reservedTiles)
     {
         for (var i = 0; i < loot.LootRules.Count; i++)
         {

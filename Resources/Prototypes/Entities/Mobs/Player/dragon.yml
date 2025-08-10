@@ -43,7 +43,7 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 4 # 3->4
     baseSprintSpeed: 6 # 5->6
-    weightlessModifier: 2 # 1.5>2 - Mono "I hope you like going fast"
+    baseWeightlessModifier: 2 # 1.5>2 - Mono "I hope you like going fast"
   - type: UserInterface
     interfaces:
       enum.RadarConsoleUiKey.Key:

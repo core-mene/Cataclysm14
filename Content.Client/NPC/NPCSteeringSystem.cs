@@ -1,5 +1,15 @@
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2024 TemporalOroboros
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Princess Cheeseballs
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using Content.Client.Physics.Controllers;
+using Content.Client.PhysicsSystem.Controllers;
 using Content.Shared.Movement.Components;
 using Content.Shared.NPC;
 using Content.Shared.NPC.Events;

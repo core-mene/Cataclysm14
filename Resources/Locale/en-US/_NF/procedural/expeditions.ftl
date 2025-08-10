@@ -17,8 +17,10 @@ salvage-weather-mod-fallout = Fallout
 salvage-weather-mod-heavy-sandstorm = Heavy Sandstorm
 salvage-weather-mod-sandstorm = Sandstorm
 salvage-weather-mod-hail = Hail
+salvage-weather-mod-rain-light = Light Rain
 salvage-weather-mod-rain = Rain
 salvage-weather-mod-storm = Storm
+salvage-weather-mod-none = Clear Weather
 
 salvage-biome-mod-shadow = Shadow
 

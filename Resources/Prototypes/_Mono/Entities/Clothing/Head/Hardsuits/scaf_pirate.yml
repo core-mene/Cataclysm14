@@ -1,8 +1,13 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: [ClothingHeadHardsuitBase, BaseC3SyndicateContraband]
   id: ClothingHeadHelmetHardsuitPirateScaf
-  name: pirate SCAF hardsuit helmet
-  description: A (probably stolen) SCAF suit painted red with white stripes. The lighting systems have been replaced with a thermal pulse.
+  name: rogue SCAF hardsuit helmet
+  description: An old SCAF suit painted red with white stripes. The lighting systems have been replaced with a thermal pulse.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Head/Hardsuits/scaf_pirate.rsi

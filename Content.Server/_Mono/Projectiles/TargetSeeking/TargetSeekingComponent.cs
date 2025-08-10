@@ -63,6 +63,12 @@ public sealed partial class TargetSeekingComponent : Component
     public float LaunchSpeed = 10f;
 
     /// <summary>
+    /// Has the projectile had its launch speed applied yet?
+    /// </summary>
+    [DataField]
+    public bool Launched = false;
+
+    /// <summary>
     /// Current speed of the projectile in m/s.
     /// </summary>
     [DataField]

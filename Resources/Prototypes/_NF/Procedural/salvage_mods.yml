@@ -33,6 +33,7 @@
     - Grasslands
     - Snow
     - Shadow
+    - Desert
 
 - type: salvageDungeonMod
   id: NFFactoryDorms
@@ -43,6 +44,7 @@
     - Grasslands
     - Lava
     - Shadow
+    - Desert
 
 - type: salvageDungeonMod
   id: NFLavaMercenary
@@ -62,6 +64,7 @@
     - Lava
     - Snow
     - Shadow
+    - Desert
 
 - type: salvageDungeonMod
   id: NFSalvageOutpost
@@ -73,6 +76,7 @@
     - Lava
     - Snow
     - Shadow
+    - Desert
 
 - type: salvageDungeonMod
   id: NFExperiment
@@ -81,6 +85,7 @@
   biomes:
     #- LowDesert
     - Grasslands
+    - Desert
 
 - type: salvageDungeonMod
   id: NFLavaBrig
@@ -137,7 +142,7 @@
 - type: salvageWeatherMod
   id: SnowfallHeavy
   desc: salvage-weather-mod-heavy-snowfall
-  weather: SnowfallHeavy
+  weather: MonoBlizzard
   cost: 1
   biomes:
   - Snow
@@ -145,7 +150,7 @@
 - type: salvageWeatherMod
   id: SnowfallMedium
   desc: salvage-weather-mod-medium-snowfall
-  weather: SnowfallMedium
+  weather: MonoSnow
   cost: 1
   biomes:
   - Grasslands
@@ -154,7 +159,7 @@
 - type: salvageWeatherMod
   id: SnowfallLight
   desc: salvage-weather-mod-light-snowfall
-  weather: SnowfallLight
+  weather: MonoSnowLight
   cost: 1
   biomes:
   - Grasslands
@@ -164,7 +169,7 @@
   id: AshfallHeavy
   desc: salvage-weather-mod-heavy-ashfall
   weather: AshfallHeavy
-  cost: 4
+  cost: 5
   biomes:
   - Lava
 
@@ -181,13 +186,21 @@
   id: AshfallLight
   desc: salvage-weather-mod-light-ashfall
   weather: AshfallLight
-  cost: 2
+  cost: 1
+  biomes:
+  - Lava
+  - Shadow
+  - Caves
+  - Desert
 
 - type: salvageWeatherMod
   id: Fallout
   desc: salvage-weather-mod-fallout
   weather: Fallout
-  cost: 2
+  cost: 1
+  biomes:
+  - Lava
+  - Shadow
 
 - type: salvageWeatherMod
   id: SandstormHeavy
@@ -196,6 +209,7 @@
   cost: 1
   biomes:
   - Caves
+  - Desert
 
 - type: salvageWeatherMod
   id: Sandstorm
@@ -203,23 +217,35 @@
   weather: Sandstorm
   biomes:
   - Caves
+  - Lava
+  - Desert
+
+- type: salvageWeatherMod
+  id: LightRain
+  desc: salvage-weather-mod-rain-light
+  weather: MonoLightRain
+  biomes:
+  - Grasslands
+  - Lava # primordial planet or something idk
 
 - type: salvageWeatherMod
   id: Rain
   desc: salvage-weather-mod-rain
-  weather: Rain
+  weather: MonoRain
   biomes:
   - Grasslands
-  - Shadow
-  - Lava # primordial planet or something idk
 
 - type: salvageWeatherMod
   id: Storm
   desc: salvage-weather-mod-storm
-  weather: Storm
+  weather: MonoStorm
   biomes:
   - Grasslands
-  - Shadow
+
+- type: salvageWeatherMod
+  id: ClearWeather
+  desc: salvage-weather-mod-none
+  weather: ClearWeather
 
 # Air mixtures
 - type: salvageAirMod

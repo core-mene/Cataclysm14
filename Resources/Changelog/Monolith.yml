@@ -9828,3 +9828,282 @@ Entries:
   id: 1096
   time: '2025-08-06T22:42:30.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1789
+- author: BoskiYourk
+  changes:
+    - type: Remove
+      message: Removed the Ability for the Commissar to buy a Ledokol Round-Start
+    - type: Tweak
+      message: Updated Engineering in Dorms in the Ledokol
+  id: 1097
+  time: '2025-08-07T06:44:46.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1793
+- author: BoskiYourk
+  changes:
+    - type: Tweak
+      message: Updated Baikal to be more in line with other stations
+  id: 1098
+  time: '2025-08-07T06:46:03.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1792
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added AK-220 as a shitty cheap SMG to Mercenary loadouts, USSP T1 guns,
+        liberation stations (both PMC and normal), and low-tier expedition loot.
+    - type: Tweak
+      message: USSP can make 9x19mm FMJ/incen/practice SMG mags/ammo boxes now.
+  id: 1099
+  time: '2025-08-07T07:03:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1784
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Rule 1 tweak, justified diplomacy, truces, temporary deals, etc allowed.
+        Permanent, cooperative alliances banned.
+  id: 1100
+  time: '2025-08-07T14:04:41.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1711
+- author: tonotom1
+  changes:
+    - type: Add
+      message: Maints jack wield sprite
+    - type: Tweak
+      message: Maints jack combat stats tweaked to be inline with pickaxe.
+  id: 1101
+  time: '2025-08-07T20:07:42.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1798
+- author: Arcticular1
+  changes:
+    - type: Tweak
+      message: >-
+        Took the syndicate commander suit out of the armory and into the
+        Commander's room.
+  id: 1102
+  time: '2025-08-07T23:13:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1796
+- author: Rubeebeebee
+  changes:
+    - type: Tweak
+      message: added 2x defibs to the padval
+  id: 1103
+  time: '2025-08-08T00:41:16.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1801
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Speed boots, speed chems, and speed legs speed bonuses reduced.
+  id: 1104
+  time: '2025-08-08T14:00:13.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1790
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: >-
+        Mobs will now attack you even in open space and should otherwise behave
+        better in 0-gravity.
+  id: 1105
+  time: '2025-08-08T14:46:46.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1810
+- author: starch70
+  changes:
+    - type: Add
+      message: Grass, desert tiles, snow, and rain now use RMC-14/CM-13 sprites.
+    - type: Add
+      message: >-
+        Expeds can now generate with light rain, clear weather, and desert
+        biomes.
+  id: 1106
+  time: '2025-08-08T15:11:05.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1811
+- author: Rubeebeebee
+  changes:
+    - type: Tweak
+      message: added a wall recharger and medical techfab to the taichi
+  id: 1107
+  time: '2025-08-08T15:50:24.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1809
+- author: tonotom1
+  changes:
+    - type: Add
+      message: >-
+        Ported The People's Shovel from Frontier, the meme Chinese multitool
+        shovel. It can be rarely found in salvage. Credit: dvir001
+    - type: Tweak
+      message: Added holoflare guns and antique power cells to salvage tables
+    - type: Fix
+      message: >-
+        Fixed a weighting issue with salvmaints gacha prize table. The basic
+        guns shouldn't overdilute prize variety now.
+  id: 1108
+  time: '2025-08-08T15:52:27.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1808
+- author: Avalon-Proto
+  changes: []
+  id: 1109
+  time: '2025-08-08T16:17:59.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1802
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Planets can generate ore again (minus some ores such as
+        bluespace/bananium)
+  id: 1110
+  time: '2025-08-08T18:19:51.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1813
+- author: starch70
+  changes:
+    - type: Add
+      message: Added a permanent desert planet below you can warp to. Lavaland?
+    - type: Fix
+      message: Fixed tiles on desert planets being destructible.
+    - type: Fix
+      message: Fixed dark grass showing up as missing textures.
+  id: 1111
+  time: '2025-08-08T20:15:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1815
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Pirate scaf suits renamed appropiately.
+  id: 1112
+  time: '2025-08-08T21:27:06.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1816
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Desert planet disabled temporarily pending issue resolution.
+  id: 1113
+  time: '2025-08-09T02:18:38.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1817
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Desert planet returns w/ changes to rock generation that should make it
+        less laggy for the server (rocks are rarer and its mostly flat now,
+        rocks you do find are very rich with ore though compared to before.)
+  id: 1114
+  time: '2025-08-09T11:39:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1819
+- author: Ilya246
+  changes:
+    - type: Add
+      message: >-
+        Added the carp caller, a machine that can attract wild space carp, as a
+        T1 experimental research.
+  id: 1115
+  time: '2025-08-09T14:48:48.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1818
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Charon and Charonette projectile damage buffed, more damage to shields
+        basically.
+  id: 1116
+  time: '2025-08-09T14:50:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1820
+- author: Rubeebeebee
+  changes:
+    - type: Tweak
+      message: >-
+        added a exped console to the claymore, since it didnt have one
+        originally
+  id: 1117
+  time: '2025-08-09T18:19:43.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1824
+- author: BoskiYourk
+  changes:
+    - type: Tweak
+      message: Moved faction leader firearms out of loadouts onto maps
+  id: 1118
+  time: '2025-08-09T18:39:44.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1803
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed grid garbage-clean deleting non-expedition planets.
+  id: 1119
+  time: '2025-08-09T18:56:26.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1825
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Ship FTL times are now modified by ship mass.
+  id: 1120
+  time: '2025-08-09T18:58:51.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1823
+- author: Cojoke-dot
+  changes:
+    - type: Fix
+      message: IPC no longer shows surgeries you can't do on them
+    - type: Fix
+      message: You can now do surgery to insert/remove IPC brains
+  id: 1121
+  time: '2025-08-09T21:44:37.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1829
+- author: Cojoke-dot
+  changes:
+    - type: Tweak
+      message: PMC WL-01's helmet light is the same as the Scaf's now
+  id: 1122
+  time: '2025-08-09T23:20:46.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1832
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Renames Contractor to Spacer
+  id: 1123
+  time: '2025-08-09T23:53:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1830
+- author: Cojoke-dot
+  changes:
+    - type: Tweak
+      message: Breaching Hammer can now pry unpowered doors open
+  id: 1124
+  time: '2025-08-09T23:53:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1831
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added 2 plants to the desert planet. one gives you logs, the other gives
+        you food/water/drugs. Rimworld is now possible on the desert planet.
+        Free fent 24/7 even
+  id: 1125
+  time: '2025-08-09T23:58:41.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1828
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Halcyon meeting room powered
+  id: 1126
+  time: '2025-08-10T00:58:40.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1833
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Implemented roofs on every ship, so exped/planet lighting shouldnt show
+        in your ship anymore.
+  id: 1127
+  time: '2025-08-10T15:59:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1840
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: M82 helmet NVs brighter.
+  id: 1128
+  time: '2025-08-10T16:00:05.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1835
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Cryo lag fix
+    - type: Tweak
+      message: Bodies shouldn't be frictionless in space anymore probably
+  id: 1129
+  time: '2025-08-10T16:11:08.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1834

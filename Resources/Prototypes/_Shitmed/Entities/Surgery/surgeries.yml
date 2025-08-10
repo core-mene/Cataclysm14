@@ -349,6 +349,25 @@
 
 - type: entity
   parent: SurgeryBase
+  id: SurgeryRemoveBorgBrain
+  name: Remove Positronic Brain
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    # TODO: ipc surgery steps
+    - SurgeryStepSawBones
+    - SurgeryStepClampInternalBleeders
+    - SurgeryStepRemoveOrgan
+  - type: SurgeryPartCondition
+    part: Torso
+  - type: SurgeryOrganCondition
+    organ:
+    - type: BorgBrain
+
+- type: entity
+  parent: SurgeryBase
   id: SurgeryInsertBrain
   name: Insert Brain
   categories: [ HideSpawnMenu ]
@@ -359,13 +378,25 @@
     - SurgeryStepSawBones
     - SurgeryStepInsertOrgan
     - SurgeryStepSealOrganWound
-  - type: SurgeryPartCondition
-    part: Head
+  - type: SurgeryOrganSlotCondition
+    organSlot: brain
   - type: SurgeryOrganCondition
     organ:
     - type: Brain
     inverse: true
     reattaching: true
+
+- type: entity
+  parent: SurgeryInsertBrain
+  id: SurgeryInsertBorgBrain
+  name: Insert Positronic Brain
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SurgeryOrganSlotCondition
+    organSlot: posbrain
+  - type: SurgeryOrganCondition
+    organ:
+    - type: BorgBrain
 
 - type: entity
   parent: SurgeryBase
@@ -397,6 +428,8 @@
     - SurgeryStepSawBones
     - SurgeryStepInsertHeart
     - SurgeryStepSealOrganWound
+  - type: SurgeryOrganSlotCondition
+    organSlot: heart
   - type: SurgeryPartCondition
     part: Torso
   - type: SurgeryOrganCondition
@@ -435,6 +468,8 @@
     - SurgeryStepSawBones
     - SurgeryStepInsertLiver
     - SurgeryStepSealOrganWound
+  - type: SurgeryOrganSlotCondition
+    organSlot: liver
   - type: SurgeryPartCondition
     part: Torso
   - type: SurgeryOrganCondition
@@ -473,6 +508,8 @@
     - SurgeryStepSawBones
     - SurgeryStepInsertLungs
     - SurgeryStepSealOrganWound
+  - type: SurgeryOrganSlotCondition
+    organSlot: lungs
   - type: SurgeryPartCondition
     part: Torso
   - type: SurgeryOrganCondition
@@ -511,6 +548,8 @@
     - SurgeryStepSawBones
     - SurgeryStepInsertEyes
     - SurgeryStepSealOrganWound
+  - type: SurgeryOrganSlotCondition
+    organSlot: eyes
   - type: SurgeryPartCondition
     part: Head
   - type: SurgeryOrganCondition

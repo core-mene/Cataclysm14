@@ -652,9 +652,9 @@
 #      weight: 1
 #      children:
 #      - id: Coal1
-  #Meh prize
+  #Gun prize
     - !type:GroupSelector
-      weight: 90
+      weight: 45
       children:
       #Novalite
       - !type:AllSelector
@@ -687,10 +687,15 @@
         children:
         - id: WeaponRevolverArgenti
         - id: SpeedLoader5.56x45mmFMJ
-    - id: PillCanisterStrange
-    - id: WeaponLaserPistolNF
-    - id: BoxT3ComponentsAssorted
-    - id: PlushieThrongler
+      - id: WeaponLaserPistolNF
+  #Meh prize
+    - !type:GroupSelector
+      weight: 45
+      children:
+      - id: PillCanisterStrange
+      - id: BoxT3ComponentsAssorted
+      - id: PlushieThrongler
+      - id: NFShovel
     
   #Yeh prize
     - !type:GroupSelector

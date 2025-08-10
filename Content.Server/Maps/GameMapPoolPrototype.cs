@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2022 Rane
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Set;
@@ -7,7 +13,7 @@ namespace Content.Server.Maps;
 /// <summary>
 /// Prototype that holds a pool of maps that can be indexed based on the map pool CCVar.
 /// </summary>
-[Prototype("gameMapPool"), PublicAPI]
+[Prototype, PublicAPI]
 public sealed partial class GameMapPoolPrototype : IPrototype
 {
     /// <inheritdoc/>

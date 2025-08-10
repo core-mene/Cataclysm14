@@ -18,6 +18,9 @@
       components:
         - type: StationNameSetup
           mapNameTemplate: "MonoDev"
+        - type: StationPlanetSpawner
+          planet: DesertWorld
+          gridPath: /Maps/_Mono/surface_outpost_desert.yml
         - type: StationJobs
           availableJobs:
             Contractor: [ -1, -1 ]

@@ -299,6 +299,19 @@
 
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
+  id: WeaponSubMachineGunAK220USSP
+  result: WeaponSubMachineGunAK220
+  categories:
+  - SMGs
+  - Ballistic
+  - Weapons
+  materials:
+    Steel: 800
+    Plasteel: 200
+    Plastic: 400
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
   id: WeaponRifleAK502USSP
   result: WeaponRifleAK502
   categories:

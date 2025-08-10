@@ -4,11 +4,13 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using System.ComponentModel.DataAnnotations;
 using System.Numerics;
 using Content.Shared.Interaction;
 using Content.Server.Shuttles.Components;
 using Content.Shared.Projectiles;
 using Robust.Server.GameObjects;
+using Robust.Shared.Physics.Components;
 using Robust.Shared.Timing;
 
 namespace Content.Server._Mono.Projectiles.TargetSeeking;
@@ -75,27 +77,28 @@ public sealed class TargetSeekingSystem : EntitySystem
 
         var curTime = _gameTiming.CurTime;
 
-        var query = EntityQueryEnumerator<TargetSeekingComponent, TransformComponent>();
-        while (query.MoveNext(out var uid, out var seekingComp, out var xform))
+        var query = EntityQueryEnumerator<TargetSeekingComponent, PhysicsComponent, TransformComponent>();
+        while (query.MoveNext(out var uid, out var seekingComp, out var body, out var xform))
         {
-            // Initialize speed if needed
-            if (seekingComp.CurrentSpeed < seekingComp.LaunchSpeed)
+            // Mono Begin
+            var acceleration = seekingComp.Acceleration * frameTime;
+            // Initialize launch speed.
+            if (seekingComp.Launched == false)
             {
-                seekingComp.CurrentSpeed = seekingComp.LaunchSpeed;
+                acceleration += seekingComp.LaunchSpeed;
+                seekingComp.Launched = true;
             }
 
-            // Accelerate up to max speed
-            if (seekingComp.CurrentSpeed < seekingComp.MaxSpeed)
-            {
-                seekingComp.CurrentSpeed += seekingComp.Acceleration * frameTime;
-            }
+            // Apply acceleration in the direction the projectile is facing
+            _physics.SetLinearVelocity(uid, body.LinearVelocity + _transform.GetWorldRotation(xform).ToWorldVec() * acceleration, body: body);
+
+            // Damping applied for missiles above max speed.
+            if (body.LinearVelocity.Length() >= seekingComp.MaxSpeed)
+                _physics.SetLinearDamping(uid, body, seekingComp.Acceleration * frameTime * 1.5f);
             else
             {
-                seekingComp.CurrentSpeed = seekingComp.MaxSpeed;
+                _physics.SetLinearDamping(uid, body, 0f);
             }
-
-            // Apply velocity in the direction the projectile is facing
-            _physics.SetLinearVelocity(uid, _transform.GetWorldRotation(xform).ToWorldVec() * seekingComp.CurrentSpeed);
 
             // Skip seeking behavior if disabled (e.g., after entering an enemy grid)
             if (seekingComp.SeekingDisabled)

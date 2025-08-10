@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# carp but with dragon compound to make it follow the carp caller
+- type: entity
+  id: MobCarpCaller
+  categories: [ HideSpawnMenu ] # no reason to spawn it
+  parent: MobCarp
+  components:
+    - type: HTN
+      rootTask:
+        task: DragonCarpCompound

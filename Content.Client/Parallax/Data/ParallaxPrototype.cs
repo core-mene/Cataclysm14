@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2022 20kdc
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Robust.Shared.Prototypes;
 
 namespace Content.Client.Parallax.Data;
@@ -5,7 +12,7 @@ namespace Content.Client.Parallax.Data;
 /// <summary>
 /// Prototype data for a parallax.
 /// </summary>
-[Prototype("parallax")]
+[Prototype]
 public sealed partial class ParallaxPrototype : IPrototype
 {
     /// <inheritdoc/>
