@@ -75,6 +75,32 @@
     - FloorAsteroidSandUnvariantizedPlanet
     entities:
     - FloraRockSolid
+  # Flora Placement
+  # Piluma
+  - !type:BiomeEntityLayer
+    threshold: 0.915
+    noise:
+      seed: 0
+      frequency: 2
+      noiseType: OpenSimplex2
+    allowedTiles:
+    - FloorDesert
+    - FloorDesertPlanet
+    - FloorAsteroidSandUnvariantizedPlanet
+    entities:
+    - FloraPilumaPlant
+  # Orakim
+  - !type:BiomeEntityLayer
+    threshold: 0.925
+    noise:
+      seed: 0
+      frequency: 2
+      noiseType: OpenSimplex2
+    allowedTiles:
+    - FloorDesert
+    - FloorDesertPlanet
+    entities:
+    - FloraOrakimPlant
   # Rock decals
   - !type:BiomeDecalLayer
     allowedTiles:
@@ -98,7 +124,7 @@
     - Basalt7
     - Basalt8
     - Basalt9
-  # Bush decals 1
+  # Bush decals
   - !type:BiomeDecalLayer
     allowedTiles:
     - FloorDesert
@@ -112,22 +138,6 @@
     - Bushj1
     - Bushj2
     - Bushj3
-  # Bush decals 2
-  - !type:BiomeDecalLayer
-    allowedTiles:
-    - FloorDesert
-    - FloorDesertPlanet
-    - FloorAsteroidSandUnvariantizedPlanet
-    threshold: 0.9
-    divisions: 1
-    noise:
-      seed: 1
-      frequency: 0.9
-    decals:
-    - Bushd1
-    - Bushd2
-    - Bushd3
-    - Bushd4
   # Large rock areas
   - !type:BiomeEntityLayer
     allowedTiles:
