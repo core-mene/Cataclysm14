@@ -861,8 +861,6 @@ public sealed partial class ShuttleSystem
                 _physics.SetLinearVelocity(dockedUid, Vector2.Zero, body: dockedBody);
                 _physics.SetAngularVelocity(dockedUid, 0f, body: dockedBody);
                 var dockedShuttle = Comp<ShuttleComponent>(dockedUid);
-                _physics.SetLinearDamping(dockedUid, dockedBody, dockedShuttle.LinearDamping);
-                _physics.SetAngularDamping(dockedUid, dockedBody, dockedShuttle.AngularDamping);
                 if (TryGetFTLDrive(dockedUid, out _, out var drive))
                 {
                     MassAdjustFTLCooldown(dockedBody, drive, out var massAdjustedCooldown);
@@ -1606,8 +1604,6 @@ public sealed partial class ShuttleSystem
                 Enable(dockedUid, component: dockedBody);
                 _physics.SetLinearVelocity(dockedUid, new Vector2(0f, 20f), body: dockedBody);
                 _physics.SetAngularVelocity(dockedUid, 0f, body: dockedBody);
-                _physics.SetLinearDamping(dockedUid, dockedBody, 0f);
-                _physics.SetAngularDamping(dockedUid, dockedBody, 0f);
             }
 
             // Refresh consoles for this docked shuttle as well
