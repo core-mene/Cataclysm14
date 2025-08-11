@@ -40,6 +40,9 @@
 // SPDX-FileCopyrightText: 2024 Tayrtahn
 // SPDX-FileCopyrightText: 2024 TemporalOroboros
 // SPDX-FileCopyrightText: 2024 nikthechampiongr
+// SPDX-FileCopyrightText: 2025 AlgisAlphonse
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 Redrover1760
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 

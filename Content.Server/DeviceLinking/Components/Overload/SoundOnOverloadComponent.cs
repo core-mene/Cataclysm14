@@ -1,4 +1,10 @@
-﻿using Content.Server.DeviceLinking.Systems;
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Julian Giebel
+// SPDX-FileCopyrightText: 2025 slarticodefast
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Content.Server.DeviceLinking.Systems;
 using Robust.Shared.Audio;
 
 namespace Content.Server.DeviceLinking.Components.Overload;
