@@ -89,15 +89,15 @@ public sealed partial class ShuttleSystem
             return;
         }
 
-        // Clamp the speed between 0 and 60
-        // TODO: Make this account for thruster upgrades
-        var maxSpeed = Math.Clamp(args.MaxSpeed, 0f, 60f);
+        // Mono - fix
+        var maxSpeed = Math.Max(args.MaxSpeed, 0f);
 
         // Don't do anything if the value didn't change
-        if (Math.Abs(shuttleComponent.BaseMaxLinearVelocity - maxSpeed) < 0.01f)
+        if (Math.Abs(shuttleComponent.SetMaxVelocity - maxSpeed) < 0.01f)
             return;
 
-        shuttleComponent.BaseMaxLinearVelocity = maxSpeed;
+        // Mono - fix
+        shuttleComponent.SetMaxVelocity = maxSpeed;
 
         // Refresh the shuttle consoles to update the UI
         _console.RefreshShuttleConsoles(transform.GridUid.Value);

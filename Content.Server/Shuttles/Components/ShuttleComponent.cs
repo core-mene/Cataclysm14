@@ -92,6 +92,12 @@ namespace Content.Server.Shuttles.Components
 
         // <Mono>
         /// <summary>
+        /// Limit to max velocity set by a shuttle console.
+        /// </summary>
+        [DataField]
+        public float SetMaxVelocity = 140f;
+
+        /// <summary>
         /// At what Thrust-Weight-Ratio should this ship have the base max velocity as its maximum velocity.
         /// </summary>
         [DataField]
