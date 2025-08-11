@@ -45,13 +45,6 @@
       - !type:PopupMessage
         conditions:
         - !type:ReagentThreshold
-<<<<<<< HEAD
-=======
-          min: 10
-      - !type:PopupMessage
-        conditions:
-        - !type:ReagentThreshold
->>>>>>> upstream/main
           min: 2
         type: Local
         visualType: Medium
@@ -110,13 +103,6 @@
       - !type:PopupMessage
         conditions:
         - !type:ReagentThreshold
-<<<<<<< HEAD
-=======
-          min: 15
-      - !type:PopupMessage
-        conditions:
-        - !type:ReagentThreshold
->>>>>>> upstream/main
           min: 4
         type: Local
         visualType: Medium
