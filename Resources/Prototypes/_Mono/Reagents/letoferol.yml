@@ -35,8 +35,8 @@
           shouldHave: false
         damage:
           types:
-            Poison: 2
-            Cellular: 3
+            Poison: 3
+            Cellular: 4
       - !type:Polymorph
         prototype: LetoferolMutation
         conditions:
@@ -99,7 +99,7 @@
           shouldHave: false
         damage:
           types:
-            Poison: 1.5
+            Poison: 2
             Cellular: 2
       - !type:Polymorph
         prototype: LetoferolMutationNatural
