@@ -44,6 +44,7 @@
       amount: 4
   - type: Inventory
     templateId: chimera
+  - type: SurgeryTarget
   - type: Bloodstream
     bloodReagent: NaturalLetoferol
     bloodMaxVolume: 300
@@ -82,6 +83,8 @@
         type: StorageBoundUserInterface
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
   - type: MeleeChemicalInjector
     solution: melee
     transferAmount: 2.5
@@ -178,8 +181,8 @@
         Slash: 1.2
         Piercing: 0.65 # spear is clunky
         Heat: 0.5 # fire is scary (esword is op)
-  - type: CollectiveMind
-    channel: Letoferol
+  #- type: CollectiveMind  # Part of the organ instead.
+  #  channel: Letoferol
   - type: Flammable
     fireSpread: true
     canResistFire: true

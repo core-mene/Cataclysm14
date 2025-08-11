@@ -16,7 +16,7 @@
       connections:
       - torso
       organs:
-        brain: OrganHumanBrain
+        brain: OrganChimeraBrain
         eyes: OrganHumanEyes
     torso:
       part: TorsoSkeleton
@@ -31,7 +31,6 @@
         lungs: OrganChimeraLungs
         stomach: OrganChimeraStomach
         liver: OrganChimeraLiver
-        kidneys: OrganHumanKidneys
     right arm:
       part: RightArmSkeletonChimera
       connections:

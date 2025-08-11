@@ -10,9 +10,13 @@
 
 - type: entity
   id: BaseChimeraOrgan
-  parent: BaseItem
+  name: chimera organ
+  parent: [BaseItem, BaseC3SyndicateContraband]
   abstract: true
   components:
+  - type: Sprite
+    sprite: _Mono/Mobs/Chimera/organs.rsi
+    state: metabolism-chimera
   - type: SolutionContainerManager
     solutions:
       organ:
@@ -20,73 +24,142 @@
         - ReagentId: NaturalLetoferol
           Quantity: 10
       food:
-        maxVol: 5
+        maxVol: 10
         reagents:
         - ReagentId: NaturalLetoferol
+          Quantity: 5
+        - ReagentId: Slime
           Quantity: 5
 
 - type: entity
   id: OrganChimeraStomach
-  parent: [ BaseChimeraOrgan , OrganHumanStomach ]
+  parent: BaseChimeraOrgan
   name: chimera stomach
+  description: "A strange organ that serves as the center for the metabolism of a Chimera."
   components:
   - type: Sprite
     state: stomach
+  - type: Stomach
   - type: Organ
+    slotId: stomach
+  - type: Metabolizer
+    maxReagents: 4
+    metabolizerTypes: [ Chimera ]
+    removeEmpty: true
+    groups:
+    - id: Food
+    - id: Drink
+    - id: Medicine
+    - id: Cryogenic
+    - id: Poison
+    - id: Narcotic
+    - id: Alcohol
+      rateModifier: 0.25
   - type: SolutionContainerManager
     solutions:
       stomach:
         maxVol: 75
       food:
-        maxVol: 5
+        maxVol: 20
         reagents:
         - ReagentId: NaturalLetoferol
           Quantity: 5
-  - type: Stomach
-  - type: Metabolizer
-    # mm very yummy
-    maxReagents: 5
-    metabolizerTypes: [Chimera]
+        - ReagentId: Slime
+          Quantity: 15
+      organ:
+        reagents:
+        - ReagentId: NaturalLetoferol
+          Quantity: 10
+  - type: Item
+    size: Small
+    heldPrefix: stomach
+
+- type: entity
+  id: OrganChimeraBrain
+  parent: [ BaseChimeraOrgan, OrganHumanBrain ]
+  name: chimera brain
+  description: "The heart of a chimera growth."
+  components:
+  - type: Sprite
+    state: brain
+  - type: Item
+    size: Small
+    heldPrefix: brain
 
 - type: entity
   id: OrganChimeraLiver
-  parent: [ BaseChimeraOrgan , OrganHumanLiver ] 
-  name: chimera liver
+  parent: BaseChimeraOrgan
+  name: chimera spike gland
+  description: "Takes the location of the liver in the body, and repurposes them to be used as a gland for growing bone spikes instead."
   components:
   - type: Metabolizer
+    maxReagents: 2
     metabolizerTypes: [Chimera]
+    removeEmpty: true
+  - type: Sprite
+    state: spike
+  - type: Item
+    size: Small
+    heldPrefix: spike
+  - type: Liver # Shitmed Change
+  - type: Organ # Shitmed Change
+    slotId: liver # Shitmed Change
+    onAdd:
+    - type: ActionGun
+      action: ActionLetoferolSpike
+      gunProto: LetoferolSpikeGun
 
 - type: entity
   id: OrganChimeraHeart
-  parent: [ BaseChimeraOrgan , OrganHumanHeart ] 
+  parent: [ BaseChimeraOrgan , OrganHumanHeart ]
   name: chimera heart
   components:
   - type: Metabolizer
     metabolizerTypes: [Chimera]
+  - type: Sprite
+    state: heart-on
+  - type: Item
+    size: Small
+    heldPrefix: heart
+  - type: Organ
+    onAdd:
+    - type: PressureImmunity
 
 - type: entity
   id: OrganChimeraLungs
-  parent: [ BaseChimeraOrgan , OrganHumanLungs ] 
-  name: lungs
-  description: "Filters oxygen from an atmosphere, which is then sent into the bloodstream to be used as an electron carrier."
+  parent: BaseChimeraOrgan
+  name: chimera pheropod
+  description: "Distributes pheromones allowing for hivemind communication with other Chimeras. Serves as the lungs for the parasite as well."
   components:
+  - type: Sprite
+    state: pheropod
+  - type: Item
+    size: Small
+    heldPrefix: pheropod
+  - type: Organ
+    slotId: lungs
+    onAdd:
+    - type: BreathingImmunity
+    - type: CollectiveMind
+      channel: Letoferol
+  - type: Lung
   - type: Metabolizer
     removeEmpty: true
     solutionOnBody: false
     solution: "Lung"
-    metabolizerTypes: [ Chimera ]
+    metabolizerTypes: [ Animal ]
     groups:
     - id: Gas
       rateModifier: 100.0
   - type: SolutionContainerManager
     solutions:
+      Lung:
+        maxVol: 100.0
+        canReact: false
       organ:
         reagents:
         - ReagentId: NaturalLetoferol
           Quantity: 20
-      Lung:
-        maxVol: 200.0
-        canReact: false
       food:
         maxVol: 5
         reagents:

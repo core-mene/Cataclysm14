@@ -478,6 +478,19 @@
 
 - type: entity
   parent: SurgeryStepInsertOrgan
+  id: SurgeryStepInsertStomach
+  name: Add stomach
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SurgeryDamageChangeEffect
+    damage:
+      types:
+        Poison: -2147483648 # Literally the max 32 bit value, if your patient has gone higher than this, maybe it's time to restart the round.
+    sleepModifier: 1
+    isConsumable: true
+
+- type: entity
+  parent: SurgeryStepInsertOrgan
   id: SurgeryStepInsertLiver
   name: Add liver
   categories: [ HideSpawnMenu ]
