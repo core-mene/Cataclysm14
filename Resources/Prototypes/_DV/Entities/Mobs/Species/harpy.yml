@@ -141,9 +141,10 @@
           False: {visible: false}
           True: {visible: true}
   - type: MovementSpeedModifier
-    #    baseWalkSpeed: 2.5 # Frontier
-    #    baseSprintSpeed: 5.0 # Frontier
-    weightlessAcceleration: 2.5
+    weightlessAcceleration: 2.5 # Fly through space, my dear moth. Well, until you can't touch ground anymore.
+    weightlessFriction: 0.1
+    baseWeightlessModifier: 0.1
+  - type: CanMoveInAir # Mono
   - type: Inventory
     speciesId: harpy
     displacements:
