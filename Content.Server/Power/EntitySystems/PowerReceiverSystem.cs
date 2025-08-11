@@ -8,6 +8,7 @@ using Content.Shared.Hands.Components;
 using Content.Shared.Power.Components;
 using Content.Shared.Power.EntitySystems;
 using Content.Shared.Verbs;
+using Robust.Server.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Utility;
 using Content.Shared.Emp; // Frontier: Upstream - #28984
@@ -132,7 +133,7 @@ namespace Content.Server.Power.EntitySystems
             {
                 Act = () =>
                 {
-                    TryTogglePower(uid, user: args.User); // Frontier: Upstream - #28984
+                    TogglePower(uid, user: args.User); // Frontier: Upstream - #28984
                 },
                 Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/VerbIcons/Spare/poweronoff.svg.192dpi.png")),
                 Text = Loc.GetString("power-switch-component-toggle-verb"),
