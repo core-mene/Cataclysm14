@@ -300,8 +300,8 @@ public sealed class MoverController : SharedMoverController
         var vertIndex = vel.Y > 0 ? 2 : 0; // north else south
 
         // Mono
-        var horizThrust = shuttle.LinearThrust[horizIndex];
-        var vertThrust = shuttle.LinearThrust[vertIndex];
+        var horizThrust = vel.X * shuttle.LinearThrust[horizIndex];
+        var vertThrust = vel.Y * shuttle.LinearThrust[vertIndex];
 
         // Mono - scale max velocity depending on TWR
         var thrust = MathF.Sqrt(horizThrust * horizThrust + vertThrust * vertThrust);
@@ -309,8 +309,8 @@ public sealed class MoverController : SharedMoverController
         var twrMult = MathF.Pow(twr / shuttle.BaseMaxVelocityTWR, shuttle.MaxVelocityScalingExponent);
 
         // Mono - minor optimisation
-        var horizComp = vel.X * shuttle.BaseLinearThrust[horizIndex] / horizThrust; // Frontier: LinearThrust<BaseLinearThrust
-        var vertComp = vel.Y * shuttle.BaseLinearThrust[vertIndex] / vertThrust; // Frontier: LinearThrust<BaseLinearThrust
+        var horizComp = vel.X == 0 ? 0 : vel.X * shuttle.BaseLinearThrust[horizIndex] / horizThrust; // Frontier: LinearThrust<BaseLinearThrust
+        var vertComp = vel.Y == 0 ? 0 : vel.Y * shuttle.BaseLinearThrust[vertIndex] / vertThrust; // Frontier: LinearThrust<BaseLinearThrust
 
         // Mono
         return vel * MathF.Min(shuttle.BaseMaxLinearVelocity * twrMult / MathF.Sqrt(horizComp * horizComp + vertComp * vertComp), shuttle.UpperMaxVelocity);
