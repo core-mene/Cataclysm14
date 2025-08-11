@@ -55,7 +55,7 @@
         type: Local
         visualType: Medium
         messages: [ "generic-reagent-effect-nauseous" ]
-        probability: 1
+        probability: 0.5
       - !type:Drunk
         boozePower: 15
         conditions:
@@ -119,7 +119,7 @@
         type: Local
         visualType: Medium
         messages: [ "generic-reagent-effect-nauseous" ]
-        probability: 1
+        probability: 0.5
       - !type:Drunk
         boozePower: 15
         conditions:
