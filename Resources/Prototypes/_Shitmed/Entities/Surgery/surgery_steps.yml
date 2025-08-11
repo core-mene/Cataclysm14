@@ -1,5 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -473,6 +475,19 @@
     damage:
       types:
         Asphyxiation: -2147483648 # Literally the max 32 bit value, if your patient has gone higher than this, maybe it's time to restart the round.
+    sleepModifier: 1
+    isConsumable: true
+
+- type: entity
+  parent: SurgeryStepInsertOrgan
+  id: SurgeryStepInsertStomach
+  name: Add stomach
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SurgeryDamageChangeEffect
+    damage:
+      types:
+        Poison: -2147483648 # Literally the max 32 bit value, if your patient has gone higher than this, maybe it's time to restart the round.
     sleepModifier: 1
     isConsumable: true
 

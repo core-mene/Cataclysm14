@@ -1,3 +1,20 @@
+# SPDX-FileCopyrightText: 2021 Peptide90
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2022 Martin Petkovski
+# SPDX-FileCopyrightText: 2022 Morb
+# SPDX-FileCopyrightText: 2022 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2023 EnDecc
+# SPDX-FileCopyrightText: 2023 MisterMecky
+# SPDX-FileCopyrightText: 2023 PeterFuto
+# SPDX-FileCopyrightText: 2023 Tunguso4ka
+# SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2024 saga3152
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: construction
   name: livestock crate
   id: CrateLivestock
@@ -42,7 +59,6 @@
   icon: { sprite: Structures/Storage/Crates/plastic.rsi, state: icon }
   objectType: Structure
 
-
 - type: construction
   name: wooden crate
   id: CrateWood
@@ -84,7 +100,7 @@
   targetNode: foodboxpizza
   category: construction-category-storage
   description: A box for pizza.
-  icon: 
+  icon:
     sprite: Objects/Consumable/Food/Baked/pizza.rsi
     state: box
   objectType: Item

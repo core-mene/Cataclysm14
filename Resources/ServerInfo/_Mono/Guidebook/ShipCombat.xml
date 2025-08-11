@@ -38,12 +38,16 @@ Some ships are equipped with [color=cyan]shield generators[/color]. These absorb
 
   ## Bluespace Drives
 
-  Many large, expedition, and combat ships are equipped with a [color=dodgerblue]Bluespace Drive[/color]. These can be fabricated with a T3 experimental research.
+  Many large, expedition, and combat ships are equipped with a [color=dodgerblue]Bluespace Drive[/color]. These can be fabricated with a T2 and T3 experimental research.
 
   <Box>
     <GuideEntityEmbed Entity="MachineFTLDrive"/>
   </Box>
 
 These increase the ship's FTL range by a certain amount if powered. For the [color=dodgerblue][bold]CTLA-25[/bold][/color], this range is [bold]5000m[/bold]
+
+FTL speed is influenced based off the ship's mass. Heavier ships will have longer startup times, travel times, and longer cooldowns. More advanced drives can offset this effect.
+
+Lighter ships have shorter startup times, travel times, and shorter cooldowns.
 
 </Document>

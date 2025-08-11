@@ -24,6 +24,7 @@
 # SPDX-FileCopyrightText: 2024 deltanedas
 # SPDX-FileCopyrightText: 2024 slarticodefast
 # SPDX-FileCopyrightText: 2025 Errant
+# SPDX-FileCopyrightText: 2025 Southbridge
 # SPDX-FileCopyrightText: 2025 keronshb
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -447,3 +448,11 @@
 #    - id: BloodbathPuddleMessVariationPass # Frontier
 #      prob: 0.01 # Frontier
 #      orGroup: puddleMess # Frontier
+#    - id: BasicDecalDirtVariationPass
+#    - id: BasicDecalGraffitiVariationPass
+#    - id: BasicDecalBrunsVariationPass
+#      prob: 0.50
+#      orGroup: monospaceDecals
+#    - id: BasicDecalDirtMonospaceVariationPass
+#      prob: 0.50
+#      orGroup: monospaceDecals

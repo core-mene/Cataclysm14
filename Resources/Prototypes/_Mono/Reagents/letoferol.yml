@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -16,20 +17,44 @@
       metabolismRate: 0.2
       effects:
       - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          max: 10
+        - !type:OrganType
+          type: Chimera
+          shouldHave: false
         damage:
           types:
             Cellular: 0.5
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+        - !type:OrganType
+          type: Chimera
+          shouldHave: false
+        damage:
+          types:
+            Poison: 3
+            Cellular: 4
       - !type:Polymorph
         prototype: LetoferolMutation
         conditions:
         - !type:ReagentThreshold
           min: 10
-      - !type:AdjustReagent
-        reagent: Letoferol
-        amount: -0.5
+      - !type:PopupMessage
         conditions:
         - !type:ReagentThreshold
-          min: 10
+          min: 2
+        type: Local
+        visualType: Medium
+        messages: [ "generic-reagent-effect-nauseous" ]
+        probability: 0.25
+      - !type:Drunk
+        boozePower: 15
+        conditions:
+        - !type:ReagentThreshold
+          min: 8
 
 - type: reagent
   id: NaturalLetoferol
@@ -50,20 +75,44 @@
       metabolismRate: 0.2
       effects:
       - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          max: 15
+        - !type:OrganType
+          type: Chimera
+          shouldHave: false
         damage:
           types:
             Cellular: 0.5
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        - !type:OrganType
+          type: Chimera
+          shouldHave: false
+        damage:
+          types:
+            Poison: 2
+            Cellular: 2
       - !type:Polymorph
         prototype: LetoferolMutationNatural
         conditions:
         - !type:ReagentThreshold
           min: 15
-      - !type:AdjustReagent
-        reagent: NaturalLetoferol
-        amount: -2.5
+      - !type:PopupMessage
         conditions:
         - !type:ReagentThreshold
-          min: 15
+          min: 4
+        type: Local
+        visualType: Medium
+        messages: [ "generic-reagent-effect-nauseous" ]
+        probability: 0.2
+      - !type:Drunk
+        boozePower: 15
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
 
 - type: reagent
   id: ProtoLetoferol

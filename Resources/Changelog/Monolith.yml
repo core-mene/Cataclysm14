@@ -10107,3 +10107,85 @@ Entries:
   id: 1129
   time: '2025-08-10T16:11:08.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1834
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Friction hotfix
+  id: 1130
+  time: '2025-08-10T19:10:07.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1844
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: FTL mass mechanic added to guidebook
+  id: 1131
+  time: '2025-08-10T19:35:51.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1842
+- author: Rubeebeebee
+  changes:
+    - type: Add
+      message: adding the PB Piva, a small and agile cargo ship!
+  id: 1132
+  time: '2025-08-10T19:38:31.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1657
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Missile acceleration buffed substantially to make juking missiles take a
+        mild amount of effort and tracking more consistent. Track delay reduced.
+        Yes, you can juke missiles now.
+  id: 1133
+  time: '2025-08-10T20:19:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1843
+- author: starch70
+  changes:
+    - type: Add
+      message: Roofs can now be built/deconstructed.
+    - type: Add
+      message: >-
+        You can now dig up tiles on desert planet with a shovel, so now you can
+        build lattice (and thus plating and whatnot) with only a shovel instead
+        of needing a RCD.
+    - type: Tweak
+      message: >-
+        Planets now have a bedrock parallax instead of empty void for missing
+        tiles.
+    - type: Fix
+      message: Fixed planet shelter not having a roof.
+    - type: Fix
+      message: Fixed ship's pre-defined roofs being overwritten.
+  id: 1134
+  time: '2025-08-10T20:31:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1845
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Letoferal has been reworked. It no longer turns people who are not in
+        critical condition. However, above the reagent threshold where it would
+        turn before, it does substantial Cellular and Poison damage over time.
+        Those who are turned are fully healed on turn.
+  id: 1135
+  time: '2025-08-11T00:53:49.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1846
+- author: starch70
+  changes:
+    - type: Add
+      message: Added organs to chimeras (and thus chimeras are now surgery targets).
+    - type: Add
+      message: Added guidebook page for Chimeras and Letoferol.
+    - type: Tweak
+      message: >-
+        Chimera abilities (bone spikes, hivemind) are now reliant on their
+        organs instead of being innate.
+  id: 1136
+  time: '2025-08-11T03:52:41.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1849
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: Fixed (dead) mobs taken from wrecks or expeditions randomly despawning.
+  id: 1137
+  time: '2025-08-11T05:42:10.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1850

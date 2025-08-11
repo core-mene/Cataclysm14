@@ -9,6 +9,7 @@
 # SPDX-FileCopyrightText: 2024 Nemanja
 # SPDX-FileCopyrightText: 2024 PECK
 # SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -47,7 +48,7 @@
   - 1.0
   - 1.0
   - 1.0
-  edgeSpritePriority: 1
+  edgeSpritePriority: 2
   edgeSprites:
     SouthEast: /Textures/_RMC14/Tiles/planet/auto_sand/sand_single_edge.png
     NorthEast: /Textures/_RMC14/Tiles/planet/auto_sand/sand_single_edge.png
@@ -58,6 +59,9 @@
     North: /Textures/_RMC14/Tiles/planet/auto_sand/sand_double_edge.png
     West: /Textures/_RMC14/Tiles/planet/auto_sand/sand_double_edge.png
   isSubfloor: true
+  deconstructTools: [ Digging ]
+  deconstructTimeMultiplier: 2
+  itemDrop: FloorTileItemDirt
   baseTurf: FloorAsteroidSandUnvariantizedPlanet
   footstepSounds:
     collection: FootstepAsteroid
@@ -81,7 +85,7 @@
   - 1.0
   - 1.0
   - 1.0
-  edgeSpritePriority: 1
+  edgeSpritePriority: 2
   edgeSprites:
     SouthEast: /Textures/_RMC14/Tiles/planet/auto_sand/sand_single_edge.png
     NorthEast: /Textures/_RMC14/Tiles/planet/auto_sand/sand_single_edge.png
@@ -92,6 +96,9 @@
     North: /Textures/_RMC14/Tiles/planet/auto_sand/sand_double_edge.png
     West: /Textures/_RMC14/Tiles/planet/auto_sand/sand_double_edge.png
   isSubfloor: true
+  deconstructTools: [ Digging ]
+  deconstructTimeMultiplier: 2
+  itemDrop: FloorTileItemDirt
   baseTurf: FloorAsteroidSandUnvariantizedPlanet
   footstepSounds:
     collection: FootstepAsteroid
@@ -123,7 +130,7 @@
   - 0.2
   - 0.2
   - 0.2
-  edgeSpritePriority: 2
+  edgeSpritePriority: 3
   edgeSprites:
     SouthEast: /Textures/_Mono/Tiles/planet/auto_sand/sand_single_edge.png
     NorthEast: /Textures/_Mono/Tiles/planet/auto_sand/sand_single_edge.png
@@ -134,6 +141,9 @@
     North: /Textures/_Mono/Tiles/planet/auto_sand/sand_double_edge.png
     West: /Textures/_Mono/Tiles/planet/auto_sand/sand_double_edge.png
   isSubfloor: true
+  deconstructTools: [ Digging ]
+  deconstructTimeMultiplier: 2
+  itemDrop: FloorTileItemDirt
   baseTurf: FloorAsteroidSandUnvariantizedPlanet
   footstepSounds:
     collection: FootstepAsteroid
@@ -156,6 +166,9 @@
   - 0.5
   - 0.05
   isSubfloor: true
+  deconstructTools: [ Digging ]
+  deconstructTimeMultiplier: 2
+  itemDrop: FloorTileItemDirt
   baseTurf: FloorAsteroidSandUnvariantizedPlanet
   footstepSounds:
     collection: FootstepAsteroid
@@ -178,7 +191,6 @@
   - 0.5
   - 0.05
   isSubfloor: true
-  baseTurf: FloorAsteroidSandUnvariantizedPlanet
   footstepSounds:
     collection: FootstepWater
   barestepSounds:
@@ -192,6 +204,20 @@
   name: tiles-asteroid-sand
   sprite: /Textures/Tiles/Asteroid/asteroid0.png
   isSubfloor: true
+  baseTurf: Space
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Mono/Tiles/planet/Asteroid/sand_single_edge.png
+    NorthEast: /Textures/_Mono/Tiles/planet/Asteroid/sand_single_edge.png
+    NorthWest: /Textures/_Mono/Tiles/planet/Asteroid/sand_single_edge.png
+    SouthWest: /Textures/_Mono/Tiles/planet/Asteroid/sand_single_edge.png
+    South: /Textures/_Mono/Tiles/planet/Asteroid/sand_double_edge.png
+    East: /Textures/_Mono/Tiles/planet/Asteroid/sand_double_edge.png
+    North: /Textures/_Mono/Tiles/planet/Asteroid/sand_double_edge.png
+    West: /Textures/_Mono/Tiles/planet/Asteroid/sand_double_edge.png
+  deconstructTools: [ Digging ]
+  deconstructTimeMultiplier: 1
+  itemDrop: FloorTileItemDirt
   footstepSounds:
     collection: FootstepAsteroid
   barestepSounds:
@@ -220,6 +246,20 @@
   - 0.0116
   - 0.0116
   isSubfloor: true
+  baseTurf: Space
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Mono/Tiles/planet/Asteroid/sand_single_edge.png
+    NorthEast: /Textures/_Mono/Tiles/planet/Asteroid/sand_single_edge.png
+    NorthWest: /Textures/_Mono/Tiles/planet/Asteroid/sand_single_edge.png
+    SouthWest: /Textures/_Mono/Tiles/planet/Asteroid/sand_single_edge.png
+    South: /Textures/_Mono/Tiles/planet/Asteroid/sand_double_edge.png
+    East: /Textures/_Mono/Tiles/planet/Asteroid/sand_double_edge.png
+    North: /Textures/_Mono/Tiles/planet/Asteroid/sand_double_edge.png
+    West: /Textures/_Mono/Tiles/planet/Asteroid/sand_double_edge.png
+  deconstructTools: [ Digging ]
+  deconstructTimeMultiplier: 1
+  itemDrop: FloorTileItemDirt
   footstepSounds:
     collection: FootstepAsteroid
   barestepSounds:

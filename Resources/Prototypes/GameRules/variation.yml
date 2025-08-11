@@ -1,4 +1,14 @@
-﻿# Base
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 Tayrtahn
+# SPDX-FileCopyrightText: 2024 Whisper
+# SPDX-FileCopyrightText: 2024 deltanedas
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 Southbridge
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Base
 
 - type: entity
   id: BaseVariationPass
@@ -46,6 +56,46 @@
     tilesPerEntityStdDev: 4
     entities:
     - id: RandomSpawner
+
+- type: entity
+  id: BasicDecalDirtVariationPass
+  parent: BaseVariationPass
+  components:
+  - type: EntitySpawnVariationPass
+    tilesPerEntityAverage: 80
+    tilesPerEntityStdDev: 5
+    entities:
+    - id: DecalSpawnerDirtWide
+
+- type: entity
+  id: BasicDecalGraffitiVariationPass
+  parent: BaseVariationPass
+  components:
+  - type: EntitySpawnVariationPass
+    tilesPerEntityAverage: 120
+    tilesPerEntityStdDev: 5
+    entities:
+    - id: DecalSpawnerGraffiti
+
+- type: entity
+  id: BasicDecalBrunsVariationPass
+  parent: BaseVariationPass
+  components:
+  - type: EntitySpawnVariationPass
+    tilesPerEntityAverage: 120
+    tilesPerEntityStdDev: 10
+    entities:
+    - id: DecalSpawnerBurns
+
+- type: entity
+  id: BasicDecalDirtMonospaceVariationPass
+  parent: BaseVariationPass
+  components:
+  - type: EntitySpawnVariationPass
+    tilesPerEntityAverage: 80
+    tilesPerEntityStdDev: 10
+    entities:
+    - id: DecalSpawnerDirtMonospace
 
 - type: weightedRandomFillSolution
   id: RandomFillTrashPuddle

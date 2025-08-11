@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2022 Jezithyr
 # SPDX-FileCopyrightText: 2023 Nemanja
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -16,7 +17,7 @@
       connections:
       - torso
       organs:
-        brain: OrganHumanBrain
+        brain: OrganChimeraBrain
         eyes: OrganHumanEyes
     torso:
       part: TorsoSkeleton
@@ -27,11 +28,10 @@
       - left leg
       - head # Shitmed
       organs:
-        heart: OrganHumanHeart
-        lungs: OrganHumanLungs
-        stomach: OrganHumanStomach
-        liver: OrganHumanLiver
-        kidneys: OrganHumanKidneys
+        heart: OrganChimeraHeart
+        lungs: OrganChimeraLungs
+        stomach: OrganChimeraStomach
+        liver: OrganChimeraLiver
     right arm:
       part: RightArmSkeletonChimera
       connections:
