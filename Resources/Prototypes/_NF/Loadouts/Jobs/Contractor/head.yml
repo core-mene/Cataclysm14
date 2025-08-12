@@ -594,7 +594,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
-  price: 1250
+  price: 1100
   equipment:
     head: ClothingHeadHatUNSABeer
 
@@ -626,15 +626,6 @@
   price: 1250
   equipment:
     head: ClothingHeadHatKippah
-
-- type: loadout
-  id: ContractorClothingHeadHatUNSABeer
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
-  price: 1000
-  equipment:
-    head: ClothingHeadHatUNSABeer
 
 #T3 for lols
 - type: loadout
