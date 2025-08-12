@@ -50,7 +50,7 @@
 - type: entity
   id: ActionControlHost
   name: Take Control
-  description: Take full control of your host for a limited time.
+  description: Take full control of your host, lasts for 40 seconds on awake hosts.
   components:
   - type: InstantAction
     icon: _Mono/Interface/Action/borer_control.png
@@ -70,7 +70,7 @@
 - type: entity
   id: ActionLayEggHost
   name: Lay Egg
-  description: Force your host to vomit an egg. Costs 200 chemicals and lasts for 40 seconds. # needs to be changed if the base chem cost is changed
+  description: Force your host to vomit an egg. Costs 200 chemicals. # needs to be changed if the base chem cost is changed
   components:
   - type: InstantAction
     icon: _Mono/Interface/Action/borer_egg.png
