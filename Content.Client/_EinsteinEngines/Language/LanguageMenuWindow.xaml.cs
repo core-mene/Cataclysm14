@@ -1,7 +1,8 @@
-// SPDX-FileCopyrightText: 2025 CerberusWolfie <wb.johnb.willis@gmail.com>
-// SPDX-FileCopyrightText: 2025 FoxxoTrystan <45297731+FoxxoTrystan@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
-// SPDX-FileCopyrightText: 2025 Mnemotechnican <69920617+Mnemotechnician@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 CerberusWolfie
+// SPDX-FileCopyrightText: 2025 FoxxoTrystan
+// SPDX-FileCopyrightText: 2025 GoobBot
+// SPDX-FileCopyrightText: 2025 Mnemotechnican
+// SPDX-FileCopyrightText: 2025 ScyronX
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 

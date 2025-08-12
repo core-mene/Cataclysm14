@@ -11,6 +11,8 @@
 // SPDX-FileCopyrightText: 2024 Whatstone
 // SPDX-FileCopyrightText: 2024 geraeumig
 // SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 lzk
 // SPDX-FileCopyrightText: 2025 themias
 //

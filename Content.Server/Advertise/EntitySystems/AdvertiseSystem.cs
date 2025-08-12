@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 Wrexbe (Josh)
+// SPDX-FileCopyrightText: 2025 ScyronX
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Advertise.Components;
 using Content.Server.Chat.Systems;
 using Content.Server.Power.Components;

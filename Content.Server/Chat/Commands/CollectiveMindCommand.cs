@@ -10,6 +10,7 @@
 // SPDX-FileCopyrightText: 2023 Checkraze
 // SPDX-FileCopyrightText: 2023 HerCoyote23
 // SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
