@@ -626,6 +626,15 @@
   price: 1250
   equipment:
     head: ClothingHeadHatKippah
+    
+- type: loadout
+  id: ContractorClothingHeadHatPlaguedoctor
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1250
+  equipment:
+    head: ClothingHeadHatPlaguedoctor
 
 #T3 for lols
 - type: loadout
