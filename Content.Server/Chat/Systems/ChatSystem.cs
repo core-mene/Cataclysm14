@@ -735,7 +735,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             }
     }
 
-    private void SendEntityDirect( // I brought back the old languageless TransformSpeech method for this please integrate languages into this and get rid of the old TransformSpeech one this gets working.
+    private void SendEntityDirect( // I brought back the old languageless TransformSpeech method for this please integrate languages into this and get rid of the old TransformSpeech one once this gets working.
         EntityUid source,
         string originalMessage,
         ChatTransmitRange range,
