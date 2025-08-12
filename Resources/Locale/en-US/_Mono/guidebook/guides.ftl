@@ -27,3 +27,7 @@ guide-entry-radios = Broadband & Shortband
 
 # Rules
 guide-entry-monolith-rules = Monolith Rules
+
+# Creatures
+guide-entry-creatures = Creatures of the Sector
+guide-entry-cortical-borer = Cortical Borer

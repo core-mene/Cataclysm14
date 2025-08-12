@@ -237,11 +237,20 @@
   id: MobEnhancedMovement
   abstract: true
   components:
-  - type: MovementAlwaysTouching
-  - type: MovementIgnoreGravity
-  - type: NoSlip
-  - type: ProtectedFromStepTriggers
   - type: Climbing
+
+- type: entity
+  save: false
+  id: MobStepTriggerImmune
+  abstract: true
+  components:
+  - type: ProtectedFromStepTriggers
+
+- type: entity
+  save: false
+  id: MobPrying
+  abstract: true
+  components:
   - type: Tool
     speedModifier: 3 # 1.5->3 Mono
     qualities:
@@ -263,6 +272,8 @@
   abstract: true
   parent:
   - MobEnhancedMovement
+  - MobPrying
+  - MobStepTriggerImmune
   - MobPassiveRegenWeak
   - NFMobRestrictions
   components:
@@ -358,6 +369,8 @@
   - MobBloodstream
   - MobFlammable
   - MobEnhancedMovement
+  - MobPrying
+  - MobStepTriggerImmune
   - BaseMobSpecies
   - MobHumanoidHostileAIComplex
   - BaseC3MobHuman
@@ -416,6 +429,7 @@
   - MobBloodstream
   - MobFlammable
   - MobEnhancedMovement
+  - MobPrying
   - MobHumanoidHostileAIComplex
   - BaseC3MobCreature
   id: MobNonHumanHostileBase
@@ -481,6 +495,7 @@
   parent:
   - MobFlammable
   - MobEnhancedMovement
+  - MobPrying
   - MobHumanoidHostileAISimpleMelee
   - BaseC3MobCreature
   id: NFMobSimpleHostileBase
@@ -505,6 +520,8 @@
   #- type: ZombieImmune # Mono
   - type: NameIdentifier
     group: GenericNumber
+  - type: Puller
+  - type: Hands
   - type: NpcFactionMember
     factions:
     - SimpleHostile

@@ -1,3 +1,15 @@
+// SPDX-FileCopyrightText: 2022 DrSmugleaf
+// SPDX-FileCopyrightText: 2022 Jezithyr
+// SPDX-FileCopyrightText: 2023 Eoin Mcloughlin
+// SPDX-FileCopyrightText: 2023 Flipp Syder
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 eoineoineoin
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2025 Coenx-flex
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Client.Alerts;
 using Content.Client.Gameplay;
 using Content.Client.UserInterface.Systems.Alerts.Widgets;
@@ -98,7 +110,8 @@ public sealed class AlertsUIController : UIController, IOnStateEntered<GameplayS
         if (!EntityManager.TryGetComponent<SpriteComponent>(spriteViewEnt, out var sprite))
             return;
 
-        var ev = new UpdateAlertSpriteEvent((spriteViewEnt, sprite), alert);
+        var ev = new UpdateAlertSpriteEvent((spriteViewEnt, sprite), player, alert);
         EntityManager.EventBus.RaiseLocalEvent(player, ref ev);
+        EntityManager.EventBus.RaiseLocalEvent(spriteViewEnt, ref ev);
     }
 }

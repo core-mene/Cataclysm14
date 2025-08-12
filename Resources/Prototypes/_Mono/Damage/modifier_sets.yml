@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Honestly101
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -24,3 +25,16 @@
     Blunt: 0.6
     Slash: 0.7
     Piercing: 0.7
+
+- type: damageModifierSet
+  id: StructuralMetallicHeatReinforced
+  coefficients:
+    Shock: 1.2
+    Heat: 1.2
+    Structural: 0.5
+  flatReductions:
+    Blunt: 10
+    Slash: 10
+    Piercing: 10
+    Heat: 17 # no damage from emitters
+    Structural: 10

@@ -49,6 +49,7 @@ using Content.Server._NF.Bank;
 using Content.Server._NF.Trade; // Mono
 using Content.Shared._NF.Bank.BUI;
 using Content.Shared._NF.Trade;
+using Content.Shared.Mech.Components;
 using Robust.Shared.Toolshed.Commands.Math; // Mono
 
 
@@ -482,8 +483,8 @@ public sealed partial class CargoSystem
         if (_blacklistQuery.HasComponent(uid))
             return false;
 
-        // Frontier: allow selling dead mobs
-        if (_mobQuery.TryComp(uid, out var mob) && mob.CurrentState != MobState.Dead)
+        // Frontier: allow selling dead mobs, Mono: and mecha
+        if (_mobQuery.TryComp(uid, out var mob) && mob.CurrentState != MobState.Dead && !TryComp<MechComponent>(uid, out _))
             return false;
         // End Frontier
 

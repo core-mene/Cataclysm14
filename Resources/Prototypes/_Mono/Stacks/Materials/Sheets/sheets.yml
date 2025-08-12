@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: stack
+  id: Synthalloy
+  name: synthalloy
+  icon: { sprite: /Textures/_Mono/Objects/Materials/synthalloy.rsi, state: synthalloy }
+  spawn: MaterialSynthalloy1
+  maxCount: 50
+
+- type: stack
+  id: Iridite
+  name: iridite
+  icon: { sprite: /Textures/_Mono/Objects/Materials/iridite.rsi, state: iridite }
+  spawn: SheetIridite1
+  maxCount: 100

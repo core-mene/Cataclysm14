@@ -148,6 +148,18 @@
       Steel: 5
 
 - type: entity
+  id: ThrusterRogueMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: Rogue thruster machine board
+  components:
+  - type: MachineBoard
+    prototype: ThrusterRogue
+    requirements:
+      Capacitor: 3
+    stackRequirements:
+      Steel: 5
+
+- type: entity
   id: SmallThrusterMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: small thruster machine board

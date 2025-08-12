@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2025 Honestly101
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: ThrusterRogue
+  parent: ThrusterSecurity
+  suffix: Rogue
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/Shuttles/thrusterrogue.rsi
+  - type: Machine
+    board: ThrusterRogueMachineCircuitboard
+
+- type: entity
+  id: DebugThrusterRogue
+  parent: DebugThrusterSecurity
+  suffix: DEBUG, Rogue
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/Shuttles/thrusterrogue.rsi
+  - type: Machine
+    board: ThrusterRogueMachineCircuitboard
+
+- type: entity
+  id: ThrusterLargeRogue
+  parent: ThrusterLarge
+  suffix: Rogue
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/Shuttles/thrusterrogue_large.rsi

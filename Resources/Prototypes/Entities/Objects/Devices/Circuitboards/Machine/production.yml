@@ -62,6 +62,7 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 KieueCaprie
 # SPDX-FileCopyrightText: 2025 cheetah1984
+# SPDX-FileCopyrightText: 2025 marc-pelletier
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -147,7 +148,6 @@
   id: SecurityTechFabCircuitboard
   parent: BaseMachineCircuitboard
   name: security techfab machine board
-  categories: [ HideSpawnMenu ] # Frontier
   description: A machine printed circuit board for a security techfab.
   components:
     - type: Sprite
@@ -1087,8 +1087,9 @@
     state: supply
   - type: MachineBoard
     prototype: MachineMaterialSilo
+    requirements: # Frontier
+      MatterBin: 4 # Frontier stackRequirements<requirements
     stackRequirements:
-      MatterBin: 4
       Cable: 1
 
 - type: entity
@@ -1454,7 +1455,26 @@
       state: medical
     - type: MachineBoard
       prototype: MedicalBiofabricator
-      stackRequirements:
+      requirements:
         MatterBin: 2
         Manipulator: 2
 # Shitmed Change End
+
+# Assmos - /tg/ gases
+
+- type: entity
+  id: CrystallizerMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: crystallizer machine board
+  description: A machine printed circuit board for a crystallizer.
+  components:
+  - type: MachineBoard
+    prototype: Crystallizer
+    requirements:
+      Capacitor: 2
+      Manipulator: 4
+      MatterBin: 4
+    stackRequirements:
+      Steel: 5
+      Glass: 5
+# Assmos Change End

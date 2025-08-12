@@ -15,6 +15,7 @@
   - type: MovementSpeedModifier
     baseWalkSpeed : 2.7
     baseSprintSpeed : 4.65
+    weightlessAcceleration: 1.5 # Slightly more manueverable in space.
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]

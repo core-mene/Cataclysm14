@@ -16,3 +16,17 @@
       Manipulator: 2
     stackRequirements:
       Plasma: 2
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: ContainmentFieldGeneratorCircuitboard
+  name: containment field generator machine board
+  components:
+  - type: Sprite
+    state: engineering
+  - type: MachineBoard
+    prototype: ContainmentFieldGenerator
+    requirements:
+      Capacitor: 4
+    stackRequirements:
+      Plasteel: 4

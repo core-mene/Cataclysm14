@@ -74,7 +74,21 @@
     - FloorDesertPlanet
     - FloorAsteroidSandUnvariantizedPlanet
     entities:
-    - FloraRockSolid
+    - FloraRockSolidPlanet
+  # Fauna Placement
+  - !type:BiomeEntityLayer
+    threshold: 0.98
+    noise:
+      seed: 0
+      frequency: 3
+      noiseType: OpenSimplex2
+    allowedTiles:
+    - FloorDesert
+    - FloorDesertRocky
+    - FloorDesertPlanet
+    - FloorAsteroidSandUnvariantizedPlanet
+    entities:
+    - MonoPlanetmapFaunaDesert
   # Flora Placement
   # Piluma
   - !type:BiomeEntityLayer

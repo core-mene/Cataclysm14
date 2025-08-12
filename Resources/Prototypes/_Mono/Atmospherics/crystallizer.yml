@@ -1,0 +1,144 @@
+# SPDX-FileCopyrightText: 2025 marc-pelletier
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: crystallizerRecipe
+  id: PlasticRecipe
+  name: Plastic (10)
+  minimumTemperature: 500
+  maximumTemperature: 800
+  energyRelease: -200
+  products:
+    SheetPlastic10: 1
+  dangerous: false
+  minimumRequirements:
+  - 0     # oxygen
+  - 0     # nitrogen
+  - 4     # carbon dioxide
+  - 0     # plasma
+  - 0     # tritium
+  - 6     # vapor
+  - 0     # miasma
+  - 0     # n2o
+  - 0     # frezon
+
+- type: crystallizerRecipe
+  id: Iridite
+  name: Iridite (1)
+  minimumTemperature: 4900
+  maximumTemperature: 14000
+  energyRelease: -1290
+  products:
+    SheetIridite1: 1
+  dangerous: false
+  minimumRequirements:
+  - 7     # oxygen
+  - 3     # nitrogen
+  - 3     # carbon dioxide
+  - 0     # plasma
+  - 2     # tritium
+  - 0     # vapor
+  - 0     # miasma
+  - 1     # n2o
+  - 2     # frezon
+
+- type: crystallizerRecipe
+  id: Synthalloy
+  name: Synthalloy (1)
+  minimumTemperature: 1790
+  maximumTemperature: 2100
+  energyRelease: -190
+  products:
+    MaterialSynthalloy1: 1
+  dangerous: true
+  minimumRequirements:
+  - 6     # oxygen
+  - 1     # nitrogen
+  - 6     # carbon dioxide
+  - 6     # plasma
+  - 0     # tritium
+  - 4     # vapor
+  - 0     # miasma
+  - 1     # n2o
+  - 0     # frezon
+
+- type: crystallizerRecipe
+  id: Plasteel
+  name: Plasteel (1)
+  minimumTemperature: 1500
+  maximumTemperature: 3500
+  energyRelease: -650
+  products:
+    SheetPlasteel1: 1
+  dangerous: false
+  minimumRequirements:
+  - 4     # oxygen
+  - 0     # nitrogen
+  - 6     # carbon dioxide
+  - 2     # plasma
+  - 0     # tritium
+  - 0     # vapor
+  - 0     # miasma
+  - 0     # n2o
+  - 0     # frezon
+
+- type: crystallizerRecipe
+  id: Plasma
+  name: Plasma (10)
+  minimumTemperature: 40
+  maximumTemperature: 60
+  energyRelease: 60
+  products:
+    SheetPlasma10: 1
+  dangerous: false
+  minimumRequirements:
+  - 0     # oxygen
+  - 0     # nitrogen
+  - 0     # carbon dioxide
+  - 2     # plasma
+  - 0     # tritium
+  - 0     # vapor
+  - 0     # miasma
+  - 0     # n2o
+  - 0     # frezon
+
+- type: crystallizerRecipe
+  id: Telecrystal
+  name: Telecrystal (1)
+  minimumTemperature: 0
+  maximumTemperature: 10
+  energyRelease: 950
+  products:
+    Telecrystal1: 1
+  dangerous: false
+  minimumRequirements:
+  - 0     # oxygen
+  - 4     # nitrogen
+  - 0     # carbon dioxide
+  - 2     # plasma
+  - 3     # tritium
+  - 0     # vapor
+  - 4     # miasma
+  - 8     # n2o
+  - 2     # frezon
+
+- type: crystallizerRecipe
+  id: Coal
+  name: Coal (1)
+  minimumTemperature: 720
+  maximumTemperature: 3000
+  energyRelease: 950
+  products:
+    Coal1: 1
+  dangerous: false
+  minimumRequirements:
+  - 0     # oxygen
+  - 0     # nitrogen
+  - 2     # carbon dioxide
+  - 0     # plasma
+  - 0     # tritium
+  - 0     # vapor
+  - 0     # miasma
+  - 0     # n2o
+  - 0     # frezon

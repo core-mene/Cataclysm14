@@ -11,6 +11,8 @@
 // SPDX-FileCopyrightText: 2024 Leon Friedrich
 // SPDX-FileCopyrightText: 2024 Whatstone
 // SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 ark1368
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -102,7 +104,10 @@ public sealed class SpawnPointSystem : EntitySystem
             }
             else
             {
-                Log.Error($"No spawn points were available for station {args.Station}!");
+                if (TryComp<MetaDataComponent>(args.Station, out var data) && data.EntityPrototype != null)
+                    Log.Error($"No spawn points were available for station {data.EntityPrototype}! (uid: {args.Station}, name: {data.EntityName})");
+                else
+                    Log.Error($"No spawn points were available for station {args.Station}!, station prototype is null.");
                 return;
             }
         }
