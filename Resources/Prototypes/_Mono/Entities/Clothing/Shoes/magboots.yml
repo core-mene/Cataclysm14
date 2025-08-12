@@ -12,3 +12,16 @@
     sprite: _Mono/Clothing/Shoes/Boots/magboots-drake_industries.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Shoes/Boots/magboots-drake_industries.rsi
+
+- type: entity
+  parent: [ClothingShoesBootsMagBase]
+  id: ClothingShoesBootsMagVoid
+  name: voidboots
+  description: Magboots enhanced with bluespace tethering technology, allowing you to walk on the void of space.
+  components:
+  - type: Magboots
+    requiresGrid: false
+  - type: Sprite
+    sprite: _Mono/Clothing/Shoes/Boots/voidboots.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Shoes/Boots/voidboots.rsi
