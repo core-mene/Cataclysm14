@@ -84,6 +84,12 @@ public sealed partial class CorticalBorerComponent : Component
     public int EggCost = 200;
 
     [DataField]
+    public ComponentRegistry? AddOnInfest;
+
+    [DataField]
+    public ComponentRegistry? RemoveOnInfest;
+
+    [DataField]
     public ProtoId<AlertPrototype> ChemicalAlert = "Chemicals";
 
     public readonly List<EntProtoId> InitialCorticalBorerActions = new()

@@ -89,6 +89,8 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
 
     private void OnSpeakEvent(Entity<CorticalBorerComponent> ent, ref CheckTargetedSpeechEvent args)
     {
+        args.ChatTypeIgnore.Add(InGameICChatType.CollectiveMind);
+
         if (ent.Comp.Host.HasValue)
         {
             args.Targets.Add(ent);

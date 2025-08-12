@@ -301,7 +301,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         var targetEv = new CheckTargetedSpeechEvent();
         RaiseLocalEvent(source, targetEv);
 
-        if (targetEv.Targets.Count > 0)
+        if (targetEv.Targets.Count > 0 && !targetEv.ChatTypeIgnore.Contains(desiredType))
         {
             SendEntityDirect(source, message, range, nameOverride, targetEv.Targets);
             return;
@@ -1138,7 +1138,8 @@ public sealed class CheckIgnoreSpeechBlockerEvent : EntityEventArgs
 
 public sealed class CheckTargetedSpeechEvent : EntityEventArgs
 {
-    public List<EntityUid> Targets = new List<EntityUid>();
+    public List<InGameICChatType> ChatTypeIgnore = new();
+    public List<EntityUid> Targets = new();
 }
 
 /// <summary>

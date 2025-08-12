@@ -4,7 +4,7 @@
 
 - type: entity
   name: Cortical Borer
-  parent: SimpleSpaceMobBase
+  parent: SimpleMobBase
   id: MobCorticalBorer
   description: A worm that burrows into brains and lays its eggs
   components:
@@ -56,12 +56,17 @@
   - type: Tag
     tags:
     - Meat
-  - type: NightVision
-    color: "#512f59"
+  - type: ThermalVision
+    color: "#ae65bf"
+    lightRadius: 15
     activateSound: null
     deactivateSound: null
   - type: CorticalBorer
     eggProto: "CorticalBorerEgg"
+    addOnInfest:
+    - type: PressureImmunity
+    removeOnInfest:
+    - type: CanEscapeInventory
   - type: UserInterface
     interfaces:
       enum.CorticalBorerDispenserUiKey.Key:
