@@ -588,6 +588,15 @@
   equipment:
     head: ClothingHeadHatWideBrimmedYellow
 
+  - type: loadout
+  id: ContractorClothingHeadHatBeerhat
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1250
+  equipment:
+    head: ClothingHeadHatWideBrimmedYellow
+
 # Mono End
 
 - type: loadout
@@ -618,13 +627,13 @@
     head: ClothingHeadHatKippah
 
 - type: loadout
-  id: ContractorClothingHeadHatPlaguedoctor
+  id: ContractorClothingHeadHatUNSABeer
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
-  price: 1250
+  price: 1000
   equipment:
-    head: ClothingHeadHatPlaguedoctor
+    head: ClothingHeadHatUNSABeer
 
 #T3 for lols
 - type: loadout
