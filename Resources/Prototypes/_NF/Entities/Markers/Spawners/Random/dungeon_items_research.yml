@@ -268,8 +268,9 @@
     chance: 0.9
     offset: 0.0
     rarePrototypes:
-    - AutolatheHyperConvectionMachineCircuitboard
-    - ProtolatheHyperConvectionMachineCircuitboard
+    # Mono - replace hyperconvection lathes with upgrade kits
+    - LatheUpgradeKitHyper
+    - LatheUpgradeKitCryo
     - ComputerIFFCircuitboard
     rareChance: 0.05
 

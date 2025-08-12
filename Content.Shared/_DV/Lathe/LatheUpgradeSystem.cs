@@ -7,6 +7,8 @@ namespace Content.Shared._DV.Lathe;
 /// </summary>
 public sealed class LatheUpgradeSystem : EntitySystem
 {
+    [Dependency] private readonly SharedLatheSystem _lathe = default!;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -18,14 +20,6 @@ public sealed class LatheUpgradeSystem : EntitySystem
     {
         RemCompDeferred<LatheUpgradeComponent>(ent);
 
-        if (!TryComp<LatheComponent>(ent, out var lathe))
-            return;
-
-        if (ent.Comp.MaterialUseMultiplier is {} matMul)
-            lathe.MaterialUseMultiplier = matMul;
-        if (ent.Comp.TimeMultiplier is {} timeMul)
-            lathe.TimeMultiplier = timeMul;
-
-        Dirty(ent, lathe);
+        _lathe.SetLatheMultipliers(ent.Owner, ent.Comp.MaterialUseMultiplier, ent.Comp.TimeMultiplier);
     }
 }
