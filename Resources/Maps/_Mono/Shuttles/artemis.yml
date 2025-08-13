@@ -1,29 +1,10 @@
-# SPDX-FileCopyrightText: 2023 cynical24
-# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 Mr. Samuel
-# SPDX-FileCopyrightText: 2024 Salvantrix
-# SPDX-FileCopyrightText: 2024 TsjipTsjip
-# SPDX-FileCopyrightText: 2024 Tych0
-# SPDX-FileCopyrightText: 2024 checkraze
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 Jakumba
-# SPDX-FileCopyrightText: 2025 LukeZurg22
-# SPDX-FileCopyrightText: 2025 Maxtone
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 Rubeebeebee
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/03/2025 05:24:53
+  time: 08/13/2025 19:25:07
   entityCount: 426
 maps: []
 grids:
@@ -86,6 +67,7 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
+      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -356,6 +338,8 @@ entities:
       locked: False
     - type: BecomesStation
       id: Artemis
+    - type: Roof
+      data: {}
 - proto: AirAlarm
   entities:
   - uid: 135
@@ -2985,6 +2969,8 @@ entities:
     - type: Transform
       pos: -1.5,3.5
       parent: 1
+    - type: Advertise
+      nextAdvertisementTime: 167.9833633
 - proto: WallReinforced
   entities:
   - uid: 3
