@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/13/2025 19:53:39
+  time: 08/13/2025 21:06:01
   entityCount: 661
 maps: []
 grids:
@@ -390,7 +390,13 @@ entities:
     - type: ShipGridLock
       locked: False
     - type: Roof
-      data: {}
+      data:
+        -1,1: 67827742623201535
+        0,1: 282578800148799
+        0,0: 4557501257542992128
+        -1,0: 18446744073709350912
+        -2,0: 9286669686462742528
+        -2,1: 128
 - proto: ActionToggleInternals
   entities:
   - uid: 4
@@ -539,7 +545,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -16074.364
+      secondsUntilStateChange: -16140.608
       state: Opening
   - uid: 21
     components:
@@ -551,7 +557,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -16074.664
+      secondsUntilStateChange: -16140.908
       state: Opening
   - uid: 22
     components:
