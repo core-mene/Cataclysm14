@@ -84,7 +84,10 @@ public sealed class CorticalBorerInfestedSystem : EntitySystem
 
     private void OnMindRemoved(Entity<CorticalBorerInfestedComponent> infected, ref MindRemovedMessage args)
     {
-        if(infected.Comp.Borer.Comp.ControlingHost)
+        if (infected.Comp.Borer.Comp.ControlingHost)
+        {
             _borer.EndControl(infected.Comp.Borer);
+            _borer.TryEjectBorer(infected.Comp.Borer);
+        }
     }
 }

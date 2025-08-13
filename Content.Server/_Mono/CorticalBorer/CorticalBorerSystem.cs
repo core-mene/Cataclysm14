@@ -60,6 +60,7 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
         SubscribeLocalEvent<InventoryComponent, InfestHostAttempt>(OnInfestHostAttempt);
         SubscribeLocalEvent<CorticalBorerComponent, CheckTargetedSpeechEvent>(OnSpeakEvent);
 
+        SubscribeLocalEvent<CorticalBorerComponent, MindRemovedMessage>(OnMindRemoved);
     }
 
     private void OnStartup(Entity<CorticalBorerComponent> ent, ref ComponentStartup args)
@@ -317,6 +318,8 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
         {
             infestedComp.OrigininalMindId = null;
         }
+
+        comp.ControlingHost = true;
         _mind.TransferTo(wormMind, host);
 
         // add the end control and vomit egg action
@@ -328,8 +331,6 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
             if (_actions.AddAction(host, "ActionLayEggHost") is {} actionLay)
                 infestedComp.RemoveAbilities.Add(actionLay);
         }
-
-        comp.ControlingHost = true;
 
         var str = $"{ToPrettyString(worm)} has taken control over {ToPrettyString(host)}";
 
@@ -369,5 +370,11 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
 
         infestedComp.ControlTimeEnd = null;
         _container.CleanContainer(infestedComp.ControlContainer);
+    }
+
+    private void OnMindRemoved(Entity<CorticalBorerComponent> ent, ref MindRemovedMessage args)
+    {
+        if (!ent.Comp.ControlingHost)
+            TryEjectBorer(ent); // No storing them in hosts if you don't have a soul
     }
 }
