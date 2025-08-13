@@ -1,35 +1,10 @@
-# SPDX-FileCopyrightText: 2021 AJCM-git
-# SPDX-FileCopyrightText: 2021 Paul Ritter
-# SPDX-FileCopyrightText: 2021 wrexbe
-# SPDX-FileCopyrightText: 2022 20kdc
-# SPDX-FileCopyrightText: 2022 Kara
-# SPDX-FileCopyrightText: 2022 LittleBuilderJane
-# SPDX-FileCopyrightText: 2022 Peptide90
-# SPDX-FileCopyrightText: 2022 metalgearsloth
-# SPDX-FileCopyrightText: 2022 mirrorcult
-# SPDX-FileCopyrightText: 2023 Alexander Evgrashin
-# SPDX-FileCopyrightText: 2023 Cheackraze
-# SPDX-FileCopyrightText: 2023 Emisse
-# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
-# SPDX-FileCopyrightText: 2023 crystalHex
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 Mr. Samuel
-# SPDX-FileCopyrightText: 2025 Alice "Arimah" Heurlin
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 Rubeebeebee
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/13/2025 19:57:41
+  time: 08/13/2025 20:55:30
   entityCount: 778
 maps: []
 grids:
@@ -827,7 +802,19 @@ entities:
     - type: ShipGridLock
       locked: False
     - type: Roof
-      data: {}
+      data:
+        0,-5: 1080872706661941248
+        0,-1: 217020518715556611
+        -1,-1: 13889313185716027584
+        0,0: 197379
+        0,-2: 217020518514230016
+        -1,0: 12632256
+        -1,-2: 13889313184910721024
+        0,-4: 9187078323019124495
+        0,-3: 8355711
+        -1,-4: 17940362863944071416
+        -1,-3: 16316664
+        -1,-5: 17870283321406128128
 - proto: AirAlarm
   entities:
   - uid: 2
