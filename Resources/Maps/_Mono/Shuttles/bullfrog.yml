@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/13/2025 18:22:44
+  time: 08/13/2025 20:06:03
   entityCount: 1120
 maps: []
 grids:
@@ -607,7 +607,18 @@ entities:
     - type: ShipGridLock
       locked: False
     - type: Roof
-      data: {}
+      data:
+        -1,0: 252645375
+        -1,-1: 18446743038875078415
+        0,0: 1886416967
+        0,-1: 542551266110798072
+        -2,0: 2155905152
+        -2,-1: 9277627166483333248
+        -1,-2: 35184405708800
+        0,-2: 6944797880238505984
+        1,-2: 117899264
+        1,-1: 282578800148480
+        -2,-2: 4503740839108608
     - type: BecomesStation
       id: Bullfrog
 - proto: AirAlarm
