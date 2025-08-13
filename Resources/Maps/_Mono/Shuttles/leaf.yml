@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/13/2025 19:48:03
-  entityCount: 866
+  time: 08/13/2025 20:53:34
+  entityCount: 865
 maps: []
 grids:
 - 1
@@ -518,40 +518,37 @@ entities:
             0: 36046
             1: 4352
           0,2:
-            0: 4979
-            1: 34952
+            0: 1
+            1: 10184
+            2: 4096
           -1,2:
-            0: 2248
-            1: 8739
-          0,3:
-            1: 124
-          -1,3:
-            1: 198
+            1: 35939
           1,0:
-            0: 5597
+            0: 21981
           1,1:
-            1: 4964
+            1: 4968
           1,2:
             1: 1
           1,-1:
             0: 64981
           2,0:
-            1: 12288
+            1: 30720
             0: 38
+          2,1:
+            1: 3
           2,-1:
-            0: 29728
-            2: 512
+            0: 30240
+            1: 8
           3,0:
-            1: 1
+            1: 17
           3,-1:
-            1: 4352
+            1: 4368
           0,-3:
             0: 45875
-            1: 128
+            1: 132
           -1,-3:
-            3: 4096
-            0: 43144
-            1: 48
+            0: 47240
+            1: 52
           0,-2:
             0: 15355
           -1,-2:
@@ -559,31 +556,35 @@ entities:
           -1,-1:
             0: 65535
           1,-3:
-            1: 16
+            1: 33840
             0: 4096
           1,-2:
             0: 819
+            1: 136
           2,-2:
-            1: 12288
+            1: 29440
           -3,-1:
-            1: 4352
+            1: 4370
             0: 52352
           -3,0:
-            1: 32769
+            1: 49681
             0: 140
           -3,-2:
-            1: 32768
+            1: 51200
           -2,-2:
-            1: 4096
+            1: 4898
             0: 2184
           -2,-1:
             0: 63348
           -2,0:
-            0: 1111
-            3: 32
+            0: 17527
             1: 4096
+          -2,-3:
+            1: 9344
+          -3,1:
+            1: 8
           -2,1:
-            1: 2244
+            1: 2243
         uniqueMixes:
         - volume: 2500
           temperature: 293.15
@@ -616,25 +617,10 @@ entities:
           - 0
           - 0
         - volume: 2500
-          temperature: 293.1499
+          temperature: 293.15
           moles:
-          - 20.078888
-          - 75.53487
           - 0
           - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        - volume: 2500
-          temperature: 293.14996
-          moles:
-          - 21.824879
-          - 82.10312
           - 0
           - 0
           - 0
@@ -653,7 +639,17 @@ entities:
     - type: BecomesStation
       id: Leaf
     - type: Roof
-      data: {}
+      data:
+        0,1: 197379
+        0,0: 217086747924709375
+        -1,1: 12632256
+        -1,0: 13889375007613648895
+        -1,-1: 18446744073591650552
+        -1,-2: 17870283321406128128
+        0,-1: 18446744073709502271
+        0,-2: 4539628424389459968
+        -2,0: 14737632
+        -2,-1: 16204198711956340736
 - proto: AirAlarm
   entities:
   - uid: 836
@@ -918,11 +914,6 @@ entities:
     components:
     - type: Transform
       pos: -4.5,7.5
-      parent: 1
-  - uid: 248
-    components:
-    - type: Transform
-      pos: 7.5,4.5
       parent: 1
   - uid: 268
     components:
@@ -4981,7 +4972,7 @@ entities:
       pos: 4.5,-8.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 138.2940892
+      nextAdvertisementTime: 1212.8814736
 - proto: VendingMachineChemicals
   entities:
   - uid: 717
@@ -4997,7 +4988,7 @@ entities:
       pos: 3.5,-8.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 517.2999717
+      nextAdvertisementTime: 1462.8990301
 - proto: VendingMachineNutri
   entities:
   - uid: 180
@@ -5006,7 +4997,7 @@ entities:
       pos: 0.5,0.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 430.2940892
+      nextAdvertisementTime: 1284.8814736
 - proto: VendingMachineSeedsUnlocked
   entities:
   - uid: 181
@@ -5015,7 +5006,7 @@ entities:
       pos: 0.5,1.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 490.2940892
+      nextAdvertisementTime: 1507.8814736
 - proto: WallReinforced
   entities:
   - uid: 23
