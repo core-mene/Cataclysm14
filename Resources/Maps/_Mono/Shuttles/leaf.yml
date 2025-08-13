@@ -1,26 +1,10 @@
-# SPDX-FileCopyrightText: 2023 Cheackraze
-# SPDX-FileCopyrightText: 2023 Checkraze
-# SPDX-FileCopyrightText: 2023 Vera Aguilera Puerto
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 TsjipTsjip
-# SPDX-FileCopyrightText: 2024 checkraze
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 Rubeebeebee
-# SPDX-FileCopyrightText: 2025 Whatstone
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/05/2025 02:55:50
+  time: 08/13/2025 19:48:03
   entityCount: 866
 maps: []
 grids:
@@ -99,6 +83,7 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
+      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -667,6 +652,8 @@ entities:
       locked: False
     - type: BecomesStation
       id: Leaf
+    - type: Roof
+      data: {}
 - proto: AirAlarm
   entities:
   - uid: 836
@@ -4993,6 +4980,8 @@ entities:
     - type: Transform
       pos: 4.5,-8.5
       parent: 1
+    - type: Advertise
+      nextAdvertisementTime: 138.2940892
 - proto: VendingMachineChemicals
   entities:
   - uid: 717
@@ -5007,6 +4996,8 @@ entities:
     - type: Transform
       pos: 3.5,-8.5
       parent: 1
+    - type: Advertise
+      nextAdvertisementTime: 517.2999717
 - proto: VendingMachineNutri
   entities:
   - uid: 180
@@ -5014,6 +5005,8 @@ entities:
     - type: Transform
       pos: 0.5,0.5
       parent: 1
+    - type: Advertise
+      nextAdvertisementTime: 430.2940892
 - proto: VendingMachineSeedsUnlocked
   entities:
   - uid: 181
@@ -5021,6 +5014,8 @@ entities:
     - type: Transform
       pos: 0.5,1.5
       parent: 1
+    - type: Advertise
+      nextAdvertisementTime: 490.2940892
 - proto: WallReinforced
   entities:
   - uid: 23
