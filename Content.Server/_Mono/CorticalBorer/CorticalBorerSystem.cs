@@ -313,6 +313,10 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
 
             _mind.TransferTo(controledMind, dummy);
         }
+        else
+        {
+            infestedComp.OrigininalMindId = null;
+        }
         _mind.TransferTo(wormMind, host);
 
         // add the end control and vomit egg action
@@ -348,6 +352,8 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
         if (!comp.ControlingHost)
             return;
 
+        comp.ControlingHost = false;
+
         // remove all the actions set to remove
         foreach (var ability in infestedComp.RemoveAbilities)
         {
@@ -358,12 +364,10 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
         // Return everyone to their own bodies
         if (!TerminatingOrDeleted(infestedComp.BorerMindId))
             _mind.TransferTo(infestedComp.BorerMindId, infestedComp.Borer);
-        if (!TerminatingOrDeleted(infestedComp.OrigininalMindId))
-            _mind.TransferTo(infestedComp.OrigininalMindId, host);
+        if (!TerminatingOrDeleted(infestedComp.OrigininalMindId) && infestedComp.OrigininalMindId.HasValue)
+            _mind.TransferTo(infestedComp.OrigininalMindId.Value, host);
 
         infestedComp.ControlTimeEnd = null;
         _container.CleanContainer(infestedComp.ControlContainer);
-
-        comp.ControlingHost = false;
     }
 }

@@ -29,7 +29,7 @@ public sealed partial class CorticalBorerInfestedComponent : Robust.Shared.GameO
     public TimeSpan? ControlTimeEnd;
 
     [ViewVariables]
-    public EntityUid OrigininalMindId;
+    public EntityUid? OrigininalMindId;
 
     [ViewVariables]
     public EntityUid BorerMindId;
