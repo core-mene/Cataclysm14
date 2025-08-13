@@ -907,7 +907,9 @@
   solids:
     FoodRiceBoiled: 1
     FoodMeatCutlet: 3
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeRiceGumbo
@@ -919,7 +921,9 @@
     FoodRiceBoiled: 1
     FoodMeatCutlet: 3
     FoodChiliPepper: 2
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeEggRice
@@ -932,7 +936,9 @@
   solids:
     FoodRiceBoiled: 1
     FoodCarrot: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeCopypasta
@@ -1500,7 +1506,9 @@
     TableSalt: 5
   solids:
     FoodPotato: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeCheesyFries
@@ -1513,7 +1521,9 @@
   solids:
     FoodPotato: 1
     FoodCheeseSlice: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeCarrotFries
@@ -1525,7 +1535,9 @@
     TableSalt: 5
   solids:
     FoodCarrot: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeNachos
