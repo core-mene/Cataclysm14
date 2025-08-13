@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/13/2025 18:57:38
+  time: 08/13/2025 20:19:19
   entityCount: 659
 maps: []
 grids:
@@ -347,7 +347,15 @@ entities:
     - type: BecomesStation
       id: Parabellum
     - type: Roof
-      data: {}
+      data:
+        0,-2: 18446599485766698752
+        -1,-2: 17361377632842217472
+        0,-1: 1085102592318521151
+        -1,-1: 9259542121117972728
+        -1,0: 13889313184910721184
+        0,0: 506381209866536719
+        0,1: 460551
+        -1,1: 12632256
 - proto: AirAlarm
   entities:
   - uid: 2
