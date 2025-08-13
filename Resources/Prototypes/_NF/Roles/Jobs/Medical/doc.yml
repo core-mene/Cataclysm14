@@ -34,6 +34,11 @@
         - MD # mono faction
       - type: SurgerySpeedModifier
         SpeedModifier: 2
+  - !type:AddLanguageSpecial
+    languagesSpoken:
+    - SolCommon
+    languagesUnderstood:
+    - SolCommon
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
