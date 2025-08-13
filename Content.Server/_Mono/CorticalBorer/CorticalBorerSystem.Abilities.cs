@@ -97,6 +97,7 @@ public sealed partial class CorticalBorerSystem
             BreakOnMove = true,
             BreakOnWeightlessMove = true,
             AttemptFrequency = AttemptFrequency.StartAndEnd,
+            Hidden = true,
         };
         _doAfter.TryStartDoAfter(infestArgs);
     }

@@ -1,3 +1,4 @@
+using Content.Shared._Mono.CorticalBorer;
 using Content.Shared.CCVar;
 using Content.Shared.Ghost;
 using Content.Shared.StatusIcon;
@@ -90,6 +91,9 @@ public sealed class StatusIconSystem : SharedStatusIconSystem
             return false;
 
         if (data.ShowTo != null && !_entityWhitelist.IsValid(data.ShowTo, viewer))
+            return false;
+
+        if (HasComp<CorticalBorerComponent>(ent)) // Mono
             return false;
 
         return true;
