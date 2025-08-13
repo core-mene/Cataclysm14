@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/13/2025 19:12:20
+  time: 08/13/2025 20:39:14
   entityCount: 2431
 maps: []
 grids:
@@ -1201,7 +1201,26 @@ entities:
     - type: BecomesStation
       id: Bratan
     - type: Roof
-      data: {}
+      data:
+        0,-2: 18446744073694813952
+        -1,-2: 17365597584339562496
+        -1,-1: 17361641481138401520
+        -1,0: 18446744073709549808
+        -1,1: 2305843009213693951
+        0,-1: 18446744073709551615
+        0,0: 2305843009213693951
+        0,1: 17582052944715440095
+        1,-2: 506381179683864576
+        -2,0: 54255129628508160
+        -3,0: 1125899906842624
+        2,0: 252060289724778247
+        1,0: 9288647739687036871
+        2,1: 217020518514492163
+        1,1: 9476560434145362304
+        1,-1: 506381209866536711
+        -1,2: 31
+        1,2: 3
+        0,2: 66547
 - proto: AirAlarm
   entities:
   - uid: 2
@@ -15087,7 +15106,7 @@ entities:
       pos: -2.5,-13.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 268.0657062
+      nextAdvertisementTime: 574.666625
 - proto: VendingMachineBooze
   entities:
   - uid: 2136
@@ -15096,7 +15115,7 @@ entities:
       pos: -3.5,2.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 242.0657062
+      nextAdvertisementTime: 361.6635439
 - proto: VendingMachineChefvend
   entities:
   - uid: 2137
@@ -15105,7 +15124,7 @@ entities:
       pos: 5.5,15.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 317.0657062
+      nextAdvertisementTime: 499.6635439
 - proto: VendingMachineChemicals
   entities:
   - uid: 2138
@@ -15121,7 +15140,7 @@ entities:
       pos: 3.5,-13.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 103.0657062
+      nextAdvertisementTime: 548.6635439
 - proto: VendingMachineGames
   entities:
   - uid: 2140
@@ -15130,7 +15149,7 @@ entities:
       pos: -1.5,-8.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 383.0657062
+      nextAdvertisementTime: 195.6635439
 - proto: VendingMachineNutri
   entities:
   - uid: 2141
@@ -15139,7 +15158,7 @@ entities:
       pos: 4.5,2.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 334.0657062
+      nextAdvertisementTime: 598.6635439
 - proto: VendingMachineRestockChefvend
   entities:
   - uid: 2142
@@ -15155,7 +15174,7 @@ entities:
       pos: 6.5,2.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 184.0657062
+      nextAdvertisementTime: 284.6635439
 - proto: VendingMachineSovietSoda
   entities:
   - uid: 2144
@@ -15164,7 +15183,7 @@ entities:
       pos: 9.5,2.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 348.0657062
+      nextAdvertisementTime: 472.6635439
 - proto: VendingMachineTheater
   entities:
   - uid: 2145
@@ -15173,7 +15192,7 @@ entities:
       pos: 9.5,3.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 584.0657062
+      nextAdvertisementTime: 470.6635439
 - proto: WallReinforced
   entities:
   - uid: 69
@@ -16420,7 +16439,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -6096.55
+      secondsUntilStateChange: -6247.5474
       state: Opening
     - type: Airlock
       autoClose: False
