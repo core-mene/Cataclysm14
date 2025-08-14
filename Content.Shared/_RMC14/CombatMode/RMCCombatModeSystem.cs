@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2025 Onezero0
 // SPDX-FileCopyrightText: 2025 starch
 //
-// SPDX-License-Identifier: MIY-3.0-or-later
+// SPDX-License-Identifier: MIT-3.0-or-later
 
 using Content.Shared.Wieldable.Components;
 using Robust.Shared.Utility;
