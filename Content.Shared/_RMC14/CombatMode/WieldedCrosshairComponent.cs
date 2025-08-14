@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: 2025 starch
 //
-// SPDX-License-Identifier: AGPL-3.0-or-later
+// SPDX-License-Identifier: MIT-3.0-or-later
 
 using Robust.Shared.GameStates;
 using Robust.Shared.Utility;

@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: 2025 starch
 //
-// SPDX-License-Identifier: AGPL-3.0-or-later
+// SPDX-License-Identifier: MIY-3.0-or-later
 
 using Content.Shared.Wieldable.Components;
 using Robust.Shared.Utility;

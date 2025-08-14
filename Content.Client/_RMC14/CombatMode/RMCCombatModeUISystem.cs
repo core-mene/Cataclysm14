@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: 2025 starch
 //
-// SPDX-License-Identifier: AGPL-3.0-or-later
+// SPDX-License-Identifier: MIT-3.0-or-later
 
 using Content.Client.CombatMode;
 using Content.Client.Hands.Systems;
