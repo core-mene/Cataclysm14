@@ -449,8 +449,8 @@
         ignoreResistances: true
         damage:
           types:
-            Asphyxiation: 10
-            Poison: 2.5
+            Asphyxiation: 5
+            Poison: 1.5
       - !type:GenericStatusEffect
         conditions:
         - !type:ReagentThreshold
@@ -462,7 +462,7 @@
         key: SeeingRainbows
         component: SeeingRainbows
         type: Add
-        time: 10
+        time: 30
         refresh: false
       - !type:Emote
         conditions:
@@ -535,39 +535,142 @@
         conditions:
         - !type:ReagentThreshold
           reagent: Healium
-          min: 0.5
+          min: 1
+          max: 15
         scaleByQuantity: true
         ignoreResistances: true
         damage:
           groups:
-            Burn: -0.3
-            Toxin: -0.3
-          types:
-            Blunt: -0.3
-      - !type:ModifyBleedAmount
-        amount: -0.15
+            Burn: -2
+            Toxin: -5
+            Brute: -2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Healium
+          min: 15
+        ignoreResistances: true
+        damage:
+          groups:
+            Burn: -12
+            Toxin: -25
+            Brute: -12
       - !type:PopupMessage
         conditions:
         - !type:ReagentThreshold
           reagent: Healium
-          min: 0.5
+          min: 4
         type: Local
         visualType: Medium
         messages: [ "effect-sleepy" ]
         probability: 0.1
-      - !type:MovespeedModifier
-        conditions:
-        - !type:ReagentThreshold
-          reagent: Healium
-          min: 1
-        walkSpeedModifier: 0.65
-        sprintSpeedModifier: 0.65
       - !type:GenericStatusEffect
         conditions:
         - !type:ReagentThreshold
           reagent: Healium
-          min: 1.8
+          min: 8
         key: ForcedSleep
         component: ForcedSleeping
         time: 3
         type: Add
+      - !type:Drunk
+        boozePower: 150
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Healium
+          min: 4
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Burn: -0.1
+            Toxin: -0.1
+            Brute: -0.1
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Healium
+          min: 6
+        key: ForcedSleep
+        component: ForcedSleeping
+        time: 3
+        type: Add
+      - !type:Drunk
+        boozePower: 50
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Healium
+          min: 3
+        # needs to be made into hypothium to work well as a chem, use as a gas otherwise
+
+- type: reagent
+  id: Nitrium
+  name: reagent-name-nitrium
+  desc: reagent-desc-nitrium
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: sour
+  color: "#8b0000"
+  metabolisms:
+    Gas:
+      effects:
+      - !type:NitriumMovespeedModifier
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 4
+        walkSpeedModifier: 1.25
+        sprintSpeedModifier: 1.25
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 15
+        key: Stutter
+        component: StutteringAccent
+        time: 10
+      - !type:Jitter
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 10
+        time: 10
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 15
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 10
+        key: Drowsiness
+        time: 10
+        type: Remove
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 15
+        key: ForcedSleep
+        type: Remove
+        time: 3
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 15
+        key: Adrenaline
+        component: IgnoreSlowOnDamage
+        type: Add
+        time: 3
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 18
+        ignoreResistances: true
+        damage:
+          types:
+            Asphyxiation: 15

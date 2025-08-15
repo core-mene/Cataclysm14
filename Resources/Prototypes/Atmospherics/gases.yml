@@ -134,18 +134,34 @@
   name: gases-bz
   specificHeat: 20
   heatCapacityRatio: 1.4
-  molarMass: 10
+  molarMass: 12
   color: 9370db
   reagent: BZ
-  pricePerMole: 6 # Mono 0.15<6
+  pricePerMole: 2 #Mono 2<10
 
 - type: gas
   id: 10
   name: gases-healium
   specificHeat: 20
   heatCapacityRatio: 1.4
-  molarMass: 10
+  molarMass: 15
+  gasOverlaySprite: /Textures/_Funkystation/Effects/atmospherics.rsi
+  gasOverlayState: healium
+  gasMolesVisible: 2
   color: 8b0000
   reagent: Healium
-  pricePerMole: 10 # Mono 1.4<10
+  pricePerMole: 10 #Mono 3<10
+
+- type: gas
+  id: 11
+  name: gases-nitrium
+  specificHeat: 10
+  heatCapacityRatio: 1.4
+  gasOverlaySprite: /Textures/_Funkystation/Effects/atmospherics.rsi
+  gasOverlayState: nitrium
+  gasMolesVisible: 0.6
+  molarMass: 8
+  color: b76f0e
+  reagent: Nitrium
+  pricePerMole: 3 #Mono 3<10
 

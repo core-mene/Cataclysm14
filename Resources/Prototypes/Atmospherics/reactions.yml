@@ -103,6 +103,23 @@
   effects:
   - !type:N2ODecompositionReaction {}
 
+#- type: gasReaction
+#  id: WaterVaporPuddle
+#  priority: 1
+#  maximumTemperature: 373.13 # Boiling point of water.
+#  minimumRequirements: # In this case, same as minimum mole count.
+#    - 0  # oxygen
+#    - 0  # nitrogen
+#    - 0  # carbon dioxide
+#    - 0  # plasma
+#    - 0  # tritium
+#    - 1  # water vapor
+#  effects:
+#    - !type:WaterVaporReaction
+#      gas: 5
+#      reagent: Water
+
+#Gases from Funky: Credit to marc-pelletier
 - type: gasReaction
   id: bzFormation
   priority: 2
@@ -137,18 +154,39 @@
   effects:
   - !type:HealiumProductionReaction {}
 
-#- type: gasReaction
-#  id: WaterVaporPuddle
-#  priority: 1
-#  maximumTemperature: 373.13 # Boiling point of water.
-#  minimumRequirements: # In this case, same as minimum mole count.
-#    - 0  # oxygen
-#    - 0  # nitrogen
-#    - 0  # carbon dioxide
-#    - 0  # plasma
-#    - 0  # tritium
-#    - 1  # water vapor
-#  effects:
-#    - !type:WaterVaporReaction
-#      gas: 5
-#      reagent: Water
+- type: gasReaction
+  id: NitriumProduction
+  priority: 2
+  minimumTemperature: 1500.0
+  minimumRequirements:
+  - 0     # oxygen
+  - 20    # nitrogen
+  - 0     # carbon dioxide
+  - 0     # plasma
+  - 20    # tritium
+  - 0     # vapor
+  - 0     # miasma
+  - 0     # n2o
+  - 0     # frezon
+  - 5     # bz
+  effects:
+  - !type:NitriumProductionReaction {}
+
+- type: gasReaction
+  id: NitriumDecomposition
+  priority: 2
+  minimumRequirements:
+  - 0.01  # oxygen
+  - 0     # nitrogen
+  - 0     # carbon dioxide
+  - 0     # plasma
+  - 0     # tritium
+  - 0     # vapor
+  - 0     # miasma
+  - 0     # n2o
+  - 0     # frezon
+  - 0     # bz
+  - 0     # healium
+  - 0.01  # nitrium
+  effects:
+  - !type:NitriumDecompositionReaction {}
