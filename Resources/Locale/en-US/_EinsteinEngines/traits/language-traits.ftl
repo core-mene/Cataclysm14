@@ -21,8 +21,8 @@ trait-language-signlanguage-desc =
 
 trait-language-solcommon-name = Sol Common
 trait-language-solcommon-desc =
-    With its roots in Mandarin Chinese - Common evolved as the official language of the Sol Alliance - with officials working to tie it together with a common tongue.
-    It's spoken by state officials - taught in schools - and spoken by those who either feel a sense of national pride in the Alliance or otherwise fell sway to the culture.
+    With its roots in Mandarin Chinese - Common evolved as the official language of the Trans-Solar Federation - with officials working to tie it together with a common tongue.
+    It's spoken by state officials, the armed forces, by those who either feel a sense of national pride in the Federation or otherwise fell sway to the culture.
 
 trait-language-tradeband-name = Tradeband
 trait-language-tradeband-desc =
@@ -36,13 +36,12 @@ trait-language-freespeak-desc =
 
 trait-language-elyran-name = Elyran
 trait-language-elyran-desc =
-    Elyran Standard is the official tongue of the Republic of Elyra.
     Constructed using elements of Farsi - Arabic - and Turkish - influence from all three of these languages can be seen throughout its grammar and vocabulary.
 
 trait-language-valyrianstandard-name = Valyrian Standard
 trait-language-valyrianstandard-desc =
     A language descended from eastern european languages of old earth - Valyrian Standard is the commonly spoken tongue of Harpies brought up on their homeworld of Valyrian 4b
-    It is rarely spoken outside of the worlds of its native speakers, and has in modern times been supplanted by the 'Conlangs of the Sol Alliance.
+    It is rarely spoken outside of the worlds of its native speakers, and has in modern times been supplanted by the 'Conlangs of the Trans-Solar Federation.
     Its speakers are those who wish to uphold the traditions and beliefs of ancient peoples from before the colonial era.
 
 trait-language-novunederic-name = Novu-Nederic

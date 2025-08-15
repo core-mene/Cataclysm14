@@ -24,8 +24,8 @@ language-Azaziba-description =
 
 language-SolCommon-name = Sol common
 language-SolCommon-description =
-    With its roots in Mandarin Chinese - Common evolved as the official language of the Sol Alliance - with officials working to tie it together with a common tongue.
-    It's spoken by state officials - taught in schools - and spoken by those who either feel a sense of national pride in the Alliance or otherwise fell sway to the culture.
+    With its roots in Mandarin Chinese - Common evolved as the official language of the Trans-Solar Federation - with officials working to tie it together with a common tongue.
+    It's spoken by state officials, the armed forces, by those who either feel a sense of national pride in the Federation or otherwise fell sway to the culture.
 
 language-NovuNederic-name = Novu-Nederic
 language-NovuNederic-description =
@@ -48,9 +48,10 @@ language-Freespeak-description =
     A rarely heard language outside of the colossus sector, developed over time through isolation from the main systems and lost colonies abandoned to die on this edge of civilized space.
     Usually equated to slurred speach, relying more on tone to have the words mean something.
 
+# Mono - edited to remove mentions of elyran republic, or whatever it was
 language-Elyran-name = Elyran Standard
 language-Elyran-description =
-    Elyran Standard is the official tongue of the Republic of Elyra. Constructed using elements of Farsi - Arabic - and Turkish.
+    Constructed using elements of Farsi - Arabic - and Turkish.
     Influence from all three of these languages can be seen throughout its grammar and vocabulary.
 
 language-Canilunzt-name = Canilunzt
@@ -79,7 +80,7 @@ language-Marish-description =  A language spoken only by Shadowkin, one that is 
 language-ValyrianStandard-name = Valyrian Standard
 language-ValyrianStandard-description =
     A language descended from eastern european languages of old earth - Valyrian Standard is the commonly spoken tongue of Harpies brought up on their homeworld of Valyrian 4b
-    It is rarely spoken outside of the worlds of its native speakers, and has in modern times been supplanted by the 'Conlangs of the Sol Alliance.
+    It is rarely spoken outside of the worlds of its native speakers, and has in modern times been supplanted by the 'Conlangs of the Trans-Solar Federation.
     Its speakers are those who wish to uphold the traditions and beliefs of ancient peoples from before the colonial era.
 
 language-Chittin-name = Chittin

@@ -6,6 +6,7 @@
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 tonotom
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -37,7 +38,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
     soundEmpty:
-      path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
+      path: /Audio/Weapons/click.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 200

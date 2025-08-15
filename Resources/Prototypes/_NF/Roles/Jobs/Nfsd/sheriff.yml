@@ -98,6 +98,11 @@
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
+  - !type:AddLanguageSpecial # Monolith - Languages
+    languagesSpoken:
+    - SolCommon
+    languagesUnderstood:
+    - SolCommon
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
