@@ -905,7 +905,7 @@
   components:
   - type: Sprite
     layers:
-    - state: yellow
+    - state: storage
   - type: GasCanister
     gasMixture:
       volume: 1000
@@ -1117,4 +1117,4 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    state: yellow-1
+    state: storage-1
