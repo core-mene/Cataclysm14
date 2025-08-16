@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/16/2025 14:34:31
+  time: 08/16/2025 14:36:56
   entityCount: 558
 maps: []
 grids:
@@ -2420,22 +2420,18 @@ entities:
       startingCharge: 0
     - type: ApcPowerReceiver
       powerLoad: 5
-- proto: Gyroscope
-  entities:
-  - uid: 347
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -1.5,-2.5
-      parent: 1
-  - uid: 348
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 2.5,-2.5
-      parent: 1
 - proto: GyroscopeSecurity
   entities:
+  - uid: 188
+    components:
+    - type: Transform
+      pos: 2.5,-2.5
+      parent: 1
+  - uid: 189
+    components:
+    - type: Transform
+      pos: -1.5,-2.5
+      parent: 1
   - uid: 349
     components:
     - type: Transform
