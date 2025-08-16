@@ -1,4 +1,8 @@
-﻿using Content.Shared.Administration.Logs;
+// SPDX-FileCopyrightText: 2025 ArtisticRoomba
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Content.Shared.Administration.Logs;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Atmos.Piping.Binary.Components;
 using Content.Shared.Database;

@@ -20,9 +20,11 @@
 // SPDX-FileCopyrightText: 2024 MjrLandWhale
 // SPDX-FileCopyrightText: 2024 PotentiallyTom
 // SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 ArtisticRoomba
 // SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 Kyle Tyo
 // SPDX-FileCopyrightText: 2025 Palladinium
+// SPDX-FileCopyrightText: 2025 chromiumboy
 // SPDX-FileCopyrightText: 2025 slarticodefast
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
