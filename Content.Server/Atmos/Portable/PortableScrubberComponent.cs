@@ -42,9 +42,9 @@ namespace Content.Server.Atmos.Portable
             Gas.Ammonia,
             Gas.NitrousOxide,
             Gas.Frezon,
-            Gas.BZ,
-            Gas.Healium,
-			Gas.Nitrium,
+            Gas.BZ, //Funky
+            Gas.Healium, //Funky
+			Gas.Nitrium, //Funky
         };
 
         [ViewVariables(VVAccess.ReadWrite)]
