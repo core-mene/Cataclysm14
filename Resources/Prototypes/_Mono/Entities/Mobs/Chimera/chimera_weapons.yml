@@ -50,14 +50,14 @@
         maxVol: 3
         reagents:
         - ReagentId: NaturalLetoferol
-          Quantity: 1
+          Quantity: 2
   - type: SolutionContainerVisuals
-    maxFillLevels: 1
+    maxFillLevels: 2
     fillBaseName: spikeSolution
   - type: Projectile
     damage:
       types:
-        Piercing: 6
+        Piercing: 2.5
 
 - type: entity
   id: ActionLetoferolSpike
