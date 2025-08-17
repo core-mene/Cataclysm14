@@ -254,6 +254,8 @@
       path: /Audio/Weapons/Guns/Cock/batrifle_cock.ogg
   - type: Item
     sprite: _Mono/Objects/Weapons/Guns/LMGs/grizzly/Grizzly-inhands.rsi
+    shape:
+    - 0,0,7,4
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -287,6 +289,7 @@
   - type: Appearance
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/LMGs/grizzly/Grizzly-inhands.rsi
+    unequipDelay: 4
   - type: StaticPrice
     price: 2500
   - type: GunRequiresWield
@@ -294,8 +297,8 @@
     id: ExperimentalFactionWeapon
   - type: HeldSpeedModifier
   - type: ClothingSpeedModifier
-    sprintModifier: 0.7
-    walkModifier: 0.7
+    sprintModifier: 0.9
+    walkModifier: 0.9
   - type: SpeedModifiedOnWield
     walkModifier: 0.4
     sprintModifier: 0.35
@@ -315,6 +318,8 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: Item
     sprite: _Mono/Objects/Weapons/Guns/LMGs/ratel/Ratel-inhands.rsi
+    shape:
+    - 0,0,5,2
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/LMGs/ratel/Ratel-inhands.rsi
   - type: GunWieldBonus
