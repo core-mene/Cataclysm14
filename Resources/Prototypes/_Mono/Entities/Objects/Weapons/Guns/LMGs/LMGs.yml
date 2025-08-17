@@ -289,12 +289,16 @@
     sprite: _Mono/Objects/Weapons/Guns/LMGs/grizzly/Grizzly-inhands.rsi
   - type: StaticPrice
     price: 2500
-  - type: SpeedModifiedOnWield
-    walkModifier: 0.85
-    sprintModifier: 0.75
   - type: GunRequiresWield
   - type: PirateBountyItem # Mono
     id: ExperimentalFactionWeapon
+  - type: HeldSpeedModifier
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.7
+    walkModifier: 0.7
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.4
+    sprintModifier: 0.35
 
 - type: entity
   name: VFD PSW "Ratel" (7.62x51mm)
@@ -368,5 +372,5 @@
     sprintModifier: 0.75
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 7
-    pvsIncrease: 1
+    maxOffset: 3
+    pvsIncrease: 0.3
