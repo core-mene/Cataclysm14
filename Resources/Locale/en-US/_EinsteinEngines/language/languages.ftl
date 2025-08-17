@@ -33,6 +33,11 @@ language-NovuNederic-description =
     Spoken in the New-Netherlands, this direct and pragmatic trade language carries the sharp consonants and clipped vowels of its old-world roots.
     Built on centuries of seafaring, land reclamation, and commerce, it thrives among those who shape entire worlds — just as their ancestors shaped the land from the sea.
 
+language-NovaCygniBasic-name = Nova-Cygni Basic
+language-NovaCygniBasic-description =
+    A long split dialect of Sol Common, over the years it has turned into the language of the USSP.
+    To an outsider it sounds similar, but compared to Sol Common it sounds like gibberish.
+
 language-TauCetiBasic-name = Andromeda Standard
 language-TauCetiBasic-description =
     Established shortly after humans had colonized their local cluster, the andromeda standard has evolved rapidly with each discovery of an alien species. Changing to allow more diverse,

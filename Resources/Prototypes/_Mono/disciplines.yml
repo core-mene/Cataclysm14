@@ -15,6 +15,19 @@
     2: 0.5
     3: 0.5
 
+# Nothingburger discipline for tech-disk only shit so it doesnt checkfail
+- type: techDiscipline
+  id: DebugPrefracture
+  name: research-discipline-faction-universal
+  color: "#03cafc"
+  icon:
+    sprite: Interface/Misc/research_disciplines.rsi
+    state: biochemical
+  tierPrerequisites:
+    1: 0
+    2: 0.75
+    3: 0.75
+
 - type: techDiscipline
   id: FactionUniversal
   name: research-discipline-faction-universal

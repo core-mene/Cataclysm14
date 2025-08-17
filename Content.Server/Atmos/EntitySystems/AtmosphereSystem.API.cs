@@ -1,3 +1,13 @@
+// SPDX-FileCopyrightText: 2022 Kara
+// SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2023 Chief-Engineer
+// SPDX-FileCopyrightText: 2024 Jezithyr
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using Content.Server.Atmos.Components;
 using Content.Server.Atmos.Piping.Components;
@@ -5,6 +15,7 @@ using Content.Server.NodeContainer.NodeGroups;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Atmos.Reactions;
+using Content.Shared.Fluids.Components;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Utility;
 
@@ -308,6 +319,27 @@ public partial class AtmosphereSystem
             return false;
 
         device.Comp.JoinedGrid = null;
+        return true;
+    }
+
+    public bool SetPuddleFlammabilityAtTile(Entity<TransformComponent?> ent, int flammability = 0)
+    {
+        if (!Resolve(ent, ref ent.Comp, false))
+            return false;
+        var grid = ent.Comp.GridUid;
+        var position = _transformSystem.GetGridTilePositionOrDefault((ent, ent.Comp));
+        return SetPuddleFlammabilityAtTile(position, grid, flammability);
+
+    }
+
+    public bool SetPuddleFlammabilityAtTile(Vector2i position,
+        Entity<GridAtmosphereComponent?>? grid,
+        int flammability = 0)
+    {
+        if (grid is not { } gridEnt || !Resolve(gridEnt, ref gridEnt.Comp, false) ||
+            !gridEnt.Comp.Tiles.TryGetValue(position, out var atmosTile))
+            return false;
+        atmosTile.PuddleSolutionFlammability = flammability;
         return true;
     }
 

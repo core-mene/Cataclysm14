@@ -1,4 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -9,21 +11,17 @@
   parent: BaseMachine
   description: A large automated drill that digs up random materials when powered with 50 kW of HV. Only works on expedition planets.
   components:
-  - type: BatterySelfRecharger
-    autoRecharge: true
-    autoRechargeRate: -1000000
   - type: PowerConsumer
     voltage: High
     drawRate: 50000
-  - type: ItemGenerator
-    prototypes:
-    - SpawnLootOres15
-    miningInterval: 10
-    powerDraw: 50000
+  - type: ItemMiner
+    proto: SpawnLootOres15
+    interval: 10
+    needApcPower: false
+  - type: PowerConsumerMiner
+  - type: PlanetMiner
     requireExpedition: true
-  - type: Battery
-    maxCharge: 1000
-    pricePerJoule: 0.0003
+    requireGround: false # works just fine on lattice
   - type: Sprite
     offset: 0,0.5
     noRot: true
@@ -34,17 +32,6 @@
     - map: ["computerLayerScreen"]
       state: unlit
       shader: unshaded
-  - type: ItemSlots
-    slots:
-      output_slot:
-        name: Container
-        insertSound:
-          path: /Audio/Machines/cutter.ogg
-        ejectSound:
-          path: /Audio/Machines/tray_eject.ogg
-        whitelist:
-          tags:
-          - Ore
   - type: NodeContainer
     examinable: true
     nodes:

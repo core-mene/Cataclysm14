@@ -26,3 +26,10 @@
     - type: Tag
       tags:
       - TechDiskMono
+
+- type: weightedRandom
+  id: TechDiskTierWeightsNormal
+  weights:
+    1: 1
+    2: 1
+    3: 1

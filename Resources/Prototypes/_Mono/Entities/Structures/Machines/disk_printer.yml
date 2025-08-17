@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -8,22 +9,15 @@
   parent: [BaseStructureDisableToolUse, BaseMachine]
   description: A machine that automatically prints tech disks every 7.5 minutes from automatically scavenged pre-Fracture data. Needs 120kW of HV power to function.
   components:
-  - type: BatterySelfRecharger
-    autoRecharge: true
-    autoRechargeRate: -1000000
   - type: PowerConsumer
     voltage: High
     drawRate: 120000
-  - type: ItemGenerator
-    prototypes:
-    - SpawnLootTechDisksPrinterT1
-    - SpawnLootTechDisksPrinterT2
-    miningInterval: 450
-    powerDraw: 120000
-    requireExpedition: false
-  - type: Battery
-    maxCharge: 7500
-    pricePerJoule: 0.0003
+  - type: ItemMiner
+    proto: SpawnLootTechDiskPrinter
+    interval: 450
+    minedSound: /Audio/Machines/circuitprinter.ogg
+    needApcPower: false
+  - type: PowerConsumerMiner
   - type: Sprite
     sprite: _Mono/Structures/Machines/diskprinter.rsi
     layers:
@@ -32,17 +26,6 @@
     - map: ["computerLayerScreen"]
       state: unlit
       shader: unshaded
-  - type: ItemSlots
-    slots:
-      output_slot:
-        name: Container
-        insertSound:
-          path: /Audio/Machines/cutter.ogg
-        ejectSound:
-          path: /Audio/Machines/tray_eject.ogg
-        whitelist:
-          tags:
-          - TechDiskMono
   - type: NodeContainer
     examinable: true
     nodes:
@@ -96,6 +79,23 @@
     radius: 0.8
     energy: 0.5
     color: "#00AACC"
+
+- type: entity
+  name: tech disk printer spawnable disks
+  id: SpawnLootTechDiskPrinter
+  parent: MarkerBasePlaceFree
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: _NF/Markers/general.rsi
+      state: questionmark
+      color: red
+  - type: ConditionalSpawner
+    prototypes:
+    - SpawnLootTechDisksPrinterT1
+    - SpawnLootTechDisksPrinterT2
 
 - type: entity
   name: tech disk printer disks

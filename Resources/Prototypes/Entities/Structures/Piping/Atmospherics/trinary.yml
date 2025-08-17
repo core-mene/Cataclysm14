@@ -19,9 +19,11 @@
 # SPDX-FileCopyrightText: 2024 Łukasz Mędrek
 # SPDX-FileCopyrightText: 2025 ArtisticRoomba
 # SPDX-FileCopyrightText: 2025 Dinner
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 MrTswe
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -56,7 +58,7 @@
 
 - type: entity
   parent: GasTrinaryBase
-  id: GasFilter
+  id: GasFilterBase # Mono
   name: gas filter
   description: Very useful for filtering gases.
   placement:
@@ -91,8 +93,6 @@
       enabled: false
       transferRate: 1000
       maxTransferRate: 1000
-    - type: Flippable
-      mirrorEntity: GasFilterFlipped
     - type: Construction
       graph: GasTrinary
       node: filter
@@ -107,6 +107,14 @@
     - type: GuideHelp
       guides:
       - MixingAndFiltering
+
+# Mono
+- type: entity
+  parent: GasFilterBase
+  id: GasFilter
+  components:
+  - type: Flippable
+    mirrorEntity: GasFilterFlipped
 
 - type: entity
   parent: GasFilter

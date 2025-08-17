@@ -10499,3 +10499,129 @@ Entries:
   id: 1173
   time: '2025-08-15T02:46:17.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/1889
+- author: Avalon-Proto
+  changes:
+    - type: Fix
+      message: Gave doorbump to forgotten Mechs
+  id: 1174
+  time: '2025-08-15T13:58:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1909
+- author: Ilya246
+  changes:
+    - type: Add
+      message: Ported inline filter and radiator for atmos from goob.
+  id: 1175
+  time: '2025-08-15T15:16:43.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1910
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Added Mercury to Rogue shipyard. Real Monolith veterans will recognize
+        it.
+  id: 1176
+  time: '2025-08-15T17:33:14.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1913
+- author: Onezero0
+  changes:
+    - type: Fix
+      message: Removed ghost role chance from desert planet kangaroo spawns.
+  id: 1177
+  time: '2025-08-15T17:44:57.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1912
+- author: starch70
+  changes:
+    - type: Add
+      message: 'Ported support for 7 segment displays from Wizden #37070.'
+    - type: Add
+      message: Updated APC UI again.
+  id: 1178
+  time: '2025-08-15T18:46:16.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1914
+- author: starch70
+  changes:
+    - type: Add
+      message: Added Sentinel to TSFMC shipyard.
+  id: 1179
+  time: '2025-08-15T18:57:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1906
+- author: starch70
+  changes:
+    - type: Add
+      message: USSP gets their own language now.
+  id: 1180
+  time: '2025-08-15T19:02:41.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1916
+- author: Scyron
+  changes:
+    - type: Add
+      message: >-
+        Atmospheric pipes can now be built on three different sublayers,
+        allowing for multiple pipe networks on a single tile
+    - type: Add
+      message: >-
+        Pipe manifolds can now be constructed to connect pipes across different
+        sublayers
+    - type: Tweak
+      message: >-
+        Gas vent under-pressure lockout releases are now performed using the
+        right-click menu - a screwdriver is no longer required
+  id: 1181
+  time: '2025-08-16T16:09:03.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1922
+- author: Ilya246
+  changes:
+    - type: Add
+      message: Sevastopol disk printer and laser drill now make sound while working.
+    - type: Tweak
+      message: Laser drill now has to be on lattice or on the planet directly to work.
+  id: 1182
+  time: '2025-08-16T16:11:37.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1921
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Frontier EVA suits are now 3x2 instead of 4x3.
+    - type: Fix
+      message: Fixed EVA suit duffel bags not being able to fit all their contents.
+  id: 1183
+  time: '2025-08-16T18:17:10.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1926
+- author: starch70
+  changes:
+    - type: Add
+      message: Added 2 more fighters to Tumour.
+  id: 1184
+  time: '2025-08-16T18:17:46.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1924
+- author: Ilya246
+  changes:
+    - type: Add
+      message: Shuttle max speed now scales with thrust-weight ratio.
+  id: 1185
+  time: '2025-08-17T00:48:25.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1856
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Some fluids (such as oxygen, welding fuel, napalm, etc) have flammable
+        puddles now.
+  id: 1186
+  time: '2025-08-17T01:54:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1929
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed Modsuits not being craftable.
+    - type: Fix
+      message: >-
+        Buffed small weapon/ammo/explosive cases to 4x4 storage, so they can fit
+        all the big ammo boxes they might spawn with.
+    - type: Tweak
+      message: >-
+        The medical multitool is finally no longer roundstart, and is now
+        gatekept to the T3 high-end surgery research like intended.
+  id: 1187
+  time: '2025-08-17T02:11:59.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1927
