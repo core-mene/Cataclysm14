@@ -1,29 +1,10 @@
-# SPDX-FileCopyrightText: 2023 cynical24
-# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 Mr. Samuel
-# SPDX-FileCopyrightText: 2024 Salvantrix
-# SPDX-FileCopyrightText: 2024 TsjipTsjip
-# SPDX-FileCopyrightText: 2024 Tych0
-# SPDX-FileCopyrightText: 2024 checkraze
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 Jakumba
-# SPDX-FileCopyrightText: 2025 LukeZurg22
-# SPDX-FileCopyrightText: 2025 Maxtone
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 Rubeebeebee
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/13/2025 20:52:03
+  time: 08/17/2025 02:13:24
   entityCount: 426
 maps: []
 grids:
@@ -278,7 +259,8 @@ entities:
             1: 32904
             2: 2048
           -1,1:
-            0: 51404
+            0: 35020
+            3: 16384
             1: 4113
             2: 256
           0,2:
@@ -286,7 +268,8 @@ entities:
             1: 512
             2: 1024
           -1,2:
-            0: 140
+            3: 4
+            0: 136
             2: 512
             1: 1024
           -2,0:
@@ -345,6 +328,21 @@ entities:
           moles:
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.15
+          moles:
+          - 21.6852
+          - 81.57766
           - 0
           - 0
           - 0
@@ -532,6 +530,16 @@ entities:
       parent: 1
 - proto: AtmosFixBlockerMarker
   entities:
+  - uid: 25
+    components:
+    - type: Transform
+      pos: 2.5,-5.5
+      parent: 1
+  - uid: 87
+    components:
+    - type: Transform
+      pos: -2.5,-5.5
+      parent: 1
   - uid: 368
     components:
     - type: Transform
@@ -677,11 +685,6 @@ entities:
     - type: Transform
       pos: -3.5,-4.5
       parent: 1
-  - uid: 397
-    components:
-    - type: Transform
-      pos: -2.5,-5.5
-      parent: 1
   - uid: 398
     components:
     - type: Transform
@@ -721,11 +724,6 @@ entities:
     components:
     - type: Transform
       pos: 2.5,-6.5
-      parent: 1
-  - uid: 406
-    components:
-    - type: Transform
-      pos: 2.5,-5.5
       parent: 1
   - uid: 407
     components:
@@ -1621,85 +1619,19 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingOuterHardsuitTrauma
+- proto: ClothingOuterHardsuitVoidParamed
   entities:
-  - uid: 122
-    components:
-    - type: Transform
-      parent: 121
-    - type: GroupExamine
-      group:
-      - hoverMessage: ""
-        contextText: verb-examine-group-other
-        icon: /Textures/Interface/examine-star.png
-        components:
-        - Armor
-        - ClothingSpeedModifier
-        entries:
-        - message: This increases your speed by [color=yellow]15%[/color].
-          priority: 0
-          component: ClothingSpeedModifier
-        - message: >-
-            It provides the following protection:
-
-            - [color=yellow]Blunt[/color] damage reduced by [color=lightblue]40%[/color].
-
-            - [color=yellow]Slash[/color] damage reduced by [color=lightblue]40%[/color].
-
-            - [color=yellow]Piercing[/color] damage reduced by [color=lightblue]40%[/color].
-
-            - [color=yellow]Heat[/color] damage reduced by [color=lightblue]20%[/color].
-
-            - [color=yellow]Radiation[/color] damage reduced by [color=lightblue]50%[/color].
-
-            - [color=yellow]Caustic[/color] damage reduced by [color=lightblue]40%[/color].
-
-            - [color=aqua]Stamina[/color] damage reduced by [color=lightblue]55%[/color].
-
-            - [color=orange]Explosion[/color] damage reduced by [color=lightblue]50%[/color].
-          priority: 0
-          component: Armor
-        title: null
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 127
+  - uid: 88
     components:
     - type: Transform
       parent: 116
-    - type: GroupExamine
-      group:
-      - hoverMessage: ""
-        contextText: verb-examine-group-other
-        icon: /Textures/Interface/examine-star.png
-        components:
-        - Armor
-        - ClothingSpeedModifier
-        entries:
-        - message: This increases your speed by [color=yellow]15%[/color].
-          priority: 0
-          component: ClothingSpeedModifier
-        - message: >-
-            It provides the following protection:
-
-            - [color=yellow]Blunt[/color] damage reduced by [color=lightblue]40%[/color].
-
-            - [color=yellow]Slash[/color] damage reduced by [color=lightblue]40%[/color].
-
-            - [color=yellow]Piercing[/color] damage reduced by [color=lightblue]40%[/color].
-
-            - [color=yellow]Heat[/color] damage reduced by [color=lightblue]20%[/color].
-
-            - [color=yellow]Radiation[/color] damage reduced by [color=lightblue]50%[/color].
-
-            - [color=yellow]Caustic[/color] damage reduced by [color=lightblue]40%[/color].
-
-            - [color=aqua]Stamina[/color] damage reduced by [color=lightblue]55%[/color].
-
-            - [color=orange]Explosion[/color] damage reduced by [color=lightblue]50%[/color].
-          priority: 0
-          component: Armor
-        title: null
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
+  - uid: 89
+    components:
+    - type: Transform
+      parent: 121
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
@@ -2240,41 +2172,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 1.5,10.5
       parent: 1
-  - uid: 87
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.5,7.5
-      parent: 1
-  - uid: 88
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 3.5,5.5
-      parent: 1
-  - uid: 89
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -3.5,5.5
-      parent: 1
-  - uid: 90
-    components:
-    - type: Transform
-      pos: -3.5,7.5
-      parent: 1
-  - uid: 109
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 1.5,-7.5
-      parent: 1
-  - uid: 110
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -1.5,-7.5
-      parent: 1
 - proto: Gyroscope
   entities:
   - uid: 104
@@ -2540,12 +2437,14 @@ entities:
   - uid: 364
     components:
     - type: Transform
-      pos: 1.5,-7.5
+      rot: -1.5707963267948966 rad
+      pos: -2.5,-6.5
       parent: 1
   - uid: 365
     components:
     - type: Transform
-      pos: -1.5,-7.5
+      rot: 1.5707963267948966 rad
+      pos: 2.5,-6.5
       parent: 1
 - proto: PoweredStrobeLightPolice
   entities:
@@ -2870,8 +2769,8 @@ entities:
         immutable: False
         temperature: 293.14923
         moles:
-        - 1.7459903
-        - 6.568249
+        - 1.8856695
+        - 7.0937095
         - 0
         - 0
         - 0
@@ -2888,13 +2787,13 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 131
+          - 88
           - 132
-          - 118
-          - 117
-          - 119
           - 120
-          - 127
+          - 119
+          - 117
+          - 118
+          - 131
   - uid: 121
     components:
     - type: Transform
@@ -2906,8 +2805,8 @@ entities:
         immutable: False
         temperature: 293.14923
         moles:
-        - 1.7459903
-        - 6.568249
+        - 1.8856695
+        - 7.0937095
         - 0
         - 0
         - 0
@@ -2924,13 +2823,13 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 133
+          - 89
           - 130
-          - 126
-          - 122
-          - 124
-          - 125
           - 123
+          - 125
+          - 124
+          - 126
+          - 133
 - proto: Table
   entities:
   - uid: 112
@@ -3000,7 +2899,7 @@ entities:
       pos: -1.5,3.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 1080.61911
+      nextAdvertisementTime: 636.2998857
 - proto: WallReinforced
   entities:
   - uid: 3
@@ -3199,13 +3098,48 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.5,2.5
       parent: 1
-  - uid: 25
+  - uid: 90
+    components:
+    - type: Transform
+      pos: -3.5,7.5
+      parent: 1
+  - uid: 92
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -3.5,5.5
+      parent: 1
+  - uid: 109
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 3.5,5.5
+      parent: 1
+  - uid: 110
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 3.5,7.5
+      parent: 1
+  - uid: 122
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,-7.5
+      parent: 1
+  - uid: 127
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -1.5,-7.5
+      parent: 1
+  - uid: 397
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -2.5,-5.5
       parent: 1
-  - uid: 92
+  - uid: 406
     components:
     - type: Transform
       rot: 3.141592653589793 rad
