@@ -228,7 +228,7 @@
   description: A medium machine gun chambered in 7.62x51mm, accepts both box and standard magazines. A label on the side reads "FOR MILITARY USE ONLY".
   components:
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/LMGs/grizzly/grizzly-icon.rsi
+    sprite: _Mono/Objects/Weapons/Guns/LMGs/grizzly/Grizzly-icon.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -253,7 +253,7 @@
     soundRack:
       path: /Audio/Weapons/Guns/Cock/batrifle_cock.ogg
   - type: Item
-    sprite: _Mono/Objects/Weapons/Guns/LMGs/grizzly/grizzly-inhands.rsi
+    sprite: _Mono/Objects/Weapons/Guns/LMGs/grizzly/Grizzly-inhands.rsi
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -286,7 +286,7 @@
     zeroVisible: true
   - type: Appearance
   - type: Clothing
-    sprite: _Mono/Objects/Weapons/Guns/LMGs/grizzly/grizzly-inhands.rsi
+    sprite: _Mono/Objects/Weapons/Guns/LMGs/grizzly/Grizzly-inhands.rsi
   - type: StaticPrice
     price: 2500
   - type: SpeedModifiedOnWield
@@ -303,16 +303,16 @@
   description: The precision support weapon chambered in 7.62x51mm and fits simple ammo box and all kind of magazines. Based on the Vulcan and made with higher quality materials as well as a mounted precision scope. A label on the side that seems to have been tampered with reads "FOR MILI-CENARY USE ONLY".
   components:
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/LMGs/ratel/ratel-icon.rsi
+    sprite: _Mono/Objects/Weapons/Guns/LMGs/ratel/Ratel-icon.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Item
-    sprite: _Mono/Objects/Weapons/Guns/LMGs/ratel/ratel-inhands.rsi
+    sprite: _Mono/Objects/Weapons/Guns/LMGs/ratel/Ratel-inhands.rsi
   - type: Clothing
-    sprite: _Mono/Objects/Weapons/Guns/LMGs/ratel/ratel-inhands.rsi
+    sprite: _Mono/Objects/Weapons/Guns/LMGs/ratel/Ratel-inhands.rsi
   - type: GunWieldBonus
     minAngle: -20
     maxAngle: -30
