@@ -114,6 +114,10 @@
     rsi:
       sprite: _RMC14/Interface/MousePointer/lmg_mouse.rsi
       state: all
+  - type: WieldDelay # Mono
+    baseDelay: 1.4
+    modifiedDelay: 1.4
+    preventFiring: true
 
 - type: entity
   name: PA L6B SAW (7.62x39mm)
