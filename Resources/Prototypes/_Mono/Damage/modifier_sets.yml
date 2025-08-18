@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -38,3 +39,17 @@
     Piercing: 10
     Heat: 17 # no damage from emitters
     Structural: 10
+
+- type: damageModifierSet
+  id: StructuralStone
+  coefficients:
+    Heat: 0.2 # its a rock
+    Cold: 0
+    Radiation: 0
+    Shock: 0
+    Blunt: 0.7
+    Slash: 0.8
+    Piercing: 0.7
+  flatReductions:
+    Blunt: 3
+    Structural: -1

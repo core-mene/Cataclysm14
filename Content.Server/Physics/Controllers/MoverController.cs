@@ -282,10 +282,12 @@ public sealed class MoverController : SharedMoverController
     /// <summary>
     /// Helper function to extrapolate max velocity for a given Vector2 (really, its angle) and shuttle.
     /// </summary>
-    private Vector2 ObtainMaxVel(Vector2 vel, ShuttleComponent shuttle)
+    private Vector2 ObtainMaxVel(Vector2 vel, ShuttleComponent shuttle, PhysicsComponent body) // mono
     {
         if (vel.Length() == 0f)
             return Vector2.Zero;
+
+        vel.Normalize(); // Mono
 
         // this math could PROBABLY be simplified for performance
         // probably
@@ -296,10 +298,22 @@ public sealed class MoverController : SharedMoverController
 
         var horizIndex = vel.X > 0 ? 1 : 3; // east else west
         var vertIndex = vel.Y > 0 ? 2 : 0; // north else south
-        var horizComp = vel.X != 0 ? MathF.Pow(Vector2.Dot(vel, new (shuttle.BaseLinearThrust[horizIndex] / shuttle.LinearThrust[horizIndex], 0f)), 2) : 0; // Frontier: LinearThrust<BaseLinearThrust
-        var vertComp = vel.Y != 0 ? MathF.Pow(Vector2.Dot(vel, new (0f, shuttle.BaseLinearThrust[vertIndex] / shuttle.LinearThrust[vertIndex])), 2) : 0; // Frontier: LinearThrust<BaseLinearThrust
 
-        return shuttle.BaseMaxLinearVelocity * vel * MathF.ReciprocalSqrtEstimate(horizComp + vertComp);
+        // Mono
+        var horizThrust = vel.X * shuttle.LinearThrust[horizIndex];
+        var vertThrust = vel.Y * shuttle.LinearThrust[vertIndex];
+
+        // Mono - scale max velocity depending on TWR
+        var thrust = MathF.Sqrt(horizThrust * horizThrust + vertThrust * vertThrust);
+        var twr = thrust / body.Mass;
+        var twrMult = MathF.Pow(twr / shuttle.BaseMaxVelocityTWR, shuttle.MaxVelocityScalingExponent);
+
+        // Mono - minor optimisation
+        var horizComp = vel.X == 0 ? 0 : vel.X * shuttle.BaseLinearThrust[horizIndex] / horizThrust; // Frontier: LinearThrust<BaseLinearThrust
+        var vertComp = vel.Y == 0 ? 0 : vel.Y * shuttle.BaseLinearThrust[vertIndex] / vertThrust; // Frontier: LinearThrust<BaseLinearThrust
+
+        // Mono
+        return vel * MathF.Min(shuttle.BaseMaxLinearVelocity * twrMult / MathF.Sqrt(horizComp * horizComp + vertComp * vertComp), MathF.Min(shuttle.UpperMaxVelocity, shuttle.SetMaxVelocity));
     }
 
     private void HandleShuttleMovement(float frameTime)
@@ -557,8 +571,9 @@ public sealed class MoverController : SharedMoverController
                 var forceMul = frameTime * body.InvMass;
 
                 var localVel = (-shuttleNorthAngle).RotateVec(body.LinearVelocity);
-                var maxVelocity = ObtainMaxVel(localVel, shuttle); // max for current travel dir
-                var maxWishVelocity = ObtainMaxVel(totalForce, shuttle);
+                // Mono - ObtainMaxVel takes body
+                var maxVelocity = ObtainMaxVel(localVel, shuttle, body); // max for current travel dir
+                var maxWishVelocity = ObtainMaxVel(totalForce, shuttle, body);
                 var properAccel = (maxWishVelocity - localVel) / forceMul;
 
                 var finalForce = Vector2Dot(totalForce, properAccel.Normalized()) * properAccel.Normalized();

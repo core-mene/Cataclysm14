@@ -1,5 +1,6 @@
 // SPDX-FileCopyrightText: 2025 Coenx-flex
 // SPDX-FileCopyrightText: 2025 Cojoke
+// SPDX-FileCopyrightText: 2025 ark1368
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -97,6 +98,7 @@ public sealed partial class CorticalBorerSystem
             BreakOnMove = true,
             BreakOnWeightlessMove = true,
             AttemptFrequency = AttemptFrequency.StartAndEnd,
+            Hidden = true,
         };
         _doAfter.TryStartDoAfter(infestArgs);
     }

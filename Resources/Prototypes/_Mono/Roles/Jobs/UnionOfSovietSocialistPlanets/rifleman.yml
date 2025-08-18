@@ -33,6 +33,11 @@
     - type: NpcFactionMember
       factions:
       - USSP
+  - !type:AddLanguageSpecial
+    languagesSpoken:
+    - NovaCygniBasic
+    languagesUnderstood:
+    - NovaCygniBasic
   accessGroups:
   - GeneralAccess
   - USSPLow

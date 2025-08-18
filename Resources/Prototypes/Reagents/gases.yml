@@ -1,3 +1,29 @@
+# SPDX-FileCopyrightText: 2022 20kdc
+# SPDX-FileCopyrightText: 2022 Alex Evgrashin
+# SPDX-FileCopyrightText: 2022 EmoGarbage404
+# SPDX-FileCopyrightText: 2022 Flipp Syder
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 CrigCrag
+# SPDX-FileCopyrightText: 2023 FoxxoTrystan
+# SPDX-FileCopyrightText: 2023 Interrobang01
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 Kevin Zheng
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 PuceTint
+# SPDX-FileCopyrightText: 2023 Whisper
+# SPDX-FileCopyrightText: 2023 qwerltaz
+# SPDX-FileCopyrightText: 2024 ArchPigeon
+# SPDX-FileCopyrightText: 2024 Brandon Li
+# SPDX-FileCopyrightText: 2024 Errant
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: reagent
   id: Oxygen
   name: reagent-name-oxygen
@@ -7,6 +33,7 @@
   color: "#c4f5ff"
   boilingPoint: -183.0
   meltingPoint: -218.4
+  flammability: 3
   metabolisms:
     Gas:
       effects:
@@ -69,6 +96,7 @@
   recognizable: true
   boilingPoint: -127.3 # Random values picked between the actual values for CO2 and O2
   meltingPoint: -186.4
+  flammability: 4
   tileReactions:
   - !type:FlammableTileReaction
     temperatureMultiplier: 1.5
@@ -120,6 +148,7 @@
   physicalDesc: reagent-physical-desc-ionizing
   flavor: bitter
   color: "#66ff33"
+  flammability: 5
   tileReactions:
   - !type:FlammableTileReaction
     temperatureMultiplier: 2.0
@@ -340,7 +369,7 @@
           types:
             Heat: -0.5
             Shock: -0.5
-            Cold: -0.5 
+            Cold: -0.5
             Radiation: -0.5
       - !type:HealthChange
         conditions:

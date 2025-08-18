@@ -13,11 +13,11 @@
   id: BaseMobResomi
   abstract: true
   components:
-  # - type: LanguageKnowledge # Goobstation - WE ONLY SPEAK MURICAN HERE
-  #   speaks:
-  #     - TauCetiBasic
-  #   understands:
-  #     - TauCetiBasic
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - TauCetiBasic
+    understands:
+    - TauCetiBasic
   - type: Fixtures
     fixtures:
       fix1:

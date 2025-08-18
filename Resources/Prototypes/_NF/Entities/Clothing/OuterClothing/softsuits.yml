@@ -1,3 +1,13 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 dustylens
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # BASE
 - type: entity
   abstract: true
@@ -9,7 +19,7 @@
   components:
   - type: Item
     shape:
-    - 0,0,3,2
+    - 0,0,2,1
   - type: Armor
     modifiers:
       coefficients: # Made to have no protection - Mono

@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2020 AJCM-git
+  # SPDX-FileCopyrightText: 2020 AJCM-git
 # SPDX-FileCopyrightText: 2020 F77F
 # SPDX-FileCopyrightText: 2020 Hugal31
 # SPDX-FileCopyrightText: 2020 Hugo Laloge
@@ -110,6 +110,8 @@
     netsync: false
     radius: 6
     enabled: false
+  - type: LanguageSpeaker # Einstein Engines - Languages
+  - type: UniversalLanguageSpeaker # Einstein Engines - Languages
   # Frontier: changes to the prototype so it can access radars
   - type: UserInterface
     interfaces:

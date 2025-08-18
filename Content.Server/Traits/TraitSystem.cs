@@ -1,3 +1,4 @@
+using Content.Server._EinsteinEngines.Language;
 using Content.Shared.GameTicking;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
@@ -46,6 +47,27 @@ public sealed class TraitSystem : EntitySystem
 
             // Add all components required by the prototype
             EntityManager.AddComponents(args.Mob, traitPrototype.Components, false);
+
+            // Einstein Engines - Language begin (remove this if trait system refactor)
+            // Remove/Add Languages required by the prototype
+            var language = EntityManager.System<LanguageSystem>();
+
+            if (traitPrototype.RemoveLanguagesSpoken is not null)
+                foreach (var lang in traitPrototype.RemoveLanguagesSpoken)
+                    language.RemoveLanguage(args.Mob, lang, true, false);
+
+            if (traitPrototype.RemoveLanguagesUnderstood is not null)
+                foreach (var lang in traitPrototype.RemoveLanguagesUnderstood)
+                    language.RemoveLanguage(args.Mob, lang, false, true);
+
+            if (traitPrototype.LanguagesSpoken is not null)
+                foreach (var lang in traitPrototype.LanguagesSpoken)
+                    language.AddLanguage(args.Mob, lang, true, false);
+
+            if (traitPrototype.LanguagesUnderstood is not null)
+                foreach (var lang in traitPrototype.LanguagesUnderstood)
+                    language.AddLanguage(args.Mob, lang, false, true);
+            // Einstein Engines - Language end
 
             // Add item required by the trait
             if (traitPrototype.TraitGear == null)

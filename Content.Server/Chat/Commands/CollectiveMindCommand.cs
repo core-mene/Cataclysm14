@@ -10,12 +10,14 @@
 // SPDX-FileCopyrightText: 2023 Checkraze
 // SPDX-FileCopyrightText: 2023 HerCoyote23
 // SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Server.Chat.Systems;
 using Content.Shared.Administration;
+using Content.Shared.Chat; // Einstein Engines - Languages
 using Robust.Shared.Player;
 using Robust.Shared.Console;
 using Robust.Shared.Enums;

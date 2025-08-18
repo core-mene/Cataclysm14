@@ -20,6 +20,9 @@ using Content.Shared._Mono.Radio;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Radio;
 using Content.Shared.Radio.Components;
+using Content.Server.Speech;
+using Content.Server._EinsteinEngines.Language;
+using Content.Shared.Chat;
 using Content.Shared.Radio.EntitySystems;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -30,6 +33,8 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
 {
     [Dependency] private readonly INetManager _netMan = default!;
     [Dependency] private readonly RadioSystem _radio = default!;
+    [Dependency] private readonly LanguageSystem _language = default!;
+
 
     public override void Initialize()
     {
@@ -117,7 +122,15 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
     {
         if (TryComp(Transform(uid).ParentUid, out ActorComponent? actor))
         {
-            _netMan.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
+            // Einstein Engines - Language begin
+            var canUnderstand = _language.CanUnderstand(Transform(uid).ParentUid, args.Language.ID);
+            var msg = new MsgChatMessage
+            {
+                    Message = canUnderstand ? args.OriginalChatMsg : args.LanguageObfuscatedChatMsg
+            };
+            _netMan.ServerSendMessage(msg, actor.PlayerSession.Channel);
+
+            // Einstein Engines - Language end
 
             // Send radio noise event to client
             var radioNoiseEvent = new RadioNoiseEvent(GetNetEntity(uid), args.Channel.ID);
