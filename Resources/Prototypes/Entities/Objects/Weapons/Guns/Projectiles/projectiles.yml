@@ -527,8 +527,8 @@
     impactEffect: BulletImpactEffectKinetic
     damage:
       types:
-        Blunt: 15 # Frontier 30<0.5, monolith 0.5<15
-        Structural: 15 # Frontier 35<1, monolith 1<15
+        Blunt: 40 # Frontier 30<0.5, monolith 0.5<40
+        Structural: 400 # Frontier 35<1, monolith 1<300
     # Mono start
   - type: ShipWeaponProjectile
   - type: RadarBlip
