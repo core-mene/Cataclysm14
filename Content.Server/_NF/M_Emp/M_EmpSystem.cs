@@ -14,7 +14,7 @@ using Content.Server.Chat.Managers;
 using Content.Server.Station.Systems;
 using Robust.Shared.Timing;
 using Content.Server.Emp;
-using Content.Server.DeviceLinking.Events;
+using Content.Shared.DeviceLinking.Events;
 using Content.Server.DeviceLinking.Systems;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Ame.Components;

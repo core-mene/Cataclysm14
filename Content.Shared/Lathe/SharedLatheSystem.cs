@@ -189,4 +189,35 @@ public abstract class SharedLatheSystem : EntitySystem
 
         return string.Empty;
     }
+
+    // Monolith
+    /// <summary>
+    /// Sets multipliers for this lathe before modification by machine parts, for non-null arguments.
+    /// </summary>
+    public void SetLatheMultipliers(Entity<LatheComponent?> ent, float? materialUse = null, float? time = null)
+    {
+        if (!Resolve(ent, ref ent.Comp))
+            return;
+
+        if (materialUse != null)
+        {
+            // parts are server so have to do this hack in shared
+            var old = ent.Comp.MaterialUseMultiplier;
+            ent.Comp.MaterialUseMultiplier = materialUse.Value;
+            ent.Comp.FinalMaterialUseMultiplier *= materialUse.Value / old;
+
+            DirtyField(ent, nameof(LatheComponent.MaterialUseMultiplier));
+            DirtyField(ent, nameof(LatheComponent.FinalMaterialUseMultiplier));
+        }
+
+        if (time != null)
+        {
+            var old = ent.Comp.TimeMultiplier;
+            ent.Comp.TimeMultiplier = time.Value;
+            ent.Comp.FinalTimeMultiplier *= time.Value / old;
+
+            DirtyField(ent, nameof(LatheComponent.TimeMultiplier));
+            DirtyField(ent, nameof(LatheComponent.FinalTimeMultiplier));
+        }
+    }
 }

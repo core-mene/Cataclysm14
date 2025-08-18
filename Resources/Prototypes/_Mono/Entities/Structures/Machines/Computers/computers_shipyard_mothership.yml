@@ -58,6 +58,17 @@
     - Zephyr
 
 - type: entity
+  id: TSFCarrierComputer
+  parent: BaseCarrierComputer
+  name: TSF carrier console
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - QJ490
+    - QJ270
+    - Zephyr
+
+- type: entity
   id: LedokolAttatchmentComputer
   parent: BaseCarrierComputer
   name: ledokol attatchment console

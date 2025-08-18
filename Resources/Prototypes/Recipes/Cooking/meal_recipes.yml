@@ -1,3 +1,83 @@
+# SPDX-FileCopyrightText: 2020 FL-OZ
+# SPDX-FileCopyrightText: 2020 Hugo Laloge
+# SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+# SPDX-FileCopyrightText: 2021 20kdc
+# SPDX-FileCopyrightText: 2021 AJCM-git
+# SPDX-FileCopyrightText: 2021 Elijahrane
+# SPDX-FileCopyrightText: 2021 Ephememory
+# SPDX-FileCopyrightText: 2021 Leon Friedrich
+# SPDX-FileCopyrightText: 2021 Matz05
+# SPDX-FileCopyrightText: 2021 Metal Gear Sloth
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 SweptWasTaken
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2022 CrudeWax
+# SPDX-FileCopyrightText: 2022 Justin Trotter
+# SPDX-FileCopyrightText: 2022 Kevin Zheng
+# SPDX-FileCopyrightText: 2022 Michael Phillips
+# SPDX-FileCopyrightText: 2022 Nemanja
+# SPDX-FileCopyrightText: 2022 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 Arendian
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2023 Doru991
+# SPDX-FileCopyrightText: 2023 DoubleRiceEddiedd
+# SPDX-FileCopyrightText: 2023 Feluk6174
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Moony
+# SPDX-FileCopyrightText: 2023 SonicHDC
+# SPDX-FileCopyrightText: 2023 Timothy Teakettle
+# SPDX-FileCopyrightText: 2023 Velcroboy
+# SPDX-FileCopyrightText: 2023 ZeroDayDaemon
+# SPDX-FileCopyrightText: 2023 chromiumboy
+# SPDX-FileCopyrightText: 2023 dahnte
+# SPDX-FileCopyrightText: 2023 deathride58
+# SPDX-FileCopyrightText: 2023 forthbridge
+# SPDX-FileCopyrightText: 2023 lapatison
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2023 nmajask
+# SPDX-FileCopyrightText: 2023 phunnyguy
+# SPDX-FileCopyrightText: 2023 Арт
+# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2024 Alzore
+# SPDX-FileCopyrightText: 2024 ArtisticRoomba
+# SPDX-FileCopyrightText: 2024 August Sun
+# SPDX-FileCopyrightText: 2024 Brandon Hu
+# SPDX-FileCopyrightText: 2024 CheddaCheez
+# SPDX-FileCopyrightText: 2024 DrEnzyme
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 GreaseMonk
+# SPDX-FileCopyrightText: 2024 GreyMario
+# SPDX-FileCopyrightText: 2024 Gyrandola
+# SPDX-FileCopyrightText: 2024 IProduceWidgets
+# SPDX-FileCopyrightText: 2024 Joel Zimmerman
+# SPDX-FileCopyrightText: 2024 Nim
+# SPDX-FileCopyrightText: 2024 RumiTiger
+# SPDX-FileCopyrightText: 2024 SlamBamActionman
+# SPDX-FileCopyrightText: 2024 Tayrtahn
+# SPDX-FileCopyrightText: 2024 TheKittehJesus
+# SPDX-FileCopyrightText: 2024 TurboTrackerss14
+# SPDX-FileCopyrightText: 2024 Ubaser
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 beck-thompson
+# SPDX-FileCopyrightText: 2024 degradka
+# SPDX-FileCopyrightText: 2024 deltanedas
+# SPDX-FileCopyrightText: 2024 goet
+# SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2024 mkanke-real
+# SPDX-FileCopyrightText: 2024 potato1234_x
+# SPDX-FileCopyrightText: 2024 themias
+# SPDX-FileCopyrightText: 2025 SG6732
+# SPDX-FileCopyrightText: 2025 Smith
+# SPDX-FileCopyrightText: 2025 pathetic meowmeow
+# SPDX-FileCopyrightText: 2025 slarticodefast
+# SPDX-FileCopyrightText: 2025 the-hivequeen
+# SPDX-FileCopyrightText: 2025 tonotom
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: microwaveMealRecipe
   id: RecipeBun
   name: bun recipe
@@ -419,7 +499,7 @@
   solids:
     FoodBreadBun: 1
     MobMothroach: 1
-  recipeType: Oven # Frontier
+  recipeType: Microwave # Mono: Deviating to match the item description and restore the humor
 
 #Breads & Sandwiches
 
@@ -648,7 +728,9 @@
   solids:
     FoodBreadPlainSlice: 1
     FoodFlyAmanita: 1
-  recipeType: Microwave # Frontier
+  recipeType: # Frontier
+  - Oven # Mono
+  - Microwave # Frontier
 
 - type: microwaveMealRecipe
   id: RecipeTwoBreadSlice
@@ -660,7 +742,9 @@
     Wine: 5
   solids:
     FoodBreadPlainSlice: 2
-  recipeType: Microwave # Frontier
+  recipeType: # Frontier
+  - Oven # Mono
+  - Microwave # Frontier
 
 - type: microwaveMealRecipe
   id: RecipeOnionRings
@@ -796,7 +880,9 @@
     Flour: 15
     Egg: 6
     OilOlive: 5
-  recipeType: Microwave # Frontier
+  recipeType: # Frontier
+  - Oven # Mono
+  - Microwave # Frontier
 
 - type: microwaveMealRecipe
   id: RecipePastaTomato
@@ -857,7 +943,9 @@
     Water: 10
   solids:
     FoodBowlBig: 1
-  recipeType: Microwave # Frontier
+  recipeType: # Frontier
+  - Oven # Mono
+  - Microwave # Frontier
 
 - type: microwaveMealRecipe
   id: RecipeBoiledRice
@@ -870,7 +958,9 @@
     Water: 10
   solids:
     FoodBowlBig: 1
-  recipeType: Microwave # Frontier
+  recipeType: # Frontier
+  - Oven # Mono
+  - Microwave # Frontier
 
 - type: microwaveMealRecipe
   id: RecipeRicePudding
@@ -884,7 +974,9 @@
     Sugar: 5
   solids:
     FoodBowlBig: 1
-  recipeType: Microwave # Frontier
+  recipeType: # Frontier
+  - Oven # Mono
+  - Microwave # Frontier
 
 - type: microwaveMealRecipe
   id: RecipeRicePork
@@ -895,7 +987,9 @@
   solids:
     FoodRiceBoiled: 1
     FoodMeatCutlet: 3
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeRiceGumbo
@@ -907,7 +1001,9 @@
     FoodRiceBoiled: 1
     FoodMeatCutlet: 3
     FoodChiliPepper: 2
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeEggRice
@@ -920,7 +1016,9 @@
   solids:
     FoodRiceBoiled: 1
     FoodCarrot: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeCopypasta
@@ -946,7 +1044,9 @@
     FoodTomato: 1
     FoodMushroom: 1
     FoodMeatFish: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeMeatballSoup
@@ -961,7 +1061,9 @@
     FoodMeatMeatball: 1
     FoodCarrot: 1
     FoodPotato: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeNettleSoup
@@ -976,7 +1078,9 @@
     FoodBowlBig: 1
     Nettle: 1
     FoodPotato: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeEyeballSoup
@@ -991,7 +1095,9 @@
     OrganHumanEyes: 1
     FoodCarrot: 1
     FoodPotato: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeAmanitaJelly
@@ -1004,7 +1110,9 @@
     Vodka: 5
   solids:
     FoodFlyAmanita: 3
-  recipeType: Microwave # Frontier
+  recipeType: # Frontier
+  - Oven # Mono
+  - Microwave # Frontier
 
 - type: microwaveMealRecipe
   id: RecipeOnionSoup
@@ -1018,7 +1126,9 @@
     FoodBowlBig: 1
     FoodOnionSlice: 5
     FoodCheeseSlice: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeMushroomSoup
@@ -1032,7 +1142,9 @@
   solids:
     FoodBowlBig: 1
     FoodMushroom: 2
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeStewSoup
@@ -1050,7 +1162,9 @@
     FoodCarrot: 1
     FoodEggplant: 1
     FoodMushroom: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeTomatoSoup
@@ -1063,7 +1177,9 @@
   solids:
     FoodBowlBig: 1
     FoodTomato: 2
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeTomatoBloodSoup
@@ -1076,7 +1192,9 @@
   solids:
     FoodBowlBig: 1
     FoodBloodTomato: 2
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeWingFangChuSoup
@@ -1089,7 +1207,9 @@
   solids:
     FoodBowlBig: 1
     FoodMeatXenoCutlet: 2
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeWingFangChuSoupSpider
@@ -1102,7 +1222,9 @@
   solids:
     FoodBowlBig: 1
     FoodMeatSpider: 2
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeVegetableSoup
@@ -1118,7 +1240,9 @@
     FoodCarrot: 1
     FoodPotato: 1
     FoodEggplant: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeClownTearsSoup
@@ -1133,7 +1257,9 @@
     FoodBanana: 1
     ShardGlass: 1
     #idk probably replace shard with someting bananium when #14663 merged
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeMonkeysDelightSoup
@@ -1149,7 +1275,9 @@
     FoodBowlBig: 1
     FoodBanana: 1
     MonkeyCube: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeBungoSoup
@@ -1163,7 +1291,9 @@
     FoodBowlBig: 1
     FoodBungo: 2
     FoodChiliPepper: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeBoiledSnail
@@ -1176,6 +1306,7 @@
   solids:
     FoodMeatSnail: 1
   recipeType: # Frontier
+  - Oven # Mono
   - Microwave # Frontier
 
 - type: microwaveMealRecipe
@@ -1191,7 +1322,9 @@
     FoodOnionSlice: 1
     FoodButter: 1
     FoodMeatSnailCooked: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 #Pies
 
@@ -1426,7 +1559,9 @@
     Cola: 5
   solids:
     FoodSoupMiso: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeLoadedBakedPotato
@@ -1437,7 +1572,9 @@
   solids:
     FoodPotato: 1
     FoodCheeseSlice: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeFries
@@ -1449,7 +1586,9 @@
     TableSalt: 5
   solids:
     FoodPotato: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeCheesyFries
@@ -1462,7 +1601,9 @@
   solids:
     FoodPotato: 1
     FoodCheeseSlice: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeCarrotFries
@@ -1474,7 +1615,9 @@
     TableSalt: 5
   solids:
     FoodCarrot: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeNachos
@@ -1487,6 +1630,9 @@
   solids:
     FoodDoughTortillaFlat: 1
     FoodPlateSmall: 1
+  recipeType: # Mono
+  - Oven # Mono
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeNachosCheesy
@@ -1500,6 +1646,9 @@
     FoodCheeseSlice: 1
     FoodDoughTortillaFlat: 1
     FoodPlateSmall: 1
+  recipeType: # Mono
+  - Oven # Mono
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeNachosCuban
@@ -1513,6 +1662,9 @@
     FoodChiliPepper: 1
     FoodDoughTortillaFlat: 1
     FoodPlateSmall: 1
+  recipeType: # Mono
+  - Oven # Mono
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipePopcorn
@@ -1860,7 +2012,9 @@
     UncookedAnimalProteins: 6
   solids:
     FoodDoughSlice: 3
-  recipeType: Microwave # Frontier
+  recipeType: # Frontier
+  - Oven # Mono
+  - Microwave # Frontier
 
 - type: microwaveMealRecipe
   id: RecipeBrownies
@@ -1981,7 +2135,9 @@
     FoodMeatCutlet: 1
     FoodOnionSlice: 1
     FoodTomato: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeColdChili
@@ -2006,7 +2162,9 @@
     FoodOnionSlice: 1
     FoodTomato: 1
     BikeHorn: 1
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeChiliClown
@@ -2035,7 +2193,9 @@
   solids:
     FoodChiliPepper: 1
     FoodCheeseSlice: 2
-  recipeType: Oven # Frontier
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Mono
 
 - type: microwaveMealRecipe
   id: RecipeRibs
@@ -2369,6 +2529,7 @@
     FoodButter: 1
     LeavesCannabis: 6
   recipeType: # Frontier
+  - Oven # Mono
   - Microwave # Frontier
 
 - type: microwaveMealRecipe

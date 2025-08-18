@@ -7,7 +7,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Lathe
 {
-    [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+    [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(fieldDeltas: true)]
     public sealed partial class LatheComponent : Component
     {
         /// <summary>
@@ -67,25 +67,29 @@ namespace Content.Shared.Lathe
         /// <summary>
         /// A modifier that changes how long it takes to print a recipe
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField, ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+        [Access(typeof(SharedLatheSystem))] // Mono
         public float TimeMultiplier = 1;
 
         /// <summary>
         /// A modifier that changes how much of a material is needed to print a recipe
         /// </summary>
         [DataField, ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+        [Access(typeof(SharedLatheSystem))] // Mono
         public float MaterialUseMultiplier = 1;
 
         /// <summary>
         /// A modifier that changes how long it takes to print a recipe
         /// </summary>
         [DataField, ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+        [Access(typeof(SharedLatheSystem))] // Mono
         public float FinalTimeMultiplier = 1;
 
         /// <summary>
         /// A modifier that changes how much of a material is needed to print a recipe
         /// </summary>
         [DataField, ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+        [Access(typeof(SharedLatheSystem))] // Mono
         public float FinalMaterialUseMultiplier = 1;
 
         public const float DefaultPartRatingMaterialUseMultiplier = 0.85f; // Frontier: restored for machine parts

@@ -1,14 +1,25 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: BoxSurvivalEngineering
+  parent: BoxCardboard
   id: BoxBaseSurvivalMono
   name: Emergency Survival Box
   description: A dedicated, standard issue survival box for the Colossus sector. Holds utility tools to keep you alive in an emergency.
   suffix: Oxygen
   components:
+  - type: StorageFill
+    contents:
+    - id: DoubleEmergencyOxygenTankFilled
+    - id: SpaceMedipen
+    - id: EmergencyMedipen
+    - id: Flare
+      amount: 2
+    - id: MonoMRE # Mono - replace PSB and water bottle w/ MRE
+    - id: CrowbarPocket
+    - id: HandHeldMassScanner
   - type: Item
     size: Normal # Frontier Large<Normal
     shape:
@@ -58,7 +69,6 @@
     contents:
       - id: DoubleEmergencyNitrogenTankFilled
       - id: SpaceMedipen
-
       - id: EmergencyMedipen
       - id: Flare
         amount: 2

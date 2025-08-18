@@ -1,14 +1,18 @@
+# SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 CrescentMothershipComputer: null # missing from map
 ShipyardLiquidatorInfo: null # missing from map
+ShipyardCeresInfo: null
 StationEfficiencyCircuitBoard : null # item removed by wizden
-40mmGrenadeIncendiary: null # item removed
-40mmGrenadeStinger: null # item removed
+40mmGrenadeIncendiary: 40mmGrenadeThermobaric # item removed
+40mmGrenadeStinger: 40mmGrenadeBaton # item removed
+40mmGrenadeShrapnel: 40mmGrenadeFragmentation # item removed
 CircularShieldConsole: null # entity removed
 CircularShieldBase: ShieldGeneratorSmall
 

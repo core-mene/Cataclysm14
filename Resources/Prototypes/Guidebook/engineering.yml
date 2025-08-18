@@ -8,6 +8,7 @@
   - Atmospherics
   - ShuttleCraft
   - Networking
+  - Automation
 
 - type: guideEntry
   id: Construction
@@ -121,6 +122,7 @@
   - SignalValve
   - PneumaticValve
   - PassiveGate
+  - PressureRegulator
 
 - type: guideEntry
   id: ManualValve
@@ -141,6 +143,11 @@
   id: PassiveGate
   name: guide-entry-passivegate
   text: "/ServerInfo/Guidebook/Engineering/PassiveGate.xml"
+
+- type: guideEntry
+  id: PressureRegulator
+  name: guide-entry-ressureregulator
+  text: "/ServerInfo/Guidebook/Engineering/PressureRegulator.xml"
 
 - type: guideEntry
   id: MixingAndFiltering

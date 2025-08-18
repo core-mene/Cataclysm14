@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: job
   id: USSPCommissar
   name: job-name-ussp-commissar
@@ -34,6 +41,11 @@
     - type: NpcFactionMember
       factions:
       - USSP
+  - !type:AddLanguageSpecial
+    languagesSpoken:
+    - NovaCygniBasic
+    languagesUnderstood:
+    - NovaCygniBasic
   accessGroups:
   - GeneralAccess
   - USSPAA

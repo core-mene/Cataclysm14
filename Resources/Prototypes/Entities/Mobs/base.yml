@@ -45,6 +45,7 @@
   - type: RequireProjectileTarget
     active: False
   - type: AnimatedEmotes # goob edit - animated emotes
+  - type: LanguageSpeaker # Einstein Engines - Language. This component is required to support speech, but it does not define known languages.
 
 - type: entity
   save: false

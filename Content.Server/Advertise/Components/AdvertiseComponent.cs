@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 Wrexbe (Josh)
+// SPDX-FileCopyrightText: 2025 Ilya246
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Advertise.EntitySystems;
 using Content.Shared.Dataset;
 using Robust.Shared.Prototypes;
@@ -42,6 +48,7 @@ public sealed partial class AdvertiseComponent : Component
     /// The next time an advertisement will be said.
     /// </summary>
     [DataField]
+    [Access(typeof(AdvertiseSystem))] // Mono - you really don't want to change this outside of AdvertiseSystem
     public TimeSpan NextAdvertisementTime { get; set; } = TimeSpan.Zero;
 
 }

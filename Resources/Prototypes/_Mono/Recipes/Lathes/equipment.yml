@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -20,3 +21,13 @@
     Durathread: 2500
     Silver: 500
     Gold: 500
+
+- type: latheRecipe
+  id: ClothingShoesBootsMagVoid
+  result: ClothingShoesBootsMagVoid
+  completetime: 10
+  materials:
+    Steel: 500
+    Plastic: 500
+    Plasma: 500
+    Silver: 200

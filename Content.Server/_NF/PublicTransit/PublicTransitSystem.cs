@@ -4,6 +4,7 @@ using Content.Server.GameTicking;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Shuttles.Systems;
+using Content.Shared.Chat; // Einstein Engines - Languages
 using Content.Shared.GameTicking;
 using Content.Shared._NF.CCVar;
 using Content.Shared.Shuttles.Components;
@@ -300,7 +301,7 @@ public sealed class PublicTransitSystem : EntitySystem
             {
                 //we set up a default in case the second time we call it fails for some reason
                 transitComp.NextStation = destination;
-                
+
                 // Ensure the shuttle is undocked before initiating FTL travel
                 _dockSystem.UndockDocks(shuttle);
                 _shuttles.FTLToDock(shuttle, shuttleComp, destination, hyperspaceTime: 5f);

@@ -110,7 +110,6 @@
 # SPDX-FileCopyrightText: 2024 Hannah Giovanna Dawson
 # SPDX-FileCopyrightText: 2024 Hanz
 # SPDX-FileCopyrightText: 2024 IProduceWidgets
-# SPDX-FileCopyrightText: 2024 Ilya246
 # SPDX-FileCopyrightText: 2024 Julian Giebel
 # SPDX-FileCopyrightText: 2024 Kara
 # SPDX-FileCopyrightText: 2024 KieueCaprie
@@ -151,9 +150,11 @@
 # SPDX-FileCopyrightText: 2025 Aviu00
 # SPDX-FileCopyrightText: 2025 BeeRobynn
 # SPDX-FileCopyrightText: 2025 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 K-Dynamic
 # SPDX-FileCopyrightText: 2025 Myzumi
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 Southbridge
 # SPDX-FileCopyrightText: 2025 Velken
 # SPDX-FileCopyrightText: 2025 ark1368
@@ -225,6 +226,11 @@
   - type: StaticPrice
     price: 800
   - type: ResearchClient
+  - type: AutomationSlots # Goobstation
+    slots:
+    - !type:AutomatedMaterialStorage
+      input: AutomationSlotMaterials
+      output: null
   - type: TechnologyDatabase
   - type: MaterialStorageMagnetPickup # Frontier
     range: 1.50 # Mono
@@ -399,11 +405,16 @@
     - NFService # Frontier
     - NFScience # Frontier
     - NFPouches # Frontier
+    - VoidBoots # Mono
+    - UpgradeKits # Mono
+    - UpgradeKits_Goob # Mono
     - SMSurgery # Shitmed Change
     # WD EDIT START
     - VisionGoggles
     # WD EDIT END
     - SmartGun # Goobstation
+    # Einstein Engines Packs
+    - Translators
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - AdvancedAmmoRecipePack
@@ -475,6 +486,7 @@
     - MechBoardsPlus
     - AiCoreBoard
     - S2MechBoards
+    - EngineeringBoardsGoob #Goob Factorio port
   - type: MaterialStorage
     whitelist:
       tags:
@@ -529,6 +541,8 @@
     # Shitmed Change
     - BorgModulesDynamic
     - SMCybernetics
+    # Goob/Mono - modsuits
+    - Modsuits
     # Mono - Mechs
     - ClarkeMechParts
     - DurandMechParts
@@ -730,6 +744,9 @@
     # Shitmed Change
     - SMSurgery
     - SMCybernetics
+    # Einstein Engines Packs
+    - Translators # Language
+    - TranslatorImplanters # Language
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget

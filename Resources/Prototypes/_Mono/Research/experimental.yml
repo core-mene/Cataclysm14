@@ -13,3 +13,15 @@
   cost: 5000
   recipeUnlocks:
   - CarpCallerMachineCircuitboard
+
+- type: technology
+  id: BluespaceTethering
+  name: research-technology-bluespace-tethering
+  icon:
+    sprite: _Mono/Clothing/Shoes/Boots/voidboots.rsi
+    state: icon
+  discipline: Experimental
+  tier: 2 # normal magboots are t1 so t2
+  cost: 5000
+  recipeUnlocks:
+  - ClothingShoesBootsMagVoid
