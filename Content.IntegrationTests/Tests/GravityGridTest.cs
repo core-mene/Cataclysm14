@@ -66,7 +66,7 @@ namespace Content.IntegrationTests.Tests
                 powerComponent.NeedsPower = false;
             });
 
-            await server.WaitRunTicks(5);
+            await server.WaitRunTicks(10); // Mono change: increase from 5 due to power update change
 
             await server.WaitAssertion(() =>
             {
@@ -85,7 +85,7 @@ namespace Content.IntegrationTests.Tests
                 powerComponent.NeedsPower = true;
             });
 
-            await server.WaitRunTicks(5);
+            await server.WaitRunTicks(15); // Mono change: increase from 5 due to power update change
 
             await server.WaitAssertion(() =>
             {
