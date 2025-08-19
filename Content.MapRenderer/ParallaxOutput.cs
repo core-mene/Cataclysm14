@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+// SPDX-FileCopyrightText: 2025 Onezero0
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using System.Collections.Generic;
 using System.IO;
 using Robust.Shared.ContentPack;
 using Robust.Shared.Utility;
