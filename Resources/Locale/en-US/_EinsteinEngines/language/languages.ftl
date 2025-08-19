@@ -186,3 +186,8 @@ language-Shadowmind-description =
 language-Qiilour-name = Qiilour
 language-Qiilour-description =
     The native and principal language of the Xelthia, Qiilour is spoken by nearly all members of their species to some degree. It is a refined fusion of several ancient tongues—such as Telenarii, Voskarn, and Old Xelthec—each now lost to history.
+
+# Languages Added here by Mono
+
+language-Blob-name = Blob
+language-Blob-description = The language spoken by blobs! Glorp!
