@@ -23,6 +23,8 @@
 // SPDX-FileCopyrightText: 2024 slarticodefast
 // SPDX-FileCopyrightText: 2024 themias
 // SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 Steve
+// SPDX-FileCopyrightText: 2025 bitcrushing
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
