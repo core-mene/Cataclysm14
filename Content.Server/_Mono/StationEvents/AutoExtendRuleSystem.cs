@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Server.StationEvents.Components;
+using Content.Shared.GameTicking.Components;
 using Content.Shared.Ghost;
 using Content.Shared.Mobs.Systems;
 using Robust.Server.Player;
@@ -20,9 +21,17 @@ public sealed class AutoExtendRuleSystem : EntitySystem
 
     public override void Update(float frameTime)
     {
+        var unExtendQueue = new List<EntityUid>();
         var query = EntityQueryEnumerator<AutoExtendRuleComponent, StationEventComponent>();
         while (query.MoveNext(out var ruleUid, out var extendRule, out var stationEv))
         {
+            // if we're ended remove AutoExtendRuleComponent from us
+            if (HasComp<EndedGameRuleComponent>(ruleUid))
+            {
+                unExtendQueue.Add(ruleUid);
+                continue;
+            }
+
             if (stationEv.EndTime == null)
                 continue;
 
@@ -75,6 +84,11 @@ public sealed class AutoExtendRuleSystem : EntitySystem
 
             if (hasNearbyPlayer)
                 stationEv.EndTime += extendRule.ExtendBy;
+        }
+
+        foreach (var uid in unExtendQueue)
+        {
+            RemComp<AutoExtendRuleComponent>(uid);
         }
     }
 

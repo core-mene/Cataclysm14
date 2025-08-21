@@ -10,6 +10,7 @@ namespace Content.Server._Mono.StationEvents;
 /// Causes this station event to automatically extend its duration if there's players near any of the specified entities.
 /// Also supports grids and automatically accounts for them potentially being big.
 /// Supposed to be used by other systems and not YML.
+/// Is removed once the event is ended.
 /// </summary>
 [RegisterComponent]
 public sealed partial class AutoExtendRuleComponent : Component
