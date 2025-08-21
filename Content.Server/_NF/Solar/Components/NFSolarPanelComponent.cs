@@ -23,6 +23,13 @@ public sealed partial class NFSolarPanelComponent : Component
     [DataField]
     public int MaxSupply = 1500;
 
+    // Mono
+    /// <summary>
+    /// Coverage to still have if there's a wall directly in front of us.
+    /// </summary>
+    [DataField]
+    public float ObstructedCoverage = 0.5f;
+
     /// <summary>
     /// Current coverage of this panel (from 0 to 1).
     /// This is updated by <see cref='PowerSolarSystem'/>.
