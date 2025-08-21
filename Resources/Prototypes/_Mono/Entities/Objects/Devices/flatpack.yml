@@ -231,6 +231,28 @@
     price: 2000
 
 - type: entity
+  parent: BaseNFFlatpack
+  id: GasMiningDrillFlatpack
+  name: gas mining drill flatpack
+  description: A flatpack used for constructing a gas mining drill.
+  components:
+  - type: Flatpack
+    entity: GasMiningDrill
+  - type: StaticPrice
+    price: 300
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: GaslockFrameFlatpack
+  name: portable gaslock flatpack
+  description: A flatpack used for constructing a portable gaslock.
+  components:
+  - type: Flatpack
+    entity: GaslockFrame
+  - type: StaticPrice
+    price: 300
+
+- type: entity
   parent: BaseFlatpack
   id: LaserDrillFlatpack
   name: laser drill flatpack
