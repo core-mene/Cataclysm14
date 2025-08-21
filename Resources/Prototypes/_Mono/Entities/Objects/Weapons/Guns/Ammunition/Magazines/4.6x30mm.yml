@@ -518,7 +518,7 @@
 #Start TopMounted mags
 - type: entity
   id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
-  name: top-mounted magazine (4.6x30mm top-mounted)
+  name: WT550 magazine (4.6x30mm top-mounted)
   parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
   components:
   - type: Tag
@@ -550,7 +550,7 @@
 
 - type: entity
   id: Magazine4.6x30mmSubMachineGunTopMountedEmpty
-  name: top-mounted magazine (4.6x30mm top-mounted any)
+  name: WT550 magazine (4.6x30mm top-mounted any)
   parent: Magazine4.6x30mmSubMachineGunTopMountedFMJ
   components:
   - type: BallisticAmmoProvider
