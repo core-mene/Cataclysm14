@@ -119,3 +119,76 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+# Mono AP syst
+#anti-flesh:
+- type: entity
+  id: Magazine7.62x54mmRHP
+  name: "magazine (7.62x54mmR hollow-point)"
+  parent: BaseMagazine7.62x54mmR
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x54mmRHP
+  - type: Sprite
+    layers:
+    - state: HP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine7.62x54mmRRIP
+  name: "magazine (7.62x54mmR Radically Invasive Projectile)"
+  parent: BaseMagazine7.62x54mmR
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x54mmRRIP
+  - type: Sprite
+    layers:
+    - state: RIP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+#armor-piercing:
+- type: entity
+  id: Magazine7.62x54mmRSteelAP
+  name: "magazine (7.62x54mmR armor-piercing steel core)"
+  parent: BaseMagazine7.62x54mmR
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x54mmRSteelAP
+  - type: Sprite
+    layers:
+    - state: steelAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine7.62x54mmRPlastitAP
+  name: "magazine (7.62x54mmR armor-piercing plastitanium core)"
+  parent: BaseMagazine7.62x54mmR
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x54mmRPlastitAP
+  - type: Sprite
+    layers:
+    - state: plastitAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine7.62x54mmRSynthAP
+  name: "magazine (7.62x54mmR armor-piercing synthalloy core)"
+  parent: BaseMagazine7.62x54mmR
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x54mmRSynthAP
+  - type: Sprite
+    layers:
+    - state: synthAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
