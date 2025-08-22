@@ -199,7 +199,7 @@
 #big ammo boxes
 - type: entity
   parent: BaseAmmoBox5.56x45mm
-  id: AmmoBox5.56x45mmBig
+  id: AmmoBox5.56x45mmBigFMJ
   name: big ammunition box (5.56x45mm FMJ)
   suffix: Big
   components:
@@ -220,3 +220,20 @@
     steps: 4
     zeroVisible: false
   - type: Appearance
+
+- type: entity
+  parent: AmmoBox5.56x45mmBigFMJ
+  id: AmmoBox5.56x45mmBigRubber
+  name: ammunition box (5.56x45mm rubber)
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 210
+    proto: Cartridge5.56x45mmRubber
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/5.56x45mm.rsi
+    layers:
+    - state: base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-3
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: practice-b
