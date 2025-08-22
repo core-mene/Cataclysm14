@@ -260,3 +260,88 @@
     proto: Pellet23x75mmDozd
     count: 12
     spread: 30
+
+#Mono AP system
+#anti-flesh ammo
+- type: entity
+  id: Pellet23x75mmOOBuckshot
+  name: Pellet23x75mm (4 gauge OO magnum buckshot)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: buckshot
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 16
+    armorPenetration: -0.1
+
+- type: entity
+  id: Pellet23x75mmOOBuckshotSpread
+  parent: Pellet23x75mmOOBuckshot
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileSpread
+    proto: Pellet23x75mmOOBuckshot
+    count: 3
+    spread: 6
+
+- type: entity
+  id: Pellet23x75mmSlugRIP
+  name: Pellet23x75mm (4 gauge Radically Invasive Projectile)
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: slug
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 55
+        Structural: 250
+    armorPenetration: -0.8
+
+#armor-piercing ammo
+- type: entity
+  id: Pellet23x75mmSlugAP
+  name: Pellet23x75mm (4 gauge armor-piercing slug)
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: slug
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 25
+        Structural: 250
+    armorPenetration: 0.5
+
+- type: entity
+  id: Pellet23x75mmFlechette
+  name: Pellet23x75mm (4 gauge flechette)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: buckshot
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 7
+    armorPenetration: 0.2
+
+- type: entity
+  id: Pellet23x75mmflechette
+  parent: Pellet23x75mmOOBuckshot
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileSpread
+    proto: Pellet23x75mmOOBuckshot
+    count: 5
+    spread: 12

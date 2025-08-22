@@ -228,7 +228,7 @@
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
-    proto: Pellet12_gaugeSpreadOOBuckshot
+    proto: Pellet12_gaugeOOBuckshotSpread
   - type: SpentAmmoVisuals
 
 - type: entity
@@ -262,7 +262,7 @@
 
 - type: entity
   id: ShellShotgun12_gaugeFlechette
-  name: shotgun shell (12 gauge Flechette)
+  name: shotgun shell (12 gauge flechette)
   parent: BaseShellShotgun12_gauge
   components:
   - type: Sprite
@@ -270,6 +270,6 @@
       - state: flechette
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
-    proto: Pellet12_gaugeSpreadOOBuckshot
+    proto: Pellet12_gaugeOOBuckshotSpread
   - type: SpentAmmoVisuals
     state: "flechette"
