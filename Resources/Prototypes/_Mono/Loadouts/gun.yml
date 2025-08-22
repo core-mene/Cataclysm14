@@ -16,7 +16,7 @@
 
 - type: loadout #MK32 Universal Ammo
   id: Contractor9x19mmPistolAmmoLoadout
-  price: 5000
+  price: 500
   storage:
     back:
     - BoxMagazine9x19mmFMJ
@@ -32,7 +32,7 @@
 
 - type: loadout #Double Barrel Beanbag
   id: ContractorDoubleBarreledLoadout
-  price: 10000
+  price: 2500
   storage:
     back:
     - WeaponShotgunDoubleBarreledRubber
@@ -49,35 +49,35 @@
 
 #Rifles
 
-# - type: loadout #Lecter
-#  id: MercenaryLecterLoadout
-#  price: 25000
-#  storage:
-#    back:
-#    - WeaponRifleLecterPMC
+- type: loadout #Lecter
+  id: MercenaryLecterLoadout
+  price: 25000
+  storage:
+    back:
+    - WeaponRifleLecterPMC
 
-# - type: loadout #Lecter Ammo
-#  id: Mercenary5.56x45mmAmmoLoadout
-#  price: 2000
-#  storage:
-#    back:
-#    - BoxMagazine5.56x45mmFMJ
+- type: loadout #Lecter Ammo
+  id: Mercenary5.56x45mmAmmoLoadout
+  price: 2000
+  storage:
+    back:
+    - BoxMagazine5.56x45mmFMJ
 
 # Shotguns
 
 - type: loadout #Kammerer
   id: MercenaryKammererLoadout
-  price: 15000
+  price: 5000
   storage:
     back:
     - WeaponShotgunKammererPMC
 
-# - type: loadout #Enforcer
-# id: MercenaryEnforcerLoadout
-#  price: 27000
-#  storage:
-#    back:
-#    - WeaponShotgunEnforcerPMC
+- type: loadout #Enforcer
+  id: MercenaryEnforcerLoadout
+  price: 12000
+  storage:
+   back:
+    - WeaponShotgunEnforcerPMC
 
 - type: loadout #Buckshot Shells
   id: MercenaryBuckshotAmmoLoadout
@@ -95,16 +95,16 @@
 
 # SMGs
 
-# - type: loadout #Drozd
-#  id: MercenaryDrozdLoadout
-#  price: 25000
-#  storage:
-#    back:
-#    - WeaponSubMachineGunDrozdPMC
+- type: loadout #Drozd
+  id: MercenaryDrozdLoadout
+  price: 25000
+  storage:
+    back:
+    - WeaponSubMachineGunDrozdPMC
 
 - type: loadout #Drozd Ammo
   id: MercenaryAcpSubAmmoLoadout
-  price: 2000
+  price: 1000
   storage:
     back:
     - BoxMagazine45_ACPSubMachineGunFMJ
@@ -118,28 +118,28 @@
 
 - type: loadout #WT550
   id: MercenaryWt550Loadout
-  price: 10000
+  price: 12000
   storage:
     back:
     - WeaponSubMachineGunWt550PMC
 
 - type: loadout #WT550 Ammo
   id: Mercenary4.6x30mmTopAmmoLoadout
-  price: 2000
+  price: 1000
   storage:
     back:
     - BoxMagazine4.6x30mmSubMachineGunTopMountedFMJ
 
 - type: loadout #C20r
   id: MercenaryC20rLoadout
-  price: 10000
+  price: 12000
   storage:
     back:
     - WeaponSubMachineGunC20rPMC
 
 - type: loadout #C20r Ammo
   id: Mercenary9x19SmgAmmoLoadout
-  price: 2000
+  price: 1000
   storage:
     back:
     - BoxMagazine9x19mmSubMachineGunFMJ
@@ -169,28 +169,28 @@
 
 - type: loadout #Laser Carbine
   id: MercenaryLaserCarbineLoadout
-  price: 10000
+  price: 12000
   storage:
     back:
     - WeaponLaserCarbinePMC
 
 - type: loadout #Laser Cannon
   id: MercenaryLaserCannonLoadout
-  price: 10000
+  price: 12000
   storage:
     back:
     - WeaponLaserCannonPMC
 
 - type: loadout #Disabler SMG
   id: MercenaryDisablerSMGLoadout
-  price: 5000
+  price: 2500
   storage:
     back:
     - WeaponDisablerSMGPMC
 
 - type: loadout #Energy Recharger Flatpack
   id: MercenaryRechargerLoadout
-  price: 2000
+  price: 500
   storage:
     back:
     - WeaponCapacitorRechargerFlatpack
@@ -213,21 +213,21 @@
 
 - type: loadout #MK58 Ammo
   id: MercenaryAcpPistolAmmoLoadout
-  price: 2000
+  price: 500
   storage:
     back:
     - BoxMagazine45_ACPFMJ
 
 - type: loadout #Viper
   id: MercenaryViperLoadout
-  price: 5000
+  price: 2500
   storage:
     back:
     - WeaponPistolViperPMC
 
 - type: loadout #Sawn-off
   id: MercenarySawedOffLoadout
-  price: 12000
+  price: 2500
   storage:
     back:
     - WeaponShotgunSawn
@@ -459,6 +459,13 @@
   storage:
     back:
     - BoxMagazine9x19mmSubMachineGunFMJ
+
+- type: loadout #AK220
+  id: FactionAk220Loadout
+  price: 0
+  storage:
+    back:
+    - WeaponSubMachineGunAK220
 
 # LMGs
 
