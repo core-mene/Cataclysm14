@@ -23,6 +23,7 @@
   abstract: true
   parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
   id: BaseAmmoBox45_ACP
+  name: ammunition box (.45 ACP FMJ)
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
@@ -30,7 +31,7 @@
       tags:
         - Cartridge45_ACPFMJ
     proto: Cartridge45_ACPFMJ
-    capacity: 70 # 60->70 Two mags per box
+    capacity: 80
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -44,31 +45,7 @@
     zeroVisible: false
   - type: Appearance
 
-# Boxes
-- type: entity # Mono Big Pistol Mags
-  parent: BaseAmmoBox45_ACP
-  id: AmmoBox45_ACPBigFMJ
-  name: big ammunition box (.45 ACP FMJ)
-  suffix: Big
-  components:
-  - type: Item
-    shape:
-    - 0,0,1,1
-  - type: BallisticAmmoProvider
-    capacity: 280 # 8 mags per box similar to rifle box
-    proto: Cartridge45_ACPFMJ
-  - type: Sprite
-    layers:
-    - state: base-b # Frontier: base-big<base-b
-      map: ["enum.GunVisualLayers.Base"]
-    - state: magb-1 # Frontier: mag-big-1<magb-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: magb # Frontier: mag-big<magb
-    steps: 4
-    zeroVisible: false
-  - type: Appearance
-
+#small ammo boxes
 - type: entity
   parent: BaseAmmoBox45_ACP
   id: AmmoBox45_ACPFMJ
@@ -159,3 +136,106 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: emp
+
+# Mono AP syst
+#anti-flesh:
+- type: entity
+  parent: BaseAmmoBox45_ACP
+  id: AmmoBox45_ACPHP
+  name: ammunition box (.45 ACP hollow-point)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPHP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: HP
+
+- type: entity
+  parent: BaseAmmoBox45_ACP
+  id: AmmoBox45_ACPRIP
+  name: ammunition box (.45 ACP Radically Invasive Projectile)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPRIP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: RIP
+
+#armor-piercing:
+- type: entity
+  parent: BaseAmmoBox45_ACP
+  id: AmmoBox45_ACPSteelAP
+  name: ammunition box (.45 ACP armor-piercing steel core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPSteelAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: steelAP
+
+- type: entity
+  parent: BaseAmmoBox45_ACP
+  id: AmmoBox45_ACPPlastitAP
+  name: ammunition box (.45 ACP armor-piercing plastitanium core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPPlastitAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: plastitAP
+
+- type: entity
+  parent: BaseAmmoBox45_ACP
+  id: AmmoBox45_ACPSynthAP
+  name: ammunition box (.45 ACP armor-piercing synthalloy core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPSynthAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: synthAP
+
+#big ammo boxes
+- type: entity
+  parent: BaseAmmoBox45_ACP
+  id: AmmoBox45_ACPBig
+  name: big ammunition box (.45 ACP FMJ)
+  suffix: Big
+  components:
+  - type: Item
+    shape:
+    - 0,0,1,1
+  - type: BallisticAmmoProvider
+    capacity: 280 # 8 mags per box similar to rifle box
+    proto: Cartridge45_ACPFMJ
+  - type: Sprite
+    layers:
+    - state: base-b # Frontier: base-big<base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-1 # Frontier: mag-big-1<magb-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb # Frontier: mag-big<magb
+    steps: 4
+    zeroVisible: false
+  - type: Appearance

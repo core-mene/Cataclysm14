@@ -15,10 +15,12 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+
 - type: entity
   abstract: true
   parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
   id: BaseAmmoBox5.56x45mm
+  name: ammunition box (5.56x45mm FMJ)
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
@@ -26,7 +28,7 @@
       tags:
         - Cartridge5.56x45mmFMJ
     proto: Cartridge5.56x45mmFMJ
-    capacity: 80
+    capacity: 70 # more than 2 rifle mag
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -36,35 +38,11 @@
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/5.56x45mm.rsi
   - type: MagazineVisuals
     magState: mag
-    steps: 4
+    steps: 3
     zeroVisible: false
   - type: Appearance
 
-# Boxes
-- type: entity
-  parent: BaseAmmoBox5.56x45mm
-  id: AmmoBox5.56x45mmBigFMJ
-  name: big ammunition box (5.56x45mm FMJ)
-  suffix: Big
-  components:
-  - type: Item
-    shape:
-    - 0,0,1,1
-  - type: BallisticAmmoProvider
-    capacity: 200
-    proto: Cartridge5.56x45mmFMJ
-  - type: Sprite
-    layers:
-    - state: base-b # Frontier: base-big<base-b
-      map: ["enum.GunVisualLayers.Base"]
-    - state: magb-1 # Frontier: mag-big-1<magb-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: magb # Frontier: mag-big<magb
-    steps: 4
-    zeroVisible: false
-  - type: Appearance
-
+#small ammo boxes
 - type: entity
   parent: BaseAmmoBox5.56x45mm
   id: AmmoBox5.56x45mmFMJ
@@ -95,8 +73,8 @@
     - state: practice
 
 - type: entity
-  id: AmmoBox5.56x45mmIncendiary
   parent: BaseAmmoBox5.56x45mm
+  id: AmmoBox5.56x45mmIncendiary
   name: ammunition box (5.56x45mm incendiary)
   components:
   - type: BallisticAmmoProvider
@@ -124,23 +102,7 @@
       map: ["enum.GunVisualLayers.Mag"]
     - state: uranium
 
-- type: entity
-  parent: AmmoBox5.56x45mmBigFMJ
-  id: AmmoBox5.56x45mmBigRubber
-  name: ammunition box (5.56x45mm rubber)
-  components:
-  - type: BallisticAmmoProvider
-    capacity: 200
-    proto: Cartridge5.56x45mmRubber
-  - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/5.56x45mm.rsi
-    layers:
-    - state: base-b
-      map: ["enum.GunVisualLayers.Base"]
-    - state: magb-3
-      map: ["enum.GunVisualLayers.Mag"]
-    - state: practice-b
-
+# Upstream
 - type: entity
   parent: BaseAmmoBox5.56x45mm
   id: AmmoBox5.56x45mmRubber
@@ -149,10 +111,112 @@
   - type: BallisticAmmoProvider
     proto: Cartridge5.56x45mmRubber
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/5.56x45mm.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
-    - state: mag-3
+    - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: rubber
+
+# Mono AP syst
+#anti-flesh:
+- type: entity
+  parent: BaseAmmoBox5.56x45mm
+  id: AmmoBox5.56x45mmHP
+  name: ammunition box (5.56x45mm hollow-point)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.56x45mmHP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: HP
+
+- type: entity
+  parent: BaseAmmoBox5.56x45mm
+  id: AmmoBox5.56x45mmRIP
+  name: ammunition box (5.56x45mm Radically Invasive Projectile)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.56x45mmRIP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: RIP
+
+#armor-piercing:
+- type: entity
+  parent: BaseAmmoBox5.56x45mm
+  id: AmmoBox5.56x45mmSteelAP
+  name: ammunition box (5.56x45mm armor-piercing steel core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.56x45mmSteelAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: steelAP
+
+- type: entity
+  parent: BaseAmmoBox5.56x45mm
+  id: AmmoBox5.56x45mmPlastitAP
+  name: ammunition box (5.56x45mm armor-piercing plastitanium core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.56x45mmPlastitAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: plastitAP
+
+- type: entity
+  parent: BaseAmmoBox5.56x45mm
+  id: AmmoBox5.56x45mmSynthAP
+  name: ammunition box (5.56x45mm armor-piercing synthalloy core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.56x45mmSynthAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: synthAP
+
+#big ammo boxes
+- type: entity
+  parent: BaseAmmoBox5.56x45mm
+  id: AmmoBox5.56x45mmBig
+  name: big ammunition box (5.56x45mm FMJ)
+  suffix: Big
+  components:
+  - type: Item
+    shape:
+    - 0,0,1,1
+  - type: BallisticAmmoProvider
+    capacity: 210 # 7 rifle mags
+    proto: Cartridge5.56x45mmFMJ
+  - type: Sprite
+    layers:
+    - state: base-b # Frontier: base-big<base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-1 # Frontier: mag-big-1<magb-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb # Frontier: mag-big<magb
+    steps: 4
+    zeroVisible: false
+  - type: Appearance

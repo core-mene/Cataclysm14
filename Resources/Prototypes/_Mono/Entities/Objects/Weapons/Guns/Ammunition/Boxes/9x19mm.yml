@@ -23,6 +23,7 @@
   abstract: true
   parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
   id: BaseAmmoBox9x19mm
+  name: ammunition box (9x19mm FMJ)
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
@@ -30,7 +31,7 @@
       tags:
         - Cartridge9x19mmFMJ
     proto: Cartridge9x19mmFMJ
-    capacity: 70 # 60->70 Two mags per box
+    capacity: 80
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -44,31 +45,7 @@
     zeroVisible: false
   - type: Appearance
 
-# Boxes
-- type: entity # Mono Big Pistol Mags
-  parent: BaseAmmoBox9x19mm
-  id: AmmoBox9x19mmBigFMJ
-  name: big ammunition box (9x19mm FMJ)
-  suffix: Big
-  components:
-  - type: Item
-    shape:
-    - 0,0,1,1
-  - type: BallisticAmmoProvider
-    capacity: 280 # 8 mags per box similar to rifle box
-    proto: Cartridge9x19mmFMJ
-  - type: Sprite
-    layers:
-    - state: base-b # Frontier: base-big<base-b
-      map: ["enum.GunVisualLayers.Base"]
-    - state: magb-1 # Frontier: mag-big-1<magb-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: magb # Frontier: mag-big<magb
-    steps: 4
-    zeroVisible: false
-  - type: Appearance
-
+#small ammo boxes
 - type: entity
   parent: BaseAmmoBox9x19mm
   id: AmmoBox9x19mmFMJ
@@ -159,3 +136,106 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: emp
+
+# Mono AP syst
+#anti-flesh:
+- type: entity
+  parent: BaseAmmoBox9x19mm
+  id: AmmoBox9x19mmHP
+  name: ammunition box (9x19mm hollow-point)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x19mmHP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: HP
+
+- type: entity
+  parent: BaseAmmoBox9x19mm
+  id: AmmoBox9x19mmRIP
+  name: ammunition box (9x19mm Radically Invasive Projectile)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x19mmRIP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: RIP
+
+#armor-piercing:
+- type: entity
+  parent: BaseAmmoBox9x19mm
+  id: AmmoBox9x19mmSteelAP
+  name: ammunition box (9x19mm armor-piercing steel core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x19mmSteelAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: steelAP
+
+- type: entity
+  parent: BaseAmmoBox9x19mm
+  id: AmmoBox9x19mmPlastitAP
+  name: ammunition box (9x19mm armor-piercing plastitanium core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x19mmPlastitAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: plastitAP
+
+- type: entity
+  parent: BaseAmmoBox9x19mm
+  id: AmmoBox9x19mmSynthAP
+  name: ammunition box (9x19mm armor-piercing synthalloy core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x19mmSynthAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: synthAP
+
+#big ammo boxes
+- type: entity
+  parent: BaseAmmoBox9x19mm
+  id: AmmoBox9x19mmBig
+  name: big ammunition box (9x19mm FMJ)
+  suffix: Big
+  components:
+  - type: Item
+    shape:
+    - 0,0,1,1
+  - type: BallisticAmmoProvider
+    capacity: 280 # 8 mags per box similar to rifle box
+    proto: Cartridge9x19mmFMJ
+  - type: Sprite
+    layers:
+    - state: base-b # Frontier: base-big<base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-1 # Frontier: mag-big-1<magb-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb # Frontier: mag-big<magb
+    steps: 4
+    zeroVisible: false
+  - type: Appearance

@@ -1,11 +1,11 @@
 # SPDX-FileCopyrightText: 2025 core-mene
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: entity
   abstract: true
   parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
   id: BaseAmmoBox7.62x39mm
+  name: ammunition box (7.62x39mm FMJ)
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
@@ -13,7 +13,7 @@
       tags:
         - Cartridge7.62x39mmFMJ
     proto: Cartridge7.62x39mmFMJ
-    capacity: 80
+    capacity: 70 # more than 2 rifle mag
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -23,34 +23,11 @@
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/7.62x39mm.rsi
   - type: MagazineVisuals
     magState: mag
-    steps: 4
+    steps: 3
     zeroVisible: false
   - type: Appearance
 
-# Boxes
-- type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmBigFMJ
-  name: big ammunition box (7.62x39mm FMJ)
-  suffix: Big
-  components:
-  - type: Item
-    shape:
-    - 0,0,1,1
-  - type: BallisticAmmoProvider
-    capacity: 200
-    proto: Cartridge7.62x39mmFMJ
-  - type: Sprite
-    layers:
-    - state: base-b # Frontier: base<base-b
-      map: ["enum.GunVisualLayers.Base"]
-    - state: magb-3 # Frontier: mag-1<magb-3
-      map: ["enum.GunVisualLayers.Mag"]
-  # Frontier:
-  - type: MagazineVisuals
-    magState: magb
-  # End Frontier
-
+#small ammo boxes
 - type: entity
   parent: BaseAmmoBox7.62x39mm
   id: AmmoBox7.62x39mmFMJ
@@ -81,8 +58,8 @@
     - state: practice
 
 - type: entity
-  id: AmmoBox7.62x39mmIncendiary
   parent: BaseAmmoBox7.62x39mm
+  id: AmmoBox7.62x39mmIncendiary
   name: ammunition box (7.62x39mm incendiary)
   components:
   - type: BallisticAmmoProvider
@@ -96,8 +73,8 @@
     - state: incendiary
 
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
   id: AmmoBox7.62x39mmUranium
+  parent: BaseAmmoBox7.62x39mm
   name: ammunition box (7.62x39mm uranium)
   components:
   - type: BallisticAmmoProvider
@@ -110,6 +87,7 @@
       map: ["enum.GunVisualLayers.Mag"]
     - state: uranium
 
+# Upstream
 - type: entity
   parent: BaseAmmoBox7.62x39mm
   id: AmmoBox7.62x39mmRubber
@@ -118,30 +96,90 @@
   - type: BallisticAmmoProvider
     proto: Cartridge7.62x39mmRubber
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/7.62x39mm.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
-    - state: mag-3
+    - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: rubber
 
+# Mono AP syst
+#anti-flesh:
 - type: entity
-  parent: AmmoBox7.62x39mmBigFMJ
-  id: AmmoBox7.62x39mmRubberBig
-  name: ammunition box (7.62x39mm rubber)
-  suffix: Big
+  parent: BaseAmmoBox7.62x39mm
+  id: AmmoBox7.62x39mmHP
+  name: ammunition box (7.62x39mm hollow-point)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmRubber
+    proto: Cartridge7.62x39mmHP
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/7.62x39mm.rsi
     layers:
-    - state: base-b
+    - state: base
       map: ["enum.GunVisualLayers.Base"]
-    - state: magb-3
+    - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
-    - state: rubber-b
+    - state: HP
+
+- type: entity
+  parent: BaseAmmoBox7.62x39mm
+  id: AmmoBox7.62x39mmRIP
+  name: ammunition box (7.62x39mm Radically Invasive Projectile)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x39mmRIP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: RIP
+
+#armor-piercing:
+- type: entity
+  parent: BaseAmmoBox7.62x39mm
+  id: AmmoBox7.62x39mmSteelAP
+  name: ammunition box (7.62x39mm armor-piercing steel core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x39mmSteelAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: steelAP
+
+- type: entity
+  parent: BaseAmmoBox7.62x39mm
+  id: AmmoBox7.62x39mmPlastitAP
+  name: ammunition box (7.62x39mm armor-piercing plastitanium core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x39mmPlastitAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: plastitAP
+
+- type: entity
+  parent: BaseAmmoBox7.62x39mm
+  id: AmmoBox7.62x39mmSynthAP
+  name: ammunition box (7.62x39mm armor-piercing synthalloy core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x39mmSynthAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: synthAP
 
 - type: entity
   parent: BaseAmmoBox7.62x39mm
@@ -161,3 +199,28 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+#big ammo boxes
+- type: entity
+  parent: BaseAmmoBox7.62x39mm
+  id: AmmoBox7.62x39mmBig
+  name: big ammunition box (7.62x39mm FMJ)
+  suffix: Big
+  components:
+  - type: Item
+    shape:
+    - 0,0,1,1
+  - type: BallisticAmmoProvider
+    capacity: 210 # 7 rifle mags
+    proto: Cartridge7.62x39mmFMJ
+  - type: Sprite
+    layers:
+    - state: base-b # Frontier: base-big<base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-1 # Frontier: mag-big-1<magb-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb # Frontier: mag-big<magb
+    steps: 4
+    zeroVisible: false
+  - type: Appearance
