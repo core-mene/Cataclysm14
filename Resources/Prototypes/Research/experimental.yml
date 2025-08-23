@@ -32,7 +32,9 @@
   cost: 15000
   recipeUnlocks:
   - ProximitySensor
-  position: -2, -2
+  technologyPrerequisites:
+  - BasicParts
+  position: -1, -5
 
 - type: technology
   id: BasicAnomalousResearch
@@ -48,7 +50,9 @@
   - BorgModuleAnomaly
   - APECircuitboard
   - AnomalyVesselCircuitboard
-  position: -3, -2
+  technologyPrerequisites:
+  - BasicParts
+  position: -1, -4
 
 - type: technology
   id: BasicXenoArcheology
@@ -62,21 +66,24 @@
   - BorgModuleArtifact
   - AnalysisComputerCircuitboard
   - ArtifactAnalyzerMachineCircuitboard
-  position: -4, -2
+  technologyPrerequisites:
+  - BasicParts
+  position: -1, -3
 
-# Frontier: no tech disks
-# - type: technology
-#   id: AlternativeResearch
-#   name: research-technology-alternative-research
-#   icon:
-#     sprite: Structures/Machines/tech_disk_printer.rsi
-#     state: display
-#   discipline: Experimental
-#   tier: 1
-#   cost: 5000
-#   recipeUnlocks:
-#   - TechDiskComputerCircuitboard
-# End Frontier: no tech disks
+- type: technology
+  id: AlternativeResearch
+  name: research-technology-alternative-research
+  icon:
+    sprite: Structures/Machines/tech_disk_printer.rsi
+    state: display
+  discipline: Experimental
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - TechDiskComputerCircuitboard
+  technologyPrerequisites:
+  - BasicParts
+  position: 1, -4
 
 - type: technology
   id: MagnetsTech
@@ -88,7 +95,9 @@
   recipeUnlocks:
   - ClothingShoesBootsMagSci
   - NFClothingShoesBootsMoon # Frontier ClothingShoesBootsMoon<NFClothingShoesBootsMoon
-  position: -2, -1
+  technologyPrerequisites:
+  - BasicParts
+  position: -3, -1
 
 - type: technology
   id: AnomalyCoreHarnessing
@@ -102,7 +111,7 @@
   technologyPrerequisites:
   - BasicAnomalousResearch
   - AdvancedParts
-  position: -3, -3
+  position: -3, -4
 
 # Tier 2
 
@@ -117,7 +126,9 @@
   - AdvancedCapacitorStockPart
   - AdvancedMatterBinStockPart
   - NanoManipulatorStockPart
-  position: 0, 0
+  technologyPrerequisites:
+  - BasicParts
+  position: 5, 5
 
 - type: technology
   id: AbnormalArtifactManipulation
@@ -131,7 +142,7 @@
   technologyPrerequisites:
   - BasicXenoArcheology
   - AdvancedParts
-  position: -4, -3
+  position: -2, -3
 
 - type: technology
   id: AdvancedAnomalyResearch
@@ -147,7 +158,7 @@
   technologyPrerequisites:
   - BasicAnomalousResearch
   - AdvancedParts
-  position: -3, -4
+  position: -2, -4
 
 - type: technology
   id: DeterrenceTechnologies
@@ -161,7 +172,7 @@
   - HoloprojectorField
   technologyPrerequisites:
   - AdvancedParts
-  position: -3, -1
+  position: 3, 3
 
 - type: technology
   id: AiTechnology
@@ -174,7 +185,7 @@
   - AiCoreElectronics
   technologyPrerequisites:
   - SuperParts
-  position: -4, -1
+  position: 8, 10
 
 # Tier 3
 

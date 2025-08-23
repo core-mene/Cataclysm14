@@ -46,7 +46,9 @@
   - OreProcessorIndustrialMachineCircuitboard
   - ClothingMaskWeldingGas
   - MechEquipmentDrill # Goobstation
-  position: 2, -3
+  technologyPrerequisites:
+  - BasicParts
+  position: -4, 2
 
 - type: technology
   id: SpaceScanning
@@ -59,7 +61,9 @@
   - RadarConsoleCircuitboard
   - HandHeldMassScanner
   - BorgModuleGPS
-  position: 1, -4
+  technologyPrerequisites:
+  - BasicParts
+  position: 0, 2
 
 - type: technology
   id: AdvancedPowercells
@@ -87,7 +91,7 @@
   - FlatpackerMachineCircuitboard
   technologyPrerequisites:
   - AdvancedParts
-  position: 3, -3
+  position: 6, 3
 
 - type: technology
   id: IndustrialEngineering
@@ -116,7 +120,7 @@
   - SheetifierMachineCircuitboard
   technologyPrerequisites:
   - AdvancedParts
-  position: 4, -3
+  position: 5, 2
 
 - type: technology
   id: PowerGeneration
@@ -135,7 +139,7 @@
   - ContainmentFieldGeneratorCircuitboard # Mono
   technologyPrerequisites:
   - AdvancedParts
-  position: 3, -5
+  position: 3, 5
 
 - type: technology
   id: AtmosphericTech
@@ -148,8 +152,8 @@
   - ThermomachineFreezerMachineCircuitBoard
   - GasRecyclerMachineCircuitboard
   technologyPrerequisites:
-  - AdvancedParts
-  position: 2, -4
+  - BasicParts
+  position: -2, 2
 
 # Tier 2
 
@@ -170,6 +174,7 @@
   - SmallGyroscopeMachineCircuitboard # Frontier
   technologyPrerequisites:
   - AdvancedParts
+  - PowerGeneration
   position: 1, 5
 
 - type: technology
@@ -187,7 +192,7 @@
   #  - FireExtinguisherBluespace # DeltaV
   technologyPrerequisites:
   - AtmosphericTech
-  position: 1, -5
+  position: -2, 3
 
 - type: technology
   id: AdvancedToolsTechnology
@@ -210,7 +215,7 @@
   #- NFBlueprintWelderExperimental # Frontier
   technologyPrerequisites:
   - SuperParts
-  position: 1, -3
+  position: 10, -12
 
 - type: technology
   id: MassExcavation
@@ -230,7 +235,7 @@
   - MechEquipmentDrillDiamond
   technologyPrerequisites:
   - SalvageEquipment
-  position: 2, -2
+  position: -4, 3
 
 # Tier 3
 
@@ -268,7 +273,7 @@
   technologyPrerequisites:
   - AdvancedPowercells
   - SuperParts
-  position: 4, -4
+  position: 3, 8
 
 - type: technology
   id: RapidConstruction
@@ -285,4 +290,4 @@
   - NFBlueprintRCDAmmo
   technologyPrerequisites:
   - AdvancedParts
-  position: 1, -2
+  position: 10, 13
