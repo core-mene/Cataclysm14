@@ -102,9 +102,9 @@
 # + 0.05 base AP
 #anti-flesh:
 - type: entity
-  id: Bullet7.62x51mmHP
+  id: Bullet45_magnumHP
   parent: BaseBullet
-  name: bullet (7.62x51mm hollow-point)
+  name: bullet (.45 magnum hollow-point)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -115,9 +115,9 @@
     armorPenetration: -0.5
 
 - type: entity
-  id: Bullet7.62x51mmRIP
+  id: Bullet45_magnumRIP
   parent: BaseBullet
-  name: bullet (7.62x51mm Radically Invasive Projectile)
+  name: bullet (.45 magnum Radically Invasive Projectile)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -129,9 +129,9 @@
 
 #armor-piercing:
 - type: entity
-  id: Bullet7.62x51mmSteelAP
+  id: Bullet45_magnumSteelAP
   parent: BaseBullet
-  name: bullet (7.62x51mm armor-piercing steel core)
+  name: bullet (.45 magnum armor-piercing steel core)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -141,9 +141,9 @@
     armorPenetration: 0.3
 
 - type: entity
-  id: Bullet7.62x51mmPlastitAP
+  id: Bullet45_magnumPlastitAP
   parent: BaseBullet
-  name: bullet (7.62x51mm armor-piercing plastitanium core)
+  name: bullet (.45 magnum armor-piercing plastitanium core)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -153,9 +153,9 @@
     armorPenetration: 0.5
 
 - type: entity
-  id: Bullet7.62x51mmSynthAP
+  id: Bullet45_magnumSynthAP
   parent: BaseBullet
-  name: bullet (7.62x51mm armor-piercing synthalloy core)
+  name: bullet (.45 magnum armor-piercing synthalloy core)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile

@@ -100,9 +100,9 @@
 # + 0.05 base AP
 #anti-flesh:
 - type: entity
-  id: Bullet5.56x45mmHP
+  id: Bullet4.6x30mmHP
   parent: BaseBullet
-  name: bullet (5.56x45mm hollow-point)
+  name: bullet (4.6x30mm hollow-point)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -113,9 +113,9 @@
     armorPenetration: -0.55
 
 - type: entity
-  id: Bullet5.56x45mmRIP
+  id: Bullet4.6x30mmRIP
   parent: BaseBullet
-  name: bullet (5.56x45mm Radically Invasive Projectile)
+  name: bullet (4.6x30mm Radically Invasive Projectile)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -127,9 +127,9 @@
 
 #armor-piercing:
 - type: entity
-  id: Bullet5.56x45mmSteelAP
+  id: Bullet4.6x30mmSteelAP
   parent: BaseBullet
-  name: bullet (5.56x45mm armor-piercing steel core)
+  name: bullet (4.6x30mm armor-piercing steel core)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -139,9 +139,9 @@
     armorPenetration: 0.25
 
 - type: entity
-  id: Bullet5.56x45mmPlastitAP
+  id: Bullet4.6x30mmPlastitAP
   parent: BaseBullet
-  name: bullet (5.56x45mm armor-piercing plastitanium core)
+  name: bullet (4.6x30mm armor-piercing plastitanium core)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -151,9 +151,9 @@
     armorPenetration: 0.45
 
 - type: entity
-  id: Bullet5.56x45mmSynthAP
+  id: Bullet4.6x30mmSynthAP
   parent: BaseBullet
-  name: bullet (5.56x45mm armor-piercing synthalloy core)
+  name: bullet (4.6x30mm armor-piercing synthalloy core)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
