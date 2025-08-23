@@ -40,10 +40,21 @@ public abstract class SharedGasDepositSystem : EntitySystem
             ("pressure", ent.Comp.TargetPressure)));
         if (_net.IsServer && TryComp(ent.Comp.DepositEntity, out GasDepositComponent? deposit))
         {
-            float estimatedAmount = MathF.Round(deposit.Deposit.TotalMoles / DrillExamineAmountRound) * DrillExamineAmountRound;
-            args.PushMarkup(Loc.GetString("gas-deposit-drill-system-examined-amount",
-                ("statusColor", "lightblue"),
-                ("value", estimatedAmount)));
+            if (deposit.YieldBased)
+            {
+                var hitMinimum = deposit.Yield == deposit.MinYield;
+                args.PushMarkup(Loc.GetString("gas-deposit-drill-system-examined-yield",
+                    ("statusColor", "lightblue"),
+                    ("yield", deposit.Yield * 100f),
+                    ("hitMinimum", hitMinimum)));
+            }
+            else
+            {
+                float estimatedAmount = MathF.Round(deposit.GasLeft / DrillExamineAmountRound) * DrillExamineAmountRound;
+                args.PushMarkup(Loc.GetString("gas-deposit-drill-system-examined-amount",
+                    ("statusColor", "lightblue"),
+                    ("value", estimatedAmount)));
+            }
         }
     }
 

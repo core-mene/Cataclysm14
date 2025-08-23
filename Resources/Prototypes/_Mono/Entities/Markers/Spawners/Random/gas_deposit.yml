@@ -1,0 +1,14 @@
+- type: entityTable
+  id: VgroidGasDepositTable
+  table: !type:GroupSelector
+    children:
+      - id: DeepGasDepositVerySmall
+        weight: 0.1
+      - id: DeepGasDepositSmall
+        weight: 0.2
+      - id: DeepGasDeposit
+        weight: 0.4
+      - id: DeepGasDepositLarge
+        weight: 0.2
+      - id: DeepGasDepositVeryLarge
+        weight: 0.1
