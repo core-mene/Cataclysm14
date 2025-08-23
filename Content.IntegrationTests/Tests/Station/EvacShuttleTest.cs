@@ -17,7 +17,8 @@ public sealed class EvacShuttleTest
     /// <summary>
     /// Ensure that the emergency shuttle can be called, and that it will travel to centcomm
     /// </summary>
-    [Test]
+    // Mono change: disable test... we ain't getting a flight back to cc
+    // [Test]
     public async Task EmergencyEvacTest()
     {
         await using var pair = await PoolManager.GetServerClient(new PoolSettings { DummyTicker = true, Dirty = true });
