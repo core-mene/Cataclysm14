@@ -6,6 +6,7 @@
 // SPDX-FileCopyrightText: 2025 Misandry
 // SPDX-FileCopyrightText: 2025 NotActuallyMarty
 // SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 core-mene
 // SPDX-FileCopyrightText: 2025 gus
 // SPDX-FileCopyrightText: 2025 starch
 //

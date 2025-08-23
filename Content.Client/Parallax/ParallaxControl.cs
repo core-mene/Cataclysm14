@@ -2,6 +2,7 @@
 // SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
 // SPDX-FileCopyrightText: 2022 20kdc
 // SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2025 core-mene
 // SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
