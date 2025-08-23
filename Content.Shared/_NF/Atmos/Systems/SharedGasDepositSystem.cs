@@ -46,6 +46,7 @@ public abstract class SharedGasDepositSystem : EntitySystem
             ("pressure", ent.Comp.TargetPressure)));
         if (_net.IsServer && TryComp(ent.Comp.DepositEntity, out GasDepositComponent? deposit))
         {
+            // Mono
             if (deposit.YieldBased)
             {
                 var hitMinimum = deposit.Yield == deposit.MinYield;

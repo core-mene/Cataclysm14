@@ -168,7 +168,7 @@ public sealed class GasDepositScannerSystem : EntitySystem
                 return false;
             }
 
-            gasMixList = GenerateGasEntryArray(gasDeposit.Composition, gasDeposit.GasLeft);
+            gasMixList = GenerateGasEntryArray(gasDeposit.Composition, gasDeposit.GasLeft); // Mono
         }
 
         // Don't bother sending a UI message with no content, and stop updating I guess?
@@ -184,7 +184,8 @@ public sealed class GasDepositScannerSystem : EntitySystem
     /// <summary>
     /// Generates a GasEntry array for a given GasMixture.
     /// </summary>
-    private GasEntry[] GenerateGasEntryArray(GasMixture? mixture, float scale)
+    private GasEntry[] GenerateGasEntryArray(GasMixture? mixture,
+                                             float scale) // Mono
     {
         if (mixture == null)
             return [];
@@ -200,6 +201,7 @@ public sealed class GasDepositScannerSystem : EntitySystem
 
             var gasName = Loc.GetString(gas.Name);
             ApproximateGasDepositSize depositSize;
+            // Mono
             var gasCount = mixture[i] * scale;
             if (gasCount < 500.0)
                 depositSize = ApproximateGasDepositSize.Trace;

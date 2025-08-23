@@ -114,6 +114,7 @@ public sealed class GasDepositSystem : SharedGasDepositSystem
             depositPrototype = (GasDepositPrototype)randomPrototype;
         }
 
+        // Mono
         var mix = new GasMixture();
 
         for (var i = 0; i < depositPrototype.Gases.Length && i < Atmospherics.TotalNumberOfGases; i++)
@@ -123,6 +124,7 @@ public sealed class GasDepositSystem : SharedGasDepositSystem
             mix.SetMoles(i, gasAmount);
         }
 
+        // Mono
         var moleCount = mix.TotalMoles;
         deposit.Composition = mix;
         deposit.Composition.Multiply(1f / moleCount);
@@ -132,6 +134,7 @@ public sealed class GasDepositSystem : SharedGasDepositSystem
         deposit.LowMoles = moleCount * LowMoleCoefficient;
     }
 
+    // Mono - changes throughout the method
     private void OnExtractorUpdate(Entity<GasDepositExtractorComponent> ent, ref AtmosDeviceUpdateEvent args)
     {
         if (!ent.Comp.Enabled

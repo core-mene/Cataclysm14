@@ -40,7 +40,7 @@ public sealed partial class GasDepositComponent : Component
     /// Minimum yield to never drop below.
     /// </summary>
     [DataField]
-    public float MinYield = 0.15f;
+    public float MinYield = 0.25f;
 
     /// <summary>
     /// Whether this deposit is yield-based.
