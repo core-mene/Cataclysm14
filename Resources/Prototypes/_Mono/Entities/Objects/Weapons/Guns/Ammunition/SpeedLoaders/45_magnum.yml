@@ -169,7 +169,7 @@
 
 - type: entity
   id: SpeedLoader45_magnumPistolRIP
-  name: speed loader (.45 magnum Radically Invasive Projectile)
+  name: speed loader (.45 magnum RIP)
   parent: BaseSpeedLoader45_magnum
   components:
   - type: BallisticAmmoProvider
@@ -209,12 +209,12 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoader45_magnumPistolPlastitAP
+  id: SpeedLoader45_magnumPistolplasteelAP
   name: speed loader (.45 magnum armor-piercing plastitanium core)
   parent: BaseSpeedLoader45_magnum
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge45_magnumPlastitAP
+    proto: Cartridge45_magnumplasteelAP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/45_magnum/45_magnum_speed_loader.rsi
     layers:

@@ -152,7 +152,7 @@
 
 - type: entity
   id: Cartridge45_ACPRIP
-  name: cartridge (.45 ACP Radically Invasive Projectile)
+  name: cartridge (.45 ACP RIP)
   parent: BaseCartridge45_ACP
   components:
   - type: CartridgeAmmo
@@ -181,12 +181,12 @@
         map: [ "enum.AmmoVisualLayers.Tip" ]
 
 - type: entity
-  id: Cartridge45_ACPPlastitAP
+  id: Cartridge45_ACPplasteelAP
   name: cartridge (.45 ACP armor-piercing plastitanium core)
   parent: BaseCartridge45_ACP
   components:
   - type: CartridgeAmmo
-    proto: Bullet45_ACPPlastitAP
+    proto: Bullet45_ACPplasteelAP
   - type: Sprite
     layers:
       - state: base

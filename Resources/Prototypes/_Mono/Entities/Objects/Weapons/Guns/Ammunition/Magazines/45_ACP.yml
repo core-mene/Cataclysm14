@@ -170,7 +170,7 @@
 
 - type: entity
   id: Magazine45_ACPPistolRIP
-  name: pistol magazine (.45 ACP Radically Invasive Projectile)
+  name: pistol magazine (.45 ACP RIP)
   parent: BaseMagazine45_ACP
   components:
   - type: BallisticAmmoProvider
@@ -200,16 +200,16 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine45_ACPPistolPlastitAP
+  id: Magazine45_ACPPistolplasteelAP
   name: pistol magazine (.45 ACP armor-piercing plastitanium core)
   parent: BaseMagazine45_ACP
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge45_ACPPlastitAP
+    proto: Cartridge45_ACPplasteelAP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_pistol_mag.rsi
     layers:
-    - state: plastitAP
+    - state: plasteelAP
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
@@ -483,7 +483,7 @@
 
 - type: entity
   id: Magazine45_ACPSubMachineGunRIP
-  name: SMG magazine (.45 ACP Radically Invasive Projectile)
+  name: SMG magazine (.45 ACP RIP)
   parent: BaseMagazine45_ACPSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
@@ -513,16 +513,16 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine45_ACPSubMachineGunPlastitAP
+  id: Magazine45_ACPSubMachineGunplasteelAP
   name: SMG magazine (.45 ACP armor-piercing plastitanium core)
   parent: BaseMagazine45_ACPSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge45_ACPPlastitAP
+    proto: Cartridge45_ACPplasteelAP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_smg_mag.rsi
     layers:
-    - state: plastitAP
+    - state: plasteelAP
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]

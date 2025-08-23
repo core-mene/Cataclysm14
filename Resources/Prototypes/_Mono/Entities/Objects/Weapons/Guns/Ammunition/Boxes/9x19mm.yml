@@ -157,7 +157,7 @@
 - type: entity
   parent: BaseAmmoBox9x19mm
   id: AmmoBox9x19mmRIP
-  name: ammunition box (9x19mm Radically Invasive Projectile)
+  name: ammunition box (9x19mm RIP)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmRIP
@@ -187,18 +187,18 @@
 
 - type: entity
   parent: BaseAmmoBox9x19mm
-  id: AmmoBox9x19mmPlastitAP
+  id: AmmoBox9x19mmplasteelAP
   name: ammunition box (9x19mm armor-piercing plastitanium core)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge9x19mmPlastitAP
+    proto: Cartridge9x19mmplasteelAP
   - type: Sprite
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
-    - state: plastitAP
+    - state: plasteelAP
 
 - type: entity
   parent: BaseAmmoBox9x19mm

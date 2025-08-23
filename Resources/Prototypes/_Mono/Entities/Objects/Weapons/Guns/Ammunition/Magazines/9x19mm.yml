@@ -170,7 +170,7 @@
 
 - type: entity
   id: Magazine9x19mmPistolRIP
-  name: pistol magazine (9x19mm Radically Invasive Projectile)
+  name: pistol magazine (9x19mm RIP)
   parent: BaseMagazine9x19mm
   components:
   - type: BallisticAmmoProvider
@@ -200,16 +200,16 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine9x19mmPistolPlastitAP
+  id: Magazine9x19mmPistolplasteelAP
   name: pistol magazine (9x19mm armor-piercing plastitanium core)
   parent: BaseMagazine9x19mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge9x19mmPlastitAP
+    proto: Cartridge9x19mmplasteelAP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/9x19mm/9x19mm_pistol_mag.rsi
     layers:
-    - state: plastitAP
+    - state: plasteelAP
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
@@ -483,7 +483,7 @@
 
 - type: entity
   id: Magazine9x19mmSubMachineGunRIP
-  name: SMG magazine (9x19mm Radically Invasive Projectile)
+  name: SMG magazine (9x19mm RIP)
   parent: BaseMagazine9x19mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
@@ -513,16 +513,16 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine9x19mmSubMachineGunPlastitAP
+  id: Magazine9x19mmSubMachineGunplasteelAP
   name: SMG magazine (9x19mm armor-piercing plastitanium core)
   parent: BaseMagazine9x19mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge9x19mmPlastitAP
+    proto: Cartridge9x19mmplasteelAP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/9x19mm/9x19mm_smg_mag.rsi
     layers:
-    - state: plastitAP
+    - state: plasteelAP
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]

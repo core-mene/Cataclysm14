@@ -112,12 +112,12 @@
       types: 
         Slash: 8
         Piercing: 37
-    armorPenetration: -0.5
+    armorPenetration: -0.2
 
 - type: entity
   id: Bullet45_magnumRIP
   parent: BaseBullet
-  name: bullet (.45 magnum Radically Invasive Projectile)
+  name: bullet (.45 magnum RIP)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -125,7 +125,7 @@
       types: 
         Slash: 10
         Piercing: 50
-    armorPenetration: -0.9
+    armorPenetration: -0.6
 
 #armor-piercing:
 - type: entity
@@ -141,7 +141,7 @@
     armorPenetration: 0.3
 
 - type: entity
-  id: Bullet45_magnumPlastitAP
+  id: Bullet45_magnumplasteelAP
   parent: BaseBullet
   name: bullet (.45 magnum armor-piercing plastitanium core)
   categories: [ HideSpawnMenu ]
@@ -162,4 +162,4 @@
     damage:
       types: 
         Piercing: 26
-    armorPenetration: 0.67
+    armorPenetration: 0.7

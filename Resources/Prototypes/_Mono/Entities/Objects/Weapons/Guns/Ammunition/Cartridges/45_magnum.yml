@@ -153,7 +153,7 @@
 
 - type: entity
   id: Cartridge45_magnumRIP
-  name: cartridge (.45 magnum Radically Invasive Projectile)
+  name: cartridge (.45 magnum RIP)
   parent: BaseCartridge45_magnum
   components:
   - type: CartridgeAmmo
@@ -182,12 +182,12 @@
         map: [ "enum.AmmoVisualLayers.Tip" ]
 
 - type: entity
-  id: Cartridge45_magnumPlastitAP
+  id: Cartridge45_magnumplasteelAP
   name: cartridge (.45 magnum armor-piercing plastitanium core)
   parent: BaseCartridge45_magnum
   components:
   - type: CartridgeAmmo
-    proto: Bullet45_magnumPlastitAP
+    proto: Bullet45_magnumplasteelAP
   - type: Sprite
     layers:
       - state: base

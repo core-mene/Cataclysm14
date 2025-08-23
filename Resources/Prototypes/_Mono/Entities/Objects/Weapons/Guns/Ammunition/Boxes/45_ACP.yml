@@ -157,7 +157,7 @@
 - type: entity
   parent: BaseAmmoBox45_ACP
   id: AmmoBox45_ACPRIP
-  name: ammunition box (.45 ACP Radically Invasive Projectile)
+  name: ammunition box (.45 ACP RIP)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPRIP
@@ -187,18 +187,18 @@
 
 - type: entity
   parent: BaseAmmoBox45_ACP
-  id: AmmoBox45_ACPPlastitAP
+  id: AmmoBox45_ACPplasteelAP
   name: ammunition box (.45 ACP armor-piercing plastitanium core)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge45_ACPPlastitAP
+    proto: Cartridge45_ACPplasteelAP
   - type: Sprite
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
-    - state: plastitAP
+    - state: plasteelAP
 
 - type: entity
   parent: BaseAmmoBox45_ACP

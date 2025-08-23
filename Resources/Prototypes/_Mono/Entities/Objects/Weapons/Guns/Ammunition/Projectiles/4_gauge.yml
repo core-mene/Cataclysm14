@@ -276,8 +276,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 16
-    armorPenetration: -0.1
+        Piercing: 40
+    armorPenetration: -0.2
 
 - type: entity
   id: Pellet23x75mmOOBuckshotSpread
@@ -291,7 +291,7 @@
 
 - type: entity
   id: Pellet23x75mmSlugRIP
-  name: Pellet23x75mm (4 gauge Radically Invasive Projectile)
+  name: Pellet23x75mm (4 gauge RIP)
   categories: [ HideSpawnMenu ]
   parent: BaseBullet
   components:
@@ -301,9 +301,9 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 55
+        Piercing: 160
         Structural: 250
-    armorPenetration: -0.8
+    armorPenetration: -0.9
 
 #armor-piercing ammo
 - type: entity
@@ -334,7 +334,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 13
+        Piercing: 15
     armorPenetration: 0.3
 
 - type: entity

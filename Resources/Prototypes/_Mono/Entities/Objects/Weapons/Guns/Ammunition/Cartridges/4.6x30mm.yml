@@ -127,7 +127,7 @@
 
 - type: entity
   id: Cartridge4.6x30mmRIP
-  name: cartridge (4.6x30mm Radically Invasive Projectile)
+  name: cartridge (4.6x30mm RIP)
   parent: BaseCartridge4.6x30mm
   components:
   - type: CartridgeAmmo
@@ -156,12 +156,12 @@
         map: [ "enum.AmmoVisualLayers.Tip" ]
 
 - type: entity
-  id: Cartridge4.6x30mmPlastitAP
+  id: Cartridge4.6x30mmplasteelAP
   name: cartridge (4.6x30mm armor-piercing plastitanium core)
   parent: BaseCartridge4.6x30mm
   components:
   - type: CartridgeAmmo
-    proto: Bullet4.6x30mmPlastitAP
+    proto: Bullet4.6x30mmplasteelAP
   - type: Sprite
     layers:
       - state: base

@@ -142,7 +142,7 @@
 
 - type: entity
   id: Magazine5.7x28mmPistolRIP
-  name: pistol magazine (5.7x28mm Radically Invasive Projectile)
+  name: pistol magazine (5.7x28mm RIP)
   parent: BaseMagazine5.7x28mm
   components:
   - type: BallisticAmmoProvider
@@ -172,16 +172,16 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine5.7x28mmPistolPlastitAP
+  id: Magazine5.7x28mmPistolplasteelAP
   name: pistol magazine (5.7x28mm armor-piercing plastitanium core)
   parent: BaseMagazine5.7x28mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmPlastitAP
+    proto: Cartridge5.7x28mmplasteelAP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/5.7x28mm/5.7x28mm_pistol_mag.rsi
     layers:
-    - state: plastitAP
+    - state: plasteelAP
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
@@ -455,7 +455,7 @@
 
 - type: entity
   id: Magazine5.7x28mmSubMachineGunRIP
-  name: SMG magazine (5.7x28mm Radically Invasive Projectile)
+  name: SMG magazine (5.7x28mm RIP)
   parent: BaseMagazine5.7x28mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
@@ -485,16 +485,16 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine5.7x28mmSubMachineGunPlastitAP
+  id: Magazine5.7x28mmSubMachineGunplasteelAP
   name: SMG magazine (5.7x28mm armor-piercing plastitanium core)
   parent: BaseMagazine5.7x28mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmPlastitAP
+    proto: Cartridge5.7x28mmplasteelAP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/5.7x28mm/5.7x28mm_smg_mag.rsi
     layers:
-    - state: plastitAP
+    - state: plasteelAP
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]

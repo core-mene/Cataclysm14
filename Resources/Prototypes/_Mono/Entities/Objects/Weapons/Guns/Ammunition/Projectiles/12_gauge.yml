@@ -360,7 +360,7 @@
 
 - type: entity
   id: Pellet12_gaugeSlugRIP
-  name: Pellet12_gauge (12 gauge Radically Invasive Projectile)
+  name: Pellet12_gauge (12 gauge RIP)
   categories: [ HideSpawnMenu ]
   parent: BaseBullet
   components:
@@ -370,9 +370,9 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 55
-        Structural: 250
-    armorPenetration: -0.8
+        Piercing: 80
+        Structural: 300
+    armorPenetration: -0.9
 
 #armor-piercing ammo
 - type: entity

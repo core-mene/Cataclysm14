@@ -152,7 +152,7 @@
 
 - type: entity
   id: Cartridge9x19mmRIP
-  name: cartridge (9x19mm Radically Invasive Projectile)
+  name: cartridge (9x19mm RIP)
   parent: BaseCartridge9x19mm
   components:
   - type: CartridgeAmmo
@@ -181,12 +181,12 @@
         map: [ "enum.AmmoVisualLayers.Tip" ]
 
 - type: entity
-  id: Cartridge9x19mmPlastitAP
+  id: Cartridge9x19mmplasteelAP
   name: cartridge (9x19mm armor-piercing plastitanium core)
   parent: BaseCartridge9x19mm
   components:
   - type: CartridgeAmmo
-    proto: Bullet9x19mmPlastitAP
+    proto: Bullet9x19mmplasteelAP
   - type: Sprite
     layers:
       - state: base

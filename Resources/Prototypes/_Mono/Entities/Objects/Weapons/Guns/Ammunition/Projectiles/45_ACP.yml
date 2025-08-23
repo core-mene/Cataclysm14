@@ -107,12 +107,12 @@
       types: 
         Slash: 4
         Piercing: 32
-    armorPenetration: -0.7
+    armorPenetration: -0.4
 
 - type: entity
   id: Bullet45_ACPRIP
   parent: BaseBullet
-  name: bullet (.45 Radically Invasive Projectile)
+  name: bullet (.45 RIP)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -120,7 +120,7 @@
       types: 
         Slash: 7
         Piercing: 42
-    armorPenetration: -0.95
+    armorPenetration: -0.65
 
 #armor-piercing:
 - type: entity
@@ -136,7 +136,7 @@
     armorPenetration: 0.1
 
 - type: entity
-  id: Bullet45_ACPPlastitAP
+  id: Bullet45_ACPplasteelAP
   parent: BaseBullet
   name: bullet (.45 armor-piercing plastitanium core)
   categories: [ HideSpawnMenu ]
@@ -144,8 +144,8 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 23
-    armorPenetration: 0.3
+        Piercing: 21
+    armorPenetration: 0.25
 
 - type: entity
   id: Bullet45_ACPSynthAP
@@ -156,5 +156,5 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 22
-    armorPenetration: 0.5
+        Piercing: 18
+    armorPenetration: 0.4

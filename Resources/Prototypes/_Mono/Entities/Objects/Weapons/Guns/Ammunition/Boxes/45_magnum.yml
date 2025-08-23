@@ -156,7 +156,7 @@
 - type: entity
   parent: BaseAmmoBox45_magnum
   id: AmmoBox45_magnumRIP
-  name: ammunition box (.45 magnum Radically Invasive Projectile)
+  name: ammunition box (.45 magnum RIP)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumRIP
@@ -186,18 +186,18 @@
 
 - type: entity
   parent: BaseAmmoBox45_magnum
-  id: AmmoBox45_magnumPlastitAP
+  id: AmmoBox45_magnumplasteelAP
   name: ammunition box (.45 magnum armor-piercing plastitanium core)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge45_magnumPlastitAP
+    proto: Cartridge45_magnumplasteelAP
   - type: Sprite
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
-    - state: plastitAP
+    - state: plasteelAP
 
 - type: entity
   parent: BaseAmmoBox45_magnum

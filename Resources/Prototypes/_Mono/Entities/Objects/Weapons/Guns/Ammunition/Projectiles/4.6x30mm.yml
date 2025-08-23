@@ -110,12 +110,12 @@
       types: 
         Slash: 3
         Piercing: 24
-    armorPenetration: -0.55
+    armorPenetration: -0.25
 
 - type: entity
   id: Bullet4.6x30mmRIP
   parent: BaseBullet
-  name: bullet (4.6x30mm Radically Invasive Projectile)
+  name: bullet (4.6x30mm RIP)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -123,7 +123,7 @@
       types: 
         Slash: 5
         Piercing: 30
-    armorPenetration: -0.90
+    armorPenetration: -0.6
 
 #armor-piercing:
 - type: entity
@@ -139,7 +139,7 @@
     armorPenetration: 0.25
 
 - type: entity
-  id: Bullet4.6x30mmPlastitAP
+  id: Bullet4.6x30mmplasteelAP
   parent: BaseBullet
   name: bullet (4.6x30mm armor-piercing plastitanium core)
   categories: [ HideSpawnMenu ]
@@ -159,5 +159,5 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 15
+        Piercing: 14
     armorPenetration: 0.65

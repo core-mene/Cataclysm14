@@ -124,7 +124,7 @@
 - type: entity
   parent: BaseAmmoBox7.62x54mmR
   id: AmmoBox7.62x54mmRRIP
-  name: ammunition box (7.62x54mmR Radically Invasive Projectile)
+  name: ammunition box (7.62x54mmR RIP)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge7.62x54mmRRIP
@@ -154,18 +154,18 @@
 
 - type: entity
   parent: BaseAmmoBox7.62x54mmR
-  id: AmmoBox7.62x54mmRPlastitAP
+  id: AmmoBox7.62x54mmRplasteelAP
   name: ammunition box (7.62x54mmR armor-piercing plastitanium core)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x54mmRPlastitAP
+    proto: Cartridge7.62x54mmRplasteelAP
   - type: Sprite
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
-    - state: plastitAP
+    - state: plasteelAP
 
 - type: entity
   parent: BaseAmmoBox7.62x54mmR

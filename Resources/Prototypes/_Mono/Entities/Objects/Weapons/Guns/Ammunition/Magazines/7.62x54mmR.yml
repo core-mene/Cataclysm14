@@ -142,7 +142,7 @@
 
 - type: entity
   id: Magazine7.62x54mmRRIP
-  name: "magazine (7.62x54mmR Radically Invasive Projectile)"
+  name: "magazine (7.62x54mmR RIP)"
   parent: BaseMagazine7.62x54mmR
   components:
   - type: BallisticAmmoProvider
@@ -170,15 +170,15 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x54mmRPlastitAP
+  id: Magazine7.62x54mmRplasteelAP
   name: "magazine (7.62x54mmR armor-piercing plastitanium core)"
   parent: BaseMagazine7.62x54mmR
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x54mmRPlastitAP
+    proto: Cartridge7.62x54mmRplasteelAP
   - type: Sprite
     layers:
-    - state: plastitAP
+    - state: plasteelAP
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]

@@ -106,12 +106,12 @@
       types: 
         Slash: 3
         Piercing: 26
-    armorPenetration: -0.6
+    armorPenetration: -0.3
 
 - type: entity
   id: Bullet9x19mmRIP
   parent: BaseBullet
-  name: bullet (9x19mm Radically Invasive Projectile)
+  name: bullet (9x19mm RIP)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -119,7 +119,7 @@
       types: 
         Slash: 5
         Piercing: 35
-    armorPenetration: -0.95
+    armorPenetration: -0.65
 
 #armor-piercing:
 - type: entity
@@ -135,7 +135,7 @@
     armorPenetration: 0.1
 
 - type: entity
-  id: Bullet9x19mmPlastitAP
+  id: Bullet9x19mmplasteelAP
   parent: BaseBullet
   name: bullet (9x19mm armor-piercing plastitanium core)
   categories: [ HideSpawnMenu ]
