@@ -6,57 +6,61 @@
 - type: technology
   id: RogueProwler
   name: research-technology-rogue-prowler-voucher
-  icon:
-    sprite: _NF/Objects/Misc/shipyard_voucher.rsi
-    state: nfsd
+  entityIcon: ShipVoucherProwler
   discipline: RogueShipyard
   tier: 1
   cost: 50000
   recipeUnlocks:
   - ProwlerVoucherRogue
+  technologyPrerequisites:
+  - RogueStealthsuit
+  - RogueEmag
+  - RogueEngineeringResearchT2
+  position: 14, 21
 
 - type: technology
   id: RogueJaws
   name: research-technology-rogue-jaws
-  icon:
-    sprite: Objects/Tools/jaws_of_life.rsi
-    state: syn_jaws_pry
+  entityIcon: JawsOfLife
   discipline: RogueGear
   tier: 1
   cost: 15000
   recipeUnlocks:
   - JawsOfLifeRogue
+  technologyPrerequisites:
+  - RogueEngineeringResearchT1
+  position: 13, 17
 
 - type: technology
   id: RogueHypospray
   name: research-technology-rogue-hypospray
-  icon:
-    sprite: Objects/Specific/Medical/hypospray.rsi
-    state: hypo
+  entityIcon: Hypospray
   discipline: RogueGear
   tier: 2
   cost: 25000
   recipeUnlocks:
   - HyposprayRogue
+  technologyPrerequisites:
+  - RogueEngineeringResearchT1
+  position: 12, 17
 
 - type: technology
   id: RogueEmag
   name: research-technology-rogue-emag
-  icon:
-    sprite: Objects/Tools/emag.rsi
-    state: icon
+  entityIcon: Emag
   discipline: RogueGear
   tier: 2
   cost: 25000
   recipeUnlocks:
   - EmagRogue
+  technologyPrerequisites:
+  - RogueAdvancedEquipment
+  position: 12, 18
 
 - type: technology
   id: RogueEmag2
   name: research-technology-rogue-access-breaker
-  icon:
-    sprite: Objects/Tools/access_breaker.rsi
-    state: icon
+  entityIcon: AccessBreaker
   discipline: RogueGear
   tier: 3
   cost: 27500
@@ -64,15 +68,18 @@
   - AccessBreakerRogue
   technologyPrerequisites:
   - RogueEmag
+  - RogueEngineeringResearchT2
+  position: 11, 18
 
 - type: technology
   id: RogueThermals
   name: research-technology-rogue-thermals
-  icon:
-    sprite: _White/Clothing/Eyes/Goggles/thermal.rsi
-    state: icon
+  entityIcon: ClothingEyesThermalVisionGoggles
   discipline: RogueGear
   tier: 1
   cost: 15000
   recipeUnlocks:
   - ClothingEyesThermalVisionGoggles
+  technologyPrerequisites:
+  - RogueBasicEquipment
+  position: 16, 18

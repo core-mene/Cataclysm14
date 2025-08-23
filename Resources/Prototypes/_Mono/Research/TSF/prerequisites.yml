@@ -1,0 +1,22 @@
+- type: technology
+  id: TsfMaterialResearchT1
+  name: research-technology-tsfmc-matsci-1
+  entityIcon: SheetSteel
+  discipline: TsfmcGear
+  tier: 1
+  cost: 100000
+  technologyPrerequisites:
+  - TsfBasicGuns
+  - TsfmcBasicEquipment
+  position: 23, 11
+
+- type: technology
+  id: TsfMaterialResearchT2
+  name: research-technology-tsfmc-matsci-2
+  entityIcon: SheetPlastitanium
+  discipline: TsfmcGear
+  tier: 2
+  cost: 150000
+  technologyPrerequisites:
+  - TsfMaterialResearchT1
+  position: 23, 14

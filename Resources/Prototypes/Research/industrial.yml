@@ -35,12 +35,10 @@
 - type: technology
   id: SalvageEquipment
   name: research-technology-salvage-equipment
-  icon:
-    sprite: Objects/Tools/handdrill.rsi
-    state: handdrill
+  entityIcon: MiningDrill
   discipline: Industrial
   tier: 1
-  cost: 7500
+  cost: 10000
   recipeUnlocks:
   - MiningDrill
   - WeaponGrapplingGun # Frontier
@@ -48,56 +46,56 @@
   - OreProcessorIndustrialMachineCircuitboard
   - ClothingMaskWeldingGas
   - MechEquipmentDrill # Goobstation
+  position: 2, -3
 
 - type: technology
   id: SpaceScanning
   name: research-technology-space-scanning
-  icon:
-    sprite: Objects/Tools/handheld_mass_scanner.rsi
-    state: icon
+  entityIcon: HandHeldMassScanner
   discipline: Industrial
   tier: 1
-  cost: 5000
+  cost: 15000
   recipeUnlocks:
   - RadarConsoleCircuitboard
   - HandHeldMassScanner
   - BorgModuleGPS
+  position: 1, -4
 
 - type: technology
   id: AdvancedPowercells
   name: research-technology-advanced-powercells
-  icon:
-    sprite: Structures/Power/turbo_recharger.rsi
-    state: empty
+  entityIcon: PowerCellHigh
   discipline: Industrial
   tier: 1
-  cost: 7500
+  cost: 25000
   recipeUnlocks:
   - PowerCellHigh
   - TurboItemRechargerCircuitboard
   - SMESAdvancedMachineCircuitboard
+  technologyPrerequisites:
+  - AdvancedParts
+  position: 3, -4
 
 - type: technology
   id: MechanicalCompression
   name: research-technology-mechanical-compression
-  icon:
-    sprite: Structures/Machines/flatpacker.rsi
-    state: base
+  entityIcon: MachineFlatpacker
   discipline: Industrial
   tier: 1
-  cost: 10000
+  cost: 30000
   recipeUnlocks:
   - FlatpackerMachineCircuitboard
+  technologyPrerequisites:
+  - AdvancedParts
+  position: 3, -3
 
 - type: technology
   id: IndustrialEngineering
   name: research-technology-industrial-engineering
-  icon:
-    sprite: Structures/Machines/protolathe_hypercon.rsi
-    state: building
+  entityIcon: LatheUpgradeKitHyper
   discipline: Industrial
   tier: 1
-  cost: 10000
+  cost: 40000
   recipeUnlocks:
   # Begin DeltaV Removals - replaced by upgrade kits + departmental techfabs
   #- AutolatheHyperConvectionMachineCircuitboard
@@ -116,16 +114,17 @@
   - ConstructorCircuitboard
   # End Goobstation Additions
   - SheetifierMachineCircuitboard
+  technologyPrerequisites:
+  - AdvancedParts
+  position: 4, -3
 
 - type: technology
   id: PowerGeneration
   name: research-technology-power-generation
-  icon:
-    sprite: Structures/Power/Generation/portable_generator.rsi
-    state: portgen0
+  entityIcon: PortableGeneratorPacman
   discipline: Industrial
   tier: 1
-  cost: 7500
+  cost: 25000
   recipeUnlocks:
   - PortableGeneratorPacmanMachineCircuitboard
   - PortableGeneratorSuperPacmanMachineCircuitboard
@@ -134,31 +133,33 @@
   - SolarTrackerElectronics
   - EmitterCircuitboard
   - ContainmentFieldGeneratorCircuitboard # Mono
+  technologyPrerequisites:
+  - AdvancedParts
+  position: 3, -5
 
 - type: technology
   id: AtmosphericTech
   name: research-technology-atmospheric-tech
-  icon:
-    sprite: Structures/Piping/Atmospherics/thermomachine.rsi
-    state: freezerOff
+  entityIcon: GasThermoMachineFreezerEnabled
   discipline: Industrial
   tier: 1
-  cost: 7500
+  cost: 8500
   recipeUnlocks:
   - ThermomachineFreezerMachineCircuitBoard
   - GasRecyclerMachineCircuitboard
+  technologyPrerequisites:
+  - AdvancedParts
+  position: 2, -4
 
 # Tier 2
 
 - type: technology
   id: Shuttlecraft
   name: research-technology-shuttlecraft
-  icon:
-    sprite: Structures/Shuttles/gyroscope.rsi
-    state: base
+  entityIcon: Thruster
   discipline: Industrial
   tier: 2
-  cost: 10000
+  cost: 30000
   recipeUnlocks:
   - ShuttleConsoleCircuitboard
   - ThrusterMachineCircuitboard
@@ -167,16 +168,17 @@
   - MiniStationAnchorCircuitboard # Frontier
   - SmallThrusterMachineCircuitboard # Frontier
   - SmallGyroscopeMachineCircuitboard # Frontier
+  technologyPrerequisites:
+  - AdvancedParts
+  position: 1, 5
 
 - type: technology
   id: AdvancedAtmospherics
   name: research-technology-advanced-atmospherics
-  icon:
-    sprite: Objects/Devices/Holoprojectors/atmos.rsi
-    state: icon
+  entityIcon: Crystallizer
   discipline: Industrial
   tier: 2
-  cost: 7500
+  cost: 25000
   recipeUnlocks:
   - HellfireFreezerMachineCircuitBoard
   - PortableScrubberMachineCircuitBoard
@@ -185,16 +187,15 @@
   #  - FireExtinguisherBluespace # DeltaV
   technologyPrerequisites:
   - AtmosphericTech
+  position: 1, -5
 
 - type: technology
   id: AdvancedToolsTechnology
   name: research-technology-advanced-tools
-  icon:
-    sprite: Objects/Tools/welder_experimental.rsi
-    state: icon
+  entityIcon: WelderExperimental
   discipline: Industrial
   tier: 2
-  cost: 10000
+  cost: 75000
   recipeUnlocks:
   - WelderExperimental
   - PowerDrill
@@ -207,16 +208,17 @@
   #- NFBlueprintPowerDrill # Frontier
   #- NFBlueprintJawsOfLife # Frontier
   #- NFBlueprintWelderExperimental # Frontier
+  technologyPrerequisites:
+  - SuperParts
+  position: 1, -3
 
 - type: technology
   id: MassExcavation
   name: research-technology-excavation
-  icon:
-    sprite: Objects/Tools/handdrilldiamond.rsi
-    state: handdrill
+  entityIcon: MiningDrillDiamond
   discipline: Industrial
   tier: 2
-  cost: 12500
+  cost: 50000
   recipeUnlocks:
   #- OreBagOfHolding
   - MiningDrillDiamond
@@ -226,6 +228,9 @@
   - NFBlueprintAdvancedMineralScannerEmpty # Frontier
   - BorgModuleAdvancedMining # Frontier
   - MechEquipmentDrillDiamond
+  technologyPrerequisites:
+  - SalvageEquipment
+  position: 2, -2
 
 # Tier 3
 
@@ -251,12 +256,10 @@
 - type: technology
   id: PortableFission
   name: research-technology-portable-fission
-  icon:
-    sprite: Objects/Power/power_cells.rsi
-    state: microreactor
+  entityIcon: PowerCellMicroreactor
   discipline: Industrial
   tier: 3
-  cost: 10000
+  cost: 80000
   recipeUnlocks:
   - PowerCellMicroreactor
   - NFBlueprintPowerCellMicroreactor # Frontier
@@ -264,19 +267,22 @@
   - NFBlueprintPortableGeneratorDKJr # Frontier
   technologyPrerequisites:
   - AdvancedPowercells
+  - SuperParts
+  position: 4, -4
 
 - type: technology
   id: RapidConstruction
   name: research-technology-rapid-construction
-  icon:
-    sprite: _NF/Objects/Tools/rcd.rsi
-    state: icon # Mono
+  entityIcon: RCD
   discipline: Industrial
   tier: 2
-  cost: 10000
+  cost: 60000
   recipeUnlocks:
 #  - ShipyardRCD # Frontier
 #  - ShipyardRCDAmmo # Frontier
   - RCD
   - RCDAmmo
   - NFBlueprintRCDAmmo
+  technologyPrerequisites:
+  - AdvancedParts
+  position: 1, -2

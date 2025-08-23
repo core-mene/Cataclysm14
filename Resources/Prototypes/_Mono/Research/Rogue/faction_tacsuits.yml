@@ -6,22 +6,19 @@
 - type: technology
   id: RogueBasicEquipment
   name: research-technology-rogue-basic-equipment
-  icon:
-    sprite: _Mono/Clothing/OuterClothing/Hardsuits/scaf_pirate.rsi
-    state: icon
+  entityIcon: ClothingOuterHardsuitPirateScaf
   discipline: RogueEquipment
   tier: 1
   cost: 20000
   recipeUnlocks:
   - ClothingOuterHardsuitPirateScafRogue
   - ClothingOuterVestWebRogue
+  position: 15, 15
 
 - type: technology
   id: RogueAdvancedEquipment
   name: research-technology-rogue-advanced-equipment
-  icon:
-    sprite: _Mono/Clothing/OuterClothing/Hardsuits/viper_group_standard.rsi
-    state: icon
+  entityIcon: ClothingOuterHardsuitViperGroupStandard
   discipline: RogueEquipment
   tier: 2
   cost: 35000
@@ -32,13 +29,13 @@
   - ClothingMaskGasSyndicateRogue
   technologyPrerequisites:
   - RogueBasicEquipment
+  - RogueEngineeringResearchT1
+  position: 15, 17
 
 - type: technology
   id: RogueSyndicateTacsuits
   name: research-technology-rogue-syndicate-tacsuits
-  icon:
-    sprite: Clothing/OuterClothing/Hardsuits/syndicate.rsi
-    state: icon
+  entityIcon: ClothingOuterHardsuitSyndie
   discipline: RogueEquipment
   tier: 2
   cost: 75000
@@ -46,31 +43,27 @@
   - ClothingOuterHardsuitSyndieRogue
   - ClothingOuterHardsuitSyndieEliteRogue
   technologyPrerequisites:
-  - RogueBasicEquipment
   - RogueAdvancedEquipment
+  position: 16, 18
 
 - type: technology
   id: RogueStealthsuit
   name: research-technology-rogue-stealthsuit
-  icon:
-    sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/cybersunstealth.rsi
-    state: icon
+  entityIcon: ClothingOuterHardsuitCybersunStealth
   discipline: RogueEquipment
   tier: 2
   cost: 20000
   recipeUnlocks:
   - ClothingOuterHardsuitCybersunStealthRogue
   technologyPrerequisites:
-  - RogueBasicEquipment
-  - RogueAdvancedEquipment
   - RogueSyndicateTacsuits
+  - RogueEngineeringResearchT2
+  position: 16, 19
 
 - type: technology
   id: RogueSyndicateTacsuitsT3
   name: research-technology-rogue-syndicate-tacsuits-t3
-  icon:
-    sprite: Clothing/OuterClothing/Hardsuits/cybersun.rsi
-    state: icon
+  entityIcon: ClothingOuterHardsuitJuggernaut
   discipline: RogueEquipment
   tier: 3
   cost: 65000
@@ -78,21 +71,20 @@
   - ClothingOuterHardsuitJuggernautRogue
 # - ClothingOuterHardsuitSyndieCommanderRogue
   technologyPrerequisites:
-  - RogueBasicEquipment
-  - RogueAdvancedEquipment
   - RogueSyndicateTacsuits
+  - RogueEngineeringResearchT2
+  position: 17, 18
 
 - type: technology
   id: RogueRx01
   name: research-technology-rogue-rx01
-  icon:
-    sprite: _Mono/Clothing/Back/Modsuits/rogue.rsi
-    state: control
+  entityIcon: ClothingModsuitRoguePowerCell
   discipline: RogueEquipment
   tier: 3
   cost: 75000
   recipeUnlocks:
   - ClothingModsuitRoguePowerCellRogue
   technologyPrerequisites:
-  - RogueBasicEquipment
   - RogueAdvancedEquipment
+  - RogueEngineeringResearchT2
+  position: 15, 19

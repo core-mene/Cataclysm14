@@ -7,9 +7,7 @@
 - type: technology
   id: SmartWeaponry
   name: research-technology-smart-weaponry
-  icon:
-    sprite: _Goobstation/Objects/Weapons/Guns/SMGs/smartgun.rsi
-    state: icon
+  entityIcon: WeaponSubMachineSmart
   discipline: Arsenal
   tier: 3
   cost: 15000
@@ -17,3 +15,7 @@
   - WeaponSubMachineSmart
   - MagazineSmart
   - MagazineSmartLMG
+  technologyPrerequisites:
+  - AdvancedParts
+  - ConcentratedLaserWeaponry
+  position: 6, 4

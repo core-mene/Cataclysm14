@@ -7,11 +7,15 @@
 - type: technology
   id: HighEndSurgery
   name: research-technology-high-end-surgery
-  icon:
-    sprite: _Shitmed/Objects/Specific/Medical/Surgery/omnimed.rsi
-    state: omnimed
+  entityIcon: OmnimedTool
   discipline: CivilianServices
   tier: 3
-  cost: 10000
+  cost: 85000
   recipeUnlocks:
   - ShitmedOmnimedTool
+  technologyPrerequisites:
+  - SuperParts
+  - AdvancedTreatment
+  - ChemicalDispensary
+  - IndustrialMedicine
+  position: -3, 1

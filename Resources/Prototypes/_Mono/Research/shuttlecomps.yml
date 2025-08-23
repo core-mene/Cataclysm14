@@ -8,12 +8,10 @@
 - type: technology
   id: ShuttleArmamentComponentsResearch
   name: research-technology-shuttle-armaments-components
-  icon:
-    sprite: _Mono/Structures/ShuttleComponents/shield.rsi
-    state: control
+  entityIcon: ShieldGeneratorSmall
   discipline: Arsenal
   tier: 3
-  cost: 20000
+  cost: 50000
   recipeUnlocks:
 #  - ShieldControlComputerCircuitboard
 #  - MachineShieldMS225Circuitboard
@@ -21,41 +19,48 @@
   - MachineGCSLowCircuitboard
   - MachineGCSMediumCircuitboard
   - MachineGCSHighCircuitboard
+  technologyPrerequisites:
+  - ShuttleCtla25DriveResearch
+  position: 0, 8
 
 - type: technology
   id: ShuttleRadarResearch
   name: research-technology-shuttle-radar-components
-  icon:
-    sprite: Structures/Shuttles/iff.rsi
-    state: helm
+  entityIcon: ComputerAdvancedRadar
   discipline: CivilianServices
   tier: 3
-  cost: 20000
+  cost: 80000
   recipeUnlocks:
   - AdvancedRadarConsoleCircuitboard
   - ComputerIFFCircuitboard
+  technologyPrerequisites:
+  - ShuttleCtla25DriveResearch
+  position: -1, 7
 
 - type: technology
   id: ShuttleCtla25DriveResearch
   name: research-technology-bluespace-drive-ctla25
-  icon:
-    sprite: _Mono/Structures/ShuttleComponents/drive.rsi
-    state: control
+  entityIcon: MachineFTLDrive
   discipline: Experimental
   tier: 2
-  cost: 5000
+  cost: 50000
   recipeUnlocks:
   - MachineDriveCTLA25Circuitboard
+  technologyPrerequisites:
+  - AdvancedParts
+  position: -1, 8
 
 - type: technology
   id: ShuttleCtlaAdvancedDriveResearch
   name: research-technology-bluespace-drive-ctla-advanced
-  icon:
-    sprite: _Mono/Structures/ShuttleComponents/drive.rsi
-    state: control
+  entityIcon: MachineFTLDrive50
   discipline: Experimental
   tier: 3
-  cost: 7500
+  cost: 75000
   recipeUnlocks:
   - MachineDriveCTLA25sCircuitboard
   - MachineDriveCTLA50Circuitboard
+  technologyPrerequisites:
+  - ShuttleCtla25DriveResearch
+  - SuperParts
+  position: -1, 9

@@ -7,21 +7,18 @@
 - type: technology
   id: UsspBasicShips
   name: research-technology-ussp-ships-basic
-  icon:
-    sprite: _Mono/Interface/Misc/research_icons_ussp.rsi
-    state: icon-tier1
+  entityIcon: ShipVoucherUSSPBasic
   discipline: UsspShipyard
   tier: 1
   cost: 45000
   recipeUnlocks:
   - BasicVoucherUssp
+  position: 12, 8
 
 - type: technology
   id: UsspMediumShips
   name: research-technology-ussp-ships-medium
-  icon:
-    sprite: _Mono/Interface/Misc/research_icons_ussp.rsi
-    state: icon-tier2
+  entityIcon: ShipVoucherUSSPIntermediate
   discipline: UsspShipyard
   tier: 2
   cost: 65000
@@ -29,13 +26,12 @@
   - IntermediateVoucherUssp
   technologyPrerequisites:
   - UsspBasicShips
+  position: 13, 8
 
 - type: technology
   id: UsspAdvancedShips
   name: research-technology-ussp-ships-advanced
-  icon:
-    sprite: _Mono/Interface/Misc/research_icons_ussp.rsi
-    state: icon-tier3
+  entityIcon: ShipVoucherUSSPAdvanced
   discipline: UsspShipyard
   tier: 3
   cost: 95000
@@ -43,13 +39,12 @@
   - AdvancedVoucherUssp
   technologyPrerequisites:
   - UsspMediumShips
+  position: 14, 8
 
 - type: technology
   id: UsspLedokol
   name: research-technology-ussp-ships-ledokol
-  icon:
-    sprite: _Mono/Interface/Misc/research_icons_ussp.rsi
-    state: icon-tier4
+  entityIcon: ShipVoucherUSSPLedokol
   discipline: UsspShipyard
   tier: 3
   cost: 100000
@@ -58,3 +53,4 @@
   - LedokolRamVoucherUssp
   technologyPrerequisites:
   - UsspAdvancedShips
+  position: 15, 8

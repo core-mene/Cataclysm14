@@ -3,13 +3,10 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-
 - type: technology
   id: MercArmementAdvanced
   name: research-technology-merc-armement-advanced
-  icon:
-    sprite: _Mono/Objects/Weapons/Guns/LMGs/ratel/Ratel-icon.rsi
-    state: icon
+  entityIcon: WeaponLMGRatel
   discipline: Arsenal
   tier: 2
   cost: 55000
@@ -18,13 +15,13 @@
   - WeaponShotgunBigBuddy
   technologyPrerequisites:
   - MercArmementSimple
+  - SuperParts
+  position: 6, 1
 
 - type: technology
   id: MercArmementSimple
   name: research-technology-merc-armement-simple
-  icon:
-    sprite: _Mono/Objects/Weapons/Guns/Shotguns/BigJohnny.rsi
-    state: icon
+  entityIcon: WeaponShotgunEnforcer
   discipline: Arsenal
   tier: 2
   cost: 35000
@@ -34,13 +31,13 @@
   - WeaponRifleVulcanMerc
   technologyPrerequisites:
   - MercArmementBasic
+  - ConcentratedLaserWeaponry
+  position: 5, 1
 
 - type: technology
   id: MercArmementBasic
   name: research-technology-merc-armement-basic
-  icon:
-    sprite: _Mono/Objects/Weapons/Guns/Rifles/prometheus.rsi
-    state: icon
+  entityIcon: WeaponRiflePrometheus
   discipline: Arsenal
   tier: 1
   cost: 22500
@@ -48,3 +45,6 @@
   - WeaponRiflePrometheus
   - WeaponRifleVulcanFCMC
   - WeaponShotgunKammererNF
+  technologyPrerequisites:
+  - AdvancedParts
+  position: 4, 1

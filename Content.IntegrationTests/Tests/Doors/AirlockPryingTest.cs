@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2025 Cojoke
+// SPDX-FileCopyrightText: 2025 Tayrtahn
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.IntegrationTests.Tests.Interaction;
 using Content.Server.Doors.Systems;
 using Content.Shared.Doors.Components;

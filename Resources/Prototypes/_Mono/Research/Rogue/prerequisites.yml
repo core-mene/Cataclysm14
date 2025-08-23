@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: technology
+  id: RogueEngineeringResearchT1
+  name: research-technology-rogue-engsci-1
+  entityIcon: SheetSteel
+  discipline: RogueGear
+  tier: 1
+  cost: 80000
+  position: 14, 16
+
+- type: technology
+  id: RogueEngineeringResearchT2
+  name: research-technology-rogue-engsci-2
+  entityIcon: SheetPlastitanium
+  discipline: RogueGear
+  tier: 2
+  cost: 150000
+  technologyPrerequisites:
+  - RogueEngineeringResearchT1
+  position: 14, 19

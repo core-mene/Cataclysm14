@@ -1,0 +1,56 @@
+- type: technology
+  id: UniversalSteelCore
+  name: research-technology-universal-ap-steel
+  entityIcon: SheetSteel
+  discipline: FactionUniversal
+  tier: 1
+  cost: 30000
+  technologyPrerequisites:
+  - UniversalBallisticSci1
+  position: 6, 8
+
+- type: technology
+  id: UniversalPlastitaniumCore
+  name: research-technology-universal-ap-plastitanium
+  entityIcon: SheetPlastitanium
+  discipline: FactionUniversal
+  tier: 2
+  cost: 50000
+  technologyPrerequisites:
+  - UniversalSteelCore
+  position: 6, 7
+
+- type: technology
+  id: UniversalSynthalloyCore
+  name: research-technology-universal-ap-synthalloy
+  entityIcon: MaterialSynthalloy
+  discipline: FactionUniversal
+  tier: 3
+  cost: 80000
+  technologyPrerequisites:
+  - UniversalPlastitaniumCore
+  - UniversalBallisticSci2
+  position: 6, 6
+
+- type: technology
+  id: UniversalHollowPoint
+  name: research-technology-universal-ap-hp
+  entityIcon: AmmoBox45_ACPFMJ
+  discipline: FactionUniversal
+  tier: 1
+  cost: 30000
+  technologyPrerequisites:
+  - UniversalBallisticSci1
+  position: 8, 7
+
+- type: technology
+  id: UniversalRIP
+  name: research-technology-universal-ap-rip
+  entityIcon: AmmoBox14.5x114mm
+  discipline: FactionUniversal
+  tier: 2
+  cost: 50000
+  technologyPrerequisites:
+  - UniversalHollowPoint
+  - UniversalBallisticSci2
+  position: 8, 6

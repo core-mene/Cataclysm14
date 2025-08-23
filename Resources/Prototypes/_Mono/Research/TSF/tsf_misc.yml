@@ -5,45 +5,40 @@
 - type: technology
   id: TsfForensics
   name: research-technology-tsfmc-forensics
-  icon:
-    sprite: _NF/Objects/Devices/forensic_scanner.rsi
-    state: forensicnew
+  entityIcon: ForensicScanner
   discipline: TsfmcGear
   tier: 1
   cost: 5000
   recipeUnlocks:
   - ForensicsScannerTSF
+  position: 21, 10
 
 - type: technology
   id: TsfPocketCrowbar
   name: research-technology-tsfmc-pocket-crowbar
-  icon:
-    sprite: _NF/Objects/Tools/crowbar.rsi
-    state: pocket-icon
+  entityIcon: CrowbarPocket
   discipline: TsfmcGear
   tier: 1
   cost: 6500
   recipeUnlocks:
   - CrowbarPocketTSF
+  position: 22, 9
 
 - type: technology
   id: TsfDemag
   name: research-technology-tsfmc-demag
-  icon:
-    sprite: _NF/Objects/Tools/demag.rsi
-    state: icon
+  entityIcon: Demag
   discipline: TsfmcGear
   tier: 2
   cost: 5000
   recipeUnlocks:
   - DemagTSF
+  position: 23, 10
 
 - type: technology
   id: TsfmcMopp
   name: research-technology-tsfmc-mopp-equipment
-  icon:
-    sprite: _Mono/Clothing/Uniforms/Jumpsuit/mopp-tsfmc.rsi
-    state: icon
+  entityIcon: ClothingUniformTsfmcMopp
   discipline: TsfmcEquipment
   tier: 2
   cost: 15000
@@ -52,50 +47,58 @@
   - ClothingHandsGlovesMoppTsf
   technologyPrerequisites:
   - TsfmcBasicEquipment
+  - TsfMeds
+  - TsfMaterialResearchT1
+  position: 26, 13
 
 - type: technology
   id: TsfEshield
   name: research-technology-tsfmc-eshield
-  icon:
-    sprite: _NF/Objects/Weapons/Melee/e_shield.rsi
-    state: eshield-on
+  entityIcon: EnergyShield
   discipline: TsfmcWeaponry
   tier: 2
   cost: 30000
   recipeUnlocks:
   - EnergyShieldTSF
+  technologyPrerequisites:
+  - TsfBasicGuns
+  - TsfMaterialResearchT1
+  position: 21, 13
 
 - type: technology
   id: TsfFlyssa
   name: research-technology-tsfmc-flyssa-voucher
-  icon:
-    sprite: _NF/Objects/Misc/shipyard_voucher.rsi
-    state: nfsd
+  entityIcon: ShipVoucherFlyssa
   discipline: TsfmcShipyard
   tier: 2
   cost: 100000
   recipeUnlocks:
   - FlyssaVoucherTSF
+  technologyPrerequisites:
+  - TsfIndustrialStorage
+  - TsfSynthalloy
+  - TsfIndustrialProcessing
+  position: 23, 19
 
 - type: technology
   id: TsfMeds
   name: research-technology-tsfmc-advanced-meds
-  icon:
-    sprite: Objects/Specific/Medical/firstaidkits.rsi
-    state: blackkit
+  entityIcon: MedkitCombatFilled
   discipline: TsfmcGear
   tier: 2
   cost: 20000
   recipeUnlocks:
   - SutureTSF
   - MeshTSF
+  technologyPrerequisites:
+  - TsfMaterialResearchT1
+  - TsfIndustrialProcessing
+  position: 25, 11
 
 - type: technology
   id: TsfNanofoam
   name: research-technology-tsfmc-nanofoam
-  icon:
-    sprite: Objects/Weapons/Grenades/metalfoam.rsi
-    state: icon
+  entityIcon: NanolaminateFoamGrenade
   discipline: TsfmcGear
   tier: 2
   cost: 10000
@@ -103,76 +106,82 @@
   - NanolaminateFoamGrenadeTSF
   technologyPrerequisites:
     - TsfSynthalloy
+  position: 21, 18
 
 - type: technology
   id: TsfSynthalloy
   name: research-technology-tsfmc-synthalloy
-  icon:
-    sprite: _Mono/Objects/Materials/synthalloy.rsi
-    state: synthalloy
+  entityIcon: MaterialSynthalloy
   discipline: TsfmcGear
   tier: 3
   cost: 50000
   recipeUnlocks:
     - SynthalloyProductionTsf
+  technologyPrerequisites:
+  - TsfIndustrialProcessing
+  - TsfMaterialResearchT2
+  position: 23, 17
 
 - type: technology
   id: TsfIndustrialStorage
   name: research-technology-tsfmc-industrial-storage
-  icon:
-    sprite: Structures/Machines/autolathe.rsi
-    state: icon
+  entityIcon: OreBox
   discipline: TsfmcShipyard
   tier: 1
   cost: 7500
   recipeUnlocks:
     - OreBoxFlatpackTSF
     - MaterialBoxFlatpackTSF
+  position: 26, 10
 
 - type: technology
   id: TsfIndustrialProcessing
   name: research-technology-tsfmc-industrial-processing
-  icon:
-    sprite: Structures/Machines/ore_processor_industrial.rsi
-    state: icon
+  entityIcon: OreProcessorIndustrial
   discipline: TsfmcShipyard
   tier: 1
   cost: 15000
   recipeUnlocks:
     - OreProcessorIndustrialMachineCircuitboard
+  position: 25, 10
 
 - type: technology
   id: TsfPortableRecharger
   name: research-technology-tsfmc-portable-recharger
-  icon:
-    sprite: Objects/Power/portable_recharger.rsi
-    state: charging
+  entityIcon: PortableRecharger
   discipline: TsfmcGear
   tier: 1
   cost: 15000
   recipeUnlocks:
     - PortableRecharger
+  technologyPrerequisites:
+  - TsfBasicGuns
+  - TsfMaterialResearchT1
+  position: 24, 12
 
 - type: technology
   id: TsfNvd
   name: research-technology-tsfmc-nvd
-  icon:
-    sprite: _White/Clothing/Eyes/Goggles/nightvision.rsi
-    state: icon
+  entityIcon: ClothingEyesNightVisionGoggles
   discipline: TsfmcGear
   tier: 1
   cost: 15000
   recipeUnlocks:
     - ClothingEyesNightVisionGoggles
+  technologyPrerequisites:
+  - TsfMaterialResearchT1
+  - TsfForensics
+  position: 21, 11
 
 - type: technology
   id: TsfMotionDetector
   name: research-technology-tsfmc-motion-detector
-  icon:
-    sprite: _RMC14/Objects/Tools/motion_detector.rsi
-    state: detector
+  entityIcon: MotionDetector
   discipline: TsfmcGear
   tier: 1
   cost: 20000
   recipeUnlocks:
   - MotionDetectorTSF
+  technologyPrerequisites:
+  - TsfNvd
+  position: 21, 12

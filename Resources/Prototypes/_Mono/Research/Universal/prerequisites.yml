@@ -1,0 +1,19 @@
+- type: technology
+  id: UniversalBallisticSci1
+  name: research-technology-universal-ballistic-1
+  entityIcon: AmmoBox68x52mmCaselessBig
+  discipline: FactionUniversal
+  tier: 1
+  cost: 40000
+  position: 5, 9
+
+- type: technology
+  id: UniversalBallisticSci2
+  name: research-technology-universal-ballistic-2
+  entityIcon: AmmoBox45_magnumUranium
+  discipline: FactionUniversal
+  tier: 2
+  cost: 90000
+  technologyPrerequisites:
+  - UniversalBallisticSci1
+  position: 7, 9
