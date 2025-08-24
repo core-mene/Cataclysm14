@@ -148,7 +148,7 @@
 #Mono AP system
 #anti-flesh ammo
 - type: entity
-  id: SpeedLoader45_magnumPistolHP
+  id: SpeedLoader45_magnumHP
   name: speed loader (.45 magnum hollow-point)
   parent: BaseSpeedLoader45_magnum
   components:
@@ -168,7 +168,7 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoader45_magnumPistolRIP
+  id: SpeedLoader45_magnumRIP
   name: speed loader (.45 magnum RIP)
   parent: BaseSpeedLoader45_magnum
   components:
@@ -189,7 +189,7 @@
 
 #armor-piercing ammo
 - type: entity
-  id: SpeedLoader45_magnumPistolSteelAP
+  id: SpeedLoader45_magnumSteelAP
   name: speed loader (.45 magnum armor-piercing steel core)
   parent: BaseSpeedLoader45_magnum
   components:
@@ -209,7 +209,7 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoader45_magnumPistolplasteelAP
+  id: SpeedLoader45_magnumPlasteelAP
   name: speed loader (.45 magnum armor-piercing plastitanium core)
   parent: BaseSpeedLoader45_magnum
   components:
@@ -229,7 +229,7 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoader45_magnumPistolSynthAP
+  id: SpeedLoader45_magnumSynthAP
   name: speed loader (.45 magnum armor-piercing synthalloy core)
   parent: BaseSpeedLoader45_magnum
   components:

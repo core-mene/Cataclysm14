@@ -216,3 +216,76 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+# Mono AP syst
+#anti-flesh:
+- type: entity
+  id: Magazine7.62x51mmHP
+  name: "magazine (7.62x51mm hollow-point)"
+  parent: BaseMagazine7.62x51mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x51mmHP
+  - type: Sprite
+    layers:
+    - state: HP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine7.62x51mmRIP
+  name: "magazine (7.62x51mm RIP)"
+  parent: BaseMagazine7.62x51mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x51mmRIP
+  - type: Sprite
+    layers:
+    - state: RIP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+#armor-piercing:
+- type: entity
+  id: Magazine7.62x51mmSteelAP
+  name: "magazine (7.62x51mm armor-piercing steel core)"
+  parent: BaseMagazine7.62x51mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x51mmSteelAP
+  - type: Sprite
+    layers:
+    - state: steelAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine7.62x51mmplasteelAP
+  name: "magazine (7.62x51mm armor-piercing plastitanium core)"
+  parent: BaseMagazine7.62x51mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x51mmplasteelAP
+  - type: Sprite
+    layers:
+    - state: plasteelAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine7.62x51mmSynthAP
+  name: "magazine (7.62x51mm armor-piercing synthalloy core)"
+  parent: BaseMagazine7.62x51mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x51mmSynthAP
+  - type: Sprite
+    layers:
+    - state: synthAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
