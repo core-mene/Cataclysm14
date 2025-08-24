@@ -45,6 +45,16 @@
   id: Magazine9x19mmPistolUranium
   result: Magazine9x19mmPistolUranium
 
+- type: latheRecipe
+  parent: BaseAmmoHPPistolCaliberPistolMagazineRecipe
+  id: AmmoBox9x19mmHP
+  result: AmmoBox9x19mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPPistolCaliberPistolMagazineRecipe
+  id: AmmoBox9x19mmRIP
+  result: AmmoBox9x19mmRIP
+
 #SMG Magazines
 
 - type: latheRecipe
@@ -101,6 +111,16 @@
   parent: BaseAmmoEmptyPistolCaliberSubMachineGunMagazineRecipe
   id: Magazine9x19mmSubMachineGunTopMountedEmpty
   result: Magazine9x19mmSubMachineGunTopMountedEmpty
+
+- type: latheRecipe
+  parent: BaseAmmoHPPistolCaliberSubMachineGunMagazineRecipe
+  id: AmmoBox9x19mmHP
+  result: AmmoBox9x19mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPPistolCaliberSubMachineGunMagazineRecipe
+  id: AmmoBox9x19mmRIP
+  result: AmmoBox9x19mmRIP
 
 #Speedloaders
 
@@ -175,3 +195,13 @@
   parent: BaseAmmoUraniumPistolCaliberAmmoBoxRecipe
   id: AmmoBox9x19mmUranium
   result: AmmoBox9x19mmUranium
+
+- type: latheRecipe
+  parent: BaseAmmoHPPistolCaliberAmmoBoxRecipe
+  id: AmmoBox9x19mmHP
+  result: AmmoBox9x19mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPPistolCaliberAmmoBoxRecipe
+  id: AmmoBox9x19mmRIP
+  result: AmmoBox9x19mmRIP

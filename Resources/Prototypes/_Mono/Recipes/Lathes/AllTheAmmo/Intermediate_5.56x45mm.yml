@@ -45,6 +45,16 @@
   id: Magazine5.56x45mmUranium
   result: Magazine5.56x45mmUranium
 
+- type: latheRecipe
+  parent: BaseAmmoHPIntermediateMagazineRecipe
+  id: AmmoBox5.56x45mmHP
+  result: AmmoBox5.56x45mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPIntermediateMagazineRecipe
+  id: AmmoBox5.56x45mmRIP
+  result: AmmoBox5.56x45mmRIP
+
 #Speedloaders
 
 - type: latheRecipe
@@ -118,3 +128,13 @@
   parent: BaseAmmoUraniumIntermediateAmmoBoxRecipe
   id: AmmoBox5.56x45mmUranium
   result: AmmoBox5.56x45mmUranium
+
+- type: latheRecipe
+  parent: BaseAmmoHPIntermediateAmmoBoxRecipe
+  id: AmmoBox5.56x45mmHP
+  result: AmmoBox5.56x45mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPIntermediateAmmoBoxRecipe
+  id: AmmoBox5.56x45mmRIP
+  result: AmmoBox5.56x45mmRIP

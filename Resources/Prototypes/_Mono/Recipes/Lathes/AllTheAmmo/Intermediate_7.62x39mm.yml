@@ -61,6 +61,16 @@
   id: Magazine7.62x39mmSubsonic
   result: Magazine7.62x39mmSubsonic
 
+- type: latheRecipe
+  parent: BaseAmmoHPIntermediateMagazineRecipe
+  id: AmmoBox7.62x39mmHP
+  result: AmmoBox7.62x39mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPIntermediateMagazineRecipe
+  id: AmmoBox7.62x39mmRIP
+  result: AmmoBox7.62x39mmRIP
+
 #Speedloaders
 
 - type: latheRecipe
@@ -114,3 +124,13 @@
   parent: BaseAmmoFMJIntermediateAmmoBoxRecipe
   id: AmmoBox7.62x39mmSubsonic
   result: AmmoBox7.62x39mmSubsonic
+
+- type: latheRecipe
+  parent: BaseAmmoHPIntermediateAmmoBoxRecipe
+  id: AmmoBox7.62x39mmHP
+  result: AmmoBox7.62x39mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPIntermediateAmmoBoxRecipe
+  id: AmmoBox7.62x39mmRIP
+  result: AmmoBox7.62x39mmRIP

@@ -105,6 +105,27 @@
     Steel: 175
     Uranium: 300
 
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoHPIntermediateMagazineRecipe
+  categories:
+  - HPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 475
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoRIPIntermediateMagazineRecipe
+  categories:
+  - RIPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 235
+    Plasteel: 240
+
 #Base intermediate ammo speedloaders for .45 magnum, 5.56, 5.45, 7.62x39mm and potential others
 #speedloaders:     [TOTAL = 175]
 
@@ -201,6 +222,27 @@
     Steel: 60
     Uranium: 125
 
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoHPIntermediateSpeedloaderRecipe
+  categories:
+  - HPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 175
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoRIPIntermediateSpeedloaderRecipe
+  categories:
+  - RIPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 85
+    Plasteel: 90
+
 #Base intermediate ammo boxes for 5.56, 5.45, 7.62x39mm and potential others
 #Boxes:     [TOTAL = 1425]
 
@@ -289,6 +331,27 @@
   materials:
     Steel: 570
     Uranium: 855
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoHPIntermediateAmmoBoxRecipe
+  categories:
+  - HPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 1425
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoRIPIntermediateAmmoBoxRecipe
+  categories:
+  - RIPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 710
+    Plasteel: 715
 
 #Base Fully powered ammo magazines for all the other 7.62 (-7.62x39mm)
 #Magazines: [TOTAL = 575]
@@ -386,6 +449,27 @@
     Steel: 200
     Uranium: 375
 
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoHPFullyPoweredMagazineRecipe
+  categories:
+  - HPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 575
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoRIPFullyPoweredMagazineRecipe
+  categories:
+  - RIPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 285
+    Plasteel: 290
+
 #Base Fully powered ammo boxes for all the other 7.62 (-7.62x39mm)
 #Boxes:     [TOTAL = 1725]
 
@@ -474,6 +558,27 @@
   materials:
     Steel: 575
     Uranium: 1150
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoHPFullyPoweredAmmoBoxRecipe
+  categories:
+  - HPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 1725
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoRIPFullyPoweredAmmoBoxRecipe
+  categories:
+  - RIPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 860
+    Plasteel: 865
 
 #Base Fully powered ammo speedloaders for all the other 7.62 (-7.62x39mm)
 #speedloaders:     [TOTAL = 225]
@@ -581,8 +686,29 @@
   - Ammo
   abstract: true
   materials:
-    Steel: 60
+    Steel: 50
     Uranium: 125
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoHPPistolCaliberPistolMagazineRecipe
+  categories:
+  - HPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 175
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoRIPPistolCaliberPistolMagazineRecipe
+  categories:
+  - RIPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 85
+    Plasteel: 90
 
 #Base pistol caliber smg magazines ammo for .45 ACP, 9mm, 5.7mm, 4.6mm
 #Magazines: [TOTAL = 375]
@@ -679,6 +805,27 @@
   materials:
     Steel: 125
     Uranium: 250
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoHPPistolCaliberSubMachineGunMagazineRecipe
+  categories:
+  - HPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 375
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoRIPPistolCaliberSubMachineGunMagazineRecipe
+  categories:
+  - RIPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 185
+    Plasteel: 190
 
 #Base PistolCaliber ammo speedloaders for .45 magnum, 5.56, 5.45, 7.62x39mm and potential others
 #speedloaders:     [TOTAL = 175]
@@ -829,3 +976,24 @@
   materials:
     Steel: 375
     Uranium: 750
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoHPPistolCaliberAmmoBoxRecipe
+  categories:
+  - HPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 1125
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoRIPPistolCaliberAmmoBoxRecipe
+  categories:
+  - RIPammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 560
+    Plasteel: 565

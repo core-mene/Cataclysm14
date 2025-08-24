@@ -45,6 +45,16 @@
   id: Magazine7.62x51mmUranium
   result: Magazine7.62x51mmUranium
 
+- type: latheRecipe
+  parent: BaseAmmoHPFullyPoweredMagazineRecipe
+  id: AmmoBox7.62x51mmHP
+  result: AmmoBox7.62x51mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPFullyPoweredMagazineRecipe
+  id: AmmoBox7.62x51mmRIP
+  result: AmmoBox7.62x51mmRIP
+
 #Boxes
 
 - type: latheRecipe
@@ -86,3 +96,13 @@
   parent: BaseAmmoUraniumFullyPoweredAmmoBoxRecipe
   id: AmmoBox7.62x51mmUranium
   result: AmmoBox7.62x51mmUranium
+
+- type: latheRecipe
+  parent: BaseAmmoHPFullyPoweredAmmoBoxRecipe
+  id: AmmoBox7.62x51mmHP
+  result: AmmoBox7.62x51mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPFullyPoweredAmmoBoxRecipe
+  id: AmmoBox7.62x51mmRIP
+  result: AmmoBox7.62x51mmRIP

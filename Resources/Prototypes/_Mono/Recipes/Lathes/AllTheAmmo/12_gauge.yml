@@ -36,6 +36,26 @@
   id: Magazine12_gaugeSlug
   result: Magazine12_gaugeSlug
 
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPIntermediateMagazineRecipe
+  id: AmmoBox12_gaugeSlugRIP
+  result: AmmoBox12_gaugeSlugRIP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPIntermediateMagazineRecipe
+  id: AmmoBox12_gaugeSlugAP
+  result: AmmoBox12_gaugeSlugAP
+
+- type: latheRecipe
+  parent: BaseAmmoFMJIntermediateMagazineRecipe
+  id: AmmoBox12_gaugeOOBuckshot
+  result: AmmoBox12_gaugeOOBuckshot
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPIntermediateMagazineRecipe
+  id: AmmoBox12_gaugeFlechette
+  result: AmmoBox12_gaugeFlechette
+
 #Boxes
 
 - type: latheRecipe
@@ -67,3 +87,23 @@
   parent: BaseAmmoFMJIntermediateAmmoBoxRecipe
   id: AmmoBox12_gaugeSlug
   result: AmmoBox12_gaugeSlug
+
+- type: latheRecipe
+  parent: BaseAmmoRIPIntermediateAmmoBoxRecipe
+  id: AmmoBox12_gaugeSlugRIP
+  result: AmmoBox12_gaugeSlugRIP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPIntermediateAmmoBoxRecipe
+  id: AmmoBox12_gaugeSlugAP
+  result: AmmoBox12_gaugeSlugAP
+
+- type: latheRecipe
+  parent: BaseAmmoFMJIntermediateAmmoBoxRecipe
+  id: AmmoBox12_gaugeOOBuckshot
+  result: AmmoBox12_gaugeOOBuckshot
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPIntermediateAmmoBoxRecipe
+  id: AmmoBox12_gaugeFlechette
+  result: AmmoBox12_gaugeFlechette

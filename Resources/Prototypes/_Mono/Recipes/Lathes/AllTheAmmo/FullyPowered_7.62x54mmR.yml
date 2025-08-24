@@ -45,6 +45,16 @@
   id: Magazine7.62x54mmRUranium
   result: Magazine7.62x54mmRUranium
 
+- type: latheRecipe
+  parent: BaseAmmoHPFullyPoweredMagazineRecipe
+  id: AmmoBox7.62x54mmRHP
+  result: AmmoBox7.62x54mmRHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPFullyPoweredMagazineRecipe
+  id: AmmoBox7.62x54mmRRIP
+  result: AmmoBox7.62x54mmRRIP
+
 #Speedloaders
 
 - type: latheRecipe
@@ -93,3 +103,13 @@
   parent: BaseAmmoUraniumFullyPoweredAmmoBoxRecipe
   id: AmmoBox7.62x54mmRUranium
   result: AmmoBox7.62x54mmRUranium
+
+- type: latheRecipe
+  parent: BaseAmmoHPFullyPoweredAmmoBoxRecipe
+  id: AmmoBox7.62x54mmRHP
+  result: AmmoBox7.62x54mmRHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPFullyPoweredAmmoBoxRecipe
+  id: AmmoBox7.62x54mmRRIP
+  result: AmmoBox7.62x54mmRRIP

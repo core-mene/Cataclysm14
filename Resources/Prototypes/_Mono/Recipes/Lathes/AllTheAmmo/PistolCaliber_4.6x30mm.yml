@@ -45,6 +45,16 @@
   id: Magazine4.6x30mmPistolUranium
   result: Magazine4.6x30mmPistolUranium
 
+- type: latheRecipe
+  parent: BaseAmmoHPPistolCaliberPistolMagazineRecipe
+  id: AmmoBox4.6x30mmHP
+  result: AmmoBox4.6x30mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPPistolCaliberPistolMagazineRecipe
+  id: AmmoBox4.6x30mmRIP
+  result: AmmoBox4.6x30mmRIP
+
 #SMG Magazines
 
 - type: latheRecipe
@@ -102,6 +112,16 @@
   id: Magazine4.6x30mmSubMachineGunTopMountedEmpty
   result: Magazine4.6x30mmSubMachineGunTopMountedEmpty
 
+- type: latheRecipe
+  parent: BaseAmmoHPPistolCaliberSubMachineGunMagazineRecipe
+  id: AmmoBox4.6x30mmHP
+  result: AmmoBox4.6x30mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPPistolCaliberSubMachineGunMagazineRecipe
+  id: AmmoBox4.6x30mmRIP
+  result: AmmoBox4.6x30mmRIP
+
 #Boxes
 
 - type: latheRecipe
@@ -143,3 +163,13 @@
   parent: BaseAmmoUraniumPistolCaliberAmmoBoxRecipe
   id: AmmoBox4.6x30mmUranium
   result: AmmoBox4.6x30mmUranium
+
+- type: latheRecipe
+  parent: BaseAmmoHPPistolCaliberAmmoBoxRecipe
+  id: AmmoBox4.6x30mmHP
+  result: AmmoBox4.6x30mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPPistolCaliberAmmoBoxRecipe
+  id: AmmoBox4.6x30mmRIP
+  result: AmmoBox4.6x30mmRIP
