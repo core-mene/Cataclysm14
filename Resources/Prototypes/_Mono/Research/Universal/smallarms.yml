@@ -8,6 +8,29 @@
   technologyPrerequisites:
   - UniversalBallisticSci1
   position: 6, 8
+  recipeUnlocks:
+  - Magazine7.62x51mmSteelAP
+  - AmmoBox7.62x51mmSteelAP
+  - Magazine7.62x54mmRSteelAP
+  - AmmoBox7.62x54mmRSteelAP
+  - Magazine5.56x45mmSteelAP
+  - AmmoBox5.56x45mmSteelAP
+  - Magazine7.62x39mmSteelAP
+  - AmmoBox7.62x39mmSteelAP
+  - Magazine45_magnumPistolSteelAP
+  - AmmoBox45_magnumSteelAP
+  - Magazine4.6x30mmPistolSteelAP
+  - Magazine4.6x30mmSubMachineGunSteelAP
+  - AmmoBox4.6x30mmSteelAP
+  - Magazine5.7x28mmPistolSteelAP
+  - Magazine5.7x28mmSubMachineGunSteelAP
+  - AmmoBox5.7x28mmSteelAP
+  - Magazine9x19mmPistolSteelAP
+  - Magazine9x19mmSubMachineGunSteelAP
+  - AmmoBox9x19mmSteelAP
+  - Magazine45_ACPPistolSteelAP
+  - Magazine45_ACPSubMachineGunSteelAP
+  - AmmoBox45_ACPSteelAP
 
 - type: technology
   id: UniversalPlastitaniumCore
@@ -19,6 +42,35 @@
   technologyPrerequisites:
   - UniversalSteelCore
   position: 6, 7
+  recipeUnlocks:
+  - Magazine7.62x51mmPlasteelAP
+  - AmmoBox7.62x51mmPlasteelAP
+  - Magazine7.62x54mmRPlasteelAP
+  - AmmoBox7.62x54mmRPlasteelAP
+  - Magazine5.56x45mmPlasteelAP
+  - AmmoBox5.56x45mmPlasteelAP
+  - Magazine7.62x39mmPlasteelAP
+  - AmmoBox7.62x39mmPlasteelAP
+  - Magazine45_magnumPistolPlasteelAP
+  - AmmoBox45_magnumPlasteelAP
+  - Magazine4.6x30mmPistolPlasteelAP
+  - Magazine4.6x30mmSubMachineGunPlasteelAP
+  - AmmoBox4.6x30mmPlasteelAP
+  - Magazine5.7x28mmPistolPlasteelAP
+  - Magazine5.7x28mmSubMachineGunPlasteelAP
+  - AmmoBox5.7x28mmPlasteelAP
+  - Magazine9x19mmPistolPlasteelAP
+  - Magazine9x19mmSubMachineGunPlasteelAP
+  - AmmoBox9x19mmPlasteelAP
+  - Magazine45_ACPPistolPlasteelAP
+  - Magazine45_ACPSubMachineGunPlasteelAP
+  - AmmoBox45_ACPPlasteelAP
+  - AmmoBox23x75mmSlugAP
+  - Magazine12_gaugeSlugAP
+  - AmmoBox12_gaugeSlugAP
+  - AmmoBox23x75mmFlechette
+  - Magazine12_gaugeFlechette
+  - AmmoBox12_gaugeFlechette
 
 - type: technology
   id: UniversalSynthalloyCore
@@ -31,22 +83,69 @@
   - UniversalPlastitaniumCore
   - UniversalBallisticSci2
   position: 6, 6
+  recipeUnlocks:
+  - Magazine7.62x51mmSynthAP
+  - AmmoBox7.62x51mmSynthAP
+  - Magazine7.62x54mmRSynthAP
+  - AmmoBox7.62x54mmRSynthAP
+  - Magazine5.56x45mmSynthAP
+  - AmmoBox5.56x45mmSynthAP
+  - Magazine7.62x39mmSynthAP
+  - AmmoBox7.62x39mmSynthAP
+  - Magazine45_magnumPistolSynthAP
+  - AmmoBox45_magnumSynthAP
+  - Magazine4.6x30mmPistolSynthAP
+  - Magazine4.6x30mmSubMachineGunSynthAP
+  - AmmoBox4.6x30mmSynthAP
+  - Magazine5.7x28mmPistolSynthAP
+  - Magazine5.7x28mmSubMachineGunSynthAP
+  - AmmoBox5.7x28mmSynthAP
+  - Magazine9x19mmPistolSynthAP
+  - Magazine9x19mmSubMachineGunSynthAP
+  - AmmoBox9x19mmSynthAP
+  - Magazine45_ACPPistolSynthAP
+  - Magazine45_ACPSubMachineGunSynthAP
+  - AmmoBox45_ACPSynthAP
 
 - type: technology
   id: UniversalHollowPoint
   name: research-technology-universal-ap-hp
-  entityIcon: AmmoBox45_ACPFMJ
+  entityIcon: AmmoBox9x19mmHP
   discipline: FactionUniversal
   tier: 1
   cost: 30000
   technologyPrerequisites:
   - UniversalBallisticSci1
   position: 8, 7
+  recipeUnlocks:
+  - Magazine7.62x51mmHP
+  - AmmoBox7.62x51mmHP
+  - Magazine7.62x54mmRHP
+  - AmmoBox7.62x54mmRHP
+  - Magazine5.56x45mmHP
+  - AmmoBox5.56x45mmHP
+  - Magazine7.62x39mmHP
+  - AmmoBox7.62x39mmHP
+  - Magazine45_magnumPistolHP
+  - SpeedLoader45_magnumHP
+  - AmmoBox45_magnumHP
+  - Magazine4.6x30mmPistolHP
+  - Magazine4.6x30mmSubMachineGunHP
+  - AmmoBox4.6x30mmHP
+  - Magazine5.7x28mmPistolHP
+  - Magazine5.7x28mmSubMachineGunHP
+  - AmmoBox5.7x28mmHP
+  - Magazine9x19mmPistolHP
+  - Magazine9x19mmSubMachineGunHP
+  - AmmoBox9x19mmHP
+  - Magazine45_ACPPistolHP
+  - Magazine45_ACPSubMachineGunHP
+  - AmmoBox45_ACPHP
 
 - type: technology
   id: UniversalRIP
   name: research-technology-universal-ap-rip
-  entityIcon: AmmoBox14.5x114mm
+  entityIcon: AmmoBox9x19mmRIP
   discipline: FactionUniversal
   tier: 2
   cost: 50000
@@ -54,3 +153,30 @@
   - UniversalHollowPoint
   - UniversalBallisticSci2
   position: 8, 6
+  recipeUnlocks:
+  - AmmoBox23x75mmSlugRIP
+  - Magazine12_gaugeSlugRIP
+  - AmmoBox12_gaugeSlugRIP
+  - Magazine7.62x51mmRIP
+  - AmmoBox7.62x51mmRIP
+  - Magazine7.62x54mmRRIP
+  - AmmoBox7.62x54mmRRIP
+  - Magazine5.56x45mmRIP
+  - AmmoBox5.56x45mmRIP
+  - Magazine7.62x39mmRIP
+  - AmmoBox7.62x39mmRIP
+  - Magazine45_magnumPistolRIP
+  - SpeedLoader45_magnumRIP
+  - AmmoBox45_magnumRIP
+  - Magazine4.6x30mmPistolRIP
+  - Magazine4.6x30mmSubMachineGunRIP
+  - AmmoBox4.6x30mmRIP
+  - Magazine5.7x28mmPistolRIP
+  - Magazine5.7x28mmSubMachineGunRIP
+  - AmmoBox5.7x28mmRIP
+  - Magazine9x19mmPistolRIP
+  - Magazine9x19mmSubMachineGunRIP
+  - AmmoBox9x19mmRIP
+  - Magazine45_ACPPistolRIP
+  - Magazine45_ACPSubMachineGunRIP
+  - AmmoBox45_ACPRIP
