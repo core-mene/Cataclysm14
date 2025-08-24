@@ -75,7 +75,8 @@ public sealed class JobTest
     /// <summary>
     /// Simple test that checks that starting the round spawns the player into the test map as a passenger.
     /// </summary>
-    // [Test] // Mono change: Comment out [Test], We don't use this so no point to test it
+    [Test]
+    [Ignore("We don't use this")] // Mono change: We don't use this so no point to test it
     public async Task StartRoundTest()
     {
         await using var pair = await PoolManager.GetServerClient(new PoolSettings
@@ -108,7 +109,8 @@ public sealed class JobTest
     /// <summary>
     /// Check that job preferences are respected.
     /// </summary>
-    // [Test] // Mono change: Comment out [Test], We don't use this so no point to test it
+    [Test] // Mono change: We don't use this so no point to test it
+    [Ignore("We don't use this")]
     public async Task JobPreferenceTest()
     {
         await using var pair = await PoolManager.GetServerClient(new PoolSettings
@@ -147,7 +149,8 @@ public sealed class JobTest
     /// Check high priority jobs (e.g., captain) are selected before other roles, even if it means a player does not
     /// get their preferred job.
     /// </summary>
-    // [Test] // Mono change: Comment out [Test], We don't use this so no point to test it
+    [Test] // Mono change: We don't use this so no point to test it
+    [Ignore("We don't use this")]
     public async Task JobWeightTest()
     {
         await using var pair = await PoolManager.GetServerClient(new PoolSettings
@@ -182,7 +185,8 @@ public sealed class JobTest
     /// <summary>
     /// Check that jobs are preferentially given to players that have marked those jobs as higher priority.
     /// </summary>
-    // [Test] // Mono change: Comment out [Test], We don't use this so no point to test it
+    [Test] // Mono change: We don't use this so no point to test it
+    [Ignore("We don't use this")]
     public async Task JobPriorityTest()
     {
         await using var pair = await PoolManager.GetServerClient(new PoolSettings
