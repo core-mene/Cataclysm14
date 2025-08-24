@@ -154,11 +154,11 @@
 
 - type: entity
   parent: BaseAmmoBox7.62x54mmR
-  id: AmmoBox7.62x54mmRplasteelAP
+  id: AmmoBox7.62x54mmRPlasteelAP
   name: ammunition box (7.62x54mmR armor-piercing plastitanium core)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x54mmRplasteelAP
+    proto: Cartridge7.62x54mmRPlasteelAP
   - type: Sprite
     layers:
     - state: base

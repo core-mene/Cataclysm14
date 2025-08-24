@@ -170,12 +170,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x54mmRplasteelAP
+  id: Magazine7.62x54mmRPlasteelAP
   name: "magazine (7.62x54mmR armor-piercing plastitanium core)"
   parent: BaseMagazine7.62x54mmR
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x54mmRplasteelAP
+    proto: Cartridge7.62x54mmRPlasteelAP
   - type: Sprite
     layers:
     - state: plasteelAP
