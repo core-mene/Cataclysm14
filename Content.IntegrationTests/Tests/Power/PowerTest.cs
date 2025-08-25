@@ -218,7 +218,8 @@ namespace Content.IntegrationTests.Tests.Power
                 consumer2.DrawRate = loadPower;
             });
 
-            server.RunTicks(1); //let run a tick for PowerNet to process power
+            //let run a tick for PowerNet to process power
+            server.RunTicks(15); // Mono: 1 > 15, power updates every .5 seconds
 
             await server.WaitAssertion(() =>
             {
@@ -280,7 +281,8 @@ namespace Content.IntegrationTests.Tests.Power
                 consumer2.DrawRate = loadPower * 2;
             });
 
-            server.RunTicks(1); //let run a tick for PowerNet to process power
+            //let run a tick for PowerNet to process power
+            server.RunTicks(15); // Mono, 1 > 15, power updates every .5 seconds
 
             await server.WaitAssertion(() =>
             {
@@ -365,8 +367,6 @@ namespace Content.IntegrationTests.Tests.Power
                     Assert.That(consumer.ReceivedPower, Is.EqualTo(200).Within(tickDev));
                 });
             });
-
-
 
             // run for 0.75 seconds
             ticks = (int) Math.Round(0.75 * gameTiming.TickRate);
@@ -539,7 +539,7 @@ namespace Content.IntegrationTests.Tests.Power
                 netBattery.SupplyRampTolerance = rampTol;
             });
 
-            server.RunTicks(1);
+            server.RunTicks(15); // Mono: 1 > 15, power updates every .5 seconds
 
             await server.WaitAssertion(() =>
             {
@@ -694,7 +694,7 @@ namespace Content.IntegrationTests.Tests.Power
             });
 
             // Run some ticks so everything is stable.
-            server.RunTicks(gameTiming.TickRate);
+            server.RunTicks(gameTiming.TickRate + gameTiming.TickRate / 2); // Mono change: add half the tick rate in extra
 
             // Exact values can/will be off by a tick, add tolerance for that.
             var tickPeriod = (float) gameTiming.TickPeriod.TotalSeconds;
@@ -712,7 +712,7 @@ namespace Content.IntegrationTests.Tests.Power
                     Assert.That(netBattery.CurrentSupply, Is.EqualTo(1000).Within(0.1));
                     Assert.That(netBattery.SupplyRampPosition, Is.EqualTo(200).Within(0.1));
 
-                    const int expectedSpent = 200;
+                    const int expectedSpent = 100; // Mono change: 200 > 100, different values due to power updating every .5 seconds
                     Assert.That(battery.CurrentCharge, Is.EqualTo(battery.MaxCharge - expectedSpent).Within(tickDev));
                 });
             });
@@ -790,7 +790,7 @@ namespace Content.IntegrationTests.Tests.Power
                     Assert.That(netBattery.CurrentSupply, Is.EqualTo(600).Within(0.1));
                     Assert.That(netBattery.SupplyRampPosition, Is.EqualTo(400).Within(0.1));
 
-                    const int expectedSpent = 400;
+                    const int expectedSpent = 300; // Mono Change: 400 > 300, power updates every .5 seconds, ends on a different number
                     Assert.That(battery.CurrentCharge, Is.EqualTo(battery.MaxCharge - expectedSpent).Within(tickDev));
                 });
             });
@@ -876,7 +876,7 @@ namespace Content.IntegrationTests.Tests.Power
             });
 
             // Run some ticks so everything is stable.
-            server.RunTicks(10);
+            server.RunTicks(30); // Mono: 10 > 30, power updates every .5 seconds
 
             await server.WaitAssertion(() =>
             {
@@ -1131,7 +1131,7 @@ namespace Content.IntegrationTests.Tests.Power
             });
 
             // Run some ticks so everything is stable.
-            server.RunTicks(5);
+            server.RunTicks(75); // Mono: power only updates every .5 seconds = 15 ticks, was 5 ticks
 
             await server.WaitAssertion(() =>
             {
@@ -1148,7 +1148,7 @@ namespace Content.IntegrationTests.Tests.Power
                 netBattery.SupplyRampTolerance = 5;
             });
 
-            server.RunTicks(3);
+            server.RunTicks(45); // Mono: power only updates every .5 seconds = 15 ticks, was 3 ticks
 
             await server.WaitAssertion(() =>
             {
