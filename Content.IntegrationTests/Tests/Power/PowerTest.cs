@@ -1276,7 +1276,7 @@ namespace Content.IntegrationTests.Tests.Power
                 batterySys.SetCharge(apcEnt, 0, apcBattery);
             });
 
-            server.RunTicks(10); //let run a few ticks for PowerNets to reevaluate and start charging apc - mono increase
+            server.RunTicks(15); //let run a few ticks for PowerNets to reevaluate and start charging apc - mono increase
 
             await server.WaitAssertion(() =>
             {
