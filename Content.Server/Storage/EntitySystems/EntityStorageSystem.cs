@@ -42,7 +42,6 @@ public sealed class EntityStorageSystem : SharedEntityStorageSystem
         SubscribeLocalEvent<EntityStorageComponent, GetVerbsEvent<InteractionVerb>>(AddToggleOpenVerb);
         SubscribeLocalEvent<EntityStorageComponent, ContainerRelayMovementEntityEvent>(OnRelayMovement);
         SubscribeLocalEvent<EntityStorageComponent, FoldAttemptEvent>(OnFoldAttempt);
-        SubscribeLocalEvent<EntityStorageComponent, EntityTerminatingEvent>(OnEntityTerminating);
 
         SubscribeLocalEvent<EntityStorageComponent, ComponentGetState>(OnGetState);
         SubscribeLocalEvent<EntityStorageComponent, ComponentHandleState>(OnHandleState);
@@ -57,21 +56,6 @@ public sealed class EntityStorageSystem : SharedEntityStorageSystem
         SubscribeLocalEvent<InsideEntityStorageComponent, AtmosExposedGetAirEvent>(OnInsideExposed);
 
         SubscribeLocalEvent<InsideEntityStorageComponent, EntGotRemovedFromContainerMessage>(OnRemoved);
-    }
-
-    /// <summary>
-    /// Handles emptying the storage container when the entity is being terminated.
-    /// This prevents the contents from being deleted along with the container.
-    /// </summary>
-    private void OnEntityTerminating(EntityUid uid, EntityStorageComponent component, ref EntityTerminatingEvent args)
-    {
-        // Skip if this component is being deleted via DestructionEventArgs,
-        // since that event handler may have specific deletion behavior
-        if (component.DeleteContentsOnDestruction)
-            return;
-
-        // Empty the container to prevent the contained entities from being deleted
-        OpenStorage(uid, component);
     }
 
     private void OnMapInit(EntityUid uid, EntityStorageComponent component, MapInitEvent args)
