@@ -330,7 +330,7 @@
   parent: [ ShuttleGunBase, ConstructibleMachine]
   name: PTK-1500e "Matter Dematerializer" # Frontier: "800"<"1500e" (consistent with naming scheme)
   description: Mining turret, effective for blasting hardened targets. Gradually accumulates charges on its own. # Mono: description changed
-  categories: [ DoNotMap ]
+  # categories: [ DoNotMap ] Mono
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shuttles/kinetic.rsi

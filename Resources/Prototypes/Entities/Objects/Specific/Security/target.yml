@@ -129,8 +129,8 @@
       - !type:SpawnEntitiesBehavior
         spawn:
           SheetSteel:
-            min: 10
-            max: 10
+            min: 5
+            max: 5
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
