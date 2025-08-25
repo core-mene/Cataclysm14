@@ -471,8 +471,7 @@ entities:
       pos: 0.5,4.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
       deviceLists:
       - 2
   - uid: 11
@@ -1589,8 +1588,7 @@ entities:
       pos: 0.5,2.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
       deviceLists:
       - 191
       - 192
@@ -1802,8 +1800,6 @@ entities:
       pos: 1.5,3.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2
   - uid: 225
@@ -1851,8 +1847,7 @@ entities:
       pos: 2.5,3.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
       deviceLists:
       - 2
   - uid: 230

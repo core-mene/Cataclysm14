@@ -10990,8 +10990,6 @@ entities:
       pos: 18.5,5.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 11
     - type: AtmosPipeColor
@@ -11050,8 +11048,6 @@ entities:
       pos: 18.5,4.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 11
     - type: AtmosPipeColor
@@ -12277,7 +12273,7 @@ entities:
         Emergency Generator Terminal
 
 
-        Anchor a generator on this terminal in order to supplement the power grid in case of catastrophic damage to the AME/Solar Panels. 
+        Anchor a generator on this terminal in order to supplement the power grid in case of catastrophic damage to the AME/Solar Panels.
 
 
         (GENERATOR NOT INCLUDED)
