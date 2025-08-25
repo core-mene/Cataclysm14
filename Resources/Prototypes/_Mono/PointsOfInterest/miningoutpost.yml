@@ -23,12 +23,12 @@
     color: "#FF4D00"
 
 - type: gameMap
-  id: Sevastopol
+  id: MiningPOIDelta
   mapName: 'Mining Outpost Delta'
   gridPath: /Maps/_Mono/POI/miningpost.yml
   minPlayers: 0
   stations:
-    Sevastopol:
+    MiningPOIDelta:
       stationProto: RecordsFrontierOutpostCargo
       components:
         - type: StationNameSetup
@@ -47,12 +47,12 @@
     color: "#FF4D00"
 
 - type: gameMap
-  id: Sevastopol
+  id: MiningPOIGamma
   mapName: 'Mining Outpost Gamma'
   gridPath: /Maps/_Mono/POI/miningpost.yml
   minPlayers: 0
   stations:
-    Sevastopol:
+    MiningPOIGamma:
       stationProto: RecordsFrontierOutpostCargo
       components:
         - type: StationNameSetup
