@@ -1,0 +1,253 @@
+
+- type: entity
+  id: DeepDrillPOI
+  name: powered deep drill
+  parent: [BaseStructureDisableToolUse, BaseMachinePowered]
+  description: A massive electrical automatic drill that digs up materials in bulk. On the screen is indicated "Power supply rated at 100KW".
+  components:
+  - type: PowerConsumer
+    voltage: High
+    drawRate: 100000
+  - type: ItemMiner
+    proto: SpawnLootOresDeepDrill
+    interval: 20
+    needApcPower: false
+  - type: PowerConsumerMiner
+  - type: Sprite
+    offset: 0,0.5
+    noRot: true
+    sprite: _Mono/Structures/Machines/deepdrill.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: icon
+    - map: ["computerLayerScreen"]
+      state: unlit
+      shader: unshaded
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Transform
+    anchored: true
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.7,-0.5,0.7,0.6"
+        density: 750
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: PointLight
+    radius: 5
+    energy: 1
+    color: "#ff0000"
+  - type: Construction
+    graph: LaserDrill
+    node: laserDrill
+
+- type: entity
+  name: random ores
+  id: SpawnLootOresDeepDrill
+  parent: MarkerBasePlaceFree
+  suffix: "Deep Drill, 50+"
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Objects/Materials/ore.rsi
+      state: plasma
+    - sprite: _NF/Markers/general.rsi
+      state: questionmark
+      color: red
+  - type: RandomSpawner
+    prototypes:
+    - SteelOre225
+    - SteelOre175
+    - SteelOre150
+    - SteelOre100
+    - SpaceQuartz225
+    - SpaceQuartz150
+    - SpaceQuartz125
+    - Coal225
+    - Coal150
+    - PlasmaOre75
+    - PlasmaOre50
+    - SilverOre75
+    - SilverOre50
+    - GoldOre75
+    - GoldOre50
+    - UraniumOre75
+    - UraniumOre50
+    - BananiumOre5
+    - DiamondOre1
+    - BluespaceOre1
+    - SpawnMobOreCrab
+    chance: 0.95
+    offset: 0.0
+
+#iron ore
+- type: entity
+  parent: SteelOre
+  id: SteelOre225
+  suffix: 225
+  components:
+  - type: Stack
+    count: 225
+
+- type: entity
+  parent: SteelOre
+  id: SteelOre175
+  suffix: 175
+  components:
+  - type: Stack
+    count: 175
+
+- type: entity
+  parent: SteelOre
+  id: SteelOre150
+  suffix: 150
+  components:
+  - type: Stack
+    count: 150
+
+- type: entity
+  parent: SteelOre
+  id: SteelOre100
+  suffix: 100
+  components:
+  - type: Stack
+    count: 100
+
+#quartz ore
+- type: entity
+  parent: SpaceQuartz
+  id: SpaceQuartz225
+  suffix: 225
+  components:
+  - type: Stack
+    count: 225
+
+- type: entity
+  parent: SpaceQuartz
+  id: SpaceQuartz150
+  suffix: 150
+  components:
+  - type: Stack
+    count: 150
+
+- type: entity
+  parent: SpaceQuartz
+  id: SpaceQuartz125
+  suffix: 125
+  components:
+  - type: Stack
+    count: 125
+
+#coal ore
+- type: entity
+  parent: Coal
+  id: Coal225
+  suffix: 225
+  components:
+  - type: Stack
+    count: 225
+
+- type: entity
+  parent: Coal
+  id: Coal150
+  suffix: 150
+  components:
+  - type: Stack
+    count: 150
+
+#plasma ore
+- type: entity
+  parent: PlasmaOre
+  id: PlasmaOre75
+  suffix: 75
+  components:
+  - type: Stack
+    count: 75
+
+- type: entity
+  parent: PlasmaOre
+  id: PlasmaOre50
+  suffix: 50
+  components:
+  - type: Stack
+    count: 50
+
+#silver ore
+- type: entity
+  parent: SilverOre
+  id: SilverOre75
+  suffix: 75
+  components:
+  - type: Stack
+    count: 75
+
+- type: entity
+  parent: SilverOre
+  id: SilverOre50
+  suffix: 50
+  components:
+  - type: Stack
+    count: 50
+
+#gold ore
+- type: entity
+  parent: GoldOre
+  id: GoldOre75
+  suffix: 75
+  components:
+  - type: Stack
+    count: 75
+
+- type: entity
+  parent: GoldOre
+  id: GoldOre50
+  suffix: 50
+  components:
+  - type: Stack
+    count: 50
+
+#uranium ore
+- type: entity
+  parent: UraniumOre
+  id: UraniumOre75
+  suffix: 75
+  components:
+  - type: Stack
+    count: 75
+    
+- type: entity
+  parent: UraniumOre
+  id: UraniumOre50
+  suffix: 50
+  components:
+  - type: Stack
+    count: 50
+    
+#bananium ore
+- type: entity
+  parent: BananiumOre
+  id: BananiumOre5
+  suffix: 5
+  components:
+  - type: Stack
+    count: 5
