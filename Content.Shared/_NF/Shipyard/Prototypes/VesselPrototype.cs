@@ -114,7 +114,7 @@ public sealed class VesselPrototype : IPrototype, IInheritingPrototype
     ///     The price markup of the vessel testing
     /// </summary>
     [DataField]
-    public float MinPriceMarkup = 1.05f;
+    public float MinPriceMarkup = 1f; // Mono change: 1.05 > 1
 
     [DataField]
     public HashSet<ProtoId<TagPrototype>> Tags = new();
