@@ -1,47 +1,23 @@
 {
-  "version": 1,
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Based off w556.dmi from the SS-13 Aurora repo, missing states edited from original sprite for SS14 by _starch_ (discord)",
-  "size": {
-    "x": 32,
-    "y": 32
-  },
-  "states": [
-      {
-          "name": "icon"
-      },
-      {
-          "name": "base"
-      },
-      {
-          "name": "bolt-open"
-      },
-      {
-          "name": "mag-0"
-      },
-      {
-          "name": "inhand-left",
-          "directions": 4
-      },
-      {
-          "name": "inhand-right",
-          "directions": 4
-      },
-      {
-          "name": "wielded-inhand-left",
-          "directions": 4
-      },
-      {
-          "name": "wielded-inhand-right",
-          "directions": 4
-      },
-      {
-          "name": "equipped-BACKPACK",
-          "directions": 4
-      },
-      {
-          "name": "equipped-SUITSTORAGE",
-          "directions": 4
-      }
-  ]
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by _starch_ (discord)",
+    "size": {
+        "x": 48,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "base"
+        },
+        {
+            "name": "bolt-open"
+        },
+        {
+            "name": "icon"
+        },
+        {
+            "name": "mag-0"
+        }
+    ]
 }
