@@ -324,7 +324,7 @@
     - MonoRestraintsStatic # Mono
   - type: EmagLatheRecipes
     emagStaticPacks:
-    - CivilianAmmoRecipePack
+    - StaticAmmoRecipePack
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -420,13 +420,13 @@
     - Translators
   - type: EmagLatheRecipes
     emagDynamicPacks:
-    - AdvancedAmmoRecipePack
+    - DynamicAmmoRecipePack
     - SecurityExplosives
     - SecurityEquipment
     - SecurityWeapons
     - SyringeGuns # Delta-V
     emagStaticPacks:
-    - CivilianAmmoRecipePack
+    - StaticAmmoRecipePack
 
 - type: entity
   id: ProtolatheHyperConvection
@@ -635,18 +635,18 @@
     staticPacks:
     - SecurityEquipmentStatic
     - SecurityPracticeStatic
-    - CivilianAmmoRecipePack
+    - StaticAmmoRecipePack
     - SecurityWeaponsStatic
     dynamicPacks:
     - SecurityEquipment
     - SecurityExplosives
-    - AdvancedAmmoRecipePack
+    - DynamicAmmoRecipePack
     - SecurityWeapons
     - SecurityDisablers
     - SMCybernetics
     # Mono - Mechs
     - WeaponMechCombatArsenal
-    - AdvancedAmmoRecipePack
+    - DynamicAmmoRecipePack
     - SmartGun # Goobstation
     # Mono start
     - MonoTSFWeaponsDynamicMelee
@@ -693,10 +693,9 @@
     idleState: icon
     runningState: icon
     staticPacks:
-    - CivilianAmmoRecipePack
+    - StaticAmmoRecipePack
     dynamicPacks:
-    - AdvancedAmmoRecipePack
-    - AllTheAmmo # Mono
+    - DynamicAmmoRecipePack
   - type: MaterialStorage
     whitelist:
       tags:

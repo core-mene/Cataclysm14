@@ -5,8 +5,8 @@
 
 #All the ammo recipes
 
-- type: latheRecipePack
-  id: AllTheAmmo
+- type: latheRecipePack 
+  id: AllTheAmmo #DO NOT use this or test breaks. Unless its static for some kind of debugg lathe
   recipes:
   - AmmoBox23x75mmBuckshot
   - AmmoBox23x75mmBeanbag
@@ -674,7 +674,7 @@
 #civilian = FMJ + practice + empty + rubber + HP + Steel AP
 
 - type: latheRecipePack
-  id: CivilianAmmoRecipePack
+  id: StaticAmmoRecipePack
   recipes:
 #FMJ recipes
 
@@ -816,7 +816,7 @@
 #advanced = Uranium + Incendiary + Steel AP + Plasteel AP + Synth AP + HP + RIP
 
 - type: latheRecipePack
-  id: AdvancedAmmoRecipePack
+  id: DynamicAmmoRecipePack
   recipes:
 #Uranium recipes
 
