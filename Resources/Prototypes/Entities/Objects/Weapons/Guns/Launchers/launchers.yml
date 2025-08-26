@@ -59,6 +59,10 @@
     containers:
       ballistic-ammo: !type:Container
         ents: []
+  - type: WieldedCrosshair
+    rsi:
+      sprite: _RMC14/Interface/MousePointer/explosive_mouse.rsi
+      state: all
 
 - type: entity
   name: PA china lake

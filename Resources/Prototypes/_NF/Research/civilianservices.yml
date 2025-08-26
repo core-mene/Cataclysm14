@@ -11,28 +11,27 @@
 - type: technology
   id: FoodService
   name: research-technology-food-service
-  icon:
-    sprite: Structures/Machines/juicer.rsi
-    state: juicer1
+  entityIcon: KitchenReagentGrinder
   discipline: CivilianServices
   tier: 1
-  cost: 7500
+  cost: 5000
   recipeUnlocks:
   - MicrowaveMachineCircuitboard
   - ReagentGrinderMachineCircuitboard
   - ElectricGrillMachineCircuitboard
   - BoozeDispenserMachineCircuitboard
   - SodaDispenserMachineCircuitboard
+  technologyPrerequisites:
+  - BasicParts
+  position: 4, -1
 
 - type: technology
   id: MiscellaneousItemsOrganization
   name: research-technology-personal-storage-solutions
-  icon:
-    sprite: _NF/Objects/Storage/Pouches/pouch.rsi
-    state: closed
+  entityIcon: NFPouchContractor
   discipline: CivilianServices
   tier: 1
-  cost: 2500
+  cost: 5000
   recipeUnlocks:
   - NFPouchUtility
   - NFPouchEngineering
@@ -52,70 +51,79 @@
   - NFPouchMime
   - NFPouchCaptain
   - NFPouchCargo
+  technologyPrerequisites:
+  - BasicParts
+  position: 7, -1
 
 # Tier 2
 
 - type: technology
   id: ChemicalDispensary
   name: research-technology-chemical-dispensary
-  icon:
-    sprite: Structures/dispensers.rsi
-    state: industrial-working
+  entityIcon: ChemDispenser
   discipline: CivilianServices
   tier: 2
   cost: 10000
   recipeUnlocks:
   - ChemMasterMachineCircuitboard
   - ChemDispenserMachineCircuitboard
+  technologyPrerequisites:
+  - AdvancedParts
+  position: -4, 10
 
 - type: technology
   id: IndustrialMedicine
   name: research-technology-industrial-medicine
-  icon:
-    sprite: _NF/Structures/Machines/medical_assembler.rsi
-    state: icon
+  entityIcon: MedicalAssembler
   discipline: CivilianServices
   tier: 2
-  cost: 5000
+  cost: 20000
   recipeUnlocks:
   - MedicalAssemblerMachineCircuitboard
   - HotplateMachineCircuitboard
+  technologyPrerequisites:
+  - AdvancedParts
+  position: -2, 10
 
 - type: technology
   id: AdvancedPersonalPropulsion
   name: research-technology-advanced-personal-propulsion
-  icon:
-    sprite: Objects/Tanks/Jetpacks/void.rsi
-    state: icon
+  entityIcon: JetpackVoid
   discipline: CivilianServices
   tier: 2 # 3->2 - Mono
-  cost: 7500 # 15000->7500 - Mono
+  cost: 25000
   recipeUnlocks:
   - JetpackVoid
+  technologyPrerequisites:
+  - Shuttlecraft
+  position: -4, 7
 
 - type: technology
   id: AdvancedFoodService
   name: research-technology-advanced-food-service
-  icon:
-    sprite: _NF/Structures/Machines/oven.rsi
-    state: composite_off
+  entityIcon: KitchenDeepFryer
   discipline: CivilianServices
   tier: 2
-  cost: 7500
+  cost: 10000
   recipeUnlocks:
   - DeepFryerMachineCircuitboard #Nyano - Summary: adds deep fryer circuit board to service research.
   - ServiceSelectiveDropper
   - KitchenAssemblerMachineCircuitboard
   - ElectricRangeMachineCircuitboard
+  technologyPrerequisites:
+  - FoodService
+  position: 4, -2
 
 - type: technology
   id: MobileSanitation
   name: research-technology-mobile-sanitation
-  icon:
-    sprite: Objects/Vehicles/janicart.rsi
-    state: icon
+  entityIcon: NFVehicleJanicart
   discipline: CivilianServices
   tier: 2
   cost: 5000
   recipeUnlocks:
     - JanicartFlatpack
+  technologyPrerequisites:
+  - AdvancedParts
+  - AdvancedCleaning
+  position: 5, -3

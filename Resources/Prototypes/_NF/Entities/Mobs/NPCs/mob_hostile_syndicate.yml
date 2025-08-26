@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 AndresE55
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 nathan736
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   name: syndicate naval agent
   abstract: true
@@ -173,7 +182,7 @@
       prototypes:
         - SyndicateNavalEngineerGearD
     - type: BasicEntityAmmoProvider
-      proto: PelletShotgunBeanbag
+      proto: Pellet12_gaugeBeanbag
       capacity: 1
       count: 1
 

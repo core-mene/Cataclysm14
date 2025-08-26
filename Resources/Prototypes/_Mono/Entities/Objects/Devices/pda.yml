@@ -180,3 +180,45 @@
   - type: Icon
     state: pda-lifesupporttech
   - type: Geiger # Mono
+
+- type: entity
+  parent: [BaseC2ContrabandUnredeemable, SheriffPDA]
+  id: MarsocFTLPDA
+  name: TSFMC MARSOC fire team leader PDA
+  description: A standard TSFMC personal computer.
+  components:
+  - type: Pda
+    id: TsfMarsocFTLIDCard
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NewsReaderCartridge
+    - MedTekCartridge
+    - WantedListCartridge
+    - LogProbeCartridge
+    - AstroNavCartridge
+    - MailMetricsCartridge # Frontier
+  - type: Geiger # Mono
+
+- type: entity
+  parent: [BaseC2ContrabandUnredeemable, SheriffPDA]
+  id: MarsocPDA
+  name: TSFMC MARSOC operative PDA
+  description: A standard TSFMC personal computer.
+  components:
+  - type: Pda
+    id: TsfMarsocIDCard
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NewsReaderCartridge
+    - MedTekCartridge
+    - WantedListCartridge
+    - LogProbeCartridge
+    - AstroNavCartridge
+    - MailMetricsCartridge # Frontier
+  - type: Geiger # Mono

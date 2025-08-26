@@ -40,7 +40,6 @@
 # SPDX-FileCopyrightText: 2024 Boaz1111
 # SPDX-FileCopyrightText: 2024 Ed
 # SPDX-FileCopyrightText: 2024 Hannah Giovanna Dawson
-# SPDX-FileCopyrightText: 2024 Ilya246
 # SPDX-FileCopyrightText: 2024 Julian Giebel
 # SPDX-FileCopyrightText: 2024 Ko4ergaPunk
 # SPDX-FileCopyrightText: 2024 Menshin
@@ -53,7 +52,10 @@
 # SPDX-FileCopyrightText: 2024 slarticodefast
 # SPDX-FileCopyrightText: 2025 ArtisticRoomba
 # SPDX-FileCopyrightText: 2025 BeeRobynn
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 marc-pelletier
+# SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 āda
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -367,12 +369,10 @@
   id: AnalysisComputerCircuitboard
   result: AnalysisComputerCircuitboard
 
-# Frontier: no tech disk recipes
-# - type: latheRecipe
-#   parent: BaseGoldCircuitboardRecipe
-#   id: TechDiskComputerCircuitboard
-#   result: TechDiskComputerCircuitboard
-# End Frontier
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: TechDiskComputerCircuitboard
+  result: TechDiskComputerCircuitboard
 
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe

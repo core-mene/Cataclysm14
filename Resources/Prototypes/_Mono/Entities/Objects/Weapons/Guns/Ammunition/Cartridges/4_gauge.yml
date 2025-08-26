@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -6,6 +7,7 @@
   id: BaseShellShotgun23x75mm
   name: shotgun shell (4 gauge)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: added BaseC1Contraband
+  description: Large shotgun round. Kicks like a mule, and will tear a chunk out of anything that doesnt have the armor to protect it.
   abstract: true
   components:
   - type: Tag
@@ -161,3 +163,61 @@
     proto: Pellet23x75mmFlashbang
   - type: SpentAmmoVisuals
     state: "flashbang"
+
+# Mono AP syst
+#anti-flesh:
+- type: entity
+  id: ShellShotgun23x75mmOOBuckshot
+  name: shotgun shell (4 gauge OO Buckshot)
+  parent: BaseShellShotgun23x75mm
+  components:
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: Pellet23x75mmOOBuckshotSpread
+  - type: SpentAmmoVisuals
+
+- type: entity
+  id: ShellShotgun23x75mmSlugRIP
+  name: shotgun shell (4 gauge RIP)
+  parent: BaseShellShotgun23x75mm
+  components:
+  - type: Sprite
+    layers:
+      - state: RIP
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: Pellet23x75mmSlugRIP
+  - type: SpentAmmoVisuals
+    state: "RIP"
+
+#armor-piercing:
+- type: entity
+  id: ShellShotgun23x75mmSlugAP
+  name: shotgun shell (4 gauge armor-piercing slug)
+  parent: BaseShellShotgun23x75mm
+  components:
+  - type: Sprite
+    layers:
+      - state: slug-AP
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: Pellet23x75mmSlugAP
+  - type: SpentAmmoVisuals
+    state: "slug-AP"
+
+- type: entity
+  id: ShellShotgun23x75mmFlechette
+  name: shotgun shell (4 gauge flechette)
+  parent: BaseShellShotgun23x75mm
+  components:
+  - type: Sprite
+    layers:
+      - state: flechette
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: Pellet23x75mmFlechetteSpread
+  - type: SpentAmmoVisuals
+    state: "flechette"

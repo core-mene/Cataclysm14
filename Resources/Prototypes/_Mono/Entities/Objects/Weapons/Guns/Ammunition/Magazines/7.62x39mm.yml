@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -318,3 +319,76 @@
   - type: StaticPrice
     price: 50
     vendPrice: 5000
+
+# Mono AP syst
+#anti-flesh:
+- type: entity
+  id: Magazine7.62x39mmHP
+  name: "magazine (7.62x39mm hollow-point)"
+  parent: BaseMagazine7.62x39mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x39mmHP
+  - type: Sprite
+    layers:
+    - state: HP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine7.62x39mmRIP
+  name: "magazine (7.62x39mm RIP)"
+  parent: BaseMagazine7.62x39mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x39mmRIP
+  - type: Sprite
+    layers:
+    - state: RIP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+#armor-piercing:
+- type: entity
+  id: Magazine7.62x39mmSteelAP
+  name: "magazine (7.62x39mm AP steel core)"
+  parent: BaseMagazine7.62x39mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x39mmSteelAP
+  - type: Sprite
+    layers:
+    - state: steelAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine7.62x39mmPlasteelAP
+  name: "magazine (7.62x39mm AP plasteel core)"
+  parent: BaseMagazine7.62x39mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x39mmPlasteelAP
+  - type: Sprite
+    layers:
+    - state: plasteelAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine7.62x39mmSynthAP
+  name: "magazine (7.62x39mm AP synthalloy core)"
+  parent: BaseMagazine7.62x39mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x39mmSynthAP
+  - type: Sprite
+    layers:
+    - state: synthAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

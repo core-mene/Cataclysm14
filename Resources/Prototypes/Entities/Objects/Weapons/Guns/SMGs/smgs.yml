@@ -109,6 +109,10 @@
   - type: ItemTax # Mono
     taxAccounts:
       nfsd: 0.2
+  - type: WieldedCrosshair
+    rsi:
+      sprite: _RMC14/Interface/MousePointer/pistol_mouse.rsi
+      state: all
 
 - type: entity
   name: MA PDW-58 Atreides (5.7x28mm)
@@ -254,7 +258,7 @@
               - Cartridge45_ACPFMJ
     - type: MagazineVisuals
       magState: mag
-      steps: 1
+      steps: 6
       zeroVisible: true
     - type: Appearance
     - type: StaticPrice # Mono

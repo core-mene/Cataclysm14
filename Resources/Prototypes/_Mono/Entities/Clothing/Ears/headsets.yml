@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: ClothingHeadsetAlt
   id: ClothingHeadsetAltTsfmc
@@ -42,6 +46,41 @@
       key_slots:
       - EncryptionKeyCommon
       - EncryptionKeyNfsd
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetAltTsfmcMarsoc
+  name: TSFMC MARSOC over-ear headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommand
+      - EncryptionKeyCommon
+      - EncryptionKeyNfsd
+      - EncryptionKeyTraffic
+      - EncryptionKeyMedical
+      - EncryptionKeySecurity
+      - EncryptionKeyCentCom
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetAltTsfmcMarsocFtl
+  name: TSFMC MARSOC command over-ear headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyStationMaster
+      - EncryptionKeyCentCom
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
 
 - type: entity
   parent: ClothingHeadsetAlt

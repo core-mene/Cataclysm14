@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Coenx-flex
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 // Monolith - This file is licensed under AGPLv3
 // Copyright (c) 2025 Monolith
 // See AGPLv3.txt for details.
@@ -15,31 +20,14 @@ public sealed partial class ShuttleConsoleSystem
     /// </summary>
     private void EnsureDeviceLinkComponents(EntityUid uid, ShuttleConsoleComponent component)
     {
-        // Get the DeviceLinkSystem which has proper access to modify DeviceLinkSourceComponent
-        var deviceLinkSystem = EntityManager.System<DeviceLinkSystem>();
-
-        DeviceLinkSourceComponent sourceComp;
-
         // Check if the component exists
-        if (!HasComp<DeviceLinkSourceComponent>(uid))
-        {
-            // If not, add it and register the ports
-            sourceComp = AddComp<DeviceLinkSourceComponent>(uid);
-
-            // Now let the DeviceLinkSystem handle setting up the ports
-            deviceLinkSystem.EnsureSourcePorts(uid, component.SourcePorts.ToArray());
-        }
-        else
-        {
-            // If it exists, make sure all ports are registered
-            sourceComp = Comp<DeviceLinkSourceComponent>(uid);
-            deviceLinkSystem.EnsureSourcePorts(uid, component.SourcePorts.ToArray());
-        }
+        var sourceComp = EnsureComp<DeviceLinkSourceComponent>(uid);
+        _deviceLink.EnsureSourcePorts(uid, component.SourcePorts.ToArray());
 
         // Clear all signal states to prevent unwanted signals when establishing new connections
         foreach (var sourcePort in component.SourcePorts)
         {
-            deviceLinkSystem.ClearSignal((uid, sourceComp), sourcePort);
+            _deviceLink.ClearSignal((uid, sourceComp), sourcePort);
         }
     }
 }

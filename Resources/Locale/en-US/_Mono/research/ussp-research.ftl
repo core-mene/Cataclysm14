@@ -11,6 +11,7 @@ research-technology-ussp-explosives-basic = USSP Explosive Charges
 
 # T2 USSP
 research-technology-ussp-guns-medium = USSP Standard Armaments
+research-technology-ussp-guns-ak410 = AK-410 Program
 research-technology-ussp-ships-medium = USSP Tier II Ships
 research-technology-ussp-suits-medium = USSP Basic Equipment
 research-technology-ussp-explosives-medium = USSP Weaponized Explosives

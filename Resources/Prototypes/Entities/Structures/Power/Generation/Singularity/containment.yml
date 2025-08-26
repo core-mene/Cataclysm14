@@ -13,7 +13,9 @@
 # SPDX-FileCopyrightText: 2023 lzk
 # SPDX-FileCopyrightText: 2025 ArtisticRoomba
 # SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
 # SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -61,7 +63,6 @@
   - type: Sprite
     sprite: Structures/Power/Generation/Singularity/containment.rsi
     state: icon
-    noRot: false # Mono
     layers:
       - state: icon
       - state: p1
@@ -138,7 +139,6 @@
   - type: Sprite
     sprite: Structures/Power/Generation/Singularity/containment_field.rsi
     state: field
-    noRot: false # Mono
   - type: Icon
     sprite: Structures/Power/Generation/Singularity/containment_field.rsi
     state: field

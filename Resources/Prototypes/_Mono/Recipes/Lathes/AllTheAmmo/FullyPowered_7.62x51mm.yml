@@ -1,9 +1,28 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 #Magazines
 
 - type: latheRecipe
   parent: BaseAmmoFMJFullyPoweredMagazineRecipe
   id: Magazine7.62x51mmFMJ
   result: Magazine7.62x51mmFMJ
+
+- type: latheRecipe
+  parent: BaseAmmoSteelAPFullyPoweredMagazineRecipe
+  id: Magazine7.62x51mmSteelAP
+  result: Magazine7.62x51mmSteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPFullyPoweredMagazineRecipe
+  id: Magazine7.62x51mmPlasteelAP
+  result: Magazine7.62x51mmPlasteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoSynthAPFullyPoweredMagazineRecipe
+  id: Magazine7.62x51mmSynthAP
+  result: Magazine7.62x51mmSynthAP
 
 - type: latheRecipe
   parent: BaseAmmoRubberFullyPoweredMagazineRecipe
@@ -30,12 +49,37 @@
   id: Magazine7.62x51mmUranium
   result: Magazine7.62x51mmUranium
 
+- type: latheRecipe
+  parent: BaseAmmoHPFullyPoweredMagazineRecipe
+  id: Magazine7.62x51mmHP
+  result: Magazine7.62x51mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPFullyPoweredMagazineRecipe
+  id: Magazine7.62x51mmRIP
+  result: Magazine7.62x51mmRIP
+
 #Boxes
 
 - type: latheRecipe
   parent: BaseAmmoFMJFullyPoweredAmmoBoxRecipe
   id: AmmoBox7.62x51mmFMJ
   result: AmmoBox7.62x51mmFMJ
+
+- type: latheRecipe
+  parent: BaseAmmoSteelAPFullyPoweredAmmoBoxRecipe
+  id: AmmoBox7.62x51mmSteelAP
+  result: AmmoBox7.62x51mmSteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPFullyPoweredAmmoBoxRecipe
+  id: AmmoBox7.62x51mmPlasteelAP
+  result: AmmoBox7.62x51mmPlasteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoSynthAPFullyPoweredAmmoBoxRecipe
+  id: AmmoBox7.62x51mmSynthAP
+  result: AmmoBox7.62x51mmSynthAP
 
 - type: latheRecipe
   parent: BaseAmmoRubberFullyPoweredAmmoBoxRecipe
@@ -56,3 +100,13 @@
   parent: BaseAmmoUraniumFullyPoweredAmmoBoxRecipe
   id: AmmoBox7.62x51mmUranium
   result: AmmoBox7.62x51mmUranium
+
+- type: latheRecipe
+  parent: BaseAmmoHPFullyPoweredAmmoBoxRecipe
+  id: AmmoBox7.62x51mmHP
+  result: AmmoBox7.62x51mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPFullyPoweredAmmoBoxRecipe
+  id: AmmoBox7.62x51mmRIP
+  result: AmmoBox7.62x51mmRIP

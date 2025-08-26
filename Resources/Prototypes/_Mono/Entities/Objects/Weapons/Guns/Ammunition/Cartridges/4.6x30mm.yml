@@ -1,7 +1,13 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: BaseCartridge4.6x30mm
   name: cartridge (4.6x30mm FMJ)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  description: A light AP round developed for PDWs in the 1990s, by an older world.
   abstract: true
   components:
   - type: Tag
@@ -101,3 +107,80 @@
     range: 0.3
     energyConsumption: 2700000
     disableDuration: 10
+
+# Mono AP syst
+#anti-flesh:
+- type: entity
+  id: Cartridge4.6x30mmHP
+  name: cartridge (4.6x30mm hollow-point)
+  parent: BaseCartridge4.6x30mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet4.6x30mmHP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#90EE90"
+
+- type: entity
+  id: Cartridge4.6x30mmRIP
+  name: cartridge (4.6x30mm RIP)
+  parent: BaseCartridge4.6x30mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet4.6x30mmRIP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#C04000"
+
+#armor-piercing:
+- type: entity
+  id: Cartridge4.6x30mmSteelAP
+  name: cartridge (4.6x30mm AP steel core)
+  parent: BaseCartridge4.6x30mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet4.6x30mmSteelAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+
+- type: entity
+  id: Cartridge4.6x30mmPlasteelAP
+  name: cartridge (4.6x30mm AP plasteel core)
+  parent: BaseCartridge4.6x30mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet4.6x30mmPlasteelAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#888888"
+
+- type: entity
+  id: Cartridge4.6x30mmSynthAP
+  name: cartridge (4.6x30mm AP synthalloy core)
+  parent: BaseCartridge4.6x30mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet4.6x30mmSynthAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#111111"

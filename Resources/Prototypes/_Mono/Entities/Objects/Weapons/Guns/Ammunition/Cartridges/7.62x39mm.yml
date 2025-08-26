@@ -1,7 +1,38 @@
+# SPDX-FileCopyrightText: 2020 AJCM-git
+# SPDX-FileCopyrightText: 2020 Paul Ritter
+# SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+# SPDX-FileCopyrightText: 2021 Leon Friedrich
+# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2022 Kara
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 Visne
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2022 ninruB
+# SPDX-FileCopyrightText: 2023 Boaz1111
+# SPDX-FileCopyrightText: 2023 Flareguy
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Vordenburg
+# SPDX-FileCopyrightText: 2023 brainfood1183
+# SPDX-FileCopyrightText: 2023 chromiumboy
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Nairod
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 PoorMansDreams
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 Winkarst
+# SPDX-FileCopyrightText: 2025 BramvanZijp
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: BaseCartridge7.62x39mm
   name: cartridge (7.62x39mm FMJ)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  description: Originating from over 400 years ago, this round has seen use in the rifles of multiple militias and militaries alike.
   abstract: true
   components:
   - type: Tag
@@ -107,3 +138,80 @@
       - state: tip
         map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#00f8ff"
+
+# Mono AP syst
+#anti-flesh:
+- type: entity
+  id: Cartridge7.62x39mmHP
+  name: cartridge (7.62x39mm hollow-point)
+  parent: BaseCartridge7.62x39mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet7.62x39mmHP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#90EE90"
+
+- type: entity
+  id: Cartridge7.62x39mmRIP
+  name: cartridge (7.62x39mm RIP)
+  parent: BaseCartridge7.62x39mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet7.62x39mmRIP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#C04000"
+
+#armor-piercing:
+- type: entity
+  id: Cartridge7.62x39mmSteelAP
+  name: cartridge (7.62x39mm AP steel core)
+  parent: BaseCartridge7.62x39mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet7.62x39mmSteelAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+
+- type: entity
+  id: Cartridge7.62x39mmPlasteelAP
+  name: cartridge (7.62x39mm AP plasteel core)
+  parent: BaseCartridge7.62x39mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet7.62x39mmPlasteelAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#888888"
+
+- type: entity
+  id: Cartridge7.62x39mmSynthAP
+  name: cartridge (7.62x39mm AP synthalloy core)
+  parent: BaseCartridge7.62x39mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet7.62x39mmSynthAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#111111"

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Ilya246
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Lathe;
 
 namespace Content.Shared._DV.Lathe;
@@ -20,6 +24,6 @@ public sealed class LatheUpgradeSystem : EntitySystem
     {
         RemCompDeferred<LatheUpgradeComponent>(ent);
 
-        _lathe.SetLatheMultipliers(ent.Owner, ent.Comp.MaterialUseMultiplier, ent.Comp.TimeMultiplier);
+        _lathe.MultiplyLatheMultipliers(ent.Owner, ent.Comp.MaterialUseMultiplier, ent.Comp.TimeMultiplier);
     }
 }

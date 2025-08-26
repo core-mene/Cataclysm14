@@ -50,3 +50,7 @@
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
+  - type: WieldedCrosshair
+    rsi:
+      sprite: _RMC14/Interface/MousePointer/pistol_mouse.rsi
+      state: all

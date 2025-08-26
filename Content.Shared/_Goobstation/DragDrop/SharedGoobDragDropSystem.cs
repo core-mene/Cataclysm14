@@ -38,11 +38,10 @@ public abstract partial class SharedGoobDragDropSystem : EntitySystem
     // copypaste avoidance methods
     protected void OnDragDrop(EntityUid uid, ref DragDropTargetEvent args)
     {
-        if (!_timing.IsFirstTimePredicted || !CanDragDrop(args.User))
+        if (!_timing.IsFirstTimePredicted || args.Handled || !CanDragDrop(args.User))
             return;
 
-        _interaction.InteractUsing(args.User, args.Dragged, uid, Transform(uid).Coordinates);
-        args.Handled = true;
+        args.Handled = _interaction.InteractUsing(args.User, args.Dragged, uid, Transform(uid).Coordinates);
     }
 
     protected void CanDropTarget(EntityUid uid, ref CanDropTargetEvent args)

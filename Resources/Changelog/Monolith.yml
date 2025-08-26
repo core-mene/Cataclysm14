@@ -11190,3 +11190,229 @@ Entries:
   id: 1251
   time: '2025-08-25T09:30:27.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2036
+- author: Ilya246
+  changes:
+    - type: Add
+      message: You can now craft ore crabs.
+  id: 1252
+  time: '2025-08-25T17:54:48.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2038
+- author: Evil Maint Overlords
+  changes:
+    - type: Tweak
+      message: 'The Rebalance Op is now live, with the following changes:'
+    - type: Add
+      message: 'New gun content!:'
+    - type: Add
+      message: >-
+        (Onezero0) Added the Knallstock, a new merc SMG, and changed out the
+        stock of liberation station and loadouts.
+    - type: Add
+      message: Added FCL prometheus as light merc burst assault rifle in the libvend.
+    - type: Add
+      message: >-
+        added a weaker version of typewritter for mercs in the libvend, the
+        Keyboard!
+    - type: Add
+      message: >-
+        added the Ratel LMG, which uses a 60 round ammo belt/box, for mercenary
+        research.
+    - type: Add
+      message: >-
+        added the grizzly MMG to TSF research, which uses an uo to 200 round
+        caseless ammo box.
+    - type: Add
+      message: added the big buddy (merc big leady) for mercenary research.
+    - type: Add
+      message: (Starch) Added the AK-410 DMR to USSP research.
+    - type: Add
+      message: >-
+        (Starch) Added MK-290 turret to TSF uplink, feeds from
+        5.56x45mm/6.8x52mm/7.62x39mm magazines.
+    - type: Add
+      message: 'Research Tech Tree!:'
+    - type: Add
+      message: (Starch) Ported tech tree from Goob and Frontier.
+    - type: Add
+      message: >-
+        (Starch) Faction servers can research civ technologies, finally. This
+        includes mechs.
+    - type: Add
+      message: (Avtomata) Added 3 new tech for mercs to be able to print weapons.
+    - type: Add
+      message: 'Resprites!:'
+    - type: Tweak
+      message: (Starch, Onezero0) Resprited TSF and USSP guns.
+    - type: Tweak
+      message: Caseless cartridges now have a unique sprite.
+    - type: Add
+      message: Ported RMC14/CM13 weapon-specific crosshairs.
+    - type: Add
+      message: 'Ammo rebalance!:'
+    - type: Tweak
+      message: >-
+        (Avtomata) Ammo Rebalance: Rifle ammo has around 0.05-0.1 partial AP
+        now, shotgun and pistol ammo damage buffed, but receives a bit of
+        negative partial AP in return (so its worse against armor). Also, 4.6
+        and 5.7 now have a bit of partial AP too, so WT550 should be useful
+        again.
+    - type: Tweak
+      message: The Lecter now fires caseless ammunition.
+    - type: Tweak
+      message: Rebalanced all faction-only hardsuits.
+    - type: Add
+      message: >-
+        AP and anti-flesh focused ammo types have been added to universal
+        faction tech.
+    - type: Tweak
+      message: the descriptions of the vulcans and their names have been adjusted.
+  id: 1253
+  time: '2025-08-25T22:57:36.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1903
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: >-
+        Fixed lathes sometimes not letting you make recipes when you have just
+        above the requirement.
+    - type: Fix
+      message: >-
+        Fixed upgrades not properly applying to upgraded-type machines like
+        industrial ore processor.
+  id: 1254
+  time: '2025-08-25T23:01:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2037
+- author: grandalff
+  changes:
+    - type: Tweak
+      message: >-
+        Reverts prior Gruznyk change to the belts, adds two more backwards
+        thrusters.
+  id: 1255
+  time: '2025-08-25T23:02:19.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2041
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        The ammo techfab can now make all ammo recipes (if you have the
+        research)
+    - type: Fix
+      message: Fixed some errors with lathe recipes.
+  id: 1256
+  time: '2025-08-26T00:02:02.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2051
+- author: HungryCuban
+  changes:
+    - type: Add
+      message: Added ushankas for USSP in loadouts
+  id: 1257
+  time: '2025-08-26T01:10:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2042
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Removed slop guns from exped loot (like Novalites and Svallins), moved
+        some weapons to be less rare.
+    - type: Tweak
+      message: >-
+        Made the merc guns less unbearable to use (increased accuracy, but
+        implemented the recoil control shit)
+    - type: Tweak
+      message: Readded the merc semi-auto vulcan to the libvend for 27500.
+  id: 1258
+  time: '2025-08-26T10:39:10.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2061
+- author: Ilya246
+  changes:
+    - type: Add
+      message: Borgs can now toggle radar signature on themselves via rightclick.
+  id: 1259
+  time: '2025-08-26T10:40:20.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2060
+- author: Ilya246
+  changes:
+    - type: Add
+      message: You can now swipe ID cards on borgs to grant them the card's accesses.
+  id: 1260
+  time: '2025-08-26T10:41:51.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2058
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        No longer are the prices of the special faction guns in civ loadout
+        balanced around the rich man (basically like halved all of them).
+  id: 1261
+  time: '2025-08-26T13:35:08.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2062
+- author: Danchi299
+  changes:
+    - type: Tweak
+      message: >-
+        All of PMC Liberation Station weapons are once again accessable to
+        Mercenaries from Loadout.
+    - type: Add
+      message: >-
+        Civilians now have Agrenti, Makeshift pistol, and Svalinn pistols as a
+        weapon option in Loadout.
+    - type: Add
+      message: >-
+        PMC Liberation Station now has MK58, Pollocks, Throwing Knifes, and
+        Laser Pistols in stock.
+    - type: Tweak
+      message: Mercenaries now start with Pollock instead of MK32.
+  id: 1262
+  time: '2025-08-26T15:10:25.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2064
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: >-
+        Ship prices drastically changed. Plastitanium wall prices increased
+        heavily from "generic wall"
+  id: 1263
+  time: '2025-08-26T15:47:42.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2054
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: Fixed climbing and other drag-and-drop interactions.
+  id: 1264
+  time: '2025-08-26T19:22:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2069
+- author: core-mene
+  changes:
+    - type: Add
+      message: >-
+        mercenary R&D server available at exped lodge flatpackvend, as well as
+        console
+    - type: Tweak
+      message: reduced mats price of merc weapons
+    - type: Add
+      message: added the vector, firestarter and WT550 to the merc tech
+    - type: Tweak
+      message: steel AP and hollow-point are now roundstart ammo
+    - type: Add
+      message: bluespace drive at exped flatpackvend
+    - type: Add
+      message: adds the HWM Firestarter, 45 ACP heavy SMG using old drozd sprite
+    - type: Tweak
+      message: kammerer made semi-automatic again
+    - type: Tweak
+      message: >-
+        diminished the researcch cost and requirements of a lot of techs, no
+        more pain
+  id: 1265
+  time: '2025-08-26T19:49:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2063
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Vespera and Tovek acceleration increased. ASM, Vespera, Tovek detection
+        range increased.
+  id: 1266
+  time: '2025-08-26T22:09:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2072

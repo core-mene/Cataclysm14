@@ -1,3 +1,26 @@
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 ShadowCommander
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Cojoke
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 Ed
+// SPDX-FileCopyrightText: 2024 Krunklehorn
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 deltanedas
+// SPDX-FileCopyrightText: 2025 Errant
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 ScarKy0
+// SPDX-FileCopyrightText: 2025 eoineoineoin
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Actions;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
@@ -304,24 +327,6 @@ public sealed partial class BorgSystem : SharedBorgSystem
         Popup.PopupEntity(Loc.GetString("borg-mind-added", ("name", Identity.Name(uid, EntityManager))), uid);
 
         Toggle.TryActivate(uid);
-
-        // Frontier: add cyborg access
-        if (TryComp<AccessComponent>(uid, out var oldAccess))
-        {
-            var access = oldAccess.Tags.ToList();
-
-            access.Clear();
-            access.Add($"Captain");
-            access.Add($"Maintenance");
-            access.Add($"External");
-            access.Add($"Medical");
-            access.Add($"Pilot");
-            access.Add($"Mercenary");
-
-            _access.TrySetTags(uid, access);
-        }
-        _access.SetAccessEnabled(uid, true);
-        // End Frontier
 
         if (_powerCell.HasDrawCharge(uid))
         {

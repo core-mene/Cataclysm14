@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 #4 gauge boxes use Fully powered Box cost
 #Magazines
 
@@ -42,3 +46,23 @@
   parent: BaseAmmoFMJFullyPoweredAmmoBoxRecipe
   id: AmmoBox23x75mmDozd
   result: AmmoBox23x75mmDozd
+
+- type: latheRecipe
+  parent: BaseAmmoRIPFullyPoweredAmmoBoxRecipe
+  id: AmmoBox23x75mmSlugRIP
+  result: AmmoBox23x75mmSlugRIP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPFullyPoweredAmmoBoxRecipe
+  id: AmmoBox23x75mmSlugAP
+  result: AmmoBox23x75mmSlugAP
+
+- type: latheRecipe
+  parent: BaseAmmoFMJFullyPoweredAmmoBoxRecipe
+  id: AmmoBox23x75mmOOBuckshot
+  result: AmmoBox23x75mmOOBuckshot
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPFullyPoweredAmmoBoxRecipe
+  id: AmmoBox23x75mmFlechette
+  result: AmmoBox23x75mmFlechette

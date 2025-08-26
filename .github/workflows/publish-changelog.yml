@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2023 Debug
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 name: Publish Changelog
 
 on:
@@ -14,7 +19,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         token: ${{secrets.GITHUB_TOKEN}}
-        ref: master
+        ref: main
 
     - name: Publish changelog
       run: Tools/actions_changelogs_since_last_run.py

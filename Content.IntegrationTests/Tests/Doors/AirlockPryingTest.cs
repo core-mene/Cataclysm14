@@ -1,4 +1,6 @@
 // SPDX-FileCopyrightText: 2025 Cojoke
+// SPDX-FileCopyrightText: 2025 Tayrtahn
+// SPDX-FileCopyrightText: 2025 starch
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 Tayrtahn
 //
@@ -37,7 +39,7 @@ public sealed class AirlockPryingTest : InteractionTest
         await SpawnTarget(Airlock);
         await SpawnEntity("APCBasic", SEntMan.GetCoordinates(TargetCoords));
 
-        await RunTicks(10); // Mono change: 10 ticks instead of 1 due to power update change
+        await RunTicks(20); // Mono change: 20 ticks instead of 1 due to power update change
 
         Assert.That(TryComp<AirlockComponent>(out var airlockComp), "Airlock does not have AirlockComponent?");
         Assert.That(airlockComp.Powered, "Airlock should be powered for this test.");

@@ -1,9 +1,28 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 #Magazines
 
 - type: latheRecipe
   parent: BaseAmmoFMJIntermediateMagazineRecipe
   id: Magazine5.56x45mmFMJ
   result: Magazine5.56x45mmFMJ
+
+- type: latheRecipe
+  parent: BaseAmmoSteelAPIntermediateMagazineRecipe
+  id: Magazine5.56x45mmSteelAP
+  result: Magazine5.56x45mmSteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPIntermediateMagazineRecipe
+  id: Magazine5.56x45mmPlasteelAP
+  result: Magazine5.56x45mmPlasteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoSynthAPIntermediateMagazineRecipe
+  id: Magazine5.56x45mmSynthAP
+  result: Magazine5.56x45mmSynthAP
 
 - type: latheRecipe
   parent: BaseAmmoRubberIntermediateMagazineRecipe
@@ -29,6 +48,16 @@
   parent: BaseAmmoUraniumIntermediateMagazineRecipe
   id: Magazine5.56x45mmUranium
   result: Magazine5.56x45mmUranium
+
+- type: latheRecipe
+  parent: BaseAmmoHPIntermediateMagazineRecipe
+  id: Magazine5.56x45mmHP
+  result: Magazine5.56x45mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPIntermediateMagazineRecipe
+  id: Magazine5.56x45mmRIP
+  result: Magazine5.56x45mmRIP
 
 #Speedloaders
 
@@ -70,6 +99,21 @@
   result: AmmoBox5.56x45mmFMJ
 
 - type: latheRecipe
+  parent: BaseAmmoSteelAPIntermediateAmmoBoxRecipe
+  id: AmmoBox5.56x45mmSteelAP
+  result: AmmoBox5.56x45mmSteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPIntermediateAmmoBoxRecipe
+  id: AmmoBox5.56x45mmPlasteelAP
+  result: AmmoBox5.56x45mmPlasteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoSynthAPIntermediateAmmoBoxRecipe
+  id: AmmoBox5.56x45mmSynthAP
+  result: AmmoBox5.56x45mmSynthAP
+
+- type: latheRecipe
   parent: BaseAmmoRubberIntermediateAmmoBoxRecipe
   id: AmmoBox5.56x45mmRubber
   result: AmmoBox5.56x45mmRubber
@@ -88,3 +132,13 @@
   parent: BaseAmmoUraniumIntermediateAmmoBoxRecipe
   id: AmmoBox5.56x45mmUranium
   result: AmmoBox5.56x45mmUranium
+
+- type: latheRecipe
+  parent: BaseAmmoHPIntermediateAmmoBoxRecipe
+  id: AmmoBox5.56x45mmHP
+  result: AmmoBox5.56x45mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPIntermediateAmmoBoxRecipe
+  id: AmmoBox5.56x45mmRIP
+  result: AmmoBox5.56x45mmRIP

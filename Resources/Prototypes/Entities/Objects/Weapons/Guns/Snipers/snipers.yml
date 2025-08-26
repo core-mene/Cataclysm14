@@ -89,6 +89,10 @@
   - type: ItemTax # Mono
     taxAccounts:
       nfsd: 0.2
+  - type: WieldedCrosshair
+    rsi:
+      sprite: _RMC14/Interface/MousePointer/sniper_mouse.rsi
+      state: all
 
 - type: entity
   name: NCI Kardashev-Mosin (7.62x54mmR)

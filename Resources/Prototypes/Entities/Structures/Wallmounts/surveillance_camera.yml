@@ -6,9 +6,11 @@
 # SPDX-FileCopyrightText: 2024 Ilya246
 # SPDX-FileCopyrightText: 2024 Kara
 # SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 Coenx-flex
 # SPDX-FileCopyrightText: 2025 KiraZen_
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Spessmann
+# SPDX-FileCopyrightText: 2025 significant harassment
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -20,6 +22,24 @@
   components:
   - type: Physics
     bodyType: Static
+  - type: Fixtures
+    fixtures:
+      light:
+        shape:
+          !type:PhysShapeCircle
+          radius: 5
+        hard: false
+        mask:
+        - GhostImpassable
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,-0.2,-0.15"
+        density: 190
+        mask:
+        - None
+        layer:
+        - TabletopMachineLayer
   - type: LightOnCollide
   - type: PointLight
     enabled: false

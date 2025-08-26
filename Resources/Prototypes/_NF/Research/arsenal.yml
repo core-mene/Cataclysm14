@@ -3,9 +3,7 @@
 - type: technology
   id: BountyHunting
   name: research-technology-bounty-hunting
-  icon:
-    sprite: Objects/Weapons/Throwable/bola.rsi
-    state: icon
+  entityIcon: ClothingOuterCoatBHTrench
   discipline: Arsenal
   tier: 1
   cost: 10000
@@ -17,35 +15,34 @@
   - ClothingOuterCoatBHTrench
   - PinpointerUniversalNF
   - ClothingEyesHudBountyHunter
-  - WeaponShotgunKammererNF
+  # - WeaponShotgunKammererNF # _Mono: Moved to merc weapon research
   - ForensicPad
   - FlashlightSecliteNF
   technologyPrerequisites:
   - AdvancedRiotControl
+  position: 3, 2
 
 # Tier 2
 
 - type: technology
   id: MagnetsTechCombat
   name: research-technology-magnets-tech-combat
-  icon:
-    sprite: _NF/Clothing/Shoes/Boots/magboots-security.rsi
-    state: icon
+  entityIcon: ClothingShoesBootsMagSecurity
   discipline: Experimental
   tier: 1
-  cost: 9000
+  cost: 10000
   recipeUnlocks:
   - ClothingShoesBootsMagSecurity
   - ClothingShoesBootsMagMercenary
   technologyPrerequisites:
   - MagnetsTech
+  - AdvancedParts
+  position: -3, -1
 
 - type: technology
   id: HardsuitsArmored
   name: research-technology-hardsuits-armored
-  icon:
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/mercenary.rsi
-    state: icon
+  entityIcon: ClothingOuterHardsuitPrivateSecurity
   discipline: Arsenal
   tier: 2
   cost: 15000
@@ -53,18 +50,17 @@
   - ClothingOuterHardsuitMercenary
   - ClothingOuterHardsuitPrivateSecurity
   technologyPrerequisites:
-  - AdvancedRiotControl
+  - HardsuitsSpecialized
   - HardsuitsAdvanced
+  position: 4, 8
 
 - type: technology
   id: ArsenalStyle
   name: research-technology-arsenal-style
-  icon:
-    sprite: Objects/Weapons/Melee/katana.rsi
-    state: icon
+  entityIcon: Katana
   discipline: Arsenal
   tier: 2
-  cost: 15000
+  cost: 10000
   recipeUnlocks:
   - KatanaNF
   - KukriKnifeNF
@@ -88,15 +84,14 @@
   - ClothingOuterCoatBomberRandomized
   technologyPrerequisites:
   - BountyHunting
+  position: 4, 2
 
 # Tier 3
 
 - type: technology
   id: HardsuitsArmoredAdvanced
   name: research-technology-hardsuits-armored-advanced
-  icon:
-    sprite: Clothing/OuterClothing/Hardsuits/security.rsi
-    state: icon
+  entityIcon: ClothingOuterHardsuitScaf
   discipline: Arsenal
   tier: 3
   cost: 25000
@@ -105,3 +100,5 @@
   - BlueprintClothingOuterHardsuitScaf
   technologyPrerequisites:
   - HardsuitsArmored
+  - SuperParts
+  position: 5, 8

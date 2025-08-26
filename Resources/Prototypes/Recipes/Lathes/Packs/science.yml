@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2025 BeeRobynn
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 deltanedas
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 ## Static
 
 - type: latheRecipePack
@@ -80,7 +89,7 @@
   id: ScienceBoards
   recipes:
   - TurboItemRechargerCircuitboard
-  # - TechDiskComputerCircuitboard # Frontier: no tech disks
+  - TechDiskComputerCircuitboard
   # Begin DeltaV Removals - replaced by techfabs/upgrade kits
   #- AutolatheHyperConvectionMachineCircuitboard
   #- ProtolatheHyperConvectionMachineCircuitboard
@@ -127,7 +136,7 @@
   - ThrusterMachineCircuitboard
   - GyroscopeMachineCircuitboard
   - MiniGravityGeneratorCircuitboard
-  
+
 - type: latheRecipePack
   id: AiCoreBoard
   recipes:

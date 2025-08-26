@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Coenx-flex
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 chromiumboy
@@ -94,6 +95,9 @@
   name: ballistic turret
   abstract: true
   components:
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
   - type: Battery
     maxCharge: 2000
     startingCharge: 2000

@@ -49,6 +49,12 @@ uplink-security-8x65mm-boxmag-desc = Compatible with the MR-8B only. Contains 75
 uplink-security-8x65mm-box-name = 8x65mm SKR Box
 uplink-security-8x65mm-box-desc = Used to refill magazines/boxes for the MR-8C and MR-8B. Contains 100 rounds.
 
+uplink-security-68x52mm-magazine-name = 6.8x52mm Caseless Magazine
+uplink-security-68x52mm-magazine-desc = Compatible with the Lecter. Contains 30 rounds.
+
+uplink-security-68x52mm-box-name = 6.8x52mm Caseless Box
+uplink-security-68x52mm-box-desc = Used to refill magazines for the Lecter. Contains 200 rounds.
+
 uplink-security-portable-recharger-name = Portable Recharger
 uplink-security-portable-recharger-desc = An experimental portable recharger equipped with an inbuilt microreactor.
 
@@ -63,7 +69,6 @@ uplink-security-omnizine-jug-desc = A jug of omnizine, used for making medipens 
 
 uplink-security-medical-assembler-name = Medical Assembler Flatpack
 uplink-security-medical-assembler-desc = An assembler that can be used to make useful medical supplies.
-
 
 uplink-security-hfblade-name = HF-Katana
 uplink-security-hfblade-desc = A tool of justice.
@@ -82,6 +87,9 @@ uplink-security-capital-voucher-desc = A single use voucher for any small to cap
 
 uplink-security-flyssa-voucher-name = TSFMC Flyssa Ship Voucher
 uplink-security-flyssa-voucher-desc = A single use voucher for the Flyssa.
+
+uplink-security-sentry-mk290-name = MK-290 Deployable Sentry System
+uplink-security-sentry-mk290-desc = A multipurpose portable sentry, capable of feeding from 5.56x45mm, 6.8x52mm, and 7.62x39mm magazines. Requires a screwdriver to disassemble once placed.
 
 uplink-security-hardsuit-m82b-name = M82b Hardsuit
 uplink-security-hardsuit-m82b-desc = A variant of the M-82c for NBC protection, usually utilized by corpsmen.

@@ -312,6 +312,10 @@
       flatReductions:
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
   - type: PreventDropOnDowned # Frontier: borgs don't drop items when falling (e.g. critical/dead)
+  - type: ToggleableSignature # Monolith
+    blip:
+      radarColor: CornflowerBlue
+      scale: 0.5
   - type: Magboots # Monolith
 
 - type: entity
@@ -342,6 +346,7 @@
     intensitySlope: 20
     maxIntensity: 20
     canCreateVacuum: false # its for killing the borg not the station
+  - type: AccessGrantable # Mono
 
 - type: entity
   id: BaseBorgChassisNT

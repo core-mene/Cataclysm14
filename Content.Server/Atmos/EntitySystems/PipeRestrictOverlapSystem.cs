@@ -1,5 +1,6 @@
 // SPDX-FileCopyrightText: 2024 Nemanja
 // SPDX-FileCopyrightText: 2025 ArtisticRoomba
+// SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 TemporalOroboros
 // SPDX-FileCopyrightText: 2025 chromiumboy
 // SPDX-FileCopyrightText: 2025 metalgearsloth
