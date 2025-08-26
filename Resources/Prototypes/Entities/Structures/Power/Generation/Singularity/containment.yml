@@ -61,7 +61,6 @@
   - type: Sprite
     sprite: Structures/Power/Generation/Singularity/containment.rsi
     state: icon
-    noRot: false # Mono
     layers:
       - state: icon
       - state: p1
@@ -138,7 +137,6 @@
   - type: Sprite
     sprite: Structures/Power/Generation/Singularity/containment_field.rsi
     state: field
-    noRot: false # Mono
   - type: Icon
     sprite: Structures/Power/Generation/Singularity/containment_field.rsi
     state: field
