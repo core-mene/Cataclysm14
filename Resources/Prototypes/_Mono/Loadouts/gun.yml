@@ -127,6 +127,20 @@
     back:
     - BoxMagazineNovaliteC1
 
+- type: loadout # Vulcan-C
+  id: MercenaryVulcanCLoadout
+  price: 30000
+  storage:
+    back:
+    - WeaponRifleVulcanFCMC
+
+- type: loadout # Vulcan-C Ammo
+  id: Mercenary7.52x51mmAmmoLoadout
+  price: 1000
+  storage:
+    back:
+    - BoxMagazine7.52x51mmFMJ
+
 # Shotguns
 
 - type: loadout #Kammerer
