@@ -130,7 +130,7 @@
   - type: Occluder
   - type: Airtight
   - type: StaticPrice
-    price: 25 # Frontier 75<25
+    price: 15 # Mono 75<15
   - type: RadiationBlocker
     resistance: 2
   - type: BlockWeather
@@ -203,7 +203,7 @@
     delay: 8 # Frontier
     fx: EffectRCDDeconstruct8 # Frontier
   - type: StaticPrice # Frontier 75
-    price: 75 # Frontier 75
+    price: 40 # Frontier 75
 
 - type: entity
   parent: BaseWall
@@ -589,6 +589,8 @@
     damageModifierSet: StructuralMetallicStrong
   - type: RadiationBlocker
     resistance: 5
+  - type: StaticPrice
+    price: 100 # Frontier 250<115
 
 - type: entity
   parent: WallPlastitaniumIndestructible
@@ -767,7 +769,7 @@
           5: { state: reinf_construct-5, visible: true}
   - type: ReinforcedWallReplacementMarker
   - type: StaticPrice
-    price: 115 # Frontier 250<115
+    price: 65 # Frontier 250<115
   - type: RadiationBlocker
     resistance: 5
   - type: Fixtures
@@ -911,7 +913,7 @@
     key: walls
     base: riveted
   - type: StaticPrice
-    price: 115 # Frontier: 150<115
+    price: 70 # Frontier: 150<115
   - type: RCDDeconstructable #Frontier
     cost: 6 #Frontier
     delay: 8 #Frontier
@@ -1080,6 +1082,8 @@
     cost: 6 #Frontier
     delay: 8 #Frontier
     fx: EffectRCDDeconstruct8 #Frontier
+  - type: StaticPrice
+    price: 35 # This shit is decorative anyways
 
 - type: entity
   parent: BaseWall
@@ -1113,7 +1117,7 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: StaticPrice
-    price: 150 # Frontier: 250<150 - makes some shuttles way more expensive otherwise
+    price: 70 # Frontier: 250<150 - makes some shuttles way more expensive otherwise
   - type: RadiationBlocker
     resistance: 5
   - type: Sprite
@@ -1431,7 +1435,7 @@
     delay: 8 #Frontier
     fx: EffectRCDDeconstruct8 #Frontier
   - type: StaticPrice # Frontier
-    price: 30 # Frontier
+    price: 10 # Mono
 
 - type: entity
   parent: BaseWall
