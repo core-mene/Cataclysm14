@@ -161,8 +161,8 @@ namespace Content.Server.Medical.BiomassReclaimer
             args.Cancel();
         }
         private void OnAfterInteractUsing(Entity<BiomassReclaimerComponent> reclaimer, ref AfterInteractUsingEvent args)
-        {
-            if (!args.CanReach || args.Target == null)
+        {                                             // Mono
+            if (!args.CanReach || args.Target == null || args.Handled)
                 return;
 
             if (!CanGib(reclaimer, args.Used))
@@ -172,7 +172,8 @@ namespace Content.Server.Medical.BiomassReclaimer
                 return;
 
             var delay = reclaimer.Comp.BaseInsertionDelay * physics.FixturesMass;
-            _doAfterSystem.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, delay, new ReclaimerDoAfterEvent(), reclaimer, target: args.Target, used: args.Used)
+            // Mono
+            args.Handled = _doAfterSystem.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, delay, new ReclaimerDoAfterEvent(), reclaimer, target: args.Target, used: args.Used)
             {
                 NeedHand = true,
                 BreakOnMove = true,
