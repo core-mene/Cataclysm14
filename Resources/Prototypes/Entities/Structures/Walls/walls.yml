@@ -552,9 +552,6 @@
         node: girder
       - !type:DoActsBehavior
         acts: ["Destruction"]
-  - type: IconSmooth
-    key: walls
-    base: plastic
 
 - type: entity
   parent: BaseWall
