@@ -259,6 +259,16 @@
     guides:
     - ShuttleCraft
   - type: NoSignalOnLink
+  - type: DeviceLinkSource # Mono
+    ports:
+    - device-button-1
+    - device-button-2
+    - device-button-3
+    - device-button-4
+    - device-button-5
+    - device-button-6
+    - device-button-7
+    - device-button-8
 
 - type: entity
   parent: [BaseComputerShuttle, BaseShuttleIntercom] # Frontier - BaseShuttleIntercom

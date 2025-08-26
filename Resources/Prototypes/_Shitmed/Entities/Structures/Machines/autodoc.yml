@@ -8,7 +8,7 @@
 
 - type: entity
   id: Autodoc
-  parent: BaseMachine
+  parent: [BaseMachine, ConstructibleMachine]
   name: autodoc
   description: An advanced medical machine for healing the critically wounded.
   components:
