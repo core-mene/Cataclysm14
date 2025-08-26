@@ -305,24 +305,6 @@ public sealed partial class BorgSystem : SharedBorgSystem
 
         Toggle.TryActivate(uid);
 
-        // Frontier: add cyborg access
-        if (TryComp<AccessComponent>(uid, out var oldAccess))
-        {
-            var access = oldAccess.Tags.ToList();
-
-            access.Clear();
-            access.Add($"Captain");
-            access.Add($"Maintenance");
-            access.Add($"External");
-            access.Add($"Medical");
-            access.Add($"Pilot");
-            access.Add($"Mercenary");
-
-            _access.TrySetTags(uid, access);
-        }
-        _access.SetAccessEnabled(uid, true);
-        // End Frontier
-
         if (_powerCell.HasDrawCharge(uid))
         {
             Toggle.TryActivate(uid);
