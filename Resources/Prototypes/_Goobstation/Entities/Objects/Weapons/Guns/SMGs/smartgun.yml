@@ -93,3 +93,7 @@
   - type: SpeedModifiedOnWield # Mono
     walkModifier: 0.95
     sprintModifier: 0.95
+  - type: WieldedCrosshair
+    rsi:
+      sprite: _RMC14/Interface/MousePointer/smartgun_mouse.rsi
+      state: all

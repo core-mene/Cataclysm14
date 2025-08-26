@@ -3,37 +3,37 @@
 - type: technology
   id: ConstructionBags
   name: research-technology-construction-bags
-  icon:
-    sprite: _NF/Objects/Specific/Engineering/construction_bag.rsi
-    state: icon
+  entityIcon: ConstructionBagOfHolding
   discipline: Industrial
   tier: 1
-  cost: 5000
+  cost: 20000
   recipeUnlocks:
   - ConstructionBagOfHolding
   - NFBlueprintConstructionBagOfHolding
+  technologyPrerequisites:
+  - AdvancedToolsTechnology
+  position: -2, 18
 
 - type: technology
   id: HardsuitsBasic
   name: research-technology-hardsuits-basic
-  icon:
-    sprite: Clothing/OuterClothing/Hardsuits/basic.rsi
-    state: icon
+  entityIcon: ClothingOuterHardsuitBasic
   discipline: Industrial
   tier: 1
-  cost: 5000
+  cost: 10000
   recipeUnlocks:
   - ClothingOuterHardsuitBasic
+  technologyPrerequisites:
+    - AdvancedParts
+  position: 2, 8
 
 - type: technology
   id: HardsuitsSpecialized
   name: research-technology-hardsuits-specialized
-  icon:
-    sprite: Clothing/OuterClothing/Hardsuits/engineering.rsi
-    state: icon
+  entityIcon: ClothingOuterHardsuitEngineering
   discipline: Industrial
   tier: 1
-  cost: 10000
+  cost: 20000
   recipeUnlocks:
   - ClothingOuterHardsuitAtmos
   - ClothingOuterHardsuitEngineering
@@ -44,18 +44,17 @@
   - ClothingOuterHardsuitPilot
   technologyPrerequisites:
   - HardsuitsBasic
+  position: 3, 8
 
 # Tier 2
 
 - type: technology
   id: HardsuitsAdvanced
   name: research-technology-hardsuits-advanced
-  icon:
-    sprite: Clothing/OuterClothing/Hardsuits/engineering-white.rsi
-    state: icon
+  entityIcon: ClothingOuterHardsuitEngineeringWhite
   discipline: Industrial
   tier: 2
-  cost: 10000
+  cost: 25000
   recipeUnlocks:
   - ClothingOuterHardsuitCap
   - ClothingOuterHardsuitEngineeringWhite
@@ -63,22 +62,22 @@
   - ClothingOuterHardsuitLuxury
   technologyPrerequisites:
   - HardsuitsSpecialized
+  position: 3, 7
 
 # Tier 3
 
 - type: technology
   id: HardsuitsExperimentalIndustrial
   name: research-technology-hardsuits-experimental-industrial
-  icon:
-    sprite: Clothing/OuterClothing/Hardsuits/maxim.rsi
-    state: icon
+  entityIcon: ClothingOuterHardsuitMaximPrototype
   discipline: Industrial
   tier: 3
-  cost: 15000
+  cost: 30000
   recipeUnlocks:
     - ClothingOuterHardsuitMaximPrototype
 #    - ClothingHeadHelmetAncient
 #    - ClothingOuterHardsuitAncientEVA
     - NFBlueprintClothingOuterHardsuitMaximPrototype
   technologyPrerequisites:
-  - HardsuitsAdvanced
+  - HardsuitsArmored
+  position: 4, 7

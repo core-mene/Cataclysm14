@@ -1,9 +1,28 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 #Pistol Magazines
 
 - type: latheRecipe
   parent: BaseAmmoFMJPistolCaliberPistolMagazineRecipe
   id: Magazine45_ACPPistolFMJ
   result: Magazine45_ACPPistolFMJ
+
+- type: latheRecipe
+  parent: BaseAmmoSteelAPPistolCaliberPistolMagazineRecipe
+  id: Magazine45_ACPPistolSteelAP
+  result: Magazine45_ACPPistolSteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPPistolCaliberPistolMagazineRecipe
+  id: Magazine45_ACPPistolPlasteelAP
+  result: Magazine45_ACPPistolPlasteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoSynthAPPistolCaliberPistolMagazineRecipe
+  id: Magazine45_ACPPistolSynthAP
+  result: Magazine45_ACPPistolSynthAP
 
 - type: latheRecipe
   parent: BaseAmmoRubberPistolCaliberPistolMagazineRecipe
@@ -30,12 +49,37 @@
   id: Magazine45_ACPPistolUranium
   result: Magazine45_ACPPistolUranium
 
+- type: latheRecipe
+  parent: BaseAmmoHPPistolCaliberPistolMagazineRecipe
+  id: Magazine45_ACPPistolHP
+  result: Magazine45_ACPPistolHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPPistolCaliberPistolMagazineRecipe
+  id: Magazine45_ACPPistolRIP
+  result: Magazine45_ACPPistolRIP
+
 #SMG Magazines
 
 - type: latheRecipe
   parent: BaseAmmoFMJPistolCaliberSubMachineGunMagazineRecipe
   id: Magazine45_ACPSubMachineGunFMJ
   result: Magazine45_ACPSubMachineGunFMJ
+
+- type: latheRecipe
+  parent: BaseAmmoSteelAPPistolCaliberSubMachineGunMagazineRecipe
+  id: Magazine45_ACPSubMachineGunSteelAP
+  result: Magazine45_ACPSubMachineGunSteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPPistolCaliberSubMachineGunMagazineRecipe
+  id: Magazine45_ACPSubMachineGunPlasteelAP
+  result: Magazine45_ACPSubMachineGunPlasteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoSynthAPPistolCaliberSubMachineGunMagazineRecipe
+  id: Magazine45_ACPSubMachineGunSynthAP
+  result: Magazine45_ACPSubMachineGunSynthAP
 
 - type: latheRecipe
   parent: BaseAmmoRubberPistolCaliberSubMachineGunMagazineRecipe
@@ -72,12 +116,37 @@
   id: Magazine45_ACPSubMachineGunTopMountedEmpty
   result: Magazine45_ACPSubMachineGunTopMountedEmpty
 
+- type: latheRecipe
+  parent: BaseAmmoHPPistolCaliberSubMachineGunMagazineRecipe
+  id: Magazine45_ACPSubMachineGunHP
+  result: Magazine45_ACPSubMachineGunHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPPistolCaliberSubMachineGunMagazineRecipe
+  id: Magazine45_ACPSubMachineGunRIP
+  result: Magazine45_ACPSubMachineGunRIP
+
 #Boxes
 
 - type: latheRecipe
   parent: BaseAmmoFMJPistolCaliberAmmoBoxRecipe
   id: AmmoBox45_ACPFMJ
   result: AmmoBox45_ACPFMJ
+
+- type: latheRecipe
+  parent: BaseAmmoSteelAPPistolCaliberAmmoBoxRecipe
+  id: AmmoBox45_ACPSteelAP
+  result: AmmoBox45_ACPSteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPPistolCaliberAmmoBoxRecipe
+  id: AmmoBox45_ACPPlasteelAP
+  result: AmmoBox45_ACPPlasteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoSynthAPPistolCaliberAmmoBoxRecipe
+  id: AmmoBox45_ACPSynthAP
+  result: AmmoBox45_ACPSynthAP
 
 - type: latheRecipe
   parent: BaseAmmoRubberPistolCaliberAmmoBoxRecipe
@@ -98,3 +167,13 @@
   parent: BaseAmmoUraniumPistolCaliberAmmoBoxRecipe
   id: AmmoBox45_ACPUranium
   result: AmmoBox45_ACPUranium
+
+- type: latheRecipe
+  parent: BaseAmmoHPPistolCaliberAmmoBoxRecipe
+  id: AmmoBox45_ACPHP
+  result: AmmoBox45_ACPHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPPistolCaliberAmmoBoxRecipe
+  id: AmmoBox45_ACPRIP
+  result: AmmoBox45_ACPRIP

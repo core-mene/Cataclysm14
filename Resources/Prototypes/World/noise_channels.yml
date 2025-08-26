@@ -1,4 +1,10 @@
-﻿  - type: noiseChannel
+# SPDX-FileCopyrightText: 2023 Moony
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+  - type: noiseChannel
     id: Density
     noiseType: Perlin
     fractalLacunarityByPi: 0.666666666
@@ -34,8 +40,8 @@
     - 0.0, 0.4
     clippedValue: 0
     remapTo0Through1: true
-    inputMultiplier: 16 # Makes wreck concentration very low noise at scale.
-    outputMultiplier: 0.35 # Frontier: fewer wrecks
+    inputMultiplier: 24 # Makes wreck concentration very low noise at scale.
+    outputMultiplier: 0.05 # Mono: fewer wrecks
 
   - type: noiseChannel
     id: Temperature

@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -5,93 +8,51 @@
 - type: technology
   id: TsfBasicGuns
   name: research-technology-tsfmc-guns
-  icon:
-    sprite: _Mono/Objects/Weapons/Guns/Rifles/lecter.rsi
-    state: icon
+  entityIcon: WeaponRifleLecter
   discipline: TsfmcWeaponry
   tier: 1
-  cost: 20000
+  cost: 25000
   recipeUnlocks:
   - WeaponRifleLecterTSF
   - WeaponRifleVulcanTSF
   - WeaponSubMachineGunDrozdTSF
   - WeaponRifleMR3CTSF
-  - Magazine5.56x45mmFMJ
-  - Magazine5.56x45mmEmpty
-  - AmmoBox5.56x45mmFMJ
-  - Magazine7.62x51mmFMJ
-  - Magazine7.62x51mmEmpty
-  - AmmoBox7.62x51mmFMJ
-  - Magazine45_ACPSubMachineGunFMJ
-  - Magazine45_ACPSubMachineGunEmpty
-  - AmmoBox45_ACPFMJ
-  - Magazine8x65mmSKR
-  - Magazine8x65mmEmpty
-  - AmmoBox8x65mmSKR
-
-- type: technology
-  id: TsfPracticeAmmo
-  name: research-technology-faction-practice-ammo
-  icon:
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/8x65mm_practice.rsi
-    state: base
-  discipline: TsfmcWeaponry
-  tier: 1
-  cost: 2000
-  recipeUnlocks:
-  - Magazine8x65mmSKRPractice
-  - AmmoBox8x65mmSKRPractice
-  - Magazine7.62x39mmPractice
-  - AmmoBox7.62x39mmPractice
-  - Magazine7.62x51mmPractice
-  - AmmoBox7.62x51mmPractice
-  - Magazine45_ACPPistolPractice
-  - Magazine45_ACPSubMachineGunPractice
-  - AmmoBox45_ACPPractice
-
-- type: technology
-  id: TsfIncendiaryAmmo
-  name: research-technology-faction-incendiary-ammo
-  icon:
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/8x65mm_incendiary.rsi
-    state: base
-  discipline: TsfmcWeaponry
-  tier: 3
-  cost: 20000
-  recipeUnlocks:
-  - Magazine8x65mmSKRIncendiary
-  - AmmoBox8x65mmSKRIncendiary
-  - Magazine7.62x39mmIncendiary
-  - AmmoBox7.62x39mmIncendiary
-  - Magazine7.62x51mmIncendiary
-  - AmmoBox7.62x51mmIncendiary
-  - Magazine45_ACPPistolIncendiary
-  - Magazine45_ACPSubMachineGunIncendiary
-  - AmmoBox45_ACPIncendiary
+  technologyPrerequisites:
+  - UniversalMaterialResearchT1
+  position: 12, 2
 
 - type: technology
   id: TsfAnnie
   name: research-technology-tsfmc-annie
-  icon:
-    sprite: _Mono/Objects/Weapons/Guns/Rifles/annie.rsi
-    state: icon
+  entityIcon: WeaponRifleAnnie
   discipline: TsfmcWeaponry
   tier: 2
-  cost: 15000
+  cost: 25000
   recipeUnlocks:
   - WeaponRifleAnnieTSF
-  - Magazine7.62x39mmFMJ
-  - Magazine7.62x39mmEmpty
-  - AmmoBox7.62x39mmFMJ
   technologyPrerequisites:
   - TsfBasicGuns
+  - UniversalMaterialResearchT2
+  position: 12, 7
+
+- type: technology
+  id: TsfGrizzly
+  name: research-technology-tsfmc-grizzly
+  entityIcon: WeaponLMGGrizzly
+  discipline: TsfmcWeaponry
+  tier: 2
+  cost: 40000
+  recipeUnlocks:
+  - WeaponLMGGrizzlyTSF
+  technologyPrerequisites:
+  - TsfAnnie
+  - UniversalMaterialResearchT2
+  position: 12, 8
 
 - type: technology
   id: TsfMarsocGuns
   name: research-technology-tsfmc-mr8
-  icon:
-    sprite: _Mono/Objects/Weapons/Guns/Rifles/mr8c.rsi
-    state: icon
+  entityIcon: WeaponRifleMR8C
   discipline: TsfmcWeaponry
   tier: 3
   cost: 40000 # Raise back to 75k when MR-8B is balanced (never)
@@ -101,21 +62,19 @@
   #- Magazine8x65mmSKRBox
   #- Magazine8x65mmEmptyBox
   technologyPrerequisites:
-  - TsfBasicGuns
-  - TsfSynthalloy
+  - TsfAnnie
+  - UniversalMaterialResearchT3
+  position: 12, 12
 
 - type: technology
   id: TsfIcws
   name: research-technology-tsfmc-xlr556
-  icon:
-    sprite: _Mono/Objects/Weapons/Guns/Rifles/xlr556.rsi
-    state: icon
+  entityIcon: WeaponRifleXlr556
   discipline: TsfmcWeaponry
   tier: 3
-  cost: 15000
+  cost: 30000
   recipeUnlocks:
   - WeaponRifleXlr556Tsf
   technologyPrerequisites:
-  - TsfBasicGuns
-  - TsfSynthalloy
   - TsfMarsocGuns
+  position: 12, 13

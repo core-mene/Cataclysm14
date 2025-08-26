@@ -14,19 +14,7 @@
     1: 0
     2: 0.5
     3: 0.5
-
-# Nothingburger discipline for tech-disk only shit so it doesnt checkfail
-- type: techDiscipline
-  id: DebugPrefracture
-  name: research-discipline-faction-universal
-  color: "#03cafc"
-  icon:
-    sprite: Interface/Misc/research_disciplines.rsi
-    state: biochemical
-  tierPrerequisites:
-    1: 0
-    2: 0.75
-    3: 0.75
+  uiName: MCH
 
 - type: techDiscipline
   id: FactionUniversal
@@ -39,6 +27,7 @@
     1: 0
     2: 0.75
     3: 0.75
+  uiName: UNV
 
 - type: techDiscipline
   id: TsfmcWeaponry
@@ -51,6 +40,7 @@
     1: 0
     2: 0.75
     3: 0.75
+  uiName: TSF-WP
 
 - type: techDiscipline
   id: TsfmcGear
@@ -63,6 +53,7 @@
     1: 0
     2: 0.5
     3: 0.5
+  uiName: TSF-GR
 
 - type: techDiscipline
   id: TsfmcEquipment
@@ -75,6 +66,7 @@
     1: 0
     2: 0.5
     3: 0.5
+  uiName: TSF-EQ
 
 - type: techDiscipline
   id: TsfmcShipyard
@@ -87,6 +79,7 @@
     1: 0
     2: 0.5
     3: 0.5
+  uiName: TSF-HI
 
 - type: techDiscipline
   id: RogueWeaponry
@@ -99,6 +92,7 @@
     1: 0
     2: 0.75
     3: 0.75
+  uiName: ASR-WP
 
 - type: techDiscipline
   id: RogueGear
@@ -111,6 +105,7 @@
     1: 0
     2: 0.5
     3: 0.5
+  uiName: ASR-GR
 
 - type: techDiscipline
   id: RogueEquipment
@@ -123,6 +118,7 @@
     1: 0
     2: 0.5
     3: 0.5
+  uiName: ASR-EQ
 
 - type: techDiscipline
   id: RogueShipyard
@@ -134,7 +130,8 @@
   tierPrerequisites:
     1: 0
     2: 0.5
-    3: 0.5
+    3: 0.
+  uiName: ASR-HI
 
 - type: techDiscipline
   id: Ussp
@@ -147,6 +144,7 @@
     1: 0
     2: 0.50
     3: 0.50
+  uiName: USSP
 
 - type: techDiscipline
   id: UsspShipyard
@@ -159,6 +157,7 @@
     1: 0
     2: 0.50
     3: 0.50
+  uiName: USSP-HI
 
 - type: techDiscipline
   id: UsspEquipment
@@ -171,6 +170,7 @@
     1: 0
     2: 0.50
     3: 0.50
+  uiName: USSP-EQ
 
 - type: techDiscipline
   id: UsspWeapons
@@ -183,3 +183,4 @@
     1: 0
     2: 0.75
     3: 0.75
+  uiName: USSP-WP

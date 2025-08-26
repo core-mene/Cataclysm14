@@ -1,5 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Aviu00
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -7,9 +9,7 @@
 - type: technology
   id: SmartWeaponry
   name: research-technology-smart-weaponry
-  icon:
-    sprite: _Goobstation/Objects/Weapons/Guns/SMGs/smartgun.rsi
-    state: icon
+  entityIcon: WeaponSubMachineSmart
   discipline: Arsenal
   tier: 3
   cost: 15000
@@ -17,3 +17,6 @@
   - WeaponSubMachineSmart
   - MagazineSmart
   - MagazineSmartLMG
+  technologyPrerequisites:
+  - BasicParts
+  position: 2, 5

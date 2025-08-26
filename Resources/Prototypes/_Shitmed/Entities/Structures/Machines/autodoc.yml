@@ -1,9 +1,15 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Basic Autodoc and AutodocSyndie entity prototypes
 # These are placeholder definitions to resolve the reference errors
 
 - type: entity
   id: Autodoc
-  parent: BaseMachine
+  parent: [BaseMachine, ConstructibleMachine]
   name: autodoc
   description: An advanced medical machine for healing the critically wounded.
   components:
@@ -32,3 +38,5 @@
       map: [machineLayer]
     - state: idle_unlit
       map: [terminalLayer]
+  - type: Machine
+    board: AutodocSyndieCircuitboard

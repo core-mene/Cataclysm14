@@ -1,3 +1,22 @@
+// SPDX-FileCopyrightText: 2020 DamianX
+// SPDX-FileCopyrightText: 2020 chairbender
+// SPDX-FileCopyrightText: 2021 DrSmugleaf
+// SPDX-FileCopyrightText: 2021 Javier Guardia Fernández
+// SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 metalgearsloth
+// SPDX-FileCopyrightText: 2022 Acruid
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2024 Julian Giebel
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Gravity;
 using Content.Shared.Alert;
 using Content.Shared.Gravity;
@@ -56,7 +75,7 @@ namespace Content.IntegrationTests.Tests.Gravity
             });
 
             // Let WeightlessSystem and GravitySystem tick
-            await pair.RunTicksSync(10);
+            await pair.RunTicksSync(30);
             var generatorUid = EntityUid.Invalid;
             await server.WaitAssertion(() =>
             {
@@ -67,7 +86,7 @@ namespace Content.IntegrationTests.Tests.Gravity
             });
 
             // Let WeightlessSystem and GravitySystem tick
-            await pair.RunTicksSync(10);
+            await pair.RunTicksSync(30);
 
             await server.WaitAssertion(() =>
             {
@@ -77,14 +96,14 @@ namespace Content.IntegrationTests.Tests.Gravity
                 entityManager.DeleteEntity(generatorUid);
             });
 
-            await pair.RunTicksSync(10);
+            await pair.RunTicksSync(30);
 
             await server.WaitAssertion(() =>
             {
                 Assert.That(alertsSystem.IsShowingAlert(human, weightlessAlert));
             });
 
-            await pair.RunTicksSync(10);
+            await pair.RunTicksSync(30);
 
             await pair.CleanReturnAsync();
         }

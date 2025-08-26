@@ -1,27 +1,39 @@
 # SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: technology
   id: XenopsychologyResearch
   name: research-technology-xenopsychology
-  icon:
-    sprite: Mobs/Aliens/Carps/space.rsi
-    state: alive
+  entityIcon: MachineCarpCaller
   discipline: Experimental
   tier: 1
-  cost: 5000
+  cost: 25000
   recipeUnlocks:
   - CarpCallerMachineCircuitboard
+  technologyPrerequisites:
+  - BasicParts
+  position: 1, -5
 
 - type: technology
   id: BluespaceTethering
   name: research-technology-bluespace-tethering
-  icon:
-    sprite: _Mono/Clothing/Shoes/Boots/voidboots.rsi
-    state: icon
+  entityIcon: ClothingShoesBootsMagVoid
   discipline: Experimental
   tier: 2 # normal magboots are t1 so t2
-  cost: 5000
+  cost: 25000
   recipeUnlocks:
   - ClothingShoesBootsMagVoid
+  technologyPrerequisites:
+  - MagnetsTech
+  position: -2, -2
+
+- type: technology
+  id: BasicParts
+  name: research-technology-basic-parts
+  entityIcon: CapacitorStockPart
+  discipline: Experimental
+  tier: 1
+  cost: 5000
+  position: 0, 0

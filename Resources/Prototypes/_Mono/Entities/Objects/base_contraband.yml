@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Your Name
 # SPDX-FileCopyrightText: 2025 starch
@@ -52,3 +53,14 @@
   id: BaseCargoContraband
   parent: BaseC1Contraband
   abstract: true
+
+# near-worthless syndicate contraband
+- type: entity
+  id: BaseC3SyndicateContrabandLowValue
+  parent: BaseC3ChemContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: Class3Syndicate
+    turnInValues:
+      FederationMilitaryCredit: 1

@@ -1,0 +1,89 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  abstract: true
+  id: MobOreCrabDocileBase
+  suffix: Docile
+  components:
+  - type: FactionException
+  - type: NPCRetaliation
+    attackMemoryLength: 10
+  - type: NpcFactionMember
+    factions:
+      - SimpleNeutral
+
+# uranium is already docile
+
+- type: entity
+  parent: [MobOreCrabDocileBase, MobQuartzCrabNF]
+  id: MobQuartzCrabDocile
+  components:
+  - type: Construction
+    graph: OreCrab
+    node: quartz
+
+- type: entity
+  parent: [MobOreCrabDocileBase, MobIronCrabNF]
+  id: MobIronCrabDocile
+  components:
+  - type: Construction
+    graph: OreCrab
+    node: iron
+
+- type: entity
+  parent: [MobOreCrabDocileBase, MobUraniumCrabNF]
+  id: MobUraniumCrabDocile
+  components:
+  - type: Construction
+    graph: OreCrab
+    node: uranium
+
+- type: entity
+  parent: [MobOreCrabDocileBase, MobSilverCrabNF]
+  id: MobSilverCrabDocile
+  components:
+  - type: Construction
+    graph: OreCrab
+    node: silver
+
+- type: entity
+  parent: [MobOreCrabDocileBase, MobBananiumCrabNF]
+  id: MobBananiumCrabDocile
+  components:
+  - type: Construction
+    graph: OreCrab
+    node: bananium
+
+- type: entity
+  parent: [MobOreCrabDocileBase, MobCoalCrabNF]
+  id: MobCoalCrabDocile
+  components:
+  - type: Construction
+    graph: OreCrab
+    node: coal
+
+- type: entity
+  parent: [MobOreCrabDocileBase, MobGoldCrabNF]
+  id: MobGoldCrabDocile
+  components:
+  - type: Construction
+    graph: OreCrab
+    node: gold
+
+- type: entity
+  parent: [MobOreCrabDocileBase, MobPlasmaCrabNF]
+  id: MobPlasmaCrabDocile
+  components:
+  - type: Construction
+    graph: OreCrab
+    node: plasma
+
+- type: entity
+  parent: [MobOreCrabDocileBase, MobSaltCrabNF]
+  id: MobSaltCrabDocile
+  components:
+  - type: Construction
+    graph: OreCrab
+    node: salt

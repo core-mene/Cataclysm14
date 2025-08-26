@@ -1,3 +1,16 @@
+// SPDX-FileCopyrightText: 2023 Cheackraze
+// SPDX-FileCopyrightText: 2024 Checkraze
+// SPDX-FileCopyrightText: 2024 Kill_Me_I_Noobs
+// SPDX-FileCopyrightText: 2024 Shroomerian
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2025 Alkheemist
+// SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 GreaseMonk
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 Whatstone
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using Content.Server.Cargo.Systems;
 using Robust.Server.GameObjects;
@@ -19,6 +32,8 @@ using Content.Server.StationEvents.Events;
 using Content.Server._NF.Station.Systems;
 using Content.Server._NF.StationEvents.Components;
 using Robust.Shared.EntitySerialization.Systems;
+using Content.Server._Mono.StationEvents;
+using Content.Server._Mono.GridClaimer;
 
 namespace Content.Server._NF.StationEvents.Events;
 
@@ -40,6 +55,7 @@ public sealed class BluespaceErrorRule : StationEventSystem<BluespaceErrorRuleCo
     [Dependency] private readonly StationRenameWarpsSystems _renameWarps = default!;
     [Dependency] private readonly BankSystem _bank = default!;
     [Dependency] private readonly SharedSalvageSystem _salvage = default!;
+    [Dependency] private readonly AutoExtendRuleSystem _autoExtend = default!;
 
     public override void Initialize()
     {
@@ -121,6 +137,9 @@ public sealed class BluespaceErrorRule : StationEventSystem<BluespaceErrorRuleCo
                 EntityManager.AddComponents(spawned, group.AddComponents);
 
                 component.GridsUid.Add(spawned);
+
+                if (component.ExtendIfPopulated)
+                    _autoExtend.AutoExtend(uid, spawned);
             }
         }
 
@@ -220,6 +239,10 @@ public sealed class BluespaceErrorRule : StationEventSystem<BluespaceErrorRuleCo
                 Log.Error("bluespace error has no associated grid?");
                 return;
             }
+
+            // don't delete it if claimed
+            if (TryComp<ClaimableGridComponent>(componentGridUid, out var claimable) && claimable.Claimed)
+                return;
 
             if (component.DeleteGridsOnEnd)
             {

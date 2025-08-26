@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Coenx-flex
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: OrganYowieStomach
   parent: OrganHumanStomach
@@ -58,7 +63,7 @@
         - ReagentId: Nutriment
           Quantity: 20
       Lung:
-        maxVol: 200.0
+        maxVol: 100.0
         canReact: false
       food:
         maxVol: 5

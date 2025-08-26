@@ -17,6 +17,7 @@
 # SPDX-FileCopyrightText: 2024 Houtblokje
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2025 Coenx-flex
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -540,8 +541,6 @@ entities:
       pos: 4.5,11.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2
   - uid: 18
@@ -550,8 +549,6 @@ entities:
       pos: -5.5,11.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
       - 2

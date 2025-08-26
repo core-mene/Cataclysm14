@@ -1,9 +1,28 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 #Pistol Magazines
 
 - type: latheRecipe
   parent: BaseAmmoFMJPistolCaliberPistolMagazineRecipe
   id: Magazine5.7x28mmPistolFMJ
   result: Magazine5.7x28mmPistolFMJ
+
+- type: latheRecipe
+  parent: BaseAmmoSteelAPPistolCaliberPistolMagazineRecipe
+  id: Magazine5.7x28mmPistolSteelAP
+  result: Magazine5.7x28mmPistolSteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPPistolCaliberPistolMagazineRecipe
+  id: Magazine5.7x28mmPistolPlasteelAP
+  result: Magazine5.7x28mmPistolPlasteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoSynthAPPistolCaliberPistolMagazineRecipe
+  id: Magazine5.7x28mmPistolSynthAP
+  result: Magazine5.7x28mmPistolSynthAP
 
 - type: latheRecipe
   parent: BaseAmmoRubberPistolCaliberPistolMagazineRecipe
@@ -30,12 +49,37 @@
   id: Magazine5.7x28mmPistolUranium
   result: Magazine5.7x28mmPistolUranium
 
+- type: latheRecipe
+  parent: BaseAmmoHPPistolCaliberPistolMagazineRecipe
+  id: Magazine5.7x28mmPistolHP
+  result: Magazine5.7x28mmPistolHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPPistolCaliberPistolMagazineRecipe
+  id: Magazine5.7x28mmPistolRIP
+  result: Magazine5.7x28mmPistolRIP
+
 #SMG Magazines
 
 - type: latheRecipe
   parent: BaseAmmoFMJPistolCaliberSubMachineGunMagazineRecipe
   id: Magazine5.7x28mmSubMachineGunFMJ
   result: Magazine5.7x28mmSubMachineGunFMJ
+
+- type: latheRecipe
+  parent: BaseAmmoSteelAPPistolCaliberSubMachineGunMagazineRecipe
+  id: Magazine5.7x28mmSubMachineGunSteelAP
+  result: Magazine5.7x28mmSubMachineGunSteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPPistolCaliberSubMachineGunMagazineRecipe
+  id: Magazine5.7x28mmSubMachineGunPlasteelAP
+  result: Magazine5.7x28mmSubMachineGunPlasteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoSynthAPPistolCaliberSubMachineGunMagazineRecipe
+  id: Magazine5.7x28mmSubMachineGunSynthAP
+  result: Magazine5.7x28mmSubMachineGunSynthAP
 
 - type: latheRecipe
   parent: BaseAmmoRubberPistolCaliberSubMachineGunMagazineRecipe
@@ -72,12 +116,37 @@
   id: Magazine5.7x28mmSubMachineGunTopMountedEmpty
   result: Magazine5.7x28mmSubMachineGunTopMountedEmpty
 
+- type: latheRecipe
+  parent: BaseAmmoHPPistolCaliberSubMachineGunMagazineRecipe
+  id: Magazine5.7x28mmSubMachineGunHP
+  result: Magazine5.7x28mmSubMachineGunHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPPistolCaliberSubMachineGunMagazineRecipe
+  id: Magazine5.7x28mmSubMachineGunRIP
+  result: Magazine5.7x28mmSubMachineGunRIP
+
 #Boxes
 
 - type: latheRecipe
   parent: BaseAmmoFMJPistolCaliberAmmoBoxRecipe
   id: AmmoBox5.7x28mmFMJ
   result: AmmoBox5.7x28mmFMJ
+
+- type: latheRecipe
+  parent: BaseAmmoSteelAPPistolCaliberAmmoBoxRecipe
+  id: AmmoBox5.7x28mmSteelAP
+  result: AmmoBox5.7x28mmSteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPPistolCaliberAmmoBoxRecipe
+  id: AmmoBox5.7x28mmPlasteelAP
+  result: AmmoBox5.7x28mmPlasteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoSynthAPPistolCaliberAmmoBoxRecipe
+  id: AmmoBox5.7x28mmSynthAP
+  result: AmmoBox5.7x28mmSynthAP
 
 - type: latheRecipe
   parent: BaseAmmoRubberPistolCaliberAmmoBoxRecipe
@@ -98,3 +167,13 @@
   parent: BaseAmmoUraniumPistolCaliberAmmoBoxRecipe
   id: AmmoBox5.7x28mmUranium
   result: AmmoBox5.7x28mmUranium
+
+- type: latheRecipe
+  parent: BaseAmmoHPPistolCaliberAmmoBoxRecipe
+  id: AmmoBox5.7x28mmHP
+  result: AmmoBox5.7x28mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoRIPPistolCaliberAmmoBoxRecipe
+  id: AmmoBox5.7x28mmRIP
+  result: AmmoBox5.7x28mmRIP

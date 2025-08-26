@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 #12 gauge drums use Intermediate Magazines cost and boxes use Intermediate Box cost
 #Magazines
 
@@ -36,6 +40,26 @@
   id: Magazine12_gaugeSlug
   result: Magazine12_gaugeSlug
 
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPIntermediateMagazineRecipe
+  id: Magazine12_gaugeSlugRIP
+  result: Magazine12_gaugeSlugRIP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPIntermediateMagazineRecipe
+  id: Magazine12_gaugeSlugAP
+  result: Magazine12_gaugeSlugAP
+
+- type: latheRecipe
+  parent: BaseAmmoFMJIntermediateMagazineRecipe
+  id: Magazine12_gaugeOOBuckshot
+  result: Magazine12_gaugeOOBuckshot
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPIntermediateMagazineRecipe
+  id: Magazine12_gaugeFlechette
+  result: Magazine12_gaugeFlechette
+
 #Boxes
 
 - type: latheRecipe
@@ -67,3 +91,23 @@
   parent: BaseAmmoFMJIntermediateAmmoBoxRecipe
   id: AmmoBox12_gaugeSlug
   result: AmmoBox12_gaugeSlug
+
+- type: latheRecipe
+  parent: BaseAmmoRIPIntermediateAmmoBoxRecipe
+  id: AmmoBox12_gaugeSlugRIP
+  result: AmmoBox12_gaugeSlugRIP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPIntermediateAmmoBoxRecipe
+  id: AmmoBox12_gaugeSlugAP
+  result: AmmoBox12_gaugeSlugAP
+
+- type: latheRecipe
+  parent: BaseAmmoFMJIntermediateAmmoBoxRecipe
+  id: AmmoBox12_gaugeOOBuckshot
+  result: AmmoBox12_gaugeOOBuckshot
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPIntermediateAmmoBoxRecipe
+  id: AmmoBox12_gaugeFlechette
+  result: AmmoBox12_gaugeFlechette

@@ -18,6 +18,8 @@
 // SPDX-FileCopyrightText: 2024 Nemanja
 // SPDX-FileCopyrightText: 2024 TemporalOroboros
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Coenx-flex
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 metalgearsloth
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -95,12 +97,8 @@ namespace Content.Server.Destructible
                         return b.GetType().Name;
                     }));
 
-                    bool spaceOrigin = false;
                     // Check if the damage is from space (barotrauma)
-                    if (args.Origin != null && EntityManager.TryGetComponent<BarotraumaComponent>(args.Origin.Value, out _))
-                    {
-                        spaceOrigin = true;
-                    }
+                    var spaceOrigin = args.Origin != null && EntityManager.HasComponent<BarotraumaComponent>(args.Origin.Value);
 
                     if (args.Origin != null)
                     {
@@ -120,16 +118,6 @@ namespace Content.Server.Destructible
                 if (EntityManager.IsQueuedForDeletion(uid) || EntityManager.Deleted(uid))
                     return;
             }
-        }
-
-        public void BreakEntity(EntityUid uid)
-        {
-            RaiseLocalEvent(uid, new BreakageEventArgs(), true);
-        }
-
-        public void DestroyEntity(EntityUid uid)
-        {
-            EntityManager.QueueDeleteEntity(uid);
         }
 
         // FFS this shouldn't be this hard. Maybe this should just be a field of the destructible component. Its not

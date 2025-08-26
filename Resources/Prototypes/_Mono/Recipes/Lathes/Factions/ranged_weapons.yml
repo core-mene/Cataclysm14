@@ -100,6 +100,22 @@
     Plasteel: 1200
     Plastic: 900
 
+# TSF Grizzly
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponLMGGrizzlyTSF
+  result: WeaponLMGGrizzly
+  categories:
+  - GPMGs
+  - MGs
+  - Ballistic
+  - Weapons
+  materials:
+    Steel: 3500
+    Plasteel: 2000
+    Plastic: 1200
+
 # Rogues MlA-73
 
 - type: latheRecipe
@@ -309,6 +325,7 @@
     Steel: 800
     Plasteel: 200
     Plastic: 400
+    Uranium: 10 # tritium sights
 
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
@@ -323,6 +340,21 @@
     Plasteel: 800
     Plastic: 1200
     Silver: 100
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRifleAK410USSP
+  result: WeaponRifleAK410
+  categories:
+  - Rifles
+  - DMRs
+  - Ballistic
+  - Weapons
+  materials:
+    Steel: 2000
+    Plasteel: 1000
+    Plastic: 900
+    Uranium: 10 # tritium sights
 
 - type: latheRecipe
   parent: BaseWeaponRecipeLong

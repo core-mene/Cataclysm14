@@ -3,10 +3,11 @@
 # SPDX-FileCopyrightText: 2024 Ed
 # SPDX-FileCopyrightText: 2024 ErhardSteinhauer
 # SPDX-FileCopyrightText: 2024 Flareguy
-# SPDX-FileCopyrightText: 2024 Ilya246
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2024 chrome-cirrus
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Killerqu00
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Winkarst
@@ -330,7 +331,7 @@
   parent: [ ShuttleGunBase, ConstructibleMachine]
   name: PTK-1500e "Matter Dematerializer" # Frontier: "800"<"1500e" (consistent with naming scheme)
   description: Mining turret, effective for blasting hardened targets. Gradually accumulates charges on its own. # Mono: description changed
-  categories: [ DoNotMap ]
+  # categories: [ DoNotMap ] Mono
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shuttles/kinetic.rsi
@@ -385,6 +386,7 @@
   - type: ShipGunClass
     shipClass: Superlight
   - type: RadarBlip
+    visibleFromOtherGrids: false
     radarColor: "#FF0040"
     scale: 1.25
   - type: ShipGunType

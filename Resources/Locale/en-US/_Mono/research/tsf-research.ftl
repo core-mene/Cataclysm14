@@ -19,7 +19,8 @@ research-technology-tsfmc-nvd = Night Vision Devices
 research-technology-tsfmc-motion-detector = Biosignature IFF Technology
 
 # T2 TSFMC
-research-technology-tsfmc-annie = Annie
+research-technology-tsfmc-annie = M-27 Annie
+research-technology-tsfmc-grizzly = MMG-68 Grizzly
 research-technology-tsfmc-nanofoam = Nanomaterial Growth
 research-technology-tsfmc-demag = System Reset Technology
 research-technology-tsfmc-eshield = Energy Shielding

@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: 2024 Dvir
 # SPDX-FileCopyrightText: 2025 GreaseMonk
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 significant harassment
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -36,6 +38,7 @@
         - type: ProtectedGrid
           preventArtifactTriggers: true
         - type: PreventPilot
+        - type: ClaimableGrid # Mono
         paths:
         - /Maps/_NF/Shuttles/Scrap/bison.yml
 #        - /Maps/_NF/Shuttles/Scrap/canister.yml # Too small

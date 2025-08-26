@@ -12,6 +12,9 @@
 # SPDX-FileCopyrightText: 2024 QueerNB
 # SPDX-FileCopyrightText: 2024 Ubaser
 # SPDX-FileCopyrightText: 2025 BoskiYourk
+# SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 compilatron
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -975,8 +978,6 @@ entities:
       pos: 7.5,1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 204
     - type: AtmosPipeColor
@@ -990,8 +991,6 @@ entities:
       pos: 8.5,2.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 204
     - type: AtmosPipeColor

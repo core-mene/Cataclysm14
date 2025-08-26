@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Avalon
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -73,6 +75,7 @@
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis # Goobstation - Let borgs pilot mechs
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -127,11 +130,12 @@
     baseState: clarke
     openState: clarke-open
     brokenState: clarke-broken
-    mechToPilotDamageMultiplier: 0.5
+    mechToPilotDamageMultiplier: 0.25 # Mono
     airtight: true
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis # Goobstation - Let borgs pilot mechs
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -141,6 +145,7 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.5
     baseSprintSpeed: 4.5
+    baseWeightlessModifier: 5 # Mono
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: StaticPrice
@@ -151,6 +156,11 @@
     - FootstepSound
     - Clarke
     - CivilianMechBounty # Mono
+  - type: RadarBlip # Mono
+    radarColor: "#E3E3E3"
+    scale: 1.5
+    requireNoGrid: true
+    shape: square
 
 - type: entity
   id: MechClarkeBattery
@@ -199,11 +209,13 @@
     baseState: gygax
     openState: gygax-open
     brokenState: gygax-broken
-    mechToPilotDamageMultiplier: 0.3
+    mechToPilotDamageMultiplier: 0.1 # Mono
+    maxIntegrity: 550 # Mono
     airtight: true
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis # Goobstation - Let borgs pilot mechs
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -213,9 +225,10 @@
         Structural: 180
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
-  - type: MovementSpeedModifier
-    baseWalkSpeed: 2
-    baseSprintSpeed: 2.6
+  - type: MovementSpeedModifier # Mono
+    baseWalkSpeed: 3
+    baseSprintSpeed: 4.5
+    baseWeightlessModifier: 5
   - type: StaticPrice
     price: 3000
   - type: Tag
@@ -224,6 +237,11 @@
     - FootstepSound
     - Gygax
     - MilitaryMechBounty # Mono
+  - type: RadarBlip # Mono
+    radarColor: "#E3E3E3"
+    scale: 1.5
+    requireNoGrid: true
+    shape: square
 
 - type: entity
   id: MechGygaxBattery
@@ -261,10 +279,11 @@
     brokenState: durand-broken
     mechToPilotDamageMultiplier: 0.25
     airtight: true
-    maxIntegrity: 400
+    maxIntegrity: 800
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis # Goobstation - Let borgs pilot mechs
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -275,6 +294,7 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 1.5
     baseSprintSpeed: 2
+    baseWeightlessModifier: 3 # Mono
   - type: Damageable
     damageModifierSet: MediumArmorNT
   - type: CanMoveInAir
@@ -290,6 +310,11 @@
     - FootstepSound
     - Durand
     - MilitaryMechBounty # Mono
+  - type: RadarBlip # Mono
+    radarColor: "#E3E3E3"
+    scale: 1.5
+    requireNoGrid: true
+    shape: square
 
 - type: entity
   id: MechDurandBattery
@@ -329,11 +354,12 @@
     brokenState: marauder-broken
     mechToPilotDamageMultiplier: 0.1
     airtight: true
-    maxIntegrity: 500
+    maxIntegrity: 1000
     maxEquipmentAmount: 4
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis # Goobstation - Let borgs pilot mechs
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -344,6 +370,7 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 1
     baseSprintSpeed: 1.5
+    baseWeightlessModifier: 3 # Mono
   - type: Damageable
     damageModifierSet: HeavyArmorNT
   - type: CanMoveInAir
@@ -358,6 +385,11 @@
     - DoorBumpOpener
     - FootstepSound
     - MilitaryMechBounty # Mono
+  - type: RadarBlip # Mono
+    radarColor: "#E3E3E3"
+    scale: 1.5
+    requireNoGrid: true
+    shape: square
 
 - type: entity
   id: MechMarauderBattery
@@ -407,11 +439,12 @@
     brokenState: seraph-broken
     mechToPilotDamageMultiplier: 0.05
     airtight: true
-    maxIntegrity: 550
+    maxIntegrity: 1100
     maxEquipmentAmount: 5
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis # Goobstation - Let borgs pilot mechs
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -422,6 +455,7 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.2
     baseSprintSpeed: 3.7
+    baseWeightlessModifier: 3 # Mono
   - type: Damageable
     damageModifierSet: HeavyArmorNT
   - type: CanMoveInAir
@@ -436,6 +470,11 @@
     - DoorBumpOpener
     - FootstepSound
     - MilitaryMechBounty # Mono
+  - type: RadarBlip # Mono
+    radarColor: "#E3E3E3"
+    scale: 1.5
+    requireNoGrid: true
+    shape: square
 
 - type: entity
   id: MechSeraphBattery
@@ -488,11 +527,12 @@
     brokenState: darkgygax-broken
     mechToPilotDamageMultiplier: 0.15
     airtight: true
-    maxIntegrity: 300
+    maxIntegrity: 750
     maxEquipmentAmount: 4
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis # Goobstation - Let borgs pilot mechs
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -501,8 +541,9 @@
         Blunt: 30
         Structural: 200
   - type: MovementSpeedModifier
-    baseWalkSpeed: 2.2
-    baseSprintSpeed: 3.7
+    baseWalkSpeed: 3.5 # Mono
+    baseSprintSpeed: 5.5 # Mono
+    baseWeightlessModifier: 7 # Mono
   - type: Damageable
     damageModifierSet: MediumArmorSyndi
   - type: CanMoveInAir
@@ -517,6 +558,11 @@
     - DoorBumpOpener
     - FootstepSound
     - MilitaryMechBounty # Mono
+  - type: RadarBlip # Mono
+    radarColor: "#E3E3E3"
+    scale: 1.5
+    requireNoGrid: true
+    shape: square
 
 - type: entity
   id: MechGygaxSyndieBattery
@@ -571,6 +617,7 @@
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis # Goobstation - Let borgs pilot mechs
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -595,6 +642,11 @@
     - DoorBumpOpener
     - FootstepSound
     - MilitaryMechBounty # Mono
+  - type: RadarBlip # Mono
+    radarColor: "#E3E3E3"
+    scale: 1.5
+    requireNoGrid: true
+    shape: square
 
 - type: entity
   id: MechMaulerSyndieBattery

@@ -16,6 +16,7 @@
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -31,7 +32,7 @@
       tags:
         - Cartridge5.7x28mmFMJ
     proto: Cartridge5.7x28mmFMJ
-    capacity: 70 # 60->70 Two mags per box
+    capacity: 80
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -45,31 +46,7 @@
     zeroVisible: false
   - type: Appearance
 
-# Boxes
-- type: entity # Mono Big Pistol Mags
-  parent: BaseAmmoBox5.7x28mm
-  id: AmmoBox5.7x28mmBig
-  name: big ammunition box (5.7x28mm FMJ)
-  suffix: Big
-  components:
-  - type: Item
-    shape:
-    - 0,0,1,1
-  - type: BallisticAmmoProvider
-    capacity: 280 # 8 mags per box similar to rifle box
-    proto: Cartridge5.7x28mmFMJ
-  - type: Sprite
-    layers:
-    - state: base-b # Frontier: base-big<base-b
-      map: ["enum.GunVisualLayers.Base"]
-    - state: magb-1 # Frontier: mag-big-1<magb-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: magb # Frontier: mag-big<magb
-    steps: 4
-    zeroVisible: false
-  - type: Appearance
-
+#small ammo boxes
 - type: entity
   parent: BaseAmmoBox5.7x28mm
   id: AmmoBox5.7x28mmFMJ
@@ -160,3 +137,106 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: emp
+
+# Mono AP syst
+#anti-flesh:
+- type: entity
+  parent: BaseAmmoBox5.7x28mm
+  id: AmmoBox5.7x28mmHP
+  name: ammunition box (5.7x28mm hollow-point)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.7x28mmHP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: HP
+
+- type: entity
+  parent: BaseAmmoBox5.7x28mm
+  id: AmmoBox5.7x28mmRIP
+  name: ammunition box (5.7x28mm RIP)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.7x28mmRIP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: RIP
+
+#armor-piercing:
+- type: entity
+  parent: BaseAmmoBox5.7x28mm
+  id: AmmoBox5.7x28mmSteelAP
+  name: ammunition box (5.7x28mm AP steel core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.7x28mmSteelAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: steelAP
+
+- type: entity
+  parent: BaseAmmoBox5.7x28mm
+  id: AmmoBox5.7x28mmPlasteelAP
+  name: ammunition box (5.7x28mm AP plasteel core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.7x28mmPlasteelAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: plasteelAP
+
+- type: entity
+  parent: BaseAmmoBox5.7x28mm
+  id: AmmoBox5.7x28mmSynthAP
+  name: ammunition box (5.7x28mm AP synthalloy core)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.7x28mmSynthAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: synthAP
+
+#big ammo boxes
+- type: entity
+  parent: BaseAmmoBox5.7x28mm
+  id: AmmoBox5.7x28mmBigFMJ
+  name: big ammunition box (5.7x28mm FMJ)
+  suffix: Big
+  components:
+  - type: Item
+    shape:
+    - 0,0,1,1
+  - type: BallisticAmmoProvider
+    capacity: 280 # 8 mags per box similar to rifle box
+    proto: Cartridge5.7x28mmFMJ
+  - type: Sprite
+    layers:
+    - state: base-b # Frontier: base-big<base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-1 # Frontier: mag-big-1<magb-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb # Frontier: mag-big<magb
+    steps: 4
+    zeroVisible: false
+  - type: Appearance

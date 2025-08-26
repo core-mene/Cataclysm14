@@ -1,3 +1,26 @@
+// SPDX-FileCopyrightText: 2022 Kara
+// SPDX-FileCopyrightText: 2022 Leon Friedrich
+// SPDX-FileCopyrightText: 2022 Mervill
+// SPDX-FileCopyrightText: 2022 ShadowCommander
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 Segonist
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2023 deltanedas
+// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2024 Brandon Hu
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 icekot8
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Coenx-flex
+// SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 Errant
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Power.Components;
 using Content.Server.Emp;
 using Content.Server.PowerCell;
@@ -247,11 +270,11 @@ internal sealed class ChargerSystem : EntitySystem
         switch (component.Status)
         {
             case CellChargerStatus.Off:
-                receiver.Load = 1;
+                receiver.Load = 0;
                 _appearance.SetData(uid, CellVisual.Light, CellChargerStatus.Off, appearance);
                 break;
             case CellChargerStatus.Empty:
-                receiver.Load = 1;
+                receiver.Load = 0;
                 _appearance.SetData(uid, CellVisual.Light, CellChargerStatus.Empty, appearance);
                 break;
             case CellChargerStatus.Charging:
@@ -259,7 +282,7 @@ internal sealed class ChargerSystem : EntitySystem
                 _appearance.SetData(uid, CellVisual.Light, CellChargerStatus.Charging, appearance);
                 break;
             case CellChargerStatus.Charged:
-                receiver.Load = 1;
+                receiver.Load = 0;
                 _appearance.SetData(uid, CellVisual.Light, CellChargerStatus.Charged, appearance);
                 break;
             default:

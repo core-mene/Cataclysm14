@@ -5,6 +5,7 @@
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 Bonaout
 # SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Hyenh
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
@@ -194,6 +195,69 @@
   price: 1000
   equipment:
     neck: ClothingNeckCloakCOG
+
+- type: loadout
+  id: ContractorClothingNeckPonchoSmallPurple # Monolith
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  equipment:
+    neck: ClothingNeckPonchoSmallPurple
+
+- type: loadout
+  id: ContractorClothingNeckPonchoSmallPink # Monolith
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  equipment:
+    neck: ClothingNeckPonchoSmallPink
+
+- type: loadout
+  id: ContractorClothingNeckPonchoSmallBlack # Monolith
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  equipment:
+    neck: ClothingNeckPonchoSmallBlack
+
+- type: loadout
+  id: ContractorClothingNeckPonchoSmallRed # Monolith
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  equipment:
+    neck: ClothingNeckPonchoSmallRed
+
+- type: loadout
+  id: ContractorClothingNeckPonchoSmallWhite # Monolith
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  equipment:
+    neck: ClothingNeckPonchoSmallWhite
+
+- type: loadout
+  id: ContractorClothingNeckPonchoArctic # Monolith
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  equipment:
+    neck: ClothingNeckPonchoArctic
+
+- type: loadout
+  id: ContractorClothingNeckPonchoBlack # Monolith
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  equipment:
+    neck: ClothingNeckPonchoArctic
 
 - type: loadout
   id: ContractorClothingNeckCloakMiner

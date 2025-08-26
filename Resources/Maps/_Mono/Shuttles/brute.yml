@@ -1,3 +1,19 @@
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2023 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 TsjipTsjip
+# SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 UnicornOnLSD
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 meta:
   format: 7
   category: Grid
@@ -824,8 +840,8 @@ entities:
       pos: 2.5,-9.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
+
       deviceLists:
       - 5
   - uid: 24
@@ -860,8 +876,8 @@ entities:
       pos: -0.5,-13.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
+
       deviceLists:
       - 6
 - proto: APCBasic
@@ -2545,8 +2561,8 @@ entities:
       pos: -0.5,-9.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
+
       deviceLists:
       - 4
       - 309
@@ -2557,8 +2573,8 @@ entities:
       pos: 7.5,-8.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
+
       deviceLists:
       - 307
       - 309
@@ -3220,8 +3236,8 @@ entities:
       pos: 0.5,-8.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
+
       deviceLists:
       - 5
     - type: AtmosPipeColor
@@ -3299,8 +3315,8 @@ entities:
       pos: 2.5,-10.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
+
       deviceLists:
       - 5
     - type: AtmosPipeColor

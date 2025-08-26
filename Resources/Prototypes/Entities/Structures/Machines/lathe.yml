@@ -150,9 +150,11 @@
 # SPDX-FileCopyrightText: 2025 Aviu00
 # SPDX-FileCopyrightText: 2025 BeeRobynn
 # SPDX-FileCopyrightText: 2025 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 Hyenh
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 K-Dynamic
 # SPDX-FileCopyrightText: 2025 Myzumi
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 Southbridge
@@ -322,7 +324,7 @@
     - MonoRestraintsStatic # Mono
   - type: EmagLatheRecipes
     emagStaticPacks:
-    - CivilianAmmoRecipePack
+    - StaticAmmoRecipePack
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -384,6 +386,7 @@
     staticPacks:
     - ChemistryStatic
     - SurgeryStatic
+    - PartsStatic
     dynamicPacks:
     - AdvancedTools
     - ScienceEquipment
@@ -417,13 +420,13 @@
     - Translators
   - type: EmagLatheRecipes
     emagDynamicPacks:
-    - AdvancedAmmoRecipePack
+    - DynamicAmmoRecipePack
     - SecurityExplosives
     - SecurityEquipment
     - SecurityWeapons
     - SyringeGuns # Delta-V
     emagStaticPacks:
-    - CivilianAmmoRecipePack
+    - StaticAmmoRecipePack
 
 - type: entity
   id: ProtolatheHyperConvection
@@ -632,32 +635,28 @@
     staticPacks:
     - SecurityEquipmentStatic
     - SecurityPracticeStatic
-    - CivilianAmmoRecipePack
+    - StaticAmmoRecipePack
     - SecurityWeaponsStatic
     dynamicPacks:
     - SecurityEquipment
-    - SecurityBoards
     - SecurityExplosives
-    - AdvancedAmmoRecipePack
+    - DynamicAmmoRecipePack
     - SecurityWeapons
     - SecurityDisablers
     - SMCybernetics
     # Mono - Mechs
     - WeaponMechCombatArsenal
-    - AdvancedAmmoRecipePack
+    - DynamicAmmoRecipePack
     - SmartGun # Goobstation
     # Mono start
     - MonoTSFWeaponsDynamicMelee
     - MonoTSFWeaponsDynamicRanged
     - MonoTSFMiscDynamic
-    - MonoTSFAmmo
     - MonoRogueWeaponsDynamicMelee
     - MonoRogueWeaponsDynamicRanged
     - MonoRogueMiscDynamic
-    - MonoRogueAmmo
     - MonoUSSPMiscDynamic
     - MonoUSSPWeaponsDynamicRanged
-    - MonoUSSPAmmo
     - UniversalShellAmmo
     # Mono end
   - type: MaterialStorage
@@ -694,9 +693,9 @@
     idleState: icon
     runningState: icon
     staticPacks:
-    - CivilianAmmoRecipePack
+    - StaticAmmoRecipePack
     dynamicPacks:
-    - AdvancedAmmoRecipePack
+    - DynamicAmmoRecipePack
   - type: MaterialStorage
     whitelist:
       tags:
@@ -784,6 +783,7 @@
     - ClothingSecurity
     - ClothingService
     - WinterCoats
+    - Ponchos # Monolith
     - Ties
     - Scarves
     - Carpets

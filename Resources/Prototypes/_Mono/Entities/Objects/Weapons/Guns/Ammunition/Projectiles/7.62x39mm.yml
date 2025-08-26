@@ -25,6 +25,7 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -38,6 +39,7 @@
     damage:
       types:
         Piercing: 25
+    armorPenetration: 0.075
 
 - type: entity
   id: Bullet7.62x39mmPractice
@@ -95,3 +97,70 @@
     damage:
       types:
         Piercing: 23
+    armorPenetration: 0.05
+
+# Mono AP syst
+# - 0.05 base AP
+#anti-flesh:
+- type: entity
+  id: Bullet7.62x39mmHP
+  parent: BaseBullet
+  name: bullet (7.62x39mm hollow-point)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Slash: 6
+        Piercing: 35
+    armorPenetration: -0.35
+
+- type: entity
+  id: Bullet7.62x39mmRIP
+  parent: BaseBullet
+  name: bullet (7.62x39mm RIP)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Slash: 8
+        Piercing: 42
+    armorPenetration: -0.65
+
+#armor-piercing:
+- type: entity
+  id: Bullet7.62x39mmSteelAP
+  parent: BaseBullet
+  name: bullet (7.62x39mm AP steel core)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Piercing: 22
+    armorPenetration: 0.15
+
+- type: entity
+  id: Bullet7.62x39mmPlasteelAP
+  parent: BaseBullet
+  name: bullet (7.62x39mm AP plasteel core)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Piercing: 20
+    armorPenetration: 0.35
+
+- type: entity
+  id: Bullet7.62x39mmSynthAP
+  parent: BaseBullet
+  name: bullet (7.62x39mm AP synthalloy core)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Piercing: 18
+    armorPenetration: 0.55

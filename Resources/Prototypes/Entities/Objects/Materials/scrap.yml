@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 beck-thompson
+# SPDX-FileCopyrightText: 2025 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 SpaceRox1244
+# SPDX-FileCopyrightText: 2025 Whatstone
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: BaseItem
   id: BaseScrap
@@ -70,7 +79,7 @@
   parent: BaseScrap
   id: ScrapSteel
   name: blasted steel pile
-  description: An pile of steel welded together in extreme heat. It's of a decent size overall; you could probably get a fair amount of sheets out of it.
+  description: A pile of steel welded together in extreme heat. It's of a decent size overall; you could probably get a fair amount of sheets out of it.
   components:
   - type: Sprite
     layers:

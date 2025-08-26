@@ -26,7 +26,6 @@ public sealed class CorticalBorerInfestedSystem : EntitySystem
     {
         SubscribeLocalEvent<CorticalBorerInfestedComponent, MapInitEvent>(OnInit);
         SubscribeLocalEvent<CorticalBorerInfestedComponent, ExaminedEvent>(OnExaminedInfested);
-        SubscribeLocalEvent<CorticalBorerInfestedComponent, ComponentShutdown>(OnComponentShutdown);
 
         SubscribeLocalEvent<CorticalBorerInfestedComponent, BodyPartRemovedEvent>(OnBodyPartRemoved);
         SubscribeLocalEvent<CorticalBorerInfestedComponent, MobStateChangedEvent>(OnStateChange);
@@ -62,12 +61,6 @@ public sealed class CorticalBorerInfestedSystem : EntitySystem
         if (args.NewMobState != MobState.Dead)
             return;
 
-        if(infected.Comp.Borer.Comp.ControlingHost)
-            _borer.EndControl(infected.Comp.Borer);
-    }
-
-    private void OnComponentShutdown(Entity<CorticalBorerInfestedComponent> infected, ref ComponentShutdown args)
-    {
         if(infected.Comp.Borer.Comp.ControlingHost)
             _borer.EndControl(infected.Comp.Borer);
     }

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 tonotom
 # SPDX-FileCopyrightText: 2025 tonotom1
@@ -111,3 +112,20 @@
     state: uranium_reinforced_window
   objectType: Structure
   placementMode: SnapgridCenter
+
+- type: construction
+  name: gaslock
+  id: Gaslock
+  graph: AirlockShuttle
+  startNode: start
+  targetNode: gaslock
+  category: construction-category-structures
+  description: Connects gas pipes on separate ships or stations together to allow gas transfer. Both sides must be docked and pumping in the same direction to accept flow.
+  icon:
+    sprite: _NF/Structures/Piping/Atmospherics/gaslock.rsi
+    state: closed
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked

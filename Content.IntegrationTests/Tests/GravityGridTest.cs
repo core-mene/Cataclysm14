@@ -18,6 +18,8 @@
 // SPDX-FileCopyrightText: 2024 Leon Friedrich
 // SPDX-FileCopyrightText: 2024 Tayrtahn
 // SPDX-FileCopyrightText: 2025 Coenx-flex
+// SPDX-FileCopyrightText: 2025 Cojoke
+// SPDX-FileCopyrightText: 2025 Redrover1760
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -53,7 +55,7 @@ namespace Content.IntegrationTests.Tests
   - type: UserInterface
 ";
         [Test]
-        public async Task Test()
+        public async Task GravityTest() // Test->GravityTest - Mono
         {
             await using var pair = await PoolManager.GetServerClient();
             var server = pair.Server;
@@ -89,7 +91,7 @@ namespace Content.IntegrationTests.Tests
                 powerComponent.NeedsPower = false;
             });
 
-            await server.WaitRunTicks(10); // Mono change: increase from 5 due to power update change
+            await server.WaitRunTicks(25); // Mono change: increase from 5 due to power update change
 
             await server.WaitAssertion(() =>
             {
@@ -108,7 +110,7 @@ namespace Content.IntegrationTests.Tests
                 powerComponent.NeedsPower = true;
             });
 
-            await server.WaitRunTicks(15); // Mono change: increase from 5 due to power update change
+            await server.WaitRunTicks(25); // Mono change: increase from 5 due to power update change
 
             await server.WaitAssertion(() =>
             {

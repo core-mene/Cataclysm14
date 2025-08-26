@@ -44,3 +44,147 @@
   - type: NpcFactionMember
     factions:
     - USSPTurret
+
+- type: entity
+  parent: BaseWeaponTurretNF
+  id: BaseMk290Sentry
+  name: MK-290 Sentry
+  description:
+    The MK-290 deployable sentry system designed in the old United Nations of Earth, and serving continued use with the TSF armed forces.
+    Feeds from any 7.62x39mm magazine, however recent upgrades have allowed it to use 6.8x52mm caseless and 5.56x45mm to comply with TSF standard.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Sentries/sentry.rsi
+    drawdepth: Mobs
+    layers:
+    - state: normal_uac_sentry # TODO - new sprites
+  - type: InteractionPopup
+    interactDelay: 0.2
+    successChance: 0.8
+    interactSuccessString: petting-success-generic
+    interactFailureString: petting-failure-generic
+    interactSuccessSound:
+      path: /Audio/Effects/double_beep.ogg
+  - type: CombatMode
+    toggleMouseRotator: false
+  - type: MouseRotator
+    angleTolerance: 5
+    rotationSpeed: 270
+    simple4DirMode: false
+  - type: NoRotateOnInteract
+  - type: NoRotateOnMove
+  - type: Input
+    context: "human"
+  - type: Gun
+    fireRate: 9
+    projectileSpeed: 55
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/m41.ogg
+  - type: MagazineAmmoProvider
+    autoEject: false
+  - type: NpcFactionMember
+    factions:
+    - TSFMCTurret
+  - type: Construction
+    deconstructionTarget: null
+    graph: WeaponTurretMk290PackingGraph
+    node: WeaponTurretMk290Packed
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine7.62x39mmBox
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 1
+        whitelist:
+          tags:
+          - Magazine7.62x39mmFMJ
+          - Magazine7.62x39mmLowCapacityFMJ
+          - Magazine7.62x39mmBox
+          - Magazine5.56x45mmFMJ
+          - Magazine5.56x45mmBox
+          - Magazine68x52mmCaseless
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+
+- type: entity
+  parent: BaseMk290Sentry
+  id: WeaponTurretMk290
+  suffix: TSFMC
+  components:
+  - type: NpcFactionMember
+    factions:
+    - TSFMCTurret
+
+- type: entity
+  parent: BaseMk290Sentry
+  id: WeaponTurretMk290Empty
+  suffix: TSFMC, Empty
+  components:
+  - type: NpcFactionMember
+    factions:
+    - TSFMCTurret
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: null
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 1
+        whitelist:
+          tags:
+          - Magazine7.62x39mmFMJ
+          - Magazine7.62x39mmLowCapacityFMJ
+          - Magazine7.62x39mmBox
+          - Magazine5.56x45mmFMJ
+          - Magazine5.56x45mmBox
+          - Magazine68x52mmCaseless
+
+- type: constructionGraph # deconstruction graph
+  id: WeaponTurretMk290PackingGraph
+  start: WeaponTurretMk290Packed
+  graph:
+  - node: WeaponTurretMk290Packed
+    entity: WeaponTurretMk290
+    edges:
+    - to: WeaponTurretMk290Packed
+      completed:
+      - !type:SpawnPrototype
+        prototype: WeaponTurretMk290Packed
+        amount: 1
+      - !type:EmptyAllContainers
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Screwing
+        doAfter: 14
+
+- type: entity # folded turret
+  id: WeaponTurretMk290Packed
+  name: packed MK-290
+  description: A disassembled and packed MK-290 sentry system.
+  suffix: TSFMC, Packed
+  parent:
+  - BaseC2ContrabandUnredeemable
+  - BaseItem
+  components:
+  - type: WeaponCaseInsertable
+  - type: MultiHandedItem
+  - type: SpawnAfterInteract
+    prototype: WeaponTurretMk290
+    doAfter: 5
+    removeOnInteract: true
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Sentries/sentry.rsi
+    state: normal_uac_sentry_handheld
+  - type: Item
+    size: Ginormous
+    shape:
+    - 0,0,3,3
+    sprite: _Mono/Objects/Weapons/Sentries/sentry.rsi

@@ -35,7 +35,7 @@
 - type: latheRecipePack
   id: SecurityAmmoStatic
   recipes:
-  - Wirecutter 
+  - Wirecutter
 
 - type: latheRecipePack
   id: SecurityWeaponsStatic
@@ -60,7 +60,7 @@
 
 - type: latheRecipePack
   id: SecurityBoards
-  # abstract: true # Frontier: finally, spammable shuttle guns
+  abstract: true # Frontier: finally, spammable shuttle guns
   recipes:
   - ShuttleGunDusterCircuitboard
   - ShuttleGunFriendshipCircuitboard

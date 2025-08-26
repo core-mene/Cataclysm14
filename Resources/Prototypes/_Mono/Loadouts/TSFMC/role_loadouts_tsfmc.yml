@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 cheetah1984
 # SPDX-FileCopyrightText: 2025 sleepyyapril
 # SPDX-FileCopyrightText: 2025 starch
@@ -37,7 +38,7 @@
   canCustomizeName: true # pseudonym?
 
 - type: roleLoadout
-  id: JobDeputy
+  id: JobDeputy # Marine
   groups:
   - TsfmcHead
   - TsfmcNeck
@@ -64,7 +65,7 @@
   canCustomizeName: true
 
 - type: roleLoadout
-  id: JobBrigmedic
+  id: JobBrigmedic # Brigmedic
   groups:
   - TsfmcHeadMedic
   - TsfmcNeckMedic
@@ -91,7 +92,7 @@
   canCustomizeName: true
 
 - type: roleLoadout
-  id: JobBailiff
+  id: JobBailiff # Unused
   groups:
   - TsfmcHead
   - TsfmcNeck
@@ -118,7 +119,7 @@
   canCustomizeName: true
 
 - type: roleLoadout
-  id: JobSeniorOfficer
+  id: JobSeniorOfficer # Fireteam Leader
   groups:
   - TsfmcHead
   - TsfmcNeck
@@ -145,7 +146,7 @@
   canCustomizeName: true
 
 - type: roleLoadout
-  id: JobSheriff
+  id: JobSheriff # Colonel
   groups:
   - TsfmcHead
   - TsfmcNeckCommander
@@ -166,12 +167,12 @@
   - ContractorFun
   - SeniorOfficerTrinkets
   - NfsdSpeciesSpecific
-  - TsfmcFirearm
+  - TsfmcFirearmColonel
   - TsfmcMag
   canCustomizeName: true
 
 - type: roleLoadout
-  id: JobTsfEngineer
+  id: JobTsfEngineer # Engineer
   groups:
   - TsfmcHeadEngi
   - TsfmcNeckEngi

@@ -27,6 +27,7 @@
 # SPDX-FileCopyrightText: 2025 Alice "Arimah" Heurlin
 # SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 Checkraze
+# SPDX-FileCopyrightText: 2025 Coenx-flex
 # SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Jakumba
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
@@ -11465,8 +11466,7 @@ entities:
       pos: 52.5,14.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
       deviceLists:
       - 17
     - type: AtmosPipeColor
@@ -11605,8 +11605,6 @@ entities:
       pos: 52.5,13.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 17
     - type: AtmosPipeColor

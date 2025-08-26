@@ -159,3 +159,78 @@
       - state: mag-tranq-1
         map: ["enum.GunVisualLayers.Mag"]
       - state: tranquilizer
+
+# Mono AP syst
+#anti-flesh:
+- type: entity
+  name: shotgun shell box (12 gauge OO magnum buckshot)
+  parent: AmmoProvider12_gaugeShotgunShell
+  id: AmmoBox12_gaugeOOBuckshot
+  components:
+    - type: BallisticAmmoProvider
+      proto: ShellShotgun12_gaugeOOBuckshot
+    - type: Sprite
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: magnum-buckshot
+
+- type: entity
+  name: shotgun shell box (12 gauge RIP)
+  parent: AmmoProvider12_gaugeShotgunShell
+  id: AmmoBox12_gaugeSlugRIP
+  components:
+    - type: BallisticAmmoProvider
+      proto: ShellShotgun12_gaugeOOBuckshot
+    - type: MagazineVisuals
+      magState: mag-slugRIP
+      steps: 5
+      zeroVisible: false
+    - type: Sprite
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-slugRIP-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: slugRIP
+
+#armor-piercing:
+- type: entity
+  name: shotgun shell box (12 gauge armor-piercing slug)
+  parent: AmmoProvider12_gaugeShotgunShell
+  id: AmmoBox12_gaugeSlugAP
+  components:
+    - type: BallisticAmmoProvider
+      proto: ShellShotgun12_gaugeSlugAP
+    - type: MagazineVisuals
+      magState: mag-slugAP
+      steps: 5
+      zeroVisible: false
+    - type: Sprite
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-slugAP-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: slugAP
+
+- type: entity
+  name: shotgun shell box (12 gauge flechette)
+  parent: AmmoProvider12_gaugeShotgunShell
+  id: AmmoBox12_gaugeFlechette
+  components:
+    - type: BallisticAmmoProvider
+      proto: ShellShotgun12_gaugeFlechette
+    - type: MagazineVisuals
+      magState: mag-flechette
+      steps: 5
+      zeroVisible: false
+    - type: Sprite
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-flechette-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: flechette

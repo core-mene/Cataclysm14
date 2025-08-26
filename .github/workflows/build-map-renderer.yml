@@ -1,16 +1,34 @@
-﻿name: Build & Test Map Renderer
+# SPDX-FileCopyrightText: 2021 Javier Guardia Fernández
+# SPDX-FileCopyrightText: 2021 Paul Ritter
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 mirrorcult
+# SPDX-FileCopyrightText: 2022 0x6273
+# SPDX-FileCopyrightText: 2023 DrSmugleaf
+# SPDX-FileCopyrightText: 2023 Moony
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Myra
+# SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
+# SPDX-FileCopyrightText: 2025 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+name: Build & Test Map Renderer
 
 on:
   push:
-    branches: [ master, staging, stable ]
+    branches: [ main, staging, stable ]
   merge_group:
   pull_request:
     types: [ opened, reopened, synchronize, ready_for_review ]
-    branches: [ master, staging, stable ]
+    branches: [ main, staging, stable ]
 
 jobs:
   build:
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'FrontierATC' # Frontier
+    if: github.event.pull_request.draft == false
     strategy:
       matrix:
         os: [ubuntu-latest]

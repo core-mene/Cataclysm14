@@ -1,4 +1,11 @@
-﻿- type: entity
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Milon
+# SPDX-FileCopyrightText: 2025 Whatstone
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
   parent: GasPressurePump
   id: GasPressurePumpOn
   suffix: On
@@ -186,6 +193,10 @@
   - type: IconSmooth
     key: walls
     mode: NoSprite
+  # Mono
+  - type: Construction
+    graph: AirlockShuttle
+    node: gaslock
 
 - type: entity
   parent: [BaseStructureDynamic, BasePressurePumpGaslock]

@@ -1,6 +1,12 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: BaseCartridge5.7x28mm
   name: cartridge (5.7x28mm FMJ)
+  description: A small PDW cartridge. More internal damage than 4.6, but less armor-piercing capabilities. Formerly infamous for its high cost.
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
   abstract: true
   components:
@@ -101,3 +107,80 @@
     range: 0.3
     energyConsumption: 2700000
     disableDuration: 10
+
+# Mono AP syst
+#anti-flesh:
+- type: entity
+  id: Cartridge5.7x28mmHP
+  name: cartridge (5.7x28mm hollow-point)
+  parent: BaseCartridge5.7x28mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet5.7x28mmHP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#90EE90"
+
+- type: entity
+  id: Cartridge5.7x28mmRIP
+  name: cartridge (5.7x28mm RIP)
+  parent: BaseCartridge5.7x28mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet5.7x28mmRIP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#C04000"
+
+#armor-piercing:
+- type: entity
+  id: Cartridge5.7x28mmSteelAP
+  name: cartridge (5.7x28mm AP steel core)
+  parent: BaseCartridge5.7x28mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet5.7x28mmSteelAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+
+- type: entity
+  id: Cartridge5.7x28mmPlasteelAP
+  name: cartridge (5.7x28mm AP plasteel core)
+  parent: BaseCartridge5.7x28mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet5.7x28mmPlasteelAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#888888"
+
+- type: entity
+  id: Cartridge5.7x28mmSynthAP
+  name: cartridge (5.7x28mm AP synthalloy core)
+  parent: BaseCartridge5.7x28mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet5.7x28mmSynthAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#111111"

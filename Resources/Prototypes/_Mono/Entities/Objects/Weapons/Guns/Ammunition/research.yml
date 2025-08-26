@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: AbstractResearchIconBallistic1
+  components:
+    - type: Sprite
+      sprite: _Mono/Objects/Weapons/Guns/Ammunition/Research.rsi
+      state: T1
+
+- type: entity
+  id: AbstractResearchIconBallistic2
+  components:
+    - type: Sprite
+      sprite: _Mono/Objects/Weapons/Guns/Ammunition/Research.rsi
+      state: T2

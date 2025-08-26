@@ -1,5 +1,6 @@
 // SPDX-FileCopyrightText: 2024 Tayrtahn
 // SPDX-FileCopyrightText: 2024 Wrexbe (Josh)
+// SPDX-FileCopyrightText: 2025 Coenx-flex
 // SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 ScyronX
 //
@@ -38,7 +39,7 @@ public sealed class AdvertiseSystem : EntitySystem
 
     public override void Initialize()
     {
-        SubscribeLocalEvent<AdvertiseComponent, ComponentInit>(OnInit);
+        SubscribeLocalEvent<AdvertiseComponent, MapInitEvent>(OnMapInit);
 
         SubscribeLocalEvent<ApcPowerReceiverComponent, AttemptAdvertiseEvent>(OnPowerReceiverAttemptAdvertiseEvent);
         SubscribeLocalEvent<VendingMachineComponent, AttemptAdvertiseEvent>(OnVendingAttemptAdvertiseEvent);
@@ -47,10 +48,14 @@ public sealed class AdvertiseSystem : EntitySystem
     }
 
     // Mono - has to be ComponentInit so it doesn't break when loading again after MapInit
-    private void OnInit(EntityUid uid, AdvertiseComponent advert, ComponentInit args)
+    // Mono - ComponentInit component modifications is a nono, back to mapInit with a check
+    private void OnMapInit(EntityUid uid, AdvertiseComponent advert, MapInitEvent args)
     {
-        var prewarm = advert.Prewarm;
-        RandomizeNextAdvertTime(uid, advert, prewarm);
+        if (advert.NextAdvertisementTime == TimeSpan.Zero)
+        {
+            var prewarm = advert.Prewarm;
+            RandomizeNextAdvertTime(uid, advert, prewarm);
+        }
     }
 
     private void RandomizeNextAdvertTime(EntityUid uid, AdvertiseComponent advert, bool prewarm = false)

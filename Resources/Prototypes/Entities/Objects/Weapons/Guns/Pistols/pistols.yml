@@ -39,6 +39,7 @@
 # SPDX-FileCopyrightText: 2024 metalgearsloth
 # SPDX-FileCopyrightText: 2024 nikthechampiongr
 # SPDX-FileCopyrightText: 2025 BramvanZijp
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 KiraZen_
 # SPDX-FileCopyrightText: 2025 Redrover1760
@@ -121,6 +122,10 @@
   - type: ItemTax # Mono
     taxAccounts:
       nfsd: 0.2
+  - type: WieldedCrosshair
+    rsi:
+      sprite: _RMC14/Interface/MousePointer/pistol_mouse.rsi
+      state: all
 
 - type: entity
   name: LWC PT-45A viper (9x19mm)
@@ -320,6 +325,8 @@
         whitelist:
           tags:
             - Cartridge45_ACPFMJ
+  - type: StaticPrice # Mono
+    price: 150
 
 - type: entity
   name: NT N1984 (.45 magnum)

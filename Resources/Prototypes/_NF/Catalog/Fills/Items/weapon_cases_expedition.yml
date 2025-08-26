@@ -3,10 +3,11 @@
 # SPDX-FileCopyrightText: 2024 Qulibly
 # SPDX-FileCopyrightText: 2024 VividPups
 # SPDX-FileCopyrightText: 2024 Whatstone
-# SPDX-FileCopyrightText: 2024 starch
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 Dvir
 # SPDX-FileCopyrightText: 2025 FireFoxPhoenix
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -21,7 +22,7 @@
     contents:
     - id: WeaponPistolMk58Expedition
       amount: 1
-    - id: Magazine9x19mmPistolFMJ
+    - id: Magazine45_ACPPistolFMJ
       amount: 2
 
 - type: entity
@@ -373,7 +374,7 @@
     contents:
     - id: WeaponRifleLecter
       amount: 1
-    - id: Magazine5.56x45mmFMJ
+    - id: Magazine68x52mmCaseless # Mono
       amount: 2
 
 - type: entity

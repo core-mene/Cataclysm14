@@ -1,0 +1,64 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 GreaseMonk
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2024 Shroomerian
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 significant harassment
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: starch70
+# Discord: _starch_
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Notes: Wow.
+#
+- type: pointOfInterest
+  id: Jupiter
+  parent: BaseMobilePOI
+  name: 'ASR Jupiter Class Carrier'
+  minimumDistance: 17000
+  maximumDistance: 19000
+  spawnGroup: Required
+  gridPath: /Maps/_Mono/POI/jupiter.yml
+  addComponents:
+  - type: IFF
+    color: "#FF0D0D"
+    flags: [HideLabel]
+    readOnly: false
+
+- type: gameMap
+  id: Jupiter
+  mapName: 'ASR Jupiter Class Carrier'
+  mapPath: /Maps/_Mono/POI/jupiter.yml
+  minPlayers: 0
+  stations:
+    Jupiter:
+      stationProto: RecordsFrontierOutpostCargo
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'ASR Jupiter Class Carrier'
+        - type: ExtraStationInformation
+          iconPath: /Textures/_NF/Interface/Pirate/piratelogo.png
+          stationSubtext: 'frontier-lobby-jupiter-subtext'
+          stationDescription: 'frontier-lobby-jupiter-description'
+          lobbySortOrder: 2
+        - type: StationJobs
+          availableJobs:
+            PirateCaptain: [ 1, 1 ]
+            PirateFirstMate: [ 2, 2 ] # Mono
+            Pirate: [ 8, 8 ] # Mono
+          tags:
+          - RogueCommander
+        - type: StationDeadDropReporting
+          messageSet: Pirate
+        - type: StationDeadDropHintExempt

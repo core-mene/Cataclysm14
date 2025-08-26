@@ -28,7 +28,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 14:30:55
+  time: 08/16/2025 14:43:06
   entityCount: 1137
 maps: []
 grids:
@@ -94,6 +94,7 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
+      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -4191,6 +4192,14 @@ entities:
     - type: Transform
       pos: -1.5,19.5
       parent: 1
+- proto: DefibrillatorCabinetFilled
+  entities:
+  - uid: 651
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,-5.5
+      parent: 1
 - proto: DrinkCoffeeLiqueurBottleFull
   entities:
   - uid: 633
@@ -4272,12 +4281,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -1.5,-2.5
-      parent: 1
-  - uid: 651
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,12.5
       parent: 1
   - uid: 652
     components:
@@ -6442,8 +6445,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -6.5,-3.5
       parent: 1
-    - type: Thruster
-      enabled: False
     - type: ApcPowerReceiver
       powerLoad: 1
   - uid: 920

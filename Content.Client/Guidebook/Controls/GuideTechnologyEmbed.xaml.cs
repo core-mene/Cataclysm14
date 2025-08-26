@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Diagnostics.CodeAnalysis;
 using Content.Client.Guidebook.Richtext;
 using Content.Client.Message;
@@ -83,7 +88,16 @@ public sealed partial class GuideTechnologyEmbed : BoxContainer, IDocumentTag, I
 
         NameLabel.SetMarkup($"[bold]{Loc.GetString(technology.Name)}[/bold]");
         DescriptionLabel.SetMessage(_research.GetTechnologyDescription(technology, includePrereqs: true, disciplinePrototype: discipline));
-        TechTexture.Texture = _sprite.Frame0(technology.Icon);
+        // Frontier: Handle technology icon - prioritize EntityIcon, fall back to Icon
+        if (technology.EntityIcon.HasValue)
+        {
+            TechTexture.Texture = _sprite.GetPrototypeIcon(technology.EntityIcon.Value).Default;
+        }
+        else if (technology.Icon != null)
+        {
+            TechTexture.Texture = _sprite.Frame0(technology.Icon);
+        }
+        // End Frontier: If neither is available, the texture will remain null/empty
 
         DisciplineColorBackground.PanelOverride = new StyleBoxFlat
         {

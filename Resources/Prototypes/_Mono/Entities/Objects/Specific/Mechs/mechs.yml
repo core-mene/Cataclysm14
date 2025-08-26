@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Avalon
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 starch
@@ -109,6 +110,7 @@
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -143,7 +145,7 @@
     baseSprintSpeed: 1
     baseWeightlessModifier: 40
   - type: RadarBlip
-    radarColor: "#CF0E0E"
+    radarColor: "#E3E3E3"
     scale: 3
     requireNoGrid: true
     shape: square
@@ -213,6 +215,7 @@
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -249,7 +252,7 @@
   - type: Damageable
     damageModifierSet: HeavyArmorNT
   - type: RadarBlip
-    radarColor: "#CF0E0E"
+    radarColor: "#E3E3E3"
     scale: 3
     requireNoGrid: true
     shape: square
@@ -308,6 +311,7 @@
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -343,7 +347,7 @@
   - type: Damageable
     damageModifierSet: HeavyArmorNT
   - type: RadarBlip
-    radarColor: "#CF0E0E"
+    radarColor: "#E3E3E3"
     scale: 3
     requireNoGrid: true
     shape: square
@@ -403,6 +407,7 @@
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -437,7 +442,7 @@
     baseSprintSpeed: 1
     baseWeightlessModifier: 25
   - type: RadarBlip
-    radarColor: "#CF0E0E"
+    radarColor: "#E3E3E3"
     scale: 3
     requireNoGrid: true
     shape: square
@@ -498,6 +503,7 @@
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -532,7 +538,7 @@
     baseSprintSpeed: 0.5
     baseWeightlessModifier: 20
   - type: RadarBlip
-    radarColor: "#CF0E0E"
+    radarColor: "#E3E3E3"
     scale: 3
     requireNoGrid: true
     shape: square
@@ -593,6 +599,7 @@
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -627,7 +634,7 @@
     baseSprintSpeed: 1
     baseWeightlessModifier: 30
   - type: RadarBlip
-    radarColor: "#CF0E0E"
+    radarColor: "#E3E3E3"
     scale: 3
     requireNoGrid: true
     shape: square

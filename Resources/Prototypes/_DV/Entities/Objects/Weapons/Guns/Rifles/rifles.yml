@@ -11,10 +11,10 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  name: FCM Vulcan (7.62x51mm)
+  name: HWM FCM "Vulcan" (7.62x51mm)
   parent: [BaseWeaponLightMachineGun, BaseGunWieldable, BaseC1Contraband] # Frontier: add BaseC1Contraband
   id: WeaponRifleVulcan
-  description: One of the heaviest small arms to grace Security's armory, the FCM "Vulcan" (Fusil de Combat Moyen), this rifle is a modern take on a classic, manufactured by Herstal Light Arms, informally dubbed the "Right Arm of the Free World". Uses 7.62x51mm ammo.
+  description: One of the heaviest small arms to grace Security's armory, The Herstal Weapon Manufacture FCM (Fusil de Combat Moyen) "Vulcan", this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World". Uses 7.62x51mm ammo.
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi

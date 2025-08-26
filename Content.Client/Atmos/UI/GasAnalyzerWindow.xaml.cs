@@ -5,7 +5,9 @@
 // SPDX-FileCopyrightText: 2024 Mervill
 // SPDX-FileCopyrightText: 2024 slarticodefast
 // SPDX-FileCopyrightText: 2025 ArtisticRoomba
+// SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 chromiumboy
+// SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 

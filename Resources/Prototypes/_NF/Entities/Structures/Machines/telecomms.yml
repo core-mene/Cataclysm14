@@ -1,3 +1,13 @@
+# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2024 AndresE55
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: TelecomServer
   id: NFTelecomServerFilled
@@ -44,6 +54,7 @@
     containers:
       key_slots:
       - EncryptionKeyCommon
+      - EncryptionKeyTraffic
       - EncryptionKeyMedical
 
 - type: entity

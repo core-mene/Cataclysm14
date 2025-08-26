@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -30,37 +31,34 @@
     producingSound: /Audio/Machines/circuitprinter.ogg
     idleState: icon
     runningState: icon
+    staticPacks:
+    - StaticAmmoRecipePack
     dynamicPacks:
     # rogue start
     - MonoRogueWeaponsDynamicMelee
     - MonoRogueWeaponsDynamicRanged
     - MonoRogueVouchersDynamic
     - MonoRogueMiscDynamic
-    - MonoRogueAmmo
     - MonoRogueGearDynamic
     - MonoRogueGearProDynamic
-    - MonoRogueSpecialAmmo
     # TSF start
     - MonoTSFWeaponsDynamicMelee
     - MonoTSFWeaponsDynamicRanged
     - MonoTSFVouchersDynamic
     - MonoTSFMiscDynamic
-    - MonoTSFAmmo
     - MonoTSFGearDynamic
     - MonoTSFStructuresDynamic
-    - MonoTSFSpecialAmmo
     # USSP start
     - MonoUSSPVouchersDynamic
     - MonoUSSPArmorDynamic
     - MonoUSSPMiscDynamic
     - MonoUSSPWeaponsDynamicRanged
-    - MonoUSSPAmmo
-    - MonoUSSPSpecialAmmo
     # Universal shit (stuff like shipgun ammo)
     - UniversalRailgunAmmo
     - UniversalMissileAmmo
     - UniversalShellAmmo
     - UniversalOrdinance
+    - DynamicAmmoRecipePack
   - type: MaterialStorage
     whitelist:
       tags:

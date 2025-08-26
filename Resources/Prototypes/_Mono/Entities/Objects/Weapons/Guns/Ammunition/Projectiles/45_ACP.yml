@@ -17,6 +17,7 @@
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -29,7 +30,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 22
+        Piercing: 26
+    armorPenetration: -0.1
 
 - type: entity
   id: Bullet45_ACPPractice
@@ -62,8 +64,9 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 2
-        Heat: 20
+        Blunt: 3
+        Heat: 22
+    armorPenetration: -0.1
 
 - type: entity
   id: Bullet45_ACPUranium
@@ -74,8 +77,9 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 8
-        Piercing: 14
+        Radiation: 9
+        Piercing: 15
+    armorPenetration: -0.075
 
 # Upstream
 - type: entity
@@ -88,3 +92,69 @@
     damage:
       types:
         Shock: 0
+
+
+# Mono AP syst
+#anti-flesh:
+- type: entity
+  id: Bullet45_ACPHP
+  parent: BaseBullet
+  name: bullet (.45 hollow-point)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Slash: 4
+        Piercing: 32
+    armorPenetration: -0.4
+
+- type: entity
+  id: Bullet45_ACPRIP
+  parent: BaseBullet
+  name: bullet (.45 RIP)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Slash: 7
+        Piercing: 42
+    armorPenetration: -0.65
+
+#armor-piercing:
+- type: entity
+  id: Bullet45_ACPSteelAP
+  parent: BaseBullet
+  name: bullet (.45 AP steel core)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Piercing: 24
+    armorPenetration: 0.1
+
+- type: entity
+  id: Bullet45_ACPPlasteelAP
+  parent: BaseBullet
+  name: bullet (.45 AP plasteel core)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Piercing: 21
+    armorPenetration: 0.25
+
+- type: entity
+  id: Bullet45_ACPSynthAP
+  parent: BaseBullet
+  name: bullet (.45 AP synthalloy core)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Piercing: 18
+    armorPenetration: 0.4

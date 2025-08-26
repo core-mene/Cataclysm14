@@ -1,5 +1,8 @@
-# sir. These are strong walls. For outposts. Indestructible is too much
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
 
+# sir. These are strong walls. For outposts. Indestructible is too much
 
 - type: entity
   parent: WallReinforced
@@ -101,7 +104,6 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
 
-
 - type: entity
   parent: WallPlastitaniumDiagonal
   id: WallPlastitaniumDiagonalOutpost
@@ -117,6 +119,73 @@
     - trigger:
         !type:DamageTrigger
         damage: 50000
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Girder:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+# capital-only plastitainum
+
+- type: entity
+  parent: WallPlastitanium
+  id: WallPlastitaniumCapital
+  suffix: CAPITAL ONLY
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 9000 # No ram-meta
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 20000
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Girder:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: WallPlastitaniumDiagonal
+  id: WallPlastitaniumDiagonalCapital
+  name: plastitanium wall
+  suffix: diagonal, CAPITAL ONLY
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 4500 # No ram-meta
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10000
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:

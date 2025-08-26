@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 BoskiYourk
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -18,3 +19,11 @@
   components:
   - type: FaxMachine
     name: "USSP Station Baikal Commisar"
+
+- type: entity
+  parent: [BaseStructureDisableToolUse, FaxMachineBase]
+  id: FaxMachineASRJupiter
+  suffix: POI, ASR Jupiter
+  components:
+  - type: FaxMachine
+    name: "ASR Jupiter-Class Carrier"

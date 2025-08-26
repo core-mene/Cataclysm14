@@ -5,6 +5,7 @@
 # SPDX-FileCopyrightText: 2024 ErhardSteinhauer
 # SPDX-FileCopyrightText: 2024 TsjipTsjip
 # SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2025 Coenx-flex
 # SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
@@ -3275,8 +3276,6 @@ entities:
       pos: -5.5,1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 5
     - type: AtmosPipeColor
@@ -3333,8 +3332,7 @@ entities:
       pos: -5.5,-1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
       deviceLists:
       - 5
     - type: AtmosPipeColor

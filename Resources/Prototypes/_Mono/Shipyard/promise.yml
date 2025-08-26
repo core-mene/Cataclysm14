@@ -1,0 +1,56 @@
+# SPDX-FileCopyrightText: 2023 IHAN <IHAN>
+# SPDX-FileCopyrightText: 2023 Kennedy
+# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Long YM
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Rubeebeebee
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: Rubeebeebee
+# Discord: rubeebee
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Promise
+  parent: BaseVessel
+  name: DFNT Promise
+  description: An old Medical Ship design dating back from the fracture era. It comes equipped with everything a hospital ship would want, as well as a spacious crew accomodations for long term shifts. 
+  price: 97000
+  category: Medium
+  group: Medical
+  shuttlePath: /Maps/_Mono/Shuttles/promise.yml
+  guidebookPage: null
+  class:
+  - Medical
+  - Chemistry
+  engine:
+  - AME
+
+- type: gameMap
+  id: Promise
+  mapName: 'DFNT Promise'
+  mapPath: /Maps/_Mono/Shuttles/promise.yml
+  minPlayers: 0
+  stations:
+    Promise:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Promise MED{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            MdMedic: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

@@ -89,3 +89,27 @@
     - Antlion
     - StratoRat
 
+- type: entity
+  id: JupiterCarrierComputer
+  parent: BaseCarrierComputer
+  name: jupiter shipyard console
+  description: Lighter shipyard using the Jupiter's internal hangars, doesn't have access to the full roster of Ashen Republic ships.
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Prowler
+    - Sable
+    - Tethys
+    - Spyglass
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_blackmarket
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_blackmarket
+    - map: ["computerLayerKeys"]
+      state: blackmarket_key
+

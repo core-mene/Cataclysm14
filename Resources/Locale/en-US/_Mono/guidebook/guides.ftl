@@ -21,9 +21,12 @@ guide-entry-vespera = ADMP-27 VESPERA Rapid-Fire Pod
 guide-entry-tovek = ADMX-23 TOVEK Hybrid EMP Pod
 
 # Generic guides
+guide-entry-misc = Miscellaneous
+
 guide-entry-fentanyl = Fentanyl Production
 guide-entry-letoferol = Letoferol & Chimeras
 guide-entry-radios = Broadband & Shortband
+guide-entry-gridclaimer = Claiming Debris
 
 # Rules
 guide-entry-monolith-rules = Monolith Rules

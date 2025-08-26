@@ -7,3 +7,4 @@ job-supervisors-prisoner = all TSFMC personnel
 job-supervisors-nfsd = Fireteam Leaders, and the Colonel
 job-supervisors-pirate = the Rogue Commander and Commandant
 job-supervisors-nobody = nobody
+job-supervisors-ws = Winter Solstic

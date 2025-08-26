@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -10,9 +11,9 @@
   minLimit: 1
   loadouts:
   - FactionC20RLoadout
-  - FactionWt550Loadout
-  - FactionLecterLoadout
-  - FactionAkmLoadout
+  # - FactionWt550Loadout
+  # - FactionLecterLoadout
+  - FactionAk220Loadout
   - FactionEnergyGunLoadout
   fallbacks:
   - FactionC20RLoadout
@@ -25,7 +26,7 @@
   - FactionHawk4Pistol
   - FactionC20RLoadout
   - FactionWt550Loadout
-  - FactionLecterLoadout
+  # - FactionLecterLoadout
   - FactionAkmLoadout
   - FactionEnergyGunLoadout
   fallbacks:
@@ -37,9 +38,9 @@
   minLimit: 1
   loadouts:
   - Faction9x19SMGAmmoLoadout #C20r
-  - Faction4.6x30mmTopAmmo #WT550
-  - Faction5.56x45mmAmmoLoadout #Lecter
-  - Faction7.62x39mmAmmoLoadout #AKM
+  # - Faction4.6x30mmTopAmmo #WT550
+  # - Faction5.56x45mmAmmoLoadout #Lecter
+  # - Faction7.62x39mmAmmoLoadout #AKM
   - FactionRechargerLoadout #Energy
   fallbacks:
   - Faction9x19SMGAmmoLoadout #C20r
