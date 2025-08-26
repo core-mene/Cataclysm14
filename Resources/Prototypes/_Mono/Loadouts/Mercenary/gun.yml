@@ -24,7 +24,7 @@
 - type: loadoutGroup
   id: MercenaryPistol
   name: loadout-group-pistol
-  minLimit: 1
+  minLimit: 0
   loadouts:
   - ContractorMk32Loadout
   - MercenaryMk58Loadout
@@ -36,7 +36,7 @@
 - type: loadoutGroup
   id: MercenaryMag
   name: loadout-group-magazine
-  minLimit: 1
+  minLimit: 0
   loadouts:
   - Mercenary9x19mmPistolAmmoLoadout #MK32 Universal / Viper Ammo
   - MercenaryAcpPistolAmmoLoadout #MK58
