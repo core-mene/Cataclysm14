@@ -17,7 +17,7 @@ on:
 
 jobs:
   build:
-    if: github.event.pull_request.draft == false && github.actor != 'monolith8319'
+    if: github.event.pull_request.draft == false
     strategy:
       matrix:
         os: [ubuntu-latest]
