@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -16,18 +17,6 @@
   - WeaponRifleVulcanTSF
   - WeaponSubMachineGunDrozdTSF
   - WeaponRifleMR3CTSF
-  - Magazine68x52mmFMJ
-  - Magazine68x52mmEmpty
-  - AmmoBox68x52mmFMJ
-  - Magazine7.62x51mmFMJ
-  - Magazine7.62x51mmEmpty
-  - AmmoBox7.62x51mmFMJ
-  - Magazine45_ACPSubMachineGunFMJ
-  - Magazine45_ACPSubMachineGunEmpty
-  - AmmoBox45_ACPFMJ
-  - Magazine8x65mmSKR
-  - Magazine8x65mmEmpty
-  - AmmoBox8x65mmSKR
   technologyPrerequisites:
   - UniversalMaterialResearchT1
   position: 12, 2
@@ -41,9 +30,6 @@
   cost: 25000
   recipeUnlocks:
   - WeaponRifleAnnieTSF
-  - Magazine7.62x39mmFMJ
-  - Magazine7.62x39mmEmpty
-  - AmmoBox7.62x39mmFMJ
   technologyPrerequisites:
   - TsfBasicGuns
   - UniversalMaterialResearchT2
@@ -89,9 +75,6 @@
   cost: 30000
   recipeUnlocks:
   - WeaponRifleXlr556Tsf
-  - Magazine5.56x45mmFMJ
-  - Magazine5.56x45mmEmpty
-  - AmmoBox5.56x45mmFMJ
   technologyPrerequisites:
   - TsfMarsocGuns
   position: 12, 13

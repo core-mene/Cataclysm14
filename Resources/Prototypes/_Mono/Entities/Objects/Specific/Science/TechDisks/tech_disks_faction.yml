@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -84,9 +85,6 @@
   - type: TechnologyDisk
     recipes:
     - WeaponRifleLecterTSF
-    - Magazine68x52mmFMJ
-    - Magazine68x52mmEmpty
-    - AmmoBox68x52mmFMJ
 
 - type: entity
   parent: TechDiskBase
