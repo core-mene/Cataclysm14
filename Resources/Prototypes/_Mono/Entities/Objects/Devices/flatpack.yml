@@ -265,3 +265,14 @@
     price: 3000
     vendPrice: 20000
 
+- type: entity
+  parent: BaseFlatpack
+  id: ResearchAndDevelopmentServerMercFlatpack
+  name: mercenary R&D server flatpack
+  description: A flatpack used for constructing a mercenary R&D server.
+  components:
+  - type: Flatpack
+    entity: ResearchAndDevelopmentServerMerc
+  - type: StaticPrice
+    price: 4000
+    vendPrice: 10000

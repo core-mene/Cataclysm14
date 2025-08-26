@@ -186,11 +186,5 @@
     - state: variant-merc
     - state: server_o
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: TechnologyDatabase
-    supportedDisciplines:
-    - Industrial
-    - Arsenal
-    - Experimental
-    - CivilianServices
-    - FactionUniversal
-    - MechaEngineering
+  - type: StaticPrice
+    price: 4000
