@@ -255,20 +255,7 @@ public sealed class SuitSensorSystem : EntitySystem
             default:
                 return;
         }
-        // Mono Begin
-        string radarMsg;
-        switch (component.IFFSignatureEnabled)
-        {
-            case true:
-                radarMsg = "suit-sensor-signature-examine-on";
-                break;
-            case false:
-                radarMsg = "suit-sensor-signature-examine-off";
-                break;
-        }
-        // Mono End
         args.PushMarkup(Loc.GetString(msg));
-        args.PushMarkup(Loc.GetString(radarMsg)); // Mono
     }
 
     private void OnVerb(EntityUid uid, SuitSensorComponent component, GetVerbsEvent<Verb> args)
@@ -295,18 +282,6 @@ public sealed class SuitSensorSystem : EntitySystem
             CreateVerb(uid, component, args.User, SuitSensorMode.SensorVitals),
             CreateVerb(uid, component, args.User, SuitSensorMode.SensorCords)
         });
-
-        // Monolith IFF signature edit Start
-        var verb = new Verb
-        {
-            Text = Loc.GetString("suit-sensor-signature-toggle", ("status", GetStatusSignatureName(component))),
-            Act = () =>
-            {
-                TryToggleSignature(uid, component);
-            }
-        };
-        args.Verbs.Add(verb);
-        // End
     }
 
     private void OnInsert(EntityUid uid, SuitSensorComponent component, EntGotInsertedIntoContainerMessage args)
@@ -382,24 +357,6 @@ public sealed class SuitSensorSystem : EntitySystem
         return Loc.GetString(name);
     }
 
-    // Mono Begin
-    private string GetStatusSignatureName(SuitSensorComponent component)
-    {
-        string signatureName;
-        switch (component.IFFSignatureEnabled)
-        {
-            case true:
-                signatureName = "suit-sensor-signature-verb-disable";
-                break;
-            case false:
-                signatureName = "suit-sensor-signature-verb-enable";
-                break;
-        }
-
-        return Loc.GetString(signatureName);
-    }
-    // Mono End
-
     public void TrySetSensor(Entity<SuitSensorComponent> sensors, SuitSensorMode mode, EntityUid userUid)
     {
         var comp = sensors.Comp;
@@ -419,26 +376,6 @@ public sealed class SuitSensorSystem : EntitySystem
             };
 
             _doAfterSystem.TryStartDoAfter(doAfterArgs);
-        }
-    }
-
-    // Monolith - Radar signature toggle verb
-    public void TryToggleSignature(EntityUid uid, SuitSensorComponent comp)
-    {
-        if (comp.IFFSignatureEnabled || HasComp<RadarBlipComponent>(uid))
-        {
-            comp.IFFSignatureEnabled = false;
-            RemComp<RadarBlipComponent>(uid);
-            _popupSystem.PopupEntity(Loc.GetString("suit-sensor-signature-toggled-off"), uid);
-        }
-        else
-        {
-            comp.IFFSignatureEnabled = true;
-            var blip = EnsureComp<RadarBlipComponent>(uid);
-            blip.RadarColor = Color.Cyan;
-            blip.Scale = 0.5f;
-            blip.VisibleFromOtherGrids = true;
-            _popupSystem.PopupEntity(Loc.GetString("suit-sensor-signature-toggled-on"), uid);
         }
     }
 

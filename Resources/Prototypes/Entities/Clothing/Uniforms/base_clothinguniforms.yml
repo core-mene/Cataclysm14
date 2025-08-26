@@ -43,6 +43,10 @@
   id: ClothingUniformBase
   components:
   - type: SuitSensor
+  - type: ToggleableSignature
+    blip:
+      radarColor: Cyan
+      scale: 0.5
   - type: DeviceNetwork
     deviceNetId: Wireless
     transmitFrequencyId: SuitSensor
