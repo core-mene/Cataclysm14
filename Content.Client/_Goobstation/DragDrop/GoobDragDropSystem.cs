@@ -1,3 +1,4 @@
+// SPDX-FileCopyrightText: 2025 BombasterDS2
 // SPDX-FileCopyrightText: 2025 GoobBot
 // SPDX-FileCopyrightText: 2025 Ilya246
 //
