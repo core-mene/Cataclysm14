@@ -7,6 +7,7 @@ on:
       - "Resources/Maps/_NF/Shuttles/**/*.yml" # Ship grids
       - "Resources/Prototypes/_NF/Shipyard/**/*.yml" # Shipyard prototypes
       - "Content.IntegrationTests/Tests/_NF/ShipyardTests.cs" # Shipyard tests
+      - "Resources/Prototypes/Entities/**/*.yml" # Mono Change, run when an entity may have changed price
 
 jobs:
   build:
