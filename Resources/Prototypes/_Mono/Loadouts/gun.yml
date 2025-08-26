@@ -31,14 +31,14 @@
 
 - type: loadout #Svalinn
   id: ContractorSvalinnLoadout
-  price: 0
+  price: 2000
   storage:
     back:
     - WeaponLaserSvalinn
 
 - type: loadout #Makeshift Laser
   id: ContractorLaserLoadout
-  price: 2000
+  price: 0
   storage:
     back:
     - WeaponMakeshiftLaser
