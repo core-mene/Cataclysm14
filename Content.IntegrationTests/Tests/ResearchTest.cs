@@ -16,6 +16,7 @@ using Content.Shared.Research.Prototypes;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Prototypes;
 using Content.Shared.Research.TechnologyDisk.Components;
+using Content.Shared.Research.Components;
 
 namespace Content.IntegrationTests.Tests;
 
@@ -113,19 +114,20 @@ public sealed class ResearchTest
                     if (pair.IsTestPrototype(proto))
                         continue;
 
-                    if (!proto.TryGetComponent<TechnologyDiskComponent>(out var techDisk, compFact))
-                        continue;
-
-                    if (techDisk.Recipes != null)
+                    if (proto.TryGetComponent<TechnologyDiskComponent>(out var techDisk, compFact) && techDisk.Recipes != null)
                         techDiskRecipes.UnionWith(techDisk.Recipes);
+
+                    if (proto.TryGetComponent<BlueprintComponent>(out var blueprint, compFact) && blueprint.ProvidedRecipes != null)
+                        techDiskRecipes.UnionWith(blueprint.ProvidedRecipes);
+
                 }
 
                 unlockedTechs.UnionWith(techDiskRecipes);
                 // now check that every dynamic recipe a lathe lists can be unlocked
-                // mono: or has a tech disk recipe
+                // mono: or has a tech disk recipe or blueprint recipe
                 foreach (var recipe in latheTechs)
                 {
-                    Assert.That(unlockedTechs, Does.Contain(recipe), $"Recipe '{recipe}' is dynamic on a lathe but cannot be unlocked by research or tech disk.");
+                    Assert.That(unlockedTechs, Does.Contain(recipe), $"Recipe '{recipe}' is dynamic on a lathe but cannot be unlocked by research, tech disk, or blueprint.");
                 }
             });
         });
