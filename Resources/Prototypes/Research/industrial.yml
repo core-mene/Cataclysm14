@@ -39,7 +39,7 @@
   entityIcon: MiningDrill
   discipline: Industrial
   tier: 1
-  cost: 10000
+  cost: 7500
   recipeUnlocks:
   - MiningDrill
   - WeaponGrapplingGun # Frontier
@@ -72,7 +72,7 @@
   entityIcon: PowerCellHigh
   discipline: Industrial
   tier: 1
-  cost: 25000
+  cost: 20000
   recipeUnlocks:
   - PowerCellHigh
   - TurboItemRechargerCircuitboard
@@ -87,7 +87,7 @@
   entityIcon: MachineFlatpacker
   discipline: Industrial
   tier: 1
-  cost: 30000
+  cost: 10000
   recipeUnlocks:
   - FlatpackerMachineCircuitboard
   technologyPrerequisites:
@@ -100,7 +100,7 @@
   entityIcon: LatheUpgradeKitHyper
   discipline: Industrial
   tier: 1
-  cost: 40000
+  cost: 30000
   recipeUnlocks:
   # Begin DeltaV Removals - replaced by upgrade kits + departmental techfabs
   #- AutolatheHyperConvectionMachineCircuitboard
@@ -129,7 +129,7 @@
   entityIcon: PortableGeneratorPacman
   discipline: Industrial
   tier: 1
-  cost: 25000
+  cost: 15000
   recipeUnlocks:
   - PortableGeneratorPacmanMachineCircuitboard
   - PortableGeneratorSuperPacmanMachineCircuitboard
@@ -164,7 +164,7 @@
   entityIcon: Thruster
   discipline: Industrial
   tier: 2
-  cost: 30000
+  cost: 10000
   recipeUnlocks:
   - ShuttleConsoleCircuitboard
   - ThrusterMachineCircuitboard
@@ -175,9 +175,6 @@
   - SmallGyroscopeMachineCircuitboard # Frontier
   technologyPrerequisites:
   - AdvancedParts
-  - PowerGeneration
-  - SpaceScanning
-  - AtmosphericTech
   position: -5, 7
 
 - type: technology
@@ -186,7 +183,7 @@
   entityIcon: GasThermoMachineHellfireFreezer
   discipline: Industrial
   tier: 2
-  cost: 25000
+  cost: 20000
   recipeUnlocks:
   - HellfireFreezerMachineCircuitBoard
   - PortableScrubberMachineCircuitBoard
@@ -203,7 +200,7 @@
   entityIcon: WelderExperimental
   discipline: Industrial
   tier: 2
-  cost: 45000
+  cost: 30000
   recipeUnlocks:
   - WelderExperimental
   - PowerDrill
@@ -226,7 +223,7 @@
   entityIcon: MiningDrillDiamond
   discipline: Industrial
   tier: 2
-  cost: 25000
+  cost: 20000
   recipeUnlocks:
   #- OreBagOfHolding
   - MiningDrillDiamond
@@ -285,7 +282,7 @@
   entityIcon: RCD
   discipline: Industrial
   tier: 3
-  cost: 30000
+  cost: 15000
   recipeUnlocks:
 #  - ShipyardRCD # Frontier
 #  - ShipyardRCDAmmo # Frontier
