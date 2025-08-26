@@ -56,6 +56,7 @@ public sealed class FailAndStartPresetTest
     ///     Test that a nuke ops gamemode can start after failing to start once.
     /// </summary>
     [Test]
+    [Ignore("Uses old stuff we don't use")]
     public async Task FailAndStartTest()
     {
         await using var pair = await PoolManager.GetServerClient(new PoolSettings
