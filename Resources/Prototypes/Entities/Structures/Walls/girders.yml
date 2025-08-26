@@ -88,7 +88,7 @@
         sound:
           collection: MetalBreak
   - type: StaticPrice
-    price: 7 # Mono: 15>5
+    price: 15 # Mono: 15
   - type: Climbable # Frontier - Stop AI Abuse
   - type: RCDDeconstructable # Frontier
     cost: 4 # Frontier
@@ -136,7 +136,7 @@
               sound:
                 collection: MetalBreak
     - type: StaticPrice
-      price: 35 # Mono: 130<35
+      price: 65 # Mono: 130<65
 
 - type: entity
   id: ClockworkGirder
