@@ -173,3 +173,24 @@
     - FactionUniversal
     - MechaEngineering
 
+- type: entity
+  parent: ResearchAndDevelopmentServer
+  id: ResearchAndDevelopmentServerMerc
+  name: mercenary R&D server
+  description: Contains the collective knowledge of the crew.
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/Machines/server.rsi
+    layers:
+    - state: server
+    - state: variant-merc
+    - state: server_o
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - Industrial
+    - Arsenal
+    - Experimental
+    - CivilianServices
+    - FactionUniversal
+    - MechaEngineering

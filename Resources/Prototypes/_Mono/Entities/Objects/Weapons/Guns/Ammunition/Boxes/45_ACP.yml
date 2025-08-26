@@ -173,7 +173,7 @@
 - type: entity
   parent: BaseAmmoBox45_ACP
   id: AmmoBox45_ACPSteelAP
-  name: ammunition box (.45 ACP armor-piercing steel core)
+  name: ammunition box (.45 ACP AP steel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPSteelAP
@@ -188,7 +188,7 @@
 - type: entity
   parent: BaseAmmoBox45_ACP
   id: AmmoBox45_ACPPlasteelAP
-  name: ammunition box (.45 ACP armor-piercing plastitanium core)
+  name: ammunition box (.45 ACP AP plasteel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPPlasteelAP
@@ -203,7 +203,7 @@
 - type: entity
   parent: BaseAmmoBox45_ACP
   id: AmmoBox45_ACPSynthAP
-  name: ammunition box (.45 ACP armor-piercing synthalloy core)
+  name: ammunition box (.45 ACP AP synthalloy core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_ACPSynthAP

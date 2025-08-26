@@ -813,7 +813,58 @@
   - Magazine12_gaugeBeanbag
   - AmmoBox12_gaugeBeanbag
 
-#advanced = Uranium + Incendiary + Steel AP + Plasteel AP + Synth AP + HP + RIP
+#HP recipes
+
+  - Magazine7.62x51mmHP
+  - AmmoBox7.62x51mmHP
+  - Magazine7.62x54mmRHP
+  - AmmoBox7.62x54mmRHP
+  - Magazine5.56x45mmHP
+  - AmmoBox5.56x45mmHP
+  - Magazine7.62x39mmHP
+  - AmmoBox7.62x39mmHP
+  - Magazine45_magnumPistolHP
+  - SpeedLoader45_magnumHP
+  - AmmoBox45_magnumHP
+  - Magazine4.6x30mmPistolHP
+  - Magazine4.6x30mmSubMachineGunHP
+  - AmmoBox4.6x30mmHP
+  - Magazine5.7x28mmPistolHP
+  - Magazine5.7x28mmSubMachineGunHP
+  - AmmoBox5.7x28mmHP
+  - Magazine9x19mmPistolHP
+  - Magazine9x19mmSubMachineGunHP
+  - AmmoBox9x19mmHP
+  - Magazine45_ACPPistolHP
+  - Magazine45_ACPSubMachineGunHP
+  - AmmoBox45_ACPHP
+
+#Steel AP recipes
+
+  - Magazine7.62x51mmSteelAP
+  - AmmoBox7.62x51mmSteelAP
+  - Magazine7.62x54mmRSteelAP
+  - AmmoBox7.62x54mmRSteelAP
+  - Magazine5.56x45mmSteelAP
+  - AmmoBox5.56x45mmSteelAP
+  - Magazine7.62x39mmSteelAP
+  - AmmoBox7.62x39mmSteelAP
+  - Magazine45_magnumPistolSteelAP
+  - AmmoBox45_magnumSteelAP
+  - Magazine4.6x30mmPistolSteelAP
+  - Magazine4.6x30mmSubMachineGunSteelAP
+  - AmmoBox4.6x30mmSteelAP
+  - Magazine5.7x28mmPistolSteelAP
+  - Magazine5.7x28mmSubMachineGunSteelAP
+  - AmmoBox5.7x28mmSteelAP
+  - Magazine9x19mmPistolSteelAP
+  - Magazine9x19mmSubMachineGunSteelAP
+  - AmmoBox9x19mmSteelAP
+  - Magazine45_ACPPistolSteelAP
+  - Magazine45_ACPSubMachineGunSteelAP
+  - AmmoBox45_ACPSteelAP
+
+#advanced = Uranium + Incendiary + Plasteel AP + Synth AP + RIP
 
 - type: latheRecipePack
   id: AdvancedAmmoRecipePack
@@ -963,32 +1014,6 @@
   - Magazine45_ACPPistolSynthAP
   - Magazine45_ACPSubMachineGunSynthAP
   - AmmoBox45_ACPSynthAP
-
-#HP recipes
-
-  - Magazine7.62x51mmHP
-  - AmmoBox7.62x51mmHP
-  - Magazine7.62x54mmRHP
-  - AmmoBox7.62x54mmRHP
-  - Magazine5.56x45mmHP
-  - AmmoBox5.56x45mmHP
-  - Magazine7.62x39mmHP
-  - AmmoBox7.62x39mmHP
-  - Magazine45_magnumPistolHP
-  - SpeedLoader45_magnumHP
-  - AmmoBox45_magnumHP
-  - Magazine4.6x30mmPistolHP
-  - Magazine4.6x30mmSubMachineGunHP
-  - AmmoBox4.6x30mmHP
-  - Magazine5.7x28mmPistolHP
-  - Magazine5.7x28mmSubMachineGunHP
-  - AmmoBox5.7x28mmHP
-  - Magazine9x19mmPistolHP
-  - Magazine9x19mmSubMachineGunHP
-  - AmmoBox9x19mmHP
-  - Magazine45_ACPPistolHP
-  - Magazine45_ACPSubMachineGunHP
-  - AmmoBox45_ACPHP
 
 #RIP recipes
 

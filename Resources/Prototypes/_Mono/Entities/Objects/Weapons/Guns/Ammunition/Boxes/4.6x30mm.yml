@@ -173,7 +173,7 @@
 - type: entity
   parent: BaseAmmoBox4.6x30mm
   id: AmmoBox4.6x30mmSteelAP
-  name: ammunition box (4.6x30mm armor-piercing steel core)
+  name: ammunition box (4.6x30mm AP steel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge4.6x30mmSteelAP
@@ -188,7 +188,7 @@
 - type: entity
   parent: BaseAmmoBox4.6x30mm
   id: AmmoBox4.6x30mmPlasteelAP
-  name: ammunition box (4.6x30mm armor-piercing plastitanium core)
+  name: ammunition box (4.6x30mm AP plasteel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge4.6x30mmPlasteelAP
@@ -203,7 +203,7 @@
 - type: entity
   parent: BaseAmmoBox4.6x30mm
   id: AmmoBox4.6x30mmSynthAP
-  name: ammunition box (4.6x30mm armor-piercing synthalloy core)
+  name: ammunition box (4.6x30mm AP synthalloy core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge4.6x30mmSynthAP

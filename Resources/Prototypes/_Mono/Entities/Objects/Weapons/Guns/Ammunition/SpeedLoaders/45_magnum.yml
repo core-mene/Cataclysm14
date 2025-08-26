@@ -211,7 +211,7 @@
 #armor-piercing ammo
 - type: entity
   id: SpeedLoader45_magnumSteelAP
-  name: speed loader (.45 magnum armor-piercing steel core)
+  name: speed loader (.45 magnum AP steel core)
   parent: BaseSpeedLoader45_magnum
   components:
   - type: BallisticAmmoProvider
@@ -231,7 +231,7 @@
 
 - type: entity
   id: SpeedLoader45_magnumPlasteelAP
-  name: speed loader (.45 magnum armor-piercing plastitanium core)
+  name: speed loader (.45 magnum AP plasteel core)
   parent: BaseSpeedLoader45_magnum
   components:
   - type: BallisticAmmoProvider
@@ -251,7 +251,7 @@
 
 - type: entity
   id: SpeedLoader45_magnumSynthAP
-  name: speed loader (.45 magnum armor-piercing synthalloy core)
+  name: speed loader (.45 magnum AP synthalloy core)
   parent: BaseSpeedLoader45_magnum
   components:
   - type: BallisticAmmoProvider

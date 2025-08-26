@@ -173,7 +173,7 @@
 - type: entity
   parent: BaseAmmoBox5.7x28mm
   id: AmmoBox5.7x28mmSteelAP
-  name: ammunition box (5.7x28mm armor-piercing steel core)
+  name: ammunition box (5.7x28mm AP steel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge5.7x28mmSteelAP
@@ -188,7 +188,7 @@
 - type: entity
   parent: BaseAmmoBox5.7x28mm
   id: AmmoBox5.7x28mmPlasteelAP
-  name: ammunition box (5.7x28mm armor-piercing plastitanium core)
+  name: ammunition box (5.7x28mm AP plasteel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge5.7x28mmPlasteelAP
@@ -203,7 +203,7 @@
 - type: entity
   parent: BaseAmmoBox5.7x28mm
   id: AmmoBox5.7x28mmSynthAP
-  name: ammunition box (5.7x28mm armor-piercing synthalloy core)
+  name: ammunition box (5.7x28mm AP synthalloy core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge5.7x28mmSynthAP

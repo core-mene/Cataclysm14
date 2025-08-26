@@ -157,7 +157,7 @@
 #armor-piercing:
 - type: entity
   id: Magazine7.62x54mmRSteelAP
-  name: "magazine (7.62x54mmR armor-piercing steel core)"
+  name: "magazine (7.62x54mmR AP steel core)"
   parent: BaseMagazine7.62x54mmR
   components:
   - type: BallisticAmmoProvider
@@ -171,7 +171,7 @@
 
 - type: entity
   id: Magazine7.62x54mmRPlasteelAP
-  name: "magazine (7.62x54mmR armor-piercing plastitanium core)"
+  name: "magazine (7.62x54mmR AP plasteel core)"
   parent: BaseMagazine7.62x54mmR
   components:
   - type: BallisticAmmoProvider
@@ -185,7 +185,7 @@
 
 - type: entity
   id: Magazine7.62x54mmRSynthAP
-  name: "magazine (7.62x54mmR armor-piercing synthalloy core)"
+  name: "magazine (7.62x54mmR AP synthalloy core)"
   parent: BaseMagazine7.62x54mmR
   components:
   - type: BallisticAmmoProvider

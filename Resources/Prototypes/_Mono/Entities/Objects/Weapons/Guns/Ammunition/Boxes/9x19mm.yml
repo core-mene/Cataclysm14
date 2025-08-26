@@ -173,7 +173,7 @@
 - type: entity
   parent: BaseAmmoBox9x19mm
   id: AmmoBox9x19mmSteelAP
-  name: ammunition box (9x19mm armor-piercing steel core)
+  name: ammunition box (9x19mm AP steel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmSteelAP
@@ -188,7 +188,7 @@
 - type: entity
   parent: BaseAmmoBox9x19mm
   id: AmmoBox9x19mmPlasteelAP
-  name: ammunition box (9x19mm armor-piercing plastitanium core)
+  name: ammunition box (9x19mm AP plasteel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmPlasteelAP
@@ -203,7 +203,7 @@
 - type: entity
   parent: BaseAmmoBox9x19mm
   id: AmmoBox9x19mmSynthAP
-  name: ammunition box (9x19mm armor-piercing synthalloy core)
+  name: ammunition box (9x19mm AP synthalloy core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge9x19mmSynthAP
