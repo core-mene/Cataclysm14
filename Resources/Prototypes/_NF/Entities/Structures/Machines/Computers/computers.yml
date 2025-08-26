@@ -87,7 +87,7 @@
   suffix: Low
   components:
   - type: MarketModifier
-    mod: 0.75
+    mod: 0.85 # Mono 0.75->0.85
 
 - type: entity
   parent: ComputerPalletConsoleNFMarket
@@ -95,7 +95,7 @@
   suffix: VeryLow
   components:
   - type: MarketModifier
-    mod: 0.50
+    mod: 0.70 # Mono 0.5->0.7
 
 - type: entity
   name: contraband exchange computer
