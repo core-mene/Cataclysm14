@@ -33,14 +33,14 @@
 
 - type: loadout #Double Barrel Beanbag
   id: ContractorDoubleBarreledLoadout
-  price: 2500
+  price: 3000
   storage:
     back:
     - WeaponShotgunDoubleBarreledRubber
 
 - type: loadout #Beanbag Shells
   id: ContractorBeanbagAmmoLoadout
-  price: 5000
+  price: 200
   storage:
     back:
     - AmmoBox12_gaugeBeanbag
@@ -207,7 +207,7 @@
 
 - type: loadout #MK58
   id: MercenaryMk58Loadout
-  price: 2500
+  price: 1500
   storage:
     back:
     - WeaponPistolMk58
@@ -228,7 +228,7 @@
 
 - type: loadout #Sawn-off
   id: MercenarySawedOffLoadout
-  price: 2500
+  price: 3000
   storage:
     back:
     - WeaponShotgunSawn
