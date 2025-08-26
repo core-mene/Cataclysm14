@@ -27,6 +27,8 @@
 # SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 Checkraze
 # SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 WreakHavocOnTheMiddleClass
@@ -5880,6 +5882,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 30.5,103.5
       parent: 1
+    - type: Docking
+      name: Dock 4
   - uid: 7020
     components:
     - type: Transform
@@ -5898,6 +5902,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 12.5,84.5
       parent: 1
+    - type: Docking
+      name: Dock 3
   - uid: 7023
     components:
     - type: Transform
@@ -5910,6 +5916,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 11.5,62.5
       parent: 1
+    - type: Docking
+      name: Dock 2
   - uid: 7705
     components:
     - type: Transform
@@ -5928,6 +5936,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 15.5,33.5
       parent: 1
+    - type: Docking
+      name: Dock 1
   - uid: 7889
     components:
     - type: Transform
@@ -5963,6 +5973,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 85.5,103.5
       parent: 1
+    - type: Docking
+      name: USSP Dock Alpha
   - uid: 3160
     components:
     - type: Transform
@@ -5993,6 +6005,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 103.5,84.5
       parent: 1
+    - type: Docking
+      name: USSP Dock Beta
   - uid: 4200
     components:
     - type: Transform

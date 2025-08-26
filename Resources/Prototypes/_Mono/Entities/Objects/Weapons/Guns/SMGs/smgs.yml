@@ -75,7 +75,7 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
     minAngle: -19
-    maxAngle: -32
+    maxAngle: -34
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
@@ -85,8 +85,8 @@
     minAngle: 22
     maxAngle: 40
     fireRate: 4
-    angleIncrease: 7
-    angleDecay: 15
+    angleIncrease: 21
+    angleDecay: 14
     selectedMode: FullAuto
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/smg.ogg
@@ -253,8 +253,10 @@
     sprite: _Mono/Objects/Weapons/Guns/SMGs/knallstock.rsi
   - type: Gun
     fireRate: 6
-    minAngle: 21
-    maxAngle: 32
+    minAngle: 19
+    maxAngle: 21
+    angleIncrease: 16
+    angleDecay: 10
     selectedMode: Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
@@ -303,13 +305,13 @@
   description: A modern take on the classic design used by mobsters throughout space and time. This one is an offbrand mercenary version of the typewritter nicknamed the "keyboard", its barrel heat rapidly which reduce accuracy. Uses .45 ACP ammo.
   components:
   - type: GunWieldBonus
-    minAngle: -20
-    maxAngle: -30
+    minAngle: -27
+    maxAngle: -45
   - type: Gun
     minAngle: 30
     maxAngle: 55
-    angleIncrease: 4
-    angleDecay: 10
+    angleIncrease: 18
+    angleDecay: 4
     fireRate: 5
   - type: StaticPrice
     price: 500

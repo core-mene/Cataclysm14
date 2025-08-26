@@ -11309,3 +11309,32 @@ Entries:
   id: 1257
   time: '2025-08-26T01:10:01.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2042
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Removed slop guns from exped loot (like Novalites and Svallins), moved
+        some weapons to be less rare.
+    - type: Tweak
+      message: >-
+        Made the merc guns less unbearable to use (increased accuracy, but
+        implemented the recoil control shit)
+    - type: Tweak
+      message: Readded the merc semi-auto vulcan to the libvend for 27500.
+  id: 1258
+  time: '2025-08-26T10:39:10.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2061
+- author: Ilya246
+  changes:
+    - type: Add
+      message: Borgs can now toggle radar signature on themselves via rightclick.
+  id: 1259
+  time: '2025-08-26T10:40:20.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2060
+- author: Ilya246
+  changes:
+    - type: Add
+      message: You can now swipe ID cards on borgs to grant them the card's accesses.
+  id: 1260
+  time: '2025-08-26T10:41:51.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2058
