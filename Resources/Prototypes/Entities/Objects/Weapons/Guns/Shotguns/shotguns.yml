@@ -219,7 +219,7 @@
     node: start
     deconstructionTarget: null
   - type: StaticPrice
-    price: 350
+    price: 300 # 300 < 350 Mono
 
 - type: entity
   name: double-barreled shotgun (12 gauge)
@@ -310,6 +310,8 @@
     graph: ShotgunSawn
     node: shotgunsawn
     deconstructionTarget: null
+  - type: StaticPrice # Mono
+    price: 300
 
 - type: entity
   name: sawn-off shotgun (12 gauge)
