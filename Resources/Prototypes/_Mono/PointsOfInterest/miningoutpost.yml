@@ -34,6 +34,8 @@
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Mining Outpost Delta'
+        - type: StationDeadDropHintExempt
+
 
 - type: pointOfInterest
   id: MiningPOIGamma
@@ -58,3 +60,4 @@
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Mining Outpost Gamma'
+        - type: StationDeadDropHintExempt
