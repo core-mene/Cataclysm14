@@ -6,7 +6,6 @@
 
 using Content.Server.Construction.Components;
 using Content.Shared._Goobstation.DragDrop;
-using Content.Shared.Climbing.Systems;
 using Content.Shared.DragDrop;
 using Content.Shared.Hands.Components;
 using Content.Shared.Interaction;
@@ -21,8 +20,8 @@ public sealed partial class GoobDragDropSystem : SharedGoobDragDropSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<ConstructionComponent, DragDropTargetEvent>(OnDragDropConstruction, after: [typeof(ClimbSystem)]);
-        SubscribeLocalEvent<DragDropTargetableComponent, DragDropTargetEvent>(OnDragDropTargetable, after: [typeof(ClimbSystem)]);
+        SubscribeLocalEvent<ConstructionComponent, DragDropTargetEvent>(OnDragDropConstruction);
+        SubscribeLocalEvent<DragDropTargetableComponent, DragDropTargetEvent>(OnDragDropTargetable);
     }
 
     // this is cursed but making construction system code handle DragDropTargetEvent would be even more cursed
