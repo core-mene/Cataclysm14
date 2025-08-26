@@ -1,7 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ark1368
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 gus
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -10,6 +13,7 @@
 - type: entity
   parent: [VendingMachineAmmo, BaseStructureDisableAnchoring]
   id: VendingMachineAmmoPOIMercenary
+  name: PMC liberation station
   suffix: POI, PMC
   components:
   - type: VendingMachine
@@ -95,7 +99,7 @@
     ejectDelay: 1.9
     initialStockQuality: 1
   - type: MarketModifier
-    mod: 8
+    mod: 10
   - type: Advertise
     pack: BaristaAds
   - type: SpeakOnUIClosed

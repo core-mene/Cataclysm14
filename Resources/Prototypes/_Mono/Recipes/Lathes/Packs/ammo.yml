@@ -1,12 +1,13 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 #All the ammo recipes
-
+# MARK: Debug
 - type: latheRecipePack
-  id: AllTheAmmo
+  id: AllTheAmmo #DO NOT use this or test breaks. Unless its static for some kind of debugg lathe
   recipes:
   - AmmoBox23x75mmBuckshot
   - AmmoBox23x75mmBeanbag
@@ -87,7 +88,6 @@
   - Magazine8x65mmSKR
   - Magazine8x65mmSKRPractice
   - Magazine8x65mmSKRIncendiary
-  - Magazine8x65mmEmpty
   - AmmoBox8x65mmSKR
   - AmmoBox8x65mmSKRIncendiary
   - AmmoBox8x65mmSKRPractice
@@ -164,7 +164,6 @@
   - SpeedLoader45_magnumUranium
   - SpeedLoader45_magnumHP
   - SpeedLoader45_magnumRIP
-  - AmmoBox45_magnumFMJ
   - AmmoBox45_magnumSteelAP
   - AmmoBox45_magnumPlasteelAP
   - AmmoBox45_magnumSynthAP
@@ -175,11 +174,8 @@
   - AmmoBox45_magnumAP
   - AmmoBox45_magnumHP
   - AmmoBox45_magnumRIP
-  - Magazine68x52mmFMJ
   - Magazine68x52mmRubber
   - Magazine68x52mmPractice
-  - Magazine68x52mmEmpty
-  - AmmoBox68x52mmFMJ
   - AmmoBox68x52mmRubber
   - AmmoBox68x52mmPractice
   - Magazine4.6x30mmPistolFMJ
@@ -672,9 +668,9 @@
   - AmmoBox45_ACPRIP
 
 #civilian = FMJ + practice + empty + rubber + HP + Steel AP
-
+# MARK: Static
 - type: latheRecipePack
-  id: CivilianAmmoRecipePack
+  id: StaticAmmoRecipePack
   recipes:
 #FMJ recipes
 
@@ -717,6 +713,13 @@
   - AmmoBox23x75mmSlug
   - Magazine12_gaugeSlug
   - AmmoBox12_gaugeSlug
+
+#SKR
+
+  - Magazine8x65mmSKR
+
+#DP
+  - MagazineDP29
 
 #Practice recipes
 
@@ -813,10 +816,61 @@
   - Magazine12_gaugeBeanbag
   - AmmoBox12_gaugeBeanbag
 
-#advanced = Uranium + Incendiary + Steel AP + Plasteel AP + Synth AP + HP + RIP
+#HP recipes
 
+  - Magazine7.62x51mmHP
+  - AmmoBox7.62x51mmHP
+  - Magazine7.62x54mmRHP
+  - AmmoBox7.62x54mmRHP
+  - Magazine5.56x45mmHP
+  - AmmoBox5.56x45mmHP
+  - Magazine7.62x39mmHP
+  - AmmoBox7.62x39mmHP
+  - Magazine45_magnumPistolHP
+  - SpeedLoader45_magnumHP
+  - AmmoBox45_magnumHP
+  - Magazine4.6x30mmPistolHP
+  - Magazine4.6x30mmSubMachineGunHP
+  - AmmoBox4.6x30mmHP
+  - Magazine5.7x28mmPistolHP
+  - Magazine5.7x28mmSubMachineGunHP
+  - AmmoBox5.7x28mmHP
+  - Magazine9x19mmPistolHP
+  - Magazine9x19mmSubMachineGunHP
+  - AmmoBox9x19mmHP
+  - Magazine45_ACPPistolHP
+  - Magazine45_ACPSubMachineGunHP
+  - AmmoBox45_ACPHP
+
+#Steel AP recipes
+
+  - Magazine7.62x51mmSteelAP
+  - AmmoBox7.62x51mmSteelAP
+  - Magazine7.62x54mmRSteelAP
+  - AmmoBox7.62x54mmRSteelAP
+  - Magazine5.56x45mmSteelAP
+  - AmmoBox5.56x45mmSteelAP
+  - Magazine7.62x39mmSteelAP
+  - AmmoBox7.62x39mmSteelAP
+  - Magazine45_magnumPistolSteelAP
+  - AmmoBox45_magnumSteelAP
+  - Magazine4.6x30mmPistolSteelAP
+  - Magazine4.6x30mmSubMachineGunSteelAP
+  - AmmoBox4.6x30mmSteelAP
+  - Magazine5.7x28mmPistolSteelAP
+  - Magazine5.7x28mmSubMachineGunSteelAP
+  - AmmoBox5.7x28mmSteelAP
+  - Magazine9x19mmPistolSteelAP
+  - Magazine9x19mmSubMachineGunSteelAP
+  - AmmoBox9x19mmSteelAP
+  - Magazine45_ACPPistolSteelAP
+  - Magazine45_ACPSubMachineGunSteelAP
+  - AmmoBox45_ACPSteelAP
+
+#advanced = Uranium + Incendiary + Plasteel AP + Synth AP + RIP
+# MARK: Dynamic
 - type: latheRecipePack
-  id: AdvancedAmmoRecipePack
+  id: DynamicAmmoRecipePack
   recipes:
 #Uranium recipes
 
@@ -883,31 +937,6 @@
   - AmmoBox45_ACPIncendiary
   - AmmoBox23x75mmFlashbang
 
-#Steel AP recipes
-
-  - Magazine7.62x51mmSteelAP
-  - AmmoBox7.62x51mmSteelAP
-  - Magazine7.62x54mmRSteelAP
-  - AmmoBox7.62x54mmRSteelAP
-  - Magazine5.56x45mmSteelAP
-  - AmmoBox5.56x45mmSteelAP
-  - Magazine7.62x39mmSteelAP
-  - AmmoBox7.62x39mmSteelAP
-  - Magazine45_magnumPistolSteelAP
-  - AmmoBox45_magnumSteelAP
-  - Magazine4.6x30mmPistolSteelAP
-  - Magazine4.6x30mmSubMachineGunSteelAP
-  - AmmoBox4.6x30mmSteelAP
-  - Magazine5.7x28mmPistolSteelAP
-  - Magazine5.7x28mmSubMachineGunSteelAP
-  - AmmoBox5.7x28mmSteelAP
-  - Magazine9x19mmPistolSteelAP
-  - Magazine9x19mmSubMachineGunSteelAP
-  - AmmoBox9x19mmSteelAP
-  - Magazine45_ACPPistolSteelAP
-  - Magazine45_ACPSubMachineGunSteelAP
-  - AmmoBox45_ACPSteelAP
-
 #Plasteel AP recipes
 
   - Magazine7.62x51mmPlasteelAP
@@ -964,32 +993,6 @@
   - Magazine45_ACPSubMachineGunSynthAP
   - AmmoBox45_ACPSynthAP
 
-#HP recipes
-
-  - Magazine7.62x51mmHP
-  - AmmoBox7.62x51mmHP
-  - Magazine7.62x54mmRHP
-  - AmmoBox7.62x54mmRHP
-  - Magazine5.56x45mmHP
-  - AmmoBox5.56x45mmHP
-  - Magazine7.62x39mmHP
-  - AmmoBox7.62x39mmHP
-  - Magazine45_magnumPistolHP
-  - SpeedLoader45_magnumHP
-  - AmmoBox45_magnumHP
-  - Magazine4.6x30mmPistolHP
-  - Magazine4.6x30mmSubMachineGunHP
-  - AmmoBox4.6x30mmHP
-  - Magazine5.7x28mmPistolHP
-  - Magazine5.7x28mmSubMachineGunHP
-  - AmmoBox5.7x28mmHP
-  - Magazine9x19mmPistolHP
-  - Magazine9x19mmSubMachineGunHP
-  - AmmoBox9x19mmHP
-  - Magazine45_ACPPistolHP
-  - Magazine45_ACPSubMachineGunHP
-  - AmmoBox45_ACPHP
-
 #RIP recipes
 
   - AmmoBox23x75mmSlugRIP
@@ -1018,3 +1021,17 @@
   - Magazine45_ACPPistolRIP
   - Magazine45_ACPSubMachineGunRIP
   - AmmoBox45_ACPRIP
+
+#Misc
+  - Magazine7.62x39mmSubsonic
+  - AmmoBox7.62x39mmSubsonic
+  - AmmoBox635x40mmCaseless
+  - Magazine635x40mmCaseless
+  - Magazine40mmEmpty
+  - 40mmGrenadeFlash
+  - 40mmGrenadeThermobaric
+  - 40mmGrenadeEMP
+  - MagazineSmartLMG
+  - AmmoBox145x114mm
+  - AmmoBox145x114mmBig
+  - MagazineDP29

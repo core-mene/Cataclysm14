@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -158,7 +159,7 @@
 #armor-piercing ammo
 - type: entity
   id: Magazine5.7x28mmPistolSteelAP
-  name: pistol magazine (5.7x28mm armor-piercing steel core)
+  name: pistol magazine (5.7x28mm AP steel core)
   parent: BaseMagazine5.7x28mm
   components:
   - type: BallisticAmmoProvider
@@ -173,7 +174,7 @@
 
 - type: entity
   id: Magazine5.7x28mmPistolPlasteelAP
-  name: pistol magazine (5.7x28mm armor-piercing plastitanium core)
+  name: pistol magazine (5.7x28mm AP plasteel core)
   parent: BaseMagazine5.7x28mm
   components:
   - type: BallisticAmmoProvider
@@ -188,7 +189,7 @@
 
 - type: entity
   id: Magazine5.7x28mmPistolSynthAP
-  name: pistol magazine (5.7x28mm armor-piercing synthalloy core)
+  name: pistol magazine (5.7x28mm AP synthalloy core)
   parent: BaseMagazine5.7x28mm
   components:
   - type: BallisticAmmoProvider
@@ -471,7 +472,7 @@
 #armor-piercing ammo
 - type: entity
   id: Magazine5.7x28mmSubMachineGunSteelAP
-  name: SMG magazine (5.7x28mm armor-piercing steel core)
+  name: SMG magazine (5.7x28mm AP steel core)
   parent: BaseMagazine5.7x28mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
@@ -486,7 +487,7 @@
 
 - type: entity
   id: Magazine5.7x28mmSubMachineGunPlasteelAP
-  name: SMG magazine (5.7x28mm armor-piercing plastitanium core)
+  name: SMG magazine (5.7x28mm AP plasteel core)
   parent: BaseMagazine5.7x28mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
@@ -501,7 +502,7 @@
 
 - type: entity
   id: Magazine5.7x28mmSubMachineGunSynthAP
-  name: SMG magazine (5.7x28mm armor-piercing synthalloy core)
+  name: SMG magazine (5.7x28mm AP synthalloy core)
   parent: BaseMagazine5.7x28mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider

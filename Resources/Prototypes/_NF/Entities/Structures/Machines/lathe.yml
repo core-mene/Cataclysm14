@@ -169,10 +169,10 @@
     runningState: icon
     staticPacks:
     - NFNfsdTechfabDeprecatedStatic
-    - CivilianAmmoRecipePack
+    - StaticAmmoRecipePack
     dynamicPacks:
     - NFNfsdTechfabDeprecated
-    - AdvancedAmmoRecipePack
+    - DynamicAmmoRecipePack
     # Mono start
     - MonoTSFWeaponsDynamicMelee
     - MonoTSFWeaponsDynamicRanged
@@ -214,11 +214,11 @@
     runningState: icon
     staticPacks:
     - NFMercenaryTechfabDeprecatedStatic
-    - CivilianAmmoRecipePack
+    - StaticAmmoRecipePack
     - MonoRestraintsStatic # Mono
     dynamicPacks:
     - NFMercenaryTechfabDeprecated
-    - AdvancedAmmoRecipePack
+    - DynamicAmmoRecipePack
     # Mono start
     - MonoTSFWeaponsDynamicMelee
     - MonoTSFWeaponsDynamicRanged
@@ -275,11 +275,11 @@
     runningState: icon
     staticPacks:
     - NFHackedMercenaryTechfabDeprecatedStatic
-    - CivilianAmmoRecipePack
+    - StaticAmmoRecipePack
     - MonoRestraintsStatic
     dynamicPacks:
     - NFHackedMercenaryTechfabDeprecated
-    - AdvancedAmmoRecipePack
+    - DynamicAmmoRecipePack
     - SmartGun # Goobstation
     # Mono start
     - MonoTSFWeaponsDynamicMelee

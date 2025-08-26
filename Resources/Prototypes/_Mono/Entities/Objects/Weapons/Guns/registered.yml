@@ -32,7 +32,7 @@
   suffix: Registered
   components:
   - type: StaticPrice
-    price: 1200
+    price: 1000
 
 - type: entity #Drozd
   parent:
@@ -42,7 +42,7 @@
   suffix: Registered
   components:
   - type: StaticPrice
-    price: 1200
+    price: 1000
 
 - type: entity #C-20r
   parent:
@@ -54,7 +54,7 @@
   - type: PirateBountyItem
     id: StandardFactionLongarm
   - type: StaticPrice
-    price: 1200
+    price: 1000
 
 # Rifles
 
@@ -102,16 +102,6 @@
   - type: StaticPrice
     price: 500
 
-- type: entity #Laser Rifle
-  parent:
-  - BaseC2ContrabandMercenary
-  - WeaponLaserCarbine
-  id: WeaponLaserCarbinePMC
-  suffix: Registered
-  components:
-  - type: StaticPrice
-    price: 1200
-
 - type: entity #Laser Cannon
   parent:
   - BaseC2ContrabandMercenary
@@ -120,7 +110,7 @@
   suffix: Registered
   components:
   - type: StaticPrice
-    price: 1200
+    price: 1000
 
 - type: entity #Disabler SMG
   parent:

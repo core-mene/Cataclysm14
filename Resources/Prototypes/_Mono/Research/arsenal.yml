@@ -9,19 +9,19 @@
   entityIcon: WeaponLMGRatel
   discipline: Arsenal
   tier: 2
-  cost: 30000
+  cost: 25000
   recipeUnlocks:
   - WeaponLMGRatel
   - WeaponShotgunBigBuddy
   technologyPrerequisites:
   - MercArmementSimple
-  - SuperParts
-  position: 6, 2
+  - AdvancedParts
+  position: 4, 1
 
 - type: technology
   id: MercArmementSimple
   name: research-technology-merc-armement-simple
-  entityIcon: WeaponShotgunEnforcer
+  entityIcon: WeaponSubMachineGunVector9x19mm
   discipline: Arsenal
   tier: 2
   cost: 15000
@@ -29,9 +29,11 @@
   - WeaponShotgunBigJohnny
   - WeaponShotgunEnforcerMerc
   - WeaponRifleVulcanMerc
+  - WeaponSubMachineGunVector9x19mm
+  - WeaponSubMachineGunFirestarter
   technologyPrerequisites:
   - MercArmementBasic
-  position: 5, 2
+  position: 3, 1
 
 - type: technology
   id: MercArmementBasic
@@ -39,12 +41,12 @@
   entityIcon: WeaponRiflePrometheus
   discipline: Arsenal
   tier: 1
-  cost: 10000
+  cost: 7500
   recipeUnlocks:
+  - WeaponSubMachineGunWt550
   - WeaponRiflePrometheus
   - WeaponRifleVulcanFCMC
   - WeaponShotgunKammererNF
   technologyPrerequisites:
-  - AdvancedParts
-  - BountyHunting
-  position: 4, 2
+  - BasicParts
+  position: 2, 1

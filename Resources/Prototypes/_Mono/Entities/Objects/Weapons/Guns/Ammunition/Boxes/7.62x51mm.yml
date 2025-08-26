@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -143,7 +144,7 @@
 - type: entity
   parent: BaseAmmoBox7.62x51mm
   id: AmmoBox7.62x51mmSteelAP
-  name: ammunition box (7.62x51mm armor-piercing steel core)
+  name: ammunition box (7.62x51mm AP steel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge7.62x51mmSteelAP
@@ -158,7 +159,7 @@
 - type: entity
   parent: BaseAmmoBox7.62x51mm
   id: AmmoBox7.62x51mmPlasteelAP
-  name: ammunition box (7.62x51mm armor-piercing plastitanium core)
+  name: ammunition box (7.62x51mm AP plasteel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge7.62x51mmPlasteelAP
@@ -173,7 +174,7 @@
 - type: entity
   parent: BaseAmmoBox7.62x51mm
   id: AmmoBox7.62x51mmSynthAP
-  name: ammunition box (7.62x51mm armor-piercing synthalloy core)
+  name: ammunition box (7.62x51mm AP synthalloy core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge7.62x51mmSynthAP

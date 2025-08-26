@@ -21,6 +21,7 @@
 # SPDX-FileCopyrightText: 2025 Ignaz "Ian" Kraft
 # SPDX-FileCopyrightText: 2025 K-Dynamic
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -241,7 +242,7 @@
 #armor-piercing:
 - type: entity
   id: Magazine5.56x45mmSteelAP
-  name: "magazine (5.56x45mm armor-piercing steel core)"
+  name: "magazine (5.56x45mm AP steel core)"
   parent: BaseMagazine5.56x45mm
   components:
   - type: BallisticAmmoProvider
@@ -255,7 +256,7 @@
 
 - type: entity
   id: Magazine5.56x45mmPlasteelAP
-  name: "magazine (5.56x45mm armor-piercing plastitanium core)"
+  name: "magazine (5.56x45mm AP plasteel core)"
   parent: BaseMagazine5.56x45mm
   components:
   - type: BallisticAmmoProvider
@@ -269,7 +270,7 @@
 
 - type: entity
   id: Magazine5.56x45mmSynthAP
-  name: "magazine (5.56x45mm armor-piercing synthalloy core)"
+  name: "magazine (5.56x45mm AP synthalloy core)"
   parent: BaseMagazine5.56x45mm
   components:
   - type: BallisticAmmoProvider

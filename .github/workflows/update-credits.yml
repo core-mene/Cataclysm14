@@ -3,6 +3,8 @@
 # SPDX-FileCopyrightText: 2024 Kara
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
+# SPDX-FileCopyrightText: 2025 Redrover1760
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -59,5 +61,5 @@ jobs:
           commit-message: Update Credits
           title: Update Credits
           body: This is an automated Pull Request. This PR updates the github contributors in the credits section.
-          author: FrontierATC <zuuswa@gmail.com>
+          author: monolith8319 # TODO: Add email here
           branch: automated/credits-${{env.NOW}}
