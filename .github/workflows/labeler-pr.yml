@@ -5,7 +5,7 @@ on:
 
 jobs:
   labeler:
-    if: github.actor != 'PJBot' && github.actor != 'FrontierATC' # Frontier
+    if: github.actor != 'PJBot' && github.actor != 'monolith8319' # Mono
     permissions:
       contents: read
       pull-requests: write
