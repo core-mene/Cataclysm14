@@ -1083,7 +1083,7 @@
     delay: 8 #Frontier
     fx: EffectRCDDeconstruct8 #Frontier
   - type: StaticPrice
-    price: 35 # This shit is decorative anyways
+    price: 25 # This shit is decorative anyways
 
 - type: entity
   parent: BaseWall
@@ -1297,6 +1297,8 @@
         node: girder
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: StaticPrice
+    price: 15 # This shit is decorative anyways
 
 - type: entity
   parent: WallSolid
