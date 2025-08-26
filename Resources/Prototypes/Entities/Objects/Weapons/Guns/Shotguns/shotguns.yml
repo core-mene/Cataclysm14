@@ -280,12 +280,12 @@
     sprite: _NF/Objects/Weapons/Guns/Shotguns/pump.rsi # Frontier: add _NF prefix
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
-    #fireRate: 1 # Goobstation
+    fireRate: 1.4
   - type: Tag
     tags:
     - WeaponShotgunKammerer
-  - type: BallisticAmmoProvider # Goobstation
-    autoCycle: false
+  - type: BallisticAmmoProvider
+    capacity: 5
   - type: PirateBountyItem # Mono
     id: StandardFactionLongarm
 
