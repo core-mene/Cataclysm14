@@ -317,6 +317,7 @@
       radarColor: CornflowerBlue
       scale: 0.5
   - type: Magboots # Monolith
+  - type: AccessGrantable # Mono
 
 - type: entity
   abstract: true
@@ -346,7 +347,6 @@
     intensitySlope: 20
     maxIntensity: 20
     canCreateVacuum: false # its for killing the borg not the station
-  - type: AccessGrantable # Mono
 
 - type: entity
   id: BaseBorgChassisNT
