@@ -6324,7 +6324,7 @@ entities:
     - type: Transform
       pos: 6.55553,-3.4416347
       parent: 1
-- proto: AmmoBox4.6x30mmPractice
+- proto: AmmoBox46x30mmPractice
   entities:
   - uid: 330
     components:
@@ -6352,42 +6352,42 @@ entities:
     - type: Transform
       pos: 6.5343175,-3.3750856
       parent: 1
-- proto: AmmoBox5.56x45mmPractice
+- proto: AmmoBox556x45mmPractice
   entities:
   - uid: 334
     components:
     - type: Transform
       pos: 6.586427,-3.4063356
       parent: 1
-- proto: AmmoBox5.7x28mmPractice
+- proto: AmmoBox57x28mmPractice
   entities:
   - uid: 335
     components:
     - type: Transform
       pos: 6.5238957,-3.4688356
       parent: 1
-- proto: AmmoBox6.35x40mmCaselessPractice
+- proto: AmmoBox635x40mmCaselessPractice
   entities:
   - uid: 336
     components:
     - type: Transform
       pos: 6.5447392,-3.4375856
       parent: 1
-- proto: AmmoBox7.62x39mmPractice
+- proto: AmmoBox762x39mmPractice
   entities:
   - uid: 337
     components:
     - type: Transform
       pos: 6.4509435,-3.4375856
       parent: 1
-- proto: AmmoBox7.62x51mmPractice
+- proto: AmmoBox762x51mmPractice
   entities:
   - uid: 338
     components:
     - type: Transform
       pos: 6.4822087,-3.4063356
       parent: 1
-- proto: AmmoBox7.62x54mmRPractice
+- proto: AmmoBox762x54mmRPractice
   entities:
   - uid: 339
     components:
@@ -11111,7 +11111,7 @@ entities:
     - type: Transform
       pos: -6.462846,11.782579
       parent: 1
-- proto: BoxMagazine4.6x30mmSubMachineGunTopMountedFMJ
+- proto: BoxMagazine46x30mmSubMachineGunTopMountedFMJ
   entities:
   - uid: 1253
     components:
@@ -11127,7 +11127,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: BoxMagazine7.62x39mmFMJ
+- proto: BoxMagazine762x39mmFMJ
   entities:
   - uid: 1257
     components:

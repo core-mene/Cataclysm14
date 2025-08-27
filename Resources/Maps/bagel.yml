@@ -42,9 +42,11 @@
 # SPDX-FileCopyrightText: 2024 joshepvodka
 # SPDX-FileCopyrightText: 2024 lzk
 # SPDX-FileCopyrightText: 2025 ArtisticRoomba
+# SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Emisse
 # SPDX-FileCopyrightText: 2025 Nox
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Southbridge
 # SPDX-FileCopyrightText: 2025 core-mene
 #
@@ -112055,7 +112057,7 @@ entities:
     - type: Transform
       pos: 4.5,-44.5
       parent: 60
-- proto: Magazine7.62x39mmFMJ
+- proto: Magazine762x39mmFMJ
   entities:
   - uid: 1863
     components:
@@ -112067,7 +112069,7 @@ entities:
     - type: Transform
       pos: -24.246445,1.6150734
       parent: 60
-- proto: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+- proto: Magazine46x30mmSubMachineGunTopMountedFMJ
   entities:
   - uid: 1902
     components:
