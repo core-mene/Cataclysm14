@@ -53,7 +53,7 @@ using System.Numerics;
 using Content.Shared.Physics;
 using Robust.Shared.Physics;
 using Content.Server.Explosion.EntitySystems; // Mono
-using Content.Server.Explosion.Components;
+using Content.Server.Explosion.Components; // Mono
 
 namespace Content.Server.Projectiles;
 
