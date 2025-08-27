@@ -1,3 +1,11 @@
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Onezero0
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Shuttles.Components;
 using Content.Shared.CCVar;
 using Content.Shared.Shuttles.BUIStates;
