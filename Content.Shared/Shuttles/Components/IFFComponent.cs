@@ -56,5 +56,10 @@ public enum IFFFlags : byte
     /// </summary>
     IsPlayerShuttle = 4,
 
+    /// <summary>
+    /// Frontier - Is this a player shuttle
+    /// </summary>
+    ObscureIFF = 5,
+
     // TODO: Need one that hides its outline, just replace it with a bunch of triangles or lines or something.
 }

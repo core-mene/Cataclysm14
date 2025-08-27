@@ -14,9 +14,10 @@ public sealed partial class IFFConsoleWindow : FancyWindow,
 {
     private readonly ButtonGroup _showIFFButtonGroup = new();
     private readonly ButtonGroup _showVesselButtonGroup = new();
+    private readonly ButtonGroup _obscureIFFButtonGroup = new(); // _Mono
     public event Action<bool>? ShowIFF;
     public event Action<bool>? ShowVessel;
-
+    public event Action<bool>? ObscureIFF; // _Mono
     public IFFConsoleWindow()
     {
         RobustXamlLoader.Load(this);
@@ -29,6 +30,13 @@ public sealed partial class IFFConsoleWindow : FancyWindow,
         ShowVesselOnButton.Group = _showVesselButtonGroup;
         ShowVesselOnButton.OnPressed += args => ShowVesselPressed(true);
         ShowVesselOffButton.OnPressed += args => ShowVesselPressed(false);
+
+        // _Mono: Obscure button groups & OnPressed(s)
+        ObscureIFFOffButton.Group = _obscureIFFButtonGroup;
+        ObscureIFFOnButton.Group = _obscureIFFButtonGroup;
+        ObscureIFFOnButton.OnPressed += args => ObscureIFFPressed(true);
+        ObscureIFFOffButton.OnPressed += args => ObscureIFFPressed(false);
+        // End mono
     }
 
     private void ShowIFFPressed(bool pressed)
@@ -40,6 +48,13 @@ public sealed partial class IFFConsoleWindow : FancyWindow,
     {
         ShowVessel?.Invoke(pressed);
     }
+
+    // _Mono: Obscure IFF invoke
+    private void ObscureIFFPressed(bool pressed)
+    {
+        ObscureIFF?.Invoke(pressed);
+    }
+    // End mono
 
     public void UpdateState(IFFConsoleBoundUserInterfaceState state)
     {
@@ -82,5 +97,27 @@ public sealed partial class IFFConsoleWindow : FancyWindow,
             ShowVesselOffButton.Disabled = true;
             ShowVesselOnButton.Disabled = true;
         }
+
+        // _Mono: Button state control for ObscureIFF
+        if ((state.AllowedFlags & IFFFlags.ObscureIFF) != 0x0)
+        {
+            ObscureIFFOffButton.Disabled = false;
+            ObscureIFFOnButton.Disabled = false;
+
+            if ((state.Flags & IFFFlags.ObscureIFF) != 0x0)
+            {
+                ObscureIFFOffButton.Pressed = true;
+            }
+            else
+            {
+                ObscureIFFOnButton.Pressed = true;
+            }
+        }
+        else
+        {
+            ObscureIFFOffButton.Disabled = true;
+            ObscureIFFOnButton.Disabled = true;
+        }
+        // End mono
     }
 }

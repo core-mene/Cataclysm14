@@ -24,6 +24,7 @@ public sealed class IFFConsoleBoundUserInterface : BoundUserInterface
         _window = this.CreateWindowCenteredLeft<IFFConsoleWindow>();
         _window.ShowIFF += SendIFFMessage;
         _window.ShowVessel += SendVesselMessage;
+        _window.ObscureIFF += ObscureIFFMessage;
     }
 
     protected override void UpdateState(BoundUserInterfaceState state)
@@ -47,6 +48,14 @@ public sealed class IFFConsoleBoundUserInterface : BoundUserInterface
     private void SendVesselMessage(bool obj)
     {
         SendMessage(new IFFShowVesselMessage()
+        {
+            Show = obj,
+        });
+    }
+
+    private void SendObscureMessage(bool obj)
+    {
+        SendMessage(new IFFObscureIFFMessage()
         {
             Show = obj,
         });

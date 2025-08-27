@@ -14,6 +14,7 @@ public sealed partial class ShuttleSystem
         SubscribeLocalEvent<IFFConsoleComponent, AnchorStateChangedEvent>(OnIFFConsoleAnchor);
         SubscribeLocalEvent<IFFConsoleComponent, IFFShowIFFMessage>(OnIFFShow);
         SubscribeLocalEvent<IFFConsoleComponent, IFFShowVesselMessage>(OnIFFShowVessel);
+        SubscribeLocalEvent<IFFConsoleComponent, IFFObscureIFFMessage>(OnIFFObscureVessel); // Mono
         SubscribeLocalEvent<IFFConsoleComponent, BoundUIOpenedEvent>(OnIFFConsoleOpen);
         SubscribeLocalEvent<GridSplitEvent>(OnGridSplit);
     }
@@ -102,6 +103,26 @@ public sealed partial class ShuttleSystem
             RemoveIFFFlag(xform.GridUid.Value, IFFFlags.Hide);
         }
     }
+
+    // _Mono: Obscure IFF handling
+    private void OnIFFObscureVessel(EntityUid uid, IFFConsoleComponent component, IFFObscureIFFMessage args)
+    {
+        if (!TryComp(uid, out TransformComponent? xform) || xform.GridUid == null ||
+            (component.AllowedFlags & IFFFlags.ObscureIFF) == 0x0)
+        {
+            return;
+        }
+
+        if (!args.Show)
+        {
+            AddIFFFlag(xform.GridUid.Value, IFFFlags.ObscureIFF);
+        }
+        else
+        {
+            RemoveIFFFlag(xform.GridUid.Value, IFFFlags.ObscureIFF);
+        }
+    }
+    // End mono
 
     private void OnIFFConsoleAnchor(EntityUid uid, IFFConsoleComponent component, ref AnchorStateChangedEvent args)
     {
