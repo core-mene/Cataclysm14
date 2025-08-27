@@ -43,6 +43,14 @@ public sealed partial class IFFComponent : Component
     [ViewVariables(VVAccess.ReadWrite), DataField(serverOnly: true)]
     public bool ReadOnly;
     // End Frontier
+
+    // _Mono start
+    /// <summary>
+    /// Classification for this vessel when IFF is obscured
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
+    public string VesselClass { get; set; } = string.Empty;
+
 }
 
 [Flags]
@@ -61,15 +69,16 @@ public enum IFFFlags : byte
     /// </summary>
     Hide = 2,
 
-    /// <summary>
-    /// Frontier - Is this a player shuttle
-    /// </summary>
-    IsPlayerShuttle = 4,
 
     /// <summary>
     /// Frontier - Is this a player shuttle
     /// </summary>
-    ObscureIFF = 5,
+    ObscureIFF = 3,
+
+    /// <summary>
+    /// Frontier - Is this a player shuttle
+    /// </summary>
+    IsPlayerShuttle = 4,
 
     // TODO: Need one that hides its outline, just replace it with a bunch of triangles or lines or something.
 }

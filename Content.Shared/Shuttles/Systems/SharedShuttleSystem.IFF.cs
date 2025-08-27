@@ -45,6 +45,8 @@ public abstract partial class SharedShuttleSystem
         // Get the company information if available
         Color? companyColor = null;
         string? companyName = null;
+        // _Mono: Get ship classification info if available
+        string? vesselClass = null;
 
         if (TryComp<_Mono.Company.CompanyComponent>(gridUid, out var companyComp) && !string.IsNullOrEmpty(companyComp.CompanyName))
         {
@@ -71,13 +73,17 @@ public abstract partial class SharedShuttleSystem
         var labelText = string.IsNullOrEmpty(entName) ? Loc.GetString("shuttle-console-unknown") : entName;
 
         // Add company info if available
-        if (companyName != null && companyColor != null)
+        if (companyName != null && companyColor != null && IFFFlags.HideLabel != 0x0)
         {
             // Return a formatted label that the client can parse properly
             return $"{labelText}\n{companyName}";
         }
+        else
+        {
+            return $"{labelText}";
+        }
 
-        return labelText;
+        return $"{vesselClass}";
     }
 
     /// <summary>

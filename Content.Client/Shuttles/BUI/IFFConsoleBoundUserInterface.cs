@@ -33,7 +33,7 @@ public sealed class IFFConsoleBoundUserInterface : BoundUserInterface
         _window = this.CreateWindowCenteredLeft<IFFConsoleWindow>();
         _window.ShowIFF += SendIFFMessage;
         _window.ShowVessel += SendVesselMessage;
-        _window.ObscureIFF += ObscureIFFMessage;
+        _window.ObscureIFF += SendObscureIFFMessage;
     }
 
     protected override void UpdateState(BoundUserInterfaceState state)
@@ -62,7 +62,7 @@ public sealed class IFFConsoleBoundUserInterface : BoundUserInterface
         });
     }
 
-    private void SendObscureMessage(bool obj)
+    private void SendObscureIFFMessage(bool obj)
     {
         SendMessage(new IFFObscureIFFMessage()
         {
