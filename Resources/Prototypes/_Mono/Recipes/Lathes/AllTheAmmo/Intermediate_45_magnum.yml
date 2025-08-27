@@ -68,6 +68,21 @@
   result: SpeedLoader45_magnumFMJ
 
 - type: latheRecipe
+  parent: BaseAmmoSteelAPIntermediateSpeedloaderRecipe
+  id: SpeedLoader45_magnumSteelAP
+  result: SpeedLoader45_magnumSteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPIntermediateSpeedloaderRecipe
+  id: SpeedLoader45_magnumPlasteelAP
+  result: SpeedLoader45_magnumPlasteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoSynthAPIntermediateSpeedloaderRecipe
+  id: SpeedLoader45_magnumSynthAP
+  result: SpeedLoader45_magnumSynthAP
+
+- type: latheRecipe
   parent: BaseAmmoRubberIntermediateSpeedloaderRecipe
   id: SpeedLoader45_magnumRubber
   result: SpeedLoader45_magnumRubber
