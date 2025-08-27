@@ -61,5 +61,5 @@ jobs:
           commit-message: Update Credits
           title: Update Credits
           body: This is an automated Pull Request. This PR updates the github contributors in the credits section.
-          author: monolith8319 # TODO: Add email here
+          author: monolith8319 <195513600+monolith8319@users.noreply.github.com>
           branch: automated/credits-${{env.NOW}}
