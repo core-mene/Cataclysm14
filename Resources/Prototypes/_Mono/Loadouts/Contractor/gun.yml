@@ -4,11 +4,14 @@
 
 - type: loadoutGroup
   id: ContractorFirearm
-  name: loadout-group-pistol
-  minLimit: 1
+  minLimit: 0
+  name: loadout-group-weapon-civilian
   loadouts:
   - ContractorMk32Loadout
+  - ContractorLaserLoadout
   - ContractorDisablerLoadout
+  - ContractorArgentiLoadout
+  - ContractorSvalinnLoadout
   - ContractorDoubleBarreledLoadout
   fallbacks:
   - ContractorMk32Loadout
@@ -19,4 +22,5 @@
   minLimit: 0
   loadouts:
   - Contractor9x19mmPistolAmmoLoadout #MK32 Universal
-  - ContractorBeanbagAmmoLoadout #Beanbag
+  - Contractor5.56x45mmAmmoLoadout #Argenti
+  - ContractorBeanbagAmmoLoadout #Shotgun Beanbag

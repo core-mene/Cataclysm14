@@ -62,6 +62,7 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 BramvanZijp
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 GaussiArson
 # SPDX-FileCopyrightText: 2025 Ignaz "Ian" Kraft
@@ -209,6 +210,8 @@
     magState: mag
     steps: 5
     zeroVisible: true
+  - type: StaticPrice # Mono
+    price: 200
 
 - type: entity
   name: retro laser blaster
@@ -332,7 +335,7 @@
   description: A simple civilian grade laser carbine, the workhorse of many private security organizations. # Frontier: description
   components:
   - type: StaticPrice
-    price: 420
+    price: 500
   - type: HitscanBatteryAmmoProvider
     proto: RedLaser
     fireCost: 62.5

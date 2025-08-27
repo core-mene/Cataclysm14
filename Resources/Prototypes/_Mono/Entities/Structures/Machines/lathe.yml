@@ -32,7 +32,7 @@
     idleState: icon
     runningState: icon
     staticPacks:
-    - CivilianAmmoRecipePack
+    - StaticAmmoRecipePack
     dynamicPacks:
     # rogue start
     - MonoRogueWeaponsDynamicMelee
@@ -58,7 +58,7 @@
     - UniversalMissileAmmo
     - UniversalShellAmmo
     - UniversalOrdinance
-    - AdvancedAmmoRecipePack
+    - DynamicAmmoRecipePack
   - type: MaterialStorage
     whitelist:
       tags:

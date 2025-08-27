@@ -11338,3 +11338,88 @@ Entries:
   id: 1260
   time: '2025-08-26T10:41:51.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2058
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        No longer are the prices of the special faction guns in civ loadout
+        balanced around the rich man (basically like halved all of them).
+  id: 1261
+  time: '2025-08-26T13:35:08.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2062
+- author: Danchi299
+  changes:
+    - type: Tweak
+      message: >-
+        All of PMC Liberation Station weapons are once again accessable to
+        Mercenaries from Loadout.
+    - type: Add
+      message: >-
+        Civilians now have Agrenti, Makeshift pistol, and Svalinn pistols as a
+        weapon option in Loadout.
+    - type: Add
+      message: >-
+        PMC Liberation Station now has MK58, Pollocks, Throwing Knifes, and
+        Laser Pistols in stock.
+    - type: Tweak
+      message: Mercenaries now start with Pollock instead of MK32.
+  id: 1262
+  time: '2025-08-26T15:10:25.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2064
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: >-
+        Ship prices drastically changed. Plastitanium wall prices increased
+        heavily from "generic wall"
+  id: 1263
+  time: '2025-08-26T15:47:42.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2054
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: Fixed climbing and other drag-and-drop interactions.
+  id: 1264
+  time: '2025-08-26T19:22:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2069
+- author: core-mene
+  changes:
+    - type: Add
+      message: >-
+        mercenary R&D server available at exped lodge flatpackvend, as well as
+        console
+    - type: Tweak
+      message: reduced mats price of merc weapons
+    - type: Add
+      message: added the vector, firestarter and WT550 to the merc tech
+    - type: Tweak
+      message: steel AP and hollow-point are now roundstart ammo
+    - type: Add
+      message: bluespace drive at exped flatpackvend
+    - type: Add
+      message: adds the HWM Firestarter, 45 ACP heavy SMG using old drozd sprite
+    - type: Tweak
+      message: kammerer made semi-automatic again
+    - type: Tweak
+      message: >-
+        diminished the researcch cost and requirements of a lot of techs, no
+        more pain
+  id: 1265
+  time: '2025-08-26T19:49:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2063
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Vespera and Tovek acceleration increased. ASM, Vespera, Tovek detection
+        range increased.
+  id: 1266
+  time: '2025-08-26T22:09:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2072
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Exped Lounge is now Titlecard (invincible).
+  id: 1267
+  time: '2025-08-26T22:48:21.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2076

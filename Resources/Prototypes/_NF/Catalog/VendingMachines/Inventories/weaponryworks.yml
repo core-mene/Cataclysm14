@@ -81,6 +81,14 @@
 - type: vendingMachineInventory # Mono - this entire thing is mono
   id: WeaponryWorksVendPOIMercInventory
   startingInventory:
+# Rifles
+    WeaponRifleVulcanFCMC: 4294967295
+    WeaponRiflePrometheus: 4294967295
+    WeaponRifleNovaliteC1: 4294967295
+    WeaponRifleGestio: 4294967295
+    # WeaponSubMachineGunC20rPMC: 4294967295
+    # WeaponRifleLecterPMC: 4294967295
+    # WeaponSubMachineGunDrozdPMC: 4294967295
 # SMGs
     # WeaponSubMachineGunC20rPMC: 4294967295
     # WeaponSubMachineGunWt550PMC: 4294967295
@@ -88,39 +96,36 @@
     # WeaponSubMachineGunDrozdPMC: 4294967295
     WeaponSubMachineGunKnallstock: 4294967295
     WeaponSubMachineGunTypewriterPMC: 4294967295
-# Rifles
-    WeaponRifleGestio: 4294967295
-    WeaponRifleNovaliteC1: 4294967295
-    # WeaponSubMachineGunC20rPMC: 4294967295
-    # WeaponRifleLecterPMC: 4294967295
-    WeaponRifleVulcanFCMC: 4294967295
-    # WeaponSubMachineGunDrozdPMC: 4294967295
     WeaponSubMachineGunAK220: 4294967295
-    WeaponRiflePrometheus: 4294967295
 # Shotguns
     # WeaponShotgunBigJohnny: 4294967295
     # WeaponShotgunEnforcerPMC: 4294967295
     WeaponShotgunKammererPMC: 4294967295
 # Energy
     # WeaponLaserCannonPMC: 4294967295
+    WeaponLaserCarbine: 4294967295
     WeaponEnergyGunPMC: 4294967295
-    WeaponLaserCarbinePMC: 4294967295
     WeaponDisablerSMGPMC: 4294967295
 # Sidearms
+    WeaponLaserPistolNF: 4294967295
     WeaponShotgunSawn: 4294967295
     WeaponPistolViperPMC: 4294967295
+    WeaponPistolMk58: 4294967295
+    WeaponPistolPollock: 4294967295
     WeaponPistolMk32: 4294967295
     Machete: 4294967295
+    ThrowingKnife: 4294967295
     KukriKnife: 4294967295
     CombatKnife: 4294967295
     SurvivalKnife: 4294967295
 # Magazines
     Magazine9x19mmPistolFMJ: 4294967295 # 9x19mm Pistol
     Magazine45_ACPPistolFMJ: 4294967295 # .45 ACP Pistol
-    Magazine9x19mmSubMachineGunFMJ: 4294967295 # 9x19mm C20r
-    Magazine45_ACPSubMachineGunFMJ: 4294967295 # .45 ACP Drozd
+    Magazine9x19mmSubMachineGunFMJ: 4294967295 # 9x19mm AK220
+    Magazine45_ACPSubMachineGunFMJ: 4294967295 # .45 ACP Keyboard 
     Magazine4.6x30mmSubMachineGunTopMountedFMJ: 4294967295 # 4.6x30mm WT550
     Magazine5.56x45mmFMJ: 4294967295 # 5.56x45mm Lecter
+    MagazineNovaliteC1: 4294967295 #5.56x45mm Clip Novalite
     Magazine7.62x39mmLowCapacityFMJ: 4294967295 # 7.62x39mm Gestio/AKM
     Magazine7.62x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
     Magazine7.62x51mmLowCapacityFMJ: 4294967295 # 7.62x51mm Vulcan
@@ -138,6 +143,8 @@
     AmmoBox7.62x51mmBigFMJ: 4294967295 # 7.62x51mm
     AmmoBox7.62x54mmRFMJ: 4294967295 # 7.62x54mmR
     AmmoBox7.62x54mmRBigFMJ: 4294967295 # 7.62x54mmR
+    AmmoBox4.6x30mmFMJ: 4294967295 # 4.6x30mm
+    AmmoBox4.6x30mmBigFMJ: 4294967295 # 4.6x30mm
     AmmoBox9x19mmFMJ: 4294967295 # 9x19mm
     AmmoBox9x19mmBigFMJ: 4294967295 # 9x19mm
     AmmoBox45_ACPFMJ: 4294967295 # .45 ACP

@@ -72,6 +72,7 @@
 # SPDX-FileCopyrightText: 2024 slarticodefast
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Southbridge
 # SPDX-FileCopyrightText: 2025 lzk
@@ -131,7 +132,7 @@
   - type: Occluder
   - type: Airtight
   - type: StaticPrice
-    price: 25 # Frontier 75<25
+    price: 25 # Mono 75<25
   - type: RadiationBlocker
     resistance: 2
   - type: BlockWeather
@@ -187,7 +188,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1200 # Mono - wall buff - 4x
+        damage: 1800 # Mono - wall buff - 6x
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -203,8 +204,8 @@
     cost: 6 # Frontier
     delay: 8 # Frontier
     fx: EffectRCDDeconstruct8 # Frontier
-  - type: StaticPrice # Frontier 75
-    price: 75 # Frontier 75
+  - type: StaticPrice # Frontier 60
+    price: 60 # Frontier 60
 
 - type: entity
   parent: BaseWall
@@ -590,6 +591,8 @@
     damageModifierSet: StructuralMetallicStrong
   - type: RadiationBlocker
     resistance: 5
+  - type: StaticPrice
+    price: 110 # Mono
 
 - type: entity
   parent: WallPlastitaniumIndestructible
@@ -663,6 +666,8 @@
         acts: ["Destruction"]
   - type: RCDDeconstructable # Frontier
     deconstructable: false # Frontier
+  - type: StaticPrice
+    price: 95 # Mono
 
 - type: entity
   id: WallPlastitaniumDiagonalIndestructible
@@ -712,6 +717,8 @@
         - FullTileMask
         layer:
         - WallLayer
+  - type: StaticPrice
+    price: 50 # Mono
 
 - type: entity
   parent: BaseWall
@@ -912,7 +919,7 @@
     key: walls
     base: riveted
   - type: StaticPrice
-    price: 115 # Frontier: 150<115
+    price: 70 # Frontier: 150<115
   - type: RCDDeconstructable #Frontier
     cost: 6 #Frontier
     delay: 8 #Frontier
@@ -1081,6 +1088,8 @@
     cost: 6 #Frontier
     delay: 8 #Frontier
     fx: EffectRCDDeconstruct8 #Frontier
+  - type: StaticPrice
+    price: 95 # This shit is decorative anyways
 
 - type: entity
   parent: BaseWall
@@ -1114,7 +1123,7 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: StaticPrice
-    price: 150 # Frontier: 250<150 - makes some shuttles way more expensive otherwise
+    price: 125 # Frontier: 250<150 - makes some shuttles way more expensive otherwise
   - type: RadiationBlocker
     resistance: 5
   - type: Sprite
@@ -1294,6 +1303,8 @@
         node: girder
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: StaticPrice
+    price: 95
 
 - type: entity
   parent: WallSolid
@@ -1432,7 +1443,7 @@
     delay: 8 #Frontier
     fx: EffectRCDDeconstruct8 #Frontier
   - type: StaticPrice # Frontier
-    price: 30 # Frontier
+    price: 30 # Mono
 
 - type: entity
   parent: BaseWall

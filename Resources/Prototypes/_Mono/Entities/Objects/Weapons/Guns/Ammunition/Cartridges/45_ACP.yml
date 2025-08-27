@@ -168,7 +168,7 @@
 #armor-piercing:
 - type: entity
   id: Cartridge45_ACPSteelAP
-  name: cartridge (.45 ACP armor-piercing steel core)
+  name: cartridge (.45 ACP AP steel core)
   parent: BaseCartridge45_ACP
   components:
   - type: CartridgeAmmo
@@ -182,7 +182,7 @@
 
 - type: entity
   id: Cartridge45_ACPPlasteelAP
-  name: cartridge (.45 ACP armor-piercing plastitanium core)
+  name: cartridge (.45 ACP AP plasteel core)
   parent: BaseCartridge45_ACP
   components:
   - type: CartridgeAmmo
@@ -197,7 +197,7 @@
 
 - type: entity
   id: Cartridge45_ACPSynthAP
-  name: cartridge (.45 ACP armor-piercing synthalloy core)
+  name: cartridge (.45 ACP AP synthalloy core)
   parent: BaseCartridge45_ACP
   components:
   - type: CartridgeAmmo

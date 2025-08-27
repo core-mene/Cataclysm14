@@ -16,6 +16,7 @@
 # SPDX-FileCopyrightText: 2024 Plykiya
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 - type: entity
@@ -172,7 +173,7 @@
 - type: entity
   parent: BaseAmmoBox45_magnum
   id: AmmoBox45_magnumSteelAP
-  name: ammunition box (.45 magnum armor-piercing steel core)
+  name: ammunition box (.45 magnum AP steel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumSteelAP
@@ -187,7 +188,7 @@
 - type: entity
   parent: BaseAmmoBox45_magnum
   id: AmmoBox45_magnumPlasteelAP
-  name: ammunition box (.45 magnum armor-piercing plastitanium core)
+  name: ammunition box (.45 magnum AP plasteel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumPlasteelAP
@@ -202,7 +203,7 @@
 - type: entity
   parent: BaseAmmoBox45_magnum
   id: AmmoBox45_magnumSynthAP
-  name: ammunition box (.45 magnum armor-piercing synthalloy core)
+  name: ammunition box (.45 magnum AP synthalloy core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumSynthAP

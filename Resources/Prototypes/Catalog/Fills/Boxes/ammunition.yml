@@ -189,6 +189,19 @@
       - id: Magazine5.56x45mmFMJ
         amount: 4
 
+#mono edit
+- type: entity
+  name: box of 5.56x45mm clips
+  parent: BoxMagazine
+  id: BoxMagazineNovaliteC1
+  description: A box full of 5.56x45mm clips.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazineNovaliteC1
+        amount: 4
+#mono edit end
+
 - type: entity
   name: box of 5.56x45mm (practice) magazines
   parent: BoxMagazine

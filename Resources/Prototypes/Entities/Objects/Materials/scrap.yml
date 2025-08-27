@@ -101,22 +101,6 @@
     materialComposition:
       Steel: 3000 # 30 sheets
 
-# Mono Begin
-
-- type: entity
-  parent: ScrapSteel
-  id: PlastitaniumScrapSteel
-  name: blasted steel pile
-  description: A pile of steel welded together in extreme heat. It's of a decent size overall; you could probably get a fair amount of sheets out of it.
-  components:
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 1000 # 10 sheets
-  - type: StaticPrice
-    price: 10
-
-# Mono End
-
 - type: entity
   parent: BaseScrap
   id: ScrapGlass

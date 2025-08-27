@@ -29,18 +29,46 @@
     back:
     - WeaponDisabler
 
+- type: loadout #Svalinn
+  id: ContractorSvalinnLoadout
+  price: 2000
+  storage:
+    back:
+    - WeaponLaserSvalinn
+
+- type: loadout #Makeshift Laser
+  id: ContractorLaserLoadout
+  price: 0
+  storage:
+    back:
+    - WeaponMakeshiftLaser
+
+- type: loadout #Argenti
+  id: ContractorArgentiLoadout
+  price: 2000
+  storage:
+    back:
+    - WeaponRevolverArgenti
+
+- type: loadout #Argenti Ammo
+  id: Contractor5.56x45mmAmmoLoadout
+  price: 200
+  storage:
+    back:
+    - AmmoBox5.56x45mmFMJ
+
 # Shotguns
 
 - type: loadout #Double Barrel Beanbag
   id: ContractorDoubleBarreledLoadout
-  price: 2500
+  price: 3000
   storage:
     back:
     - WeaponShotgunDoubleBarreledRubber
 
 - type: loadout #Beanbag Shells
   id: ContractorBeanbagAmmoLoadout
-  price: 5000
+  price: 200
   storage:
     back:
     - AmmoBox12_gaugeBeanbag
@@ -57,12 +85,61 @@
     back:
     - WeaponRifleLecterPMC
 
-- type: loadout #Lecter Ammo
+- type: loadout # Prometheus
+  id: MercenaryPrometheusLoadout
+  price: 15000
+  storage:
+    back:
+    - WeaponRiflePrometheus
+
+- type: loadout #Lecter / Prometheus Ammo
   id: Mercenary5.56x45mmAmmoLoadout
-  price: 2000
+  price: 1000
   storage:
     back:
     - BoxMagazine5.56x45mmFMJ
+
+- type: loadout #Gestio
+  id: MercenaryGestioLoadout
+  price: 5000
+  storage:
+    back:
+    - WeaponRifleGestio
+
+- type: loadout #Gestio Ammo
+  id: Mercenary7.62x39mmAmmoLoadout
+  price: 1000
+  storage:
+    back:
+    - BoxMagazine7.62x39mmFMJ
+
+- type: loadout # Novalite
+  id: MercenaryNovaliteLoadout
+  price: 5000
+  storage:
+    back:
+    - WeaponRifleNovaliteC1
+
+- type: loadout #Novalite Ammo
+  id: MercenaryNovaliteAmmoLoadout
+  price: 1000
+  storage:
+    back:
+    - BoxMagazineNovaliteC1
+
+- type: loadout #Vulcan-C
+  id: MercenaryVulcanCLoadout
+  price: 30000
+  storage:
+    back:
+    - WeaponRifleVulcanFCMC
+
+- type: loadout #Vulcan-C Ammo
+  id: Mercenary7.62x51mmAmmoLoadout
+  price: 1000
+  storage:
+    back:
+    - BoxMagazine7.62x51mmFMJ
 
 # Shotguns
 
@@ -103,7 +180,14 @@
     back:
     - WeaponSubMachineGunDrozdPMC
 
-- type: loadout #Drozd Ammo
+- type: loadout #Keyboard
+  id: MercenaryKeyboardLoadout
+  price: 5000
+  storage:
+    back:
+    - WeaponSubMachineGunTypewriterPMC
+
+- type: loadout #Drozd / Keyboard  Ammo
   id: MercenaryAcpSubAmmoLoadout
   price: 1000
   storage:
@@ -152,13 +236,6 @@
     back:
     - WeaponSubMachineGunKnallstock
 
-- type: loadout # Knallstock
-  id: MercenaryNovaliteLoadout
-  price: 5000
-  storage:
-    back:
-    - WeaponRifleNovaliteC1
-
 # Energy
 
 - type: loadout #Energy Gun
@@ -170,10 +247,10 @@
 
 - type: loadout #Laser Carbine
   id: MercenaryLaserCarbineLoadout
-  price: 12000
+  price: 5000
   storage:
     back:
-    - WeaponLaserCarbinePMC
+    - WeaponLaserCarbine
 
 - type: loadout #Laser Cannon
   id: MercenaryLaserCannonLoadout
@@ -198,26 +275,12 @@
 
 #Sidearms
 
-- type: loadout #MK32 Universal / Viper Ammo
-  id: Mercenary9x19mmPistolAmmoLoadout
+- type: loadout #Pollock
+  id: MercenaryPollockLoadout
   price: 0
   storage:
     back:
-    - BoxMagazine9x19mmFMJ
-
-- type: loadout #MK58
-  id: MercenaryMk58Loadout
-  price: 2500
-  storage:
-    back:
-    - WeaponPistolMk58
-
-- type: loadout #MK58 Ammo
-  id: MercenaryAcpPistolAmmoLoadout
-  price: 500
-  storage:
-    back:
-    - BoxMagazine45_ACPFMJ
+    - WeaponPistolPollock
 
 - type: loadout #Viper
   id: MercenaryViperLoadout
@@ -226,12 +289,40 @@
     back:
     - WeaponPistolViperPMC
 
+- type: loadout #Pollock / Viper / Knallstock Ammo
+  id: Mercenary9x19mmPistolAmmoLoadout
+  price: 0
+  storage:
+    back:
+    - BoxMagazine9x19mmFMJ
+
+- type: loadout #MK58
+  id: MercenaryMk58Loadout
+  price: 1500
+  storage:
+    back:
+    - WeaponPistolMk58
+
+- type: loadout #MK58 / Knallstock Ammo
+  id: MercenaryAcpPistolAmmoLoadout
+  price: 500
+  storage:
+    back:
+    - BoxMagazine45_ACPFMJ
+
 - type: loadout #Sawn-off
   id: MercenarySawedOffLoadout
-  price: 2500
+  price: 3000
   storage:
     back:
     - WeaponShotgunSawn
+
+- type: loadout #Laser Pistol
+  id: MercenaryLaserPistolLoadout
+  price: 1500
+  storage:
+    back:
+    - WeaponLaserPistolNF
 
 #region Security Guard
 
@@ -244,7 +335,7 @@
     back:
     - WeaponRifleLecter
 
-- type: loadout #Lecter Ammo
+- type: loadout #Lecter / Prometheus Ammo
   id: SecurityGuard5.56x45mmAmmoLoadout
   price: 0
   storage:

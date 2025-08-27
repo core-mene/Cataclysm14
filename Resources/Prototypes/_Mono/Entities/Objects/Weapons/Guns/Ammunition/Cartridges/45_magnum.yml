@@ -169,7 +169,7 @@
 #armor-piercing:
 - type: entity
   id: Cartridge45_magnumSteelAP
-  name: cartridge (.45 magnum armor-piercing steel core)
+  name: cartridge (.45 magnum AP steel core)
   parent: BaseCartridge45_magnum
   components:
   - type: CartridgeAmmo
@@ -183,7 +183,7 @@
 
 - type: entity
   id: Cartridge45_magnumPlasteelAP
-  name: cartridge (.45 magnum armor-piercing plastitanium core)
+  name: cartridge (.45 magnum AP plasteel core)
   parent: BaseCartridge45_magnum
   components:
   - type: CartridgeAmmo
@@ -198,7 +198,7 @@
 
 - type: entity
   id: Cartridge45_magnumSynthAP
-  name: cartridge (.45 magnum armor-piercing synthalloy core)
+  name: cartridge (.45 magnum AP synthalloy core)
   parent: BaseCartridge45_magnum
   components:
   - type: CartridgeAmmo

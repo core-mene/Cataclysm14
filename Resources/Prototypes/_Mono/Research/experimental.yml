@@ -22,12 +22,12 @@
   entityIcon: ClothingShoesBootsMagVoid
   discipline: Experimental
   tier: 2 # normal magboots are t1 so t2
-  cost: 50000
+  cost: 25000
   recipeUnlocks:
   - ClothingShoesBootsMagVoid
   technologyPrerequisites:
-  - MagnetsTechAdvanced
-  position: -5, -1
+  - MagnetsTech
+  position: -2, -2
 
 - type: technology
   id: BasicParts

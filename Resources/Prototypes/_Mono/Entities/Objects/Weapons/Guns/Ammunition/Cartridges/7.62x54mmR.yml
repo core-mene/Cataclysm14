@@ -154,7 +154,7 @@
 #armor-piercing:
 - type: entity
   id: Cartridge7.62x54mmRSteelAP
-  name: cartridge (7.62x54mmR armor-piercing steel core)
+  name: cartridge (7.62x54mmR AP steel core)
   parent: BaseCartridge7.62x54mmR
   components:
   - type: CartridgeAmmo
@@ -168,7 +168,7 @@
 
 - type: entity
   id: Cartridge7.62x54mmRPlasteelAP
-  name: cartridge (7.62x54mmR armor-piercing plastitanium core)
+  name: cartridge (7.62x54mmR AP plasteel core)
   parent: BaseCartridge7.62x54mmR
   components:
   - type: CartridgeAmmo
@@ -183,7 +183,7 @@
 
 - type: entity
   id: Cartridge7.62x54mmRSynthAP
-  name: cartridge (7.62x54mmR armor-piercing synthalloy core)
+  name: cartridge (7.62x54mmR AP synthalloy core)
   parent: BaseCartridge7.62x54mmR
   components:
   - type: CartridgeAmmo

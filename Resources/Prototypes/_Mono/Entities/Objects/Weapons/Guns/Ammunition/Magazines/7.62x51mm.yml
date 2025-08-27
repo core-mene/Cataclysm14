@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -254,7 +255,7 @@
 #armor-piercing:
 - type: entity
   id: Magazine7.62x51mmSteelAP
-  name: "magazine (7.62x51mm armor-piercing steel core)"
+  name: "magazine (7.62x51mm AP steel core)"
   parent: BaseMagazine7.62x51mm
   components:
   - type: BallisticAmmoProvider
@@ -268,7 +269,7 @@
 
 - type: entity
   id: Magazine7.62x51mmPlasteelAP
-  name: "magazine (7.62x51mm armor-piercing plastitanium core)"
+  name: "magazine (7.62x51mm AP plasteel core)"
   parent: BaseMagazine7.62x51mm
   components:
   - type: BallisticAmmoProvider
@@ -282,7 +283,7 @@
 
 - type: entity
   id: Magazine7.62x51mmSynthAP
-  name: "magazine (7.62x51mm armor-piercing synthalloy core)"
+  name: "magazine (7.62x51mm AP synthalloy core)"
   parent: BaseMagazine7.62x51mm
   components:
   - type: BallisticAmmoProvider

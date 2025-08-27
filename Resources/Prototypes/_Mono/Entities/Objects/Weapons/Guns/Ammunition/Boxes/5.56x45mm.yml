@@ -12,6 +12,7 @@
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 Ps3Moira
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -154,7 +155,7 @@
 - type: entity
   parent: BaseAmmoBox5.56x45mm
   id: AmmoBox5.56x45mmSteelAP
-  name: ammunition box (5.56x45mm armor-piercing steel core)
+  name: ammunition box (5.56x45mm AP steel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge5.56x45mmSteelAP
@@ -169,7 +170,7 @@
 - type: entity
   parent: BaseAmmoBox5.56x45mm
   id: AmmoBox5.56x45mmPlasteelAP
-  name: ammunition box (5.56x45mm armor-piercing plastitanium core)
+  name: ammunition box (5.56x45mm AP plasteel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge5.56x45mmPlasteelAP
@@ -184,7 +185,7 @@
 - type: entity
   parent: BaseAmmoBox5.56x45mm
   id: AmmoBox5.56x45mmSynthAP
-  name: ammunition box (5.56x45mm armor-piercing synthalloy core)
+  name: ammunition box (5.56x45mm AP synthalloy core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge5.56x45mmSynthAP

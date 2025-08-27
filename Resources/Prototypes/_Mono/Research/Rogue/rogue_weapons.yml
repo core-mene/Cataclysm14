@@ -57,12 +57,6 @@
   recipeUnlocks:
   - WeaponSubMachineGunC20rRogue
   - WeaponRevolverPythonRogue
-  - SpeedLoader45_magnumFMJ
-  - SpeedLoader45_magnumEmpty
-  - AmmoBox45_magnumFMJ
-  - Magazine9x19mmSubMachineGunFMJ
-  - Magazine9x19mmSubMachineGunEmpty
-  - AmmoBox9x19mmFMJ
   technologyPrerequisites:
   - UniversalMaterialResearchT1
   position: 20, 2
@@ -77,12 +71,6 @@
   recipeUnlocks:
   - WeaponRifleM90Rogue
   - WeaponSubMachineGunWt550Rogue
-  - Magazine7.62x51mmFMJ
-  - Magazine7.62x51mmEmpty
-  - AmmoBox7.62x51mmFMJ
-  - Magazine4.6x30mmSubMachineGunTopMountedFMJ
-  - Magazine4.6x30mmSubMachineGunTopMountedEmpty
-  - AmmoBox4.6x30mmFMJ
   technologyPrerequisites:
   - RogueBasicGuns
   - UniversalMaterialResearchT2
@@ -98,14 +86,6 @@
   recipeUnlocks:
   - WeaponSubMachineGunAtreidesRogue
   - WeaponShotgunBulldogRogue
-  - Magazine5.7x28mmSubMachineGunFMJ
-  - Magazine5.7x28mmSubMachineGunEmpty
-  - AmmoBox5.7x28mmFMJ
-  - Magazine12_gaugeBuckshot
-  - Magazine12_gaugeSlug
-  - Magazine12_gaugeEmpty
-  - AmmoBox12_gaugeBuckshot
-  - AmmoBox12_gaugeSlug
   technologyPrerequisites:
   - RogueAdvancedGuns
   position: 20, 8
@@ -119,6 +99,7 @@
   cost: 55000
   recipeUnlocks:
   - WeaponSniperHristovRogue
+  - AmmoBox145x114mm
   - AmmoBox145x114mmBig
   technologyPrerequisites:
   - RogueAdvancedGuns

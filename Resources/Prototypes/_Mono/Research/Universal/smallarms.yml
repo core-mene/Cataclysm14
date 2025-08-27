@@ -4,40 +4,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: technology
-  id: UniversalSteelCore
-  name: research-technology-universal-ap-steel
-  entityIcon: SheetSteel
-  discipline: FactionUniversal
-  tier: 1
-  cost: 10000
-  technologyPrerequisites:
-  - UniversalMaterialResearchT1
-  position: 9, 0
-  recipeUnlocks:
-  - Magazine7.62x51mmSteelAP
-  - AmmoBox7.62x51mmSteelAP
-  - Magazine7.62x54mmRSteelAP
-  - AmmoBox7.62x54mmRSteelAP
-  - Magazine5.56x45mmSteelAP
-  - AmmoBox5.56x45mmSteelAP
-  - Magazine7.62x39mmSteelAP
-  - AmmoBox7.62x39mmSteelAP
-  - Magazine45_magnumPistolSteelAP
-  - AmmoBox45_magnumSteelAP
-  - Magazine4.6x30mmPistolSteelAP
-  - Magazine4.6x30mmSubMachineGunSteelAP
-  - AmmoBox4.6x30mmSteelAP
-  - Magazine5.7x28mmPistolSteelAP
-  - Magazine5.7x28mmSubMachineGunSteelAP
-  - AmmoBox5.7x28mmSteelAP
-  - Magazine9x19mmPistolSteelAP
-  - Magazine9x19mmSubMachineGunSteelAP
-  - AmmoBox9x19mmSteelAP
-  - Magazine45_ACPPistolSteelAP
-  - Magazine45_ACPSubMachineGunSteelAP
-  - AmmoBox45_ACPSteelAP
-
-- type: technology
   id: UniversalPlastitaniumCore
   name: research-technology-universal-ap-plastitanium
   entityIcon: SheetPlasteel
@@ -45,7 +11,6 @@
   tier: 2
   cost: 20000
   technologyPrerequisites:
-  - UniversalSteelCore
   - UniversalMaterialResearchT2
   position: 9, 5
   recipeUnlocks:
@@ -114,41 +79,6 @@
   - AmmoBox45_ACPSynthAP
 
 - type: technology
-  id: UniversalHollowPoint
-  name: research-technology-universal-ap-hp
-  entityIcon: AmmoBox9x19mmHP
-  discipline: FactionUniversal
-  tier: 1
-  cost: 20000
-  technologyPrerequisites:
-  - UniversalSteelCore
-  position: 8, 0
-  recipeUnlocks:
-  - Magazine7.62x51mmHP
-  - AmmoBox7.62x51mmHP
-  - Magazine7.62x54mmRHP
-  - AmmoBox7.62x54mmRHP
-  - Magazine5.56x45mmHP
-  - AmmoBox5.56x45mmHP
-  - Magazine7.62x39mmHP
-  - AmmoBox7.62x39mmHP
-  - Magazine45_magnumPistolHP
-  - SpeedLoader45_magnumHP
-  - AmmoBox45_magnumHP
-  - Magazine4.6x30mmPistolHP
-  - Magazine4.6x30mmSubMachineGunHP
-  - AmmoBox4.6x30mmHP
-  - Magazine5.7x28mmPistolHP
-  - Magazine5.7x28mmSubMachineGunHP
-  - AmmoBox5.7x28mmHP
-  - Magazine9x19mmPistolHP
-  - Magazine9x19mmSubMachineGunHP
-  - AmmoBox9x19mmHP
-  - Magazine45_ACPPistolHP
-  - Magazine45_ACPSubMachineGunHP
-  - AmmoBox45_ACPHP
-
-- type: technology
   id: UniversalRIP
   name: research-technology-universal-ap-rip
   entityIcon: AmmoBox9x19mmRIP
@@ -156,7 +86,6 @@
   tier: 2
   cost: 30000
   technologyPrerequisites:
-  - UniversalHollowPoint
   - UniversalPlastitaniumCore
   position: 8, 5
   recipeUnlocks:
@@ -227,7 +156,7 @@
   - AmmoBox45_ACPIncendiary
   - AmmoBox23x75mmFlashbang
   technologyPrerequisites:
-  - UniversalSteelCore
+  - UniversalMaterialResearchT1
   position: 9, -1
 
 - type: technology
