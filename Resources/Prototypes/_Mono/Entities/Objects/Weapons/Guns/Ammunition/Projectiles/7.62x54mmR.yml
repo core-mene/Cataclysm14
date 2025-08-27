@@ -20,7 +20,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  id: Bullet7.62x54mmRFMJ
+  id: Bullet762x54mmRFMJ
   name: bullet (7.62x54mmR FMJ)
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
@@ -31,7 +31,7 @@
         Piercing: 45
 
 - type: entity
-  id: Bullet7.62x54mmRPractice
+  id: Bullet762x54mmRPractice
   name: bullet (7.62x54mmR practice)
   parent: BaseBulletPractice
   categories: [ HideSpawnMenu ]
@@ -42,7 +42,7 @@
         Blunt: 3
 
 - type: entity
-  id: Bullet7.62x54mmRRubber
+  id: Bullet762x54mmRRubber
   name: bullet (7.62x54mmR rubber)
   parent: BaseBulletRubber
   categories: [ HideSpawnMenu ]
@@ -53,7 +53,7 @@
         Blunt: 5
 
 - type: entity
-  id: Bullet7.62x54mmRIncendiary
+  id: Bullet762x54mmRIncendiary
   parent: BaseBulletIncendiary
   name: bullet (7.62x54mmR incendiary)
   categories: [ HideSpawnMenu ]
@@ -65,7 +65,7 @@
         Heat: 30
 
 - type: entity
-  id: Bullet7.62x54mmRUranium
+  id: Bullet762x54mmRUranium
   parent: BaseBulletUranium
   name: bullet (7.62x54mmR uranium)
   categories: [ HideSpawnMenu ]
@@ -79,7 +79,7 @@
 # Mono AP syst
 #anti-flesh:
 - type: entity
-  id: Bullet7.62x54mmRHP
+  id: Bullet762x54mmRHP
   parent: BaseBullet
   name: bullet (7.62x54mmR hollow-point)
   categories: [ HideSpawnMenu ]
@@ -92,7 +92,7 @@
     armorPenetration: -0.3
 
 - type: entity
-  id: Bullet7.62x54mmRRIP
+  id: Bullet762x54mmRRIP
   parent: BaseBullet
   name: bullet (7.62x54mmR RIP)
   categories: [ HideSpawnMenu ]
@@ -106,7 +106,7 @@
 
 #armor-piercing:
 - type: entity
-  id: Bullet7.62x54mmRSteelAP
+  id: Bullet762x54mmRSteelAP
   parent: BaseBullet
   name: bullet (7.62x54mmR AP steel core)
   categories: [ HideSpawnMenu ]
@@ -118,7 +118,7 @@
     armorPenetration: 0.2
 
 - type: entity
-  id: Bullet7.62x54mmRPlasteelAP
+  id: Bullet762x54mmRPlasteelAP
   parent: BaseBullet
   name: bullet (7.62x54mmR AP plasteel core)
   categories: [ HideSpawnMenu ]
@@ -130,7 +130,7 @@
     armorPenetration: 0.4
 
 - type: entity
-  id: Bullet7.62x54mmRSynthAP
+  id: Bullet762x54mmRSynthAP
   parent: BaseBullet
   name: bullet (7.62x54mmR AP synthalloy core)
   categories: [ HideSpawnMenu ]

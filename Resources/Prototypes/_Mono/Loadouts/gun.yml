@@ -51,11 +51,11 @@
     - WeaponRevolverArgenti
 
 - type: loadout #Argenti Ammo
-  id: Contractor5.56x45mmAmmoLoadout
+  id: Contractor556x45mmAmmoLoadout
   price: 200
   storage:
     back:
-    - AmmoBox5.56x45mmFMJ
+    - AmmoBox556x45mmFMJ
 
 # Shotguns
 
@@ -93,11 +93,11 @@
     - WeaponRiflePrometheus
 
 - type: loadout #Lecter / Prometheus Ammo
-  id: Mercenary5.56x45mmAmmoLoadout
+  id: Mercenary556x45mmAmmoLoadout
   price: 1000
   storage:
     back:
-    - BoxMagazine5.56x45mmFMJ
+    - BoxMagazine556x45mmFMJ
 
 - type: loadout #Gestio
   id: MercenaryGestioLoadout
@@ -107,11 +107,11 @@
     - WeaponRifleGestio
 
 - type: loadout #Gestio Ammo
-  id: Mercenary7.62x39mmAmmoLoadout
+  id: Mercenary762x39mmAmmoLoadout
   price: 1000
   storage:
     back:
-    - BoxMagazine7.62x39mmFMJ
+    - BoxMagazine762x39mmFMJ
 
 - type: loadout # Novalite
   id: MercenaryNovaliteLoadout
@@ -135,11 +135,11 @@
     - WeaponRifleVulcanFCMC
 
 - type: loadout #Vulcan-C Ammo
-  id: Mercenary7.62x51mmAmmoLoadout
+  id: Mercenary762x51mmAmmoLoadout
   price: 1000
   storage:
     back:
-    - BoxMagazine7.62x51mmFMJ
+    - BoxMagazine762x51mmFMJ
 
 # Shotguns
 
@@ -209,11 +209,11 @@
     - WeaponSubMachineGunWt550PMC
 
 - type: loadout #WT550 Ammo
-  id: Mercenary4.6x30mmTopAmmoLoadout
+  id: Mercenary46x30mmTopAmmoLoadout
   price: 1000
   storage:
     back:
-    - BoxMagazine4.6x30mmSubMachineGunTopMountedFMJ
+    - BoxMagazine46x30mmSubMachineGunTopMountedFMJ
 
 - type: loadout #C20r
   id: MercenaryC20rLoadout
@@ -336,11 +336,11 @@
     - WeaponRifleLecter
 
 - type: loadout #Lecter / Prometheus Ammo
-  id: SecurityGuard5.56x45mmAmmoLoadout
+  id: SecurityGuard556x45mmAmmoLoadout
   price: 0
   storage:
     back:
-    - BoxMagazine5.56x45mmFMJ
+    - BoxMagazine556x45mmFMJ
 
 # Shotguns
 
@@ -425,11 +425,11 @@
     - WeaponRifleLecter
 
 - type: loadout #Lecter Ammo
-  id: Faction5.56x45mmAmmoLoadout
+  id: Faction556x45mmAmmoLoadout
   price: 0
   storage:
     back:
-    - BoxMagazine5.56x45mmFMJ
+    - BoxMagazine556x45mmFMJ
 
 - type: loadout #Vulcan
   id: FactionVulcanLoadout
@@ -439,11 +439,11 @@
     - WeaponRifleVulcan
 
 - type: loadout #Vulcan Ammo
-  id: Faction7.62x51mmAmmoLoadout
+  id: Faction762x51mmAmmoLoadout
   price: 0
   storage:
     back:
-    - BoxMagazine7.62x51mmFMJ
+    - BoxMagazine762x51mmFMJ
 
 - type: loadout #Bandit
   id: FactionBanditLoadout
@@ -474,11 +474,11 @@
     - WeaponRifleAK502
 
 - type: loadout #AKM / AK502 Ammo
-  id: Faction7.62x39mmAmmoLoadout
+  id: Faction762x39mmAmmoLoadout
   price: 0
   storage:
     back:
-    - BoxMagazine7.62x39mmFMJ
+    - BoxMagazine762x39mmFMJ
 
 - type: loadout #Mosin
   id: FactionMosinLoadout
@@ -495,11 +495,11 @@
     - WeaponRifleSVS
 
 - type: loadout #Mosin / SVS42 Ammo
-  id: Faction7.62x54mmRAmmoLoadout
+  id: Faction762x54mmRAmmoLoadout
   price: 0
   storage:
     back:
-    - BoxMagazine7.62x54mmRFMJ
+    - BoxMagazine762x54mmRFMJ
 
 # SMGs
 
@@ -532,11 +532,11 @@
     - WeaponSubMachineGunWt550
 
 - type: loadout #WT550 Ammo
-  id: Faction4.6x30mmTopAmmo
+  id: Faction46x30mmTopAmmo
   price: 0
   storage:
     back:
-    - BoxMagazine4.6x30mmSubMachineGunTopMountedFMJ
+    - BoxMagazine46x30mmSubMachineGunTopMountedFMJ
 
 - type: loadout #C20r
   id: FactionC20RLoadout

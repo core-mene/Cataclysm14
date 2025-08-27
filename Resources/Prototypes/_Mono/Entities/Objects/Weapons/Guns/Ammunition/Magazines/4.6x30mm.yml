@@ -4,19 +4,19 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  id: BaseMagazine4.6x30mm
+  id: BaseMagazine46x30mm
   name: pistol magazine (4.6x30mm FMJ)
   parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine4.6x30mmPistolFMJ
+      - Magazine46x30mmPistolFMJ
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge4.6x30mmFMJ
+        - Cartridge46x30mmFMJ
     capacity: 21
   - type: Item
     size: Small
@@ -38,12 +38,12 @@
 
 #Start Pistol mags
 - type: entity
-  id: Magazine4.6x30mmPistolFMJ
+  id: Magazine46x30mmPistolFMJ
   name: pistol magazine (4.6x30mm FMJ)
-  parent: BaseMagazine4.6x30mm
+  parent: BaseMagazine46x30mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmFMJ
+    proto: Cartridge46x30mmFMJ
   - type: Sprite
     layers:
     - state: base
@@ -52,10 +52,10 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmPistolEmpty
+  id: Magazine46x30mmPistolEmpty
   name: pistol magazine (4.6x30mm any)
   suffix: empty
-  parent: Magazine4.6x30mmPistolFMJ
+  parent: Magazine46x30mmPistolFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -67,12 +67,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmPistolIncendiary
+  id: Magazine46x30mmPistolIncendiary
   name: pistol magazine (4.6x30mm incendiary)
-  parent: Magazine4.6x30mmPistolFMJ
+  parent: Magazine46x30mmPistolFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmIncendiary
+    proto: Cartridge46x30mmIncendiary
   - type: Sprite
     layers:
     - state: red
@@ -81,12 +81,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmPistolPractice
+  id: Magazine46x30mmPistolPractice
   name: pistol magazine (4.6x30mm practice)
-  parent: BaseMagazine4.6x30mm
+  parent: BaseMagazine46x30mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmPractice
+    proto: Cartridge46x30mmPractice
   - type: Sprite
     layers:
     - state: red
@@ -95,12 +95,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmPistolUranium
+  id: Magazine46x30mmPistolUranium
   name: pistol magazine (4.6x30mm uranium)
-  parent: BaseMagazine4.6x30mm
+  parent: BaseMagazine46x30mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmUranium
+    proto: Cartridge46x30mmUranium
   - type: Sprite
     layers:
     - state: uranium
@@ -110,12 +110,12 @@
 
 #Upstream
 - type: entity
-  id: Magazine4.6x30mmPistolRubber
+  id: Magazine46x30mmPistolRubber
   name: pistol magazine (4.6x30mm rubber)
-  parent: BaseMagazine4.6x30mm
+  parent: BaseMagazine46x30mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmRubber
+    proto: Cartridge46x30mmRubber
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_pistol_mag.rsi
     layers:
@@ -127,12 +127,12 @@
 #Mono AP system
 #anti-flesh ammo
 - type: entity
-  id: Magazine4.6x30mmPistolHP
+  id: Magazine46x30mmPistolHP
   name: pistol magazine (4.6x30mm hollow-point)
-  parent: BaseMagazine4.6x30mm
+  parent: BaseMagazine46x30mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmHP
+    proto: Cartridge46x30mmHP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_pistol_mag.rsi
     layers:
@@ -142,12 +142,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmPistolRIP
+  id: Magazine46x30mmPistolRIP
   name: pistol magazine (4.6x30mm RIP)
-  parent: BaseMagazine4.6x30mm
+  parent: BaseMagazine46x30mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmRIP
+    proto: Cartridge46x30mmRIP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_pistol_mag.rsi
     layers:
@@ -158,12 +158,12 @@
 
 #armor-piercing ammo
 - type: entity
-  id: Magazine4.6x30mmPistolSteelAP
+  id: Magazine46x30mmPistolSteelAP
   name: pistol magazine (4.6x30mm AP steel core)
-  parent: BaseMagazine4.6x30mm
+  parent: BaseMagazine46x30mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmSteelAP
+    proto: Cartridge46x30mmSteelAP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_pistol_mag.rsi
     layers:
@@ -173,12 +173,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmPistolPlasteelAP
+  id: Magazine46x30mmPistolPlasteelAP
   name: pistol magazine (4.6x30mm AP plasteel core)
-  parent: BaseMagazine4.6x30mm
+  parent: BaseMagazine46x30mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmPlasteelAP
+    proto: Cartridge46x30mmPlasteelAP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_pistol_mag.rsi
     layers:
@@ -188,12 +188,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmPistolSynthAP
+  id: Magazine46x30mmPistolSynthAP
   name: pistol magazine (4.6x30mm AP synthalloy core)
-  parent: BaseMagazine4.6x30mm
+  parent: BaseMagazine46x30mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmSynthAP
+    proto: Cartridge46x30mmSynthAP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_pistol_mag.rsi
     layers:
@@ -205,19 +205,19 @@
 #End Pistol mags
 #Start HighCapacity mags
 - type: entity
-  id: BaseMagazine4.6x30mmPistolHighCapacityFMJ
+  id: BaseMagazine46x30mmPistolHighCapacityFMJ
   name: machine pistol magazine (4.6x30mm FMJ)
   parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine4.6x30mmPistolHighCapacityFMJ
+      - Magazine46x30mmPistolHighCapacityFMJ
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge4.6x30mmFMJ
+        - Cartridge46x30mmFMJ
     capacity: 38
   - type: Item
     size: Small
@@ -238,10 +238,10 @@
   - type: Appearance
 
 - type: entity
-  id: Magazine4.6x30mmPistolHighCapacityEmpty
+  id: Magazine46x30mmPistolHighCapacityEmpty
   name: machine pistol magazine (4.6x30mm any)
   suffix: empty
-  parent: BaseMagazine4.6x30mmPistolHighCapacityFMJ
+  parent: BaseMagazine46x30mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -253,12 +253,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmPistolHighCapacityFMJ
+  id: Magazine46x30mmPistolHighCapacityFMJ
   name: machine pistol magazine (4.6x30mm FMJ)
-  parent: BaseMagazine4.6x30mmPistolHighCapacityFMJ
+  parent: BaseMagazine46x30mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmFMJ
+    proto: Cartridge46x30mmFMJ
   - type: Sprite
     layers:
     - state: base
@@ -267,12 +267,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmPistolHighCapacityPractice
+  id: Magazine46x30mmPistolHighCapacityPractice
   name: machine pistol magazine (4.6x30mm practice)
-  parent: BaseMagazine4.6x30mmPistolHighCapacityFMJ
+  parent: BaseMagazine46x30mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmFMJ
+    proto: Cartridge46x30mmFMJ
   - type: Sprite
     layers:
     - state: practice
@@ -281,12 +281,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmPistolHighCapacityRubber
+  id: Magazine46x30mmPistolHighCapacityRubber
   name: machine pistol magazine (4.6x30mm rubber)
-  parent: BaseMagazine4.6x30mmPistolHighCapacityFMJ
+  parent: BaseMagazine46x30mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmFMJ
+    proto: Cartridge46x30mmFMJ
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_pistol_high_capacity_mag.rsi
     layers:
@@ -298,19 +298,19 @@
 #End HighCapacity mags
 #Start SubMachineGun mags
 - type: entity
-  id: BaseMagazine4.6x30mmSubMachineGunFMJ
+  id: BaseMagazine46x30mmSubMachineGunFMJ
   name: SMG magazine (4.6x30mm FMJ)
   parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseSecurityContraband<BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine4.6x30mmSubMachineGunFMJ
+      - Magazine46x30mmSubMachineGunFMJ
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge4.6x30mmFMJ
+        - Cartridge46x30mmFMJ
     capacity: 40
   - type: Item
     size: Small
@@ -331,15 +331,15 @@
   - type: Appearance
 
 - type: entity
-  id: Magazine4.6x30mmSubMachineGunFMJ
+  id: Magazine46x30mmSubMachineGunFMJ
   name: SMG magazine (4.6x30mm FMJ)
-  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
+  parent: BaseMagazine46x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmFMJ
+    proto: Cartridge46x30mmFMJ
     whitelist:
       tags:
-        - Cartridge4.6x30mmFMJ
+        - Cartridge46x30mmFMJ
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
   - type: Sprite
@@ -350,10 +350,10 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmSubMachineGunEmpty
+  id: Magazine46x30mmSubMachineGunEmpty
   name: SMG magazine (4.6x30mm any)
   suffix: empty
-  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
+  parent: BaseMagazine46x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -365,12 +365,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmSubMachineGunPractice
+  id: Magazine46x30mmSubMachineGunPractice
   name: SMG magazine (4.6x30mm practice)
-  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
+  parent: BaseMagazine46x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmPractice
+    proto: Cartridge46x30mmPractice
   - type: Sprite
     layers:
     - state: practice
@@ -379,12 +379,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmSubMachineGunUranium
+  id: Magazine46x30mmSubMachineGunUranium
   name: SMG magazine (4.6x30mm uranium)
-  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
+  parent: BaseMagazine46x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmUranium
+    proto: Cartridge46x30mmUranium
   - type: Sprite
     layers:
     - state: uranium
@@ -393,12 +393,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
-  id: Magazine4.6x30mmSubMachineGunIncendiary
+  parent: BaseMagazine46x30mmSubMachineGunFMJ
+  id: Magazine46x30mmSubMachineGunIncendiary
   name: SMG magazine (4.6x30mm incendiary)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmIncendiary
+    proto: Cartridge46x30mmIncendiary
   - type: Sprite
     layers:
     - state: red
@@ -407,12 +407,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmSubMachineGunRubber
+  id: Magazine46x30mmSubMachineGunRubber
   name: SMG magazine (4.6x30mm rubber)
-  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
+  parent: BaseMagazine46x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmRubber
+    proto: Cartridge46x30mmRubber
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_smg_mag.rsi
     layers:
@@ -423,12 +423,12 @@
 
 # Frontier
 - type: entity
-  id: Magazine4.6x30mmSubMachineGunEmp
+  id: Magazine46x30mmSubMachineGunEmp
   name: SMG magazine (4.6x30mm emp)
-  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
+  parent: BaseMagazine46x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmEmp
+    proto: Cartridge46x30mmEmp
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_smg_mag.rsi
     layers:
@@ -440,12 +440,12 @@
 #Mono AP system
 #anti-flesh ammo
 - type: entity
-  id: Magazine4.6x30mmSubMachineGunHP
+  id: Magazine46x30mmSubMachineGunHP
   name: SMG magazine (4.6x30mm hollow-point)
-  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
+  parent: BaseMagazine46x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmHP
+    proto: Cartridge46x30mmHP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_smg_mag.rsi
     layers:
@@ -455,12 +455,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmSubMachineGunRIP
+  id: Magazine46x30mmSubMachineGunRIP
   name: SMG magazine (4.6x30mm RIP)
-  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
+  parent: BaseMagazine46x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmRIP
+    proto: Cartridge46x30mmRIP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_smg_mag.rsi
     layers:
@@ -471,12 +471,12 @@
 
 #armor-piercing ammo
 - type: entity
-  id: Magazine4.6x30mmSubMachineGunSteelAP
+  id: Magazine46x30mmSubMachineGunSteelAP
   name: SMG magazine (4.6x30mm AP steel core)
-  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
+  parent: BaseMagazine46x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmSteelAP
+    proto: Cartridge46x30mmSteelAP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_smg_mag.rsi
     layers:
@@ -486,12 +486,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmSubMachineGunPlasteelAP
+  id: Magazine46x30mmSubMachineGunPlasteelAP
   name: SMG magazine (4.6x30mm AP plasteel core)
-  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
+  parent: BaseMagazine46x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmPlasteelAP
+    proto: Cartridge46x30mmPlasteelAP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_smg_mag.rsi
     layers:
@@ -501,12 +501,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine4.6x30mmSubMachineGunSynthAP
+  id: Magazine46x30mmSubMachineGunSynthAP
   name: SMG magazine (4.6x30mm AP synthalloy core)
-  parent: BaseMagazine4.6x30mmSubMachineGunFMJ
+  parent: BaseMagazine46x30mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge4.6x30mmSynthAP
+    proto: Cartridge46x30mmSynthAP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_smg_mag.rsi
     layers:
@@ -518,19 +518,19 @@
 #End SubMachineGun mags
 #Start TopMounted mags
 - type: entity
-  id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+  id: Magazine46x30mmSubMachineGunTopMountedFMJ
   name: WT550 magazine (4.6x30mm top-mounted)
   parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
   components:
   - type: Tag
     tags:
-      - Magazine4.6x30mmSubMachineGunTopMountedFMJ
+      - Magazine46x30mmSubMachineGunTopMountedFMJ
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: Cartridge4.6x30mmFMJ
+    proto: Cartridge46x30mmFMJ
     whitelist:
       tags:
-      - Cartridge4.6x30mmFMJ
+      - Cartridge46x30mmFMJ
     capacity: 42
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_smg_mag_top_mounted.rsi
@@ -550,9 +550,9 @@
       ballistic-ammo: !type:Container
 
 - type: entity
-  id: Magazine4.6x30mmSubMachineGunTopMountedEmpty
+  id: Magazine46x30mmSubMachineGunTopMountedEmpty
   name: WT550 magazine (4.6x30mm top-mounted any)
-  parent: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+  parent: Magazine46x30mmSubMachineGunTopMountedFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null

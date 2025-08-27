@@ -27,21 +27,21 @@
 
 # Empty mags
 - type: entity
-  id: BaseMagazine5.56x45mm
-  name: "magazine (5.56x45mm FMJ)"
+  id: BaseMagazine556x45mm
+  name: "magazine 5.56x45mm FMJ)"
   parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine5.56x45mmFMJ
+      - Magazine556x45mmFMJ
   - type: Item
     size: Small
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge5.56x45mmFMJ
+        - Cartridge556x45mmFMJ
     capacity: 30
   - type: ContainerContainer
     containers:
@@ -61,12 +61,12 @@
 
 # Magazines
 - type: entity
-  id: Magazine5.56x45mmFMJ
-  name: "magazine (5.56x45mm FMJ)"
-  parent: BaseMagazine5.56x45mm
+  id: Magazine556x45mmFMJ
+  name: "magazine 5.56x45mm FMJ)"
+  parent: BaseMagazine556x45mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmFMJ
+    proto: Cartridge556x45mmFMJ
   - type: Sprite
     layers:
     - state: base
@@ -75,10 +75,10 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine5.56x45mmEmpty
-  name: "magazine (5.56x45mm any)"
+  id: Magazine556x45mmEmpty
+  name: "magazine 5.56x45mm any)"
   suffix: empty
-  parent: Magazine5.56x45mmFMJ
+  parent: Magazine556x45mmFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -90,12 +90,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine5.56x45mmIncendiary
-  name: "magazine (5.56x45mm incendiary)"
-  parent: Magazine5.56x45mmFMJ
+  id: Magazine556x45mmIncendiary
+  name: "magazine 5.56x45mm incendiary)"
+  parent: Magazine556x45mmFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmIncendiary
+    proto: Cartridge556x45mmIncendiary
   - type: Sprite
     layers:
     - state: red
@@ -104,12 +104,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine5.56x45mmPractice
-  name: "magazine (5.56x45mm practice)"
-  parent: BaseMagazine5.56x45mm
+  id: Magazine556x45mmPractice
+  name: "magazine 5.56x45mm practice)"
+  parent: BaseMagazine556x45mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmPractice
+    proto: Cartridge556x45mmPractice
   - type: Sprite
     layers:
     - state: practice
@@ -118,12 +118,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine5.56x45mmUranium
-  name: "magazine (5.56x45mm uranium)"
-  parent: BaseMagazine5.56x45mm
+  id: Magazine556x45mmUranium
+  name: "magazine 5.56x45mm uranium)"
+  parent: BaseMagazine556x45mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmUranium
+    proto: Cartridge556x45mmUranium
   - type: Sprite
     layers:
     - state: uranium
@@ -132,12 +132,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine5.56x45mmRubber
-  name: "magazine (5.56x45mm rubber)"
-  parent: BaseMagazine5.56x45mm
+  id: Magazine556x45mmRubber
+  name: "magazine 5.56x45mm rubber)"
+  parent: BaseMagazine556x45mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmRubber
+    proto: Cartridge556x45mmRubber
   - type: Sprite
     layers:
     - state: rubber
@@ -147,9 +147,9 @@
 
 # Novalite
 - type: entity
-  parent: BaseMagazine5.56x45mm
+  parent: BaseMagazine556x45mm
   id: MagazineNovaliteC1Empty
-  name: "clip (5.56x45mm any)"
+  name: "clip 5.56x45mm any)"
   suffix: empty
   components:
   - type: Tag
@@ -161,7 +161,7 @@
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge5.56x45mmFMJ
+        - Cartridge556x45mmFMJ
     capacity: 25
   - type: ContainerContainer
     containers:
@@ -182,11 +182,11 @@
 - type: entity
   parent: MagazineNovaliteC1Empty
   id: MagazineNovaliteC1
-  name: "clip (5.56x45mm FMJ)"
+  name: "clip 5.56x45mm FMJ)"
   suffix: full
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmFMJ
+    proto: Cartridge556x45mmFMJ
   - type: Sprite
     layers:
     - state: base
@@ -197,11 +197,11 @@
 - type: entity
   parent: MagazineNovaliteC1Empty
   id: MagazineNovaliteC1Rubber
-  name: "clip (5.56x45mm rubber)"
+  name: "clip 5.56x45mm rubber)"
   suffix: full
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmRubber
+    proto: Cartridge556x45mmRubber
   - type: Sprite
     layers:
     - state: base
@@ -212,12 +212,12 @@
 # Mono AP syst
 #anti-flesh:
 - type: entity
-  id: Magazine5.56x45mmHP
-  name: "magazine (5.56x45mm hollow-point)"
-  parent: BaseMagazine5.56x45mm
+  id: Magazine556x45mmHP
+  name: "magazine 5.56x45mm hollow-point)"
+  parent: BaseMagazine556x45mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmHP
+    proto: Cartridge556x45mmHP
   - type: Sprite
     layers:
     - state: HP
@@ -226,12 +226,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine5.56x45mmRIP
-  name: "magazine (5.56x45mm RIP)"
-  parent: BaseMagazine5.56x45mm
+  id: Magazine556x45mmRIP
+  name: "magazine 5.56x45mm RIP)"
+  parent: BaseMagazine556x45mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmRIP
+    proto: Cartridge556x45mmRIP
   - type: Sprite
     layers:
     - state: RIP
@@ -241,12 +241,12 @@
 
 #armor-piercing:
 - type: entity
-  id: Magazine5.56x45mmSteelAP
-  name: "magazine (5.56x45mm AP steel core)"
-  parent: BaseMagazine5.56x45mm
+  id: Magazine556x45mmSteelAP
+  name: "magazine 5.56x45mm AP steel core)"
+  parent: BaseMagazine556x45mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmSteelAP
+    proto: Cartridge556x45mmSteelAP
   - type: Sprite
     layers:
     - state: steelAP
@@ -255,12 +255,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine5.56x45mmPlasteelAP
-  name: "magazine (5.56x45mm AP plasteel core)"
-  parent: BaseMagazine5.56x45mm
+  id: Magazine556x45mmPlasteelAP
+  name: "magazine 5.56x45mm AP plasteel core)"
+  parent: BaseMagazine556x45mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmPlasteelAP
+    proto: Cartridge556x45mmPlasteelAP
   - type: Sprite
     layers:
     - state: plasteelAP
@@ -269,12 +269,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine5.56x45mmSynthAP
-  name: "magazine (5.56x45mm AP synthalloy core)"
-  parent: BaseMagazine5.56x45mm
+  id: Magazine556x45mmSynthAP
+  name: "magazine 5.56x45mm AP synthalloy core)"
+  parent: BaseMagazine556x45mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmSynthAP
+    proto: Cartridge556x45mmSynthAP
   - type: Sprite
     layers:
     - state: synthAP

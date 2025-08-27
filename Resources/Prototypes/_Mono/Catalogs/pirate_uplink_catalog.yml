@@ -587,10 +587,10 @@
       - PirateUplink
 
 - type: listing
-  id: UplinkPirate7.62x39mmAmmoBoxBig
+  id: UplinkPirate762x39mmAmmoBoxBig
   name: uplink-pirate-light-rifle-magazine-box-big-name
   description: uplink-pirate-light-rifle-magazine-box-big-desc
-  productEntity: AmmoBox7.62x39mmBigFMJ
+  productEntity: AmmoBox762x39mmBigFMJ
   cost:
     Doubloon: 10
   categories:
@@ -617,10 +617,10 @@
       - PirateUplink
 
 - type: listing
-  id: UplinkPirateBoxMagazine7.62x39mmFMJ
+  id: UplinkPirateBoxMagazine762x39mmFMJ
   name: uplink-pirate-box-magazine-light-rifle-name
   description: uplink-pirate-box-magazine-light-rifle-desc
-  productEntity: BoxMagazine7.62x39mmFMJ
+  productEntity: BoxMagazine762x39mmFMJ
   cost:
     Doubloon: 5
   categories:
@@ -635,7 +635,7 @@
   id: UplinkPirateMagazineSubsonic
   name: uplink-subsonic-mag-name
   description: uplink-subsonic-mag-desc
-  productEntity: Magazine7.62x39mmSubsonic
+  productEntity: Magazine762x39mmSubsonic
   cost:
     Doubloon: 4
   categories:
@@ -650,7 +650,7 @@
   id: UplinkPirateBoxSubsonic
   name: uplink-subsonic-box-name
   description: uplink-subsonic-box-desc
-  productEntity: AmmoBox7.62x39mmSubsonic
+  productEntity: AmmoBox762x39mmSubsonic
   cost:
     Doubloon: 7
   categories:
@@ -680,7 +680,7 @@
   id: UplinkPirateBurnerBox
   name: uplink-pirate-box-highcal-name
   description: uplink-pirate-box-highcal-desc
-  productEntity: AmmoBox12.7x99mm
+  productEntity: AmmoBox127x99mm
   cost:
     Doubloon: 15
   categories:
@@ -695,7 +695,7 @@
   id: UplinkPirateBurnerBoxHE
   name: uplink-pirate-box-highcal-he-name
   description: uplink-pirate-box-highcal-he-desc
-  productEntity: AmmoBox12.7x99mmExplosive
+  productEntity: AmmoBox127x99mmExplosive
   cost:
     Doubloon: 30
   categories:
@@ -725,7 +725,7 @@
   id: UplinkPirateSniperAmmo
   name: uplink-pirate-sniper-ammo-name
   description: uplink-pirate-sniper-ammo-desc
-  productEntity: AmmoBox14.5x114mm
+  productEntity: AmmoBox145x114mm
   cost:
     Doubloon: 12 # Mono
   categories:

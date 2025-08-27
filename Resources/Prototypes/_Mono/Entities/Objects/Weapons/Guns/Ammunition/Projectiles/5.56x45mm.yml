@@ -22,8 +22,8 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  id: Bullet5.56x45mmFMJ
-  name: bullet (5.56x45mm FMJ)
+  id: Bullet556x45mmFMJ
+  name: bullet 5.56x45mm FMJ)
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
@@ -34,8 +34,8 @@
     armorPenetration: 0.1
 
 - type: entity
-  id: Bullet5.56x45mmPractice
-  name: bullet (5.56x45mm practice)
+  id: Bullet556x45mmPractice
+  name: bullet 5.56x45mm practice)
   parent: BaseBulletPractice
   categories: [ HideSpawnMenu ]
   components:
@@ -45,8 +45,8 @@
         Blunt: 2
 
 - type: entity
-  id: Bullet5.56x45mmRubber
-  name: bullet (5.56x45mm rubber)
+  id: Bullet556x45mmRubber
+  name: bullet 5.56x45mm rubber)
   parent: BaseBulletRubber
   categories: [ HideSpawnMenu ]
   components:
@@ -56,9 +56,9 @@
         Blunt: 3
 
 - type: entity
-  id: Bullet5.56x45mmIncendiary
+  id: Bullet556x45mmIncendiary
   parent: BaseBulletIncendiary
-  name: bullet (5.56x45mm incendiary)
+  name: bullet 5.56x45mm incendiary)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -68,9 +68,9 @@
         Heat: 17
 
 - type: entity
-  id: Bullet5.56x45mmUranium
+  id: Bullet556x45mmUranium
   parent: BaseBulletUranium
-  name: bullet (5.56x45mm uranium)
+  name: bullet 5.56x45mm uranium)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -83,9 +83,9 @@
 # + 0.05 base AP
 #anti-flesh:
 - type: entity
-  id: Bullet5.56x45mmHP
+  id: Bullet556x45mmHP
   parent: BaseBullet
-  name: bullet (5.56x45mm hollow-point)
+  name: bullet 5.56x45mm hollow-point)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -96,9 +96,9 @@
     armorPenetration: -0.25
 
 - type: entity
-  id: Bullet5.56x45mmRIP
+  id: Bullet556x45mmRIP
   parent: BaseBullet
-  name: bullet (5.56x45mm RIP)
+  name: bullet 5.56x45mm RIP)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -110,9 +110,9 @@
 
 #armor-piercing:
 - type: entity
-  id: Bullet5.56x45mmSteelAP
+  id: Bullet556x45mmSteelAP
   parent: BaseBullet
-  name: bullet (5.56x45mm AP steel core)
+  name: bullet 5.56x45mm AP steel core)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -122,9 +122,9 @@
     armorPenetration: 0.25
 
 - type: entity
-  id: Bullet5.56x45mmPlasteelAP
+  id: Bullet556x45mmPlasteelAP
   parent: BaseBullet
-  name: bullet (5.56x45mm AP plasteel core)
+  name: bullet 5.56x45mm AP plasteel core)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -134,9 +134,9 @@
     armorPenetration: 0.45
 
 - type: entity
-  id: Bullet5.56x45mmSynthAP
+  id: Bullet556x45mmSynthAP
   parent: BaseBullet
-  name: bullet (5.56x45mm AP synthalloy core)
+  name: bullet 5.56x45mm AP synthalloy core)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile

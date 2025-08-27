@@ -608,11 +608,11 @@
 
 # For the Cobra
 - type: listing
-  id: UplinkMagazine6.35x40mmCaselessPistol
+  id: UplinkMagazine635x40mmCaselessPistol
   name: uplink-pistol-magazine-caseless-name
   description: uplink-pistol-magazine-caseless-desc
   icon: { sprite: /Textures/_Mono/Objects/Weapons/Guns/Ammunition/Magazine/6.35x40mm_caseless/6.35x40mm_caseless_pistol_mag.rsi, state: red-icon }
-  productEntity: Magazine6.35x40mmCaselessPistol
+  productEntity: Magazine635x40mmCaselessPistol
   cost:
     Telecrystal: 5 # Mono
   categories:
@@ -635,7 +635,7 @@
   id: UplinkMosinAmmo
   name: uplink-mosin-ammo-name
   description: uplink-mosin-ammo-desc
-  productEntity: AmmoBox7.62x39mmFMJ
+  productEntity: AmmoBox762x39mmFMJ
   cost:
     Telecrystal: 5 # Mono
   categories:
@@ -646,7 +646,7 @@
   id: UplinkHristovAmmo
   name: uplink-sniper-ammo-name
   description: uplink-sniper-ammo-desc
-  productEntity: AmmoBox14.5x114mm
+  productEntity: AmmoBox145x114mm
   cost:
     Telecrystal: 10 # Mono
   categories:

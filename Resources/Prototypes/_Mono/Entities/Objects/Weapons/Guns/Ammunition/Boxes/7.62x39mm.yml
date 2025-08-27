@@ -5,15 +5,15 @@
 - type: entity
   abstract: true
   parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
-  id: BaseAmmoBox7.62x39mm
+  id: BaseAmmoBox762x39mm
   name: ammunition box (7.62x39mm FMJ)
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge7.62x39mmFMJ
-    proto: Cartridge7.62x39mmFMJ
+        - Cartridge762x39mmFMJ
+    proto: Cartridge762x39mmFMJ
     capacity: 70 # more than 2 rifle mag
   - type: Item
     size: Small
@@ -30,12 +30,12 @@
 
 #small ammo boxes
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmFMJ
+  parent: BaseAmmoBox762x39mm
+  id: AmmoBox762x39mmFMJ
   name: ammunition box (7.62x39mm FMJ)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmFMJ
+    proto: Cartridge762x39mmFMJ
   - type: Sprite
     layers:
     - state: base
@@ -44,12 +44,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmPractice
+  parent: BaseAmmoBox762x39mm
+  id: AmmoBox762x39mmPractice
   name: ammunition box (7.62x39mm practice)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmPractice
+    proto: Cartridge762x39mmPractice
   - type: Sprite
     layers:
     - state: base
@@ -59,12 +59,12 @@
     - state: practice
 
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmIncendiary
+  parent: BaseAmmoBox762x39mm
+  id: AmmoBox762x39mmIncendiary
   name: ammunition box (7.62x39mm incendiary)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmIncendiary
+    proto: Cartridge762x39mmIncendiary
   - type: Sprite
     layers:
     - state: base
@@ -74,12 +74,12 @@
     - state: incendiary
 
 - type: entity
-  id: AmmoBox7.62x39mmUranium
-  parent: BaseAmmoBox7.62x39mm
+  id: AmmoBox762x39mmUranium
+  parent: BaseAmmoBox762x39mm
   name: ammunition box (7.62x39mm uranium)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmUranium
+    proto: Cartridge762x39mmUranium
   - type: Sprite
     layers:
     - state: base
@@ -90,12 +90,12 @@
 
 # Upstream
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmRubber
+  parent: BaseAmmoBox762x39mm
+  id: AmmoBox762x39mmRubber
   name: ammunition box (7.62x39mm rubber)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmRubber
+    proto: Cartridge762x39mmRubber
   - type: Sprite
     layers:
     - state: base
@@ -107,12 +107,12 @@
 # Mono AP syst
 #anti-flesh:
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmHP
+  parent: BaseAmmoBox762x39mm
+  id: AmmoBox762x39mmHP
   name: ammunition box (7.62x39mm hollow-point)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmHP
+    proto: Cartridge762x39mmHP
   - type: Sprite
     layers:
     - state: base
@@ -122,12 +122,12 @@
     - state: HP
 
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmRIP
+  parent: BaseAmmoBox762x39mm
+  id: AmmoBox762x39mmRIP
   name: ammunition box (7.62x39mm RIP)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmRIP
+    proto: Cartridge762x39mmRIP
   - type: Sprite
     layers:
     - state: base
@@ -138,12 +138,12 @@
 
 #armor-piercing:
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmSteelAP
+  parent: BaseAmmoBox762x39mm
+  id: AmmoBox762x39mmSteelAP
   name: ammunition box (7.62x39mm AP steel core)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmSteelAP
+    proto: Cartridge762x39mmSteelAP
   - type: Sprite
     layers:
     - state: base
@@ -153,12 +153,12 @@
     - state: steelAP
 
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmPlasteelAP
+  parent: BaseAmmoBox762x39mm
+  id: AmmoBox762x39mmPlasteelAP
   name: ammunition box (7.62x39mm AP plasteel core)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmPlasteelAP
+    proto: Cartridge762x39mmPlasteelAP
   - type: Sprite
     layers:
     - state: base
@@ -168,12 +168,12 @@
     - state: plasteelAP
 
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmSynthAP
+  parent: BaseAmmoBox762x39mm
+  id: AmmoBox762x39mmSynthAP
   name: ammunition box (7.62x39mm AP synthalloy core)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmSynthAP
+    proto: Cartridge762x39mmSynthAP
   - type: Sprite
     layers:
     - state: base
@@ -183,17 +183,17 @@
     - state: synthAP
 
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmSubsonic
+  parent: BaseAmmoBox762x39mm
+  id: AmmoBox762x39mmSubsonic
   name: ammunition box (7.62x39mm subsonic)
   components:
   - type: BallisticAmmoProvider
     capacity: 70
-    proto: Cartridge7.62x39mmSubsonic
+    proto: Cartridge762x39mmSubsonic
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge7.62x39mmSubsonic
+        - Cartridge762x39mmSubsonic
   - type: Sprite
     layers:
     - state: base
@@ -203,8 +203,8 @@
 
 #big ammo boxes
 - type: entity
-  parent: BaseAmmoBox7.62x39mm
-  id: AmmoBox7.62x39mmBigFMJ
+  parent: BaseAmmoBox762x39mm
+  id: AmmoBox762x39mmBigFMJ
   name: big ammunition box (7.62x39mm FMJ)
   suffix: Big
   components:
@@ -213,7 +213,7 @@
     - 0,0,1,1
   - type: BallisticAmmoProvider
     capacity: 210 # 7 rifle mags
-    proto: Cartridge7.62x39mmFMJ
+    proto: Cartridge762x39mmFMJ
   - type: Sprite
     layers:
     - state: base-b # Frontier: base-big<base-b
