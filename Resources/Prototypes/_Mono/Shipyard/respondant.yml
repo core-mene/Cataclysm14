@@ -1,0 +1,36 @@
+- type: vessel
+  id: Claymore
+  parent: BaseVessel
+  name: PPU Respondant
+  description: An armed and armored ambulance and fleet escort vessel. Meant for short, quick attacks, but not sustained combat. Recommended crew is 2-4 people.
+  price: 135000
+  category: Medium
+  group: Shipyard
+  access: Mercenary
+  shuttlePath: /Maps/_Mono/Shuttles/respondant.yml
+  guidebookPage: Null
+  class:
+  - Pursuit
+  - Fighter
+  engine:
+  - Bananium
+
+- type: gameMap
+  id: Respondant
+  mapName: 'PPU Respondant'
+  mapPath: /Maps/_Mono/Shuttles/respondant.yml
+  minPlayers: 0
+  stations:
+    Respondant:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Respondant MIL{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
