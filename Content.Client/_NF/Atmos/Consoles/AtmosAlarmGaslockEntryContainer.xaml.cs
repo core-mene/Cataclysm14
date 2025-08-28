@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2025 Milon
+// SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Globalization;
 using System.Linq;
 using Content.Client.Stylesheets;

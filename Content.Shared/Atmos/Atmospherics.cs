@@ -25,9 +25,11 @@
 // SPDX-FileCopyrightText: 2024 router
 // SPDX-FileCopyrightText: 2025 ArtisticRoomba
 // SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 bitcrushing
 // SPDX-FileCopyrightText: 2025 marc-pelletier
 // SPDX-FileCopyrightText: 2025 starch
 // SPDX-FileCopyrightText: 2025 tonotom
+// SPDX-FileCopyrightText: 2025 tonotom1
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
