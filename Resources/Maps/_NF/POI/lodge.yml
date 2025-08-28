@@ -20,6 +20,7 @@
 # SPDX-FileCopyrightText: 2024 Shroomerian
 # SPDX-FileCopyrightText: 2024 TsjipTsjip
 # SPDX-FileCopyrightText: 2025 Checkraze
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
@@ -143,6 +144,8 @@ entities:
     - type: Fixtures
       fixtures: {}
     - type: OccluderTree
+    - type: GridGodMode
+      protectedEntities: []
     - type: SpreaderGrid
     - type: Shuttle
     - type: GridPathfinding

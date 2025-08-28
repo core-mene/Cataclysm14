@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 Bonaout
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 gixer94
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -588,6 +589,15 @@
   equipment:
     head: ClothingHeadHatWideBrimmedYellow
 
+- type: loadout
+  id: ContractorClothingHeadHatUNSABeer
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1100
+  equipment:
+    head: ClothingHeadHatUNSABeer
+
 # Mono End
 
 - type: loadout
@@ -616,7 +626,7 @@
   price: 1250
   equipment:
     head: ClothingHeadHatKippah
-
+    
 - type: loadout
   id: ContractorClothingHeadHatPlaguedoctor
   effects:

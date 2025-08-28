@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Qulibly
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Registered (legal) weapon crates
 - type: entity
   id: CrateArmoryRifleGestio
@@ -9,7 +18,7 @@
     contents:
       - id: WeaponRifleGestio
         amount: 2
-      - id: Magazine7.62x39mmLowCapacityFMJ
+      - id: Magazine762x39mmLowCapacityFMJ
         amount: 6
 
 # Contraband (unregistered) weaponry crates for expeditions
@@ -26,7 +35,7 @@
     contents:
       - id: WeaponSubMachineGunWt550Expedition
         amount: 2
-      - id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+      - id: Magazine46x30mmSubMachineGunTopMountedFMJ
         amount: 4
 
 - type: entity
@@ -86,7 +95,7 @@
     contents:
     - id: WeaponPistolMk58Expedition
       amount: 2
-    - id: Magazine9x19mmPistolFMJ
+    - id: Magazine45_ACPPistolFMJ
       amount: 4
 
 - type: entity
@@ -102,7 +111,7 @@
     contents:
       - id: WeaponRifleGestioExpedition
         amount: 2
-      - id: Magazine7.62x39mmLowCapacityFMJ
+      - id: Magazine762x39mmLowCapacityFMJ
         amount: 6
 
 - type: entity
@@ -122,7 +131,7 @@
         amount: 6
 
 # Ammo crates
-## 5.56x45mm
+## 556x45mm
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
@@ -172,7 +181,7 @@
   id: CrateAmmoBoxUranium20
   categories: [ HideSpawnMenu ]
 
-## 7.62x39mm
+## 762x39mm
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
@@ -265,7 +274,7 @@
   id: CrateAmmoBoxEmp35
   categories: [ HideSpawnMenu ]
 
-## 6.35x40mm Caseless
+## 635x40mm Caseless
 - type: entity
   parent:
   - CrateAmmoSecureMercenary

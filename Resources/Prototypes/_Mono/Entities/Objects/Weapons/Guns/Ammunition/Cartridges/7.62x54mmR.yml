@@ -1,15 +1,46 @@
+# SPDX-FileCopyrightText: 2020 AJCM-git
+# SPDX-FileCopyrightText: 2020 Paul Ritter
+# SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+# SPDX-FileCopyrightText: 2021 Leon Friedrich
+# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2022 Kara
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 Visne
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2022 ninruB
+# SPDX-FileCopyrightText: 2023 Boaz1111
+# SPDX-FileCopyrightText: 2023 Flareguy
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Vordenburg
+# SPDX-FileCopyrightText: 2023 brainfood1183
+# SPDX-FileCopyrightText: 2023 chromiumboy
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Nairod
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 PoorMansDreams
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 Winkarst
+# SPDX-FileCopyrightText: 2025 BramvanZijp
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
-  id: BaseCartridge7.62x54mmR
+  id: BaseCartridge762x54mmR
   name: cartridge (7.62x54mmR FMJ)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  description: A full-power rifle round commonly used in DMRs and civilian bolt-action rifles.
   abstract: true
   components:
   - type: Tag
     tags:
     - Cartridge
-    - Cartridge7.62x54mmRFMJ
+    - Cartridge762x54mmRFMJ
   - type: CartridgeAmmo
-    proto: Bullet7.62x54mmRFMJ
+    proto: Bullet762x54mmRFMJ
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
@@ -21,20 +52,20 @@
     price: 1
 
 - type: entity
-  id: Cartridge7.62x54mmRFMJ
+  id: Cartridge762x54mmRFMJ
   name: cartridge (7.62x54mmR FMJ)
-  parent: BaseCartridge7.62x54mmR
+  parent: BaseCartridge762x54mmR
   components:
   - type: CartridgeAmmo
-    proto: Bullet7.62x54mmRFMJ
+    proto: Bullet762x54mmRFMJ
 
 - type: entity
-  id: Cartridge7.62x54mmRPractice
+  id: Cartridge762x54mmRPractice
   name: cartridge (7.62x54mmR practice)
-  parent: BaseCartridge7.62x54mmR
+  parent: BaseCartridge762x54mmR
   components:
   - type: CartridgeAmmo
-    proto: Bullet7.62x54mmRPractice
+    proto: Bullet762x54mmRPractice
   - type: Sprite
     layers:
       - state: base
@@ -44,12 +75,12 @@
         color: "#dbdbdb"
 
 - type: entity
-  id: Cartridge7.62x54mmRIncendiary
+  id: Cartridge762x54mmRIncendiary
   name: cartridge (7.62x54mmR incendiary)
-  parent: BaseCartridge7.62x54mmR
+  parent: BaseCartridge762x54mmR
   components:
   - type: CartridgeAmmo
-    proto: Bullet7.62x54mmRIncendiary
+    proto: Bullet762x54mmRIncendiary
   - type: Sprite
     layers:
       - state: base
@@ -59,12 +90,12 @@
         color: "#ff6e52"
 
 - type: entity
-  id: Cartridge7.62x54mmRUranium
+  id: Cartridge762x54mmRUranium
   name: cartridge (7.62x54mmR uranium)
-  parent: BaseCartridge7.62x54mmR
+  parent: BaseCartridge762x54mmR
   components:
   - type: CartridgeAmmo
-    proto: Bullet7.62x54mmRUranium
+    proto: Bullet762x54mmRUranium
   - type: Sprite
     layers:
       - state: base
@@ -74,12 +105,12 @@
         color: "#65fe08"
 
 - type: entity
-  id: Cartridge7.62x54mmRRubber
+  id: Cartridge762x54mmRRubber
   name: cartridge (7.62x54mmR rubber)
-  parent: BaseCartridge7.62x54mmR
+  parent: BaseCartridge762x54mmR
   components:
   - type: CartridgeAmmo
-    proto: Bullet7.62x54mmRRubber
+    proto: Bullet762x54mmRRubber
   - type: Sprite
     layers:
       - state: base
@@ -87,3 +118,80 @@
       - state: tip
         map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#43c4f7"
+
+# Mono AP syst
+#anti-flesh:
+- type: entity
+  id: Cartridge762x54mmRHP
+  name: cartridge (7.62x54mmR hollow-point)
+  parent: BaseCartridge762x54mmR
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet762x54mmRHP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#90EE90"
+
+- type: entity
+  id: Cartridge762x54mmRRIP
+  name: cartridge (7.62x54mmR RIP)
+  parent: BaseCartridge762x54mmR
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet762x54mmRRIP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#C04000"
+
+#armor-piercing:
+- type: entity
+  id: Cartridge762x54mmRSteelAP
+  name: cartridge (7.62x54mmR AP steel core)
+  parent: BaseCartridge762x54mmR
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet762x54mmRSteelAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+
+- type: entity
+  id: Cartridge762x54mmRPlasteelAP
+  name: cartridge (7.62x54mmR AP plasteel core)
+  parent: BaseCartridge762x54mmR
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet762x54mmRPlasteelAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#888888"
+
+- type: entity
+  id: Cartridge762x54mmRSynthAP
+  name: cartridge (7.62x54mmR AP synthalloy core)
+  parent: BaseCartridge762x54mmR
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet762x54mmRSynthAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#111111"

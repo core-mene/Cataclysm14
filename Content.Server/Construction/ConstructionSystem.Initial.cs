@@ -97,6 +97,10 @@ namespace Content.Server.Construction
             SubscribeNetworkEvent<TryStartItemConstructionMessage>(HandleStartItemConstruction);
         }
 
+        // Goobstation - conflict landmine; should ideally not be in the system or be a cvar but whatever
+        // replaces wizcode magic constants
+        public const float ConstructGrabRange = 2f;
+
         // LEGACY CODE. See warning at the top of the file!
         private IEnumerable<EntityUid> EnumerateNearby(EntityUid user)
         {
@@ -139,11 +143,12 @@ namespace Content.Server.Construction
 
             var pos = _transformSystem.GetMapCoordinates(user);
 
-            foreach (var near in _lookupSystem.GetEntitiesInRange(pos, 2f, LookupFlags.Contained | LookupFlags.Dynamic | LookupFlags.Sundries | LookupFlags.Approximate))
+            // Goobstation - conflict landmine: replace magic constant with ConstructGrabRange
+            foreach (var near in _lookupSystem.GetEntitiesInRange(pos, ConstructGrabRange, LookupFlags.Contained | LookupFlags.Dynamic | LookupFlags.Sundries | LookupFlags.Approximate))
             {
                 if (near == user)
                     continue;
-                if (_interactionSystem.InRangeUnobstructed(pos, near, 2f) && _container.IsInSameOrParentContainer(user, near))
+                if (_interactionSystem.InRangeUnobstructed(pos, near, ConstructGrabRange) && _container.IsInSameOrParentContainer(user, near))
                     yield return near;
             }
         }
@@ -472,7 +477,8 @@ namespace Content.Server.Construction
                     GetCoordinates(ev.Location),
                     ev.Angle,
                     ev.Ack,
-                    args.SenderSession);
+                    args.SenderSession,
+                    ev.With);
         }
 
 /// <summary>
@@ -484,7 +490,8 @@ namespace Content.Server.Construction
             EntityCoordinates location,
             Angle angle,
             int ack = 0,
-            ICommonSession? senderSession = null)
+            ICommonSession? senderSession = null,
+            NetEntity? with = null)
         {
             // </Goobstation>
             if (!PrototypeManager.TryIndex(prototypeName, out ConstructionPrototype? constructionPrototype))
@@ -534,6 +541,11 @@ namespace Content.Server.Construction
                 }
             }
 
+            // Goobstation - can only realistically happen for sus clients, but ignore this for constructor
+            HandsComponent? hands = null;
+            if (senderSession != null && !TryComp<HandsComponent>(user, out hands))
+                return false;
+
             foreach (var condition in constructionPrototype.Conditions)
             {
                 if (!condition.Condition(user, location, angle.GetCardinalDir()))
@@ -549,9 +561,27 @@ namespace Content.Server.Construction
                     _beingBuilt[session].Remove(ack);
             }
 
-            HandsComponent? hands = null; // Goobstation
+            // Goobstation
+            EntityUid? entWith = with == null ? null : GetEntity(with);
+            if (with != null && entWith != null)
+            {
+                // sus client can't use steel half the station away to build
+                var userPos = _transformSystem.GetMapCoordinates(user);
+                var withPos = _transformSystem.GetMapCoordinates(entWith.Value);
+                if (!_container.IsInSameOrParentContainer(user, entWith.Value)
+                    || !_interactionSystem.InRangeUnobstructed(userPos, withPos, ConstructGrabRange))
+                {
+                    Cleanup();
+                    return false;
+                }
+            }
+            else if (hands != null)
+            {
+                entWith = hands.ActiveHandEntity;
+            }
+
             if (!_actionBlocker.CanInteract(user, null)
-                || (senderSession != null && EntityManager.TryGetComponent(user, out hands) && hands.ActiveHandEntity == null)) // Goobstation - dont check hands for constructor
+                || (senderSession != null && entWith == null)) // Goobstation
             {
                 Cleanup();
                 return false;
@@ -578,7 +608,7 @@ namespace Content.Server.Construction
             {
                 var valid = false;
 
-                if (hands?.ActiveHandEntity is not { Valid: true } holding) // Goobstation - don't check for constructor machine
+                if (entWith is not {Valid: true} holding) // Goobstation - don't check for constructor machine
                 {
                     Cleanup();
                     return false;

@@ -8,6 +8,7 @@
 # SPDX-FileCopyrightText: 2024 TsjipTsjip
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 starch
@@ -36,9 +37,9 @@
           stationSubtext: 'frontier-lobby-frontier-subtext'
           stationDescription: 'frontier-lobby-frontier-description'
           lobbySortOrder: 1
-        - type: StationPlanetSpawner
-          planet: DesertWorld
-          gridPath: /Maps/_Mono/surface_outpost_desert.yml
+        # - type: StationPlanetSpawner # Mono - Commented out planet spawner (for now)
+        #   planet: DesertWorld
+        #   gridPath: /Maps/_Mono/POI/surface_outpost_desert.yml
         - type: StationJobs
           availableJobs:
             Contractor: [ -1, -1 ]

@@ -39,6 +39,21 @@
       - SecurityUplink
 
 - type: listing
+  id: UplinkSecurityMk290
+  name:  uplink-security-sentry-mk290-name
+  description: uplink-security-sentry-mk290-desc
+  productEntity: WeaponTurretMk290Packed
+  cost:
+    FederationMilitaryCredit: 100
+  categories:
+  - UplinkSecurityWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
   id: UplinkSecurityMR8C
   name:  uplink-security-mr8c-name
   description: uplink-security-mr8c-desc
@@ -125,7 +140,7 @@
 #  id: UplinkSecurityMagazineSubsonic
 #  name:  uplink-subsonic-mag-name
 #  description: uplink-subsonic-mag-desc
-#  productEntity: Magazine7.62x39mmSubsonic
+#  productEntity: Magazine762x39mmSubsonic
 #  cost:
 #    FederationMilitaryCredit: 3
 #  categories:
@@ -140,7 +155,7 @@
 #  id: UplinkSecurityBoxSubsonic
 #  name:  uplink-subsonic-box-name
 #  description: uplink-subsonic-box-desc
-#  productEntity: AmmoBox7.62x39mmSubsonic
+#  productEntity: AmmoBox762x39mmSubsonic
 #  cost:
 #    FederationMilitaryCredit: 10
 #  categories:
@@ -173,6 +188,36 @@
   productEntity: AmmoBox8x65mmSKR
   cost:
     FederationMilitaryCredit: 12
+  categories:
+  - UplinkSecurityAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityMagazine68x52mm
+  name:  uplink-security-68x52mm-magazine-name
+  description: uplink-security-68x52mm-magazine-desc
+  productEntity: Magazine68x52mmCaseless
+  cost:
+    FederationMilitaryCredit: 2
+  categories:
+  - UplinkSecurityAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityBox68x52mm
+  name:  uplink-security-68x52mm-box-name
+  description: uplink-security-68x52mm-box-desc
+  productEntity: AmmoBox68x52mmCaselessBig
+  cost:
+    FederationMilitaryCredit: 8
   categories:
   - UplinkSecurityAmmo
   conditions:

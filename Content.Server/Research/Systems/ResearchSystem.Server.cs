@@ -1,3 +1,13 @@
+// SPDX-FileCopyrightText: 2022 Paul Ritter
+// SPDX-FileCopyrightText: 2022 Rane
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2024 GreaseMonk
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2025 Coenx-flex
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Research.Components;
@@ -63,7 +73,7 @@ public sealed partial class ResearchSystem
     public void RegisterClient(EntityUid client, EntityUid server, ResearchClientComponent? clientComponent = null,
         ResearchServerComponent? serverComponent = null,  bool dirtyServer = true)
     {
-        if (!Resolve(client, ref clientComponent) || !Resolve(server, ref serverComponent))
+        if (!Resolve(client, ref clientComponent, false) || !Resolve(server, ref serverComponent, false))
             return;
 
         if (serverComponent.Clients.Contains(client))
@@ -73,7 +83,7 @@ public sealed partial class ResearchSystem
         clientComponent.Server = server;
         SyncClientWithServer(client, clientComponent: clientComponent);
 
-        if (dirtyServer)
+        if (dirtyServer && !TerminatingOrDeleted(server))
             Dirty(server, serverComponent);
 
         var ev = new ResearchRegistrationChangedEvent(server);
@@ -108,17 +118,15 @@ public sealed partial class ResearchSystem
     public void UnregisterClient(EntityUid client, EntityUid server, ResearchClientComponent? clientComponent = null,
         ResearchServerComponent? serverComponent = null, bool dirtyServer = true)
     {
-        if (!Resolve(client, ref clientComponent) || !Resolve(server, ref serverComponent))
+        if (!Resolve(client, ref clientComponent, false) || !Resolve(server, ref serverComponent, false))
             return;
 
         serverComponent.Clients.Remove(client);
         clientComponent.Server = null;
         SyncClientWithServer(client, clientComponent: clientComponent);
 
-        if (dirtyServer)
-        {
+        if (dirtyServer && !TerminatingOrDeleted(server))
             Dirty(server, serverComponent);
-        }
 
         var ev = new ResearchRegistrationChangedEvent(null);
         RaiseLocalEvent(client, ref ev);

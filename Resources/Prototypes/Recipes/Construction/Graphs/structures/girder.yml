@@ -19,7 +19,10 @@
 # SPDX-FileCopyrightText: 2024 JustinWinningham
 # SPDX-FileCopyrightText: 2024 Nairod
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -174,7 +177,7 @@
             - material: Steel
               amount: 2
               doAfter: 1
-              
+
         #Mono - create diagonal wall
         - to: wallSolidDiagonal
           completed:
@@ -338,7 +341,7 @@
             - material: Plasteel
               amount: 2
               doAfter: 1
-              
+
         #Mono - create diagonal reinforced wall
         - to: wallReinforcedDiagonal
           completed:
@@ -352,6 +355,41 @@
             - material: Plasteel
               amount: 2
               doAfter: 1
+
+      #Mono - create diagonal plastitanium wall
+        - to: wallPlastitaniumDiagonal
+          completed:
+          - !type:SnapToGrid
+            southRotation: false
+          conditions:
+          - !type:EntityAnchored { }
+          steps:
+          - tool: Screwing
+            doAfter: 1
+          - tool: Welding
+            doAfter: 2
+          - material: Plasteel
+            amount: 2
+            doAfter: 1
+          - material: Plastitanium
+            amount: 4
+            doAfter: 1
+
+        - to: plastitaniumWall
+          completed:
+          - !type:SnapToGrid
+            southRotation: true
+          conditions:
+          - !type:EntityAnchored { }
+          steps:
+          - tool: Welding
+            doAfter: 15
+          - material: Plasteel
+            amount: 4
+            doAfter: 1
+          - material: Plastitanium
+            amount: 8
+            doAfter: 1
 
         - to: shuttleWall
           completed:
@@ -569,6 +607,75 @@
               doAfter: 1
             - tool: Cutting
               doAfter: 1
+
+  #Mono - diagonal plastitanium wall node
+    - node: wallPlastitaniumDiagonal
+      entity: WallPlastitaniumDiagonal
+      edges:
+      - to: reinforcedGirder
+        completed:
+        - !type:SpawnPrototype
+          prototype: ScrapSteel
+          amount: 1
+        steps:
+        - tool: Cutting
+          doAfter: 1
+        - tool: Screwing
+          doAfter: 1
+        - tool: Welding
+          doAfter: 5
+        - tool: Prying
+          doAfter: 1
+        - tool: Anchoring
+          doAfter: 1
+        - tool: Welding
+          doAfter: 10
+        - tool: Prying
+          doAfter: 1
+        - tool: Screwing
+          doAfter: 1
+        - tool: Cutting
+          doAfter: 1
+        - tool: Welding
+          doAfter: 15
+        - tool: Prying
+          doAfter: 5
+        - tool: Anchoring
+          doAfter: 1
+
+    - node: plastitaniumWall
+      entity: WallPlastitanium
+      edges:
+      - to: reinforcedGirder
+        completed:
+        - !type:SpawnPrototype
+          prototype: ScrapSteel
+          amount: 2
+        steps:
+        - tool: Cutting
+          doAfter: 1
+        - tool: Screwing
+          doAfter: 1
+        - tool: Welding
+          doAfter: 5
+        - tool: Prying
+          doAfter: 1
+        - tool: Anchoring
+          doAfter: 1
+        - tool: Welding
+          doAfter: 10
+        - tool: Prying
+          doAfter: 1
+        - tool: Screwing
+          doAfter: 1
+        - tool: Cutting
+          doAfter: 1
+        - tool: Welding
+          doAfter: 15
+        - tool: Prying
+          doAfter: 5
+        - tool: Anchoring
+          doAfter: 1
 
     - node: wallrust
       entity: WallSolidRust

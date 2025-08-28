@@ -1,4 +1,14 @@
-﻿# Base
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2025 GreaseMonk
+# SPDX-FileCopyrightText: 2025 KiraZen_
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Base
 - type: entity
   id: BaseBoltLiquidInjector
   abstract: true
@@ -554,7 +564,7 @@
   categories: [ HideSpawnMenu, Spawner ] # Spawner category - this is intended to create other entities
   components:
   - type: ScatteringGrenade
-    fillPrototype: PelletShotgun
+    fillPrototype: Pellet12_gauge
     capacity: 6
     delayBeforeTriggerContents: 0
   - type: TriggerOnSpawn

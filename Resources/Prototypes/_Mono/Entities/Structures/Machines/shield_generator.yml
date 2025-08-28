@@ -9,7 +9,8 @@
 - type: entity
   id: ShieldGeneratorPOI
   parent: ShieldGenerator
-  name: FS-421 "Fortress" Shield Generator
+  name: FS-421 "Fortress" Outpost Shield Generator
+  suffix: POI ONLY
   components:
   - type: ShipShieldEmitter
     healPerSecond: 10000
@@ -31,7 +32,7 @@
       visible: false
       color: "#FF9933"
   - type: ApcPowerReceiver
-    powerLoad: 40000
+    powerLoad: 80000
   - type: PointLight
     enabled: false
     castShadows: true
@@ -39,11 +40,47 @@
     energy: 1.5
     color: "#FF9933"
 
+# TSF capital shield - inbetween POI and MS-500, meant for flyssa
+- type: entity
+  id: ShieldGeneratorTSFCapital
+  parent: ShieldGenerator
+  name: LM-212 "Vanguard" Capital Shield Generator
+  suffix: TSF CAPITAL ONLY
+  components:
+  - type: ShipShieldEmitter
+    healPerSecond: 12000
+    damageExp: 0.5
+    baseDraw: 60000
+    maxDraw: 90000
+    unpoweredBonus: 8
+    damageLimit: 85000
+    damageOverloadTimePunishment: 35
+    shieldColor: "#FF0A70"
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/fobshield.rsi
+    snapCardinals: true
+    layers:
+    - state: fobshield
+    - state: fobshield_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
+      color: "#FF0A70"
+  - type: ApcPowerReceiver
+    powerLoad: 60000
+  - type: PointLight
+    enabled: false
+    castShadows: true
+    radius: 2
+    energy: 1.5
+    color: "#FF0A70"
+
 # High-End
 - type: entity
   id: ShieldGenerator
   parent: BaseMachinePowered
   name: MS-500 "Titan" Shield Generator
+  suffix: ADS ONLY
   components:
   - type: AmbientOnPowered
   - type: AmbientSound
@@ -135,6 +172,7 @@
   id: ShieldGeneratorMedium
   parent: ShieldGenerator
   name: MS-250 "Aegis" Shield Generator
+  suffix: ADS ONLY, SCI VOUCHER SHIPS ONLY
   components:
   - type: ShipShieldEmitter
     healPerSecond: 1000 # Base is 250

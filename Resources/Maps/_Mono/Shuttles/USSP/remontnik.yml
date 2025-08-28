@@ -17,6 +17,7 @@
 # SPDX-FileCopyrightText: 2024 QueerNB
 # SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 grandalff
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -28,7 +29,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 14:30:55
+  time: 08/16/2025 14:43:06
   entityCount: 1137
 maps: []
 grids:
@@ -94,6 +95,7 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
+      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -976,7 +978,7 @@ entities:
       parent: 45
     - type: Physics
       canCollide: False
-- proto: AmmoBox7.62x39mmFMJ
+- proto: AmmoBox762x39mmFMJ
   entities:
   - uid: 47
     components:
@@ -984,7 +986,7 @@ entities:
       parent: 45
     - type: Physics
       canCollide: False
-- proto: AmmoBox7.62x54mmRFMJ
+- proto: AmmoBox762x54mmRFMJ
   entities:
   - uid: 48
     components:
@@ -4191,6 +4193,14 @@ entities:
     - type: Transform
       pos: -1.5,19.5
       parent: 1
+- proto: DefibrillatorCabinetFilled
+  entities:
+  - uid: 651
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,-5.5
+      parent: 1
 - proto: DrinkCoffeeLiqueurBottleFull
   entities:
   - uid: 633
@@ -4272,12 +4282,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -1.5,-2.5
-      parent: 1
-  - uid: 651
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,12.5
       parent: 1
   - uid: 652
     components:
@@ -5394,7 +5398,7 @@ entities:
     - type: Transform
       pos: 2.5,7.5
       parent: 1
-- proto: Magazine7.62x39mmFMJ
+- proto: Magazine762x39mmFMJ
   entities:
   - uid: 785
     components:
@@ -6442,8 +6446,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -6.5,-3.5
       parent: 1
-    - type: Thruster
-      enabled: False
     - type: ApcPowerReceiver
       powerLoad: 1
   - uid: 920

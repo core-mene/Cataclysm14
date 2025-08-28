@@ -34,8 +34,10 @@
 # SPDX-FileCopyrightText: 2024 lzk
 # SPDX-FileCopyrightText: 2024 slarticodefast
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Coenx-flex
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 Winkarst
 # SPDX-FileCopyrightText: 2025 keronshb
 #
@@ -97,6 +99,7 @@
   - type: Examiner
     skipChecks: true
   - type: Ghost
+  - type: Visibility
   - type: GhostHearing
   - type: ShowElectrocutionHUD
   - type: IntrinsicRadioReceiver
@@ -110,6 +113,8 @@
     netsync: false
     radius: 6
     enabled: false
+  - type: LanguageSpeaker # Einstein Engines - Languages
+  - type: UniversalLanguageSpeaker # Einstein Engines - Languages
   # Frontier: changes to the prototype so it can access radars
   - type: UserInterface
     interfaces:

@@ -26,7 +26,7 @@
     layers:
     - state: mini-rocket
   - type: Ammo
-    muzzleFlash: null
+    muzzleFlash: MuzzleFlashEffectSmall
   - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#FCBA03"
@@ -49,8 +49,8 @@
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
   - type: TargetSeeking
-    acceleration: 150
-    detectionRange: 300
+    acceleration: 300
+    detectionRange: 500
     scanArc: 35
     launchSpeed: 150
     maxSpeed: 180
@@ -75,7 +75,7 @@
     layers:
     - state: frag
   - type: Ammo
-    muzzleFlash: null
+    muzzleFlash: MuzzleFlashEffectSmall
   - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#FCBA03"
@@ -99,7 +99,7 @@
   - type: MiningGatheringHard
   - type: TargetSeeking
     acceleration: 200
-    detectionRange: 450
+    detectionRange: 600
     scanArc: 40
     launchSpeed: 90
     maxSpeed: 210
@@ -148,7 +148,7 @@
   - type: MiningGatheringHard
   - type: TargetSeeking
     acceleration: 50
-    detectionRange: 300
+    detectionRange: 600
     scanArc: 30
     launchSpeed: 25
     maxSpeed: 30
@@ -173,7 +173,7 @@
     layers:
     - state: hybrid-missile
   - type: Ammo
-    muzzleFlash: null
+    muzzleFlash: MuzzleFlashEffectSmall
   - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#FB00FF"
@@ -201,8 +201,8 @@
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
   - type: TargetSeeking
-    acceleration: 100
-    detectionRange: 450
+    acceleration: 200
+    detectionRange: 600
     scanArc: 45
     launchSpeed: 50
     maxSpeed: 125

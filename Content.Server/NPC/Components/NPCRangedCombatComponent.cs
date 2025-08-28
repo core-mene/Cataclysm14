@@ -1,4 +1,11 @@
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2025 Ilya246
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.NPC.Systems;
+using Content.Shared.Physics;
 using Robust.Shared.Audio;
 
 namespace Content.Server.NPC.Components;
@@ -54,4 +61,18 @@ public sealed partial class NPCRangedCombatComponent : Component
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
     public SoundSpecifier? SoundTargetInLOS;
+
+    // Mono
+    /// <summary>
+    /// Use this collision group to check if target is in line of sight.
+    /// </summary>
+    [ViewVariables]
+    public CollisionGroup ObstructedMask;
+
+    // Mono
+    /// <summary>
+    /// Ignore entities that don't collide with this mask for LOS check purposes.
+    /// </summary>
+    [ViewVariables]
+    public CollisionGroup BulletMask;
 }

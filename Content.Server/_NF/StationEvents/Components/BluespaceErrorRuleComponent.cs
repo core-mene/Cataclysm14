@@ -1,3 +1,13 @@
+// SPDX-FileCopyrightText: 2023 Cheackraze
+// SPDX-FileCopyrightText: 2024 Kill_Me_I_Noobs
+// SPDX-FileCopyrightText: 2024 Shroomerian
+// SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 GreaseMonk
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 Whatstone
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.StationEvents.Events;
 using Content.Server.Shuttles.Systems;
 using Content.Shared.Dataset;
@@ -48,6 +58,13 @@ public sealed partial class BluespaceErrorRuleComponent : Component
     /// </summary>
     [DataField]
     public bool DeleteGridsOnEnd = true;
+
+    /// <summary>
+    /// Will actively extend the gamerule's duration as long as there's people near or on any of the rule's grids.
+    /// Prevents it being deleted from under you.
+    /// </summary>
+    [DataField]
+    public bool ExtendIfPopulated = true;
 
     /// <summary>
     /// How much the grid is appraised at upon entering into existence, set after starting the event

@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
@@ -31,7 +32,7 @@
   suffix: Registered
   components:
   - type: StaticPrice
-    price: 2200
+    price: 1000
 
 - type: entity #Drozd
   parent:
@@ -41,7 +42,7 @@
   suffix: Registered
   components:
   - type: StaticPrice
-    price: 1350
+    price: 1000
 
 - type: entity #C-20r
   parent:
@@ -53,7 +54,7 @@
   - type: PirateBountyItem
     id: StandardFactionLongarm
   - type: StaticPrice
-    price: 2500
+    price: 1000
 
 # Rifles
 
@@ -65,7 +66,7 @@
   suffix: Registered
   components:
   - type: StaticPrice
-    price: 1500
+    price: 1200
 
 # Shotguns
 
@@ -77,7 +78,7 @@
   suffix: Registered
   components:
   - type: StaticPrice
-    price: 800
+    price: 500
 
 - type: entity #Enforcer
   parent:
@@ -87,7 +88,7 @@
   suffix: Registered
   components:
   - type: StaticPrice
-    price: 1800
+    price: 1200
 
 # Energy
 
@@ -99,17 +100,7 @@
   suffix: Registered
   components:
   - type: StaticPrice
-    price: 1100
-
-- type: entity #Laser Rifle
-  parent:
-  - BaseC2ContrabandMercenary
-  - WeaponLaserCarbine
-  id: WeaponLaserCarbinePMC
-  suffix: Registered
-  components:
-  - type: StaticPrice
-    price: 750
+    price: 500
 
 - type: entity #Laser Cannon
   parent:
@@ -119,7 +110,7 @@
   suffix: Registered
   components:
   - type: StaticPrice
-    price: 1400
+    price: 1000
 
 - type: entity #Disabler SMG
   parent:
@@ -129,4 +120,4 @@
   suffix: Registered
   components:
   - type: StaticPrice
-    price: 420
+    price: 250

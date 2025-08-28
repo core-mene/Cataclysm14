@@ -1,3 +1,31 @@
+# SPDX-FileCopyrightText: 2020 AJCM-git
+# SPDX-FileCopyrightText: 2020 DrSmugleaf
+# SPDX-FileCopyrightText: 2020 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2021 Leon Friedrich
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2022 Charlese2
+# SPDX-FileCopyrightText: 2022 Kara
+# SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2022 ninruB
+# SPDX-FileCopyrightText: 2023 AndresE55
+# SPDX-FileCopyrightText: 2023 Boaz1111
+# SPDX-FileCopyrightText: 2023 Flareguy
+# SPDX-FileCopyrightText: 2023 Jackal298
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Vordenburg
+# SPDX-FileCopyrightText: 2023 kerisargit
+# SPDX-FileCopyrightText: 2023 vanx
+# SPDX-FileCopyrightText: 2023 vanx <vanx#5477>
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 IProduceWidgets
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 Plykiya
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: Bullet45_magnumFMJ
   name: bullet (.45 magnum)
@@ -8,6 +36,7 @@
     damage:
       types:
         Piercing: 35
+    armorPenetration: 0.1
 
 - type: entity
   id: Bullet45_magnumPractice
@@ -68,3 +97,69 @@
       types:
         Radiation: 15
         Piercing: 20
+
+# Mono AP syst
+# + 0.05 base AP
+#anti-flesh:
+- type: entity
+  id: Bullet45_magnumHP
+  parent: BaseBullet
+  name: bullet (.45 magnum hollow-point)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Slash: 8
+        Piercing: 37
+    armorPenetration: -0.2
+
+- type: entity
+  id: Bullet45_magnumRIP
+  parent: BaseBullet
+  name: bullet (.45 magnum RIP)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Slash: 10
+        Piercing: 50
+    armorPenetration: -0.6
+
+#armor-piercing:
+- type: entity
+  id: Bullet45_magnumSteelAP
+  parent: BaseBullet
+  name: bullet (.45 magnum AP steel core)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Piercing: 32
+    armorPenetration: 0.3
+
+- type: entity
+  id: Bullet45_magnumPlasteelAP
+  parent: BaseBullet
+  name: bullet (.45 magnum AP plasteel core)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Piercing: 28
+    armorPenetration: 0.5
+
+- type: entity
+  id: Bullet45_magnumSynthAP
+  parent: BaseBullet
+  name: bullet (.45 magnum AP synthalloy core)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types: 
+        Piercing: 26
+    armorPenetration: 0.7

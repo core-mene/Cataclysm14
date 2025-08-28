@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Hyenh
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadoutGroup
   id: RogueJumpsuit
   name: loadout-group-contractor-jumpsuit
@@ -13,3 +18,13 @@
   subgroups:
   - PirateJumpsuit
   - PirateMercenaryJumpsuit
+
+- type: loadoutGroup
+  id: RogueNeck
+  name: loadout-group-contractor-neck
+  minLimit: 0
+  loadouts:
+  - RogueClothingNeckPonchoBlack
+  - RogueClothingNeckPonchoRed
+  subgroups:
+  - ContractorNeck

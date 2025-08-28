@@ -1,9 +1,16 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entityTable
   id: DamagedAIShipsTable
   table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
     children:
       - id: UnknownShuttleZenith
+      - id: UnknownShuttleZenithE
       - id: UnknownShuttleRazor
+      - id: UnknownShuttleNebula
 
 - type: entity
   parent: BaseRandomShuttleRule
@@ -14,11 +21,26 @@
     startAudio:
       path: /Audio/Misc/notice1.ogg
     weight: 2
-    maxOccurrences: 3
+    maxOccurrences: 6
   - type: GameRule
     minPlayers: 32
   - type: LoadMapRule
     preloadedGrid: AIZenith
+
+- type: entity
+  parent: BaseRandomShuttleRule
+  id: UnknownShuttleZenithE
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-ai-shuttle-detected
+    startAudio:
+      path: /Audio/Misc/notice1.ogg
+    weight: 2
+    maxOccurrences: 2
+  - type: GameRule
+    minPlayers: 32
+  - type: LoadMapRule
+    preloadedGrid: AIZenithE
 
 - type: entity
   parent: BaseRandomShuttleRule
@@ -29,7 +51,7 @@
     startAudio:
       path: /Audio/Misc/notice1.ogg
     weight: 2
-    maxOccurrences: 3
+    maxOccurrences: 6
   - type: GameRule
     minPlayers: 32
   - type: LoadMapRule

@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -22,25 +23,32 @@
   name: loadout-group-weapon
   minLimit: 1
   loadouts:
-  - FactionDrozdLoadout
   - FactionLecterLoadout
+  - FactionDrozdLoadout
   - FactionVulcanLoadout
   - FactionEnergyGunLoadout
-  - FactionBanditLoadout
+  # - FactionBanditLoadout
   fallbacks:
-  - FactionLecterLoadout
+  - FactionVulcanLoadout
 
 - type: loadoutGroup
   id: TsfmcMag
   name: loadout-group-magazine
   minLimit: 1
   loadouts:
-  - FactionAcpPistolAmmoLoadout #MK58
+  - TSFCaselessAmmoBoxLoadout # Lecter
   - FactionAcpSmgAmmoLoadout #Drozd
   - FactionAcpSmgEmpAmmoLoadout #Drozd EMP
-  - Faction5.56x45mmAmmoLoadout #Lecter
-  - Faction7.62x51mmAmmoLoadout #Vulcan
+  - Faction762x51mmAmmoLoadout #Vulcan
   - FactionRechargerLoadout #Energy
-  - Faction8x65mmAmmoLoadout #Bandit
+  # - Faction8x65mmAmmoLoadout #Bandit
+  - FactionAcpPistolAmmoLoadout #MK58
   fallbacks:
-  - Faction5.56x45mmAmmoLoadout #Lecter
+  - TSFCaselessAmmoBoxLoadout #Lecter
+
+- type: loadout # Lecter ammo - putting it here because other factions shouldnt be using this
+  id: TSFCaselessAmmoBoxLoadout
+  price: 0
+  storage:
+    back:
+    - BoxMagazine68x52mmFMJ

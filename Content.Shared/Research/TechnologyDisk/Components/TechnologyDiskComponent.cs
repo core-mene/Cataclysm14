@@ -25,5 +25,5 @@ public sealed partial class TechnologyDiskComponent : Component
     /// A weighted random prototype for how rare each tier should be.
     /// </summary>
     [DataField]
-    public ProtoId<WeightedRandomPrototype> TierWeightPrototype;
+    public ProtoId<WeightedRandomPrototype> TierWeightPrototype = "TechDiskTierWeightsNormal";
 }

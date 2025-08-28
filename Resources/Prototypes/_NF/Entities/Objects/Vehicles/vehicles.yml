@@ -1,3 +1,13 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 chrome-cirrus
+# SPDX-FileCopyrightText: 2025 Avalon
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Base game vehicles
 - type: entity
   parent: VehicleATV
@@ -53,6 +63,9 @@
   - type: Appearance
   - type: Strap
     unbuckleDistanceSquared: 0.09 # (30 cm)^2
+  - type: Tag # Mono
+    tags:
+    - DoorBumpOpener
 
 - type: entity
   parent: VehicleSkeletonMotorcycle
@@ -78,6 +91,9 @@
         type: StorageBoundUserInterface
   - type: Strap
     unbuckleDistanceSquared: 0.09 # (30 cm)^2
+  - type: Tag # Mono
+    tags:
+    - DoorBumpOpener
 
 # New Frontier vehicles
 - type: entity
@@ -151,6 +167,9 @@
   - type: PointLight
     radius: 7
     energy: 3
+  - type: Tag # Mono
+    tags:
+    - DoorBumpOpener
 
 - type: entity
   parent: VehicleHoverbikeNF
@@ -275,6 +294,7 @@
   - type: Tag
     tags:
       - Wringer
+      - DoorBumpOpener # Mono 
   - type: Drink
     solution: bucket
   - type: ContainerContainer
@@ -383,6 +403,9 @@
     enabled: false
     radius: 6
     energy: 3
+  - type: Tag # Mono
+    tags:
+    - DoorBumpOpener
 
 - type: entity
   parent: VehicleHoverbikeMailcarrier

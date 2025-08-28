@@ -1,8 +1,11 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -66,9 +69,11 @@
     zeroVisible: true
   - type: Appearance
   - type: Clothing
-    sprite: _Mono/Objects/Weapons/Guns/Rifles/mr8c.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/mr8c_inhands_32x.rsi
+  - type: Item
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/mr8c_inhands_32x.rsi
   - type: StaticPrice
-    price: 1750
+    price: 2400
   - type: SpeedModifiedOnWield
     walkModifier: 0.65
     sprintModifier: 0.5
@@ -110,21 +115,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine7.62x39mmFMJ
+        startingItem: Magazine762x39mmFMJ
         insertSound: /Audio/Weapons/Guns/MagIn/sfrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/hpistol_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - Magazine7.62x39mmFMJ
+          - Magazine762x39mmFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge7.62x39mmFMJ
+        startingItem: Cartridge762x39mmFMJ
         priority: 1
         whitelist:
           tags:
-          - Cartridge7.62x39mmFMJ
+          - Cartridge762x39mmFMJ
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -135,16 +140,15 @@
     zeroVisible: true
   - type: Appearance
   - type: StaticPrice
-    price: 100
-    vendPrice: 9000
+    price: 1200
   - type: PirateBountyItem
     id: StandardFactionLongarm
 
 - type: entity
-  name: VFD XLR-556 ICWS (5.56x45mm)
+  name: VFD XLR-556 ICWS 5.56x45mm)
   parent: [BaseWeaponRifle, BaseGunWieldable, BaseC2ContrabandUnredeemable]
   id: WeaponRifleXlr556
-  description: A proposed "next-gen" rifle for TSF standard infantry.
+  description: A proposed next-gen "rifle" for TSF standard infantry. Chambered in 556x45mm rifle rounds, its RPM is incredible - but with great firerate comes great fire control...
   components:
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Rifles/xlr556.rsi
@@ -154,13 +158,13 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
-    minAngle: -20
-    maxAngle: -47
+    minAngle: -14
+    maxAngle: -17
   - type: Gun
-    minAngle: 23
-    maxAngle: 73
-    angleIncrease: 9
-    angleDecay: 20
+    minAngle: 18
+    maxAngle: 35
+    angleIncrease: 4
+    angleDecay: 40
     fireRate: 11 # 660 rpm
     shotsPerBurst: 3
     availableModes:
@@ -173,26 +177,28 @@
     soundRack:
       path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
   - type: Clothing
-    sprite: _Mono/Objects/Weapons/Guns/Rifles/xlr556.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/xlr556_inhands_32x.rsi
+  - type: Item
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/xlr556_inhands_32x.rsi
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine5.56x45mmFMJ
+        startingItem: Magazine556x45mmFMJ
         insertSound: /Audio/Weapons/Guns/MagIn/sfrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/hpistol_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - Magazine5.56x45mmFMJ
+          - Magazine556x45mmFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge5.56x45mmFMJ
+        startingItem: Cartridge556x45mmFMJ
         priority: 1
         whitelist:
           tags:
-          - Cartridge5.56x45mmFMJ
+          - Cartridge556x45mmFMJ
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -210,10 +216,10 @@
 
 #Mercenary vulcan
 - type: entity
-  name: FCM-C Vulcan (7.62x51mm)
+  name: HWM FCM-C "Vulcan" (7.62x51mm)
   parent: WeaponRifleVulcan
   id: WeaponRifleVulcanFCMC
-  description: The "Vulcan" Civilian Medium combat rifle (Fusil de Combat Moyen Civil) in 7.62x51mm, this civilian version only has semi-automatic mode and reduced firerate.
+  description: The Herstal Weapon Manufacture "Vulcan" Civilian Medium combat rifle (Fusil de Combat Moyen Civil) in 762x51mm, this civilian version only has semi-automatic mode and reduced firerate.
   components:
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Rifles/WeaponRifleVulcanFCMC.rsi
@@ -238,25 +244,97 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine7.62x51mmFMJ
+        startingItem: Magazine762x51mmFMJ
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine7.62x51mmFMJ
-            - Magazine7.62x51mmLowCapacityFMJ
+            - Magazine762x51mmFMJ
+            - Magazine762x51mmLowCapacityFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge7.62x51mmFMJ
+        startingItem: Cartridge762x51mmFMJ
         priority: 1
         whitelist:
           tags:
-            - Cartridge7.62x51mmFMJ
+            - Cartridge762x51mmFMJ
   - type: StaticPrice
-    price: 4000
-    vendPrice: 33200
+    price: 1200
+    vendPrice: 30000
+
+#Mercenary lecter
+- type: entity
+  name: HWM FCL "Prometheus" 5.56x45mm)
+  parent: [BaseWeaponRifle, BaseC1Contraband]
+  id: WeaponRiflePrometheus
+  description: The Herstal Weapon Manufacture "Prometheus" Light combat rifle (Fusil de Combat Léger) in 556x45mm. Made to be mass producable for fight against xenos. Its firerate is decent with burst being superior and accuracy poor.
+  components:
+  - type: Item # Mono
+    size: Huge
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/prometheus.rsi # Mono
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/prometheus.rsi
+  - type: ChamberMagazineAmmoProvider # Mono
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
+  - type: GunWieldBonus
+    minAngle: -27
+    maxAngle: -40
+  - type: Gun
+    minAngle: 30
+    maxAngle: 46
+    angleIncrease: 76
+    angleDecay: 7
+    cameraRecoilScalar: 0
+    fireRate: 3
+    selectedMode: Burst
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/light_rifle_1.ogg # Mono
+    availableModes:
+    - Burst
+    - SemiAuto
+    - FullAuto
+    burstCooldown: 0.5
+    burstFireRate: 15
+    shotsPerBurst: 3
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine556x45mmFMJ # Mono
+        insertSound: /Audio/_Mono/Weapons/Guns/SmallArms/MagIn/m16_magin.ogg # Mono
+        ejectSound: /Audio/_Mono/Weapons/Guns/SmallArms/MagOut/skm_magout.ogg # Mono
+        priority: 2
+        whitelist:
+          tags:
+            - Magazine556x45mmFMJ # Mono
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge556x45mmFMJ # Mono
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge556x45mmFMJ # Mono
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice # Mono
+    price: 1500
 
 - type: entity
   name: SKR-WS MLA-34 smartgun (.160 smart) # TODO - make like 5.56 level smartgun ammo for these
@@ -335,3 +413,7 @@
   - type: SpeedModifiedOnWield
     walkModifier: 0.95
     sprintModifier: 0.95
+  - type: WieldedCrosshair
+    rsi:
+      sprite: _RMC14/Interface/MousePointer/smartgun_mouse.rsi
+      state: all

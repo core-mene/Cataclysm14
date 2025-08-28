@@ -30,7 +30,6 @@
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: entity
   id: BaseMagazine45_ACP
   name: pistol magazine (.45 ACP FMJ)
@@ -64,72 +63,7 @@
     zeroVisible: false
   - type: Appearance
 
-- type: entity
-  id: BaseMagazine45_ACPPistolHighCapacityFMJ
-  name: machine pistol magazine (.45 ACP FMJ)
-  parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseC1Contraband
-  abstract: true
-  components:
-  - type: Tag
-    tags:
-      - Magazine45_ACPPistolHighCapacityFMJ
-  - type: BallisticAmmoProvider
-    mayTransfer: true
-    whitelist:
-      tags:
-        - Cartridge45_ACPFMJ
-    capacity: 28
-  - type: Item
-    size: Small
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-  - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_pistol_high_capacity_mag.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 6
-    zeroVisible: false
-  - type: Appearance
-
-- type: entity
-  id: BaseMagazine45_ACPSubMachineGunFMJ
-  name: SMG magazine (.45 ACP FMJ)
-  parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseSecurityContraband<BaseC1Contraband
-  abstract: true
-  components:
-  - type: Tag
-    tags:
-      - Magazine45_ACPSubMachineGunFMJ
-  - type: BallisticAmmoProvider
-    mayTransfer: true
-    whitelist:
-      tags:
-        - Cartridge45_ACPFMJ
-    capacity: 30
-  - type: Item
-    size: Small
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-  - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_smg_mag.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
-
+#Start Pistol mags
 - type: entity
   id: Magazine45_ACPPistolFMJ
   name: pistol magazine (.45 ACP FMJ)
@@ -159,7 +93,6 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
 
-
 - type: entity
   id: Magazine45_ACPPistolIncendiary
   name: pistol magazine (.45 ACP incendiary)
@@ -183,7 +116,7 @@
     proto: Cartridge45_ACPPractice
   - type: Sprite
     layers:
-    - state: practice
+    - state: red
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
@@ -201,6 +134,135 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+#Upstream
+- type: entity
+  id: Magazine45_ACPPistolRubber
+  name: pistol magazine (.45 ACP rubber)
+  parent: BaseMagazine45_ACP
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPRubber
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_pistol_mag.rsi
+    layers:
+    - state: rubber
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+#Mono AP system
+#anti-flesh ammo
+- type: entity
+  id: Magazine45_ACPPistolHP
+  name: pistol magazine (.45 ACP hollow-point)
+  parent: BaseMagazine45_ACP
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPHP
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_pistol_mag.rsi
+    layers:
+    - state: HP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine45_ACPPistolRIP
+  name: pistol magazine (.45 ACP RIP)
+  parent: BaseMagazine45_ACP
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPRIP
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_pistol_mag.rsi
+    layers:
+    - state: RIP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+#armor-piercing ammo
+- type: entity
+  id: Magazine45_ACPPistolSteelAP
+  name: pistol magazine (.45 ACP AP steel core)
+  parent: BaseMagazine45_ACP
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPSteelAP
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_pistol_mag.rsi
+    layers:
+    - state: steelAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine45_ACPPistolPlasteelAP
+  name: pistol magazine (.45 ACP AP plasteel core)
+  parent: BaseMagazine45_ACP
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPPlasteelAP
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_pistol_mag.rsi
+    layers:
+    - state: plasteelAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine45_ACPPistolSynthAP
+  name: pistol magazine (.45 ACP AP synthalloy core)
+  parent: BaseMagazine45_ACP
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPSynthAP
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_pistol_mag.rsi
+    layers:
+    - state: synthAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+#End Pistol mags
+#Start HighCapacity mags
+- type: entity
+  id: BaseMagazine45_ACPPistolHighCapacityFMJ
+  name: machine pistol magazine (.45 ACP FMJ)
+  parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseC1Contraband
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Magazine45_ACPPistolHighCapacityFMJ
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge45_ACPFMJ
+    capacity: 30
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_pistol_high_capacity_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
 
 - type: entity
   id: Magazine45_ACPPistolHighCapacityEmpty
@@ -244,6 +306,56 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine45_ACPPistolHighCapacityRubber
+  name: machine pistol magazine (.45 ACP rubber)
+  parent: BaseMagazine45_ACPPistolHighCapacityFMJ
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPFMJ
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_pistol_high_capacity_mag.rsi
+    layers:
+    - state: rubber
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+#End HighCapacity mags
+#Start SubMachineGun mags
+- type: entity
+  id: BaseMagazine45_ACPSubMachineGunFMJ
+  name: SMG magazine (.45 ACP FMJ)
+  parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseSecurityContraband<BaseC1Contraband
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Magazine45_ACPSubMachineGunFMJ
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge45_ACPFMJ
+    capacity: 30
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_smg_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
 
 - type: entity
   id: Magazine45_ACPSubMachineGunFMJ
@@ -322,21 +434,6 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine45_ACPPistolRubber
-  name: pistol magazine (.45 ACP rubber)
-  parent: BaseMagazine45_ACP
-  components:
-  - type: BallisticAmmoProvider
-    proto: Cartridge45_ACPRubber
-  - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_pistol_mag.rsi
-    layers:
-    - state: rubber
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-
-- type: entity
   id: Magazine45_ACPSubMachineGunRubber
   name: SMG magazine (.45 ACP rubber)
   parent: BaseMagazine45_ACPSubMachineGunFMJ
@@ -345,22 +442,6 @@
     proto: Cartridge45_ACPRubber
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_smg_mag.rsi
-    layers:
-    - state: rubber
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-
-
-- type: entity
-  id: Magazine45_ACPPistolHighCapacityRubber
-  name: machine pistol magazine (.45 ACP rubber)
-  parent: BaseMagazine45_ACPPistolHighCapacityFMJ
-  components:
-  - type: BallisticAmmoProvider
-    proto: Cartridge45_ACPFMJ
-  - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_pistol_high_capacity_mag.rsi
     layers:
     - state: rubber
       map: ["enum.GunVisualLayers.Base"]
@@ -383,9 +464,89 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
 
+#Mono AP system
+#anti-flesh ammo
+- type: entity
+  id: Magazine45_ACPSubMachineGunHP
+  name: SMG magazine (.45 ACP hollow-point)
+  parent: BaseMagazine45_ACPSubMachineGunFMJ
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPHP
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_smg_mag.rsi
+    layers:
+    - state: HP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine45_ACPSubMachineGunRIP
+  name: SMG magazine (.45 ACP RIP)
+  parent: BaseMagazine45_ACPSubMachineGunFMJ
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPRIP
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_smg_mag.rsi
+    layers:
+    - state: RIP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+#armor-piercing ammo
+- type: entity
+  id: Magazine45_ACPSubMachineGunSteelAP
+  name: SMG magazine (.45 ACP AP steel core)
+  parent: BaseMagazine45_ACPSubMachineGunFMJ
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPSteelAP
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_smg_mag.rsi
+    layers:
+    - state: steelAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine45_ACPSubMachineGunPlasteelAP
+  name: SMG magazine (.45 ACP AP plasteel core)
+  parent: BaseMagazine45_ACPSubMachineGunFMJ
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPPlasteelAP
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_smg_mag.rsi
+    layers:
+    - state: plasteelAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: Magazine45_ACPSubMachineGunSynthAP
+  name: SMG magazine (.45 ACP AP synthalloy core)
+  parent: BaseMagazine45_ACPSubMachineGunFMJ
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge45_ACPSynthAP
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/45_ACP/45_ACP_smg_mag.rsi
+    layers:
+    - state: synthAP
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+#End SubMachineGun mags
+#Start TopMounted mags
 - type: entity
   id: Magazine45_ACPSubMachineGunTopMountedFMJ
-  name: WT550 magazine (.45 ACP top-mounted)
+  name: top-mounted magazine (.45 ACP top-mounted)
   parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
   components:
   - type: Tag
@@ -417,8 +578,9 @@
 
 - type: entity
   id: Magazine45_ACPSubMachineGunTopMountedEmpty
-  name: WT550 magazine (.45 ACP top-mounted any)
+  name: top-mounted magazine (.45 ACP top-mounted any)
   parent: Magazine45_ACPSubMachineGunTopMountedFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
+#End TopMounted mags

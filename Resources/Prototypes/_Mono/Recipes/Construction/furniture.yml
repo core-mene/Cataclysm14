@@ -1,4 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 significant harassment
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -35,3 +37,71 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
+
+- type: construction
+  id: TargetHuman
+  name: human target
+  description: A shooting target. This one is a human.
+  graph: ShootingTargets
+  startNode: start
+  targetNode: TargetHuman
+  category: construction-category-furniture
+  icon:
+    sprite: Objects/Specific/Security/target.rsi
+    state: target_h
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TargetSyndicate
+  name: syndicate target
+  description: A shooting target. This one is a syndicate agent.
+  graph: ShootingTargets
+  startNode: start
+  targetNode: TargetSyndicate
+  category: construction-category-furniture
+  icon:
+    sprite: Objects/Specific/Security/target.rsi
+    state: target_s
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TargetClown
+  name: clown target
+  description: A shooting target. This one is a clown.
+  graph: ShootingTargets
+  startNode: start
+  targetNode: TargetClown
+  category: construction-category-furniture
+  icon:
+    sprite: Objects/Specific/Security/target.rsi
+    state: target_c
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TargetStrange
+  name: strange target
+  description: A shooting target. You aren't quite sure what this one is, but it seems to be extra robust.
+  graph: ShootingTargets
+  startNode: start
+  targetNode: TargetStrange
+  category: construction-category-furniture
+  icon:
+    sprite: Objects/Specific/Security/target.rsi
+    state: target_f
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

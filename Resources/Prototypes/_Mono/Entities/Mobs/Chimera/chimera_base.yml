@@ -10,8 +10,8 @@
 - type: entity
   parent:
   - StripableInventoryBase
+  - MobHumanoidHostileAIChimera
   - MobNonHumanHostileBase
-  - MobHumanoidHostileAISimpleMelee
   - MobStepTriggerImmune
   id: MonoBaseMobFleshLetoferol
   name: chimera fleshbeast
@@ -27,6 +27,9 @@
   - type: MobState
   - type: DoAfter
   - type: Stripping
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Chimera
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -130,12 +133,12 @@
     - Critical
     damage:
       types:
-        Radiation: -0.1
-        Poison: -0.1
+        Radiation: -0.3
+        Poison: -0.3
       groups:
         Airloss: -0.45
-        Brute: -0.45
-        Burn: -0.45
+        Brute: -1.2
+        Burn: -1.2
         Genetic: -0.1
   - type: Targeting
   - type: Puller

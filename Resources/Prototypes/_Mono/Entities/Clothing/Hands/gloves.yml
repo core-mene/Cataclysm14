@@ -1,7 +1,29 @@
 # SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesMopp
+  name: MOPP gloves
+  description: High-quality rubber gloves, insulated for better CBRN protection.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Hands/Gloves/mopp.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Hands/Gloves/mopp.rsi
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Poison: 0.9
+        Radiation: 0.95
+        Caustic: 0.8
+  - type: Fiber
+    fiberMaterial: fibers-rubber
+    fiberColor: fibers-black
+  - type: FingerprintMask
 
 #tactical gloves
 
@@ -174,7 +196,7 @@
     damage:
       types:
         Blunt: 15
-        Structural: 100   
+        Structural: 100
     soundHit:
       collection: ExplosionSmall
     heavyStaminaCost: 0

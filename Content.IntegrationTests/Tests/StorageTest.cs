@@ -8,6 +8,9 @@
 // SPDX-FileCopyrightText: 2023 TemporalOroboros
 // SPDX-FileCopyrightText: 2023 Visne
 // SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2025 Coenx-flex
+// SPDX-FileCopyrightText: 2025 Cojoke
+// SPDX-FileCopyrightText: 2025 Redrover1760
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -17,6 +20,7 @@ using System.Linq;
 using Content.Server.Storage.Components;
 using Content.Shared.Item;
 using Content.Shared.Prototypes;
+using Content.Shared.Stacks;
 using Content.Shared.Storage;
 using Content.Shared.Storage.Components;
 using Content.Shared.Storage.EntitySystems;
@@ -225,9 +229,31 @@ namespace Content.IntegrationTests.Tests
             if (getCount)
                 return entry.Amount;
 
+            // mono change start, make it consider stacks when checking if it can fit stuff
+            var amount = entry.Amount;
+            var stackMax = 1;
 
             if (proto.TryGetComponent<ItemComponent>("Item", out var item))
-                return itemSystem.GetItemShape(item).GetArea() * entry.Amount;
+            {
+                if (proto.TryGetComponent<StackComponent>("Stack", out var stack))
+                {
+                    if (protoMan.TryIndex<StackPrototype>(stack.StackTypeId, out var stackProto))
+                    {
+                        if (stackProto.MaxCount.HasValue)
+                            stackMax = stackProto.MaxCount.Value;
+                    }
+
+                    if (stack.MaxCountOverride.HasValue)
+                        stackMax = stack.MaxCountOverride.Value;
+
+                    amount /= stackMax;
+                    if (entry.Amount % stackMax != 0)
+                        amount += 1;
+                }
+
+                return itemSystem.GetItemShape(item).GetArea() * amount;
+            }
+            // mono change end
 
             Assert.Fail($"Prototype is missing item comp: {entry.PrototypeId}");
             return 0;

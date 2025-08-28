@@ -1,0 +1,55 @@
+# SPDX-FileCopyrightText: 2023 IHAN <IHAN>
+# SPDX-FileCopyrightText: 2023 Kennedy
+# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Long YM
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Rubeebeebee
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: Rubeebeebee
+# Discord: rubeebee
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Artemis
+  parent: BaseVessel
+  name: HME Artemis
+  description: The Artemis is a compact ambulance ship, designed to rescue patients quickly, and exfiltrate as fast as they arrived.
+  price: 34000 # Its a barebones med ship, basically acting as a paramedic ship. 
+  category: Small
+  group: Medical
+  shuttlePath: /Maps/_Mono/Shuttles/artemis.yml
+  guidebookPage: null
+  class:
+  - Medical
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Artemis
+  mapName: 'HME Artemis'
+  mapPath: /Maps/_Mono/Shuttles/artemis.yml
+  minPlayers: 0
+  stations:
+    Artemis:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Artemis MED{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            MdMedic: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

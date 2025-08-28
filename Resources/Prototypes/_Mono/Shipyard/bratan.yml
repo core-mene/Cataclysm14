@@ -1,0 +1,70 @@
+# SPDX-FileCopyrightText: 2023 IHAN <IHAN>
+# SPDX-FileCopyrightText: 2023 Kennedy
+# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Long YM
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Junerisms
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Rubeebee
+# SPDX-FileCopyrightText: 2025 Rubeebeebee
+# SPDX-FileCopyrightText: 2025 plethorian
+# SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: tonotom1
+# Discord: rws
+
+# Shuttle Notes:
+# im reusing this template from the takeaway
+
+# Author info
+# Github: Rubeebeebee
+# Discord: Rubeebee
+
+- type: vessel
+  id: Bratan
+  parent: BaseVessel
+  name: PB Bratan
+  description: A mobile nightclub, cafeteria, hydroponics, and secret drug lab and smuggling ship, all in one package! Brought to you by the Paycheck Bratva. 
+  price: 142000
+  category: Large
+  group: Shipyard
+  shuttlePath: /Maps/_Mono/Shuttles/bratan.yml
+  guidebookPage: Null
+  class:
+  - Civilian
+  - Kitchen
+  - Botany
+  engine:
+  - AME
+  - Solar
+  addComponents:
+  - type: SolarPoweredGrid
+    doNotCull: true
+
+
+- type: gameMap
+  id: Bratan
+  mapName: 'PB Bratan'
+  mapPath: /Maps/_Mono/Shuttles/bratan.yml
+  minPlayers: 0
+  stations:
+    Bratan:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Bratan CIV{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Flareguy
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Killerqu00
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Most of these have DO NOT MAP, since stations are completely unequipped to deal with ship combat + these are basically placeholder.
 
 - type: entity
@@ -6,7 +15,7 @@
   name: LSE-400c "Svalinn machine gun" machine board
   description: A machine printed circuit board for an LSE-400c "Svalinn machine gun".
   suffix: DO NOT MAP, Machine Board
-  categories: [ DoNotMap ]
+  # categories: [ DoNotMap ] Mono
   components:
   - type: Sprite
     state: security

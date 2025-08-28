@@ -28,7 +28,7 @@ public sealed class GridCleanupSystem : EntitySystem
     private const int MinimumTiles = 10;
 
     // The delay before cleaning up a small grid (in seconds)
-    private const float CleanupDelay = 1800.0f;
+    private const float CleanupDelay = 300.0f;
 
     // Dictionary to track grids scheduled for deletion
     private readonly Dictionary<EntityUid, TimeSpan> _pendingCleanup = new();

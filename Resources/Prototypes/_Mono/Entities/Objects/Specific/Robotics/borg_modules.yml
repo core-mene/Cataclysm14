@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2025 Avalon
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: BorgModuleAdvancedWeapon
+  parent: [ BaseBorgModule, BaseProviderBorgModule, BaseC3SyndicateContraband ]
+  name: advanced weapon cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: syndicate
+    - state: icon-syndicate
+  - type: ItemBorgModule
+    moduleId: Security
+    items:
+    - EnergySword
+    - WeaponPistolAnaconda
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }

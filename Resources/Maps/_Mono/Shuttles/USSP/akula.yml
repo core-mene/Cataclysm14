@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2024 Dvir
 # SPDX-FileCopyrightText: 2024 ErhardSteinhauer
 # SPDX-FileCopyrightText: 2024 dustylens
+# SPDX-FileCopyrightText: 2025 Coenx-flex
 # SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Ricky
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
@@ -19,8 +20,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 14:19:08
-  entityCount: 405
+  time: 08/16/2025 14:40:34
+  entityCount: 407
 maps: []
 grids:
 - 1
@@ -85,6 +86,7 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
+      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -470,8 +472,7 @@ entities:
       pos: 0.5,4.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
       deviceLists:
       - 2
   - uid: 11
@@ -1472,6 +1473,14 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
+- proto: DefibrillatorCabinetFilled
+  entities:
+  - uid: 407
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.5,0.5
+      parent: 1
 - proto: DrinkVodkaBottleFull
   entities:
   - uid: 183
@@ -1580,8 +1589,7 @@ entities:
       pos: 0.5,2.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
       deviceLists:
       - 191
       - 192
@@ -1608,6 +1616,13 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
+- proto: FuelUranium
+  entities:
+  - uid: 406
+    components:
+    - type: Transform
+      pos: -1.453125,1.46875
+      parent: 1
 - proto: GasMixerOnFlipped
   entities:
   - uid: 198
@@ -1786,8 +1801,6 @@ entities:
       pos: 1.5,3.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2
   - uid: 225
@@ -1835,8 +1848,7 @@ entities:
       pos: 2.5,3.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
+
       deviceLists:
       - 2
   - uid: 230

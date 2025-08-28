@@ -1,7 +1,16 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: preloadedGrid
   id: AIZenith
   path: /Maps/_Mono/ShuttleEvent/zenith.yml
   copies: 6
+
+- type: preloadedGrid
+  id: AIZenithE
+  path: /Maps/_Mono/ShuttleEvent/zenith_e.yml
+  copies: 2
 
 - type: preloadedGrid
   id: AINebula

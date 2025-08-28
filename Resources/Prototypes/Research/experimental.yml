@@ -1,26 +1,50 @@
+# SPDX-FileCopyrightText: 2023 T-Stalker
+# SPDX-FileCopyrightText: 2023 Ubaser
+# SPDX-FileCopyrightText: 2023 brainfood1183
+# SPDX-FileCopyrightText: 2023 chromiumboy
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 AndresE55
+# SPDX-FileCopyrightText: 2024 Debug
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 Emisse
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 GeneralGaws
+# SPDX-FileCopyrightText: 2024 Hannah Giovanna Dawson
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 checkraze
+# SPDX-FileCopyrightText: 2025 BeeRobynn
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 deltanedas
+# SPDX-FileCopyrightText: 2025 dustylens
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Tier 1
 
 - type: technology
   id: BasicRobotics
   name: research-technology-basic-robotics
-  icon:
-    sprite: Structures/Machines/exosuit_fabricator.rsi
-    state: fab-idle
+  entityIcon: ExosuitFabricator
   discipline: Experimental
   tier: 1
   cost: 5000
   recipeUnlocks:
   - ProximitySensor
+  technologyPrerequisites:
+  - BasicParts
+  position: -1, -6
 
 - type: technology
   id: BasicAnomalousResearch
   name: research-technology-basic-anomalous-research
-  icon:
-    sprite: Objects/Specific/Research/anomalyscanner.rsi
-    state: icon
+  entityIcon: AnomalyScanner
   discipline: Experimental
   tier: 1
-  cost: 5000
+  cost: 10000
   recipeUnlocks:
   - AnomalyScanner
   - AnomalyLocator
@@ -28,13 +52,14 @@
   - BorgModuleAnomaly
   - APECircuitboard
   - AnomalyVesselCircuitboard
+  technologyPrerequisites:
+  - BasicParts
+  position: -1, -5
 
 - type: technology
   id: BasicXenoArcheology
   name: research-technology-basic-xenoarcheology
-  icon:
-    sprite: Structures/Machines/artifact_analyzer.rsi
-    state: display
+  entityIcon: MachineArtifactAnalyzer
   discipline: Experimental
   tier: 1
   cost: 5000
@@ -43,114 +68,124 @@
   - BorgModuleArtifact
   - AnalysisComputerCircuitboard
   - ArtifactAnalyzerMachineCircuitboard
+  technologyPrerequisites:
+  - BasicParts
+  position: -1, -4
 
-# Frontier: no tech disks
-# - type: technology
-#   id: AlternativeResearch
-#   name: research-technology-alternative-research
-#   icon:
-#     sprite: Structures/Machines/tech_disk_printer.rsi
-#     state: display
-#   discipline: Experimental
-#   tier: 1
-#   cost: 5000
-#   recipeUnlocks:
-#   - TechDiskComputerCircuitboard
-# End Frontier: no tech disks
+- type: technology
+  id: AlternativeResearch
+  name: research-technology-alternative-research
+  entityIcon: ComputerTechnologyDiskTerminal
+  discipline: Experimental
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - TechDiskComputerCircuitboard
+  technologyPrerequisites:
+  - BasicParts
+  position: 1, -6
 
 - type: technology
   id: MagnetsTech
   name: research-technology-magnets-tech
-  icon:
-    sprite: Clothing/Shoes/Boots/magboots-science.rsi
-    state: icon
-  discipline: Experimental
-  tier: 1
-  cost: 7500
-  recipeUnlocks:
-  - ClothingShoesBootsMagSci
-  - NFClothingShoesBootsMoon # Frontier ClothingShoesBootsMoon<NFClothingShoesBootsMoon
-
-- type: technology
-  id: AnomalyCoreHarnessing
-  name: research-technology-anomaly-harnessing
-  icon:
-    sprite: Objects/Weapons/Melee/gorilla.rsi
-    state: icon
+  entityIcon: ClothingShoesBootsMagSci
   discipline: Experimental
   tier: 1
   cost: 10000
   recipeUnlocks:
+  - ClothingShoesBootsMagSci
+  - NFClothingShoesBootsMoon # Frontier ClothingShoesBootsMoon<NFClothingShoesBootsMoon
+  technologyPrerequisites:
+  - BasicParts
+  position: -2, -1
+
+- type: technology
+  id: AnomalyCoreHarnessing
+  name: research-technology-anomaly-harnessing
+  entityIcon: WeaponGauntletGorilla
+  discipline: Experimental
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
   - WeaponGauntletGorilla
+  technologyPrerequisites:
+  - BasicAnomalousResearch
+  - AdvancedParts
+  position: -3, -5
 
 # Tier 2
 
 - type: technology
   id: AdvancedParts
   name: research-technology-advanced-parts
-  icon:
-    sprite: _NF/Objects/Misc/stock_parts.rsi # Frontier
-    state: advanced_matter_bin
+  entityIcon: AdvancedCapacitorStockPart
   discipline: Experimental
   tier: 2
-  cost: 10000
+  cost: 20000
   recipeUnlocks:
   - AdvancedCapacitorStockPart
   - AdvancedMatterBinStockPart
   - NanoManipulatorStockPart
+  technologyPrerequisites:
+  - BasicParts
+  position: 0, 9
 
 - type: technology
   id: AbnormalArtifactManipulation
   name: research-technology-abnormal-artifact-manipulation
-  icon:
-    sprite: Structures/Machines/artifact_crusher.rsi
-    state: icon
+  entityIcon: MachineArtifactCrusher
   discipline: Experimental
   tier: 2
-  cost: 5000
+  cost: 25000
   recipeUnlocks:
   - ArtifactCrusherMachineCircuitboard
+  technologyPrerequisites:
+  - BasicXenoArcheology
+  - AdvancedParts
+  position: -2, -4
 
 - type: technology
   id: AdvancedAnomalyResearch
   name: research-technology-advanced-anomaly-research
-  icon:
-    sprite: Objects/Weapons/Guns/Revolvers/chimp.rsi
-    state: base
+  entityIcon: WeaponPistolCHIMP
   discipline: Experimental
   tier: 2
-  cost: 10000
+  cost: 25000
   recipeUnlocks:
   - WeaponPistolCHIMP
   # - AnomalySynchronizerCircuitboard # Frontier: doesn't make sense for Frontier
   - AnomalyVesselExperimentalCircuitboard
   technologyPrerequisites:
   - BasicAnomalousResearch
+  - AdvancedParts
+  position: -2, -5
 
 - type: technology
   id: DeterrenceTechnologies
   name: research-technology-deterrence
-  icon:
-    sprite: Objects/Devices/Holoprojectors/field.rsi # Frontier particle_decelerator.rsi<field.rsi
-    state: icon # Frontier base<icon
-  discipline: Experimental
-  tier: 2
-  cost: 7500
-  recipeUnlocks:
-  # - WeaponParticleDecelerator # Frontier - Cancer gun that skip walls
-  - HoloprojectorField
-  
-- type: technology
-  id: AiTechnology
-  name: research-technology-ai
-  icon:
-    sprite: Mobs/Silicon/station_ai.rsi
-    state: ai
+  entityIcon: HoloprojectorField
   discipline: Experimental
   tier: 2
   cost: 10000
   recipeUnlocks:
+  # - WeaponParticleDecelerator # Frontier - Cancer gun that skip walls
+  - HoloprojectorField
+  technologyPrerequisites:
+  - BasicParts
+  position: 2, -1
+
+- type: technology
+  id: AiTechnology
+  name: research-technology-ai
+  entityIcon: PlayerStationAiEmpty
+  discipline: Experimental
+  tier: 2
+  cost: 20000
+  recipeUnlocks:
   - AiCoreElectronics
+  technologyPrerequisites:
+  - SuperParts
+  position: -4, 18
 
 # Tier 3
 

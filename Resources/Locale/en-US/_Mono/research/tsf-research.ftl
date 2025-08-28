@@ -6,6 +6,7 @@ research-discipline-tsfmc-shipyard = TSFMC Heavy Industry
 research-technology-tsfmc-basic-equipment = Basic TSFMC Equipment
 research-technology-tsfmc-advanced-equipment = Advanced TSFMC Equipment
 research-technology-tsfmc-experimental-equipment = Experimental TSFMC Equipment
+research-technology-tsfmc-mopp-equipment = Chemical Protection Gear
 
 # T1 TSFMC
 research-technology-tsfmc-guns = Ballistics Production
@@ -18,7 +19,8 @@ research-technology-tsfmc-nvd = Night Vision Devices
 research-technology-tsfmc-motion-detector = Biosignature IFF Technology
 
 # T2 TSFMC
-research-technology-tsfmc-annie = Annie
+research-technology-tsfmc-annie = M-27 Annie
+research-technology-tsfmc-grizzly = MMG-68 Grizzly
 research-technology-tsfmc-nanofoam = Nanomaterial Growth
 research-technology-tsfmc-demag = System Reset Technology
 research-technology-tsfmc-eshield = Energy Shielding

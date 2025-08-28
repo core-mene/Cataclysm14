@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 RikuTheKiller
 // SPDX-FileCopyrightText: 2025 ark1368
@@ -218,6 +219,8 @@ public sealed class FireControlNavControl : BaseShuttleControl
         var shuttleToWorld = Matrix3x2.Multiply(posMatrix, ourEntMatrix);
         Matrix3x2.Invert(shuttleToWorld, out var worldToShuttle);
         var shuttleToView = Matrix3x2.CreateScale(new Vector2(MinimapScale, -MinimapScale)) * Matrix3x2.CreateTranslation(MidPointVector);
+        var worldToView = worldToShuttle * shuttleToView;
+        Matrix3x2.Invert(worldToView, out var viewToWorld);
 
         var ourGridId = xform.GridUid;
         if (EntManager.TryGetComponent<MapGridComponent>(ourGridId, out var ourGrid) &&
@@ -262,7 +265,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
                 continue;
 
             var curGridToWorld = _transform.GetWorldMatrix(gUid);
-            var curGridToView = curGridToWorld * worldToShuttle * shuttleToView;
+            var curGridToView = curGridToWorld * worldToView;
 
             var labelColor = _shuttles.GetIFFColor(grid, self: false, iff);
             var coordColor = new Color(labelColor.R * 0.8f, labelColor.G * 0.8f, labelColor.B * 0.8f, 0.5f);
@@ -327,7 +330,8 @@ public sealed class FireControlNavControl : BaseShuttleControl
 
         foreach (var blip in blips)
         {
-            var blipPos = Vector2.Transform(blip.Item1, worldToShuttle * shuttleToView);
+            var blipCoord = _transform.ToMapCoordinates(blip.Item1).Position;
+            var blipPos = Vector2.Transform(blipCoord, worldToView);
 
             if (blip.Item4 == RadarBlipShape.Ring)
             {
@@ -341,7 +345,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
 
             if (_isMouseInside && _controllables != null)
             {
-                var worldPos = blip.Item1;
+                var worldPos = blipCoord;
                 var isFireControllable = _controllables.Any(c =>
                 {
                     var coords = EntManager.GetCoordinates(c.Coordinates);
@@ -355,7 +359,6 @@ public sealed class FireControlNavControl : BaseShuttleControl
                     var cursorViewPos = InverseScalePosition(_lastMousePos);
                     cursorViewPos = ScalePosition(cursorViewPos);
 
-                    Matrix3x2.Invert(worldToShuttle * shuttleToView, out var viewToWorld);
                     var cursorWorldPos = Vector2.Transform(cursorViewPos, viewToWorld);
 
                     var direction = cursorWorldPos - worldPos;
@@ -372,39 +375,11 @@ public sealed class FireControlNavControl : BaseShuttleControl
         }
 
         // Draw hitscan lines from the radar blips system
-        var hitscanLines = _blips.GetRawHitscanLines();
+        var hitscanLines = _blips.GetHitscanLines();
         foreach (var line in hitscanLines)
         {
-            Vector2 startPosInView;
-            Vector2 endPosInView;
-
-            // Handle differently based on if there's a grid
-            if (line.Grid == null)
-            {
-                // For world-space lines without a grid, use standard world transformation
-                startPosInView = Vector2.Transform(line.Start, worldToShuttle * shuttleToView);
-                endPosInView = Vector2.Transform(line.End, worldToShuttle * shuttleToView);
-            }
-            else
-            {
-                // For grid-relative lines, we need to transform from grid space to world space first
-                var gridEntity = EntManager.GetEntity(line.Grid.Value);
-                if (EntManager.TryGetComponent<TransformComponent>(gridEntity, out var gridXform))
-                {
-                    var gridToWorld = _transform.GetWorldMatrix(gridEntity);
-                    var gridStartWorld = Vector2.Transform(line.Start, gridToWorld);
-                    var gridEndWorld = Vector2.Transform(line.End, gridToWorld);
-
-                    startPosInView = Vector2.Transform(gridStartWorld, worldToShuttle * shuttleToView);
-                    endPosInView = Vector2.Transform(gridEndWorld, worldToShuttle * shuttleToView);
-                }
-                else
-                {
-                    // Fallback to treating as world coordinates if grid transform is not available
-                    startPosInView = Vector2.Transform(line.Start, worldToShuttle * shuttleToView);
-                    endPosInView = Vector2.Transform(line.End, worldToShuttle * shuttleToView);
-                }
-            }
+            var startPosInView = Vector2.Transform(line.Start, worldToView);
+            var endPosInView = Vector2.Transform(line.End, worldToView);
 
             // Check if the line is within the view bounds before drawing
             var viewBounds = new Box2(-3f, -3f, Size.X + 3f, Size.Y + 3f);

@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  name: kangaroo # exact same
+  parent:
+  - MobKangaroo
+  id: MobKangarooPlanet
+  description: A large marsupial herbivore. It has powerful hind legs, with nails that resemble long claws.
+  components:
+  - type: GhostRole
+    prob: 0.0

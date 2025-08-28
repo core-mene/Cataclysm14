@@ -65,4 +65,7 @@
   - type: ClothingGrantComponent
     component:
     - type: Stealth
+    - type: StealthOnMove
+      passiveVisibilityRate: -0.4
+      movementVisibilityRate: 0.4
 

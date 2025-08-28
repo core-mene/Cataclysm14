@@ -1,4 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Coenx-flex
 # SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Hyenh
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 core-mene
 #
@@ -45,9 +47,15 @@
     sprite: _Mono/Clothing/Neck/Cloaks/cogcloakicon.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Neck/Cloaks/cogcloak.rsi
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container { }
+      storagebase: !type:Container
+        ents: [ ]
   - type: ToggleableClothing
     requiredSlot: neck
     blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHatCOG
+

@@ -19,7 +19,7 @@
   - 0     # plasma
   - 0     # tritium
   - 6     # vapor
-  - 0     # miasma
+  - 0     # ammonia
   - 0     # n2o
   - 0     # frezon
 
@@ -39,9 +39,29 @@
   - 0     # plasma
   - 2     # tritium
   - 0     # vapor
-  - 0     # miasma
+  - 0     # ammonia
   - 1     # n2o
   - 2     # frezon
+
+- type: crystallizerRecipe
+  id: Plastitanium
+  name: Plastitanium (1)
+  minimumTemperature: 7920
+  maximumTemperature: 8150
+  energyRelease: 1840
+  products:
+    SheetPlastitanium1: 1
+  dangerous: true
+  minimumRequirements:
+  - 27     # oxygen
+  - 2     # nitrogen
+  - 3     # carbon dioxide
+  - 9     # plasma
+  - 2     # tritium
+  - 0     # vapor
+  - 5     # ammonia
+  - 1     # n2o
+  - 0     # frezon
 
 - type: crystallizerRecipe
   id: Synthalloy
@@ -59,7 +79,7 @@
   - 6     # plasma
   - 0     # tritium
   - 4     # vapor
-  - 0     # miasma
+  - 0     # ammonia
   - 1     # n2o
   - 0     # frezon
 
@@ -79,7 +99,7 @@
   - 2     # plasma
   - 0     # tritium
   - 0     # vapor
-  - 0     # miasma
+  - 0     # ammonia
   - 0     # n2o
   - 0     # frezon
 
@@ -99,7 +119,7 @@
   - 2     # plasma
   - 0     # tritium
   - 0     # vapor
-  - 0     # miasma
+  - 0     # ammonia
   - 0     # n2o
   - 0     # frezon
 
@@ -119,7 +139,7 @@
   - 2     # plasma
   - 3     # tritium
   - 0     # vapor
-  - 4     # miasma
+  - 4     # ammonia
   - 8     # n2o
   - 2     # frezon
 
@@ -139,6 +159,6 @@
   - 0     # plasma
   - 0     # tritium
   - 0     # vapor
-  - 0     # miasma
+  - 0     # ammonia
   - 0     # n2o
   - 0     # frezon

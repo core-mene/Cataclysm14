@@ -17,12 +17,17 @@ lathe-category-combat-eva = Combat Hardsuits
 lathe-category-faction-gear = Faction Equipment
 
 # Ammo
-lathe-category-fmj-ammo = FMJ Ammo
-lathe-category-incen-ammo = Incendiary Ammo
-lathe-category-uranium-ammo = Uranium Ammo
-lathe-category-practice-ammo = Practice Ammo
-lathe-category-misc-ammo = Misc. Ammo
-lathe-category-ship-ammo = Ship Weapon Ammo
+lathe-category-fmj-ammo = Full Metal Jacket Ammunition
+lathe-category-incen-ammo = Incendiary payload Ammunition
+lathe-category-uranium-ammo = Uranium core Ammunition
+lathe-category-practice-ammo = Practice Ammunition
+lathe-category-misc-ammo = Misc. Ammunition
+lathe-category-ship-ammo = Ship Weapon Ammunition
+lathe-category-steelap-ammo = Steel core armor-piercing Ammunition
+lathe-category-plasteelap-ammo = Plasteel core armor-piercing Ammunition
+lathe-category-synthap-ammo = Synthalloy core armor-piercing Ammunition
+lathe-category-hp-ammo = Hollow-point Ammunition
+lathe-category-rip-ammo = Radically Invasive Projectile Ammunition
 
 # Weapons
 lathe-category-guns-rifles = Rifles

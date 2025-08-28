@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Coenx-flex
 # SPDX-FileCopyrightText: 2025 core-mene
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -7,7 +8,7 @@
   parent: [ClothingHelmetAttachmentBase, ClothingBackpack]
   id: ClothingHelmetAttachmentGogglesCoverOlive
   name: olive goggles cover
-  description: Goggles cover to fit your goggle when not in use.
+  description: Goggles cover to fit your goggle when not in use, worn in the helmet attachment slot.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/HelmetAttachment/goggles_cover_olive.rsi
@@ -25,7 +26,7 @@
   parent: [ClothingHelmetAttachmentBase, ClothingBackpack]
   id: ClothingHelmetAttachmentGogglesCoverTan
   name: tan goggles cover
-  description: Goggles cover to fit your goggle when not in use.
+  description: Goggles cover to fit your goggle when not in use, worn in the helmet attachment slot.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/HelmetAttachment/goggles_cover_tan.rsi
@@ -43,7 +44,7 @@
   parent: [ClothingHelmetAttachmentBase, ClothingBackpack]
   id: ClothingHelmetAttachmentGogglesCoverBlack
   name: black goggles cover
-  description: Goggles cover to fit your goggle when not in use.
+  description: Goggles cover to fit your goggle when not in use, worn in the helmet attachment slot.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/HelmetAttachment/goggles_cover_black.rsi
@@ -61,7 +62,7 @@
   parent: [ClothingHelmetAttachmentBase, ClothingBackpack]
   id: ClothingHelmetAttachmentGogglesCoverRedDigital
   name: red digital goggles cover
-  description: Goggles cover to fit your goggle when not in use.
+  description: Goggles cover to fit your goggle when not in use, worn in the helmet attachment slot.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/HelmetAttachment/goggles_cover_digital_red.rsi
@@ -80,7 +81,7 @@
   parent: ClothingHelmetAttachmentBase
   id: ClothingHelmetAttachmentNVGsBasic
   name: basic night vision goggles
-  description: A pair of basic optoelectronics night vision goggles with high sensibility to flashes.
+  description: A pair of basic optoelectronics night vision goggles with high sensibility to flashes, worn in the helmet attachment slot.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/HelmetAttachment/basic_optoelectronics_nvgs.rsi
@@ -99,7 +100,7 @@
   parent: ClothingHelmetAttachmentBase
   id: ClothingHelmetAttachmentInfraredBasic
   name: basic thermal vision goggles
-  description: A pair of basic thermal vision goggles with high sensibility to flashes.
+  description: A pair of basic thermal vision goggles with high sensibility to flashes, worn in the helmet attachment slot.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/HelmetAttachment/basic_optoelectronics_infrared.rsi

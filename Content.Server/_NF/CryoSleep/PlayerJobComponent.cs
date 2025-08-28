@@ -1,5 +1,12 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Coenx-flex
+// SPDX-FileCopyrightText: 2025 Cojoke
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Robust.Shared.Prototypes;
 using Content.Shared.Roles;
+using Robust.Shared.Map;
 
 namespace Content.Server._NF.CryoSleep;
 
@@ -16,11 +23,18 @@ public sealed partial class PlayerJobComponent : Component
     /// </summary>
     [DataField("jobPrototype")]
     public ProtoId<JobPrototype>? JobPrototype;
-    
+
     /// <summary>
     /// The station entity where this player initially spawned.
     /// Used to make sure job slots are only reopened on the correct station.
     /// </summary>
     [DataField("spawnStation")]
     public EntityUid? SpawnStation;
-} 
+
+    /// <summary>
+    ///  Mono: The spawn point of the player
+    /// </summary>
+    [DataField("spawnCoordinates")]
+
+    public MapCoordinates? SpawnCoordinates;
+}

@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 BoskiYourk
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -17,3 +18,11 @@
   components:
   - type: Label
     currentLabel: holopad-ussp-commissar
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: HolopadJupiter
+  suffix: ASR Jupiter
+  components:
+  - type: Label
+    currentLabel: holopad-asr-jupiter

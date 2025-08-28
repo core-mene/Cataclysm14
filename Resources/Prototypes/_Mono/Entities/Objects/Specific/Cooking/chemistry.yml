@@ -1,5 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
-# SPDX-FileCopyrightText: 2025 monolith8319
+# SPDX-FileCopyrightText: 2025 Coenx-flex
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -19,8 +20,8 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     fillBaseName: teaspoon
+    inHandsFillBaseName: null
     # inHandsMaxFillLevels: 1 # TODO: Add inHandsMaxFillLevels
-    # inHandsFillBaseName: -fill-
   - type: SolutionContainerManager
     solutions:
       injector:

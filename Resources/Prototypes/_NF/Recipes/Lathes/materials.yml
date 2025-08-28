@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 tonotom
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Base prototype is in Resources\Prototypes\_NF\Recipes\Lathes\sheet.yml
 
 # Raw mats
@@ -19,7 +25,7 @@
 - type: latheRecipe
   id: SmeltScrap
   result: SpawnRandomRefinedScrap
-  parent: BaseMaterialsNoDiscountRecipe
+#  parent: BaseMaterialsNoDiscountRecipe #Mono
   completetime: 0.1
   icon:
     sprite: _NF/Objects/Materials/ore.rsi
