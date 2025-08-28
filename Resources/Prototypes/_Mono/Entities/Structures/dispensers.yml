@@ -1,0 +1,181 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: BaseDispenser
+  id: BaseCargoChute
+  name: base cargo turn-in chute
+  abstract: true
+  description: A machine with piping systems that lead into the bowels of the station, accepting export goods for trade deeds.
+  components:
+  - type: Anchorable
+    flags:
+    - None
+  - type: Dispenser
+    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    inventory:
+      WeaponRifleLecter: SpaceCash15000 # Example listing
+  - type: Sprite
+    sprite: _Crescent/Structures/cargochute.rsi # Normally we cant use hullrot sprites because they're commissioned, but this one is from CEV-Eris according to metadata, so its fine.
+    layers:
+    - state: "icon"
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
+
+- type: entity
+  id: PaperWrittenDispenserInstructions
+  name: "cargo dispenser instructions"
+  parent: Paper
+  components:
+  - type: Paper
+    content: book-text-cargo-instructions
+  - type: TimedDespawn # So you cant spam it to lag the server.
+    lifetime: 120
+
+- type: entity
+  parent: BaseCargoChute
+  id: CargoChuteDepot
+  name: cargo depot turn-in chute
+  description: A machine with piping systems that lead into the bowels of the cargo depot, accepting export goods for trade deeds.
+  components:
+  - type: Dispenser
+    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    inventory:
+      TradeGoodSupplies: SpaceCash1500
+      TradeGoodMedicalSupplies: SpaceCash2500
+      TradeGoodChemicalSupplies: SpaceCash1000
+      TradeGoodChemicalsVolatile: SpaceCash3000
+      TradeGoodFissionFuel: SpaceCash12000
+      TradeGoodScrap: SpaceCash1500
+      TradeGoodComponents: SpaceCash4000
+
+- type: entity
+  parent: BaseCargoChute
+  id: CargoChuteDepotAlt
+  name: alternate cargo depot turn-in chute
+  description: A machine with piping systems that lead into the bowels of the cargo depot, accepting export goods for trade deeds.
+  components:
+  - type: Dispenser
+    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    inventory:
+      TradeGoodAmmo: SpaceCash5000
+      TradeGoodFissionFuel: SpaceCash12000
+      TradeGoodWeaponParts: SpaceCash4500
+      TradeGoodScrap: SpaceCash1500
+      TradeGoodLuxuries: SpaceCash9000
+      TradeGoodFertilizer: SpaceCash2500
+      TradeGoodShipComponents: SpaceCash4000
+
+- type: entity
+  parent: BaseCargoChute
+  id: CargoChuteTradeMall
+  name: Trade Mall cargo turn-in chute
+  description: A machine with piping systems that lead into the bowels of the station, accepting export goods for trade deeds.
+  components:
+  - type: Dispenser
+    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    inventory:
+      TradeGoodAmmo: SpaceCash3500
+      TradeGoodSupplies: SpaceCash3000
+      TradeGoodMedicalSupplies: SpaceCash1250
+      TradeGoodChemicalSupplies: SpaceCash2500
+      TradeGoodChemicalsVolatile: SpaceCash3000
+      TradeGoodScrap: SpaceCash2000
+      TradeGoodFusionFuel: SpaceCash6000
+      TradeGoodComponents: SpaceCash2000
+      TradeGoodFertilizer: SpaceCash2250
+      TradeGoodShipComponents: SpaceCash2000
+      TradeGoodFabric: SpaceCash2500
+      TradeGoodMetals: SpaceCash1250
+
+- type: entity
+  parent: BaseCargoChute
+  id: CargoChuteBaikal
+  name: Baikal cargo turn-in chute
+  description: A machine with piping systems that lead into the bowels of the station, accepting export goods for trade deeds.
+  components:
+  - type: Dispenser
+    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    inventory:
+      TradeGoodAmmo: SpaceCash4000
+      TradeGoodSupplies: SpaceCash1250
+      TradeGoodMedicalSupplies: SpaceCash2200
+      TradeGoodWeaponParts: SpaceCash5000
+      TradeGoodFusionFuel: SpaceCash6000
+      TradeGoodLuxuries: SpaceCash7000
+      TradeGoodEquipment: SpaceCash1750
+      TradeGoodFertilizer: SpaceCash3500
+      TradeGoodShipComponents: SpaceCash3000
+      TradeGoodFabric: SpaceCash2000
+      TradeGoodMetals: SpaceCash1750
+
+- type: entity
+  parent: BaseCargoChute
+  id: CargoChuteTSFMC
+  name: TSFMC cargo turn-in chute
+  description: A machine with piping systems that lead into the bowels of the station, accepting export goods for trade deeds.
+  components:
+  - type: Dispenser
+    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    inventory:
+      TradeGoodAmmo: SpaceCash6000
+      TradeGoodSupplies: SpaceCash1250
+      TradeGoodMedicalSupplies: SpaceCash1750
+      TradeGoodChemicalSupplies: SpaceCash2250
+      TradeGoodChemicalsVolatile: SpaceCash4000
+      TradeGoodWeaponParts: SpaceCash4500
+      TradeGoodFusionFuel: SpaceCash6000
+      TradeGoodEquipment: SpaceCash1500
+      TradeGoodComponents: SpaceCash3000
+      TradeGoodShipComponents: SpaceCash5000
+      TradeGoodFabric: SpaceCash1250
+      TradeGoodMetals: SpaceCash2500
+
+- type: entity
+  parent: BaseCargoChute
+  id: CargoChuteHideout
+  name: ASR hideout cargo turn-in chute
+  description: A machine with piping systems that lead into the bowels of the station, accepting export goods for trade deeds.
+  components:
+  - type: Dispenser
+    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    inventory:
+      TradeGoodAmmo: SpaceCash7000
+      TradeGoodSupplies: SpaceCash2500
+      TradeGoodMedicalSupplies: SpaceCash1250
+      TradeGoodChemicalSupplies: SpaceCash3000
+      TradeGoodChemicalsVolatile: SpaceCash3000
+      TradeGoodWeaponParts: SpaceCash6000
+      TradeGoodScrap: SpaceCash3000
+      TradeGoodFusionFuel: SpaceCash7000
+      TradeGoodEquipment: SpaceCash2250
+      TradeGoodComponents: SpaceCash2500
+      TradeGoodShipComponents: SpaceCash3000
+      TradeGoodFabric: SpaceCash1250
+      TradeGoodMetals: SpaceCash2000
+
+- type: entity
+  parent: BaseCargoChute
+  id: CargoChuteJupiter
+  name: ASR jupiter cargo turn-in chute
+  description: A machine with piping systems that lead into the bowels of the carrier, accepting export goods for trade deeds.
+  components:
+  - type: Dispenser
+    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    inventory:
+      TradeGoodAmmo: SpaceCash9000
+      TradeGoodSupplies: SpaceCash4000
+      TradeGoodMedicalSupplies: SpaceCash4500
+      TradeGoodChemicalSupplies: SpaceCash5500
+      TradeGoodChemicalsVolatile: SpaceCash6500
+      TradeGoodWeaponParts: SpaceCash8000
+      TradeGoodScrap: SpaceCash2000
+      TradeGoodFusionFuel: SpaceCash12000
+      TradeGoodEquipment: SpaceCash3500
+      TradeGoodComponents: SpaceCash4250
+      TradeGoodShipComponents: SpaceCash1000
+      TradeGoodFabric: SpaceCash2000
+      TradeGoodMetals: SpaceCash1000

@@ -165,3 +165,59 @@
       map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
   - type: AccessReader
     access: [["Mercenary"], ["Security"]]
+
+- type: entity
+  parent: [VendingMachineAstroVend, BaseStructureDisableAnchoring]
+  id: VendingMachineTraderBaikal
+  name: Baikal Trade Goods Vendor
+  description: Sells various trade goods.
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: TraderBaikal
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+  - type: MarketModifier
+    mod: 8
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/robotics.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#B0ADA9"
+
+- type: entity
+  parent: VendingMachineTraderBaikal
+  id: VendingMachineTraderDepot
+  name: Cargo Depot Trade Goods Vendor
+  components:
+  - type: VendingMachine
+    pack: TraderDepot
+
+- type: entity
+  parent: VendingMachineTraderBaikal
+  id: VendingMachineTraderDepotAlt
+  name: Cargo Depot Trade Goods Vendor
+  suffix: POI, Alt
+  components:
+  - type: VendingMachine
+    pack: TraderDepotAlt
+
+- type: entity
+  parent: VendingMachineTraderBaikal
+  id: VendingMachineTraderTradeMall
+  name: Trade Mall Trade Goods Vendor
+  components:
+  - type: VendingMachine
+    pack: TraderTradeMall
