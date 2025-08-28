@@ -70,8 +70,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      80: Critical
-      140: Dead
+      160: Critical #Mono, health buff
+      280: Dead
     stateAlertDict:
       Alive: BorgHealth
       Critical: BorgCrit
@@ -181,8 +181,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      60: Critical
-      120: Dead
+      120: Critical #Mono, health buff
+      240: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       36: 0.7
@@ -240,8 +240,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      30: Critical
-      90: Dead
+      60: Critical #Mono, health buff
+      180: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       18: 0.7
@@ -633,8 +633,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      12: Critical
-      20: Dead
+      24: Critical #Mono, health buff
+      40: Dead
   - type: DamageStateVisuals
     states:
       Alive:
@@ -916,8 +916,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      110: Critical
-      160: Dead
+      220: Critical #Mono, health buff
+      320: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       66: 0.7
