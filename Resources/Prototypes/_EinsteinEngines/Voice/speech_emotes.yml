@@ -21,3 +21,15 @@
     - BorgChassis
   chatTriggers:
     - whirrs
+
+- type: emote
+  id: Boop
+  name: chat-emote-name-boop
+  category: Vocal
+  chatMessages: [ boops. ]
+  whitelist:
+    components:
+    - Silicon
+    - BorgChassis
+  chatTriggers:
+  - boops
