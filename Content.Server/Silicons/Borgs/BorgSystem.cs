@@ -14,6 +14,7 @@
 // SPDX-FileCopyrightText: 2024 Tayrtahn
 // SPDX-FileCopyrightText: 2024 Whatstone
 // SPDX-FileCopyrightText: 2024 deltanedas
+// SPDX-FileCopyrightText: 2025 BeBright
 // SPDX-FileCopyrightText: 2025 Errant
 // SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 ScarKy0

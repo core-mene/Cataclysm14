@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2025 BeBright
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Silicons.Borgs.Components;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
