@@ -13,7 +13,7 @@
   - Ballistic
   - Weapons
   materials:
-    Steel: 2500
+    Steel: 1500
     Plasteel: 1200
     Plastic: 1500
 
@@ -26,8 +26,7 @@
   - Ballistic
   - Weapons
   materials:
-    Steel: 5500
-    Plasteel: 2000
+    Steel: 2500
     Plastic: 2000
 
 - type: latheRecipe
@@ -39,10 +38,8 @@
   - Ballistic
   - Weapons
   materials:
-    Steel: 5500
-    Plasteel: 1500
-    Plastic: 500
-    Wood: 1500
+    Steel: 2500
+    Plastic: 1500
 
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
@@ -109,3 +106,41 @@
     Steel: 3000
     Plasteel: 2500
     Plastic: 700
+
+- type: latheRecipe
+  id: WeaponSubMachineGunVector9x19mm
+  parent: BaseWeaponRecipeLong
+  result: WeaponSubMachineGunVector9x19mmRegistered
+  categories:
+  - SMGs
+  - Ballistic
+  - Weapons
+  materials:
+    Steel: 1500
+    Plasteel: 1500
+    Plastic: 800
+
+- type: latheRecipe
+  id: WeaponSubMachineGunWt550
+  parent: BaseWeaponRecipeLong
+  result: WeaponSubMachineGunWt550PMC
+  categories:
+  - SMGs
+  - Ballistic
+  - Weapons
+  materials:
+    Steel: 1500
+    Plastic: 1000
+
+- type: latheRecipe
+  id: WeaponSubMachineGunFirestarter
+  parent: BaseWeaponRecipeLong
+  result: WeaponSubMachineGunFirestarter
+  categories:
+  - SMGs
+  - Ballistic
+  - Weapons
+  materials:
+    Steel: 2000
+    Plasteel: 1000
+    Plastic: 500

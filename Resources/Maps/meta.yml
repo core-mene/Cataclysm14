@@ -38,9 +38,11 @@
 # SPDX-FileCopyrightText: 2024 lzk
 # SPDX-FileCopyrightText: 2024 scrivoy
 # SPDX-FileCopyrightText: 2025 ArtisticRoomba
+# SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Emisse
 # SPDX-FileCopyrightText: 2025 Nox
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -132035,7 +132037,7 @@ entities:
     - type: Transform
       pos: -15.574577,42.476746
       parent: 5350
-- proto: AmmoBox5.56x45mmPractice
+- proto: AmmoBox556x45mmPractice
   entities:
   - uid: 22344
     components:
@@ -132082,7 +132084,7 @@ entities:
     - type: Transform
       pos: -15.387077,43.488113
       parent: 5350
-- proto: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+- proto: Magazine46x30mmSubMachineGunTopMountedFMJ
   entities:
   - uid: 10438
     components:
@@ -132098,7 +132100,7 @@ entities:
       parent: 5350
     - type: BallisticAmmoProvider
       unspawnedCount: 30
-- proto: Magazine5.56x45mmFMJ
+- proto: Magazine556x45mmFMJ
   entities:
   - uid: 28208
     components:
@@ -132114,7 +132116,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Magazine5.56x45mmPractice
+- proto: Magazine556x45mmPractice
   entities:
   - uid: 22345
     components:

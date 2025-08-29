@@ -17,6 +17,7 @@
 # SPDX-FileCopyrightText: 2024 QueerNB
 # SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 grandalff
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -977,7 +978,7 @@ entities:
       parent: 45
     - type: Physics
       canCollide: False
-- proto: AmmoBox7.62x39mmFMJ
+- proto: AmmoBox762x39mmFMJ
   entities:
   - uid: 47
     components:
@@ -985,7 +986,7 @@ entities:
       parent: 45
     - type: Physics
       canCollide: False
-- proto: AmmoBox7.62x54mmRFMJ
+- proto: AmmoBox762x54mmRFMJ
   entities:
   - uid: 48
     components:
@@ -5397,7 +5398,7 @@ entities:
     - type: Transform
       pos: 2.5,7.5
       parent: 1
-- proto: Magazine7.62x39mmFMJ
+- proto: Magazine762x39mmFMJ
   entities:
   - uid: 785
     components:

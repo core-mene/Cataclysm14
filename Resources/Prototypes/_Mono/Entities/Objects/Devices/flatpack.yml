@@ -5,6 +5,7 @@
 # SPDX-FileCopyrightText: 2025 SRV
 # SPDX-FileCopyrightText: 2025 SarahRaven
 # SPDX-FileCopyrightText: 2025 cheetah1984
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 gus
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -197,6 +198,10 @@
     entity: OreBox
   - type: StaticPrice
     price: 500
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+      Glass: 30
 
 - type: entity
   parent: BaseNFFlatpack
@@ -208,6 +213,11 @@
     entity: ConstructionBox
   - type: StaticPrice
     price: 500
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+      Glass: 30
+
 
 - type: entity
   parent: BaseNFFlatpack
@@ -265,3 +275,14 @@
     price: 3000
     vendPrice: 20000
 
+- type: entity
+  parent: BaseFlatpack
+  id: ResearchAndDevelopmentServerMercFlatpack
+  name: mercenary R&D server flatpack
+  description: A flatpack used for constructing a mercenary R&D server.
+  components:
+  - type: Flatpack
+    entity: ResearchAndDevelopmentServerMerc
+  - type: StaticPrice
+    price: 4000
+    vendPrice: 10000

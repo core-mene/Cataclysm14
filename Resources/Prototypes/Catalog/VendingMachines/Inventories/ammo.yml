@@ -1,11 +1,36 @@
+# SPDX-FileCopyrightText: 2019 DamianX
+# SPDX-FileCopyrightText: 2020 AJCM-git
+# SPDX-FileCopyrightText: 2020 Hugo Laloge
+# SPDX-FileCopyrightText: 2020 Metal Gear Sloth
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Visne
+# SPDX-FileCopyrightText: 2022 Andreas Kämper
+# SPDX-FileCopyrightText: 2022 Kara
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2023 Dvir
+# SPDX-FileCopyrightText: 2023 Qulibly
+# SPDX-FileCopyrightText: 2023 Vordenburg
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2024 AndresE55
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Kesiath
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 ThatOneGoblin25
+# SPDX-FileCopyrightText: 2024 VividPups
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: vendingMachineInventory
   id: AmmoVendInventory
   startingInventory:
-    AmmoBox6.35x40mmCaseless: 6
-    AmmoBox6.35x40mmCaselessPractice: 3
+    AmmoBox635x40mmCaseless: 6
+    AmmoBox635x40mmCaselessPractice: 3
 
-    AmmoBox7.62x39mmBigFMJ: 6
-    AmmoBox7.62x39mmPractice: 3
+    AmmoBox762x39mmBigFMJ: 6
+    AmmoBox762x39mmPractice: 3
 
     AmmoBox45_magnumFMJ: 6
     AmmoBox45_magnumPractice: 3
@@ -13,5 +38,5 @@
     AmmoBox9x19mmFMJ: 6
     AmmoBox9x19mmPractice: 3
 
-    AmmoBox5.56x45mmFMJ: 6
-    AmmoBox5.56x45mmPractice: 3
+    AmmoBox556x45mmFMJ: 6
+    AmmoBox556x45mmPractice: 3

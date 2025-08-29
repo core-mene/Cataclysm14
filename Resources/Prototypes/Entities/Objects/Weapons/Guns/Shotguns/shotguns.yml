@@ -59,6 +59,7 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 BramvanZijp
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 GoobBot
 # SPDX-FileCopyrightText: 2025 John
 # SPDX-FileCopyrightText: 2025 K-Dynamic
@@ -219,7 +220,7 @@
     node: start
     deconstructionTarget: null
   - type: StaticPrice
-    price: 350
+    price: 300 # 300 < 350 Mono
 
 - type: entity
   name: double-barreled shotgun (12 gauge)
@@ -280,12 +281,12 @@
     sprite: _NF/Objects/Weapons/Guns/Shotguns/pump.rsi # Frontier: add _NF prefix
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
-    #fireRate: 1 # Goobstation
+    fireRate: 1.4
   - type: Tag
     tags:
     - WeaponShotgunKammerer
-  - type: BallisticAmmoProvider # Goobstation
-    autoCycle: false
+  - type: BallisticAmmoProvider
+    capacity: 5
   - type: PirateBountyItem # Mono
     id: StandardFactionLongarm
 
@@ -310,6 +311,8 @@
     graph: ShotgunSawn
     node: shotgunsawn
     deconstructionTarget: null
+  - type: StaticPrice # Mono
+    price: 300
 
 - type: entity
   name: sawn-off shotgun (12 gauge)

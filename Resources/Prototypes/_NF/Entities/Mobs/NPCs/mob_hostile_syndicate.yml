@@ -549,7 +549,7 @@
       rechargeSound:
         path: /Audio/_NF/Effects/silence.ogg
     - type: BasicEntityAmmoProvider
-      proto: Cartridge7.62x39mmFMJ
+      proto: Cartridge762x39mmFMJ
       capacity: 4
       count: 4
     - type: Gun
@@ -569,7 +569,7 @@
       prototypes:
         - SyndicateNavalCommanderGearB
     - type: BasicEntityAmmoProvider
-      proto: Cartridge5.56x45mmFMJ
+      proto: Cartridge556x45mmFMJ
       capacity: 4
       count: 4
     - type: Gun

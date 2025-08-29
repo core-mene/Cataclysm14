@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: WeaponMechDebugBallistic
   parent: [ BaseMechWeaponRange, DebugMechEquipment ] # Debug equipment does have all whitelist tags.
@@ -26,7 +31,7 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: AmmoCounter
   - type: ProjectileBatteryAmmoProvider
-    proto: Cartridge7.62x39mmFMJ
+    proto: Cartridge762x39mmFMJ
     fireCost: 9
   - type: MagazineVisuals
     magState: mag

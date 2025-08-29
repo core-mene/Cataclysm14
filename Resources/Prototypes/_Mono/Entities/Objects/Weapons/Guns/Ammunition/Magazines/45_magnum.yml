@@ -23,6 +23,7 @@
 # SPDX-FileCopyrightText: 2025 Ignaz "Ian" Kraft
 # SPDX-FileCopyrightText: 2025 K-Dynamic
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 - type: entity
@@ -196,7 +197,7 @@
 #armor-piercing ammo
 - type: entity
   id: Magazine45_magnumPistolSteelAP
-  name: pistol magazine (.45 magnum armor-piercing steel core)
+  name: pistol magazine (.45 magnum AP steel core)
   parent: BaseMagazine45_magnum
   components:
   - type: BallisticAmmoProvider
@@ -211,7 +212,7 @@
 
 - type: entity
   id: Magazine45_magnumPistolPlasteelAP
-  name: pistol magazine (.45 magnum armor-piercing plastitanium core)
+  name: pistol magazine (.45 magnum AP plasteel core)
   parent: BaseMagazine45_magnum
   components:
   - type: BallisticAmmoProvider
@@ -226,7 +227,7 @@
 
 - type: entity
   id: Magazine45_magnumPistolSynthAP
-  name: pistol magazine (.45 magnum armor-piercing synthalloy core)
+  name: pistol magazine (.45 magnum AP synthalloy core)
   parent: BaseMagazine45_magnum
   components:
   - type: BallisticAmmoProvider
@@ -493,7 +494,7 @@
 #armor-piercing ammo
 - type: entity
   id: Magazine45_magnumSubMachineGunSteelAP
-  name: SMG magazine (.45 magnum armor-piercing steel core)
+  name: SMG magazine (.45 magnum AP steel core)
   parent: BaseMagazine45_magnumSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
@@ -508,7 +509,7 @@
 
 - type: entity
   id: Magazine45_magnumSubMachineGunPlasteelAP
-  name: SMG magazine (.45 magnum armor-piercing plastitanium core)
+  name: SMG magazine (.45 magnum AP plasteel core)
   parent: BaseMagazine45_magnumSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
@@ -523,7 +524,7 @@
 
 - type: entity
   id: Magazine45_magnumSubMachineGunSynthAP
-  name: SMG magazine (.45 magnum armor-piercing synthalloy core)
+  name: SMG magazine (.45 magnum AP synthalloy core)
   parent: BaseMagazine45_magnumSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider

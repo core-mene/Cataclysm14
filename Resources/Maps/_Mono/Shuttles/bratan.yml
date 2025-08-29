@@ -10,7 +10,7 @@
 # SPDX-FileCopyrightText: 2024 ErhardSteinhauer
 # SPDX-FileCopyrightText: 2024 TsjipTsjip
 # SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
 # SPDX-FileCopyrightText: 2025 Rubeebeebee
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 blackknight954
@@ -25,8 +25,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/21/2025 03:43:22
-  entityCount: 2397
+  time: 08/26/2025 16:14:34
+  entityCount: 2411
 maps: []
 grids:
 - 1
@@ -83,7 +83,7 @@ entities:
       name: grid
     - type: Transform
       pos: -1.53125,0.203125
-      parent: invalid
+      
     - type: MapGrid
       chunks:
         0,0:
@@ -3188,8 +3188,9 @@ entities:
   - uid: 1258
     components:
     - type: Transform
-      pos: 6.6525407,8.693879
-      parent: 1
+      parent: 208
+    - type: Physics
+      canCollide: False
 - proto: BenchSofaCorpCorner
   entities:
   - uid: 323
@@ -5156,6 +5157,66 @@ entities:
     components:
     - type: Transform
       pos: 16.5,12.5
+      parent: 1
+  - uid: 1880
+    components:
+    - type: Transform
+      pos: -18.5,5.5
+      parent: 1
+  - uid: 1925
+    components:
+    - type: Transform
+      pos: -18.5,5.5
+      parent: 1
+  - uid: 1926
+    components:
+    - type: Transform
+      pos: -19.5,5.5
+      parent: 1
+  - uid: 1936
+    components:
+    - type: Transform
+      pos: -20.5,5.5
+      parent: 1
+  - uid: 1937
+    components:
+    - type: Transform
+      pos: 19.5,5.5
+      parent: 1
+  - uid: 1939
+    components:
+    - type: Transform
+      pos: 20.5,5.5
+      parent: 1
+  - uid: 1940
+    components:
+    - type: Transform
+      pos: 21.5,5.5
+      parent: 1
+  - uid: 1941
+    components:
+    - type: Transform
+      pos: 21.5,5.5
+      parent: 1
+  - uid: 1983
+    components:
+    - type: Transform
+      pos: 22.5,5.5
+      parent: 1
+  - uid: 1997
+    components:
+    - type: Transform
+      pos: -21.5,5.5
+      parent: 1
+  - uid: 2002
+    components:
+    - type: Transform
+      pos: -15.5,4.5
+      parent: 1
+  - uid: 2045
+    components:
+    - type: Transform
+      pos: -15.5,3.5
       parent: 1
   - uid: 2352
     components:
@@ -7607,6 +7668,15 @@ entities:
     - type: Transform
       pos: 5.5,15.5
       parent: 1
+- proto: ChemistryHotplate
+  entities:
+  - uid: 2055
+    components:
+    - type: Transform
+      pos: 6.5,8.5
+      parent: 1
+    - type: PlaceableSurface
+      isPlaceable: False
 - proto: ChemMaster
   entities:
   - uid: 1109
@@ -7956,18 +8026,6 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-    - type: DeviceLinkSource
-      linkedPorts: {}
-      lastSignals: {}
-      ports:
-      - device-button-1
-      - device-button-2
-      - device-button-3
-      - device-button-4
-      - device-button-5
-      - device-button-6
-      - device-button-7
-      - device-button-8
 - proto: ComputerSolarControl
   entities:
   - uid: 1148
@@ -10993,6 +11051,7 @@ entities:
       pos: 18.5,5.5
       parent: 1
     - type: DeviceNetwork
+     
       deviceLists:
       - 11
     - type: AtmosPipeColor
@@ -11051,6 +11110,7 @@ entities:
       pos: 18.5,4.5
       parent: 1
     - type: DeviceNetwork
+      
       deviceLists:
       - 11
     - type: AtmosPipeColor
@@ -11918,6 +11978,24 @@ entities:
     - type: Transform
       pos: 6.5,9.5
       parent: 1
+    - type: ContainerContainer
+      containers:
+        beakerSlot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: 1258
+        inputContainer: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        machine_board: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        machine_parts: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
 - proto: KitchenSpike
   entities:
   - uid: 1684
@@ -11930,7 +12008,7 @@ entities:
   - uid: 235
     components:
     - type: Transform
-      pos: 6.3869157,8.772004
+      pos: 6.3070755,9.407352
       parent: 1
 - proto: LockerBoozeFilled
   entities:
@@ -12141,6 +12219,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: -6.2762017,6.6497717
       parent: 1
+- proto: MaterialReclaimer
+  entities:
+  - uid: 2054
+    components:
+    - type: Transform
+      pos: 1.5,8.5
+      parent: 1
 - proto: MicrophoneInstrument
   entities:
   - uid: 1703
@@ -12216,12 +12301,6 @@ entities:
     - type: Transform
       pos: 0.5,1.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
 - proto: OrganHumanKidneys
   entities:
   - uid: 1172
@@ -12276,7 +12355,7 @@ entities:
         Emergency Generator Terminal
 
 
-        Anchor a generator on this terminal in order to supplement the power grid in case of catastrophic damage to the AME/Solar Panels.
+        Anchor a generator on this terminal in order to supplement the power grid in case of catastrophic damage to the AME/Solar Panels. 
 
 
         (GENERATOR NOT INCLUDED)
@@ -15080,7 +15159,7 @@ entities:
       pos: -2.5,-13.5
       parent: 1
     - type: Advertise
-      nextAdvertisementTime: 1102.2660654
+      nextAdvertisementTime: 1102.2660653
 - proto: VendingMachineBooze
   entities:
   - uid: 2136
@@ -16546,7 +16625,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -18462.035
+      secondsUntilStateChange: -20188.506
       state: Opening
     - type: Airlock
       autoClose: False

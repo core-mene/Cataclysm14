@@ -58,9 +58,9 @@
     contents:
     - id: WeaponPistolCobra
       amount: 1
-    - id: Magazine6.35x40mmCaselessPistol
+    - id: Magazine635x40mmCaselessPistol
       amount: 1
-    - id: AmmoBox6.35x40mmCaseless
+    - id: AmmoBox635x40mmCaseless
       amount: 1
 
 - type: entity
@@ -107,7 +107,7 @@
     contents:
     - id: WeaponRevolverArgentiExpedition
       amount: 1
-    - id: SpeedLoader5.56x45mmFMJ
+    - id: SpeedLoader556x45mmFMJ
       amount: 2
 
 - type: entity
@@ -279,9 +279,9 @@
     contents:
     - id: WeaponSubMachineGunWt550Expedition
       amount: 1
-    - id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+    - id: Magazine46x30mmSubMachineGunTopMountedFMJ
       amount: 2
-    - id: AmmoBox4.6x30mmFMJ
+    - id: AmmoBox46x30mmFMJ
       amount: 1
 
 - type: entity
@@ -293,9 +293,9 @@
     contents:
     - id: WeaponSubMachineGunAtreidesExpedition
       amount: 1
-    - id: Magazine5.7x28mmSubMachineGunFMJ
+    - id: Magazine57x28mmSubMachineGunFMJ
       amount: 2
-    - id: AmmoBox5.7x28mmFMJ
+    - id: AmmoBox57x28mmFMJ
       amount: 2
 
 - type: entity
@@ -350,7 +350,7 @@
     contents:
     - id: WeaponRifleGestio
       amount: 1
-    - id: Magazine7.62x39mmLowCapacityFMJ
+    - id: Magazine762x39mmLowCapacityFMJ
       amount: 3
 
 - type: entity
@@ -386,7 +386,7 @@
     contents:
     - id: WeaponRifleAk
       amount: 1
-    - id: Magazine7.62x39mmFMJ
+    - id: Magazine762x39mmFMJ
       amount: 2
 
 - type: entity
@@ -398,7 +398,7 @@
     contents:
     - id: WeaponRifleM90
       amount: 1
-    - id: Magazine7.62x51mmFMJ
+    - id: Magazine762x51mmFMJ
       amount: 2
 
 - type: entity
@@ -410,7 +410,7 @@
     contents:
     - id: WeaponRifleSVS
       amount: 1
-    - id: Magazine7.62x54mmRFMJ
+    - id: Magazine762x54mmRFMJ
       amount: 2
 
 - type: entity
@@ -422,7 +422,7 @@
     contents:
     - id: WeaponRifleVulcanExpedition
       amount: 1
-    - id: Magazine7.62x51mmFMJ
+    - id: Magazine762x51mmFMJ
       amount: 2
 
 - type: entity
@@ -434,7 +434,7 @@
     contents:
     - id: WeaponRifleJackdaw
       amount: 1
-    - id: Magazine6.35x40mmCaseless
+    - id: Magazine635x40mmCaseless
       amount: 2
 
 # Energy
@@ -520,7 +520,7 @@
     contents:
     - id: WeaponSniperMosinExpedition
       amount: 1
-    - id: AmmoBox7.62x39mmFMJ
+    - id: AmmoBox762x39mmFMJ
       amount: 2
 
 - type: entity
@@ -532,7 +532,7 @@
     contents:
     - id: WeaponSniperHristov
       amount: 1
-    - id: AmmoBox14.5x114mm
+    - id: AmmoBox145x114mm
       amount: 2
 
 - type: entity
@@ -556,7 +556,7 @@
     contents:
     - id: WeaponMusketExpedition
       amount: 1
-    - id: AmmoBox14.5x114mm
+    - id: AmmoBox145x114mm
       amount: 2
 
 - type: entity
@@ -568,7 +568,7 @@
     contents:
     - id: WeaponSniperCeremonialExpedition
       amount: 1
-    - id: AmmoBox7.62x39mmFMJ
+    - id: AmmoBox762x39mmFMJ
       amount: 2
 
 # Launchers
@@ -606,7 +606,7 @@
     contents:
     - id: WeaponLightMachineGunL6
       amount: 1
-    - id: Magazine7.62x39mmBox
+    - id: Magazine762x39mmBox
       amount: 2
 
 # Melee
@@ -725,7 +725,7 @@
       amount: 4
 
 # Ammo
-## 5.56x45mm
+## 556x45mm
 - type: entity
   parent:
   - WeaponCaseShortAmmo
@@ -768,7 +768,7 @@
   - StorageFillAmmoBoxUranium20
   id: WeaponCaseShortAmmoBoxUranium20
 
-## 7.62x39mm
+## 762x39mm
 - type: entity
   parent:
   - WeaponCaseShortAmmo
@@ -842,7 +842,7 @@
   - StorageFillAmmoBoxEmp35
   id: WeaponCaseShortAmmoBoxEmp35
 
-## 6.35x40mm Caseless
+## 635x40mm Caseless
 - type: entity
   parent:
   - WeaponCaseShortAmmo

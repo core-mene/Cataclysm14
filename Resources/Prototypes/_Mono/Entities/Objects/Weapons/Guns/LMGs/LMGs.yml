@@ -50,11 +50,11 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge7.62x39mmFMJ
+        startingItem: Cartridge762x39mmFMJ
         priority: 1
         whitelist:
           tags:
-            - Cartridge7.62x39mmFMJ
+            - Cartridge762x39mmFMJ
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -184,22 +184,22 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine7.62x39mmBox
+        startingItem: Magazine762x39mmBox
         insertSound: /Audio/Weapons/Guns/MagIn/sfrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/hpistol_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - Magazine7.62x39mmFMJ
-          - Magazine7.62x39mmBox
+          - Magazine762x39mmFMJ
+          - Magazine762x39mmBox
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge7.62x39mmFMJ
+        startingItem: Cartridge762x39mmFMJ
         priority: 1
         whitelist:
           tags:
-          - Cartridge7.62x39mmFMJ
+          - Cartridge762x39mmFMJ
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -313,7 +313,7 @@
   name: VFD PSW "Ratel" (7.62x51mm)
   parent: BaseWeaponRifle
   id: WeaponLMGRatel
-  description: The precision support weapon chambered in 7.62x51mm and fits simple ammo box and all kind of magazines. Based on the Vulcan and made with higher quality materials as well as a mounted precision scope. A label on the side that seems to have been tampered with reads "FOR MILI-CENARY USE ONLY".
+  description: The precision support weapon chambered in 762x51mm and fits simple ammo box and all kind of magazines. Based on the Vulcan and made with higher quality materials as well as a mounted precision scope. A label on the side that seems to have been tampered with reads "FOR MILI-CENARY USE ONLY".
   components:
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/LMGs/ratel/Ratel-icon.rsi
@@ -350,23 +350,23 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: AmmoBox7.62x51mmFMJ
+        startingItem: AmmoBox762x51mmFMJ
         insertSound: /Audio/Weapons/Guns/MagIn/lmg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/lmg_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - Magazine7.62x51mmBoxSmall
-          - Magazine7.62x51mmFMJ
-          - Magazine7.62x51mmLowCapacityFMJ
+          - Magazine762x51mmBoxSmall
+          - Magazine762x51mmFMJ
+          - Magazine762x51mmLowCapacityFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge7.62x51mmFMJ
+        startingItem: Cartridge762x51mmFMJ
         priority: 1
         whitelist:
           tags:
-          - Cartridge7.62x51mmFMJ
+          - Cartridge762x51mmFMJ
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

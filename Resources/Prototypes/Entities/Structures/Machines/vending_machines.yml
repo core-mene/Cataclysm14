@@ -78,6 +78,7 @@
 # SPDX-FileCopyrightText: 2024 erohrs2
 # SPDX-FileCopyrightText: 2024 strO0pwafel
 # SPDX-FileCopyrightText: 2025 Alpaccalypse
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
@@ -207,7 +208,7 @@
     - RobotTalk
   # Frontier: vending machine modifications
   - type: MarketModifier
-    mod: 8 # 10->8 Mono
+    mod: 10
   - type: PotentialDeadDrop
     hintText: dead-drop-hint-vendor
   - type: VendingMachine

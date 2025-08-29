@@ -186,7 +186,7 @@
 #armor-piercing ammo
 - type: entity
   id: Magazine45_ACPPistolSteelAP
-  name: pistol magazine (.45 ACP armor-piercing steel core)
+  name: pistol magazine (.45 ACP AP steel core)
   parent: BaseMagazine45_ACP
   components:
   - type: BallisticAmmoProvider
@@ -201,7 +201,7 @@
 
 - type: entity
   id: Magazine45_ACPPistolPlasteelAP
-  name: pistol magazine (.45 ACP armor-piercing plastitanium core)
+  name: pistol magazine (.45 ACP AP plasteel core)
   parent: BaseMagazine45_ACP
   components:
   - type: BallisticAmmoProvider
@@ -216,7 +216,7 @@
 
 - type: entity
   id: Magazine45_ACPPistolSynthAP
-  name: pistol magazine (.45 ACP armor-piercing synthalloy core)
+  name: pistol magazine (.45 ACP AP synthalloy core)
   parent: BaseMagazine45_ACP
   components:
   - type: BallisticAmmoProvider
@@ -499,7 +499,7 @@
 #armor-piercing ammo
 - type: entity
   id: Magazine45_ACPSubMachineGunSteelAP
-  name: SMG magazine (.45 ACP armor-piercing steel core)
+  name: SMG magazine (.45 ACP AP steel core)
   parent: BaseMagazine45_ACPSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
@@ -514,7 +514,7 @@
 
 - type: entity
   id: Magazine45_ACPSubMachineGunPlasteelAP
-  name: SMG magazine (.45 ACP armor-piercing plastitanium core)
+  name: SMG magazine (.45 ACP AP plasteel core)
   parent: BaseMagazine45_ACPSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
@@ -529,7 +529,7 @@
 
 - type: entity
   id: Magazine45_ACPSubMachineGunSynthAP
-  name: SMG magazine (.45 ACP armor-piercing synthalloy core)
+  name: SMG magazine (.45 ACP AP synthalloy core)
   parent: BaseMagazine45_ACPSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider

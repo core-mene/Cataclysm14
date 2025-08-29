@@ -3,10 +3,10 @@
 - type: technology
   id: BountyHunting
   name: research-technology-bounty-hunting
-  entityIcon: WeaponShotgunKammerer
+  entityIcon: ClothingOuterCoatBHTrench
   discipline: Arsenal
   tier: 1
-  cost: 15000
+  cost: 10000
   recipeUnlocks:
   - Stunbaton
   - BolaNF
@@ -30,7 +30,7 @@
   entityIcon: ClothingShoesBootsMagSecurity
   discipline: Experimental
   tier: 1
-  cost: 25000
+  cost: 10000
   recipeUnlocks:
   - ClothingShoesBootsMagSecurity
   - ClothingShoesBootsMagMercenary
@@ -45,7 +45,7 @@
   entityIcon: ClothingOuterHardsuitPrivateSecurity
   discipline: Arsenal
   tier: 2
-  cost: 35000
+  cost: 15000
   recipeUnlocks:
   - ClothingOuterHardsuitMercenary
   - ClothingOuterHardsuitPrivateSecurity
@@ -60,7 +60,7 @@
   entityIcon: Katana
   discipline: Arsenal
   tier: 2
-  cost: 20000
+  cost: 10000
   recipeUnlocks:
   - KatanaNF
   - KukriKnifeNF
@@ -84,7 +84,7 @@
   - ClothingOuterCoatBomberRandomized
   technologyPrerequisites:
   - BountyHunting
-  position: 3, 1
+  position: 4, 2
 
 # Tier 3
 
@@ -94,7 +94,7 @@
   entityIcon: ClothingOuterHardsuitScaf
   discipline: Arsenal
   tier: 3
-  cost: 50000
+  cost: 25000
   recipeUnlocks:
   - ClothingOuterHardsuitScaf
   - BlueprintClothingOuterHardsuitScaf

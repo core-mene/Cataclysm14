@@ -1343,7 +1343,7 @@ namespace Content.IntegrationTests.Tests.Power
                 receiver.Load = 1; //arbitrary small amount of power
             });
 
-            server.RunTicks(10); //let run a tick for ApcNet to process power - mono increase
+            server.RunTicks(15); //let run a tick for ApcNet to process power - mono increase
 
             await server.WaitAssertion(() =>
             {

@@ -28,6 +28,7 @@
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Southbridge
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 dustylens
 # SPDX-FileCopyrightText: 2025 mikus
 # SPDX-FileCopyrightText: 2025 starch
@@ -42,7 +43,7 @@
   entityIcon: hydroponicsTray
   discipline: CivilianServices
   tier: 1
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - BorgModuleGardening
   - BorgModuleHarvesting
@@ -63,7 +64,7 @@
   entityIcon: MechHamtrBattery
   discipline: CivilianServices
   tier: 1
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - HamtrHarness
   - HamtrLArm
@@ -84,7 +85,7 @@
   entityIcon: SurveillanceCameraAssembly
   discipline: CivilianServices
   tier: 1
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - SurveillanceCameraRouterCircuitboard
   #  - SurveillanceCameraWirelessRouterCircuitboard # Frontier - Removal of range limits made it useless to build
@@ -104,7 +105,7 @@
   entityIcon: ComputerTelevision
   discipline: CivilianServices
   tier: 1
-  cost: 15000
+  cost: 5000
   recipeUnlocks:
   - ComputerTelevisionCircuitboard
   - SynthesizerInstrument
@@ -121,7 +122,7 @@
   entityIcon: BorgChassisJanitor
   discipline: CivilianServices
   tier: 1
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - BorgModuleAdvancedCleaning
   technologyPrerequisites:
@@ -134,7 +135,7 @@
   entityIcon: FatExtractor
   discipline: CivilianServices
   tier: 1
-  cost: 17500
+  cost: 7500
   recipeUnlocks:
   - FatExtractorMachineCircuitboard
   - BiogeneratorMachineCircuitboard
@@ -188,7 +189,7 @@
   entityIcon: EnergyScalpel
   discipline: CivilianServices
   tier: 2
-  cost: 25000
+  cost: 20000
   recipeUnlocks:
   - BorgModuleAdvancedTreatment
   - BorgModuleDefibrillator
@@ -232,7 +233,7 @@
   entityIcon: AdvMopItem
   discipline: CivilianServices
   tier: 2
-  cost: 20000
+  cost: 15000
   recipeUnlocks:
   - AdvMopItem
   - MegaSprayBottle
@@ -271,7 +272,7 @@
   entityIcon: WeaponSprayNozzle
   discipline: CivilianServices
   tier: 2
-  cost: 15000
+  cost: 10000
   recipeUnlocks:
   - WeaponSprayNozzle
   - ClothingBackpackWaterTank
@@ -312,7 +313,7 @@
   entityIcon: BluespaceBeaker
   discipline: CivilianServices
   tier: 3
-  cost: 45000
+  cost: 35000
   recipeUnlocks:
   - BluespaceBeaker
   - SyringeBluespace

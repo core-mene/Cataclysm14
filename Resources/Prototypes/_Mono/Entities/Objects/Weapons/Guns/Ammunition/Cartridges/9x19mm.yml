@@ -168,7 +168,7 @@
 #armor-piercing:
 - type: entity
   id: Cartridge9x19mmSteelAP
-  name: cartridge (9x19mm armor-piercing steel core)
+  name: cartridge (9x19mm AP steel core)
   parent: BaseCartridge9x19mm
   components:
   - type: CartridgeAmmo
@@ -182,7 +182,7 @@
 
 - type: entity
   id: Cartridge9x19mmPlasteelAP
-  name: cartridge (9x19mm armor-piercing plastitanium core)
+  name: cartridge (9x19mm AP plasteel core)
   parent: BaseCartridge9x19mm
   components:
   - type: CartridgeAmmo
@@ -197,7 +197,7 @@
 
 - type: entity
   id: Cartridge9x19mmSynthAP
-  name: cartridge (9x19mm armor-piercing synthalloy core)
+  name: cartridge (9x19mm AP synthalloy core)
   parent: BaseCartridge9x19mm
   components:
   - type: CartridgeAmmo

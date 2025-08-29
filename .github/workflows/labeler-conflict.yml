@@ -1,3 +1,14 @@
+# SPDX-FileCopyrightText: 2022 Moony
+# SPDX-FileCopyrightText: 2022 ike709
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2022 wrexbe
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 SlamBamActionman
+# SPDX-FileCopyrightText: 2024 TsjipTsjip
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 name: Check Merge Conflicts
 
 on:
@@ -10,7 +21,7 @@ on:
 
 jobs:
   Label:
-    if: ( github.event.pull_request.draft == false ) && ( github.actor != 'PJBot' ) && ( github.actor != 'FrontierATC' ) # Frontier
+    if: ( github.event.pull_request.draft == false )
     runs-on: ubuntu-latest
     steps:
       - name: Check for Merge Conflicts

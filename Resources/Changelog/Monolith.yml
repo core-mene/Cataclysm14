@@ -6355,7 +6355,7 @@ Entries:
     - type: Add
       message: Ported original Goob stealthsuit.
     - type: Tweak
-      message: Changed M-90 and M-90GL to 7.62x51mm from 5.56x45mm
+      message: Changed M-90 and M-90GL to 762x51mm from 556x45mm
     - type: Tweak
       message: Replaced AK-502 recipe for Rogues with M-90.
     - type: Tweak
@@ -8516,8 +8516,8 @@ Entries:
       message: Drozd, Lecter, and Annie now use Shiptest SFX/sprites.
     - type: Add
       message: >-
-        45 ACP SMG mags, 5.56x45mm rifle mags, and 7.62x51mm mags now use
-        Shiptest sprites.
+        45 ACP SMG mags, 556x45mm rifle mags, and 762x51mm mags now use Shiptest
+        sprites.
     - type: Fix
       message: Fixed TSF T1 weapon research using Wizden Lecter sprite instead of Mono.
     - type: Tweak
@@ -11228,7 +11228,7 @@ Entries:
     - type: Add
       message: >-
         (Starch) Added MK-290 turret to TSF uplink, feeds from
-        5.56x45mm/6.8x52mm/7.62x39mm magazines.
+        556x45mm/6.8x52mm/7.62x39mm/ magazines.
     - type: Add
       message: 'Research Tech Tree!:'
     - type: Add
@@ -11309,3 +11309,220 @@ Entries:
   id: 1257
   time: '2025-08-26T01:10:01.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2042
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Removed slop guns from exped loot (like Novalites and Svallins), moved
+        some weapons to be less rare.
+    - type: Tweak
+      message: >-
+        Made the merc guns less unbearable to use (increased accuracy, but
+        implemented the recoil control shit)
+    - type: Tweak
+      message: Readded the merc semi-auto vulcan to the libvend for 27500.
+  id: 1258
+  time: '2025-08-26T10:39:10.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2061
+- author: Ilya246
+  changes:
+    - type: Add
+      message: Borgs can now toggle radar signature on themselves via rightclick.
+  id: 1259
+  time: '2025-08-26T10:40:20.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2060
+- author: Ilya246
+  changes:
+    - type: Add
+      message: You can now swipe ID cards on borgs to grant them the card's accesses.
+  id: 1260
+  time: '2025-08-26T10:41:51.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2058
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        No longer are the prices of the special faction guns in civ loadout
+        balanced around the rich man (basically like halved all of them).
+  id: 1261
+  time: '2025-08-26T13:35:08.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2062
+- author: Danchi299
+  changes:
+    - type: Tweak
+      message: >-
+        All of PMC Liberation Station weapons are once again accessable to
+        Mercenaries from Loadout.
+    - type: Add
+      message: >-
+        Civilians now have Agrenti, Makeshift pistol, and Svalinn pistols as a
+        weapon option in Loadout.
+    - type: Add
+      message: >-
+        PMC Liberation Station now has MK58, Pollocks, Throwing Knifes, and
+        Laser Pistols in stock.
+    - type: Tweak
+      message: Mercenaries now start with Pollock instead of MK32.
+  id: 1262
+  time: '2025-08-26T15:10:25.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2064
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: >-
+        Ship prices drastically changed. Plastitanium wall prices increased
+        heavily from "generic wall"
+  id: 1263
+  time: '2025-08-26T15:47:42.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2054
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: Fixed climbing and other drag-and-drop interactions.
+  id: 1264
+  time: '2025-08-26T19:22:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2069
+- author: core-mene
+  changes:
+    - type: Add
+      message: >-
+        mercenary R&D server available at exped lodge flatpackvend, as well as
+        console
+    - type: Tweak
+      message: reduced mats price of merc weapons
+    - type: Add
+      message: added the vector, firestarter and WT550 to the merc tech
+    - type: Tweak
+      message: steel AP and hollow-point are now roundstart ammo
+    - type: Add
+      message: bluespace drive at exped flatpackvend
+    - type: Add
+      message: adds the HWM Firestarter, 45 ACP heavy SMG using old drozd sprite
+    - type: Tweak
+      message: kammerer made semi-automatic again
+    - type: Tweak
+      message: >-
+        diminished the researcch cost and requirements of a lot of techs, no
+        more pain
+  id: 1265
+  time: '2025-08-26T19:49:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2063
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Vespera and Tovek acceleration increased. ASM, Vespera, Tovek detection
+        range increased.
+  id: 1266
+  time: '2025-08-26T22:09:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2072
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Exped Lounge is now Titlecard (invincible).
+  id: 1267
+  time: '2025-08-26T22:48:21.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2076
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Bawk
+  id: 1268
+  time: '2025-08-27T01:04:49.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2083
+- author: Rubeebeebee
+  changes:
+    - type: Tweak
+      message: 'Tweaked the price of the Leaf from 72k to 64k '
+  id: 1269
+  time: '2025-08-27T12:29:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2068
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: Wrecks should be common again.
+  id: 1270
+  time: '2025-08-27T12:31:10.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2085
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: You can now scan your ID on derelict borgs too.
+  id: 1271
+  time: '2025-08-27T12:32:06.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2086
+- author: Rubeebeebee
+  changes:
+    - type: Add
+      message: >-
+        Added a material reclaimer and a hotplate to the Bratan. Also fixed the
+        outer docking airlocks not being powered. 
+  id: 1272
+  time: '2025-08-27T13:08:09.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2067
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: >-
+        Diagonal walls, tables, etc, all items will always properly trigger ship
+        projectile explosions on collision. Projectiles probably will explode on
+        shields too.
+  id: 1273
+  time: '2025-08-27T17:34:34.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2090
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Ported Hullrot's systems for cargo trading (with different trade goods
+        of course). Various goods can be bought at TM, cargo depots, and Baikal,
+        and can be sold at TM, cargo depots, Baikal, Halcyon, and ASR Jupiter.
+    - type: Tweak
+      message: Buffed cargo depots to have 1.25x sell rate.
+  id: 1274
+  time: '2025-08-27T23:16:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2094
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Cargo crate instruction papers now despawn after 20 minutes.
+    - type: Fix
+      message: Fixed insurgency hideout not having a crate chute.
+    - type: Fix
+      message: >-
+        Fixed Jupiter spawnroom being commander locked, having no
+        defibs/extinguishers/ATMs, and fixed Jupiter crate chute spawning in a
+        vending machine.
+  id: 1275
+  time: '2025-08-28T00:35:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2095
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: GLASK
+  id: 1276
+  time: '2025-08-28T00:40:38.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2096
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: I am a parrot. CL fix also
+  id: 1277
+  time: '2025-08-28T01:09:02.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2097
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: goobers
+  id: 1278
+  time: '2025-08-28T01:41:36.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2098
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: >-
+        Large thrusters now provide more acceleration and provide bonus max
+        speed.
+  id: 1279
+  time: '2025-08-28T11:36:13.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2091

@@ -9,7 +9,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  name: SKR-WS MLA-73 (6.35x40mm caseless)
+  name: SKR-WS MLA-73 (635x40mm caseless)
   parent: [BaseWeaponSubMachineGun, BaseGunWieldable, BaseC2Contraband] # Frontier: added BaseC2Contraband
   id: WeaponSubMachineGunMla73
   description: A reliable PDW design, commonly issued to pilots and AFV crewmen. This one has been modified with an integral suppressor. Legends around this weapons say it's a Corporate-Era schematic that's been built by The Ashen Republic.
@@ -39,21 +39,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine6.35x40mmCaseless
+        startingItem: Magazine635x40mmCaseless
         insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - Magazine6.35x40mmCaseless
+          - Magazine635x40mmCaseless
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge6.35x40mmCaseless
+        startingItem: Cartridge635x40mmCaseless
         priority: 1
         whitelist:
           tags:
-          - Cartridge6.35x40mmCaseless
+          - Cartridge635x40mmCaseless
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -75,7 +75,7 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
     minAngle: -19
-    maxAngle: -32
+    maxAngle: -34
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
@@ -84,9 +84,9 @@
   - type: Gun
     minAngle: 22
     maxAngle: 40
-    fireRate: 4
-    angleIncrease: 7
-    angleDecay: 15
+    fireRate: 6
+    angleIncrease: 21
+    angleDecay: 14
     selectedMode: FullAuto
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/smg.ogg
@@ -174,6 +174,7 @@
   - type: LaserPointer
     targetedColor: "#FF0000"
     defaultColor: "#FF0000"
+  - type: Appearance
 
 - type: entity
   name: LWC Vector (.45 ACP)
@@ -230,6 +231,7 @@
   - type: LaserPointer
     targetedColor: "#FF0000"
     defaultColor: "#FF0000"
+  - type: Appearance
 
 # merc guns
 
@@ -253,8 +255,10 @@
     sprite: _Mono/Objects/Weapons/Guns/SMGs/knallstock.rsi
   - type: Gun
     fireRate: 6
-    minAngle: 21
-    maxAngle: 32
+    minAngle: 19
+    maxAngle: 21
+    angleIncrease: 16
+    angleDecay: 10
     selectedMode: Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
@@ -303,13 +307,64 @@
   description: A modern take on the classic design used by mobsters throughout space and time. This one is an offbrand mercenary version of the typewritter nicknamed the "keyboard", its barrel heat rapidly which reduce accuracy. Uses .45 ACP ammo.
   components:
   - type: GunWieldBonus
-    minAngle: -20
-    maxAngle: -30
+    minAngle: -27
+    maxAngle: -45
   - type: Gun
     minAngle: 30
     maxAngle: 55
-    angleIncrease: 4
-    angleDecay: 10
-    fireRate: 5
+    angleIncrease: 18
+    angleDecay: 4
+    fireRate: 7
   - type: StaticPrice
     price: 500
+
+#old drozd sprite SMG
+- type: entity
+  name: HWM Firestarter (.45 ACP)
+  parent: [BaseWeaponSubMachineGun, BaseGunWieldable, BaseC2Contraband] # Frontier: added BaseC2Contraband
+  id: WeaponSubMachineGunFirestarter
+  description: An excellent fully automatic SMG. Uses .45 ACP ammo.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/SMGs/drozd.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: GunWieldBonus
+    minAngle: -5
+    maxAngle: -5
+  - type: Clothing
+    sprite: _NF/Objects/Weapons/Guns/SMGs/drozd.rsi
+  - type: Gun
+    fireRate: 6
+    selectedMode: FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
+    availableModes:
+    - SemiAuto
+    - FullAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine45_ACPSubMachineGunFMJ
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - Magazine45_ACPSubMachineGunFMJ
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge45_ACPFMJ
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge45_ACPFMJ
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

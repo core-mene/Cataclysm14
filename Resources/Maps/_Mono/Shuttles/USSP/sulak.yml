@@ -6,11 +6,13 @@
 # SPDX-FileCopyrightText: 2024 TsjipTsjip
 # SPDX-FileCopyrightText: 2024 checkraze
 # SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
 # SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
 # SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -828,7 +830,7 @@ entities:
     - type: Transform
       pos: 5.5,2.5
       parent: 1
-- proto: AmmoBox7.62x39mmFMJ
+- proto: AmmoBox762x39mmFMJ
   entities:
   - uid: 35
     components:
@@ -3707,7 +3709,7 @@ entities:
     - type: Transform
       pos: -2.5,7.5
       parent: 1
-- proto: Magazine7.62x39mmFMJ
+- proto: Magazine762x39mmFMJ
   entities:
   - uid: 487
     components:

@@ -1,9 +1,14 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: vessel
   id: Ample
   parent: BaseVessel
   name: SKR Ample
   description: A very light mining shuttle equipped with a PTK-1500e
-  price: 5750
+  price: 6250
   category: Micro
   group: Custom
   mapchecker_group_override: Shipyard  # Treat this as a Shipyard vessel for mapchecker purposes

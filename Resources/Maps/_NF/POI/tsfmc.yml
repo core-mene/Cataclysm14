@@ -3527,7 +3527,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: BoxMagazine5.56x45mmFMJ
+- proto: BoxMagazine556x45mmFMJ
   entities:
   - uid: 230
     components:
@@ -15981,7 +15981,7 @@ entities:
     - type: Transform
       pos: -27.5,7.5
       parent: 1
-- proto: AmmoBox7.62x39mmPractice
+- proto: AmmoBox762x39mmPractice
   entities:
   - uid: 2263
     components:
@@ -16010,7 +16010,7 @@ entities:
     - type: Transform
       pos: -14.139512,16.44655
       parent: 1
-- proto: AmmoBox5.56x45mmPractice
+- proto: AmmoBox556x45mmPractice
   entities:
   - uid: 2268
     components:
