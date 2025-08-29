@@ -52,7 +52,7 @@
 - type: entity
   id: ShipAutopulserPlasmaProjectile
   name: plasma projectile
-  parent: BaseBulletTrigger
+  parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
