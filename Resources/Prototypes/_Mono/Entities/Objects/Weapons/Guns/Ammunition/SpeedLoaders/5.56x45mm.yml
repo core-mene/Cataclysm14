@@ -1,6 +1,6 @@
 - type: entity
   id: BaseSpeedLoader556x45mm
-  name: "speed loader 5.56x45mm FMJ)"
+  name: "speed loader (5.56x45mm FMJ)"
   parent: BaseItem
   abstract: true
   components:
@@ -21,7 +21,7 @@
 
 - type: entity
   id: SpeedLoader556x45mmFMJ
-  name: "speed loader 5.56x45mm FMJ)"
+  name: "speed loader (5.56x45mm FMJ)"
   parent: BaseSpeedLoader556x45mm
   components:
   - type: BallisticAmmoProvider
@@ -44,7 +44,7 @@
 
 - type: entity
   id: SpeedLoader556x45mmEmpty
-  name: "speed loader 5.56x45mm any)"
+  name: "speed loader (5.56x45mm any)"
   parent: SpeedLoader556x45mmFMJ
   components:
   - type: BallisticAmmoProvider
@@ -62,7 +62,7 @@
 
 - type: entity
   id: SpeedLoader556x45mmIncendiary
-  name: "speed loader 5.56x45mm incendiary)"
+  name: "speed loader (5.56x45mm incendiary)"
   parent: BaseSpeedLoader556x45mm
   components:
   - type: BallisticAmmoProvider
@@ -82,7 +82,7 @@
 
 - type: entity
   id: SpeedLoader556x45mmPractice
-  name: "speed loader 5.56x45mm practice)"
+  name: "speed loader (5.56x45mm practice)"
   parent: BaseSpeedLoader556x45mm
   components:
   - type: BallisticAmmoProvider
@@ -105,7 +105,7 @@
 
 - type: entity
   id: SpeedLoader556x45mmUranium
-  name: "speed loader 5.56x45mm uranium)"
+  name: "speed loader (5.56x45mm uranium)"
   parent: BaseSpeedLoader556x45mm
   components:
   - type: BallisticAmmoProvider
@@ -128,7 +128,7 @@
 
 - type: entity
   id: SpeedLoader556x45mmRubber
-  name: "speed loader 5.56x45mm rubber)"
+  name: "speed loader (5.56x45mm rubber)"
   parent: BaseSpeedLoader556x45mm
   components:
   - type: BallisticAmmoProvider
