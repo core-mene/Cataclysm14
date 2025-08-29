@@ -192,7 +192,7 @@ public sealed partial class GunSystem : SharedGunSystem
 
                     // Something like ballistic might want to leave it in the container still
                     if (!cartridge.DeleteOnSpawn && !Containers.IsEntityInContainer(ent!.Value))
-                        EjectCartridge(ent.Value, angle, false); #Mono: false: prevents shotguns from overlapping ejection sound
+                        EjectCartridge(ent.Value, angle, false); //Mono: false: prevents shotguns from overlapping ejection sound
 
                     Dirty(ent!.Value, cartridge);
                     break;
