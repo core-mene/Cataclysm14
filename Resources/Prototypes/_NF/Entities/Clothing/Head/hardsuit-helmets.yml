@@ -189,9 +189,16 @@
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
-  - type: FlashImmunity
   - type: EyeProtection
-    protectionTime: 5
+    protectionTime: 15
+  - type: ThermalVision
+    pulseTime: 1.5
+    isEquipment: true
+    toggleAction: PulseThermalVision
+  - type: NightVision
+    flashDurationMultiplier: 2.75
+    isEquipment: true
+    color: "#5e8bac"
   - type: Armor
     modifiers:
       coefficients:

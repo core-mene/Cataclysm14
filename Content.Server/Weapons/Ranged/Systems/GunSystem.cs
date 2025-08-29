@@ -35,7 +35,9 @@
 // SPDX-FileCopyrightText: 2024 nikthechampiongr
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Leon Friedrich
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 SlamBamActionman
+// SPDX-FileCopyrightText: 2025 tonotom
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 

@@ -10,6 +10,7 @@
 # SPDX-FileCopyrightText: 2024 Nemanja
 # SPDX-FileCopyrightText: 2024 Plykiya
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 Ps3Moira
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
@@ -21,7 +22,7 @@
   abstract: true
   parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
   id: BaseAmmoBox556x45mm
-  name: ammunition box 5.56x45mm FMJ)
+  name: ammunition box (5.56x45mm FMJ)
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
@@ -47,7 +48,7 @@
 - type: entity
   parent: BaseAmmoBox556x45mm
   id: AmmoBox556x45mmFMJ
-  name: ammunition box 5.56x45mm FMJ)
+  name: ammunition box (5.56x45mm FMJ)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmFMJ
@@ -61,7 +62,7 @@
 - type: entity
   parent: BaseAmmoBox556x45mm
   id: AmmoBox556x45mmPractice
-  name: ammunition box 5.56x45mm practice)
+  name: ammunition box (5.56x45mm practice)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmPractice
@@ -76,7 +77,7 @@
 - type: entity
   parent: BaseAmmoBox556x45mm
   id: AmmoBox556x45mmIncendiary
-  name: ammunition box 5.56x45mm incendiary)
+  name: ammunition box (5.56x45mm incendiary)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmIncendiary
@@ -91,7 +92,7 @@
 - type: entity
   id: AmmoBox556x45mmUranium
   parent: BaseAmmoBox556x45mm
-  name: ammunition box 5.56x45mm uranium)
+  name: ammunition box (5.56x45mm uranium)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmUranium
@@ -107,7 +108,7 @@
 - type: entity
   parent: BaseAmmoBox556x45mm
   id: AmmoBox556x45mmRubber
-  name: ammunition box 5.56x45mm rubber)
+  name: ammunition box (5.56x45mm rubber)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmRubber
@@ -124,7 +125,7 @@
 - type: entity
   parent: BaseAmmoBox556x45mm
   id: AmmoBox556x45mmHP
-  name: ammunition box 5.56x45mm hollow-point)
+  name: ammunition box (5.56x45mm hollow-point)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmHP
@@ -139,7 +140,7 @@
 - type: entity
   parent: BaseAmmoBox556x45mm
   id: AmmoBox556x45mmRIP
-  name: ammunition box 5.56x45mm RIP)
+  name: ammunition box (5.56x45mm RIP)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmRIP
@@ -155,7 +156,7 @@
 - type: entity
   parent: BaseAmmoBox556x45mm
   id: AmmoBox556x45mmSteelAP
-  name: ammunition box 5.56x45mm AP steel core)
+  name: ammunition box (5.56x45mm AP steel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmSteelAP
@@ -170,7 +171,7 @@
 - type: entity
   parent: BaseAmmoBox556x45mm
   id: AmmoBox556x45mmPlasteelAP
-  name: ammunition box 5.56x45mm AP plasteel core)
+  name: ammunition box (5.56x45mm AP plasteel core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmPlasteelAP
@@ -185,7 +186,7 @@
 - type: entity
   parent: BaseAmmoBox556x45mm
   id: AmmoBox556x45mmSynthAP
-  name: ammunition box 5.56x45mm AP synthalloy core)
+  name: ammunition box (5.56x45mm AP synthalloy core)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmSynthAP
@@ -201,7 +202,7 @@
 - type: entity
   parent: BaseAmmoBox556x45mm
   id: AmmoBox556x45mmBigFMJ
-  name: big ammunition box 5.56x45mm FMJ)
+  name: big ammunition box (5.56x45mm FMJ)
   suffix: Big
   components:
   - type: Item
@@ -225,7 +226,7 @@
 - type: entity
   parent: AmmoBox556x45mmBigFMJ
   id: AmmoBox556x45mmBigRubber
-  name: ammunition box 5.56x45mm rubber)
+  name: ammunition box (5.56x45mm rubber)
   components:
   - type: BallisticAmmoProvider
     capacity: 210
