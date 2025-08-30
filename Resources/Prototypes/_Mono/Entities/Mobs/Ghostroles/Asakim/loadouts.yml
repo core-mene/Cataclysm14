@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -19,12 +20,13 @@
   storage:
     back:
     - RadioHandheldNF
-    - DoubleEmergencyOxygenTank
+    - DoubleEmergencyOxygenTankFilled
     - MedkitCombatFilled
     - MedkitCombatFilled
     - SyringeCaseAltFilled
     - JetpackMiniFilled
     - StorageImplanter
+    - FreedomImplanter
     - WeaponHFKatana
     belt:
     - CombatMedipen
@@ -32,3 +34,6 @@
     - CombatMedipen
     - CombatMedipen
     - HandHeldMassScannerBorg
+    - PowerDrill
+    - JawsOfLife
+    - WelderExperimental
