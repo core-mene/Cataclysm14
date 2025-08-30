@@ -6,12 +6,12 @@
   id: Respondant
   parent: BaseVessel
   name: PPU Respondant
-  description: An armed and armored ambulance and fleet escort vessel. Meant for short, quick attacks, but not sustained combat. Recommended crew is 2-4 people.
-  price: 138000
+  description: An armed and armored ambulance and fleet escort vessel. Meant for short, quick attacks, but not sustained combat. Recommended crew is 2-4 people. Does not come expedition capable out of the box.
+  price: 87000
   category: Medium
   group: Shipyard
   access: Mercenary
-  shuttlePath: /Maps/_Mono/Shuttles/respondant.yml
+  shuttlePath: /Maps/_Mono/Shuttles/Expedition/respondant.yml
   guidebookPage: Null
   class:
   - Pursuit
@@ -22,7 +22,7 @@
 - type: gameMap
   id: Respondant
   mapName: 'PPU Respondant'
-  mapPath: /Maps/_Mono/Shuttles/respondant.yml
+  mapPath: /Maps/_Mono/Shuttles/Expedition/respondant.yml
   minPlayers: 0
   stations:
     Respondant:

@@ -1,30 +1,11 @@
-# SPDX-FileCopyrightText: 2023 Alexander Evgrashin
-# SPDX-FileCopyrightText: 2023 Banshee
-# SPDX-FileCopyrightText: 2023 CharcoalShipyard
-# SPDX-FileCopyrightText: 2023 Cheackraze
-# SPDX-FileCopyrightText: 2023 Emisse
-# SPDX-FileCopyrightText: 2023 metalgearsloth
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 TsjipTsjip
-# SPDX-FileCopyrightText: 2025 Alice "Arimah" Heurlin
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 Honestly101
-# SPDX-FileCopyrightText: 2025 dustylens
-# SPDX-FileCopyrightText: 2025 grandalff
-# SPDX-FileCopyrightText: 2025 plethorian
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/28/2025 21:30:41
-  entityCount: 711
+  time: 08/30/2025 21:43:11
+  entityCount: 688
 maps: []
 grids:
 - 1
@@ -102,6 +83,11 @@ entities:
       chunkCollection:
         version: 2
         nodes:
+        - node:
+            color: '#FFFFFFFF'
+            id: Box
+          decals:
+            279: -1,2
         - node:
             color: '#FFFFFFFF'
             id: BrickBoxOverlay
@@ -692,15 +678,10 @@ entities:
       parent: 611
     - type: Physics
       canCollide: False
-  - uid: 297
+  - uid: 300
     components:
     - type: Transform
-      pos: 1.5963117,9.580605
-      parent: 1
-  - uid: 302
-    components:
-    - type: Transform
-      pos: 1.4531755,9.584986
+      pos: 1.4656963,9.632265
       parent: 1
   - uid: 664
     components:
@@ -899,44 +880,6 @@ entities:
     - type: Transform
       pos: -1.5,10.5
       parent: 1
-- proto: Asm220TorpedoHE
-  entities:
-  - uid: 284
-    components:
-    - type: Transform
-      parent: 668
-    - type: Physics
-      canCollide: False
-  - uid: 285
-    components:
-    - type: Transform
-      parent: 673
-    - type: Physics
-      canCollide: False
-  - uid: 669
-    components:
-    - type: Transform
-      parent: 668
-    - type: Physics
-      canCollide: False
-  - uid: 670
-    components:
-    - type: Transform
-      parent: 668
-    - type: Physics
-      canCollide: False
-  - uid: 684
-    components:
-    - type: Transform
-      parent: 673
-    - type: Physics
-      canCollide: False
-  - uid: 685
-    components:
-    - type: Transform
-      parent: 673
-    - type: Physics
-      canCollide: False
 - proto: AtmosDeviceFanDirectional
   entities:
   - uid: 474
@@ -2234,69 +2177,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,3.5
       parent: 1
-- proto: ClothingBalaclavaClassicGray
-  entities:
-  - uid: 166
-    components:
-    - type: Transform
-      rot: 0.0003265957348048687 rad
-      pos: 5.7364373,0.5372604
-      parent: 1
-  - uid: 205
-    components:
-    - type: Transform
-      pos: 5.7574334,0.53721094
-      parent: 1
-- proto: ClothingEyesBallisticGlassesRed
-  entities:
-  - uid: 705
-    components:
-    - type: Transform
-      rot: 0.00013851828407496214 rad
-      pos: 4.7350836,-0.40286204
-      parent: 1
-  - uid: 706
-    components:
-    - type: Transform
-      rot: 0.00013851828407496214 rad
-      pos: 4.7350836,-0.40286204
-      parent: 1
-  - uid: 709
-    components:
-    - type: Transform
-      rot: 0.00013851828407496214 rad
-      pos: 4.7350836,-0.40286204
-      parent: 1
-  - uid: 710
-    components:
-    - type: Transform
-      rot: 0.00013851828407496214 rad
-      pos: 4.7350836,-0.40286204
-      parent: 1
-- proto: ClothingHeadBPHelmetLight
-  entities:
-  - uid: 688
-    components:
-    - type: Transform
-      pos: 5.4917803,0.68630004
-      parent: 1
-  - uid: 707
-    components:
-    - type: Transform
-      pos: 5.4917803,0.68630004
-      parent: 1
-- proto: ClothingOuterArmorBPVestMedium
-  entities:
-  - uid: 607
-    components:
-    - type: Transform
-      pos: 5.512614,0.36685553
-      parent: 1
-  - uid: 687
-    components:
-    - type: Transform
-      pos: 5.512614,0.36685553
-      parent: 1
 - proto: ComputerAdvancedRadar
   entities:
   - uid: 601
@@ -3336,6 +3216,28 @@ entities:
     - type: Transform
       pos: 0.5,6.5
       parent: 1
+- proto: LightFighterOrdinanceZenithItem
+  entities:
+  - uid: 302
+    components:
+    - type: Transform
+      pos: 5.5025573,0.5623809
+      parent: 1
+  - uid: 308
+    components:
+    - type: Transform
+      pos: 5.5025573,0.5623809
+      parent: 1
+  - uid: 322
+    components:
+    - type: Transform
+      pos: 5.5025573,0.5623809
+      parent: 1
+  - uid: 607
+    components:
+    - type: Transform
+      pos: 5.5025573,0.5623809
+      parent: 1
 - proto: LockerWallMedicalFilled
   entities:
   - uid: 304
@@ -3351,49 +3253,17 @@ entities:
     - type: Transform
       pos: -4.5,0.5
       parent: 1
-- proto: Magazine45_ACPSubMachineGunFMJ
+- proto: Magazine762x54mmRFMJ
   entities:
-  - uid: 689
+  - uid: 166
     components:
     - type: Transform
-      pos: 4.264883,-0.5822928
+      pos: 4.392857,-0.4928099
       parent: 1
-  - uid: 690
+  - uid: 205
     components:
     - type: Transform
-      pos: 4.264883,-0.5822928
-      parent: 1
-  - uid: 691
-    components:
-    - type: Transform
-      pos: 4.264883,-0.5822928
-      parent: 1
-  - uid: 692
-    components:
-    - type: Transform
-      pos: 4.264883,-0.5822928
-      parent: 1
-- proto: Magazine9x19mmSubMachineGunFMJ
-  entities:
-  - uid: 693
-    components:
-    - type: Transform
-      pos: 4.5750422,-0.69129455
-      parent: 1
-  - uid: 694
-    components:
-    - type: Transform
-      pos: 4.5750422,-0.69129455
-      parent: 1
-  - uid: 695
-    components:
-    - type: Transform
-      pos: 4.5750422,-0.69129455
-      parent: 1
-  - uid: 696
-    components:
-    - type: Transform
-      pos: 4.5750422,-0.69129455
+      pos: 4.595982,-0.4928099
       parent: 1
 - proto: MedicalBed
   entities:
@@ -3469,37 +3339,6 @@ entities:
       parent: 1
     - type: Physics
       bodyType: Static
-- proto: Paper
-  entities:
-  - uid: 699
-    components:
-    - type: Transform
-      pos: 0.49085474,2.479671
-      parent: 1
-    - type: Paper
-      content: >2-
-
-        [head=1]Ship Manual[/head]
-
-        Privet tovarisch,
-
-
-        This ship for shock combat, not for sustained fight. Has armory, medical bay, two 90mm cannon, one tarnyx, two torpedo launcher. Each launcher three torpedo. All you get. No extra torpedo, no printer. Do not waste.
-
-
-        Tarnyx loaded with three EMP, three more on rack. Tactic simple: disable enemy with EMP. Then close, shoot 90mm. When near, torpedo. Then fly far, repeat. Ship fast, but turn slow. Has radar, gunner can prepare or alert.
-
-
-        Main purpose — fleet medic, combat escort, or rescuing client.
-
-
-        Behind you two smartgun pistolet. Good for cockpit staff. Make sure on burst fire. Recommend cockpit crew buy bounty hunter flak vest. Very good pierce protection. Hat good too, da.
-
-
-        Armory have enough gun for crew four — maximum crew recommended. Two extra magazine for each gun, no ammo belt. Two armor vest, two hardsuit. In case breach, two suit in medical, two armory. Armory hardsuit more armored, are scaf, but medical is good too, is mercenary suit. Do not wear vest in space, die like idiot.
-
-
-        PPU welcomes you, try not die.
 - proto: PaperBin20
   entities:
   - uid: 30
@@ -3509,6 +3348,34 @@ entities:
       parent: 1
 - proto: PaperOffice
   entities:
+  - uid: 297
+    components:
+    - type: Transform
+      pos: 0.5,2.5
+      parent: 1
+    - type: Paper
+      content: >-
+        [head=1]Instrukcija Paper[/head]
+
+        PPU welcomes you to Respondant! Respondant is fleet escort ship with a medical bay, but without chemistry. Ship meant for shock combat and rescue client.
+
+
+        Ship has tarnyx, two GPOB-L and two 90mm. GPOB-L not loaded, amunicija in armory. To reload need EVA walk. Tarnyx — loaded. To reload medbay have blast door.
+
+
+        Four suits total, armory and medical, armory suit more armored.
+
+
+        Ship main tactic: disable with tarnyx, close, shoot GPOB-L, retreat or continue fight with 90mm. No printer or lab for more ammo, get from logistic.
+
+
+        Have radar to notice approach vessel to protect flagship or client.
+
+
+        Armory start with only two SVS-42, get more gun if need.
+
+
+        PPU welcomes you again, try not die.
   - uid: 679
     components:
     - type: Transform
@@ -3768,7 +3635,7 @@ entities:
       parent: 1
 - proto: StructureGunRackMercenary
   entities:
-  - uid: 300
+  - uid: 668
     components:
     - type: Transform
       pos: 3.5,-0.5
@@ -3778,23 +3645,23 @@ entities:
         weapon1: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: 308
+          ent: null
         weapon2: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: 322
+          ent: null
         weapon3: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: 698
+          ent: 669
         weapon4: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: null
+          ent: 670
         weapon5: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: 697
+          ent: null
 - proto: SubstationWallBasic
   entities:
   - uid: 202
@@ -4901,56 +4768,18 @@ entities:
     - type: Transform
       pos: 0.5,2.5
       parent: 1
-- proto: WeaponPistolUllmanSmartMagnumMK5
+- proto: WeaponRifleSVS
   entities:
-  - uid: 700
+  - uid: 669
     components:
     - type: Transform
-      pos: 0.1432867,0.6160686
-      parent: 1
-    - type: Gun
-      selectedMode: Burst
-    - type: ChamberMagazineAmmoProvider
-      boltClosed: True
-  - uid: 701
-    components:
-    - type: Transform
-      pos: 0.096411705,0.4754436
-      parent: 1
-    - type: Gun
-      selectedMode: Burst
-    - type: ChamberMagazineAmmoProvider
-      boltClosed: True
-- proto: WeaponRiflePrometheus
-  entities:
-  - uid: 308
-    components:
-    - type: Transform
-      parent: 300
-    - type: ChamberMagazineAmmoProvider
-      boltClosed: True
+      parent: 668
     - type: Physics
       canCollide: False
-  - uid: 322
+  - uid: 670
     components:
     - type: Transform
-      parent: 300
-    - type: ChamberMagazineAmmoProvider
-      boltClosed: True
-    - type: Physics
-      canCollide: False
-- proto: WeaponSubMachineGunAK220
-  entities:
-  - uid: 697
-    components:
-    - type: Transform
-      parent: 300
-    - type: Physics
-      canCollide: False
-  - uid: 698
-    components:
-    - type: Transform
-      parent: 300
+      parent: 668
     - type: Physics
       canCollide: False
 - proto: WeaponTurretAK570
@@ -4967,48 +4796,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 9.5,8.5
       parent: 1
-- proto: WeaponTurretASM220
-  entities:
-  - uid: 668
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 2.5,19.5
-      parent: 1
-    - type: BallisticAmmoProvider
-      entities:
-      - 669
-      - 670
-      - 284
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 669
-          - 670
-          - 284
-  - uid: 673
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,19.5
-      parent: 1
-    - type: BallisticAmmoProvider
-      entities:
-      - 684
-      - 685
-      - 285
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 684
-          - 685
-          - 285
 - proto: WeaponTurretL85Autocannon
   entities:
   - uid: 603
@@ -5020,6 +4807,18 @@ entities:
     components:
     - type: Transform
       pos: -7.5,1.5
+      parent: 1
+- proto: WeaponTurretLightMunitionsBay
+  entities:
+  - uid: 284
+    components:
+    - type: Transform
+      pos: 2.5,19.5
+      parent: 1
+  - uid: 285
+    components:
+    - type: Transform
+      pos: -1.5,19.5
       parent: 1
 - proto: WeaponTurretTarnyxReload
   entities:
