@@ -55,6 +55,7 @@
         - SurveillanceCameraMedical
         - SurveillanceCameraCommand
         - SurveillanceCameraTSF
+        - SurveillanceCameraRogue
 
 - type: entity
   parent: SurveillanceCameraRouterBase
@@ -186,3 +187,13 @@
   components:
     - type: SurveillanceCameraRouter
       subnetFrequency: SurveillanceCameraTSF
+
+# mono
+- type: entity
+  parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterRogue
+  name: Rogue camera router
+  suffix: Rogue
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraRogue

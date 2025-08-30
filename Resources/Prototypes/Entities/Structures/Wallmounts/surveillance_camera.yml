@@ -278,3 +278,17 @@
     transmitFrequencyId: SurveillanceCamera
   - type: SurveillanceCamera
     networkSet: true
+
+# mono
+- type: entity
+  parent: SurveillanceCameraBase
+  id: SurveillanceCameraRogue
+  name: camera
+  suffix: Rogue
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: SurveillanceCameraRogue
+    transmitFrequencyId: SurveillanceCamera
+  - type: SurveillanceCamera
+    networkSet: true
