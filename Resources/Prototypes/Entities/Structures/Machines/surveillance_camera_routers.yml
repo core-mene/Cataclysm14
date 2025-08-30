@@ -190,7 +190,6 @@
     - type: SurveillanceCameraRouter
       subnetFrequency: SurveillanceCameraTSF
 
-# mono
 - type: entity
   parent: SurveillanceCameraRouterBase
   id: SurveillanceCameraRouterRogue
@@ -199,3 +198,12 @@
   components:
     - type: SurveillanceCameraRouter
       subnetFrequency: SurveillanceCameraRogue
+
+- type: entity
+  parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterUSSP
+  name: USSP camera router
+  suffix: USSP
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraUSSP

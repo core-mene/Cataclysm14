@@ -281,7 +281,6 @@
   - type: SurveillanceCamera
     networkSet: true
 
-# mono
 - type: entity
   parent: SurveillanceCameraBase
   id: SurveillanceCameraRogue
@@ -291,6 +290,19 @@
   - type: DeviceNetwork
     deviceNetId: Wired
     receiveFrequencyId: SurveillanceCameraRogue
+    transmitFrequencyId: SurveillanceCamera
+  - type: SurveillanceCamera
+    networkSet: true
+
+- type: entity
+  parent: SurveillanceCameraBase
+  id: SurveillanceCameraUSSP
+  name: camera
+  suffix: USSP
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: SurveillanceCameraUSSP
     transmitFrequencyId: SurveillanceCamera
   - type: SurveillanceCamera
     networkSet: true
