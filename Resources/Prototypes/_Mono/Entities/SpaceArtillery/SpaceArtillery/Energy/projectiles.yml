@@ -52,7 +52,7 @@
 - type: entity
   id: ShipAutopulserPlasmaProjectile
   name: plasma projectile
-  parent: BaseBullet
+  parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -79,6 +79,13 @@
     lifetime: 4.2
   - type: PointLight
     radarColor: "#C92BCC"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: DefaultShipGun
+    totalIntensity: 20
+    intensitySlope: 2
+    maxIntensity: 40
+    maxTileBreak: 1
 
 # M25
 
