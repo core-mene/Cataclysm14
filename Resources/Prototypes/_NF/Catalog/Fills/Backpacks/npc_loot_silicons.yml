@@ -88,9 +88,12 @@
       prob: 0.05
     # Research disk
     - id: RogueSiliconResearchDisk5000
-      prob: 1
+      prob: 0.8
     - id: RogueSiliconResearchDisk10000
-      prob: 0.5
+      prob: 0.1
+    # Tech disk
+    - id: SpawnLootTechDisksT1
+      prob: 0.05
     sound:
       path: /Audio/Machines/windoor_open.ogg
 
@@ -157,10 +160,13 @@
       amount: 3
       prob: 0.1
     # Research disk
+    - id: RogueSiliconResearchDisk5000
+      prob: 0.7
     - id: RogueSiliconResearchDisk10000
-      prob: 1
-    - id: RogueSiliconResearchDisk25000
-      prob: 0.2
+      prob: 0.5
+    # Tech disk
+    - id: SpawnLootTechDisksT2Faction
+      prob: 0.1
     sound:
       path: /Audio/Machines/windoor_open.ogg
 
@@ -218,10 +224,15 @@
       amount: 3
       prob: 0.1
     # Research disk
-    - id: RogueSiliconResearchDisk25000
-      prob: 1
     - id: RogueSiliconResearchDisk10000
-      prob: 0.2
+      prob: 0.5
+    - id: RogueSiliconResearchDisk25000
+      prob: 0.05
+    # Tech disk
+    - id: SpawnLootTechDisksPrinterT1
+      prob: 0.05
+    - id: SpawnLootTechDisksT1
+      prob: 0.1
     sound:
       path: /Audio/Machines/windoor_open.ogg
 
@@ -281,10 +292,15 @@
       amount: 3
       prob: 0.15
     # Research disk
-    - id: RogueSiliconResearchDisk25000
-      prob: 1
     - id: RogueSiliconResearchDisk10000
-      prob: 0.2
+      prob: 0.4
+    - id: RogueSiliconResearchDisk25000
+      prob: 0.3
+    # Tech disk
+    - id: SpawnLootTechDisksT1
+      prob: 0.1
+    - id: SpawnLootTechDisksPrinterT1
+      prob: 0.1
     sound:
       path: /Audio/Machines/windoor_open.ogg
 
@@ -348,9 +364,14 @@
     # Research disk
     - id: RogueSiliconResearchDisk50000
       prob: 1
-    - id: RogueSiliconResearchDisk25000
+    # Tech disk
+    - id: SpawnLootTechDisksPrinterT2
+      prob: 0.1
+    - id: SpawnLootTechDisksPrinterT1
+      prob: 0.1
+    - id: SpawnLootTechDisksT1
       prob: 0.2
-    - id: RogueSiliconResearchDisk10000
-      prob: 0.2
+    - id: SpawnLootTechDisksT2Faction
+      prob: 0.1
     sound:
       path: /Audio/Machines/windoor_open.ogg
