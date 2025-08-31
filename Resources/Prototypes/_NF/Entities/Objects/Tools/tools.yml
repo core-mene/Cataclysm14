@@ -67,7 +67,7 @@
   - type: Item
     size: Large #Mono: Huge > Large
     shape: 
-    - 0,0,1,3 #Mono end
+    - 0,0,1,2 #Mono end
   - type: Clothing
     sprite: Objects/Weapons/Melee/fireaxe.rsi
     quickEquip: false
@@ -77,10 +77,13 @@
   - type: Tool
     qualities:
       - Axing
-      - Prying #Mono
+      - Prying #Mono    
     useSound: #Mono
       path: /Audio/Items/crowbar.ogg #Mono
   - type: ToolTileCompatible
+  - type: PhysicalComposition #Mono
+    materialComposition: #Mono
+      Steel: 200 #Mono
   - type: UseDelay
     delay: 1
 

@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Cojoke
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: guideEntry
   id: Creatures
   name: guide-entry-creatures
@@ -6,6 +11,7 @@
   children:
   - CorticalBorerGuide
   - Letoferol
+  - Asakim
 
 - type: guideEntry
   id: CorticalBorerGuide
@@ -17,4 +23,10 @@
   id: Letoferol
   name: guide-entry-letoferol
   text: "/ServerInfo/_Mono/Guidebook/Creatures/Chimera.xml"
+  priority: 1
+
+- type: guideEntry
+  id: Asakim
+  name: guide-entry-asakim
+  text: "/ServerInfo/_Mono/Guidebook/Creatures/Asakim.xml"
   priority: 1

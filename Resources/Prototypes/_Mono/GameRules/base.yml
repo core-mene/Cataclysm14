@@ -8,20 +8,23 @@
   components:
     - type: BasicStationEventScheduler
       scheduledGameRules: !type:NestedSelector
-        tableId: MonoAISTCEventsTable
+        tableId: DamagedAIShipsTable
       minimumTimeUntilFirstEvent: 3600 # 60 minutes
       minMaxEventTiming:
         min: 3600 # 60 minutes between events
         max: 7200 # 120 minutes between events
 
-- type: entityTable
-  id: MonoAISTCEventsTable
-  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
-    children:
-      - id: UnknownShuttleZenith
-      - id: UnknownShuttleZenithE
-      - id: UnknownShuttleRazor
-      - id: UnknownShuttleNebula
+- type: entity
+  id: MonoAsakimSTCShuttleSpawnerScheduler
+  parent: BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    scheduledGameRules: !type:NestedSelector
+      tableId: AsakimShipsTable
+    minimumTimeUntilFirstEvent: 10800 # 180 minutes
+    minMaxEventTiming:
+      min: 3600 # 60 minutes between events
+      max: 7200 # 120 minutes between events
 
 - type: entity
   abstract: true

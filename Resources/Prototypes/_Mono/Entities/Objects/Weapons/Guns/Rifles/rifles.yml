@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
@@ -145,7 +146,7 @@
     id: StandardFactionLongarm
 
 - type: entity
-  name: VFD XLR-556 ICWS 5.56x45mm)
+  name: VFD XLR-556 ICWS (5.56x45mm)
   parent: [BaseWeaponRifle, BaseGunWieldable, BaseC2ContrabandUnredeemable]
   id: WeaponRifleXlr556
   description: A proposed next-gen "rifle" for TSF standard infantry. Chambered in 556x45mm rifle rounds, its RPM is incredible - but with great firerate comes great fire control...
@@ -266,7 +267,7 @@
 
 #Mercenary lecter
 - type: entity
-  name: HWM FCL "Prometheus" 5.56x45mm)
+  name: HWM FCL "Prometheus" (5.56x45mm)
   parent: [BaseWeaponRifle, BaseC1Contraband]
   id: WeaponRiflePrometheus
   description: The Herstal Weapon Manufacture "Prometheus" Light combat rifle (Fusil de Combat Léger) in 556x45mm. Made to be mass producable for fight against xenos. Its firerate is decent with burst being superior and accuracy poor.

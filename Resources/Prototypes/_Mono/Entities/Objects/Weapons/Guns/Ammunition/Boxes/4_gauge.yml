@@ -9,6 +9,7 @@
 # SPDX-FileCopyrightText: 2025 Ps3Moira
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -200,7 +201,7 @@
   id: AmmoBox23x75mmSlugRIP
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgun23x75mmOOBuckshot
+      proto: ShellShotgun23x75mmSlugRIP
     - type: MagazineVisuals
       magState: mag-slugRIP
       steps: 5

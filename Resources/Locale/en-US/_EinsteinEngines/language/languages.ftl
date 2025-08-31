@@ -13,14 +13,13 @@ language-RootSpeak-description = The strange whistling-style language spoken by 
 language-Nekomimetic-name = Nekomimetic
 language-Nekomimetic-description = To the casual observer, this language is an incomprehensible mess of broken Japanese. To the Felinids and Oni, it's somehow comprehensible.
 
-language-Draconic-name = Sinta'Unathi
+language-Draconic-name = Draconic
 language-Draconic-description =
-    The common language of Moghes - composed of sibilant hisses and rattles. Spoken natively by Unathi.
+    The common language of reptillians - composed of sibilant hisses and rattles.
 
-language-Azaziba-name = Sinta'Azaziba
+language-Azaziba-name = Azaziba
 language-Azaziba-description =
-    A language of Moghes consisting of a combination of spoken word and gesticulation.
-    While waning since Moghes entered the galactic stage - it enjoys popular use by Unathi that never fell to the Hegemony's cultural dominance.
+    A native language of Asakims consisting of a combination of spoken word and gesticulation.
 
 language-SolCommon-name = Sol common
 language-SolCommon-description =

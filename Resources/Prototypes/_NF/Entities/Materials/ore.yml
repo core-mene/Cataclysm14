@@ -1,5 +1,5 @@
 # SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 tonotom
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -53,7 +53,6 @@
   - type: Stack
     count: 3
 
-#Mono aditions
 - type: entity
   parent: ScrapOre
   id: ScrapOre20
@@ -61,23 +60,6 @@
   components:
   - type: Stack
     count: 20
-
-- type: entity
-  parent: ScrapOre
-  id: ScrapOre50
-  suffix: 50
-  components:
-  - type: Stack
-    count: 50
-
-- type: entity
-  parent: ScrapOre
-  id: ScrapOre100
-  suffix: 100
-  components:
-  - type: Stack
-    count: 100
-#Mono end
 
 - type: material
   id: RawScrap
@@ -105,18 +87,19 @@
         color: red
   - type: RandomSpawner
     prototypes:
-    - SpawnDungeonLootMaterialsBasicSingle
-    - SpawnDungeonLootMaterialsBasicSingle
-    - SpawnDungeonLootMaterialsBasicSingle
-    - SpawnDungeonLootMaterialsBasicSingle
-    - SpawnDungeonLootOresSingle
-    - SpawnDungeonLootToolsBasicEngineering
+#    - SpawnDungeonLootMaterialsBasicSingle #Mono out 
+#    - SpawnDungeonLootMaterialsBasicSingle #wtf use entitytables
+#    - SpawnDungeonLootMaterialsBasicSingle
+#    - SpawnDungeonLootMaterialsBasicSingle
+#    - SpawnDungeonLootOresSingle
+#    - SpawnDungeonLootToolsBasicEngineering
+     - ScrapProcessorRollTrunk #Mono in: Full entitytable nest can be found in _Mono\Entities\Markers\Spawners\Random\scrap_processor.yml
     chance: 1.0
     offset: 0.0
-    rarePrototypes:
-    - MaterialBananium1
-    - MaterialBones1
-    - SpawnDungeonLootMaterialsValuableSingle
-    - SpawnDungeonLootPartsEngi
-    - SpawnDungeonLootCircuitBoard
-    rareChance: 0.005
+#    rarePrototypes:
+#    - MaterialBananium1 #Mono out
+#    - MaterialBones1 #wtf why
+#    - SpawnDungeonLootMaterialsValuableSingle
+#    - SpawnDungeonLootPartsEngi
+#    - SpawnDungeonLootCircuitBoard
+#    rareChance: 0.005

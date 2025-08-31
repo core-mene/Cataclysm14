@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2025 LaCumbiaDelCoronavirus
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadSanabi
+  name: brigadier general hat
+  description: Smells like steel.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Head/Hats/sanabi.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Head/Hats/sanabi.rsi
+  - type: StaticPrice # Monolith
+    vendPrice: 220
