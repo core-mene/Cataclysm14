@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 ScyronX
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Spoken by Unathi, reptilians.
 - type: language
   id: Draconic
@@ -99,7 +104,7 @@
 - type: language
   id: Azaziba
   speech:
-    color: "#2aca2add"
+    color: "#257bb0dd" # Mono
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 2

@@ -1,6 +1,9 @@
 # redacted AI ship spawns
 
-station-event-ai-shuttle-detected = Unidentified dilapidated combat vessel approaching your sector. All personnel, caution is advised.
+station-event-ai-shuttle-detected = Unidentified dilapidated combat vessel detected near local space. Caution is advised.
+
+# asakim ship spawns
+station-event-asakim-shuttle-detected = Unidentified Pre-Fracture vessel detected near local space. Caution is advised.
 
 # redacted AI ship borg stuff
 

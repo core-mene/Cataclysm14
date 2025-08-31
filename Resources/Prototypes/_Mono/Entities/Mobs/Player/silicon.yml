@@ -141,6 +141,17 @@
       shader: unshaded
       map: ["light"]
       visible: false
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - RobotTalk
+    - Draconic
+    - Azaziba
+    understands:
+    - TauCetiBasic
+    - RobotTalk
+    - Draconic
+    - Azaziba
   - type: BorgChassis
     maxModules: 8
     moduleWhitelist:
@@ -237,6 +248,17 @@
     raffle:
       settings: default
     prototype: RemnantAICore
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - RobotTalk
+    - Draconic
+    - Azaziba
+    understands:
+    - TauCetiBasic
+    - RobotTalk
+    - Draconic
+    - Azaziba
   - type: GhostTakeoverAvailable
   - type: RandomMetadata
     nameSegments: [MonoRemnantCoreNameset]
@@ -285,6 +307,17 @@
   - type: RadarConsole
     maxRange: 768 # Mono
     followEntity: false
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - RobotTalk
+    - Draconic
+    - Azaziba
+    understands:
+    - TauCetiBasic
+    - RobotTalk
+    - Draconic
+    - Azaziba
   - type: HolographicAvatar
     layerData:
     - sprite: Mobs/Silicon/station_ai.rsi

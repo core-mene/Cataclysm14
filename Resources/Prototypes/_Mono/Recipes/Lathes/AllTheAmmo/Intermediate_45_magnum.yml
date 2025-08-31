@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -66,6 +67,21 @@
   parent: BaseAmmoFMJIntermediateSpeedloaderRecipe
   id: SpeedLoader45_magnumFMJ
   result: SpeedLoader45_magnumFMJ
+
+- type: latheRecipe
+  parent: BaseAmmoSteelAPIntermediateSpeedloaderRecipe
+  id: SpeedLoader45_magnumSteelAP
+  result: SpeedLoader45_magnumSteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoPlasteelAPIntermediateSpeedloaderRecipe
+  id: SpeedLoader45_magnumPlasteelAP
+  result: SpeedLoader45_magnumPlasteelAP
+
+- type: latheRecipe
+  parent: BaseAmmoSynthAPIntermediateSpeedloaderRecipe
+  id: SpeedLoader45_magnumSynthAP
+  result: SpeedLoader45_magnumSynthAP
 
 - type: latheRecipe
   parent: BaseAmmoRubberIntermediateSpeedloaderRecipe

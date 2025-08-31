@@ -67,6 +67,7 @@ using Robust.Shared.Utility;
 using FTLMapComponent = Content.Shared.Shuttles.Components.FTLMapComponent;
 using Content.Server.Salvage.Expeditions;
 using Content.Shared._Mono.Ships;
+using System.Threading.Tasks;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -736,7 +737,7 @@ public sealed partial class ShuttleSystem
     /// <summary>
     ///  Shuttle arrived.
     /// </summary>
-    private void UpdateFTLArriving(Entity<FTLComponent, ShuttleComponent> entity)
+    private async Task UpdateFTLArriving(Entity<FTLComponent, ShuttleComponent> entity)
     {
         var globalFtlCooldown = 10f;
         var uid = entity.Owner;
@@ -843,9 +844,9 @@ public sealed partial class ShuttleSystem
             var newRot = mainNewRot + relativeRot;
             if (xform.MapUid != null)
             {
+                _transform.SetWorldRotation(dockedUid, newRot);
                 _transform.SetParent(dockedUid, dockedXform, xform.MapUid.Value);
                 _transform.SetWorldPosition(dockedUid, newPos);
-                _transform.SetWorldRotation(dockedUid, newRot);
             }
 
             // Re-establish all docking connections
@@ -1599,6 +1600,7 @@ public sealed partial class ShuttleSystem
             var dockedComp = EnsureComp<FTLComponent>(dockedUid);
             dockedComp.LinkedShuttle = uid;
             dockedComp.State = FTLState.Travelling;
+            dockedComp.TargetAngle = comp.TargetAngle + relativeRot;
 
             if (TryComp<PhysicsComponent>(dockedUid, out var dockedBody))
             {

@@ -44,11 +44,13 @@
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 JonahDes
 # SPDX-FileCopyrightText: 2025 Kittygyat
+# SPDX-FileCopyrightText: 2025 MarkerWicker
 # SPDX-FileCopyrightText: 2025 Myzumi
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 Theodore Lukin
 # SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 crasg
 # SPDX-FileCopyrightText: 2025 lzk
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -210,10 +212,14 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Borg
+    allowedEmotes: # Goobstation - Cyborg emote sounds
+    - Laugh
+    - Sigh
+    - Crying
+    - Whistle
   - type: Vocal
     sounds:
       Unsexed: UnisexSilicon
-    screamAction: null
   - type: UnblockableSpeech
   - type: FootstepModifier
     footstepSoundCollection:
@@ -406,6 +412,11 @@
     speechSounds: SyndieBorg
     allowedEmotes:
     - Laugh
+    # Goobstation - Cyborg emote sounds
+    - Sigh
+    - Crying
+    - Whistle
+    # end Goobstation - Cyborg emote sounds
   - type: Vocal
     sounds:
       Unsexed: UnisexSiliconSyndicate

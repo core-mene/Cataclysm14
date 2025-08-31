@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -23,7 +24,7 @@
       coefficients:
         Blunt: 0.65
         Slash: 0.6
-        Piercing: 0.5
+        Piercing: 0.6
         Heat: 0.65
         Radiation: 0.6
         Caustic: 0.8
@@ -42,5 +43,5 @@
   - type: PirateBountyItem
     id: ClothingOuterHardsuitTacsuit
   - type: StaminaDamageResistance
-    coefficient: 0.5
+    coefficient: 0.6
 

@@ -52,8 +52,6 @@ using System.Linq;
 using System.Numerics;
 using Content.Shared.Physics;
 using Robust.Shared.Physics;
-using Content.Server.Explosion.EntitySystems; // Mono
-using Content.Server.Explosion.Components; // Mono
 
 namespace Content.Server.Projectiles;
 
@@ -74,7 +72,6 @@ public sealed class ProjectileSystem : SharedProjectileSystem
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
-    [Dependency] private readonly TriggerSystem _trigger = default!;
 
     /// <summary>
     /// Minimum velocity for a projectile to be considered for raycast hit detection.
@@ -288,11 +285,6 @@ public sealed class ProjectileSystem : SharedProjectileSystem
                         HasComp<ActorComponent>(hitEntity) ? LogImpact.Extreme : LogImpact.High,
                         $"Projectile {ToPrettyString(uid):projectile} (raycast) shot by {ToPrettyString(projectileComp.Shooter!.Value):user} hit {otherName:target} and dealt {modifiedDamage.GetTotal():damage} damage");
                 }
-
-                // Process Collision Triggers - Mono
-
-                if (TryComp<TriggerOnCollideComponent>(uid, out _))
-                    _trigger.Trigger(uid, hitEntity);
 
                 // Penetration Logic
                 if (modifiedDamage != null && projectileComp.PenetrationThreshold != FixedPoint2.Zero)

@@ -1,6 +1,27 @@
+# SPDX-FileCopyrightText: 2022 Kara
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 PixelTK
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2022 ninruB
+# SPDX-FileCopyrightText: 2023 Flareguy
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Vordenburg
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2024 AndresE55
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 IProduceWidgets
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 Plykiya
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: BaseSpeedLoader556x45mm
-  name: "speed loader 5.56x45mm FMJ)"
+  name: "speed loader (5.56x45mm FMJ)"
   parent: BaseItem
   abstract: true
   components:
@@ -21,7 +42,7 @@
 
 - type: entity
   id: SpeedLoader556x45mmFMJ
-  name: "speed loader 5.56x45mm FMJ)"
+  name: "speed loader (5.56x45mm FMJ)"
   parent: BaseSpeedLoader556x45mm
   components:
   - type: BallisticAmmoProvider
@@ -44,7 +65,7 @@
 
 - type: entity
   id: SpeedLoader556x45mmEmpty
-  name: "speed loader 5.56x45mm any)"
+  name: "speed loader (5.56x45mm any)"
   parent: SpeedLoader556x45mmFMJ
   components:
   - type: BallisticAmmoProvider
@@ -62,7 +83,7 @@
 
 - type: entity
   id: SpeedLoader556x45mmIncendiary
-  name: "speed loader 5.56x45mm incendiary)"
+  name: "speed loader (5.56x45mm incendiary)"
   parent: BaseSpeedLoader556x45mm
   components:
   - type: BallisticAmmoProvider
@@ -82,7 +103,7 @@
 
 - type: entity
   id: SpeedLoader556x45mmPractice
-  name: "speed loader 5.56x45mm practice)"
+  name: "speed loader (5.56x45mm practice)"
   parent: BaseSpeedLoader556x45mm
   components:
   - type: BallisticAmmoProvider
@@ -105,7 +126,7 @@
 
 - type: entity
   id: SpeedLoader556x45mmUranium
-  name: "speed loader 5.56x45mm uranium)"
+  name: "speed loader (5.56x45mm uranium)"
   parent: BaseSpeedLoader556x45mm
   components:
   - type: BallisticAmmoProvider
@@ -128,7 +149,7 @@
 
 - type: entity
   id: SpeedLoader556x45mmRubber
-  name: "speed loader 5.56x45mm rubber)"
+  name: "speed loader (5.56x45mm rubber)"
   parent: BaseSpeedLoader556x45mm
   components:
   - type: BallisticAmmoProvider

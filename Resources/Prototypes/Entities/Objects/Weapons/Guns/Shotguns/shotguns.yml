@@ -73,6 +73,7 @@
 # SPDX-FileCopyrightText: 2025 pheenty
 # SPDX-FileCopyrightText: 2025 slarticodefast
 # SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 tonotom
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -115,6 +116,10 @@
     proto: ShellShotgun12_gaugeBuckshot
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
+    soundRack: #Mono start
+      path: /Audio/_Mono/Weapons/Guns/Cock/shotgun_cock.ogg
+      params:
+        volume: -3 #Mono end
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -214,6 +219,7 @@
   - type: Gun
     fireRate: 3.5 #3->3.5 Mono
   - type: BallisticAmmoProvider
+    soundRack: /Audio/Weapons/Guns/Cock/smg_cock.ogg #Mono
     capacity: 2
   - type: Construction
     graph: ShotgunSawn
@@ -306,6 +312,7 @@
   - type: Gun
     fireRate: 3.5
   - type: BallisticAmmoProvider
+    soundRack: /Audio/Weapons/Guns/Cock/smg_cock.ogg #Mono
     capacity: 2
   - type: Construction
     graph: ShotgunSawn
@@ -344,6 +351,7 @@
   - type: Gun
     fireRate: 4
   - type: BallisticAmmoProvider
+    soundRack: /Audio/Weapons/Guns/Cock/smg_cock.ogg #Mono
     capacity: 1
   - type: Construction
     graph: ShotgunSawn
@@ -369,6 +377,7 @@
   - type: Gun
     fireRate: 2
   - type: BallisticAmmoProvider
+    soundRack: /Audio/Weapons/Guns/Cock/smg_cock.ogg #Mono
     capacity: 1
   - type: StaticPrice
     price: 0
@@ -392,6 +401,7 @@
   - type: Gun
     fireRate: 4 #No reason to stifle the firerate since you have to manually reload every time anyways.
   - type: BallisticAmmoProvider
+    soundRack: /Audio/Weapons/Guns/Cock/smg_cock.ogg #Mono
     capacity: 1
     proto: null
   - type: Construction

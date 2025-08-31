@@ -1,0 +1,40 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 significant harassment
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: startingGear
+  id: AsakimGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNinja
+    back: ClothingBackpackSecurity
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitAsakim
+    shoes: ClothingShoesBootsMagAsakim
+    pocket1: CrowbarPocket
+    pocket2: DoubleEmergencyOxygenTank
+    belt: ClothingBeltWebbingsBigBlack
+    suitStorage: OxygenTankFilled
+  inhand:
+  - WeaponRifleAsakimAutopulser
+  - WeaponHFKatana
+  storage:
+    back:
+    - RadioHandheldNF
+    - DoubleEmergencyOxygenTankFilled
+    - MedkitCombatFilled
+    - MedkitCombatFilled
+    - SyringeCaseAltFilled
+    - JetpackMiniFilled
+    - StorageImplanter
+    - FreedomImplanter
+    belt:
+    - CombatMedipen
+    - CombatMedipen
+    - CombatMedipen
+    - CombatMedipen
+    - HandHeldMassScannerBorg
+    - PowerDrill
+    - JawsOfLife
+    - WelderExperimental

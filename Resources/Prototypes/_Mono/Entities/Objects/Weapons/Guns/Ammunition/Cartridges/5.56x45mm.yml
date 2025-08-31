@@ -23,6 +23,7 @@
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2024 Winkarst
 # SPDX-FileCopyrightText: 2025 BramvanZijp
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -30,7 +31,7 @@
 
 - type: entity
   id: BaseCartridge556x45mm
-  name: cartridge 5.56x45mm FMJ)
+  name: cartridge (5.56x45mm FMJ)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
   description: An extremely-common intermediate cartridge for rifles.
   abstract: true
@@ -53,7 +54,7 @@
 
 - type: entity
   id: Cartridge556x45mmFMJ
-  name: cartridge 5.56x45mm FMJ)
+  name: cartridge (5.56x45mm FMJ)
   parent: BaseCartridge556x45mm
   components:
   - type: CartridgeAmmo
@@ -61,7 +62,7 @@
 
 - type: entity
   id: Cartridge556x45mmPractice
-  name: cartridge 5.56x45mm practice)
+  name: cartridge (5.56x45mm practice)
   parent: BaseCartridge556x45mm
   components:
   - type: CartridgeAmmo
@@ -76,7 +77,7 @@
 
 - type: entity
   id: Cartridge556x45mmIncendiary
-  name: cartridge 5.56x45mm incendiary)
+  name: cartridge (5.56x45mm incendiary)
   parent: BaseCartridge556x45mm
   components:
   - type: CartridgeAmmo
@@ -91,7 +92,7 @@
 
 - type: entity
   id: Cartridge556x45mmUranium
-  name: cartridge 5.56x45mm uranium)
+  name: cartridge (5.56x45mm uranium)
   parent: BaseCartridge556x45mm
   components:
   - type: CartridgeAmmo
@@ -106,7 +107,7 @@
 
 - type: entity
   id: Cartridge556x45mmRubber
-  name: cartridge 5.56x45mm rubber)
+  name: cartridge (5.56x45mm rubber)
   parent: BaseCartridge556x45mm
   components:
   - type: CartridgeAmmo
@@ -123,7 +124,7 @@
 #anti-flesh:
 - type: entity
   id: Cartridge556x45mmHP
-  name: cartridge 5.56x45mm hollow-point)
+  name: cartridge (5.56x45mm hollow-point)
   parent: BaseCartridge556x45mm
   components:
   - type: CartridgeAmmo
@@ -138,7 +139,7 @@
 
 - type: entity
   id: Cartridge556x45mmRIP
-  name: cartridge 5.56x45mm RIP)
+  name: cartridge (5.56x45mm RIP)
   parent: BaseCartridge556x45mm
   components:
   - type: CartridgeAmmo
@@ -154,7 +155,7 @@
 #armor-piercing:
 - type: entity
   id: Cartridge556x45mmSteelAP
-  name: cartridge 5.56x45mm AP steel core)
+  name: cartridge (5.56x45mm AP steel core)
   parent: BaseCartridge556x45mm
   components:
   - type: CartridgeAmmo
@@ -168,7 +169,7 @@
 
 - type: entity
   id: Cartridge556x45mmPlasteelAP
-  name: cartridge 5.56x45mm AP plasteel core)
+  name: cartridge (5.56x45mm AP plasteel core)
   parent: BaseCartridge556x45mm
   components:
   - type: CartridgeAmmo
@@ -183,7 +184,7 @@
 
 - type: entity
   id: Cartridge556x45mmSynthAP
-  name: cartridge 5.56x45mm AP synthalloy core)
+  name: cartridge (5.56x45mm AP synthalloy core)
   parent: BaseCartridge556x45mm
   components:
   - type: CartridgeAmmo

@@ -65,6 +65,7 @@
 # SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 GaussiArson
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 Ignaz "Ian" Kraft
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 UltimateJester
@@ -80,7 +81,7 @@
   components:
   - type: Sprite
   - type: Item
-    size: Huge
+    size: Large # Mono - Was Huge
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/laser_retro.rsi
     quickEquip: false
@@ -739,8 +740,6 @@
   id: WeaponAdvancedLaser
   description: An experimental civilian grade high-energy laser pistol with a self-charging nuclear battery.
   components:
-  - type: Item
-    size: Normal  # Intentionally larger than other pistols
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/advancedlasergun.rsi
     layers:
@@ -770,6 +769,7 @@
   - type: Tag
     tags:
     - AdvancedLaserPistol
+    - Sidearm
 
 - type: entity
   name: C.H.I.M.P. handcannon

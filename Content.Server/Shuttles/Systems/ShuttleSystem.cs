@@ -84,6 +84,7 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     [Dependency] private readonly DockingSystem _dockSystem = default!;
     [Dependency] private readonly DungeonSystem _dungeon = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
+    [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly FixtureSystem _fixtures = default!;
     [Dependency] private readonly InventorySystem _inventorySystem = default!;
     [Dependency] private readonly MapLoaderSystem _loader = default!;
@@ -241,11 +242,46 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
 
     private void OnFTLStarted(Entity<ShuttleComponent> ent, ref FTLStartedEvent args)
     {
+        var gridUid = args.Entity;
+
         ent.Comp.DampingModifier = 0f;
+
+        var dockedShuttles = new HashSet<EntityUid>();
+        GetAllDockedShuttles(gridUid, dockedShuttles);
+
+        // Process each docked ship (excluding the main ship which we already processed)
+        foreach (var dockedUid in dockedShuttles)
+        {
+            if (dockedUid == gridUid)
+                continue;
+
+            if (_entityManager.TryGetComponent<ShuttleComponent>(dockedUid, out var dockedComp))
+            {
+                dockedComp.DampingModifier = 0f;
+            }
+        }
     }
 
     private void OnFTLCompleted(Entity<ShuttleComponent> ent, ref FTLCompletedEvent args)
     {
+        var gridUid = args.Entity;
+
         ent.Comp.DampingModifier = ent.Comp.BodyModifier;
+
+        // Todo: Account for scenarios where shuttles undock mid-FTL
+        var dockedShuttles = new HashSet<EntityUid>();
+        GetAllDockedShuttles(gridUid, dockedShuttles);
+
+        // Process each docked ship (excluding the main ship which we already processed)
+        foreach (var dockedUid in dockedShuttles)
+        {
+            if (dockedUid == gridUid)
+                continue;
+
+            if (_entityManager.TryGetComponent<ShuttleComponent>(dockedUid, out var dockedComp))
+            {
+                dockedComp.DampingModifier = dockedComp.BodyModifier;
+            }
+        }
     }
 }

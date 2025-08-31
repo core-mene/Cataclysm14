@@ -301,10 +301,11 @@
       coefficients:
         Blunt: 0.4
         Slash: 0.3
-        Piercing: 0.4
+        Piercing: 0.35
         Heat: 0.5
         Radiation: 0.4
         Caustic: 0.5
+        Poison: 0.8 # Mono
   - type: ClothingSpeedModifier # Mono - Armor Value Changes
     walkModifier: 0.85
     sprintModifier: 0.85
@@ -366,6 +367,8 @@
   - type: PressureProtection
     highPressureMultiplier: 0.2
     lowPressureMultiplier: 1000
+  - type: FireProtection # Mono
+    reduction: 0.6
   - type: ExplosionResistance
     damageCoefficient: 0.4
   - type: Armor # Mono - Armor Value Changes
@@ -377,9 +380,10 @@
         Heat: 0.45
         Radiation: 0.6
         Caustic: 0.55
+        Poison: 0.8 # Mono
   - type: ClothingSpeedModifier # Mono - Armor Value Changes
-    walkModifier: 0.85
-    sprintModifier: 0.85
+    walkModifier: 0.925
+    sprintModifier: 0.925
   - type: FactionClothing
     faction: NanoTrasen
   - type: StaminaDamageResistance # Mono - Stamres
@@ -476,21 +480,21 @@
     sprite: _NF/Clothing/OuterClothing/Hardsuits/scaf.rsi
   - type: Armor
     modifiers:
-      coefficients:
-        Blunt: 0.55
-        Slash: 0.55
-        Piercing: 0.55 # Mono
-        Heat: 0.65
-        Radiation: 0.6 # Added Radiation Resist
-        Caustic: 0.7
+      coefficients: # Mono - all of these values are changed
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.45 # Mono
+        Heat: 0.55
+        Radiation: 0.5 # Added Radiation Resist
+        Caustic: 0.65
   - type: ExplosionResistance
-    damageCoefficient: 0.55
+    damageCoefficient: 0.35
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
   - type: ClothingSpeedModifier # Mono - Armor Value Changes
-    walkModifier: 0.85
-    sprintModifier: 0.85
+    walkModifier: 0.825
+    sprintModifier: 0.825
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing

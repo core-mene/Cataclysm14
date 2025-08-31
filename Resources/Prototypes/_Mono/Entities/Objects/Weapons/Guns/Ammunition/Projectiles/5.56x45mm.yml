@@ -15,6 +15,7 @@
 # SPDX-FileCopyrightText: 2024 Nemanja
 # SPDX-FileCopyrightText: 2024 Plykiya
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 sleepyyapril
 # SPDX-FileCopyrightText: 2025 starch
@@ -23,7 +24,7 @@
 
 - type: entity
   id: Bullet556x45mmFMJ
-  name: bullet 5.56x45mm FMJ)
+  name: bullet (5.56x45mm FMJ)
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
@@ -35,7 +36,7 @@
 
 - type: entity
   id: Bullet556x45mmPractice
-  name: bullet 5.56x45mm practice)
+  name: bullet (5.56x45mm practice)
   parent: BaseBulletPractice
   categories: [ HideSpawnMenu ]
   components:
@@ -46,7 +47,7 @@
 
 - type: entity
   id: Bullet556x45mmRubber
-  name: bullet 5.56x45mm rubber)
+  name: bullet (5.56x45mm rubber)
   parent: BaseBulletRubber
   categories: [ HideSpawnMenu ]
   components:
@@ -58,7 +59,7 @@
 - type: entity
   id: Bullet556x45mmIncendiary
   parent: BaseBulletIncendiary
-  name: bullet 5.56x45mm incendiary)
+  name: bullet (5.56x45mm incendiary)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -70,7 +71,7 @@
 - type: entity
   id: Bullet556x45mmUranium
   parent: BaseBulletUranium
-  name: bullet 5.56x45mm uranium)
+  name: bullet (5.56x45mm uranium)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -85,7 +86,7 @@
 - type: entity
   id: Bullet556x45mmHP
   parent: BaseBullet
-  name: bullet 5.56x45mm hollow-point)
+  name: bullet (5.56x45mm hollow-point)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -93,12 +94,12 @@
       types: 
         Slash: 4
         Piercing: 30
-    armorPenetration: -0.25
+    armorPenetration: -0.55
 
 - type: entity
   id: Bullet556x45mmRIP
   parent: BaseBullet
-  name: bullet 5.56x45mm RIP)
+  name: bullet (5.56x45mm RIP)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -106,13 +107,13 @@
       types: 
         Slash: 7
         Piercing: 37
-    armorPenetration: -0.6
+    armorPenetration: -0.9
 
 #armor-piercing:
 - type: entity
   id: Bullet556x45mmSteelAP
   parent: BaseBullet
-  name: bullet 5.56x45mm AP steel core)
+  name: bullet (5.56x45mm AP steel core)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -124,7 +125,7 @@
 - type: entity
   id: Bullet556x45mmPlasteelAP
   parent: BaseBullet
-  name: bullet 5.56x45mm AP plasteel core)
+  name: bullet (5.56x45mm AP plasteel core)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -136,7 +137,7 @@
 - type: entity
   id: Bullet556x45mmSynthAP
   parent: BaseBullet
-  name: bullet 5.56x45mm AP synthalloy core)
+  name: bullet (5.56x45mm AP synthalloy core)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
