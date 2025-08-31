@@ -11740,3 +11740,48 @@ Entries:
   id: 1302
   time: '2025-08-30T23:46:46.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2145
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Energy weapons are 2x4 sized instead of 4x4 sized.
+  id: 1303
+  time: '2025-08-30T23:59:54.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2151
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Ocelot to TSF shipyard as a expensive small ship, high burst damage with
+        autopulsers and torps but bad for prolonged combat. Capable of
+        cloakhunting.
+  id: 1304
+  time: '2025-08-31T06:06:10.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2153
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: Lathes now consume resources as objects are produced.
+    - type: Add
+      message: Queued lathe recipes are now cancellable.
+    - type: Add
+      message: >-
+        Lathes may now be made to loop their queue and/or skip over recipes with
+        insufficient materials.
+    - type: Add
+      message: >-
+        Lathes now have signal ports to pause/resume the queue and a signal
+        source port for when something is produced.
+  id: 1305
+  time: '2025-08-31T06:09:03.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2134
+- author: core-mene
+  changes:
+    - type: Add
+      message: New rogue silicons tech disk in silicon lootbox.
+    - type: Tweak
+      message: >-
+        Buffed silicon loot box in exchange for twice as much HP + more armor
+        for most silicons (minus boss).
+  id: 1306
+  time: '2025-08-31T06:10:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2114
