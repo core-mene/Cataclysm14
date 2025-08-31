@@ -1,5 +1,7 @@
 # SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -53,6 +55,7 @@
   - type: Stack
     count: 3
 
+#Mono aditions
 - type: entity
   parent: ScrapOre
   id: ScrapOre20
@@ -60,6 +63,23 @@
   components:
   - type: Stack
     count: 20
+
+- type: entity
+  parent: ScrapOre
+  id: ScrapOre50
+  suffix: 50
+  components:
+  - type: Stack
+    count: 50
+
+- type: entity
+  parent: ScrapOre
+  id: ScrapOre100
+  suffix: 100
+  components:
+  - type: Stack
+    count: 100
+#Mono end
 
 - type: material
   id: RawScrap

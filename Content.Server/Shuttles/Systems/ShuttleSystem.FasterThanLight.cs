@@ -843,9 +843,9 @@ public sealed partial class ShuttleSystem
             var newRot = mainNewRot + relativeRot;
             if (xform.MapUid != null)
             {
+                _transform.SetWorldRotation(dockedUid, newRot);
                 _transform.SetParent(dockedUid, dockedXform, xform.MapUid.Value);
                 _transform.SetWorldPosition(dockedUid, newPos);
-                _transform.SetWorldRotation(dockedUid, newRot);
             }
 
             // Re-establish all docking connections
@@ -1599,6 +1599,7 @@ public sealed partial class ShuttleSystem
             var dockedComp = EnsureComp<FTLComponent>(dockedUid);
             dockedComp.LinkedShuttle = uid;
             dockedComp.State = FTLState.Travelling;
+            dockedComp.TargetAngle = comp.TargetAngle + relativeRot;
 
             if (TryComp<PhysicsComponent>(dockedUid, out var dockedBody))
             {

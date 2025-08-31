@@ -236,6 +236,20 @@
   - type: TechnologyDatabase
   - type: MaterialStorageMagnetPickup # Frontier
     range: 1.50 # Mono
+  # <Mono>
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+    - Pause
+    - Resume
+  - type: DeviceLinkSource
+    ports:
+    - Produced
+  # </Mono>
 
 # a lathe that can be sped up with space lube / slowed down with glue
 - type: entity

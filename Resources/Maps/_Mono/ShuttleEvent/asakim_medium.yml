@@ -17,6 +17,7 @@
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -392,8 +393,6 @@ entities:
       pos: 3.5,0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 365
   - uid: 379
@@ -402,8 +401,6 @@ entities:
       pos: -4.5,0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 365
   - uid: 380
@@ -412,8 +409,6 @@ entities:
       pos: -0.5,-4.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 365
 - proto: APCHyperCapacity
@@ -1679,8 +1674,6 @@ entities:
       pos: -0.5,-1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 365
   - uid: 382
@@ -1690,8 +1683,6 @@ entities:
       pos: -2.5,0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 365
   - uid: 383
@@ -1701,8 +1692,6 @@ entities:
       pos: 1.5,0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 365
   - uid: 384
@@ -1712,8 +1701,6 @@ entities:
       pos: 1.5,1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 365
 - proto: FloorDrain
@@ -1846,8 +1833,6 @@ entities:
       pos: -0.5,-0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 365
 - proto: GasVentScrubber
@@ -1859,8 +1844,6 @@ entities:
       pos: -0.5,0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 365
 - proto: GeneratorWallmountAPU

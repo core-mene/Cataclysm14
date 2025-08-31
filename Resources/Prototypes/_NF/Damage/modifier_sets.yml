@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2024 AndresE55
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: damageModifierSet
   id: Goblin
   coefficients:
@@ -58,7 +65,7 @@
     Structural: 1.2
     Blunt: 0.7
     Slash: 0.5
-    Piercing: 0.7
+    Piercing: 0.6 #Mono 0.7->0.6
     Shock: 1.5
     Caustic: 0.9
     Radiation: 1.2

@@ -13,6 +13,7 @@
 // SPDX-FileCopyrightText: 2024 Plykiya
 // SPDX-FileCopyrightText: 2024 metalgearsloth
 // SPDX-FileCopyrightText: 2024 plykiya
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 Whatstone
 // SPDX-FileCopyrightText: 2025 deltanedas
 // SPDX-FileCopyrightText: 2025 starch
@@ -23,6 +24,7 @@
 using System.Linq;
 using System.Text;
 using Content.Client.Materials;
+using Content.Client.Stylesheets; // Mono
 using Content.Shared.Lathe;
 using Content.Shared.Lathe.Prototypes;
 using Content.Shared.Research.Prototypes;
@@ -49,6 +51,11 @@ public sealed partial class LatheMenu : FancyWindow
 
     public event Action<BaseButton.ButtonEventArgs>? OnServerListButtonPressed;
     public event Action<string, int>? RecipeQueueAction;
+    // <Mono>
+    public event Action<bool>? OnLoopCheckboxPressed;
+    public event Action<bool>? OnSkipCheckboxPressed;
+    public event Action<int>? OnRecipeCancelled;
+    // </Mono>
 
     public List<ProtoId<LatheRecipePrototype>> Recipes = new();
 
@@ -79,6 +86,11 @@ public sealed partial class LatheMenu : FancyWindow
         FilterOption.OnItemSelected += OnItemSelected;
 
         ServerListButton.OnPressed += a => OnServerListButtonPressed?.Invoke(a);
+
+        // <Mono>
+        LoopCheckbox.OnPressed += _ => OnLoopCheckboxPressed?.Invoke(LoopCheckbox.Pressed);
+        SkipCheckbox.OnPressed += _ => OnSkipCheckboxPressed?.Invoke(SkipCheckbox.Pressed);
+        // </Mono>
     }
 
     public void SetEntity(EntityUid uid)
@@ -272,6 +284,13 @@ public sealed partial class LatheMenu : FancyWindow
                 queuedRecipeLabel.Text = $"{idx}. {_lathe.GetRecipeName(batch.Recipe)}";
             // End Frontier
             queuedRecipeBox.AddChild(queuedRecipeLabel);
+            // <Mono>
+            var cancelButton = new Button();
+            cancelButton.Text = "X";
+            cancelButton.StyleClasses.Add(StyleBase.ButtonCaution);
+            cancelButton.OnPressed += _ => OnRecipeCancelled?.Invoke(batch.Index);
+            queuedRecipeBox.AddChild(cancelButton);
+            // </Mono>
             QueueList.AddChild(queuedRecipeBox);
             idx++;
         }
@@ -288,6 +307,18 @@ public sealed partial class LatheMenu : FancyWindow
 
         NameLabel.Text = _lathe.GetRecipeName(recipe);
     }
+
+    // <Mono>
+    public void SetLooping(bool loop)
+    {
+        LoopCheckbox.Pressed = loop;
+    }
+
+    public void SetSkipping(bool skip)
+    {
+        SkipCheckbox.Pressed = skip;
+    }
+    // </Mono>
 
     public Control GetRecipeDisplayControl(LatheRecipePrototype recipe)
     {

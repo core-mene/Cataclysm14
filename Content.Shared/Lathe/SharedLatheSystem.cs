@@ -79,6 +79,48 @@ public abstract class SharedLatheSystem : EntitySystem
         return _proto.TryIndex<LatheRecipePrototype>(recipe, out var proto) && CanProduce(uid, proto, amount, component);
     }
 
+    // Mono
+    public Dictionary<ProtoId<MaterialPrototype>, int> GetEndMaterialAmounts(Entity<LatheComponent?> ent)
+    {
+        if (!Resolve(ent, ref ent.Comp))
+            return new();
+
+        var currentMaterial = _materialStorage.GetStoredMaterials(ent.Owner);
+        foreach (var batch in ent.Comp.Queue)
+        {
+            var recipe = batch.Recipe;
+            foreach (var (material, needed) in recipe.Materials)
+            {
+                var adjustedAmount = AdjustMaterial(needed, recipe.ApplyMaterialDiscount, ent.Comp.FinalMaterialUseMultiplier);
+                currentMaterial[material] -= adjustedAmount * (batch.ItemsRequested - batch.ItemsPrinted);
+            }
+        }
+        return currentMaterial;
+    }
+
+    // Mono
+    /// <summary>
+    /// Whether we'll be able to produce this if we queue this to the end.
+    /// </summary>
+    public bool CanProduceEnd(Entity<LatheComponent?> ent, LatheRecipePrototype recipe, int amount = 1)
+    {
+        if (!Resolve(ent, ref ent.Comp))
+            return false;
+        if (!HasRecipe(ent, recipe, ent.Comp))
+            return false;
+
+        var endAmts = GetEndMaterialAmounts(ent);
+
+        foreach (var (material, needed) in recipe.Materials)
+        {
+            var adjustedAmount = AdjustMaterial(needed, recipe.ApplyMaterialDiscount, ent.Comp.FinalMaterialUseMultiplier);
+
+            if (endAmts.GetValueOrDefault(material) < adjustedAmount * amount)
+                return false;
+        }
+        return true;
+    }
+
     public bool CanProduce(EntityUid uid, LatheRecipePrototype recipe, int amount = 1, LatheComponent? component = null)
     {
         if (!Resolve(uid, ref component))
