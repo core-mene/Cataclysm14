@@ -114,11 +114,10 @@
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
-    # Shit punching damage, equip a melee weapon if you want to get up close
     damage:
       types:
         Blunt: 25
-        Structural: 0
+        Structural: 260
   - type: Destructible
     thresholds:
     - trigger:
@@ -219,11 +218,10 @@
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
-    # Shit punching damage, equip a melee weapon if you want to get up close
     damage:
       types:
         Blunt: 25
-        Structural: 0
+        Structural: 260
   - type: Destructible
     thresholds:
     - trigger:
@@ -315,11 +313,10 @@
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
-    # Shit punching damage, equip a melee weapon if you want to get up close
     damage:
       types:
         Blunt: 25
-        Structural: 0
+        Structural: 260
   - type: Destructible
     thresholds:
     - trigger:
@@ -411,11 +408,10 @@
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
-    # Shit punching damage, equip a melee weapon if you want to get up close
     damage:
       types:
         Blunt: 50
-        Structural: 0
+        Structural: 550
   - type: Destructible
     thresholds:
     - trigger:
@@ -507,11 +503,10 @@
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
-    # Shit punching damage, equip a melee weapon if you want to get up close
     damage:
       types:
         Blunt: 50
-        Structural: 0
+        Structural: 550
   - type: Destructible
     thresholds:
     - trigger:
@@ -607,7 +602,7 @@
     damage:
       types:
         Blunt: 50
-        Structural: 0
+        Structural: 550
   - type: Destructible
     thresholds:
     - trigger:
