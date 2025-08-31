@@ -67,6 +67,7 @@ using Robust.Shared.Utility;
 using FTLMapComponent = Content.Shared.Shuttles.Components.FTLMapComponent;
 using Content.Server.Salvage.Expeditions;
 using Content.Shared._Mono.Ships;
+using System.Threading.Tasks;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -736,7 +737,7 @@ public sealed partial class ShuttleSystem
     /// <summary>
     ///  Shuttle arrived.
     /// </summary>
-    private void UpdateFTLArriving(Entity<FTLComponent, ShuttleComponent> entity)
+    private async Task UpdateFTLArriving(Entity<FTLComponent, ShuttleComponent> entity)
     {
         var globalFtlCooldown = 10f;
         var uid = entity.Owner;

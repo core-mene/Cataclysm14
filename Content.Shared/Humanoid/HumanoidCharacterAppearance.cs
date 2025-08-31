@@ -1,4 +1,25 @@
-﻿using System.Linq;
+// SPDX-FileCopyrightText: 2020 DamianX
+// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2021 Moses
+// SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2021 Visne
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Flipp Syder
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 Morb
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 csqrb
+// SPDX-FileCopyrightText: 2024 Errant
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using System.Linq;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
 using Robust.Shared.Prototypes;
@@ -188,8 +209,8 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
                 break;
         }
 
-        var newHeight = random.NextFloat(0.8f, 1.2f); // Random height between 80% and 120% of normal
-        var newWidth = random.NextFloat(0.8f, 1.2f); // Random width between 80% and 120% of normal
+        var newHeight = random.NextFloat(0.95f, 1.05f); // Random height between 95% and 105% of normal
+        var newWidth = random.NextFloat(0.95f, 1.05f); // Random width between 95% and 105% of normal
         return new HumanoidCharacterAppearance(newHairStyle, newHairColor, newFacialHairStyle, newHairColor, newEyeColor, newSkinColor, new (), newHeight, newWidth);
 
         float RandomizeColor(float channel)
