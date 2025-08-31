@@ -95,6 +95,12 @@
     - FootstepSound
     - RipleyMkII
     - CivilianMechBounty # Mono
+  - type: Prying # Mono
+    pryPowered: true
+    force: true
+    speedModifier: 3
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechRipley2Battery
@@ -161,6 +167,12 @@
     scale: 1.5
     requireNoGrid: true
     shape: square
+  - type: Prying # Mono
+    pryPowered: true
+    force: true
+    speedModifier: 3
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechClarkeBattery
@@ -242,6 +254,12 @@
     scale: 1.5
     requireNoGrid: true
     shape: square
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 5
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechGygaxBattery
@@ -315,6 +333,12 @@
     scale: 1.5
     requireNoGrid: true
     shape: square
+  - type: Prying # Mono
+    pryPowered: true
+    force: true
+    speedModifier: 5
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechDurandBattery
@@ -390,6 +414,12 @@
     scale: 1.5
     requireNoGrid: true
     shape: square
+  - type: Prying # Mono
+    pryPowered: true
+    force: true
+    speedModifier: 5
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechMarauderBattery
@@ -475,6 +505,12 @@
     scale: 1.5
     requireNoGrid: true
     shape: square
+  - type: Prying # Mono
+    pryPowered: true
+    force: true
+    speedModifier: 5
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechSeraphBattery
@@ -563,6 +599,12 @@
     scale: 1.5
     requireNoGrid: true
     shape: square
+  - type: Prying # Mono
+    pryPowered: true
+    force: true
+    speedModifier: 5
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechGygaxSyndieBattery
@@ -647,6 +689,12 @@
     scale: 1.5
     requireNoGrid: true
     shape: square
+  - type: Prying # Mono
+    pryPowered: true
+    force: true
+    speedModifier: 5
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechMaulerSyndieBattery

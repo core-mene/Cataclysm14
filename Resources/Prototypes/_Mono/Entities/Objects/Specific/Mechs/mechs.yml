@@ -160,6 +160,12 @@
     - DoorBumpOpener
     - FootstepSound
     - Broadsword
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 7
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: AFInterceptorBattery
@@ -265,6 +271,13 @@
     - FootstepSound
     - Halberd
     - MilitaryMechBounty
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 7
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
+
 
 - type: entity
   id: AFInterceptorG
@@ -359,6 +372,12 @@
     - FootstepSound
     - Sabre
     - MilitaryMechBounty
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 7
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 #4x4 mechas
 - type: entity
@@ -455,6 +474,13 @@
     - FootstepSound
     - Flail
     - MilitaryMechBounty
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 10
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
+
 
 - type: entity
   id: AFFlailE
@@ -550,6 +576,12 @@
     - FootstepSound
     - Spyglass
     - MilitaryMechBounty
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 10
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: AFMace
@@ -646,3 +678,9 @@
     - FootstepSound
     - Mace
     - MilitaryMechBounty
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 10
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
