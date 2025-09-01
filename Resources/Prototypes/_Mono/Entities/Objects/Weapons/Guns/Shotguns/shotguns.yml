@@ -133,10 +133,11 @@
   - type: Tag
     tags:
     - WeaponShotgunHelopolis
-  - type: BallisticAmmoProvider # Goobstation
+  - type: BallisticAmmoProvider
     autoCycle: false
     capacity: 4
     proto: ShellShotgun12_gaugeSlug
   - type: StaticPrice
     price: 1000
     vendPrice: 3000
+    
