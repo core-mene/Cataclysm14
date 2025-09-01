@@ -226,7 +226,7 @@
       unwieldOnUse: false
     - type: GunWieldBonus
       minAngle: -19
-      maxAngle: -16
+      maxAngle: -20 # -16 -> -20 - Mono
     - type: ChamberMagazineAmmoProvider # Mono
       soundRack:
         path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
