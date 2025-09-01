@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-4.0",
+    "copyright": "icon sprited entirely by tonotom1, backpack strap sprite derived from sawn-off backpack sprite by Peptide, modified by tonotom1",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "equipped-BACKPACK",
+            "directions": 4
+        },
+        {
+            "name": "equipped-SUITSTORAGE",
+            "directions": 4
+        }
+    ]
+}

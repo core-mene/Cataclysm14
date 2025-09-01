@@ -106,3 +106,34 @@
   - type: StaticPrice
     price: 5000
     vendPrice: 42300
+    
+- type: entity
+  name: Helopolis (12 gauge)
+  parent: [ BaseWeaponShotgun, BaseC1Contraband ]
+  id: WeaponShotgunHelopolis
+  description: A compact shotgun that sacrifices all combat ergonomics to better serve as a breaching tool. The logo "UW" is machined into the receiver.
+  components:
+  - type: Sprite
+    sprite: _Mono\Objects\Weapons\Guns\Shotguns\Helopolis
+  - type: Clothing
+    sprite: _Mono\Objects\Weapons\Guns\Shotguns\Helopolis
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,0
+#    - 0,1,0,1 #In case size balance is needed
+#    storedRotation: 90
+    sprite: _Mono\Objects\Weapons\Guns\Shotguns\Helopolis
+  - type: Gun
+    minAngle: 6
+    maxAngle: 12
+    fireRate: 1.2
+    angleIncrease: 3
+    angleDecay: 2
+  - type: BallisticAmmoProvider
+    autoCycle: false
+    capacity: 4
+    proto: ShellShotgun12_gaugeSlug
+  - type: StaticPrice # Mono
+    price: 800
+    vendPrice: 2400
