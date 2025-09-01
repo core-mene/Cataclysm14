@@ -108,3 +108,36 @@
   - type: StaticPrice
     price: 5000
     vendPrice: 42300
+
+- type: entity
+  name: UW12-B Helopolis (12 gauge)
+  parent: [BaseWeaponShotgun, BaseC1Contraband]
+  id: WeaponShotgunHelopolis
+  description: A compact shotgun that sacrifices all combat ergonomics to better serve as a breaching tool. Breaks doors with slugs. Combat use unadvised.
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,0
+    sprite: _Mono/Objects/Weapons/Guns/Shotguns/Helopolis.rsi
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Shotguns/Helopolis.rsi
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Guns/Shotguns/Helopolis.rsi
+  - type: Gun
+    minAngle: 6
+    maxAngle: 12
+    fireRate: 1.2
+    angleIncrease: 3
+    angleDecay: 2
+  - type: Tag
+    tags:
+    - WeaponShotgunHelopolis
+  - type: BallisticAmmoProvider
+    autoCycle: false
+    capacity: 4
+    proto: ShellShotgun12_gaugeSlug
+  - type: StaticPrice
+    price: 1000
+    vendPrice: 3000
+    
