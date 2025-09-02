@@ -115,7 +115,7 @@ public sealed class CheapEntitiesCleanupSystem : EntitySystem
             if (HasComp<MobStateComponent>(uid))
                 continue;
 
-            // Safety check for players. This shouldn't apply as mobs do not have static prices.
+            // Safety check for players. This shouldn't apply as mobs do not have stack prices.
             if (HasComp<ActorComponent>(uid))
                 continue;
 
