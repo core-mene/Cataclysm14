@@ -1,4 +1,6 @@
 using Content.Server.Administration.Logs;
+using Content.Server.Atmos.Components; // Mono
+using Content.Server.Atmos.EntitySystems; // Mono
 using Content.Server.Body.Systems;
 using Content.Server.Construction;
 using Content.Server.Explosion.EntitySystems;
@@ -48,6 +50,7 @@ namespace Content.Server.Kitchen.EntitySystems
 {
     public sealed partial class MicrowaveSystem : EntitySystem // Frontier: add partial
     {
+        [Dependency] private readonly AtmosphereSystem _atmosphereSystem = default!; // Mono
         [Dependency] private readonly BodySystem _bodySystem = default!;
         [Dependency] private readonly DeviceLinkSystem _deviceLink = default!;
         [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
@@ -191,6 +194,15 @@ namespace Content.Server.Kitchen.EntitySystems
             {
                 if (TryComp<TemperatureComponent>(entity, out var tempComp))
                     _temperature.ChangeHeat(entity, heatToAdd * component.ObjectHeatMultiplier, false, tempComp);
+
+                // Mono Start - Heat gas tanks
+                if (TryComp<GasTankComponent>(entity, out var gasTank) && gasTank.Air != null)
+                {
+                    // Thermal energy to be added based on gas heat capacity
+                    var thermalEnergyToAdd = heatToAdd * component.ObjectHeatMultiplier;
+                    _atmosphereSystem.AddHeat(gasTank.Air, thermalEnergyToAdd);
+                }
+                // Mono End
 
                 if (!TryComp<SolutionContainerManagerComponent>(entity, out var solutions))
                     continue;
