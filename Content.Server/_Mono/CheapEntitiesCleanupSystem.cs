@@ -8,6 +8,7 @@ using Content.Server.Body.Components;
 using Content.Shared._Mono.CCVar;
 using Content.Shared.Cargo.Components;
 using Content.Shared.Mobs.Components;
+using Content.Shared.Stacks;
 using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
@@ -52,7 +53,7 @@ public sealed class CheapEntitiesCleanupSystem : EntitySystem
 
         // EQE
         var staticquery = EntityQueryEnumerator<StaticPriceComponent, TransformComponent>();
-        var stackquery = EntityQueryEnumerator<StaticPriceComponent, TransformComponent>();
+        var stackquery = EntityQueryEnumerator<StaticPriceComponent, StackComponent, TransformComponent>();
 
         // Logging Var
         var entCount = 0;
@@ -97,40 +98,40 @@ public sealed class CheapEntitiesCleanupSystem : EntitySystem
             QueueDel(uid);
         }
 
-        while (stackquery.MoveNext(out var uid, out var comp, out var xform))
+        while (stackquery.MoveNext(out var uid2, out var stackPrice, out var stack, out var xform))
         {
             // Skip deletion if entity is on a grid.
             if (xform.GridUid != null)
                 continue;
 
             // Skip deletion if the entity is inside a container.
-            if (_container.IsEntityInContainer(uid))
+            if (_container.IsEntityInContainer(uid2))
                 continue;
 
             // Check for being a container
-            if (HasComp<ContainerManagerComponent>(uid))
+            if (HasComp<ContainerManagerComponent>(uid2))
                 continue;
 
             // Price Check
-            if (comp.Price > _minValueToDelete)
+            if (stackPrice.Price * stack.Count > _minValueToDelete)
                 continue;
 
             // Safety check for mobs. This shouldn't apply as mobs do not have stack prices.
-            if (HasComp<MobStateComponent>(uid))
+            if (HasComp<MobStateComponent>(uid2))
                 continue;
 
             // Safety check for players. This shouldn't apply as mobs do not have stack prices.
-            if (HasComp<ActorComponent>(uid))
+            if (HasComp<ActorComponent>(uid2))
                 continue;
 
             // Final safety check.
-            if (HasComp<BrainComponent>(uid))
+            if (HasComp<BrainComponent>(uid2))
                 continue;
 
             // Adds entity to logging
             entCount += 1;
             // Delete the entity
-            QueueDel(uid);
+            QueueDel(uid2);
         }
 
 
