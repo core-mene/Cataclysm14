@@ -11844,3 +11844,158 @@ Entries:
   id: 1313
   time: '2025-09-01T04:40:54.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2139
+- author: mikusssssss
+  changes:
+    - type: Add
+      message: >-
+        Liquid oxygen/nitrogen canisters along with plasma canisters are buyable
+        again.
+  id: 1314
+  time: '2025-09-01T16:47:39.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2170
+- author: Honestly101
+  changes:
+    - type: Tweak
+      message: Large mechs can now damage structures with melee
+    - type: Tweak
+      message: Mechs can now pry open doors (Alt Left Click)
+  id: 1315
+  time: '2025-09-01T17:10:45.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2161
+- author: tonotom1
+  changes:
+    - type: Add
+      message: >-
+        UW-12B Helopolis: A compact breaching shotgun intended for use with
+        slugs to break down internal airlocks
+  id: 1316
+  time: '2025-09-01T19:10:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2171
+- author: Honestly101
+  changes:
+    - type: Fix
+      message: Fixed missing plating under halycon walls
+  id: 1317
+  time: '2025-09-01T19:11:17.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2168
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Properly implemented recoil gain/recovery on guns. SMGs/rifles/DMRs/LMGs
+        should all be controllable now if you just fire in bursts. Also buffed
+        firerate of Grizzly and AK-220. No more near perfect accuracy M-90, so
+        sad for the 0 people using it.
+  id: 1318
+  time: '2025-09-01T19:37:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2155
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: >-
+        TSF experimental suit 10% more blunt, slash, pierce, and 25% more stam
+        resist
+  id: 1319
+  time: '2025-09-01T19:41:26.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2173
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Elite suit armor stats reverted to standard wizden (40%
+        blunt/slash/pierce). 0% slowdown still.
+    - type: Tweak
+      message: Jugsuit slowdown increased from 35% to 40%.
+  id: 1320
+  time: '2025-09-01T19:46:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2174
+- author: Ilya246
+  changes:
+    - type: Add
+      message: Borgs now have inbuilt mass scanner and can freely float in space.
+    - type: Tweak
+      message: >-
+        Borg appraisal module renamed to cargo module and given tether gun and
+        gravity gun.
+    - type: Tweak
+      message: Medical borgs now get the surgery module right away.
+    - type: Tweak
+      message: All borgs now get the tools module right away.
+    - type: Tweak
+      message: Borgs can now open their own UI.
+    - type: Tweak
+      message: You can now eject default modules from borgs.
+  id: 1321
+  time: '2025-09-01T20:07:59.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2103
+- author: bitcrushing
+  changes:
+    - type: Fix
+      message: >-
+        Fixed ported Funky Station gases not displaying correctly on the gas
+        sale console
+  id: 1322
+  time: '2025-09-01T20:09:05.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2101
+- author: starch70
+  changes:
+    - type: Add
+      message: Added a ADS capital. Only spawns after 5 hour mark.
+    - type: Add
+      message: >-
+        Added Type-241 plasma lance as a superheavy energy weapon that fires a
+        large ~0.5km long beam of plasma in 1 giant burst. Don't get hit by it.
+        Currently only mapped on ADS capital.
+    - type: Tweak
+      message: >-
+        Changed ADS events to be more aggressive after 5 hour mark, and locked
+        zenith alt-variant to post 5 hour mark.
+    - type: Tweak
+      message: >-
+        Gave ADS ships a unique IFF color, and gave ADS systems/Asakim a unique
+        radio channel (its :j to access it).
+    - type: Tweak
+      message: Added a new law to ADS lawset.
+    - type: Tweak
+      message: >-
+        Buffed omega gunnery server to 500 capacity from 150, replaced Flyssa
+        station server with Omega server.
+    - type: Fix
+      message: Fixed Asakim medium ship missing a gyro.
+  id: 1323
+  time: '2025-09-01T20:14:41.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2167
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Drozd max spread while wielded reduced.
+    - type: Tweak
+      message: Vulcan a bit easier to use.
+  id: 1324
+  time: '2025-09-01T21:15:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2178
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Increased density of ADS capital walls, no more rammeta.
+  id: 1325
+  time: '2025-09-01T23:24:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2180
+- author: Honestly101
+  changes:
+    - type: Fix
+      message: AI can move around again at the cost of a rotating cube.
+  id: 1326
+  time: '2025-09-02T00:17:23.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2179
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Halcyon/Balkai radar change decreased to 1280m
+    - type: Tweak
+      message: >-
+        Other places using the station radar replaced with elite radar, with a
+        1024m range
+  id: 1327
+  time: '2025-09-02T04:45:22.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2183

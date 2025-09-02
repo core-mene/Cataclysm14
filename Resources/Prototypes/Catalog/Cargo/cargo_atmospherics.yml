@@ -10,8 +10,10 @@
 # SPDX-FileCopyrightText: 2024 Dvir
 # SPDX-FileCopyrightText: 2024 Ilya246
 # SPDX-FileCopyrightText: 2024 MODERN
+# SPDX-FileCopyrightText: 2025 SRV
 # SPDX-FileCopyrightText: 2025 SarahRaven
 # SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 mikus
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -37,12 +39,11 @@
 
 - type: cargoProduct
   id: AtmosphericsLiquidOxygen
-  abstract: true # Frontier
   icon:
     sprite: _NF/Structures/Storage/canister.rsi # Frontier: _NF
     state: oxygen_liquid # Frontier blue<oxygen_liquid
   product: LiquidOxygenCanister
-  cost: 2500
+  cost: 15000 # Mono - re-enable liquid gasses
   category: cargoproduct-category-name-atmospherics
   group: market
 
@@ -58,34 +59,31 @@
 
 - type: cargoProduct
   id: AtmosphericsLiquidNitrogen
-  abstract: true # Frontier
   icon:
     sprite: _NF/Structures/Storage/canister.rsi # Frontier: _NF
     state: nitrogen_liquid # Frontier red<nitrogen_liquid
   product: LiquidNitrogenCanister
-  cost: 2500
+  cost: 12500 # Mono - re-enable liquid gasses
   category: cargoproduct-category-name-atmospherics
   group: market
 
 - type: cargoProduct
   id: AtmosphericsCarbonDioxide
-  abstract: true # Frontier
   icon:
     sprite: _NF/Structures/Storage/canister.rsi # Frontier: _NF
     state: carbon # Frontier black<carbon
   product: CarbonDioxideCanister
-  cost: 2200 # Until someone fixes it co2 can be used to oneshot people so it's more expensive
+  cost: 8000
   category: cargoproduct-category-name-atmospherics
   group: market
 
 - type: cargoProduct
   id: AtmosphericsLiquidCarbonDioxide
-  abstract: true # Frontier
   icon:
     sprite: _NF/Structures/Storage/canister.rsi # Frontier: _NF
     state: carbon_liquid # Frontier black<carbon_liquid
   product: LiquidCarbonDioxideCanister
-  cost: 4000
+  cost: 16000 # Mono - re-enable liquid gasses
   category: cargoproduct-category-name-atmospherics
   group: market
 
@@ -112,13 +110,12 @@
 #  group: market
 
 - type: cargoProduct
-  id: AtmosphericsPlasma
-  abstract: true # Frontier
+  id: AtmosphericsPlasma # Mono - Make plasma canisters buyable again
   icon:
     sprite: _NF/Structures/Storage/canister.rsi # Frontier: _NF
     state: plasma # Frontier orange<plasma
   product: PlasmaCanister
-  cost: 5000 # Frontier: 4000<5000
+  cost: 7000 # Mono - Gas sell prices
   category: cargoproduct-category-name-atmospherics
   group: market
 

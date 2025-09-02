@@ -4,14 +4,8 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Server.Light.Components;
-using Content.Server.Nutrition.Components;
 using Content.Server.Shuttles.Components;
 using Content.Shared._Mono.CCVar;
-using Content.Shared.Chemistry.Components;
-using Content.Shared.Chemistry.EntitySystems;
-using Content.Shared.Light.Components;
-using Content.Shared.Nutrition.Components;
 using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
@@ -26,7 +20,6 @@ public sealed class SpaceGarbageCleanupSystem : EntitySystem
 
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
-    [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
 
     private ISawmill _log = default!;
@@ -53,23 +46,24 @@ public sealed class SpaceGarbageCleanupSystem : EntitySystem
         _nextCleanup = curTime + cleanupInterval;
 
         // Find all entities with SpaceGarbageComponent and delete them
-        var query = EntityQueryEnumerator<SpaceGarbageComponent>();
+        var query = EntityQueryEnumerator<SpaceGarbageComponent, TransformComponent>();
 
         // Logging Var
         var entCount = 0;
 
-        while (query.MoveNext(out var uid, out var comp))
+        while (query.MoveNext(out var uid, out var comp, out var xform))
         {
+
+            // Skip deletion if entity is on a grid.
+            if (xform.GridUid != null)
+                continue;
+
             // Skip deletion if the component marks the entity as exempt.
             if (comp.CleanupExempt == true)
                 continue;
 
             // Skip deletion if the entity is inside a container.
             if (_container.IsEntityInContainer(uid))
-                continue;
-
-            // Skip deletion if entity is on a grid.
-            if (TryComp<TransformComponent>(uid, out var xform) && xform.GridUid != null)
                 continue;
 
             // Adds entity to logging

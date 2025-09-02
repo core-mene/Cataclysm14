@@ -8,9 +8,18 @@
   table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
     children:
       - id: UnknownShuttleZenith
-      - id: UnknownShuttleZenithE
       - id: UnknownShuttleRazor
       - id: UnknownShuttleNebula
+
+- type: entityTable
+  id: DamagedAIShipsTableT2
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+    - id: UnknownShuttleZenith
+    - id: UnknownShuttleZenithE
+    - id: UnknownShuttleRazor
+    - id: UnknownShuttleNebula
+    - id: UnknownShuttleWyvern
 
 - type: entity
   parent: BaseRandomShuttleRule
@@ -71,3 +80,18 @@
     minPlayers: 15
   - type: LoadMapRule
     preloadedGrid: AIRazor
+
+- type: entity
+  parent: BaseRandomShuttleRule
+  id: UnknownShuttleWyvern
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-ai-capital-detected
+    startAudio:
+      path: /Audio/Misc/delta_alt.ogg
+    weight: 6
+    maxOccurrences: 1
+  - type: GameRule
+    minPlayers: 60
+  - type: LoadMapRule
+    preloadedGrid: AIWyvern

@@ -132,6 +132,8 @@
       # Only used for NT borgs that can switch type, defined here to avoid copy-pasting the rest of this component.
       enum.BorgSwitchableTypeUiKey.SelectBorgType:
         type: BorgSelectTypeUserInterface
+      enum.RadarConsoleUiKey.Key: # Mono
+        type: RadarConsoleBoundUserInterface
   - type: ActivatableUI
     key: enum.BorgUiKey.Key
   - type: SiliconLawBound
@@ -318,12 +320,22 @@
       flatReductions:
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
   - type: PreventDropOnDowned # Frontier: borgs don't drop items when falling (e.g. critical/dead)
-  - type: ToggleableSignature # Monolith
+  # <Mono>
+  - type: ToggleableSignature
     blip:
       radarColor: CornflowerBlue
       scale: 0.5
-  - type: Magboots # Monolith
-  - type: AccessGrantable # Mono
+  - type: Magboots
+  - type: AccessGrantable
+  - type: MovementAlwaysTouching
+  - type: IntrinsicUI
+    uis:
+      enum.RadarConsoleUiKey.Key:
+        toggleAction: ActionObserverShowRadar
+  - type: RadarConsole
+    maxRange: 256
+    followEntity: true
+  # </Mono>
 
 - type: entity
   abstract: true

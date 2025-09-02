@@ -1,16 +1,3 @@
-# SPDX-FileCopyrightText: 2023 EnDecc
-# SPDX-FileCopyrightText: 2024 Ed
-# SPDX-FileCopyrightText: 2024 EdenTheLiznerd
-# SPDX-FileCopyrightText: 2024 Emisse
-# SPDX-FileCopyrightText: 2024 IProduceWidgets
-# SPDX-FileCopyrightText: 2024 Moomoobeef
-# SPDX-FileCopyrightText: 2024 Mr. 27
-# SPDX-FileCopyrightText: 2024 checkraze
-# SPDX-FileCopyrightText: 2024 lzk
-# SPDX-FileCopyrightText: 2025 Ilya246
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: entity
   id: CrateCargoLuxuryHardsuit
   parent: CratePirate
@@ -404,10 +391,9 @@
     - id: FoodPlateTin
       prob: 0.01
       orGroup: NotUseful
-    # Mono - 100% free lag
-    #- id: WeakKudzu
-    #  prob: 0.01
-    #  orGroup: NotUseful
+    - id: WeakKudzu
+      prob: 0.01
+      orGroup: NotUseful
     - id: MagazineFoamBox
       prob: 0.001
       orGroup: NotUseful

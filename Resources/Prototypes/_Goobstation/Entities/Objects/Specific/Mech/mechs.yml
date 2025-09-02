@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Avalon
+# SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
@@ -95,6 +96,11 @@
     - FootstepSound
     - RipleyMkII
     - CivilianMechBounty # Mono
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechRipley2Battery
@@ -161,6 +167,11 @@
     scale: 1.5
     requireNoGrid: true
     shape: square
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechClarkeBattery
@@ -242,6 +253,12 @@
     scale: 1.5
     requireNoGrid: true
     shape: square
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 3
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechGygaxBattery
@@ -315,6 +332,11 @@
     scale: 1.5
     requireNoGrid: true
     shape: square
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 3
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechDurandBattery
@@ -390,6 +412,11 @@
     scale: 1.5
     requireNoGrid: true
     shape: square
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 3
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechMarauderBattery
@@ -475,6 +502,11 @@
     scale: 1.5
     requireNoGrid: true
     shape: square
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 3
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechSeraphBattery
@@ -563,6 +595,11 @@
     scale: 1.5
     requireNoGrid: true
     shape: square
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 3
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechGygaxSyndieBattery
@@ -647,6 +684,11 @@
     scale: 1.5
     requireNoGrid: true
     shape: square
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 3
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechMaulerSyndieBattery

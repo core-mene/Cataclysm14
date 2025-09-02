@@ -1,3 +1,13 @@
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Dvir
+// SPDX-FileCopyrightText: 2023 Kara
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Ilya246
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.StationEvents.Events;
 using Content.Shared.Atmos;
 using Robust.Shared.Map;
@@ -11,9 +21,9 @@ public sealed partial class GasLeakRuleComponent : Component
     {
         Gas.Ammonia,
         // Frontier - Only leak water vapors, not major health risks - PR 641
-//        Gas.Plasma,
-//        Gas.Tritium,
-//        Gas.Frezon,
+        //Gas.Plasma,
+        //Gas.Tritium,
+        //Gas.Frezon,
         Gas.WaterVapor, // the fog
     };
 

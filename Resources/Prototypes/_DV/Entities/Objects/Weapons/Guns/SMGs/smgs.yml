@@ -20,13 +20,13 @@
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/SMGs/typewriter.rsi
   - type: GunWieldBonus
-    minAngle: -20
-    maxAngle: -30
+    minAngle: -29
+    maxAngle: -44
   - type: Gun
-    minAngle: 21
-    maxAngle: 45
-    angleIncrease: 5
-    angleDecay: 20
+    minAngle: 30
+    maxAngle: 55
+    angleIncrease: 2
+    angleDecay: 17
     fireRate: 8
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/typewriter.ogg

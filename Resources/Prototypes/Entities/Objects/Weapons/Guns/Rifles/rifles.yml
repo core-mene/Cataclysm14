@@ -114,8 +114,15 @@
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -31
   - type: Gun
     fireRate: 5
+    minAngle: 21
+    maxAngle: 64
+    angleIncrease: 4
+    angleDecay: 14
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
   - type: ChamberMagazineAmmoProvider
@@ -174,9 +181,16 @@
   - type: ChamberMagazineAmmoProvider # Mono
     soundRack:
       path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -31
   - type: Gun
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/light_rifle_1.ogg # Mono
+    minAngle: 21
+    maxAngle: 64
+    angleIncrease: 2
+    angleDecay: 14
   - type: ItemSlots
     slots:
       gun_magazine:

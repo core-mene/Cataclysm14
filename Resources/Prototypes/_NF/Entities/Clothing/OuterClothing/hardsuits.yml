@@ -374,20 +374,20 @@
   - type: Armor # Mono - Armor Value Changes
     modifiers:
       coefficients:
-        Blunt: 0.45
-        Slash: 0.45
-        Piercing: 0.5
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.4
         Heat: 0.45
         Radiation: 0.6
         Caustic: 0.55
         Poison: 0.8 # Mono
   - type: ClothingSpeedModifier # Mono - Armor Value Changes
-    walkModifier: 0.925
-    sprintModifier: 0.925
+    walkModifier: 0.9
+    sprintModifier: 0.9
   - type: FactionClothing
     faction: NanoTrasen
   - type: StaminaDamageResistance # Mono - Stamres
-    coefficient: 0.5
+    coefficient: 0.25
   - type: PirateBountyItem # Mono
     id: ClothingOuterHardsuitTacsuitHighValue
 

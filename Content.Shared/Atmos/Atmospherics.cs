@@ -25,9 +25,11 @@
 // SPDX-FileCopyrightText: 2024 router
 // SPDX-FileCopyrightText: 2025 ArtisticRoomba
 // SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 bitcrushing
 // SPDX-FileCopyrightText: 2025 marc-pelletier
 // SPDX-FileCopyrightText: 2025 starch
 // SPDX-FileCopyrightText: 2025 tonotom
+// SPDX-FileCopyrightText: 2025 tonotom1
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -199,8 +201,11 @@ namespace Content.Shared.Atmos
         public static Dictionary<Gas, string> GasAbbreviations = new Dictionary<Gas, string>()
         {
             [Gas.Ammonia] = Loc.GetString("gas-ammonia-abbreviation"),
+            [Gas.BZ] = Loc.GetString("gas-bz-abbreviation"), // Funky Station - Ported gas
             [Gas.CarbonDioxide] = Loc.GetString("gas-carbon-dioxide-abbreviation"),
             [Gas.Frezon] = Loc.GetString("gas-frezon-abbreviation"),
+            [Gas.Healium] = Loc.GetString("gas-healium-abbreviation"), // Funky Station - Ported gas
+            [Gas.Nitrium] = Loc.GetString("gas-nitrium-abbreviation"), // Funky Station - Ported gas
             [Gas.Nitrogen] = Loc.GetString("gas-nitrogen-abbreviation"),
             [Gas.NitrousOxide] = Loc.GetString("gas-nitrous-oxide-abbreviation"),
             [Gas.Oxygen] = Loc.GetString("gas-oxygen-abbreviation"),
@@ -216,8 +221,11 @@ namespace Content.Shared.Atmos
         public static Dictionary<Gas, string> GasNames = new Dictionary<Gas, string>()
         {
             [Gas.Ammonia] = Loc.GetString("gases-ammonia"),
+            [Gas.BZ] = Loc.GetString("gases-bz"), // Funky Station - Ported gas
             [Gas.CarbonDioxide] = Loc.GetString("gases-co2"),
             [Gas.Frezon] = Loc.GetString("gases-frezon"),
+            [Gas.Healium] = Loc.GetString("gases-healium"), // Funky Station - Ported gas
+            [Gas.Nitrium] = Loc.GetString("gases-nitrium"), // Funky Station - Ported gas
             [Gas.Nitrogen] = Loc.GetString("gases-nitrogen"),
             [Gas.NitrousOxide] = Loc.GetString("gases-n2o"),
             [Gas.Oxygen] = Loc.GetString("gases-oxygen"),
@@ -334,22 +342,22 @@ namespace Content.Shared.Atmos
         /// <summary>
         ///     The amount of energy 1 mole of BZ forming from N2O and plasma releases.
         /// </summary>
-        public const float BZFormationEnergy = 80e3f; 
+        public const float BZFormationEnergy = 80e3f;
 
         /// <summary>
         ///     The amount of energy 1 mol of Healium forming from BZ and frezon releases.
         /// </summary>
-        public const float HealiumProductionEnergy = 9e3f; 
+        public const float HealiumProductionEnergy = 9e3f;
 
         /// <summary>
         ///     The amount of energy 1 mol of Nitrium forming from Tritium, Nitrogen and BZ releases.
         /// </summary>
-        public const float NitriumProductionEnergy = 100e3f; 
+        public const float NitriumProductionEnergy = 100e3f;
 
         /// <summary>
         ///     The amount of energy 1 mol of Nitrium decomposing into nitrogen and water vapor releases.
         /// </summary>
-        public const float NitriumDecompositionEnergy = 30e3f; 
+        public const float NitriumDecompositionEnergy = 30e3f;
 ///Funky end
         /// <summary>
         ///     Determines at what pressure the ultra-high pressure red icon is displayed.
@@ -444,6 +452,6 @@ namespace Content.Shared.Atmos
         Frezon = 8,
         BZ = 9, //Funky
         Healium = 10, //Funky
-		Nitrium = 11, //Funky
+        Nitrium = 11, //Funky
     }
 }

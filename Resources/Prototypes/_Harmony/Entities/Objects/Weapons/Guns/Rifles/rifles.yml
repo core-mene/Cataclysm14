@@ -21,12 +21,12 @@
     sprite: _Harmony/Objects/Weapons/Guns/Rifles/bandit.rsi
   - type: GunWieldBonus # Mono
     minAngle: -32
-    maxAngle: -51
+    maxAngle: -44 # Mono
   - type: Gun
     minAngle: 32 # Mono
-    maxAngle: 54 # Mono
-    angleIncrease: 14
-    angleDecay: 5
+    maxAngle: 67 # Mono
+    angleIncrease: 8
+    angleDecay: 14
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto

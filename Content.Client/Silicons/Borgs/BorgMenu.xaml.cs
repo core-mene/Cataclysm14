@@ -1,3 +1,12 @@
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 ShadowCommander
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 Whatstone
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.NameIdentifier;
@@ -136,7 +145,7 @@ public sealed partial class BorgMenu : FancyWindow
         foreach (var module in chassis.ModuleContainer.ContainedEntities)
         {
             var moduleComponent = _entity.GetComponent<BorgModuleComponent>(module);
-            var control = new BorgModuleControl(module, _entity, !moduleComponent.DefaultModule);
+            var control = new BorgModuleControl(module, _entity, true); // Mono - can remove even if default
             control.RemoveButtonPressed += () =>
             {
                 RemoveModuleButtonPressed?.Invoke(module);

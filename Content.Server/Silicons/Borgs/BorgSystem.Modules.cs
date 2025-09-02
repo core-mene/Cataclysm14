@@ -1,3 +1,19 @@
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 LankLTE
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2024 ScarKy0
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 deltanedas
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using Content.Shared.Hands.Components;
 using Content.Shared.Interaction.Components;
@@ -322,8 +338,9 @@ public sealed partial class BorgSystem
         Entity<BorgModuleComponent> module,
         EntityUid? user = null)
     {
-        if (module.Comp.DefaultModule)
-            return false;
+        // Mono - can remove even if default
+        //if (module.Comp.DefaultModule)
+        //    return false;
 
         return true;
     }

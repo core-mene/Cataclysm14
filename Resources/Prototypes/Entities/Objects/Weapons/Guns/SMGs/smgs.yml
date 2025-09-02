@@ -129,6 +129,10 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
     fireRate: 8.5
+    minAngle: 6
+    maxAngle: 45
+    angleIncrease: 2
+    angleDecay: 23
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
   - type: MagazineVisuals
@@ -180,7 +184,9 @@
     maxAngle: -16
   - type: Gun
     minAngle: 21
-    maxAngle: 32
+    maxAngle: 46
+    angleIncrease: 1
+    angleDecay: 17
     shotsPerBurst: 5
     availableModes:
     - Burst
@@ -220,7 +226,7 @@
       unwieldOnUse: false
     - type: GunWieldBonus
       minAngle: -19
-      maxAngle: -16
+      maxAngle: -20 # -16 -> -20 - Mono
     - type: ChamberMagazineAmmoProvider # Mono
       soundRack:
         path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
@@ -293,9 +299,9 @@
   - type: Gun
     fireRate: 5.5
     minAngle: 1
-    maxAngle: 6
+    maxAngle: 24
     angleIncrease: 1.5
-    angleDecay: 6
+    angleDecay: 15
     selectedMode: FullAuto
     shotsPerBurst: 5
     burstCooldown: 0.2

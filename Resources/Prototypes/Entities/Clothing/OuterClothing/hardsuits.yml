@@ -826,9 +826,9 @@
   - type: Armor # Mono - Armor Value Changes
     modifiers:
       coefficients:
-        Blunt: 0.5 # 0.6 -> 0.5 Mono
-        Slash: 0.5 # 0.6 -> 0.5 Mono
-        Piercing: 0.45 # 0.6 -> 0.45 Mono
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
         Heat: 0.2
         Radiation: 0.01
         Caustic: 0.5
@@ -916,7 +916,7 @@
         Caustic: 0.2
   - type: ClothingSpeedModifier
     walkModifier: 0.9
-    sprintModifier: 0.65
+    sprintModifier: 0.6 # 0.65-> 0.6 Mono
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
@@ -927,7 +927,7 @@
       helmetcover: ClothingHeadHelmetCoverBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance # Mono - Stamres
-    coefficient: 0.3
+    coefficient: 0.4
 
 #Wizard Hardsuit
 - type: entity

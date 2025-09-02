@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 drakewill-CRL
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Botany.Components;
 using Content.Shared.Atmos;
 using Content.Shared.EntityEffects;
@@ -25,7 +31,7 @@ public sealed partial class PlantMutateExudeGasses : EntityEffect
         if (plantholder.Seed == null)
             return;
 
-        // Frontier: List of gasses
+        // Frontier, Funky: List of gasses
         Gas[] gasList =
         {
           Gas.Oxygen,
@@ -37,8 +43,11 @@ public sealed partial class PlantMutateExudeGasses : EntityEffect
           Gas.WaterVapor,
           //Gas.Tritium,
           //Gas.Frezon,
+          //Gas.BZ,
+          //Gas.Healium,
+          //Gas.Nitrium,
         };
-        // End Frontier: List of gasses
+        // End Frontier, Funky: List of gasses
 
         var random = IoCManager.Resolve<IRobustRandom>();
         var gasses = plantholder.Seed.ExudeGasses;
@@ -92,6 +101,9 @@ public sealed partial class PlantMutateConsumeGasses : EntityEffect
           Gas.WaterVapor,
           //Gas.Tritium,
           //Gas.Frezon,
+          //Gas.BZ,
+          //Gas.Healium,
+          //Gas.Nitrium,
         };
         // End Frontier: List of gasses
 

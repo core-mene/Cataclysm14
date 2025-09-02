@@ -94,6 +94,8 @@ entities:
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg
+    - type: IFF
+      color: '#00CCFFFF'
     - type: DecalGrid
       chunkCollection:
         version: 2
@@ -2255,7 +2257,7 @@ entities:
       - device-button-6
       - device-button-7
       - device-button-8
-- proto: ComputerStationRadar
+- proto: ComputerEliteRadar
   entities:
   - uid: 288
     components:

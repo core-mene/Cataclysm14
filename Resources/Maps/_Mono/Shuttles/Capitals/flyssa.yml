@@ -15,6 +15,7 @@
 # SPDX-FileCopyrightText: 2024 chrome-cirrus
 # SPDX-FileCopyrightText: 2025 Checkraze
 # SPDX-FileCopyrightText: 2025 Honestly101
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 dustylens
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -8706,7 +8707,7 @@ entities:
       - device-button-6
       - device-button-7
       - device-button-8
-- proto: ComputerStationRadar
+- proto: ComputerEliteRadar
   entities:
   - uid: 1346
     components:
@@ -12222,7 +12223,7 @@ entities:
     - type: Transform
       pos: -0.5,25.5
       parent: 1
-- proto: GunneryServerStation
+- proto: GunneryServerOmega
   entities:
   - uid: 1984
     components:

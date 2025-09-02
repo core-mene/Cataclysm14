@@ -32,6 +32,12 @@
   - type: NpcFactionMember
     factions:
     - Syndicate
-  - type: MindShield
   - type: SurgerySpeedModifier
     speedModifier: 1.5
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Remnants
+  - type: ActiveRadio
+    channels:
+    - Remnants

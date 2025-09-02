@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Avalon
+# SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
@@ -114,11 +115,10 @@
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
-    # Shit punching damage, equip a melee weapon if you want to get up close
     damage:
       types:
         Blunt: 25
-        Structural: 0
+        Structural: 260
   - type: Destructible
     thresholds:
     - trigger:
@@ -161,6 +161,11 @@
     - DoorBumpOpener
     - FootstepSound
     - Broadsword
+  - type: Prying
+    pryPowered: true
+    speedModifier: 3
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: AFInterceptorBattery
@@ -219,11 +224,10 @@
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
-    # Shit punching damage, equip a melee weapon if you want to get up close
     damage:
       types:
         Blunt: 25
-        Structural: 0
+        Structural: 260
   - type: Destructible
     thresholds:
     - trigger:
@@ -267,6 +271,12 @@
     - FootstepSound
     - Halberd
     - MilitaryMechBounty
+  - type: Prying
+    pryPowered: true
+    speedModifier: 3
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
+
 
 - type: entity
   id: AFInterceptorG
@@ -315,11 +325,10 @@
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
-    # Shit punching damage, equip a melee weapon if you want to get up close
     damage:
       types:
         Blunt: 25
-        Structural: 0
+        Structural: 260
   - type: Destructible
     thresholds:
     - trigger:
@@ -362,6 +371,11 @@
     - FootstepSound
     - Sabre
     - MilitaryMechBounty
+  - type: Prying
+    pryPowered: true
+    speedModifier: 3
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 #4x4 mechas
 - type: entity
@@ -411,11 +425,10 @@
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
-    # Shit punching damage, equip a melee weapon if you want to get up close
     damage:
       types:
         Blunt: 50
-        Structural: 0
+        Structural: 550
   - type: Destructible
     thresholds:
     - trigger:
@@ -459,6 +472,12 @@
     - FootstepSound
     - Flail
     - MilitaryMechBounty
+  - type: Prying
+    pryPowered: true
+    speedModifier: 5
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
+
 
 - type: entity
   id: AFFlailE
@@ -507,11 +526,10 @@
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
-    # Shit punching damage, equip a melee weapon if you want to get up close
     damage:
       types:
         Blunt: 50
-        Structural: 0
+        Structural: 550
   - type: Destructible
     thresholds:
     - trigger:
@@ -555,6 +573,11 @@
     - FootstepSound
     - Spyglass
     - MilitaryMechBounty
+  - type: Prying
+    pryPowered: true
+    speedModifier: 5
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: AFMace
@@ -607,7 +630,7 @@
     damage:
       types:
         Blunt: 50
-        Structural: 0
+        Structural: 550
   - type: Destructible
     thresholds:
     - trigger:
@@ -651,3 +674,8 @@
     - FootstepSound
     - Mace
     - MilitaryMechBounty
+  - type: Prying
+    pryPowered: true
+    speedModifier: 5
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg

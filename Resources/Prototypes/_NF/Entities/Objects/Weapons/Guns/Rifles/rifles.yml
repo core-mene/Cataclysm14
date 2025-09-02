@@ -250,8 +250,15 @@
     slots:
     - Back
     - suitStorage
+  - type: GunWieldBonus
+    minAngle: -27
+    maxAngle: -36
   - type: Gun
     fireRate: 1.9
+    angleIncrease: 15
+    angleDecay: 14
+    minAngle: 27
+    maxAngle: 54
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
