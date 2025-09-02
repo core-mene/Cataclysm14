@@ -66,6 +66,7 @@ public abstract partial class SharedMoverController
         targetComp.Source = uid;
         Dirty(uid, component);
         Dirty(relayEntity, targetComp);
+        _blocker.UpdateCanMove(uid);
     }
 
     private void OnRelayShutdown(Entity<RelayInputMoverComponent> entity, ref ComponentShutdown args)
@@ -81,6 +82,8 @@ public abstract partial class SharedMoverController
 
         if (TryComp(entity.Comp.RelayEntity, out MovementRelayTargetComponent? target) && target.LifeStage <= ComponentLifeStage.Running)
             RemComp(entity.Comp.RelayEntity, target);
+
+        _blocker.UpdateCanMove(entity.Owner);
     }
 
     private void OnTargetRelayShutdown(Entity<MovementRelayTargetComponent> entity, ref ComponentShutdown args)
