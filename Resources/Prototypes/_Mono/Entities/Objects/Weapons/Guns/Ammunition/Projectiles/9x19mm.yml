@@ -106,7 +106,7 @@
       types: 
         Slash: 3
         Piercing: 26
-    armorPenetration: -0.6
+    armorPenetration: -0.3
 
 - type: entity
   id: Bullet9x19mmRIP
@@ -119,7 +119,7 @@
       types: 
         Slash: 5
         Piercing: 35
-    armorPenetration: -0.95
+    armorPenetration: -0.65
 
 #armor-piercing:
 - type: entity
@@ -131,7 +131,7 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 16
+        Piercing: 19
     armorPenetration: 0.1
 
 - type: entity
@@ -143,7 +143,7 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 13
+        Piercing: 17
     armorPenetration: 0.3
 
 - type: entity
@@ -155,5 +155,5 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 11
+        Piercing: 15
     armorPenetration: 0.5

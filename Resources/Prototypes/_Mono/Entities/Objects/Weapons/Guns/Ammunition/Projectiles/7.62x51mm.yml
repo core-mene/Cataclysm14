@@ -22,7 +22,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  id: Bullet762x51mmFMJ
+  id: Bullet7.62x51mmFMJ
   name: bullet (7.62x51mm FMJ)
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
@@ -34,7 +34,7 @@
     armorPenetration: 0.075
 
 - type: entity
-  id: Bullet762x51mmPractice
+  id: Bullet7.62x51mmPractice
   name: bullet (7.62x51mm practice)
   parent: BaseBulletPractice
   categories: [ HideSpawnMenu ]
@@ -45,7 +45,7 @@
         Blunt: 4
 
 - type: entity
-  id: Bullet762x51mmRubber
+  id: Bullet7.62x51mmRubber
   name: bullet (7.62x51mm rubber)
   parent: BaseBulletRubber
   categories: [ HideSpawnMenu ]
@@ -56,7 +56,7 @@
         Blunt: 6
 
 - type: entity
-  id: Bullet762x51mmIncendiary
+  id: Bullet7.62x51mmIncendiary
   parent: BaseBulletIncendiary
   name: bullet (7.62x51mm incendiary)
   categories: [ HideSpawnMenu ]
@@ -68,7 +68,7 @@
         Heat: 27
 
 - type: entity
-  id: Bullet762x51mmUranium
+  id: Bullet7.62x51mmUranium
   parent: BaseBulletUranium
   name: bullet (7.62x51mm uranium)
   categories: [ HideSpawnMenu ]
@@ -83,7 +83,7 @@
 # + 0.05 base AP
 #anti-flesh:
 - type: entity
-  id: Bullet762x51mmHP
+  id: Bullet7.62x51mmHP
   parent: BaseBullet
   name: bullet (7.62x51mm hollow-point)
   categories: [ HideSpawnMenu ]
@@ -93,10 +93,10 @@
       types: 
         Slash: 8
         Piercing: 37
-    armorPenetration: -0.55
+    armorPenetration: -0.25
 
 - type: entity
-  id: Bullet762x51mmRIP
+  id: Bullet7.62x51mmRIP
   parent: BaseBullet
   name: bullet (7.62x51mm Radically Invasive Projectile)
   categories: [ HideSpawnMenu ]
@@ -106,11 +106,11 @@
       types: 
         Slash: 10
         Piercing: 50
-    armorPenetration: -0.9
+    armorPenetration: -0.6
 
 #armor-piercing:
 - type: entity
-  id: Bullet762x51mmSteelAP
+  id: Bullet7.62x51mmSteelAP
   parent: BaseBullet
   name: bullet (7.62x51mm AP steel core)
   categories: [ HideSpawnMenu ]
@@ -118,11 +118,11 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 26
-    armorPenetration: 0.20
+        Piercing: 32
+    armorPenetration: 0.25
 
 - type: entity
-  id: Bullet762x51mmPlasteelAP
+  id: Bullet7.62x51mmPlasteelAP
   parent: BaseBullet
   name: bullet (7.62x51mm AP plasteel core)
   categories: [ HideSpawnMenu ]
@@ -130,11 +130,11 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 20
-    armorPenetration: 0.35
+        Piercing: 26
+    armorPenetration: 0.45
 
 - type: entity
-  id: Bullet762x51mmSynthAP
+  id: Bullet7.62x51mmSynthAP
   parent: BaseBullet
   name: bullet (7.62x51mm AP synthalloy core)
   categories: [ HideSpawnMenu ]
@@ -142,5 +142,5 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 16
-    armorPenetration: 0.55
+        Piercing: 23
+    armorPenetration: 0.65

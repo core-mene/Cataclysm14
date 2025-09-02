@@ -22,7 +22,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  id: Bullet57x28mmFMJ
+  id: Bullet5.7x28mmFMJ
   name: bullet (5.7x28mm FMJ)
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
@@ -34,7 +34,7 @@
     armorPenetration: 0.05
 
 - type: entity
-  id: Bullet57x28mmPractice
+  id: Bullet5.7x28mmPractice
   name: bullet (5.7x28mm practice)
   parent: BaseBulletPractice
   categories: [ HideSpawnMenu ]
@@ -45,7 +45,7 @@
         Blunt: 2
 
 - type: entity
-  id: Bullet57x28mmRubber
+  id: Bullet5.7x28mmRubber
   name: bullet (5.7x28mm rubber)
   parent: BaseBulletRubber
   categories: [ HideSpawnMenu ]
@@ -56,7 +56,7 @@
         Blunt: 3
 
 - type: entity
-  id: Bullet57x28mmIncendiary
+  id: Bullet5.7x28mmIncendiary
   parent: BaseBulletIncendiary
   name: bullet (5.7x28mm incendiary)
   categories: [ HideSpawnMenu ]
@@ -68,7 +68,7 @@
         Heat: 17
 
 - type: entity
-  id: Bullet57x28mmUranium
+  id: Bullet5.7x28mmUranium
   parent: BaseBulletUranium
   name: bullet (5.7x28mm uranium)
   categories: [ HideSpawnMenu ]
@@ -81,7 +81,7 @@
 
 # Upstream
 - type: entity
-  id: Bullet57x28mmEmp
+  id: Bullet5.7x28mmEmp
   name: bullet (5.7x28mm emp)
   parent: BaseBulletEmp
   categories: [ HideSpawnMenu ]
@@ -95,7 +95,7 @@
 # + 0.05 base AP
 #anti-flesh:
 - type: entity
-  id: Bullet57x28mmHP
+  id: Bullet5.7x28mmHP
   parent: BaseBullet
   name: bullet (5.7x28mm hollow-point)
   categories: [ HideSpawnMenu ]
@@ -105,10 +105,10 @@
       types: 
         Slash: 3
         Piercing: 26
-    armorPenetration: -0.55
+    armorPenetration: -0.25
 
 - type: entity
-  id: Bullet57x28mmRIP
+  id: Bullet5.7x28mmRIP
   parent: BaseBullet
   name: bullet (5.7x28mm RIP)
   categories: [ HideSpawnMenu ]
@@ -118,11 +118,11 @@
       types: 
         Slash: 5
         Piercing: 32
-    armorPenetration: -0.9
+    armorPenetration: -0.6
 
 #armor-piercing:
 - type: entity
-  id: Bullet57x28mmSteelAP
+  id: Bullet5.7x28mmSteelAP
   parent: BaseBullet
   name: bullet (5.7x28mm AP steel core)
   categories: [ HideSpawnMenu ]
@@ -131,10 +131,10 @@
     damage:
       types: 
         Piercing: 19
-    armorPenetration: 0.15
+    armorPenetration: 0.25
 
 - type: entity
-  id: Bullet57x28mmPlasteelAP
+  id: Bullet5.7x28mmPlasteelAP
   parent: BaseBullet
   name: bullet (5.7x28mm AP plasteel core)
   categories: [ HideSpawnMenu ]
@@ -143,10 +143,10 @@
     damage:
       types: 
         Piercing: 17
-    armorPenetration: 0.35
+    armorPenetration: 0.45
 
 - type: entity
-  id: Bullet57x28mmSynthAP
+  id: Bullet5.7x28mmSynthAP
   parent: BaseBullet
   name: bullet (5.7x28mm AP synthalloy core)
   categories: [ HideSpawnMenu ]
@@ -155,4 +155,4 @@
     damage:
       types: 
         Piercing: 14
-    armorPenetration: 0.55
+    armorPenetration: 0.65

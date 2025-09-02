@@ -30,7 +30,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  id: Bullet762x39mmFMJ
+  id: Bullet7.62x39mmFMJ
   name: bullet (7.62x39mm FMJ)
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
@@ -42,7 +42,7 @@
     armorPenetration: 0.075
 
 - type: entity
-  id: Bullet762x39mmPractice
+  id: Bullet7.62x39mmPractice
   name: bullet (7.62x39mm practice)
   parent: BaseBulletPractice
   categories: [ HideSpawnMenu ]
@@ -53,7 +53,7 @@
         Blunt: 2
 
 - type: entity
-  id: Bullet762x39mmRubber
+  id: Bullet7.62x39mmRubber
   name: bullet (7.62x39mm rubber)
   parent: BaseBulletRubber
   categories: [ HideSpawnMenu ]
@@ -64,7 +64,7 @@
         Blunt: 3
 
 - type: entity
-  id: Bullet762x39mmIncendiary
+  id: Bullet7.62x39mmIncendiary
   parent: BaseBulletIncendiary
   name: bullet (7.62x39mm incendiary)
   categories: [ HideSpawnMenu ]
@@ -76,7 +76,7 @@
         Heat: 18
 
 - type: entity
-  id: Bullet762x39mmUranium
+  id: Bullet7.62x39mmUranium
   parent: BaseBulletUranium
   name: bullet (7.62x39mm uranium)
   categories: [ HideSpawnMenu ]
@@ -88,7 +88,7 @@
         Piercing: 13
 
 - type: entity
-  id: Bullet762x39mmSubsonic
+  id: Bullet7.62x39mmSubsonic
   name: bullet (7.62x39mm subsonic)
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
@@ -103,7 +103,7 @@
 # - 0.05 base AP
 #anti-flesh:
 - type: entity
-  id: Bullet762x39mmHP
+  id: Bullet7.62x39mmHP
   parent: BaseBullet
   name: bullet (7.62x39mm hollow-point)
   categories: [ HideSpawnMenu ]
@@ -113,10 +113,10 @@
       types: 
         Slash: 6
         Piercing: 35
-    armorPenetration: -0.65
+    armorPenetration: -0.35
 
 - type: entity
-  id: Bullet762x39mmRIP
+  id: Bullet7.62x39mmRIP
   parent: BaseBullet
   name: bullet (7.62x39mm RIP)
   categories: [ HideSpawnMenu ]
@@ -126,11 +126,11 @@
       types: 
         Slash: 8
         Piercing: 42
-    armorPenetration: -0.95
+    armorPenetration: -0.65
 
 #armor-piercing:
 - type: entity
-  id: Bullet762x39mmSteelAP
+  id: Bullet7.62x39mmSteelAP
   parent: BaseBullet
   name: bullet (7.62x39mm AP steel core)
   categories: [ HideSpawnMenu ]
@@ -138,11 +138,11 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 20
+        Piercing: 22
     armorPenetration: 0.15
 
 - type: entity
-  id: Bullet762x39mmPlasteelAP
+  id: Bullet7.62x39mmPlasteelAP
   parent: BaseBullet
   name: bullet (7.62x39mm AP plasteel core)
   categories: [ HideSpawnMenu ]
@@ -150,11 +150,11 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 16
-    armorPenetration: 0.25
+        Piercing: 20
+    armorPenetration: 0.35
 
 - type: entity
-  id: Bullet762x39mmSynthAP
+  id: Bullet7.62x39mmSynthAP
   parent: BaseBullet
   name: bullet (7.62x39mm AP synthalloy core)
   categories: [ HideSpawnMenu ]
@@ -162,5 +162,5 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 12
-    armorPenetration: 0.35
+        Piercing: 18
+    armorPenetration: 0.55
