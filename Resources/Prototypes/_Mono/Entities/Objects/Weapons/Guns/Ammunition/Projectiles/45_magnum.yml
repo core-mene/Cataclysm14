@@ -23,6 +23,7 @@
 # SPDX-FileCopyrightText: 2024 Plykiya
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -112,7 +113,7 @@
       types: 
         Slash: 8
         Piercing: 37
-    armorPenetration: -0.2
+    armorPenetration: -0.5
 
 - type: entity
   id: Bullet45_magnumRIP
@@ -125,7 +126,7 @@
       types: 
         Slash: 10
         Piercing: 50
-    armorPenetration: -0.6
+    armorPenetration: -0.9
 
 #armor-piercing:
 - type: entity

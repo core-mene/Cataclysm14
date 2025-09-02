@@ -51,7 +51,7 @@
         Piercing: 75
         Blunt: 10
         Structural: 200
-    armorPenetration: -0.1
+    armorPenetration: 0.1
 
 - type: entity
   id: Pellet23x75mmFlashbang
@@ -100,7 +100,7 @@
     damage:
       types:
         Piercing: 24
-    armorPenetration: -0.3
+    armorPenetration: -0.5
 
 - type: entity
   id: Pellet23x75mmBuckshotSpread
