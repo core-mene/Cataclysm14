@@ -119,8 +119,8 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 23
-    armorPenetration: 0.25
+        Piercing: 19
+    armorPenetration: 0.15
 
 - type: entity
   id: Bullet556x45mmPlasteelAP
@@ -131,8 +131,8 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 20
-    armorPenetration: 0.45
+        Piercing: 15
+    armorPenetration: 0.25
 
 - type: entity
   id: Bullet556x45mmSynthAP
@@ -143,5 +143,5 @@
   - type: Projectile
     damage:
       types: 
-        Piercing: 17
-    armorPenetration: 0.65
+        Piercing: 11
+    armorPenetration: 0.45
