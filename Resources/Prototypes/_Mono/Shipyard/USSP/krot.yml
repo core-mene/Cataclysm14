@@ -1,0 +1,36 @@
+- type: vessel
+  id: Krot
+  parent: BaseVesselAntag
+  name: PPU Krot
+  description: A small, cramped, cheap and unarmored USSP mining shuttle, mass produced to serve the union well. Recommended crew is 1 person. You shit in bucket.
+  price: 24000
+  category: Small
+  group: Ussp
+  access: USSPBasic
+  shuttlePath: /Maps/_Mono/Shuttles/USSP/krot.yml
+  guidebookPage: Null
+  class:
+  - Salvage
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Krot
+  mapName: 'Krot'
+  mapPath: /Maps/_Mono/Shuttles/USSP/krot.yml
+  minPlayers: 0
+  stations:
+    Krot:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Krot USSP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            USSPSergeant: [0, 0]
+            USSPCorporal: [0, 0]
+            USSPMedic: [0, 0]
+            USSPRifleman: [0, 0]
