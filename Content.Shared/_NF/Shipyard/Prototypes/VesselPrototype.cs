@@ -124,6 +124,10 @@ public sealed class VesselPrototype : IPrototype, IInheritingPrototype
     [DataField("maxPriceMarkup")]
     public float MaxPriceMarkup = 2.5f; // Mono
 
+    // Mono
+    [DataField]
+    public bool Purchasable = true;
+
     [DataField]
     public HashSet<ProtoId<TagPrototype>> Tags = new();
 

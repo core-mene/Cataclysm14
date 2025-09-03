@@ -913,7 +913,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                 key != null && key != ShipyardConsoleUiKey.Custom &&
                 vessel.Group == key)
             {
-                if (hasAccess || voucherAllowed.Contains(vessel.ID))
+                // if not purchasable, only allow it if voucher says so
+                if (vessel.Purchasable && hasAccess || voucherAllowed.Contains(vessel.ID))
                     available.Add(vessel.ID);
                 else
                     unavailable.Add(vessel.ID);

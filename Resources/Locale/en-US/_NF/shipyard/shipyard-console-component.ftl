@@ -2,6 +2,7 @@
 shipyard-console-invalid-vessel = Cannot purchase vessel:
 shipyard-console-menu-title = Shipyard Menu
 shipyard-console-menu-listing-free = Free
+shipyard-console-menu-listing-voucher = Voucher
 shipyard-console-docking = {$owner} shuttle {$vessel} en route.
 shipyard-console-leaving = {$owner} shuttle {$vessel} sold by {$player}.
 shipyard-console-docking-secret = Unregistered vessel detected entering your sector.

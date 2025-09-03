@@ -157,6 +157,8 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
             string priceText;
             if (free)
                 priceText = Loc.GetString("shipyard-console-menu-listing-free");
+            else if (prototype != null && !prototype.Purchasable) // Mono
+                priceText = Loc.GetString("shipyard-console-menu-listing-voucher");
             else
                 priceText = BankSystemExtensions.ToSpesoString(prototype!.Price);
 

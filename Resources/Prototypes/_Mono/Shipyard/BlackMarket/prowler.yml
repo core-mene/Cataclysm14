@@ -17,9 +17,9 @@
   limit: 2
   price: 300000
   maxPriceMarkup: 20 # Multiplier
+  purchasable: false # voucher only
   category: Small
   group: BlackMarket
-  access: CentralCommand # not purchasable
   shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/prowler.yml
   guidebookPage: Null
   class:
