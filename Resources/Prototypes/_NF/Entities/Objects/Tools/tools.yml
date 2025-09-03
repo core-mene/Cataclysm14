@@ -84,10 +84,16 @@
     qualities:
       - Prying #Mono
       - Axing
+      - Anchoring
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+    speedModifier: 0.8 #Mono
   - type: ToolTileCompatible
-  - type: PhysicalComposition #Mono
-    materialComposition: #Mono
-      Steel: 200 #Mono
+  - type: Prying #Mono start
+    enabled: false
+  - type: PhysicalComposition 
+    materialComposition: 
+      Steel: 200 #Mono end
   - type: UseDelay
     delay: 1
   - type: MultipleTool #Mono start
