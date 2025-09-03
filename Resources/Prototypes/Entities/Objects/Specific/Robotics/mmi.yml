@@ -75,11 +75,45 @@
   - type: LanguageSpeaker # Einstein Engines - Language
   - type: LanguageKnowledge # Einstein Engines - Language
     speaks:
-    - TauCetiBasic
-    - RobotTalk
+      - TauCetiBasic
+      - RobotTalk
+      - Bubblish
+      - RootSpeak
+      - Nekomimetic
+      - Draconic
+      - SolCommon
+      - NovuNederic
+      - NovaCygniBasic
+      - Tradeband
+      - Freespeak
+      - Elyran
+      - Canilunzt
+      - Moffic
+      - Calcic
+      - Marish
+      - ValyrianStandard
+      - Chittin
+      - Xeeplian
     understands:
-    - TauCetiBasic
-    - RobotTalk
+      - TauCetiBasic
+      - RobotTalk
+      - Bubblish
+      - RootSpeak
+      - Nekomimetic
+      - Draconic
+      - SolCommon
+      - NovuNederic
+      - NovaCygniBasic
+      - Tradeband
+      - Freespeak
+      - Elyran
+      - Canilunzt
+      - Moffic
+      - Calcic
+      - Marish
+      - ValyrianStandard
+      - Chittin
+      - Xeeplian
 
 - type: entity
   parent: MMI
@@ -173,6 +207,40 @@
       speaks:
       - TauCetiBasic # Added since posi brains should be able to talk to roboticists/scientists.
       - RobotTalk
+      - Bubblish
+      - RootSpeak
+      - Nekomimetic
+      - Draconic
+      - SolCommon
+      - NovuNederic
+      - NovaCygniBasic
+      - Tradeband
+      - Freespeak
+      - Elyran
+      - Canilunzt
+      - Moffic
+      - Calcic
+      - Marish
+      - ValyrianStandard
+      - Chittin
+      - Xeeplian
       understands:
       - TauCetiBasic # Added since posi brains should be able to understand TauCetiBasic (they can in a chassis)
       - RobotTalk
+      - Bubblish
+      - RootSpeak
+      - Nekomimetic
+      - Draconic
+      - SolCommon
+      - NovuNederic
+      - NovaCygniBasic
+      - Tradeband
+      - Freespeak
+      - Elyran
+      - Canilunzt
+      - Moffic
+      - Calcic
+      - Marish
+      - ValyrianStandard
+      - Chittin
+      - Xeeplian
