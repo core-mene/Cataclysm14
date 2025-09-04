@@ -37,8 +37,6 @@ public sealed partial class RadarBlipSystem : EntitySystem
         if (!TryComp<RadarConsoleComponent>(radarUid, out var radar))
             return;
 
-        if (!TryComp<PhysicsComponent>(radarUid, out _))
-            return;
 
         var blips = AssembleBlipsReport((EntityUid)radarUid, radar);
         var hitscans = AssembleHitscanReport((EntityUid)radarUid, radar);
@@ -62,9 +60,9 @@ public sealed partial class RadarBlipSystem : EntitySystem
             // Check if the radar is on an FTL map
             var isFtlMap = HasComp<FTLComponent>(radarXform.GridUid);
 
-            var blipQuery = EntityQueryEnumerator<RadarBlipComponent, TransformComponent>();
+            var blipQuery = EntityQueryEnumerator<RadarBlipComponent, TransformComponent, PhysicsComponent>();
 
-            while (blipQuery.MoveNext(out var blipUid, out var blip, out var blipXform))
+            while (blipQuery.MoveNext(out var blipUid, out var blip, out var blipXform, out _))
             {
                 if (!blip.Enabled)
                     continue;
@@ -96,7 +94,7 @@ public sealed partial class RadarBlipSystem : EntitySystem
 
                 var blipVelocity = _physics.GetMapLinearVelocity(blipUid);
 
-                var distance = (blipXform.WorldPosition - radarPosition).Length();
+                var distance = (_xform.GetWorldPosition(blipXform) - radarPosition).Length();
                 if (distance > component.MaxRange)
                     continue;
 
