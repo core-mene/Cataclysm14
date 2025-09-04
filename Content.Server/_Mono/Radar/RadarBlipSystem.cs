@@ -63,7 +63,7 @@ public sealed partial class RadarBlipSystem : EntitySystem
 
             var blipQuery = EntityQueryEnumerator<RadarBlipComponent, TransformComponent, PhysicsComponent>();
 
-            while (blipQuery.MoveNext(out var blipUid, out var blip, out var blipXform, out _))
+            while (blipQuery.MoveNext(out var blipUid, out var blip, out var blipXform, out var blipPhysics))
             {
                 if (!blip.Enabled)
                     continue;
@@ -93,7 +93,7 @@ public sealed partial class RadarBlipSystem : EntitySystem
                 //         continue;
                 // }
 
-                var blipVelocity = _physics.GetMapLinearVelocity(blipUid);
+                var blipVelocity = _physics.GetMapLinearVelocity(blipUid, blipPhysics, blipXform);
 
                 var distance = (_xform.GetWorldPosition(blipXform) - radarPosition).Length();
                 if (distance > component.MaxRange)
