@@ -1,5 +1,6 @@
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 ark1368
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -8,6 +9,7 @@ using System.Numerics;
 using Content.Shared._Mono.Radar;
 using Robust.Shared.Map;
 using Robust.Shared.Timing;
+using System.Linq;
 
 namespace Content.Client._Mono.Radar;
 
@@ -15,7 +17,7 @@ public sealed partial class RadarBlipsSystem : EntitySystem
 {
     private const double BlipStaleSeconds = 3.0;
     private static readonly List<(Vector2, float, Color, RadarBlipShape)> EmptyBlipList = new();
-    private static readonly List<(NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> EmptyRawBlipList = new();
+    private static readonly List<(NetEntity netUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> EmptyRawBlipList = new();
     private static readonly List<(Vector2 Start, Vector2 End, float Thickness, Color Color)> EmptyHitscanList = new();
     private TimeSpan _lastRequestTime = TimeSpan.Zero;
     private static readonly TimeSpan RequestThrottle = TimeSpan.FromMilliseconds(250);
@@ -27,7 +29,7 @@ public sealed partial class RadarBlipsSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _xform = default!;
 
     private TimeSpan _lastUpdatedTime;
-    private List<(NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> _blips = new();
+    private List<(NetEntity netUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> _blips = new();
     private List<(Vector2 Start, Vector2 End, float Thickness, Color Color)> _hitscans = new();
     private Vector2 _radarWorldPosition;
 
@@ -35,6 +37,7 @@ public sealed partial class RadarBlipsSystem : EntitySystem
     {
         base.Initialize();
         SubscribeNetworkEvent<GiveBlipsEvent>(HandleReceiveBlips);
+        SubscribeNetworkEvent<BlipRemovalEvent>(RemoveBlip);
     }
 
     private void HandleReceiveBlips(GiveBlipsEvent ev, EntitySessionEventArgs args)
@@ -58,6 +61,12 @@ public sealed partial class RadarBlipsSystem : EntitySystem
         }
 
         _lastUpdatedTime = _timing.CurTime;
+    }
+
+    private void RemoveBlip(BlipRemovalEvent args)
+    {
+        var blipid = _blips.FirstOrDefault(x => x.netUid == args.NetBlipUid);
+        _blips.Remove(blipid);
     }
 
     public void RequestBlips(EntityUid console)

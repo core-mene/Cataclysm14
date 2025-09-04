@@ -11,7 +11,6 @@
 # SPDX-FileCopyrightText: 2024 Ed
 # SPDX-FileCopyrightText: 2024 FungiFellow
 # SPDX-FileCopyrightText: 2024 Ian
-# SPDX-FileCopyrightText: 2024 Ilya246
 # SPDX-FileCopyrightText: 2024 JIPDawg
 # SPDX-FileCopyrightText: 2024 Kara
 # SPDX-FileCopyrightText: 2024 Leon Friedrich
@@ -33,6 +32,7 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 GreaseMonk
 # SPDX-FileCopyrightText: 2025 Honestly101
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 JonahDes
 # SPDX-FileCopyrightText: 2025 KiraZen_
 # SPDX-FileCopyrightText: 2025 SRV
@@ -298,8 +298,8 @@
     moduleId: Appraisal # Frontier
     items:
     - AppraisalTool
-    - WeaponTetherGun # Mono - we ball
-    - WeaponForceGun # Mono
+    - WeaponTetherGunBorg # Mono - we ball
+    - WeaponForceGunBorg # Mono
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: appraisal-module }
 

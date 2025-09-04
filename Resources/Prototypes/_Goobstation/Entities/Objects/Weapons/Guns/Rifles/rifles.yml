@@ -23,7 +23,7 @@
   - type: Item # Mono
     sprite: _Mono/Objects/Weapons/Guns/Rifles/annie_inhands_32x.rsi
   - type: Clothing
-    sprite: _Mono/Objects/Weapons/Guns/Rifles/annie_inhands_32x.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/annie_inhands_32x.rsi # Mono
   - type: GunWieldBonus
     minAngle: -14
     maxAngle: -32
@@ -83,14 +83,16 @@
   description: A cutting-edge rifle from Cybersun, versatile, reliable, and Syndicate-approved. Uses 7.62x39mm subsonic ammo.
   components:
   - type: Sprite
-    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/wspr.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/wspr.rsi # Mono
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
+  - type: Item # Mono
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/wspr_inhands_32x.rsi
   - type: Clothing
-    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/wspr.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/wspr_inhands_32x.rsi # Mono
   - type: GunWieldBonus
     minAngle: -14
     maxAngle: -41

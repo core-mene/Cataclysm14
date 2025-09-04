@@ -1,5 +1,6 @@
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 ark1368
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -19,14 +20,11 @@ public sealed partial class RadarBlipSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _xform = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
 
-    private EntityQuery<PhysicsComponent> _physQuery;
-
     public override void Initialize()
     {
         base.Initialize();
         SubscribeNetworkEvent<RequestBlipsEvent>(OnBlipsRequested);
-
-        _physQuery = GetEntityQuery<PhysicsComponent>();
+        SubscribeLocalEvent<RadarBlipComponent, ComponentShutdown>(OnBlipShutdown);
     }
 
     private void OnBlipsRequested(RequestBlipsEvent ev, EntitySessionEventArgs args)
@@ -37,17 +35,28 @@ public sealed partial class RadarBlipSystem : EntitySystem
         if (!TryComp<RadarConsoleComponent>(radarUid, out var radar))
             return;
 
+
         var blips = AssembleBlipsReport((EntityUid)radarUid, radar);
         var hitscans = AssembleHitscanReport((EntityUid)radarUid, radar);
 
         // Combine the blips and hitscan lines
         var giveEv = new GiveBlipsEvent(blips, hitscans);
         RaiseNetworkEvent(giveEv, args.SenderSession);
+
+        blips.Clear();
+        hitscans.Clear();
     }
 
-    private List<(NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> AssembleBlipsReport(EntityUid uid, RadarConsoleComponent? component = null)
+    private void OnBlipShutdown(EntityUid blipUid, RadarBlipComponent component, ComponentShutdown args)
     {
-        var blips = new List<(NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)>();
+        var netBlipUid = GetNetEntity(blipUid);
+        var removalEv = new BlipRemovalEvent(netBlipUid);
+        RaiseNetworkEvent(removalEv);
+    }
+
+    private List<(NetEntity netUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> AssembleBlipsReport(EntityUid uid, RadarConsoleComponent? component = null)
+    {
+        var blips = new List<(NetEntity netUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)>();
 
         if (Resolve(uid, ref component))
         {
@@ -59,9 +68,9 @@ public sealed partial class RadarBlipSystem : EntitySystem
             // Check if the radar is on an FTL map
             var isFtlMap = HasComp<FTLComponent>(radarXform.GridUid);
 
-            var blipQuery = EntityQueryEnumerator<RadarBlipComponent, TransformComponent>();
+            var blipQuery = EntityQueryEnumerator<RadarBlipComponent, TransformComponent, PhysicsComponent>();
 
-            while (blipQuery.MoveNext(out var blipUid, out var blip, out var blipXform))
+            while (blipQuery.MoveNext(out var blipUid, out var blip, out var blipXform, out var blipPhysics))
             {
                 if (!blip.Enabled)
                     continue;
@@ -69,6 +78,8 @@ public sealed partial class RadarBlipSystem : EntitySystem
                 // This prevents blips from showing on radars that are on different maps
                 if (blipXform.MapID != radarMapId)
                     continue;
+
+                var netBlipUid = GetNetEntity(blipUid);
 
                 var blipGrid = blipXform.GridUid;
 
@@ -91,9 +102,9 @@ public sealed partial class RadarBlipSystem : EntitySystem
                 //         continue;
                 // }
 
-                var blipVelocity = _physics.GetMapLinearVelocity(blipUid);
+                var blipVelocity = _physics.GetMapLinearVelocity(blipUid, blipPhysics, blipXform);
 
-                var distance = (blipXform.WorldPosition - radarPosition).Length();
+                var distance = (_xform.GetWorldPosition(blipXform) - radarPosition).Length();
                 if (distance > component.MaxRange)
                     continue;
 
@@ -109,7 +120,7 @@ public sealed partial class RadarBlipSystem : EntitySystem
                 if (blipGrid != null)
                     blipVelocity -= _physics.GetLinearVelocity(blipGrid.Value, coord.Position);
 
-                blips.Add((GetNetCoordinates(coord), blipVelocity, blip.Scale, blip.RadarColor, blip.Shape));
+                blips.Add((netBlipUid, GetNetCoordinates(coord), blipVelocity, blip.Scale, blip.RadarColor, blip.Shape));
             }
         }
 

@@ -108,12 +108,16 @@
   description: An old Pre-Fracture Era rifle. Uses 7.62x39mm ammo. When the Fracture began to spread across the Old Earth territories, few weapons were as reliable as the AKM
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Rifles/ak.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/akm.rsi # Mono
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
+  - type: Item # Mono
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/akm_inhands_32x.rsi
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/akm_inhands_32x.rsi # Mono
   - type: GunWieldBonus
     minAngle: -20
     maxAngle: -31

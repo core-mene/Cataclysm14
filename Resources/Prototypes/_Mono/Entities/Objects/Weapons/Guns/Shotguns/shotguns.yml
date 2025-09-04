@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -125,11 +126,11 @@
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/Shotguns/Helopolis.rsi
   - type: Gun
-    minAngle: 6
+    minAngle: 3
     maxAngle: 12
     fireRate: 1.2
-    angleIncrease: 3
-    angleDecay: 2
+    angleIncrease: 4
+    angleDecay: 4
   - type: Tag
     tags:
     - WeaponShotgunHelopolis
