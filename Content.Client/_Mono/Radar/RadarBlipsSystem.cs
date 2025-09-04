@@ -16,7 +16,7 @@ public sealed partial class RadarBlipsSystem : EntitySystem
 {
     private const double BlipStaleSeconds = 3.0;
     private static readonly List<(Vector2, float, Color, RadarBlipShape)> EmptyBlipList = new();
-    private static readonly List<(EntityUid uid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> EmptyRawBlipList = new();
+    private static readonly List<(NetEntity netUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> EmptyRawBlipList = new();
     private static readonly List<(Vector2 Start, Vector2 End, float Thickness, Color Color)> EmptyHitscanList = new();
     private TimeSpan _lastRequestTime = TimeSpan.Zero;
     private static readonly TimeSpan RequestThrottle = TimeSpan.FromMilliseconds(250);
@@ -28,7 +28,7 @@ public sealed partial class RadarBlipsSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _xform = default!;
 
     private TimeSpan _lastUpdatedTime;
-    private List<(EntityUid uid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> _blips = new();
+    private List<(NetEntity netUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> _blips = new();
     private List<(Vector2 Start, Vector2 End, float Thickness, Color Color)> _hitscans = new();
     private Vector2 _radarWorldPosition;
 
@@ -64,7 +64,7 @@ public sealed partial class RadarBlipsSystem : EntitySystem
 
     private void RemoveBlip(BlipRemovalEvent args)
     {
-        var blipid = _blips.SingleOrDefault(x => x.uid == args.BlipUid);
+        var blipid = _blips.SingleOrDefault(x => x.netUid == args.NetBlipUid);
         _blips.Remove(blipid);
     }
 

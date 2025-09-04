@@ -49,13 +49,14 @@ public sealed partial class RadarBlipSystem : EntitySystem
 
     private void OnBlipShutdown(EntityUid blipUid, RadarBlipComponent component, ComponentShutdown args)
     {
-        var removalEv = new BlipRemovalEvent(blipUid);
+        var netBlipUid = GetNetEntity(blipUid);
+        var removalEv = new BlipRemovalEvent(netBlipUid);
         RaiseNetworkEvent(removalEv);
     }
 
-    private List<(EntityUid uid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> AssembleBlipsReport(EntityUid uid, RadarConsoleComponent? component = null)
+    private List<(NetEntity netUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> AssembleBlipsReport(EntityUid uid, RadarConsoleComponent? component = null)
     {
-        var blips = new List<(EntityUid uid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)>();
+        var blips = new List<(NetEntity netUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)>();
 
         if (Resolve(uid, ref component))
         {
@@ -77,6 +78,8 @@ public sealed partial class RadarBlipSystem : EntitySystem
                 // This prevents blips from showing on radars that are on different maps
                 if (blipXform.MapID != radarMapId)
                     continue;
+
+                var netBlipUid = GetNetEntity(blipUid);
 
                 var blipGrid = blipXform.GridUid;
 
@@ -117,7 +120,7 @@ public sealed partial class RadarBlipSystem : EntitySystem
                 if (blipGrid != null)
                     blipVelocity -= _physics.GetLinearVelocity(blipGrid.Value, coord.Position);
 
-                blips.Add((uid, GetNetCoordinates(coord), blipVelocity, blip.Scale, blip.RadarColor, blip.Shape));
+                blips.Add((netBlipUid, GetNetCoordinates(coord), blipVelocity, blip.Scale, blip.RadarColor, blip.Shape));
             }
         }
 
