@@ -24,6 +24,7 @@ public sealed partial class RadarBlipSystem : EntitySystem
     {
         base.Initialize();
         SubscribeNetworkEvent<RequestBlipsEvent>(OnBlipsRequested);
+        SubscribeLocalEvent<RadarBlipComponent, ComponentShutdown>(OnBlipShutdown);
     }
 
     private void OnBlipsRequested(RequestBlipsEvent ev, EntitySessionEventArgs args)
@@ -41,11 +42,20 @@ public sealed partial class RadarBlipSystem : EntitySystem
         // Combine the blips and hitscan lines
         var giveEv = new GiveBlipsEvent(blips, hitscans);
         RaiseNetworkEvent(giveEv, args.SenderSession);
+
+        blips.Clear();
+        hitscans.Clear();
     }
 
-    private List<(NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> AssembleBlipsReport(EntityUid uid, RadarConsoleComponent? component = null)
+    private void OnBlipShutdown(EntityUid blipUid, RadarBlipComponent component, ComponentShutdown args)
     {
-        var blips = new List<(NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)>();
+        var removalEv = new BlipRemovalEvent(blipUid);
+        RaiseNetworkEvent(removalEv);
+    }
+
+    private List<(EntityUid uid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> AssembleBlipsReport(EntityUid uid, RadarConsoleComponent? component = null)
+    {
+        var blips = new List<(EntityUid uid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)>();
 
         if (Resolve(uid, ref component))
         {
@@ -107,7 +117,7 @@ public sealed partial class RadarBlipSystem : EntitySystem
                 if (blipGrid != null)
                     blipVelocity -= _physics.GetLinearVelocity(blipGrid.Value, coord.Position);
 
-                blips.Add((GetNetCoordinates(coord), blipVelocity, blip.Scale, blip.RadarColor, blip.Shape));
+                blips.Add((uid, GetNetCoordinates(coord), blipVelocity, blip.Scale, blip.RadarColor, blip.Shape));
             }
         }
 

@@ -30,21 +30,21 @@ public sealed class GiveBlipsEvent : EntityEventArgs
     /// <summary>
     /// Blips are now (position, velocity, scale, color, shape).
     /// </summary>
-    public readonly List<(NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> Blips;
+    public readonly List<(EntityUid uid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> Blips;
 
     /// <summary>
     /// Hitscan lines to display on the radar as (start position, end position, thickness, color).
     /// </summary>
     public readonly List<(Vector2 Start, Vector2 End, float Thickness, Color Color)> HitscanLines;
 
-    public GiveBlipsEvent(List<(NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> blips)
+    public GiveBlipsEvent(List<(EntityUid uid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> blips)
     {
         Blips = blips;
         HitscanLines = new List<(Vector2 Start, Vector2 End, float Thickness, Color Color)>();
     }
 
     public GiveBlipsEvent(
-        List<(NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> blips,
+        List<(EntityUid uid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> blips,
         List<(Vector2 Start, Vector2 End, float Thickness, Color Color)> hitscans)
     {
         Blips = blips;
@@ -59,5 +59,16 @@ public sealed class RequestBlipsEvent : EntityEventArgs
     public RequestBlipsEvent(NetEntity radar)
     {
         Radar = radar;
+    }
+}
+
+[Serializable, NetSerializable]
+public sealed class BlipRemovalEvent : EntityEventArgs
+{
+    public EntityUid BlipUid { get; set; }
+
+    public BlipRemovalEvent(EntityUid blipUid)
+    {
+        BlipUid = blipUid;
     }
 }
