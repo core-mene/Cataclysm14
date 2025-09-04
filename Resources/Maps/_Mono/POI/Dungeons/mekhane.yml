@@ -29,8 +29,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/04/2025 06:01:31
-  entityCount: 4662
+  time: 09/04/2025 14:22:20
+  entityCount: 4695
 maps: []
 grids:
 - 1
@@ -12306,8 +12306,8 @@ entities:
         immutable: False
         temperature: 293.14908
         moles:
-        - 1.606311
-        - 6.042789
+        - 1.8744951
+        - 7.051672
         - 0
         - 0
         - 0
@@ -12324,9 +12324,9 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 3958
           - 3959
           - 3960
+          - 3958
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -12421,6 +12421,44 @@ entities:
       pos: 14.5,-31.5
       parent: 1
   - uid: 4653
+    components:
+    - type: Transform
+      pos: 14.5,-31.5
+      parent: 1
+- proto: MaterialCloth
+  entities:
+  - uid: 4693
+    components:
+    - type: Transform
+      pos: 16.5,-33.5
+      parent: 1
+- proto: MaterialDiamond
+  entities:
+  - uid: 4691
+    components:
+    - type: Transform
+      pos: 15.5,-33.5
+      parent: 1
+- proto: MaterialDurathread
+  entities:
+  - uid: 4688
+    components:
+    - type: Transform
+      pos: 14.5,-31.5
+      parent: 1
+  - uid: 4689
+    components:
+    - type: Transform
+      pos: 12.5,-33.5
+      parent: 1
+  - uid: 4690
+    components:
+    - type: Transform
+      pos: 17.5,-32.5
+      parent: 1
+- proto: MaterialSynthalloy
+  entities:
+  - uid: 4692
     components:
     - type: Transform
       pos: 14.5,-31.5
@@ -13696,6 +13734,18 @@ entities:
     - type: Transform
       pos: -10.461533,4.4361153
       parent: 1
+- proto: SheetPlasteel
+  entities:
+  - uid: 4694
+    components:
+    - type: Transform
+      pos: 17.5,-32.5
+      parent: 1
+  - uid: 4695
+    components:
+    - type: Transform
+      pos: 13.5,-31.5
+      parent: 1
 - proto: ShuttersNormal
   entities:
   - uid: 3475
@@ -14245,6 +14295,75 @@ entities:
     - type: Transform
       pos: -1.6630306,-39.44381
       parent: 1
+- proto: SpawnDungeonLootPartsEngi
+  entities:
+  - uid: 4675
+    components:
+    - type: Transform
+      pos: -16.5,-13.5
+      parent: 1
+  - uid: 4676
+    components:
+    - type: Transform
+      pos: -17.5,-10.5
+      parent: 1
+  - uid: 4677
+    components:
+    - type: Transform
+      pos: -18.5,-8.5
+      parent: 1
+  - uid: 4678
+    components:
+    - type: Transform
+      pos: -17.5,-18.5
+      parent: 1
+  - uid: 4679
+    components:
+    - type: Transform
+      pos: -16.5,-21.5
+      parent: 1
+  - uid: 4680
+    components:
+    - type: Transform
+      pos: -19.5,-13.5
+      parent: 1
+  - uid: 4681
+    components:
+    - type: Transform
+      pos: -18.5,-12.5
+      parent: 1
+- proto: SpawnDungeonLootPowerCell
+  entities:
+  - uid: 4682
+    components:
+    - type: Transform
+      pos: -18.5,-14.5
+      parent: 1
+  - uid: 4683
+    components:
+    - type: Transform
+      pos: -16.5,-9.5
+      parent: 1
+  - uid: 4684
+    components:
+    - type: Transform
+      pos: -17.5,-12.5
+      parent: 1
+  - uid: 4685
+    components:
+    - type: Transform
+      pos: -16.5,-18.5
+      parent: 1
+  - uid: 4686
+    components:
+    - type: Transform
+      pos: -17.5,-21.5
+      parent: 1
+  - uid: 4687
+    components:
+    - type: Transform
+      pos: -19.5,-9.5
+      parent: 1
 - proto: SpawnDungeonLootRnDDisk
   entities:
   - uid: 3946
@@ -14371,12 +14490,40 @@ entities:
     - type: Transform
       pos: -13.736858,-39.646935
       parent: 1
-- proto: SpawnDungeonLootVaultGuns
-  entities:
-  - uid: 4526
+  - uid: 4668
     components:
     - type: Transform
-      pos: -2.456522,-4.3727283
+      pos: -17.5,-8.5
+      parent: 1
+  - uid: 4669
+    components:
+    - type: Transform
+      pos: -15.5,-14.5
+      parent: 1
+  - uid: 4670
+    components:
+    - type: Transform
+      pos: -18.5,-15.5
+      parent: 1
+  - uid: 4671
+    components:
+    - type: Transform
+      pos: -17.5,-11.5
+      parent: 1
+  - uid: 4672
+    components:
+    - type: Transform
+      pos: -15.5,-12.5
+      parent: 1
+  - uid: 4673
+    components:
+    - type: Transform
+      pos: -19.5,-10.5
+      parent: 1
+  - uid: 4674
+    components:
+    - type: Transform
+      pos: -17.5,-22.5
       parent: 1
 - proto: SpawnDungeonVendomatsEngi
   entities:
@@ -14547,6 +14694,11 @@ entities:
     components:
     - type: Transform
       pos: -2.5,-17.5
+      parent: 1
+  - uid: 4667
+    components:
+    - type: Transform
+      pos: -11.5,-7.5
       parent: 1
 - proto: SpawnMobSyndicateNavalChemwarrior
   entities:
@@ -15040,6 +15192,26 @@ entities:
     components:
     - type: Transform
       pos: 9.5,-7.5
+      parent: 1
+  - uid: 4663
+    components:
+    - type: Transform
+      pos: -6.5,-26.5
+      parent: 1
+  - uid: 4664
+    components:
+    - type: Transform
+      pos: 7.5,-15.5
+      parent: 1
+  - uid: 4665
+    components:
+    - type: Transform
+      pos: 25.5,-3.5
+      parent: 1
+  - uid: 4666
+    components:
+    - type: Transform
+      pos: 28.5,-13.5
       parent: 1
 - proto: SpawnMobWeaponTurretSyndicate
   entities:
@@ -26996,6 +27168,13 @@ entities:
     components:
     - type: Transform
       pos: -0.5,-17.5
+      parent: 1
+- proto: WeaponCaseBigLeadyRegistered
+  entities:
+  - uid: 4526
+    components:
+    - type: Transform
+      pos: -2.5064065,-4.402608
       parent: 1
 - proto: WeaponCaseLongBulldog
   entities:
