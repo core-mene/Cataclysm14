@@ -68,11 +68,6 @@ public sealed partial class RadarBlipsSystem : EntitySystem
         _blips.Remove(blipid);
     }
 
-    private static bool EndsWithSaurus(String s)
-    {
-        return s.ToLower().EndsWith("saurus");
-    }
-
     public void RequestBlips(EntityUid console)
     {
         // Only request if we have a valid console
