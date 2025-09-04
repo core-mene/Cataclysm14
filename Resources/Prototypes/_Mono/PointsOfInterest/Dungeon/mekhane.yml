@@ -1,0 +1,31 @@
+- type: pointOfInterest
+  id: Mekhane
+  parent: BasePOI
+  name: 'Mekhane Forward Operating Base'
+  minimumDistance: 15000
+  maximumDistance: 20000
+  spawnGroup: SyndicateMechBase
+  gridPath: /Maps/_Mono/POI/Dungeons/mekhane.yml
+  hideWarp: true
+  addComponents:
+  - type: IFF
+    color: "#C83737"
+    flags: [HideLabel]
+    readOnly: false
+  - type: SyndicateMechBase # For pinpointer
+  - type: SolarPoweredGrid
+    trackOnInit: true
+    doNotCull: true
+
+- type: gameMap
+  id: Mekhane
+  mapName: 'Mekhane Forward Operating Base'
+  mapPath: /Maps/_Mono/POI/Dungeons/mekhane.yml
+  minPlayers: 0
+  stations:
+    Mekhane:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Mekhane Forward Operating Base'
+        - type: StationDeadDropHintExempt

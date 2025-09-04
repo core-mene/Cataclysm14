@@ -1,0 +1,10 @@
+# MechBase Pinpointer
+- type: entity
+  description: Seems to be pointing to a Syndicate Mech Base.
+  id: PinpointerSyndicateMechPOI
+  parent: PinpointerSyndicateNuclear
+  suffix: Syndicate MechBase
+  components:
+  - type: Pinpointer
+    component: SyndicateMechBase
+    targetName: Mekhane
