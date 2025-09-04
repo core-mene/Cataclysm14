@@ -65,7 +65,7 @@ public sealed partial class RadarBlipsSystem : EntitySystem
 
     private void RemoveBlip(BlipRemovalEvent args)
     {
-        var blipid = _blips.SingleOrDefault(x => x.netUid == args.NetBlipUid);
+        var blipid = _blips.FirstOrDefault(x => x.netUid == args.NetBlipUid);
         _blips.Remove(blipid);
     }
 
