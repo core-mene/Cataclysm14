@@ -1,0 +1,33 @@
+- type: vessel
+  id: Exigence
+  parent: BaseVesselAntag
+  name: NIKI Exigence
+  description: An NIKI light skirmisher that trades survivability for pure speed. Lacks a shielding system, and the hull is obscenely thin. Take extreme caution.
+  price: 70000
+  category: Medium
+  group: BlackMarket
+  shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/exigence.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  - Corvette
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Exigence
+  mapName: 'ASR Exigence'
+  mapPath: /Maps/_Mono/Shuttles/BlackMarket/exigence.yml
+  minPlayers: 0
+  stations:
+    Exigence:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Exigence RG{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Pirate: [ 0, 0 ]
