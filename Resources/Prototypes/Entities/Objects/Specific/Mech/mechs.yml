@@ -230,6 +230,11 @@
     tags:
     - DoorBumpOpener
     - CivilianMechBounty # Mono
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechRipleyBattery
@@ -274,6 +279,11 @@
     tags:
     - DoorBumpOpener
     - CivilianMechBounty # Mono
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   parent: MechHonker
@@ -321,6 +331,11 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.4
     baseSprintSpeed: 3.7
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   parent: MechHamtr
@@ -394,6 +409,11 @@
     # - Maintenance # Frontier
   # TOOD: buzz / chime actions
   # TODO: builtin flashlight
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   parent: MechVim
