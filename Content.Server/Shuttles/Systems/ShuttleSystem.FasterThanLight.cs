@@ -781,6 +781,8 @@ public sealed partial class ShuttleSystem
                 dockConnections.Add((dock, dockComp.DockedWith.Value));
             }
             relativeTransforms[dockedUid] = (dockedPos - mainPos, dockedRot - mainRot, dockConnections);
+            _physics.SetLinearVelocity(dockedUid, Vector2.Zero, body: body);
+            _physics.SetAngularVelocity(dockedUid, 0f, body: body);
         }
 
         // Handle physics for main shuttle
