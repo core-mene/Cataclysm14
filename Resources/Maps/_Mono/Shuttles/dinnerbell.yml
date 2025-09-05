@@ -10,7 +10,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/05/2025 18:34:30
+  time: 09/05/2025 18:56:38
   entityCount: 98
 maps: []
 grids:
@@ -193,6 +193,14 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.5,1.5
+      parent: 1
+- proto: AlwaysPoweredLightExterior
+  entities:
+  - uid: 72
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 3.5,-0.5
       parent: 1
 - proto: APCBasic
   entities:
@@ -622,11 +630,6 @@ entities:
       parent: 1
 - proto: PoweredlightExterior
   entities:
-  - uid: 72
-    components:
-    - type: Transform
-      pos: 3.5,-0.5
-      parent: 1
   - uid: 73
     components:
     - type: Transform
