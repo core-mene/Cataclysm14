@@ -780,6 +780,7 @@ public sealed partial class ShuttleSystem
                 if (!TryComp<DockingComponent>(dock, out var dockComp) || !dockComp.Docked || dockComp.DockedWith == null)
                     continue;
                 dockConnections.Add((dock, dockComp.DockedWith.Value));
+                _dockSystem.Undock((dock, dockComp));
             }
             relativeTransforms[dockedUid] = (dockedPos - mainPos, dockedRot - mainRot, dockConnections);
             _physics.SetLinearVelocity(dockedUid, Vector2.Zero, body: dockedBody);
@@ -846,7 +847,7 @@ public sealed partial class ShuttleSystem
             var newRot = mainNewRot + relativeRot;
             if (xform.MapUid != null)
             {
-                _transform.SetWorldRotation(dockedUid, newRot);
+                _transform.SetWorldRotation(dockedUid, comp.TargetAngle + relativeRot);
                 _transform.SetParent(dockedUid, dockedXform, xform.MapUid.Value);
                 _transform.SetWorldPosition(dockedUid, newPos);
             }
