@@ -29,9 +29,9 @@ public sealed class GCQueuePrototype : IPrototype
     public int Depth { get; }
 
     /// <summary>
-    ///     The amount of time in milliseconds spent deleting things for this queue, later multiplied by the total count of objects. Mono Dynamic Queueing
+    ///     How many miliseconds to spend deleting objects per object in the queue above the MinDepth? Mono Dynamic Queueing
     /// </summary>
-    [DataField("maximumTickTime")]
+    [DataField]
     public double TimeDeletePerObject { get; } = 0.1; // Mono - at 100 objects past the MinDepth will spend up to 10 milliseconds trying to do deletions
 
     /// <summary>
