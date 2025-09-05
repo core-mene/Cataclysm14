@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/05/2025 02:28:07
-  entityCount: 415
+  time: 09/05/2025 10:53:28
+  entityCount: 416
 maps: []
 grids:
 - 1
@@ -710,6 +710,11 @@ entities:
     components:
     - type: Transform
       pos: 1.5,-2.5
+      parent: 1
+  - uid: 416
+    components:
+    - type: Transform
+      pos: 0.5,2.5
       parent: 1
 - proto: CableApcExtension
   entities:
@@ -1575,6 +1580,9 @@ entities:
           - Toggle
         391:
         - - device-button-1
+          - Toggle
+        416:
+        - - device-button-3
           - Toggle
     - type: ApcPowerReceiver
       powerLoad: 5

@@ -1,0 +1,75 @@
+<Document>
+  # EXIGENCE-CLASS LIGHT SKIRMISHER
+  <Box>
+    <GuideEntityEmbed Entity="WeaponTurretAK570"/>
+    <GuideEntityEmbed Entity="WeaponTurretDravon"/>
+  </Box>
+  [color=#a4885c]Ship Size:[/color] Medium
+
+  [color=#a4885c]Recommended Crew:[/color] 1
+
+  [color=#a4885c]Power Gen Type:[/color] Uranium
+
+  [color=#a4885c]Expeditions:[/color] None
+
+  [color=#a4885c]IFF Console:[/color] Included
+
+  "An NIKI light skirmisher that trades survivability for pure speed. Lacks a shield generator, and the hull is obscenely thin. Take extreme caution."
+
+  # PREFLIGHT CHECKLIST
+
+  ## 1. Power supply
+
+  ## 1.1. Battery units
+  <Box>
+    <GuideEntityEmbed Entity="SMESAdvanced"/>
+    <GuideEntityEmbed Entity="SubstationWallBasic"/>
+    <GuideEntityEmbed Entity="APCBasic"/>
+  </Box>
+
+  - Check that the S.U.P.E.R.P.A.C.M.A.N. generator unit is anchored to the floor.
+  - Check that the SMES unit is anchored to the floor.
+  - Check that the substation unit is anchored to the wall.
+  - Check that each APC unit's Main Breaker is toggled on.
+  - Check the APC unit's current Load* (W).
+
+  ## 1.2. S.U.P.E.R.P.A.C.M.A.N. generator unit.
+  <Box>
+    <GuideEntityEmbed Entity="PortableGeneratorSuperPacmanShuttle"/>
+    <GuideEntityEmbed Entity="FuelUranium"/>
+  </Box>
+
+  - Check that each generator unit is properly anchored.
+  - Check that the generator unit is connected to the cable terminal of your SMES via HV.
+  - Check the fuel remaining of the generator unit.
+  - Set each generator unit output power to 40 kW.
+  - Enable Injection.
+
+  ## 2. Atmospherics
+
+  ## 2.1. Distribution Loop
+  <Box>
+    <GuideEntityEmbed Entity="AirCanister"/>
+    <GuideEntityEmbed Entity="GasPressurePump"/>
+  </Box>
+
+  - Ensure that the air canister is wrenched to the connector port.
+  - Check that the air canister is of a suitable atmos mixture (~22% oxygen, ~78% nitrogen).
+  - Enable the gas pump into the distribution system.
+
+  ## 3. Other checks
+  <Box>
+    <GuideEntityEmbed Entity="GyroscopeSecurity"/>
+    <GuideEntityEmbed Entity="GravityGeneratorMini"/>
+    <GuideEntityEmbed Entity="BlastDoor"/>
+  </Box>
+
+  - Check that each gyroscope is anchored, powered, and enabled.
+  - Check that the mini gravity generator is anchored, powered, and enabled.
+  - Check that network ports 1, 2, and 3 are connected to the airlock blast doors, gyroscope access, and bridge window blast door respectively.
+
+  ## Sidenotes
+
+  * - Exigence-class light skirmishers draw ≈80KW of power - more than what two S.U.P.E.R.P.A.C.M.A.N.-type portable generators are configured for stock. Ensure that each generator's output power is set to 40KW.
+
+</Document>
