@@ -6,10 +6,10 @@
 
 - type: entity
   id: WeaponTurretThanatos
-  name: Thanatos SN twin massdriver
+  name: THANATOS twin mass driver
   parent: BallisticArtilleryUnanchorable
   suffix: STATION ONLY, Recharging Ammo
-  description: A design only meant for use on station, the Thanatos sub-nuclear twin barreled mass driver is truly a monstrous weapon, capable of reducing most capital ships to rubble. It can be remotely activated or linked up to a GCS. This one feeds from an autoloader somewhere, and doesn't need manual reloads.
+  description: The charon's mean older brother, the Thanatos is a force to be reckoned with. It can be remotely activated or linked up to a GCS. This one feeds from an autoloader somewhere, and doesn't need manual reloads.
   components:
   - type: StaticPrice
     price: 1200000
@@ -42,7 +42,7 @@
     powerUseActive: 7500
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
-    proto: ShipRailgunProjectileSubnuclear
+    proto: ShipRailgunProjectile
     fireCost: 1500
   - type: Fixtures
     fixtures:
@@ -73,3 +73,6 @@
     shipType: Ballistic
   - type: ShipGunClass
     shipClass: Superheavy
+
+
+# If someone wants to make a ship version go nuts, but be SURE it uses ammo
