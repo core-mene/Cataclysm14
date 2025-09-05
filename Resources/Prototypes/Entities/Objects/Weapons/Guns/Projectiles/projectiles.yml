@@ -790,9 +790,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 2 # max 30 per tile
-    intensitySlope: 1
-    totalIntensity: 4 # 60 total damage to distribute over tiles
+    maxIntensity: 5 # 2->5 Mono
+    intensitySlope: 5 # 4->5 Mono
+    totalIntensity: 25 # 4->25 Mono
     maxTileBreak: 1
   - type: PointLight
     radius: 3.5
