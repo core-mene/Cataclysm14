@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: vessel
+  id: Calming Notion
+  parent: BaseVesselAntag
+  name: NIKI Calming Notion
+  description: In true NIKI fashion, the Calming Notion is a fast and fragile deathbox with zero practicality. Armed with VESPERA swarm missiles, 90mm Autocannons, and a 220mm torpedo system.
+  price: 114050
+  category: Medium
+  group: BlackMarket
+  shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/calmingnotion.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  - Corvette
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Calming Notion
+  mapName: 'NIKI Calming Notion'
+  mapPath: /Maps/_Mono/Shuttles/BlackMarket/calmingnotion.yml
+  minPlayers: 0
+  stations:
+    Calming Notion:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Calming Notion RG{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Pirate: [ 0, 0 ]
