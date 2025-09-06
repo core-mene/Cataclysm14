@@ -841,7 +841,7 @@ public sealed partial class ShuttleSystem
             if (dockedUid == uid) continue;
             var dockedXform = _xformQuery.GetComponent(dockedUid);
             var (relativePos, relativeRot, dockConnections) = relativeTransforms[dockedUid];
-            var ftlCooldown = 10f;
+
 
             var newPos = mainNewPos + relativePos;
             var newRot = mainNewRot + relativeRot;
@@ -850,8 +850,14 @@ public sealed partial class ShuttleSystem
                 _transform.SetParent(dockedUid, dockedXform, xform.MapUid.Value);
                 _transform.SetWorldRotationNoLerp(dockedUid, newRot);
                 _transform.SetWorldPosition(dockedUid, newPos);
-            }
 
+            }
+        }
+        foreach (var dockedUid in dockedShuttles)
+        {
+            var dockedXform = _xformQuery.GetComponent(dockedUid);
+            var (relativePos, relativeRot, dockConnections) = relativeTransforms[dockedUid];
+            var ftlCooldown = 10f;
             // Re-establish all docking connections
             foreach (var (dockA, dockB) in dockConnections)
             {
