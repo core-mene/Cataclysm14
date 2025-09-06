@@ -847,8 +847,8 @@ public sealed partial class ShuttleSystem
             var newRot = mainNewRot + relativeRot;
             if (xform.MapUid != null)
             {
-                _transform.SetWorldRotation(dockedUid, comp.TargetAngle + relativeRot);
                 _transform.SetParent(dockedUid, dockedXform, xform.MapUid.Value);
+                _transform.SetWorldRotationNoLerp(dockedUid, newRot);
                 _transform.SetWorldPosition(dockedUid, newPos);
             }
 
@@ -859,6 +859,7 @@ public sealed partial class ShuttleSystem
                     !TryComp<DockingComponent>(dockB, out var dockCompB))
                     continue;
                 _dockSystem.Dock((dockA, dockCompA), (dockB, dockCompB));
+                _dockSystem.Dock((dockB, dockCompB), (dockA, dockCompA));
             }
 
             if (TryComp<PhysicsComponent>(dockedUid, out var dockedBody))
@@ -1595,8 +1596,8 @@ public sealed partial class ShuttleSystem
             var newRot = mainRot + relativeRot;
             // Ensure we move to the same map as the main shuttle
             _transform.SetParent(dockedUid, dockedXform, ftlMap);
+            _transform.SetWorldRotationNoLerp(dockedUid, newRot);
             _transform.SetWorldPosition(dockedUid, newPos);
-            _transform.SetWorldRotation(dockedUid, newRot);
             LeaveNoFTLBehind((dockedUid, dockedXform), dockedOldGridMatrix, dockedOldMapUid);
 
             // Add FTL component to the docked shuttle and link it to the main shuttle
