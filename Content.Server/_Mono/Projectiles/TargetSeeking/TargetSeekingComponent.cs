@@ -43,7 +43,7 @@ public sealed partial class TargetSeekingComponent : Component
     /// Tracking algorithm used for intercepting the target.
     /// </summary>
     [DataField]
-    public TrackingMethod TrackingAlgorithm = TrackingMethod.Predictive;
+    public TrackingMethod TrackingAlgorithm = TrackingMethod.AdvancedPredictive;
 
     /// <summary>
     /// How fast the projectile accelerates in m/s².
