@@ -832,6 +832,7 @@ public sealed partial class ShuttleSystem
             _transform.SetCoordinates(uid, xform, target, rotation: comp.TargetAngle);
         }
 
+        var handledShuttles = new HashSet<EntityUid>();
         // Now move all docked shuttles to maintain their relative positions
         foreach (var dockedUid in dockedShuttles)
         {
@@ -845,18 +846,20 @@ public sealed partial class ShuttleSystem
 
             var newPos = mainNewPos + relativePos;
             var newRot = mainNewRot + relativeRot;
+            handledShuttles.Add(dockedUid);
             if (xform.MapUid != null)
             {
-                _transform.SetWorldPosition(dockedUid, newPos);
-                _transform.SetWorldRotationNoLerp(dockedUid, newRot);
-                _transform.SetParent(dockedUid, dockedXform, xform.MapUid.Value);
+                foreach (var handledUid in handledShuttles)
+                {
+                    _transform.SetParent(handledUid, dockedXform, xform.MapUid.Value);
+                    _transform.SetWorldPosition(handledUid, newPos);
+                    _transform.SetWorldRotation(handledUid, newRot);
+                    _transform.SetWorldPosition(uid, mainNewPos);
+                    _transform.SetWorldRotation(uid, mainNewRot);
+                }
 
                 // Ensure we are in the correct rotation for the next shuttle
-                _transform.SetWorldPosition(uid, mainNewPos);
-                _transform.SetWorldRotationNoLerp(uid, mainNewRot);
 
-                _transform.SetWorldPosition(dockedUid, newPos);
-                _transform.SetWorldRotationNoLerp(dockedUid, newRot);
                 // yeah I'm crazy
             }
 
