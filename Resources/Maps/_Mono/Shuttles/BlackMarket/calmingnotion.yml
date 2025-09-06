@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/06/2025 19:34:15
+  time: 09/06/2025 20:56:46
   entityCount: 613
 maps: []
 grids:
@@ -135,73 +135,73 @@ entities:
             0: 35007
           0,-1:
             0: 47240
-            2: 50
+            1: 50
           -1,0:
             0: 9151
           0,1:
-            1: 1
+            2: 1
             0: 34954
-            2: 8704
+            1: 8704
           0,2:
-            2: 41507
-            1: 17408
+            1: 41507
+            2: 17408
             0: 8
           -1,2:
-            2: 43400
+            1: 43400
             0: 2
-            1: 17408
+            2: 17408
           0,3:
-            2: 10923
+            1: 10923
           -1,3:
-            2: 35498
+            1: 35498
           0,4:
-            2: 67
+            1: 67
           1,0:
             0: 39
           1,1:
             0: 273
-            2: 1092
+            1: 1092
           1,2:
-            2: 290
+            1: 290
           1,-1:
             0: 8193
-            2: 4
+            1: 4
           -1,-1:
-            2: 136
+            1: 136
             0: 45859
           0,-3:
-            2: 12000
+            1: 12000
           0,-2:
-            2: 8738
+            1: 8738
             0: 34952
           1,-3:
-            2: 8464
+            1: 8464
           1,-2:
             0: 4352
-            2: 17410
+            1: 17410
           -2,0:
             0: 2184
           -2,1:
-            2: 1092
+            1: 1092
           -2,-1:
             0: 34816
-            2: 4
+            1: 4
           -1,1:
             0: 9011
-            2: 34816
+            1: 34816
           -2,2:
-            2: 136
+            1: 136
           -1,4:
-            2: 72
+            1: 72
           -2,-2:
-            2: 17416
+            1: 17416
           -2,-3:
-            2: 32768
+            1: 32768
           -1,-2:
             0: 13058
-            2: 34952
+            1: 34952
           -1,-3:
-            2: 36848
+            1: 36848
         uniqueMixes:
         - volume: 2500
           temperature: 293.15
@@ -219,7 +219,7 @@ entities:
           - 0
           - 0
         - volume: 2500
-          temperature: 293.15
+          immutable: True
           moles:
           - 0
           - 0
@@ -234,7 +234,7 @@ entities:
           - 0
           - 0
         - volume: 2500
-          immutable: True
+          temperature: 293.15
           moles:
           - 0
           - 0
@@ -363,6 +363,12 @@ entities:
       parent: 1
 - proto: Asm220TorpedoHE
   entities:
+  - uid: 7
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 4.197917,5.730154
+      parent: 1
   - uid: 8
     components:
     - type: Transform
@@ -374,14 +380,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 4.780503,5.2332673
-      parent: 1
-- proto: Asm220TorpedoLOSAT
-  entities:
-  - uid: 7
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.183281,5.7541003
       parent: 1
 - proto: AtmosDeviceFanDirectional
   entities:
