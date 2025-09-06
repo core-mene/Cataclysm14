@@ -355,8 +355,9 @@
   - type: Sprite
     sprite: Objects/Weapons/Grenades/empgrenade.rsi
   - type: EmpOnTrigger
-    range: 5.5
-    energyConsumption: 2700000 # Frontier: Upstream - #28984, 50000<2700000
+    range: 4 # 5.5->4 - Mono
+    energyConsumption: 1550 #270000->1550 roughly 3-4 shots to fully drain a S2-S4 mech - Mono
+    disableDuration: 10 # Mono
   - type: DeleteOnTrigger
   - type: Appearance
   - type: TimerTriggerVisuals
