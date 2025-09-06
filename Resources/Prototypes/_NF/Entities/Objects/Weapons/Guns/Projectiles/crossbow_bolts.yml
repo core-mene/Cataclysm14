@@ -468,8 +468,8 @@
   - type: StaminaDamageOnCollide
     damage: 20
   - type: EmpOnTrigger
-    range: 0.5
-    energyConsumption: 2700000
+    range: 1 # 0.5->1 - Mono
+    energyConsumption: 1550 # 270000->1550 - Mono
     disableDuration: 10
   - type: PointLight
     radius: 1.3

@@ -57,7 +57,8 @@
       fixtureID: floortrap
     - type: EmpOnTrigger
       range: 2
-      energyConsumption: 270000 # Frontier: 5kJ<270kJ
+      energyConsumption: 4550 # 270000-4550 watch your step bozo - Mono
+      disableDuration: 10 # Mono
     - type: DeleteOnTrigger
 
 - type: entity
