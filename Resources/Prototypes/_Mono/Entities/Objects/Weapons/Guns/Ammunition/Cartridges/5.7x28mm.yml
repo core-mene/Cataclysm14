@@ -104,9 +104,9 @@
   - type: CartridgeAmmo
     proto: Bullet57x28mmEmp
   - type: EmpDescription
-    range: 0.3
-    energyConsumption: 2700000
-    disableDuration: 10
+    range: 0.1 # 0.3-0.1 - Mono
+    energyConsumption: 50 # 270000-50 - Mono
+    disableDuration: 2 # 10->2 - Mono
 
 # Mono AP syst
 #anti-flesh:

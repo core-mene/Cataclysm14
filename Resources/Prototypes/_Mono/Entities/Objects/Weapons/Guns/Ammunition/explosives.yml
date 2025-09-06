@@ -169,9 +169,9 @@
     state: frag
     suffix: false
   - type: EmpDescription # Frontier
-    range: 5 # Frontier
-    energyConsumption: 2700000 # Frontier
-    disableDuration: 10 # Frontier
+    range: 3 # 5->3 - Mono
+    energyConsumption: 1550 #270000->1550 - Mono
+    disableDuration: 10
 
 # Cannon Balls
 
@@ -248,9 +248,9 @@
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     state: rpg-emp
   - type: EmpDescription
-    range: 6
-    energyConsumption: 4500000
-    disableDuration: 25
+    range: 4
+    energyConsumption: 2700 # 2700000-2700 - Mono
+    disableDuration: 10 # 60-10 - Mono
 
 # Cannon Balls
 - type: entity
