@@ -374,7 +374,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
                 detectionLevel == DetectionLevel.PartialDetected ?
                     Loc.GetString($"shuttle-console-signature-infrared")
                     : Loc.GetString($"shuttle-console-signature-unknown")
-                : _shuttles.GetIFFLabel(grid, self: true, component: iff);
+                : _shuttles.GetIFFLabel(grid, self: false, component: iff);
 
             var isPlayerShuttle = iff != null && (iff.Flags & IFFFlags.IsPlayerShuttle) != 0x0;
             var shouldDrawIFF = ShowIFF && labelName != null;

@@ -15,6 +15,7 @@ using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Systems;
 using Content.Client._Mono.Radar;
+using Content.Shared._Mono.Detection;
 using Content.Shared._Mono.Radar;
 using Content.Shared._Crescent.ShipShields;
 using Robust.Shared.Physics.Collision.Shapes;
@@ -30,9 +31,11 @@ using Robust.Shared.Timing;
 
 namespace Content.Client._Mono.FireControl.UI;
 
+// TODO: make this not a copypaste of ShuttleNavControl
 public sealed class FireControlNavControl : BaseShuttleControl
 {
     [Dependency] private readonly IMapManager _mapManager = default!;
+    private readonly DetectionSystem _detection; // Mono
     private readonly SharedShuttleSystem _shuttles;
     private readonly SharedTransformSystem _transform;
     private readonly IEntitySystemManager _sysManager = default!;
@@ -73,6 +76,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
     public FireControlNavControl() : base(64f, 512f, 512f)
     {
         IoCManager.InjectDependencies(this);
+        _detection = EntManager.System<DetectionSystem>(); // Mono
         _shuttles = EntManager.System<SharedShuttleSystem>();
         _transform = EntManager.System<SharedTransformSystem>();
         _blips = EntManager.System<RadarBlipsSystem>();
@@ -264,21 +268,36 @@ public sealed class FireControlNavControl : BaseShuttleControl
             if (!_shuttles.CanDraw(gUid, gridBody, iff))
                 continue;
 
+            var hideLabel = iff != null && (iff.Flags & IFFFlags.HideLabel) != 0x0;
+            var detectionLevel = _consoleEntity == null ? DetectionLevel.Detected : _detection.IsGridDetected(grid.Owner, _consoleEntity.Value);
+            var detected = detectionLevel != DetectionLevel.Undetected || !hideLabel;
+            var blipOnly = detectionLevel == DetectionLevel.PartialDetected;
+            if (!detected)
+                continue;
+
             var curGridToWorld = _transform.GetWorldMatrix(gUid);
             var curGridToView = curGridToWorld * worldToView;
 
             var labelColor = _shuttles.GetIFFColor(grid, self: false, iff);
             var coordColor = new Color(labelColor.R * 0.8f, labelColor.G * 0.8f, labelColor.B * 0.8f, 0.5f);
 
-            DrawGrid(handle, curGridToView, grid, labelColor);
+            var gridCentre = Vector2.Transform(gridBody.LocalCenter, curGridToView);
+
+            if (!blipOnly)
+                DrawGrid(handle, curGridToView, grid, labelColor);
+            else
+                DrawBlipShape(handle, gridCentre, 4, Color.Orange, RadarBlipShape.Circle);
 
             if (ShowIFF)
             {
-                var labelName = _shuttles.GetIFFLabel(grid, self: false, iff);
+                var labelName = hideLabel ?
+                    detectionLevel == DetectionLevel.PartialDetected ?
+                        Loc.GetString($"shuttle-console-signature-infrared")
+                        : Loc.GetString($"shuttle-console-signature-unknown")
+                    : _shuttles.GetIFFLabel(grid, self: false, component: iff);
                 if (labelName != null)
                 {
                     var gridBounds = grid.Comp.LocalAABB;
-                    var gridCentre = Vector2.Transform(gridBody.LocalCenter, curGridToView);
 
                     var distance = gridCentre.Length();
                     var labelText = Loc.GetString("shuttle-console-iff-label", ("name", labelName),
@@ -572,6 +591,10 @@ public sealed class FireControlNavControl : BaseShuttleControl
 
             // Don't draw shields when in FTL
             if (EntManager.HasComponent<FTLComponent>(parentXform.Owner))
+                continue;
+
+            var detectionLevel = _consoleEntity == null ? DetectionLevel.Detected : _detection.IsGridDetected(parentXform.Owner, _consoleEntity.Value);
+            if (detectionLevel != DetectionLevel.Detected)
                 continue;
 
             var shieldFixture = fixtures.Fixtures.TryGetValue("shield", out var fixture) ? fixture : null;
