@@ -113,14 +113,14 @@
     buckleOffset: "0.1, -0.05"
     # maxBuckleDistance: 1 # Umbra - buckling fix
   - type: MovementSpeedModifier
-    acceleration: 0.5
-    friction: 10
+    baseAcceleration: 0.5
+    baseFriction: 10
     baseWalkSpeed: 4.5
     baseSprintSpeed: 7
-    weightlessAcceleration: 1
-    weightlessFriction: 0.05
-    weightlessFrictionNoInput: 0.05
-    weightlessModifier: 3
+    baseWeightlessAcceleration: 1
+    baseWeightlessFriction: 0.05
+    baseWeightlessFrictionNoInput: 0.05
+    baseWeightlessModifier: 3
   - type: Sprite
     sprite: _NF/Objects/Vehicles/hoverbike.rsi
     layers:
