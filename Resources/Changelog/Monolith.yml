@@ -12141,3 +12141,87 @@ Entries:
   id: 1345
   time: '2025-09-06T18:11:24.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2234
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: All missiles now have a further improved tracking algorithm.
+  id: 1346
+  time: '2025-09-06T21:56:30.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2239
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: >-
+        FTL Docking collision substantially rarer. Avoid ftling with 4 or more
+        docked shuttles still.
+  id: 1347
+  time: '2025-09-06T21:57:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2240
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: >-
+        The Pantheon Collective has produced a new weapon for the sector, the
+        RAC-30 Draupnir, a rapid-fire cannon firing forth a hail of 30mm rounds
+  id: 1348
+  time: '2025-09-06T23:08:53.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2236
+- author: Honestly101
+  changes:
+    - type: Fix
+      message: Fixed the network device errors on the Jupiter.
+  id: 1349
+  time: '2025-09-06T23:10:27.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2223
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: Maints jack can now be flipped to use its wrench end
+  id: 1350
+  time: '2025-09-06T23:11:45.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2192
+- author: Ghagliiarghii
+  changes:
+    - type: Tweak
+      message: >-
+        Military Multipurpose Assembly (faction techfab) can now print mercenary
+        techfab stuff. No more wondering why you can't print "mercenary" guns
+        with the gun printer.
+  id: 1351
+  time: '2025-09-07T02:25:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2245
+- author: Ghagliiarghii
+  changes:
+    - type: Fix
+      message: >-
+        Cybernetic left hand (which comes with a J.W.L. left arm) is now
+        properly named (and no longer called "body part")
+  id: 1352
+  time: '2025-09-07T02:41:39.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2244
+- author: 10kee
+  changes:
+    - type: Tweak
+      message: Resprited Vox magboots
+  id: 1353
+  time: '2025-09-07T02:46:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2246
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Buffed direct (not explosion) damage of superheavy ship plasma lance
+        (from 700/1400 hull/shield damage to 9000/10200 hull/shield damage per
+        projectile)
+    - type: Tweak
+      message: Doubled HP of ship plasma lance to make it harder to destroy.
+  id: 1354
+  time: '2025-09-07T04:28:16.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2242
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed Legionnaire GCS not being powerful enough for its autopulsers.
+  id: 1355
+  time: '2025-09-07T05:30:42.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2248
