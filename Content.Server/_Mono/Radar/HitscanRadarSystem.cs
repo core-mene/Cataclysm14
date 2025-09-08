@@ -3,7 +3,6 @@ using Robust.Shared.Physics.Systems;
 using System.Numerics;
 using Content.Server._Mono.FireControl;
 using Robust.Shared.Timing;
-using Content.Shared.Weapons.Ranged;
 
 namespace Content.Server._Mono.Radar;
 
@@ -29,11 +28,11 @@ public sealed partial class HitscanRadarSystem : EntitySystem
         public EntityCoordinates FromCoordinates { get; }
         public float Distance { get; }
         public Angle Angle { get; }
-        public HitscanPrototype Hitscan { get; }
+        public EntityUid? Hitscan { get; }
         public EntityUid? HitEntity { get; }
         public EntityUid? Shooter { get; }
 
-        public HitscanFireEffectEvent(EntityCoordinates fromCoordinates, float distance, Angle angle, HitscanPrototype hitscan, EntityUid? hitEntity = null, EntityUid? shooter = null)
+        public HitscanFireEffectEvent(EntityCoordinates fromCoordinates, float distance, Angle angle, EntityUid? hitscan = null, EntityUid? hitEntity = null, EntityUid? shooter = null)
         {
             FromCoordinates = fromCoordinates;
             Distance = distance;
@@ -93,7 +92,7 @@ public sealed partial class HitscanRadarSystem : EntitySystem
     /// <summary>
     /// Inherits radar settings from the shooter entity if available
     /// </summary>
-    private void InheritShooterSettings(EntityUid shooter, HitscanRadarComponent hitscanRadar, HitscanPrototype hitscan)
+    private void InheritShooterSettings(EntityUid shooter, HitscanRadarComponent hitscanRadar, EntityUid? hitscan)
     {
         // Try to inherit from shooter's existing HitscanRadarComponent if present
         if (TryComp<HitscanRadarComponent>(shooter, out var shooterHitscanRadar))

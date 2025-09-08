@@ -23,7 +23,8 @@ public sealed class HitscanReflectSystem : EntitySystem
         if (hitscan.Comp.CurrentReflections >= hitscan.Comp.MaxReflections)
             return;
 
-        var ev = new HitScanReflectAttemptEvent(args.Shooter ?? args.Gun, args.Gun, hitscan.Comp.ReflectiveType, args.ShotDirection, false);
+        // Mono - Added null as default DamageSpecifier? Damage parameter
+        var ev = new HitScanReflectAttemptEvent(args.Shooter ?? args.Gun, args.Gun, hitscan.Comp.ReflectiveType, args.ShotDirection, false, null);
         RaiseLocalEvent(args.HitEntity.Value, ref ev);
 
         if (!ev.Reflected)

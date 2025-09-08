@@ -58,6 +58,7 @@ using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Weapons.Ranged.Systems;
 using Content.Shared.Weapons.Hitscan.Components;
 using Content.Shared.Weapons.Hitscan.Events;
+using Content.Shared.Effects; // Mono
 using Robust.Shared.Audio;
 using Robust.Shared.Map;
 using Robust.Shared.Player;
@@ -363,12 +364,10 @@ public sealed partial class GunSystem : SharedGunSystem
             Audio.PlayPvs(weaponSound, otherEntity);
         }
     }
-<<<<<<< HEAD
-
+    // Mono Start - Radar stuff
     // TODO: Pseudo RNG so the client can predict these.
     #region Hitscan effects
-
-    private void FireEffects(EntityCoordinates fromCoordinates, float distance, Angle angle, HitscanPrototype hitscan, EntityUid? hitEntity = null, EntityUid? user = null)
+    private void FireEffects(EntityCoordinates fromCoordinates, float distance, Angle angle, EntityUid? hitscan = null, EntityUid? hitEntity = null, EntityUid? user = null)
     {
         // Raise custom event for radar tracking
         // Use the actual user as shooter instead of trying to derive from coordinates
@@ -398,31 +397,35 @@ public sealed partial class GunSystem : SharedGunSystem
             angle -= _transform.GetWorldRotation(fromXform);
         }
 
-        if (distance >= 1f)
+        if (hitscan != null)
         {
-            if (hitscan.MuzzleFlash != null)
+            var hitscanVisuals = Comp<HitscanBasicVisualsComponent>(hitscan.Value);
+            if (distance >= 1f)
             {
-                var coords = fromCoordinates.Offset(angle.ToVec().Normalized() / 2);
-                var netCoords = GetNetCoordinates(coords);
+                if (hitscanVisuals.MuzzleFlash != null)
+                {
+                    var coords = fromCoordinates.Offset(angle.ToVec().Normalized() / 2);
+                    var netCoords = GetNetCoordinates(coords);
 
-                sprites.Add((netCoords, angle, hitscan.MuzzleFlash, 1f));
+                    sprites.Add((netCoords, angle, hitscanVisuals.MuzzleFlash, 1f));
+                }
+
+                if (hitscanVisuals.TravelFlash != null)
+                {
+                    var coords = fromCoordinates.Offset(angle.ToVec() * (distance + 0.5f) / 2);
+                    var netCoords = GetNetCoordinates(coords);
+
+                    sprites.Add((netCoords, angle, hitscanVisuals.TravelFlash, distance - 1.5f));
+                }
             }
 
-            if (hitscan.TravelFlash != null)
+            if (hitscanVisuals.ImpactFlash != null)
             {
-                var coords = fromCoordinates.Offset(angle.ToVec() * (distance + 0.5f) / 2);
+                var coords = fromCoordinates.Offset(angle.ToVec() * distance);
                 var netCoords = GetNetCoordinates(coords);
 
-                sprites.Add((netCoords, angle, hitscan.TravelFlash, distance - 1.5f));
+                sprites.Add((netCoords, angle.FlipPositive(), hitscanVisuals.ImpactFlash, 1f));
             }
-        }
-
-        if (hitscan.ImpactFlash != null)
-        {
-            var coords = fromCoordinates.Offset(angle.ToVec() * distance);
-            var netCoords = GetNetCoordinates(coords);
-
-            sprites.Add((netCoords, angle.FlipPositive(), hitscan.ImpactFlash, 1f));
         }
 
         if (sprites.Count > 0)
@@ -459,4 +462,5 @@ public sealed partial class GunSystem : SharedGunSystem
     }
 
     #endregion
+    // Mono End - Radar stuff
 }
