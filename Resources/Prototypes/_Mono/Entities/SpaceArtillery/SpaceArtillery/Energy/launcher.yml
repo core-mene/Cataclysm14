@@ -35,7 +35,7 @@
   - type: Gun
     fireRate: 0.5
     projectileSpeed: 90
-    shootThermalSignature: 1000000 # ~1414m with continuous fire
+    shootThermalSignature: 4000000 # ~2.8km with continuous fire
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
     soundEmpty:
@@ -103,7 +103,7 @@
   - type: Gun
     fireRate: 16
     projectileSpeed: 145
-    shootThermalSignature: 500000 # ~4000m with continuous fire
+    shootThermalSignature: 500000 # ~5.6km with continuous fire
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/autopulse_laser_fire_01.ogg
     soundEmpty:
@@ -387,6 +387,7 @@
   - type: Gun
     projectileSpeed: 150
     fireRate: 0.75
+    shootThermalSignature: 12000000 # ~6km after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/laserfire.ogg
     soundEmpty:

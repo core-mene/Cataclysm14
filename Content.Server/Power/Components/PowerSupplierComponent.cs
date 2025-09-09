@@ -78,6 +78,6 @@ namespace Content.Server.Power.Components
         ///     If we have a <see cref="ThermalSignatureComponent">, heat signature generated per watt currently supplied.
         /// </summary>
         [DataField]
-        public float HeatSignatureRatio = 1f;
+        public float HeatSignatureRatio = 4f;
     }
 }

@@ -247,7 +247,7 @@
   components:
   - type: PowerSupplier
     supplyRate: 10000 # supposed to be low power at no fuel cost to power derelicts
-    heatSignatureRatio: 4 # Mono
+    heatSignatureRatio: 16 # Mono
   - type: ThermalSignature # Mono
   - type: Sprite
     sprite: Structures/Power/Generation/rtg.rsi

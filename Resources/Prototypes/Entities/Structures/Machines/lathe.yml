@@ -249,6 +249,9 @@
   - type: DeviceLinkSource
     ports:
     - Produced
+  - type: MachineThermalSignature
+    signature: 2500 # 100m
+  - type: ThermalSignature
   # </Mono>
 
 # a lathe that can be sped up with space lube / slowed down with glue
