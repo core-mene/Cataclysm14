@@ -127,6 +127,7 @@
     transmitFrequencyId: ShuttleTimer
   - type: RadarConsole
     followEntity: false
+    pannable: true # Mono
   - type: CommunicationsConsole
     canShuttle: false
     title: comms-console-announcement-title-station-ai
