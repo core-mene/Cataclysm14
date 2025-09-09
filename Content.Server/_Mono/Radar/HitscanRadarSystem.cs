@@ -1,8 +1,9 @@
 using Robust.Shared.Map;
-using Robust.Shared.Physics.Systems;
 using System.Numerics;
 using Content.Server._Mono.FireControl;
 using Robust.Shared.Timing;
+using Content.Shared.Weapons.Hitscan.Events;
+using Content.Shared.Weapons.Hitscan.Components;
 
 namespace Content.Server._Mono.Radar;
 
@@ -11,57 +12,30 @@ namespace Content.Server._Mono.Radar;
 /// </summary>
 public sealed partial class HitscanRadarSystem : EntitySystem
 {
-    [Dependency] private readonly IMapManager _mapManager = default!;
-    [Dependency] private readonly RadarBlipSystem _radarBlipSystem = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
 
     // Dictionary to track entities that should be deleted after a specific time
     private readonly Dictionary<EntityUid, TimeSpan> _pendingDeletions = new();
 
-    /// <summary>
-    /// Event raised before firing the effects for a hitscan projectile.
-    /// </summary>
-    public sealed class HitscanFireEffectEvent : EntityEventArgs
-    {
-        public EntityCoordinates FromCoordinates { get; }
-        public float Distance { get; }
-        public Angle Angle { get; }
-        public EntityUid? Hitscan { get; }
-        public EntityUid? HitEntity { get; }
-        public EntityUid? Shooter { get; }
-
-        public HitscanFireEffectEvent(EntityCoordinates fromCoordinates, float distance, Angle angle, EntityUid? hitscan = null, EntityUid? hitEntity = null, EntityUid? shooter = null)
-        {
-            FromCoordinates = fromCoordinates;
-            Distance = distance;
-            Angle = angle;
-            Hitscan = hitscan;
-            HitEntity = hitEntity;
-            Shooter = shooter;
-        }
-    }
-
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<HitscanFireEffectEvent>(OnHitscanEffect);
+        SubscribeLocalEvent<HitscanAmmoComponent, HitscanRaycastFiredEvent>(OnHitscanRaycastFired);
         SubscribeLocalEvent<HitscanRadarComponent, ComponentShutdown>(OnHitscanRadarShutdown);
     }
 
-    private void OnHitscanEffect(HitscanFireEffectEvent ev)
+    private void OnHitscanRaycastFired(Entity<HitscanAmmoComponent> ent, ref HitscanRaycastFiredEvent ev)
     {
-        if (ev.Shooter == null)
-            return;
+        var shooter = ev.Shooter ?? ev.Gun;
 
         // Only create hitscan radar blips for entities with FireControllable component
-        if (!HasComp<FireControllableComponent>(ev.Shooter.Value))
+        if (!HasComp<FireControllableComponent>(shooter))
             return;
 
         // Create a new entity for the hitscan radar visualization
         // Use the shooter's position to spawn the entity
-        var shooterCoords = new EntityCoordinates(ev.Shooter.Value, Vector2.Zero);
+        var shooterCoords = new EntityCoordinates(shooter, Vector2.Zero);
         var uid = Spawn(null, shooterCoords);
 
         // Add the hitscan radar component
@@ -70,19 +44,18 @@ public sealed partial class HitscanRadarSystem : EntitySystem
         // Determine start position using proper coordinate transformation
         var startPos = _transform.ToMapCoordinates(ev.FromCoordinates).Position;
 
-        // Compute end position in map space (world coordinates)
-        var dir = ev.Angle.ToVec().Normalized();
-        var endPos = startPos + dir * ev.Distance;
+        // Compute end position using raycast distance
+        var endPos = startPos + ev.ShotDirection.Normalized() * ev.DistanceTried;
 
         // Set the origin grid if available
-        hitscanRadar.OriginGrid = Transform(ev.Shooter.Value).GridUid;
+        hitscanRadar.OriginGrid = Transform(shooter).GridUid;
 
         // Set the start and end coordinates
         hitscanRadar.StartPosition = startPos;
         hitscanRadar.EndPosition = endPos;
 
         // Inherit component settings from the shooter entity
-        InheritShooterSettings(ev.Shooter.Value, hitscanRadar, ev.Hitscan);
+        InheritShooterSettings(shooter, hitscanRadar);
 
         // Schedule entity for deletion after its lifetime expires
         var deleteTime = _timing.CurTime + TimeSpan.FromSeconds(hitscanRadar.LifeTime);
@@ -92,7 +65,7 @@ public sealed partial class HitscanRadarSystem : EntitySystem
     /// <summary>
     /// Inherits radar settings from the shooter entity if available
     /// </summary>
-    private void InheritShooterSettings(EntityUid shooter, HitscanRadarComponent hitscanRadar, EntityUid? hitscan)
+    private void InheritShooterSettings(EntityUid shooter, HitscanRadarComponent hitscanRadar)
     {
         // Try to inherit from shooter's existing HitscanRadarComponent if present
         if (TryComp<HitscanRadarComponent>(shooter, out var shooterHitscanRadar))
