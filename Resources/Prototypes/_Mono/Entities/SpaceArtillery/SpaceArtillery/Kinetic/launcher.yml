@@ -108,8 +108,8 @@
     ports:
     - Toggle
   - type: Gun
-    fireRate: 25
-    projectileSpeed: 100
+    fireRate: 50
+    projectileSpeed: 120
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/slammer.ogg
     soundEmpty:
@@ -126,7 +126,7 @@
   - type: Airtight
   - type: ProjectileBatteryAmmoProvider
     proto: 30mmBullet
-    fireCost: 15
+    fireCost: 7.5
   - type: Destructible
     thresholds:
     - trigger:
@@ -142,7 +142,7 @@
     resistance: 8
   - type: RadarBlip
     radarColor: "#FF0000"
-    scale: 1
+    scale: 1.5
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
