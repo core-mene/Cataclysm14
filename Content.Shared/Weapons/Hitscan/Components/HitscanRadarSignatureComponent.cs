@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: MIT
+
 using Content.Shared.Weapons.Ranged;
 using Robust.Shared.GameStates;
 
