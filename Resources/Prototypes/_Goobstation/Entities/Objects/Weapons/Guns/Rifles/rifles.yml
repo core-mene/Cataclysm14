@@ -23,10 +23,7 @@
   - type: Item # Mono
     sprite: _Mono/Objects/Weapons/Guns/Rifles/annie_inhands_32x.rsi
   - type: Clothing
-    sprite: _Mono/Objects/Weapons/Guns/Rifles/annie_inhands_32x.rsi # Mono
-  - type: GunWieldBonus
-    minAngle: -14
-    maxAngle: -32
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/annie_inhands_32x.rsi
   - type: Gun
     availableModes:
     - FullAuto
@@ -36,10 +33,6 @@
     shotsPerBurst: 4
     fireRate: 6.5
     projectileSpeed: 42.5 # Mono
-    minAngle: 15
-    maxAngle: 54
-    angleIncrease: 4
-    angleDecay: 33
     soundGunshot:
       path: /Audio/_Goobstation/Weapons/Guns/Gunshots/thock.ogg
   - type: ChamberMagazineAmmoProvider
@@ -103,10 +96,6 @@
     burstFireRate: 20 # Mono
     burstCooldown: 0.4 # Mono
     projectileSpeed: 45 # Mono
-    minAngle: 15
-    maxAngle: 54
-    angleIncrease: 2
-    angleDecay: 33
     fireRate: 7.5 # Mono, does nothing because its burst only but it makes it clear it can fire at this rate.
     soundGunshot:
       path: /Audio/_Goobstation/Weapons/Guns/Gunshots/bwuh.ogg
@@ -156,17 +145,9 @@
   - type: ChamberMagazineAmmoProvider # Mono
     soundRack:
       path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
-  - type: GunWieldBonus
-    minAngle: -14
-    maxAngle: -38
   - type: Gun
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/light_rifle_2.ogg # Mono
-    projectileSpeed: 60 # Mono
-    minAngle: 15
-    maxAngle: 54
-    angleIncrease: 5
-    angleDecay: 28
   - type: ItemSlots
     slots:
       gun_magazine:

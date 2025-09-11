@@ -32,9 +32,7 @@
     maxAngle: -36
   - type: Gun
     minAngle: 27
-    maxAngle: 54
-    angleIncrease: 8
-    angleDecay: 14
+    maxAngle: 39
     fireRate: 2.25
     selectedMode: SemiAuto
     availableModes:
@@ -74,10 +72,10 @@
   - type: Appearance
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 6.5
-    pvsIncrease: 0.65
+    maxOffset: 2.5
+    pvsIncrease: 0.4
   - type: SpeedModifiedOnWield # Mono
-    walkModifier: 0.65
-    sprintModifier: 0.65
+    walkModifier: 0.85
+    sprintModifier: 0.85
   - type: PirateBountyItem # Mono
     id: StandardFactionLongarm
