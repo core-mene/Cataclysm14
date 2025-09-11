@@ -285,6 +285,10 @@
           collection: MetalBreak
   - type: Machine
     board: WeaponTurretM25Circuitboard #not currently deconstructible, if making deconstructible in future make doAfter somewhat substantial
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
   - type: RadarBlip
     radarColor: "#C92BCC"
     scale: 1
