@@ -1,3 +1,13 @@
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 InsanityMoose
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 Jake Huxell
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Ilya246
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared.Shuttles.Systems;
 using Robust.Shared.GameStates;
 
@@ -42,6 +52,7 @@ public enum IFFFlags : byte
 
     /// <summary>
     /// Should the label for this grid be hidden at all ranges.
+    /// Mono - only hides true IFF instead.
     /// </summary>
     HideLabel = 1,
 
@@ -55,6 +66,12 @@ public enum IFFFlags : byte
     /// Frontier - Is this a player shuttle
     /// </summary>
     IsPlayerShuttle = 4,
+
+    // Mono
+    /// <summary>
+    /// If HideLabel is true, whether even detection labels should not be shown.
+    /// </summary>
+    HideLabelAlways = 8,
 
     // TODO: Need one that hides its outline, just replace it with a bunch of triangles or lines or something.
 }

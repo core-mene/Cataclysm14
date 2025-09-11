@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 ark1368
+// SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -173,7 +174,7 @@ public sealed partial class ShipShieldsSystem : EntitySystem
         }
     }
 
-    private void OnEmitterShutdown(EntityUid uid, ShipShieldEmitterComponent emitter, ComponentShutdown args) // Mono 
+    private void OnEmitterShutdown(EntityUid uid, ShipShieldEmitterComponent emitter, ComponentShutdown args) // Mono
     {
         if (emitter.Shielded != null)
         {
@@ -257,7 +258,7 @@ public sealed partial class ShipShieldsSystem : EntitySystem
         if (!Resolve(uid, ref component, false))
             return false;
 
-        Del(component.Shield);
+        TryQueueDel(component.Shield);
         RemComp<ShipShieldedComponent>(uid);
         return true;
     }

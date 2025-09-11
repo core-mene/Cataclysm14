@@ -118,6 +118,17 @@
     baseDelay: 1.4
     modifiedDelay: 1.4
     preventFiring: true
+  # Goobstation edit start
+  - type: EmitSoundOnPickup
+    sound:
+      collection: RiflesPickUp
+  - type: EmitSoundOnDrop
+    sound:
+      collection: RiflesDrop
+  - type: EmitSoundOnLand
+    sound:
+      collection: RiflesDrop
+  # Goobstation edit end
 
 - type: entity
   name: PA L6B SAW (7.62x39mm)

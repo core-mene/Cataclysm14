@@ -9,6 +9,7 @@
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2024 lzk
 # SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 RealSchepka
 # SPDX-FileCopyrightText: 2025 Schepka
 # SPDX-FileCopyrightText: 2025 keronshb
 # SPDX-FileCopyrightText: 2025 starch
@@ -93,7 +94,7 @@
 - type: entity
   id: SuitStorageEVAPirate
   parent: SuitStorageBase
-  suffix: Pirate EVA
+  suffix: ASR SCAF # Mono
   components:
   - type: StorageFill
     contents:
@@ -102,7 +103,7 @@
         - id: ClothingOuterHardsuitPirateScaf # Mono
 #        - id: ClothingMaskGas # Mono
         - id: JetpackBlackFilled # Frontier
-        - id: ClothingShoesBootsMagSyndie # Mono
+        - id: ClothingShoesBootsMagAshen # Mono
 
 #NTSRA Voidsuit
 - type: entity
@@ -298,7 +299,7 @@
 - type: entity
   id: SuitStoragePirateCap
   parent: SuitStorageBase
-  suffix: Rogue Commander
+  suffix: ASR Cell Commander
   components:
   - type: StorageFill
     contents:
@@ -308,7 +309,7 @@
         - id: ClothingMaskGasSwat # Mono
         - id: ClothingNeckCloakPirateCap # Frontier
         - id: JetpackBlackFilled # Frontier
-        - id: ClothingShoesBootsMagSyndie # Mono
+        - id: ClothingShoesBootsMagAshen # Mono
 
 #Wizard
 - type: entity

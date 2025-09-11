@@ -1,0 +1,115 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Shroomerian
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: gamePreset
+  id: MonoStandard
+  alias:
+    - standard
+    - monostandard
+  name: mono-standard-title
+  description: mono-standard-description
+  showInVote: true
+  rules:
+    - NFAdventure
+    - BasicStationEventScheduler
+    - BluespaceEventScheduler
+    - BluespaceDungeonEventScheduler
+    - BluespaceSalvageEventScheduler
+    - SmugglingEventScheduler
+    - FrontierRoundstartVariation
+
+- type: gamePreset
+  id: MonoRogueTSF
+  name: mono-roguetsf-title
+  description: mono-roguetsf-description
+  showInVote: true
+  rules:
+  - NFAdventure
+  - BasicStationEventScheduler
+  - BluespaceEventScheduler
+  - BluespaceDungeonEventScheduler
+  - BluespaceSalvageEventScheduler
+  - SmugglingEventScheduler
+  - FrontierRoundstartVariation
+
+- type: gamePreset
+  id: MonoRogueUSSP
+  name: mono-rogueussp-title
+  description: mono-rogueussp-description
+  showInVote: true
+  rules:
+  - NFAdventure
+  - BasicStationEventScheduler
+  - BluespaceEventScheduler
+  - BluespaceDungeonEventScheduler
+  - BluespaceSalvageEventScheduler
+  - SmugglingEventScheduler
+  - FrontierRoundstartVariation
+
+- type: gamePreset
+  id: MonoTSFUSSP
+  name: mono-tsfussp-title
+  description: mono-tsfussp-description
+  showInVote: true
+  rules:
+  - NFAdventure
+  - BasicStationEventScheduler
+  - BluespaceEventScheduler
+  - BluespaceDungeonEventScheduler
+  - BluespaceSalvageEventScheduler
+  - SmugglingEventScheduler
+  - FrontierRoundstartVariation
+
+- type: gamePreset
+  id: MonoADS
+  name: mono-ads-title
+  description: mono-ads-description
+  showInVote: true
+  rules:
+  - NFAdventure
+  - BasicStationEventScheduler
+  - BluespaceEventScheduler
+  - BluespaceDungeonEventScheduler
+  - BluespaceSalvageEventScheduler
+  - SmugglingEventScheduler
+  - FrontierRoundstartVariation
+  - MonoAISTCShuttleSpawnerScheduler
+  - MonoAISTCShuttleSpawnerSchedulerTier2
+  - MonoAsakimSTCShuttleSpawnerScheduler
+
+- type: gamePreset
+  id: MonoChimera
+  name: mono-chimera-title
+  description: mono-chimera-description
+  showInVote: true
+  rules:
+  - NFAdventure
+  - BasicStationEventScheduler
+  - BluespaceEventScheduler
+  - BluespaceDungeonEventScheduler
+  - BluespaceSalvageEventScheduler
+  - SmugglingEventScheduler
+  - FrontierRoundstartVariation
+  - MonoChimeraSTCShuttleSpawnerScheduler
+
+- type: gamePreset
+  id: MonoAllAtOnce
+  name: mono-allatonce-title
+  description: mono-allatonce-description
+  showInVote: true # Good idea sir!
+  rules:
+  - NFAdventure
+  - BasicStationEventScheduler
+  - BluespaceEventScheduler
+  - BluespaceDungeonEventScheduler
+  - BluespaceSalvageEventScheduler
+  - SmugglingEventScheduler
+  - FrontierRoundstartVariation
+  - MonoChimeraSTCShuttleSpawnerSchedulerApocalypse
+  - MonoAISTCShuttleSpawnerSchedulerApocalypse
+  - MonoAsakimSTCShuttleSpawnerSchedulerApocalypse
+

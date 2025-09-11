@@ -52,4 +52,10 @@ public sealed partial class RadarBlipComponent : Component
 
     [DataField]
     public bool Enabled = true;
+
+    /// <summary>
+    /// Do not show the blip beyond this distance to the viewing mass scanner.
+    /// </summary>
+    [DataField]
+    public float MaxDistance = 1024f;
 }

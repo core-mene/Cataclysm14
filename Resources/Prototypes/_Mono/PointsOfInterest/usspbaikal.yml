@@ -21,6 +21,7 @@
   name: 'Baikal Station'
   minimumDistance: 10650
   maximumDistance: 12400
+  spawnGamePreset: [ NFAdventure, NFPirate, MonoStandard, MonoRogueUSSP, MonoTSFUSSP, MonoADS, MonoChimera, MonoAllAtOnce ]
   spawnGroup: Required
   gridPath: /Maps/_Mono/POI/usspbaikal.yml
   addComponents:

@@ -1,0 +1,49 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndie
+  id: ClothingOuterHardsuitAshen
+  name: ASR CV-32 combat tacsuit
+  description: A combat tacsuit designed in the Ashen Republic.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/syndicate.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/syndicate.rsi
+  - type: ToggleableClothing
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: false
+    replaceCurrentClothing: true
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitAshen
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
+  - type: Tag
+    tags:
+    - RogueHardsuit
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndieElite
+  id: ClothingOuterHardsuitAshenElite
+  name: ASR CV-53 combat hardsuit
+  description: Based off of the CV-32, sacrifices combat protection for enviornment protection.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/syndieelite.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/syndieelite.rsi
+  - type: ToggleableClothing
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: false
+    replaceCurrentClothing: true
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitAshenElite
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
+  - type: Tag
+    tags:
+    - RogueHardsuit

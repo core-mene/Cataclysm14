@@ -49,6 +49,7 @@
     supplyRate: 3000
     supplyRampRate: 500
     supplyRampTolerance: 500
+  - type: ThermalSignature # Mono
   - type: Anchorable
   - type: Pullable
   - type: Damageable
@@ -246,6 +247,8 @@
   components:
   - type: PowerSupplier
     supplyRate: 10000 # supposed to be low power at no fuel cost to power derelicts
+    heatSignatureRatio: 16 # Mono
+  - type: ThermalSignature # Mono
   - type: Sprite
     sprite: Structures/Power/Generation/rtg.rsi
     state: rtg

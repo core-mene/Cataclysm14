@@ -47,7 +47,7 @@
       coefficients:
         Blunt: 0.5
         Slash: 0.5
-        Piercing: 0.5
+        Piercing: 0.4 # Modsuits are pain to use. Needs some kind of benefit.
         Heat: 0.75
         Radiation: 0.5
         Caustic: 0.5
@@ -94,7 +94,7 @@
       outerClothing:
       - state: equipped-OUTERCLOTHING-sealed
   - type: ExplosionResistance
-    damageCoefficient: 0.45
+    damageCoefficient: 0.3
   - type: StaminaDamageResistance
     coefficient: 0.4
   - type: Armor
@@ -102,7 +102,7 @@
       coefficients:
         Blunt: 0.45
         Slash: 0.45
-        Piercing: 0.45
+        Piercing: 0.3 # It has a lot of slowdown, I want to jugglarp
         Heat: 0.55
         Caustic: 0.4
         Radiation: 0.35

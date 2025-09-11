@@ -113,6 +113,17 @@
     rsi:
       sprite: _RMC14/Interface/MousePointer/pistol_mouse.rsi
       state: all
+  # Goobstation edit start
+  - type: EmitSoundOnPickup
+    sound:
+      collection: SMGPickUp
+  - type: EmitSoundOnDrop
+    sound:
+      collection: SMGDrop
+  - type: EmitSoundOnLand
+    sound:
+      collection: SMGDrop
+  # Goobstation edit end
 
 - type: entity
   name: MA PDW-58 Atreides (5.7x28mm)

@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Disguised Bear
@@ -41,6 +42,7 @@
   - type: Gun
     fireRate: 12
     projectileSpeed: 90
+    shootThermalSignature: 10000 # relatively low for a shipgun, ~693m signature if firing continuously
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/slammer.ogg
     soundEmpty:
@@ -79,6 +81,75 @@
   - type: ShipGunClass
     shipClass: Light
 
+# RAC-30 Draupnir
+
+- type: entity
+  id: WeaponTurretRAC30
+  name: RAC-30 Draupnir Autocannon
+  parent: BallisticArtillery
+  description: A more heavy duty rapid rife autocannon, firing a hail of rounds much like its namesake became a hail of spears.
+  components:
+  - type: StaticPrice
+    price: 1000
+  - type: Sprite
+    sprite: _Mono/Objects/ShuttleWeapons/rac-30_draupnir.rsi
+    layers:
+    - state: space_artillery
+  - type: Battery
+    maxCharge: 45000
+    startingCharge: 45000
+  - type: ExaminableBattery
+  - type: Appearance
+  - type: FireControlRotate
+  - type: AutoShootGun
+  - type: GunSignalControl
+  - type: WirelessNetworkConnection
+    range: 700
+  - type: DeviceLinkSink
+    ports:
+    - Toggle
+  - type: Gun
+    fireRate: 50
+    projectileSpeed: 120
+    shootThermalSignature: 100000 # ~4.5km if firing continuously
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/Gunshots/slammer.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 600
+  - type: SpaceArtillery
+    powerChargeRate: 100
+    powerUsePassive: 100
+  - type: Actions
+  - type: CombatMode
+    isInCombatMode: true
+  - type: Airtight
+  - type: ProjectileBatteryAmmoProvider
+    proto: 30mmBullet
+    fireCost: 7.5
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: RadiationBlocker
+    resistance: 8
+  - type: RadarBlip
+    radarColor: "#FF0000"
+    scale: 1.5
+  - type: ShipGunType
+    shipType: Ballistic
+  - type: ShipGunClass
+    shipClass: Medium
+
 # DRAVON 57mm
 
 - type: entity
@@ -105,6 +176,7 @@
   - type: Gun
     fireRate: 1.5
     projectileSpeed: 161
+    shootThermalSignature: 2000000 # ~3.5km signature if firing continuously
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/mortar.ogg
     soundEmpty:
@@ -170,6 +242,7 @@
     shotsPerBurst: 2
     selectedMode: Burst
     availableModes: Burst
+    shootThermalSignature: 2000000 # ~4.5km signature if firing continuously
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/120mm_mortar.ogg
     soundEmpty:
@@ -247,6 +320,7 @@
     shotsPerBurst: 2
     selectedMode: Burst
     availableModes: Burst
+    shootThermalSignature: 48000000 # ~7km after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
     soundEmpty:
@@ -324,6 +398,7 @@
     shotsPerBurst: 2
     selectedMode: Burst
     availableModes: Burst
+    shootThermalSignature: 160000000 # now all of china knows you're here (12.6km)
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
     soundEmpty:
@@ -384,6 +459,7 @@
   - type: Gun
     fireRate: 0.05
     projectileSpeed: 400
+    shootThermalSignature: 20000000 # ~4.5km after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/leviathan_fire.ogg
     soundEmpty:
@@ -467,6 +543,7 @@
   - type: Gun
     projectileSpeed: 155
     fireRate: 0.1
+    shootThermalSignature: 80000000 # ~9km after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
     soundEmpty:
@@ -540,6 +617,7 @@
   - type: Gun
     projectileSpeed: 155
     fireRate: 0.2
+    shootThermalSignature: 40000000 # ~6.3km after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
     soundEmpty:

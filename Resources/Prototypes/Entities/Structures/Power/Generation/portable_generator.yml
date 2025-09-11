@@ -114,6 +114,7 @@
       supplyRampRate: 500
       supplyRampTolerance: 500
       enabled: false
+    - type: ThermalSignature # Mono
     - type: DeviceLinkSink
       ports:
       - On
@@ -183,7 +184,7 @@
       board: PortableGeneratorPacmanMachineCircuitboard
     - type: FuelGenerator
       minTargetPower: 1000
-      maxTargetPower: 25000
+      maxTargetPower: 35000 # Mono
       targetPower: 15000
       optimalPower: 15000
       # 45 minutes at max output
@@ -252,7 +253,7 @@
       board: PortableGeneratorSuperPacmanMachineCircuitboard
     - type: FuelGenerator
       minTargetPower: 5000
-      maxTargetPower: 50000
+      maxTargetPower: 60000 # Mono
       targetPower: 30000
       optimalPower: 30000
       # 45 minutes at full power
@@ -335,7 +336,7 @@
       targetPower: 6000 # Frontier - 2000<6000
       minTargetPower: 1000
       optimalPower: 6000 # Frontier - 2000<6000
-      maxTargetPower: 15000
+      maxTargetPower: 20000 # Mono
       # 30~ minutes at full tank.
       optimalBurnRate: 0.11111111
       # Shallow curve
@@ -347,7 +348,7 @@
     - type: SolutionContainerManager
       solutions:
         tank:
-          maxVol: 200 # Frontier - 50<200
+          maxVol: 300 # Mono - 50<300
     - type: RefillableSolution
       solution: tank
     - type: PortableGenerator

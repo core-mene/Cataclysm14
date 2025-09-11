@@ -23,5 +23,7 @@
     preventArtifactTriggers: true
   - type: PreventPilot
   - type: IFF
-    flags: HideLabel
+    flags: HideLabel, HideLabelAlways
   - type: ClaimableGrid # Mono
+  - type: DetectedAtRangeMultiplier # Mono
+    visualBias: 512

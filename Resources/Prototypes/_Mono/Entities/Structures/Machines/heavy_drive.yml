@@ -38,6 +38,8 @@
     hyperSpaceTime: 25
     startupTime: 6.4
     driveMassMultiplier: 0.25
+    thermalSignature: 6000000 # ~4900m range
+  - type: ThermalSignature
   - type: ApcPowerReceiver
     powerLoad: 15000
   - type: ExtensionCableReceiver

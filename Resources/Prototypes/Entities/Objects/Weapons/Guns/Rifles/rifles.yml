@@ -100,6 +100,17 @@
     rsi:
       sprite: _RMC14/Interface/MousePointer/rifle_mouse.rsi
       state: all
+  # Goobstation edit start
+  - type: EmitSoundOnPickup
+    sound:
+      collection: RiflesPickUp
+  - type: EmitSoundOnDrop
+    sound:
+      collection: RiflesDrop
+  - type: EmitSoundOnLand
+    sound:
+      collection: RiflesDrop
+  # Goobstation edit end
 
 - type: entity
   name: LWC AKM (7.62x39mm)

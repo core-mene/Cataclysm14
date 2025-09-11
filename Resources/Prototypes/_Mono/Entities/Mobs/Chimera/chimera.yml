@@ -64,3 +64,20 @@
   - type: GuideHelp
     guides:
     - Letoferol
+
+- type: entity
+  parent: MobLetoferolHorror
+  id: MobLetoferolHorrorGhostrole
+  suffix: Ghostrole
+  name: chimera fleshbeast
+  components:
+  - type: GhostRole
+    name: ghost-role-information-chimera-name
+    description: ghost-role-information-chimera-description
+    rules: ghost-role-information-chimera-rules
+    raffle:
+      settings: default
+    requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 180000 # 50 hrs
+  - type: GhostTakeoverAvailable

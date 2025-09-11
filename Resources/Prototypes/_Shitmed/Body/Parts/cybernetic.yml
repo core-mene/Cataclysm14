@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 mikusssssss
 # SPDX-FileCopyrightText: 2025 starch
@@ -81,6 +82,7 @@
 - type: entity
   parent: [ CyberneticPartBase, BaseLeftHand ]
   id: LeftHandCybernetic
+  name: cybernetic left hand
   components:
   - type: BodyPart
     baseLayerId: MobCyberneticBishopLHand

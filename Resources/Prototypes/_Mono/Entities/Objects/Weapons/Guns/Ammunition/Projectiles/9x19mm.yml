@@ -103,7 +103,7 @@
   components:
   - type: Projectile
     damage:
-      types: 
+      types:
         Slash: 3
         Piercing: 26
     armorPenetration: -0.6
@@ -116,7 +116,7 @@
   components:
   - type: Projectile
     damage:
-      types: 
+      types:
         Slash: 5
         Piercing: 35
     armorPenetration: -0.95
@@ -130,7 +130,7 @@
   components:
   - type: Projectile
     damage:
-      types: 
+      types:
         Piercing: 19
     armorPenetration: 0.1
 
@@ -142,7 +142,7 @@
   components:
   - type: Projectile
     damage:
-      types: 
+      types:
         Piercing: 17
     armorPenetration: 0.3
 
@@ -154,6 +154,9 @@
   components:
   - type: Projectile
     damage:
-      types: 
+      types:
         Piercing: 15
     armorPenetration: 0.5
+  - type: Tracer
+    color: "#6f7c82ff"
+    length: 3

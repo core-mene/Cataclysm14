@@ -33,7 +33,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Europa RG{1}'
+          mapNameTemplate: 'Europa ASR{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
