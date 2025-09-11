@@ -50,7 +50,7 @@ uplink-pirate-romerol-desc = A bioweapon used in previous wars, and heavily outl
 uplink-pirate-empty-implanter-name = Empty Implanter
 uplink-pirate-empty-implanter-desc = A spare, empty implanter to remove implants with, including faction tracking implants. It does not backfire on you.
 
-uplink-pirate-syndicate-magboots-name = Blood-red Magboots
+uplink-pirate-syndicate-magboots-name = Tactical Magboots
 uplink-pirate-syndicate-magboots-desc = A pair of boots that prevent slipping and, in zero gravity, allow you to move normally, at the cost of a slight slowdown. Additionally, they have jetpack functionality and come fueled, but don't last for long.
 
 uplink-pirate-syndicate-jetpack-name = Black Jetpack
@@ -77,14 +77,14 @@ uplink-pirate-emag-desc = A multipurpose hacking device that can configure the w
 uplink-pirate-access-breaker-name = Authentication Disruptor
 uplink-pirate-access-breaker-desc = A device that overrides the access reader on a machine or door, letting you access it freely.
 
-uplink-pirate-jaws-name = Syndicate Jaws of Life
+uplink-pirate-jaws-name = Advanced Jaws of Life
 uplink-pirate-jaws-desc = A normal jaws-of-life illegally modified past restrictions, capable of opening doors 2x as fast as normal JOL.
 
 uplink-pirate-thruster-kit-name = Thruster Upgrade Kit
 uplink-pirate-thruster-kit-desc = Contains 32 super capaciters. Perfect for upgrading eight thrusters.
 
-uplink-pirate-comms-computer-circuitboard-name = Rogue communications computer board
-uplink-pirate-comms-computer-circuitboard-desc = A computer printed circuit board for a rogue communications console.
+uplink-pirate-comms-computer-circuitboard-name = ASR communications computer board
+uplink-pirate-comms-computer-circuitboard-desc = A computer printed circuit board for an ASR communications console.
 
 uplink-pirate-security-cyborg-module-name = Security Cyborg Module
 uplink-pirate-security-cyborg-module-desc = A machete, an energy gun, and a stun baton, made specifically for borgs. Wait, doesn't TFSMC have the same thing?
@@ -205,8 +205,8 @@ uplink-pirate-blast-grenade-desc = A highly lethal 40mm thermobaric grenade for 
 
 # MARK: Equipment
 
-uplink-pirate-combat-hardsuit-name = Combat Hardsuit
-uplink-pirate-combat-hardsuit-desc = Definitely not just a stolen SCAF suit. Incase you lost yours.
+uplink-pirate-combat-hardsuit-name = SCAF Tacsuit
+uplink-pirate-combat-hardsuit-desc = Basic protective gear of ASR military groups.
 
 uplink-pirate-viper-group-standard-hardsuit-name = Viper Group JACKAL Hardsuit
 uplink-pirate-viper-group-standard-hardsuit-desc = A heavy hardsuit adorned with signature markings of the Viper Group. The armor is remarkably flexible for its protection and has a built-in nightvision system.
@@ -214,13 +214,13 @@ uplink-pirate-viper-group-standard-hardsuit-desc = A heavy hardsuit adorned with
 uplink-pirate-viper-group-medic-hardsuit-name = Viper Group IMP Hardsuit
 uplink-pirate-viper-group-medic-hardsuit-desc = A light hardsuit adorned with signature markings of the Viper Group. The armor features various reinforced plating in vital areas and a medical HUD complemented by thermal pulse systems.
 
-uplink-pirate-webvest-name = Syndicate Webvest
-uplink-pirate-webvest-desc = A webvest smuggled into the sector that hasn't been downgraded like ones utilized by contractors. Great pierce resist, poor heat resist.
+uplink-pirate-webvest-name = Webvest
+uplink-pirate-webvest-desc = A webvest smuggled into the sector that hasn't been downgraded like ones utilized by civilian contractors. Great pierce resist, poor heat resist.
 
 uplink-pirate-syndie-mask-name = Syndicate Gas Mask
 uplink-pirate-syndie-mask-desc = A tactical flash resistant gas mask that can be connected to an air supply.
 
-uplink-pirate-modsuit-name = RX-01 Rogue Modsuit
+uplink-pirate-modsuit-name = RX-01 ASR Modsuit
 uplink-pirate-modsuit-desc = An experimental modsuit prototype developed by Ullman Industries. When powered it provides enhanced agility and boosted sensors. "The original client died so uh, go nuts" - Felix Ullman
 
 # MARK: Explosives
@@ -250,12 +250,12 @@ uplink-pirate-explosivegrenade-box-name = Explosive Grenade Box
 uplink-pirate-explosivegrenade-box-desc = A box containing 4 explosive grenades.
 
 uplink-pirate-prowler-voucher-name = Prowler Ship Voucher
-uplink-pirate-prowler-voucher-desc = A single use voucher for a Prowler-pattern stealth craft.
+uplink-pirate-prowler-voucher-desc = A single use voucher for a Prowler-class stealth craft.
 
 # MARK: $Gambling$
 
 uplink-pirate-syndisurplus-name = Surplus Crate
-uplink-pirate-syndisurplus-desc = Contains a large amount of imported good from a company backing the Rogues. This item is non-refundable, don't argue with our lawyers.
+uplink-pirate-syndisurplus-desc = Contains a large amount of imported good from a company backing the Ashen Republic. This item is non-refundable, don't argue with our lawyers.
 
 uplink-pirate-syndisupersurplus-name = Super Surplus Crate
-uplink-pirate-syndisupersurplus-desc = Contains a huge amount of imported good from a company backing the Rogues. This item is non-refundable, don't argue with our lawyers.
+uplink-pirate-syndisupersurplus-desc = Contains a huge amount of imported good from a company backing the Ashen Republic. This item is non-refundable, don't argue with our lawyers.

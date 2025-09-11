@@ -31,11 +31,9 @@ public sealed class CompanySystem : EntitySystem
     // Dictionary to store original company preferences for players
     private readonly Dictionary<string, string> _playerOriginalCompanies = new();
 
-    private readonly HashSet<string> _ngcJobs = new()
+    private readonly HashSet<string> _tsfJobs = new()
     {
         "Sheriff",
-        "StationRepresentative",
-        "StationTrafficController",
         "Bailiff",
         "SeniorOfficer", // Sergeant
         "Deputy",
@@ -47,7 +45,7 @@ public sealed class CompanySystem : EntitySystem
         "TsfEngineer"
     };
 
-    private readonly HashSet<string> _rogueJobs = new()
+    private readonly HashSet<string> _asrJobs = new()
     {
         "PirateCaptain",
         "PirateFirstMate",
@@ -61,6 +59,16 @@ public sealed class CompanySystem : EntitySystem
         "USSPCorporal",
         "USSPMedic",
         "USSPRifleman"
+    };
+
+    private readonly HashSet<string> _colonialJobs = new()
+    {
+        "StationRepresentative",
+        "StationTrafficController",
+        "SecurityGuard",
+        "NFJanitor",
+        "MailCarrier",
+        "Valet",
     };
 
     private readonly HashSet<string> _mdJobs = new()
@@ -100,14 +108,15 @@ public sealed class CompanySystem : EntitySystem
             _playerOriginalCompanies[playerId] = profileCompany;
         }
 
+        // todo - make this a switch statement or something lol. who cares.
         // Check if player's job is one of the TSF jobs
-        if (args.JobId != null && _ngcJobs.Contains(args.JobId))
+        if (args.JobId != null && _tsfJobs.Contains(args.JobId))
         {
             // Assign TSF company
             companyComp.CompanyName = "TSF";
         }
         // Check if player's job is one of the Rogue jobs
-        else if (args.JobId != null && _rogueJobs.Contains(args.JobId))
+        else if (args.JobId != null && _asrJobs.Contains(args.JobId))
         {
             // Assign Rogue company
             companyComp.CompanyName = "Rogue";
@@ -117,6 +126,11 @@ public sealed class CompanySystem : EntitySystem
         {
             // Assign USSP company
             companyComp.CompanyName = "USSP";
+        }
+        else if (args.JobId != null && _colonialJobs.Contains(args.JobId))
+        {
+            // Assign MD company
+            companyComp.CompanyName = "Colonial";
         }
         else if (args.JobId != null && _mdJobs.Contains(args.JobId))
         {

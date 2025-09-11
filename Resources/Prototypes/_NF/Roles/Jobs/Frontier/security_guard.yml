@@ -66,11 +66,6 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, TrackingImplant ]
-  - !type:AddLanguageSpecial
-    languagesSpoken:
-    - SolCommon
-    languagesUnderstood:
-    - SolCommon
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

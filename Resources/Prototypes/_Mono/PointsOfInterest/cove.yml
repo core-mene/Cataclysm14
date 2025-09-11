@@ -20,7 +20,7 @@
 - type: pointOfInterest
   id: Cove
   parent: BasePOI
-  name: Rogue Insurgency Hideout
+  name: ASR Insurgency Hideout
   minimumDistance: 22500 # Mono
   maximumDistance: 24000 # Mono
   spawnGamePreset: [ NFAdventure, NFPirate, MonoStandard, MonoRogueTSF, MonoRogueUSSP, MonoADS, MonoChimera, MonoAllAtOnce ]
@@ -29,13 +29,13 @@
   hideWarp: true
   addComponents:
   - type: IFF
-    color: "#C83737"
+    color: "#d1bf58"
     flags: [HideLabel]
     readOnly: true # mono
 
 - type: gameMap
   id: Cove
-  mapName: 'Rogue Insurgency Hideout'
+  mapName: 'ASR Insurgency Hideout'
   mapPath: /Maps/_Mono/POI/cove.yml
   minPlayers: 0
   stations:
@@ -43,7 +43,7 @@
       stationProto: RecordsFrontierOutpostCargo
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Rogue Insurgency Hideout'
+          mapNameTemplate: 'ASR Insurgency Hideout'
         - type: ExtraStationInformation
           iconPath: /Textures/_NF/Interface/Pirate/piratelogo.png
           stationSubtext: 'frontier-lobby-pirate-subtext'

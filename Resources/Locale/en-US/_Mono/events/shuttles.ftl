@@ -19,8 +19,8 @@ ghost-role-information-redacted-core-description = The dilapidated ship computer
 
 # ADS Core
 
-ghost-role-information-rogue-core = Rogue AI Core
-ghost-role-information-rogue-core-description = An ADS AI core that has been reprogrammed and put onto a Rogue vessel.
+ghost-role-information-rogue-core = ASR AI Core
+ghost-role-information-rogue-core-description = An ADS AI core that has been reprogrammed and put onto an Insurgent vessel.
 
 # Lawsets
 
