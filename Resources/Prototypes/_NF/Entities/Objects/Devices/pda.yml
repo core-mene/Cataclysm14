@@ -402,6 +402,10 @@
         !type:String
         pda-syndi
   - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
 
 - type: entity
   parent: PiratePDA
@@ -416,6 +420,10 @@
         !type:String
         pda-syndi-agent
   - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
 
 - type: entity
   parent: PiratePDA
@@ -430,6 +438,10 @@
         !type:String
         pda-syndi
   - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
 
 - type: entity
   parent: PassengerPDA

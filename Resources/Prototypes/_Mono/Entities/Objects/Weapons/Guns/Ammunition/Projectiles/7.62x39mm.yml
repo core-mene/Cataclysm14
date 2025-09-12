@@ -39,7 +39,7 @@
     damage:
       types:
         Piercing: 25
-    armorPenetration: 0.075
+    armorPenetration: 0.085
 
 - type: entity
   id: Bullet762x39mmPractice
@@ -138,8 +138,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 22
-    armorPenetration: 0.15
+        Piercing: 23
+    armorPenetration: 0.2
 
 - type: entity
   id: Bullet762x39mmPlasteelAP
@@ -151,7 +151,7 @@
     damage:
       types:
         Piercing: 20
-    armorPenetration: 0.35
+    armorPenetration: 0.4
 
 - type: entity
   id: Bullet762x39mmSynthAP
@@ -162,8 +162,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 18
-    armorPenetration: 0.55
+        Piercing: 19
+    armorPenetration: 0.6
   - type: Tracer
     color: "#6f7c82ff"
     length: 3

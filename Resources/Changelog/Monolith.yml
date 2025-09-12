@@ -12411,3 +12411,91 @@ Entries:
   id: 1372
   time: '2025-09-10T23:29:17.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2259
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: Increased asteroid and wreck visibility range to 1km.
+    - type: Fix
+      message: Fixed wrecks and asteroids apearing white on radar.
+  id: 1373
+  time: '2025-09-11T15:16:02.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2280
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed CL not having access to the CO bank console.
+  id: 1374
+  time: '2025-09-11T15:33:31.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2281
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Modsuit chestplates now have inbuilt geiger counters.
+    - type: Fix
+      message: Fixed hardsuit/PDA geiger counters not working.
+  id: 1375
+  time: '2025-09-11T19:23:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2283
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Replaced Baikal with (fully remapped) Camelot to follow through with
+        community vote. The cycle completes.
+  id: 1376
+  time: '2025-09-12T07:05:17.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2273
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed microwaves and electric ranges being indestructible.
+  id: 1377
+  time: '2025-09-12T07:40:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2288
+- author: ScyronX
+  changes:
+    - type: Tweak
+      message: Most no longer have large recoils.
+    - type: Tweak
+      message: AP ammunition damages are rebalanced with proper calculations.
+  id: 1378
+  time: '2025-09-12T14:22:34.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2290
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: Chimera AI changed to also attack crit mobs.
+    - type: Tweak
+      message: >-
+        Infecting non-species mobs with letoferol now only makes a weaker flesh
+        monster and not a full chimera.
+  id: 1379
+  time: '2025-09-12T15:31:59.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2289
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Destroyed microwaves and electric ranges now come apart instead of being
+        vaporized
+  id: 1380
+  time: '2025-09-12T18:38:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2293
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Updated Camelot.
+    - type: Fix
+      message: Fixed missing warp point on Camelot.
+  id: 1381
+  time: '2025-09-12T21:36:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2294
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Brought back blips for jetpacks/hoverbikes. 2x'd jetpack speed and
+        slightly buffed acceleration to compensate.
+  id: 1382
+  time: '2025-09-12T21:42:14.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2284

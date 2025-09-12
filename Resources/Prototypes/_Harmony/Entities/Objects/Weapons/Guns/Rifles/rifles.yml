@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 halycon
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -21,12 +22,12 @@
     sprite: _Harmony/Objects/Weapons/Guns/Rifles/bandit.rsi
   - type: GunWieldBonus # Mono
     minAngle: -32
-    maxAngle: -44 # Mono
+    maxAngle: -51
   - type: Gun
     minAngle: 32 # Mono
-    maxAngle: 67 # Mono
-    angleIncrease: 8
-    angleDecay: 14
+    maxAngle: 54 # Mono
+    angleIncrease: 14
+    angleDecay: 5
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto

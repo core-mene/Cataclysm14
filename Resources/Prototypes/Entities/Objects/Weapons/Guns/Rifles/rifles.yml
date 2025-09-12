@@ -33,6 +33,7 @@
 # SPDX-FileCopyrightText: 2025 BramvanZijp
 # SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 UltimateJester
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
@@ -129,15 +130,8 @@
     sprite: _Mono/Objects/Weapons/Guns/Rifles/akm_inhands_32x.rsi
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/Rifles/akm_inhands_32x.rsi # Mono
-  - type: GunWieldBonus
-    minAngle: -20
-    maxAngle: -31
   - type: Gun
     fireRate: 5
-    minAngle: 21
-    maxAngle: 64
-    angleIncrease: 4
-    angleDecay: 14
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
   - type: ChamberMagazineAmmoProvider
@@ -196,16 +190,9 @@
   - type: ChamberMagazineAmmoProvider # Mono
     soundRack:
       path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
-  - type: GunWieldBonus
-    minAngle: -20
-    maxAngle: -31
   - type: Gun
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/light_rifle_1.ogg # Mono
-    minAngle: 21
-    maxAngle: 64
-    angleIncrease: 2
-    angleDecay: 14
   - type: ItemSlots
     slots:
       gun_magazine:
