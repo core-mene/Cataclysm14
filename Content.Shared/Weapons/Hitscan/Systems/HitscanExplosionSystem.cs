@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Avalon
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared.Damage;
 using Content.Shared.Explosion.EntitySystems;
 using Content.Shared.Weapons.Hitscan.Components;
