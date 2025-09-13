@@ -4,6 +4,7 @@
 // SPDX-FileCopyrightText: 2022 Morbo
 // SPDX-FileCopyrightText: 2022 metalgearsloth
 // SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later

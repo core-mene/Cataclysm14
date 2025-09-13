@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Ilya246
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared._Starlight.CollectiveMind;
 using Content.Shared.Tag;
 using Robust.Shared.Prototypes;
