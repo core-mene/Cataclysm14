@@ -89,6 +89,7 @@
   - type: CollectiveMind
     channels:
     - Binary
+    defaultChannel: Binary
   - type: IgnoreUIRange
   - type: StationAiHeld
   - type: StationAiOverlay
@@ -151,6 +152,7 @@
   - type: CollectiveMind
     channels:
     - Binary
+    defaultChannel: Binary
   - type: ActionGrant
     actions:
     - ActionAIViewLaws

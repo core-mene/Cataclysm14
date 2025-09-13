@@ -44,6 +44,7 @@
   - type: CollectiveMind
     channels:
     - Binary
+    defaultChannel: Binary
   - type: NameIdentifier
     group: MMI
   - type: DoAfter
@@ -135,6 +136,7 @@
     - type: CollectiveMind
       channels:
       - Binary
+      defaultChannel: Binary
     - type: NameIdentifier
       group: PositronicBrain
     - type: DoAfter

@@ -357,9 +357,6 @@ public sealed partial class ChatSystem : SharedChatSystem
             case InGameICChatType.Emote:
                 SendEntityEmote(source, message, range, nameOverride, language, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker); // Einstein Engines - Language
                 break;
-            case InGameICChatType.CollectiveMind:
-                SendCollectiveMindChat(source, message, false);
-                break;
         }
     }
 

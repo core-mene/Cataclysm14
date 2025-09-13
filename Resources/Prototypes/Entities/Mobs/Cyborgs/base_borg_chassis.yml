@@ -166,6 +166,7 @@
   - type: CollectiveMind
     channels:
     - Binary
+    defaultChannel: Binary
   - type: ZombieImmune
   - type: Repairable
     doAfterDelay: 10
@@ -423,6 +424,7 @@
   - type: CollectiveMind
     channels:
     - Binary
+    defaultChannel: Binary
   - type: ShowSyndicateIcons
   - type: MovementAlwaysTouching
   - type: Speech

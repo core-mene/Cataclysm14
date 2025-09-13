@@ -141,7 +141,9 @@
     onAdd:
     - type: BreathingImmunity
     - type: CollectiveMind
-      channel: Letoferol
+      channels:
+      - Letoferol
+      defaultChannel: Letoferol
   - type: Lung
   - type: Metabolizer
     removeEmpty: true

@@ -94,7 +94,9 @@
       enum.HealthAnalyzerUiKey.Key:
         type: HealthAnalyzerBoundUserInterface
   - type: CollectiveMind
-    channel: CorticalBorer
+    channels:
+    - CorticalBorer
+    defaultChannel: CorticalBorer
   - type: Speech
     enabled: false
   - type: HealthAnalyzer
