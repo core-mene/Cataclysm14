@@ -392,7 +392,7 @@
 - type: entity
   parent: PiratePDA
   id: PirateNFPDA
-  name: rogue PDA
+  name: ASR insurgent PDA
   components:
   - type: Pda
     id: PirateNFIDCard
@@ -402,11 +402,15 @@
         !type:String
         pda-syndi
   - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
 
 - type: entity
   parent: PiratePDA
   id: PirateCaptainNFPDA
-  name: rogue commander PDA
+  name: ASR cell commander PDA
   components:
   - type: Pda
     id: PirateCaptainNFIDCard
@@ -416,11 +420,15 @@
         !type:String
         pda-syndi-agent
   - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
 
 - type: entity
   parent: PiratePDA
   id: PirateFirstMateNFPDA
-  name: rogue commandant PDA
+  name: ASR agent PDA
   components:
   - type: Pda
     id: PirateFirstMateNFIDCard
@@ -430,6 +438,10 @@
         !type:String
         pda-syndi
   - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
 
 - type: entity
   parent: PassengerPDA

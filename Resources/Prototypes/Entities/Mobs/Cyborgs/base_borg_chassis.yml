@@ -333,8 +333,11 @@
       enum.RadarConsoleUiKey.Key:
         toggleAction: ActionObserverShowRadar
   - type: RadarConsole
-    maxRange: 256
+    maxRange: 512
     followEntity: true
+  - type: DetectionRangeMultiplier # same as mass scanner
+    infraredMultiplier: 0.5 # from 1
+    visualMultiplier: 3 # from 4
   # </Mono>
 
 - type: entity

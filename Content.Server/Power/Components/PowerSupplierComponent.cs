@@ -1,3 +1,17 @@
+// SPDX-FileCopyrightText: 2020 py01
+// SPDX-FileCopyrightText: 2021 20kdc
+// SPDX-FileCopyrightText: 2021 Paul Ritter
+// SPDX-FileCopyrightText: 2021 Visne
+// SPDX-FileCopyrightText: 2021 collinlunn
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2025 ArtisticRoomba
+// SPDX-FileCopyrightText: 2025 Ilya246
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Server.Power.NodeGroups;
 using Content.Server.Power.Pow3r;
 using Content.Shared.Guidebook;
@@ -58,5 +72,12 @@ namespace Content.Server.Power.Components
         {
             powerNet.RemoveSupplier(this);
         }
+
+        // Mono
+        /// <summary>
+        ///     If we have a <see cref="ThermalSignatureComponent">, heat signature generated per watt currently supplied.
+        /// </summary>
+        [DataField]
+        public float HeatSignatureRatio = 4f;
     }
 }

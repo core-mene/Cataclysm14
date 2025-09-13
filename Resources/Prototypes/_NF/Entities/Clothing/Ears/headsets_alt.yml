@@ -132,3 +132,9 @@
   parent: [ClothingHeadsetCommon, ClothingHeadsetAltCentCom]
   id: ClothingHeadsetAltCentComCommon
   categories: [ HideSpawnMenu ]
+
+# Mono
+- type: entity
+  parent: [ClothingHeadsetCommon, ClothingHeadsetAltCentComSR]
+  id: ClothingHeadsetAltCentComCommonSR
+  categories: [ HideSpawnMenu ]

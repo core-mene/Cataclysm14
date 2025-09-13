@@ -1,48 +1,32 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 # Its really annoying how far i have to go in HTN yaml to make a AI that doesnt get stuck trying to pickup a folding chair like a dumbass.
 
-- type: entity
-  id: MobHumanoidHostileAIChimera
-  abstract: true
-  components:
-  - type: HTN
-    rootTask:
-      task: ChimeraHostileCompound
-    blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
-
 - type: htnCompound
   id: ChimeraHostileCompound
   branches:
   - tasks:
     - !type:HTNCompoundTask
-      task: MeleeCombatCompoundNoGrabWeapon
+      task: ChimeraMeleeCombatCompound
   - tasks:
     - !type:HTNCompoundTask
       task: IdleCompound
 
 - type: htnCompound
-  id: MeleeCombatCompoundNoGrabWeapon
+  id: ChimeraMeleeCombatCompound
   branches:
   - tasks:
     - !type:HTNPrimitiveTask
       operator: !type:UtilityOperator
-        proto: NearbyMeleeTargets
+        proto: NearbyChimeraMeleeTargets
     - !type:HTNCompoundTask
-      task: BeforeMeleeAttackTargetCompoundNoGrabWeapon
+      task: BeforeChimeraMeleeAttackTargetCompound
 
 - type: htnCompound
-  id: BeforeMeleeAttackTargetCompoundNoGrabWeapon
+  id: BeforeChimeraMeleeAttackTargetCompound
   branches:
   - preconditions:
     - !type:BuckledPrecondition
@@ -66,4 +50,53 @@
       task: EscapeCompound
   - tasks:
     - !type:HTNCompoundTask
-      task: MeleeAttackTargetCompound
+      task: ChimeraMeleeAttackTargetCompound
+
+# MeleeAttackTargetCompound but also attacks crit
+- type: htnCompound
+  id: ChimeraMeleeAttackTargetCompound
+  branches:
+    - preconditions:
+      - !type:KeyExistsPrecondition
+        key: Target
+      tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:MoveToOperator
+            shutdownState: PlanFinished
+            pathfindInPlanning: true
+            removeKeyOnFinish: false
+            brakeMaxVelocity: null # Monolith - don't try to brake
+            targetKey: TargetCoordinates
+            pathfindKey: TargetPathfind
+            rangeKey: MeleeRange
+        - !type:HTNPrimitiveTask
+          operator: !type:MeleeOperator
+            targetKey: Target
+            targetState: Critical
+          preconditions:
+            - !type:KeyExistsPrecondition
+              key: Target
+            - !type:TargetInRangePrecondition
+              targetKey: Target
+              rangeKey: MeleeRange
+          services:
+            - !type:UtilityService
+              id: MeleeService
+              proto: NearbyChimeraMeleeTargets
+              key: Target
+
+# NearbyMeleeTargets but ignores health
+- type: utilityQuery
+  id: NearbyChimeraMeleeTargets
+  query:
+    - !type:NearbyHostilesQuery
+  considerations:
+    - !type:TargetIsDeadCon
+      curve: !type:InverseBoolCurve
+    - !type:TargetDistanceCon
+      curve: !type:PresetCurve
+        preset: TargetDistance
+    - !type:TargetAccessibleCon
+      curve: !type:BoolCurve
+    - !type:TargetInLOSOrCurrentCon
+      curve: !type:BoolCurve

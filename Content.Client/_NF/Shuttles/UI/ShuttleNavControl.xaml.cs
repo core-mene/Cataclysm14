@@ -1,3 +1,11 @@
+// SPDX-FileCopyrightText: 2024 neuPanda
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 LukeZurg22
+// SPDX-FileCopyrightText: 2025 Whatstone
+//
+// SPDX-License-Identifier: MPL-2.0
+
 // New Frontiers - This file is licensed under AGPLv3
 // Copyright (c) 2024 New Frontiers Contributors
 // See AGPLv3.txt for details.
@@ -13,7 +21,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Client.Shuttles.UI
 {
-    public sealed partial class ShuttleNavControl
+    public partial class ShuttleNavControl // Mono
     {
         public InertiaDampeningMode DampeningMode { get; set; }
 

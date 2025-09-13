@@ -236,8 +236,7 @@
 - type: entity
   parent: PirateIDCard
   id: PirateNFIDCard
-  name: rogue agent ID card
-  description: Garr, be this wood?
+  name: ASR insurgent ID card
   components:
   - type: PresetIdCard
     job: Pirate
@@ -252,8 +251,7 @@
 - type: entity
   parent: PirateNFIDCard
   id: PirateCaptainNFIDCard
-  name: rogue commander ID card
-  description: Ahoy, see how it glistens!
+  name: ASR cell commander ID card
   components:
   - type: PresetIdCard
     job: PirateCaptain
@@ -266,7 +264,7 @@
 - type: entity
   parent: PirateNFIDCard
   id: PirateFirstMateNFIDCard
-  name: rogue commandant ID card
+  name: ASR agent ID card
   components:
   - type: PresetIdCard
     job: PirateFirstMate

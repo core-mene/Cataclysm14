@@ -77,7 +77,7 @@ book-text-cargo-instructions = You have tried to activate the machine without an
 
       These cargo crates can be bought and/or sold at the following locations:
       - TSFMC Flagship Halcyon - Sell Only
-      - Baikal Station - Buy and Sell
+      - Camelot Station - Buy and Sell
       - Trade Mall - Buy and Sell
       - Cargo Depots - Buy and Sell
       - ASR Base - Sell Only

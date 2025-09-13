@@ -23,8 +23,11 @@
   components:
   - type: Computer
     board: AdvancedRadarConsoleCircuitboard
+  - type: DetectionRangeMultiplier
+    infraredMultiplier: 1.2 # up from 1
+    visualMultiplier: 6 # up from 4
   - type: RadarConsole
-    maxRange: 1024
+    maxRange: 1536
     maxIffRange: null # Frontier
   - type: Sprite
     layers:
@@ -416,7 +419,11 @@
   abstract: true
   components:
   - type: RadarConsole
-    maxRange: 768 # Mono 350->768
+    maxRange: 1024 # Mono 350->768
+    pannable: true
+  - type: DetectionRangeMultiplier
+    infraredMultiplier: 1 # from 1 - doesn't really care about thermal sigs
+    visualMultiplier: 12 # from 4
   - type: Computer
     board: Null
   - type: Sprite

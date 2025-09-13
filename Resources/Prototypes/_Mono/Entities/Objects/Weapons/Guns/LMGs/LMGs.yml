@@ -238,10 +238,10 @@
     maxAngle: -20
   - type: Gun
     minAngle: 24
-    maxAngle: 75
-    angleIncrease: 2
-    angleDecay: 54
-    fireRate: 9 # 540 rpm
+    maxAngle: 36
+    angleIncrease: 3
+    angleDecay: 34
+    fireRate: 6 # 360 rpm
     selectedMode: FullAuto
     availableModes:
     - SemiAuto
@@ -329,13 +329,13 @@
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/LMGs/ratel/Ratel-inhands.rsi
   - type: GunWieldBonus
-    minAngle: -24
+    minAngle: -20
     maxAngle: -30
   - type: Gun
     minAngle: 25
-    maxAngle: 65
+    maxAngle: 40
     angleIncrease: 5
-    angleDecay: 32
+    angleDecay: 34
     fireRate: 5 # 300 rpm
     selectedMode: FullAuto
     availableModes:

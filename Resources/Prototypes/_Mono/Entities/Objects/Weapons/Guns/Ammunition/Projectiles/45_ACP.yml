@@ -15,6 +15,7 @@
 # SPDX-FileCopyrightText: 2024 Nemanja
 # SPDX-FileCopyrightText: 2024 Plykiya
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 sleepyyapril
 # SPDX-FileCopyrightText: 2025 starch
@@ -31,7 +32,7 @@
     damage:
       types:
         Piercing: 26
-    armorPenetration: -0.1
+    armorPenetration: 0.05
 
 - type: entity
   id: Bullet45_ACPPractice
@@ -104,7 +105,7 @@
   components:
   - type: Projectile
     damage:
-      types: 
+      types:
         Slash: 4
         Piercing: 32
     armorPenetration: -0.7
@@ -117,7 +118,7 @@
   components:
   - type: Projectile
     damage:
-      types: 
+      types:
         Slash: 7
         Piercing: 42
     armorPenetration: -0.95
@@ -131,8 +132,8 @@
   components:
   - type: Projectile
     damage:
-      types: 
-        Piercing: 24
+      types:
+        Piercing: 23
     armorPenetration: 0.1
 
 - type: entity
@@ -143,9 +144,9 @@
   components:
   - type: Projectile
     damage:
-      types: 
+      types:
         Piercing: 21
-    armorPenetration: 0.25
+    armorPenetration: 0.3
 
 - type: entity
   id: Bullet45_ACPSynthAP
@@ -155,6 +156,9 @@
   components:
   - type: Projectile
     damage:
-      types: 
-        Piercing: 18
-    armorPenetration: 0.4
+      types:
+        Piercing: 19
+    armorPenetration: 0.5
+  - type: Tracer
+    color: "#6f7c82ff"
+    length: 3

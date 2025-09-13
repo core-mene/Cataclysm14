@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -20,13 +21,13 @@
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/SMGs/typewriter.rsi
   - type: GunWieldBonus
-    minAngle: -29
-    maxAngle: -44
+    minAngle: -20
+    maxAngle: -30
   - type: Gun
-    minAngle: 30
-    maxAngle: 55
-    angleIncrease: 2
-    angleDecay: 17
+    minAngle: 21
+    maxAngle: 45
+    angleIncrease: 5
+    angleDecay: 20
     fireRate: 8
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/typewriter.ogg

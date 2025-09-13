@@ -390,6 +390,9 @@
         Piercing: 25
         Structural: 250
     armorPenetration: 0.5
+  - type: Tracer
+    color: "#6f7c82ff"
+    length: 3
 
 - type: entity
   id: Pellet12_gaugeFlechette
@@ -405,6 +408,9 @@
       types:
         Piercing: 8
     armorPenetration: 0.3
+  - type: Tracer
+    color: "#6f7c82ff"
+    length: 3
 
 - type: entity
   id: Pellet12_gaugeFlechetteSpread

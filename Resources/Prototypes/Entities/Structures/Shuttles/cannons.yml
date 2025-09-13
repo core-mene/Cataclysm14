@@ -7,11 +7,13 @@
 # SPDX-FileCopyrightText: 2024 chrome-cirrus
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Killerqu00
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Winkarst
 # SPDX-FileCopyrightText: 2025 ark1368
+# SPDX-FileCopyrightText: 2025 beck-thompson
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -111,7 +113,9 @@
           tags:
             - PowerCell
             - PowerCellSmall
-  - type: MagazineAmmoProvider
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLightLaser
+    fireCost: 50
 
 - type: entity
   id: ShuttleGunPerforator
@@ -163,7 +167,9 @@
         whitelist:
           tags:
             - PowerCage
-  - type: MagazineAmmoProvider
+  - type: HitscanBatteryAmmoProvider
+    proto: RedShuttleLaser
+    fireCost: 150
 
 # ---- Launchers ----
 # naming: EXP (Explosion) + conventional power + suffix (g for Grenade, c for RPG Cartridge) + Name

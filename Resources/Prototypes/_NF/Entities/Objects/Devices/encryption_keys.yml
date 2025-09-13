@@ -52,7 +52,6 @@
   - type: PirateBountyItem # Mono
     id: EncryptionKeyFaction
 
-
 - type: entity
   parent: EncryptionKey
   id: EncryptionKeyDoc
@@ -64,7 +63,8 @@
     channels:
     - Common
     - Medical
-    - Command
+    - Service # Mono
+    #- Command # Mono
     defaultChannel: Common
   - type: Item
     sprite: _NF/Objects/Devices/encryption_keys.rsi

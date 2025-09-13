@@ -1,4 +1,10 @@
-﻿using Robust.Shared.Configuration;
+// SPDX-FileCopyrightText: 2024 Simon
+// SPDX-FileCopyrightText: 2025 GreaseMonk
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: MPL-2.0
+
+using Robust.Shared.Configuration;
 
 namespace Content.Shared.CCVar;
 
@@ -32,7 +38,7 @@ public sealed partial class CCVars
     ///     See vote.enabled, but specific to preset votes
     /// </summary>
     public static readonly CVarDef<bool> VotePresetEnabled =
-        CVarDef.Create("vote.preset_enabled", false, CVar.SERVERONLY); // Frontier: false
+        CVarDef.Create("vote.preset_enabled", true, CVar.SERVERONLY); // Mono: true
 
     /// <summary>
     ///     See vote.enabled, but specific to map votes

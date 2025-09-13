@@ -30,6 +30,9 @@
   color: "#FFFFFF"
 
 # ====DO NOT TOUCH - ADMIN COMPANIES====
+# On a less serious note, these are just companies that are auto-assigned to jobs.
+# You can add to this in CompanySystem.cs in Content.Server
+
 - type: company
   id: TSF
   form: Protagonist
@@ -56,6 +59,13 @@
   form: Protagonist
   name: MED
   color: "#3B8EEA"
+  disabled: true
+
+- type: company
+  id: Colonial
+  form: Protagonist
+  name: Colonial Staff
+  color: "#279659"
   disabled: true
 
 - type: company
@@ -234,7 +244,7 @@
     - MarssSett18
     - Administratorx # Hopefully this doesnt get denied because it has adminstrator in it smh
     - MSMarvin
-    
+
 # ====Rogue / Antag. Companies====
 - type: company
   id: TheViperGroup

@@ -133,6 +133,7 @@
 - type: entity
   parent: WallPlastitanium
   id: WallPlastitaniumCapital
+  name: reinforced plastitanium wall
   suffix: CAPITAL ONLY
   components:
   - type: Fixtures
@@ -146,6 +147,10 @@
         layer:
         - WallLayer
         density: 9000 # No ram-meta
+  - type: Sprite
+    sprite: _Mono/Structures/Walls/rplas.rsi
+  - type: Icon
+    sprite: _Mono/Structures/Walls/rplas.rsi
   - type: Destructible
     thresholds:
     - trigger:
@@ -163,13 +168,17 @@
 - type: entity
   parent: WallPlastitaniumDiagonal
   id: WallPlastitaniumDiagonalCapital
-  name: plastitanium wall
+  name: reinforced plastitanium wall
   suffix: diagonal, CAPITAL ONLY
   placement:
     mode: SnapgridCenter
     snap:
     - Wall
   components:
+  - type: Sprite
+    drawdepth: Walls
+    sprite: _Mono/Structures/Walls/rplas_diagonal.rsi
+    state: state0
   - type: Fixtures
     fixtures:
       fix1:

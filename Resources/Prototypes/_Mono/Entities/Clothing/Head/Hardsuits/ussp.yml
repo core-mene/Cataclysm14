@@ -101,8 +101,9 @@
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
   - type: RadarConsole
-    maxRange: 350
+    maxRange: 512
     followEntity: true
+    pannable: true # it's called scoutsuit for a reason
   - type: ActivatableUI
     key: enum.RadarConsoleUiKey.Key
     singleUser: true
@@ -169,7 +170,7 @@
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
   - type: RadarConsole
-    maxRange: 225
+    maxRange: 512
     followEntity: true
   - type: ActivatableUI
     key: enum.RadarConsoleUiKey.Key
