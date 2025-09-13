@@ -256,7 +256,6 @@
       state: impact_beam_heavy
   - type: HitscanRadarSignature
     radarColor: red
-    lifetime: 1
   - type: HitscanBasicDamage
     damage:
      types:
@@ -282,7 +281,6 @@
       state: impact_beam_heavy2
   - type: HitscanRadarSignature
     radarColor: "#e67a22"
-    scale: 1.5
   - type: HitscanBasicDamage
     damage:
      types:
