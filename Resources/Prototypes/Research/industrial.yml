@@ -78,6 +78,10 @@
   - PowerCellHigh
   - TurboItemRechargerCircuitboard
   - SMESAdvancedMachineCircuitboard
+  - PowerCageSmall # Mono
+  - PowerCageMedium # Mono
+  - PowerCageHigh # Mono
+  - PowerCageRechargerCircuitboard # Mono
   technologyPrerequisites:
   - PowerGeneration
   position: -2, 7
@@ -137,6 +141,7 @@
   - PortableGeneratorJrPacmanMachineCircuitboard
   - SolarControlComputerCircuitboard
   - SolarTrackerElectronics
+  - SolarAssemblyFlatpack # Mono
   - EmitterCircuitboard
   - ContainmentFieldGeneratorCircuitboard # Mono
   technologyPrerequisites:
