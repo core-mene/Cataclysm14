@@ -4,6 +4,9 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+# Faction hardsuit naming scheme: (Faction designation) (Choice letters)-(Number related to damage protection) combat hardsuit (Letter corresponding to use, e.g G for general, F for faster/vulnerable, S for slower/armored)(Number corresponding to tech level, 1 being steel and 3 being synth)
+# Example: ASR CV-50 combat hardsuit (G2) (ashen republic hardsuit with ~50% protection, general purpose from tech level 2)
+
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseC3SyndicateContraband]
   id: ClothingOuterHardsuitPirateScaf
@@ -24,17 +27,18 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.5
-        Slash: 0.5
-        Piercing: 0.55
-        Heat: 0.6
-        Radiation: 0.5
-        Caustic: 0.65
+        Blunt: 0.65 # 35%
+        Slash: 0.65 # 35%
+        Piercing: 0.55 # 45%
+        Shock: 0.8 # 20%
+        Heat: 0.75 # 25%
+        Radiation: 0.7 # 30%
+        Caustic: 0.7 # 30%
   - type: StaminaDamageResistance # Mono - Stamres
-    coefficient: 0.3
+    coefficient: 0.3 # 30%
   - type: ClothingSpeedModifier
-    walkModifier: 0.875
-    sprintModifier: 0.875
+    walkModifier: 0.9 # 10%
+    sprintModifier: 0.9 # 10%
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing

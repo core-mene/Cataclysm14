@@ -4,11 +4,14 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+# Faction hardsuit naming scheme: (Faction designation) (Choice letters)-(Number related to damage protection) combat hardsuit (Letter corresponding to use, e.g G for general, F for faster/vulnerable, S for slower/armored)(Number corresponding to tech level, 1 being steel and 3 being synth)
+# Example: ASR CV-50 combat hardsuit (G2) (ashen republic hardsuit with ~50% protection, general purpose from tech level 2)
+
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseC2ContrabandUnredeemable]
   id: ClothingOuterHardsuitM86
-  name: M86 hardsuit
-  description: An armored hardsuit, designed to be an upgrade for the M82 series. The extra armor gives it some more weight to move around.
+  name: TSF M-55 combat hardsuit (G2)
+  description: An armored hardsuit, designed to be an upgrade for the inferior M-35 series. The extra armor gives it some more weight to move around.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/m86.rsi
@@ -20,22 +23,22 @@
     highPressureMultiplier: 0.03
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.5
+    damageCoefficient: 0.5 # 50%
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.4
-        Slash: 0.45
-        Piercing: 0.475
-        Shock: 0.8
-        Heat: 0.6
-        Radiation: 0.5
-        Caustic: 0.6
+        Blunt: 0.45 # 55%
+        Slash: 0.45 # 55%
+        Piercing: 0.4 # 60%
+        Shock: 0.8 # 20%
+        Heat: 0.8 # 20%
+        Radiation: 0.5 # 50%
+        Caustic: 0.8 # 20%
   - type: StaminaDamageResistance
     coefficient: 0.4
   - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.825
+    walkModifier: 0.7 # 30% slowdown
+    sprintModifier: 0.8 # 20% slowdown
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
@@ -47,4 +50,49 @@
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaticPrice
     price: 7500
-    vendPrice: 1000
+    vendPrice: 5000
+
+- type: entity
+  parent: [ClothingOuterHardsuitBase, BaseC2ContrabandUnredeemable]
+  id: ClothingOuterHardsuitM45
+  name: TSF M-45f tactical hardsuit (F2)
+  description: A lightly armored tactical modification of the M-55, shedding conventional armor for better environmental protection and speed.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/m86.rsi
+  - type: Item
+    size: Huge
+  - type: Clothing
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/m86.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.03
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.7 # 30%
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65 # 35%
+        Slash: 0.65 # 35%
+        Piercing: 0.55 # 45%
+        Shock: 0.55 # 45%
+        Heat: 0.55 # 45%
+        Radiation: 0.4 # 60%
+        Caustic: 0.4 # 60%
+  - type: StaminaDamageResistance
+    coefficient: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9 # 10% slowdown
+    sprintModifier: 0.9 # 10% slowdown
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: false
+    replaceCurrentClothing: true
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitM86
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
+  - type: StaticPrice
+    price: 7500
+    vendPrice: 5000

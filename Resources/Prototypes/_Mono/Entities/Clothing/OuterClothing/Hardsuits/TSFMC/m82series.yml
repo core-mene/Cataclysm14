@@ -4,11 +4,14 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+# Faction hardsuit naming scheme: (Faction designation) (Choice letters)-(Number related to damage protection) combat hardsuit (Letter corresponding to use, e.g G for general, F for faster/vulnerable, S for slower/armored)(Number corresponding to tech level, 1 being steel and 3 being synth)
+# Example: ASR CV-50 combat hardsuit (G2) (ashen republic hardsuit with ~50% protection, general purpose from tech level 2)
+
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseC2ContrabandUnredeemable]
   id: ClothingOuterHardsuitM82c
-  name: M82c hardsuit
-  description: A hardsuit issued to marines operating in low-pressure and high-risk environments.
+  name: TSF M-35 combat hardsuit (G1)
+  description: A cheap hardsuit issued en-masse to marines operating in low-pressure and high-risk environments.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/m82c.rsi
@@ -24,17 +27,18 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.65
-        Slash: 0.65
-        Piercing: 0.55
-        Heat: 0.7
-        Radiation: 0.65
-        Caustic: 0.8
+        Blunt: 0.65 # 35%
+        Slash: 0.65 # 35%
+        Piercing: 0.55 # 45%
+        Shock: 0.8 # 20%
+        Heat: 0.65 # 35%
+        Radiation: 0.65 # 35%
+        Caustic: 0.6 # 40%
   - type: StaminaDamageResistance
-    coefficient: 0.25
+    coefficient: 0.25 # 25%
   - type: ClothingSpeedModifier
-    walkModifier: 0.875
-    sprintModifier: 0.875
+    walkModifier: 0.85 # 15%
+    sprintModifier: 0.85 # 15%
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
@@ -46,13 +50,13 @@
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaticPrice
     price: 5000
-    vendPrice: 7500
+    vendPrice: 1000
 
 - type: entity
   parent: ClothingOuterHardsuitM82c
   id: ClothingOuterHardsuitM82b
-  name: M82b hardsuit
-  description: Corpsman variant of the M82c outfitted with caustic and radiological shielding. Some of the blunt-absorbent gel layer is sacrificed for the NBC protection.
+  name: TSF M-35c combat hardsuit (F1)
+  description: Corpsman variant of the M-35 outfitted with proper hazardous environment protection. Some of the blunt-absorbent gel layer is sacrificed for the NBC protection.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/m82b.rsi
@@ -63,13 +67,13 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.7
-        Slash: 0.65
-        Piercing: 0.55
-        Heat: 0.65
-        Radiation: 0.5
-        Caustic: 0.6
-        Poison: 0.9
+        Blunt: 0.75 # 25%
+        Slash: 0.65 # 35%
+        Piercing: 0.55 # 45%
+        Heat: 0.65 # 35%
+        Radiation: 0.5 # 50%
+        Caustic: 0.5 # 50%
+        Poison: 0.5 # 50%
   - type: ClothingSpeedModifier
-    walkModifier: 0.875
-    sprintModifier: 0.875
+    walkModifier: 0.9 # 10%
+    sprintModifier: 0.9 # 10%

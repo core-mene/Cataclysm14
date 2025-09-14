@@ -178,8 +178,8 @@
 - type: entity
   parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
   id: ClothingModsuitChestplateVolta
-  name: Volta Modsuit Chestplate
-  description: Reinforced military modification of Sapper Modsuit, featuring better bullet resistance.
+  name: TSF Volta Modsuit Chestplate (S1)
+  description: Reinforced military modification of the Sapper Modsuit, featuring better bullet resistance.
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -196,8 +196,8 @@
     unequipSound: /Audio/Mecha/mechmove03.ogg
     slots: [ outerClothing ]
   - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.85
+    walkModifier: 0.8
+    sprintModifier: 0.8
   - type: SealableClothing
     sealUpPopup: sealable-clothing-seal-up-chestplate
     sealDownPopup: sealable-clothing-seal-down-chestplate
@@ -213,12 +213,12 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.75
-        Slash: 0.8
-        Piercing: 0.6
-        Heat: 0.5
-        Shock: 0.9
-        Radiation: 0.7
+        Blunt: 0.4 # 40%
+        Slash: 0.4 # 40%
+        Piercing: 0.5 # 50%
+        Heat: 0.5 # 50%
+        Shock: 0.2 # 80%
+        Radiation: 0.1 # 90%
   - type: ComponentToggler
     components:
     - type: PressureProtection

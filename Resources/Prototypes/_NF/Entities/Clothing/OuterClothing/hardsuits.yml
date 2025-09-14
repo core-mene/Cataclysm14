@@ -15,6 +15,9 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+# Faction hardsuit naming scheme: (Faction designation) (Choice letters)-(Number related to damage protection) combat hardsuit (Letter corresponding to use, e.g G for general, F for faster/vulnerable, S for slower/armored)(Number corresponding to tech level, 1 being steel and 3 being synth)
+# Example: ASR CV-50 combat hardsuit (G2) (ashen republic hardsuit with ~50% protection, general purpose from tech level 2)
+
 #Mercenary Hardsuit
 - type: entity
   parent: ClothingOuterHardsuitBaseNF
@@ -279,8 +282,8 @@
 - type: entity
   parent: ClothingOuterHardsuitBaseNFNfsd
   id: ClothingOuterHardsuitNfsdSheriff
-  name: TSFMC M92 tacsuit
-  description: A heavy tacsuit, capable of taking a lot of physical damage.
+  name: TSF MC-70C tacsuit (GX)
+  description: A heavy tacsuit used by commanding officers of flagships, capable of taking a lot of physical damage. Uses a lightened, glorified chassis of an M80-X juggernaut suit.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_colonel.rsi # Mono
@@ -299,16 +302,16 @@
   - type: Armor # Mono - Armor Value Changes
     modifiers:
       coefficients:
-        Blunt: 0.4
-        Slash: 0.3
-        Piercing: 0.35
-        Heat: 0.5
-        Radiation: 0.4
-        Caustic: 0.5
-        Poison: 0.8 # Mono
+        Blunt: 0.4 # 60%
+        Slash: 0.4 # 60%
+        Piercing: 0.3 # 70%
+        Heat: 0.6 # 40%
+        Radiation: 0.7 # 30%
+        Caustic: 0.7 # 30%
+        Poison: 0.8 # Mono: 20%
   - type: ClothingSpeedModifier # Mono - Armor Value Changes
-    walkModifier: 0.85
-    sprintModifier: 0.85
+    walkModifier: 0.7
+    sprintModifier: 0.8
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.35
   - type: PirateBountyItem # Mono
@@ -349,8 +352,8 @@
 - type: entity
   parent: [BaseC2ContrabandUnredeemable, ClothingOuterHardsuitJuggernaut] # Jugger Suit
   id: ClothingOuterHardsuitNfsdExperimental
-  name: TSFMC M92-X tacsuit
-  description: A experimental modification of the M92 tacsuit for spec-ops units of the TSFMC. Externally the same, internally its higher-quality alloys and fabric.
+  name: TSF M80-X combat hardsuit (S3)
+  description: A experimental modification of the M-86 hardsuit for spec-ops units of the TSFMC. Outfitted with top-of-the-line plating, the wearer becomes relatable to an old-war tank.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/tsfmc_experimental.rsi # Mono
@@ -374,16 +377,16 @@
   - type: Armor # Mono - Armor Value Changes
     modifiers:
       coefficients:
-        Blunt: 0.35
-        Slash: 0.35
-        Piercing: 0.4
-        Heat: 0.45
-        Radiation: 0.6
-        Caustic: 0.55
-        Poison: 0.8 # Mono
+        Blunt: 0.3 # 70%
+        Slash: 0.2 # 80%
+        Piercing: 0.2 # 80%
+        Heat: 0.7 # 30%
+        Radiation: 0.7 # 30%
+        Caustic: 0.7 # 30%
+        Poison: 0.8 # Mono: 20%
   - type: ClothingSpeedModifier # Mono - Armor Value Changes
-    walkModifier: 0.9
-    sprintModifier: 0.9
+    walkModifier: 0.8 # 20%
+    sprintModifier: 0.6 # 40%
   - type: FactionClothing
     faction: NanoTrasen
   - type: StaminaDamageResistance # Mono - Stamres
