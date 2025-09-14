@@ -29,8 +29,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/11/2025 00:48:18
-  entityCount: 5338
+  time: 09/14/2025 01:01:08
+  entityCount: 5334
 maps: []
 grids:
 - 1
@@ -1143,6 +1143,7 @@ entities:
             1548: -8,-4
             1551: -8,-12
             1717: -12,-24
+            1720: 25,-11
         - node:
             color: '#9C2020FF'
             id: TrimWarnEast
@@ -1338,6 +1339,7 @@ entities:
             1409: 17,-13
             1410: 17,-15
             1486: -9,2
+            1721: 25,-11
         - node:
             color: '#9C2020FF'
             id: TrimlineEastEnd
@@ -19976,20 +19978,15 @@ entities:
     - type: Transform
       pos: 19.5,-21.5
       parent: 1
-  - uid: 5226
+  - uid: 3986
     components:
     - type: Transform
-      pos: -10.5,-7.5
+      pos: -5.5,-32.5
       parent: 1
-  - uid: 5280
+  - uid: 3998
     components:
     - type: Transform
-      pos: 8.5,-18.5
-      parent: 1
-  - uid: 5281
-    components:
-    - type: Transform
-      pos: 1.5,-28.5
+      pos: 8.5,-7.5
       parent: 1
   - uid: 5307
     components:
@@ -20007,6 +20004,11 @@ entities:
     components:
     - type: Transform
       pos: -5.5,1.5
+      parent: 1
+  - uid: 5226
+    components:
+    - type: Transform
+      pos: 18.5,-7.5
       parent: 1
 - proto: SpawnMobSyndicateNavalCommander
   entities:
@@ -20161,30 +20163,6 @@ entities:
     - type: Transform
       pos: -9.5,-20.5
       parent: 1
-- proto: SpawnMobSyndicateNavalGrenadier
-  entities:
-  - uid: 3986
-    components:
-    - type: Transform
-      pos: 8.5,-7.5
-      parent: 1
-  - uid: 5222
-    components:
-    - type: Transform
-      pos: -5.5,-32.5
-      parent: 1
-  - uid: 5238
-    components:
-    - type: Transform
-      pos: -6.5,-14.5
-      parent: 1
-- proto: SpawnMobSyndicateNavalHorror
-  entities:
-  - uid: 204
-    components:
-    - type: Transform
-      pos: 18.5,-7.5
-      parent: 1
 - proto: SpawnMobSyndicateNavalMime
   entities:
   - uid: 5250
@@ -20198,6 +20176,11 @@ entities:
     components:
     - type: Transform
       pos: 20.5,-9.5
+      parent: 1
+  - uid: 204
+    components:
+    - type: Transform
+      pos: -10.5,-7.5
       parent: 1
   - uid: 206
     components:
@@ -20329,6 +20312,11 @@ entities:
     - type: Transform
       pos: 3.5,-16.5
       parent: 1
+  - uid: 5222
+    components:
+    - type: Transform
+      pos: 19.5,-13.5
+      parent: 1
   - uid: 5225
     components:
     - type: Transform
@@ -20354,6 +20342,11 @@ entities:
     - type: Transform
       pos: 5.5,-7.5
       parent: 1
+  - uid: 5238
+    components:
+    - type: Transform
+      pos: 17.5,-13.5
+      parent: 1
   - uid: 5240
     components:
     - type: Transform
@@ -20374,11 +20367,6 @@ entities:
     - type: Transform
       pos: 16.5,-18.5
       parent: 1
-  - uid: 5248
-    components:
-    - type: Transform
-      pos: 18.5,-14.5
-      parent: 1
   - uid: 5251
     components:
     - type: Transform
@@ -20395,11 +20383,6 @@ entities:
     components:
     - type: Transform
       pos: 25.5,-24.5
-      parent: 1
-  - uid: 3998
-    components:
-    - type: Transform
-      pos: -9.5,-37.5
       parent: 1
   - uid: 4058
     components:
@@ -20460,11 +20443,6 @@ entities:
     components:
     - type: Transform
       pos: 6.5,-27.5
-      parent: 1
-  - uid: 5239
-    components:
-    - type: Transform
-      pos: 18.5,-12.5
       parent: 1
   - uid: 5252
     components:
