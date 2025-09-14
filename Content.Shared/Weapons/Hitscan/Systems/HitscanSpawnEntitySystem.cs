@@ -30,7 +30,7 @@ public sealed class HitscanSpawnEntitySystem : EntitySystem
         if (_net.IsClient)
             return;
 
-        var entity = Spawn(SpawnedEntity, Transform(args.HitEntity.Value).Coordinates);
+        var entity = Spawn(ent.comp.SpawnedEntity, Transform(args.HitEntity.Value).Coordinates);
 
         // TODO: maybe split up the effects component or something - this wont play sounds and stuff (maybe that's ok?)
     }
