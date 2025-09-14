@@ -28,7 +28,9 @@
     - back
   - type: Storage
     grid:
-    - 0,0,6,3
+    - 0,0,1,3
+    - 3,0,6,3
+    - 8,0,9,3
     maxItemSize: Huge
   - type: ContainerContainer
     containers:
@@ -48,7 +50,7 @@
     damageCoefficient: 0.9
   - type: ToggleableClothing
     requiredSlot: back
-    blockUnequipWhenAttached: true
+    blockUnequipWhenAttached: false # easier to use and now its fixed
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingModsuitHelmetStandard

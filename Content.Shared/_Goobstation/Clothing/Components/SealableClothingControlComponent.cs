@@ -57,7 +57,13 @@ public sealed partial class SealableClothingControlComponent : Component
     ///     Doafter time for other players to start sealing via stripping menu
     /// </summary>
     [DataField, AutoNetworkedField]
-    public TimeSpan NonWearerSealingTime = TimeSpan.FromSeconds(4);
+    public TimeSpan NonWearerSealingTime = TimeSpan.FromSeconds(2);
+
+    /// <summary>
+    ///     if true; after ClothingControlSealCompleteEvent it will unToggle the control
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool UnequipAfterUnseal = false;
 
     #region Popups & Sounds
 
@@ -77,15 +83,21 @@ public sealed partial class SealableClothingControlComponent : Component
     public LocId CurrentlySealedToggleFailPopup = "sealable-clothing-sealed-toggle-fail";
 
     [DataField]
+    public LocId SealBrokenPopup = "sealable-clothing-seal-was-broken";
+
+    [DataField]
     public LocId VerbText = "sealable-clothing-seal-verb";
 
     [DataField]
-    public SoundSpecifier FailSound = new SoundPathSpecifier("/Audio/Machines/scanbuzz.ogg");
+    public SoundSpecifier FailSound = new SoundPathSpecifier("/Audio/_Goobstation/Machines/ErrorBeep2.wav");
 
     [DataField]
     public SoundSpecifier SealCompleteSound = new SoundPathSpecifier("/Audio/_Goobstation/Mecha/nominal.ogg");
 
     [DataField]
     public SoundSpecifier UnsealCompleteSound = new SoundPathSpecifier("/Audio/_Goobstation/Machines/computer_end.ogg");
+
+    [DataField]
+    public SoundSpecifier GenericSuitWarning = new SoundPathSpecifier("/Audio/_Goobstation/Machines/MaxTempAlertCut.wav");
     #endregion
 }
