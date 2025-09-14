@@ -25,11 +25,13 @@
 # SPDX-FileCopyrightText: 2024 Winkarst
 # SPDX-FileCopyrightText: 2024 checkraze
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 BramvanZijp
 # SPDX-FileCopyrightText: 2025 John
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 mikusssssss
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -121,6 +123,26 @@
     layers:
     - state: crypt_gold
     - state: cap_label
+
+# Mono start - alt variant w/ no TSFMC or TSF command radio key
+
+- type: entity
+  parent: EncryptionKeyStationMaster
+  id: EncryptionKeyStationMasterSR
+  components:
+  - type: EncryptionKey
+    channels:
+    - Common
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Traffic # Frontier
+    defaultChannel: Service
+
+# Mono end
 
 - type: entity
   parent: [EncryptionKey, BaseC2ContrabandUnredeemable] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable

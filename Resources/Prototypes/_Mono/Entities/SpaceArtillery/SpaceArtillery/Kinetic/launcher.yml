@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Disguised Bear
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 core-mene
@@ -42,6 +43,7 @@
   - type: Gun
     fireRate: 12
     projectileSpeed: 90
+    shootThermalSignature: 10000 # relatively low for a shipgun, ~693m signature if firing continuously
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/slammer.ogg
     soundEmpty:
@@ -110,6 +112,7 @@
   - type: Gun
     fireRate: 50
     projectileSpeed: 120
+    shootThermalSignature: 100000 # ~4.5km if firing continuously
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/slammer.ogg
     soundEmpty:
@@ -173,7 +176,8 @@
     range: 500
   - type: Gun
     fireRate: 1.5
-    projectileSpeed: 161
+    projectileSpeed: 180
+    shootThermalSignature: 2000000 # ~3.5km signature if firing continuously
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/mortar.ogg
     soundEmpty:
@@ -239,6 +243,7 @@
     shotsPerBurst: 2
     selectedMode: Burst
     availableModes: Burst
+    shootThermalSignature: 2000000 # ~4.5km signature if firing continuously
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/120mm_mortar.ogg
     soundEmpty:
@@ -316,6 +321,7 @@
     shotsPerBurst: 2
     selectedMode: Burst
     availableModes: Burst
+    shootThermalSignature: 48000000 # ~7km after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
     soundEmpty:
@@ -393,6 +399,7 @@
     shotsPerBurst: 2
     selectedMode: Burst
     availableModes: Burst
+    shootThermalSignature: 160000000 # now all of china knows you're here (12.6km)
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
     soundEmpty:
@@ -453,6 +460,7 @@
   - type: Gun
     fireRate: 0.05
     projectileSpeed: 400
+    shootThermalSignature: 20000000 # ~4.5km after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/leviathan_fire.ogg
     soundEmpty:
@@ -536,6 +544,7 @@
   - type: Gun
     projectileSpeed: 155
     fireRate: 0.1
+    shootThermalSignature: 80000000 # ~9km after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
     soundEmpty:
@@ -609,6 +618,7 @@
   - type: Gun
     projectileSpeed: 155
     fireRate: 0.2
+    shootThermalSignature: 40000000 # ~6.3km after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
     soundEmpty:

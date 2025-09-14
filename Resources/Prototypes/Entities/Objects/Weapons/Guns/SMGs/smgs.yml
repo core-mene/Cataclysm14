@@ -39,6 +39,7 @@
 # SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 K-Dynamic
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 UltimateJester
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
@@ -140,10 +141,6 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
     fireRate: 8.5
-    minAngle: 6
-    maxAngle: 45
-    angleIncrease: 2
-    angleDecay: 23
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
   - type: MagazineVisuals
@@ -195,9 +192,7 @@
     maxAngle: -16
   - type: Gun
     minAngle: 21
-    maxAngle: 46
-    angleIncrease: 1
-    angleDecay: 17
+    maxAngle: 32
     shotsPerBurst: 5
     availableModes:
     - Burst
@@ -310,9 +305,9 @@
   - type: Gun
     fireRate: 5.5
     minAngle: 1
-    maxAngle: 24
+    maxAngle: 6
     angleIncrease: 1.5
-    angleDecay: 15
+    angleDecay: 6
     selectedMode: FullAuto
     shotsPerBurst: 5
     burstCooldown: 0.2

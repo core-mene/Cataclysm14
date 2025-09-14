@@ -249,6 +249,9 @@
   - type: DeviceLinkSource
     ports:
     - Produced
+  - type: MachineThermalSignature
+    signature: 2500 # 100m
+  - type: ThermalSignature
   # </Mono>
   - type: SpamEmitSound # Goobstation - random lathe sounds
     minInterval: 300

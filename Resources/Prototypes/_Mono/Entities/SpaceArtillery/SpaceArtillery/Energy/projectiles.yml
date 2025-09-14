@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 Disguised Bear
 # SPDX-FileCopyrightText: 2025 Ilya246
@@ -59,7 +60,7 @@
     damage:
       types:
         Radiation: 600
-        Structural: 400
+        Structural: 900
         Heat: 120
         Ion: 150
   - type: Sprite
@@ -236,3 +237,58 @@
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
+
+# Lasers
+
+- type: entity
+  parent: BasicHitscan
+  id: PhalanxLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: muzzle_beam_heavy
+    travelFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: beam_heavy
+    impactFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: impact_beam_heavy
+  - type: HitscanRadarSignature
+    radarColor: red
+  - type: HitscanBasicDamage
+    damage:
+     types:
+      Heat: 90
+      Structural: 300
+  - type: HitscanBasicRaycast
+    maxDistance: 300
+
+- type: entity
+  parent: BasicHitscan
+  id: ApolloLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: muzzle_beam_heavy2
+    travelFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: beam_heavy2
+    impactFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: impact_beam_heavy2
+  - type: HitscanRadarSignature
+    radarColor: "#e67a22"
+  - type: HitscanBasicDamage
+    damage:
+     types:
+      Heat: 10000
+      Structural: 50000
+  - type: HitscanExplosion
+    explosive: ApolloExplosion
+  - type: HitscanBasicRaycast
+    maxDistance: 1500
+

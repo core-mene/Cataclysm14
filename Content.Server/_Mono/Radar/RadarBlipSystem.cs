@@ -105,7 +105,7 @@ public sealed partial class RadarBlipSystem : EntitySystem
                 var blipVelocity = _physics.GetMapLinearVelocity(blipUid, blipPhysics, blipXform);
 
                 var distance = (_xform.GetWorldPosition(blipXform) - radarPosition).Length();
-                if (distance > component.MaxRange)
+                if (distance > blip.MaxDistance)
                     continue;
 
                 if (blip.RequireNoGrid && blipGrid != null // if we want no grid but we are on a grid

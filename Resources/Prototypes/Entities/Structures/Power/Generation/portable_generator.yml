@@ -114,6 +114,7 @@
       supplyRampRate: 500
       supplyRampTolerance: 500
       enabled: false
+    - type: ThermalSignature # Mono
     - type: DeviceLinkSink
       ports:
       - On

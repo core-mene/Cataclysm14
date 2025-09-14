@@ -275,7 +275,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 400 # Mono - wall buff - 4x
+        damage: 2500 # Mono - wall buff to match rwalls
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:

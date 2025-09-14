@@ -46,7 +46,7 @@
   name: department-Civilian
   description: department-NFCivilian-description # Frontier
   color: "#9FED58"
-  weight: -10
+  weight: 130 # Mono
   roles:
   # - Bartender # Frontier
   # - Botanist # Frontier
@@ -141,7 +141,7 @@
   name: department-Security
   description: department-NFSecurity-description # Frontier
   color: "#326DA8" # Mono
-  weight: 1 # Frontier: 20<1 - accounted for in jobs
+  weight: 120 # Mono
   roles:
 #  - Detective # Frontier
 #  - HeadOfSecurity # Frontier

@@ -12301,3 +12301,237 @@ Entries:
   id: 1364
   time: '2025-09-09T00:55:07.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2264
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: Reworked shuttle detection.
+    - type: Add
+      message: Shuttles now have a thermal and visual signature.
+    - type: Add
+      message: >-
+        Thermal signature is produced by generators, working thrusters, and a
+        lot by firing ship guns. Some by living things.
+    - type: Add
+      message: >-
+        Visual signature scales off a ship's diagonal (building long and thin
+        ships is bad for visual signature).
+    - type: Add
+      message: >-
+        You now see ships if you're close enough, depending on their visual and
+        thermal signature.
+    - type: Add
+      message: Radar consoles (and mass scanners) can now be panned.
+    - type: Tweak
+      message: Massively increased max zoomout on most mass scanner interfaces.
+  id: 1365
+  time: '2025-09-09T19:24:30.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2260
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: Borgs can now actually AME fuel. - Goob port
+  id: 1366
+  time: '2025-09-09T21:44:41.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2266
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Now you can vote for what factions and ghostrole threats you want every
+        round. Not my problem anymore.
+  id: 1367
+  time: '2025-09-09T23:15:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2252
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: Turbolaser batteries have been given a pretty new shine!
+  id: 1368
+  time: '2025-09-09T23:20:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2268
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: Thanatos Twin mass drivers have been developed for station defense!
+    - type: Tweak
+      message: >-
+        The USSP has massively upgunned Baikal station, with new mass driver
+        technology
+  id: 1369
+  time: '2025-09-10T15:40:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2207
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Apocalypse game preset should be more accurate to name now. All events
+        only need 60 minutes threshold to spawn now, and only have 30 minutes in
+        between events. Do you want 3 ADS capitals?
+    - type: Fix
+      message: >-
+        Fixed ADS game preset missing the scheduler for more intense ADS spawns
+        after 5 hours. I cant really explain it in a better way.
+  id: 1370
+  time: '2025-09-10T17:40:51.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2270
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: Fixed the shuttle console IFF distance slider not working.
+    - type: Fix
+      message: >-
+        Fixed IFF spam on mass scanner interfaces (now limited to 3km like it
+        was before).
+    - type: Fix
+      message: Fixed radar triangles being in company color even for IFF-less ships.
+    - type: Fix
+      message: Hopefully fixed radar/shuttle console IFF color jank.
+    - type: Fix
+      message: The shuttle console map now properly shows detected IFF-less grids.
+    - type: Tweak
+      message: Now distant grids even with IFF don't show their outline.
+    - type: Tweak
+      message: Gunnery and shuttle consoles are now pannable too.
+  id: 1371
+  time: '2025-09-10T19:04:28.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2271
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Did a lot of changes (nothing mechanical, just names) to show lore
+        better (they arent called rogues anymore Lol), but there is some other
+        things like sprite changes to make ASR not be Evil Fucking Red.
+    - type: Tweak
+      message: >-
+        Replaced the hardsuits in rogue tech to not be syndicate ones. Dont
+        worry, they're just reskins. No stat changes.
+    - type: Tweak
+      message: CO staff and DOC/SR is now independent from TSF.
+  id: 1372
+  time: '2025-09-10T23:29:17.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2259
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: Increased asteroid and wreck visibility range to 1km.
+    - type: Fix
+      message: Fixed wrecks and asteroids apearing white on radar.
+  id: 1373
+  time: '2025-09-11T15:16:02.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2280
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed CL not having access to the CO bank console.
+  id: 1374
+  time: '2025-09-11T15:33:31.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2281
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Modsuit chestplates now have inbuilt geiger counters.
+    - type: Fix
+      message: Fixed hardsuit/PDA geiger counters not working.
+  id: 1375
+  time: '2025-09-11T19:23:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2283
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Replaced Baikal with (fully remapped) Camelot to follow through with
+        community vote. The cycle completes.
+  id: 1376
+  time: '2025-09-12T07:05:17.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2273
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed microwaves and electric ranges being indestructible.
+  id: 1377
+  time: '2025-09-12T07:40:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2288
+- author: ScyronX
+  changes:
+    - type: Tweak
+      message: Most no longer have large recoils.
+    - type: Tweak
+      message: AP ammunition damages are rebalanced with proper calculations.
+  id: 1378
+  time: '2025-09-12T14:22:34.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2290
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: Chimera AI changed to also attack crit mobs.
+    - type: Tweak
+      message: >-
+        Infecting non-species mobs with letoferol now only makes a weaker flesh
+        monster and not a full chimera.
+  id: 1379
+  time: '2025-09-12T15:31:59.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2289
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Destroyed microwaves and electric ranges now come apart instead of being
+        vaporized
+  id: 1380
+  time: '2025-09-12T18:38:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2293
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Updated Camelot.
+    - type: Fix
+      message: Fixed missing warp point on Camelot.
+  id: 1381
+  time: '2025-09-12T21:36:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2294
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Brought back blips for jetpacks/hoverbikes. 2x'd jetpack speed and
+        slightly buffed acceleration to compensate.
+  id: 1382
+  time: '2025-09-12T21:42:14.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2284
+- author: Honestly101
+  changes:
+    - type: Add
+      message: Added Twin Charons and some more missiles to Camelot
+    - type: Tweak
+      message: Altered Exterior of Camelot
+    - type: Fix
+      message: Fixed wiring, pipes, disposals and cargo consoles at Camelot
+  id: 1383
+  time: '2025-09-13T00:40:46.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2295
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: Lasers can now be made to explode!
+    - type: Add
+      message: >-
+        The Pantheon Collective has developed 2 new pieces of ship based
+        artillery, the L-1 Phalanx and L-20 Apollo
+  id: 1384
+  time: '2025-09-13T15:17:53.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2299
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Autopulsar damage buff
+  id: 1385
+  time: '2025-09-13T23:26:36.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2304
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Dravon projectile speed and range increased slightly.
+  id: 1386
+  time: '2025-09-14T16:18:13.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2308

@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2024 neuPanda
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
+//
+// SPDX-License-Identifier: MPL-2.0
+
 // New Frontiers - This file is licensed under AGPLv3
 // Copyright (c) 2024 New Frontiers Contributors
 // See AGPLv3.txt for details.
@@ -19,7 +25,7 @@ namespace Content.Client.Shuttles.UI
             IffSearchCriteria.OnTextChanged += args => OnIffSearchChanged(args.Text);
 
             // Frontier - Maximum IFF Distance
-            MaximumIFFDistanceValue.GetChild(0).GetChild(1).Margin = new Thickness(8, 0, 0, 0);
+            MaximumIFFDistanceValue.GetChild(0).GetChild(1).Margin = new Thickness(10, 0, 0, 0);
             MaximumIFFDistanceValue.OnValueChanged += args => OnRangeFilterChanged(args);
 
             // Frontier - Maximum Shuttle Speed

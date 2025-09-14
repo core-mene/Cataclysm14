@@ -77,6 +77,7 @@
     shipClass: Medium
   - type: LightningTarget
     priority: 1
+  - type: ThermalSignature # at least most have a thermal signature when firing
 
 - type: entity
   id: BallisticArtilleryUnanchorable

@@ -69,6 +69,8 @@
 # SPDX-FileCopyrightText: 2025 Ignaz "Ian" Kraft
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 UltimateJester
+# SPDX-FileCopyrightText: 2025 beck-thompson
+# SPDX-FileCopyrightText: 2025 bitcrushing
 # SPDX-FileCopyrightText: 2025 keronshb
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -142,7 +144,11 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
-  - type: MagazineAmmoProvider
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLightLaser
+    fireCost: 50
+  - type: PowerCellSlot
+    cellSlotId: gun_magazine
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -240,10 +246,8 @@
       map: ["enum.GunVisualLayers.MagUnshaded"]
       shader: unshaded
   - type: HitscanBatteryAmmoProvider
-    proto: RedLaser
+    proto: RedMediumLaser
     fireCost: 83.3
-  - type: Item
-    size: Normal
   - type: MagazineVisuals
     magState: mag
     steps: 5
@@ -274,7 +278,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/makeshift.rsi
   - type: HitscanBatteryAmmoProvider
-    proto: RedLightLaser
+    proto: RedLaser
     fireCost: 62.5
   - type: Battery
     maxCharge: 500
@@ -493,7 +497,9 @@
   - type: Battery
     maxCharge: 4000
     startingCharge: 4000
-
+  - type: Tag
+    tags:
+    - TurretCompatibleWeapon
 
 - type: entity
   name: portable particle decelerator
