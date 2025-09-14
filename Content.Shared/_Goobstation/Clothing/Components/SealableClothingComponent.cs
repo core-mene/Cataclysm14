@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 Marty
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared._Goobstation.Clothing.Systems;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;

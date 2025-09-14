@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Marty
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared._Goobstation.Clothing.Components;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Actions;
