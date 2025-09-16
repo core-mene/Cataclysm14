@@ -98,6 +98,9 @@ uplink-pirate-cash10000-desc = That's my boy, you made my day.
 uplink-pirate-cash100000-name = 100,000 spesos
 uplink-pirate-cash100000-desc = That's my boy, you really made my day.
 
+uplink-syndicate-applicator-name = Nanite Applicator
+uplink-syndicate-applicator-desc = Repair tool that uses nanobots.
+
 # desc is quote
 
 # MARK: Weapons

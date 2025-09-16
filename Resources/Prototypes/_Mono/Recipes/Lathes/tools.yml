@@ -8,3 +8,17 @@
   result: MaintenanceJack
   materials:
     Steel: 500
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: ExperimentalNaniteApplicator
+  result: NaniteApplicatorExperimental
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: NaniteApplicatorSyndicate
+  result: NaniteApplicatorSyndicate
+  materials:
+    Steel: 500
