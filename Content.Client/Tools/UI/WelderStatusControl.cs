@@ -1,3 +1,13 @@
+// SPDX-FileCopyrightText: 2022 Alex Evgrashin
+// SPDX-FileCopyrightText: 2023 Darkie
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 ScyronX
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Client.Items.UI;
 using Content.Client.Message;
 using Content.Client.Stylesheets;
