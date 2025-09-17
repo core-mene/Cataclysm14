@@ -95,7 +95,7 @@ namespace Content.Server.Repairable
             if (!TryComp<ToolComponent>(args.Used, out var tool))
                 return;
 
-            // Run the repairing doafter
+            // Run the repairing doafter - Attempts to run the repairing doafter with required quality.
             foreach (var quality in component.Qualities)
                 if (_toolSystem.HasQuality(args.Used, quality, tool))
                     args.Handled = _toolSystem.UseTool(args.Used, args.User, uid, delay, quality, new RepairFinishedEvent(), component.FuelCost);
