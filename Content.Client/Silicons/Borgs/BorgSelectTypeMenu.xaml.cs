@@ -1,4 +1,9 @@
-﻿using System.Linq;
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2025 Ilya246
+//
+// SPDX-License-Identifier: MPL-2.0
+
+using System.Linq;
 using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.Guidebook;

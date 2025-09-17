@@ -1,4 +1,9 @@
-﻿using Content.Server.Inventory;
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2025 Ilya246
+//
+// SPDX-License-Identifier: MPL-2.0
+
+using Content.Server.Inventory;
 using Content.Server.Radio.Components;
 using Content.Shared.Inventory;
 using Content.Shared.Silicons.Borgs;
