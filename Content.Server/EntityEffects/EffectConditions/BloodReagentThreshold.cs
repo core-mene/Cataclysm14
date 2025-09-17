@@ -27,20 +27,21 @@ public sealed partial class BloodReagentThreshold : EntityEffectCondition
     public string? Reagent = null;
     public override bool Condition(EntityEffectBaseArgs args)
     {
-        if (Reagent is null) return true;
-        if (args.EntityManager.TryGetComponent<BloodstreamComponent>(args.TargetEntity, out var blood))
-        {
-            if (args.EntityManager.System<SharedSolutionContainerSystem>().ResolveSolution(args.TargetEntity, blood.ChemicalSolutionName, ref blood.ChemicalSolution, out var chemSolution))
-            {
-                var reagentID = new ReagentId(Reagent, null);
-                if (chemSolution.TryGetReagentQuantity(reagentID, out var quant))
-                {
-                    return quant > Min && quant < Max;
-                }
-            }
-            return true;
-        }
+        if (Reagent is null) 
+			return true;
 
+		if (!args.EntityManager.TryGetComponent<BloodstreamComponent>(args.TargetEntity, out var blood))
+			return true;
+
+		if (!args.EntityManager.System<SharedSolutionContainerSystem>()
+				.ResolveSolution(args.TargetEntity, blood.ChemicalSolutionName, ref blood.ChemicalSolution, out var chemSolution))
+			return true;
+
+		var reagentID = new ReagentId(Reagent, null);
+		if (!chemSolution.TryGetReagentQuantity(reagentID, out var reagentQuant))
+			return true;
+
+		return reagentQuant > Min && reagentQuant < Max;
         throw new NotImplementedException();
     }
 
