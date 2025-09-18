@@ -75,7 +75,7 @@ entities:
       name: grid
     - type: Transform
       pos: -1.828125,1.75
-      parent: invalid
+
     - type: MapGrid
       chunks:
         -1,0:
@@ -20478,9 +20478,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -5.5,1.5
       parent: 1
-    - type: DeviceNetwork
-      configurators:
-      - invalid
+  
   - uid: 2464
     components:
     - type: Transform
@@ -20495,7 +20493,9 @@ entities:
       parent: 1
   - uid: 2466
     components:
-    
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -2.5,0.5
       parent: 1
   - uid: 2467
     components:
