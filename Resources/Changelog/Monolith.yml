@@ -12411,3 +12411,193 @@ Entries:
   id: 1372
   time: '2025-09-10T23:29:17.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2259
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: Increased asteroid and wreck visibility range to 1km.
+    - type: Fix
+      message: Fixed wrecks and asteroids apearing white on radar.
+  id: 1373
+  time: '2025-09-11T15:16:02.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2280
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed CL not having access to the CO bank console.
+  id: 1374
+  time: '2025-09-11T15:33:31.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2281
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Modsuit chestplates now have inbuilt geiger counters.
+    - type: Fix
+      message: Fixed hardsuit/PDA geiger counters not working.
+  id: 1375
+  time: '2025-09-11T19:23:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2283
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        Replaced Baikal with (fully remapped) Camelot to follow through with
+        community vote. The cycle completes.
+  id: 1376
+  time: '2025-09-12T07:05:17.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2273
+- author: starch70
+  changes:
+    - type: Fix
+      message: Fixed microwaves and electric ranges being indestructible.
+  id: 1377
+  time: '2025-09-12T07:40:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2288
+- author: ScyronX
+  changes:
+    - type: Tweak
+      message: Most no longer have large recoils.
+    - type: Tweak
+      message: AP ammunition damages are rebalanced with proper calculations.
+  id: 1378
+  time: '2025-09-12T14:22:34.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2290
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: Chimera AI changed to also attack crit mobs.
+    - type: Tweak
+      message: >-
+        Infecting non-species mobs with letoferol now only makes a weaker flesh
+        monster and not a full chimera.
+  id: 1379
+  time: '2025-09-12T15:31:59.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2289
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Destroyed microwaves and electric ranges now come apart instead of being
+        vaporized
+  id: 1380
+  time: '2025-09-12T18:38:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2293
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Updated Camelot.
+    - type: Fix
+      message: Fixed missing warp point on Camelot.
+  id: 1381
+  time: '2025-09-12T21:36:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2294
+- author: starch70
+  changes:
+    - type: Tweak
+      message: >-
+        Brought back blips for jetpacks/hoverbikes. 2x'd jetpack speed and
+        slightly buffed acceleration to compensate.
+  id: 1382
+  time: '2025-09-12T21:42:14.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2284
+- author: Honestly101
+  changes:
+    - type: Add
+      message: Added Twin Charons and some more missiles to Camelot
+    - type: Tweak
+      message: Altered Exterior of Camelot
+    - type: Fix
+      message: Fixed wiring, pipes, disposals and cargo consoles at Camelot
+  id: 1383
+  time: '2025-09-13T00:40:46.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2295
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: Lasers can now be made to explode!
+    - type: Add
+      message: >-
+        The Pantheon Collective has developed 2 new pieces of ship based
+        artillery, the L-1 Phalanx and L-20 Apollo
+  id: 1384
+  time: '2025-09-13T15:17:53.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2299
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Autopulsar damage buff
+  id: 1385
+  time: '2025-09-13T23:26:36.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2304
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Dravon projectile speed and range increased slightly.
+  id: 1386
+  time: '2025-09-14T16:18:13.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2308
+- author: OneZerooo0
+  changes:
+    - type: Tweak
+      message: Balanced the Phalanx and Apollo.
+  id: 1387
+  time: '2025-09-15T23:28:57.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2307
+- author: LaCumbiaDelCoronavirus
+  changes:
+    - type: Add
+      message: Cargo request computers now offer canisters of BZ.
+  id: 1388
+  time: '2025-09-16T12:46:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2301
+- author: starch70
+  changes:
+    - type: Remove
+      message: Removed fun!
+    - type: Tweak
+      message: Changed preset autovote timer to 150 seconds from 30.
+    - type: Tweak
+      message: >-
+        Removed all voting options except either Remnants or Biohazard (worry
+        not, these don't have the jacked up spawnrates that Apocalypse does).
+        Faction selection votes may return in the future, who knows. Likely not
+        though.
+  id: 1389
+  time: '2025-09-16T20:25:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2315
+- author: Honestly101
+  changes:
+    - type: Tweak
+      message: Moved powercages to advanced power tech
+    - type: Tweak
+      message: Solar panel flatpacks added to power tech and protolathes
+  id: 1390
+  time: '2025-09-17T11:42:05.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2296
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Applies a physics engine fix for memory issues
+  id: 1391
+  time: '2025-09-17T17:10:03.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2317
+- author: Onezero0
+  changes:
+    - type: Tweak
+      message: Made the price of MLA-79 drum magazines much more sane.
+  id: 1392
+  time: '2025-09-18T02:11:38.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2318
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: >-
+        Temporarily reverted customizable borg sprites and new borg sounds to
+        see if this fixes borgs lagging out nearby players.
+  id: 1393
+  time: '2025-09-18T20:46:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2316
+- author: Nope1356
+  changes: []
+  id: 1394
+  time: '2025-09-18T21:02:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2325

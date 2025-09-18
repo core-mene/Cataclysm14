@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Your Name
 # SPDX-FileCopyrightText: 2025 starch
@@ -8,7 +9,7 @@
 # TODO - new sprites
 
 - type: entity
-  parent: MonoBaseMobFleshLetoferol
+  parent: MonoBaseMobLetoferolHumanoid
   id: MobLetoferolHorror
   name: chimera fleshbeast
   components:
@@ -27,15 +28,10 @@
         Base: horror
       Dead:
         Base: dead
-  - type: MobState
-    allowedStates:
-    - Alive
-    - Dead
   - type: MobThresholds
     thresholds:
       0: Alive
-      500: Critical
-      800: Dead
+      500: Dead
     allowRevives: true
   - type: SlowOnDamage
     speedModifierThresholds:
@@ -56,14 +52,6 @@
   #- type: ActionGun
   #  action: ActionLetoferolSpike
   #  gunProto: LetoferolSpikeGun
-  - type: ThermalVision
-    lightRadius: 15
-    color: "#f22e55"
-    activateSound: null
-    deactivateSound: null
-  - type: GuideHelp
-    guides:
-    - Letoferol
 
 - type: entity
   parent: MobLetoferolHorror
@@ -81,3 +69,35 @@
     - !type:OverallPlaytimeRequirement
       time: 180000 # 50 hrs
   - type: GhostTakeoverAvailable
+
+- type: entity
+  parent:
+  - MonoBaseMobLetoferol
+  - BaseMobFlesh
+  id: MobLetoferolBeast
+  name: chimera fleshbeast
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/flesh.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: jared
+  - type: RandomSprite
+    available:
+    - enum.DamageStateVisualLayers.Base:
+        jared: ""
+        golem: ""
+        clamp: ""
+        lover: ""
+  - type: MeleeWeapon
+    attackRate: 1.5
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 30
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Blunt: 5
+        Slash: 5
+        Structural: 50

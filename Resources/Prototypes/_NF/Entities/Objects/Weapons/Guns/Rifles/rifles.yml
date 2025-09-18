@@ -8,6 +8,7 @@
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 significant harassment
@@ -250,15 +251,8 @@
     slots:
     - Back
     - suitStorage
-  - type: GunWieldBonus
-    minAngle: -27
-    maxAngle: -36
   - type: Gun
     fireRate: 1.9
-    angleIncrease: 15
-    angleDecay: 14
-    minAngle: 27
-    maxAngle: 54
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto

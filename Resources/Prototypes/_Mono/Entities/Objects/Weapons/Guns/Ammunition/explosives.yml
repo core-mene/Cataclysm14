@@ -24,6 +24,7 @@
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -265,3 +266,49 @@
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     state: ball-emp
+
+# MPSSM
+
+- type: entity
+  id: CartridgeMPSSMMissile
+  name: MPSSM ASM-19 missile tube
+  parent: [BaseItem, BaseC2ContrabandUnredeemable] # Frontier: BaseMajorContraband<BaseC2ContrabandUnredeemable
+  description: A missile tube designed for the MPSSM launcher. Fires a ship-tracking EMP-HE missile with a lockon range of 1.2km
+  components:
+  - type: Tag
+    tags:
+    - MPSSMMissile
+  - type: Item
+    size: Large
+  - type: CartridgeAmmo
+    proto: ShipMissileASM19
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: mpssm
+  - type: StaticPrice
+    price: 1500
+  - type: EmpDescription
+    range: 2
+    energyConsumption: 2700000
+    disableDuration: 20
+
+- type: entity
+  id: CartridgeMPSSMHEAT
+  name: MPSSM Mk.248 rocket tube
+  parent: [BaseItem, BaseC2ContrabandUnredeemable] # Frontier: BaseMajorContraband<BaseC2ContrabandUnredeemable
+  description: A missile tube designed for the MPSSM launcher. Fires an unguided HEAT rocket for precise structural destruction and AT usage.
+  components:
+  - type: Tag
+    tags:
+    - MPSSMMissile
+  - type: Item
+    size: Large
+  - type: CartridgeAmmo
+    proto: RocketMk248
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: mpssm-he
+  - type: StaticPrice
+    price: 1500

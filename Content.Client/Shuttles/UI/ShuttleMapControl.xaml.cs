@@ -398,7 +398,8 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
             if (!detected)
                 continue;
 
-            var gridColor = hideLabel ? blipOnly ? Color.Orange : Color.White : _shuttles.GetIFFColor(grid, self: _shuttleEntity == grid.Owner, component: iffComp);
+            var hideColor = hideLabel && iffComp != null && (iffComp.Flags & IFFFlags.AlwaysShowColor) == 0x0;
+            var gridColor = hideColor ? blipOnly ? Color.Orange : Color.White : _shuttles.GetIFFColor(grid, self: _shuttleEntity == grid.Owner, component: iffComp);
 
             var existingVerts = _verts.GetOrNew(gridColor);
             var existingEdges = _edges.GetOrNew(gridColor);
