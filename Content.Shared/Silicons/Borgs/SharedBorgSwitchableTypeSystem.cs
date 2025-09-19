@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2025 BeBright
+// SPDX-FileCopyrightText: 2025 Ilya246
 //
-// SPDX-License-Identifier: AGPL-3.0-or-later
+// SPDX-License-Identifier: MPL-2.0
 
 using Content.Shared.Actions;
 using Content.Shared.Interaction;
@@ -53,11 +53,9 @@ public abstract class SharedBorgSwitchableTypeSystem : EntitySystem
         _actionsSystem.AddAction(ent, ref ent.Comp.SelectTypeAction, ActionId);
         Dirty(ent);
 
-        if (ent.Comp.SelectedBorgType != null &&
-            TryComp(ent, out BorgSwitchableSubtypeComponent? subtype) &&
-            subtype.BorgSubtype != null)
+        if (ent.Comp.SelectedBorgType != null)
         {
-            SelectBorgModule(ent, ent.Comp.SelectedBorgType.Value, subtype.BorgSubtype.Value);
+            SelectBorgModule(ent, ent.Comp.SelectedBorgType.Value);
         }
     }
 
@@ -81,10 +79,10 @@ public abstract class SharedBorgSwitchableTypeSystem : EntitySystem
         if (ent.Comp.SelectedBorgType != null)
             return;
 
-        if (!Prototypes.HasIndex(args.Prototype) || !Prototypes.HasIndex(args.Subtype))
+        if (!Prototypes.HasIndex(args.Prototype))
             return;
 
-        SelectBorgModule(ent, args.Prototype, args.Subtype);
+        SelectBorgModule(ent, args.Prototype);
     }
 
     //
@@ -93,37 +91,30 @@ public abstract class SharedBorgSwitchableTypeSystem : EntitySystem
 
     protected virtual void SelectBorgModule(
         Entity<BorgSwitchableTypeComponent> ent,
-        ProtoId<BorgTypePrototype> borgType,
-        ProtoId<BorgSubtypePrototype> borgSubtype)
+        ProtoId<BorgTypePrototype> borgType)
     {
         ent.Comp.SelectedBorgType = borgType;
-        if (TryComp(ent, out BorgSwitchableSubtypeComponent? subtype))
-            subtype.BorgSubtype = borgSubtype;
 
         _actionsSystem.RemoveAction(ent, ent.Comp.SelectTypeAction);
-        _userInterface.CloseUi(ent.Owner, BorgSwitchableTypeUiKey.SelectBorgType);
         ent.Comp.SelectTypeAction = null;
         Dirty(ent);
-        if (subtype != null)
-            Dirty(ent.Owner, subtype);
+
+        _userInterface.CloseUi((ent.Owner, null), BorgSwitchableTypeUiKey.SelectBorgType);
 
         UpdateEntityAppearance(ent);
     }
 
     protected void UpdateEntityAppearance(Entity<BorgSwitchableTypeComponent> entity)
     {
-        if (!Prototypes.TryIndex(entity.Comp.SelectedBorgType, out var proto) ||
-            !TryComp(entity, out BorgSwitchableSubtypeComponent? subtype) ||
-            !Prototypes.TryIndex(subtype.BorgSubtype, out var subtypeProto))
+        if (!Prototypes.TryIndex(entity.Comp.SelectedBorgType, out var proto))
             return;
 
-        UpdateEntityAppearance(entity, proto, subtypeProto);
+        UpdateEntityAppearance(entity, proto);
     }
 
     protected virtual void UpdateEntityAppearance(
         Entity<BorgSwitchableTypeComponent> entity,
-        BorgTypePrototype prototype,
-        BorgSubtypePrototype subtypePrototype)
+        BorgTypePrototype prototype)
     {
         if (TryComp(entity, out InteractionPopupComponent? popup))
         {

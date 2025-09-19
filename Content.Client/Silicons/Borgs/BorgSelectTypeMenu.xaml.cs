@@ -1,10 +1,9 @@
 // SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2025 BeBright
+// SPDX-FileCopyrightText: 2025 Ilya246
 //
-// SPDX-License-Identifier: AGPL-3.0-or-later
+// SPDX-License-Identifier: MPL-2.0
 
 using System.Linq;
-using System.Numerics;
 using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.Guidebook;
@@ -29,7 +28,8 @@ public sealed partial class BorgSelectTypeMenu : FancyWindow
 
     private BorgTypePrototype? _selectedBorgType;
 
-    public event Action<ProtoId<BorgTypePrototype>, ProtoId<BorgSubtypePrototype>>? ConfirmedBorgType;
+    public event Action<ProtoId<BorgTypePrototype>>? ConfirmedBorgType;
+
     [ValidatePrototypeId<GuideEntryPrototype>]
     private static readonly List<ProtoId<GuideEntryPrototype>> GuidebookEntries = new() { "Cyborgs", "Robotics" };
 
@@ -38,30 +38,24 @@ public sealed partial class BorgSelectTypeMenu : FancyWindow
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
 
+        var group = new ButtonGroup();
         foreach (var borgType in _prototypeManager.EnumeratePrototypes<BorgTypePrototype>().OrderBy(PrototypeName))
         {
-            // Goobstation-Start: Customizable borgs sprites
-            var chassisList = new EntityPrototypeView
+            var button = new Button
             {
-                Scale = new Vector2(2, 2),
-                MouseFilter = MouseFilterMode.Stop
+                Text = PrototypeName(borgType),
+                Group = group,
             };
-            chassisList.SetPrototype(borgType.DummyPrototype);
-            chassisList.OnMouseEntered += _ =>
+            button.OnPressed += _ =>
             {
                 _selectedBorgType = borgType;
                 UpdateInformation(borgType);
             };
-            SelectionsContainer.AddChild(chassisList);
+            SelectionsContainer.AddChild(button);
         }
 
         ConfirmTypeButton.OnPressed += ConfirmButtonPressed;
         HelpGuidebookIds = GuidebookEntries;
-
-
-        SubtypeSelection.SubtypeSelected += () =>
-            ConfirmTypeButton.Disabled = false;
-        // Goobstation-End: Customizable borgs sprites
     }
 
     private void UpdateInformation(BorgTypePrototype prototype)
@@ -75,20 +69,14 @@ public sealed partial class BorgSelectTypeMenu : FancyWindow
         NameLabel.Text = PrototypeName(prototype);
         DescriptionLabel.Text = Loc.GetString($"borg-type-{prototype.ID}-desc");
         ChassisView.SetPrototype(prototype.DummyPrototype);
-
-        // Goobstation: Customizable borgs sprites
-        SubtypeSelection.FillContainer(prototype);
-        ConfirmTypeButton.Disabled = true;
     }
 
     private void ConfirmButtonPressed(BaseButton.ButtonEventArgs obj)
     {
-        if (_selectedBorgType == null ||
-            SubtypeSelection.SelectedBorgSubtype == null ||
-            SubtypeSelection.SelectedBorgSubtype.ParentBorgType != _selectedBorgType)
+        if (_selectedBorgType == null)
             return;
 
-        ConfirmedBorgType?.Invoke(_selectedBorgType, SubtypeSelection.SelectedBorgSubtype);
+        ConfirmedBorgType?.Invoke(_selectedBorgType);
     }
 
     private static string PrototypeName(BorgTypePrototype prototype)
