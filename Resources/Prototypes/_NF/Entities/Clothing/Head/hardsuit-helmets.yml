@@ -164,7 +164,7 @@
     sprite: _NF/Clothing/Head/Hardsuits/nfsd.rsi
 
 - type: entity
-  parent: ClothingHeadHelmetHardsuitNfsdBronze
+  parent: [NFClothingHeadHardsuitWithLightBaseNfsd, ShowMedicalIcons, ShowSecurityIcons]
   id: ClothingHeadHelmetHardsuitNfsdSheriff
   name: TSFMC M92 tacsuit helmet
   description: An armored tacsuit helmet used by the TSFMC.
@@ -174,6 +174,19 @@
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_sheriff.rsi
   - type: Clothing
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_sheriff.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: EyeProtection
+    protectionTime: 15
+  - type: ThermalVision
+    pulseTime: 1.5
+    isEquipment: true
+    toggleAction: PulseThermalVision
+  - type: NightVision
+    flashDurationMultiplier: 2.75
+    isEquipment: true
+    color: "#5e8bac"
 
 - type: entity
   parent: [NFClothingHeadHardsuitWithLightBaseNfsd, ShowMedicalIcons, ShowSecurityIcons]
