@@ -205,6 +205,9 @@
     statusEffectTime: 5 # less harmful; sunglasses can block it
   - type: Tool
     speedModifier: 1.3
+  - type: Tag # Goobstation-WelderSword
+    tags:
+    - WelderExperimental
 
 - type: entity
   name: emergency welding tool

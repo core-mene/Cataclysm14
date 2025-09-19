@@ -1,6 +1,6 @@
 - type: entity
   name: welder energy sword
-  parent: [BaseMeleeWeaponEnergy, BaseMinorContraband]
+  parent: [BaseMeleeWeaponEnergy, BaseC1Contraband]
   id: EnergySwordWelder
   description: Roughly converted from a welding tool, this energy sword hums an unstable flame. It looks like it's about to fall apart.
   components:
@@ -33,7 +33,6 @@
             Slash: 4
             Heat: 11
   - type: ItemToggle
-    predictable: false
     soundActivate:
       path: /Audio/_Goobstation/Weapons/EswordWelder/on.ogg
     soundDeactivate:
@@ -48,6 +47,7 @@
       path: /Audio/_Goobstation/Weapons/EswordWelder/eblade1.ogg
       params:
         variation: 0.250
+  - type: ItemToggleHot
   - type: Reflect
     reflectProb: 0
     otherTypeReflectProb: 0
@@ -68,12 +68,6 @@
   - type: Tag # WD EDIT
     tags:
     - EnergySword
-  - type: ThrowableBlocker
-    blockSound:
-      path: /Audio/_Goobstation/Weapons/EswordWelder/eblade1.ogg
-      params:
-        variation: 0.250
-        volume: -2
   - type: RefillableSolution
     solution: Welder
   - type: Construction
