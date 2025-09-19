@@ -166,23 +166,10 @@
         color: "#C04000"
 
 #armor-piercing:
-- type: entity
-  id: Cartridge9x19mmSteelAP
-  name: cartridge (9x19mm AP steel core)
-  parent: BaseCartridge9x19mm
-  components:
-  - type: CartridgeAmmo
-    proto: Bullet9x19mmSteelAP
-  - type: Sprite
-    layers:
-      - state: base
-        map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
 
 - type: entity
   id: Cartridge9x19mmPlasteelAP
-  name: cartridge (9x19mm AP plasteel core)
+  name: cartridge (9x19mm AP)
   parent: BaseCartridge9x19mm
   components:
   - type: CartridgeAmmo
@@ -194,18 +181,3 @@
       - state: tip
         map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#888888"
-
-- type: entity
-  id: Cartridge9x19mmSynthAP
-  name: cartridge (9x19mm AP synthalloy core)
-  parent: BaseCartridge9x19mm
-  components:
-  - type: CartridgeAmmo
-    proto: Bullet9x19mmSynthAP
-  - type: Sprite
-    layers:
-      - state: base
-        map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
-        color: "#111111"

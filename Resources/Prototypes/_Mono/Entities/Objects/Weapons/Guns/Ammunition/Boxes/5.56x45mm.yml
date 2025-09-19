@@ -165,25 +165,11 @@
     - state: RIP
 
 #armor-piercing:
-- type: entity
-  parent: BaseAmmoBox556x45mm
-  id: AmmoBox556x45mmSteelAP
-  name: ammunition box (5.56x45mm AP steel core)
-  components:
-  - type: BallisticAmmoProvider
-    proto: Cartridge556x45mmSteelAP
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-    - state: steelAP
 
 - type: entity
   parent: BaseAmmoBox556x45mm
   id: AmmoBox556x45mmPlasteelAP
-  name: ammunition box (5.56x45mm AP plasteel core)
+  name: ammunition box (5.56x45mm AP)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmPlasteelAP
@@ -194,21 +180,6 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: plasteelAP
-
-- type: entity
-  parent: BaseAmmoBox556x45mm
-  id: AmmoBox556x45mmSynthAP
-  name: ammunition box (5.56x45mm AP synthalloy core)
-  components:
-  - type: BallisticAmmoProvider
-    proto: Cartridge556x45mmSynthAP
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-    - state: synthAP
 
 #big ammo boxes
 - type: entity

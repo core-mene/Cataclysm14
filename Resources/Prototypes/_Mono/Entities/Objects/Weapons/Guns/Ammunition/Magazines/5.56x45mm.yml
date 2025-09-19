@@ -241,23 +241,10 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 #armor-piercing:
-- type: entity
-  id: Magazine556x45mmSteelAP
-  name: "magazine (5.56x45mm AP steel core)"
-  parent: BaseMagazine556x45mm
-  components:
-  - type: BallisticAmmoProvider
-    proto: Cartridge556x45mmSteelAP
-  - type: Sprite
-    layers:
-    - state: steelAP
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
   id: Magazine556x45mmPlasteelAP
-  name: "magazine (5.56x45mm AP plasteel core)"
+  name: "magazine (5.56x45mm AP)"
   parent: BaseMagazine556x45mm
   components:
   - type: BallisticAmmoProvider
@@ -265,20 +252,6 @@
   - type: Sprite
     layers:
     - state: plasteelAP
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-
-- type: entity
-  id: Magazine556x45mmSynthAP
-  name: "magazine (5.56x45mm AP synthalloy core)"
-  parent: BaseMagazine556x45mm
-  components:
-  - type: BallisticAmmoProvider
-    proto: Cartridge556x45mmSynthAP
-  - type: Sprite
-    layers:
-    - state: synthAP
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]

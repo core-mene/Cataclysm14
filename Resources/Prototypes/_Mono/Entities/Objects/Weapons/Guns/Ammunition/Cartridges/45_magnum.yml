@@ -167,23 +167,10 @@
         color: "#C04000"
 
 #armor-piercing:
-- type: entity
-  id: Cartridge45_magnumSteelAP
-  name: cartridge (.45 magnum AP steel core)
-  parent: BaseCartridge45_magnum
-  components:
-  - type: CartridgeAmmo
-    proto: Bullet45_magnumSteelAP
-  - type: Sprite
-    layers:
-      - state: base
-        map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
 
 - type: entity
   id: Cartridge45_magnumPlasteelAP
-  name: cartridge (.45 magnum AP plasteel core)
+  name: cartridge (.45 magnum AP)
   parent: BaseCartridge45_magnum
   components:
   - type: CartridgeAmmo
@@ -195,18 +182,3 @@
       - state: tip
         map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#888888"
-
-- type: entity
-  id: Cartridge45_magnumSynthAP
-  name: cartridge (.45 magnum AP synthalloy core)
-  parent: BaseCartridge45_magnum
-  components:
-  - type: CartridgeAmmo
-    proto: Bullet45_magnumSynthAP
-  - type: Sprite
-    layers:
-      - state: base
-        map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
-        color: "#111111"

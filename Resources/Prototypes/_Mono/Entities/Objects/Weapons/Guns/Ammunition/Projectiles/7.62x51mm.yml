@@ -112,40 +112,13 @@
 
 #armor-piercing:
 - type: entity
-  id: Bullet762x51mmSteelAP
-  parent: BaseBullet
-  name: bullet (7.62x51mm AP steel core)
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Projectile
-    damage:
-      types:
-        Piercing: 32
-    armorPenetration: 0.25
-
-- type: entity
   id: Bullet762x51mmPlasteelAP
   parent: BaseBullet
-  name: bullet (7.62x51mm AP plasteel core)
+  name: bullet (7.62x51mm AP)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
     damage:
       types:
-        Piercing: 15
-    armorPenetration: 0.5
-
-- type: entity
-  id: Bullet762x51mmSynthAP
-  parent: BaseBullet
-  name: bullet (7.62x51mm AP synthalloy core)
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Projectile
-    damage:
-      types:
-        Piercing: 27
-    armorPenetration: 0.65
-  - type: Tracer
-    color: "#6f7c82ff"
-    length: 3
+        Piercing: 13
+    armorPenetration: 0.8
