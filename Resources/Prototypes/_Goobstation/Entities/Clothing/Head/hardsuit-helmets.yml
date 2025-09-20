@@ -66,7 +66,7 @@
   - type: ClothingGrantComponent
     component:
     - type: Stealth
-      MinVisibility: 1 # Mono: Made more visible
+      minVisibility: -1 # Mono: Made more visible
     - type: StealthOnMove
       passiveVisibilityRate: -0.4
       movementVisibilityRate: 0.4
