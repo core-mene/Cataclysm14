@@ -187,3 +187,30 @@
   components:
   - type: Stack
     count: 5
+
+#Ore denominations used for mining entity consolidation:
+#Iron, Quartz, and Coal absent because drops average at 15 already. Plasma, Uranium, Bananium absent due to fractional drop averages where rounding would be untidy
+
+- type: entity
+  parent: GoldOre
+  id: GoldOre10
+  suffix: Ten
+  components:
+  - type: Stack
+    count: 10
+    
+- type: entity
+  parent: SilverOre
+  id: SilverOre10
+  suffix: Ten
+  components:
+  - type: Stack
+    count: 10
+    
+- type: entity
+  parent: SaltOre
+  id: SaltOre10
+  suffix: Ten
+  components:
+  - type: Stack
+    count: 10
