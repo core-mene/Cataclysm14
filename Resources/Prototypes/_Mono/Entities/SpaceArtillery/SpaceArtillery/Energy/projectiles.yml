@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 Disguised Bear
 # SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 core-mene
@@ -238,7 +239,9 @@
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
 
-# Lasers
+# region Laser Hitscans
+
+# Phalanx
 
 - type: entity
   parent: BasicHitscan
@@ -260,10 +263,12 @@
   - type: HitscanBasicDamage
     damage:
      types:
-      Heat: 90
-      Structural: 300
+      Heat: 100
+      Structural: 100
   - type: HitscanBasicRaycast
-    maxDistance: 300
+    maxDistance: 400
+
+# Apollo
 
 - type: entity
   parent: BasicHitscan
@@ -287,8 +292,22 @@
      types:
       Heat: 10000
       Structural: 50000
-  - type: HitscanExplosion
-    explosive: ApolloExplosion
+  - type: HitscanSpawnEntity
+    spawnedEntity: ApolloExplosion
   - type: HitscanBasicRaycast
-    maxDistance: 1500
+    maxDistance: 600
 
+# Hitscan Explosions
+
+- type: entity
+  id: ApolloExplosion
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TriggerOnSpawn
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 120
+    intensitySlope: 50
+    maxIntensity: 100
+    maxTileBreak: 2

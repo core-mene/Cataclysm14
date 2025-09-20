@@ -10,6 +10,7 @@
 # SPDX-FileCopyrightText: 2024 Dvir
 # SPDX-FileCopyrightText: 2024 Ilya246
 # SPDX-FileCopyrightText: 2024 MODERN
+# SPDX-FileCopyrightText: 2025 LaCumbiaDelCoronavirus
 # SPDX-FileCopyrightText: 2025 SRV
 # SPDX-FileCopyrightText: 2025 SarahRaven
 # SPDX-FileCopyrightText: 2025 Whatstone
@@ -130,17 +131,3 @@
 #  cost: 15500
 #  category: cargoproduct-category-name-atmospherics
 #  group: market
-
-- type: cargoProduct
-  id: AtmosphericsTEGCrate
-  name: "TEG Crate"
-  description: "A full set of flatpacked Thermoelectric Generator components, ready to use"
-  icon:
-    sprite: Structures/Power/Generation/teg.rsi
-    state: teg
-  product: CrateTeg 
-  cost: 30000
-  category: cargoproduct-category-name-atmospherics
-  group: market
-  # Create TegCenter, TegCirculator, TegCirculator
-

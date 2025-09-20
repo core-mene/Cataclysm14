@@ -4,11 +4,14 @@
 # SPDX-FileCopyrightText: 2024 Kesiath
 # SPDX-FileCopyrightText: 2024 Maxtone
 # SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2025 Arcticular
+# SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 BramvanZijp
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -175,7 +178,16 @@
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_sheriff.rsi
   - type: Clothing
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_sheriff.rsi
-  - type: NightVision # Mono
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: EyeProtection
+    protectionTime: 15
+  - type: ThermalVision
+    pulseTime: 1.5
+    isEquipment: true
+    toggleAction: PulseThermalVision
+  - type: NightVision
     flashDurationMultiplier: 2.75
     isEquipment: true
     color: "#5e8bac"

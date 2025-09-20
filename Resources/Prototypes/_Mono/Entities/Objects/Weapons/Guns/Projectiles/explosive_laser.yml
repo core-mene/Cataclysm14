@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Avalon
+# SPDX-FileCopyrightText: 2025 Onezero0
 #
 # SPDX-License-Identifier: MPL-2.0
 
@@ -18,8 +19,8 @@
   id: ExplosiveLaser
   categories: [ HideSpawnMenu ]
   components:
-  - type: HitscanExplosion
-    explosive: SimpleLaserExplosion
+  - type: HitscanSpawnEntity
+    spawnedEntity: SimpleLaserExplosion
 
 - type: entity
   name: explosive laser gun
@@ -32,16 +33,3 @@
   - type: HitscanBatteryAmmoProvider
     proto: ExplosiveLaser
     fireCost: 1
-
-# Shigun Explosions
-
-- type: entity
-  id: ApolloExplosion
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Explosive
-    explosionType: HardBombShipGun
-    totalIntensity: 500
-    intensitySlope: 50
-    maxIntensity: 250
-    maxTileBreak: 5
