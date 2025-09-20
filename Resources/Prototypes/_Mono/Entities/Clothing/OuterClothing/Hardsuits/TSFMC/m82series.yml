@@ -24,8 +24,8 @@
     highPressureMultiplier: 0.05
     lowPressureMultiplier: 1000
   - type: TemperatureProtection
-    heatingCoefficient: 0.4
-    coolingCoefficient: 0.4 # more protection compared to later hardsuits
+    heatingCoefficient: 0.3
+    coolingCoefficient: 0.3 # more protection compared to later hardsuits
   - type: ExplosionResistance
     damageCoefficient: 0.65
   - type: Armor
@@ -33,7 +33,7 @@
       coefficients:
         Blunt: 0.65 # 35%
         Slash: 0.65 # 35%
-        Piercing: 0.55 # 45%
+        Piercing: 0.65 # 35%
         Shock: 0.8 # 20%
         Heat: 0.65 # 35%
         Radiation: 0.6 # 40%
@@ -73,7 +73,7 @@
       coefficients:
         Blunt: 0.75 # 25%
         Slash: 0.65 # 35%
-        Piercing: 0.55 # 45%
+        Piercing: 0.65 # 35%
         Heat: 0.65 # 35%
         Radiation: 0.5 # 50%
         Caustic: 0.5 # 50%
