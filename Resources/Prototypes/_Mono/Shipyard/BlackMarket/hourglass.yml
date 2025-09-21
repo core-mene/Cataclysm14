@@ -33,7 +33,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Hourglass RG{1}'
+          mapNameTemplate: 'Hourglass ASR{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

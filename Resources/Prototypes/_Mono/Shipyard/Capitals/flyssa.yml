@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 sleepyyapril
 # SPDX-FileCopyrightText: 2025 starch
@@ -11,9 +12,10 @@
   description: Lended over from the TSFN for you marines. A one-ship fleet on this scale of combat.
   limit: 1
   price: 1225950
+  purchasable: false # voucher only
   category: Large
   group: Security
-  access: VoucherFlyssa
+  access: Security
   shuttlePath: /Maps/_Mono/Shuttles/Capitals/flyssa.yml
   guidebookPage: Null
   class:

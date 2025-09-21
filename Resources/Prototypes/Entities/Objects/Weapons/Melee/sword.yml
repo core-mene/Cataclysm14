@@ -62,6 +62,11 @@
   id: CaptainSabre
   description: A common sighting among ship captains. Once ceremonial, it now has common use for self-defense.
   components:
+  # Goobstation edit start
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Goobstation/Items/handling/sabre_drop.ogg
+  # Goobstation edit start
   - type: Sprite
     sprite: Objects/Weapons/Melee/captain_sabre.rsi
   - type: MeleeWeapon

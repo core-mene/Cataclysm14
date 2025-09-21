@@ -1,7 +1,7 @@
-# SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 Aidenkrz <28298836+Aidenkrz@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 Aiden
+# SPDX-FileCopyrightText: 2025 Aidenkrz
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 sleepyyapril
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -90,8 +90,8 @@ jobs:
             echo "PR_LICENSE=mpl" >> $GITHUB_ENV
             echo "License specified in PR: MPL"
           else
-            echo "PR_LICENSE=agpl" >> $GITHUB_ENV
-            echo "No license specified in PR, using default: AGPL"
+            echo "PR_LICENSE=mpl" >> $GITHUB_ENV
+            echo "No license specified in PR, using default: MPL"
           fi
 
       - name: Run REUSE Header Update Script

@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitSyndie
+  id: ClothingHeadHelmetHardsuitAshen
+  name: ASR CV-32 combat tacsuit helmet
+  description: A combat tacsuit designed in the Ashen Republic.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Head/Hardsuits/syndicate.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Head/Hardsuits/syndicate.rsi
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitSyndieElite
+  id: ClothingHeadHelmetHardsuitAshenElite
+  name: ASR CV-53 combat hardsuit helmet
+  description: Based off of the CV-32, sacrifices combat protection for enviornment protection.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Head/Hardsuits/syndieelite.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Head/Hardsuits/syndieelite.rsi

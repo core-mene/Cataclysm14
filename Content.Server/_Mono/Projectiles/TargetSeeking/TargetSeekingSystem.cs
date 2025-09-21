@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 RikuTheKiller
 //
@@ -75,12 +76,11 @@ public sealed class TargetSeekingSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var curTime = _gameTiming.CurTime;
+        var ticktime = _gameTiming.TickPeriod;
 
         var query = EntityQueryEnumerator<TargetSeekingComponent, PhysicsComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out var seekingComp, out var body, out var xform))
         {
-            // Mono Begin
             var acceleration = seekingComp.Acceleration * frameTime;
             // Initialize launch speed.
             if (seekingComp.Launched == false)
@@ -93,8 +93,8 @@ public sealed class TargetSeekingSystem : EntitySystem
             _physics.SetLinearVelocity(uid, body.LinearVelocity + _transform.GetWorldRotation(xform).ToWorldVec() * acceleration, body: body);
 
             // Damping applied for missiles above max speed.
-            if (body.LinearVelocity.Length() >= seekingComp.MaxSpeed)
-                _physics.SetLinearDamping(uid, body, seekingComp.Acceleration * frameTime * 1.5f);
+            if (body.LinearVelocity.Length() > seekingComp.MaxSpeed)
+                _physics.SetLinearDamping(uid, body, seekingComp.Acceleration * (float)ticktime.TotalSeconds * 1.5f);
             else
             {
                 _physics.SetLinearDamping(uid, body, 0f);
@@ -111,16 +111,33 @@ public sealed class TargetSeekingSystem : EntitySystem
             }
 
             // If we have a target, track it using the selected algorithm
-            if (seekingComp.CurrentTarget.HasValue)
+            if (seekingComp.CurrentTarget.HasValue && !TerminatingOrDeleted(seekingComp.CurrentTarget))
             {
-                if (seekingComp.TrackingAlgorithm == TrackingMethod.Predictive)
+                var target = seekingComp.CurrentTarget.Value;
+                var targetXform = Transform(target);
+                Angle wantAngle = new Angle(0);
+
+                var ourEnt = (uid, seekingComp, xform);
+                var targEnt = (target, targetXform);
+
+                switch (seekingComp.TrackingAlgorithm)
                 {
-                    ApplyPredictiveTracking(uid, seekingComp, xform, frameTime);
+                    case TrackingMethod.Direct:
+                        wantAngle = ApplyDirectTracking(ourEnt, targEnt, frameTime); break;
+                    case TrackingMethod.Predictive:
+                        wantAngle = ApplyPredictiveTracking(ourEnt, targEnt, frameTime); break;
+                    case TrackingMethod.AdvancedPredictive:
+                        wantAngle = ApplyAdvancedTracking(ourEnt, targEnt, frameTime); break;
                 }
-                else
-                {
-                    ApplyDirectTracking(uid, seekingComp, xform, frameTime);
-                }
+
+                _rotateToFace.TryRotateTo(
+                    uid,
+                    wantAngle,
+                    frameTime,
+                    seekingComp.Tolerance,
+                    seekingComp.TurnRate?.Theta ?? MathF.PI * 2,
+                    xform
+                );
             }
             else
             {
@@ -194,43 +211,32 @@ public sealed class TargetSeekingSystem : EntitySystem
 
         // Set our new target
         if (bestTarget.HasValue)
-        {
             component.CurrentTarget = bestTarget;
-
-            // Initialize tracking data
-            if (TryComp<TransformComponent>(bestTarget, out var targetXform))
-            {
-                component.PreviousTargetPosition = _transform.ToMapCoordinates(targetXform.Coordinates).Position;
-                component.PreviousDistance = closestDistance;
-            }
-        }
     }
 
     /// <summary>
     /// Advanced tracking that predicts where the target will be based on its velocity.
     /// </summary>
-    public void ApplyPredictiveTracking(EntityUid uid, TargetSeekingComponent comp, TransformComponent xform, float frameTime)
+    public Angle ApplyPredictiveTracking(Entity<TargetSeekingComponent, TransformComponent> ent, Entity<TransformComponent> target, float frameTime)
     {
-        if (!comp.CurrentTarget.HasValue || !TryComp<TransformComponent>(comp.CurrentTarget.Value, out var targetXform))
-        {
-            return;
-        }
+        if (!TryComp<PhysicsComponent>(target, out var targetBody) || !TryComp<PhysicsComponent>(ent, out var body))
+            return new Angle(0);
 
         // Get current positions
-        var currentTargetPosition = _transform.ToMapCoordinates(targetXform.Coordinates).Position;
-        var sourcePosition = _transform.ToMapCoordinates(xform.Coordinates).Position;
+        var currentTargetPosition = _transform.GetWorldPosition(target.Comp);
+        var sourcePosition = _transform.GetWorldPosition(ent.Comp2);
 
         // Calculate current distance
-        var currentDistance = Vector2.Distance(sourcePosition, currentTargetPosition);
+        var toTargetVec = currentTargetPosition - sourcePosition;
+        var currentDistance = toTargetVec.Length();
 
-        // Calculate target velocity
-        var targetVelocity = currentTargetPosition - comp.PreviousTargetPosition;
+        var targetVelocity = _physics.GetMapLinearVelocity(target, targetBody, target.Comp);
+        var ourVelocity = _physics.GetMapLinearVelocity(ent, body, ent.Comp2);
+        var relVel = ourVelocity - targetVelocity;
 
         // Calculate time to intercept (using closing rate)
-        var closingRate = (comp.PreviousDistance - currentDistance);
-        var timeToIntercept = closingRate > 0.01f ?
-            currentDistance / closingRate :
-            currentDistance / comp.CurrentSpeed;
+        var closingRate = Vector2.Dot(relVel, toTargetVec) / toTargetVec.Length();
+        var timeToIntercept = currentDistance / closingRate;
 
         // Prevent negative or very small intercept times that could cause erratic behavior
         timeToIntercept = MathF.Max(timeToIntercept, 0.1f);
@@ -241,45 +247,63 @@ public sealed class TargetSeekingSystem : EntitySystem
         // Calculate angle to the predicted position
         var targetAngle = (predictedPosition - sourcePosition).ToWorldAngle();
 
-        // Rotate toward that angle at our turn rate
-        _rotateToFace.TryRotateTo(
-            uid,
-            targetAngle,
-            frameTime,
-            comp.Tolerance,
-            comp.TurnRate?.Theta ?? MathF.PI * 2,
-            xform
-        );
+        return targetAngle;
+    }
 
-        // Update tracking data for next frame
-        comp.PreviousTargetPosition = currentTargetPosition;
-        comp.PreviousDistance = currentDistance;
+    /// <summary>
+    /// More advanced and accurate tracking.
+    /// Works best for missiles with low friction and high max speed, where they spend all or most of their lifetime accelerating and being under max speed.
+    /// </summary>
+    // see: https://github.com/Ilya246/orbitfight/blob/master/src/entities.cpp for original
+    public Angle ApplyAdvancedTracking(Entity<TargetSeekingComponent, TransformComponent> ent, Entity<TransformComponent> target, float frameTime)
+    {
+        if (!TryComp<PhysicsComponent>(target, out var targetBody) || !TryComp<PhysicsComponent>(ent, out var body))
+            return new Angle(0);
+
+        const int guidanceIterations = 3;
+
+        var accel = ent.Comp1.Acceleration;
+
+        var ownVel    = _physics.GetMapLinearVelocity(ent);
+        var ownPos    = _transform.GetWorldPosition(ent.Comp2);
+        var targetVel = _physics.GetMapLinearVelocity(target);
+        var targetPos = _transform.GetWorldPosition(target.Comp);
+        var relVel = targetVel - ownVel;
+        var relPos = targetPos - ownPos;
+
+        var dVx    = relVel.X;
+        var dVy    = relVel.Y;
+        var dX     = relPos.X;
+        var dY     = relPos.Y;
+        var refRot = MathF.Atan2(dVy, dVx);
+        var vel    = dVx / MathF.Cos(refRot);
+        var projX  = dX * MathF.Cos(refRot) + dY * MathF.Sin(refRot);
+        var projY  = dY * MathF.Cos(refRot) - dX * MathF.Sin(refRot);
+        var itime  = GuessInterceptTime(0f, -projX, -vel, projY, accel);
+        for (var i = 0; i < guidanceIterations; i++)
+            itime = GuessInterceptTime(itime, -projX, -vel, projY, accel);
+
+        var targetRot = (relPos + relVel * itime).ToWorldAngle();
+
+        return targetRot;
+
+        // the explanation for how this works would take more space than the enclosing method so it's not included here
+        float GuessInterceptTime(float prev, float x0, float vel, float y0, float accel) {
+            var x  = x0 + vel * prev;
+            var d  = MathF.Sqrt(x * x + y0 * y0);
+            var dd = vel * x / d;
+            return (dd + MathF.Sqrt(dd * dd + 2f * accel * (d - dd * prev))) / (accel);
+        }
     }
 
     /// <summary>
     /// Basic tracking that points directly at the current target position.
     /// </summary>
-    public void ApplyDirectTracking(EntityUid uid, TargetSeekingComponent comp, TransformComponent xform, float frameTime)
+    public Angle ApplyDirectTracking(Entity<TargetSeekingComponent, TransformComponent> ent, Entity<TransformComponent> target, float frameTime)
     {
-        if (!comp.CurrentTarget.HasValue || !TryComp<TransformComponent>(comp.CurrentTarget.Value, out var targetXform))
-        {
-            return;
-        }
-
         // Get the angle directly toward the target
-        var angleToTarget = (
-            _transform.ToMapCoordinates(targetXform.Coordinates).Position -
-            _transform.ToMapCoordinates(xform.Coordinates).Position
-        ).ToWorldAngle();
+        var angleToTarget = (_transform.GetWorldPosition(target.Comp) - _transform.GetWorldPosition(ent.Comp2)).ToWorldAngle();
 
-        // Rotate toward that angle at our turn rate
-        _rotateToFace.TryRotateTo(
-            uid,
-            angleToTarget,
-            frameTime,
-            comp.Tolerance,
-            comp.TurnRate?.Theta ?? MathF.PI * 2,
-            xform
-        );
+        return angleToTarget;
     }
 }

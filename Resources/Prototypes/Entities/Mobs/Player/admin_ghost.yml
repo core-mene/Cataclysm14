@@ -130,6 +130,9 @@
     followEntity: true
     hideCoords: false # Frontier
     maxIffRange: null # Frontier
+    pannable: true # Mono
+  - type: DetectionRangeMultiplier # Mono
+    alwaysDetect: true
   - type: CargoOrderConsole
     taxAccounts: # Frontier
       Frontier: 0 # Mono - Tax Removed

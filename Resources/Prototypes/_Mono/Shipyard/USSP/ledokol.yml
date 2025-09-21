@@ -1,4 +1,8 @@
 # SPDX-FileCopyrightText: 2025 BoskiYourk
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -9,9 +13,10 @@
   description: A massive shuttle originally made for ramming through compact debris fields. Trades off fire-power for thrust-power.
   limit: 1
   price: 425000
+  purchasable: false # voucher only
   category: Large
   group: Ussp
-  access: USSPLedokol
+  access: USSP
   shuttlePath: /Maps/_Mono/Shuttles/USSP/Ledokol/ledokol.yml
   guidebookPage: Null
   class:

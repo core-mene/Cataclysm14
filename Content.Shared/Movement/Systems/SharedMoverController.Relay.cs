@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: 2023 Leon Friedrich
 // SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
 // SPDX-FileCopyrightText: 2024 Plykiya
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 metalgearsloth
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -66,6 +67,7 @@ public abstract partial class SharedMoverController
         targetComp.Source = uid;
         Dirty(uid, component);
         Dirty(relayEntity, targetComp);
+        _blocker.UpdateCanMove(uid);
     }
 
     private void OnRelayShutdown(Entity<RelayInputMoverComponent> entity, ref ComponentShutdown args)
@@ -81,6 +83,8 @@ public abstract partial class SharedMoverController
 
         if (TryComp(entity.Comp.RelayEntity, out MovementRelayTargetComponent? target) && target.LifeStage <= ComponentLifeStage.Running)
             RemComp(entity.Comp.RelayEntity, target);
+
+        _blocker.UpdateCanMove(entity.Owner);
     }
 
     private void OnTargetRelayShutdown(Entity<MovementRelayTargetComponent> entity, ref ComponentShutdown args)

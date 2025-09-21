@@ -93,6 +93,17 @@
     rsi:
       sprite: _RMC14/Interface/MousePointer/sniper_mouse.rsi
       state: all
+  # Goobstation edit start
+  - type: EmitSoundOnPickup
+    sound:
+      collection: SnipersPickUp
+  - type: EmitSoundOnDrop
+    sound:
+      collection: SnipersDrop
+  - type: EmitSoundOnLand
+    sound:
+      collection: SnipersDrop
+  # Goobstation edit end
 
 - type: entity
   name: NCI Kardashev-Mosin (7.62x54mmR)

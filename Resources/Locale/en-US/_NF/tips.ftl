@@ -119,5 +119,5 @@ nf-tips-dataset-117 = If you get stranded in space, make sure to notify others u
 nf-tips-dataset-118 = Salvage isn't just about whacking rocks. You can try to find large derelict stations, or try to bury deep into an unusual asteroid - but beware of the dangers that await you inside.
 nf-tips-dataset-119 = Trust is something that takes ages to build, and seconds to lose. Don't give players and admins a reason to hate you!
 nf-tips-dataset-120 = There are multiple ways to earn money. Why not get a job on the Colonial Outpost, join TSFMC, go salvaging, do science, or do something totally illegal? Other players can teach you each one of them!
-nf-tips-dataset-121 = As a rogue insurgent, you can get bounties to earn doubloons! Think of which ship would be most likely to have the items you need.
-nf-tips-dataset-122 = As a rogue insurgent, remember the laws of escalation! Keep your crews at 4 max, look after Clarrrpy, raid with dignity.
+nf-tips-dataset-121 = As an ASR insurgent, you can get bounties to earn doubloons! Think of which ship would be most likely to have the items you need.
+nf-tips-dataset-122 = As an ASR insurgent, remember the laws of escalation! Keep your crews at 4 max, look after Clarrrpy, raid with dignity.

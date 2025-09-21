@@ -15,6 +15,7 @@
 // SPDX-FileCopyrightText: 2025 Avalon
 // SPDX-FileCopyrightText: 2025 Aviu00
 // SPDX-FileCopyrightText: 2025 GreaseMonk
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -272,7 +273,14 @@ public sealed partial class GunComponent : Component
     /// </summary>
     [DataField]
     public LocId? ExamineCaliber;
-    
+
+    // Mono
+    /// <summary>
+    /// If we have a <see cref="ThermalSignatureComponent">, how much heat to generate per shot.
+    /// </summary>
+    [DataField]
+    public float ShootThermalSignature = 0f;
+
     /// <summary>
     /// What firemode is currently selected.
     /// </summary>

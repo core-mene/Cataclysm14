@@ -46,6 +46,17 @@
       sprite: _RMC14/Interface/MousePointer/lmg_mouse.rsi
       state: all
   # No chamber because HMG may want its own
+  # Goobstation edit start
+  - type: EmitSoundOnPickup
+    sound:
+      collection: SnipersPickUp
+  - type: EmitSoundOnDrop
+    sound:
+      collection: SnipersDrop
+  - type: EmitSoundOnLand
+    sound:
+      collection: SnipersDrop
+  # Goobstation edit end
 
 - type: entity
   name: minigun

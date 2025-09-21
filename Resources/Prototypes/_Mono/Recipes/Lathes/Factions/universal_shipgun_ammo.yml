@@ -66,6 +66,16 @@
   result: CharonSlugAmmo
 
 - type: latheRecipe
+  id: CharonSubnuclearSlugUniversal
+  parent: BaseRailgunSlugRecipe
+  result: CharonSubnuclearSlugAmmo
+  materials:
+    Steel: 1500
+    Plasteel: 500
+    Plasma: 100 # ionized plasma gas
+    Uranium: 3000 # payload
+
+- type: latheRecipe
   id: ASM220TorpedoHEUniversal
   parent: BaseTorpedoRecipe
   result: Asm220TorpedoHE

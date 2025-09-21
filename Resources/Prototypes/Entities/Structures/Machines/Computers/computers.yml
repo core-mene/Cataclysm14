@@ -66,7 +66,6 @@
 # SPDX-FileCopyrightText: 2024 Ghagliiarghii
 # SPDX-FileCopyrightText: 2024 GreaseMonk
 # SPDX-FileCopyrightText: 2024 Ian
-# SPDX-FileCopyrightText: 2024 Ilya246
 # SPDX-FileCopyrightText: 2024 Julian Giebel
 # SPDX-FileCopyrightText: 2024 Killerqu00
 # SPDX-FileCopyrightText: 2024 Maxtone
@@ -88,7 +87,9 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 ArtisticRoomba
 # SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
 # SPDX-FileCopyrightText: 2025 DieselMohawk
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 KiraZen_
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
@@ -233,7 +234,9 @@
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
   - type: RadarConsole
-    maxRange: 512 #256->512 Mono
+    maxRange: 1024 #256->1024 Mono
+    pannable: true # Mono
+    relativePanning: true # Mono
   - type: WorldLoader
     radius: 384 # Mono
   - type: PointLight
@@ -333,7 +336,7 @@
     tags:
       - Syndicate
   - type: RadarConsole
-    maxRange: 512 #384->512 Mono
+    maxRange: 1024 #384->1024 Mono
   - type: WorldLoader
     radius: 1536
   - type: PointLight
@@ -975,8 +978,9 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: RadarConsole
-    maxRange: 512 #256->512 Mono
-    maxIffRange: 512 # Frontier
+    maxRange: 1024 #256->1024 Mono
+    maxIffRange: 1024 # Frontier
+    pannable: true # Mono
   - type: ActivatableUI
     key: enum.RadarConsoleUiKey.Key
   - type: UserInterface

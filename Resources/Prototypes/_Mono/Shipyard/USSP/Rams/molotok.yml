@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 BoskiYourk
+# SPDX-FileCopyrightText: 2025 Ilya246
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -8,9 +9,10 @@
   name: BYP Molotok
   description: A broad-headed ram made to fit the connection port of the Ledokol.
   price: 60000
+  purchasable: false # voucher only
   category: Large
   group: Custom
-  access: USSPLedokolRam
+  access: USSP
   shuttlePath: /Maps/_Mono/Shuttles/USSP/Ledokol/Attatchments/molotok.yml
   guidebookPage: Null
 

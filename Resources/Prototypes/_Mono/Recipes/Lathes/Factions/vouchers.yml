@@ -9,7 +9,8 @@
   id: BaseVoucherRecipe
   categories:
   - Vouchers
-  completetime: 120
+  completetime: 5
+
 #Ussp
 - type: latheRecipe
   parent: BaseVoucherRecipe
@@ -97,12 +98,27 @@
     Uranium: 5000
     Silver: 10000
     Gold: 5000
+
+- type: latheRecipe
+  parent: BaseVoucherRecipe
+  id: PolarisVoucherTSF
+  result: ShipVoucherPolaris
+  completetime: 6
+  materials:
+    Steel: 40000
+    Plasteel: 20000
+    Plastic: 30000
+    Glass: 10000
+    Plasma: 5000
+    Uranium: 10000
+    Silver: 10000
+    Gold: 5000
+
 # Rogues
 - type: latheRecipe
   parent: BaseVoucherRecipe
   id: ProwlerVoucherRogue
   result: ShipVoucherProwler
-  completetime: 5
   materials:
     Steel: 20000
     Plasteel: 10000

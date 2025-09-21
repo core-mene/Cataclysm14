@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2025 Hyenh
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+
+# Nova Sharks
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckNovaSharksLeatherJacket
+  name: Nova Sharks leather jacket
+  description: A leather jacket for any affiliated members of The Nova Sharks. Fits comfortably over most suits and rough enough to never bend to authority. 
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Misc/NS-leather-jacket.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Neck/Misc/NS-leather-jacket.rsi
+  - type: Item
+    size: Normal

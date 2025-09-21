@@ -14,8 +14,10 @@
 // SPDX-FileCopyrightText: 2024 neuPanda
 // SPDX-FileCopyrightText: 2025 Alkheemist
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 LukeZurg22
 // SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 Whatstone
 // SPDX-FileCopyrightText: 2025 ark1368
 // SPDX-FileCopyrightText: 2025 sleepyyapril
@@ -849,11 +851,13 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         if (listing is null)
             TryComp(uid, out listing);
 
-        // Construct access set from input type (voucher or ID card)
         IDShipAccesses accesses;
         bool initialHasAccess = true;
+        var voucherAllowed = new HashSet<ProtoId<VesselPrototype>>(); // Mono - this line and everything related
+        // Construct access set from input type (voucher or ID card)
         if (TryComp<ShipyardVoucherComponent>(targetId, out var voucher))
         {
+            voucherAllowed = voucher.Vessels;
             if (voucher.ConsoleType == key)
             {
                 accesses.Tags = voucher.Access;
@@ -866,6 +870,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                 initialHasAccess = false;
             }
         }
+
         else if (TryComp<AccessComponent>(targetId, out var accessComponent))
         {
             accesses.Tags = accessComponent.Tags;
@@ -908,7 +913,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                 key != null && key != ShipyardConsoleUiKey.Custom &&
                 vessel.Group == key)
             {
-                if (hasAccess)
+                // if not purchasable, only allow it if voucher says so
+                if (vessel.Purchasable && hasAccess || voucherAllowed.Contains(vessel.ID))
                     available.Add(vessel.ID);
                 else
                     unavailable.Add(vessel.ID);

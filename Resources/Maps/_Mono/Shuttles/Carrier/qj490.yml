@@ -17,7 +17,7 @@
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 starch
 #
-# SPDX-License-Identifier: AGPL-3.0-or-later
+# SPDX-License-Identifier: MPL-2.0
 
 meta:
   format: 7
@@ -25,7 +25,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/23/2025 00:09:17
+  time: 09/04/2025 11:10:09
   entityCount: 133
 maps: []
 grids:
@@ -415,77 +415,77 @@ entities:
     - type: Transform
       pos: 2.5,0.5
       parent: 1
-  - uid: 43
+  - uid: 42
     components:
     - type: Transform
       pos: -3.5,0.5
       parent: 1
-  - uid: 44
+  - uid: 43
     components:
     - type: Transform
       pos: -2.5,2.5
       parent: 1
-  - uid: 45
+  - uid: 44
     components:
     - type: Transform
       pos: -0.5,-0.5
       parent: 1
-  - uid: 46
+  - uid: 45
     components:
     - type: Transform
       pos: -0.5,-1.5
       parent: 1
-  - uid: 47
+  - uid: 46
     components:
     - type: Transform
       pos: -0.5,-2.5
       parent: 1
-  - uid: 48
+  - uid: 47
     components:
     - type: Transform
       pos: 2.5,-0.5
       parent: 1
-  - uid: 49
+  - uid: 48
     components:
     - type: Transform
       pos: 3.5,-1.5
       parent: 1
-  - uid: 50
+  - uid: 49
     components:
     - type: Transform
       pos: 2.5,-2.5
       parent: 1
-  - uid: 51
+  - uid: 50
     components:
     - type: Transform
       pos: 1.5,-2.5
       parent: 1
-  - uid: 52
+  - uid: 51
     components:
     - type: Transform
       pos: -3.5,-2.5
       parent: 1
-  - uid: 53
+  - uid: 52
     components:
     - type: Transform
       pos: -2.5,-2.5
       parent: 1
-  - uid: 54
+  - uid: 53
     components:
     - type: Transform
       pos: -3.5,-0.5
       parent: 1
-  - uid: 55
+  - uid: 54
     components:
     - type: Transform
       pos: -4.5,-1.5
       parent: 1
-  - uid: 56
+  - uid: 55
     components:
     - type: Transform
       pos: -0.5,4.5
       parent: 1
-  - uid: 131
+  - uid: 56
     components:
     - type: Transform
       pos: -3.5,1.5
@@ -531,18 +531,6 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-    - type: DeviceLinkSource
-      linkedPorts: {}
-      lastSignals: {}
-      ports:
-      - device-button-1
-      - device-button-2
-      - device-button-3
-      - device-button-4
-      - device-button-5
-      - device-button-6
-      - device-button-7
-      - device-button-8
 - proto: GasPassiveVent
   entities:
   - uid: 61
@@ -689,7 +677,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.5,-0.5
       parent: 1
-- proto: GunneryServerLow
+- proto: GunneryServerMedium
   entities:
   - uid: 80
     components:
@@ -697,9 +685,11 @@ entities:
       pos: -1.5,-1.5
       parent: 1
     - type: Battery
-      startingCharge: 0
+      startingCharge: 125
     - type: ApcPowerReceiver
-      powerLoad: 5
+      powerLoad: 10
+    - type: ApcPowerReceiverBattery
+      enabled: True
 - proto: GyroscopeNfsd
   entities:
   - uid: 81
@@ -970,7 +960,7 @@ entities:
       parent: 1
 - proto: WeaponTurretLightMunitionsBay
   entities:
-  - uid: 132
+  - uid: 128
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -978,25 +968,25 @@ entities:
       parent: 1
 - proto: WeaponTurretType54
   entities:
-  - uid: 42
+  - uid: 129
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 2.5,1.5
       parent: 1
-  - uid: 128
+  - uid: 130
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -3.5,1.5
       parent: 1
-  - uid: 129
+  - uid: 131
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -2.5,3.5
       parent: 1
-  - uid: 130
+  - uid: 132
     components:
     - type: Transform
       rot: 3.141592653589793 rad

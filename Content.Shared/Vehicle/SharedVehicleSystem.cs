@@ -14,6 +14,7 @@
 // SPDX-FileCopyrightText: 2024 themias
 // SPDX-FileCopyrightText: 2025 HacksLua
 // SPDX-FileCopyrightText: 2025 ScyronX
+// SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -127,7 +128,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
     }
 
     // Umbra: vehicle changes
-    private void OnUnstrapped(EntityUid uid, VehicleComponent component, ref UnstrappedEvent args)
+    protected virtual void OnUnstrapped(EntityUid uid, VehicleComponent component, ref UnstrappedEvent args) //Lua: private void<protected virtual void
     {
         // Remove rider
         var riderUid = args.Buckle.Owner;
@@ -176,7 +177,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         }
     }
 
-    private void OnStrapped(EntityUid uid, VehicleComponent component, ref StrappedEvent args)
+    protected virtual void OnStrapped(EntityUid uid, VehicleComponent component, ref StrappedEvent args) //Lua: private void<protected virtual void
     {
         var riderUid = args.Buckle.Owner;
 

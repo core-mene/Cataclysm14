@@ -20,6 +20,7 @@
 # SPDX-FileCopyrightText: 2024 Nemanja
 # SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Myzumi
 # SPDX-FileCopyrightText: 2025 Onezero0
@@ -78,6 +79,10 @@
   - PowerCellHigh
   - TurboItemRechargerCircuitboard
   - SMESAdvancedMachineCircuitboard
+  - PowerCageSmall # Mono
+  - PowerCageMedium # Mono
+  - PowerCageHigh # Mono
+  - PowerCageRechargerCircuitboard # Mono
   technologyPrerequisites:
   - PowerGeneration
   position: -2, 7
@@ -137,6 +142,7 @@
   - PortableGeneratorJrPacmanMachineCircuitboard
   - SolarControlComputerCircuitboard
   - SolarTrackerElectronics
+  - SolarAssemblyFlatpack # Mono
   - EmitterCircuitboard
   - ContainmentFieldGeneratorCircuitboard # Mono
   technologyPrerequisites:

@@ -1,3 +1,17 @@
+// SPDX-FileCopyrightText: 2023 Bixkitts
+// SPDX-FileCopyrightText: 2023 Vordenburg
+// SPDX-FileCopyrightText: 2023 faint
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 DrSmugleaf
+// SPDX-FileCopyrightText: 2024 Jake Huxell
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 Tornado Tech
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Server.Atmos.Components;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Shuttles.Components;
@@ -11,6 +25,7 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Robust.Shared.Timing;
 
 namespace Content.Server.Spreader;
 
@@ -38,6 +53,9 @@ public sealed class SpreaderSystem : EntitySystem
     private EntityQuery<EdgeSpreaderComponent> _query;
 
     public const float SpreadCooldownSeconds = 1;
+
+    // Mono - Caps spreadersystem to not run excessively.
+    [ViewVariables] private readonly TimeSpan _maximumProcessTime = TimeSpan.FromMilliseconds(0.75);
 
     private static readonly ProtoId<TagPrototype> IgnoredTag = "SpreaderIgnore";
 
@@ -118,10 +136,18 @@ public sealed class SpreaderSystem : EntitySystem
 
         _robustRandom.Shuffle(spreaders);
 
+        var overallWatch = new Stopwatch(); // Mono
+        overallWatch.Start();
+
         // Remove the EdgeSpreaderComponent from any entity
         // that doesn't meet a few trivial prerequisites
         foreach (var (uid, comp) in spreaders)
         {
+
+            // Mono - Timer cap
+            if (overallWatch.Elapsed > _maximumProcessTime)
+                return;
+
             // Get xform first, as entity may have been deleted due to interactions triggered by other spreaders.
             if (!xforms.TryGetComponent(uid, out var xform))
                 continue;
@@ -232,7 +258,7 @@ public sealed class SpreaderSystem : EntitySystem
         // Add the normal neighbors.
         for (var i = 0; i < 4; i++)
         {
-            var atmosDir = (AtmosDirection) (1 << i);
+            var atmosDir = (AtmosDirection)(1 << i);
             var neighborPos = tile.Offset(atmosDir);
             neighborTiles.Add((comp.GridUid.Value, grid, neighborPos, atmosDir, i.ToOppositeDir()));
         }
@@ -328,7 +354,7 @@ public sealed class SpreaderSystem : EntitySystem
 
         for (var i = 0; i < Atmospherics.Directions; i++)
         {
-            var direction = (AtmosDirection) (1 << i);
+            var direction = (AtmosDirection)(1 << i);
             var adjacentTile = SharedMapSystem.GetDirection(tile, direction.ToDirection());
             anchored = _map.GetAnchoredEntitiesEnumerator(ent, grid, adjacentTile);
 
