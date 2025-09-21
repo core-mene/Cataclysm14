@@ -23,6 +23,7 @@
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2024 Winkarst
 # SPDX-FileCopyrightText: 2025 BramvanZijp
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -152,23 +153,10 @@
         color: "#C04000"
 
 #armor-piercing:
-- type: entity
-  id: Cartridge762x54mmRSteelAP
-  name: cartridge (7.62x54mmR AP steel core)
-  parent: BaseCartridge762x54mmR
-  components:
-  - type: CartridgeAmmo
-    proto: Bullet762x54mmRSteelAP
-  - type: Sprite
-    layers:
-      - state: base
-        map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
 
 - type: entity
   id: Cartridge762x54mmRPlasteelAP
-  name: cartridge (7.62x54mmR AP plasteel core)
+  name: cartridge (7.62x54mmR AP)
   parent: BaseCartridge762x54mmR
   components:
   - type: CartridgeAmmo
@@ -180,18 +168,3 @@
       - state: tip
         map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#888888"
-
-- type: entity
-  id: Cartridge762x54mmRSynthAP
-  name: cartridge (7.62x54mmR AP synthalloy core)
-  parent: BaseCartridge762x54mmR
-  components:
-  - type: CartridgeAmmo
-    proto: Bullet762x54mmRSynthAP
-  - type: Sprite
-    layers:
-      - state: base
-        map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
-        color: "#111111"

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -44,41 +45,41 @@
   - Magazine12_gaugeFlechette
   - AmmoBox12_gaugeFlechette
 
-- type: technology
-  id: UniversalSynthalloyCore
-  name: research-technology-universal-ap-synthalloy
-  entityIcon: MaterialSynthalloy
-  discipline: FactionUniversal
-  tier: 3
-  cost: 40000
-  technologyPrerequisites:
-  - UniversalPlastitaniumCore
-  - UniversalMaterialResearchT3
-  position: 9, 10
-  recipeUnlocks:
-  - Magazine762x51mmSynthAP
-  - AmmoBox762x51mmSynthAP
-  - Magazine762x54mmRSynthAP
-  - AmmoBox762x54mmRSynthAP
-  - Magazine556x45mmSynthAP
-  - AmmoBox556x45mmSynthAP
-  - Magazine762x39mmSynthAP
-  - AmmoBox762x39mmSynthAP
-  - Magazine45_magnumPistolSynthAP
-  - AmmoBox45_magnumSynthAP
-  - SpeedLoader45_magnumSynthAP
-  - Magazine46x30mmPistolSynthAP
-  - Magazine46x30mmSubMachineGunSynthAP
-  - AmmoBox46x30mmSynthAP
-  - Magazine57x28mmPistolSynthAP
-  - Magazine57x28mmSubMachineGunSynthAP
-  - AmmoBox57x28mmSynthAP
-  - Magazine9x19mmPistolSynthAP
-  - Magazine9x19mmSubMachineGunSynthAP
-  - AmmoBox9x19mmSynthAP
-  - Magazine45_ACPPistolSynthAP
-  - Magazine45_ACPSubMachineGunSynthAP
-  - AmmoBox45_ACPSynthAP
+#- type: technology
+#  id: UniversalSynthalloyCore
+#  name: research-technology-universal-ap-synthalloy
+#  entityIcon: MaterialSynthalloy
+#  discipline: FactionUniversal
+#  tier: 3
+#  cost: 40000
+#  technologyPrerequisites:
+#  - UniversalPlastitaniumCore
+#  - UniversalMaterialResearchT3
+#  position: 9, 10
+#  recipeUnlocks:
+#  - Magazine762x51mmSynthAP
+#  - AmmoBox762x51mmSynthAP
+#  - Magazine762x54mmRSynthAP
+#  - AmmoBox762x54mmRSynthAP
+#  - Magazine556x45mmSynthAP
+#  - AmmoBox556x45mmSynthAP
+#  - Magazine762x39mmSynthAP
+#  - AmmoBox762x39mmSynthAP
+#  - Magazine45_magnumPistolSynthAP
+#  - AmmoBox45_magnumSynthAP
+#  - SpeedLoader45_magnumSynthAP
+#  - Magazine46x30mmPistolSynthAP
+#  - Magazine46x30mmSubMachineGunSynthAP
+#  - AmmoBox46x30mmSynthAP
+#  - Magazine57x28mmPistolSynthAP
+#  - Magazine57x28mmSubMachineGunSynthAP
+#  - AmmoBox57x28mmSynthAP
+#  - Magazine9x19mmPistolSynthAP
+#  - Magazine9x19mmSubMachineGunSynthAP
+#  - AmmoBox9x19mmSynthAP
+#  - Magazine45_ACPPistolSynthAP
+#  - Magazine45_ACPSubMachineGunSynthAP
+#  - AmmoBox45_ACPSynthAP
 
 - type: technology
   id: UniversalRIP
