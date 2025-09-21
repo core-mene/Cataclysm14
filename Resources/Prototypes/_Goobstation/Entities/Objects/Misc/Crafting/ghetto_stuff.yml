@@ -109,15 +109,13 @@
 
 - type: entity
   id: ContrabandBag
-  parent: [ BaseStorageItem, BaseBagOpenClose, BaseMinorContraband ]
+  parent: [ BaseStorageItem, BaseBagOpenClose, BaseC1Contraband ]
   name: makeshift bag
   description: A makeshift bag, made out of steel and cables in such way, to block contraband scanners.
   components:
   - type: Sprite
     sprite: _Goobstation/Objects/Storage/contra_satchel.rsi
     state: icon
-  - type: HideContrabandContent
-  - type: UndetectableContraband
   - type: Storage
     grid:
     - 0,0,1,2 # no drawback because contra scanners are useless right now, change this when they are not shit
@@ -133,7 +131,7 @@
 
 - type: entity
   id: ContrabandBagUnfinished
-  parent: [ BaseItem, BaseMinorContraband ]
+  parent: [ BaseItem, BaseC1Contraband ]
   name: makeshift something
   description: Something made out of steel and plastic, you are not sure what is this supposed to be.
   components:
@@ -193,7 +191,7 @@
 
 - type: entity
   id: TideFlipperZero
-  parent: [ DoorRemoteDefault, BaseMinorContraband ]
+  parent: [ DoorRemoteDefault, BaseC1Contraband ]
   name: tide flipper
   description: A makeshift device that can hack doors without access.
   components:
@@ -256,7 +254,7 @@
 
 - type: entity
   id: MakeshiftJammer
-  parent: [ BaseItem, BaseMajorContraband ]
+  parent: [ BaseItem, BaseC3Contraband ]
   name: makeshift radio jammer
   description: A cheap looking device that can spam radio waves, essentially blocking all signal. Yeah its not effective.
   components:
@@ -350,9 +348,8 @@
 # clothing
 
 # heavy boots
-
 - type: entity
-  parent: [ClothingShoesMilitaryBase, BaseMinorContraband]
+  parent: [ClothingShoesMilitaryBase, BaseC1Contraband]
   id: ClothingShoesHeavyBoots
   name: tide boots
   description: Metal is scraping through the floor as you walk with them, who thought this was a good idea?
@@ -363,10 +360,6 @@
     sprite: _Goobstation/Clothing/Shoes/Boots/heavy_boots.rsi
   - type: ClothingSlowOnDamageModifier # 2 times the jackboots
     modifier: 0.75
-  - type: ClothingModifyStunTime
-    modifier: 0.9
-  - type: ModifyStandingUpTime
-    multiplier: 0.75
   - type: Construction
     graph: HeavyBootsGraph
     node: final
@@ -374,7 +367,7 @@
 # helmet
 
 - type: entity
-  parent: [ ClothingHeadHelmetBase, BaseMinorContraband ]
+  parent: [ ClothingHeadHelmetBase, BaseC1Contraband ]
   id: ClothingHeadMakeshiftHelmet
   name: makeshift light helmet
   description: A bunch of steel connected with wires, surprisingly durable, and stylish.
@@ -395,7 +388,7 @@
 # light armor
 
 - type: entity
-  parent: [ ClothingOuterArmorBase, BaseMinorContraband ]
+  parent: [ ClothingOuterArmorBase, BaseC1Contraband ]
   id: ClothingOuterArmorMakeshiftVestLight
   name: makeshift light vest
   description: A light handmade vest made with steel and cables. Durable, but not that efficient.
@@ -412,9 +405,6 @@
         Piercing: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.9
-  - type: ModifyDelayedKnockdown # how tf does this work
-    delayDelta: -1.0
-    knockdownTimeDelta: 1.5
   - type: StaminaDamageResistance
     coefficient: 1.2 # counter to the tide armor: stuns.
   - type: Construction
@@ -424,7 +414,7 @@
 # heavy armor
 
 - type: entity
-  parent: [ ClothingOuterArmorBase, BaseMinorContraband ]
+  parent: [ ClothingOuterArmorBase, BaseC1Contraband ]
   id: ClothingOuterArmorMakeshiftVestHeavy
   name: makeshift heavy vest
   description: A heavy makeshift vest, made to withstand bullets.
@@ -440,9 +430,6 @@
         Slash: 0.7
         Piercing: 0.7 # slightly worse than a secvest
         Heat: 0.9
-  - type: ModifyDelayedKnockdown
-    delayDelta: -1.25
-    knockdownTimeDelta: 1.25
   - type: StaminaDamageResistance
     coefficient: 1.2
   - type: Construction
