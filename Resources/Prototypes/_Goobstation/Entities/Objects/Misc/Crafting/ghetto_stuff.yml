@@ -99,8 +99,8 @@
   - type: MeleeWeapon
     damage:
       types:
-        Slash: 7 # heated knifes are not that sharp yknow
-        Heat: 5
+        Slash: 12
+        Heat: 8
   - type: DamageOnInteract
     damage:
       types:
@@ -238,8 +238,8 @@
   - type: MeleeWeapon # the difference? +2 damage compared to a normal bat, shoudlnt be an op weapon
     damage:
       types:
-        Blunt: 12
-        Structural: 7
+        Blunt: 20
+        Structural: 12
   - type: IncreaseDamageOnWield
     damage:
       types:
