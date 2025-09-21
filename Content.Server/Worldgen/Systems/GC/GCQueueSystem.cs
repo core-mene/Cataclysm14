@@ -1,4 +1,12 @@
-﻿using System.Linq;
+// SPDX-FileCopyrightText: 2023 Cheackraze
+// SPDX-FileCopyrightText: 2023 Moony
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: MIT
+
+using System.Linq;
 using Content.Server.Worldgen.Components.GC;
 using Content.Server.Worldgen.Prototypes;
 using Content.Shared.CCVar;
@@ -48,7 +56,15 @@ public sealed class GCQueueSystem : EntitySystem
                 continue;
 
             queueWatch.Restart();
-            while (queueWatch.Elapsed < proto.MaximumTickTime && queue.Count >= proto.MinDepthToProcess &&
+
+            // Mono Begin - Dynamic Queue Times (Like League of Legends)
+            var entsOverDepth = Math.Max(0, queue.Count - proto.MinDepthToProcess);
+            // We get a constant associated with the prototype, and multiply it by the count of objects in that prototype. Dynamic scaling, instead of static constants.
+            TimeSpan maxQueueTickTime = TimeSpan.FromMilliseconds(entsOverDepth * proto.TimeDeletePerObject);
+
+            // Mono End
+
+            while (queueWatch.Elapsed < maxQueueTickTime && queue.Count >= proto.MinDepthToProcess &&
                    overallWatch.Elapsed < _maximumProcessTime)
             {
                 var e = queue.Dequeue();

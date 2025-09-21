@@ -6,6 +6,7 @@
 // SPDX-FileCopyrightText: 2025 Coenx-flex
 // SPDX-FileCopyrightText: 2025 Cojoke
 // SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 ark1368
 // SPDX-FileCopyrightText: 2025 sleepyyapril
@@ -123,6 +124,10 @@ public sealed class VesselPrototype : IPrototype, IInheritingPrototype
     /// </summary>
     [DataField("maxPriceMarkup")]
     public float MaxPriceMarkup = 2.5f; // Mono
+
+    // Mono
+    [DataField]
+    public bool Purchasable = true;
 
     [DataField]
     public HashSet<ProtoId<TagPrototype>> Tags = new();

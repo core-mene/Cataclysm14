@@ -19,14 +19,14 @@ uplink-security-syringe-case-desc = A pocket case filled with medipens for most 
 uplink-security-compact-defibrillator-name = Compact Defibrillator
 uplink-security-compact-defibrillator-desc = A portable defibrillator made for field revivals.
 
-uplink-security-cash7500-name = 7,500 Spesos
+uplink-security-cash7500-name = 7,500 Credits
 uplink-security-cash7500-desc = Cold, hard cash.
 
 uplink-security-thrusterkit-name = Thruster Upgrade Kit
 uplink-security-thrusterkit-desc = Contains 32 super capaciters. Perfect for upgrading eight thrusters.
 
 uplink-security-cyborg-module-name = Security Cyborg Module
-uplink-security-cyborg-module-desc = A machete, an energy gun, and a stun baton, made specifically for borgs. Wait, don't Rogues have the same thing?
+uplink-security-cyborg-module-desc = A machete, an energy gun, and a stun baton, made specifically for borgs. Wait, don't Insurgents have the same thing?
 
 uplink-security-eg4-name = EG-4 Energy Revolver
 uplink-security-eg4-desc = A self-recharging energy weapon, capable of shooting both disabling and lethal bolts. Like a mini-energy gun.
@@ -58,7 +58,7 @@ uplink-security-68x52mm-box-desc = Used to refill magazines for the Lecter. Cont
 uplink-security-portable-recharger-name = Portable Recharger
 uplink-security-portable-recharger-desc = An experimental portable recharger equipped with an inbuilt microreactor.
 
-uplink-security-cash75000-name = 75,000 Spesos
+uplink-security-cash75000-name = 75,000 Credits
 uplink-security-cash75000-desc = Cold, hard cash, in bulk.
 
 uplink-security-surgery-duffel-name = Advanced Surgery Kit

@@ -1,8 +1,7 @@
+// SPDX-FileCopyrightText: 2025 MilonPL
 // SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: MIT
-
-// all code made by MilonPL (github), only change here is removing the caliber inspect
 
 using System;
 using System.Diagnostics.CodeAnalysis;

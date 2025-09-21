@@ -34,21 +34,16 @@
   displayWeight: 60 # Top
   canBeAntag: false
   accessGroups:
-  - AllAccess
+  - AllAccessSR
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, TrackingImplant ]
+    implants: [ MindShieldImplant ] # Mono - remove TSFMC implant
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
-      - type: NpcFactionMember
-        factions:
-        - TSFMC
-  - !type:AddLanguageSpecial
-    languagesSpoken:
-    - SolCommon
-    languagesUnderstood:
-    - SolCommon
+      #- type: NpcFactionMember - Commented out to seperate them from TSFMC.
+      #  factions:
+      #  - TSFMC
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
@@ -62,5 +57,5 @@
     - Flash
     - RubberStampSr
     - DoorRemoteCommand
-    - EncryptionKeyCentCom # Mono
-    - EncryptionKeyStationMaster
+    - EncryptionKeyCentCom
+   #- EncryptionKeyStationMaster # Mono - comment out to seperate from TSFMC

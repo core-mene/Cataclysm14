@@ -19,8 +19,11 @@
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
   - type: RadarConsole
-    maxRange: 150
+    maxRange: 512
     followEntity: true
+  - type: DetectionRangeMultiplier
+    infraredMultiplier: 0.5 # from 1
+    visualMultiplier: 3 # from 4
   - type: ActivatableUI
     key: enum.RadarConsoleUiKey.Key
     singleUser: true
@@ -70,7 +73,7 @@
     isEquipment: true
     toggleAction: PulseThermalVision
   - type: RadarConsole
-    maxRange: 350
+    maxRange: 512
     followEntity: true
   - type: ActivatableUI
     key: enum.RadarConsoleUiKey.Key

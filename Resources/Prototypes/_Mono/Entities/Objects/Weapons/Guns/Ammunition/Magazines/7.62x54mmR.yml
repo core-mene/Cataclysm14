@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -156,23 +157,10 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 #armor-piercing:
-- type: entity
-  id: Magazine762x54mmRSteelAP
-  name: "magazine (7.62x54mmR AP steel core)"
-  parent: BaseMagazine762x54mmR
-  components:
-  - type: BallisticAmmoProvider
-    proto: Cartridge762x54mmRSteelAP
-  - type: Sprite
-    layers:
-    - state: steelAP
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
   id: Magazine762x54mmRPlasteelAP
-  name: "magazine (7.62x54mmR AP plasteel core)"
+  name: "magazine (7.62x54mmR AP)"
   parent: BaseMagazine762x54mmR
   components:
   - type: BallisticAmmoProvider
@@ -180,20 +168,6 @@
   - type: Sprite
     layers:
     - state: plasteelAP
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-
-- type: entity
-  id: Magazine762x54mmRSynthAP
-  name: "magazine (7.62x54mmR AP synthalloy core)"
-  parent: BaseMagazine762x54mmR
-  components:
-  - type: BallisticAmmoProvider
-    proto: Cartridge762x54mmRSynthAP
-  - type: Sprite
-    layers:
-    - state: synthAP
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]

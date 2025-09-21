@@ -187,10 +187,13 @@
     price: 450
   - type: DragDropTargetable
   # Goobstation Change End
+  # <Mono>
   - type: RadarConsole
-    maxRange: 256
+    maxRange: 512
     followEntity: true
-  - type: Magboots # Monolith
+    pannable: true
+  - type: Magboots
+  # </Mono>
 
 - type: entity
   id: MechRipley

@@ -43,7 +43,7 @@
   name: maintenance jack
   parent: BaseItem
   id: MaintenanceJack
-  description: A maintenance jack for removing up floor plating.
+  description: A mighty tool for ruling maints. Pries tile and plating and can anchor. #Mono
   components:
   - type: Sprite
     sprite: _NF/Objects/Tools/maintenance-jack.rsi
@@ -58,34 +58,59 @@
         Structural: 5
     soundHit:
       collection: MetalThud
-  - type: Wieldable #Mono
+  - type: EmitSoundOnLand #Mono start
+    sound:
+      path: /Audio/Items/crowbar_drop.ogg
+      params:
+        volume: 2
+  - type: Wieldable 
+    unwieldOnUse: false
   - type: IncreaseDamageOnWield
     damage:
       types:
         Blunt: 18
-        Structural: 5 #Mono end
+        Structural: 5
+  - type: PhysicalComposition
+    materialComposition: 
+      Steel: 200 #Mono end
   - type: Item
     size: Large #Mono: Huge > Large
     shape: 
-    - 0,0,1,2 #Mono end
+    - 0,0,1,2 #Mono
   - type: Clothing
     sprite: Objects/Weapons/Melee/fireaxe.rsi
     quickEquip: false
     slots:
     - back
     - suitStorage
+  - type: ToolTileCompatible #Mono
   - type: Tool
     qualities:
+      - Prying #Mono
       - Axing
-      - Prying #Mono    
-    useSound: #Mono
-      path: /Audio/Items/crowbar.ogg #Mono
-  - type: ToolTileCompatible
-  - type: PhysicalComposition #Mono
-    materialComposition: #Mono
-      Steel: 200 #Mono
-  - type: UseDelay
+    speedModifier: 0.7
+    useSound: /Audio/Items/crowbar.ogg #Mono
+  - type: Prying
+    useSound: /Audio/Items/crowbar.ogg
+  - type: UseDelay # Goobstation - For insta prying
     delay: 1
+  - type: MultipleTool #Mono start
+    statusShowBehavior: true
+    entries:
+      - behavior:
+        - Prying
+        - Axing
+        sprite:
+          sprite: _NF/Objects/Tools/maintenance-jack.rsi
+          state: icon
+        useSound: /Audio/Items/crowbar.ogg
+        changeSound: /Audio/Effects/thudswoosh.ogg
+      - behavior: Anchoring
+        sprite:
+          sprite: _NF/Objects/Tools/maintenance-jack.rsi
+          state: icon-1
+        useSound: /Audio/Items/ratchet.ogg
+        changeSound: /Audio/Effects/thudswoosh.ogg #Mono end
 
 - type: entity
   name: the people's shovel

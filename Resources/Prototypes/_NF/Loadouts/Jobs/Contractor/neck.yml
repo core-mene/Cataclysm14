@@ -115,6 +115,15 @@
     neck: ClothingNeckHeadphones
 
 - type: loadout
+  id: ContractorClothingNeckNovaSharksLeatherJacket
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    neck: ClothingNeckNovaSharksLeatherJacket
+
+- type: loadout
   id: ContractorClothingNeckCrucifix
   effects:
   - !type:GroupLoadoutEffect

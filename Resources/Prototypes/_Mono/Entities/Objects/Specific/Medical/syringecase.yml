@@ -1,5 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 GNUtopia
 # SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -13,6 +15,7 @@
     sprite: _Mono/Objects/Misc/syringecase.rsi
     layers:
     - state: closed
+      map: ["closeLayer"]
     - state: open
       map: ["openLayer"]
       visible: false

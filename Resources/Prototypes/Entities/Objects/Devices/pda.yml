@@ -86,6 +86,7 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 GreaseMonk
 # SPDX-FileCopyrightText: 2025 KieueCaprie
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 SlamBamActionman
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -802,6 +803,10 @@
   - type: Icon
     state: pda-ce
   - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
 
 - type: entity
   parent: BasePDA
@@ -822,6 +827,10 @@
   - type: Icon
     state: pda-engineer
   - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
 
 - type: entity
   parent: BaseMedicalPDA
@@ -1064,6 +1073,10 @@
     scanDelay: 0
     silent: true
   - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     notificationsEnabled: false
@@ -1227,6 +1240,10 @@
       - AstroNavCartridge
       - MailMetricsCartridge # Frontier
   - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
 
 - type: entity
   parent: ERTLeaderPDA
@@ -1248,6 +1265,10 @@
   - type: Pda
     id: ERTEngineerIDCard
   - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
 
 - type: entity
   parent: ERTLeaderPDA
@@ -1471,6 +1492,10 @@
   - type: Icon
     state: pda-seniorengineer
   - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
 
 - type: entity
   parent: BasePDA

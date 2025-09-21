@@ -45,6 +45,7 @@
       damage:
         types:
           Heat: 40
+    - type: ThermalSignature # Mono
     - type: InteractionOutline
     - type: Sprite
     - type: Appearance
@@ -179,6 +180,7 @@
     baseThrust: 2000
     thrust: 2000
     machinePartThrust: Manipulator
+    heatSignatureRatio: 0.5 # Mono
   - type: Sprite
     # Listen I'm not the biggest fan of the sprite but it was the most appropriate thing I could find.
     sprite: Structures/Shuttles/gyroscope.rsi

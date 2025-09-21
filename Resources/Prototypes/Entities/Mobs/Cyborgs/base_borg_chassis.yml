@@ -44,13 +44,11 @@
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 JonahDes
 # SPDX-FileCopyrightText: 2025 Kittygyat
-# SPDX-FileCopyrightText: 2025 MarkerWicker
 # SPDX-FileCopyrightText: 2025 Myzumi
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 Theodore Lukin
 # SPDX-FileCopyrightText: 2025 Whatstone
-# SPDX-FileCopyrightText: 2025 crasg
 # SPDX-FileCopyrightText: 2025 lzk
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -214,14 +212,10 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Borg
-    allowedEmotes: # Goobstation - Cyborg emote sounds
-    - Laugh
-    - Sigh
-    - Crying
-    - Whistle
   - type: Vocal
     sounds:
       Unsexed: UnisexSilicon
+    screamAction: null
   - type: UnblockableSpeech
   - type: FootstepModifier
     footstepSoundCollection:
@@ -333,8 +327,11 @@
       enum.RadarConsoleUiKey.Key:
         toggleAction: ActionObserverShowRadar
   - type: RadarConsole
-    maxRange: 256
+    maxRange: 512
     followEntity: true
+  - type: DetectionRangeMultiplier # same as mass scanner
+    infraredMultiplier: 0.5 # from 1
+    visualMultiplier: 3 # from 4
   # </Mono>
 
 - type: entity
@@ -424,11 +421,6 @@
     speechSounds: SyndieBorg
     allowedEmotes:
     - Laugh
-    # Goobstation - Cyborg emote sounds
-    - Sigh
-    - Crying
-    - Whistle
-    # end Goobstation - Cyborg emote sounds
   - type: Vocal
     sounds:
       Unsexed: UnisexSiliconSyndicate

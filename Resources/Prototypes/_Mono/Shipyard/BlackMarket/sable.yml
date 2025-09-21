@@ -30,7 +30,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Sable RG{1}'
+          mapNameTemplate: 'Sable ASR{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

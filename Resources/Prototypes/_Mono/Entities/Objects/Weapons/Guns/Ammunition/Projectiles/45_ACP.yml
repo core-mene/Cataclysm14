@@ -15,6 +15,8 @@
 # SPDX-FileCopyrightText: 2024 Nemanja
 # SPDX-FileCopyrightText: 2024 Plykiya
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 sleepyyapril
 # SPDX-FileCopyrightText: 2025 starch
@@ -31,7 +33,7 @@
     damage:
       types:
         Piercing: 26
-    armorPenetration: -0.1
+    armorPenetration: 0.05
 
 - type: entity
   id: Bullet45_ACPPractice
@@ -104,7 +106,7 @@
   components:
   - type: Projectile
     damage:
-      types: 
+      types:
         Slash: 4
         Piercing: 32
     armorPenetration: -0.7
@@ -117,44 +119,21 @@
   components:
   - type: Projectile
     damage:
-      types: 
+      types:
         Slash: 7
         Piercing: 42
     armorPenetration: -0.95
 
 #armor-piercing:
-- type: entity
-  id: Bullet45_ACPSteelAP
-  parent: BaseBullet
-  name: bullet (.45 AP steel core)
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Projectile
-    damage:
-      types: 
-        Piercing: 24
-    armorPenetration: 0.1
 
 - type: entity
   id: Bullet45_ACPPlasteelAP
   parent: BaseBullet
-  name: bullet (.45 AP plasteel core)
+  name: bullet (.45 AP)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
     damage:
-      types: 
-        Piercing: 21
-    armorPenetration: 0.25
-
-- type: entity
-  id: Bullet45_ACPSynthAP
-  parent: BaseBullet
-  name: bullet (.45 AP synthalloy core)
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Projectile
-    damage:
-      types: 
-        Piercing: 18
-    armorPenetration: 0.4
+      types:
+        Piercing: 12
+    armorPenetration: 0.7

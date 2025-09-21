@@ -1,4 +1,52 @@
+// SPDX-FileCopyrightText: 2020 FL-OZ
+// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+// SPDX-FileCopyrightText: 2020 chairbender
+// SPDX-FileCopyrightText: 2020 zumorica
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 Ygg01
+// SPDX-FileCopyrightText: 2022 0x6273
+// SPDX-FileCopyrightText: 2022 Alex Evgrashin
+// SPDX-FileCopyrightText: 2022 DrSmugleaf
+// SPDX-FileCopyrightText: 2022 Jezithyr
+// SPDX-FileCopyrightText: 2022 Kara
+// SPDX-FileCopyrightText: 2022 Rane
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 Ben
+// SPDX-FileCopyrightText: 2023 BenOwnby
+// SPDX-FileCopyrightText: 2023 Chief-Engineer
+// SPDX-FileCopyrightText: 2023 Emisse
+// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 deltanedas
+// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
+// SPDX-FileCopyrightText: 2024 Cojoke
+// SPDX-FileCopyrightText: 2024 J. Brown
+// SPDX-FileCopyrightText: 2024 James Simonson
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Scribbles0
+// SPDX-FileCopyrightText: 2024 ShadowCommander
+// SPDX-FileCopyrightText: 2024 SpeltIncorrectyl
+// SPDX-FileCopyrightText: 2024 TinManTim
+// SPDX-FileCopyrightText: 2024 Verm
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 blueDev2
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2024 deathride58
+// SPDX-FileCopyrightText: 2024 degradka
+// SPDX-FileCopyrightText: 2024 themias
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 bitcrushing
+// SPDX-FileCopyrightText: 2025 slarticodefast
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Administration.Logs;
+using Content.Server.Atmos.Components; // Mono
+using Content.Server.Atmos.EntitySystems; // Mono
 using Content.Server.Body.Systems;
 using Content.Server.Construction;
 using Content.Server.Explosion.EntitySystems;
@@ -48,6 +96,7 @@ namespace Content.Server.Kitchen.EntitySystems
 {
     public sealed partial class MicrowaveSystem : EntitySystem // Frontier: add partial
     {
+        [Dependency] private readonly AtmosphereSystem _atmosphereSystem = default!; // Mono
         [Dependency] private readonly BodySystem _bodySystem = default!;
         [Dependency] private readonly DeviceLinkSystem _deviceLink = default!;
         [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
@@ -191,6 +240,15 @@ namespace Content.Server.Kitchen.EntitySystems
             {
                 if (TryComp<TemperatureComponent>(entity, out var tempComp))
                     _temperature.ChangeHeat(entity, heatToAdd * component.ObjectHeatMultiplier, false, tempComp);
+
+                // Mono Start - Heat gas tanks
+                if (TryComp<GasTankComponent>(entity, out var gasTank) && gasTank.Air != null)
+                {
+                    // Thermal energy to be added based on gas heat capacity
+                    var thermalEnergyToAdd = heatToAdd * component.ObjectHeatMultiplier;
+                    _atmosphereSystem.AddHeat(gasTank.Air, thermalEnergyToAdd);
+                }
+                // Mono End
 
                 if (!TryComp<SolutionContainerManagerComponent>(entity, out var solutions))
                     continue;

@@ -2,6 +2,7 @@
 shipyard-console-invalid-vessel = Cannot purchase vessel:
 shipyard-console-menu-title = Shipyard Menu
 shipyard-console-menu-listing-free = Free
+shipyard-console-menu-listing-voucher = Voucher
 shipyard-console-docking = {$owner} shuttle {$vessel} en route.
 shipyard-console-leaving = {$owner} shuttle {$vessel} sold by {$player}.
 shipyard-console-docking-secret = Unregistered vessel detected entering your sector.
@@ -63,7 +64,7 @@ shipyard-console-class-Civilian = Civilian
 shipyard-console-class-Kitchen = Kitchen
 # Antag
 shipyard-console-class-Syndicate = Syndicate
-shipyard-console-class-Pirate = Rogue
+shipyard-console-class-Pirate = ASR
 # NFSD
 shipyard-console-class-Capital = Capital
 shipyard-console-class-Detainment = Detainment
@@ -76,6 +77,7 @@ shipyard-console-class-Corvette = Corvette
 shipyard-console-class-Frigate = Frigate
 shipyard-console-class-Destroyer = Destroyer
 shipyard-console-class-Cruiser = Cruiser
+# Mono changes end
 
 shipyard-console-engine-All = All
 shipyard-console-engine-AME = AME

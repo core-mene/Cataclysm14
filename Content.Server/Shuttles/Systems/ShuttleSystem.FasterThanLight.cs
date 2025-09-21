@@ -770,6 +770,7 @@ public sealed partial class ShuttleSystem
             var dockedPos = _transform.GetWorldPosition(dockedUid);
             var mainRot = _transform.GetWorldRotation(uid);
             var dockedRot = _transform.GetWorldRotation(dockedUid);
+            var dockedBody = _physicsQuery.GetComponent(dockedUid);
 
             // Store position and rotation relative to main shuttle
             var dockConnections = new List<(EntityUid DockA, EntityUid DockB)>();
@@ -779,8 +780,11 @@ public sealed partial class ShuttleSystem
                 if (!TryComp<DockingComponent>(dock, out var dockComp) || !dockComp.Docked || dockComp.DockedWith == null)
                     continue;
                 dockConnections.Add((dock, dockComp.DockedWith.Value));
+                _dockSystem.Undock((dock, dockComp));
             }
             relativeTransforms[dockedUid] = (dockedPos - mainPos, dockedRot - mainRot, dockConnections);
+            _physics.SetLinearVelocity(dockedUid, Vector2.Zero, body: dockedBody);
+            _physics.SetAngularVelocity(dockedUid, 0f, body: dockedBody);
         }
 
         // Handle physics for main shuttle
@@ -825,10 +829,13 @@ public sealed partial class ShuttleSystem
         {
             // TODO: This should now use tryftlproximity
             mapId = _transform.GetMapId(target);
-            _transform.SetCoordinates(uid, xform, target, rotation: comp.TargetAngle);
+            _transform.SetCoordinates(uid, xform, target, rotation: comp.TargetAngle.Reduced());
         }
 
+        var handledShuttles = new HashSet<EntityUid>();
         // Now move all docked shuttles to maintain their relative positions
+        var mainNewPos = _transform.GetWorldPosition(uid);
+        var mainNewRot = _transform.GetWorldRotation(uid);
         foreach (var dockedUid in dockedShuttles)
         {
             if (dockedUid == uid) continue;
@@ -836,26 +843,17 @@ public sealed partial class ShuttleSystem
             var (relativePos, relativeRot, dockConnections) = relativeTransforms[dockedUid];
             var ftlCooldown = 10f;
 
-            var mainNewPos = _transform.GetWorldPosition(uid);
-            var mainNewRot = _transform.GetWorldRotation(uid);
-
             var newPos = mainNewPos + relativePos;
             var newRot = mainNewRot + relativeRot;
             if (xform.MapUid != null)
             {
-                _transform.SetWorldRotation(dockedUid, newRot);
                 _transform.SetParent(dockedUid, dockedXform, xform.MapUid.Value);
+                _transform.SetWorldRotationNoLerp(dockedUid, newRot);
                 _transform.SetWorldPosition(dockedUid, newPos);
-            }
 
-            // Re-establish all docking connections
-            foreach (var (dockA, dockB) in dockConnections)
-            {
-                if (!TryComp<DockingComponent>(dockA, out var dockCompA) ||
-                    !TryComp<DockingComponent>(dockB, out var dockCompB))
-                    continue;
-                _dockSystem.Dock((dockA, dockCompA), (dockB, dockCompB));
             }
+            _physics.SetLinearVelocity(uid, Vector2.Zero, body: body);
+            _physics.SetAngularVelocity(uid, 0f, body: body);
 
             if (TryComp<PhysicsComponent>(dockedUid, out var dockedBody))
             {
@@ -875,6 +873,16 @@ public sealed partial class ShuttleSystem
                 {
                     Enable(dockedUid, component: dockedBody, shuttle: dockedShuttle);
                 }
+            }
+
+            // Re-establish all docking connections
+            foreach (var (dockA, dockB) in dockConnections)
+            {
+                if (!TryComp<DockingComponent>(dockA, out var dockCompA) ||
+                    !TryComp<DockingComponent>(dockB, out var dockCompB))
+                    continue;
+                _dockSystem.Dock((dockA, dockCompA), (dockB, dockCompB));
+                _dockSystem.Dock((dockB, dockCompB), (dockA, dockCompA));
             }
 
             // Put linked shuttles in cooldown state instead of immediately removing the component
@@ -1591,8 +1599,8 @@ public sealed partial class ShuttleSystem
             var newRot = mainRot + relativeRot;
             // Ensure we move to the same map as the main shuttle
             _transform.SetParent(dockedUid, dockedXform, ftlMap);
+            _transform.SetWorldRotationNoLerp(dockedUid, newRot);
             _transform.SetWorldPosition(dockedUid, newPos);
-            _transform.SetWorldRotation(dockedUid, newRot);
             LeaveNoFTLBehind((dockedUid, dockedXform), dockedOldGridMatrix, dockedOldMapUid);
 
             // Add FTL component to the docked shuttle and link it to the main shuttle

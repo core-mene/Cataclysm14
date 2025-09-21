@@ -15,6 +15,7 @@
 # SPDX-FileCopyrightText: 2024 Nemanja
 # SPDX-FileCopyrightText: 2024 Plykiya
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -44,6 +45,15 @@
     steps: 4
     zeroVisible: false
   - type: Appearance
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_Goobstation/Items/handling/ammobox_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_Goobstation/Items/handling/ammobox_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Goobstation/Items/handling/ammobox_drop.ogg
 
 #small ammo boxes
 - type: entity
@@ -170,25 +180,11 @@
     - state: RIP
 
 #armor-piercing:
-- type: entity
-  parent: BaseAmmoBox45_magnum
-  id: AmmoBox45_magnumSteelAP
-  name: ammunition box (.45 magnum AP steel core)
-  components:
-  - type: BallisticAmmoProvider
-    proto: Cartridge45_magnumSteelAP
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-    - state: steelAP
 
 - type: entity
   parent: BaseAmmoBox45_magnum
   id: AmmoBox45_magnumPlasteelAP
-  name: ammunition box (.45 magnum AP plasteel core)
+  name: ammunition box (.45 magnum AP)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumPlasteelAP
@@ -199,21 +195,6 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: plasteelAP
-
-- type: entity
-  parent: BaseAmmoBox45_magnum
-  id: AmmoBox45_magnumSynthAP
-  name: ammunition box (.45 magnum AP synthalloy core)
-  components:
-  - type: BallisticAmmoProvider
-    proto: Cartridge45_magnumSynthAP
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-    - state: synthAP
 
 #big ammo boxes
 - type: entity

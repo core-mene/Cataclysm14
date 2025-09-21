@@ -31,6 +31,7 @@
 # SPDX-FileCopyrightText: 2024 VividPups
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -387,9 +388,12 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
+        Piercing: 28
         Structural: 250
-    armorPenetration: 0.5
+    armorPenetration: 0.4
+  - type: Tracer
+    color: "#6f7c82ff"
+    length: 3
 
 - type: entity
   id: Pellet12_gaugeFlechette
@@ -405,6 +409,9 @@
       types:
         Piercing: 8
     armorPenetration: 0.3
+  - type: Tracer
+    color: "#6f7c82ff"
+    length: 3
 
 - type: entity
   id: Pellet12_gaugeFlechetteSpread

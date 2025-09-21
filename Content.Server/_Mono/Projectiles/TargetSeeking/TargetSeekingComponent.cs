@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 RikuTheKiller
 //
@@ -42,7 +43,7 @@ public sealed partial class TargetSeekingComponent : Component
     /// Tracking algorithm used for intercepting the target.
     /// </summary>
     [DataField]
-    public TrackingMethod TrackingAlgorithm = TrackingMethod.Predictive;
+    public TrackingMethod TrackingAlgorithm = TrackingMethod.AdvancedPredictive;
 
     /// <summary>
     /// How fast the projectile accelerates in m/s².
@@ -69,12 +70,6 @@ public sealed partial class TargetSeekingComponent : Component
     public bool Launched = false;
 
     /// <summary>
-    /// Current speed of the projectile in m/s.
-    /// </summary>
-    [DataField]
-    public float CurrentSpeed;
-
-    /// <summary>
     /// The amount of time in seconds left the missile starts searching for targets. // Mono
     /// </summary>
     [DataField]
@@ -87,16 +82,6 @@ public sealed partial class TargetSeekingComponent : Component
     public float ScanArc = 90f;
 
     /// <summary>
-    /// Used for tracking metrics between updates.
-    /// </summary>
-    public float PreviousDistance;
-
-    /// <summary>
-    /// Previous position of the target, used for velocity calculation.
-    /// </summary>
-    public Vector2 PreviousTargetPosition;
-
-    /// <summary>
     /// Whether seeking has been disabled (e.g., after entering an enemy grid).
     /// </summary>
     public bool SeekingDisabled;
@@ -105,15 +90,21 @@ public sealed partial class TargetSeekingComponent : Component
 /// <summary>
 /// Defines different tracking algorithms that can be used.
 /// </summary>
+[Serializable]
 public enum TrackingMethod
 {
     /// <summary>
-    /// Advanced tracking that predicts target movement.
-    /// </summary>
-    Predictive = 1,
-
-    /// <summary>
     /// Basic tracking that simply points directly at the target.
     /// </summary>
-    Direct = 2
+    Direct = 1,
+
+    /// <summary>
+    /// Advanced tracking that predicts target movement.
+    /// </summary>
+    Predictive = 2,
+
+    /// <summary>
+    /// Even more accurate tracking.
+    /// </summary>
+    AdvancedPredictive = 3
 }

@@ -106,6 +106,17 @@
     rsi:
       sprite: _RMC14/Interface/MousePointer/pistol_mouse.rsi
       state: all
+  # Goobstation edit start
+  - type: EmitSoundOnPickup
+    sound:
+      collection: RevolversPickUp
+  - type: EmitSoundOnDrop
+    sound:
+      collection: RevolversDrop
+  - type: EmitSoundOnLand
+    sound:
+      collection: RevolversDrop
+  # Goobstation edit end
 
 - type: entity
   name: NT Deckard (.45 magnum)
