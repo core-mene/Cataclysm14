@@ -1,0 +1,63 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 burrrkeye
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: burrrkeye
+# Discord: burkia
+
+# Shuttle Notes:
+
+#Up-to-date detection ranges as of 09.23.2025
+# Thermal Detection Range
+
+# Mass Scanner/Gunnery Console/Shuttle Console detection Range - 570 meters
+# Advanced Radar detection Range - 680 meters
+# Elite Radar detection Range - 850 meters
+# Overwatch Radar detection Range - ~1.1km
+
+# Visual Detection Range
+
+# Mass Scanner/Gunnery Console/Shuttle Console detection Range - 340 meters
+# Advanced Radar detection Range - 410 meters
+# Elite Radar detection Range - 510 meters
+# Overwatch Radar detection Range - 680 meters
+
+- type: vessel
+  id: Chameleon
+  parent: BaseVessel
+  name: BT-Y Chameleon
+  description: Chameleon is a dedicated ambush craft with an extremely low thermal profile armed with 2 ASM-220 torpedos, TOVEK missile launcher and 2 L-1 Phalanx. It is powered entirely by solars, solar controls must be maintained for from the solar controls console else the ship will depower in less than 5 minutes, a backup power generator was provided in case this happens, however, it is not recommended keeping it running for long periods as it will increase the thermal profile substantially.
+  price: 250000 # appraises at 53441, price markup of ~200k for its stealth properties.
+  category: Small
+  group: Expedition
+  shuttlePath: /Maps/_Mono/Shuttles/Expedition/chameleon.yml
+  guidebookPage: null
+  class:
+  - Expedition
+  - Pursuit
+  engine:
+  - Solar
+  - Welding
+
+- type: gameMap
+  id: Chameleon
+  mapName: 'BT-Y Chameleon'
+  mapPath: /Maps/_Mono/Shuttles/Expedition/chameleon.yml
+  minPlayers: 0
+  stations:
+    Chameleon:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Chameleon MIL{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
