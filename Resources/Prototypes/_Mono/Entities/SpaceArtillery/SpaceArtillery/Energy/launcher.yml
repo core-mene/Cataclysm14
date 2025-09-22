@@ -290,6 +290,10 @@
           collection: MetalBreak
   - type: Machine
     board: WeaponTurretM25Circuitboard
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
   - type: RadarBlip
     radarColor: "#C92BCC"
     scale: 1
