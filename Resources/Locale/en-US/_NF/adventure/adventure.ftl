@@ -22,7 +22,7 @@ nf-adventure-description = Join a ship crew or buy your own and explore, researc
 nf-pirate-title = Insurgency
 nf-pirate-description = Insurgency threatens TSF expansion into the sector. A tense cold war between the TSF and USSP also takes place.
 
-currency = Spesos
+currency = Credits
 
 shipyard-rules-default1 =
     Thank you for your interest in TSF Security Forces.

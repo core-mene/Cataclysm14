@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 Disguised Bear
 # SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 core-mene
@@ -60,7 +61,7 @@
     damage:
       types:
         Radiation: 600
-        Structural: 400
+        Structural: 900
         Heat: 120
         Ion: 150
   - type: Sprite
@@ -222,7 +223,7 @@
     range: 25
     energyConsumption: 50000000
     disableDuration: 30
-    
+
 
 # DYMERE
 
@@ -264,7 +265,9 @@
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
 
-# Lasers
+# region Laser Hitscans
+
+# Phalanx
 
 - type: entity
   parent: BasicHitscan
@@ -286,10 +289,12 @@
   - type: HitscanBasicDamage
     damage:
      types:
-      Heat: 90
-      Structural: 300
+      Heat: 100
+      Structural: 100
   - type: HitscanBasicRaycast
-    maxDistance: 300
+    maxDistance: 400
+
+# Apollo
 
 - type: entity
   parent: BasicHitscan
@@ -313,39 +318,10 @@
      types:
       Heat: 10000
       Structural: 50000
-  - type: HitscanExplosion
-    explosive: ApolloExplosion
+  - type: HitscanSpawnEntity
+    spawnedEntity: ApolloExplosion
   - type: HitscanBasicRaycast
     maxDistance: 600
-
-# Tachyon Lance
-
-- type: entity
-  parent: BasicHitscan
-  id: TachyonLaser
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: HitscanBasicVisuals
-    muzzleFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
-      state: muzzle_superheavy_prefrac
-    travelFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
-      state: Beam_SuperHeavy_prefrac
-    impactFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
-      state: impact_superheavy_prefrac
-  - type: HitscanRadarSignature
-    radarColor: "#e67a22"
-  - type: HitscanBasicDamage
-    damage:
-     types:
-      Radiation: 10000
-      Structural: 80000
-  - type: HitscanSpawnEntity
-    spawnedEntity: TachyonExplosion
-  - type: HitscanBasicRaycast
-    maxDistance: 1200
 
 # Hitscan Explosions
 
