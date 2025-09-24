@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 mikusssssss
 #
-# SPDX-License-Identifier: MPL-2.0
+# SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: emote
   id: SiliconDeathgasp
@@ -27,3 +27,15 @@
     - BorgChassis
   chatTriggers:
     - whirrs
+
+- type: emote
+  id: Boop
+  name: chat-emote-name-boop
+  category: Vocal
+  chatMessages: [ boops. ]
+  whitelist:
+    components:
+    - Silicon
+    - BorgChassis
+  chatTriggers:
+  - boops
