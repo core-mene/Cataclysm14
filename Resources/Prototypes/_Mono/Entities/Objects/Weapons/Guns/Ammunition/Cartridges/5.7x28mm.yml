@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -141,23 +142,10 @@
         color: "#C04000"
 
 #armor-piercing:
-- type: entity
-  id: Cartridge57x28mmSteelAP
-  name: cartridge (5.7x28mm AP steel core)
-  parent: BaseCartridge57x28mm
-  components:
-  - type: CartridgeAmmo
-    proto: Bullet57x28mmSteelAP
-  - type: Sprite
-    layers:
-      - state: base
-        map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
 
 - type: entity
   id: Cartridge57x28mmPlasteelAP
-  name: cartridge (5.7x28mm AP plasteel core)
+  name: cartridge (5.7x28mm AP)
   parent: BaseCartridge57x28mm
   components:
   - type: CartridgeAmmo
@@ -169,18 +157,3 @@
       - state: tip
         map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#888888"
-
-- type: entity
-  id: Cartridge57x28mmSynthAP
-  name: cartridge (5.7x28mm AP synthalloy core)
-  parent: BaseCartridge57x28mm
-  components:
-  - type: CartridgeAmmo
-    proto: Bullet57x28mmSynthAP
-  - type: Sprite
-    layers:
-      - state: base
-        map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
-        color: "#111111"

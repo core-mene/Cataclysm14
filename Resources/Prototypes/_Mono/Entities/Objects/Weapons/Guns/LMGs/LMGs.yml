@@ -224,7 +224,7 @@
   name: TCA MMG-68 "Grizzly" (6.8x52mm Caseless)
   parent: [BaseWeaponLightMachineGun, BaseGunWieldable, BaseC2ContrabandUnredeemable]
   id: WeaponLMGGrizzly
-  description: A medium machine gun chambered in 6.8x52mm Caseless, accepts both box and standard magazines. A label on the side reads "FOR MILITARY USE ONLY". The weight of the machine gun make it hard to wield easily.
+  description: A medium machine gun chambered in 6.8x52mm Caseless, accepts both box and standard magazines. A label on the side reads "FOR MILITARY USE ONLY". The weight of the machine gun make it hard to wield easily. To assist with standardization, it also accepts 5.56x45mm and 7.62x39mm.
   components:
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/LMGs/grizzly/Grizzly-icon.rsi
@@ -272,6 +272,11 @@
           - Magazine68x52mmCaselessBoxSmall
           - Magazine68x52mmCaselessBoxBig
           - Magazine68x52mmCaseless
+          - Magazine556x45mmFMJ
+          - Magazine556x45mmBox
+          - Magazine762x39mmFMJ
+          - Magazine762x39mmLowCapacityFMJ
+          - Magazine762x39mmBox
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
@@ -280,6 +285,8 @@
         whitelist:
           tags:
           - Cartridge68x52mmCaseless
+          - Cartridge556x45mmFMJ
+          - Cartridge762x39mmFMJ
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
