@@ -16,7 +16,6 @@ namespace Content.Server._Mono.TargetSeekingAlert;
 /// </summary>
 
 // I really wonder what might unexpectedly happen when you put a target-seeker-alerter on a planetmap, since those count as grids.
-// Also this is a bit of a large amount of hashsets.
 public sealed class TargetSeekerAlertSystem : EntitySystem
 {
     [Dependency] private readonly AudioSystem _audioSystem = default!;
@@ -83,19 +82,6 @@ public sealed class TargetSeekerAlertSystem : EntitySystem
         }
     }
 
-    /// <summary>
-    ///     Called on an entity with <see cref="TargetSeekerAlertComponent"/> when
-    ///         it is no longer at threat of any target-seeking things, after it has
-    ///         been removed from the grid's lists of active and functional alerters.
-    /// </summary>
-    private void OnAlerterDeactivated(Entity<TargetSeekerAlertComponent> alertEntity)
-    {
-        if (alertEntity.Comp.Audio is { } alertAudio)
-            _audioSystem.Stop(alertAudio);
-
-        alertEntity.Comp.ActiveAlertSoundKey = null;
-    }
-
     private void UpdateActiveAlerter(Entity<TargetSeekerAlertComponent> alertEntity, float closestSeekerDistance)
     {
         SoundSpecifier? bestSound = null;
@@ -122,10 +108,36 @@ public sealed class TargetSeekerAlertSystem : EntitySystem
             _audioSystem.Stop(currentAlertAudio);
 
         // Entity<T> isn't real
-        // the reason ambient audio system isn't used is because that can get muted by player
+        // the reason ambient audio system isn't used is because it can get muted by player via settings
         var audioTuple = _audioSystem.PlayPvs(bestSound, alertEntity);
         if (audioTuple != null)
             alertEntity.Comp.Audio = audioTuple.Value.Entity;
+    }
+
+    /// <summary>
+    ///     Called on an entity with <see cref="TargetSeekerAlertComponent"/> when
+    ///         it is now at threat of a target-seeker, after it has been added to
+    ///         its grid's lists of active and functional alerters.
+    /// </summary>
+    // todo: make this an event for other systems to use
+    private void OnAlerterActivated(Entity<TargetSeekerAlertComponent> alertEntity)
+    {
+        if (alertEntity.Comp.TargetGainSound is { } gainSound)
+            _audioSystem.PlayPvs(gainSound, alertEntity.Owner);
+    }
+
+    /// <summary>
+    ///     Called on an entity with <see cref="TargetSeekerAlertComponent"/> when
+    ///         it is no longer at threat of any target-seeking things, after it has
+    ///         been removed from the grid's lists of active and functional alerters.
+    /// </summary>
+    // todo: ditto
+    private void OnAlerterDeactivated(Entity<TargetSeekerAlertComponent> alertEntity)
+    {
+        if (alertEntity.Comp.Audio is { } alertAudio)
+            _audioSystem.Stop(alertAudio);
+
+        alertEntity.Comp.ActiveAlertSoundKey = null;
     }
 
     private void AddAlerterToGrid(EntityUid gridUid, EntityUid alertUid)
@@ -190,7 +202,9 @@ public sealed class TargetSeekerAlertSystem : EntitySystem
             if (!_alertQuery.TryGetComponent(alertUid, out var alertComponent))
                 continue;
 
-            gridEntity.Comp.ActiveAlerters.Add((alertUid, alertComponent));
+            Entity<TargetSeekerAlertComponent> alerterEntity = (alertUid, alertComponent);
+            gridEntity.Comp.ActiveAlerters.Add(alerterEntity);
+            OnAlerterActivated(alerterEntity);
         }
     }
 
@@ -199,10 +213,10 @@ public sealed class TargetSeekerAlertSystem : EntitySystem
         gridEntity.Comp.CurrentSeekers.Remove(args.Seeker);
         if (gridEntity.Comp.CurrentSeekers.Count == 0)
         {
+            gridEntity.Comp.ActiveAlerters.Clear();
+
             foreach (var activeAlertEntity in gridEntity.Comp.ActiveAlerters)
                 OnAlerterDeactivated(activeAlertEntity);
-
-            gridEntity.Comp.ActiveAlerters.Clear();
         }
     }
 }

@@ -267,21 +267,25 @@
     energy: 1.6
     color: "#ff8400"
   - type: TargetSeekerAlert
+    targetGainSound:
+      path: /Audio/_Mono/Effects/Alerts/launchwarning.ogg
+      params:
+        volume: 1.55
+        variation: 0.15
     distanceAlertSettings:
     - maximumDistance: 220 # curse of...
       sound:
-        path: /Audio/_Mono/Effects/Computer/high_beep.ogg
+        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
         params:
           loop: true
           volume: 1.2
-          pitch: 1.1
+          pitch: 1.25
     - maximumDistance: 600
       sound:
-        path: /Audio/_Mono/Effects/Computer/beep_series2.ogg
+        path: /Audio/_Mono/Effects/Alerts/target_seeker_beep.ogg
         params:
           loop: true
-          volume: 1.1
-          pitch: 0.98
+          volume: 0.85
 
 - type: entity
   parent: [BaseStructureComputerTabletop, ComputerGunneryConsole]

@@ -997,25 +997,22 @@
     energy: 1.6
     color: "#e6e227"
   - type: TargetSeekerAlert # Mono
+    targetGainSound:
+      path: /Audio/_Mono/Effects/Alerts/launchwarning.ogg
+      params:
+        volume: 1.55
+        variation: 0.1
     distanceAlertSettings:
     - maximumDistance: 280
       sound:
-        path: /Audio/_Mono/Effects/Computer/high_beep.ogg
+        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
         params:
           loop: true
-          volume: 1.5
+          volume: 1.4
           pitch: 1.25
-    - maximumDistance: 700
-      sound:
-        path: /Audio/_Mono/Effects/Computer/beep_series2.ogg
-        params:
-          loop: true
-          volume: 1.2
-          pitch: 1.1
-          variation: 0.05
     - maximumDistance: 1000
       sound:
-        path: /Audio/_Mono/Effects/target_seeker_beep.ogg
+        path: /Audio/_Mono/Effects/Alerts/target_seeker_beep.ogg
         params:
           loop: true
           volume: 0.7

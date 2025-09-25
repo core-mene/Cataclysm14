@@ -14,9 +14,9 @@ namespace Content.Server._Mono.TargetSeekingAlert;
 public sealed partial class TargetSeekerAlertComponent : Component
 {
     /// <summary>
-    ///     The audio entity playing.
+    ///     Sound played when a target initially starts tracking this entity. 
     /// </summary>
-    public EntityUid? Audio = null;
+    public SoundSpecifier? TargetGainSound = null;
 
     /// <summary>
     ///     List specifying information of the sound this alerter plays when the seeker closest to the entity
@@ -24,6 +24,11 @@ public sealed partial class TargetSeekerAlertComponent : Component
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public List<TargetSeekerAlertSetting> DistanceAlertSettings = new();
+
+    /// <summary>
+    ///     The audio entity playing from <see cref="DistanceAlertSettings"/>. 
+    /// </summary>
+    public EntityUid? Audio = null;
 
     /// <summary>
     ///     The key of the sound specified in <see cref="DistanceAlertSounds"/> currently playing. 
