@@ -36,6 +36,12 @@
     availableModes:
     - SemiAuto
     - FullAuto
+    # Mono
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/lmg.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+    # Mono end
   - type: ChamberMagazineAmmoProvider
   - type: ItemSlots
     slots:
