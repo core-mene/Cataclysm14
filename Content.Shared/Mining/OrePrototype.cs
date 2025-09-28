@@ -20,7 +20,7 @@ public sealed partial class OrePrototype : IPrototype
     public int MinOreYield = 1;
 
     [DataField]
-    public int MaxOreYield = 1;
+    public int MaxOreYield = 1;bunga
 
     [DataField]
     public SpriteSpecifier? OreSprite;
