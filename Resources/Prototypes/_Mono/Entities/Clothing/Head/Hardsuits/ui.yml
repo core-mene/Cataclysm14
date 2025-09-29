@@ -1,0 +1,161 @@
+# SPDX-FileCopyrightText: 2025 Arcticular1
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: [ClothingHeadHardsuitBase, BaseC3SyndicateContraband]
+  id: ClothingHelmetHardsuitUIEnforcer
+  name: Enforcer Combat helmet
+  description:
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Head/Hardsuits/ullman_industries_enforcer.rsi #Ullman sprites
+  - type: Clothing
+    sprite: _Mono/Clothing/Head/Hardsuits/ullman_industries_enforcer.rsi #Ullman sprites
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.85
+        Heat: 0.8
+  - type: RadarConsole
+    maxRange: 312
+    followEntity: true
+    pannable: true
+  - type: NightVision
+    flashDurationMultiplier: 0.85
+    isEquipment: true
+    color: "#AE65BFFF"
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Special
+    - FacialHair
+    - Snout
+    - Head
+    - HeadTop
+    - HeadSide
+
+- type: entity
+  parent: [ClothingHeadHardsuitBase, BaseC3SyndicateContraband]
+  id: ClothingHelmetHardsuitUIEnforcerMKII
+  name: Enforcer MKII Combat helmet
+  description:
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Head/Hardsuits/ullman_industries_enforcermkii.rsi #Ullman sprites
+  - type: Clothing
+    sprite: _Mono/Clothing/Head/Hardsuits/ullman_industries_enforcermkii.rsi #Ullman sprites
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.85
+        Heat: 0.8
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Special
+    - FacialHair
+    - Snout
+    - Head
+    - HeadTop
+    - HeadSide
+
+- type: entity
+  parent: [ClothingHeadHardsuitBase, BaseC3SyndicateContraband]
+  id: ClothingHelmetHardsuitUIEngineer
+  name: Enforcer Combat helmet
+  description:
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Head/Hardsuits/ullman_industries_engineer.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Head/Hardsuits/ullman_industries_engineer.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.85
+        Heat: 0.8
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Special
+    - FacialHair
+    - Snout
+    - Head
+    - HeadTop
+    - HeadSide
+
+- type: entity
+  parent: [ClothingHeadHardsuitBase, BaseC3SyndicateContraband]
+  id: ClothingHelmetHardsuitUIPilot
+  name: Enforcer Combat helmet
+  description:
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Head/Hardsuits/ullman_industries_pilot.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Head/Hardsuits/ullman_industries_pilot.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.85
+        Heat: 0.8
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Special
+    - FacialHair
+    - Snout
+    - Head
+    - HeadTop
+    - HeadSide
+
+- type: entity
+  parent: [ClothingHeadHardsuitBase, BaseC3SyndicateContraband]
+  id: ClothingHelmetHardsuitUIDirector
+  name: Enforcer Combat helmet
+  description:
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Head/Hardsuits/ullman_industries_director.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Head/Hardsuits/ullman_industries_director.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.85
+        Heat: 0.8
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Special
+    - FacialHair
+    - Snout
+    - Head
+    - HeadTop
+    - HeadSide
