@@ -198,33 +198,6 @@
     energyConsumption: 2700000
     disableDuration: 10
 
-# ZEUS
-
-- type: entity
-  id: ShipZeusProjectile
-  name: Zeus Cannon Blast
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Projectile
-    damage:
-      types:
-        Radiation: 300
-        Heat: 1000
-        Ion: 5000
-  - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_projectiles.rsi
-    state: zeus_projectile
-  - type: LightningOnTrigger
-    chance: 1
-    range: 10
-    lightningProto: LightningZeus
-  - type: EmpOnTrigger
-    range: 25
-    energyConsumption: 50000000
-    disableDuration: 30
-
-
 # DYMERE
 
 - type: entity
@@ -264,6 +237,85 @@
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
+
+# SCYTHE
+
+- type: entity
+  id: ShipNeutronProjectile
+  name: neutron projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 1000
+        Structural: 2500
+        Heat: 400
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_projectiles.rsi
+    layers:
+    - state: neutron_bolt
+    scale: 1.5, 1.5
+  - type: Ammo
+    muzzleFlash: MuzzleFlashEffectHeavyLaser
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    radarColor: "#ffffff"
+    scale: 1.5
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 8
+  - type: PointLight
+    radarColor: "#ffffff"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: DefaultShipGun
+    totalIntensity: 60
+    intensitySlope: 4
+    maxIntensity: 40
+
+# Harbringer
+
+- type: entity
+  id: ShipIonProjectile
+  name: Ion shot
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 750
+        Heat: 500
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_projectiles.rsi
+    layers:
+    - state: ion_blast
+  - type: Ammo
+    muzzleFlash: MuzzleFlashEffectTempCold
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    radarColor: "#9507fa"
+    scale: 3
+    requireNoGrid: true
+    shape: circle
+  - type: TimedDespawn
+    lifetime: 10
+  - type: PointLight
+    color: "#FB00FF"
+  - type: EmpOnTrigger
+    range: 9.5
+    energyConsumption: 4000000
+    disableDuration: 20
+  - type: LightningOnTrigger
+    chance: 1
+    count: 5
+    range: 30
+    lightningProto: LightningEMP
+    lightningEffects: false
+
 
 # region Laser Hitscans
 
@@ -323,6 +375,90 @@
   - type: HitscanBasicRaycast
     maxDistance: 600
 
+# Reaper
+
+- type: entity
+  parent: BasicHitscan
+  id: TachyonLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: muzzle_superheavy_prefrac
+    travelFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: Beam_SuperHeavy_prefrac
+    impactFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: impact_superheavy_prefrac
+  - type: HitscanRadarSignature
+    radarColor: "#005829"
+  - type: HitscanBasicDamage
+    damage:
+     types:
+      Heat: 30000
+      Structural: 100000
+  - type: HitscanSpawnEntity
+    spawnedEntity: TachyonExplosion
+  - type: HitscanBasicRaycast
+    maxDistance: 1500
+
+# Sunder
+
+- type: entity
+  parent: BasicHitscan
+  id: SunderLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: proton_muzzle
+    travelFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: proton_beam
+    impactFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: proton_impact
+  - type: HitscanRadarSignature
+    radarColor: "#ff9d00"
+  - type: HitscanBasicDamage
+    damage:
+     types:
+      Heat: 350
+      Structural: 2500
+  - type: HitscanSpawnEntity
+    spawnedEntity: SunderExplosion
+  - type: HitscanBasicRaycast
+    maxDistance: 750
+
+# Flayer
+
+- type: entity
+  parent: BasicHitscan
+  id: GaussRound
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: gauss_muzzle
+    travelFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: gauss_trail
+    impactFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: gauss_impact
+  - type: HitscanRadarSignature
+  - type: HitscanBasicDamage
+    damage:
+     types:
+      Piercing: 125
+      Structural: 200
+  - type: HitscanBasicRaycast
+    maxDistance: 500
+
 # Hitscan Explosions
 
 - type: entity
@@ -349,3 +485,15 @@
     totalIntensity: 7500
     intensitySlope: 100
     maxIntensity: 6000
+
+- type: entity
+  id: SunderExplosion
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TriggerOnSpawn
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 30
+    intensitySlope: 2
+    maxIntensity: 5

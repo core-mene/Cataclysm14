@@ -548,10 +548,11 @@
   - type: ShipGunType
     shipType: Energy
 
-# Tachyon Lance
+# PRE- FRACTURE
+# Tachyon Lance "Reaper"
 
 - type: entity
-  id: WeaponTurretTachyonLance
+  id: WeaponTurretReaper
   name: Tachyon Lance "Reaper"
   parent: BallisticArtilleryUnanchorable
   suffix: PRE-FRACTURE ONLY
@@ -620,43 +621,65 @@
   - type: ShipGunClass
     shipClass: Superheavy
 
-# Zeus
+# Ion Cannnon "Harbringer"
 
 - type: entity
-  id: WeaponTurretEMPZeus
-  name: TPC "ZEUS" EMP Cannon
+  id: WeaponTurretHarbringer
+  name: Ion Cannon "Harbringer"
   parent: BallisticArtilleryUnanchorable
-  description: One of the more unique weapons of the PC Armory, the zeus is an extremelty powerful EMP cannon, of which single shots can disable massive sections of shuttle due to the unique EMP arcs
+  suffix: PRE-FRACTURE ONLY
+  description: One of the most powerful EMP weapons in sector, its a sign of doom for its targets
   components:
   - type: StaticPrice
-    price: 25000
+    price: 1250000
   - type: Sprite
-    sprite:  _Mono/Objects/ShuttleWeapons/zeus.rsi
+    sprite: _Mono/Objects/ShuttleWeapons/harbringer.rsi
     layers:
     - state: space_artillery
+  - type: Appearance
+  - type: FireControlRotate
+  - type: AmmoCounter
+  - type: Battery
+    maxCharge: 40000
+    startingCharge: 40000
+  - type: ExaminableBattery
+  - type: WirelessNetworkConnection
+    range: 500
   - type: Gun
-    fireRate: .75
-    shootThermalSignature: 5000000
+    fireRate: 0.05
+    projectileSpeed: 750
+    shootThermalSignature: 18000000 # ~8.5km after firing
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
+      path: /Audio/_Mono/Weapons/Guns/Gunshots/leviathan_fire.ogg
     soundEmpty:
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
-  - type: ShipGunClass
-    shipClass: Heavy
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 800
+  - type: SpaceArtillery
+    powerChargeRate: 350
+    powerUsePassive: 1000
+    powerUseActive: 7500
+  - type: Actions
   - type: ProjectileBatteryAmmoProvider
-    proto: ShipZeusProjectile
-    fireCost: 5000
+    proto: ShipIonProjectile
+    fireCost: 4000
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        density: 1500
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 250000
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-    - trigger:
-        !type:DamageTrigger
-        damage: 275000
+        damage: 70000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -664,14 +687,208 @@
         sound:
           collection: MetalBreak
   - type: RadarBlip
-    radarColor: "#182ef0"
-    scale: 2
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.75,-0.75,0.75,0.75"
-        density: 1500
+    radarColor: "#450089"
+    scale: 3
   - type: ShipGunType
     shipType: Energy
+  - type: ShipGunClass
+    shipClass: Superheavy
+
+# Proton Cannon "Sunder"
+
+- type: entity
+  id: WeaponTurretSunder
+  name: Proton Cannon "Sunder"
+  parent: BallisticArtillery
+  suffix: PRE-FRACTURE ONLY
+  description: A potent proton cannon from before the fracture, known for melting holes through inorganic and organic matter with ease.
+  components:
+  - type: StaticPrice
+    price: 30000
+  - type: Sprite
+    sprite: _Mono/Objects/ShuttleWeapons/sunder.rsi
+    layers:
+    - state: space_artillery
+  - type: Appearance
+  - type: AmmoCounter
+  - type: Battery
+    maxCharge: 40000
+    startingCharge: 40000
+  - type: ExaminableBattery
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: Gun
+    fireRate: 1.5
+    shootThermalSignature: 4000000 # ~2.8km with continuous fire
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 350
+  - type: SpaceArtillery
+    powerChargeRate: 350
+    powerUsePassive: 500
+    powerUseActive: 0
+  - type: FireControlRotate
+  - type: Actions
+  - type: HitscanBatteryAmmoProvider
+    proto: SunderLaser
+    fireCost: 500
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: RadarBlip
+    radarColor: "#ff9d00"
+    scale: 2
+  - type: ShipGunType
+    shipType: Energy
+  - type: ShipGunClass
+    shipClass: Medium
+
+# Neutron Repeater "Scythe"
+
+- type: entity
+  id: WeaponTurretScythe
+  name: Neutron Repeater "Scythe"
+  parent: BallisticArtillery
+  suffix: PRE-FRACTURE
+  description: A steadily firing neutron repeater, dealing solid damage to most targets. A pre-fracture marvel of weapons technology
+  components:
+  - type: StaticPrice
+    price: 40000
+  - type: Sprite
+    sprite: _Mono/Objects/ShuttleWeapons/scythe.rsi
+    layers:
+    - state: space_artillery
+  - type: Appearance
+  - type: AmmoCounter
+  - type: Battery
+    maxCharge: 30000
+    startingCharge: 30000
+  - type: ExaminableBattery
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: Gun
+    fireRate: 5
+    projectileSpeed: 400
+    shootThermalSignature: 500000 # ~5.6km with continuous fire
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/Gunshots/autopulse_laser_fire_01.ogg
+    soundEmpty:
+      path: /Audio/Weapons/click.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 600
+  - type: SpaceArtillery
+    powerChargeRate: 700
+    powerUsePassive: 100
+    powerUseActive: 0
+  - type: FireControlRotate
+  - type: Actions
+  - type: ProjectileBatteryAmmoProvider
+    proto: ShipNeutronProjectile
+    fireCost: 300
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 15000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 11500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: RadarBlip
+    radarColor: "#C92BCC"
+    scale: 1.5
+  - type: ShipGunType
+    shipType: Energy
+  - type: ShipGunClass
+    shipClass: Heavy
+
+# Auto-Coil "Flayer"
+
+- type: entity
+  id: WeaponLaserTurretFlayer
+  name: Auto-Coil "Flayer"
+  parent: BallisticArtillery
+  suffix: PRE-FRACTURE
+  description: A unique pre-fracture weapon, the Flayer fires a storm of tugnsten alloy darts at near the speed of light, barraging targets to pieces.
+  components:
+  - type: StaticPrice
+    price: 25000
+  - type: Sprite
+    sprite:  _Mono/Objects/ShuttleWeapons/flayer.rsi
+    layers:
+    - state: space_artillery
+  - type: Appearance
+  - type: AmmoCounter
+  - type: Battery
+    maxCharge: 50000
+    startingCharge: 50000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 500
+  - type: ExaminableBattery
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: Gun
+    fireRate: 25
+    shootThermalSignature: 2000000
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
+  - type: SpaceArtillery
+    powerChargeRate: 200
+    powerUsePassive: 300
+    powerUseActive: 0
+  - type: FireControlRotate
+  - type: Actions
+  - type: HitscanBatteryAmmoProvider
+    proto: GaussRound
+    fireCost: 25
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: ShipGunType
+    shipType: Ballistic
+  - type: ShipGunClass
+    shipClass: Light
