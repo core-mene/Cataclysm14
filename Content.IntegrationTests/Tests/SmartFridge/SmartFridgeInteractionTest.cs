@@ -42,7 +42,7 @@ public sealed class SmartFridgeInteractionTest : InteractionTest
         var component = SEntMan.GetComponent<SmartFridgeComponent>(fridge);
 
         await SpawnEntity("APCBasic", SEntMan.GetCoordinates(TargetCoords));
-        await RunTicks(1);
+        await RunTicks(20); // Mono - 20 ticks instead of 1 due to power update change
 
         // smartfridge spawns with nothing
         Assert.That(component.Entries, Is.Empty);
@@ -81,7 +81,7 @@ public sealed class SmartFridgeInteractionTest : InteractionTest
         var component = SEntMan.GetComponent<SmartFridgeComponent>(fridge);
 
         await SpawnEntity("APCBasic", SEntMan.GetCoordinates(TargetCoords));
-        await RunTicks(1);
+        await RunTicks(20); // Mono: 20 ticks instead of 1 due to power update change
 
         await InteractUsing(SampleDumpableAndInsertableId);
 
@@ -100,7 +100,7 @@ public sealed class SmartFridgeInteractionTest : InteractionTest
         var component = SEntMan.GetComponent<SmartFridgeComponent>(fridge);
 
         await SpawnEntity("APCBasic", SEntMan.GetCoordinates(TargetCoords));
-        await RunTicks(1);
+        await RunTicks(20); // Mono: 20 ticks instead of 1 due to power update change
 
         await InteractUsing(SampleDumpableId);
 
