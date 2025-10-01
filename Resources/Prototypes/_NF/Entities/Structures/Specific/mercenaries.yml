@@ -1,8 +1,13 @@
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: XenoWardingTower
   id: MercenaryCounterfeitCache
   name: counterfeit cache
-  description: "Cache with counterfeit spesos, bootleg movie posters."
+  description: "Cache with counterfeit credits, bootleg movie posters."
   components:
   - type: Sprite
     sprite: _NF/Structures/Specific/Mercenaries/counterfeitcache.rsi

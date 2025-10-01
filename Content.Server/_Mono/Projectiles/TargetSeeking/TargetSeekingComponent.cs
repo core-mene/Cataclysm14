@@ -1,11 +1,10 @@
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 LaCumbiaDelCoronavirus
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 RikuTheKiller
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
-
-using System.Numerics;
 
 namespace Content.Server._Mono.Projectiles.TargetSeeking;
 
@@ -38,6 +37,12 @@ public sealed partial class TargetSeekingComponent : Component
     /// </summary>
     [DataField]
     public EntityUid? CurrentTarget;
+
+    /// <summary>
+    /// Should tracked entities know that they are being tracked?
+    /// </summary>
+    [DataField]
+    public bool ExposesTracking = true;
 
     /// <summary>
     /// Tracking algorithm used for intercepting the target.

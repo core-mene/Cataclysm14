@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
   id: ClothingModsuitChestplateStandard
   name: standard modsuit chestplate
   description: A special modular suit spaceproof cover designed for compact folding inside modular suit control.
@@ -60,7 +60,7 @@
     reduction: 0.5
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
   id: ClothingModsuitChestplateSecurity
   name: soldat MODsuit chestplate
   description: A robust modular suit cover with ceramic inserts for extra protection.
@@ -117,7 +117,7 @@
 
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
   id: ClothingModsuitChestplateHeadOfSecurity
   name: bulwark modsuit chestplate
   description: A robust modular suit cover with EXTRA ceramic inserts for slightly more protection.
@@ -174,7 +174,7 @@
     reduction: 0.5
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
   id: ClothingModsuitChestplateParamedic
   name: sanitater modsuit chestplate
   description: A white and blue-ish-grey steel plate for keeping out the harsh void of space and the occasional bullet.
@@ -231,7 +231,7 @@
     reduction: 0.5
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
   id: ClothingModsuitChestplateEngineer
   name: sapper modsuit chestplate
   description: A tough armor plate to defend against harsh atmospheric conditions and shockwaves.
@@ -289,7 +289,7 @@
     reduction: 0.5 # Mono
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
   id: ClothingModsuitChestplateAtmostech
   name: aeolus modsuit chestplate
   description: A fire-proof armor plate to defend against harsh atmospheric conditions.
@@ -345,7 +345,7 @@
     reduction: 0.0
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
   id: ClothingModsuitChestplateResearchDirector
   name: minerva modsuit chestplate
   description: A bulky bomb and bat proof chunk of steel.
@@ -403,7 +403,7 @@
     reduction: 0.5
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
   id: ClothingModsuitChestplateCaptain
   name: magnate modsuit chestplate
   description: This shit is made out of DIAMONDS, man, this armor was forged with GEMS.

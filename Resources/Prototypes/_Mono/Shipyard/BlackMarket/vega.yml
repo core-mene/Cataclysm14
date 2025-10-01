@@ -32,7 +32,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Vega RG{1}'
+          mapNameTemplate: 'Vega ASR{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

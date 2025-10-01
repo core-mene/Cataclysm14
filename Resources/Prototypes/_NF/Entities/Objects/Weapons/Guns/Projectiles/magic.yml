@@ -1,4 +1,10 @@
-﻿- type: entity
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 bitcrushing
+#
+# SPDX-License-Identifier: MIT
+
+- type: entity
   parent: BaseBulletTrigger
   id: BulletFireBolt
   name: fire bolt
@@ -57,20 +63,27 @@
   - type: Ammo
     muzzleFlash: null
 
-- type: hitscan
+# Mono Start - Changed type from hitscan to entity, components also changed
+- type: entity
   id: BloodCultLaser
-  damage:
-    types:
-      Slash: 10
-  muzzleFlash:
-    sprite: _NF/Effects/bloodcultbeams.rsi
-    state: red_lightning
-  travelFlash:
-    sprite: _NF/Effects/bloodcultbeams.rsi
-    state: red_lightning
-  impactFlash:
-    sprite: _NF/Effects/bloodcultbeams.rsi
-    state: red_lightning
+  parent: BasicHitscan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Slash: 10
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: _NF/Effects/bloodcultbeams.rsi
+      state: red_lightning
+    travelFlash:
+      sprite: _NF/Effects/bloodcultbeams.rsi
+      state: red_lightning
+    impactFlash:
+      sprite: _NF/Effects/bloodcultbeams.rsi
+      state: red_lightning
+# Mono End - Changed type from hitscan to entity, components also changed
 
 - type: entity # For blood cult cat
   parent: BaseBullet

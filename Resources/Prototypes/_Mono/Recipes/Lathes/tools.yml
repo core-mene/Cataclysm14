@@ -1,4 +1,6 @@
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -6,5 +8,19 @@
   parent: BaseToolRecipe
   id: MaintenanceJack
   result: MaintenanceJack
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: ExperimentalNaniteApplicator
+  result: NaniteApplicatorExperimental
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: NaniteApplicatorSyndicate
+  result: NaniteApplicatorSyndicate
   materials:
     Steel: 500

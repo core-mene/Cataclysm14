@@ -70,17 +70,31 @@
   position: 13, 7
 
 - type: technology
+  id: TsfPolaris
+  name: research-technology-tsfmc-polaris-voucher
+  entityIcon: ShipVoucherPolaris
+  discipline: TsfmcShipyard
+  tier: 2
+  cost: 60000
+  recipeUnlocks:
+  - PolarisVoucherTSF
+  technologyPrerequisites:
+  - UniversalMaterialResearchT2
+  position: 11, 9
+
+- type: technology
   id: TsfFlyssa
   name: research-technology-tsfmc-flyssa-voucher
   entityIcon: ShipVoucherFlyssa
   discipline: TsfmcShipyard
-  tier: 2
+  tier: 3
   cost: 100000
   recipeUnlocks:
   - FlyssaVoucherTSF
   technologyPrerequisites:
   - TsfSynthalloyProduction
-  position: 13, 12
+  - TsfPolaris
+  position: 13, 14
 
 - type: technology
   id: TsfMeds

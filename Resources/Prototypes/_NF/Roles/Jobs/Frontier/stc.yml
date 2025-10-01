@@ -37,11 +37,6 @@
   - Frontier
   - StationTrafficController
   special:
-  - !type:AddLanguageSpecial
-    languagesSpoken:
-    - SolCommon
-    languagesUnderstood:
-    - SolCommon
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

@@ -1,2 +1,2 @@
-store-preset-name-pirate-uplink = Rogue Uplink
+store-preset-name-pirate-uplink = ASR Uplink
 store-preset-name-nfsd-uplink = TSFMC Uplink

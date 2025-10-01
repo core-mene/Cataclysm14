@@ -17,6 +17,7 @@
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -1153,6 +1154,9 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
+    missingComponents:
+    - Construction
+    - Anchorable
 - proto: ComputerShuttle
   entities:
   - uid: 147

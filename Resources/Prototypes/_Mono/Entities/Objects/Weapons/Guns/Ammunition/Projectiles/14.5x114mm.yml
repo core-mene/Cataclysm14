@@ -12,9 +12,11 @@
 # SPDX-FileCopyrightText: 2023 metalgearsloth
 # SPDX-FileCopyrightText: 2023 vanx
 # SPDX-FileCopyrightText: 2024 Plykiya
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 SX-7
 # SPDX-FileCopyrightText: 2025 SlamBamActionman
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -35,3 +37,6 @@
     - Structural
   - type: StaminaDamageOnCollide
     damage: 60
+  - type: Tracer
+    color: "#FFFFFFFF"
+    length: 3

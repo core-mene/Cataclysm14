@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 bluebrouny
@@ -28,6 +29,8 @@
       state: cpu_command
     - type: ComputerBoard
       prototype: ComputerGunneryConsole
+    - type: ComputerTabletopBoard
+      prototype: ComputerTabletopGunneryConsole
 
 - type: entity
   parent: StationAiUploadCircuitboard

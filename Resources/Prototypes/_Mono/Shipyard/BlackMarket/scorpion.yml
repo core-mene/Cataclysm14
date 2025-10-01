@@ -35,7 +35,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Scorpion RG{1}'
+          mapNameTemplate: 'Scorpion ASR{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

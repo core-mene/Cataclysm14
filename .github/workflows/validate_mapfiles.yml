@@ -8,6 +8,7 @@
 # SPDX-FileCopyrightText: 2025 Coenx-flex
 # SPDX-FileCopyrightText: 2025 Cojoke
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -25,7 +26,7 @@ jobs:
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3.6.0
+    - uses: actions/checkout@v4.2.2
     - name: Setup Submodule
       run: git submodule update --init
     - name: Pull engine updates
@@ -35,4 +36,4 @@ jobs:
         schema: RobustToolbox/Schemas/mapfile.yml
         path_pattern: .*Resources/Maps/.*
         validators_path: RobustToolbox/Schemas/mapfile_validators.py
-        validators_requirements: RobustToolbox/Schemas/mapfile_requirements.txt
+        validators_requirements: .github/Schemas/mapfile_requirements.txt

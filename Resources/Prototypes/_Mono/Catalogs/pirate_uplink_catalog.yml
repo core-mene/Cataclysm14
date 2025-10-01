@@ -276,7 +276,7 @@
   id: UplinkPirateSyndicateMagboots
   name: uplink-pirate-syndicate-magboots-name
   description: uplink-pirate-syndicate-magboots-desc
-  productEntity: ClothingShoesBootsMagSyndie
+  productEntity: ClothingShoesBootsMagAshen
   cost:
     Doubloon: 5
   categories:
@@ -515,6 +515,21 @@
   icon: { sprite: _NF/Objects/Economy/cash.rsi, state: cash_100000 }
   cost:
     Doubloon: 50
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateSyndicateApplicator
+  name: uplink-syndicate-applicator-name
+  description: uplink-syndicate-applicator-desc
+  productEntity: NaniteApplicatorSyndicate
+  cost:
+    Doubloon: 35
   categories:
   - UplinkPirateUtility
   conditions:

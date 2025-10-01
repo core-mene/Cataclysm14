@@ -1,0 +1,47 @@
+# SPDX-FileCopyrightText: 2025 BoskiYourk
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 grandalff
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: vessel
+  id: Strayk
+  parent: BaseVesselAntag
+  name: NCS Strayk
+  description: A poorly equipped and cramped strike craft. Outfitted with 2 torpedo launchers and 1 30mm chaingun.
+  price: 45820
+  category: Small
+  group: Ussp
+  access: USSP
+  shuttlePath: /Maps/_Mono/Shuttles/USSP/strayk.yml
+  guidebookPage: Null
+  class:
+  - Pursuit
+  engine:
+  - Uranium
+  cloakHunter: true
+  company:
+  - USSP
+
+- type: gameMap
+  id: Strayk
+  mapName: 'Strayk'
+  mapPath: /Maps/_Mono/Shuttles/USSP/strayk.yml
+  minPlayers: 0
+  stations:
+    Strayk:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Strayk USSP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            USSPSergeant: [0, 0]
+            USSPCorporal: [0, 0]
+            USSPMedic: [0, 0]
+            USSPRifleman: [0, 0]

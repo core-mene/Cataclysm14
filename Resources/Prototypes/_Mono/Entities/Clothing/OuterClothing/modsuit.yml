@@ -8,7 +8,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
   id: ClothingModsuitChestplateUSSPVaryag
   name: Panzerkorps Varyag
   description: Thick plating fused with internal atmosphere control.
@@ -63,7 +63,7 @@
     reduction: 0.7
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
   id: ClothingModsuitChestplateUSSPZastavnik
   name: Brust Zastavnika
   description: An imposing armored shell designed to absorb punishment and maintain stability under pressure.
@@ -118,7 +118,7 @@
     reduction: 0.5
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
   id: ClothingModsuitChestplateRogue
   name: RX-01 modsuit chestplate
   description: The chestpiece has some warning label on the inside about radiation leaks- and a note next to it 'Remove this label in the final product - Felix
@@ -176,7 +176,7 @@
 # Volta
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
   id: ClothingModsuitChestplateVolta
   name: Volta Modsuit Chestplate
   description: Reinforced military modification of Sapper Modsuit, featuring better bullet resistance.

@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 gus
 //
@@ -59,4 +60,11 @@ public sealed partial class FTLDriveComponent : Component
     [DataField]
     [AutoNetworkedField]
     public float DriveMassMultiplier = 1f;
+
+    /// <summary>
+    /// Thermal signature produced while on cooldown or spooling up, if <see cref="ThermalSignatureComponent"/> is present.
+    /// </summary>
+    [DataField]
+    [AutoNetworkedField]
+    public float ThermalSignature = 2000000; // ~2.8km
 }

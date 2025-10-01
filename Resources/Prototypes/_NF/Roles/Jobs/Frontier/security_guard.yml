@@ -65,12 +65,7 @@
   - Frontier
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, TrackingImplant ]
-  - !type:AddLanguageSpecial
-    languagesSpoken:
-    - SolCommon
-    languagesUnderstood:
-    - SolCommon
+    implants: [ MindShieldImplant ] # Mono - remove TSFMC implant
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

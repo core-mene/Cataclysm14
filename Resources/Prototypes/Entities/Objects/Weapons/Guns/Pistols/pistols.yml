@@ -126,6 +126,17 @@
     rsi:
       sprite: _RMC14/Interface/MousePointer/pistol_mouse.rsi
       state: all
+  # Goobstation edit start
+  - type: EmitSoundOnPickup
+    sound:
+      collection: PistolsPickUp
+  - type: EmitSoundOnDrop
+    sound:
+      collection: PistolsDrop
+  - type: EmitSoundOnLand
+    sound:
+      collection: PistolsDrop
+  # Goobstation edit end
 
 - type: entity
   name: LWC PT-45A viper (9x19mm)

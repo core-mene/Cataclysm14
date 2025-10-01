@@ -33,6 +33,19 @@
       state: derelict_icon
 
 - type: entity
+  name: chimera ghostrole spawner
+  id: SpawnChimeraGhostrole
+  parent: MarkerBase
+  components:
+  - type: ConditionalSpawner
+    prototypes:
+    - MobLetoferolHorrorGhostrole
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+    - state: green
+
+- type: entity
   name: asakim warrior spawner
   id: SpawnAsakimWarrior
   parent: MarkerBase

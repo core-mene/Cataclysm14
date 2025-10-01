@@ -31,8 +31,11 @@
     energy: 3
     color: "#e24242"
   - type: RadarConsole
-    maxRange: 350
+    maxRange: 512
     followEntity: true
+  - type: DetectionRangeMultiplier
+    infraredMultiplier: 0.5 # from 1
+    visualMultiplier: 3 # from 4
   - type: ActivatableUI
     key: enum.RadarConsoleUiKey.Key
     singleUser: true

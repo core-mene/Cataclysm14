@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -100,6 +101,16 @@
         conditions:
         - !type:ReagentThreshold
           min: 15
+        - !type:HasTag
+          tag: Humanoid
+      - !type:Polymorph
+        prototype: LetoferolMutationBeastNatural
+        conditions:
+        - !type:ReagentThreshold
+          min: 10 # less for non-humanoids
+        - !type:HasTag
+          tag: Humanoid
+          invert: true
       - !type:PopupMessage
         conditions:
         - !type:ReagentThreshold
