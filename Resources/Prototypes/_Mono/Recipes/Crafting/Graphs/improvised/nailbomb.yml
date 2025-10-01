@@ -38,14 +38,15 @@
       - material: Cable
         amount: 5
         doAfter: 2
+
   - node: nailbomb
     entity: NailBomb
-    edges:
-    - to: cable
-      completed:
-      - !type:SpawnPrototype
-        prototype: CableApcStack1
-        amount: 5
-      steps:
-      - tool: Cutting
-        doAfter: 2
+    # edges: # what is this for even?
+    # - to: cable
+    #   completed:
+    #   - !type:SpawnPrototype
+    #     prototype: CableApcStack1
+    #     amount: 5
+    #   steps:
+    #   - tool: Cutting
+    #     doAfter: 2
