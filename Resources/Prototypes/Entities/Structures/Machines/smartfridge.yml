@@ -129,7 +129,7 @@
 - type: entity
   parent: SmartFridge
   id: SmartFridgeMedical
-  suffix: Medical
+  suffix: Medical, Locked
   components:
   - type: SmartFridge
     flavorText: smart-fridge-request-chemistry
