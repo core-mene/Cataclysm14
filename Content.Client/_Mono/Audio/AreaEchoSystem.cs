@@ -25,9 +25,8 @@ using DependencyAttribute = Robust.Shared.IoC.DependencyAttribute;
 
 namespace Content.Client._Mono.Audio;
 
-// i would make this more generalised but theres not really any point
 /// <summary>
-///     Handles making sounds 'echo' in large, open spaces.
+///     Handles making sounds 'echo' in large, open spaces. Uses simplified raytracing.
 /// </summary>
 public sealed class AreaEchoSystem : EntitySystem
 {
@@ -54,7 +53,7 @@ public sealed class AreaEchoSystem : EntitySystem
     /// <remarks>
     ///     Keep in ascending order.
     /// </remarks>
-    private static readonly List<(float, ProtoId<AudioPresetPrototype>)> DistancePresets = new() { (15f, "Hallway"), (25f, "Auditorium"), (40f, "ConcertHall") };
+    private static readonly List<(float, ProtoId<AudioPresetPrototype>)> DistancePresets = new() { (6f, "Hallway"), (8.75f, "Auditorium"), (12f, "ConcertHall") };
 
     /// <summary>
     ///     When is the next time we should check all audio entities and see if they are eligible to be updated.
@@ -66,9 +65,11 @@ public sealed class AreaEchoSystem : EntitySystem
     /// </summary>
     private int _echoLayer = (int)(CollisionGroup.Opaque | CollisionGroup.Impassable); // this could be better but whatever
 
+    private int _echoMaxReflections;
     private bool _echoEnabled = true;
-    private float _calculationalFidelity = 5f;
     private TimeSpan _calculationInterval = TimeSpan.FromSeconds(15); // how often we should check existing audio re-apply or remove echo from them when necessary
+    private float _calculationalFidelity;
+    private float _echoFalloffConstant;
 
     private EntityQuery<MapGridComponent> _gridQuery;
     private EntityQuery<RoofComponent> _roofQuery;
@@ -77,11 +78,14 @@ public sealed class AreaEchoSystem : EntitySystem
     {
         base.Initialize();
 
+        _configurationManager.OnValueChanged(MonoCVars.AreaEchoReflectionCount, x => _echoMaxReflections = x, invokeImmediately: true);
+
         _configurationManager.OnValueChanged(MonoCVars.AreaEchoEnabled, x => _echoEnabled = x, invokeImmediately: true);
         _configurationManager.OnValueChanged(MonoCVars.AreaEchoHighResolution, x => _calculatedDirections = GetEffectiveDirections(x), invokeImmediately: true);
 
-        _configurationManager.OnValueChanged(MonoCVars.AreaEchoStepFidelity, x => _calculationalFidelity = x);
         _configurationManager.OnValueChanged(MonoCVars.AreaEchoRecalculationInterval, x => _calculationInterval = x, invokeImmediately: true);
+        _configurationManager.OnValueChanged(MonoCVars.AreaEchoStepFidelity, x => _calculationalFidelity = x, invokeImmediately: true);
+        _configurationManager.OnValueChanged(MonoCVars.AreaEchoFalloff, x => _echoFalloffConstant = x, invokeImmediately: true);
 
         _gridQuery = GetEntityQuery<MapGridComponent>();
         _roofQuery = GetEntityQuery<RoofComponent>();
@@ -186,9 +190,9 @@ public sealed class AreaEchoSystem : EntitySystem
         This works under a few assumptions:
         - An entity in space is invalid
         - Any spaced tile is invalid
-        - If the grid has RoofComponent:
-        - - Only now, will rays end on invalid tiles (space) or unrooved tiles
-        - - This is checked every `_calculationalFidelity`-ish tiles. Not precisely. But somewhere around that. Its moreso just proportional to that.
+        - Rays end on invalid tiles (space) or unrooved tiles, and dont process on separate grids.
+        - - This checked every `_calculationalFidelity`-ish tiles. Not precisely. But somewhere around that. Its moreso just proportional to that.
+        - Rays bounce.
     */
     public bool TryProcessAreaSpaceMagnitude(Entity<TransformComponent> entity, float maximumMagnitude, out float magnitude)
     {
@@ -216,8 +220,7 @@ public sealed class AreaEchoSystem : EntitySystem
         var checkRoof = _roofQuery.TryGetComponent(entityGrid, out var roofComponent);
         var tileRef = _mapSystem.GetTileRef(entityGrid, gridComponent, lastEntityBeforeGrid.Comp.Coordinates);
 
-        if (checkRoof &&
-            tileRef.Tile.IsEmpty)
+        if (tileRef.Tile.IsEmpty)
             return false;
 
         var gridRoofEntity = new Entity<MapGridComponent, RoofComponent?>(entityGrid, gridComponent, roofComponent);
@@ -225,58 +228,145 @@ public sealed class AreaEchoSystem : EntitySystem
             !_roofSystem.IsRooved(gridRoofEntity!, tileRef.GridIndices))
             return false;
 
-        var gridTileSize = gridComponent.TileSize;
         var originTileIndices = tileRef.GridIndices;
         var worldPosition = _transformSystem.GetWorldPosition(transformComponent);
 
+        // At this point, we are ready for war against the client's pc.
         foreach (var direction in _calculatedDirections)
         {
-            var directionVector = (direction + entityGrid.Comp.LocalRotation).ToVec();
-            var directionFidelityStep = directionVector * _calculationalFidelity;
-            var dSqStep = (directionFidelityStep * directionFidelityStep).LengthSquared(); // ???
+            var currentDirectionVector = (direction + entityGrid.Comp.LocalRotation)/* << relative to grid */.ToVec();
 
-            var ray = new CollisionRay(worldPosition, directionVector, _echoLayer);
-            var rayResults = _physicsSystem.IntersectRay(transformComponent.MapID, ray, maxLength: maximumMagnitude, ignoredEnt: lastEntityBeforeGrid, returnOnFirstHit: true);
+            var totalDistance = 0f;
+            var remainingDistance = maximumMagnitude;
 
-            // if we hit something, distance to that is magnitude but it must be lower than maximum. if we didnt hit anything, it's maximum magnitude
-            var rayMagnitude = rayResults.TryFirstOrNull(out var firstResult) ?
-                MathF.Min(firstResult.Value.Distance, maximumMagnitude) :
-                maximumMagnitude;
+            var currentOriginWorldPosition = worldPosition;
+            var currentOriginTileIndices = originTileIndices;
 
-            var rayMagnitudeSquared = rayMagnitude * rayMagnitude;
-            var incrementedRayMagnitudeSquared = 0f;
-
-            // find the furthest distance this ray reaches until its on an unrooved/dataless (space) tile
-            var nextCheckedPosition = new Vector2(originTileIndices.X, originTileIndices.Y) + directionFidelityStep;
-
-            for (; incrementedRayMagnitudeSquared < rayMagnitudeSquared;)
+            for (var reflectIteration = 0; reflectIteration < _echoMaxReflections || reflectIteration == 0 /* if maxreflections is 0 we still cast atleast once */; reflectIteration++)
             {
-                var nextCheckedTilePosition = new Vector2i(
-                    (int)MathF.Floor(nextCheckedPosition.X / gridTileSize),
-                    (int)MathF.Floor(nextCheckedPosition.Y / gridTileSize)
+                var (distanceCovered, raycastResults) = CastEchoRay(
+                    currentOriginWorldPosition,
+                    currentOriginTileIndices,
+                    currentDirectionVector,
+                    transformComponent.MapID,
+                    lastEntityBeforeGrid,
+                    gridRoofEntity,
+                    checkRoof,
+                    remainingDistance
                 );
 
-                if (checkRoof)
-                { // if we're checking roofs, end this ray if this tile is unrooved or dataless (latter is inherent of this method)
-                    if (!_roofSystem.IsRooved(gridRoofEntity!, nextCheckedTilePosition))
-                        break;
-                } // if we're not checking roofs, end this ray if this tile is empty/space
-                else if (!_mapSystem.TryGetTileRef(entityGrid, gridComponent, nextCheckedTilePosition, out var tile) ||
-                    tile.Tile.IsSpace(_tileDefinitionManager))
+                totalDistance += distanceCovered;
+                remainingDistance -= distanceCovered;
+
+                // we don't need further logic anyway
+                if (reflectIteration == _echoMaxReflections)
                     break;
 
-                nextCheckedPosition += directionFidelityStep;
-                incrementedRayMagnitudeSquared += dSqStep;
-            }
+                if (raycastResults is not { }) // means we didnt hit anything
+                    break;
 
-            // todo: more realistic estimation?
-            magnitude += incrementedRayMagnitudeSquared > float.Epsilon ?
-                MathF.Sqrt(incrementedRayMagnitudeSquared) :
-                0f;
+                // i think cross-grid would actually be pretty easy here? but the tile-marching doesnt often account for that at fidelities above 1 so whatever.
+                currentOriginWorldPosition = raycastResults.Value.HitPos;
+                if (!_mapSystem.TryGetTileRef(entityGrid, gridComponent, currentOriginWorldPosition, out var hitTileRef)) // means tile that ray hit is invalid, just assume the ray ends here
+                    break;
+
+                currentOriginTileIndices = hitTileRef.GridIndices;
+                var hitNormal =
+            }
         }
 
         magnitude /= _calculatedDirections.Length;
+        Log.Info($"Magnitude {magnitude} for {ToPrettyString(entity.Owner)}");
         return true;
+    }
+
+    /// <remarks>
+    ///     <paramref name="normal"/> should be normalised upon calling.
+    /// </remarks>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    private static Vector2 Reflect(in Vector2 direction, in Vector2 normal)
+        => direction - 2 * Vector2.Dot(direction, normal) * normal;
+
+    // this caused vsc to spike to 28gb memory usage
+    /// <summary>
+    ///     Casts a ray and marches it. See <see cref="MarchRayByTiles"/>. 
+    /// </summary>
+    private (float, RayCastResults?) CastEchoRay(
+        in Vector2 originWorldPosition,
+        in Vector2i originTileIndices,
+        in Vector2 directionVector,
+        in MapId mapId,
+        in EntityUid ignoredEntity,
+        in Entity<MapGridComponent, RoofComponent?> gridRoofEntity,
+        bool checkRoof,
+        float maximumDistance
+    )
+    {
+        var directionFidelityStep = directionVector * _calculationalFidelity;
+
+        var ray = new CollisionRay(originWorldPosition, directionVector, _echoLayer);
+        var rayResults = _physicsSystem.IntersectRay(mapId, ray, maxLength: maximumDistance, ignoredEnt: ignoredEntity, returnOnFirstHit: true);
+
+        // if we hit something, distance to that is magnitude but it must be lower than maximum. if we didnt hit anything, it's maximum magnitude
+        var rayMagnitude = rayResults.TryFirstOrNull(out var firstResult) ?
+            MathF.Min(firstResult.Value.Distance, maximumDistance) :
+            maximumDistance;
+
+        var nextCheckedPosition = new Vector2(originTileIndices.X, originTileIndices.Y) + directionFidelityStep;
+
+        var rayMagnitudeSquared = rayMagnitude * rayMagnitude;
+        var incrementedRayMagnitudeSquared = MarchRayByTiles(
+            rayMagnitudeSquared,
+            gridRoofEntity,
+            directionFidelityStep,
+            ref nextCheckedPosition,
+            gridRoofEntity.Comp1.TileSize,
+            checkRoof
+        );
+
+        return (MathF.Sqrt(incrementedRayMagnitudeSquared), firstResult);
+    }
+
+    /// <summary>
+    ///     Advances a ray, in intervals of `_calculationalFidelity`, by tiles until
+    ///         reaching an unrooved tile (if checking roofs) or space.
+    /// </summary>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    private float MarchRayByTiles(
+        in float rayMagnitudeSquared,
+        in Entity<MapGridComponent, RoofComponent?> gridRoofEntity,
+        in Vector2 directionFidelityStep,
+        ref Vector2 nextCheckedPosition,
+        ushort gridTileSize,
+        bool checkRoof
+    )
+    {
+        // find the furthest distance this ray reaches until its on an unrooved/dataless (space) tile
+
+        var fidelityStepLengthSquared = directionFidelityStep.LengthSquared();
+        var incrementedRayMagnitudeSquared = 0f;
+
+        for (; incrementedRayMagnitudeSquared < rayMagnitudeSquared;)
+        {
+            var nextCheckedTilePosition = new Vector2i(
+                (int)MathF.Floor(nextCheckedPosition.X / gridTileSize),
+                (int)MathF.Floor(nextCheckedPosition.Y / gridTileSize)
+            );
+
+            if (checkRoof)
+            { // if we're checking roofs, end this ray if this tile is unrooved or dataless (latter is inherent of this method)
+                if (!_roofSystem.IsRooved(gridRoofEntity!, nextCheckedTilePosition))
+                    break;
+            } // if we're not checking roofs, end this ray if this tile is empty/space
+            else if (!_mapSystem.TryGetTileRef(gridRoofEntity, gridRoofEntity, nextCheckedTilePosition, out var tile) ||
+                tile.Tile.IsSpace(_tileDefinitionManager))
+                break;
+
+            nextCheckedPosition += directionFidelityStep;
+            incrementedRayMagnitudeSquared += fidelityStepLengthSquared;
+        }
+
+        return incrementedRayMagnitudeSquared;
     }
 
     private void ProcessAudioEntity(Entity<AudioComponent> entity, TransformComponent transformComponent, float minimumMagnitude, float maximumMagnitude)
@@ -302,6 +392,7 @@ public sealed class AreaEchoSystem : EntitySystem
             _audioEffectSystem.TryRemoveEffect(entity);
     }
 
+    // Maybe TODO: defer this onto ticks? but whatever its just clientside
     private void OnAudioParentChanged(Entity<AudioComponent> entity, ref EntParentChangedMessage args)
     {
         if (args.Transform.MapID == MapId.Nullspace)
