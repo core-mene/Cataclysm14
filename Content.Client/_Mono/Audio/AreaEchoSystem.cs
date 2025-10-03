@@ -188,6 +188,7 @@ public sealed class AreaEchoSystem : EntitySystem
         - Any spaced tile is invalid
         - If the grid has RoofComponent:
         - - Only now, will rays end on invalid tiles (space) or unrooved tiles
+        - - This is checked every `_calculationalFidelity`-ish tiles. Not precisely. But somewhere around that. Its moreso just proportional to that.
     */
     public bool TryProcessAreaSpaceMagnitude(Entity<TransformComponent> entity, float maximumMagnitude, out float magnitude)
     {

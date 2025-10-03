@@ -12,7 +12,6 @@ using Robust.Shared.Audio;
 using Robust.Shared.Audio.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Utility;
 using DependencyAttribute = Robust.Shared.IoC.DependencyAttribute;
 
 namespace Content.Client._Mono.Audio;
@@ -24,6 +23,19 @@ public sealed class AudioEffectSystem : EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
+
+    /// <summary>
+    ///     Whether creating new auxiliaries is safe.
+    ///         This is done because integration tests
+    ///         apparently can't handle them.
+    /// 
+    ///     Null means this value wasn't determined yet.
+    /// 
+    ///     Any not-null value here is the final result,
+    ///         and no more attempts to determine this
+    ///         will be made afterwards.
+    /// </summary>
+    private bool? _auxiliariesSafe = null;
 
     private static readonly Dictionary<ProtoId<AudioPresetPrototype>, (EntityUid AuxiliaryUid, EntityUid EffectUid)> CachedEffects = new();
 
@@ -94,6 +106,9 @@ public sealed class AudioEffectSystem : EntitySystem
     /// </summary>
     public bool TryAddEffect(in Entity<AudioComponent> entity, in ProtoId<AudioPresetPrototype> preset)
     {
+        if (_auxiliariesSafe == false)
+            return false;
+
         if (!ResolveCachedEffect(preset, out var auxiliaryUid, out _))
             return false;
 
@@ -102,10 +117,18 @@ public sealed class AudioEffectSystem : EntitySystem
     }
 
     /// <summary>
-    ///     Tries to remove effects from the given audio. Returns whether the attempt was successful.
+    ///     Tries to remove effects from the given audio. Returns whether the attempt was successful,
+    ///         or no auxiliary is applied to the audio.
     /// </summary>
     public bool TryRemoveEffect(in Entity<AudioComponent> entity)
     {
+        if (_auxiliariesSafe == false)
+            return false;
+
+        if (entity.Comp.Auxiliary is not { } existingAuxiliaryUid ||
+            !existingAuxiliaryUid.IsValid())
+            return true;
+
         // resolve the cached auxiliary
         if (!_cachedBlankAuxiliaryUid.IsValid())
             _cachedBlankAuxiliaryUid = _audioSystem.CreateAuxiliary().Entity;
@@ -155,7 +178,29 @@ public sealed class AudioEffectSystem : EntitySystem
         var effectEntity = _audioSystem.CreateEffect();
         _audioSystem.SetEffectPreset(effectEntity.Entity, effectEntity.Component, presetPrototype);
 
-        var auxiliaryEntity = _audioSystem.CreateAuxiliary();
+        (EntityUid Entity, AudioAuxiliaryComponent Component)? maybeAuxiliaryEntity = null;
+        if (_auxiliariesSafe == null)
+        {
+            try
+            {
+                maybeAuxiliaryEntity = _audioSystem.CreateAuxiliary();
+                _auxiliariesSafe = true;
+            }
+            catch (Exception ex)
+            {
+                Log.Info($"Determined audio auxiliaries are unsafe in this run! If this is not an integration test, report this immediately. Exception: {ex}");
+                _auxiliariesSafe = false;
+
+                return false;
+            }
+        }
+        else if (!_auxiliariesSafe.Value)
+            return false;
+
+        // i cant `??=` it
+        if (maybeAuxiliaryEntity is not { } auxiliaryEntity)
+            auxiliaryEntity = _audioSystem.CreateAuxiliary();
+
         _audioSystem.SetEffect(auxiliaryEntity.Entity, auxiliaryEntity.Component, effectEntity.Entity);
 
         if (!Exists(auxiliaryEntity.Entity))
