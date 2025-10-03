@@ -12,6 +12,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.Audio.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Utility;
 using DependencyAttribute = Robust.Shared.IoC.DependencyAttribute;
 
 namespace Content.Client._Mono.Audio;
@@ -35,6 +36,7 @@ public sealed class AudioEffectSystem : EntitySystem
     ///         and no more attempts to determine this
     ///         will be made afterwards.
     /// </summary>
+    // actually this problem applies for effects too
     private bool? _auxiliariesSafe = null;
 
     private static readonly Dictionary<ProtoId<AudioPresetPrototype>, (EntityUid AuxiliaryUid, EntityUid EffectUid)> CachedEffects = new();
@@ -144,7 +146,9 @@ public sealed class AudioEffectSystem : EntitySystem
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private bool AuxiliariesAreDefinitelySafe()
     {
-        DetermineAuxiliarySafety(out _, destroyPairAfterUse: true);
+        if (_auxiliariesSafe == null)
+            DetermineAuxiliarySafety(out _, destroyPairAfterUse: true);
+
         return _auxiliariesSafe == true;
     }
 
@@ -216,32 +220,36 @@ public sealed class AudioEffectSystem : EntitySystem
     /// <returns>Whether the entity was successfully initialised, and it did not previously exist in the cache.</returns>
     public bool TryCacheEffect(in ProtoId<AudioPresetPrototype> preset, [NotNullWhen(true)] out EntityUid? auxiliaryUid, [NotNullWhen(true)] out EntityUid? effectUid)
     {
+
         effectUid = null;
         auxiliaryUid = null;
 
-        if (!_prototypeManager.TryIndex(preset, out var presetPrototype))
+        if (_auxiliariesSafe == false ||
+            !_prototypeManager.TryIndex(preset, out var presetPrototype))
             return false;
 
         // i cant `??=` it
         (EntityUid Entity, AudioAuxiliaryComponent Component)? maybeAuxiliaryPair = null;
+
+        // if undetermined, determine and keep the pair if confirmed safe
         if (_auxiliariesSafe == null)
         {
-            // if we cant get a real pair, return early
+            // if determined unsafe, cleanup the pair
             if (!DetermineAuxiliarySafety(out maybeAuxiliaryPair, destroyPairAfterUse: false))
                 return false;
         }
-        else if (_auxiliariesSafe == false)
-            return false;
 
-        if (maybeAuxiliaryPair is not { } auxiliaryPair)
+        // now, auxiliaries are known to be safe.
+        // only when initially determining if auxiliaries are safe will we have a pair to use. in future attempts, we won't so just make one if necessary
+        var auxiliaryPair = maybeAuxiliaryPair ?? _audioSystem.CreateAuxiliary();
+
+        DebugTools.Assert(Exists(auxiliaryPair.Entity), "Audio auxiliary pair's entity does not exist!");
+        if (!Exists(auxiliaryPair.Entity))
             return false;
 
         var effectPair = _audioSystem.CreateEffect();
         _audioSystem.SetEffectPreset(effectPair.Entity, effectPair.Component, presetPrototype);
         _audioSystem.SetEffect(auxiliaryPair.Entity, auxiliaryPair.Component, effectPair.Entity);
-
-        if (!Exists(auxiliaryPair.Entity))
-            return false;
 
         effectUid = effectPair.Entity;
         auxiliaryUid = auxiliaryPair.Entity;
