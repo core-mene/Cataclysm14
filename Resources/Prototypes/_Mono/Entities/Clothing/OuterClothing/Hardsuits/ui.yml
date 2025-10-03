@@ -5,8 +5,8 @@
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseC3SyndicateContraband]
   id: ClothingOuterHardsuitUIEnforcer
-  name: Enforcer combat tacsuit
-  description: # Very cool Ullman Tacsuit :3
+  name: U.I ENFORCER combat tacsuit
+  description: Infamously one of the most reliable combat tacsuits that the Black Market has to offer, developed by Ullman Industries. "Heads up display sold seperately!"
   components:
   - type: Sprite
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/ullman_industries_enforcer.rsi
@@ -35,7 +35,7 @@
     blockUnequipWhenAttached: false
     replaceCurrentClothing: true
     clothingPrototypes:
-      head: ClothingHelmetHardsuitUIEnforcer # Ullman Enforcer helmet
+      head: ClothingHelmetHardsuitUIEnforcer
       helmetcover: ClothingHeadHelmetCoverBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance
@@ -44,13 +44,13 @@
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseC3SyndicateContraband]
   id: ClothingOuterHardsuitUIEnforcerMKII
-  name: Enforcer MKII combat tacsuit
-  description: # Very cool Ullman Tacsuit :3
+  name: U.I ENFORCER MKII combat tacsuit
+  description: Based off of the infamous MKI design with versatility in mind. This is Ullman Industries' top of the line combat suit. Whether it be slipping away from the feds, taking out the competition, or serving your corporate overlords, this marvel of engineering will make sure that you get it done.
   components:
   - type: Sprite
-    sprite: _Mono/Clothing/OuterClothing/Hardsuits/ullman_industries_enforcer.rsi # Ullman sprites
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/ullman_industries_enforcermkii.rsi
   - type: Clothing
-    sprite: _Mono/Clothing/OuterClothing/Hardsuits/ullman_industries_enforcer.rsi #Ullman sprites
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/ullman_industries_enforcermkii.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -59,14 +59,14 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.5
-        Slash: 0.5
+        Blunt: 0.7
+        Slash: 0.75
         Piercing: 0.5
         Heat: 0.5
-        Radiation: 0.5
-        Caustic: 0.5
+        Radiation: 0.6
+        Caustic: 0.7
   - type: ClothingSpeedModifier
-    walkModifier: 0.95
+    walkModifier: 1
     sprintModifier: 0.95
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
@@ -78,7 +78,7 @@
       helmetcover: ClothingHeadHelmetCoverBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance
-    coefficient: 0.5
+    coefficient: 0.45
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseC3SyndicateContraband]

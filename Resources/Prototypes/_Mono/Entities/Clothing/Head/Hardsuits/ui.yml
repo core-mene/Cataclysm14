@@ -5,8 +5,8 @@
 - type: entity
   parent: [ClothingHeadHardsuitBase, BaseC3SyndicateContraband]
   id: ClothingHelmetHardsuitUIEnforcer
-  name: Enforcer Combat helmet
-  description:
+  name: U.I ENFORCER MKI helmet
+  description: Flash-proof lining, in built night vision system, and looks good as hell. Other than information display port being snapped, what's more to ask for?
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Head/Hardsuits/ullman_industries_enforcer.rsi #Ullman sprites
@@ -15,21 +15,18 @@
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.8
-        Slash: 0.8
-        Piercing: 0.85
-        Heat: 0.8
-  - type: RadarConsole
-    maxRange: 312
-    followEntity: true
-    pannable: true
+  - type: FlashImmunity
   - type: NightVision
     flashDurationMultiplier: 0.85
     isEquipment: true
     color: "#AE65BFFF"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
   - type: HideLayerClothing
     slots:
     - Hair
@@ -41,10 +38,10 @@
     - HeadSide
 
 - type: entity
-  parent: [ClothingHeadHardsuitBase, BaseC3SyndicateContraband]
+  parent: [ClothingHeadHardsuitBase, BaseC3SyndicateContraband, ShowMedicalIcons]
   id: ClothingHelmetHardsuitUIEnforcerMKII
-  name: Enforcer MKII Combat helmet
-  description:
+  name: U.I ENFORCER MKII Combat helmet
+  description: This top of the line helmet comes with flashproof lining, a mass scanner and an inbuilt medical diagnostic system.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Head/Hardsuits/ullman_industries_enforcermkii.rsi #Ullman sprites
@@ -53,13 +50,28 @@
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
+  - type: RadarConsole
+    maxRange: 312
+    followEntity: true
+  - type: ActivatableUI
+    key: enum.RadarConsoleUiKey.Key
+    singleUser: true
+  - type: UserInterface
+    interfaces:
+      enum.RadarConsoleUiKey.Key:
+        type: RadarConsoleBoundUserInterface
+  - type: FlashImmunity
+  - type: NightVision
+    flashDurationMultiplier: 0.85
+    isEquipment: true
+    color: "#AE65BFFF"
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.8
-        Slash: 0.8
-        Piercing: 0.85
-        Heat: 0.8
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
   - type: HideLayerClothing
     slots:
     - Hair
