@@ -12,6 +12,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.Audio.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Utility;
 using DependencyAttribute = Robust.Shared.IoC.DependencyAttribute;
 
 namespace Content.Client._Mono.Audio;
@@ -100,16 +101,62 @@ public sealed class AudioEffectSystem : EntitySystem
         _cachedBlankAuxiliaryUid = EntityUid.Invalid;
     }
 
+
+    /// <summary>
+    ///     Figures out whether auxiliaries are safe to use. Returns
+    ///         whether a safe auxiliary pair has been outputted
+    ///         for use.
+    /// </summary>
+    private bool DetermineAuxiliarySafety([NotNullWhen(true)] out (EntityUid Entity, AudioAuxiliaryComponent Component)? auxiliaryPair, bool destroyPairAfterUse = true)
+    {
+        (EntityUid Entity, AudioAuxiliaryComponent Component)? maybeAuxiliaryPair = null;
+        try
+        {
+            maybeAuxiliaryPair = _audioSystem.CreateAuxiliary();
+            _auxiliariesSafe = true;
+        }
+        catch (Exception ex)
+        {
+            Log.Info($"Determined audio auxiliaries are unsafe in this run! If this is not an integration test, report this immediately. Exception: {ex}");
+            _auxiliariesSafe = false;
+
+            TryQueueDel(maybeAuxiliaryPair?.Entity);
+
+            auxiliaryPair = null;
+            return false;
+        }
+
+        if (destroyPairAfterUse)
+        {
+            QueueDel(maybeAuxiliaryPair.Value.Entity);
+
+            auxiliaryPair = null;
+            return false;
+        }
+
+        auxiliaryPair = maybeAuxiliaryPair.Value;
+        return true;
+    }
+
+    /// <summary>
+    ///     Returns whether auxiliaries are definitely safe to use.
+    ///         Determines auxiliary safety if not already.
+    /// </summary>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    private bool AuxiliariesAreDefinitelySafe()
+    {
+        DetermineAuxiliarySafety(out _, destroyPairAfterUse: true);
+        return _auxiliariesSafe == true;
+    }
+
     /// <summary>
     ///     Tries to resolve a cached audio auxiliary entity corresponding to the prototype to apply
     ///         to the given entity.
     /// </summary>
     public bool TryAddEffect(in Entity<AudioComponent> entity, in ProtoId<AudioPresetPrototype> preset)
     {
-        if (_auxiliariesSafe == false)
-            return false;
-
-        if (!ResolveCachedEffect(preset, out var auxiliaryUid, out _))
+        if (!AuxiliariesAreDefinitelySafe() ||
+            !ResolveCachedEffect(preset, out var auxiliaryUid, out _))
             return false;
 
         _audioSystem.SetAuxiliary(entity, entity.Comp, auxiliaryUid);
@@ -122,7 +169,7 @@ public sealed class AudioEffectSystem : EntitySystem
     /// </summary>
     public bool TryRemoveEffect(in Entity<AudioComponent> entity)
     {
-        if (_auxiliariesSafe == false)
+        if (!AuxiliariesAreDefinitelySafe())
             return false;
 
         if (entity.Comp.Auxiliary is not { } existingAuxiliaryUid ||
@@ -144,20 +191,21 @@ public sealed class AudioEffectSystem : EntitySystem
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public bool ResolveCachedEffect(in ProtoId<AudioPresetPrototype> preset, [NotNullWhen(true)] out EntityUid? auxiliaryUid, [NotNullWhen(true)] out EntityUid? effectUid)
     {
-        EntityUid? maybeAuxiliaryUid = null;
-        EntityUid? maybeEffectUid = null;
-
-        if (CachedEffects.TryGetValue(preset, out var cached) ||
-            TryCacheEffect(preset, out maybeAuxiliaryUid, out maybeEffectUid))
+        if (_auxiliariesSafe == false)
         {
-            auxiliaryUid = maybeAuxiliaryUid ?? cached.AuxiliaryUid;
-            effectUid = maybeEffectUid ?? cached.EffectUid;
+            auxiliaryUid = null;
+            effectUid = null;
+            return false;
+        }
+
+        if (CachedEffects.TryGetValue(preset, out var cached))
+        {
+            auxiliaryUid = cached.AuxiliaryUid;
+            effectUid = cached.EffectUid;
             return true;
         }
 
-        auxiliaryUid = null;
-        effectUid = null;
-        return false;
+        return TryCacheEffect(preset, out auxiliaryUid, out effectUid);
     }
 
     /// <summary>
@@ -175,40 +223,30 @@ public sealed class AudioEffectSystem : EntitySystem
         if (!_prototypeManager.TryIndex(preset, out var presetPrototype))
             return false;
 
-        var effectEntity = _audioSystem.CreateEffect();
-        _audioSystem.SetEffectPreset(effectEntity.Entity, effectEntity.Component, presetPrototype);
-
-        (EntityUid Entity, AudioAuxiliaryComponent Component)? maybeAuxiliaryEntity = null;
+        // i cant `??=` it
+        (EntityUid Entity, AudioAuxiliaryComponent Component)? maybeAuxiliaryPair = null;
         if (_auxiliariesSafe == null)
         {
-            try
-            {
-                maybeAuxiliaryEntity = _audioSystem.CreateAuxiliary();
-                _auxiliariesSafe = true;
-            }
-            catch (Exception ex)
-            {
-                Log.Info($"Determined audio auxiliaries are unsafe in this run! If this is not an integration test, report this immediately. Exception: {ex}");
-                _auxiliariesSafe = false;
-
+            // if we cant get a real pair, return early
+            if (!DetermineAuxiliarySafety(out maybeAuxiliaryPair, destroyPairAfterUse: false))
                 return false;
-            }
         }
-        else if (!_auxiliariesSafe.Value)
+        else if (_auxiliariesSafe == false)
             return false;
 
-        // i cant `??=` it
-        if (maybeAuxiliaryEntity is not { } auxiliaryEntity)
-            auxiliaryEntity = _audioSystem.CreateAuxiliary();
-
-        _audioSystem.SetEffect(auxiliaryEntity.Entity, auxiliaryEntity.Component, effectEntity.Entity);
-
-        if (!Exists(auxiliaryEntity.Entity))
+        if (maybeAuxiliaryPair is not { } auxiliaryPair)
             return false;
 
-        effectUid = effectEntity.Entity;
-        auxiliaryUid = auxiliaryEntity.Entity;
+        var effectPair = _audioSystem.CreateEffect();
+        _audioSystem.SetEffectPreset(effectPair.Entity, effectPair.Component, presetPrototype);
+        _audioSystem.SetEffect(auxiliaryPair.Entity, auxiliaryPair.Component, effectPair.Entity);
 
-        return CachedEffects.TryAdd(preset, (auxiliaryEntity.Entity, effectEntity.Entity));
+        if (!Exists(auxiliaryPair.Entity))
+            return false;
+
+        effectUid = effectPair.Entity;
+        auxiliaryUid = auxiliaryPair.Entity;
+
+        return CachedEffects.TryAdd(preset, (auxiliaryPair.Entity, effectPair.Entity));
     }
 }
