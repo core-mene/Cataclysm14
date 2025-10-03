@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 Arcticular1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -48,9 +49,11 @@
           lobbySortOrder: 2
         - type: StationJobs
           availableJobs:
-            SeniorOfficer: [ 0, 3 ]
-            Brigmedic: [ 0, 1 ]
-            Deputy: [ -1, -1 ]
+            Sheriff: [ 1, 1 ]
+            SeniorOfficer: [ 2, 2 ] # Mono
+            Brigmedic: [ 2, 2 ] # Mono
+            Deputy: [ -1, -1 ] # Mono
+            TsfEngineer: [ 2, 2 ]
           tags:
           - HeadOfPersonnel
           - HeadOfSecurity
