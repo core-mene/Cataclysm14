@@ -105,7 +105,7 @@ public sealed class AudioEffectSystem : EntitySystem
     }
 
     /// <summary>
-    ///     Tries to remove effects from the given audio.
+    ///     Tries to remove effects from the given audio. Returns whether the attempt was successful.
     /// </summary>
     public bool TryRemoveEffect(in Entity<AudioComponent> entity)
     {
