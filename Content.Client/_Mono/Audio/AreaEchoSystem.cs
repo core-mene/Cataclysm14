@@ -53,7 +53,7 @@ public sealed class AreaEchoSystem : EntitySystem
     /// <remarks>
     ///     Keep in ascending order.
     /// </remarks>
-    private static readonly List<(float, ProtoId<AudioPresetPrototype>)> DistancePresets = new() { (6f, "Hallway"), (8.75f, "Auditorium"), (12f, "ConcertHall") };
+    private static readonly List<(float, ProtoId<AudioPresetPrototype>)> DistancePresets = new() { (8f, "Hallway"), (15f, "Auditorium"), (25f, "ConcertHall") };
 
     /// <summary>
     ///     When is the next time we should check all audio entities and see if they are eligible to be updated.
@@ -69,7 +69,6 @@ public sealed class AreaEchoSystem : EntitySystem
     private bool _echoEnabled = true;
     private TimeSpan _calculationInterval = TimeSpan.FromSeconds(15); // how often we should check existing audio re-apply or remove echo from them when necessary
     private float _calculationalFidelity;
-    private float _echoFalloffConstant;
 
     private EntityQuery<MapGridComponent> _gridQuery;
     private EntityQuery<RoofComponent> _roofQuery;
@@ -85,7 +84,6 @@ public sealed class AreaEchoSystem : EntitySystem
 
         _configurationManager.OnValueChanged(MonoCVars.AreaEchoRecalculationInterval, x => _calculationInterval = x, invokeImmediately: true);
         _configurationManager.OnValueChanged(MonoCVars.AreaEchoStepFidelity, x => _calculationalFidelity = x, invokeImmediately: true);
-        _configurationManager.OnValueChanged(MonoCVars.AreaEchoFalloff, x => _echoFalloffConstant = x, invokeImmediately: true);
 
         _gridQuery = GetEntityQuery<MapGridComponent>();
         _roofQuery = GetEntityQuery<RoofComponent>();
@@ -137,7 +135,7 @@ public sealed class AreaEchoSystem : EntitySystem
             return directions;
         }
 
-        return [Direction.North.ToAngle(), Direction.West.ToAngle(), Direction.South.ToAngle(), Direction.East.ToAngle()];
+        return [Direction.North.ToAngle()/*, Direction.West.ToAngle(), Direction.South.ToAngle(), Direction.East.ToAngle()*/];
     }
 
     /// <summary>
@@ -234,7 +232,7 @@ public sealed class AreaEchoSystem : EntitySystem
         // At this point, we are ready for war against the client's pc.
         foreach (var direction in _calculatedDirections)
         {
-            var currentDirectionVector = (direction + entityGrid.Comp.LocalRotation)/* << relative to grid */.ToVec();
+            var currentDirectionVector = direction/* + entityGrid.Comp.LocalRotation << This makes it relative to grid. Omitted because raytracing is better with random-ish angles.*/.ToVec();
 
             var totalDistance = 0f;
             var remainingDistance = maximumMagnitude;
@@ -242,7 +240,7 @@ public sealed class AreaEchoSystem : EntitySystem
             var currentOriginWorldPosition = worldPosition;
             var currentOriginTileIndices = originTileIndices;
 
-            for (var reflectIteration = 0; reflectIteration < _echoMaxReflections || reflectIteration == 0 /* if maxreflections is 0 we still cast atleast once */; reflectIteration++)
+            for (var reflectIteration = 0; reflectIteration <= _echoMaxReflections /* if maxreflections is 0 we still cast atleast once */; reflectIteration++)
             {
                 var (distanceCovered, raycastResults) = CastEchoRay(
                     currentOriginWorldPosition,
@@ -258,7 +256,7 @@ public sealed class AreaEchoSystem : EntitySystem
                 totalDistance += distanceCovered;
                 remainingDistance -= distanceCovered;
 
-                // we don't need further logic anyway
+                // we don't need further logic anyway if we just finished the last iteration
                 if (reflectIteration == _echoMaxReflections)
                     break;
 
@@ -266,16 +264,32 @@ public sealed class AreaEchoSystem : EntitySystem
                     break;
 
                 // i think cross-grid would actually be pretty easy here? but the tile-marching doesnt often account for that at fidelities above 1 so whatever.
-                currentOriginWorldPosition = raycastResults.Value.HitPos;
+
+                var previousRayOriginPosition = currentOriginWorldPosition;
+                currentOriginWorldPosition = raycastResults.Value.HitPos; // it's now where we hit
                 if (!_mapSystem.TryGetTileRef(entityGrid, gridComponent, currentOriginWorldPosition, out var hitTileRef)) // means tile that ray hit is invalid, just assume the ray ends here
                     break;
 
                 currentOriginTileIndices = hitTileRef.GridIndices;
-                var hitNormal =
+
+                var delta = currentOriginWorldPosition - previousRayOriginPosition;
+                Vector2 normal;
+                if (MathF.Abs(delta.X) > MathF.Abs(delta.Y))
+                    normal = new Vector2(MathF.Sign(delta.X), 0);
+                else
+                    normal = new Vector2(0, MathF.Sign(delta.Y));
+
+                Log.Info($"Origin: {previousRayOriginPosition}, Hit: {currentOriginWorldPosition}, Normal: {normal}");
+
+                currentDirectionVector = Reflect(currentDirectionVector, normal);
+
+                Log.Info("Reflected once!");
             }
+
+            magnitude += totalDistance;
         }
 
-        magnitude /= _calculatedDirections.Length;
+        magnitude /= _calculatedDirections.Length * _echoMaxReflections;
         Log.Info($"Magnitude {magnitude} for {ToPrettyString(entity.Owner)}");
         return true;
     }

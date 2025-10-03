@@ -16,20 +16,12 @@ public sealed partial class MonoCVars
         CVarDef.Create("mono.area_echo.enabled", true, CVar.ARCHIVE | CVar.CLIENTONLY);
 
     /// <summary>
-    ///     Used to determine magnitude of sounds, with the higher meaning more echo.
-    ///         The formula used is `distance * exp(-distance/this)`.
-    /// </summary>
-    /// <seealso cref="AreaEchoSystem"/>
-    public static readonly CVarDef<float> AreaEchoFalloff =
-        CVarDef.Create("mono.area_echo.falloff", 0.4f, CVar.ARCHIVE | CVar.CLIENTONLY);
-
-    /// <summary>
     ///     If false, area echos calculate with 4 directions (NSEW).
     ///         Otherwise, area echos calculate with all 8 directions.
     /// </summary>
     /// <seealso cref="AreaEchoSystem"/>
     public static readonly CVarDef<bool> AreaEchoHighResolution =
-        CVarDef.Create("mono.area_echo.8dir", false, CVar.ARCHIVE | CVar.CLIENTONLY);
+        CVarDef.Create("mono.area_echo.alldirections", false, CVar.ARCHIVE | CVar.CLIENTONLY);
 
 
     /// <summary>
