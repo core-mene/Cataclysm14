@@ -19,6 +19,7 @@ using Content.Shared.Popups;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Salvage.Expeditions;
 using Robust.Shared.Map.Components;
+using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Prototypes;
 using Content.Server.Salvage.Expeditions; // Frontier
@@ -77,6 +78,9 @@ public sealed partial class SalvageSystem
             if (_station.GetLargestGrid(stationData) is not { Valid: true } grid)
                 return;
             if (!TryComp<MapGridComponent>(grid, out var gridComp))
+                return;
+            // Mono
+            if (TryComp<PhysicsComponent>(grid, out var gridBody) && gridBody.BodyType == BodyType.Static)
                 return;
 
             // Frontier: check for FTL component - if one exists, the station won't be taken into FTL.
@@ -260,6 +264,7 @@ public sealed partial class SalvageSystem
             // Frontier: if we have a lingering FTL component, we cannot start a new mission
             if (!TryComp<StationDataComponent>(station, out var stationData) ||
                     _station.GetLargestGrid(stationData) is not { Valid: true } grid ||
+                    TryComp<PhysicsComponent>(grid, out var body) && body.BodyType == BodyType.Static || // Mono
                     HasComp<FTLComponent>(grid))
             {
                 state.Cooldown = true; //Hack: disable buttons
@@ -285,6 +290,7 @@ public sealed partial class SalvageSystem
         // Frontier: if we have a lingering FTL component, we cannot start a new mission
         if (!TryComp<StationDataComponent>(station, out var stationData) ||
                 _station.GetLargestGrid(stationData) is not { Valid: true } grid ||
+                TryComp<PhysicsComponent>(grid, out var body) && body.BodyType == BodyType.Static || // Mono
                 HasComp<FTLComponent>(grid))
         {
             state.Cooldown = true; //Hack: disable buttons
