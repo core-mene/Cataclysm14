@@ -122,6 +122,18 @@
   components:
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Melee/phaseblade.rsi
+    layers:
+    - state: e_sword
+    - state: e_sword_blade
+      visible: false
+      shader: unshaded
+      map: [ "blade" ]
+  - type: PointLight
+    enabled: false
+    radius: 2
+    energy: 2
+    color: "#c24fd1"
+    netsync: false
   - type: Item
     sprite: _Mono/Objects/Weapons/Melee/phaseblade.rsi
     size: Large
@@ -133,8 +145,6 @@
     - SuitStorage
   - type: ComponentToggler
     components:
-    - type: Execution
-      doAfterDuration: 2.0
     - type: Reflect
       reflectProb: 0.7
   - type: ItemToggleSize
@@ -166,4 +176,4 @@
     damage:
       types:
         Slash: 35
-        Stuctural: 40
+        Structural: 40
