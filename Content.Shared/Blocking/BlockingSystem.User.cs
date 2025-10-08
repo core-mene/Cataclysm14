@@ -68,7 +68,7 @@ public sealed partial class BlockingSystem
             if (!TryComp<DamageableComponent>(component.BlockingItem, out var dmgComp))
                 return;
 
-            if (!(toggleComponent.Activated)) // Mono
+            if (!toggleComponent.Activated) // Mono
                 return;
 
             var blockFraction = blocking.IsBlocking ? blocking.ActiveBlockFraction : blocking.PassiveBlockFraction;

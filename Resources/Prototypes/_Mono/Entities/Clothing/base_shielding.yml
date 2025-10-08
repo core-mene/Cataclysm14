@@ -15,6 +15,29 @@
     onUse: false
     onAltUse: true
     onActivate: false
+  - type: PointLight
+    enabled: false
+    radius: 1.4
+    energy: 2
+    color: "#3ACCFF"
+  - type: LightBehaviour
+    behaviours:
+    - !type:FadeBehaviour
+      id: radiating
+      interpolate: Linear
+      maxDuration: 2.0
+      startValue: 3.0
+      endValue: 2.0
+      isLooped: true
+      reverseWhenFinished: true
+    - !type:PulseBehaviour
+      id: blinking
+      interpolate: Nearest
+      maxDuration: 1.0
+      minValue: 0.1
+      maxValue: 2.0
+      isLooped: true
+  - type: ItemTogglePointLight
   - type: ItemToggleActiveSound
     predictable: false
     activeSound:
