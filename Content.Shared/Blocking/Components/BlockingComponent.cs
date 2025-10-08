@@ -77,16 +77,10 @@ public sealed partial class BlockingComponent : Component
     [DataField("activeBlockFraction"), ViewVariables(VVAccess.ReadWrite)]
     public float ActiveBlockFraction = 1.0f;
 
-    // Mono changes start
+    // Mono
     /// <summary>
-    /// If this is set to true, the item adds a new action to block.
+    /// Decides if the action is added or not (mostly for clothing w/ shielding).
     /// </summary>
     [DataField]
     public bool BlockAction = false;
-    /// <summary>
-    /// If this is set to true, the item adds a new action to block.
-    /// </summary>
-    [DataField]
-    public bool IsClothing = false;
-    // Mono changes end
 }

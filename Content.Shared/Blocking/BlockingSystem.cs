@@ -112,7 +112,8 @@ public sealed partial class BlockingSystem : EntitySystem
 
     private void OnGetActions(EntityUid uid, BlockingComponent component, GetItemActionsEvent args)
     {
-        args.AddAction(ref component.BlockingToggleActionEntity, component.BlockingToggleAction);
+        if (component.BlockAction) // Mono
+            args.AddAction(ref component.BlockingToggleActionEntity, component.BlockingToggleAction);
     }
 
     private void OnToggleAction(EntityUid uid, BlockingComponent component, ToggleActionEvent args)
