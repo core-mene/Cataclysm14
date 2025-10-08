@@ -17,8 +17,10 @@
 
 using System.Linq;
 using Content.Shared.Actions;
+using Content.Shared.Clothing;
 using Content.Shared.Damage;
 using Content.Shared.Examine;
+using Content.Shared.Hands;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.IdentityManagement;
@@ -62,6 +64,7 @@ public sealed partial class BlockingSystem : EntitySystem
         InitializeUser();
 
         SubscribeLocalEvent<BlockingComponent, GotEquippedEvent>(OnEquipped); // Mono
+        SubscribeLocalEvent<BlockingComponent, GotEquippedHandEvent>(OnHandEquipped); // Mono
         SubscribeLocalEvent<BlockingComponent, GotUnequippedEvent>(OnUnequipped); // Mono
         SubscribeLocalEvent<BlockingComponent, DroppedEvent>(OnDrop);
 
@@ -80,9 +83,28 @@ public sealed partial class BlockingSystem : EntitySystem
         Dirty(uid, component);
     }
 
-    private void OnEquipped(EntityUid uid, BlockingComponent component, ref GotEquippedEvent args)
+    // Mono start
+    private void OnHandEquipped(EntityUid uid, BlockingComponent component, ref GotEquippedHandEvent args)
     {
-        component.User = args.Equipee; // Mono
+        if (!component.IsClothing)
+            component.User = args.User;
+
+        Dirty(uid, component);
+
+        //To make sure that this bodytype doesn't get set as anything but the original
+        if (TryComp<PhysicsComponent>(args.User, out var physicsComponent) && physicsComponent.BodyType != BodyType.Static && !HasComp<BlockingUserComponent>(args.User))
+        {
+            var userComp = EnsureComp<BlockingUserComponent>(args.User);
+            userComp.BlockingItem = uid;
+            userComp.OriginalBodyType = physicsComponent.BodyType;
+        }
+    }
+    // Mono end
+    private void OnEquipped(EntityUid uid, BlockingComponent component, ref GotEquippedEvent args) // Mono
+    {
+        if (component.IsClothing) // Mono
+            component.User = args.Equipee;
+
         Dirty(uid, component);
 
         //To make sure that this bodytype doesn't get set as anything but the original

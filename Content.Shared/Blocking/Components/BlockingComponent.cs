@@ -83,4 +83,11 @@ public sealed partial class BlockingComponent : Component
     /// </summary>
     [DataField]
     public bool BlockAction = false;
+
+    // Mono
+    /// <summary>
+    /// If the shield is handheld or clothing.
+    /// </summary>
+    [DataField]
+    public bool IsClothing = false;
 }
