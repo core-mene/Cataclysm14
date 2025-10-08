@@ -7,7 +7,7 @@
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseC2ContrabandUnredeemable]
   id: ClothingOuterHardsuitM86
-  name: M86 hardsuit
+  name: M86 Mk.3(R) hardsuit
   description: An armored hardsuit, designed to be an upgrade for the M82 series. The extra armor gives it some more weight to move around.
   components:
   - type: Sprite
@@ -48,3 +48,33 @@
   - type: StaticPrice
     price: 7500
     vendPrice: 1000
+
+- type: entity
+  parent: [EnergyShieldClothing, ClothingOuterHardsuitM86]
+  id: ClothingOuterHardsuitM86Mk4
+  name: M86 Mk.4(B) hardsuit
+  description: A limited-production redesign proposal for the M86 Mk.3(R), outfitted with an inbuilt personal shield generator.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/m86_mk4.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/m86_mk4.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.45
+        Piercing: 0.45
+        Shock: 0.95
+        Heat: 0.7
+        Poison: 0.825
+        Radiation: 0.5
+        Caustic: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.875
