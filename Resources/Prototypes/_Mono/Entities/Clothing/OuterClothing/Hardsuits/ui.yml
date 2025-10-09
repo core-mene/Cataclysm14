@@ -101,13 +101,12 @@
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.7
-        Heat: 0.4
+        Heat: 0.6
         Radiation: 0.1
         Caustic: 0.7
-        Fire: 0.1
   - type: ClothingSpeedModifier
-    walkModifier: 0.80
-    sprintModifier: 1
+    walkModifier: 1
+    sprintModifier: 0.8
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing
@@ -134,7 +133,7 @@
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.3
+    damageCoefficient: 0.6
   - type: Armor
     modifiers:
       coefficients:
@@ -144,7 +143,7 @@
         Heat: 0.4
         Shock: 0.8
         Radiation: 0.5
-        Caustic: 0.3
+        Caustic: 0.5
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.95
@@ -158,13 +157,13 @@
       helmetcover: ClothingHeadHelmetCoverBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance
-    coefficient: 0.5
+    coefficient: 0.7
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseC3SyndicateContraband]
   id: ClothingOuterHardsuitUIDirector
   name: U.I VK-1 experimental hardsuit
-  description: Felix Ullman's top of the line personal hardsuit. A warning label engraved on the chestplate reads "Theft of this suit has a high chance of death! Seriously, i will find you. You will die."
+  description: Felix Ullman's top of the line personal hardsuit. A warning label engraved on the chestplate reads "Theft of this suit has a high chance of death! Seriously, I will find you. You will die."
   components:
   - type: Sprite
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/ullman_industries_director.rsi # Ullman sprites
