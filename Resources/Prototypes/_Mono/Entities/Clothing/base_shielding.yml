@@ -44,15 +44,8 @@
   - type: ItemToggleActiveSound
     activeSound:
       path: /Audio/Weapons/ebladehum.ogg
-  - type: ComponentToggler
-    components:
-    - type: DisarmMalus
-      malus: 0.6
   - type: UseDelay
     delay: 0.5
-  - type: Reflect
-    reflectProb: 0.05
-    damageOnReflectModifier: 0.2
   - type: Blocking
     passiveBlockModifier:
       coefficients:

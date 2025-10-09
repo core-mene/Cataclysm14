@@ -6,6 +6,7 @@ using Content.Server.Popups;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.PowerCell;
+using Content.Shared._Mono.Blocking; // Mono
 using Content.Shared.Damage;
 using Content.Shared.Examine;
 using Content.Shared.Item.ItemToggle;
@@ -14,7 +15,7 @@ using Content.Shared.PowerCell.Components;
 
 namespace Content.Server._White.Blocking;
 
-public sealed class RechargeableBlockingSystem : EntitySystem
+public sealed class RechargeableBlockingSystem : SharedBlockingSystem // Mono
 {
     [Dependency] private readonly BatterySystem _battery = default!;
     [Dependency] private readonly ItemToggleSystem _itemToggle = default!;

@@ -18,6 +18,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Linq;
+using Content.Client._Mono.Blocking.Components;
+using Content.Shared._Mono.Blocking;
 using Content.Shared.Actions;
 using Content.Shared.Clothing;
 using Content.Shared.Damage;
@@ -29,6 +31,7 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Item.ItemToggle;
+using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.Maps;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Physics;
@@ -46,7 +49,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.Blocking;
 
-public sealed partial class BlockingSystem : EntitySystem
+public sealed partial class BlockingSystem : SharedBlockingSystem // Mono
 {
     [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
     [Dependency] private readonly ActionContainerSystem _actionContainer = default!;
@@ -74,6 +77,7 @@ public sealed partial class BlockingSystem : EntitySystem
 
         SubscribeLocalEvent<BlockingComponent, GetItemActionsEvent>(OnGetActions);
         SubscribeLocalEvent<BlockingComponent, ToggleActionEvent>(OnToggleAction);
+        SubscribeLocalEvent<BlockingComponent, ItemToggledEvent>(OnItemToggleAction); // Mono
 
         SubscribeLocalEvent<BlockingComponent, ComponentShutdown>(OnShutdown);
 
@@ -106,9 +110,15 @@ public sealed partial class BlockingSystem : EntitySystem
     // Mono end
     private void OnEquipped(EntityUid uid, BlockingComponent component, ref GotEquippedEvent args) // Mono
     {
-        if (component.IsClothing) // Mono
+        // Mono start
+        if (component.IsClothing)
+        {
             component.User = args.Equipee;
-
+            if (!HasComp<BlockingVisualsComponent>(component.User.Value))
+                AddComp<BlockingVisualsComponent>(args.Equipee);
+            SetEnabled(args.Equipee, false);
+        }
+        // Mono end
         Dirty(uid, component);
 
         //To make sure that this bodytype doesn't get set as anything but the original
@@ -123,6 +133,10 @@ public sealed partial class BlockingSystem : EntitySystem
 
     private void OnUnequipped(EntityUid uid, BlockingComponent component, ref GotUnequippedEvent args)
     {
+        // Mono start
+        if (component.User != null)
+            RemCompDeferred<BlockingVisualsComponent>(component.User.Value);
+        // Mono end
         // Mono - change args.User to args.Equippee
         StopBlockingHelper(uid, component, args.Equipee);
     }
@@ -137,6 +151,20 @@ public sealed partial class BlockingSystem : EntitySystem
         if (component.BlockAction) // Mono
             args.AddAction(ref component.BlockingToggleActionEntity, component.BlockingToggleAction);
     }
+
+    // Mono start
+    private void OnItemToggleAction(EntityUid uid, BlockingComponent component, ItemToggledEvent args)
+    {
+        if (TryComp<ItemToggleComponent>(uid, out var itemToggleComponent))
+        {
+            if (component.IsClothing && itemToggleComponent.Activated && component.User != null)
+                SetEnabled(component.User.Value, true);
+            else if (component.User == null || !component.IsClothing);
+            else if (!itemToggleComponent.Activated)
+                SetEnabled(component.User.Value, false);
+        }
+    }
+    // Mono end
 
     private void OnToggleAction(EntityUid uid, BlockingComponent component, ToggleActionEvent args)
     {
@@ -178,6 +206,11 @@ public sealed partial class BlockingSystem : EntitySystem
         {
             _actionsSystem.RemoveProvidedActions(component.User.Value, uid);
             StopBlockingHelper(uid, component, component.User.Value);
+            // Mono start
+            var user = component.User.Value;
+            if (HasComp<BlockingVisualsComponent>(user))
+                RemCompDeferred<BlockingVisualsComponent>(user);
+            // Mono end
         }
     }
 
@@ -369,7 +402,10 @@ public sealed partial class BlockingSystem : EntitySystem
         var modifier = component.IsBlocking ? component.ActiveBlockDamageModifier : component.PassiveBlockDamageModifer;
 
         var msg = new FormattedMessage();
-        msg.AddMarkupOrThrow(Loc.GetString("blocking-fraction", ("value", MathF.Round(fraction * 100, 1))));
+        if (!component.IsClothing)
+            msg.AddMarkupOrThrow(Loc.GetString("blocking-fraction", ("value", MathF.Round(fraction * 100, 1))));
+        if (component.IsClothing)
+            msg.AddMarkupOrThrow(Loc.GetString("blocking-fraction-armor", ("value", MathF.Round(fraction * 100, 1))));
 
         AppendCoefficients(modifier, msg);
 
