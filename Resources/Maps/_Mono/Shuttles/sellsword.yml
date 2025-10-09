@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/09/2025 14:24:04
-  entityCount: 296
+  time: 10/09/2025 15:12:24
+  entityCount: 295
 maps: []
 grids:
 - 1
@@ -1395,7 +1395,6 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 96
           - 56
           - 57
         paper_label: !type:ContainerSlot
@@ -1548,15 +1547,6 @@ entities:
     - type: Transform
       pos: -1.5,-2.5
       parent: 1
-- proto: ReagentContainerCoffeePouch
-  entities:
-  - uid: 96
-    components:
-    - type: Transform
-      parent: 55
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: SignalButtonDirectional
   entities:
   - uid: 177
