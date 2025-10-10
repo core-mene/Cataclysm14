@@ -114,6 +114,8 @@ public sealed partial class BlockingSystem : SharedBlockingSystem // Mono
         if (component.IsClothing)
         {
             component.User = args.Equipee;
+            if (TryComp<ItemToggleComponent>(uid, out var itemToggle) && itemToggle.Activated && component.IsClothing)
+                EnsureComp<BlockingVisualsComponent>(args.Equipee);
         }
         // Mono end
         Dirty(uid, component);
