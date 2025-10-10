@@ -1,32 +1,17 @@
-# SPDX-FileCopyrightText: 2023 Cheackraze
-# SPDX-FileCopyrightText: 2023 Checkraze
-# SPDX-FileCopyrightText: 2023 Vera Aguilera Puerto
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 TsjipTsjip
-# SPDX-FileCopyrightText: 2024 checkraze
-# SPDX-FileCopyrightText: 2025 Arcticular1
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 Whatstone
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: MPL-2.0
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/10/2025 03:16:45
+  time: 10/10/2025 03:59:52
   entityCount: 730
 maps:
 - 42
 grids:
 - 1
-orphans: []
+orphans:
+- 1
 nullspace: []
 tilemap:
   0: Space
@@ -2668,8 +2653,8 @@ entities:
       parent: 1
     - type: DeviceList
       devices:
-      - 369
-      - 368
+      - 445
+      - 440
   - uid: 362
     components:
     - type: Transform
@@ -2739,7 +2724,6 @@ entities:
       configurators:
       - invalid
       deviceLists:
-      - 361
       - 3
       - 365
       - 7
@@ -2756,7 +2740,6 @@ entities:
       deviceLists:
       - 362
       - 4
-      - 361
       - 3
   - uid: 370
     components:
@@ -3323,8 +3306,11 @@ entities:
       pos: -0.5,-18.5
       parent: 1
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 3
+      - 361
     - type: AtmosPipeColor
       color: '#00AACCFF'
   - uid: 441
@@ -3379,8 +3365,11 @@ entities:
       pos: 0.5,-17.5
       parent: 1
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 3
+      - 361
     - type: AtmosPipeColor
       color: '#DD0075FF'
   - uid: 446
