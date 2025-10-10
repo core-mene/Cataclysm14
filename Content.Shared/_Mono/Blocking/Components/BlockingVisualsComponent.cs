@@ -1,4 +1,8 @@
-﻿using Content.Shared._Mono.Blocking;
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: MPL-2.0
+
+using Content.Shared._Mono.Blocking;
 using Robust.Shared.Physics;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
