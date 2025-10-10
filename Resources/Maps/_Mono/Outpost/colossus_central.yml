@@ -108,6 +108,27 @@ entities:
   entities:
   - uid: 1
     components:
+      - type: BecomesStation
+      id: Colossus
+    - type: ForceAnchor
+    - type: StationTransit
+    - type: IFF
+      readOnly: True
+    - type: ProtectedGrid
+      hostileMobKillSound: !type:SoundPathSpecifier
+        path: /Audio/Effects/holy.ogg
+      killHostileMobs: True
+      preventArtifactTriggers: True
+      preventEmpEvents: True
+      preventRCDUse: False
+      preventFloorPlacement: True
+      preventFloorRemoval: True
+    - type: GridGodMode
+      protectedEntities: []
+    - type: GridPacifier
+    - type: GridRaider
+      protectedEntities: []
+      locked: False
     - type: MetaData
       name: grid
     - type: Transform
