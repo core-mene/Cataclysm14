@@ -20,8 +20,8 @@
 using System.Linq;
 using Content.Client._Mono.Blocking.Components;
 using Content.Shared._Mono.Blocking;
+using Content.Shared.Blocking.Components;
 using Content.Shared.Actions;
-using Content.Shared.Clothing;
 using Content.Shared.Damage;
 using Content.Shared.Examine;
 using Content.Shared.Hands;
@@ -158,9 +158,7 @@ public sealed partial class BlockingSystem : SharedBlockingSystem // Mono
         {
             if (component.IsClothing && itemToggleComponent.Activated && component.User != null)
                 AddComp<BlockingVisualsComponent>(component.User.Value);
-            else if (component.User == null || !component.IsClothing)
-                ;
-            else if (!itemToggleComponent.Activated)
+            else if (component.User != null && !itemToggleComponent.Activated)
                 RemCompDeferred<BlockingVisualsComponent>(component.User.Value);
         }
     }
@@ -402,10 +400,10 @@ public sealed partial class BlockingSystem : SharedBlockingSystem // Mono
         var modifier = component.IsBlocking ? component.ActiveBlockDamageModifier : component.PassiveBlockDamageModifer;
 
         var msg = new FormattedMessage();
-        if (!component.IsClothing)
-            msg.AddMarkupOrThrow(Loc.GetString("blocking-fraction", ("value", MathF.Round(fraction * 100, 1))));
-        if (component.IsClothing)
-            msg.AddMarkupOrThrow(Loc.GetString("blocking-fraction-armor", ("value", MathF.Round(fraction * 100, 1))));
+            msg.AddMarkupOrThrow(
+            Loc.GetString((component.IsClothing ? "blocking-fraction-armor" : "blocking-fraction"),
+            ("value", MathF.Round(fraction * 100, 1)))
+        );
 
         AppendCoefficients(modifier, msg);
 
