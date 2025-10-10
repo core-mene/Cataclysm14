@@ -23,5 +23,5 @@ public sealed partial class BlockingVisualsComponent : Component
     /// </summary>
     [DataField("enabled")]
     [AutoNetworkedField]
-    public bool Enabled = false;
+    public bool Enabled = true;
 }

@@ -114,9 +114,6 @@ public sealed partial class BlockingSystem : SharedBlockingSystem // Mono
         if (component.IsClothing)
         {
             component.User = args.Equipee;
-            if (!HasComp<BlockingVisualsComponent>(component.User.Value))
-                AddComp<BlockingVisualsComponent>(args.Equipee);
-            SetEnabled(args.Equipee, false);
         }
         // Mono end
         Dirty(uid, component);
@@ -158,10 +155,11 @@ public sealed partial class BlockingSystem : SharedBlockingSystem // Mono
         if (TryComp<ItemToggleComponent>(uid, out var itemToggleComponent))
         {
             if (component.IsClothing && itemToggleComponent.Activated && component.User != null)
-                SetEnabled(component.User.Value, true);
-            else if (component.User == null || !component.IsClothing);
+                AddComp<BlockingVisualsComponent>(component.User.Value);
+            else if (component.User == null || !component.IsClothing)
+                ;
             else if (!itemToggleComponent.Activated)
-                SetEnabled(component.User.Value, false);
+                RemCompDeferred<BlockingVisualsComponent>(component.User.Value);
         }
     }
     // Mono end

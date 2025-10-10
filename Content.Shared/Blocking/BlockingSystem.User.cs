@@ -14,12 +14,9 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Client._Mono.Blocking.Components;
 using Content.Shared._Mono.Blocking;
 using Content.Shared.Damage;
-using Content.Shared.Damage.Prototypes;
 using Content.Shared.Item.ItemToggle.Components;
-using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 
@@ -92,12 +89,6 @@ public sealed partial class BlockingSystem : SharedBlockingSystem // Mono
             {
                 _audio.PlayPvs(blocking.BlockSound, uid);
             }
-            // Mono start
-            if (blocking.IsClothing && blocking.User != null && toggleComponent.Activated && HasComp<BlockingVisualsComponent>(blocking.User.Value))
-                AddComp<BlockingVisualsComponent>(uid);
-            else if (HasComp<BlockingVisualsComponent>(uid))
-                RemComp<BlockingVisualsComponent>(uid);
-            // Mono end
         }
     }
 
@@ -116,8 +107,6 @@ public sealed partial class BlockingSystem : SharedBlockingSystem // Mono
     {
         if (!TryComp<BlockingComponent>(component.BlockingItem, out var blockingComponent))
             return;
-        if (HasComp<BlockingVisualsComponent>(uid)) // Mono
-            RemComp<BlockingVisualsComponent>(uid); // Mono
 
         StopBlockingHelper(component.BlockingItem.Value, blockingComponent, uid);
 
@@ -133,7 +122,5 @@ public sealed partial class BlockingSystem : SharedBlockingSystem // Mono
     {
         if (TryComp<BlockingComponent>(component.BlockingItem, out var blockComp) && blockComp.IsBlocking)
             StopBlocking(component.BlockingItem.Value, blockComp, uid);
-        if (HasComp<BlockingVisualsComponent>(uid)) // Mono
-            RemComp<BlockingVisualsComponent>(uid); // Mono
     }
 }
