@@ -10,11 +10,11 @@
   id: Gadyuka
   parent: BaseVesselAntag
   name: NCS Gadyuka
-  description: A small attack craft, ideal for dealing with small threats.
+  description: A small attack craft, ideal for dealing with small threats. Capable of revealing IFF-invisible targets.
   price: 30520 # WALMARTMOBILE 2
   category: Small
   group: Ussp
-  access: USSP
+  access: Mercenary
   shuttlePath: /Maps/_Mono/Shuttles/USSP/gadyuka.yml
   guidebookPage: Null
   class:
@@ -22,8 +22,6 @@
   engine:
   - Uranium
   cloakHunter: true
-  company:
-  - USSP
 
 - type: gameMap
   id: Gadyuka
@@ -41,7 +39,5 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            USSPSergeant: [0, 0]
-            USSPCorporal: [0, 0]
-            USSPMedic: [0, 0]
-            USSPRifleman: [0, 0]
+            Mercenary: [ 0, 0 ]
+            Pilot: [ 0, 0 ]

@@ -9,7 +9,7 @@
   suffix: USSP, Locked
   components:
   - type: AccessReader
-    access: [["USSP"]]
+    access: [["Mercenary"]]
 
 - type: entity
   parent: DoorElectronics
@@ -17,7 +17,7 @@
   suffix: USSP Secure, Locked
   components:
   - type: AccessReader
-    access: [["USSPHigh"]]
+    access: [["Mercenary"]]
 
 - type: entity
   parent: DoorElectronics
@@ -25,7 +25,7 @@
   suffix: USSP Command, Locked
   components:
   - type: AccessReader
-    access: [["USSPCommand"]]
+    access: [["Mercenary"]]
 
 - type: entity
   parent: DoorElectronics
