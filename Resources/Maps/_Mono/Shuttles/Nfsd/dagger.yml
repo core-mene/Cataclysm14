@@ -54,7 +54,8 @@ entities:
     - type: MetaData
       name: Dagger
     - type: Transform
-      parent: 42
+      pos: 0.5,0.5
+      parent: invalid
     - type: MapGrid
       chunks:
         0,-1:
