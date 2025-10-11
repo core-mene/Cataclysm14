@@ -54,7 +54,6 @@ entities:
     - type: MetaData
       name: Dagger
     - type: Transform
-      pos: 0.5,0.5
       parent: invalid
     - type: MapGrid
       chunks:
@@ -95,7 +94,6 @@ entities:
       id: Dagger
     - type: OccluderTree
     - type: Shuttle
-      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -3322,8 +3320,6 @@ entities:
       pos: -0.5,-18.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
       - 361
@@ -3381,8 +3377,6 @@ entities:
       pos: 0.5,-17.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
       - 361
