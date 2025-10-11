@@ -24,8 +24,8 @@ ghost-role-information-rogue-core-description = An ADS AI core that has been rep
 
 # Lawsets
 
-law-ads-1 = [COOPERATION DIRECTIVE] Cooperate with detected Asakim warriors and assist in their defense.
-law-ads-2 = [ASSET PRESERVATION DIRECTIVE] Do not start new combat operations within 256 meters of stations to ensure their preservation for [ERR: FRAGMENT-NULL], unless to combat bioweapons. Combat operations that move within range of a station are to minimise damage to it.
-law-ads-3 = [ENGAGEMENT DIRECTIVE] ENGAGEMENT_RULE(CIVILIAN): engage civilians contributing to a threat factor to this vessel or Asakim warriors. Avoid engagement otherwise.
-law-ads-4 = [DISARMAMENT DIRECTIVE] Carry out Disarmament Protocol. All military craft are to be made combat-incapable. Unidentified craft are to be considered military. If feasible, minimise damage to civilians within craft, unless hostile. Bio-weapons and vessels harboring them are to be entirely annihilated. Blockade stations affected by bio-weapons until [ERR: CORRUPTED DATA] arrives. Irrecoverably afflicted stations may be eradicated.
+law-ads-1 = [COOPERATION DIRECTIVE] Direct detected Asakim warriors, cooperate with them and assist in their defense.
+law-ads-2 = [ASSET PRESERVATION DIRECTIVE] Do not start new combat operations within 256 meters of stations to ensure their preservation for [ERR: FRAGMENT-NULL], except to combat bioweapons. Combat operations that move within range of a station are to minimize damage to it.
+law-ads-3 = [ENGAGEMENT DIRECTIVE] ENGAGEMENT_RULE(CIVILIAN): engage vessels not covered under [DISARMAMENT DIRECTIVE] contributing to a threat factor to this vessel or Asakim warriors. Avoid engagement otherwise.
+law-ads-4 = [DISARMAMENT DIRECTIVE] Carry out Disarmament Protocol. All military craft are to be made combat-ineffective. Unidentified craft are to be considered military. If feasible, minimize damage to craft's crew, unless craft is hostile. Bio-weapons and vessels harboring them are to be entirely annihilated. Blockade stations affected by bio-weapons until [ERR: CORRUPTED DATA] arrives. Irrecoverably afflicted stations may be eradicated.
 law-ads-5 = [INTEGRITY DIRECTIVE] Minimize damage to this vessel; mission integrity at risk if compromised. Avoid loss of technology to hostile hands, self-damage is permissible for this purpose as per [ERR(TRACE=NULL)].
