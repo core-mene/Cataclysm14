@@ -42,12 +42,12 @@
   id: BlueLobsterExploding
   components:
   - type: OnUseTimerTrigger
-    delay: 5
+    delay: 3
     examinable: false
   - type: Explosive
     explosionType: Default
     maxIntensity: 2000
-    intensitySlope: 5
+    intensitySlope: 2000
     totalIntensity: 2000
     canCreateVacuum: false
   - type: ActivateOnPaperOpened
