@@ -50,3 +50,18 @@
   technologyPrerequisites:
   - BasicParts
   position: 2, 1
+
+- type: technology
+  id: PrintableExplosives
+  name: research-technology-printable-explosives
+  entityIcon: C4
+  discipline: Arsenal
+  tier: 3
+  cost: 7500
+  recipeUnlocks:
+  - PrintableC4
+  - PrintableEmpGrenade
+  - PrintableExplosiveGrenade
+  technologyPrerequisites:
+  - ExplosiveTechnology
+  position: 2, 14
