@@ -31,6 +31,40 @@
       map: ["enum.PowerDeviceVisualLayers.Powered"]
       visible: false
       color: "#FF9933"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+      - !type:SpawnGasBehavior
+        gasMixture:
+          volume: 1000
+          moles:
+          - 194 # oxygen
+          - 0 # nitrogen
+          - 0 # carbon dioxide
+          - 6 # plasma
+          temperature: 752.48
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 4000
+    intensitySlope: 4
+    totalIntensity: 1000
   - type: ApcPowerReceiver
     powerLoad: 80000
   - type: PointLight
@@ -66,6 +100,40 @@
       map: ["enum.PowerDeviceVisualLayers.Powered"]
       visible: false
       color: "#FF0A70"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+      - !type:SpawnGasBehavior
+        gasMixture:
+          volume: 1000
+          moles:
+          - 194 # oxygen
+          - 0 # nitrogen
+          - 0 # carbon dioxide
+          - 6 # plasma
+          temperature: 752.48
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 4000
+    intensitySlope: 4
+    totalIntensity: 1000
   - type: ApcPowerReceiver
     powerLoad: 60000
   - type: PointLight
@@ -114,13 +182,36 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 1500
       behaviors:
       - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalGlassBreak
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+      - !type:SpawnGasBehavior
+        gasMixture:
+          volume: 1000
+          moles:
+          - 194 # oxygen
+          - 0 # nitrogen
+          - 0 # carbon dioxide
+          - 6 # plasma
+          temperature: 752.48
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 4000
+    intensitySlope: 4
+    totalIntensity: 600
   - type: Repairable
     doAfterDelay: 8
   - type: PointLight
@@ -193,6 +284,40 @@
       map: ["enum.PowerDeviceVisualLayers.Powered"]
       visible: false
       color: "#9933FF"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+      - !type:SpawnGasBehavior
+        gasMixture:
+          volume: 1000
+          moles:
+          - 194 # oxygen
+          - 0 # nitrogen
+          - 0 # carbon dioxide
+          - 6 # plasma
+          temperature: 752.48
+    - trigger:
+        !type:DamageTrigger
+        damage: 750
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 4000
+    intensitySlope: 4
+    totalIntensity: 400
   - type: ApcPowerReceiver
     powerLoad: 40000
   - type: PointLight
@@ -241,6 +366,40 @@
       map: ["enum.PowerDeviceVisualLayers.Powered"]
       visible: false
       color: "#3399FF"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+      - !type:SpawnGasBehavior
+        gasMixture:
+          volume: 1000
+          moles:
+          - 194 # oxygen
+          - 0 # nitrogen
+          - 0 # carbon dioxide
+          - 6 # plasma
+          temperature: 752.48
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 4000
+    intensitySlope: 4
+    totalIntensity: 300
   - type: ApcPowerReceiver
     powerLoad: 20000
   - type: PointLight
