@@ -40,7 +40,7 @@
     fireRate: 0.5
     minAngle: 0
     maxAngle: 0
-    projectileSpeed: 90
+    projectileSpeed: 140
     shootThermalSignature: 4000000 # ~2.8km with continuous fire
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
@@ -110,7 +110,7 @@
     fireRate: 20
     minAngle: 0
     maxAngle: 5
-    projectileSpeed: 145
+    projectileSpeed: 185
     shootThermalSignature: 500000 # ~5.6km with continuous fire
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/autopulse_laser_fire_01.ogg
@@ -326,7 +326,7 @@
     range: 500
   - type: Gun
     fireRate: 0.2
-    projectileSpeed: 90
+    projectileSpeed: 140
     shootThermalSignature: 2000000 # ~1414m after firing - relatively low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
@@ -395,7 +395,7 @@
           bounds: "-0.75,-0.75,0.75,0.75"
         density: 1500
   - type: Gun
-    projectileSpeed: 150
+    projectileSpeed: 250
     fireRate: 0.75
     shootThermalSignature: 12000000 # ~6km after firing
     soundGunshot:
@@ -803,7 +803,7 @@
     range: 500
   - type: Gun
     fireRate: 5
-    projectileSpeed: 400
+    projectileSpeed: 600
     minAngle: 0
     maxAngle: 6
     shootThermalSignature: 500000 # ~5.6km with continuous fire
