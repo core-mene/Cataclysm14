@@ -177,6 +177,26 @@
 
 - type: entity
   parent: BaseShipLPC
+  id: ShipVoucherGoliath
+  name: ASR goliath LPC
+  description: A small card that authorizes the procurement of a Goliath.
+  components:
+  - type: Sprite
+    layers:
+    - state: mtech
+    - state: stripeasr
+    - state: vouchermilitary
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: BlackMarket
+    companyName: Rogue
+    vessels:
+    - Goliath
+  - type: StaticPrice
+    vendPrice: 325000
+
+- type: entity
+  parent: BaseShipLPC
   id: ShipVoucherFlyssa
   name: TSF flyssa LPC
   description: A small card that contains the data for the procurement of a Flyssa-class destroyer from the flagship's reserves.

@@ -21,6 +21,7 @@ research-technology-rogue-emag = Basic Hacking Procedures
 research-technology-rogue-hristov = Heavy Ballistics
 research-technology-rogue-stealthsuit = Metamaterial Fibers
 research-technology-rogue-subsonic = Subsonic Firearms
+research-technology-rogue-goliath-voucher = ASR Procurement Goliath LPC
 
 # T3 rogue
 research-technology-rogue-prowler-voucher = Stealthcraft Technologies
