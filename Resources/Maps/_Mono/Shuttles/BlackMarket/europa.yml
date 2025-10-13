@@ -69,7 +69,7 @@ entities:
       name: Europa
     - type: Transform
       pos: 0.5,0.5
-      parent: 126
+      parent: invalid
     - type: MapGrid
       chunks:
         -1,-1:
@@ -109,7 +109,6 @@ entities:
       id: Europa
     - type: OccluderTree
     - type: Shuttle
-      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -1056,16 +1055,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-  - uid: 126
-    components:
-    - type: MetaData
-      name: Map Entity
-    - type: Transform
-    - type: Map
-      mapPaused: True
-    - type: GridTree
-    - type: Broadphase
-    - type: OccluderTree
 - proto: AirAlarm
   entities:
   - uid: 10
