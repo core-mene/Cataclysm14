@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/13/2025 05:34:21
+  time: 10/13/2025 10:56:19
   entityCount: 1526
 maps: []
 grids:
@@ -5086,16 +5086,10 @@ entities:
         212:
         - - device-button-1
           - Toggle
-        998:
-        - - device-button-2
-          - SpaceArtilleryFire
         1492:
         - - device-button-2
           - SpaceArtilleryFire
         1429:
-        - - device-button-2
-          - SpaceArtilleryFire
-        320:
         - - device-button-2
           - SpaceArtilleryFire
     - type: ApcPowerReceiver
@@ -9443,9 +9437,9 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 5.5,-5.5
       parent: 1
-- proto: WeaponTurretBofors
+- proto: WeaponLaserTurretApollo
   entities:
-  - uid: 320
+  - uid: 990
     components:
     - type: Transform
       rot: 3.141592653589793 rad
