@@ -6,7 +6,7 @@
   id: Goliath
   parent: BaseVesselAntag
   name: ASW Goliath
-  description: An expensive light cruiser designed by Alpine Shipworks, utilised by Insurgency cells for swift ambush attacks against enemy fleets.
+  description: An expensive Frigate designed by Alpine Shipworks, utilised by Insurgency cells for swift ambush attacks against enemy fleets.
   limit: 2
   price: 325000
   purchasable: false # Voucher only
@@ -16,6 +16,8 @@
   guidebookPage: Null
   class:
   - Pirate
+  - Capital
+  - Frigate
   engine:
   - Plasma
 
