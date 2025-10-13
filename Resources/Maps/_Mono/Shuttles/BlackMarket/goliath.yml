@@ -32,8 +32,6 @@ entities:
     components:
     - type: MetaData
       name: Goliath
-    - type: GridTree
-    - type: OccluderTree
     - type: Transform
       pos: 0.5,0.5
       parent: invalid
@@ -82,9 +80,8 @@ entities:
       fixtures: {}
     - type: BecomesStation
       id: Goliath
-    - type: SpreaderGrid
+    - type: OccluderTree
     - type: Shuttle
-      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
