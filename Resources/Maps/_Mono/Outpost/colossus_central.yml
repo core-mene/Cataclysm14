@@ -108,8 +108,41 @@ entities:
   entities:
   - uid: 1
     components:
+        - type: MetaData
+      name: map 1234
+    - type: Transform
+    - type: Map
+      mapPaused: True
+    - type: GridTree
+    - type: Broadphase
+    - type: Parallax
+      parallax: ColossusStation
+    - type: OccluderTree
+  - uid: 2
+    components:
+    - type: BecomesStation
+      id: Colossus
+    - type: ForceAnchor
+    - type: StationTransit
+    - type: IFF
+      readOnly: True
+    - type: ProtectedGrid
+      hostileMobKillSound: !type:SoundPathSpecifier
+        path: /Audio/Effects/holy.ogg
+      killHostileMobs: True
+      preventArtifactTriggers: False
+      preventEmpEvents: True
+      preventRCDUse: False
+      preventFloorPlacement: False
+      preventFloorRemoval: False
+    - type: GridGodMode
+      protectedEntities: []
+    - type: GridPacifier
+    - type: GridRaider
+      protectedEntities: []
+      locked: False
     - type: MetaData
-      name: grid
+      name: Colossus Central
     - type: Transform
       pos: 0.85276127,-0.66094494
       parent: 938
