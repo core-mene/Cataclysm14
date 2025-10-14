@@ -50,9 +50,9 @@ meta:
   time: 10/14/2025 00:30:34
   entityCount: 10450
 maps:
-- 938
-grids:
 - 1
+grids:
+- 2
 orphans: []
 nullspace: []
 tilemap:
@@ -144,8 +144,8 @@ entities:
     - type: MetaData
       name: Colossus Central
     - type: Transform
-      pos: 0.85276127,-0.66094494
-      parent: 938
+      pos: 12,-25
+      parent: 1
     - type: MapGrid
       chunks:
         0,0:
@@ -335,6 +335,8 @@ entities:
     - type: Broadphase
     - type: Physics
       bodyStatus: InAir
+      angularDamping: 0.05
+      linearDamping: 0.05
       fixedRotation: False
       bodyType: Dynamic
     - type: Fixtures
