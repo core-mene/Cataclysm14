@@ -215,6 +215,45 @@
   - type: Explosive
     explosionType: DefaultShipGun
 
+# 140mm Longbow
+
+- type: entity
+  id: ShipLongbowProjectile
+  name: longbow 140mm HEAT projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 3500
+        Pierce: 4000
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+    scale: 1.25, 1.25
+  - type: Ammo
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 3.25
+    requireNoGrid: true
+    shape: arrow
+    radarColor: "#f7dc0c"
+  - type: TimedDespawn
+    lifetime: 3
+  - type: PointLight
+    color: "#FCBA03"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 400
+    intensitySlope: 18
+    maxIntensity: 1900
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
 # 220mm Cyrexa
 
 - type: entity

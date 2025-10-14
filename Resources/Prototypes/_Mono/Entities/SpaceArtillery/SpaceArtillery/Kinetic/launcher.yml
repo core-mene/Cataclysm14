@@ -446,6 +446,86 @@
   - type: ShipGunClass
     shipClass: Superheavy
 
+# Longbow 150mm
+
+- type: entity
+  id: WeaponTurretLongbow
+  name: L65 Mk.5 "Longbow" heavy autocannon
+  parent: BallisticArtilleryUnanchorable
+  description: Fires 140mm HEAT shells in a 10 round burst from an internal autoloader.
+  components:
+  - type: StaticPrice
+    price: 15000
+  - type: Sprite
+    sprite: _Mono/Objects/ShuttleWeapons/longbow.rsi
+    layers:
+    - state: space_artillery
+    scale: 1, 1
+  - type: Appearance
+  - type: FireControlRotate
+  - type: AmmoCounter
+  - type: Battery
+    maxCharge: 12000
+    startingCharge: 12000
+  - type: ExaminableBattery
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.6,-0.6,0.6,0.6"
+        density: 1500
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Gun
+    projectileSpeed: 290
+    minAngle: 0
+    maxAngle: 3
+    fireRate: 11
+    burstCooldown: 8
+    burstFireRate: 11
+    shotsPerBurst: 10
+    selectedMode: Burst
+    availableModes: Burst
+    shootThermalSignature: 48000000 # ~7km after firing
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/Gunshots/120mm_mortar.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 12000
+  - type: SpaceArtillery
+    powerChargeRate: 12000
+    powerUsePassive: 1500
+    powerUseActive: 0
+  - type: Actions
+  - type: ProjectileBatteryAmmoProvider
+    proto: ShipLongbowProjectile
+    fireCost: 600
+  - type: RadarBlip
+    radarColor: "#FF0000"
+    scale: 2
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 20000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: ShipGunType
+    shipType: Ballistic
+  - type: ShipGunClass
+    shipClass: Heavy
+
 # MiniCHARON
 
 - type: entity
