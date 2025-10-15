@@ -1,40 +1,10 @@
-# SPDX-FileCopyrightText: 2022 Jacob Tong
-# SPDX-FileCopyrightText: 2022 Kara
-# SPDX-FileCopyrightText: 2022 Nemanja
-# SPDX-FileCopyrightText: 2022 Peptide90
-# SPDX-FileCopyrightText: 2022 T-Stalker
-# SPDX-FileCopyrightText: 2022 TaralGit
-# SPDX-FileCopyrightText: 2022 and_a
-# SPDX-FileCopyrightText: 2022 metalgearsloth
-# SPDX-FileCopyrightText: 2023 DrSmugleaf
-# SPDX-FileCopyrightText: 2023 JoeHammad1844
-# SPDX-FileCopyrightText: 2023 Kevin Zheng
-# SPDX-FileCopyrightText: 2023 Leon Friedrich
-# SPDX-FileCopyrightText: 2023 Morb
-# SPDX-FileCopyrightText: 2023 brainfood1183
-# SPDX-FileCopyrightText: 2024 Checkraze
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 Emisse
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 Mr. Samuel
-# SPDX-FileCopyrightText: 2024 PECK
-# SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
-# SPDX-FileCopyrightText: 2024 Rainfey
-# SPDX-FileCopyrightText: 2025 Arcticular1
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 core-mene
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: MPL-2.0
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/03/2025 10:11:13
+  time: 10/15/2025 04:25:18
   entityCount: 3536
 maps:
 - 22
@@ -2038,7 +2008,8 @@ entities:
           1,4:
             0: 16388
           2,5:
-            0: 271
+            2: 1
+            0: 270
           3,4:
             0: 30576
           3,5:
@@ -2632,13 +2603,6 @@ entities:
     - type: Transform
       pos: 24.5,30.5
       parent: 1
-- proto: AirlockFrontierCommandLocked
-  entities:
-  - uid: 60
-    components:
-    - type: Transform
-      pos: 10.5,15.5
-      parent: 1
 - proto: AirlockGlassShuttleNfsdLocked
   entities:
   - uid: 61
@@ -2875,6 +2839,11 @@ entities:
       parent: 1
 - proto: AirlockNfsdArmoryLocked
   entities:
+  - uid: 60
+    components:
+    - type: Transform
+      pos: 10.5,15.5
+      parent: 1
   - uid: 102
     components:
     - type: Transform
@@ -3392,19 +3361,19 @@ entities:
     - type: Transform
       pos: -28.5,-1.5
       parent: 1
+- proto: BedsheetNfsd
+  entities:
+  - uid: 191
+    components:
+    - type: Transform
+      pos: 14.5,17.5
+      parent: 1
 - proto: BedsheetNfsdBrigmedic
   entities:
   - uid: 190
     components:
     - type: Transform
       pos: -32.5,0.5
-      parent: 1
-- proto: BedsheetNfsdSheriff
-  entities:
-  - uid: 191
-    components:
-    - type: Transform
-      pos: 14.5,17.5
       parent: 1
 - proto: BedsheetOrange
   entities:
@@ -15948,6 +15917,13 @@ entities:
     - type: Transform
       pos: -30.5,-3.5
       parent: 1
+- proto: LockerNfsdBailiff
+  entities:
+  - uid: 220
+    components:
+    - type: Transform
+      pos: 8.5,20.5
+      parent: 1
 - proto: LockerNfsdBrigmedic
   entities:
   - uid: 2254
@@ -15966,13 +15942,6 @@ entities:
     components:
     - type: Transform
       pos: -25.5,-5.5
-      parent: 1
-- proto: LockerNfsdSheriffFilled
-  entities:
-  - uid: 2257
-    components:
-    - type: Transform
-      pos: 8.5,20.5
       parent: 1
 - proto: LockerWallChemistryFilled
   entities:
@@ -17864,6 +17833,18 @@ entities:
     - type: Transform
       pos: 6.5,7.5
       parent: 1
+- proto: SpawnPointBailiff
+  entities:
+  - uid: 2257
+    components:
+    - type: Transform
+      pos: 11.5,19.5
+      parent: 1
+  - uid: 2566
+    components:
+    - type: Transform
+      pos: 13.5,17.5
+      parent: 1
 - proto: SpawnPointBrigmedic
   entities:
   - uid: 1696
@@ -17919,18 +17900,6 @@ entities:
     components:
     - type: Transform
       pos: -26.5,1.5
-      parent: 1
-- proto: SpawnPointSheriff
-  entities:
-  - uid: 220
-    components:
-    - type: Transform
-      pos: 11.5,18.5
-      parent: 1
-  - uid: 2566
-    components:
-    - type: Transform
-      pos: 13.5,17.5
       parent: 1
 - proto: SpawnPointTsfEngi
   entities:
