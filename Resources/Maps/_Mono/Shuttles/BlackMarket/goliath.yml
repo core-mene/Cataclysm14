@@ -1,38 +1,11 @@
-# SPDX-FileCopyrightText: 2021 AJCM-git
-# SPDX-FileCopyrightText: 2021 Paul Ritter
-# SPDX-FileCopyrightText: 2021 wrexbe
-# SPDX-FileCopyrightText: 2022 20kdc
-# SPDX-FileCopyrightText: 2022 Cheackraze
-# SPDX-FileCopyrightText: 2022 Kara
-# SPDX-FileCopyrightText: 2022 LittleBuilderJane
-# SPDX-FileCopyrightText: 2022 Peptide90
-# SPDX-FileCopyrightText: 2022 metalgearsloth
-# SPDX-FileCopyrightText: 2022 mirrorcult
-# SPDX-FileCopyrightText: 2023 Dvir
-# SPDX-FileCopyrightText: 2023 Emisse
-# SPDX-FileCopyrightText: 2023 Leon Friedrich
-# SPDX-FileCopyrightText: 2023 Nemanja
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 checkraze
-# SPDX-FileCopyrightText: 2025 Arcticular1
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 Rubeebeebee
-# SPDX-FileCopyrightText: 2025 Whatstone
-# SPDX-FileCopyrightText: 2025 chrome-cirrus
-# SPDX-FileCopyrightText: 2025 crazy1112345
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: MPL-2.0
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/13/2025 11:08:44
-  entityCount: 1526
+  time: 10/15/2025 04:02:06
+  entityCount: 1531
 maps: []
 grids:
 - 1
@@ -2323,6 +2296,16 @@ entities:
     - type: Transform
       pos: -3.5,-15.5
       parent: 1
+  - uid: 682
+    components:
+    - type: Transform
+      pos: -2.5,12.5
+      parent: 1
+  - uid: 690
+    components:
+    - type: Transform
+      pos: 3.5,12.5
+      parent: 1
   - uid: 742
     components:
     - type: Transform
@@ -3328,17 +3311,37 @@ entities:
     - type: Transform
       pos: -4.5,-11.5
       parent: 1
-- proto: CableHV
-  entities:
-  - uid: 35
+  - uid: 1528
     components:
     - type: Transform
-      pos: -0.5,-3.5
+      pos: 4.5,2.5
       parent: 1
+  - uid: 1529
+    components:
+    - type: Transform
+      pos: 3.5,2.5
+      parent: 1
+  - uid: 1530
+    components:
+    - type: Transform
+      pos: -3.5,2.5
+      parent: 1
+  - uid: 1531
+    components:
+    - type: Transform
+      pos: -2.5,2.5
+      parent: 1
+- proto: CableHV
+  entities:
   - uid: 62
     components:
     - type: Transform
       pos: 5.5,1.5
+      parent: 1
+  - uid: 320
+    components:
+    - type: Transform
+      pos: 3.5,1.5
       parent: 1
   - uid: 588
     components:
@@ -3358,7 +3361,7 @@ entities:
   - uid: 592
     components:
     - type: Transform
-      pos: 4.5,1.5
+      pos: 3.5,0.5
       parent: 1
   - uid: 595
     components:
@@ -3403,7 +3406,7 @@ entities:
   - uid: 604
     components:
     - type: Transform
-      pos: -3.5,1.5
+      pos: -2.5,0.5
       parent: 1
   - uid: 605
     components:
@@ -3740,11 +3743,6 @@ entities:
     - type: Transform
       pos: 8.5,-14.5
       parent: 1
-  - uid: 682
-    components:
-    - type: Transform
-      pos: 6.5,-14.5
-      parent: 1
   - uid: 683
     components:
     - type: Transform
@@ -3779,11 +3777,6 @@ entities:
     components:
     - type: Transform
       pos: -7.5,-14.5
-      parent: 1
-  - uid: 690
-    components:
-    - type: Transform
-      pos: -5.5,-14.5
       parent: 1
   - uid: 1354
     components:
@@ -3839,6 +3832,11 @@ entities:
     components:
     - type: Transform
       pos: 5.5,-15.5
+      parent: 1
+  - uid: 1527
+    components:
+    - type: Transform
+      pos: -2.5,1.5
       parent: 1
 - proto: CableMV
   entities:
