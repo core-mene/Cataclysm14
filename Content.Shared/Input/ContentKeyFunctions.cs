@@ -75,9 +75,26 @@ namespace Content.Shared.Input
         public static readonly BoundKeyFunction SmartEquipPocket2 = "SmartEquipPocket2";
         public static readonly BoundKeyFunction SmartEquipSuitStorage = "SmartEquipSuitStorage";
         public static readonly BoundKeyFunction SmartEquipWallet = "SmartEquipWallet"; // Frontier
-        public static readonly BoundKeyFunction SmartEquipBack = "SmartEquipBack"; // Goobstation - Smart equip to back
+        // Mono Edit
+        public static readonly BoundKeyFunction SmartEquipID = "SmartEquipID"; // Mono - Smart equip to PDA slot
+        public static readonly BoundKeyFunction SmartEquipShoes = "SmartEquipShoes";
+        public static readonly BoundKeyFunction SmartEquipOuterClothing = "SmartEquipOuterClothing";
+        public static readonly BoundKeyFunction EquipBackpack = "EquipBackpack";
+        public static readonly BoundKeyFunction EquipBelt = "EquipBelt";
+        public static readonly BoundKeyFunction EquipPocket1 = "EquipPocket1";
+        public static readonly BoundKeyFunction EquipPocket2 = "EquipPocket2";
+        public static readonly BoundKeyFunction EquipSuitStorage = "EquipSuitStorage";
+        public static readonly BoundKeyFunction EquipWallet = "EquipWallet";
+        public static readonly BoundKeyFunction EquipID = "EquipID";
+        // Mono End
         public static readonly BoundKeyFunction OpenBackpack = "OpenBackpack";
         public static readonly BoundKeyFunction OpenBelt = "OpenBelt";
+        // Mono Edit
+        public static readonly BoundKeyFunction OpenPocket1 = "OpenPocket1";
+        public static readonly BoundKeyFunction OpenPocket2 = "OpenPocket2";
+        public static readonly BoundKeyFunction OpenSuitStorage = "OpenSuitStorage";
+        public static readonly BoundKeyFunction OpenOuterClothing = "OpenOuterClothing";
+        // Mono End
         public static readonly BoundKeyFunction OpenWallet = "OpenWallet"; // Frontier
         public static readonly BoundKeyFunction OpenAHelp = "OpenAHelp";
         public static readonly BoundKeyFunction SwapHands = "SwapHands";

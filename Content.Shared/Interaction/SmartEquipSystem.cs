@@ -48,6 +48,11 @@ public sealed class SmartEquipSystem : EntitySystem
             .Bind(ContentKeyFunctions.SmartEquipPocket2, InputCmdHandler.FromDelegate(HandleSmartEquipPocket2, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SmartEquipSuitStorage, InputCmdHandler.FromDelegate(HandleSmartEquipSuitStorage, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SmartEquipWallet, InputCmdHandler.FromDelegate(HandleSmartEquipWallet, handle: false, outsidePrediction: false)) // Frontier
+            // Mono
+            .Bind(ContentKeyFunctions.SmartEquipID, InputCmdHandler.FromDelegate(HandleSmartEquipID, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.SmartEquipShoes, InputCmdHandler.FromDelegate(HandleSmartEquipShoes, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.SmartEquipOuterClothing, InputCmdHandler.FromDelegate(HandleSmartEquipOuterClothing, handle: false, outsidePrediction: false))
+            // Mono End
             .Register<SmartEquipSystem>();
     }
 
@@ -88,6 +93,22 @@ public sealed class SmartEquipSystem : EntitySystem
         HandleSmartEquip(session, "wallet");
     }
     // End Frontier: smart-equip to wallet
+    // Mono
+    private void HandleSmartEquipID(ICommonSession? session)
+    {
+        HandleSmartEquip(session, "id");
+    }
+
+    private void HandleSmartEquipShoes(ICommonSession? session)
+    {
+        HandleSmartEquip(session, "shoes");
+    }
+
+    private void HandleSmartEquipOuterClothing (ICommonSession? session)
+    {
+        HandleSmartEquip(session, "outerClothing");
+    }
+    // End Mono
     private void HandleSmartEquip(ICommonSession? session, string equipmentSlot)
     {
         if (session is not { } playerSession)

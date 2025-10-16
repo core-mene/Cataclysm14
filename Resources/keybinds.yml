@@ -268,9 +268,11 @@ binds:
   type: State
   key: F # Mono: F<H
   mod1: Shift
-- function: SmartEquipBack # Goobstation - Smart equip to back
-  type: State # Goobstation - Smart equip to back
-  key: F # Goobstation - Smart equip to back
+# Goobstation - Smart equip to back
+- function: EquipSuitStorage # Mono
+  type: State
+  key: F
+# Goobstation end
 - function: OpenBackpack
   type: State
   key: V

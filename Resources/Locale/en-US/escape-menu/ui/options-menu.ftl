@@ -155,12 +155,29 @@ ui-options-static-storage-ui = Lock storage window to hotbar
 
 ui-options-function-smart-equip-backpack = Smart-equip to backpack
 ui-options-function-smart-equip-belt = Smart-equip to belt
-ui-options-function-smart-equip-suit-storage = Smart-equip to suit storage
-ui-options-function-smart-equip-back = Alt-Smart-equip to suit storage
-ui-options-function-smart-equip-pocket1 = Smart-equip to pocket 1
-ui-options-function-smart-equip-pocket2 = Smart-equip to pocket 2
+ui-options-function-smart-equip-pocket1 = Smart-equip to 1st pocket
+ui-options-function-smart-equip-pocket2 = Smart-equip to 2nd pocket
+ui-options-function-smart-equip-suit-storage = Smart-equip to shoulder
+ui-options-function-smart-equip-wallet = Smart-equip to wallet
+ui-options-function-smart-equip-id = Smart-equip to PDA slot
+ui-options-function-smart-equip-shoes = Smart-equip to boots
+ui-options-function-smart-equip-outer-clothing = Smart-equip to armor storage
+
+ui-options-function-equip-backpack = Quick-equip to backpack
+ui-options-function-equip-belt = Quick-equip to belt
+ui-options-function-equip-suit-storage = Quick-equip to shoulder
+ui-options-function-equip-pocket1 = Quick-equip to 1st pocket
+ui-options-function-equip-pocket2 = Quick-equip to 2nd pocket
+ui-options-function-equip-id = Quick-equip to PDA slot
+ui-options-function-equip-wallet = Quick-equip to wallet
+
 ui-options-function-open-backpack = Open backpack
 ui-options-function-open-belt = Open belt
+ui-options-function-open-pocket1 = Open 1st pocket
+ui-options-function-open-pocket2 = Open 2nd pocket
+ui-options-function-open-suit-storage = Open shoulder storage
+ui-options-function-open-outer-clothing = Open armor storage
+
 ui-options-function-throw-item-in-hand = Throw item
 ui-options-function-try-pull-object = Pull object
 ui-options-function-move-pulled-object = Move pulled object

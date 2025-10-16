@@ -24,10 +24,15 @@ public sealed class BackEquipSystem : EntitySystem
     public override void Initialize()
     {
         CommandBinds.Builder
-            .Bind(ContentKeyFunctions.SmartEquipBack,
-                InputCmdHandler.FromDelegate(HandleEquipToBack,
-                    handle: false,
-                    outsidePrediction: false)) // Goobstation - Smart equip to back
+            // Mono Edit
+            .Bind(ContentKeyFunctions.EquipBackpack, InputCmdHandler.FromDelegate(HandleEquipBackpack, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.EquipBelt, InputCmdHandler.FromDelegate(HandleEquipBelt, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.EquipPocket1, InputCmdHandler.FromDelegate(HandleEquipPocket1, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.EquipPocket2, InputCmdHandler.FromDelegate(HandleEquipPocket2, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.EquipSuitStorage, InputCmdHandler.FromDelegate(HandleEquipSuitStorage, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.EquipWallet, InputCmdHandler.FromDelegate(HandleEquipWallet, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.EquipID, InputCmdHandler.FromDelegate(HandleEquipID, handle: false, outsidePrediction: false))
+            // Mono End
             .Register<BackEquipSystem>();
     }
 
@@ -37,12 +42,46 @@ public sealed class BackEquipSystem : EntitySystem
 
         CommandBinds.Unregister<BackEquipSystem>();
     }
+    // Mono Edit
+    // private void HandleEquipToBack(ICommonSession? session)
+    // {
+    //     HandleEquipToSlot(session, "suitstorage");
+    // }
+    private void HandleEquipBackpack(ICommonSession? session)
+    {
+        HandleEquipToSlot(session, "back");
+    }
 
-    private void HandleEquipToBack(ICommonSession? session)
+    private void HandleEquipBelt(ICommonSession? session)
+    {
+        HandleEquipToSlot(session, "belt");
+    }
+
+    private void HandleEquipPocket1(ICommonSession? session)
+    {
+        HandleEquipToSlot(session, "pocket1");
+    }
+
+    private void HandleEquipPocket2(ICommonSession? session)
+    {
+        HandleEquipToSlot(session, "pocket2");
+    }
+
+    private void HandleEquipSuitStorage(ICommonSession? session)
     {
         HandleEquipToSlot(session, "suitstorage");
     }
 
+    private void HandleEquipWallet(ICommonSession? session)
+    {
+        HandleEquipToSlot(session, "wallet");
+    }
+
+    private void HandleEquipID(ICommonSession? session)
+    {
+        HandleEquipToSlot(session, "id");
+    }
+    // Mono End
     private void HandleEquipToSlot(ICommonSession? session, string equipmentSlot)
     {
         if (session is not { } playerSession)
