@@ -256,6 +256,14 @@ binds:
   type: State
   key: E
   mod1: Shift
+- function: SmartEquipPocket1
+  type: State
+  key: G # Mono: G<F
+  mod1: Shift
+- function: SmartEquipPocket2
+  type: State
+  key: H # Mono: H<G
+  mod1: Shift
 - function: SmartEquipBack # Goobstation - Smart equip to back
   type: State # Goobstation - Smart equip to back
   key: F # Goobstation - Smart equip to back
