@@ -36,3 +36,19 @@
     soundHit:
       collection: MeatLaserImpact
 
+- type: entity
+  parent: BulletDisabler
+  id: BulletDisablerShock
+  name: disabler bolt
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Shock: 15
+    soundHit:
+      collection: WeakHit
+    forceSound: true
+  - type: StaminaDamageOnCollide
+    damage: 60 # They Will learn not to wear contra
