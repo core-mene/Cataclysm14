@@ -1,3 +1,4 @@
+using Content.Shared.DeviceLinking; //Mono
 using Content.Shared.Gravity;
 using Content.Shared.StepTrigger.Components;
 using Content.Shared.Whitelist;
@@ -14,6 +15,7 @@ public sealed class StepTriggerSystem : EntitySystem
     [Dependency] private readonly SharedGravitySystem _gravity = default!;
     [Dependency] private readonly SharedMapSystem _map = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
+    [Dependency] private readonly SharedDeviceLinkSystem _links = default!; //Mono
 
     public override void Initialize()
     {
@@ -119,6 +121,8 @@ public sealed class StepTriggerSystem : EntitySystem
         {
             var evStep = new StepTriggeredOnEvent(uid, otherUid);
             RaiseLocalEvent(uid, ref evStep);
+            if (HasComp<DeviceLinkSourceComponent>(uid))
+                _links.InvokePort(uid, "Pressed"); //Mono
         }
         else
         {
