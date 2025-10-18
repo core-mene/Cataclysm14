@@ -12989,3 +12989,37 @@ Entries:
   id: 1439
   time: '2025-10-15T14:45:36.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2418
+- author: Ark
+  changes:
+    - type: Fix
+      message: Cortical Borers can no longer infest each other.
+    - type: Fix
+      message: Cortical Borers can no longer infest exped mobs to prevent abuse.
+    - type: Fix
+      message: Cortical Borers can no longer reform into dionas.
+    - type: Fix
+      message: Cortical Borers no longer reset your respawn (respool) timer.
+    - type: Fix
+      message: Disposals no longer annihilate you when destroyed.
+    - type: Fix
+      message: Wheelchair-bound users can use vehicles (and their wheelchair) again.
+    - type: Fix
+      message: Fixed missing locales under the Controls menu.
+    - type: Fix
+      message: Chimeras now revive properly.
+    - type: Fix
+      message: Parallax is no longer frozen on the main menu.
+    - type: Tweak
+      message: Alerts are now global.
+    - type: Tweak
+      message: Cobra gland glows brighter.
+  id: 1440
+  time: '2025-10-18T22:14:39.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2430
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Required portstrike time raised to 6 hours.
+  id: 1441
+  time: '2025-10-18T22:17:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2303
