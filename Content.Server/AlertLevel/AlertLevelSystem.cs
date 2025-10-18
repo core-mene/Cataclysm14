@@ -234,8 +234,11 @@ public sealed class AlertLevelSystem : EntitySystem
         if (announce && Resolve(station, ref dataComponent)) // Frontier: add Resolve for dataComponent
         {
             var stationName = dataComponent.EntityName; // Frontier: moved down
-            _chatSystem.DispatchStationAnnouncement(station, announcementFull, playDefaultSound: playDefault,
-                colorOverride: detail.Color, sender: stationName);
+            _chatSystem.DispatchGlobalAnnouncement(
+                announcementFull,
+                sender: stationName,
+                playSound: playDefault,
+                colorOverride: detail.Color);
         }
 
         RaiseLocalEvent(new AlertLevelChangedEvent(EntityUid.Invalid, level)); // Frontier: pass invalid, we have no station
