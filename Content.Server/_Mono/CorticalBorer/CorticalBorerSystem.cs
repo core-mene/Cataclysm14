@@ -15,7 +15,6 @@ using Content.Server.Ghost.Roles.Components;
 using Content.Server.Medical;
 using Content.Server.Medical.Components;
 using Content.Server.Nutrition.Components;
-using Content.Server.Salvage.Expeditions;
 using Content.Shared._Mono.CorticalBorer;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Alert;
@@ -59,7 +58,6 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
         SubscribeAbilities();
 
         SubscribeLocalEvent<CorticalBorerComponent, ComponentStartup>(OnStartup);
-        SubscribeLocalEvent<CorticalBorerComponent, MapUidChangedEvent>(OnMapChanged);
 
         SubscribeLocalEvent<CorticalBorerComponent, CorticalBorerDispenserInjectMessage>(OnInjectReagentMessage);
         SubscribeLocalEvent<CorticalBorerComponent, CorticalBorerDispenserSetInjectAmountMessage>(OnSetInjectAmountMessage);
@@ -72,8 +70,6 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
 
     private void OnStartup(Entity<CorticalBorerComponent> ent, ref ComponentStartup args)
     {
-        _metaData.AddFlag(ent, MetaDataFlags.ExtraTransformEvents);
-
         //add actions
         foreach (var actionId in ent.Comp.InitialCorticalBorerActions)
             _actions.AddAction(ent, actionId);
@@ -404,15 +400,6 @@ public sealed partial class CorticalBorerSystem : SharedCorticalBorerSystem
 
         infestedComp.ControlTimeEnd = null;
         _container.CleanContainer(infestedComp.ControlContainer);
-    }
-
-    private void OnMapChanged(Entity<CorticalBorerComponent> ent, ref MapUidChangedEvent args)
-    {
-        // Delete the borer if it enters an expedition map.
-        if (args.NewMap != null && HasComp<SalvageExpeditionComponent>(args.NewMap.Value))
-        {
-            QueueDel(ent);
-        }
     }
 
     private void OnMindRemoved(Entity<CorticalBorerComponent> ent, ref MindRemovedMessage args)

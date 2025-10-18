@@ -5,6 +5,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Server._NF.Salvage;
 using Content.Server.Body.Components;
 using Content.Server.Medical;
 using Content.Shared._Mono.CorticalBorer;
@@ -70,6 +71,14 @@ public sealed partial class CorticalBorerSystem
 
         // Prevent borers from infesting other borers. :o)
         if (HasComp<CorticalBorerComponent>(target))
+        {
+            _popup.PopupEntity(Loc.GetString("cortical-borer-invalid-host", ("target", targetIdentity)), uid, uid, PopupType.Medium);
+
+            return;
+        }
+
+        // Prevent borers from infesting salvage/exped mobs. :o(
+        if (HasComp<NFSalvageMobRestrictionsComponent>(target))
         {
             _popup.PopupEntity(Loc.GetString("cortical-borer-invalid-host", ("target", targetIdentity)), uid, uid, PopupType.Medium);
 
