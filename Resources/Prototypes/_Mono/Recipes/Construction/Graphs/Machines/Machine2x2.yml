@@ -1,14 +1,14 @@
 - type: constructionGraph
   id: Machine2x2
-  start: start
+  start: start2x2
   graph:
-    - node: start
+    - node: start2x2
       actions:
         - !type:SpawnPrototype
           prototype: SheetSteel1
         - !type:DeleteEntity
       edges:
-        - to: missingWires
+        - to: missingWires2x2
           completed:
             - !type:SetAnchor
               value: false
@@ -16,23 +16,23 @@
             - material: Steel
               amount: 5
               doAfter: 2.5
-        - to: destroyedMachineFrame
+        - to: destroyedMachineFrame2x2
           steps:
             - material: Steel
               amount: 5
               doAfter: 2.5
 
-    - node: missingWires
-      entity: UnfinishedMachineFrame
+    - node: missingWires2x2
+      entity: UnfinishedMachineFrame2x2
       actions:
         - !type:EmptyAllContainers
       edges:
-        - to: machineFrame
+        - to: machineFrame2x2
           conditions:
             - !type:EntityAnchored
           steps:
             - material: Cable
-        - to: start
+        - to: start2x2
           completed:
             - !type:SpawnPrototype
               prototype: SheetSteel1
@@ -42,8 +42,8 @@
             - tool: Screwing
               doAfter: 2
 
-    - node: machineFrame
-      entity: MachineFrame
+    - node: machineFrame2x2
+      entity: MachineFrame2x2
       actions:
         - !type:AddContainer
           container: machine_parts
@@ -51,7 +51,7 @@
           container: machine_board
         - !type:MachineFrameRegenerateProgress
       edges:
-        - to: machine
+        - to: machine2x2
           conditions:
             - !type:EntityAnchored
             - !type:MachineFrameComplete
@@ -65,7 +65,7 @@
             - tool: Screwing
               doAfter: 0.5
 
-        - to: machineFrame
+        - to: machineFrame2x2
           conditions:
             - !type:EntityAnchored
             - !type:ContainerNotEmpty
@@ -77,7 +77,7 @@
                 - !type:EmptyAllContainers
                 - !type:MachineFrameRegenerateProgress
 
-        - to: missingWires
+        - to: missingWires2x2
           conditions:
             - !type:EntityAnchored
             - !type:ContainerEmpty
@@ -90,10 +90,10 @@
             - tool: Cutting
               doAfter: 0.25
 
-    - node: machine
+    - node: machine2x2
       entity: !type:BoardNodeEntity { container: machine_board }
       edges:
-        - to: machineFrame
+        - to: machineFrame2x2
           completed:
             - !type:RaiseEvent
               event: !type:MachineDeconstructedEvent
@@ -105,10 +105,10 @@
             - tool: Prying
               doAfter: 2
 
-    - node: destroyedMachineFrame
-      entity: MachineFrameDestroyed
+    - node: destroyedMachineFrame2x2
+      entity: MachineFrameDestroyed2x2
       edges:
-        - to: start
+        - to: start2x2
           steps:
             - tool: Welding
               doAfter: 5

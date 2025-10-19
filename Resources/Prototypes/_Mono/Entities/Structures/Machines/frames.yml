@@ -30,8 +30,8 @@
       containers:
         - machine_board
         - machine_parts
-      graph: Machine
-      node: missingWires
+      graph: Machine2x2
+      node: missingWires2x2
     - type: ContainerContainer
       containers:
         machine_board: !type:Container
@@ -49,7 +49,7 @@
           sound:
             collection: MetalBreak
         - !type:ChangeConstructionNodeBehavior
-          node: start
+          node: start2x2
         - !type:DoActsBehavior
           acts: ["Destruction"]
     - type: Sprite
@@ -86,8 +86,8 @@
     - type: Rotatable
     - type: Pullable
     - type: Construction
-      graph: Machine
-      node: machineFrame
+      graph: Machine2x2
+      node: machineFrame2x2
       defaultTarget: machine
       containers:
         - machine_board
@@ -105,7 +105,7 @@
           sound:
             collection: MetalBreak
         - !type:ChangeConstructionNodeBehavior
-          node: missingWires
+          node: missingWires2x2
         - !type:DoActsBehavior
           acts: ["Destruction"]
     - type: MachineFrame
@@ -140,8 +140,8 @@
     - type: Physics
       bodyType: Static
     - type: Construction
-      graph: Machine
-      node: destroyedMachineFrame
+      graph: Machine2x2
+      node: destroyedMachineFrame2x2
     - type: Damageable
       damageContainer: StructuralInorganic
       damageModifierSet: Metallic
