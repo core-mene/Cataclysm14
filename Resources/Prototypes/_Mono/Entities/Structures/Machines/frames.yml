@@ -110,7 +110,7 @@
     - type: Construction
       graph: Machine2x2
       node: machineFrame2x2
-      defaultTarget: machine2x2
+      defaultTarget: Machine2x2
       containers:
         - machine_board
         - machine_parts
@@ -184,3 +184,14 @@
       sprite: _Mono/Structures/Machines/frames/frame_2x2.rsi
       state: destroyed
       offset: 0.5,-0.5
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "1.25,0.25,-0.25,-1.25"
+          density: 190
+          mask:
+          - MachineMask
+          layer:
+          - MachineLayer

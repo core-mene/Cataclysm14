@@ -51,7 +51,7 @@
           container: machine_board
         - !type:MachineFrame2x2RegenerateProgress
       edges:
-        - to: machine2x2
+        - to: Machine2x2
           conditions:
             - !type:EntityAnchored
             - !type:MachineFrame2x2Complete
@@ -90,7 +90,7 @@
             - tool: Cutting
               doAfter: 0.25
 
-    - node: machine2x2
+    - node: Machine2x2
       entity: !type:BoardNodeEntity { container: machine_board }
       edges:
         - to: machineFrame2x2
