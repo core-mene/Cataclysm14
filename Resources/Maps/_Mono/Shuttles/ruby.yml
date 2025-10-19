@@ -1,44 +1,10 @@
-# SPDX-FileCopyrightText: 2021 AJCM-git
-# SPDX-FileCopyrightText: 2021 Paul Ritter
-# SPDX-FileCopyrightText: 2021 wrexbe
-# SPDX-FileCopyrightText: 2022 20kdc
-# SPDX-FileCopyrightText: 2022 Kara
-# SPDX-FileCopyrightText: 2022 LittleBuilderJane
-# SPDX-FileCopyrightText: 2022 Peptide90
-# SPDX-FileCopyrightText: 2022 metalgearsloth
-# SPDX-FileCopyrightText: 2022 mirrorcult
-# SPDX-FileCopyrightText: 2023 Alexander Evgrashin
-# SPDX-FileCopyrightText: 2023 AndresE55
-# SPDX-FileCopyrightText: 2023 Banshee
-# SPDX-FileCopyrightText: 2023 Cheackraze
-# SPDX-FileCopyrightText: 2023 Emisse
-# SPDX-FileCopyrightText: 2023 Kesiath
-# SPDX-FileCopyrightText: 2023 Mnemosyne
-# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 Gotimanga
-# SPDX-FileCopyrightText: 2024 Mr. Samuel
-# SPDX-FileCopyrightText: 2024 Salvantrix
-# SPDX-FileCopyrightText: 2024 TsjipTsjip
-# SPDX-FileCopyrightText: 2024 Whatstone
-# SPDX-FileCopyrightText: 2025 Alice "Arimah" Heurlin
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 Jakumba
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 bluebrouny
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: MPL-2.0
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/18/2025 22:05:36
+  time: 10/19/2025 00:18:19
   entityCount: 1786
 maps: []
 grids:
@@ -1259,7 +1225,7 @@ entities:
       pos: 5.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -19527.742
+      secondsUntilStateChange: -20004.803
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1272,7 +1238,7 @@ entities:
       pos: 10.5,7.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -15121.523
+      secondsUntilStateChange: -15598.587
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1283,7 +1249,7 @@ entities:
       pos: 11.5,7.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -15121.224
+      secondsUntilStateChange: -15598.287
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1338,7 +1304,7 @@ entities:
       pos: 8.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -25179.67
+      secondsUntilStateChange: -25656.73
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1362,7 +1328,7 @@ entities:
       pos: -1.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -11169.282
+      secondsUntilStateChange: -11646.346
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1382,7 +1348,7 @@ entities:
       pos: -8.5,0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -16762.8
+      secondsUntilStateChange: -17239.861
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8236,6 +8202,13 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 17
+- proto: GeneratorCRPinchShuttle
+  entities:
+  - uid: 1326
+    components:
+    - type: Transform
+      pos: 12.5,15.5
+      parent: 1
 - proto: GravityGeneratorMini
   entities:
   - uid: 1782
@@ -8764,32 +8737,14 @@ entities:
     - type: Transform
       pos: -1.5,25.5
       parent: 1
-- proto: LockerWallMaterialsFuelBananiumFilled
+- proto: LockerWallMaterialsFuelPlasmaFilled
   entities:
   - uid: 1291
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 13.5,14.5
+      pos: 13.5,13.5
       parent: 1
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.14923
-        moles:
-        - 1.7459903
-        - 6.568249
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
 - proto: LockerWallMedicalFilled
   entities:
   - uid: 1292
@@ -8938,7 +8893,7 @@ entities:
         [color=#134975][head=3]─────────══════[/head][head=2][[/head]◥[head=2][bold]AES[/bold][/head]◣[head=2]][/head][head=3]══════────────[/head][/color]
 
         [color=#134975] [head=4][bold]                              CHIEF ENGINEER[/bold][/head][/color]
-                                              [color=#134975] [head=6][italic]  Mima Aibarsha[/italic][/head][/color] 
+                                              [color=#134975] [head=6][italic]  Mima Aibarsha[/italic][/head][/color]
 
         [color=#aaaaaa]▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀[/color]
 
@@ -9044,7 +8999,7 @@ entities:
         [color=#134975][head=3]─────────══════[/head][head=2][[/head]◥[head=2][bold]AES[/bold][/head]◣[head=2]][/head][head=3]══════────────[/head][/color]
 
         [color=#134975] [head=4][bold]                              CHIEF ENGINEER[/bold][/head][/color]
-                                              [color=#134975] [head=6][italic]  Mima Aibarsha[/italic][/head][/color] 
+                                              [color=#134975] [head=6][italic]  Mima Aibarsha[/italic][/head][/color]
 
         [color=#aaaaaa]▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀[/color]
 
@@ -9233,15 +9188,6 @@ entities:
     - type: Transform
       pos: 4.1817083,-4.3434896
       parent: 1
-- proto: PortableGeneratorDKJrShuttle
-  entities:
-  - uid: 1326
-    components:
-    - type: Transform
-      pos: 12.5,15.5
-      parent: 1
-    - type: Anchorable
-      currentDelay: 2
 - proto: PowerCellRecharger
   entities:
   - uid: 1328
