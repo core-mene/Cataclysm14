@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Avalon
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: entity
   name: 45_magnum bolt
   id: BulletEnergyGun45_magnum
@@ -36,3 +43,19 @@
     soundHit:
       collection: MeatLaserImpact
 
+- type: entity
+  parent: BulletDisabler
+  id: BulletDisablerShock
+  name: disabler bolt
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Shock: 15
+    soundHit:
+      collection: WeakHit
+    forceSound: true
+  - type: StaminaDamageOnCollide
+    damage: 60 # They Will learn not to wear contra
