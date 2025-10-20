@@ -108,6 +108,25 @@ entities:
   entities:
   - uid: 1
     components:
+    - type: ForceAnchor
+    - type: StationTransit
+    - type: IFF
+      readOnly: True
+    - type: ProtectedGrid
+      hostileMobKillSound: !type:SoundPathSpecifier
+        path: /Audio/Effects/holy.ogg
+      killHostileMobs: True
+      preventArtifactTriggers: False
+      preventEmpEvents: True
+      preventRCDUse: False
+      preventFloorPlacement: False
+      preventFloorRemoval: False
+    - type: GridGodMode
+      protectedEntities: []
+    - type: GridPacifier
+    - type: GridRaider
+      protectedEntities: []
+      locked: False
     - type: BecomesStation
       id: Frontier
     - type: MetaData
