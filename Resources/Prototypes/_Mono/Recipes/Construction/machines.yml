@@ -15,3 +15,17 @@
   icon:
     sprite: _Mono/Structures/Machines/frames/frame_2x2_icon.rsi
     state: "icon"
+
+- type: construction
+  name: machine frame (3x2)
+  description: A machine under construction. Needs more parts.
+  id: MachineFrame3x2
+  graph: Machine3x2
+  startNode: start3x2
+  targetNode: machine3x2
+  category: construction-category-machines
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Mono/Structures/Machines/frames/frame_3x2_icon.rsi
+    state: "icon"
