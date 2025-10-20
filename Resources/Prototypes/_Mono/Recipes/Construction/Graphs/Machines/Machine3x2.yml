@@ -1,28 +1,14 @@
-# SPDX-FileCopyrightText: 2021 20kdc
-# SPDX-FileCopyrightText: 2021 DrSmugleaf
-# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
-# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
-# SPDX-FileCopyrightText: 2021 metalgearsloth
-# SPDX-FileCopyrightText: 2022 Peptide90
-# SPDX-FileCopyrightText: 2022 Rane
-# SPDX-FileCopyrightText: 2023 Nemanja
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 iacore
-# SPDX-FileCopyrightText: 2025 core-mene
-#
-# SPDX-License-Identifier: MPL-2.0
-
 - type: constructionGraph
   id: Machine3x2
-  start: start3x2
+  start: start
   graph:
-    - node: start3x2
+    - node: start
       actions:
         - !type:SpawnPrototype
           prototype: SheetSteel1
         - !type:DeleteEntity
       edges:
-        - to: missingWires3x2
+        - to: missingWires
           completed:
             - !type:SetAnchor
               value: false
@@ -30,23 +16,23 @@
             - material: Steel
               amount: 30
               doAfter: 5
-        - to: destroyedMachineFrame3x2
+        - to: destroyedMachineFrame
           steps:
             - material: Steel
               amount: 30
               doAfter: 5
 
-    - node: missingWires3x2
+    - node: missingWires
       entity: UnfinishedMachineFrame3x2
       actions:
         - !type:EmptyAllContainers
       edges:
-        - to: machineFrame3x2
+        - to: machineFrame
           conditions:
             - !type:EntityAnchored
           steps:
             - material: Cable
-        - to: start3x2
+        - to: start
           completed:
             - !type:SpawnPrototype
               prototype: SheetSteel1
@@ -56,7 +42,7 @@
             - tool: Screwing
               doAfter: 4
 
-    - node: machineFrame3x2
+    - node: machineFrame
       entity: MachineFrame3x2
       actions:
         - !type:AddContainer
@@ -65,7 +51,7 @@
           container: machine_board
         - !type:MachineFrameRegenerateProgress
       edges:
-        - to: machine3x2
+        - to: machine
           conditions:
             - !type:EntityAnchored
             - !type:MachineFrameComplete
@@ -79,7 +65,7 @@
             - tool: Screwing
               doAfter: 1
 
-        - to: machineFrame3x2
+        - to: machineFrame
           conditions:
             - !type:EntityAnchored
             - !type:ContainerNotEmpty
@@ -91,7 +77,7 @@
                 - !type:EmptyAllContainers
                 - !type:MachineFrameRegenerateProgress
 
-        - to: missingWires3x2
+        - to: missingWires
           conditions:
             - !type:EntityAnchored
             - !type:ContainerEmpty
@@ -104,10 +90,10 @@
             - tool: Cutting
               doAfter: 0.5
 
-    - node: machine3x2
+    - node: machine
       entity: !type:BoardNodeEntity { container: machine_board }
       edges:
-        - to: machineFrame3x2
+        - to: machineFrame
           completed:
             - !type:RaiseEvent
               event: !type:MachineDeconstructedEvent
@@ -119,10 +105,10 @@
             - tool: Prying
               doAfter: 4
 
-    - node: destroyedMachineFrame3x2
+    - node: destroyedMachineFrame
       entity: MachineFrameDestroyed3x2
       edges:
-        - to: start3x2
+        - to: start
           steps:
             - tool: Welding
               doAfter: 7.5

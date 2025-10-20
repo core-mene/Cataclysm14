@@ -31,7 +31,7 @@
         - machine_board
         - machine_parts
       graph: Machine3x3
-      node: missingWires3x3
+      node: missingWires
     - type: ContainerContainer
       containers:
         machine_board: !type:Container
@@ -49,7 +49,7 @@
           sound:
             collection: MetalBreak
         - !type:ChangeConstructionNodeBehavior
-          node: start3x3
+          node: start
         - !type:DoActsBehavior
           acts: ["Destruction"]
     - type: Sprite
@@ -86,7 +86,7 @@
     - type: Pullable
     - type: Construction
       graph: Machine3x3
-      node: machineFrame3x3
+      node: machineFrame
       defaultTarget: machine
       containers:
         - machine_board
@@ -104,7 +104,7 @@
           sound:
             collection: MetalBreak
         - !type:ChangeConstructionNodeBehavior
-          node: missingWires3x3
+          node: missingWires
         - !type:DoActsBehavior
           acts: ["Destruction"]
     - type: MachineFrame
@@ -139,7 +139,7 @@
       bodyType: Static
     - type: Construction
       graph: Machine3x3
-      node: destroyedMachineFrame3x3
+      node: destroyedMachineFrame
     - type: Damageable
       damageContainer: StructuralInorganic
       damageModifierSet: Metallic
@@ -152,8 +152,8 @@
         - !type:SpawnEntitiesBehavior
           spawn:
             SheetSteel1:
-              min: 1
-              max: 3
+              min: 9
+              max: 27
         - !type:DoActsBehavior
           acts: ["Destruction"]
     - type: Sprite
