@@ -1,0 +1,68 @@
+# SPDX-FileCopyrightText: 2022 DrSmugleaf
+# SPDX-FileCopyrightText: 2022 Jezithyr
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2024 portfiend
+# SPDX-FileCopyrightText: 2025 Aiden
+# SPDX-FileCopyrightText: 2025 Piras314
+# SPDX-FileCopyrightText: 2025 SX-7
+# SPDX-FileCopyrightText: 2025 coderabbitai[bot]
+# SPDX-FileCopyrightText: 2025 deltanedas
+# SPDX-FileCopyrightText: 2025 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2025 gluesniffler
+# SPDX-FileCopyrightText: 2025 inquisitor-star
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: body
+  id: Tajaran
+  name: tajaran
+  root: torso
+  slots:
+    head:
+      part: HeadTajaran
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    torso:
+      part: TorsoTajaran
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      - head # Shitmed Change
+      organs:
+        heart: OrganAnimalHeart
+        lungs: OrganHumanLungs
+        stomach: OrganAnimalStomach
+        liver:  OrganAnimalLiver
+        kidneys: OrganHumanKidneys
+    right arm:
+      part: RightArmTajaran
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmTajaran
+      connections:
+      - left hand
+    right hand:
+      part: RightHandTajaran
+    left hand:
+      part: LeftHandTajaran
+    right leg:
+      part: RightLegTajaran
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegTajaran
+      connections:
+      - left foot
+    right foot:
+      part: RightFootTajaran
+    left foot:
+      part: LeftFootTajaran
