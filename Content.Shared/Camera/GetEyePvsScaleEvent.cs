@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 SlamBamActionman
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using System.Numerics;
 using Content.Shared.Inventory;
 using Content.Shared.Movement.Systems;
@@ -19,6 +24,13 @@ namespace Content.Shared.Camera;
 /// </remarks>
 [ByRefEvent]
 public record struct GetEyePvsScaleEvent(float Scale);
+
+/// <summary>
+///     Raised before the <see cref="GetEyePvsScaleEvent"/> and <see cref="GetEyePvsScaleRelayedEvent"/>, to check if any on the subscribed
+///     systems want to cancel PVS changes.
+/// </summary>
+[ByRefEvent]
+public record struct GetEyePvsScaleAttemptEvent(bool Cancelled);
 
 /// <summary>
 ///     Raised on any equipped and in-hand items that may modify the eye offset.

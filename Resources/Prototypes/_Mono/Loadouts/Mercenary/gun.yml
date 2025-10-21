@@ -33,8 +33,14 @@
   - MercenaryPollockLoadout
   - MercenaryMk58Loadout
   - MercenaryViperLoadout
+  - ContractorArgentiLoadout
   - MercenarySawedOffLoadout
+  - ContractorDisablerLoadout
   - MercenaryLaserPistolLoadout
+  - MercenaryCombatKnifeLoadout
+  - MercenaryKukriKnifeLoadout
+  - MercenaryThrowingKnifeLoadout
+  - MercenaryMacheteLoadout
   fallbacks:
   - MercenaryPollockLoadout
 
@@ -45,6 +51,7 @@
   loadouts:
   - Mercenary9x19mmPistolAmmoLoadout #Pollock / Viper / Knallstock
   - MercenaryAcpPistolAmmoLoadout #MK58 / Knallstock
+  - Contractor556x45mmAmmoLoadout #Argenti
   - Mercenary762x39mmAmmoLoadout #Gestio
   - MercenaryNovaliteAmmoLoadout #Novalite
   - Mercenary9x19SmgAmmoLoadout #AK220
