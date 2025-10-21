@@ -24,6 +24,7 @@
 // SPDX-FileCopyrightText: 2024 slarticodefast
 // SPDX-FileCopyrightText: 2024 wafehling
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Daniel Lenrd
 // SPDX-FileCopyrightText: 2025 ErhardSteinhauer
 // SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 Whatstone
@@ -229,10 +230,30 @@ namespace Content.Client.Options.UI.Tabs
             AddHeader("ui-options-header-interaction-adv");
             AddButton(ContentKeyFunctions.SmartEquipBackpack);
             AddButton(ContentKeyFunctions.SmartEquipBelt);
+            AddButton(ContentKeyFunctions.SmartEquipPocket1);
+            AddButton(ContentKeyFunctions.SmartEquipPocket2);
+            AddButton(ContentKeyFunctions.SmartEquipSuitStorage);
             AddButton(ContentKeyFunctions.SmartEquipWallet); // Frontier
-            AddButton(ContentKeyFunctions.SmartEquipBack); // Goobstation - Equip To Back
+            // Mono Edit
+            AddButton(ContentKeyFunctions.SmartEquipID);
+            AddButton(ContentKeyFunctions.SmartEquipShoes);
+            AddButton(ContentKeyFunctions.SmartEquipOuterClothing);
+            AddButton(ContentKeyFunctions.EquipBackpack);
+            AddButton(ContentKeyFunctions.EquipBelt);
+            AddButton(ContentKeyFunctions.EquipPocket1);
+            AddButton(ContentKeyFunctions.EquipPocket2);
+            AddButton(ContentKeyFunctions.EquipSuitStorage);
+            AddButton(ContentKeyFunctions.EquipWallet);
+            AddButton(ContentKeyFunctions.EquipID);
+            // Mono End
             AddButton(ContentKeyFunctions.OpenBackpack);
             AddButton(ContentKeyFunctions.OpenBelt);
+            // Mono
+            AddButton(ContentKeyFunctions.OpenPocket1);
+            AddButton(ContentKeyFunctions.OpenPocket2);
+            AddButton(ContentKeyFunctions.OpenSuitStorage);
+            AddButton(ContentKeyFunctions.OpenOuterClothing);
+            // Mono End
             AddButton(ContentKeyFunctions.OpenWallet); // Frontier
             AddButton(ContentKeyFunctions.ThrowItemInHand);
             AddButton(ContentKeyFunctions.TryPullObject);

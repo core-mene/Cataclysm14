@@ -420,8 +420,7 @@
           reagent: Frezon
           min: 1
 
-#Gases from Funky: Credit to marc-pelletier
-- type: reagent
+- type: reagent # /tg/ gases from Funky/Goob: Credit to marc-pelletier
   id: BZ
   name: reagent-name-bz
   desc: reagent-desc-bz
@@ -615,7 +614,7 @@
   desc: reagent-desc-nitrium
   physicalDesc: reagent-physical-desc-gaseous
   flavor: sour
-  color: "#8b0000"
+  color: "#90560B"
   metabolisms:
     Gas:
       effects:
@@ -623,58 +622,29 @@
         conditions:
         - !type:ReagentThreshold
           reagent: Nitrium
-          min: 4
+          min: 3
         walkSpeedModifier: 1.25
         sprintSpeedModifier: 1.25
+      - !type:AddReagentToBlood
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 6
+        reagent: NitrosylPlasmide
+        amount: 2.5
       - !type:GenericStatusEffect
         conditions:
         - !type:ReagentThreshold
           reagent: Nitrium
-          min: 15
+          min: 8
         key: Stutter
         component: StutteringAccent
-        time: 10
-      - !type:Jitter
-        conditions:
-        - !type:ReagentThreshold
-          reagent: Nitrium
-          min: 10
-        time: 10
-      - !type:ResetNarcolepsy
-        conditions:
-        - !type:ReagentThreshold
-          reagent: Nitrium
-          min: 15
-      - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          reagent: Nitrium
-          min: 10
-        key: Drowsiness
-        time: 10
-        type: Remove
-      - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          reagent: Nitrium
-          min: 15
-        key: ForcedSleep
-        type: Remove
-        time: 3
-      - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          reagent: Nitrium
-          min: 15
-        key: Adrenaline
-        component: IgnoreSlowOnDamage
-        type: Add
-        time: 3
+        time: 8
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
           reagent: Nitrium
-          min: 18
+          min: 10
         ignoreResistances: true
         damage:
           types:

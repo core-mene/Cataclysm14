@@ -1,3 +1,22 @@
+// SPDX-FileCopyrightText: 2020 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 Visne
+// SPDX-FileCopyrightText: 2022 Júlio César Ueti
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2023 Artjom
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Kara
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 Slava0135
+// SPDX-FileCopyrightText: 2023 iacore
+// SPDX-FileCopyrightText: 2024 Cojoke
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared.Actions;
 using Content.Shared.Mind;
 using Content.Shared.MouseRotator;
@@ -11,7 +30,6 @@ namespace Content.Shared.CombatMode;
 public abstract class SharedCombatModeSystem : EntitySystem
 {
     [Dependency] protected readonly IGameTiming Timing = default!;
-    [Dependency] private   readonly INetManager _netMan = default!;
     [Dependency] private   readonly SharedActionsSystem _actionsSystem = default!;
     [Dependency] private   readonly SharedPopupSystem _popup = default!;
     [Dependency] private   readonly SharedMindSystem  _mind = default!;
@@ -46,14 +64,8 @@ public abstract class SharedCombatModeSystem : EntitySystem
         args.Handled = true;
         SetInCombatMode(uid, !component.IsInCombatMode, component);
 
-        // TODO better handling of predicted pop-ups.
-        // This probably breaks if the client has prediction disabled.
-
-        if (!_netMan.IsClient || !Timing.IsFirstTimePredicted)
-            return;
-
         var msg = component.IsInCombatMode ? "action-popup-combat-enabled" : "action-popup-combat-disabled";
-        _popup.PopupEntity(Loc.GetString(msg), args.Performer, args.Performer);
+        _popup.PopupClient(Loc.GetString(msg), args.Performer, args.Performer);
     }
 
     public void SetCanDisarm(EntityUid entity, bool canDisarm, CombatModeComponent? component = null)

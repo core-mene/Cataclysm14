@@ -2,6 +2,7 @@
 // SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
 // SPDX-FileCopyrightText: 2022 20kdc
 // SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -30,8 +31,8 @@ public sealed class ParallaxControl : Control
     private string _parallaxPrototype = "FastSpace";
 
     [ViewVariables(VVAccess.ReadWrite)] public Vector2 Offset { get; set; }
-    [ViewVariables(VVAccess.ReadWrite)] public float SpeedX { get; set; } = 0.0f;
-    [ViewVariables(VVAccess.ReadWrite)] public float SpeedY { get; set; } = 0.0f;
+    [ViewVariables(VVAccess.ReadWrite)] public float SpeedX { get; set; } = 100.0f;
+    [ViewVariables(VVAccess.ReadWrite)] public float SpeedY { get; set; } = 100.0f;
     [ViewVariables(VVAccess.ReadWrite)] public float ScaleX { get; set; } = 1.0f;
     [ViewVariables(VVAccess.ReadWrite)] public float ScaleY { get; set; } = 1.0f;
     [ViewVariables(VVAccess.ReadWrite)] public string ParallaxPrototype

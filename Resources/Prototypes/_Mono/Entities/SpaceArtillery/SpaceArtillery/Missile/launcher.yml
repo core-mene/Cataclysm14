@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Disguised Bear
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
@@ -29,13 +30,20 @@
   - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 24276
+    startingCharge: 24276
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 3
+    fireRate: 16
+    minAngle: 0
+    maxAngle: 1
+    burstCooldown: 40
+    burstFireRate: 16
+    shotsPerBurst: 28
+    selectedMode: Burst
+    availableModes: Burst
     shootThermalSignature: 2000000 # ~4.9km if firing continuously
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
@@ -43,7 +51,7 @@
       path: /Audio/Weapons/click.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 200
+    autoRechargeRate: 15000
   - type: SpaceArtillery
     powerChargeRate: 200
     powerUsePassive: 750
@@ -134,6 +142,8 @@
     range: 500
   - type: Gun
     fireRate: 0.8
+    minAngle: 0
+    maxAngle: 0
     shootThermalSignature: 8000000 # ~5km if firing continuously
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg

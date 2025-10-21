@@ -38,4 +38,21 @@
   - type: Tag # Frontier
     tags: # Frontier
     - Recyclable # Frontier
+  - type: Destructible # Mono
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+  - type: Explosive # Mono
+    explosionType: Default
+    maxIntensity: 50
+    intensitySlope: 2
+    totalIntensity: 750
+  - type: Damageable # Mono
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
 # End of modified code

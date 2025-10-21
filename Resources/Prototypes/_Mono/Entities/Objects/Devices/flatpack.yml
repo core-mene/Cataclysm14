@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
@@ -54,6 +55,17 @@
     entity: WeaponTurretCharon
   - type: StaticPrice
     price: 700
+
+- type: entity
+  parent: BaseFlatpack
+  id: M25Flatpack
+  name: M25 mining pulsar flatpack
+  description: A flatpack used for constructing an M25 mining pulsar. Useful for breaking up rock.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretM25
+  - type: StaticPrice
+    price: 100
 
 - type: entity
   parent: BaseFlatpack

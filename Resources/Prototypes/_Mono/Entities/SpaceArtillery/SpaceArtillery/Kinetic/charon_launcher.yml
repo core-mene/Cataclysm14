@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -29,7 +30,9 @@
     range: 500
   - type: Gun
     fireRate: 0.05
-    projectileSpeed: 900
+    minAngle: 0
+    maxAngle: 0
+    projectileSpeed: 1450
     shootThermalSignature: 18000000 # ~8.5km after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/leviathan_fire.ogg
@@ -97,7 +100,9 @@
     range: 500
   - type: Gun
     fireRate: 0.05
-    projectileSpeed: 1250
+    minAngle: 0
+    maxAngle: 0
+    projectileSpeed: 1450
     shootThermalSignature: 18000000 # ~8.5m after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/leviathan_fire.ogg

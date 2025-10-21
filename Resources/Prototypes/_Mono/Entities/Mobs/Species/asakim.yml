@@ -44,6 +44,7 @@
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 SuperJoelDood
 # SPDX-FileCopyrightText: 2025 Suyo
+# SPDX-FileCopyrightText: 2025 kotobdev
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -68,6 +69,8 @@
     baseWalkSpeed : 2.7
     baseSprintSpeed : 4.65
     weightlessAcceleration: 1.5 # Slightly more manueverable in space.
+  - type: ClothingSlowResistance
+    modifier: 1.0 # Completely unaffected by clothing slow
   - type: Fixtures
     fixtures: # TODO: This needs a second fixture just for mob collisions.
       fix1:

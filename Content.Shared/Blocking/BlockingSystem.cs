@@ -11,11 +11,16 @@
 // SPDX-FileCopyrightText: 2024 Dvir
 // SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
 // SPDX-FileCopyrightText: 2024 beck-thompson
+// SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 TemporalOroboros
+// SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Linq;
+using Content.Client._Mono.Blocking.Components;
+using Content.Shared._Mono.Blocking;
+using Content.Shared.Blocking.Components;
 using Content.Shared.Actions;
 using Content.Shared.Damage;
 using Content.Shared.Examine;
@@ -24,7 +29,9 @@ using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction.Events;
+using Content.Shared.Inventory.Events;
 using Content.Shared.Item.ItemToggle;
+using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.Maps;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Physics;
@@ -42,7 +49,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.Blocking;
 
-public sealed partial class BlockingSystem : EntitySystem
+public sealed partial class BlockingSystem : SharedBlockingSystem // Mono
 {
     [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
     [Dependency] private readonly ActionContainerSystem _actionContainer = default!;
@@ -56,18 +63,21 @@ public sealed partial class BlockingSystem : EntitySystem
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly ItemToggleSystem _toggle = default!; // Goobstation
+    [Dependency] private readonly IPrototypeManager _protoMan = default!;
 
     public override void Initialize()
     {
         base.Initialize();
         InitializeUser();
 
-        SubscribeLocalEvent<BlockingComponent, GotEquippedHandEvent>(OnEquip);
-        SubscribeLocalEvent<BlockingComponent, GotUnequippedHandEvent>(OnUnequip);
+        SubscribeLocalEvent<BlockingComponent, GotEquippedEvent>(OnEquipped); // Mono
+        SubscribeLocalEvent<BlockingComponent, GotEquippedHandEvent>(OnHandEquipped); // Mono
+        SubscribeLocalEvent<BlockingComponent, GotUnequippedEvent>(OnUnequipped); // Mono
         SubscribeLocalEvent<BlockingComponent, DroppedEvent>(OnDrop);
 
         SubscribeLocalEvent<BlockingComponent, GetItemActionsEvent>(OnGetActions);
         SubscribeLocalEvent<BlockingComponent, ToggleActionEvent>(OnToggleAction);
+        SubscribeLocalEvent<BlockingComponent, ItemToggledEvent>(OnItemToggleAction); // Mono
 
         SubscribeLocalEvent<BlockingComponent, ComponentShutdown>(OnShutdown);
 
@@ -81,9 +91,12 @@ public sealed partial class BlockingSystem : EntitySystem
         Dirty(uid, component);
     }
 
-    private void OnEquip(EntityUid uid, BlockingComponent component, GotEquippedHandEvent args)
+    // Mono start
+    private void OnHandEquipped(EntityUid uid, BlockingComponent component, ref GotEquippedHandEvent args)
     {
-        component.User = args.User;
+        if (!component.IsClothing)
+            component.User = args.User;
+
         Dirty(uid, component);
 
         //To make sure that this bodytype doesn't get set as anything but the original
@@ -94,10 +107,37 @@ public sealed partial class BlockingSystem : EntitySystem
             userComp.OriginalBodyType = physicsComponent.BodyType;
         }
     }
-
-    private void OnUnequip(EntityUid uid, BlockingComponent component, GotUnequippedHandEvent args)
+    // Mono end
+    private void OnEquipped(EntityUid uid, BlockingComponent component, ref GotEquippedEvent args) // Mono
     {
-        StopBlockingHelper(uid, component, args.User);
+        // Mono start
+        if (component.IsClothing)
+        {
+            component.User = args.Equipee;
+            if (TryComp<ItemToggleComponent>(uid, out var itemToggle) && itemToggle.Activated && component.IsClothing)
+                EnsureComp<BlockingVisualsComponent>(args.Equipee);
+        }
+        // Mono end
+        Dirty(uid, component);
+
+        //To make sure that this bodytype doesn't get set as anything but the original
+        // Mono - change args.User to args.Equippee
+        if (TryComp<PhysicsComponent>(args.Equipee, out var physicsComponent) && physicsComponent.BodyType != BodyType.Static && !HasComp<BlockingUserComponent>(args.Equipee))
+        {
+            var userComp = EnsureComp<BlockingUserComponent>(args.Equipee);
+            userComp.BlockingItem = uid;
+            userComp.OriginalBodyType = physicsComponent.BodyType;
+        }
+    }
+
+    private void OnUnequipped(EntityUid uid, BlockingComponent component, ref GotUnequippedEvent args)
+    {
+        // Mono start
+        if (component.User != null)
+            RemCompDeferred<BlockingVisualsComponent>(component.User.Value);
+        // Mono end
+        // Mono - change args.User to args.Equippee
+        StopBlockingHelper(uid, component, args.Equipee);
     }
 
     private void OnDrop(EntityUid uid, BlockingComponent component, DroppedEvent args)
@@ -107,8 +147,22 @@ public sealed partial class BlockingSystem : EntitySystem
 
     private void OnGetActions(EntityUid uid, BlockingComponent component, GetItemActionsEvent args)
     {
-        args.AddAction(ref component.BlockingToggleActionEntity, component.BlockingToggleAction);
+        if (component.BlockAction) // Mono
+            args.AddAction(ref component.BlockingToggleActionEntity, component.BlockingToggleAction);
     }
+
+    // Mono start
+    private void OnItemToggleAction(EntityUid uid, BlockingComponent component, ItemToggledEvent args)
+    {
+        if (TryComp<ItemToggleComponent>(uid, out var itemToggleComponent))
+        {
+            if (component.IsClothing && itemToggleComponent.Activated && component.User != null)
+                AddComp<BlockingVisualsComponent>(component.User.Value);
+            else if (component.User != null && !itemToggleComponent.Activated)
+                RemCompDeferred<BlockingVisualsComponent>(component.User.Value);
+        }
+    }
+    // Mono end
 
     private void OnToggleAction(EntityUid uid, BlockingComponent component, ToggleActionEvent args)
     {
@@ -150,6 +204,11 @@ public sealed partial class BlockingSystem : EntitySystem
         {
             _actionsSystem.RemoveProvidedActions(component.User.Value, uid);
             StopBlockingHelper(uid, component, component.User.Value);
+            // Mono start
+            var user = component.User.Value;
+            if (HasComp<BlockingVisualsComponent>(user))
+                RemCompDeferred<BlockingVisualsComponent>(user);
+            // Mono end
         }
     }
 
@@ -341,7 +400,10 @@ public sealed partial class BlockingSystem : EntitySystem
         var modifier = component.IsBlocking ? component.ActiveBlockDamageModifier : component.PassiveBlockDamageModifer;
 
         var msg = new FormattedMessage();
-        msg.AddMarkupOrThrow(Loc.GetString("blocking-fraction", ("value", MathF.Round(fraction * 100, 1))));
+            msg.AddMarkupOrThrow(
+            Loc.GetString((component.IsClothing ? "blocking-fraction-armor" : "blocking-fraction"),
+            ("value", MathF.Round(fraction * 100, 1)))
+        );
 
         AppendCoefficients(modifier, msg);
 

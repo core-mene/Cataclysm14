@@ -423,6 +423,7 @@
     - ScienceWeapons
     - Mining
     - AtmosTools
+    - ResearchedExplosives # Mono
     # - EngineeringWeapons # Frontier
     - Chemistry
     - Janitor
@@ -685,6 +686,7 @@
     - MonoUSSPMiscDynamic
     - MonoUSSPWeaponsDynamicRanged
     - UniversalShellAmmo
+    - ResearchedExplosives
     # Mono end
   - type: MaterialStorage
     whitelist:
@@ -723,6 +725,7 @@
     - StaticAmmoRecipePack
     dynamicPacks:
     - DynamicAmmoRecipePack
+    - ResearchedExplosives # Mono
   - type: MaterialStorage
     whitelist:
       tags:

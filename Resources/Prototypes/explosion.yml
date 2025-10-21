@@ -1,3 +1,22 @@
+# SPDX-FileCopyrightText: 2022 Alex Evgrashin
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 Moony
+# SPDX-FileCopyrightText: 2022 keronshb
+# SPDX-FileCopyrightText: 2023 Dawid Bla
+# SPDX-FileCopyrightText: 2023 Emisse
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Skye
+# SPDX-FileCopyrightText: 2023 ThunderBear2006
+# SPDX-FileCopyrightText: 2023 eclips_e
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 Mr. 27
+# SPDX-FileCopyrightText: 2024 liltenhead
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 router
+#
+# SPDX-License-Identifier: MPL-2.0
+
 #  Does not currently support prototype hot-reloading. See comments in c# file.
 
 - type: explosion
@@ -7,6 +26,7 @@
       Heat: 5
       Blunt: 5
       Piercing: 5
+      Structural: 20 # Mono: buff explosions
   tileBreakChance: [0, 0.5, 1]
   tileBreakIntensity: [0, 10, 30]
   tileBreakRerollReduction: 20

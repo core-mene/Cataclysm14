@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 halycon
 # SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 tonotom
 # SPDX-FileCopyrightText: 2025 tonotom1
@@ -22,6 +23,8 @@
     sprite: _Mono/Objects/Weapons/Guns/Shotguns/BigLeady.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/bigshotgun_fire.ogg
     #fireRate: 1 # Goobstation
   - type: Tag
     tags:
@@ -56,6 +59,8 @@
     sprite: _Mono/Objects/Weapons/Guns/Shotguns/BigJohnny.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/bigshotgun_fire.ogg
     #fireRate: 1 # Goobstation
   - type: Tag
     tags:
@@ -93,6 +98,8 @@
     sprite: _Mono/Objects/Weapons/Guns/Shotguns/BigBuddy.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/bigshotgun_fire.ogg
     #fireRate: 1 # Goobstation
   - type: Tag
     tags:
@@ -141,4 +148,3 @@
   - type: StaticPrice
     price: 1000
     vendPrice: 3000
-    

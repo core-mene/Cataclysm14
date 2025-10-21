@@ -27,7 +27,6 @@
 # SPDX-FileCopyrightText: 2024 Dvir
 # SPDX-FileCopyrightText: 2024 Ed
 # SPDX-FileCopyrightText: 2024 Geekyhobo
-# SPDX-FileCopyrightText: 2024 Ilya246
 # SPDX-FileCopyrightText: 2024 Leon Friedrich
 # SPDX-FileCopyrightText: 2024 MendaxxDev
 # SPDX-FileCopyrightText: 2024 Nemanja
@@ -41,6 +40,8 @@
 # SPDX-FileCopyrightText: 2024 nikthechampiongr
 # SPDX-FileCopyrightText: 2024 scrivoy
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Avalon
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Luna "YuNii" Henrich
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
@@ -73,8 +74,8 @@
   - type: ComplexInteraction
   - type: Puller
   - type: CombatMode
-  - type: Stealth
-    maxVisibility: -1.5
+ # - type: Stealth # Mono - Stealth B Gone
+ #   maxVisibility: -1.5
   - type: Physics
     ignorePaused: true
     bodyType: Kinematic

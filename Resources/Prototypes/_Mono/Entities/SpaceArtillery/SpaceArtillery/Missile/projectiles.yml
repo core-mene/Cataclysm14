@@ -33,7 +33,7 @@
     radarColor: "#FCBA03"
     scale: 1
     requireNoGrid: true
-    shape: triangle
+    shape: hexagon
   - type: TimedDespawn
     lifetime: 3.5
   - type: PointLight
@@ -82,7 +82,7 @@
     radarColor: "#FCBA03"
     scale: 1.5
     requireNoGrid: true
-    shape: triangle
+    shape: hexagon
   - type: TimedDespawn
     lifetime: 4.5
   - type: PointLight
@@ -131,7 +131,7 @@
     radarColor: "#FCBA03"
     scale: 4
     requireNoGrid: true
-    shape: triangle
+    shape: hexagon
   - type: TimedDespawn
     lifetime: 15
   - type: PointLight
@@ -180,7 +180,7 @@
     radarColor: "#FB00FF"
     scale: 1
     requireNoGrid: true
-    shape: triangle
+    shape: hexagon
   - type: TimedDespawn
     lifetime: 6.5
   - type: PointLight

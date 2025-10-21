@@ -1,3 +1,13 @@
+# SPDX-FileCopyrightText: 2019 scuffedjays
+# SPDX-FileCopyrightText: 2020 AJCM-git
+# SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2023 deathride58
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: shader
   id: SelectionOutline
   kind: source
@@ -17,3 +27,14 @@
     light_boost: 2
     light_gamma: 0.9
     light_whitepoint: 1
+
+# Mono
+- type: shader
+  id: ShieldingOutline
+  kind: source
+  path: "/Textures/Shaders/outline.swsl"
+  params:
+    outline_color: "#00AAFFCF"
+    light_boost: 3
+    light_gamma: 1.25
+    light_whitepoint: 1.2

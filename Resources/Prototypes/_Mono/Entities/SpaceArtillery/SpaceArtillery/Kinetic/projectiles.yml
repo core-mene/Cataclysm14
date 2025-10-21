@@ -72,9 +72,10 @@
     radius: 3.5
     energy: 0.5
   - type: RadarBlip
-    scale: 0.5
+    scale: 0.85
     requireNoGrid: true
     shape: triangle
+    radarColor: "#1df1f5"
 
 - type: entity
   id: 20mmBulletArmorPiercing
@@ -114,9 +115,10 @@
     radius: 3.5
     energy: 0.5
   - type: RadarBlip
-    scale: 0.7
+    scale: 1.15
     requireNoGrid: true
-    shape: triangle
+    shape: arrow
+    radarColor: "#1df1f5"
 
 # 57mm Dravon
 
@@ -142,6 +144,7 @@
     scale: 2.5
     requireNoGrid: true
     shape: triangle
+    radarColor: "#1df1f5"
   - type: TimedDespawn
     lifetime: 7
   - type: PointLight
@@ -173,6 +176,7 @@
     scale: 1.5
     requireNoGrid: true
     shape: triangle
+    radarColor: "#1df1f5"
 
 # 90mm AP
 
@@ -361,7 +365,7 @@
   - type: TimedDespawn
     lifetime: 10
   - type: PointLight
-    color: "#FCBA03"
+    color: "#ff9100"
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBombShipGun

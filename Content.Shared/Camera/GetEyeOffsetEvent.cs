@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2024 DrSmugleaf
+// SPDX-FileCopyrightText: 2025 SlamBamActionman
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using System.Numerics;
 using Content.Shared.Inventory;
 using Content.Shared.Movement.Systems;
@@ -18,6 +24,13 @@ namespace Content.Shared.Camera;
 /// </remarks>
 [ByRefEvent]
 public record struct GetEyeOffsetEvent(Vector2 Offset);
+
+/// <summary>
+///     Raised before the <see cref="GetEyeOffsetEvent"/> and <see cref="GetEyeOffsetRelayedEvent"/>, to check if any of the subscribed
+///     systems want to cancel offset changes.
+/// </summary>
+[ByRefEvent]
+public record struct GetEyeOffsetAttemptEvent(bool Cancelled);
 
 /// <summary>
 ///     Raised on any equipped and in-hand items that may modify the eye offset.

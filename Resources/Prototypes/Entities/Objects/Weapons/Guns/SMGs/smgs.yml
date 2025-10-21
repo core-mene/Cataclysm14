@@ -43,6 +43,7 @@
 # SPDX-FileCopyrightText: 2025 UltimateJester
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 halycon
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -142,7 +143,7 @@
   - type: Gun
     fireRate: 8.5
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/atreides_fire.ogg
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -316,6 +317,8 @@
     - Burst
     - FullAuto
     - SemiAuto
+    soundGunshot: # Mono change - Sound for WT
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/wt_fire.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
