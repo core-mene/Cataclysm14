@@ -53,7 +53,7 @@
         - machine_board
         - machine_parts
       graph: Machine2x1
-      node: missingWires2x1
+      node: missingWires
     - type: ContainerContainer
       containers:
         machine_board: !type:Container
