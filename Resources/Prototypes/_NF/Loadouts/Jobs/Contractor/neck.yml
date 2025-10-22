@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2024 ErhardSteinhauer
 # SPDX-FileCopyrightText: 2024 Salvantrix
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Bonaout
 # SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 HungryCuban
@@ -277,6 +278,15 @@
   price: 1000
   equipment:
     neck: ClothingNeckPonchoArctic
+
+- type: loadout
+  id: ContractorClothingNeckUIOvercoat # Monolith
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  equipment:
+    neck: ClothingNeckUllimanOvercoat
 
 - type: loadout
   id: ContractorClothingNeckCloakMiner
