@@ -33,6 +33,7 @@
 # SPDX-FileCopyrightText: 2025 BramvanZijp
 # SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 UltimateJester
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
@@ -129,15 +130,8 @@
     sprite: _Mono/Objects/Weapons/Guns/Rifles/akm_inhands_32x.rsi
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/Rifles/akm_inhands_32x.rsi # Mono
-  - type: GunWieldBonus
-    minAngle: -20
-    maxAngle: -31
   - type: Gun
     fireRate: 5
-    minAngle: 21
-    maxAngle: 64
-    angleIncrease: 4
-    angleDecay: 14
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
   - type: ChamberMagazineAmmoProvider
@@ -179,7 +173,7 @@
   name: TCA M-6 Lecter (6.8x52mm Caseless)
   parent: [BaseWeaponRifle, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponRifleLecter
-  description: The result of a project to make a new standard rifle for the branches of the TSF military. Accurate, easy to use, and firing the 6.8x52mm STANAG round.
+  description: The result of a project to make a new standard rifle for the branches of the TSF military. Accurate, easy to use, and firing the 6.8x52mm STANAG round. Also accepts 5.56x45mm magazines to assist with standardization.
   components:
   - type: Item # Mono
     size: Huge
@@ -196,16 +190,9 @@
   - type: ChamberMagazineAmmoProvider # Mono
     soundRack:
       path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
-  - type: GunWieldBonus
-    minAngle: -20
-    maxAngle: -31
   - type: Gun
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/light_rifle_1.ogg # Mono
-    minAngle: 21
-    maxAngle: 64
-    angleIncrease: 2
-    angleDecay: 14
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -217,6 +204,7 @@
         whitelist:
           tags:
             - Magazine68x52mmCaseless # Mono
+            - Magazine556x45mmFMJ # Mono
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
@@ -225,6 +213,7 @@
         whitelist:
           tags:
             - Cartridge68x52mmCaseless # Mono
+            - Cartridge556x45mmFMJ # Mono
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

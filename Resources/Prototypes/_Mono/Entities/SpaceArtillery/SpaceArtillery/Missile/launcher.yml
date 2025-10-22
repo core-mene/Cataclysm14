@@ -1,6 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Disguised Bear
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
@@ -29,13 +31,20 @@
   - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 24276
+    startingCharge: 24276
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 3
+    fireRate: 16
+    minAngle: 0
+    maxAngle: 1
+    burstCooldown: 40
+    burstFireRate: 16
+    shotsPerBurst: 28
+    selectedMode: Burst
+    availableModes: Burst
     shootThermalSignature: 2000000 # ~4.9km if firing continuously
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
@@ -43,7 +52,7 @@
       path: /Audio/Weapons/click.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 200
+    autoRechargeRate: 15000
   - type: SpaceArtillery
     powerChargeRate: 200
     powerUsePassive: 750
@@ -134,6 +143,8 @@
     range: 500
   - type: Gun
     fireRate: 0.8
+    minAngle: 0
+    maxAngle: 0
     shootThermalSignature: 8000000 # ~5km if firing continuously
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
@@ -217,3 +228,51 @@
     shipType: Missile
   - type: ShipGunClass
     shipClass: Medium
+
+# Corporate War Era - Syndicate
+
+- type: entity
+  id: WeaponTurretSerpentMissile
+  name: Serpent torpedo launcher
+  parent: BallisticArtillery
+  description: A light torpedo launcher developed by the Syndicate during the corporate war, uses similar systems to the anaconda for self loading munitons.
+  components:
+  - type: StaticPrice
+    price: 5000
+  - type: Sprite
+    sprite: _Mono/Objects/ShuttleWeapons/serpent.rsi
+    layers:
+    - state: space_artillery
+  - type: Appearance
+  - type: FireControlRotate
+  - type: AmmoCounter
+  - type: Battery
+    maxCharge: 40000
+    startingCharge: 40000
+  - type: ExaminableBattery
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: Gun
+    fireRate: 0.5
+    shootThermalSignature: 32000000 # ~5.6km
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
+  - type: SpaceArtillery
+    powerChargeRate: 250
+    powerUsePassive: 200
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 60
+  - type: Actions
+  - type: ProjectileBatteryAmmoProvider
+    proto: ShipMissileSerpent
+    fireCost: 350
+  - type: RadarBlip
+    radarColor: "#FCBA03"
+    scale: 2.75
+  - type: ShipGunType
+    shipType: Missile
+  - type: ShipGunClass
+    shipClass: Heavy

@@ -1,8 +1,10 @@
 # SPDX-FileCopyrightText: 2025 Dvir
 # SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 UltimateJester
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 halycon
 # SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -28,12 +30,12 @@
     maxAngle: -34
   - type: Gun
     minAngle: 21
-    maxAngle: 74
-    angleIncrease: 2
+    maxAngle: 38
+    angleIncrease: 5
     angleDecay: 20
     fireRate: 9.5
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/mla_fire.ogg
   - type: ChamberMagazineAmmoProvider
   - type: ItemSlots
     slots:
@@ -75,7 +77,7 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
     minAngle: -19
-    maxAngle: -24
+    maxAngle: -34
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
@@ -83,9 +85,9 @@
     sprite: _Mono/Objects/Weapons/Guns/SMGs/ak220.rsi
   - type: Gun
     minAngle: 22
-    maxAngle: 58
-    fireRate: 8
-    angleIncrease: 3
+    maxAngle: 40
+    fireRate: 6
+    angleIncrease: 21
     angleDecay: 14
     selectedMode: FullAuto
     soundGunshot:
@@ -134,15 +136,11 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
     minAngle: -5
-    maxAngle: -14
+    maxAngle: -5
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/SMGs/vector.rsi
   - type: Gun
     fireRate: 7.5
-    minAngle: 7
-    maxAngle: 40
-    angleIncrease: 3
-    angleDecay: 16
     selectedMode: Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
@@ -195,15 +193,11 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
     minAngle: -5
-    maxAngle: -14
+    maxAngle: -5
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/SMGs/vector.rsi
   - type: Gun
     fireRate: 6
-    minAngle: 7
-    maxAngle: 40
-    angleIncrease: 5
-    angleDecay: 16
     selectedMode: Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
@@ -241,6 +235,59 @@
     defaultColor: "#FF0000"
   - type: Appearance
 
+#Pre-corpowar 45 magnum rare vector 
+- type: entity
+  name: NTSF-HCLM-45 (.45 magnum)
+  parent: [BaseWeaponSubMachineGun, BaseGunWieldable, BaseC2ContrabandUnredeemable]
+  id: WeaponSubMachineGunVectorNtsfHclm
+  description: The NTSF Heavy Caliber Light Machinegun. A very high-quality heavy SMG chambered in .45 magnum for use for the Nano Trasen Security Force and NT spec-ops.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/SMGs/NTSF-HCLM-45rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: GunWieldBonus
+    minAngle: -5
+    maxAngle: -5
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Guns/SMGs/NTSF-HCLM-45rsi
+  - type: Gun
+    fireRate: 6
+    selectedMode: FullAuto
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/dmr.ogg
+    availableModes:
+    - SemiAuto
+    - FullAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine45_magnumPistolFMJ
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - Magazine45_magnumPistolFMJ
+            - Magazine45_magnumPistolHighCapacityFMJ
+            - Magazine45_magnumSubMachineGunFMJ
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge45_magnumFMJ
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge45_magnumFMJ
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
 # merc guns
 
 - type: entity
@@ -264,9 +311,9 @@
   - type: Gun
     fireRate: 6
     minAngle: 19
-    maxAngle: 32
-    angleIncrease: 9
-    angleDecay: 14
+    maxAngle: 21
+    angleIncrease: 16
+    angleDecay: 10
     selectedMode: Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
@@ -316,12 +363,12 @@
   components:
   - type: GunWieldBonus
     minAngle: -27
-    maxAngle: -36
+    maxAngle: -45
   - type: Gun
     minAngle: 30
     maxAngle: 55
-    angleIncrease: 4
-    angleDecay: 12
+    angleIncrease: 18
+    angleDecay: 4
     fireRate: 7
   - type: StaticPrice
     price: 500
@@ -341,16 +388,12 @@
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
-    minAngle: -27
-    maxAngle: -23
+    minAngle: -5
+    maxAngle: -5
   - type: Clothing
     sprite: _NF/Objects/Weapons/Guns/SMGs/drozd.rsi
   - type: Gun
     fireRate: 6
-    minAngle: 28
-    maxAngle: 42
-    angleIncrease: 4
-    angleDecay: 13
     selectedMode: FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg

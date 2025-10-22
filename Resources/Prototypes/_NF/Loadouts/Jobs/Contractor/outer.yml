@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Avalon
+# SPDX-FileCopyrightText: 2025 Dvir
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: loadout
   id: ContractorClothingOuterSuitEmergency
   price: 800
@@ -27,6 +35,24 @@
   price: 1300
   equipment:
     outerClothing: ClothingOuterHardsuitVoidParamed
+
+- type: loadout
+  id: ContractorClothingOuterHardsuitUIEngineer
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 7500
+  equipment:
+    outerClothing: ClothingOuterHardsuitUllmanEngineer
+
+- type: loadout
+  id: ContractorClothingOuterHardsuitUIPilot
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 7500
+  equipment:
+    outerClothing: ClothingOuterHardsuitUIPilot
 
 - type: loadout
   id: ContractorClothingOuterHoodieGrey

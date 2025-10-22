@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 inquisitor-star
 # SPDX-FileCopyrightText: 2025 mikus
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -216,3 +217,15 @@
     - NamesFirst
     - NamesLast
     nameFormat: name-format-standard # mono end
+
+- type: entity
+  parent: MobTajaran
+  id: MobTajaranRandom
+  name: Urist McTajaran
+  suffix: Random Appearance
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - names_tajaran_first
+    - names_tajaran_last

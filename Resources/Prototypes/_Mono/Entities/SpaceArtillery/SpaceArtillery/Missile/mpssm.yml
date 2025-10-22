@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 LaCumbiaDelCoronavirus
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -92,6 +93,7 @@
     launchSpeed: 10
     maxSpeed: 180
     trackDelay: 0
+    exposesTracking: false
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun

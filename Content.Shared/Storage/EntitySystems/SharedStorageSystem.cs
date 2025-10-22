@@ -19,12 +19,13 @@
 // SPDX-FileCopyrightText: 2024 nikthechampiongr
 // SPDX-FileCopyrightText: 2024 plykiya
 // SPDX-FileCopyrightText: 2024 slarticodefast
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Daniel Lenrd
 // SPDX-FileCopyrightText: 2025 ErhardSteinhauer
 // SPDX-FileCopyrightText: 2025 Errant
 // SPDX-FileCopyrightText: 2025 GreaseMonk
 // SPDX-FileCopyrightText: 2025 Kyle Tyo
 // SPDX-FileCopyrightText: 2025 lzk
-// SPDX-FileCopyrightText: 2025 monolith8319
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -195,6 +196,12 @@ public abstract class SharedStorageSystem : EntitySystem
             .Bind(ContentKeyFunctions.OpenBackpack, InputCmdHandler.FromDelegate(HandleOpenBackpack, handle: false))
             .Bind(ContentKeyFunctions.OpenBelt, InputCmdHandler.FromDelegate(HandleOpenBelt, handle: false))
             .Bind(ContentKeyFunctions.OpenWallet, InputCmdHandler.FromDelegate(HandleOpenWallet, handle: false)) // Frontier
+            // Mono
+            .Bind(ContentKeyFunctions.OpenPocket1, InputCmdHandler.FromDelegate(HandleOpenPocket1, handle: false))
+            .Bind(ContentKeyFunctions.OpenPocket2, InputCmdHandler.FromDelegate(HandleOpenPocket2, handle: false))
+            .Bind(ContentKeyFunctions.OpenSuitStorage, InputCmdHandler.FromDelegate(HandleOpenSuitStorage, handle: false))
+            .Bind(ContentKeyFunctions.OpenOuterClothing, InputCmdHandler.FromDelegate(HandleOuterClothing, handle: false))
+            // Mono End
             .Register<SharedStorageSystem>();
 
         Subs.CVar(_cfg, CCVars.NestedStorage, OnNestedStorageCvar, true);
@@ -1663,6 +1670,27 @@ public abstract class SharedStorageSystem : EntitySystem
         HandleToggleSlotUI(session, "wallet");
     }
     // End Frontier: open wallet
+    // Mono Edit
+    private void HandleOpenPocket1(ICommonSession? session)
+    {
+        HandleToggleSlotUI(session, "pocket1");
+    }
+
+    private void HandleOpenPocket2(ICommonSession? session)
+    {
+        HandleToggleSlotUI(session, "pocket2");
+    }
+
+    private void HandleOpenSuitStorage(ICommonSession? session)
+    {
+        HandleToggleSlotUI(session, "suitstorage");
+    }
+
+    private void HandleOuterClothing(ICommonSession? session)
+    {
+        HandleToggleSlotUI(session, "outerClothing");
+    }
+    // Mono End
     private void HandleToggleSlotUI(ICommonSession? session, string slot)
     {
         if (session is not { } playerSession)

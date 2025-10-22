@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 BeeRobynn
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 KiraZen_
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
@@ -124,6 +125,7 @@
   - type: Tag
     tags:
     - CanPilot
+  - type: AdvancedPilot # can use both gunnery and shuttle console even on capitals
 
 - type: entity
   id: BaseBorgChassisRedacted
@@ -141,16 +143,18 @@
     access: [["SyndicateAgent"], ["NuclearOperative"]]
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
     - Common
     - Remnants
     - Traffic
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
     - Remnants
     - Traffic
+  - type: CollectiveMind
+    channels:
+    - Binary
+    defaultChannel: Binary
   - type: ShowSyndicateIcons
   - type: MovementAlwaysTouching
   - type: Speech
@@ -326,16 +330,18 @@
   components:
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
     - Common
     - Remnants
     - Traffic
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
     - Remnants
     - Traffic
+  - type: CollectiveMind
+    channels:
+    - Binary
+    defaultChannel: Binary
   - type: LanguageKnowledge
     speaks:
     - TauCetiBasic
@@ -399,7 +405,6 @@
   components:
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
     - Common
     - Traffic
     - Science
@@ -408,13 +413,16 @@
     - Medical
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
     - Traffic
     - Science
     - Supply
     - Engineering
     - Medical
+  - type: CollectiveMind
+    channels:
+    - Binary
+    defaultChannel: Binary
 
 # TSFMC AI core
 
@@ -456,6 +464,15 @@
   - type: GhostTakeoverAvailable
   - type: RandomMetadata
     nameSegments: [ TSFMCCoreNameset ]
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - RobotTalk
+    - SolCommon
+    understands:
+    - TauCetiBasic
+    - RobotTalk
+    - SolCommon
 
 - type: entity
   id: AiHeldTSFMC
@@ -464,7 +481,6 @@
   components:
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
     - Common
     - Traffic
     - Science
@@ -475,7 +491,6 @@
     - Command
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
     - Traffic
     - Science
@@ -484,6 +499,10 @@
     - Medical
     - Nfsd
     - Command
+  - type: CollectiveMind
+    channels:
+    - Binary
+    defaultChannel: Binary
 
 # Rogue AI Core
 
@@ -514,7 +533,7 @@
   components:
   - type: Sprite
   - type: SiliconLawProvider
-    laws: VesselLawset
+    laws: RogueLawset
   - type: GhostRole
     name: ghost-role-information-rogue-core
     description: ghost-role-information-rogue-core-description
@@ -525,6 +544,15 @@
   - type: GhostTakeoverAvailable
   - type: RandomMetadata
     nameSegments: [ RogueCoreNameset ]
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - RobotTalk
+    - Freespeak
+    understands:
+    - TauCetiBasic
+    - RobotTalk
+    - Freespeak
 
 - type: entity
   id: AiHeldRogue
@@ -533,7 +561,6 @@
   components:
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
     - Common
     - Traffic
     - Science
@@ -543,7 +570,6 @@
     - Freelance
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
     - Traffic
     - Science
@@ -551,3 +577,7 @@
     - Engineering
     - Medical
     - Freelance
+  - type: CollectiveMind
+    channels:
+    - Binary
+    defaultChannel: Binary

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -150,25 +151,11 @@
     - state: RIP
 
 #armor-piercing:
-- type: entity
-  parent: BaseAmmoBox762x54mmR
-  id: AmmoBox762x54mmRSteelAP
-  name: ammunition box (7.62x54mmR AP steel core)
-  components:
-  - type: BallisticAmmoProvider
-    proto: Cartridge762x54mmRSteelAP
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-    - state: steelAP
 
 - type: entity
   parent: BaseAmmoBox762x54mmR
   id: AmmoBox762x54mmRPlasteelAP
-  name: ammunition box (7.62x54mmR AP plasteel core)
+  name: ammunition box (7.62x54mmR AP)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge762x54mmRPlasteelAP
@@ -179,21 +166,6 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: plasteelAP
-
-- type: entity
-  parent: BaseAmmoBox762x54mmR
-  id: AmmoBox762x54mmRSynthAP
-  name: ammunition box (7.62x54mmR AP synthalloy core)
-  components:
-  - type: BallisticAmmoProvider
-    proto: Cartridge762x54mmRSynthAP
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-    - state: synthAP
 
 #big ammo boxes
 - type: entity

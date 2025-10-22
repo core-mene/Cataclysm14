@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 ark1368
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using System.Runtime.InteropServices;
 using Content.Server.Ghost.Roles.Components;
 using Content.Shared._Corvax.Respawn;
@@ -15,6 +21,7 @@ using Content.Shared.Ghost; // Frontier
 using Content.Server.Administration.Managers; // Frontier
 using Content.Server.Administration; // Frontier
 using Content.Shared.GameTicking; // Frontier
+using Content.Shared._Mono.CorticalBorer;
 
 namespace Content.Server._Corvax.Respawn;
 
@@ -95,6 +102,11 @@ public sealed class RespawnSystem : EntitySystem
             return;
 
         if (e.Mind.Comp.Session != null && _admin.IsAdmin(e.Mind.Comp.Session)) // Admins get free respawns
+            return;
+
+        if (TryComp<CorticalBorerInfestedComponent>(entity, out var infestedComp) &&
+            TryComp<CorticalBorerComponent>(infestedComp.Borer, out var borerComp) &&
+            borerComp.ControlingHost)
             return;
 
         // Get respawn info

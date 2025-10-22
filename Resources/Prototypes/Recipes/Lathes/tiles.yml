@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2024 Ko4ergaPunk
+# SPDX-FileCopyrightText: 2024 deltanedas
+# SPDX-FileCopyrightText: 2024 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2025 SlamBamActionman
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 # Base Prototypes
 
 - type: latheRecipe
@@ -72,6 +80,11 @@
 
 - type: latheRecipe
   parent: BaseTileRecipe
+  id: FloorTileItemDarkSquiggly
+  result: FloorTileItemDarkSquiggly
+
+- type: latheRecipe
+  parent: BaseTileRecipe
   id: FloorTileItemSteelCheckerDark
   result: FloorTileItemSteelCheckerDark
 
@@ -120,6 +133,7 @@
   id: FloorTileItemSteelPavementVertical
   result: FloorTileItemSteelPavementVertical
 
+# White steel tiles
 - type: latheRecipe
   parent: BaseTileRecipe
   id: FloorTileItemWhite
@@ -185,6 +199,11 @@
   parent: BaseTileRecipe
   id: FloorTileItemSteelMaint
   result: FloorTileItemSteelMaint
+
+- type: latheRecipe
+  parent: BaseTileRecipe
+  id: FloorTileItemTechmaintDark
+  result: FloorTileItemTechmaintDark
 
 # Wood
 - type: latheRecipe

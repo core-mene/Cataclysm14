@@ -22,16 +22,6 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoSteelAPIntermediateMagazineRecipe
-  categories:
-  - SteelAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 475
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
   id: BaseAmmoPlasteelAPIntermediateMagazineRecipe
   categories:
   - PlasteelAPAmmo
@@ -40,17 +30,6 @@
   materials:
     Steel: 100
     Plasteel: 375
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: BaseAmmoSynthAPIntermediateMagazineRecipe
-  categories:
-  - SynthAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 100
-    Synthalloy: 375
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -141,16 +120,6 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoSteelAPIntermediateSpeedloaderRecipe
-  categories:
-  - SteelAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 175
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
   id: BaseAmmoPlasteelAPIntermediateSpeedloaderRecipe
   categories:
   - PlasteelAPAmmo
@@ -159,17 +128,6 @@
   materials:
     Steel: 35
     Plasteel: 140
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: BaseAmmoSynthAPIntermediateSpeedloaderRecipe
-  categories:
-  - SynthAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 35
-    Synthalloy: 140
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -258,16 +216,6 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoSteelAPIntermediateAmmoBoxRecipe
-  categories:
-  - SteelAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 1425
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
   id: BaseAmmoPlasteelAPIntermediateAmmoBoxRecipe
   categories:
   - PlasteelAPAmmo
@@ -276,17 +224,6 @@
   materials:
     Steel: 350
     Plasteel: 1075
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: BaseAmmoSynthAPIntermediateAmmoBoxRecipe
-  categories:
-  - SynthAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 350
-    Synthalloy: 1075
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -368,16 +305,6 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoSteelAPFullyPoweredMagazineRecipe
-  categories:
-  - SteelAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 575
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
   id: BaseAmmoPlasteelAPFullyPoweredMagazineRecipe
   categories:
   - PlasteelAPAmmo
@@ -386,17 +313,6 @@
   materials:
     Steel: 150
     Plasteel: 425
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: BaseAmmoSynthAPFullyPoweredMagazineRecipe
-  categories:
-  - SynthAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 150
-    Synthalloy: 425
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -485,16 +401,6 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoSteelAPFullyPoweredAmmoBoxRecipe
-  categories:
-  - SteelAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 1725
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
   id: BaseAmmoPlasteelAPFullyPoweredAmmoBoxRecipe
   categories:
   - PlasteelAPAmmo
@@ -503,17 +409,6 @@
   materials:
     Steel: 400
     Plasteel: 1325
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: BaseAmmoSynthAPFullyPoweredAmmoBoxRecipe
-  categories:
-  - SynthAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 400
-    Synthalloy: 1325
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -608,16 +503,6 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoSteelAPPistolCaliberPistolMagazineRecipe
-  categories:
-  - SteelAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 175
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
   id: BaseAmmoPlasteelAPPistolCaliberPistolMagazineRecipe
   categories:
   - PlasteelAPAmmo
@@ -626,17 +511,6 @@
   materials:
     Steel: 50
     Plasteel: 125
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: BaseAmmoSynthAPPistolCaliberPistolMagazineRecipe
-  categories:
-  - SynthAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 50
-    Synthalloy: 125
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -725,16 +599,6 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoSteelAPPistolCaliberSubMachineGunMagazineRecipe
-  categories:
-  - SteelAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 375
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
   id: BaseAmmoPlasteelAPPistolCaliberSubMachineGunMagazineRecipe
   categories:
   - PlasteelAPAmmo
@@ -743,17 +607,6 @@
   materials:
     Steel: 50
     Plasteel: 225
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: BaseAmmoSynthAPPistolCaliberSubMachineGunMagazineRecipe
-  categories:
-  - SynthAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 50
-    Synthalloy: 225
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -906,16 +759,6 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BaseAmmoSteelAPPistolCaliberAmmoBoxRecipe
-  categories:
-  - SteelAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 1125
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
   id: BaseAmmoPlasteelAPPistolCaliberAmmoBoxRecipe
   categories:
   - PlasteelAPAmmo
@@ -924,17 +767,6 @@
   materials:
     Steel: 200
     Plasteel: 925
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: BaseAmmoSynthAPPistolCaliberAmmoBoxRecipe
-  categories:
-  - SynthAPAmmo
-  - Ammo
-  abstract: true
-  materials:
-    Steel: 200
-    Synthalloy: 925
 
 - type: latheRecipe
   parent: BaseAmmoRecipe

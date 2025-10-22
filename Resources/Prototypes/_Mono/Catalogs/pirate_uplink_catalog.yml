@@ -523,6 +523,21 @@
       tags:
       - PirateUplink
 
+- type: listing
+  id: UplinkPirateSyndicateApplicator
+  name: uplink-syndicate-applicator-name
+  description: uplink-syndicate-applicator-desc
+  productEntity: NaniteApplicatorSyndicate
+  cost:
+    Doubloon: 35
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
 #MARK: Ammunition
 #TODO: Make boxes of ammo similar to TSFMC
 - type: listing

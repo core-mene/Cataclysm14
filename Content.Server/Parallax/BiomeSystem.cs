@@ -75,6 +75,9 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
     private float _updateTimer = 0f;
     private const float UpdateInterval = 1f / 10f;
 
+    private float _unloadTimer = 0f;
+    private const float UnloadInterval = 10f;
+
     /// <summary>
     /// Load area for chunks containing tiles, decals etc.
     /// </summary>
@@ -187,6 +190,9 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
 
         var loadBiomes = AllEntityQuery<BiomeComponent, MapGridComponent>();
 
+        _unloadTimer += frameTime;
+        var shouldUnload = _unloadTimer > UnloadInterval;
+
         while (loadBiomes.MoveNext(out var gridUid, out var biome, out var grid))
         {
             // If not MapInit don't run it.
@@ -200,11 +206,14 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
             if (!_activeChunks.ContainsKey(biome))
                 continue;
 
-            // Load new chunks
             LoadChunks(biome, gridUid, grid, biome.Seed);
-            // Unload old chunks
-            UnloadChunks(biome, gridUid, grid, biome.Seed);
+
+            if (shouldUnload)
+                UnloadChunks(biome, gridUid, grid, biome.Seed);
         }
+
+        if (shouldUnload)
+            _unloadTimer = 0f;
 
         CleanupUpdateCycle();
     }

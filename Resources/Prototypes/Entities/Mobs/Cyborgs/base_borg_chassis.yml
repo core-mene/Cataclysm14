@@ -156,15 +156,17 @@
   - type: IntrinsicRadioTransmitter
     channels:
     - Traffic
-    - Binary
     - Common
     - Science
   - type: ActiveRadio
     channels:
     - Traffic
-    - Binary
     - Common
     - Science
+  - type: CollectiveMind
+    channels:
+    - Binary
+    defaultChannel: Binary
   - type: ZombieImmune
   - type: Repairable
     doAfterDelay: 10
@@ -413,14 +415,16 @@
     channels:
     - Traffic
     - Common
-    - Binary
     - Syndicate
   - type: ActiveRadio
     channels:
     - Common
-    - Binary
     - Traffic
     - Syndicate
+  - type: CollectiveMind
+    channels:
+    - Binary
+    defaultChannel: Binary
   - type: ShowSyndicateIcons
   - type: MovementAlwaysTouching
   - type: Speech

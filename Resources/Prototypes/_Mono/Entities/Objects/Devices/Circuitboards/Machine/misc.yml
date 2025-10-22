@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 bitcrushing
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -30,3 +31,17 @@
       Capacitor: 4
     stackRequirements:
       Plasteel: 4
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: SmartfridgeCircuitboard
+  name: smartfridge machine board
+  description: A machine printed circuit board for a smartfridge.
+  components:
+  - type: MachineBoard
+    prototype: SmartFridge
+    requirements:
+      Capacitor: 1
+    stackRequirements:
+      Glass: 5
+      Cable: 1

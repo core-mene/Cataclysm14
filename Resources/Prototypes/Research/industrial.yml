@@ -20,10 +20,12 @@
 # SPDX-FileCopyrightText: 2024 Nemanja
 # SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Myzumi
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 beck-thompson
 # SPDX-FileCopyrightText: 2025 core-mene
@@ -78,6 +80,10 @@
   - PowerCellHigh
   - TurboItemRechargerCircuitboard
   - SMESAdvancedMachineCircuitboard
+  - PowerCageSmall # Mono
+  - PowerCageMedium # Mono
+  - PowerCageHigh # Mono
+  - PowerCageRechargerCircuitboard # Mono
   technologyPrerequisites:
   - PowerGeneration
   position: -2, 7
@@ -137,6 +143,7 @@
   - PortableGeneratorJrPacmanMachineCircuitboard
   - SolarControlComputerCircuitboard
   - SolarTrackerElectronics
+  - SolarAssemblyFlatpack # Mono
   - EmitterCircuitboard
   - ContainmentFieldGeneratorCircuitboard # Mono
   technologyPrerequisites:
@@ -208,6 +215,7 @@
   - JawsOfLife
   - UtilityBeltChiefEngineer
   - BorgModuleAdvancedTool
+  - ExperimentalNaniteApplicator # Monolith
   # - Fulton # Frontier
   # - FultonBeacon # Frontier
   - BorgModuleJetpack # Frontier

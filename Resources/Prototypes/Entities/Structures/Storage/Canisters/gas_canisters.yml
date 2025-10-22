@@ -44,9 +44,11 @@
 # SPDX-FileCopyrightText: 2025 ActiveMammmoth
 # SPDX-FileCopyrightText: 2025 ArtisticRoomba
 # SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 LaCumbiaDelCoronavirus
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -809,7 +811,7 @@
     - state: bz
   - type: GasCanister
     gasMixture:
-      volume: 1000
+      volume: 1500
       moles:
       - 0 # oxygen
       - 0 # nitrogen
@@ -820,7 +822,7 @@
       - 0 # Miasma
       - 0 # N2O
       - 0 # Frezon
-      - 1871.71051 # BZ
+      - 2769.36 # BZ
       temperature: 293.15
   - type: Destructible
     thresholds:
@@ -858,7 +860,7 @@
     - state: healium
   - type: GasCanister
     gasMixture:
-      volume: 1000
+      volume: 1500
       moles:
       - 0 # oxygen
       - 0 # nitrogen
@@ -870,7 +872,7 @@
       - 0 # N2O
       - 0 # Frezon
       - 0 # BZ
-      - 1871.71051 # Healium
+      - 2769.36 # Healium
       temperature: 293.15
   - type: Destructible
     thresholds:
@@ -908,7 +910,7 @@
     - state: nitrium
   - type: GasCanister
     gasMixture:
-      volume: 1000
+      volume: 1500
       moles:
       - 0 # oxygen
       - 0 # nitrogen
@@ -921,7 +923,7 @@
       - 0 # Frezon
       - 0 # BZ
       - 0 # Healium
-      - 1871.71051 # Nitrium
+      - 2769.36 # Nitrium
       temperature: 293.15
   - type: Destructible
     thresholds:

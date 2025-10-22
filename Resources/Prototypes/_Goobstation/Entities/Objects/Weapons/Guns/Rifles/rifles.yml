@@ -2,7 +2,9 @@
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 halycon
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -23,10 +25,7 @@
   - type: Item # Mono
     sprite: _Mono/Objects/Weapons/Guns/Rifles/annie_inhands_32x.rsi
   - type: Clothing
-    sprite: _Mono/Objects/Weapons/Guns/Rifles/annie_inhands_32x.rsi # Mono
-  - type: GunWieldBonus
-    minAngle: -14
-    maxAngle: -32
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/annie_inhands_32x.rsi
   - type: Gun
     availableModes:
     - FullAuto
@@ -36,10 +35,6 @@
     shotsPerBurst: 4
     fireRate: 6.5
     projectileSpeed: 42.5 # Mono
-    minAngle: 15
-    maxAngle: 54
-    angleIncrease: 4
-    angleDecay: 33
     soundGunshot:
       path: /Audio/_Goobstation/Weapons/Guns/Gunshots/thock.ogg
   - type: ChamberMagazineAmmoProvider
@@ -103,13 +98,9 @@
     burstFireRate: 20 # Mono
     burstCooldown: 0.4 # Mono
     projectileSpeed: 45 # Mono
-    minAngle: 15
-    maxAngle: 54
-    angleIncrease: 2
-    angleDecay: 33
     fireRate: 7.5 # Mono, does nothing because its burst only but it makes it clear it can fire at this rate.
     soundGunshot:
-      path: /Audio/_Goobstation/Weapons/Guns/Gunshots/bwuh.ogg
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/wspr_fire.ogg # Mono change - Changed audio path
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -156,17 +147,9 @@
   - type: ChamberMagazineAmmoProvider # Mono
     soundRack:
       path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
-  - type: GunWieldBonus
-    minAngle: -14
-    maxAngle: -38
   - type: Gun
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/light_rifle_2.ogg # Mono
-    projectileSpeed: 60 # Mono
-    minAngle: 15
-    maxAngle: 54
-    angleIncrease: 5
-    angleDecay: 28
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -200,7 +183,7 @@
   name: CS Burner (12.7x99mm)
   parent: [BaseWeaponRifle, BaseC3PirateContrabandHighValue] # Mono - Changed to HighValue
   id: WeaponRifleBurner
-  description: A high caliber syndicate gun chambered in 127x99mm, capable of firing anti-material and high explosive rounds.
+  description: A high caliber syndicate gun chambered in 12.7x99mm, capable of firing anti-material and high explosive rounds.
   components:
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Rifles/burner.rsi

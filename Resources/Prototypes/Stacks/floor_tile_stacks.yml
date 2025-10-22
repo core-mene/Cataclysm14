@@ -1,4 +1,29 @@
-﻿- type: stack
+# SPDX-FileCopyrightText: 2021 DrSmugleaf
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2022 Mervill
+# SPDX-FileCopyrightText: 2022 Paul Ritter
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 brainfood1183
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 NULL882
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 PixelTK
+# SPDX-FileCopyrightText: 2024 AJCM-git
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 Flareguy
+# SPDX-FileCopyrightText: 2024 IProduceWidgets
+# SPDX-FileCopyrightText: 2024 Ko4ergaPunk
+# SPDX-FileCopyrightText: 2024 MACMAN2003
+# SPDX-FileCopyrightText: 2024 Ps3Moira
+# SPDX-FileCopyrightText: 2024 TakoDragon
+# SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2025 SlamBamActionman
+# SPDX-FileCopyrightText: 2025 Southbridge
+#
+# SPDX-License-Identifier: MPL-2.0
+
+- type: stack
   id: FloorTileDark
   name: dark tile
   spawn: FloorTileItemDark
@@ -188,6 +213,12 @@
   id: FloorTileTechmaint
   name: techmaint floor
   spawn: FloorTileItemTechmaint
+  maxCount: 30
+
+- type: stack
+  id: FloorTileTechmaintDark
+  name: stack-techmaint-floor-dark
+  spawn: FloorTileItemTechmaintDark
   maxCount: 30
 
 - type: stack
@@ -633,4 +664,34 @@
   id: FloorTileWoodLarge
   name: large wood floor
   spawn: FloorTileItemWoodLarge
+  maxCount: 30
+
+- type: stack
+  id: FloorTileXeno
+  name: stack-xeno-floor
+  spawn: FloorTileItemXeno
+  maxCount: 30
+
+- type: stack
+  id: FloorTileXenoSteel
+  name: stack-xeno-steel
+  spawn: FloorTileItemXenoSteelCorner
+  maxCount: 30
+
+- type: stack
+  id: FloorTileXenoSteelCorner
+  name: stack-xeno-steel-corner
+  spawn: FloorTileItemXenoSteelCorner
+  maxCount: 30
+
+- type: stack
+  id: FloorTileXenoMaint
+  name: stack-xeno-maint
+  spawn: FloorTileItemXenoSteelCorner
+  maxCount: 30
+
+- type: stack
+  id: FloorTileDarkSquiggly
+  name: stack-dark-squiggly
+  spawn: FloorTileItemDarkSquiggly
   maxCount: 30

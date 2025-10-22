@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -29,7 +30,7 @@
     range: 500
   - type: Gun
     fireRate: 0.1
-    projectileSpeed: 200
+    projectileSpeed: 400
     shootThermalSignature: 8000000 # ~2.8km after firing - relatively low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
@@ -77,7 +78,7 @@
     range: 500
   - type: Gun
     fireRate: 0.1
-    projectileSpeed: 200
+    projectileSpeed: 400
     shootThermalSignature: 8000000 # ~2.8km after firing - relatively low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg

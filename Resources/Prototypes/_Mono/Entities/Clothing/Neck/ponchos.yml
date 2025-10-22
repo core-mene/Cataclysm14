@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 Hyenh
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -85,6 +86,17 @@
     sprite: _Mono/Clothing/Neck/Ponchos/purplesmall.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Neck/Ponchos/purplesmall.rsi
+
+- type: entity
+  parent: ClothingNeckPonchoBlack
+  id: ClothingNeckPonchoSmallOrange
+  name: small orange cold weather poncho
+  description: The Cold Weather Poncho, advertised as a masterpiece of elemental protection. This stylish rendition comes in a smaller size. This one is shockingly orange.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Ponchos/orangesmall.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Neck/Ponchos/orangesmall.rsi
 
 - type: entity
   parent: ClothingNeckPonchoBlack

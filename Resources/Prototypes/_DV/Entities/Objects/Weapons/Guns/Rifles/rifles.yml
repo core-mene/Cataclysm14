@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 Dvir
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
@@ -12,7 +13,7 @@
 
 - type: entity
   name: HWM FCM "Vulcan" (7.62x51mm)
-  parent: [BaseWeaponLightMachineGun, BaseGunWieldable, BaseC1Contraband] # Frontier: add BaseC1Contraband
+  parent: [BaseWeaponRifle, BaseGunWieldable, BaseC1Contraband] # Frontier: add BaseC1Contraband
   id: WeaponRifleVulcan
   description: One of the heaviest small arms to grace Security's armory, The Herstal Weapon Manufacture FCM (Fusil de Combat Moyen) "Vulcan", this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World". Uses 7.62x51mm ammo.
   components:
@@ -24,18 +25,24 @@
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: GunWieldBonus
-    minAngle: -20
-    maxAngle: -25
+    minAngle: -12
+    maxAngle: -18
   - type: Gun
-    minAngle: 21
-    maxAngle: 52
-    angleIncrease: 5 # 6->5 - Mono
-    angleDecay: 15
+    minAngle: 13
+    maxAngle: 20
+    angleIncrease: 5
+    angleDecay: 25
     fireRate: 4
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
     - FullAuto
+    # Mono
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/lmg.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+    # Mono end
   - type: ChamberMagazineAmmoProvider
   - type: ItemSlots
     slots:
@@ -124,7 +131,7 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
     minAngle: 22
-    maxAngle: 45
+    maxAngle: 36
     angleIncrease: 2
     angleDecay: 8
     fireRate: 8

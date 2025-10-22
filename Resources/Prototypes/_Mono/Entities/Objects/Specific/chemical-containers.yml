@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2025 ScyronX
+#
+# SPDX-License-Identifier: MPL-2.0
+
+- type: entity
+  parent: JerryCan
+  suffix: nanite fuel
+  id: JerryCanNaniteFuel
+  #  categories: [ HideSpawnMenu ] # Frontier
+  components:
+  - type: Label
+    currentLabel: reagent-name-nanite-fuel
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        reagents:
+        - ReagentId: NaniteFuel
+          Quantity: 200
+  - type: StaticPrice # Frontier
+    vendPrice: 500 # Frontier

@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 ark1368
 // SPDX-FileCopyrightText: 2025 sleepyyapril
 //
@@ -8,7 +9,6 @@
 // All rights reserved. Relicensed under AGPL with permission
 
 using Content.Server._Mono.Ships.Systems;
-using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Systems;
 using Content.Shared._Mono.FireControl;
 using Content.Shared.GameTicking;
@@ -16,8 +16,8 @@ using Content.Shared._Mono.Ships.Components;
 using Content.Shared.Popups;
 using Content.Shared.Power;
 using Content.Shared.Shuttles.BUIStates;
-using Content.Shared.Shuttles.Components;
 using Content.Shared.UserInterface;
+using Content.Shared.Weapons.Ranged.Components;
 using Robust.Server.GameObjects;
 
 namespace Content.Server._Mono.FireControl;
@@ -130,6 +130,8 @@ public sealed partial class FireControlSystem : EntitySystem
         // Fire the actual weapons
         FireWeapons((EntityUid)component.ConnectedServer, args.Selected, args.Coordinates, server);
 
+        UpdateUi(uid, component);
+
         // Raise an event to track the cursor position even when not firing
         var fireEvent = new FireControlConsoleFireEvent(args.Coordinates, args.Selected);
         RaiseLocalEvent(uid, fireEvent);
@@ -147,10 +149,10 @@ public sealed partial class FireControlSystem : EntitySystem
     {
         var shuttle = _transform.GetParentUid(uid);
         var uiOpen = _crewedShuttle.AnyShuttleConsoleActiveByPlayer(shuttle, args.User);
-        var hasComp = HasComp<CrewedShuttleComponent>(shuttle);
+        var forceOne = HasComp<CrewedShuttleComponent>(shuttle) && !HasComp<AdvancedPilotComponent>(args.User);
 
         // Crewed shuttles should not allow people to have both gunnery and shuttle consoles open.
-        if (uiOpen && hasComp)
+        if (uiOpen && forceOne)
         {
             args.Cancel();
             _popup.PopupClient(Loc.GetString("shuttle-console-crewed"), args.User);
@@ -238,6 +240,10 @@ public sealed partial class FireControlSystem : EntitySystem
                 controlled.Coordinates = GetNetCoordinates(Transform(controllable).Coordinates);
                 controlled.Name = MetaData(controllable).EntityName;
 
+                var (ammoCount, hasManualReload) = GetWeaponAmmunitionInfo(controllable);
+                controlled.AmmoCount = ammoCount;
+                controlled.HasManualReload = hasManualReload;
+
                 controllables.Add(controlled);
             }
         }
@@ -246,5 +252,25 @@ public sealed partial class FireControlSystem : EntitySystem
 
         var state = new FireControlConsoleBoundInterfaceState(component.ConnectedServer != null, array, navState);
         _ui.SetUiState(uid, FireControlConsoleUiKey.Key, state);
+    }
+
+    /// <summary>
+    /// Gets ammo information for a weapon to determine if it has manual reload.
+    /// </summary>
+    private (int? ammoCount, bool hasManualReload) GetWeaponAmmunitionInfo(EntityUid weaponEntity)
+    {
+        if (TryComp<BasicEntityAmmoProviderComponent>(weaponEntity, out var basicAmmo))
+        {
+            var hasRecharge = HasComp<RechargeBasicEntityAmmoComponent>(weaponEntity);
+
+            return (basicAmmo.Count, !hasRecharge);
+        }
+
+        if (TryComp<BallisticAmmoProviderComponent>(weaponEntity, out var ballisticAmmo))
+        {
+            return (ballisticAmmo.Count, ballisticAmmo.Cycleable);
+        }
+
+        return (null, false);
     }
 }

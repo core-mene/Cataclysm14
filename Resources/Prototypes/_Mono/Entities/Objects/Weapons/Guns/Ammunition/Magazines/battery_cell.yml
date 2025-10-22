@@ -59,6 +59,8 @@
   - type: HitscanBatteryAmmoProvider
     proto: PulsedPlasma
     fireCost: 3000
+  - type: StaticPrice
+    price: 1000
   - type: Tag
     tags:
     - PPLCell

@@ -209,53 +209,14 @@
   - type: Appearance
 
 #armor-piercing ammo
-- type: entity
-  id: SpeedLoader45_magnumSteelAP
-  name: speed loader (.45 magnum AP steel core)
-  parent: BaseSpeedLoader45_magnum
-  components:
-  - type: BallisticAmmoProvider
-    proto: Cartridge45_magnumSteelAP
-  - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/45_magnum/45_magnum_speed_loader.rsi
-    layers:
-      - state: base
-        map: [ "enum.GunVisualLayers.Base" ]
-      - state: piercing-6
-        map: [ "enum.GunVisualLayers.Mag" ]
-  - type: MagazineVisuals
-    magState: piercing
-    steps: 7
-    zeroVisible: false
-  - type: Appearance
 
 - type: entity
   id: SpeedLoader45_magnumPlasteelAP
-  name: speed loader (.45 magnum AP plasteel core)
+  name: speed loader (.45 magnum AP)
   parent: BaseSpeedLoader45_magnum
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumPlasteelAP
-  - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/45_magnum/45_magnum_speed_loader.rsi
-    layers:
-      - state: base
-        map: [ "enum.GunVisualLayers.Base" ]
-      - state: piercing-6
-        map: [ "enum.GunVisualLayers.Mag" ]
-  - type: MagazineVisuals
-    magState: piercing
-    steps: 7
-    zeroVisible: false
-  - type: Appearance
-
-- type: entity
-  id: SpeedLoader45_magnumSynthAP
-  name: speed loader (.45 magnum AP synthalloy core)
-  parent: BaseSpeedLoader45_magnum
-  components:
-  - type: BallisticAmmoProvider
-    proto: Cartridge45_magnumSynthAP
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/45_magnum/45_magnum_speed_loader.rsi
     layers:

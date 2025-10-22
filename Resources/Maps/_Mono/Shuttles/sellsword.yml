@@ -9,7 +9,7 @@
 # SPDX-FileCopyrightText: 2025 tonotom
 # SPDX-FileCopyrightText: 2025 tonotom1
 #
-# SPDX-License-Identifier: AGPL-3.0-or-later
+# SPDX-License-Identifier: MPL-2.0
 
 meta:
   format: 7
@@ -17,8 +17,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/01/2025 14:55:45
-  entityCount: 292
+  time: 10/09/2025 15:16:19
+  entityCount: 293
 maps: []
 grids:
 - 1
@@ -204,8 +204,9 @@ entities:
             0: 2130
             2: 12288
           1,-1:
-            2: 159
-            3: 64
+            2: 143
+            3: 16
+            4: 64
           2,-2:
             1: 8976
             0: 1024
@@ -254,6 +255,21 @@ entities:
           moles:
           - 21.824879
           - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.15
+          moles:
+          - 21.823984
+          - 82.09976
           - 0
           - 0
           - 0
@@ -605,14 +621,6 @@ entities:
     - type: Transform
       pos: 3.059012,-3.1883416
       parent: 1
-- proto: ButtonFrameExit
-  entities:
-  - uid: 59
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 1.5,-5.5
-      parent: 1
 - proto: CableApcExtension
   entities:
   - uid: 60
@@ -810,9 +818,21 @@ entities:
       rot: 3.141592653589793 rad
       pos: 2.5,-1.5
       parent: 1
-- proto: ComputerGunneryConsole
+- proto: ComputerIFF
   entities:
-  - uid: 96
+  - uid: 296
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -1.5,-4.5
+      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
+- proto: ComputerTabletopGunneryConsole
+  entities:
+  - uid: 295
     components:
     - type: Transform
       pos: 2.5,-0.5
@@ -821,25 +841,25 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-- proto: ComputerShuttle
+- proto: ComputerTabletopShuttle
   entities:
-  - uid: 97
+  - uid: 294
     components:
     - type: Transform
       pos: 1.5,-0.5
       parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        97:
+        - - device-button-1
+          - SpaceArtilleryFire
+        175:
+        - - device-button-2
+          - SpaceArtilleryFire
     - type: ApcPowerReceiver
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-    - type: DeviceLinkSource
-      linkedPorts:
-        285:
-        - - device-button-2
-          - SpaceArtilleryFire
-        284:
-        - - device-button-1
-          - SpaceArtilleryFire
 - proto: ComputerWallmountStationRecords
   entities:
   - uid: 98
@@ -1362,8 +1382,8 @@ entities:
         immutable: False
         temperature: 293.1493
         moles:
-        - 1.8968438
-        - 7.1357465
+        - 1.8977377
+        - 7.139109
         - 0
         - 0
         - 0
@@ -1380,8 +1400,8 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 57
           - 56
+          - 57
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -1520,34 +1540,18 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 2.5,-3.5
       parent: 1
-- proto: RandomPosterLegit
+- proto: RandomPosterAny
   entities:
-  - uid: 175
-    components:
-    - type: Transform
-      pos: -1.5,-2.5
-      parent: 1
   - uid: 176
     components:
     - type: Transform
       pos: 8.5,-2.5
       parent: 1
-- proto: SignalButtonDirectional
-  entities:
-  - uid: 177
+  - uid: 284
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 1.5,-5.5
+      pos: -1.5,-2.5
       parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        289:
-        - - Pressed
-          - Open
-        288:
-        - - Pressed
-          - Open
 - proto: SignSomethingOld
   entities:
   - uid: 178
@@ -1647,6 +1651,18 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 3.5,-3.5
+      parent: 1
+  - uid: 285
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,-0.5
+      parent: 1
+  - uid: 293
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 2.5,-0.5
       parent: 1
 - proto: Thruster
   entities:
@@ -2214,7 +2230,7 @@ entities:
       parent: 1
 - proto: WeaponTurretKargil
   entities:
-  - uid: 284
+  - uid: 97
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -2222,7 +2238,7 @@ entities:
       parent: 1
 - proto: WeaponTurretVespera
   entities:
-  - uid: 285
+  - uid: 175
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -2240,19 +2256,15 @@ entities:
     - type: Transform
       pos: -0.5,-2.5
       parent: 1
-- proto: WindoorSecureMercenaryLocked
-  entities:
   - uid: 288
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,-6.5
+      pos: 0.5,-5.5
       parent: 1
   - uid: 289
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,-6.5
+      pos: -0.5,-5.5
       parent: 1
 - proto: WindowReinforcedDirectional
   entities:

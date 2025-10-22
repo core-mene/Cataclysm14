@@ -32,6 +32,7 @@
 // SPDX-FileCopyrightText: 2024 slarticodefast
 // SPDX-FileCopyrightText: 2024 wafehling
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Daniel Lenrd
 // SPDX-FileCopyrightText: 2025 ErhardSteinhauer
 // SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 Whatstone
@@ -114,10 +115,30 @@ namespace Content.Client.Input
             human.AddFunction(ContentKeyFunctions.OpenInventoryMenu);
             human.AddFunction(ContentKeyFunctions.SmartEquipBackpack);
             human.AddFunction(ContentKeyFunctions.SmartEquipBelt);
+            human.AddFunction(ContentKeyFunctions.SmartEquipPocket1);
+            human.AddFunction(ContentKeyFunctions.SmartEquipPocket2);
+            human.AddFunction(ContentKeyFunctions.SmartEquipSuitStorage);
             human.AddFunction(ContentKeyFunctions.SmartEquipWallet); // Frontier
-            human.AddFunction(ContentKeyFunctions.SmartEquipBack); // Goobstation - Smart equip to back
+            // Mono Edit
+            human.AddFunction(ContentKeyFunctions.SmartEquipID);
+            human.AddFunction(ContentKeyFunctions.SmartEquipShoes);
+            human.AddFunction(ContentKeyFunctions.SmartEquipOuterClothing);
+            human.AddFunction(ContentKeyFunctions.EquipBackpack);
+            human.AddFunction(ContentKeyFunctions.EquipBelt);
+            human.AddFunction(ContentKeyFunctions.EquipPocket1);
+            human.AddFunction(ContentKeyFunctions.EquipPocket2);
+            human.AddFunction(ContentKeyFunctions.EquipSuitStorage);
+            human.AddFunction(ContentKeyFunctions.EquipWallet);
+            human.AddFunction(ContentKeyFunctions.EquipID);
+            // Mono End
             human.AddFunction(ContentKeyFunctions.OpenBackpack);
             human.AddFunction(ContentKeyFunctions.OpenBelt);
+            // Mono
+            human.AddFunction(ContentKeyFunctions.OpenPocket1);
+            human.AddFunction(ContentKeyFunctions.OpenPocket2);
+            human.AddFunction(ContentKeyFunctions.OpenSuitStorage);
+            human.AddFunction(ContentKeyFunctions.OpenOuterClothing);
+            // Mono End
             human.AddFunction(ContentKeyFunctions.OpenWallet); // Frontier
             human.AddFunction(ContentKeyFunctions.MouseMiddle);
             human.AddFunction(ContentKeyFunctions.RotateObjectClockwise);

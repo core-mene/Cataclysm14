@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 bitcrushing
+#
+# SPDX-License-Identifier: MIT
+
 - type: guideEntry
   id: Felinid
   name: species-name-felinid
@@ -18,10 +24,10 @@
   name: species-name-oni
   text: "/ServerInfo/Guidebook/Mobs/_DV/Oni.xml"
 
-  # - type: guideEntry
-  # id: Rodentia
-  # name: species-name-rodentia
-  # text: "/ServerInfo/Guidebook/Mobs/_DV/Rodentia.xml"
+- type: guideEntry
+  id: Rodentia
+  name: species-name-rodentia
+  text: "/ServerInfo/Guidebook/Mobs/_DV/Rodentia.xml"
 
 - type: guideEntry
   id: Chitinid

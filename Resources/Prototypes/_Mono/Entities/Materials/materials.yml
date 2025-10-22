@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 tonotom
 # SPDX-FileCopyrightText: 2025 tonotom1
@@ -49,6 +50,44 @@
   components:
   - type: Stack
     count: 10
+
+
+
+- type: material
+  id: Pyrogel
+  stackEntity: MaterialPyrogel1
+  name: materials-pyrogel
+  unit: materials-unit-sheet
+  icon: { sprite: _Mono/Objects/Materials/pyrogel.rsi, state: icon }
+  color: "#C0C0C0"
+  price: 5
+
+- type: entity
+  parent: MaterialBase
+  id: MaterialPyrogel
+  name: pyrogel
+  description: Paycheck Bratva's experimental chemical gel.
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: Pyrogel
+    count: 50
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/pyrogel.rsi
+    layers:
+    - state: icon
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Pyrogel: 100 # what?
+
+- type: entity
+  parent: MaterialPyrogel
+  id: MaterialPyrogel1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
 
 # iridite - money mat from atmos gases
 

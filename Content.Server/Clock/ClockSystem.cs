@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Server.GameTicking.Events;
 using Content.Shared.Clock;
 using Content.Shared.Destructible;
@@ -29,7 +35,6 @@ public sealed class ClockSystem : SharedClockSystem
 
     private void OnMapInit(Entity<GlobalTimeManagerComponent> ent, ref MapInitEvent args)
     {
-        //ent.Comp.TimeOffset = TimeSpan.FromHours(_robustRandom.NextFloat(0, 24)); // Frontier
         ent.Comp.TimeOffset = TimeSpan.Zero; // Frontier: station time, all the time.
         _pvsOverride.AddGlobalOverride(ent);
         Dirty(ent);
