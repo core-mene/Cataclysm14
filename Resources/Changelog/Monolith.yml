@@ -13160,3 +13160,68 @@ Entries:
   id: 1455
   time: '2025-10-22T09:51:24.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2425
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: >-
+        AI cores can now simultaneously use gunnery and shuttle consoles even on
+        capitals.
+    - type: Fix
+      message: TSFMC AIs can now speak Sol Common.
+  id: 1456
+  time: '2025-10-22T19:16:25.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2443
+- author: core-mene
+  changes:
+    - type: Add
+      message: new NT branded pre-corpowar lootboxes
+  id: 1457
+  time: '2025-10-22T19:35:28.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2448
+- author: Ark
+  changes:
+    - type: Fix
+      message: Footsteps (without shoes) should be silent now for Tajaran.
+  id: 1458
+  time: '2025-10-22T19:38:23.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2450
+- author: DummeHytteOst
+  changes:
+    - type: Fix
+      message: >-
+        Fixed Chitinids and Rodentia getting hungry faster than intended, they
+        now correctly get hungry 33% faster, instead of 160% faster.
+  id: 1459
+  time: '2025-10-22T23:55:04.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2451
+- author: ark1368
+  changes:
+    - type: Add
+      message: >-
+        Sounds in large areas now have an echo. This effect can be disabled in
+        settings. This is all client-side.
+  id: 1460
+  time: '2025-10-23T00:26:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2452
+- author: kyres1
+  changes:
+    - type: Add
+      message: Added the Acera bounty hunting ship
+  id: 1461
+  time: '2025-10-23T06:39:48.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2424
+- author: Onezero0
+  changes:
+    - type: Tweak
+      message: Stealth options can no longer become completely invisible.
+    - type: Tweak
+      message: ASR Elite hardsuit and TSF M92-X hardsuits now have shields!
+    - type: Tweak
+      message: M82, M86 and ASR Scaf stats are a bit more equalized now.
+    - type: Add
+      message: >-
+        There is now a guidebook entry detailing armor mechanics under
+        Miscellaneous.
+  id: 1462
+  time: '2025-10-23T06:41:48.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2398

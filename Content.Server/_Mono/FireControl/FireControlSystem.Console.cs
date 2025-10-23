@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 ark1368
 // SPDX-FileCopyrightText: 2025 sleepyyapril
 //
@@ -148,10 +149,10 @@ public sealed partial class FireControlSystem : EntitySystem
     {
         var shuttle = _transform.GetParentUid(uid);
         var uiOpen = _crewedShuttle.AnyShuttleConsoleActiveByPlayer(shuttle, args.User);
-        var hasComp = HasComp<CrewedShuttleComponent>(shuttle);
+        var forceOne = HasComp<CrewedShuttleComponent>(shuttle) && !HasComp<AdvancedPilotComponent>(args.User);
 
         // Crewed shuttles should not allow people to have both gunnery and shuttle consoles open.
-        if (uiOpen && hasComp)
+        if (uiOpen && forceOne)
         {
             args.Cancel();
             _popup.PopupClient(Loc.GetString("shuttle-console-crewed"), args.User);
