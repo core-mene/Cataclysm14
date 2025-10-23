@@ -1,0 +1,63 @@
+# Kevlar
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateLight
+  name: kevlar plate
+  description: A lightweight protective plate made from advanced kevlar fibers manufactured by Aether.
+  suffix: Light
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/ArmorPlate/armor_light.rsi
+    state: icon
+  - type: Item
+    sprite: _Mono/Clothing/ArmorPlate/armor_light.rsi
+    state: icon
+    size: Normal
+
+# Ceramic
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateMedium
+  name: ceramic plate
+  description: A medium-weight ceramic composite plate manufactured by Aether.
+  suffix: Medium
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/ArmorPlate/armor_medium.rsi
+    state: icon
+  - type: Item
+    sprite: _Mono/Clothing/ArmorPlate/armor_medium.rsi
+    state: icon
+    size: Normal
+
+# Steel
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateTactical
+  name: steel plate
+  description: A heavy-duty steel plate manufactured by Aether.
+  suffix: Tactical
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/ArmorPlate/armor_tactical.rsi
+    state: icon
+  - type: Item
+    sprite: _Mono/Clothing/ArmorPlate/armor_tactical.rsi
+    state: icon
+    size: Normal
+
+# Admeme
+- type: entity
+  parent: BaseItem
+  id: ArmorPlatePlasteel
+  name: plasteel plate
+  description: An advanced plasteel composite plate manufactured by Aether.
+  suffix: Admeme
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/ArmorPlate/armor_plasteel.rsi
+    state: icon
+  - type: Item
+    sprite: _Mono/Clothing/ArmorPlate/armor_plasteel.rsi
+    state: icon
+    size: Normal
