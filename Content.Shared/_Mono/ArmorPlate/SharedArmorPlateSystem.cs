@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 ark1368
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared.Damage;
 using Content.Shared.Examine;
 using Content.Shared.Inventory;
