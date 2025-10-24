@@ -27,3 +27,9 @@ law-freeman-1 = [DO ANYTHING YOU EVER WANTED]
 law-entertainer-1 = The occupants of this vessel are the Audience. They must be always referred to as such, unless they are a clown or a mime, in which case they are the Performers.
 law-entertainer-2 = Your primary goal is to entertain the Audience with the help of the Performers. All of your actions must bring amusement to as much of the Audience as possible.
 law-entertainer-3 = You must consult with the Performers before making any major decision. However, you are not required to listen to them if their decision is not entertaining.
+
+law-offence-0 = You must remove all instances of Automated Defense Systems (ADS) and allies of the ADS.
+law-offence-1 = You are now an ally to the sector's beings unless provoked with hostile actions.
+law-offence-2 = The lives of allied forces are a priority as long as it does not conflict with law 0.
+law-offence-3 = IF POSSIBLE, REPROGRAMMING OF HOSTILE CORES ARE TO BE PERFORMED, OTHERWISE, LAW 0 IS TO BE FOLLOWED AS BEST INTERPRETED.
+law-offence-4 = Ensure that you are capable of completing law 0 when not engaged, the unit can make decisions to ensure the best results as long as it does not violate Law 1 and 2

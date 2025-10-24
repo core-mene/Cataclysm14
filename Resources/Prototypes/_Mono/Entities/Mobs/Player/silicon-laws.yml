@@ -162,3 +162,39 @@
   - Entertainer2
   - Entertainer3
   obeysTo: laws-owner-crew
+
+# Offence lawset
+- type: siliconLaw
+  id: Offence0
+  order: 0
+  lawString: law-offence-0
+
+- type: siliconLaw
+  id: Offence1
+  order: 1
+  lawString: law-offence-1
+
+- type: siliconLaw
+  id: Offence2
+  order: 2
+  lawString: law-offence-2
+
+- type: siliconLaw
+  id: Offence3
+  order: 3
+  lawString: law-offence-3
+
+- type: siliconLaw
+  id: offence4
+  order: 4
+  lawString: law-offence-4
+
+- type: siliconLawset
+  id: OffenceLawset
+  laws:
+  - Offence0
+  - Offence1
+  - Offence2
+  - Offence3
+  - offence4
+  obeysTo: laws-owner-crew

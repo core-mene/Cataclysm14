@@ -562,3 +562,16 @@
     channels:
     - Binary
     defaultChannel: Binary
+
+# Law boards
+- type: entity
+  id: OffenceLawBoard
+  parent: BaseElectronics
+  name: law board (Offence)
+  description: An electronics board containing the Offence lawset.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+  - type: SiliconLawProvider
+    laws: OffenceLawset

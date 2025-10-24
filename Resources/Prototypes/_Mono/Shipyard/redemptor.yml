@@ -1,0 +1,37 @@
+# Shuttle Notes:
+#I was arguably high making this
+- type: vessel
+  id: Redemptor
+  parent: BaseVessel
+  name: AES Redemptor
+  description: A medium ambush vessel spcialzed for ADS.
+  price: 80000
+  category: medium
+  access: Mercenary
+  group: Shipyard
+  shuttlePath: /Maps/_Mono/Shuttles/redemptor.yml
+  guidebookPage: null
+  class:
+  - Pursuit
+  engine:
+  - AME
+
+- type: gameMap
+  id: Redemptor
+  mapName: 'AES Redemptor'
+  mapPath: /Maps/_Mono/Shuttles/redemptor.yml
+  minPlayers: 2
+  stations:
+    Redemptor:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Redemptor MIL{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
