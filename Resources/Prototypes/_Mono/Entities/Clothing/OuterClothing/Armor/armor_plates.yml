@@ -32,9 +32,6 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: ArmorThickness
-    thickness: 5
-    canBePierced: true
 
 # Ceramic
 - type: entity
@@ -65,9 +62,6 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: ArmorThickness
-    thickness: 8
-    canBePierced: true
 
 # Steel
 - type: entity
@@ -98,9 +92,6 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: ArmorThickness
-    thickness: 12
-    canBePierced: true
 
 # Admeme
 - type: entity
@@ -131,6 +122,3 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: ArmorThickness
-    thickness: 20
-    canBePierced: true
