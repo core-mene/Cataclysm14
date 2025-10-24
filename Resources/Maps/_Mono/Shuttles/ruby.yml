@@ -1,45 +1,11 @@
-# SPDX-FileCopyrightText: 2021 AJCM-git
-# SPDX-FileCopyrightText: 2021 Paul Ritter
-# SPDX-FileCopyrightText: 2021 wrexbe
-# SPDX-FileCopyrightText: 2022 20kdc
-# SPDX-FileCopyrightText: 2022 Kara
-# SPDX-FileCopyrightText: 2022 LittleBuilderJane
-# SPDX-FileCopyrightText: 2022 Peptide90
-# SPDX-FileCopyrightText: 2022 metalgearsloth
-# SPDX-FileCopyrightText: 2022 mirrorcult
-# SPDX-FileCopyrightText: 2023 Alexander Evgrashin
-# SPDX-FileCopyrightText: 2023 AndresE55
-# SPDX-FileCopyrightText: 2023 Banshee
-# SPDX-FileCopyrightText: 2023 Cheackraze
-# SPDX-FileCopyrightText: 2023 Emisse
-# SPDX-FileCopyrightText: 2023 Kesiath
-# SPDX-FileCopyrightText: 2023 Mnemosyne
-# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 Gotimanga
-# SPDX-FileCopyrightText: 2024 Mr. Samuel
-# SPDX-FileCopyrightText: 2024 Salvantrix
-# SPDX-FileCopyrightText: 2024 TsjipTsjip
-# SPDX-FileCopyrightText: 2024 Whatstone
-# SPDX-FileCopyrightText: 2025 Alice "Arimah" Heurlin
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 Jakumba
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 bluebrouny
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: MPL-2.0
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/24/2025 03:13:09
-  entityCount: 1762
+  time: 10/24/2025 03:36:58
+  entityCount: 1782
 maps: []
 grids:
 - 1
@@ -1211,7 +1177,7 @@ entities:
       pos: 9.5,17.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -340.17426
+      secondsUntilStateChange: -900.27594
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1227,7 +1193,7 @@ entities:
       pos: 5.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -21070.084
+      secondsUntilStateChange: -21630.186
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1240,7 +1206,7 @@ entities:
       pos: 10.5,7.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -16663.865
+      secondsUntilStateChange: -17223.967
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1251,7 +1217,7 @@ entities:
       pos: 11.5,7.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -16663.566
+      secondsUntilStateChange: -17223.668
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1306,7 +1272,7 @@ entities:
       pos: 8.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -26722.012
+      secondsUntilStateChange: -27282.113
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1330,7 +1296,7 @@ entities:
       pos: -1.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -12711.624
+      secondsUntilStateChange: -13271.726
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1350,7 +1316,7 @@ entities:
       pos: -8.5,0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -18305.143
+      secondsUntilStateChange: -18865.244
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8204,6 +8170,13 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 17
+- proto: GeneratorCRPinchShuttle
+  entities:
+  - uid: 1506
+    components:
+    - type: Transform
+      pos: 12.5,15.5
+      parent: 1
 - proto: GravityGeneratorMini
   entities:
   - uid: 1782
@@ -8876,6 +8849,92 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -11.5,8.5
       parent: 1
+- proto: PaperOffice
+  entities:
+  - uid: 1507
+    components:
+    - type: Transform
+      pos: 1.3028108,0.61488813
+      parent: 1
+    - type: Paper
+      stampState: paper_stamp-nf-signature
+      stampedBy:
+      - reapply: False
+        stampType: Signature
+        stampedColor: '#333333FF'
+        stampedName: Mima Aibarsha
+      content: >-
+        [color=#134975][head=3]─────────══════[/head][head=2][[/head]◥[head=2][bold]AES[/bold][/head]◣[head=2]][/head][head=3]══════────────[/head][/color]
+
+        [color=#134975] [head=4][bold]                              CHIEF ENGINEER[/bold][/head][/color]
+                                              [color=#134975] [head=6][italic]  Mima Aibarsha[/italic][/head][/color]
+
+        [color=#aaaaaa]▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀[/color]
+
+
+        [color=#134975][bold]Hello fellow pilot, I am forced to announce that current administrative regulations prevents from bringing along an unregulated and unlocked AI upload console with this specific vessel, apologies for the inconvenience. Fear not, for I am working on a remodel to make up for this.
+
+
+        As of now the power generators have been upgraded, a bit radioactive yes but nothing a science team and the RD suit cannot shrug off, you can always rely on an electric anomaly to solve any other struggles.
+
+        I've also taken care of the issue of anomalies deciding to appear right inside the generator, hopefully now they will behave a little less annoyingly.
+
+
+        If you are still reading this, a note going into quick detail about anomaly research is next of the generator, if you are new to this i highly recommend you give it a read, make note that anomalies and their products are not fully known to us so this information MIGHT be outdated by the time you get this model delivered through bluespace.[/bold][/color]
+  - uid: 1508
+    components:
+    - type: Transform
+      pos: 2.4555886,11.430128
+      parent: 1
+    - type: Paper
+      stampState: paper_stamp-nf-signature
+      stampedBy:
+      - reapply: False
+        stampType: Signature
+        stampedColor: '#333333FF'
+        stampedName: Mima Aibarsha
+      content: >-
+        [color=#134975][head=3]─────────══════[/head][head=2][[/head]◥[head=2][bold]AES[/bold][/head]◣[head=2]][/head][head=3]══════────────[/head][/color]
+
+        [color=#134975] [head=4][bold]                              CHIEF ENGINEER[/bold][/head][/color]
+                                              [color=#134975] [head=6][italic]  Mima Aibarsha[/italic][/head][/color]
+
+        [color=#aaaaaa]▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀[/color]
+
+
+        [head=2][color=#134975]ANOMALIES FOR DUMMIES[/color][/head]
+
+        [color=#134975][bold]As stated before, anomalies are not that well understood but the most we know about them is their behavior when shot with certain high energy beams, while i could go into detail about each one the important thing is knowing how to deal with them without blowing up.
+
+
+        First off, always carry with you an anomaly scanner, sometimes they will be invisible to the eye but not infectious so you can just aim at the air, the device will know what to do, if you are an IPC beware that infectious anomalies wont infect you at all, best advised to get yourself a helper, or just a whole lot of clones to infect.
+
+
+        Once your anomaly has been scanned you will get a list of numbers and some data, first thing you need to keep an eye on the severity, basically the higher it goes the more unpredictable it becomes, the only thing you can predict about it its that it wont be pretty and wont be easy to manage once you hit the 90's, but that usually boosts the points you can earn.
+
+
+        Next thing is the state, pretty straight forward, green is good, red (unstable) is bad, and yellow is good...or bad, it is important to note that IF an anomaly is decaying after a pulse and you don't want it to go away, you must shoot it with an unstable type particle to get it back to stable OR growing, then you can make it stable, usually anomalies that really do not want to exist will continue to go into a decaying state, be sure to push as much as you can if you cannot babysit it.
+
+
+        Jumping over to particles, yet again it is pretty straight forward, you will get anomalies which hide most, if not all of their particle types but it is usually safe to shoot them at random to see what effect they get, if the state is somehow also hidden you can notice by the way your anomaly containment reacts, fast beeps right away usually mean decay, shorter beeps usually mean unstable.
+
+
+        Behaviors  and deviations are the more complex part of anomalies, it can range from having a 10% increase on points to becoming invisible, radioactive, or changing their behavior in very wild ways for certain anomalies such as the gravity and bluespace ones. All i can really say is, if you are ready to take on that side of research, then is best to experience these reactions head on, it will be messy, you WILL DIE, like, A LOT, but the reward is rather large, your research will be done in record time once you dominate the mess that is gambling with particles.
+
+
+        So yeah! quick tips for this sort of stuff right here;
+
+        [bullet] Tag the anomaly vessel with the particle and anomaly type, can be useful if you run out of scanners.
+
+        [bullet] Be sure to have materials BEFORE starting anomalies, otherwise your ship and your entire progress can be gone on the first one.
+
+        [bullet] You can relocate anomalies with the gaunlet, you need a spare core and some planning ahead, i recommend glass pannels to punch that thing into place.
+
+        [bullet] C.H.I.M.P is good, use it for the love of god.
+
+        [bullet] Infectious anomalies are rather tame while in their innactive state, you can keep some for about 45 minutes without them going critical and not making anything crazy.
+
+        [/bold][/color]
 - proto: PlasmaReinforcedWindowDirectional
   entities:
   - uid: 1776
@@ -10178,6 +10237,111 @@ entities:
     components:
     - type: Transform
       pos: 1.5,3.5
+      parent: 1
+- proto: SurveillanceCameraRouterScience
+  entities:
+  - uid: 767
+    components:
+    - type: Transform
+      pos: 6.5,6.5
+      parent: 1
+- proto: SurveillanceCameraScience
+  entities:
+  - uid: 768
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -11.5,14.5
+      parent: 1
+  - uid: 1016
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -8.5,6.5
+      parent: 1
+  - uid: 1309
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -2.5,-0.5
+      parent: 1
+  - uid: 1326
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -0.5,-1.5
+      parent: 1
+  - uid: 1330
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 7.5,0.5
+      parent: 1
+  - uid: 1485
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 9.5,6.5
+      parent: 1
+  - uid: 1497
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 10.5,16.5
+      parent: 1
+  - uid: 1498
+    components:
+    - type: Transform
+      pos: 6.5,20.5
+      parent: 1
+  - uid: 1499
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 1.5,25.5
+      parent: 1
+  - uid: 1500
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -5.5,21.5
+      parent: 1
+  - uid: 1501
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -4.5,17.5
+      parent: 1
+  - uid: 1502
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 6.5,16.5
+      parent: 1
+  - uid: 1503
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,6.5
+      parent: 1
+  - uid: 1504
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -5.5,6.5
+      parent: 1
+  - uid: 1505
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -7.5,-0.5
+      parent: 1
+- proto: SurveillanceCameraWirelessRouterConstructed
+  entities:
+  - uid: 164
+    components:
+    - type: Transform
+      pos: -4.5,5.5
       parent: 1
 - proto: TablePlasmaGlass
   entities:
