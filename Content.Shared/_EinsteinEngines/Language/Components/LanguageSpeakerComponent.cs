@@ -7,6 +7,7 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
+using Content.Shared._NF.Cloning;
 
 namespace Content.Shared._EinsteinEngines.Language.Components;
 
@@ -18,7 +19,7 @@ namespace Content.Shared._EinsteinEngines.Language.Components;
 ///     They are not to be modified externally.
 /// </remarks>
 [RegisterComponent, NetworkedComponent]
-public sealed partial class LanguageSpeakerComponent : Component
+public sealed partial class LanguageSpeakerComponent : Component, ITransferredByCloning
 {
     public override bool SendOnlyToOwner => true;
 
