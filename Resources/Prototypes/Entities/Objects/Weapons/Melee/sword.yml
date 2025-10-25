@@ -31,7 +31,10 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 Ghost581
+# SPDX-FileCopyrightText: 2025 LemonBlemon
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 UltimateJester
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -74,7 +77,7 @@
     attackRate: 1.5
     damage:
       types:
-        Slash: 27 #cmon, it has to be at least BETTER than the rest.
+        Slash: 32 #cmon, it has to be at least BETTER than the rest. # Mono increased damage again from 27 to 32 to be on-par with other large sized melee weapons
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Reflect
@@ -111,7 +114,7 @@
   - type: MeleeWeapon
     damage:
       types:
-        Slash: 22
+        Slash: 32 # Mono increased from 22 to 32 to be on-par with other large sized melee weapons
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Item
@@ -166,7 +169,7 @@
   - type: MeleeWeapon
     damage:
       types:
-        Slash: 32
+        Slash: 32 # Mono this amount of slash is now treated as the "base" for all large sized melee weapons
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Item
@@ -179,7 +182,7 @@
     - suitStorage
 
 - type: entity
-  name: claymore
+  name: claymore # Mono TODO: make this a wieldable weapon
   parent: [ BaseSword, BaseC1Contraband ] # Frontier: BaseMajorContraband<BaseC1Contraband
   id: Claymore
   description: An ancient war blade.
@@ -190,10 +193,11 @@
     attackRate: 0.75
     damage:
       types:
-        Slash: 38
+        Slash: 40 # Mono increased from 38 to 40 to be moderately better for its awful attackrate
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Item
+    size: Huge # Mono increased from large to huge to reflect its supreme bigness, hopefully this works
   - type: Clothing
     sprite: Objects/Weapons/Melee/claymore.rsi
     slots:
@@ -215,7 +219,7 @@
   - type: MeleeWeapon
     damage:
       types:
-        Slash: 26
+        Slash: 32 # Mono increased from 26 to 32 to be on-par with other large sized melee weapons
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Item

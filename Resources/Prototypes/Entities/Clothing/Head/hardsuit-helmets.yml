@@ -39,6 +39,7 @@
 # SPDX-FileCopyrightText: 2024 Winkarst
 # SPDX-FileCopyrightText: 2024 buntobaggins
 # SPDX-FileCopyrightText: 2024 deltanedas
+# SPDX-FileCopyrightText: 2025 Arcticular
 # SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 August Sun
@@ -411,7 +412,6 @@
   - type: NightVision # Mono - remove light, replace with NVG
     flashDurationMultiplier: 2
     isEquipment: true
-    color: "#34AEEB"
 
 #Head of Security's hardsuit
 - type: entity
@@ -832,7 +832,6 @@
   # WD EDIT START
   - type: ThermalVision
     isEquipment: true
-    color: "#98EEFB"
     lightRadius: 15
   # WD EDIT END
 
