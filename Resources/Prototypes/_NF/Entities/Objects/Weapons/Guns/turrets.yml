@@ -1,6 +1,5 @@
 # SPDX-FileCopyrightText: 2024 ErhardSteinhauer
 # SPDX-FileCopyrightText: 2024 Whatstone
-# SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 core-mene
 #
@@ -32,7 +31,7 @@
       params:
         variation: 0.125
   - type: ProjectileBatteryAmmoProvider
-    proto: BulletDisablerShock # Mono
+    proto: BulletDisablerStaminaOnly
     fireCost: 10
   - type: NpcFactionMember
     factions:
