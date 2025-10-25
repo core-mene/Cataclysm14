@@ -3,12 +3,12 @@
 #
 # SPDX-License-Identifier: MPL-2.0
 
-# Kevlar
+# Durathread
 - type: entity
   parent: BaseItem
   id: ArmorPlateLight
-  name: kevlar plate
-  description: A lightweight protective plate made from advanced kevlar fibers manufactured by Aether.
+  name: durathread plate
+  description: A lightweight protective plate made from advanced durathread fibers manufactured by Aether.
   suffix: Light
   components:
   - type: Sprite
@@ -63,12 +63,12 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
 
-# Steel
+# Plasteel
 - type: entity
   parent: BaseItem
   id: ArmorPlateTactical
-  name: steel plate
-  description: A heavy-duty steel plate manufactured by Aether.
+  name: plasteel plate
+  description: A heavy-duty plasteel plate manufactured by Aether.
   suffix: Tactical
   components:
   - type: Sprite
@@ -93,19 +93,19 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
 
-# Admeme
+# Plastitanium
 - type: entity
   parent: BaseItem
-  id: ArmorPlatePlasteel
-  name: plasteel plate
-  description: An advanced plasteel composite plate manufactured by Aether.
+  id: ArmorPlatePlastitanium
+  name: plastitanium plate
+  description: An advanced plastitanium composite plate manufactured by Aether.
   suffix: Admeme
   components:
   - type: Sprite
-    sprite: _Mono/Clothing/ArmorPlate/armor_plasteel.rsi
+    sprite: _Mono/Clothing/ArmorPlate/armor_plastitanium.rsi
     state: icon
   - type: Item
-    sprite: _Mono/Clothing/ArmorPlate/armor_plasteel.rsi
+    sprite: _Mono/Clothing/ArmorPlate/armor_plastitanium.rsi
     size: Normal
   - type: ArmorPlateItem
     maxDurability: 100
