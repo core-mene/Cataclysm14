@@ -563,11 +563,11 @@ entities:
       parent: 1
     - type: RadarBlip
       enabled: False
-      visibleFromOtherGrids: True
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
 - proto: 150mmApShell
+  entities:
 - proto: AirAlarm
   entities:
   - uid: 1031
@@ -884,6 +884,7 @@ entities:
       parent: 1
 - proto: APCBasic
   entities:
+  - uid: 103
       rot: -1.5707963267948966 rad
       pos: 1.5,-1.5
       parent: 1
