@@ -193,6 +193,9 @@
     onActivate: false # You should not be able to turn off a borg temporarily.
     activated: false # gets activated when a mind is added
     onUse: false # no item-borg toggling sorry
+  #- type: ItemTogglePointLight # Mono - Light removal PR: Borg Adjustments
+  - type: NightVision # Mono
+    color: "#1584e6"
   - type: AccessToggle
   # TODO: refactor movement to just be based on toggle like speedboots but for the boots themselves
   # TODO: or just have sentient speedboots be fast idk
@@ -266,8 +269,34 @@
         - cell_slot
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: NightVision # Goobstation - Nigthvision - Mono
-    color: "#1584e6"
+  #- type: HandheldLight # Mono - Light removal PR: Borg Adjustments
+  #  toggleOnInteract: false
+  #  wattage: 0.2
+  #  blinkingBehaviourId: blinking
+  #  radiatingBehaviourId: radiating
+  #- type: LightBehaviour
+  #  behaviours:
+  #  - !type:FadeBehaviour
+  #    id: radiating
+  #    maxDuration: 2.0
+  #    startValue: 3.0
+  #    endValue: 2.0
+  #    isLooped: true
+  #    reverseWhenFinished: true
+  #  - !type:PulseBehaviour
+  #    id: blinking
+  #    interpolate: Nearest
+  #    maxDuration: 1.0
+  #    minValue: 0.1
+  #    maxValue: 2.0
+  #    isLooped: true
+  #- type: ToggleableLightVisuals
+  #- type: PointLight
+  #  enabled: false
+  #  mask: /Textures/Effects/LightMasks/cone.png
+  #  autoRot: true
+  #  radius: 4
+  #  netsync: false 
   - type: Pullable
   - type: Puller
     needsHands: false
@@ -412,8 +441,8 @@
   - type: Vocal
     sounds:
       Unsexed: UnisexSiliconSyndicate
-  - type: PointLight
-    color: "#dd200b"
+  #- type: PointLight Mono - Light removal PR: Borg Adjustments
+  #  color: "#dd200b"
 
 - type: entity
   id: BaseBorgChassisDerelict
