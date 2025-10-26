@@ -38,7 +38,7 @@ frontier-lobby-nfsd-description = The TFSMC-FOB is the center of operations for 
    - Turn in contraband
 
 frontier-lobby-pirate-subtext = The center of operations for the PDV.
-frontier-lobby-pirate-description = This is the ultimate hideout where Ashenveil Imperial Forces gather. Here you can:
+frontier-lobby-pirate-description = This is the ultimate hideout where Phaethon Imperial Forces gather. Here you can:
    - Start an Imperial crew
    - Find a crew to join
    - Socialize with other Phaethon Dynasty soldiers
