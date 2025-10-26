@@ -134,3 +134,14 @@
             max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+
+# Timed Despawn Window, for Sevastapol
+
+- type: entity
+  parent: WindowCultIndestructibleInvisible
+  name: timed seal
+  description: A powerful energy field, selaing off a location
+  suffix: 30 Minutes, Indestructible
+  components:
+  - type: TimedDespawn
+    lifetime: 1800
