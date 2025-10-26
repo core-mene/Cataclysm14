@@ -10,7 +10,7 @@
 # Discord: Huragok
 
 - type: vessel
-  id: Cheetah
+  id: cheetah
   parent: BaseVessel
   name: Cheetah
   description:  A demilitarized ocelot purchased by the colonial outpost. removing most of its lethal armaments, replaced by 4 phalanx turrets and two tovek emp launchers. it has also been outfitted with additonal thrusters and a small cargo bay.
@@ -26,12 +26,12 @@
   - Uranium
 
 - type: gameMap
-  id: Cheetah
-  mapName: 'Cheetah'
-  mapPath: /Maps/_Mono/Shuttles/Cheetah.yml
+  id: cheetah
+  mapName: 'cheetah'
+  mapPath: /Maps/_Mono/Shuttles/cheetah.yml
   minPlayers: 0
   stations:
-    Cheetah:
+    cheetah:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
