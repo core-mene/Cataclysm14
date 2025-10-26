@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2024 chrome-cirrus
 # SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -114,10 +115,10 @@
     buckleOffset: "0.1, -0.05"
     # maxBuckleDistance: 1 # Umbra - buckling fix
   - type: MovementSpeedModifier
-    baseAcceleration: 0.5
-    baseFriction: 10
-    baseWalkSpeed: 4.5
-    baseSprintSpeed: 7
+    baseAcceleration: 1.5
+    baseFriction: 1
+    baseWalkSpeed: 3.5
+    baseSprintSpeed: 6
     baseWeightlessAcceleration: 1
     baseWeightlessFriction: 0.05
     weightlessFrictionNoInput: 0.05
@@ -364,10 +365,10 @@
     volume: 5
     enabled: false
   - type: MovementSpeedModifier
-    baseAcceleration: 0.5
-    baseFriction: 10
-    baseWalkSpeed: 4.5
-    baseSprintSpeed: 7
+    baseAcceleration: 1.5
+    baseFriction: 1
+    baseWalkSpeed: 3.5
+    baseSprintSpeed: 6
     baseWeightlessAcceleration: 1
     baseWeightlessFriction: 0.05
     weightlessFrictionNoInput: 0.05

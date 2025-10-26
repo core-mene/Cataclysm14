@@ -215,7 +215,7 @@
 - type: entity
   id: ShipMissileSerpent
   name: serpent torpedo
-  parent: BaseBulletTrigger
+  parent: BaseTorpedo
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -245,9 +245,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun
-    maxIntensity: 5000
+    maxIntensity: 4500
     intensitySlope: 20
-    totalIntensity: 5000
+    totalIntensity: 4500
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard

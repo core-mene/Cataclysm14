@@ -13225,3 +13225,118 @@ Entries:
   id: 1462
   time: '2025-10-23T06:41:48.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2398
+- author: Ark
+  changes:
+    - type: Fix
+      message: >-
+        Manually reloaded ship turrets should actually now display their live
+        ammo count in the Gunnery Control.
+  id: 1463
+  time: '2025-10-24T01:00:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2461
+- author: core-mene
+  changes:
+    - type: Tweak
+      message: >-
+        Expeder capable of finding NT loot crates and smugglers reduced chance
+        of finding one
+    - type: Tweak
+      message: Defrontierified exped armory crates spawner loot
+  id: 1464
+  time: '2025-10-24T01:01:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2459
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: BZ Cans now cost 75K at cargo terminals
+  id: 1465
+  time: '2025-10-24T23:02:13.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2472
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Hoverbike ground movement buffed.
+  id: 1466
+  time: '2025-10-24T23:49:08.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2471
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Languages are properly transfered by cloning now.
+  id: 1467
+  time: '2025-10-24T23:49:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2469
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        Armor piercing is now available. Projectiles can now pierce through
+        compatible walls.
+  id: 1468
+  time: '2025-10-25T00:05:23.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2462
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: Cortical borers now may use hivemind while direct controlling.
+  id: 1469
+  time: '2025-10-25T00:11:34.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2465
+- author: Ark
+  changes:
+    - type: Add
+      message: Four types of armor plates have been added. Rook would be proud.
+  id: 1470
+  time: '2025-10-25T00:22:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2454
+- author: Onezero0
+  changes:
+    - type: Remove
+      message: Temporarily removed current implementation of trade goods.
+    - type: Fix
+      message: Hopefully fixed some lag
+  id: 1471
+  time: '2025-10-25T00:25:43.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2473
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: Added fun!
+    - type: Remove
+      message: Removed fun!
+    - type: Tweak
+      message: Changed fun!
+    - type: Fix
+      message: Fixed fun!
+    - type: Tweak
+      message: >-
+        Serpent Torpedos slightly tuned down, should now be able to shoot them
+        down too
+  id: 1472
+  time: '2025-10-26T06:14:10.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2479
+- author: core-mene
+  changes:
+    - type: Tweak
+      message: Rogue silicon no longer new player trap
+  id: 1473
+  time: '2025-10-26T06:18:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2476
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: New Hermes Shuttle for courier players
+    - type: Remove
+      message: The TM and CO no longer have mail teleporters
+    - type: Remove
+      message: The Letterbox is no more
+  id: 1474
+  time: '2025-10-26T06:22:17.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1628
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: Missiles now obey their intended max speed.
+  id: 1475
+  time: '2025-10-26T07:48:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2482
