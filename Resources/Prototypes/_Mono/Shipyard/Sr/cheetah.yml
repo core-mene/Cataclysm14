@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: 2025 Junerisms
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Loldaddy5676
+# SPDX-FileCopyrightText: 2025 Rubeebeebee
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# Github: Loldaddy5676
+# Discord: Huragok
+
+- type: vessel
+  id: Cheetah
+  parent: BaseVessel
+  name: Cheetah
+  description:  A demilitarized ocelot purchased by the colonial outpost. removing most of its lethal armaments, replaced by 4 phalanx turrets and two tovek emp launchers. it has also been outfitted with additonal thrusters and a small cargo bay.
+  category: Medium
+  group: Sr
+  access: Brig # Oddball, matches guard ID, specific enough to exclude cadets
+  mapchecker_group_override: Security  # Treat this as a security vessel for mapchecker purposes
+  shuttlePath: /Maps/_Mono/Shuttles/cheetah.yml
+  guidebookPage: Null
+  class:
+  - Civilian
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Cheetah
+  mapName: 'Cheetah'
+  mapPath: /Maps/_Mono/Shuttles/Cheetah.yml
+  minPlayers: 0
+  stations:
+    Cheetah:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Cheetah SEC{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
