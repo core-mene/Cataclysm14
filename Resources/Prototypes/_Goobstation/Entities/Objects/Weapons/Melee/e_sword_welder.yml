@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 BeBright
+# SPDX-FileCopyrightText: 2025 LuciferEOS
 # SPDX-FileCopyrightText: 2025 gluesniffler
 #
 # SPDX-License-Identifier: MPL-2.0
@@ -36,7 +37,7 @@
     activatedDamage:
         types:
             Slash: 4
-            Heat: 11
+            Heat: 14
   - type: ItemToggle
     soundActivate:
       path: /Audio/_Goobstation/Weapons/EswordWelder/on.ogg
@@ -138,3 +139,51 @@
       reagents:
         - ReagentId: WeldingFuel
           Quantity: 3 # Cuz fuelConsumption is 3
+
+- type: entity
+  name: unfinished welder sword
+  parent: BaseItem
+  id: UnfinishedWelderSword
+  description: A crude assembly of parts that vaguely resembles a weapon. It's completely non-functional.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Melee/e_sword_welder.rsi
+    layers:
+    - state: welder_sword
+    - state: welder_sword_blade_simple
+      visible: false
+      shader: unshaded
+      map: ["blade"]
+  - type: Item
+    sprite: _Goobstation/Objects/Weapons/Melee/e_sword_welder-inhands.rsi
+  - type: Construction
+    graph: WelderSword
+    node: frameAssembly
+
+- type: entity
+  name: unfinished industrial welder sword
+  parent: UnfinishedWelderSword
+  id: UnfinishedWelderSwordIndustrial
+  components:
+  - type: Sprite
+    layers:
+    - state: welder_sword_industrial
+    - state: welder_sword_blade_industrial
+      visible: false
+  - type: Construction
+    graph: WelderSwordIndustrial
+    node: reinforcedFrameInd
+
+- type: entity
+  name: unfinished experimental welder sword
+  parent: UnfinishedWelderSword
+  id: UnfinishedWelderSwordExperimental
+  components:
+  - type: Sprite
+    layers:
+    - state: welder_sword_experimental
+    - state: welder_sword_blade_experimental
+      visible: false
+  - type: Construction
+    graph: WelderSwordExperimental
+    node: plasmaFrame

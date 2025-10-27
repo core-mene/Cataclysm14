@@ -1,0 +1,124 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 ark1368
+#
+# SPDX-License-Identifier: MPL-2.0
+
+# Durathread
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateLight
+  name: durathread plate
+  description: A lightweight protective plate made from advanced durathread fibers manufactured by Aether.
+  suffix: Light
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/ArmorPlate/armor_light.rsi
+    state: icon
+  - type: Item
+    sprite: _Mono/Clothing/ArmorPlate/armor_light.rsi
+    size: Normal
+  - type: ArmorPlateItem
+    maxDurability: 25
+    walkSpeedModifier: 0.94
+    sprintSpeedModifier: 0.94
+    staminaDamageMultiplier: 1.0
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+# Ceramic
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateMedium
+  name: ceramic plate
+  description: A medium-weight ceramic composite plate manufactured by Aether.
+  suffix: Medium
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/ArmorPlate/armor_medium.rsi
+    state: icon
+  - type: Item
+    sprite: _Mono/Clothing/ArmorPlate/armor_medium.rsi
+    size: Normal
+  - type: ArmorPlateItem
+    maxDurability: 50
+    walkSpeedModifier: 0.92
+    sprintSpeedModifier: 0.92
+    staminaDamageMultiplier: 1.0
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+# Plasteel
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateTactical
+  name: plasteel plate
+  description: A heavy-duty plasteel plate manufactured by Aether.
+  suffix: Tactical
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/ArmorPlate/armor_tactical.rsi
+    state: icon
+  - type: Item
+    sprite: _Mono/Clothing/ArmorPlate/armor_tactical.rsi
+    size: Normal
+  - type: ArmorPlateItem
+    maxDurability: 75
+    walkSpeedModifier: 0.90
+    sprintSpeedModifier: 0.90
+    staminaDamageMultiplier: 1.0
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+# Plastitanium
+- type: entity
+  parent: BaseItem
+  id: ArmorPlatePlastitanium
+  name: plastitanium plate
+  description: An advanced plastitanium composite plate manufactured by Aether.
+  suffix: Admeme
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/ArmorPlate/armor_plastitanium.rsi
+    state: icon
+  - type: Item
+    sprite: _Mono/Clothing/ArmorPlate/armor_plastitanium.rsi
+    size: Normal
+  - type: ArmorPlateItem
+    maxDurability: 100
+    walkSpeedModifier: 1.0
+    sprintSpeedModifier: 1.0
+    staminaDamageMultiplier: 0.0
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

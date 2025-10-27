@@ -1,3 +1,13 @@
+# SPDX-FileCopyrightText: 2022 Flipp Syder
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2024 Rouge2t7
+# SPDX-FileCopyrightText: 2024 SlamBamActionman
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 hivehum
+# SPDX-FileCopyrightText: 2025 inquisitor-star
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: species
   id: Human
   name: species-name-human
@@ -33,7 +43,7 @@
     RLeg: MobHumanRLeg
     LFoot: MobHumanLFoot
     RFoot: MobHumanRFoot
-    Tail: MobHumanoidAnyMarking # Nyanotrasen - Felinid
+    Tail: MobHumanoidAnyMarking # Nyanotrasen - Felinid, harpies & Tajaran.
     HeadSide: MobHumanoidAnyMarking # Einstein Engines - Oni
 
 - type: markingPoints
@@ -52,7 +62,7 @@
       points: 1
       required: false
     Tail: # the cat tail joke
-      points: 0
+      points: 1
       required: false
     HeadTop:
       points: 1

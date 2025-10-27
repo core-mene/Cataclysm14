@@ -1,3 +1,15 @@
+# SPDX-FileCopyrightText: 2025 Avalon
+# SPDX-FileCopyrightText: 2025 Ghost581
+# SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 LemonBlemon
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
+# SPDX-FileCopyrightText: 2025 SupernoobTheN1
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: entity
   name: high-frequency blade
   parent: [BaseC2ContrabandUnredeemable, Katana]
@@ -11,7 +23,7 @@
      wideAnimationRotation: -60
      damage:
        types: # It's still incredibly strong, but -reasonable-
-         Slash: 20
+         Slash: 25 # Mono increased slash damage from 20 to 25 in an attempt to not let it be outclassed by normal weapons, the shock is still doing the heavy lifting here
          Shock: 6
          Structural: 25 # Ion doesn't exist, according to Proto manager.
    - type: Item
@@ -47,7 +59,7 @@
     wideAnimationRotation: -60
     damage:
       types:
-        Slash: 20
+        Slash: 25 # Mono increased slash damage from 20 to 25 in an attempt to not let it be outclassed by normal weapons, the shock and heat are still doing the heavy lifting here
         Heat: 12
         Shock: 6
         Structural: 40
@@ -102,3 +114,72 @@
   - type: Tag  # Mono
     tags:
     - VT7
+
+- type: entity
+  parent: BaseMeleeWeaponEnergy
+  id: WeaponPhaseBlade
+  name: nano-laminate phaseblade
+  description: A heavy bladed weapon with a wicked edge, commonly seen in the hands of pre-fracture warriors. Can be activated to adjust to combat needs
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Melee/phaseblade.rsi
+    layers:
+    - state: e_sword
+    - state: e_sword_blade
+      visible: false
+      shader: unshaded
+      map: [ "blade" ]
+  - type: PointLight
+    enabled: false
+    radius: 2
+    energy: 2
+    color: "#c24fd1"
+    netsync: false
+  - type: Item
+    sprite: _Mono/Objects/Weapons/Melee/phaseblade.rsi
+    size: Large
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Melee/phaseblade.rsi
+    slots:
+    - Back
+    - Belt
+    - SuitStorage
+  - type: ComponentToggler
+    components:
+    - type: Reflect
+      reflectProb: 0.3
+  - type: ItemToggleSize
+    activatedSize: Large
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Weapons/eblade1.ogg
+      params:
+        variation: 0.250
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/eblade1.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedSoundOnSwing:
+      path: /Audio/Weapons/eblademiss.ogg
+      params:
+        variation: 0.125
+    activatedDamage:
+      types:
+        Slash: 15
+        Caustic: 15
+        Heat: 15
+        Structural: 80
+  - type: MeleeWeapon
+    heavyStaminaCost: 1
+    wideAnimationRotation: -135
+    attackRate: 1.25
+    damage:
+      types:
+        Slash: 35
+        Structural: 40
+  - type: Sharp
+  - type: DisarmMalus
+    malus: 0.6
+  - type: Execution
+    doAfterDuration: 4.0

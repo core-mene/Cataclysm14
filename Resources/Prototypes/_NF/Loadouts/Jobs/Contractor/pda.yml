@@ -1,42 +1,49 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: loadout
   id: ContractorClearNFPDA
   price: 0
   equipment:
     id: ClearNFPDA
-    
+
 - type: loadout
   id: ContractorSalvagePDA
-  price: 250
+  price: 0 # Mono
   equipment:
     id: SalvagePDA
-    
+
 - type: loadout
   id: ContractorResearchAssistantPDA
-  price: 250
+  price: 0 # Mono
   equipment:
     id: ResearchAssistantPDA
-    
+
 - type: loadout
   id: ContractorCargoPDA
-  price: 250
+  price: 0 # Mono
   equipment:
     id: CargoPDA
-    
+
 - type: loadout
   id: ContractorMedicalInternPDA
-  price: 250
+  price: 0 # Mono
   equipment:
     id: MedicalInternPDA
-        
+
 - type: loadout
   id: ContractorTechnicalAssistantPDA
-  price: 250
+  price: 0 # Mono
   equipment:
     id: TechnicalAssistantPDA
 
 - type: loadout
   id: ContractorServiceWorkerPDA
-  price: 250
+  price: 0 # Mono
   equipment:
     id: ServiceWorkerPDA
 
@@ -46,7 +53,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 500
+  price: 0 # Mono
   equipment:
     id: BartenderPDA
 
@@ -55,7 +62,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 500
+  price: 0 # Mono
   equipment:
     id: ChefPDA
 
@@ -64,7 +71,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 500
+  price: 0 # Mono
   equipment:
     id: BotanistPDA
 
@@ -73,7 +80,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 500
+  price: 0 # Mono
   equipment:
     id: ChaplainPDA
 
@@ -82,7 +89,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 500
+  price: 0 # Mono
   equipment:
     id: LibrarianPDA
 
@@ -91,7 +98,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 500
+  price: 0 # Mono
   equipment:
     id: MedicalPDA
 
@@ -100,7 +107,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 500
+  price: 0 # Mono
   equipment:
     id: ParamedicPDA
 
@@ -109,7 +116,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 500
+  price: 0 # Mono
   equipment:
     id: PsychologistPDA
 
@@ -118,7 +125,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 500
+  price: 0 # Mono
   equipment:
     id: ChemistryPDA
 
@@ -127,7 +134,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 500
+  price: 0 # Mono
   equipment:
     id: SciencePDA
 
@@ -136,7 +143,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 500
+  price: 0 # Mono
   equipment:
     id: ReporterPDA
 
@@ -145,7 +152,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 500
+  price: 0 # Mono
   equipment:
     id: ZookeeperPDA
 
@@ -154,7 +161,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 500
+  price: 0 # Mono
   equipment:
     id: EngineerPDA
 
@@ -163,7 +170,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 500
+  price: 0 # Mono
   equipment:
     id: AtmosPDA
 
@@ -173,7 +180,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
-  price: 750
+  price: 0 # Mono
   equipment:
     id: CaptainPDA
 
@@ -182,7 +189,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
-  price: 750
+  price: 0 # Mono
   equipment:
     id: QuartermasterPDA
 
@@ -191,7 +198,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
-  price: 750
+  price: 0 # Mono
   equipment:
     id: SeniorResearcherPDA
 
@@ -200,7 +207,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
-  price: 750
+  price: 0 # Mono
   equipment:
     id: RnDPDA
 
@@ -209,7 +216,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
-  price: 750
+  price: 0 # Mono
   equipment:
     id: SeniorPhysicianPDA
 
@@ -218,7 +225,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
-  price: 750
+  price: 0 # Mono
   equipment:
     id: CMOPDA
 
@@ -227,7 +234,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
-  price: 750
+  price: 0 # Mono
   equipment:
     id: SeniorEngineerPDA
 
@@ -236,7 +243,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
-  price: 750
+  price: 0 # Mono
   equipment:
     id: CEPDA
 
@@ -245,7 +252,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
-  price: 750
+  price: 0 # Mono
   equipment:
     id: BoxerPDA
 
@@ -254,7 +261,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
-  price: 750
+  price: 0 # Mono
   equipment:
     id: MimePDA
 
@@ -264,7 +271,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
-  price: 1500
+  price: 0 # Mono
   equipment:
     id: ClownPDA
 
@@ -273,6 +280,6 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
-  price: 1500
+  price: 0 # Mono
   equipment:
     id: MusicianPDA

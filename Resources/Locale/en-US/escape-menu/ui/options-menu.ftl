@@ -41,6 +41,10 @@ ui-options-admin-sounds = Play Admin Sounds
 ui-options-bwoink-sound = Play AHelp Notification Sound
 ui-options-volume-label = Volume
 
+## Mono Audio menu
+
+ui-options-combat-music = Combat Music
+
 ## Graphics menu
 
 ui-options-display-label = Display

@@ -1,8 +1,21 @@
+# SPDX-FileCopyrightText: 2024 Aidenkrz
+# SPDX-FileCopyrightText: 2025 Aiden
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 Piras314
+# SPDX-FileCopyrightText: 2025 SX-7
+# SPDX-FileCopyrightText: 2025 coderabbitai[bot]
+# SPDX-FileCopyrightText: 2025 deltanedas
+# SPDX-FileCopyrightText: 2025 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2025 gluesniffler
+# SPDX-FileCopyrightText: 2025 inquisitor-star
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: marking
   id: FelinidFluffyTailRings
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Felinid]
+  speciesRestriction: [Felinid, Tajaran, Human] # Goobstation - Tajaran
   sprites:
   - sprite: _DV/Mobs/Customization/Felinid/felinid_tails.rsi
     state: Felinid_fluffy_tail_full
@@ -13,7 +26,7 @@
   id: FelinidFluffyTail
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Felinid]
+  speciesRestriction: [Felinid, Tajaran, Human] # Goobstation - Tajaran
   sprites:
   - sprite: _DV/Mobs/Customization/Felinid/felinid_tails.rsi
     state: Felinid_fluffy_tail_full
@@ -22,20 +35,7 @@
   id: FelinidAlternativeTail
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Felinid]
+  speciesRestriction: [Felinid, Tajaran, Human] # Goobstation - Tajaran
   sprites:
     - sprite: _DV/Mobs/Customization/Felinid/alternative_tail.rsi
       state: m_waggingtail_cat_FRONT
-
-- type: marking
-  id: FelinidTiger
-  bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Felinid]
-  sprites:
-    - sprite: _DV/Mobs/Customization/Felinid/tiger_tail.rsi
-      state: m_tail_tiger_primary
-    - sprite: _DV/Mobs/Customization/Felinid/tiger_tail.rsi
-      state: m_tail_tiger_secondary
-    - sprite: _DV/Mobs/Customization/Felinid/tiger_tail.rsi
-      state: m_tail_tiger_tertiary

@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared.Actions;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -9,7 +14,7 @@ public sealed partial class NightVisionComponent : SwitchableVisionOverlayCompon
 {
     public override EntProtoId? ToggleAction { get; set; } = "ToggleNightVision";
 
-    public override Color Color { get; set; } = Color.FromHex("#98FB98");
+    public override Color Color { get; set; } = Color.FromHex("#d4d4d4"); // Mono
 }
 
 public sealed partial class ToggleNightVisionEvent : InstantActionEvent;

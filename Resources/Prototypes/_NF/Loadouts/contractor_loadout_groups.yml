@@ -9,6 +9,7 @@
 # SPDX-FileCopyrightText: 2024 immortalartisan
 # SPDX-FileCopyrightText: 2024 steinhauer.erhard
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Bonaout
 # SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 Havaren
@@ -329,6 +330,8 @@
   - ContractorClothingOuterHardsuitEVA
   - ContractorClothingOuterHardsuitBasic
   - ContractorClothingOuterHardsuitVoidParamed
+  - ContractorClothingOuterHardsuitUIEngineer
+  - ContractorClothingOuterHardsuitUIPilot
   - ContractorClothingOuterHoodieGrey
   - ContractorClothingOuterVestHazard
   - ContractorClothingOuterApron
@@ -715,6 +718,7 @@
   - ContractorClothingNeckArmbandUNSA
   - ContractorClothingNeckMantleBH # Mono
   - ContractorClothingNeckCloakSanabi # Mono
+  - ContractorClothingNeckUIOvercoat # Mono
 
 - type: loadoutGroup
   id: ContractorPDA
@@ -815,8 +819,8 @@
   - ContractorAcousticGuitarInstrument
   - ContractorCane
   - ContractorLGBTQHandyFlag
-  - ContractorNTHandyFlag
-  - ContractorBalloonNT
+  #- ContractorNTHandyFlag
+  #- ContractorBalloonNT
   - ContractorPonderingOrb
   - ContractorPlushieRGBee
   - ContractorMysterySpaceBladeBox
@@ -896,7 +900,7 @@
   - ContractorFootball
   - ContractorBeachBall
   - ContractorCrayonBox
-  - ContractorSoapNT
+  #- ContractorSoapNT
   # Frontier - try to mirror the upstream trinkets here, but only if they arent job role restricted in some weird way
   - PlushieLizard
   - ClothingNeckLGBTPin

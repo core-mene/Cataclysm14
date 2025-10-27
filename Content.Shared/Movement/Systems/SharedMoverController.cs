@@ -25,6 +25,7 @@
 // SPDX-FileCopyrightText: 2025 GreaseMonk
 // SPDX-FileCopyrightText: 2025 Princess Cheeseballs
 // SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 ark1368
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -53,7 +54,6 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Controllers;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.Manager.Exceptions;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using PullableComponent = Content.Shared.Movement.Pulling.Components.PullableComponent;
@@ -641,25 +641,6 @@ public abstract partial class SharedMoverController : VirtualController
                 return true;
             }
 
-            // Frontier: check outer clothes
-            // If you have a hardsuit or power armor on that goes around your boots, it's the hardsuit that hits the floor.
-            // Check should happen before NoShoesSilentFootsteps check - loud power armor should count as wearing shoes.
-            if (_inventory.TryGetSlotEntity(uid, "outerClothing", out var outerClothing) &&
-                TryComp<FootstepModifierComponent>(outerClothing, out var outerModifier))
-            {
-                sound = outerModifier.FootstepSoundCollection;
-                return sound != null;
-            }
-            // End Frontier
-
-            // If got the component in yml and no shoes = no sound. Delta V
-            if (_entities.TryGetComponent(uid, out NoShoesSilentFootstepsComponent? _) &&
-                !_inventory.TryGetSlotEntity(uid, "shoes", out var _))
-            {
-                return false;
-            }
-            // Delta V NoShoesSilentFootsteps till here.
-
             if (_inventory.TryGetSlotEntity(uid, "shoes", out var shoes) &&
                 FootstepModifierQuery.TryComp(maybeFootstep, out var footstep))
             {
@@ -667,6 +648,23 @@ public abstract partial class SharedMoverController : VirtualController
                 return sound != null;
             }
         }
+
+        // Frontier
+        if (_inventory.TryGetSlotEntity(uid, "outerClothing", out var outerClothing) &&
+            TryComp<FootstepModifierComponent>(outerClothing, out var outerModifier))
+        {
+            sound = outerModifier.FootstepSoundCollection;
+            return sound != null;
+        }
+        // End Frontier
+
+        // Delta V
+        if (_entities.TryGetComponent(uid, out NoShoesSilentFootstepsComponent? _) &&
+            !_inventory.TryGetSlotEntity(uid, "shoes", out var _))
+        {
+            return false;
+        }
+        // End Delta V NoShoesSilentFootsteps
 
         // Walking on a tile.
         // Tile def might have been passed in already from previous methods, so use that
