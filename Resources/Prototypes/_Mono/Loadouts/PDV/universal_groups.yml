@@ -7,14 +7,8 @@
   id: PDVJumpsuit
   name: loadout-group-contractor-jumpsuit
   minLimit: 1
-  maxLimit: 1
+  hidden: true
   loadouts:
-  - PDVClothingJumpsuit
-  - PDVClothingJumpsuitPants
-  - PDVClothingJumpsuitJeans
-  - PDVClothingJumpsuitCargos
-  - PDVClothingJumpsuitWarm
-  fallbacks:
   - PDVClothingJumpsuit
 - type: loadoutGroup
   id: PDVNeck
@@ -22,7 +16,7 @@
   hidden: true
   minLimit: 1
   loadouts:
-  - PDVClothingNeckIFFGreen
+  - PDVClothingNeckIFFOrange
 - type: loadoutGroup
   id: PDVOuterClothing
   name: loadout-group-contractor-outerclothing
