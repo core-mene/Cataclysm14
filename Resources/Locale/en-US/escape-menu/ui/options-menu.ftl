@@ -139,6 +139,8 @@ ui-options-function-camera-reset = Reset
 ui-options-function-zoom-in = Zoom in
 ui-options-function-zoom-out = Zoom out
 ui-options-function-reset-zoom = Reset zoom
+## Mono
+ui-options-function-toggle-focus = Toggle focus
 
 ui-options-function-use = Use
 ui-options-function-use-secondary = Use secondary

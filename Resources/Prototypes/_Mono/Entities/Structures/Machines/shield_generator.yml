@@ -1,154 +1,16 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ark1368
+# SPDX-FileCopyrightText: 2025 kasature90
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
-
-# POI
+# Base
 - type: entity
-  id: ShieldGeneratorPOI
-  parent: ShieldGenerator
-  name: FS-421 "Fortress" Outpost Shield Generator
-  suffix: POI ONLY
-  components:
-  - type: ShipShieldEmitter
-    healPerSecond: 10000
-    damageExp: 0.5
-    baseDraw: 80000
-    maxDraw: 150000
-    unpoweredBonus: 8
-    damageLimit: 150000
-    damageOverloadTimePunishment: 30
-    shieldColor: "#FF9933"
-  - type: Sprite
-    sprite: _Mono/Structures/ShuttleComponents/fobshield.rsi
-    snapCardinals: true
-    layers:
-    - state: fobshield
-    - state: fobshield_on
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
-      visible: false
-      color: "#FF9933"
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 1500
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:ExplodeBehavior
-      - !type:SpawnGasBehavior
-        gasMixture:
-          volume: 1000
-          moles:
-          - 194 # oxygen
-          - 0 # nitrogen
-          - 0 # carbon dioxide
-          - 6 # plasma
-          temperature: 752.48
-    - trigger:
-        !type:DamageTrigger
-        damage: 500
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          SheetSteel1:
-            min: 1
-            max: 2
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 4000
-    intensitySlope: 4
-    totalIntensity: 1000
-  - type: ApcPowerReceiver
-    powerLoad: 80000
-  - type: PointLight
-    enabled: false
-    castShadows: true
-    radius: 2
-    energy: 1.5
-    color: "#FF9933"
-
-# TSF capital shield - inbetween POI and MS-500, meant for flyssa
-- type: entity
-  id: ShieldGeneratorTSFCapital
-  parent: ShieldGenerator
-  name: LM-212 "Vanguard" Capital Shield Generator
-  suffix: TSF CAPITAL ONLY
-  components:
-  - type: ShipShieldEmitter
-    healPerSecond: 12000
-    damageExp: 0.5
-    baseDraw: 60000
-    maxDraw: 100000
-    unpoweredBonus: 8
-    damageLimit: 85000
-    damageOverloadTimePunishment: 35
-    shieldColor: "#FF0A70"
-  - type: Sprite
-    sprite: _Mono/Structures/ShuttleComponents/fobshield.rsi
-    snapCardinals: true
-    layers:
-    - state: fobshield
-    - state: fobshield_on
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
-      visible: false
-      color: "#FF0A70"
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 1500
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:ExplodeBehavior
-      - !type:SpawnGasBehavior
-        gasMixture:
-          volume: 1000
-          moles:
-          - 194 # oxygen
-          - 0 # nitrogen
-          - 0 # carbon dioxide
-          - 6 # plasma
-          temperature: 752.48
-    - trigger:
-        !type:DamageTrigger
-        damage: 500
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          SheetSteel1:
-            min: 1
-            max: 2
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 4000
-    intensitySlope: 4
-    totalIntensity: 1000
-  - type: ApcPowerReceiver
-    powerLoad: 60000
-  - type: PointLight
-    enabled: false
-    castShadows: true
-    radius: 2
-    energy: 1.5
-    color: "#FF0A70"
-
-# High-End
-- type: entity
-  id: ShieldGenerator
+  id: ShieldGeneratorBase
   parent: BaseMachinePowered
-  name: MS-500 "Titan" Shield Generator
-  suffix: ADS ONLY
+  name: Shield Generator
+  abstract: true
   components:
   - type: AmbientOnPowered
   - type: AmbientSound
@@ -257,11 +119,156 @@
       machine_parts: !type:Container
   - type: PirateBountyItem
     id: ShipShield
+    
+# POI
+- type: entity
+  id: ShieldGeneratorPOI
+  parent: ShieldGeneratorBase
+  name: FS-421 "Fortress" Outpost Shield Generator
+  suffix: POI ONLY
+  components:
+  - type: ShipShieldEmitter
+    healPerSecond: 10000
+    damageExp: 0.5
+    baseDraw: 80000
+    maxDraw: 150000
+    unpoweredBonus: 8
+    damageLimit: 150000
+    damageOverloadTimePunishment: 30
+    shieldColor: "#FF9933"
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/fobshield.rsi
+    snapCardinals: true
+    layers:
+    - state: fobshield
+    - state: fobshield_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
+      color: "#FF9933"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+      - !type:SpawnGasBehavior
+        gasMixture:
+          volume: 1000
+          moles:
+          - 194 # oxygen
+          - 0 # nitrogen
+          - 0 # carbon dioxide
+          - 6 # plasma
+          temperature: 752.48
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 4000
+    intensitySlope: 4
+    totalIntensity: 1000
+  - type: ApcPowerReceiver
+    powerLoad: 80000
+  - type: PointLight
+    enabled: false
+    castShadows: true
+    radius: 2
+    energy: 1.5
+    color: "#FF9933"
+
+# TSF capital shield - inbetween POI and MS-500, meant for flyssa
+- type: entity
+  id: ShieldGeneratorTSFCapital
+  parent: ShieldGeneratorBase
+  name: LM-212 "Vanguard" Capital Shield Generator
+  suffix: TSF CAPITAL ONLY
+  components:
+  - type: ShipShieldEmitter
+    healPerSecond: 12000
+    damageExp: 0.5
+    baseDraw: 60000
+    maxDraw: 100000
+    unpoweredBonus: 8
+    damageLimit: 85000
+    damageOverloadTimePunishment: 35
+    shieldColor: "#FF0A70"
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/fobshield.rsi
+    snapCardinals: true
+    layers:
+    - state: fobshield
+    - state: fobshield_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
+      color: "#FF0A70"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+      - !type:SpawnGasBehavior
+        gasMixture:
+          volume: 1000
+          moles:
+          - 194 # oxygen
+          - 0 # nitrogen
+          - 0 # carbon dioxide
+          - 6 # plasma
+          temperature: 752.48
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 4000
+    intensitySlope: 4
+    totalIntensity: 1000
+  - type: ApcPowerReceiver
+    powerLoad: 60000
+  - type: PointLight
+    enabled: false
+    castShadows: true
+    radius: 2
+    energy: 1.5
+    color: "#FF0A70"
+
+# High-End
+- type: entity
+  id: ShieldGenerator
+  parent: ShieldGeneratorBase
+  name: MS-500 "Titan" Shield Generator
+  suffix: ADS ONLY
 
 # Medium-End
 - type: entity
   id: ShieldGeneratorMedium
-  parent: ShieldGenerator
+  parent: ShieldGeneratorBase
   name: MS-250 "Aegis" Shield Generator
   suffix: ADS ONLY, SCI VOUCHER SHIPS ONLY
   components:
@@ -344,7 +351,7 @@
 # Low-End
 - type: entity
   id: ShieldGeneratorSmall
-  parent: ShieldGenerator
+  parent: ShieldGeneratorBase
   name: MS-100 "Sentinel" Shield Generator
   components:
   - type: ShipShieldEmitter

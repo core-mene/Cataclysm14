@@ -25,6 +25,7 @@
 # SPDX-FileCopyrightText: 2024 checkraze
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Primus
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Whatstone
@@ -5848,33 +5849,6 @@ entities:
     components:
     - type: Transform
       parent: 448
-    - type: Physics
-      canCollide: False
-    - type: Storage
-      storedItems:
-        450:
-          position: 0,0
-          _rotation: South
-        451:
-          position: 1,0
-          _rotation: South
-        452:
-          position: 2,0
-          _rotation: South
-        453:
-          position: 0,2
-          _rotation: East
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 450
-          - 451
-          - 452
-          - 453
-    - type: InsideEntityStorage
 - proto: ButtonFrameCaution
   entities:
   - uid: 454

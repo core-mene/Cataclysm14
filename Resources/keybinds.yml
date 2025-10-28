@@ -45,6 +45,7 @@
 # SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 ark1368
 #
 # SPDX-License-Identifier: MPL-2.0
 
@@ -97,6 +98,9 @@ binds:
 - function: ToggleStanding
   type: State
   key: R
+- function: ToggleFocus
+  type: State
+  key: Space
 # Shuttle
 - function: ShuttleStrafeUp
   type: State
