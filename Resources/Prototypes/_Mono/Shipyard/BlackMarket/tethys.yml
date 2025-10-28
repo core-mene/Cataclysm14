@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2024 Salvantrix
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 Cojoke
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -13,9 +14,10 @@
   parent: BaseVesselAntag
   name: ASR Tethys
   description: A basic entry-level rogue ship. 4 heavy autocannons and a bit of plastitanium is what you get.
-  price: 43700 # WALMARTMOBILE
+  price: 44700 # WALMARTMOBILE
   category: Medium
   group: BlackMarket
+  access: Pirate
   shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/tethys.yml
   guidebookPage: Null
   class:

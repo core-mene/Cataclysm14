@@ -167,6 +167,7 @@
 # SPDX-FileCopyrightText: 2025 dustylens
 # SPDX-FileCopyrightText: 2025 kosticia
 # SPDX-FileCopyrightText: 2025 mikus
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 slarticodefast
 # SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 wewman222
@@ -723,9 +724,16 @@
     runningState: icon
     staticPacks:
     - StaticAmmoRecipePack
+    - RoundstartShipgunAmmo # Mono
     dynamicPacks:
     - DynamicAmmoRecipePack
-    - ResearchedExplosives # Mono
+    # Mono start
+    - ResearchedExplosives
+    - UniversalRailgunAmmo
+    - UniversalMissileAmmo
+    - UniversalShellAmmo
+    - UniversalOrdinance
+    # Mono end
   - type: MaterialStorage
     whitelist:
       tags:

@@ -62,6 +62,7 @@
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 ark1368
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -1264,30 +1265,6 @@
       head: ClothingHeadHelmetHardsuitDeathsquad
       helmetcover: ClothingHeadHelmetCoverBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
-  # ArmorPlateHolder Example
-  - type: ArmorPlateHolder
-  - type: Storage
-    maxItemSize: Normal
-    grid:
-    - 0,0,1,1
-  - type: ContainerContainer
-    containers:
-      storagebase: !type:Container
-        showEnts: False
-        occludes: True
-        ents: []
-      toggleable-clothing: !type:Container
-        showEnts: False
-        occludes: True
-        ents: []
-  - type: UserInterface
-    interfaces:
-      enum.StorageUiKey.Key:
-        type: StorageBoundUserInterface
-  - type: StorageFill
-    contents:
-    - id: ArmorPlatePlastitanium
-  # ArmorPlateHolder Example
 
 #CBURN Hardsuit
 - type: entity

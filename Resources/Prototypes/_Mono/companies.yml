@@ -48,13 +48,6 @@
   disabled: true
 
 - type: company
-  id: USSP
-  form: Antagonist
-  name: USSP
-  color: "#B01340"
-  disabled: true
-
-- type: company
   id: MD
   form: Protagonist
   name: MED
@@ -123,6 +116,13 @@
   color: "#FF2E2E"
   image: /Textures/_Mono/Companies/MACo.png
 
+- type: company
+  id: USSP
+  form: Antagonist
+  name: USSP
+  color: "#B01340"
+  disabled: false # Mercs are now USSP-pilled.
+  description: ussp-description
 
 # Major companies
 

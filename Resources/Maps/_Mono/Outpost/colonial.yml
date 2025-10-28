@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2024 TsjipTsjip
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 Checkraze
 # SPDX-FileCopyrightText: 2025 LukeZurg22
@@ -26301,13 +26302,6 @@ entities:
     components:
     - type: Transform
       pos: 22.430908,16.071648
-      parent: 2
-- proto: MailTeleporter
-  entities:
-  - uid: 3456
-    components:
-    - type: Transform
-      pos: -14.5,25.5
       parent: 2
 - proto: MaterialCloth
   entities:

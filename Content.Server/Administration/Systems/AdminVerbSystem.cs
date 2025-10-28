@@ -1,3 +1,39 @@
+// SPDX-FileCopyrightText: 2021 20kdc
+// SPDX-FileCopyrightText: 2021 Javier Guardia Fernández
+// SPDX-FileCopyrightText: 2021 Paul Ritter
+// SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 metalgearsloth
+// SPDX-FileCopyrightText: 2022 Alex Evgrashin
+// SPDX-FileCopyrightText: 2022 Moony
+// SPDX-FileCopyrightText: 2022 Nemanja
+// SPDX-FileCopyrightText: 2022 drakewill-CRL
+// SPDX-FileCopyrightText: 2022 eclips_e
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2023 Checkraze
+// SPDX-FileCopyrightText: 2023 Chief-Engineer
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Emisse
+// SPDX-FileCopyrightText: 2023 Kara
+// SPDX-FileCopyrightText: 2023 ShadowCommander
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 Vigers Ray
+// SPDX-FileCopyrightText: 2023 Ygg01
+// SPDX-FileCopyrightText: 2023 moonheart08
+// SPDX-FileCopyrightText: 2024 Aiden
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 LordCarve
+// SPDX-FileCopyrightText: 2024 SlamBamActionman
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 nikthechampiongr
+// SPDX-FileCopyrightText: 2024 no
+// SPDX-FileCopyrightText: 2025 ElectroJr
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 Simon
+// SPDX-FileCopyrightText: 2025 ark1368
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.UI;
@@ -40,6 +76,10 @@ using Robust.Server.Player;
 using Content.Shared.Silicons.StationAi;
 using Robust.Shared.Physics.Components;
 using static Content.Shared.Configurable.ConfigurationComponent;
+using Robust.Shared.Containers;
+using Content.Shared.Storage.EntitySystems;
+using Content.Shared.Hands.Components;
+using Content.Shared.PDA;
 
 namespace Content.Server.Administration.Systems
 {
@@ -72,6 +112,7 @@ namespace Content.Server.Administration.Systems
         [Dependency] private readonly AdminFrozenSystem _freeze = default!;
         [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly SiliconLawSystem _siliconLawSystem = default!;
+        [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
 
         private readonly Dictionary<ICommonSession, List<EditSolutionsEui>> _openSolutionUis = new();
 
@@ -180,6 +221,30 @@ namespace Content.Server.Administration.Systems
 
                             var profile = _ticker.GetPlayerProfile(targetActor.PlayerSession);
                             _spawning.SpawnPlayerMob(coords.Value, null, profile, stationUid, session: targetActor.PlayerSession); // Frontier: added session
+                        },
+                        ConfirmationPopup = true,
+                        Impact = LogImpact.High,
+                    });
+
+                    // Mono: Clone with Items
+                    args.Verbs.Add(new Verb()
+                    {
+                        Text = Loc.GetString("admin-player-actions-clone-with-items"),
+                        Category = VerbCategory.Admin,
+                        Act = () =>
+                        {
+                            if (!_transformSystem.TryGetMapOrGridCoordinates(args.User, out var coords))
+                            {
+                                _popup.PopupEntity(Loc.GetString("admin-player-spawn-failed"), args.User, args.User);
+                                return;
+                            }
+
+                            var stationUid = _stations.GetOwningStation(args.Target);
+
+                            var profile = _ticker.GetPlayerProfile(targetActor.PlayerSession);
+                            var clonedMob = _spawning.SpawnPlayerMob(coords.Value, null, profile, stationUid, session: targetActor.PlayerSession);
+
+                            CopyAllItems(args.Target, clonedMob);
                         },
                         ConfirmationPopup = true,
                         Impact = LogImpact.High,
@@ -626,5 +691,83 @@ namespace Content.Server.Administration.Systems
             _openSolutionUis.Clear();
         }
         #endregion
+
+        /// <summary>
+        /// Mono: Copies all items from source entity to target entity.
+        /// </summary>
+        private void CopyAllItems(EntityUid source, EntityUid target)
+        {
+            if (TryComp<InventoryComponent>(source, out var sourceInv) &&
+                TryComp<InventoryComponent>(target, out var targetInv))
+            {
+                var enumerator = new InventorySystem.InventorySlotEnumerator(sourceInv);
+                while (enumerator.NextItem(out var item, out var slot))
+                {
+                    var prototypeId = MetaData(item).EntityPrototype?.ID;
+                    if (string.IsNullOrEmpty(prototypeId))
+                        continue;
+                    var cloneItem = Spawn(prototypeId, Transform(target).Coordinates);
+                    if (_inventorySystem.TryEquip(target, cloneItem, slot.Name, silent: true, force: true, inventory: targetInv))
+                    {
+                        // Recursively copy items from containers (backpacks, etc.)
+                        CopyContainedItems(item, cloneItem);
+                    }
+                }
+            }
+
+            if (TryComp<HandsComponent>(source, out var sourceHands) &&
+                TryComp<HandsComponent>(target, out var targetHands))
+            {
+                foreach (var hand in sourceHands.Hands.Values)
+                {
+                    if (hand.HeldEntity == null)
+                        continue;
+
+                    var prototypeId = MetaData(hand.HeldEntity.Value).EntityPrototype?.ID;
+                    if (string.IsNullOrEmpty(prototypeId))
+                        continue;
+                    var cloneItem = Spawn(prototypeId, Transform(target).Coordinates);
+
+                    if (_handsSystem.TryPickupAnyHand(target, cloneItem, checkActionBlocker: false, handsComp: targetHands))
+                    {
+                        CopyContainedItems(hand.HeldEntity.Value, cloneItem);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Mono: Recursively copies all items from source container to target container.
+        /// </summary>
+        private void CopyContainedItems(EntityUid source, EntityUid target)
+        {
+            if (HasComp<PdaComponent>(target))
+                return;
+
+            if (!TryComp<ContainerManagerComponent>(source, out var sourceContainers))
+                return;
+
+            if (!TryComp<ContainerManagerComponent>(target, out var targetContainers))
+                return;
+
+            foreach (var sourceContainer in sourceContainers.Containers.Values)
+            {
+                foreach (var contained in sourceContainer.ContainedEntities)
+                {
+                    if (!targetContainers.Containers.TryGetValue(sourceContainer.ID, out var targetContainer))
+                        continue;
+
+                    var prototypeId = MetaData(contained).EntityPrototype?.ID;
+                    if (string.IsNullOrEmpty(prototypeId))
+                        continue;
+                    var cloneItem = Spawn(prototypeId, Transform(target).Coordinates);
+
+                    if (_containerSystem.Insert(cloneItem, targetContainer))
+                    {
+                        CopyContainedItems(contained, cloneItem);
+                    }
+                }
+            }
+        }
     }
 }
