@@ -9,7 +9,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: vessel
-  id: Scorpion
+  id: Scorpion-vls
   parent: BaseVesselAntag
   name: ASR Scorpion
   description: An unusual variant from the same shipyards manufacturing Anacondas, using a mix of emp missile pods and 2 torpedo tubes.
@@ -26,16 +26,16 @@
   - Uranium
 
 - type: gameMap
-  id: Scorpion
-  mapName: 'ASR Scorpion'
-  mapPath: /Maps/_Mono/Shuttles/BlackMarket/scorpion.yml
+  id: Scorpion-VLS
+  mapName: 'ASR Scorpion-VLS'
+  mapPath: /Maps/_Mono/Shuttles/BlackMarket/scorpion-vls.yml
   minPlayers: 0
   stations:
     Scorpion:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Scorpion ASR{1}'
+          mapNameTemplate: 'Scorpion-VLS ASR{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
