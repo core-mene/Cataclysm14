@@ -2,7 +2,7 @@
 
 using Content.Shared.Atmos;
 
-namespace Content.Server._Obelisk.Species.Systems.Components;
+namespace Content.Server.Species.Systems.Components;
 
 [RegisterComponent]
 public sealed partial class HydrakinHeatBuildupComponent : Component

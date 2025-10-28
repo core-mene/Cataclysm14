@@ -1,9 +1,9 @@
-using Content.Server._Obelisk.Species.Systems.Components;
+using Content.Server.Species.Systems.Components;
 using Content.Server.Temperature.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 
-namespace Content.Server._Obelisk.Species.Systems;
+namespace Content.Server.Species.Systems;
 
 public sealed class HydrakinSystem : EntitySystem
 {
