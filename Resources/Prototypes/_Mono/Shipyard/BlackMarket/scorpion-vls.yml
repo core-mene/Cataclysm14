@@ -2,38 +2,40 @@
 # SPDX-FileCopyrightText: 2024 Dvir
 # SPDX-FileCopyrightText: 2024 Salvantrix
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Coenx-flex
 # SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 marklyfie4
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: vessel
-  id: Hourglass
+  id: Scorpion
   parent: BaseVesselAntag
-  name: BSB Hourglass
-  description: The Hourglass is a bulky slow ship with 2 charonnetes and 2 90mm in the front. It has a medbay and a kitchen. Comes with FTL.
-  price: 176000 #96k appraisegrid, 1 layer of plastitanium +10k, ftl +10k, medbay/kitchen +20k, taxes 20k, suits +20k, -10k because of not being agile
+  name: ASR Scorpion
+  description: An unusual variant from the same shipyards manufacturing Anacondas, using a mix of emp missile pods and 2 torpedo tubes.
+  price: 138200
   category: Medium
   group: BlackMarket
-  shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/hourglass.yml
+  shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/scorpion-vls.yml
   guidebookPage: Null
   class:
   - Pirate
+  - Pursuit
+  - Corvette
   engine:
   - Uranium
 
 - type: gameMap
-  id: Hourglass
-  mapName: 'BSB Hourglass'
-  mapPath: /Maps/_Mono/Shuttles/BlackMarket/hourglass.yml
+  id: Scorpion
+  mapName: 'ASR Scorpion'
+  mapPath: /Maps/_Mono/Shuttles/BlackMarket/scorpion.yml
   minPlayers: 0
   stations:
-    Hourglass:
+    Scorpion:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Hourglass ASR{1}'
+          mapNameTemplate: 'Scorpion ASR{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
