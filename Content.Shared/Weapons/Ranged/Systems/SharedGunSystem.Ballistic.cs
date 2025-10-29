@@ -160,7 +160,7 @@ public abstract partial class SharedGunSystem
         }
         // End Frontier
 
-        if (component.Entities.Count + component.UnspawnedCount == 0)
+        if (GetBallisticShots(component) == 0) // Mono
         {
             Popup(
                 Loc.GetString("gun-ballistic-transfer-empty",
@@ -220,7 +220,7 @@ public abstract partial class SharedGunSystem
         else if (revolverTarget is not null)
             moreSpace = GetRevolverCount(revolverTarget) < revolverTarget.Capacity;
         // End Frontier
-        var moreAmmo = component.Entities.Count + component.UnspawnedCount > 0;
+        var moreAmmo = GetBallisticShots(component) > 0; // Mono
         args.Repeat = moreSpace && moreAmmo && validAmmoType; // Frontier: do not repeat reload attempts with invalid ammo.
     }
 
@@ -248,7 +248,7 @@ public abstract partial class SharedGunSystem
 
         // Mono
         if (component.InfiniteUnspawned)
-            args.PushMarkup(Loc.GetString("gun-magazine-infinite-examine", ("color", AmmoExamineColor), ("count", GetBallisticShots(component))));
+            args.PushMarkup(Loc.GetString("gun-magazine-infinite-examine", ("color", AmmoExamineSpecialColor), ("count", GetBallisticShots(component))));
         else
             args.PushMarkup(Loc.GetString("gun-magazine-examine", ("color", AmmoExamineColor), ("count", GetBallisticShots(component))));
     }
@@ -303,7 +303,7 @@ public abstract partial class SharedGunSystem
 
     protected int GetBallisticShots(BallisticAmmoProviderComponent component)
     {
-        return component.Entities.Count + component.InfiniteUnspawned ? 0 : component.UnspawnedCount; // Mono
+        return component.Entities.Count + (component.InfiniteUnspawned ? 0 : component.UnspawnedCount); // Mono
     }
 
     private void OnBallisticTakeAmmo(EntityUid uid, BallisticAmmoProviderComponent component, TakeAmmoEvent args)
