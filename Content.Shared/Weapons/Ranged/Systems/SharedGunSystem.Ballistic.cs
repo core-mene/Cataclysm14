@@ -246,7 +246,11 @@ public abstract partial class SharedGunSystem
         if (!args.IsInDetailsRange)
             return;
 
-        args.PushMarkup(Loc.GetString("gun-magazine-examine", ("color", AmmoExamineColor), ("count", GetBallisticShots(component))));
+        // Mono
+        if (component.InfiniteUnspawned)
+            args.PushMarkup(Loc.GetString("gun-magazine-infinite-examine", ("color", AmmoExamineColor), ("count", GetBallisticShots(component))));
+        else
+            args.PushMarkup(Loc.GetString("gun-magazine-examine", ("color", AmmoExamineColor), ("count", GetBallisticShots(component))));
     }
 
     private void ManualCycle(EntityUid uid, BallisticAmmoProviderComponent component, MapCoordinates coordinates, EntityUid? user = null, GunComponent? gunComp = null)
@@ -299,7 +303,7 @@ public abstract partial class SharedGunSystem
 
     protected int GetBallisticShots(BallisticAmmoProviderComponent component)
     {
-        return component.Entities.Count + component.UnspawnedCount;
+        return component.Entities.Count + component.InfiniteUnspawned ? 0 : component.UnspawnedCount; // Mono
     }
 
     private void OnBallisticTakeAmmo(EntityUid uid, BallisticAmmoProviderComponent component, TakeAmmoEvent args)
@@ -321,10 +325,14 @@ public abstract partial class SharedGunSystem
                 DirtyField(uid, component, nameof(BallisticAmmoProviderComponent.Entities));
                 Containers.Remove(entity, component.Container);
             }
-            else if (component.UnspawnedCount > 0)
+            else if (component.UnspawnedCount > 0
+                || component.InfiniteUnspawned) // Mono
             {
-                component.UnspawnedCount--;
-                DirtyField(uid, component, nameof(BallisticAmmoProviderComponent.UnspawnedCount));
+                if (!component.InfiniteUnspawned) // Mono
+                {
+                    component.UnspawnedCount--;
+                    DirtyField(uid, component, nameof(BallisticAmmoProviderComponent.UnspawnedCount));
+                }
                 entity = Spawn(component.Proto, args.Coordinates);
                 args.Ammo.Add((entity, EnsureShootable(entity)));
 

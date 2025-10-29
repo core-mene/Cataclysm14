@@ -63,4 +63,11 @@ public sealed partial class BallisticAmmoProviderComponent : Component
     /// </summary>
     [DataField]
     public bool AutoCycle = true;
+
+    /// <summary>
+    /// Monolith - whether to ignore UnspawnedCount and be able to fire infinitely
+    /// Will prioritise and fire/spend entity ammo if loaded
+    /// </summary>
+    [DataField]
+    public bool InfiniteUnspawned = false;
 }

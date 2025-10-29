@@ -13,6 +13,7 @@
   - type: Item
     size: Small
   - type: BallisticAmmoProvider
+    infiniteUnspawned: true
     proto: 90mmCartridge
     capacity: 400
     mayTransfer: true

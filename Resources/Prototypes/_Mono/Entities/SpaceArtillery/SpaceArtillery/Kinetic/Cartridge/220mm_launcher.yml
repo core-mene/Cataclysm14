@@ -66,6 +66,7 @@
         sound:
           collection: MetalBreak
   - type: BallisticAmmoProvider
+    infiniteUnspawned: true
     whitelist:
       tags:
       - 220mmCartridge
