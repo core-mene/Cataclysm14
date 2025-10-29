@@ -1,38 +1,11 @@
-# SPDX-FileCopyrightText: 2021 AJCM-git
-# SPDX-FileCopyrightText: 2021 Paul Ritter
-# SPDX-FileCopyrightText: 2021 wrexbe
-# SPDX-FileCopyrightText: 2022 20kdc
-# SPDX-FileCopyrightText: 2022 Cheackraze
-# SPDX-FileCopyrightText: 2022 Kara
-# SPDX-FileCopyrightText: 2022 LittleBuilderJane
-# SPDX-FileCopyrightText: 2022 Peptide90
-# SPDX-FileCopyrightText: 2022 metalgearsloth
-# SPDX-FileCopyrightText: 2022 mirrorcult
-# SPDX-FileCopyrightText: 2023 Dvir
-# SPDX-FileCopyrightText: 2023 Emisse
-# SPDX-FileCopyrightText: 2023 Leon Friedrich
-# SPDX-FileCopyrightText: 2023 Nemanja
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 checkraze
-# SPDX-FileCopyrightText: 2025 Arcticular1
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 Rubeebeebee
-# SPDX-FileCopyrightText: 2025 Whatstone
-# SPDX-FileCopyrightText: 2025 chrome-cirrus
-# SPDX-FileCopyrightText: 2025 crazy1112345
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: MPL-2.0
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/29/2025 02:39:19
-  entityCount: 1698
+  time: 10/29/2025 12:08:58
+  entityCount: 1722
 maps: []
 grids:
 - 1
@@ -1000,6 +973,126 @@ entities:
       parent: 1425
     - type: Physics
       canCollide: False
+  - uid: 1677
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1699
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1700
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1701
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1702
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1703
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1704
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1705
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1706
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1707
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1708
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1709
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1710
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1711
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1712
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1713
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1714
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1715
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1716
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1717
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1718
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1720
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1721
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
+  - uid: 1722
+    components:
+    - type: Transform
+      pos: -4.4469585,-5.498603
+      parent: 1
 - proto: AirAlarm
   entities:
   - uid: 1031
@@ -1309,32 +1402,6 @@ entities:
       - 1028
 - proto: AmmoLoader
   entities:
-  - uid: 1676
-    components:
-    - type: Transform
-      pos: 11.5,-11.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        500:
-        - - AmmoLoaderLoad
-          - SpaceArtilleryLoad
-        1492:
-        - - AmmoLoaderLoad
-          - SpaceArtilleryLoad
-  - uid: 1677
-    components:
-    - type: Transform
-      pos: -10.5,-11.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        1492:
-        - - AmmoLoaderLoad
-          - SpaceArtilleryLoad
-        500:
-        - - AmmoLoaderLoad
-          - SpaceArtilleryLoad
   - uid: 1678
     components:
     - type: Transform
@@ -1351,12 +1418,40 @@ entities:
         363:
         - - AmmoLoaderLoad
           - SpaceArtilleryLoad
-- proto: AmmoTechFab
+- proto: AmmoLoaderSmall
   entities:
+  - uid: 3
+    components:
+    - type: Transform
+      pos: 11.5,-11.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        500:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
+        1492:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
   - uid: 561
     components:
     - type: Transform
-      pos: 5.5,-11.5
+      pos: -10.5,-11.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        1492:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
+        500:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
+- proto: AmmoTechFab
+  entities:
+  - uid: 1080
+    components:
+    - type: Transform
+      pos: -4.5,-8.5
       parent: 1
 - proto: APCBasic
   entities:
@@ -5797,6 +5892,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: 14.5,-14.5
       parent: 1
+- proto: CMSemioticAmmunition
+  entities:
+  - uid: 1719
+    components:
+    - type: Transform
+      pos: -1.5,-7.5
+      parent: 1
 - proto: CMSemioticBathunisex
   entities:
   - uid: 1539
@@ -5980,6 +6082,13 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
+- proto: CrateAmmoBoxCyrexa
+  entities:
+  - uid: 1676
+    components:
+    - type: Transform
+      pos: -4.5,-7.5
+      parent: 1
 - proto: CrateSurgery
   entities:
   - uid: 1486
@@ -6016,13 +6125,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 4.5,-9.5
-      parent: 1
-- proto: EngineeringTechFab
-  entities:
-  - uid: 1369
-    components:
-    - type: Transform
-      pos: -4.5,-8.5
       parent: 1
 - proto: FaxMachineShipAntag
   entities:
@@ -7269,13 +7371,6 @@ entities:
     - type: Transform
       pos: -2.5,-11.5
       parent: 1
-- proto: LockerEngineerFilled
-  entities:
-  - uid: 1080
-    components:
-    - type: Transform
-      pos: -4.5,-7.5
-      parent: 1
 - proto: LockerWallColorL2RadiationFilled
   entities:
   - uid: 1086
@@ -7303,6 +7398,13 @@ entities:
     components:
     - type: Transform
       pos: 5.5,-16.5
+      parent: 1
+- proto: MachineMaterialSilo
+  entities:
+  - uid: 1369
+    components:
+    - type: Transform
+      pos: 5.5,-11.5
       parent: 1
 - proto: MedicalBed
   entities:
