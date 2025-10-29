@@ -178,9 +178,9 @@
 
 - type: entity
   parent: BaseShipLPC
-  id: ShipVoucherGoliath
-  name: ASR goliath LPC
-  description: A small card that authorizes the procurement of a Goliath.
+  id: ShipVoucherSaintie
+  name: ASR saintie LPC
+  description: A small card that authorizes the procurement of a Saintie.
   components:
   - type: Sprite
     layers:
@@ -192,7 +192,7 @@
     consoleType: BlackMarket
     companyName: Rogue
     vessels:
-    - Goliath
+    - Saintie
   - type: StaticPrice
     vendPrice: 325000
 
