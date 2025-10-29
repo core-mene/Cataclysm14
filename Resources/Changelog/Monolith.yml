@@ -13474,3 +13474,28 @@ Entries:
   id: 1491
   time: '2025-10-28T21:36:10.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2508
+- author: Primusirius
+  changes:
+    - type: Fix
+      message: No more atmos issues at MD
+  id: 1492
+  time: '2025-10-28T22:03:09.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2502
+- author: kasature90
+  changes:
+    - type: Tweak
+      message: >-
+        All ballistic and missile shipguns (with the exceptions of Syndicate
+        shipguns and HADES) are manually loaded now. All added ammo for shipguns
+        is buildable roundstart or buyable in cargo request.
+    - type: Tweak
+      message: Ammo techfab can make shipgun ammo now.
+    - type: Fix
+      message: Fixed manually-loaded shipguns not spawning with ammo.
+    - type: Add
+      message: Guidebook for ship gunnery specifics updated. Now its just 3 tables.
+    - type: Add
+      message: Barotrauma-style internal loaders for limited-ammo shipguns.
+  id: 1493
+  time: '2025-10-28T22:07:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2458

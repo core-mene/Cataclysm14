@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 ark1368
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -11,3 +12,8 @@
   id: Pause
   name: signal-port-name-lathe-pause
   description: signal-port-description-lathe-pause
+
+- type: sinkPort
+  id: SpaceArtilleryLoad
+  name: signal-port-name-space-artillery-load
+  description: signal-port-description-space-artillery-load

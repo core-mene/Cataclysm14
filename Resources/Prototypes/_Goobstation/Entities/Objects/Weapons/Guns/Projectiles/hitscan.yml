@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 bitcrushing
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: MIT
 
@@ -23,26 +24,6 @@
     impactFlash:
       sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/small_laser.rsi
       state: impact_beam_light
-
-- type: entity
-  id: SmallIonLaser
-  parent: BasicHitscan
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: HitscanBasicDamage
-    damage:
-      types:
-        Ion: 10
-  - type: HitscanBasicVisuals
-    muzzleFlash:
-      sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/small_laser.rsi
-      state: muzzle_beam_light_ion
-    travelFlash:
-      sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/small_laser.rsi
-      state: beam_light_ion
-    impactFlash:
-      sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/small_laser.rsi
-      state: impact_beam_light_ion
 
 - type: entity
   id: SmallXrayLaser
@@ -124,26 +105,6 @@
     impactFlash:
       sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/small_laser.rsi
       state: impact_beam_light
-
-- type: entity
-  id: MediumIonLaser
-  parent: BasicHitscan
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: HitscanBasicDamage
-    damage:
-      types:
-        Ion: 14
-  - type: HitscanBasicVisuals
-    muzzleFlash:
-      sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/small_laser.rsi
-      state: muzzle_beam_light_ion
-    travelFlash:
-      sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/small_laser.rsi
-      state: beam_light_ion
-    impactFlash:
-      sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/small_laser.rsi
-      state: impact_beam_light_ion
 
 - type: entity
   id: MediumXrayLaser
