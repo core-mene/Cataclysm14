@@ -41,7 +41,7 @@ public sealed partial class GunSystem
 			ent = existing; //Mono: Sound bugfix
             EnsureShootable(existing);
         }
-        else if (component.UnspawnedCount > 0)
+        else if (component.UnspawnedCount > 0 && !component.InfiniteUnspawned) // Mono - no ammo generator
         {
             component.UnspawnedCount--;
             DirtyField(uid, component, nameof(BallisticAmmoProviderComponent.UnspawnedCount));

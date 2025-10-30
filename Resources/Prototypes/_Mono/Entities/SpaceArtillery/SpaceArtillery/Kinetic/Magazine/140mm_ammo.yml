@@ -15,7 +15,6 @@
   - type: Item
     size: Small
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
     proto: 140mmCartridge
     capacity: 120
     mayTransfer: true
@@ -78,3 +77,19 @@
     damageContainer: Inorganic
     damageModifierSet: Metallic
 
+- type: entity
+  id: Magazine140mmWeak
+  name: "140mm ammo drum"
+  parent: Magazine140mm
+  components:
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: 140mmCartridgeWeak
+
+- type: entity
+  id: 140mmCartridgeWeak
+  name: "cartridge (140mm)"
+  parent: 140mmCartridge
+  components:
+  - type: CartridgeAmmo
+    proto: ShipLongbowProjectileWeak
