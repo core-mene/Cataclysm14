@@ -33,7 +33,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Remontnik USSP{1}'
+          mapNameTemplate: 'Remontnik MIL{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

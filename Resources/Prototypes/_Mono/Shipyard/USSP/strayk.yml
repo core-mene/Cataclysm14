@@ -34,7 +34,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Strayk USSP{1}'
+          mapNameTemplate: 'Strayk MIL{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

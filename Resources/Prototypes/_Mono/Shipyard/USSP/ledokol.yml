@@ -38,7 +38,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Ledokol USSP{1}'
+          mapNameTemplate: 'Ledokol MIL{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
