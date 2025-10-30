@@ -291,7 +291,11 @@ public abstract partial class SharedGunSystem
                     ("color", component.BoltClosed.Value ? Color.FromHex("#94e1f2") : Color.FromHex("#f29d94"))));
             }
 
-            args.PushMarkup(Loc.GetString("gun-magazine-examine", ("color", AmmoExamineColor), ("count", count)));
+            var mag = GetMagazineEntity(uid);
+            if (TryComp<BallisticAmmoProviderComponent>(mag, out var ballistic) && ballistic.InfiniteUnspawned)
+                args.PushMarkup(Loc.GetString("gun-magazine-infinite-examine", ("color", AmmoExamineSpecialColor), ("count", count)));
+            else
+                args.PushMarkup(Loc.GetString("gun-magazine-examine", ("color", AmmoExamineColor), ("count", count)));
         }
     }
 

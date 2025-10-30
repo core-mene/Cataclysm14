@@ -37,7 +37,7 @@ public sealed partial class BallisticAmmoProviderComponent : Component
     [ViewVariables(VVAccess.ReadWrite), DataField]
     public int Capacity = 30;
 
-    public int Count => UnspawnedCount + Container.ContainedEntities.Count;
+    public int Count => Container.ContainedEntities.Count + (InfiniteUnspawned ? 0 : UnspawnedCount); // Mono
 
     [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
     public int UnspawnedCount;
