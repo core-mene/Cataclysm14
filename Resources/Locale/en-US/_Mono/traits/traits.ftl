@@ -34,3 +34,6 @@ trait-osteogenesis-imperfecta-desc = Also known as "brittle bone disease", peopl
 
 trait-hemophilia-name = Hemophilia
 trait-hemophilia-desc = Your body's ability to form blood clots is impaired. You bleed for roughly twice as long, and you bruise more easily, taking 10% more Blunt damage.
+
+trait-voracious-name = Voracious
+trait-voracious-desc = Nothing gets between you and your food. Your endless consumption of food and drinks is twice as fast.
