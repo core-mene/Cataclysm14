@@ -50,6 +50,22 @@
   - type: WillToLive
 
 - type: trait
+  id: WillToDie
+  name: trait-will-to-die-name
+  description: trait-will-to-die-desc
+  category: Physical
+  cost: -1
+  mutuallyExclusiveTraits:
+  - WillToLive
+  speciesBlacklist:
+  - IPC
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+  - type: WillToDie
+
+- type: trait
   id: Thieving
   name: trait-thieving-name
   description: trait-thieving-desc

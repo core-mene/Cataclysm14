@@ -18,6 +18,10 @@ trait-will-to-live-name = Will To Live
 trait-will-to-live-desc = You have an unusually strong "will to live", and will resist death more than others.
     Your damage threshold for becoming Dead is increased by 10 points.
 
+trait-will-to-die-name = Will To Die
+trait-will-to-die-desc = You have an unusually weak "will to live", and will succumb to injuries sooner than others.
+    Your damage threshold for becoming Dead is decreased by 15 points.
+
 trait-thieving-name = Thieving
 trait-thieving-desc = You are deft with your hands, and talented at convincing people of their belongings. You can identify pocketed items, steal them quieter, and steal ~33% faster.
 
