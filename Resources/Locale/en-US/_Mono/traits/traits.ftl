@@ -28,3 +28,6 @@ trait-thieving-desc = You are deft with your hands, and talented at convincing p
 trait-bionic-legs-name = Bionic Legs
 trait-bionic-legs-desc = One or more of your limbs have been replaced with an expensive, state of the art bionic. It could be either one made of highly realistic synthflesh,
      or a more obvious metal limb. This limb provides enhanced speed to it's user, allowing you to run away from situations faster or get to a place faster.
+
+trait-osteogenesis-imperfecta-name = Osteogenesis Imperfecta
+trait-osteogenesis-imperfecta-desc = Also known as "brittle bone disease", people with this genetic disorder have bones that are easily broken, often simply by moving. This trait reduces your threshold for critical injury by 50 points.

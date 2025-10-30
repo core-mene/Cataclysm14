@@ -85,3 +85,20 @@
   cost: 2
   components:
   - type: BionicLegs
+
+- type: trait
+  id: OsteogenesisImperfecta
+  name: trait-osteogenesis-imperfecta-name
+  description: trait-osteogenesis-imperfecta-desc
+  category: Physical
+  cost: -6
+  mutuallyExclusiveTraits:
+  - Tenacity
+  speciesBlacklist:
+  - IPC
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+  - type: GlassJaw
+    critDecrease: 50
