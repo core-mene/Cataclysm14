@@ -42,7 +42,9 @@
 // SPDX-FileCopyrightText: 2024 themias
 // SPDX-FileCopyrightText: 2025 Blu
 // SPDX-FileCopyrightText: 2025 Tayrtahn
+// SPDX-FileCopyrightText: 2025 ark1368
 // SPDX-FileCopyrightText: 2025 tonotom
+// SPDX-FileCopyrightText: 2025 tonotom1
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 

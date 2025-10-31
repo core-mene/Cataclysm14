@@ -53,12 +53,14 @@
 // SPDX-FileCopyrightText: 2024 Winkarst-cpu
 // SPDX-FileCopyrightText: 2024 dffdff2423
 // SPDX-FileCopyrightText: 2024 eoineoineoin
+// SPDX-FileCopyrightText: 2025 Archylle
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 HacksLua
 // SPDX-FileCopyrightText: 2025 Ignaz "Ian" Kraft
 // SPDX-FileCopyrightText: 2025 LukeZurg22
 // SPDX-FileCopyrightText: 2025 Mora
 // SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 ark1368
 // SPDX-FileCopyrightText: 2025 inquisitor-star
 // SPDX-FileCopyrightText: 2025 starch
 //
