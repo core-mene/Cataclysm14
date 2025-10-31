@@ -314,3 +314,13 @@
   components:
   - type: Ironman
   traitGear: SpaceCash10000
+
+- type: trait
+  id: TemperatureTolerance
+  name: trait-temperature-tolerance-name
+  description: trait-temperature-tolerance-desc
+  category: Physical
+  cost: 1
+  components:
+  - type: TemperatureProtection
+    coolingCoefficient: 0.6

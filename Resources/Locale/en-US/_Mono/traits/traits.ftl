@@ -73,3 +73,6 @@ trait-dermal-armor-desc = Your skin has been replaced with a flexible, yet sturd
 
 trait-ironman-name = Ironman
 trait-ironman-desc = You live strictly on hard cash. You can't withdraw from your bank account, but you start the shift with extra credits in hand.
+
+trait-temperature-tolerance-name = Temperature Tolerance
+trait-temperature-tolerance-desc = You have a notable tolerance for lower temperatures. You can stand for extended periods in conditions just below freezing, like a walk-in fridge or the sunlit slopes of Glacier.
