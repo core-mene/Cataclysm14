@@ -30,6 +30,15 @@
       time: 180000 # 50 hrs
 
 - type: loadoutEffectGroup
+  id: MonoCivVet
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 180000 # 50 hrs
+
+- type: loadoutEffectGroup
   id: MonoCivSkilled
   effects:
   - !type:JobRequirementLoadoutEffect
