@@ -286,3 +286,21 @@
     speedModifierThresholds:
       "70": 0.83
       "90": 0.70
+
+- type: trait
+  id: DermalArmor
+  name: trait-dermal-armor-name
+  description: trait-dermal-armor-desc
+  category: Physical
+  cost: 6
+  components:
+  - type: DamageProtectionBuff
+    modifiers:
+      dermal:
+        id: DermalArmorTrait
+        coefficients:
+          Shock: 1.25
+        flatReductions:
+          Blunt: 1.5
+          Slash: 1.5
+          Piercing: 1.5

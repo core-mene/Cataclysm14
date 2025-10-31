@@ -67,3 +67,6 @@ trait-striking-calluses-desc = An iconic enhancement from the world of cyber-enh
 
 trait-steadfast-name = Steadfast
 trait-steadfast-desc = When others would buckle from the weight of your injuries, you still march forward unrelentingly. For most species, this reduces your movement slow: 25% at 60 damage becomes 17% at 70 damage, and 45% at 80 damage becomes 30% at 90 damage.
+
+trait-dermal-armor-name = Dermal Armor
+trait-dermal-armor-desc = Your skin has been replaced with a flexible, yet sturdy, hard-polymer shell wrapped in a layer of synthetic flesh. Provides 1.5 flat reduction to Blunt, Slash, and Piercing damage, but you take 25% more Shock damage.
