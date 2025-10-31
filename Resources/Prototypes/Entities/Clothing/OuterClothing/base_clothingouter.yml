@@ -192,6 +192,8 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:Container {}
+      storagebase: !type:Container
+        ents: []
   - type: UserInterface
     interfaces:
       enum.ToggleClothingUiKey.Key:
