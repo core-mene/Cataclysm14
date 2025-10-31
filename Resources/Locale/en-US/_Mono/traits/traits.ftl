@@ -64,3 +64,6 @@ trait-redshirt-desc = "They said this air would be breathable. Get in, get out a
 
 trait-striking-calluses-name = Striking Calluses
 trait-striking-calluses-desc = An iconic enhancement from the world of cyber-enhanced martial arts. Bony dermal deposits (or hard plastic shells for prosthetics) reinforce your knuckles. Increases your unarmed strike base damage by 2, but provides no benefit to armed melee.
+
+trait-steadfast-name = Steadfast
+trait-steadfast-desc = When others would buckle from the weight of your injuries, you still march forward unrelentingly. For most species, this reduces your movement slow: 25% at 60 damage becomes 17% at 70 damage, and 45% at 80 damage becomes 30% at 90 damage.

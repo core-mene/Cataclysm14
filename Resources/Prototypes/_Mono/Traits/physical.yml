@@ -266,3 +266,23 @@
     - BorgChassis
   components:
   - type: StrikingCalluses
+
+- type: trait
+  id: Steadfast
+  name: trait-steadfast-name
+  description: trait-steadfast-desc
+  category: Physical
+  cost: 3
+  mutuallyExclusiveTraits:
+  - Feeble
+  speciesBlacklist:
+  - Felinid
+  - Tajaran
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      "70": 0.83
+      "90": 0.70
