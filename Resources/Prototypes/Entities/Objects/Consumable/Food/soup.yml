@@ -1358,11 +1358,11 @@
         - ReagentId: Butter
           Quantity: 5
         - ReagentId: Nutriment
-          Quantity: 3
-        - ReagentId: Vitamin
-          Quantity: 2
-        - ReagentId: Flavorol
           Quantity: 5
+        - ReagentId: Vitamin
+          Quantity: 5
+        - ReagentId: Flavorol
+          Quantity: 10
 
 - type: entity
   name: cheese grits
@@ -1382,14 +1382,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 25
+        maxVol: 30
         reagents:
         - ReagentId: Butter
           Quantity: 5
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 10
         - ReagentId: Vitamin
-          Quantity: 2
+          Quantity: 5
         - ReagentId: Flavorol
           Quantity: 10
 
