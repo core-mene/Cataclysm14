@@ -13,6 +13,11 @@
   description: trait-vigor-desc
   category: Physical
   cost: 6
+  mutuallyExclusiveTraits:
+  - Lethargy
+  speciesBlacklist:
+  - Oni
+  - IPC
   components:
   - type: Vigor
 
@@ -39,6 +44,10 @@
   description: trait-glass-jaw-desc
   category: Physical
   cost: -2
+  mutuallyExclusiveTraits:
+  - Tenacity
+  speciesBlacklist:
+  - IPC
   components:
   - type: GlassJaw
 
@@ -49,10 +58,9 @@
   category: Physical
   cost: 1
   mutuallyExclusiveTraits:
-  - WillToDie
-  - Vigor
+  - GlassJaw
+  - OsteogenesisImperfecta
   speciesBlacklist:
-  - Human
   - IPC
   components:
   - type: Tenacity
@@ -63,6 +71,13 @@
   description: trait-will-to-live-desc
   category: Physical
   cost: 1
+  mutuallyExclusiveTraits:
+  - WillToDie
+  speciesBlacklist:
+  - IPC
+  blacklist:
+    components:
+    - BorgChassis
   components:
   - type: WillToLive
 
@@ -88,6 +103,8 @@
   description: trait-thieving-desc
   category: Physical
   cost: 3
+  speciesBlacklist:
+  - Felinid
   components:
   - type: Thieving
     stealthy: true
@@ -158,6 +175,9 @@
   speciesBlacklist:
     - IPC
     - Arachnid
+  blacklist:
+    components:
+    - BorgChassis
   components:
     - type: Sericulture
       action: ActionSericulture
