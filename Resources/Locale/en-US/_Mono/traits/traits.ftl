@@ -70,3 +70,6 @@ trait-steadfast-desc = When others would buckle from the weight of your injuries
 
 trait-dermal-armor-name = Dermal Armor
 trait-dermal-armor-desc = Your skin has been replaced with a flexible, yet sturdy, hard-polymer shell wrapped in a layer of synthetic flesh. Provides 1.5 flat reduction to Blunt, Slash, and Piercing damage, but you take 25% more Shock damage.
+
+trait-ironman-name = Ironman
+trait-ironman-desc = You live strictly on hard cash. You can't withdraw from your bank account, but you start the shift with extra credits in hand.

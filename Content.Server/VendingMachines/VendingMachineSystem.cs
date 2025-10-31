@@ -36,6 +36,7 @@ using Content.Server._NF.Contraband.Systems; // Frontier
 using Content.Shared.Stacks; // Frontier
 using Content.Server.Stack;
 using Content.Server._Mono.VendingMachine;
+using Content.Shared._Mono.Traits.Physical;
 using Robust.Shared.Containers; // Frontier
 
 namespace Content.Server.VendingMachines
@@ -356,7 +357,7 @@ namespace Content.Server.VendingMachines
             if (IsAuthorized(uid, sender, component))
             {
                 int bankBalance = 0;
-                if (TryComp<BankAccountComponent>(sender, out var bank))
+                if (!HasComp<IronmanComponent>(sender) && TryComp<BankAccountComponent>(sender, out var bank))
                     bankBalance = bank.Balance;
 
                 int cashSlotBalance = 0;
@@ -391,10 +392,8 @@ namespace Content.Server.VendingMachines
                         component.CashSlotBalance = newCashSlotBalance;
                         paidFully = true; // Either we paid fully with cash, or we need to withdraw the remainder
                     }
-                    if (totalPrice > cashSlotBalance)
-                    {
+                    if (totalPrice > cashSlotBalance && !HasComp<Content.Shared._Mono.Traits.Physical.IronmanComponent>(sender))
                         paidFully = _bankSystem.TryBankWithdraw(sender, totalPrice - cashSlotBalance);
-                    }
 
                     // If we paid completely, pay our station taxes
                     if (paidFully)

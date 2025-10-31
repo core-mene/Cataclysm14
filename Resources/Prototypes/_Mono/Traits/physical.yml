@@ -304,3 +304,13 @@
           Blunt: 1.5
           Slash: 1.5
           Piercing: 1.5
+
+- type: trait
+  id: Ironman
+  name: trait-ironman-name
+  description: trait-ironman-desc
+  category: Physical
+  cost: -10
+  components:
+  - type: Ironman
+  traitGear: SpaceCash10000
