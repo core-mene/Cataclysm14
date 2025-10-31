@@ -1,6 +1,7 @@
 using Content.Shared._Mono.Traits.Physical;
 using Content.Shared.Body.Systems;
 using Content.Shared._Shitmed.Body.Organ;
+using Content.Shared.Body.Components;
 using Content.Shared.Body.Organ;
 using Robust.Shared.Containers;
 
@@ -23,7 +24,10 @@ public sealed class LiquorLifelineSystem : EntitySystem
 
     private void OnStartup(EntityUid uid, LiquorLifelineComponent comp, ComponentStartup args)
     {
-        if (_body.TryGetBodyOrganEntityComps<LiverComponent>(uid, out var livers))
+        if (!TryComp<BodyComponent>(uid, out var body))
+            return;
+
+        if (_body.TryGetBodyOrganEntityComps<LiverComponent>((uid, body), out var livers))
         {
             var old = livers[0].Owner;
             if (_containers.TryGetContainingContainer((old, null, null), out var cont))
