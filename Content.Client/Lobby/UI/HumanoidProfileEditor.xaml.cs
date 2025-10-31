@@ -882,7 +882,7 @@ namespace Content.Client.Lobby.UI
                             if (categoryButton.TraitsContainer.ChildCount >= 2)
                             {
                                 var maxPoints = category.MaxTraitPoints.Value;
-                                float pointsLeft = maxPoints - currentPoints;
+                                float pointsLeft = Math.Max(0, maxPoints - currentPoints);
                                 if (categoryButton.TraitsContainer.GetChild(0) is ProgressBar progressBar)
                                 {
                                     progressBar.Value = pointsLeft;
@@ -934,11 +934,11 @@ namespace Content.Client.Lobby.UI
                         SetHeight = 4f,
                         MinValue = 0,
                         MaxValue = maxPoints,
-                        Value = maxPoints - selectionCount,
+                        Value = Math.Max(0, maxPoints - selectionCount),
                         Margin = new Thickness(0, 0, 0, 2)
                     };
 
-                    float pointsLeft = maxPoints - selectionCount;
+                    float pointsLeft = Math.Max(0, maxPoints - selectionCount);
                     float percentRemaining = pointsLeft / maxPoints;
 
                     Color barColor;
@@ -978,18 +978,13 @@ namespace Content.Client.Lobby.UI
                     // Color traits red if they would exceed the point limit
                     if (category is { MaxTraitPoints: >= 0 })
                     {
-                        // If this trait would exceed the limit by itself
-                        if (selector.Cost > category.MaxTraitPoints)
-                        {
-                            selector.SetUnavailable(true);
-                        }
                         // If this trait would exceed the limit when added to current selection
-                        else if (!selector.Preference && selector.Cost + selectionCount > category.MaxTraitPoints)
+                        if (!selector.Preference && selector.Cost + selectionCount > category.MaxTraitPoints)
                         {
                             selector.SetUnavailable(true);
                         }
                         // If this trait is already selected but would exceed the limit if added now
-                        else if (selector.Preference && selectionCount - selector.Cost + selector.Cost > category.MaxTraitPoints)
+                        else if (selector.Preference && selectionCount > category.MaxTraitPoints)
                         {
                             // This shouldn't happen normally, but just in case
                             selector.SetUnavailable(true);
@@ -1015,13 +1010,8 @@ namespace Content.Client.Lobby.UI
                     selector.TraitButton.ModulateSelfOverride = null;
                     selector.SetUnavailable(false);
 
-                    // If this trait would exceed the limit by itself
-                    if (selector.Cost > category.MaxTraitPoints)
-                    {
-                        selector.SetUnavailable(true);
-                    }
                     // If this trait would exceed the limit when added to current selection
-                    else if (!selector.Preference && selector.Cost + currentPoints > category.MaxTraitPoints)
+                    if (!selector.Preference && selector.Cost + currentPoints > category.MaxTraitPoints)
                     {
                         selector.SetUnavailable(true);
                     }

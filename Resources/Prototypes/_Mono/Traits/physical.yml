@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 ark1368
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: trait
   id: PrybarProsthetics
   name: trait-prybar-prosthetics-name
@@ -73,6 +78,7 @@
   cost: 1
   mutuallyExclusiveTraits:
   - WillToDie
+  - Redshirt
   speciesBlacklist:
   - IPC
   blacklist:
@@ -191,9 +197,11 @@
   description: trait-feeble-desc
   category: Physical
   cost: -4
+  mutuallyExclusiveTraits:
+   - Steadfast
   speciesBlacklist:
-    - Felinid
-    - Tajaran
+   - Felinid
+   - Tajaran
   components:
     - type: SlowOnDamage
       speedModifierThresholds:
@@ -228,6 +236,8 @@
   description: trait-liquor-lifeline-desc
   category: Physical
   cost: 6
+  mutuallyExclusiveTraits:
+  - AlcoholTolerance
   speciesBlacklist:
   - IPC
   - Dwarf
@@ -236,3 +246,125 @@
     - BorgChassis
   components:
   - type: LiquorLifeline
+
+- type: trait
+  id: Redshirt
+  name: trait-redshirt-name
+  description: trait-redshirt-desc
+  category: Physical
+  cost: -8
+  mutuallyExclusiveTraits:
+  - WillToLive
+  speciesBlacklist:
+  - IPC
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+  - type: WillToDie
+    deadDecrease: 100
+
+- type: trait
+  id: StrikingCalluses
+  name: trait-striking-calluses-name
+  description: trait-striking-calluses-desc
+  category: Physical
+  cost: 2
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+  - type: StrikingCalluses
+
+- type: trait
+  id: Steadfast
+  name: trait-steadfast-name
+  description: trait-steadfast-desc
+  category: Physical
+  cost: 3
+  mutuallyExclusiveTraits:
+  - Feeble
+  speciesBlacklist:
+  - Felinid
+  - Tajaran
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      "70": 0.83
+      "90": 0.70
+
+- type: trait
+  id: DermalArmor
+  name: trait-dermal-armor-name
+  description: trait-dermal-armor-desc
+  category: Physical
+  cost: 6
+  components:
+  - type: DamageProtectionBuff
+    modifiers:
+      dermal:
+        id: DermalArmorTrait
+        coefficients:
+          Shock: 1.25
+        flatReductions:
+          Blunt: 1.5
+          Slash: 1.5
+          Piercing: 1.5
+
+- type: trait
+  id: Ironman
+  name: trait-ironman-name
+  description: trait-ironman-desc
+  category: Physical
+  cost: -10
+  components:
+  - type: Ironman
+  traitGear: SpaceCash10000
+
+- type: trait
+  id: TemperatureTolerance
+  name: trait-temperature-tolerance-name
+  description: trait-temperature-tolerance-desc
+  category: Physical
+  cost: 1
+  components:
+  - type: TemperatureProtection
+    coolingCoefficient: 0.6
+
+- type: trait
+  id: AlcoholTolerance
+  name: trait-alcohol-tolerance-name
+  description: trait-alcohol-tolerance-desc
+  category: Physical
+  cost: 1
+  mutuallyExclusiveTraits:
+  - LightweightDrunk
+  - LiquorLifeline
+  speciesBlacklist:
+  - Dwarf
+  - IPC
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+  - type: AlcoholTolerance
+    visualScaleMultiplier: 0.35
+
+- type: trait
+  id: PlateletFactories
+  name: trait-platelet-factories-name
+  description: trait-platelet-factories-desc
+  category: Physical
+  cost: 10
+  mutuallyExclusiveTraits:
+  - Hemophilia
+  speciesBlacklist:
+  - IPC
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+  - type: PlateletFactories

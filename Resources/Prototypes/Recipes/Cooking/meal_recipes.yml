@@ -69,12 +69,15 @@
 # SPDX-FileCopyrightText: 2024 mkanke-real
 # SPDX-FileCopyrightText: 2024 potato1234_x
 # SPDX-FileCopyrightText: 2024 themias
+# SPDX-FileCopyrightText: 2025 MaybeitsMir
+# SPDX-FileCopyrightText: 2025 Miranda
 # SPDX-FileCopyrightText: 2025 SG6732
 # SPDX-FileCopyrightText: 2025 Smith
 # SPDX-FileCopyrightText: 2025 pathetic meowmeow
 # SPDX-FileCopyrightText: 2025 slarticodefast
 # SPDX-FileCopyrightText: 2025 the-hivequeen
 # SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -2758,3 +2761,35 @@
     FoodButterSlice: 1
   recipeType: Oven # Frontier
 
+- type: microwaveMealRecipe
+  id: RecipePlainGrits
+  name: butter grits recipe
+  result: FoodPlainGrits
+  time: 10
+  group: Savory
+  reagents:
+    Cornmeal: 5
+    Water: 10
+  solids:
+    FoodButterSlice: 1
+    FoodBowlBig: 1
+  recipeType: # Frontier
+  - Oven # Mono
+  - Microwave # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeCheeseGrits
+  name: cheese grits recipe
+  result: FoodCheeseGrits
+  time: 10
+  group: Savory
+  reagents:
+    Cornmeal: 5
+    Water: 10
+  solids:
+    FoodCheeseSlice: 1
+    FoodButterSlice: 1
+    FoodBowlBig: 1
+  recipeType: # Frontier
+  - Oven # Mono
+  - Microwave # Frontier

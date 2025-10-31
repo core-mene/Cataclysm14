@@ -6,6 +6,7 @@
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
+# SPDX-FileCopyrightText: 2025 sleepyyapril
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -15,9 +16,9 @@
   name: job-name-pirate
   description: job-description-pirate
   playTimeTracker: JobPirate
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 90000 # 25 hrs - mono
+  requirements: # Mono
+  - !type:OverallPlaytimeRequirement
+    time: 7200 # 2 hours
   startingGear: PirateNFGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true

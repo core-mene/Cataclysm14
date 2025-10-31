@@ -58,3 +58,27 @@ trait-self-aware-desc = You possess a keen intuition of your body and senses. Yo
 
 trait-liquor-lifeline-name = Liquor Lifeline
 trait-liquor-lifeline-desc = Forget the doctor — just hit the bar for your "ethanol prescription"! While drunk, you slowly heal Brute, Heat, Shock, and Cold damage, scaling with how drunk you are. Your liver is replaced with a sturdy dwarven one, granting the benefits of alcohol tolerance.
+
+trait-redshirt-name = Redshirt
+trait-redshirt-desc = "They said this air would be breathable. Get in, get out again, and no one gets hurt. Something is pulling me up the hill. I look down in my red shirt. I look down in my red shirt." Reduces your damage threshold for becoming Dead by 100 points.
+
+trait-striking-calluses-name = Striking Calluses
+trait-striking-calluses-desc = An iconic enhancement from the world of cyber-enhanced martial arts. Bony dermal deposits (or hard plastic shells for prosthetics) reinforce your knuckles. Increases your unarmed strike base damage by 2, but provides no benefit to armed melee.
+
+trait-steadfast-name = Steadfast
+trait-steadfast-desc = When others would buckle from the weight of your injuries, you still march forward unrelentingly. For most species, this reduces your movement slow: 25% at 60 damage becomes 17% at 70 damage, and 45% at 80 damage becomes 30% at 90 damage.
+
+trait-dermal-armor-name = Dermal Armor
+trait-dermal-armor-desc = Your skin has been replaced with a flexible, yet sturdy, hard-polymer shell wrapped in a layer of synthetic flesh. Provides 1.5 flat reduction to Blunt, Slash, and Piercing damage, but you take 25% more Shock damage.
+
+trait-ironman-name = Ironman
+trait-ironman-desc = You live strictly on hard cash. You can't withdraw from your bank account, but you start the shift with extra credits in hand.
+
+trait-temperature-tolerance-name = Temperature Tolerance
+trait-temperature-tolerance-desc = You have a notable tolerance for lower temperatures. You can stand for extended periods in conditions just below freezing, like a walk-in fridge or the sunlit slopes of Glacier.
+
+trait-alcohol-tolerance-name = Alcohol Tolerance
+trait-alcohol-tolerance-desc = Your body shrugs off the visual effects of booze. Drinks blur your vision far less, but this does not affect alcohol poisoning or how drunk you become.
+
+trait-platelet-factories-name = Platelet Factories
+trait-platelet-factories-desc = Your body has been augmented with a series of bio-tailored organs that enhance long-term survivability. These organs attempt to keep you alive even in the face of advanced trauma, all the way up until—but not including—death. Your natural healing slowly repairs any damage type, including exotic injuries like radiation exposure or cellular damage.

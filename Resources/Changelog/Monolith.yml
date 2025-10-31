@@ -13522,3 +13522,68 @@ Entries:
   id: 1496
   time: '2025-10-31T00:31:06.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2522
+- author: Primusirius
+  changes:
+    - type: Tweak
+      message: Medical Dispatch atmos has been rebuilt from the ground up
+  id: 1497
+  time: '2025-10-31T00:59:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2521
+- author: Ark
+  changes:
+    - type: Add
+      message: Most armors and hardsuits now start with durathread armor plates.
+    - type: Add
+      message: You now buy armor plates from cargo.
+    - type: Fix
+      message: >-
+        Fixed USSP loadout for special guns and removed it from the gamemode
+        title.
+  id: 1498
+  time: '2025-10-31T03:09:37.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2525
+- author: SeaborneProto
+  changes:
+    - type: Tweak
+      message: Additional Tajaran FurTones!
+  id: 1499
+  time: '2025-10-31T19:11:05.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2531
+- author: maybeitsmir
+  changes:
+    - type: Add
+      message: 'Added two new food recipes: buttered grits and cheese grits.'
+  id: 1500
+  time: '2025-10-31T19:11:59.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2528
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: PTK projectile velocity, and range, quadrupled.
+    - type: Tweak
+      message: M25 mining pulsar range halved but firerate 4->5.
+  id: 1501
+  time: '2025-10-31T19:13:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2530
+- author: Ark
+  changes:
+    - type: Add
+      message: Second batch of Physical traits!
+    - type: Fix
+      message: You should be able to open up armor plates storage now in hardsuits.
+    - type: Fix
+      message: >-
+        Trap Avoider trait should no longer be stunned by banana peels and soap.
+        Issue was the component was not networked to the client-side.
+  id: 1502
+  time: '2025-10-31T19:22:38.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2532
+- author: kasature90
+  changes:
+    - type: Remove
+      message: >-
+        Removed playtime requirements for ASR insurgent and TSF marine &
+        corpsman.
+  id: 1503
+  time: '2025-10-31T20:08:38.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2501
