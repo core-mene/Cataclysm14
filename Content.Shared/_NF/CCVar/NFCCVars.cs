@@ -73,7 +73,7 @@ public sealed class NFCCVars
     /// The amount of time the bus waits at a station.
     /// </summary>
     public static readonly CVarDef<float> PublicTransitWaitTime =
-        CVarDef.Create("nf14.publictransit.wait_time", 120f, CVar.SERVERONLY);
+        CVarDef.Create("nf14.publictransit.wait_time", 40f, CVar.SERVERONLY);
 
     /// <summary>
     /// The amount of time the flies through FTL space.
