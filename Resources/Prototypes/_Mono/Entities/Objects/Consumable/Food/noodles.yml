@@ -2,27 +2,6 @@
 # Base
 
 - type: entity
-  parent: FoodInjectableBase
-  id: FoodNoodlesBase
-  abstract: true
-  description: Now that's a nice pasta!
-  components:
-  - type: Item
-    storedRotation: -90
-  - type: Sprite
-    sprite: _Mono/Objects/Consumable/Food/noodles.rsi
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 30
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 15
-        - ReagentId: Flavorol
-          Quantity: 10
-# Noodles
-
-- type: entity
   name: macaroni & cheese
   parent: FoodNoodlesBase
   id: FoodMacaroni
