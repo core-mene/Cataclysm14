@@ -491,6 +491,9 @@
     autoRechargeRate: 200
     autoRechargePause: true
     autoRechargePauseTime: 30
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.90
+    sprintModifier: 0.85
   # End Mono
 
 - type: entity
