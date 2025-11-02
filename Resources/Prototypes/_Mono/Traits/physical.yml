@@ -319,7 +319,7 @@
   name: trait-ironman-name
   description: trait-ironman-desc
   category: Physical
-  cost: -10
+  cost: -2 # This shit was FREE for factions practically
   components:
   - type: Ironman
   traitGear: SpaceCash10000
@@ -368,3 +368,6 @@
     - BorgChassis
   components:
   - type: PlateletFactories
+    intervalSeconds: 1
+    healPerSecond: 1
+    critMultiplier: .25
