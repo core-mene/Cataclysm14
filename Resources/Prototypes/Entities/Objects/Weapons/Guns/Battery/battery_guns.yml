@@ -387,12 +387,19 @@
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
     proto: Pulse
-    fireCost: 200
+    fireCost: 100
   - type: Battery
     maxCharge: 2000
     startingCharge: 2000
   - type: PirateBountyItem # Mono
     id: ExperimentalFactionWeapon
+  # Mono Additions
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 200
+    autoRechargePause: true
+    autoRechargePauseTime: 30
+  # End Mono
 
 - type: entity
   name: LWC pulse carbine
@@ -418,19 +425,29 @@
   - type: Gun
     selectedMode: SemiAuto
     fireRate: 3
+    burstFireRate: 12 # Mono
+    shotsPerBurst: 2
     availableModes:
     - SemiAuto
-    - FullAuto
+    # - FullAuto # Mono
+    - Burst # Mono
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
     proto: Pulse
-    fireCost: 200
+    fireCost: 100
   - type: Battery
-    maxCharge: 5000
-    startingCharge: 5000
+    maxCharge: 3000 # Mono
+    startingCharge: 3000
   - type: PirateBountyItem # Mono
     id: ExperimentalFactionWeapon
+  # Mono Additions
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 200
+    autoRechargePause: true
+    autoRechargePauseTime: 30
+  # End Mono
 
 - type: entity
   name: NT pulse rifle
@@ -455,16 +472,26 @@
     sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
   - type: Gun
     fireRate: 1.5
+    availableModes:
+    - SemiAuto
+    - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
   - type: HitscanBatteryAmmoProvider
     proto: Pulse
     fireCost: 100
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 6000 # Mono
+    startingCharge: 6000 # Mono
   - type: PirateBountyItem # Mono
     id: ExperimentalFactionWeapon
+  # Mono Additions
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 200
+    autoRechargePause: true
+    autoRechargePauseTime: 30
+  # End Mono
 
 - type: entity
   name: laser cannon

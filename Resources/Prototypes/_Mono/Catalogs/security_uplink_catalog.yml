@@ -346,3 +346,24 @@
 #     whitelist:
 #       tags:
 #       - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityPulseRifle
+  name:  uplink-security-pulserifle-name
+  description: uplink-security-pulserifle-desc
+  productEntity: WeaponPulseRifle
+  icon: { sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi, state: base }
+  cost:
+    FederationMilitaryCredit: 250
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+        - Bailiff
+        - SeniorOfficer 

@@ -96,3 +96,6 @@ uplink-security-hardsuit-m82b-desc = A variant of the M-82c for NBC protection, 
 
 uplink-security-hardsuit-m82c-name = M82c Hardsuit
 uplink-security-hardsuit-m82c-desc = A basic protective system for dangerous environments (such as space). Takes the role of an armor vest in the average TSF marine's gear.
+
+uplink-security-pulserifle-name = Pulse Rifle
+uplink-security-pulserifle-desc = A large, automatic pulse weapon, used for surpression and devastation. 
