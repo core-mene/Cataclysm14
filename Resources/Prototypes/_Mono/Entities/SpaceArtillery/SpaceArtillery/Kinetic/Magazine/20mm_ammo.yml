@@ -34,6 +34,8 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
+  - type: StaticPrice
+    price: 0.1
 
 - type: entity
   id: 20mmCartridge
@@ -73,3 +75,6 @@
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
+  - type: Price
+  - type: StaticPrice
+    price: 0.1
