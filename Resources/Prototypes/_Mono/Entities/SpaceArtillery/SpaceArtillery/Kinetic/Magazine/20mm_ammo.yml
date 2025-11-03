@@ -57,7 +57,7 @@
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: StaticPrice
-    price: 1
+    price: 0.1
   - type: Destructible
     thresholds:
     - trigger:
@@ -76,5 +76,3 @@
     damageContainer: Inorganic
     damageModifierSet: Metallic
   - type: Price
-  - type: StaticPrice
-    price: 0.1
