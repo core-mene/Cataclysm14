@@ -666,7 +666,7 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 0.025 # 40s
+    fireRate: 0.04 # 25s same as reaper the nebula gets a treat
     minAngle: 0
     maxAngle: 0
     projectileSpeed: 750
@@ -740,7 +740,7 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 1.2
+    fireRate: 1
     minAngle: 0
     maxAngle: 4
     shootThermalSignature: 4000000 # ~2.8km with continuous fire
@@ -810,7 +810,7 @@
     range: 500
   - type: Gun
     fireRate: 1
-    projectileSpeed: 200
+    projectileSpeed: 290
     minAngle: 0
     maxAngle: 6
     shootThermalSignature: 500000 # ~5.6km with continuous fire

@@ -264,15 +264,15 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 3
+    lifetime: 3.5
   - type: PointLight
     radarColor: "#ffffff"
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun
-    totalIntensity: 500
+    totalIntensity: 525
     intensitySlope: 35
-    maxIntensity: 50
+    maxIntensity: 55
 
 # Harbringer
 
@@ -425,7 +425,7 @@
     damage:
      types:
       Heat: 350
-      Structural: 2500
+      Structural: 3500
   - type: HitscanSpawnEntity
     spawnedEntity: SunderExplosion
   - type: HitscanBasicRaycast
@@ -484,7 +484,7 @@
   - type: Explosive
     explosionType: HardBombShipGun
     totalIntensity: 7000
-    intensitySlope: 100
+    intensitySlope: 150
     maxIntensity: 2400
 
 - type: entity
@@ -495,6 +495,6 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBombShipGun
-    totalIntensity: 22
+    totalIntensity: 28
     intensitySlope: 2
-    maxIntensity: 5
+    maxIntensity: 10
