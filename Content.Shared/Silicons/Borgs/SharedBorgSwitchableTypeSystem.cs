@@ -1,5 +1,6 @@
 // SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
 // SPDX-FileCopyrightText: 2025 BeBright
+// SPDX-FileCopyrightText: 2025 EckoAurum
 // SPDX-FileCopyrightText: 2025 Ilya246
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -52,6 +53,7 @@ public abstract class SharedBorgSwitchableTypeSystem : EntitySystem
     private void OnMapInit(Entity<BorgSwitchableTypeComponent> ent, ref MapInitEvent args)
     {
         _actionsSystem.AddAction(ent, ref ent.Comp.SelectTypeAction, ActionId);
+        EnsureComp<BorgSwitchableSubtypeComponent>(ent.Owner); // Mono - Temp fix for borg sprites
         Dirty(ent);
 
         if (ent.Comp.SelectedBorgType != null &&

@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Onezero0
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 ark1368
 //
@@ -132,7 +133,7 @@ public sealed class ShipAccessReaderSystem : EntitySystem
         if (TryComp<CompanyComponent>(gridUid, out var shipCompany))
         {
             // Check if ship has one of the special company designations
-            if (shipCompany.CompanyName == "USSP" || shipCompany.CompanyName == "Rogue" || shipCompany.CompanyName == "TSF")
+            if (shipCompany.CompanyName == "Rogue" || shipCompany.CompanyName == "TSF")
             {
                 // Check each accessible ID card for matching company
                 foreach (var cardUid in accessibleCards)

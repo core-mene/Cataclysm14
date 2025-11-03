@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Shroomerian
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 # Author Info
 # GitHub:
 # Discord: ???
@@ -20,6 +28,7 @@
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
+  - type: StationTransit # Mono
 
 - type: gameMap
   id: Grifty

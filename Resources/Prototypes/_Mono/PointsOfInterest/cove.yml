@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2024 Salvantrix
 # SPDX-FileCopyrightText: 2024 Shroomerian
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
@@ -21,8 +22,8 @@
   id: Cove
   parent: BasePOI
   name: ASR Insurgency Hideout
-  minimumDistance: 22500 # Mono
-  maximumDistance: 24000 # Mono
+  minimumDistance: 21000 # Mono
+  maximumDistance: 27000 # Mono
   spawnGamePreset: [ NFAdventure, NFPirate, MonoStandard, MonoRogueTSF, MonoRogueUSSP, MonoADS, MonoChimera, MonoAllAtOnce ]
   spawnGroup: Required
   gridPath: /Maps/_Mono/POI/cove.yml

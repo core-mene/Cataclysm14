@@ -1,7 +1,11 @@
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 grandalff
+# SPDX-FileCopyrightText: 2025 kasature90
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -11,10 +15,10 @@
   parent: BaseVesselAntag
   name: NCS Gadyuka
   description: A small attack craft, ideal for dealing with small threats.
-  price: 30520 # WALMARTMOBILE 2
+  price: 33520 # WALMARTMOBILE 2
   category: Small
   group: Ussp
-  access: USSP
+  access: Mercenary
   shuttlePath: /Maps/_Mono/Shuttles/USSP/gadyuka.yml
   guidebookPage: Null
   class:
@@ -22,8 +26,6 @@
   engine:
   - Uranium
   cloakHunter: true
-  company:
-  - USSP
 
 - type: gameMap
   id: Gadyuka
@@ -35,13 +37,11 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Gadyuka USSP{1}'
+          mapNameTemplate: 'Gadyuka MIL{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            USSPSergeant: [0, 0]
-            USSPCorporal: [0, 0]
-            USSPMedic: [0, 0]
-            USSPRifleman: [0, 0]
+            Mercenary: [ 0, 0 ]
+            Pilot: [ 0, 0 ]

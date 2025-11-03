@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2024 Dvir
 # SPDX-FileCopyrightText: 2024 Salvantrix
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -12,9 +13,10 @@
   parent: BaseVesselAntag
   name: ASR Spyglass
   description: One of the more rare kinds of ships you'll see rogues with. A actual commercial one. Capable of Xenoarcheology and Robotics.
-  price: 53500
+  price: 55500
   category: Small
   group: BlackMarket
+  access: Pirate
   shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/spyglass.yml
   guidebookPage: Null
   class:

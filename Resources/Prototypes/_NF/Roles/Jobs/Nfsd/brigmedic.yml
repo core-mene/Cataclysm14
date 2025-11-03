@@ -24,16 +24,9 @@
   name: job-name-brigmedic
   description: job-description-brigmedic-nf
   playTimeTracker: JobBrigmedic
-  requirements:
+  requirements: # Mono
     - !type:OverallPlaytimeRequirement
-      time: 72000 # 20 hours - mono
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 7200 # 2 hours - mono
-  alternateRequirementSets:
-    longerPlaytimeLessSec:
-    - !type:OverallPlaytimeRequirement
-      time: 108000 # 30 hours - mono
+      time: 7200 # 2 hours
   startingGear: BrigmedicGear
   icon: JobIconBrigmedicNF
   supervisors: job-supervisors-bailiff
