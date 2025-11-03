@@ -12,6 +12,7 @@
   - type: Sprite
     sprite: _Mono/Objects/Fun/blue_lobster.rsi
     state: blue_lobster
+    scale: 0.0426, 0.0426
   - type: Item
     heldPrefix: blue lobster
   - type: EmitSoundOnUse
@@ -35,6 +36,16 @@
       path: /Audio/_Mono/Items/blue-lobster.ogg
   - type: UseDelay
     delay: 7
+   
+- type: entity
+  parent: BlueLobster
+  id: BlueLobsterUncursed
+  suffix: Uncursed  
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Fun/blue_lobster_uncursed.rsi
+    state: blue_lobster_uncursed
+    scale: 1, 1
 
 - type: entity
   name: Blue Lobster
@@ -75,6 +86,7 @@
   - type: Sprite
     sprite: _Mono/Objects/Fun/blue_lobster.rsi
     state: blue_lobster
+    scale: 0.0426, 0.0426
     
 - type: entity
   id: BlueLobsterImmovable
@@ -85,6 +97,7 @@
   - type: Sprite
     sprite: _Mono/Objects/Fun/blue_lobster.rsi
     state: blue_lobster
+    scale: 0.0426, 0.0426
     noRot: true
   - type: ImmovableRod
     destroyTiles: false
