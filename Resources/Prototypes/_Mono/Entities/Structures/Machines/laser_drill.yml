@@ -67,6 +67,20 @@
   - type: Construction
     graph: LaserDrill
     node: laserDrill
+    
+- type: entity
+  id: LaserDrillStation
+  name: advanced automated laser drill
+  parent: [ BaseStructureDisableAnchoring, LaserDrill]
+  description: A large automated drill that digs up random materials when powered with 50 kW of HV.
+  components:
+  - type: PlanetMiner
+    requireExpedition: false
+    requireGround: false
+  - type: ItemMiner
+    proto: SpawnLootOres15
+    interval: 20
+    needApcPower: false
 
 - type: entity
   name: random ores

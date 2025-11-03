@@ -40,7 +40,7 @@ public sealed class PlanetMinerSystem : EntitySystem
         var gridUid = xform.GridUid;
 
         // check if we're on a planet
-        if (!_gridQuery.TryComp(mapUid, out var mapGrid) || gridUid == null)
+        if (mapUid == null || !_mapQuery.HasComp(mapUid.Value) || gridUid == null || !_gridQuery.HasComp(gridUid.Value))
         {
             args.Cancelled = true;
             return;
