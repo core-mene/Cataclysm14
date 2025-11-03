@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Server.Mech.Systems;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;

@@ -22,6 +22,7 @@
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 BeeRobynn
 // SPDX-FileCopyrightText: 2025 Blu
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 ScyronX
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
