@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 ark1368
 #
 # SPDX-License-Identifier: MPL-2.0
@@ -319,7 +320,7 @@
   name: trait-ironman-name
   description: trait-ironman-desc
   category: Physical
-  cost: -10
+  cost: -5 # This shit was FREE for factions practically
   components:
   - type: Ironman
   traitGear: SpaceCash10000
@@ -368,3 +369,6 @@
     - BorgChassis
   components:
   - type: PlateletFactories
+    intervalSeconds: 1
+    healPerSecond: .5
+    critMultiplier: .25
