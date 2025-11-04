@@ -53,7 +53,8 @@ public sealed class CompanySystem : EntitySystem
     {
         "PirateCaptain",
         "PirateFirstMate",
-        "Pirate"
+        "Pirate",
+        "PDVInfiltrator",
     };
 
     // private readonly HashSet<string> _usspJobs = new()

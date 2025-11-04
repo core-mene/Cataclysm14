@@ -48,6 +48,14 @@
 
 - type: jobIcon
   parent: JobIcon
+  id: JobIconPDVInfiltrator
+  icon:
+    sprite: /Textures/_Mono/Interface/Misc/job_icons.rsi
+    state: PDVInfiltrator
+  jobName: job-name-pdv-infiltrator
+
+- type: jobIcon
+  parent: JobIcon
   id: JobIconSecurityGuard
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi

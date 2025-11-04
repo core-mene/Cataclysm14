@@ -8,6 +8,7 @@ job-description-ertmailcarrier = Nothing stops the mail.
 job-description-doc = Provide guidance and direction for shift medics and work to safeguard the health of TSF colonial personnel.
 job-description-mercenary = Execute the bidding of anyone- for the right price. Enjoy being unbound from the confines of the law.
 job-description-pilot = Pilot spaceships from point A to B, outmaneuver enemies, dodge asteroids and other ships.
+job-description-pdv-infiltrator = You are a infiltration expert of the Imperial Vanguard, decieve and cause chaos from behind the frontline.
 job-description-pirate = You are a member of an imperial battalion against the TSF expansion into the Colossus sector.
 job-description-pirate-captain = You are the leader of an imperial battalion against the TSF expansion into the Colossus sector.
 job-description-pirate-first-mate = Handle special orders from the Grand Vizier and watch over those under you.

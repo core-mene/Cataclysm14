@@ -444,6 +444,24 @@
     attachedToSuit: true # Mono
 
 - type: entity
+  parent: PiratePDA
+  id: PDVSpasakaPDA
+  name: PDV spasaka PDA
+  components:
+  - type: Pda
+    id: PDVSpasakaIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-syndi
+  - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
+
+- type: entity
   parent: PassengerPDA
   id: ContractorPDA
   name: spacer PDA
