@@ -4,7 +4,7 @@ mono-roguetsf-description = Native PDV imperials threaten the local TSFMC detach
 mono-rogueussp-title = Arms Race (USSP|PDV)
 mono-rogueussp-description = Native PDV imperials threaten USSP colonial expansion into the sector.
 
-mono-tsfussp-title = Cold War (TSF|USSP)
+mono-tsfussp-title = Cold War (TSF)
 mono-tsfussp-description = TSF colonization efforts are threatened by USSP expansion. A cold war is in place between the local TSFMC detachment and USSP colonization forces.
 
 mono-standard-title = Standard (TSF|USSP|PDV)

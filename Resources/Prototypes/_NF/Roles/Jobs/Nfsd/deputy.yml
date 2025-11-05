@@ -47,9 +47,9 @@
   name: job-name-deputy
   description: job-description-deputy
   playTimeTracker: JobSecurityOfficer
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 72000 # 20 hours
+  requirements: # Mono
+  - !type:OverallPlaytimeRequirement
+    time: 7200 # 2 hours
   startingGear: DeputyGear
   icon: JobIconDeputy
   supervisors: job-supervisors-sergeant

@@ -7,6 +7,25 @@
 # dont bloat up this file type for every ammo u add
 
 - type: latheRecipePack
+  id: RoundstartShipgunAmmo
+  recipes:
+  # Magfed
+  - Magazine20mmPiercingAmmoRecipe
+  - Magazine30mmAmmoRecipe
+  - Magazine57mmAmmoRecipe
+  - Magazine90mmAmmoRecipe
+  - Magazine140mmAmmoRecipe
+  # Individual load
+  - 220mmCartridgeAmmoRecipe
+  - 203mmCartridgeAmmoRecipe
+  - 255mmCartridgeAmmoRecipe
+  - CharonetteSlugCartridgeAmmoRecipe
+  # Missiles
+  - VanykCartridgeAmmoRecipe
+  - TovekCartridgeAmmoRecipe
+  - VesperaCartridgeAmmoRecipe
+
+- type: latheRecipePack
   id: UniversalMissileAmmo
   recipes:
   - ASM220TorpedoHEUniversal

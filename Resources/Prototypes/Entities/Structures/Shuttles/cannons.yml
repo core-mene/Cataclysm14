@@ -14,6 +14,7 @@
 # SPDX-FileCopyrightText: 2025 Winkarst
 # SPDX-FileCopyrightText: 2025 ark1368
 # SPDX-FileCopyrightText: 2025 beck-thompson
+# SPDX-FileCopyrightText: 2025 bitcrushing
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -336,7 +337,7 @@
   id: ShuttleGunKinetic
   parent: [ ShuttleGunBase, ConstructibleMachine]
   name: PTK-1500e "Matter Dematerializer" # Frontier: "800"<"1500e" (consistent with naming scheme)
-  description: Mining turret, effective for blasting hardened targets. Gradually accumulates charges on its own. # Mono: description changed
+  description: Mining turret, effective for blasting hardened targets. Has considerable range but lower firerate. # Mono: description changed
   # categories: [ DoNotMap ] Mono
   components:
   - type: Sprite
@@ -359,7 +360,7 @@
         - !type:DoActsBehavior
           acts: ["Destruction"]
   - type: Gun
-    projectileSpeed: 20
+    projectileSpeed: 80
     fireRate: 2
     selectedMode: SemiAuto
     angleDecay: 45
