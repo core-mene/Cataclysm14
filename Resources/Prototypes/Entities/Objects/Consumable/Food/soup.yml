@@ -1,3 +1,38 @@
+# SPDX-FileCopyrightText: 2021 FoLoKe
+# SPDX-FileCopyrightText: 2021 Galactic Chimp
+# SPDX-FileCopyrightText: 2021 Leon Friedrich
+# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2021 ShadowCommander
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2021 Ygg01
+# SPDX-FileCopyrightText: 2022 Flipp Syder
+# SPDX-FileCopyrightText: 2022 Michael Phillips
+# SPDX-FileCopyrightText: 2022 Morbo
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 bloodrizer
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Moony
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 TemporalOroboros
+# SPDX-FileCopyrightText: 2023 Velcroboy
+# SPDX-FileCopyrightText: 2023 ZeroDayDaemon
+# SPDX-FileCopyrightText: 2023 lapatison
+# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 IProduceWidgets
+# SPDX-FileCopyrightText: 2024 SpaceLizard
+# SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2024 wafehling
+# SPDX-FileCopyrightText: 2025 Miranda
+# SPDX-FileCopyrightText: 2025 Whatstone
+#
+# SPDX-License-Identifier: MPL-2.0
+
 # When adding new food also add to random spawner located in Resources\Prototypes\Entities\Markers\Spawners\Random\Food_Drinks\food_meal.yml
 
 - type: entity
@@ -8,7 +43,7 @@
   - type: Item
     storedRotation: -90
   - type: Food
-    trash: 
+    trash:
     - FoodBowlBig
     utensil: Spoon
   - type: SolutionContainerManager
@@ -1028,7 +1063,7 @@
     flavors:
       - miso
   - type: Food
-    trash: 
+    trash:
     - FoodBowlFancy
   - type: Sprite
     layers:
@@ -1334,3 +1369,63 @@
     tags:
     - Meat
     - Soup
+
+- type: entity
+  name: buttered grits
+  parent: FoodBowlBase
+  id: FoodPlainGrits
+  description: A savory bowl of grits, topped with a pat of butter.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - savory
+    - corn
+    - butter
+  - type: Sprite
+    layers:
+    - state: bowl
+    - state: grits-butter
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 25
+        reagents:
+        - ReagentId: Butter
+          Quantity: 5
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Vitamin
+          Quantity: 5
+        - ReagentId: Flavorol
+          Quantity: 10
+
+- type: entity
+  name: cheese grits
+  parent: FoodBowlBase
+  id: FoodCheeseGrits
+  description: A thick, savory bowl of cheesy grits.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - savory
+    - corn
+    - cheesy
+  - type: Sprite
+    layers:
+    - state: bowl
+    - state: grits-cheese
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Butter
+          Quantity: 5
+        - ReagentId: Nutriment
+          Quantity: 10
+        - ReagentId: Vitamin
+          Quantity: 5
+        - ReagentId: Flavorol
+          Quantity: 10
+
+

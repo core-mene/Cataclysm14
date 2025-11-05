@@ -1,3 +1,12 @@
+// SPDX-FileCopyrightText: 2022 Kara D
+// SPDX-FileCopyrightText: 2022 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 Waylon Cude
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2025 ark1368
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared.Drunk;
 using Content.Shared.StatusEffect;
 using Robust.Client.Graphics;
@@ -64,7 +73,11 @@ public sealed class DrunkOverlay : Overlay
         if (args.Viewport.Eye != eyeComp.Eye)
             return false;
 
-        _visualScale = BoozePowerToVisual(CurrentBoozePower);
+        var visualPower = CurrentBoozePower;
+        if (_entityManager.TryGetComponent(_playerManager.LocalEntity, out Content.Shared.Traits.Assorted.AlcoholToleranceComponent? tolerance))
+            visualPower *= tolerance.VisualScaleMultiplier;
+
+        _visualScale = BoozePowerToVisual(visualPower);
         return _visualScale > 0;
     }
 
