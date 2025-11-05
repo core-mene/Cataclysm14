@@ -5,28 +5,79 @@
 - type: entity
   id: CrateNanotrasenLootFilledT1
   parent: CrateNanotrasen
-  suffix: Filled, Lootbox
-  name: Nanotrasen equipement crate
+  suffix: Filled, Lootbox, T1
+  name: NT equipement crate
   description: A white and blue crate with the Nanotrasen Symbol, a relic from the corporation wars, could contain some interesting things.
   components:
   - type: StorageFill
     contents:
       - id: ClothingBackpackRogueNanotrasenT1
         prob: 0.8
+      - id: ClothingBackpackRogueNanotrasenT1
+        prob: 0.5
+      - id: ClothingBackpackRogueNanotrasenT1
+        prob: 0.05
       - id: ClothingBackpackRogueNanotrasenT2
-        prob: 0.4
+        prob: 0.25
       - id: ClothingBackpackRogueNanotrasenT3
-        prob: 0.1
+        prob: 0.01
       - id: ClothingOuterArmorBasic
       - id: ClothingHeadHelmetBasic
         orGroup: ClothingHeadHelmetBasic
       - id: ClothingHeadHelmetJustice
         orGroup: ClothingHeadHelmetBasic
       - id: Stunbaton
-      - id: ClothingUniformJumpsuitSec
       - id: Handcuffs
         prob: 0.5
       - id: Handcuffs
         prob: 0.5
       - id: Handcuffs
         prob: 0.5
+
+- type: entity
+  id: CrateNanotrasenLootFilledT2
+  parent: CrateNanotrasen
+  suffix: Filled, Lootbox, T2
+  name: NT equipement crate
+  description: A white and blue crate with the Nanotrasen Symbol, a relic from the corporation wars, could contain some interesting things.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingBackpackRogueNanotrasenT1
+        prob: 0.5
+      - id: ClothingBackpackRogueNanotrasenT2
+        prob: 0.75
+      - id: ClothingBackpackRogueNanotrasenT2
+        prob: 0.1
+      - id: ClothingBackpackRogueNanotrasenT2
+        prob: 0.05
+      - id: ClothingBackpackRogueNanotrasenT3
+        prob: 0.1
+      - id: NTLootBackpack
+        prob: 0.3
+      - id: NTLootHardsuit
+        prob: 0.5
+      - id: PenCentcom
+        prob: 0.75
+
+- type: entity
+  id: CrateNanotrasenLootFilledT3
+  parent: CrateNanotrasenDS
+  suffix: Filled, Lootbox, T3
+  name: menacing NT equipement crate
+  description: A white and blue crate with the Nanotrasen Symbol, a relic from the corporation wars, could contain some interesting things.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingBackpackRogueNanotrasenT2
+        prob: 0.3
+      - id: ClothingBackpackRogueNanotrasenT3
+        prob: 0.5
+      - id: ClothingBackpackRogueNanotrasenT3
+        prob: 0.3
+      - id: ClothingBackpackRogueNanotrasenT3
+        prob: 0.2
+      - id: NTLootBackpack
+        prob: 0.5
+      - id: NTLootHardsuit
+        prob: 0.75

@@ -50,12 +50,15 @@
       prob: 0.05
     - id: ClothingHeadHelmetSwat
       prob: 0.05
-    - id: ClothingUniformJumpsuitHoSParadeMale
-      prob: 0.3
-    - id: ClothingUniformJumpsuitHoSAlt
-      prob: 0.3
-    - id: ClothingUniformJumpsuitCombatSuitDigitalRed
-      prob: 0.9
+    - id: NTLootT1Clothing
+      amount: 1
+      prob: 0.8
+    - id: NTLootT1Clothing
+      amount: 2
+      prob: 0.1
+    - id: NTLootT1Clothing
+      amount: 3
+      prob: 0.04
     #NT branded bullshit
     - id: TowelColorNT
       prob: 0.33
@@ -99,17 +102,18 @@
       prob: 0.2
     - id: ClothingBeltSheathFilledNavy
       prob: 0.2
-    #Clothings
-    - id: ClothingNeckCloakNanotrasen
-      prob: 0.4
-    - id: ClothingOuterVestWeb
+    - id: WeaponEnergyShotgun
       prob: 0.1
-    - id: ClothingUniformJumpskirtCentcomFormalDress
-      prob: 0.3
-    - id: ClothingUniformJumpsuitCentcomFormal
-      prob: 0.3
-    - id: ClothingUniformJumpsuitCentcomOfficer
-      prob: 0.9
+    #Clothings
+    - id: NTLootT2Clothing
+      amount: 1
+      prob: 0.8
+    - id: NTLootT2Clothing
+      amount: 2
+      prob: 0.1
+    - id: NTLootT2Clothing
+      amount: 3
+      prob: 0.04
     #NT branded bullshit
     - id: TowelColorNT
       prob: 0.33
@@ -169,17 +173,23 @@
     - id: CartridgeMPSSMHEAT
       amount: 3
       prob: 0.09
-    - id: CatridgeMPSSMMissile
+    - id: CartridgeMPSSMMissile
       amount: 3
       prob: 0.09
+    - id: WeaponHeavyPulseCannon
+      prob: 0.01
     - id: MedkitCombatFilled
       prob: 0.5
     #Clothings
-
-    - id: ClothingUniformJumpsuitDeathSquad
-      prob: 0.4
-    - id: ClothingUniformJumpsuitHoSAlt
-      prob: 0.9
+    - id: NTLootT3Clothing
+      amount: 1
+      prob: 0.8
+    - id: NTLootT3Clothing
+      amount: 2
+      prob: 0.1
+    - id: NTLootT3Clothing
+      amount: 3
+      prob: 0.04
     #NT branded bullshit
     - id: TowelColorNT
       prob: 0.33
@@ -188,6 +198,9 @@
     - id: NTHandyFlag
       prob: 0.33
     #Blueprint
-
+    - id: BlueprintAmmoMPSSMMissile
+      prob: 0.01
+    - id: BlueprintAmmoPPLCCell
+      prob: 0.01
     sound:
       path: /Audio/Machines/windoor_open.ogg
