@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2024 Unkn0wn_Gh0st
 # SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 RangerXVII
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -43,8 +44,8 @@
 - type: entity
   parent: BaseItem
   id: SpaceCashCounterfeit
-  name: creditts
-  description: Valerian Standard C- What the hell...? THESE ARE LOUSY FAKES!!!
+  name: spessos
+  description: It is, but it isn't.
   components:
   - type: Item
     shape:
@@ -105,7 +106,7 @@
 
 - type: material
   id: CreditCounterfeit
-  name: creditt
+  name: spesso
   unit: materials-unit-bill
   stackEntity: SpaceCashCounterfeit
   icon: { sprite: _NF/Objects/Economy/counterfeit_cash.rsi, state: cash }
@@ -113,7 +114,7 @@
 
 - type: stack
   id: CreditCounterfeit
-  name: creditt
+  name: spesso
   icon: { sprite: _NF/Objects/Economy/counterfeit_cash.rsi, state: cash }
   spawn: SpaceCashCounterfeit
 

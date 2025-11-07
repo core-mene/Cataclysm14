@@ -21,14 +21,15 @@
 # SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Your Name
+# SPDX-FileCopyrightText: 2025 RangerXVII
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
   parent: BaseItem
   id: SpaceCash
-  name: credits
-  description: Veridian Standard Credits, the lifeblood of the galaxy! Most commonly referred to as "Credits" they are prints sourced from the Veridian Emerald Bank, the largest bank in the galaxy.
+  name: spesos
+  description: Always has been, always will be.
   components:
   - type: Cash
   - type: Item
@@ -93,7 +94,7 @@
 
 - type: material
   id: Credit
-  name: credit
+  name: speso
   unit: materials-unit-bill
   stackEntity: SpaceCash
   icon: { sprite: _NF/Objects/Economy/cash.rsi, state: cash } # Frontier: use Frontier sprite set
@@ -101,7 +102,7 @@
 
 - type: stack
   id: Credit
-  name: credits
+  name: speso
   icon: { sprite: _NF/Objects/Economy/cash.rsi, state: cash } # Frontier: use Frontier sprite set
   spawn: SpaceCash
 
