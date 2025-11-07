@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 ScyronX
@@ -22,7 +23,7 @@
   - type: Gun
     minAngle: 23
     maxAngle: 20
-    fireRate: 8
+    fireRate: 10
     selectedMode: FullAuto
     availableModes:
     - FullAuto
@@ -32,9 +33,13 @@
     slots:
       gun_magazine:
         name: Magazine
+        startingItem: MilitaryPowerCellMG
         whitelist:
           tags:
           - MilitaryPowerCellMG
+  - type: HitscanBatteryAmmoProvider
+    proto: MediumOverchargedLaser
+    fireCost: 15
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Battery/cell_mg.rsi
     layers:
@@ -48,6 +53,9 @@
     magState: mag
     steps: 5
     zeroVisible: true
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.80
+    sprintModifier: 0.80
   - type: PhysicalComposition
     materialComposition:
       Steel: 500

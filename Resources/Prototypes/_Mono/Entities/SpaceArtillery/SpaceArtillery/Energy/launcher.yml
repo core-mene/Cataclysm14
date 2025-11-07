@@ -239,7 +239,7 @@
   id: WeaponTurretM25
   name: M25 mining pulser
   parent: [BallisticArtillery, ConstructibleMachine] #Could possibly create a ConstructibleTurret proto if more are added; comps currently do nothing upgrade wise
-  description: Uses mechanisms to launch... something. Destroys rock easily.
+  description: Uses mechanisms to launch... something. Destroys rock easily. Limited range.
   components:
   - type: StaticPrice
     price: 1500
@@ -257,8 +257,8 @@
     range: 500
   - type: FireControlRotate
   - type: Gun
-    fireRate: 4.0
-    projectileSpeed: 40
+    fireRate: 5
+    projectileSpeed: 20
     minAngle: 0
     maxAngle: 5
     shootThermalSignature: 10000 # 400m - intentionally relatively low

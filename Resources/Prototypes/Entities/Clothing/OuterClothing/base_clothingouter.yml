@@ -196,6 +196,8 @@
         ents: []
   - type: UserInterface
     interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
       enum.ToggleClothingUiKey.Key:
         type: ToggleableClothingBoundUserInterface
   - type: GroupExamine
