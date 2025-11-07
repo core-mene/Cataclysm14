@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/07/2025 17:36:45
+  time: 11/07/2025 17:42:05
   entityCount: 308
 maps: []
 grids:
@@ -441,6 +441,20 @@ entities:
     - type: Transform
       pos: 4.5,-2.5
       parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        97:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
+        175:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
+        283:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
+        282:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
 - proto: APCBasic
   entities:
   - uid: 5
