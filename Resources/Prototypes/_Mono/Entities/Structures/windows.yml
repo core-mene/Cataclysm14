@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Avalon
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 # strong windows for outposts sir!
 
 - type: entity
@@ -134,3 +139,15 @@
             max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+
+# Timed Despawn Window, for Sevastapol
+
+- type: entity
+  id: WindowTimedSeal
+  parent: WindowCultIndestructibleInvisible
+  name: timed seal
+  description: A powerful energy field, sealing off a location for a short period of time.
+  suffix: 30 Minutes, Indestructible
+  components:
+  - type: TimedDespawn
+    lifetime: 1800

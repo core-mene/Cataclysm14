@@ -1,4 +1,4 @@
-job-description-bailiff = Ensure order at the FOB, watch over your Lieutenant(s), and make sure that all ASR insurgents are executed for their crimes against the TSF.
+job-description-bailiff = Ensure order at the Flagship, watch over your fireteam leaders(s), and make sure that all ASR insurgents are executed for their crimes against the TSF.
 job-description-brigmedic-nf = Fight in the rear of the Colonel's service, for the lives of your comrades! You are the first and last hope of your squad. Hippocrates bless you.
 job-description-cadet-nf = Hunt down ASR insurgents and protect the FOB. Listen to your supervisors and feel free to ask them for any help.
 job-description-contractor = Fulfill your own goals out in Colossus space.
