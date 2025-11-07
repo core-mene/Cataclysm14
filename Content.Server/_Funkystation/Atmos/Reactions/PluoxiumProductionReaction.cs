@@ -24,9 +24,7 @@ public sealed partial class PluoxiumProductionReaction : IGasReactionEffect
         var initCO2 = mixture.GetMoles(Gas.CarbonDioxide);
         var initTrit = mixture.GetMoles(Gas.Tritium);
 
-        float[] efficiencies = {5f, initCO2, initO2 * 2f, initTrit * 100f};
-        Array.Sort(efficiencies);
-        var producedAmount = efficiencies[0];
+        var producedAmount = MathF.Min(5f, MathF.Min(initCO2, MathF.Min(initO2 * 2f, initTrit * 100f)));
 
         var co2Removed = producedAmount;
         var oxyRemoved = producedAmount * 0.5f;
@@ -34,8 +32,8 @@ public sealed partial class PluoxiumProductionReaction : IGasReactionEffect
 
         if (producedAmount <= 0 ||
             co2Removed > initCO2 ||
-            oxyRemoved * 0.5 > initO2 ||
-            tritRemoved * 0.01 > initTrit)
+            oxyRemoved > initO2 ||
+            tritRemoved > initTrit)
             return ReactionResult.NoReaction;
 
         var pluoxProduced = producedAmount;
