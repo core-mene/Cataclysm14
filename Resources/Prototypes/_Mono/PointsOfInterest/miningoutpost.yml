@@ -1,0 +1,38 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: Primusirius
+# Discord: Primusirius
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Notes:
+- type: pointOfInterest
+  id: Mining
+  parent: BasePOI
+  name: 'Mining Outpost'
+  minimumDistance: 3500
+  maximumDistance: 7500
+  spawnGroup: Required
+  gridPath: /Maps/_Mono/POI/miningoutpost.yml
+  addComponents:
+  - type: IFF
+    color: "#ccaa55"
+
+- type: gameMap
+  id: Mining
+  mapName: 'Mining Outpost'
+  mapPath: /Maps/_Mono/POI/miningoutpost.yml
+  minPlayers: 0
+  stations:
+    Mining:
+      stationProto: RecordsFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Mining Outpost'
+        - type: StationDeadDrop
+          maxDeadDrops: 6
