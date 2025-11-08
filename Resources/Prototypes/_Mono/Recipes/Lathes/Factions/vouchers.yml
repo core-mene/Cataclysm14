@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 starch
@@ -128,3 +129,17 @@
     Uranium: 20000
     Silver: 15000
     Gold: 15000
+
+- type: latheRecipe
+  parent: BaseVoucherRecipe
+  id: SaintieVoucherRogue
+  result: ShipVoucherSaintie
+  materials:
+    Steel: 30000
+    Plasteel: 20000
+    Plastic: 30000
+    Glass: 5000
+    Plasma: 5000
+    Uranium: 10000
+    Silver: 5000
+    Gold: 5000
