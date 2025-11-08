@@ -13587,3 +13587,194 @@ Entries:
   id: 1503
   time: '2025-10-31T20:08:38.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2501
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: >-
+        New Heavy Ballistic turrets are now available in sector, for your secure
+        locations
+  id: 1504
+  time: '2025-11-01T15:44:30.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2510
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: Public Transport Shuttle now waits 3 times less.
+    - type: Tweak
+      message: Trade Mall's scrapyard console is now much easier to find.
+    - type: Tweak
+      message: Grifty's is now a PTS destination.
+  id: 1505
+  time: '2025-11-01T15:45:21.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2535
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Advanced cryochems except dox now heal 25/t of their respective damage
+        types when metabolized while having over 1000 damage.
+    - type: Tweak
+      message: >-
+        Necrosol now has omnizine-level healing at all temperatures and was
+        reworked to be able to bootstrap itself cryogenically. It cannot
+        bootstrap other cryochems.
+  id: 1506
+  time: '2025-11-01T15:46:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2534
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: Expeditionary FlatpackVend IFF consoles are no longer limited.
+  id: 1507
+  time: '2025-11-02T13:19:46.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2542
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: Plateletes nerfed + Iron Man only gives 5 points instead of 10
+  id: 1508
+  time: '2025-11-02T16:34:21.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2540
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: The Rhea has been updated and upgraded! Go give it a look!
+  id: 1509
+  time: '2025-11-03T16:25:18.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2366
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: seafood
+  id: 1510
+  time: '2025-11-03T22:20:13.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2551
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: Sevastapol has improved security further due to increased bombing
+  id: 1511
+  time: '2025-11-03T23:50:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2463
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: Ruby price 120k->125k to raise price above worth.
+  id: 1512
+  time: '2025-11-04T12:57:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2557
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: Fixed some issues w/ Sevastapol
+  id: 1513
+  time: '2025-11-05T12:56:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2560
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: Borer hour requirement increased, 10=>50
+  id: 1514
+  time: '2025-11-07T00:06:50.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2569
+- author: prototypemeat
+  changes:
+    - type: Tweak
+      message: Silos can be linked to Ore Processors
+  id: 1515
+  time: '2025-11-07T00:08:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2568
+- author: Arcticular1
+  changes:
+    - type: Tweak
+      message: AME Jars have less explosive power
+  id: 1516
+  time: '2025-11-07T00:11:19.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2562
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Holofans are now purchaseable from the Engivend, assorted food was
+        restored to hidden vendor inventories, and cursed instruments can be
+        acquired from the Autotune, with some hacking.
+  id: 1517
+  time: '2025-11-07T14:08:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2559
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: Cortical borer eggs now properly apply playtime requirements.
+  id: 1518
+  time: '2025-11-07T14:24:22.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2571
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: Sellsword updated for manual loading!
+    - type: Tweak
+      message: Takeaway received spare 20mm drums for manual loading. No autoloader.
+  id: 1519
+  time: '2025-11-07T14:28:13.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2513
+- author: Onezero0
+  changes:
+    - type: Tweak
+      message: Reduced sell value of 20mm ammo.
+    - type: Tweak
+      message: Increased gas requirements for plasma crystallization.
+  id: 1520
+  time: '2025-11-07T14:44:28.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2554
+- author: tonotom1
+  changes:
+    - type: Add
+      message: >-
+        Ported /tg/ gas Pluoxium: An inert oxygen replacement that supplies 8x
+        the oxygen! Credit to marc-pelletier.
+    - type: Tweak
+      message: >-
+        KO doses of Healium now heal much more (12 >> 20 burn/brute & 25 >> 50
+        toxin)
+    - type: Tweak
+      message: >-
+        Nitrium speedup duration no longer accumulates and lasts a flat 6
+        seconds. Nitrosyl Plasmide (Anti stun and sleep at higher dose) now
+        causes 0.1 poison/tick
+    - type: Tweak
+      message: Touched up sprites for BZ, Healium, and Nitrium canisters.
+    - type: Fix
+      message: Fixed BZ not drugging hard enough to cause trips!
+  id: 1521
+  time: '2025-11-07T17:28:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2548
+- author: Onezero0
+  changes:
+    - type: Tweak
+      message: Reverted reduced faction role playtime requirements.
+  id: 1522
+  time: '2025-11-07T19:16:41.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2555
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: >-
+        Fixed magdumping a mech weapon bricking the mech weapon if the mech has
+        a reactor.
+  id: 1523
+  time: '2025-11-07T19:17:51.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2549
+- author: maybeitsmir
+  changes:
+    - type: Add
+      message: Added a new recipe, macaroni & cheese.
+    - type: Tweak
+      message: Renamed "boiled spaghetti" to "boiled pasta"
+  id: 1524
+  time: '2025-11-07T19:18:38.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2544
+- author: thoughtlessuser
+  changes: []
+  id: 1525
+  time: '2025-11-07T19:21:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2505

@@ -6,6 +6,7 @@
 // SPDX-FileCopyrightText: 2024 GreaseMonk
 // SPDX-FileCopyrightText: 2024 Shroomerian
 // SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 Whatstone
 // SPDX-FileCopyrightText: 2025 Your Name
@@ -73,7 +74,7 @@ public sealed class NFCCVars
     /// The amount of time the bus waits at a station.
     /// </summary>
     public static readonly CVarDef<float> PublicTransitWaitTime =
-        CVarDef.Create("nf14.publictransit.wait_time", 120f, CVar.SERVERONLY);
+        CVarDef.Create("nf14.publictransit.wait_time", 40f, CVar.SERVERONLY);
 
     /// <summary>
     /// The amount of time the flies through FTL space.
