@@ -49,7 +49,7 @@ public sealed class CompanySystem : EntitySystem
         "TsfEngineer"
     };
 
-    private readonly HashSet<string> _pdvJobs = new()
+    private readonly HashSet<string> _rogues = new()
     {
         "PirateCaptain",
         "PirateFirstMate",
@@ -121,7 +121,7 @@ public sealed class CompanySystem : EntitySystem
             companyComp.CompanyName = "TSF";
         }
         // Check if player's job is one of the Rogue jobs
-        else if (args.JobId != null && _pdvJobs.Contains(args.JobId))
+        else if (args.JobId != null && _rogues.Contains(args.JobId))
         {
             // Assign Rogue company
             companyComp.CompanyName = "PDV";
