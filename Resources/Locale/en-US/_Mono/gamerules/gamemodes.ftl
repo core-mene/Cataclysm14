@@ -16,8 +16,5 @@ mono-ads-description = Native PD imperials threaten TSF colonial expansion into 
 mono-chimera-title = Biothreat (TSF|PDV)
 mono-chimera-description = Native PDV imperials threaten TSF colonial expansion into the sector. The effects of a far away letoferol outbreak seep in.
 
-mono-mixed-title = Mixed (TSF|PDV)
-mono-mixed-description = Native PDV imperials threaten TSF colonial expansion into the sector. The sector seems ripe with a variety of danger.
-
 mono-allatonce-title = Apocalypse (ALL)
 mono-allatonce-description = A battleground between PD, and TSF forces alike, with ancient ADS systems and Chimera bioweapons seeping in.
