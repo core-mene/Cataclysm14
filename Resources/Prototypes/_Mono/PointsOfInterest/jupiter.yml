@@ -26,7 +26,7 @@
 - type: pointOfInterest
   id: Jupiter
   parent: BaseMobilePOI
-  name: 'ASR Jupiter Class Carrier'
+  name: 'PDV Jupiter Class Carrier'
   minimumDistance: 17000
   maximumDistance: 19000
   spawnGamePreset: [ NFAdventure, NFPirate, MonoStandard, MonoRogueTSF, MonoRogueUSSP, MonoADS, MonoChimera, MonoMixed, MonoAllAtOnce ]
@@ -40,7 +40,7 @@
 
 - type: gameMap
   id: Jupiter
-  mapName: 'ASR Jupiter Class Carrier'
+  mapName: 'PDV Jupiter Class Carrier'
   mapPath: /Maps/_Mono/POI/jupiter.yml
   minPlayers: 0
   stations:
@@ -48,7 +48,7 @@
       stationProto: RecordsFrontierOutpostCargo
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'ASR Jupiter Class Carrier'
+          mapNameTemplate: 'PDV Jupiter Class Carrier'
         - type: ExtraStationInformation
           iconPath: /Textures/_NF/Interface/Pirate/piratelogo.png
           stationSubtext: 'frontier-lobby-jupiter-subtext'

@@ -11,7 +11,7 @@
 - type: vessel
   id: Spyglass
   parent: BaseVesselAntag
-  name: ASR Spyglass
+  name: PDV Spyglass
   description: One of the more rare kinds of ships you'll see rogues with. A actual commercial one. Capable of Xenoarcheology and Robotics.
   price: 55500
   category: Small
@@ -27,7 +27,7 @@
 
 - type: gameMap
   id: Spyglass
-  mapName: 'ASR Spyglass'
+  mapName: 'PDV Spyglass'
   mapPath: /Maps/_Mono/Shuttles/BlackMarket/spyglass.yml
   minPlayers: 0
   stations:
@@ -35,7 +35,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Spyglass ASR{1}'
+          mapNameTemplate: 'Spyglass PDV{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
