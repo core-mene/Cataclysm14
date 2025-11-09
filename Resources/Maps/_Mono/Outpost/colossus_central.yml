@@ -1,54 +1,10 @@
-# SPDX-FileCopyrightText: 2022 0x6273
-# SPDX-FileCopyrightText: 2022 20kdc
-# SPDX-FileCopyrightText: 2022 Francesco
-# SPDX-FileCopyrightText: 2022 Kara
-# SPDX-FileCopyrightText: 2022 LittleBuilderJane
-# SPDX-FileCopyrightText: 2022 Nairod
-# SPDX-FileCopyrightText: 2022 metalgearsloth
-# SPDX-FileCopyrightText: 2023 Debug
-# SPDX-FileCopyrightText: 2023 Leon Friedrich
-# SPDX-FileCopyrightText: 2023 Nemanja
-# SPDX-FileCopyrightText: 2023 TsjipTsjip
-# SPDX-FileCopyrightText: 2023 avery
-# SPDX-FileCopyrightText: 2023 lzk
-# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
-# SPDX-FileCopyrightText: 2024 AndresE55
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 Emisse
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 GreaseMonk
-# SPDX-FileCopyrightText: 2024 Maxtone
-# SPDX-FileCopyrightText: 2024 PECK
-# SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
-# SPDX-FileCopyrightText: 2024 ThatOneGoblin25
-# SPDX-FileCopyrightText: 2024 Whatstone
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Avalon
-# SPDX-FileCopyrightText: 2025 Blu
-# SPDX-FileCopyrightText: 2025 BoskiYourk
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 Cojoke
-# SPDX-FileCopyrightText: 2025 Ghagliiarghii
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 WreakHavocOnTheMiddleClass
-# SPDX-FileCopyrightText: 2025 core-mene
-# SPDX-FileCopyrightText: 2025 dustylens
-# SPDX-FileCopyrightText: 2025 significant harassment
-# SPDX-FileCopyrightText: 2025 sleepyyapril
-# SPDX-FileCopyrightText: 2025 starch
-# SPDX-FileCopyrightText: 2025 thoughtlessuser
-# SPDX-FileCopyrightText: 2025 tonotom1
-#
-# SPDX-License-Identifier: MPL-2.0
-
 meta:
   format: 7
   category: Map
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/08/2025 10:23:26
+  time: 11/09/2025 04:45:02
   entityCount: 10644
 maps:
 - 10548
@@ -10728,6 +10684,16 @@ entities:
       parent: 1
 - proto: AirlockSecurityGlassLocked
   entities:
+  - uid: 3995
+    components:
+    - type: Transform
+      pos: -18.5,86.5
+      parent: 1
+  - uid: 5238
+    components:
+    - type: Transform
+      pos: -17.5,86.5
+      parent: 1
   - uid: 5694
     components:
     - type: Transform
@@ -10768,6 +10734,26 @@ entities:
     - type: Transform
       pos: 2.5,59.5
       parent: 1
+  - uid: 7008
+    components:
+    - type: Transform
+      pos: -9.5,79.5
+      parent: 1
+  - uid: 7090
+    components:
+    - type: Transform
+      pos: -16.5,86.5
+      parent: 1
+  - uid: 10395
+    components:
+    - type: Transform
+      pos: -7.5,79.5
+      parent: 1
+  - uid: 10420
+    components:
+    - type: Transform
+      pos: -8.5,79.5
+      parent: 1
 - proto: AirlockSecurityLocked
   entities:
   - uid: 1595
@@ -10779,16 +10765,6 @@ entities:
     components:
     - type: Transform
       pos: -3.5,66.5
-      parent: 1
-  - uid: 3995
-    components:
-    - type: Transform
-      pos: -18.5,86.5
-      parent: 1
-  - uid: 5238
-    components:
-    - type: Transform
-      pos: -17.5,86.5
       parent: 1
   - uid: 5635
     components:
@@ -10839,26 +10815,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -23.5,78.5
-      parent: 1
-  - uid: 7008
-    components:
-    - type: Transform
-      pos: -7.5,79.5
-      parent: 1
-  - uid: 7090
-    components:
-    - type: Transform
-      pos: -16.5,86.5
-      parent: 1
-  - uid: 10395
-    components:
-    - type: Transform
-      pos: -9.5,79.5
-      parent: 1
-  - uid: 10420
-    components:
-    - type: Transform
-      pos: -8.5,79.5
       parent: 1
 - proto: AirSensor
   entities:
@@ -30571,7 +30527,7 @@ entities:
       pos: 25.5,46.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -67566.734
+      secondsUntilStateChange: -67605.016
       state: Closing
   - uid: 8154
     components:
@@ -39454,7 +39410,7 @@ entities:
       pos: 14.5,27.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -93128.36
+      secondsUntilStateChange: -93166.64
       state: Closing
     - type: DeviceNetwork
       deviceLists:
