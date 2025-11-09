@@ -48,8 +48,8 @@
         increasePerSecond: 18 # ~65K per hour, a bit over for the DOC MOM's wage.
       BlackMarket:
         !type:SectorBankAccountInfo
-        balance: 0
-        increasePerSecond: 1 # black market scam zone, not originally intended to be used properly - Note, don't set to 0, it'll cause annoying spam info messages
+        balance: 8000
+        increasePerSecond: 65 # # ~234K per hour, about the same as the TSF.
 # mono edit end
 
  # A global source of character records (DNA, fingerprints, criminal records, etc.)
