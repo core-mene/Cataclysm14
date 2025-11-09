@@ -14,7 +14,7 @@
 - type: vessel
   id: Defector
   parent: BaseVesselAntag
-  name: ASR Defector
+  name: PDV Defector
   description: A deprecated design brought back to its former glory by the finest chop shops this side of the sector.
   price: 91500
   category: Medium
@@ -29,7 +29,7 @@
 
 - type: gameMap
   id: Defector
-  mapName: 'ASR Defector'
+  mapName: 'PDV Defector'
   mapPath: /Maps/_Mono/Shuttles/BlackMarket/defector.yml
   minPlayers: 0
   stations:
@@ -37,7 +37,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Defector ASR{1}'
+          mapNameTemplate: 'Defector PDV{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

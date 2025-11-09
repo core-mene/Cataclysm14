@@ -9,22 +9,22 @@
 - type: roleLoadout
   id: JobPirate
   groups:
-  - PirateHead
-  - RogueNeck
-  - RogueJumpsuit
-  - MercenaryGloves
-  - MercenaryBackpack
-  - MercenaryOuterClothing
-  - PirateShoes
+  - PDVHead
+  - PDVNeck
+  - PDVJumpsuit
+  - PDVGloves
+  - PDVOuterClothing
+  - PDVHud
+  - PDVBackpack
+  - PDVShoes
   - PirateFace
   - ContractorBoxSurvival
   - PiratePDA
   - ContractorWallet
   - NFSpeciesSpecific
   - PirateTrinkets
-  - MercenaryBelt
+  - PDVBelt
   - ContractorEncryptionKey
-  - MercenaryGlasses
   - RogueFirearm
   - RogueMag
   canCustomizeName: true
@@ -32,22 +32,22 @@
 - type: roleLoadout
   id: JobPirateFirstMate
   groups:
-  - PirateFirstMateHead
-  - RogueNeck
-  - RogueJumpsuit
-  - MercenaryGloves
-  - MercenaryBackpack
-  - PirateFirstMateOuterClothing
-  - PirateShoes
-  - PirateFace
+  - PDVHead
+  - PDVNeck
+  - PDVJumpsuit
+  - PDVGloves
+  - PDVHud
+  - PDVBackpack
+  - PDVOuterClothing
+  - PDVShoes
+  - PDVFace
   - ContractorBoxSurvival
   - PirateFirstMatePDA
   - NFSpeciesSpecific
   - ContractorWallet
   - PirateTrinkets
-  - MercenaryBelt
+  - PDVBelt
   - ContractorEncryptionKey
-  - MercenaryGlasses
   - RogueFirearm
   - RogueMag
   canCustomizeName: true
@@ -55,21 +55,45 @@
 - type: roleLoadout
   id: JobPirateCaptain
   groups:
-  - PirateCaptainHead
-  - RogueJumpsuit
-  - MercenaryGloves
-  - MercenaryBackpack
-  - PirateCaptainOuterClothing
-  - PirateShoes
-  - PirateFace
+  - PDVCommanderHead
+  - PDVJumpsuit
+  - PDVGloves
+  - PDVOuterClothing
+  - PDVHud
+  - PDVBackpack
+  - PDVShoes
+  - PDVFace
+  - PDVCommanderNeck
   - ContractorBoxSurvival
   - PirateCaptainPDA
   - NFSpeciesSpecific
   - ContractorWallet
   - PirateCaptainTrinkets
-  - MercenaryBelt
+  - PDVBelt
   - ContractorEncryptionKey
-  - MercenaryGlasses
+  - RogueFirearm
+  - RogueMag
+  canCustomizeName: true
+
+- type: roleLoadout
+  id: JobPDVInfiltrator
+  groups:
+  - PDVHead
+  - PDVJumpsuit
+  - PDVGloves
+  - PDVOuterClothing
+  - PDVHud
+  - PDVBackpack
+  - PDVShoes
+  - PDVFace
+  - PDVNeck
+  - ContractorBoxSurvival
+  - PDVInfiltratorPDA
+  - NFSpeciesSpecific
+  - ContractorWallet
+  - PirateTrinkets
+  - PDVBelt
+  - ContractorEncryptionKey
   - RogueFirearm
   - RogueMag
   canCustomizeName: true

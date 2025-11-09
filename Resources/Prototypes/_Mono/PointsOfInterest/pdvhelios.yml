@@ -19,32 +19,30 @@
 # GitHub: ???
 # Discord: ???
 - type: pointOfInterest
-  id: Cove
+  id: HeliosFortress
   parent: BasePOI
-  name: ASR Insurgency Hideout
-  minimumDistance: 21000 # Mono
-  maximumDistance: 27000 # Mono
-  spawnGamePreset: [ NFAdventure, NFPirate, MonoStandard, MonoRogueTSF, MonoRogueUSSP, MonoADS, MonoChimera, MonoAllAtOnce ]
+  name: 'PDV Helios Fortress'
+  minimumDistance: 7500
+  maximumDistance: 9500
+  spawnGamePreset: [ NFAdventure, NFPirate, MonoStandard, MonoRogueTSF, MonoRogueUSSP, MonoADS, MonoChimera, MonoMixed, MonoAllAtOnce ]
   spawnGroup: Required
-  gridPath: /Maps/_Mono/POI/cove.yml
-  hideWarp: true
+  gridPath: /Maps/_Mono/POI/pdvhelios.yml
   addComponents:
   - type: IFF
-    color: "#d1bf58"
-    flags: [HideLabel]
+    color: "#DE9E59"
     readOnly: true # mono
 
 - type: gameMap
-  id: Cove
-  mapName: 'ASR Insurgency Hideout'
-  mapPath: /Maps/_Mono/POI/cove.yml
+  id: HeliosFortress
+  mapName: 'PDV Helio Fortress'
+  mapPath: /Maps/_Mono/POI/pdvhelios.yml
   minPlayers: 0
   stations:
-    Cove:
+    HeliosFortress:
       stationProto: RecordsFrontierOutpostCargo
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'ASR Insurgency Hideout'
+          mapNameTemplate: 'PDV Helio Fortress'
         - type: ExtraStationInformation
           iconPath: /Textures/_NF/Interface/Pirate/piratelogo.png
           stationSubtext: 'frontier-lobby-pirate-subtext'
@@ -52,12 +50,13 @@
         - type: StationJobs
           availableJobs:
             PirateCaptain: [ 1, 1 ]
-            PirateFirstMate: [ 4, 4 ] # Mono
-            Pirate: [ -1, -1 ] # Mono
+            PirateFirstMate: [ 4, 4 ]
+            PDVInfiltrator: [ 2, 2 ]
+            Pirate: [ -1, -1 ]
           tags:
           - RogueCommander
         - type: StationDeadDropReporting
           messageSet: Pirate
         - type: StationDeadDropHintExempt
         - type: TradeCrateWildcardDestination
-          valueMultiplier: 0.7 # Mono
+          valueMultiplier: 1.0 # Mono

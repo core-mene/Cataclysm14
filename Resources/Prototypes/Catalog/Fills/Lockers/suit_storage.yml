@@ -95,7 +95,7 @@
 - type: entity
   id: SuitStorageEVAPirate
   parent: SuitStorageBase
-  suffix: ASR SCAF # Mono
+  suffix: PDV SCAF # Mono
   components:
   - type: StorageFill
     contents:
@@ -300,7 +300,7 @@
 - type: entity
   id: SuitStoragePirateCap
   parent: SuitStorageBase
-  suffix: ASR Cell Commander
+  suffix: PDV Battalion Commander
   components:
   - type: StorageFill
     contents:

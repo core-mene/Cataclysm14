@@ -14,7 +14,9 @@
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 Your Name
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 kasature90
 # SPDX-FileCopyrightText: 2025 mikusssssss
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -24,9 +26,16 @@
   name: job-name-brigmedic
   description: job-description-brigmedic-nf
   playTimeTracker: JobBrigmedic
-  requirements: # Mono
+  requirements:
     - !type:OverallPlaytimeRequirement
-      time: 7200 # 2 hours
+      time: 72000 # 20 hours - mono
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 7200 # 2 hours - mono
+  alternateRequirementSets:
+    longerPlaytimeLessSec:
+    - !type:OverallPlaytimeRequirement
+      time: 108000 # 30 hours - mono
   startingGear: BrigmedicGear
   icon: JobIconBrigmedicNF
   supervisors: job-supervisors-bailiff
