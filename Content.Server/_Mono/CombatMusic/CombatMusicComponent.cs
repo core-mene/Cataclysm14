@@ -37,20 +37,7 @@ public sealed partial class CombatMusicComponent : Component
     [DataField]
     public List<SoundSpecifier> CombatMusicSounds = new()
     {
-        new SoundPathSpecifier("/Audio/_Mono/CombatMusic/forced_to_the_fringes.ogg"),
-        new SoundPathSpecifier("/Audio/_Mono/CombatMusic/dubmood_cluster_1.ogg"),
-        new SoundPathSpecifier("/Audio/_Mono/CombatMusic/field_directive.ogg"),
-        new SoundPathSpecifier("/Audio/_Mono/CombatMusic/voyager_battle.ogg"),
-        new SoundPathSpecifier("/Audio/_Mono/CombatMusic/smiling_abyss.ogg"),
-        new SoundPathSpecifier("/Audio/_Mono/CombatMusic/shell_battle.ogg"),
-        new SoundPathSpecifier("/Audio/_Mono/CombatMusic/ancient_battle.ogg"),
-        new SoundPathSpecifier("/Audio/_Mono/CombatMusic/augmented_battle.ogg"),
-        new SoundPathSpecifier("/Audio/_Mono/CombatMusic/corporate_battle.ogg"),
-        new SoundPathSpecifier("/Audio/_Mono/CombatMusic/morph_battle.ogg"),
-        new SoundPathSpecifier("/Audio/_Mono/CombatMusic/distant_lights_battle.ogg"),
-        new SoundPathSpecifier("/Audio/_Mono/CombatMusic/crystal_battle_remastered.ogg"),
-        new SoundPathSpecifier("/Audio/_Mono/CombatMusic/insurgence_battle.ogg"),
-        new SoundPathSpecifier("/Audio/_Mono/CombatMusic/galactic_battle.ogg"),
+        new SoundPathSpecifier("/Audio/_Mono/Jukebox/sahur.ogg"),
     };
 
     /// <summary>
