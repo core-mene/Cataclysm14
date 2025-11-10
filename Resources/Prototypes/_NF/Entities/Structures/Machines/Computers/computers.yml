@@ -420,7 +420,6 @@
   components:
   - type: RadarConsole
     maxRange: 1024 # Mono 350->768
-    pannable: true
   - type: DetectionRangeMultiplier
     infraredMultiplier: 1 # from 1 - doesn't really care about thermal sigs
     visualMultiplier: 12 # from 4

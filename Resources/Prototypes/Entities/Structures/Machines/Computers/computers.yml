@@ -236,7 +236,6 @@
           type: WiresBoundUserInterface
   - type: RadarConsole
     maxRange: 1024 #256->1024 Mono
-    pannable: true # Mono
     relativePanning: true # Mono
   - type: WorldLoader
     radius: 384 # Mono
@@ -981,7 +980,6 @@
   - type: RadarConsole
     maxRange: 1024 #256->1024 Mono
     maxIffRange: 1024 # Frontier
-    pannable: true # Mono
   - type: ActivatableUI
     key: enum.RadarConsoleUiKey.Key
   - type: UserInterface
