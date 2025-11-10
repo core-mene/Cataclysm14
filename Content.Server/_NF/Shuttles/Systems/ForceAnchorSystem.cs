@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 Whatstone
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Server._NF.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Shuttles.Systems;
