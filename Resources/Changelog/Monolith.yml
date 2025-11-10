@@ -13881,3 +13881,63 @@ Entries:
   id: 1536
   time: '2025-11-09T19:57:59.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2518
+- author: NazrinNya
+  changes:
+    - type: Remove
+      message: All of UIV's (except Syndicate UIV) has been disabled.
+    - type: Add
+      message: Added new pre-fracture vault UIV. Have fun looting it!
+  id: 1537
+  time: '2025-11-09T22:33:08.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2580
+- author: ark1368
+  changes:
+    - type: Add
+      message: >-
+        Added gun prediction and lag compensation, aka removes the delay on
+        firing due to ping.
+    - type: Fix
+      message: >-
+        Fixed melee attack lag compensation not accounting for your ping, which
+        would make melee attacks done by players with higher ping more
+        unreliable.
+  id: 1538
+  time: '2025-11-10T01:57:42.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2583
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: >-
+        Camelot station has been looted too many times, and has fallen into
+        further disrepair
+  id: 1539
+  time: '2025-11-10T07:04:05.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2546
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: >-
+        The once glorious union's flagship has appeared in sector once more,
+        shattered and decrepit, but possibly fixable...?
+  id: 1540
+  time: '2025-11-10T07:04:46.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2547
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: >-
+        Shipguns now have an infinite pool of their normal ammo, but can still
+        be loaded to fire special ammo.
+  id: 1541
+  time: '2025-11-10T07:08:57.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2514
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Colossus touchups: lizards got fresh air, kitchen and bar have distro,
+        freezer now has proper preservation temperatures, and disposals
+        hopefully doesn't flush into sec now.
+  id: 1542
+  time: '2025-11-10T07:13:26.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2584

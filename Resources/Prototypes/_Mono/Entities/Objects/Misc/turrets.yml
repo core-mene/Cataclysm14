@@ -1,4 +1,6 @@
 # SPDX-FileCopyrightText: 2025 BoskiYourk
+# SPDX-FileCopyrightText: 2025 NazrinNya
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -26,6 +28,18 @@
   - type: NpcFactionMember
     factions:
     - TSFMCTurret
+
+- type: entity
+  id: WeaponTurretLaserSilicon
+  name: laser turret
+  suffix: Frontier, Silicon
+  parent:
+  - BaseC3Contraband
+  - WeaponTurretLaserSyndicateNF
+  components:
+  - type: NpcFactionMember
+    factions:
+    - SiliconsExpeditionNF
 
 - type: entity
   parent: BaseWeaponBallisticTurret

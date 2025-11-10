@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 kasature90
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: MPL-2.0
@@ -66,11 +68,12 @@
         sound:
           collection: MetalBreak
   - type: BallisticAmmoProvider
+    infiniteUnspawned: true
     whitelist:
       tags:
       - 220mmCartridge
     capacity: 24
-    proto: 220mmCartridge
+    proto: 220mmCartridgeWeak
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
   - type: ShipGunType

@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 kasature90
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: entity
   id: WeaponTurretVespera
   name: ADMP-27 VESPERA Rapid-Fire Pod
@@ -35,11 +40,12 @@
     powerUseActive: 0
   - type: Actions
   - type: BallisticAmmoProvider
+    infiniteUnspawned: true
     whitelist:
       tags:
       - VesperaCartridge
-    capacity: 84 # 3x the amount of visible tubes.
-    proto: VesperaCartridge
+    capacity: 26
+    proto: VesperaCartridgeWeak
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
   - type: RadarBlip
