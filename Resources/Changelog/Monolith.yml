@@ -13890,3 +13890,17 @@ Entries:
   id: 1537
   time: '2025-11-09T22:33:08.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2580
+- author: ark1368
+  changes:
+    - type: Add
+      message: >-
+        Added gun prediction and lag compensation, aka removes the delay on
+        firing due to ping.
+    - type: Fix
+      message: >-
+        Fixed melee attack lag compensation not accounting for your ping, which
+        would make melee attacks done by players with higher ping more
+        unreliable.
+  id: 1538
+  time: '2025-11-10T01:57:42.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2583
