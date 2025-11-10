@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 kasature90
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: MPL-2.0
@@ -74,3 +76,20 @@
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
+
+- type: entity
+  id: Magazine57mmWeak
+  name: "57x210mm ammo drum"
+  parent: Magazine57mm
+  components:
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: 57mmCartridgeWeak
+
+- type: entity
+  id: 57mmCartridgeWeak
+  name: "cartridge (57x210mm)"
+  parent: 57mmCartridge
+  components:
+  - type: CartridgeAmmo
+    proto: ShipDravonProjectileWeak

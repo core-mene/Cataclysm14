@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 kasature90
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: MPL-2.0
@@ -23,3 +25,10 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
+
+- type: entity
+  id: CharonetteSlugAmmoWeak
+  parent: CharonetteSlugAmmo
+  components:
+  - type: CartridgeAmmo
+    proto: ShipMiniRailgunProjectileWeak

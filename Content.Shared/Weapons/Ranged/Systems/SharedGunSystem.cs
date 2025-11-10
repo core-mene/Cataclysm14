@@ -28,6 +28,7 @@
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Avalon
 // SPDX-FileCopyrightText: 2025 Aviu00
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 ark1368
 // SPDX-FileCopyrightText: 2025 beck-thompson
@@ -117,6 +118,7 @@ public abstract partial class SharedGunSystem : EntitySystem
     private const double SafetyNextFire = 0.5;
     private const float EjectOffset = 0.4f;
     protected const string AmmoExamineColor = "yellow";
+    protected const string AmmoExamineSpecialColor = "orange"; // Mono
     protected const string FireRateExamineColor = "yellow";
     public const string ModeExamineColor = "cyan";
 
