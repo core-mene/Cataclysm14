@@ -56,7 +56,6 @@
     mask: /Textures/Effects/LightMasks/double_cone.png
   - type: RotatingLight
     speed: 120
-    enabled: false
   - type: NavMapBeacon
     color: "#666666"
     text: antimatter annihilation assembly
@@ -71,8 +70,6 @@
     access: [["SyndicateAgent"], ["NuclearOperative"]]
     breakOnAccessBreaker: false
   - type: ScuttleDevice
-    alertLevelOnActivate: delta
-    alertLevelOnDeactivate: green
     unlockedPrice: 800000 # +800k for unlocked antimatter device
   - type: Explosive
     explosionType: Default
