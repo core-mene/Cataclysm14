@@ -25,9 +25,10 @@ public sealed partial class LatheHeatProducingComponent : Component
     // Mono
     /// <summary>
     /// Refuse to work if depositing the energy would bring the air to above this temperature.
+    /// Doesn't apply if null.
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public float TemperatureCap = Atmospherics.T0C + 100f;
+    public float? TemperatureCap = null;
 
     // <Mono> - change to accumulator
     [DataField]

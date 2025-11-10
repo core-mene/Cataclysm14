@@ -162,8 +162,8 @@ namespace Content.Server.Lathe
             }
 
             // Mono - now checks all and not only producing lathes in order to check air temperature
-            var heatQuery = EntityQueryEnumerator<LatheHeatProducingComponent, TransformComponent>();
-            while (heatQuery.MoveNext(out var uid, out var heatComp, out var xform))
+            var heatQuery = EntityQueryEnumerator<LatheHeatProducingComponent, LatheComponent, TransformComponent>();
+            while (heatQuery.MoveNext(out var uid, out var heatComp, out var latheComp, out var xform))
             {
                 heatComp.UpdateAccumulator += TimeSpan.FromSeconds(frameTime);
                 if (heatComp.UpdateAccumulator < heatComp.UpdateSpacing)
@@ -196,11 +196,12 @@ namespace Content.Server.Lathe
                     totalHeatCap += _atmosphere.GetHeatCapacity(env, true);
                 }
                 avgTemp /= _environments.Count;
-                heatComp.IsHot = avgTemp + heatComp.EnergyPerSecond / totalHeatCap > heatComp.TemperatureCap;
+                var wasHot = heatComp.IsHot;
+                heatComp.IsHot = heatComp.TemperatureCap != null && avgTemp + heatComp.EnergyPerSecond / totalHeatCap > heatComp.TemperatureCap;
                 if (heatComp.IsHot)
-                    TryPause(uid);
-                else
-                    TryUnpause(uid);
+                    continue;
+                else if (wasHot && !latheComp.Paused)
+                    TryStartProducing(uid, latheComp);
 
                 if (!HasComp<LatheProducingComponent>(uid))
                     continue;
@@ -289,7 +290,11 @@ namespace Content.Server.Lathe
             if (!Resolve(uid, ref component))
                 return false;
             // Mono - pause
-            if (component.Paused || component.CurrentRecipe != null || component.Queue.Count <= 0 || !this.IsPowered(uid, EntityManager))
+            if (component.Paused
+                || component.CurrentRecipe != null
+                || component.Queue.Count <= 0
+                || !this.IsPowered(uid, EntityManager)
+                || TryComp<LatheHeatProducingComponent>(uid, out var heat) && heat.IsHot) // Mono - if you want to add more conditions turn this into an event please
                 return false;
 
             // Frontier: handle batches
