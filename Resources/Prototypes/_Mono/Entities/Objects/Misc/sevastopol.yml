@@ -11,33 +11,37 @@
     heldPrefix: sevastopol
   - type: EmitSoundOnDrop
     sound:
-      path: /Audio/_Mono/Items/sevastopolplush-landing.ogg
+      collection: SevastopolPlushLanding
       params:
-        volume: -2
+        volume: -3
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_Mono/Items/sevastopolplush-thermalsignature.ogg
+      path: /Audio/_Mono/Items/sevastopolplush/sevastopolplush-thermalsignature.ogg
       params:
-        volume: -2
+        volume: -3
   - type: EmitSoundOnLand
     sound:
-      path: /Audio/_Mono/Items/sevastopolplush-structuraldamage.ogg
+      path: /Audio/_Mono/Items/sevastopolplush/sevastopolplush-structuraldamage.ogg
       params:
-        volume: -2
+        volume: -4
   - type: EmitSoundOnActivate
     sound:
-      path: /Audio/_Mono/Items/sevastopolplush-thermalsignature.ogg
+      path: /Audio/_Mono/Items/sevastopolplush/sevastopolplush-thermalsignature.ogg
+      params:
+        volume: -3
   - type: EmitSoundOnTrigger
     sound:
-      path: /Audio/_Mono/Items/sevastopolplush-structuraldamage.ogg
+      path: /Audio/_Mono/Items/sevastopolplush/sevastopolplush-thermalsignature.ogg
+      params:
+        volume: -3
   - type: EmitSoundOnCollide
     sound:
-      path: /Audio/_Mono/Items/sevastopolplush-structuraldamage.ogg
+      path: /Audio/_Mono/Items/sevastopolplush/sevastopolplush-structuraldamage.ogg
       params:
-        volume: -2
+        volume: -6
   - type: MeleeWeapon
     wideAnimationRotation: 360
     soundHit:
-      path: /Audio/_Mono/Items/sevastopolplush-structuraldamage.ogg
+      path: /Audio/_Mono/Items/sevastopolplush/sevastopolplush-killconfirmed.ogg
   - type: UseDelay
     delay: 7
