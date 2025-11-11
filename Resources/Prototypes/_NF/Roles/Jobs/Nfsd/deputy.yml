@@ -38,6 +38,8 @@
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 SupernoobTheN1
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 kasature90
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -47,9 +49,9 @@
   name: job-name-deputy
   description: job-description-deputy
   playTimeTracker: JobSecurityOfficer
-  requirements: # Mono
-  - !type:OverallPlaytimeRequirement
-    time: 7200 # 2 hours
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 72000 # 20 hours
   startingGear: DeputyGear
   icon: JobIconDeputy
   supervisors: job-supervisors-sergeant

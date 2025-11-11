@@ -520,6 +520,10 @@ public enum LogType
     /// </summary>
     ShuttleImpact = 102,
 
+    // <Mono>
+    ShipgunFired = 150,
+    // </Mono>
+
     /// <summary>
     /// Events relating to midi playback.
     /// </summary>

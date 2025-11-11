@@ -180,32 +180,34 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
         component.DampingModifier = component.BodyModifier;
     }
 
-    public void Toggle(EntityUid uid, ShuttleComponent component)
+    public void Toggle(EntityUid uid, ShuttleComponent component,
+                       bool force = false) // Mono - add force
     {
         if (!EntityManager.TryGetComponent(uid, out PhysicsComponent? physicsComponent))
             return;
 
-        if (HasComp<PreventGridAnchorChangesComponent>(uid)) // Frontier
+        if (HasComp<PreventGridAnchorChangesComponent>(uid) && !force) // Frontier // Mono
             return; // Frontier
 
         component.Enabled = !component.Enabled;
 
         if (component.Enabled)
         {
-            Enable(uid, component: physicsComponent, shuttle: component);
+            Enable(uid, component: physicsComponent, shuttle: component, force: force);
         }
         else
         {
-            Disable(uid, component: physicsComponent);
+            Disable(uid, component: physicsComponent, force: force);
         }
     }
 
-    public void Enable(EntityUid uid, FixturesComponent? manager = null, PhysicsComponent? component = null, ShuttleComponent? shuttle = null)
+    public void Enable(EntityUid uid, FixturesComponent? manager = null, PhysicsComponent? component = null, ShuttleComponent? shuttle = null,
+                       bool force = false) // Mono - add force
     {
         if (!Resolve(uid, ref manager, ref component, ref shuttle, false))
             return;
 
-        if (HasComp<PreventGridAnchorChangesComponent>(uid)) // Frontier
+        if (HasComp<PreventGridAnchorChangesComponent>(uid) && !force) // Frontier // Mono
             return; // Frontier
 
         _physics.SetBodyType(uid, BodyType.Dynamic, manager: manager, body: component);
@@ -213,12 +215,13 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
         _physics.SetFixedRotation(uid, false, manager: manager, body: component);
     }
 
-    public void Disable(EntityUid uid, FixturesComponent? manager = null, PhysicsComponent? component = null)
+    public void Disable(EntityUid uid, FixturesComponent? manager = null, PhysicsComponent? component = null,
+                        bool force = false) // Mono - add force
     {
         if (!Resolve(uid, ref manager, ref component, false))
             return;
 
-        if (HasComp<PreventGridAnchorChangesComponent>(uid)) // Frontier
+        if (HasComp<PreventGridAnchorChangesComponent>(uid) && !force) // Frontier // Mono
             return; // Frontier
 
         _physics.SetBodyType(uid, BodyType.Static, manager: manager, body: component);

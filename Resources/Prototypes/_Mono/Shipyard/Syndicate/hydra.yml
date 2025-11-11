@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2023 Kennedy
 # SPDX-FileCopyrightText: 2024 Dvir
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
@@ -33,7 +34,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Hydra MIL{1}'
+          mapNameTemplate: 'Hydra SYN{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

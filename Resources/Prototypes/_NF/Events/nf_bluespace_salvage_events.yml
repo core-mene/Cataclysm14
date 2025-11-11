@@ -35,9 +35,10 @@
         - type: IFF
           color: "#AAAAAA"
         - type: LinkedLifecycleGridParent
-        - type: ProtectedGrid
-          preventArtifactTriggers: true
-        - type: PreventPilot
+        # Mono
+        #- type: ProtectedGrid
+        #  preventArtifactTriggers: true
+        #- type: PreventPilot
         - type: ClaimableGrid # Mono
         paths:
         - /Maps/_NF/Shuttles/Scrap/bison.yml

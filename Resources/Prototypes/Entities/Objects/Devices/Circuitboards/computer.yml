@@ -42,11 +42,13 @@
 # SPDX-FileCopyrightText: 2024 chromiumboy
 # SPDX-FileCopyrightText: 2024 deltanedas
 # SPDX-FileCopyrightText: 2024 wafehling
+# SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScarKy0
 # SPDX-FileCopyrightText: 2025 SupernoobTheN1
 # SPDX-FileCopyrightText: 2025 dustylens
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -609,8 +611,8 @@
 - type: entity
   parent: [ BaseComputerCircuitboard, BaseC3PirateContrabandHighValue ] # Mono: From C3Syndicate
   id: RogueCommsComputerCircuitboard
-  name: rogue communications computer board
-  description: A computer printed circuit board for a rogue communications console.
+  name: imperial vanguard communications computer board
+  description: A computer printed circuit board for a pdv console.
   components:
     - type: Sprite
       sprite: _Mono/Objects/Misc/module.rsi

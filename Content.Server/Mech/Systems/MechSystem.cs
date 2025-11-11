@@ -22,6 +22,7 @@
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 BeeRobynn
 // SPDX-FileCopyrightText: 2025 Blu
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 ScyronX
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -402,14 +403,15 @@ public sealed partial class MechSystem : SharedMechSystem
         if (!Resolve(uid, ref component))
             return false;
 
-        if (!base.TryChangeEnergy(uid, delta, component))
-            return false;
-
         var battery = component.BatterySlot.ContainedEntity;
         if (battery == null)
             return false;
 
         if (!TryComp<BatteryComponent>(battery, out var batteryComp))
+            return false;
+
+        // Mono
+        if (batteryComp.CurrentCharge + delta.Float() < 0)
             return false;
 
         _battery.SetCharge(battery!.Value, batteryComp.CurrentCharge + delta.Float(), batteryComp);
@@ -418,6 +420,7 @@ public sealed partial class MechSystem : SharedMechSystem
             Log.Debug($"Battery charge was not equal to mech charge. Battery {batteryComp.CurrentCharge}. Mech {component.Energy}");
             component.Energy = batteryComp.CurrentCharge;
             Dirty(uid, component);
+            UpdateUserInterface(uid, component);
         }
         _actionBlocker.UpdateCanMove(uid);
         return true;

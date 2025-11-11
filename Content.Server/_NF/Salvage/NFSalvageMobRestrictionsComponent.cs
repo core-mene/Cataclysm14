@@ -26,7 +26,7 @@ public sealed partial class NFSalvageMobRestrictionsComponent : Component
     /// Useful for event ghost roles, for instance.
     /// </summary>
     [DataField]
-    public bool DespawnIfOffLinkedGrid = true;
+    public bool DespawnIfOffLinkedGrid = false;
 
     // On walking off grid
     [DataField]

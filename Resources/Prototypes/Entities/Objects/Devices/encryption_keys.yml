@@ -325,8 +325,8 @@
 - type: entity
   parent: [EncryptionKey, BaseC3PirateContrabandHighValue] # Frontier: added BaseC3PirateContraband - Mono: Changed to HighValue
   id: EncryptionKeyFreelance
-  name: insurgency encryption key # mono
-  description: An encryption key used by insurgents. # Mono
+  name: Vanguard encryption key # mono
+  description: An encryption key used by imperials. # Mono
   components:
     - type: EncryptionKey
       channels:

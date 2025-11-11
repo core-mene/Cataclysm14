@@ -1,8 +1,19 @@
+# SPDX-FileCopyrightText: 2023 FoxxoTrystan
+# SPDX-FileCopyrightText: 2023 Kennedy
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Avalon
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: vessel
   id: Infiltrator
   parent: BaseVesselAntag
   name: Infiltrator
-  description: A light syndicate frigate meant for raiding enemy stations. Armed to the teeth in missiles and CYREXAs.
+  description: A light syndicate frigate meant for raiding enemy stations. Armed to the teeth with missiles and Hydras.
   price: 275000
   category: Large
   group: Syndicate
@@ -23,7 +34,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Infiltrator MIL{1}'
+          mapNameTemplate: 'Infiltrator SYN{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2025 Arcticular
+# SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 HungryCuban
@@ -158,22 +160,42 @@
 - type: entity
   parent: BaseShipLPC
   id: ShipVoucherProwler
-  name: ASR prowler LPC
+  name: PDV prowler LPC
   description: A small card that authorizes the procurement of a Prowler.
   components:
   - type: Sprite
     layers:
     - state: mtech
-    - state: stripeasr
+    - state: stripepdv
     - state: vouchermilitary
   - type: ShipyardVoucher
     destroyOnEmpty: true
     consoleType: BlackMarket
-    companyName: Rogue
+    companyName: PDV
     vessels:
     - Prowler
   - type: StaticPrice
     vendPrice: 250000
+
+- type: entity
+  parent: BaseShipLPC
+  id: ShipVoucherSaintie
+  name: PDV saintie LPC
+  description: A small card that authorizes the procurement of a Saintie.
+  components:
+  - type: Sprite
+    layers:
+    - state: mtech
+    - state: stripepdv
+    - state: vouchermilitary
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: BlackMarket
+    companyName: PDV
+    vessels:
+    - Saintie
+  - type: StaticPrice
+    vendPrice: 325000
 
 - type: entity
   parent: BaseShipLPC

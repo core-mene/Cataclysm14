@@ -392,7 +392,7 @@
 - type: entity
   parent: PiratePDA
   id: PirateNFPDA
-  name: ASR insurgent PDA
+  name: PDV rakhshan PDA
   components:
   - type: Pda
     id: PirateNFIDCard
@@ -410,7 +410,7 @@
 - type: entity
   parent: PiratePDA
   id: PirateCaptainNFPDA
-  name: ASR cell commander PDA
+  name: PDV grand vizier PDA
   components:
   - type: Pda
     id: PirateCaptainNFIDCard
@@ -428,10 +428,28 @@
 - type: entity
   parent: PiratePDA
   id: PirateFirstMateNFPDA
-  name: ASR agent PDA
+  name: PDV asvaran PDA
   components:
   - type: Pda
     id: PirateFirstMateNFIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-syndi
+  - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
+
+- type: entity
+  parent: PiratePDA
+  id: PDVSpasakaPDA
+  name: PDV spasaka PDA
+  components:
+  - type: Pda
+    id: PDVSpasakaIDCard
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:

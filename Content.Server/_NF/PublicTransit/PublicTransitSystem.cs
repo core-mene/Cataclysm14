@@ -1,3 +1,13 @@
+// SPDX-FileCopyrightText: 2024 Checkraze
+// SPDX-FileCopyrightText: 2024 GreaseMonk
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 ScyronX
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Server._NF.PublicTransit.Components;
 using Content.Server.Chat.Systems;
 using Content.Server.GameTicking;
@@ -48,7 +58,7 @@ public sealed class PublicTransitSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<StationTransitComponent, ComponentStartup>(OnStationStartup);
+        SubscribeLocalEvent<StationTransitComponent, MapInitEvent>(OnStationStartup);
         SubscribeLocalEvent<StationTransitComponent, ComponentShutdown>(OnStationShutdown);
         SubscribeLocalEvent<TransitShuttleComponent, ComponentStartup>(OnShuttleStartup);
         SubscribeLocalEvent<TransitShuttleComponent, EntityUnpausedEvent>(OnShuttleUnpaused);
@@ -96,7 +106,7 @@ public sealed class PublicTransitSystem : EntitySystem
     /// Checks to make sure the grid is on the appropriate playfield, i.e., not in mapping space being worked on.
     /// If so, adds the grid to the list of bus stops, but only if its not already there
     /// </summary>
-    private void OnStationStartup(EntityUid uid, StationTransitComponent component, ComponentStartup args)
+    private void OnStationStartup(EntityUid uid, StationTransitComponent component, MapInitEvent args)
     {
         if (Transform(uid).MapID == _ticker.DefaultMap) //best solution i could find because of componentinit/mapinit race conditions
         {

@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2025 tonotom1
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Server.Xenoarchaeology.XenoArtifacts;
 using Content.Shared.EntityEffects;
 using Robust.Shared.Prototypes;
@@ -10,7 +16,7 @@ public sealed partial class NFActivateArtifact : EntityEffect
     /// Disintegrate chance
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public float ProbabilityBase = 0.05f; // 5%
+    public float ProbabilityBase = 0.012f; // MONO: 0.05 >> 0.012 (1.2%)
 
     /// <summary>
     /// Disintegrate chance bonus on grids that are not a station

@@ -26,6 +26,8 @@
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2024 deltanedas
 # SPDX-FileCopyrightText: 2024 slarticodefast
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 NazrinNya
 # SPDX-FileCopyrightText: 2025 SupernoobTheN1
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -55,12 +57,15 @@
   table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
     children:
     - id: BluespaceCacheError
-    - id: BluespaceCave
+#    - id: BluespaceCave # Mono edit
     - id: BluespaceVaultError
     - id: BluespaceVaultSmallError
     - id: BluespaceSyndicateFTLInterception
-    - id: BluespaceWizardFederationScout
-    - id: BluespaceBloodMoon
+# Mono edit start
+#    - id: BluespaceWizardFederationScout
+#    - id: BluespaceBloodMoon
+    - id: BluespacePreFractureFTLInterception
+# Mono edit end
 
 - type: entity
   id: BluespaceDungeonEventScheduler
@@ -82,6 +87,7 @@
     - id: BluespaceDungeonChromite
     - id: BluespaceDungeonSnow
     - id: BluespaceDungeonCave
+    - id: BluespaceDungeonScrap
 
 - type: entity
   id: BluespaceSalvageEventScheduler
