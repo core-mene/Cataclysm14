@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 TTBNC
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
+# Author Info
+# GitHub: TTBNC
+# Discord: TTBNC
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: xeloeion
+  parent: BaseVessel
+  name: SMC Xeloeian
+  description: A Semi-large Salvage and Mining Vessel, priortizing both capability and deep space mining
+  price: 55270
+  category: Large
+  group: Expedition
+  shuttlePath: /Maps/_Mono/Shuttles/Expedition/xeloeion.yml
+  guidebookPage: null
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: xeloeion
+  mapName: 'xeloeion'
+  mapPath: /Maps/_Mono/Shuttles/Expedition/xeloeion.yml
+  minPlayers: 0
+  stations:
+    xeloeion:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Xeloeion EXP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
