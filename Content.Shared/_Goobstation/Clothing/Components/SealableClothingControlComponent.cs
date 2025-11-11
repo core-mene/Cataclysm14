@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 ark1368
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared._Goobstation.Clothing.Systems;
 using Content.Shared.Inventory;
 using Robust.Shared.Audio;
