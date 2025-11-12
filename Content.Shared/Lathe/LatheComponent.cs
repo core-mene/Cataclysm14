@@ -107,7 +107,7 @@ namespace Content.Shared.Lathe
         [Access(typeof(SharedLatheSystem))] // Mono
         public float FinalMaterialUseMultiplier = 1;
 
-        public const float DefaultPartRatingMaterialUseMultiplier = 0.85f; // Frontier: restored for machine parts
+        public const float DefaultPartRatingMaterialUseMultiplier = 0.93f; // Frontier: restored for machine parts // Mono - nerf
 
         //Frontier Upgrade Code Restore
         /// <summary>

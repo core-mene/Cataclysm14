@@ -155,16 +155,18 @@
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
-        - type: Gravity
-          enabled: true
-          inherent: true
         - type: IFF
           color: "#E10F9B"
         - type: LinkedLifecycleGridParent
-        - type: ProtectedGrid
-          preventArtifactTriggers: true
-        - type: PreventPilot
-        - type: ForceAnchor
+# Mono edit - No more anchored UIV's
+#        - type: Gravity
+#          enabled: true
+#          inherent: true
+#        - type: ProtectedGrid
+#          preventArtifactTriggers: true
+#        - type: PreventPilot
+#        - type: ForceAnchor
+# Mono edit end
         paths:
         - /Maps/_NF/Bluespace/syndieftlintercept.yml
 
@@ -193,16 +195,9 @@
         minimumDistance: 2500
         maximumDistance: 4000
         addComponents:
-        - type: Gravity
-          enabled: true
-          inherent: true
         - type: IFF
           color: "#E10F9B"
         - type: LinkedLifecycleGridParent
-        - type: ProtectedGrid
-          preventArtifactTriggers: true
-        - type: PreventPilot
-        - type: ForceAnchor
         paths:
         - /Maps/_Mono/Bluespace/prefracture.yml
 # Mono edit end

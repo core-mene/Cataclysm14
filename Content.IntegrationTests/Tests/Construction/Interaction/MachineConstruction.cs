@@ -1,3 +1,13 @@
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Emisse
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2025 Ilya246
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.IntegrationTests.Tests.Interaction;
 
 namespace Content.IntegrationTests.Tests.Construction.Interaction;
@@ -82,7 +92,7 @@ public sealed class MachineConstruction : InteractionTest
         // Query now returns higher quality parts.
         foreach (var part in SConstruction.GetAllParts(SEntMan.GetEntity(Target!.Value)))
         {
-            Assert.That(part.Part.Rating, Is.EqualTo(4)); // Frontier: using MachinePartState instead of MachinePart
+            Assert.That(part.Part.Rating, Is.EqualTo(6)); // Frontier: using MachinePartState instead of MachinePart // Mono: 4->6
         }
     }
 }

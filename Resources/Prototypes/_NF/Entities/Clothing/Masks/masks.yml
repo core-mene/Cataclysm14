@@ -1,3 +1,15 @@
+# SPDX-FileCopyrightText: 2023 AjexRose
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2025 LukeZurg22
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 tonotom1
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: entity
   id: ClothingMaskArcadia
   name: arcadia battle mask
@@ -13,7 +25,7 @@
     - Hair
 
 - type: entity
-  parent: [PlushieXeno, ClothingMaskBase]
+  parent: PlushieXeno #Mono: Remove ClothingMaskBase
   id: FaceHuggerPlushie
   name: facehugger plushie
   description: The perfect plushie to scare your friends with aliens!
@@ -22,6 +34,7 @@
     sprite: _NF/Clothing/Mask/facehuggerplushie.rsi
     state: icon
   - type: Clothing
+    slots: [mask] #Mono
     sprite: _NF/Clothing/Mask/facehuggerplushie.rsi
   - type: IdentityBlocker
   - type: IngestionBlocker

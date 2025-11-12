@@ -7,6 +7,7 @@
 # SPDX-FileCopyrightText: 2024 checkraze
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 Whatstone
@@ -420,7 +421,6 @@
   components:
   - type: RadarConsole
     maxRange: 1024 # Mono 350->768
-    pannable: true
   - type: DetectionRangeMultiplier
     infraredMultiplier: 1 # from 1 - doesn't really care about thermal sigs
     visualMultiplier: 12 # from 4

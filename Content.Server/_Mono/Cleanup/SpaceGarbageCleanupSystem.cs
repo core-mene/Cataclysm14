@@ -10,7 +10,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
 
-namespace Content.Server._Mono;
+namespace Content.Server._Mono.Cleanup;
 
 /// <summary>
 ///     Deletes all entities with SpaceGarbageComponent.
@@ -25,10 +25,14 @@ public sealed class SpaceGarbageCleanupSystem : EntitySystem
     private ISawmill _log = default!;
     private TimeSpan _nextCleanup = TimeSpan.Zero;
 
+    private EntityQuery<CleanupImmuneComponent> _immuneQuery;
+
     public override void Initialize()
     {
         base.Initialize();
         _log = Logger.GetSawmill("spacegarbagecleanup");
+
+        _immuneQuery = GetEntityQuery<CleanupImmuneComponent>();
     }
 
     public override void Update(float frameTime)
@@ -64,6 +68,9 @@ public sealed class SpaceGarbageCleanupSystem : EntitySystem
 
             // Skip deletion if the entity is inside a container.
             if (_container.IsEntityInContainer(uid))
+                continue;
+
+            if (_immuneQuery.HasComp(uid))
                 continue;
 
             // Adds entity to logging

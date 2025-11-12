@@ -14,7 +14,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 
-namespace Content.Server._Mono;
+namespace Content.Server._Mono.Cleanup;
 
 /// <summary>
 ///     Deletes all entities with SpaceGarbageComponent.
@@ -29,12 +29,16 @@ public sealed class CheapEntitiesCleanupSystem : EntitySystem
     private ISawmill _log = default!;
     private TimeSpan _nextCleanup = TimeSpan.Zero;
 
+    private EntityQuery<CleanupImmuneComponent> _immuneQuery;
+
     readonly private double _minValueToDelete = 100d;
 
     public override void Initialize()
     {
         base.Initialize();
         _log = Logger.GetSawmill("cheapentitycleanup");
+
+        _immuneQuery = GetEntityQuery<CleanupImmuneComponent>();
     }
 
     public override void Update(float frameTime)
@@ -92,6 +96,9 @@ public sealed class CheapEntitiesCleanupSystem : EntitySystem
             if (HasComp<BrainComponent>(uid))
                 continue;
 
+            if (_immuneQuery.HasComp(uid))
+                continue;
+
             // Adds entity to logging
             entCount += 1;
             // Delete the entity
@@ -126,6 +133,9 @@ public sealed class CheapEntitiesCleanupSystem : EntitySystem
 
             // Final safety check.
             if (HasComp<BrainComponent>(uid2))
+                continue;
+
+            if (_immuneQuery.HasComp(uid2))
                 continue;
 
             // Adds entity to logging
