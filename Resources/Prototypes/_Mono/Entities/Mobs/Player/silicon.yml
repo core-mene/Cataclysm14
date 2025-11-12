@@ -401,6 +401,9 @@
     raffle:
       settings: default
     prototype: VesselAICore
+    requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 180000 # 50 hrs
   - type: GhostTakeoverAvailable
   - type: RandomMetadata
     nameSegments: [ VesselCoreNameset ]
