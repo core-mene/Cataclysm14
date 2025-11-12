@@ -1,3 +1,4 @@
+using Content.Server.Stack;
 using Content.Shared.Destructible;
 using Content.Shared.Mining;
 using Content.Shared.Mining.Components;
@@ -16,6 +17,7 @@ public sealed class MiningSystem : EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly StackSystem _stack = default!; // Mono edit - ore consolidation
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -49,8 +51,7 @@ public sealed class MiningSystem : EntitySystem
 
         if (TryComp<StackComponent>(ore, out var stack))
         {
-            stack.Count *= yield;
-            Dirty(ore, stack);
+            _stack.SetCount(ore, stack.Count*yield, stack);
         }
 
         // Mono edit end
