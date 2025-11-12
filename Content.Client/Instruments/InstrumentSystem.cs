@@ -380,7 +380,18 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
             return;
         }
 
-        if (instrument.SequenceStartTick <= 0)
+        var isFirstEvent = instrument.SequenceStartTick <= 0;
+
+        if (renderer.MidiBank != instrument.InstrumentBank || renderer.MidiProgram != instrument.InstrumentProgram)
+        {
+            if (!instrument.AllowProgramChange || isFirstEvent)
+            {
+                renderer.MidiBank = instrument.InstrumentBank;
+                renderer.MidiProgram = instrument.InstrumentProgram;
+            }
+        }
+
+        if (isFirstEvent)
         {
             instrument.SequenceStartTick = midiEv.MidiEvent.Min(x => x.Tick) - 1;
         }
