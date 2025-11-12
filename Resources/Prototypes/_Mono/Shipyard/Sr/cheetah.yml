@@ -1,0 +1,43 @@
+# SPDX-FileCopyrightText: 2025 Junerisms
+# SPDX-FileCopyrightText: 2025 Loldaddy5676
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 Rubeebee
+# SPDX-FileCopyrightText: 2025 Rubeebeebee
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# Github: Rubeebeebee
+# Discord: rubeebee
+
+- type: vessel
+  id: Cheetah
+  parent: BaseVessel
+  name: Cheetah
+  description: The cheetah is a modified varient of the ocelot, sold to local security forces. equiped with two dravons, two phalanxes, and two toveks, it is capable of hunting down smugglers, and holding its own aganist lighter hostiles. 
+  price: 68000
+  category: Medium
+  group: Sr
+  access: Brig # Oddball, matches guard ID, specific enough to exclude cadets
+  mapchecker_group_override: Security  # Treat this as a security vessel for mapchecker purposes
+  shuttlePath: /Maps/_Mono/Shuttles/cheetah.yml
+  guidebookPage: Null
+  class:
+  - Civilian
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Cheetah
+  mapName: 'Cheetah'
+  mapPath: /Maps/_Mono/Shuttles/cheetah.yml
+  minPlayers: 0
+  stations:
+    Cheetah:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Cheetah SEC{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
