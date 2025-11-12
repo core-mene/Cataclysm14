@@ -6,6 +6,7 @@
 //
 // SPDX-License-Identifier: MPL-2.0
 
+using System.Numerics;
 using System.Security.Cryptography;
 using Microsoft.VisualBasic.CompilerServices;
 
