@@ -33,7 +33,7 @@ public sealed partial class MonoCVars
     ///     How far away from any players can a grid be until it gets cleaned up.
     /// </summary>
     public static readonly CVarDef<float> GridCleanupDistance =
-        CVarDef.Create("mono.grid_cleanup_distance", 1280.0f, CVar.SERVERONLY);
+        CVarDef.Create("mono.grid_cleanup_distance", 628.0f, CVar.SERVERONLY);
 
     /// <summary>
     ///     How much can a grid at most be worth for it to be cleaned up.
