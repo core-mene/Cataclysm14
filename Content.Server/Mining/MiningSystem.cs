@@ -1,3 +1,5 @@
+using Content.Server._Mono.Spawning;
+using Content.Server.EntityList;
 using Content.Server.Stack;
 using Content.Shared.Destructible;
 using Content.Shared.Mining;
@@ -5,6 +7,7 @@ using Content.Shared.Mining.Components;
 using Content.Shared.Random;
 using Content.Shared.Random.Helpers;
 using Content.Shared.Stacks;
+using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
@@ -17,7 +20,7 @@ public sealed class MiningSystem : EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly StackSystem _stack = default!; // Mono edit - ore consolidation
+    [Dependency] private readonly SpawnCountSystem _spawnCount= default!; // Mono edit - ore consolidation
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -45,18 +48,10 @@ public sealed class MiningSystem : EntitySystem
         var coords = Transform(uid).Coordinates;
 
         // Mono edit start - ore consolidation
-
         var yield = _random.Next(proto.MinOreYield, proto.MaxOreYield+1);
-        var ore = Spawn(proto.OreEntity, coords.Offset(_random.NextVector2(0.2f)));
-
-        if (TryComp<StackComponent>(ore, out var stack))
-        {
-            _stack.SetCount(ore, stack.Count*yield, stack);
-        }
-
+        _spawnCount.SpawnCount(proto.OreEntity.Value, coords.Offset(_random.NextVector2(0.2f)), yield);
         // Mono edit end
     }
-
     private void OnMapInit(EntityUid uid, OreVeinComponent component, MapInitEvent args)
     {
         if (component.CurrentOre != null || component.OreRarityPrototypeId == null || !_random.Prob(component.OreChance))
