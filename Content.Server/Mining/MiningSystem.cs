@@ -3,6 +3,7 @@ using Content.Shared.Mining;
 using Content.Shared.Mining.Components;
 using Content.Shared.Random;
 using Content.Shared.Random.Helpers;
+using Content.Shared.Stacks;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
@@ -40,11 +41,19 @@ public sealed class MiningSystem : EntitySystem
             return;
 
         var coords = Transform(uid).Coordinates;
-        var toSpawn = _random.Next(proto.MinOreYield, proto.MaxOreYield+1);
-        for (var i = 0; i < toSpawn; i++)
+
+        // Mono edit start - ore consolidation
+
+        var yield = _random.Next(proto.MinOreYield, proto.MaxOreYield+1);
+        var ore = Spawn(proto.OreEntity, coords.Offset(_random.NextVector2(0.2f)));
+
+        if (TryComp<StackComponent>(ore, out var stack))
         {
-            Spawn(proto.OreEntity, coords.Offset(_random.NextVector2(0.2f)));
+            stack.Count *= yield;
+            Dirty(ore, stack);
         }
+
+        // Mono edit end
     }
 
     private void OnMapInit(EntityUid uid, OreVeinComponent component, MapInitEvent args)
