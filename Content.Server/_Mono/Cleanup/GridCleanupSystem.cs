@@ -75,7 +75,7 @@ public sealed class GridCleanupSystem : EntitySystem
                 || HasComp<MapGridComponent>(parent) // do not delete anything on planetmaps either
                 || TryComp<IFFComponent>(uid, out var iff) && (iff.Flags & IFFFlags.HideLabel) == 0 // delete only if IFF off
                 || _cleanup.HasNearbyPlayers(xform.Coordinates, _maxDistance)
-                || HasPoweredAPC((uid, TransformComponent)) // don't delete if it has powered APCs
+                || HasPoweredAPC((uid, xform)) // don't delete if it has powered APCs
                 || _pricing.AppraiseGrid(uid) > _maxValue) // expensive to run, put last
             {
                 state.CleanupAtTime = null;
@@ -119,7 +119,7 @@ public sealed class GridCleanupSystem : EntitySystem
         _apcList.Clear();
         var worldAABB = _lookup.GetWorldAABB(grid, grid.Comp);
 
-        _lookup.GetEntitiesIntersecting<ApcComponent>(grid.MapID, worldAABB, _apcList);
+        _lookup.GetEntitiesIntersecting<ApcComponent>(grid.Comp.MapID, worldAABB, _apcList);
 
         foreach (var apc in _apcList)
         {

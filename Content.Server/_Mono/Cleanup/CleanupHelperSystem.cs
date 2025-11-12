@@ -1,7 +1,7 @@
 using Content.Shared.Ghost;
 using Content.Shared.Mobs.Systems;
+using Robust.Server.Player;
 using Robust.Shared.Map;
-using Robust.Shared.Player;
 
 namespace Content.Server._Mono.Cleanup;
 

@@ -45,7 +45,7 @@ public sealed partial class MonoCVars
     ///     Duration, in seconds, for how long a grid has to fulfill cleanup conditions to get cleaned up.
     /// </summary>
     public static readonly CVarDef<float> GridCleanupDuration =
-        CVarDef.Create("mono.grid_cleanup_max_value", 60f * 45f, CVar.SERVERONLY);
+        CVarDef.Create("mono.grid_cleanup_duration", 60f * 45f, CVar.SERVERONLY);
 
     #endregion
 

@@ -4,8 +4,8 @@ namespace Content.Server._Mono.Cleanup;
 ///     Stores at which time will we have to be still meeting cleanup conditions for this grid to get cleaned up.
 /// </summary>
 [RegisterComponent]
-public sealed partial class CleanupImmuneComponent : Component
+public sealed partial class GridCleanupStateComponent : Component
 {
     [ViewVariables]
-    TimeSpan? CleanupAtTime = null;
+    public TimeSpan? CleanupAtTime = null;
 }
