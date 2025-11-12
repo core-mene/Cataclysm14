@@ -1,0 +1,37 @@
+# SPDX-FileCopyrightText: 2025 Loldaddy5676
+#
+# SPDX-License-Identifier: MPL-2.0
+
+- type: vessel
+  id: ambassador
+  parent: BaseVessel
+  name: Ambassador
+  description: A large vessel tailored made to conduct diplomacy within sectors. Equipped with a small medical bay, recreational room, a meeting room, security room, and finally a reprogrammed ADS core to assist the liaison. However, just because it is meant for diplomacy, does not mean it bears no defenses. equiped with hidden gun bays, which contain 4 rubicons, 4 dravons, and 4 phalanxs. powered by two pinch reactors. 
+  price: 150000
+  category: Small
+  group: Sr
+  access: HeadOfPersonnel
+  shuttlePath: /Maps/_Mono/Shuttles/ambassador.yml
+  guidebookPage: Null
+  class:
+  - Civilian
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: ambassador
+  mapName: 'ambassador'
+  mapPath: /Maps/_Mono/Shuttles/ambassador.yml
+  minPlayers: 0
+  stations:
+    ambassador:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Ambassador SRV{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            SecurityGuard: [ 0, 0 ]
