@@ -11,5 +11,5 @@ namespace Content.Server._Mono.Cleanup;
 public sealed partial class GridCleanupStateComponent : Component
 {
     [ViewVariables]
-    public TimeSpan? CleanupAtTime = null;
+    public TimeSpan CleanupAccumulator = TimeSpan.FromSeconds(0);
 }

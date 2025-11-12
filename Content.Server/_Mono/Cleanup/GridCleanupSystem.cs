@@ -79,13 +79,13 @@ public sealed class GridCleanupSystem : EntitySystem
                 || HasPoweredAPC((uid, xform)) // don't delete if it has powered APCs
                 || _pricing.AppraiseGrid(uid) > _maxValue) // expensive to run, put last
             {
-                state.CleanupAtTime = null;
+                state.CleanupAccumulator = TimeSpan.FromSeconds(0);
                 return;
             }
             // see if we should update timer or just be deleted
-            else if (state.CleanupAtTime == null || state.CleanupAtTime < _timing.CurTime)
+            else if (state.CleanupAccumulator + _cleanupInterval < _duration)
             {
-                state.CleanupAtTime ??= _timing.CurTime + _duration;
+                state.CleanupAccumulator += _cleanupInterval;
                 return;
             }
 
