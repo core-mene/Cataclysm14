@@ -9,14 +9,14 @@ namespace Content.Server._Mono.Spawning;
 [RegisterComponent]
 public sealed partial class CountSpawnerComponent : Component
 {
-    [DataField("prototype")]
-    public EntProtoId Prototype { get; set; } = "";
+    [DataField(required: true)]
+    public EntProtoId Prototype;
 
-    [DataField("minimumCount")]
-    public int MinimumCount { get; set; } = 1;
+    [DataField]
+    public int MinimumCount = 1;
 
-    [DataField("maximumCount")]
-    public int MaximumCount { get; set; } = 1;
+    [DataField]
+    public int MaximumCount = 1;
 
     [DataField]
     public bool DespawnAfterSpawn = true;

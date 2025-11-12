@@ -20,38 +20,31 @@ public sealed class SpawnCountSystem : EntitySystem
         SubscribeLocalEvent<CountSpawnerComponent, MapInitEvent>(OnMapInit);
     }
 
-    public void OnMapInit(EntityUid uid, CountSpawnerComponent component, MapInitEvent args)
+    public void OnMapInit(Entity<CountSpawnerComponent> ent, ref MapInitEvent args)
     {
-        var count = _random.Next(component.MinimumCount, component.MaximumCount);
+        var count = _random.Next(ent.Comp.MinimumCount, ent.Comp.MaximumCount);
 
-        SpawnCount(component.Prototype, Transform(uid).Coordinates, count);
-        if (component.DespawnAfterSpawn)
-            QueueDel(uid);
+        SpawnCount(ent.Comp.Prototype, Transform(ent).Coordinates, count);
+        if (ent.Comp.DespawnAfterSpawn)
+            QueueDel(ent);
     }
 
-    public void SpawnCount(EntProtoId prototype, EntityCoordinates coordinates, int count, int bound = 0)
+    public void SpawnCount(EntProtoId prototype, EntityCoordinates coordinates, int count)
     {
         var entProto = _proto.Index<EntityPrototype>(prototype);
-
-        var spawnPerStack = 1;
-        var stackCount = 1;
+        var bound = 1;
+        var stackCount = count;
 
         if (entProto.TryGetComponent<StackComponent>(out var stack))
         {
             stackCount = stack.Count * count;
             var stackPrototype = _proto.Index<StackPrototype>(stack.StackTypeId);
-
-            if (bound == 0)
-                bound = stackPrototype.MaxCount ?? Int32.MaxValue;
-
-            spawnPerStack = (stackCount + bound - 1) / bound;
+            bound = stackPrototype.MaxCount ?? Int32.MaxValue;
         }
 
-        for (var i = 0; i < count; i += spawnPerStack)
+        for (var i = 0; i < stackCount; i += bound)
         {
-            SpawnEntity(prototype, coordinates, stackCount);
-            if (stackCount != 0)
-                stackCount -= bound;
+            SpawnEntity(prototype, coordinates, stackCount - i);
         }
     }
 

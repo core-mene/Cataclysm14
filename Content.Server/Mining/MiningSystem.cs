@@ -20,7 +20,7 @@ public sealed class MiningSystem : EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly SpawnCountSystem _spawnCount= default!; // Mono edit - ore consolidation
+    [Dependency] private readonly SpawnCountSystem _spawnCount = default!; // Mono edit - ore consolidation
 
     /// <inheritdoc/>
     public override void Initialize()
