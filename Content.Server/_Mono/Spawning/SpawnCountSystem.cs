@@ -1,3 +1,4 @@
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 NazrinNya
 //
 // SPDX-License-Identifier: MPL-2.0
