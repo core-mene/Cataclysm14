@@ -22,7 +22,8 @@ using Content.Shared.Weapons.Hitscan.Components;
 using Content.Shared.Weapons.Ranged.Components;
 using Robust.Shared.Prototypes;
 using Content.Server.Power.EntitySystems;
-using Content.Server.PowerCell; // Mono
+using Content.Server.PowerCell;
+using Content.Shared.Weapons.Ranged.Events; // Mono
 
 namespace Content.Server.Weapons.Ranged.Systems;
 
@@ -75,7 +76,10 @@ public sealed partial class GunSystem
         if (_powerCell.TryGetBatteryFromSlot(uid, out var cellBattery))
         {
             UpdateShots(uid, component, cellBattery.CurrentCharge, cellBattery.MaxCharge);
-            return;
+        }
+        else
+        {
+            UpdateShots(uid, component, 0, component.Capacity * component.FireCost);
         }
     }
     // Mono End
@@ -93,6 +97,9 @@ public sealed partial class GunSystem
         component.Shots = shots;
         component.Capacity = maxShots;
         UpdateBatteryAppearance(uid, component);
+
+        var updateAmmoEv = new UpdateClientAmmoEvent();
+        RaiseLocalEvent(uid, ref updateAmmoEv);
     }
 
     private void OnBatteryDamageExamine(EntityUid uid, BatteryAmmoProviderComponent component, ref DamageExamineEvent args)
