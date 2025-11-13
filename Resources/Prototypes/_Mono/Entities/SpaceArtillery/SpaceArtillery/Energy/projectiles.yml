@@ -382,13 +382,13 @@
   components:
   - type: HitscanBasicVisuals
     muzzleFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
       state: muzzle_superheavy_prefrac
     travelFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
       state: Beam_SuperHeavy_prefrac
     impactFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
       state: impact_superheavy_prefrac
   - type: HitscanRadarSignature
     radarColor: "#1cd471"
@@ -411,13 +411,13 @@
   components:
   - type: HitscanBasicVisuals
     muzzleFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
       state: proton_muzzle
     travelFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
       state: proton_beam
     impactFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
       state: proton_impact
   - type: HitscanRadarSignature
     radarColor: "#f29705"
@@ -440,13 +440,13 @@
   components:
   - type: HitscanBasicVisuals
     muzzleFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
       state: gauss_muzzle
     travelFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
       state: gauss_trail
     impactFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
       state: gauss_impact
   - type: HitscanRadarSignature
     radarColor: "#FFFFFF"
