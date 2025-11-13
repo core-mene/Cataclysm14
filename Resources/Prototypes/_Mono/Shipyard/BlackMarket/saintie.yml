@@ -31,7 +31,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Saintie ASR{1}'
+          mapNameTemplate: 'Saintie PDV{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

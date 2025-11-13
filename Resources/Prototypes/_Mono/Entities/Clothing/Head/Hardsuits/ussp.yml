@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Arcticular
 # SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 HungryCuban
@@ -112,7 +113,6 @@
   - type: RadarConsole
     maxRange: 512
     followEntity: true
-    pannable: true # it's called scoutsuit for a reason
   - type: ActivatableUI
     key: enum.RadarConsoleUiKey.Key
     singleUser: true

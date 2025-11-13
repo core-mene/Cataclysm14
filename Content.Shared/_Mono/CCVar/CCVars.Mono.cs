@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 ark1368
 //
@@ -14,17 +15,46 @@ namespace Content.Shared._Mono.CCVar;
 [CVarDefs]
 public sealed partial class MonoCVars
 {
+    #region Cleanup
+
     /// <summary>
     ///     How often to clean up space garbage entities, in seconds.
     /// </summary>
     public static readonly CVarDef<float> SpaceGarbageCleanupInterval =
         CVarDef.Create("mono.space_garbage_cleanup_interval", 1800.0f, CVar.SERVERONLY);
 
-	/// <summary>
+    /// <summary>
+    ///     How far away from any players can a mob be until it gets cleaned up.
+    /// </summary>
+    public static readonly CVarDef<float> MobCleanupDistance =
+        CVarDef.Create("mono.mob_cleanup_distance", 1280.0f, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     How far away from any players can a grid be until it gets cleaned up.
+    /// </summary>
+    public static readonly CVarDef<float> GridCleanupDistance =
+        CVarDef.Create("mono.grid_cleanup_distance", 628.0f, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     How much can a grid at most be worth for it to be cleaned up.
+    /// </summary>
+    public static readonly CVarDef<float> GridCleanupMaxValue =
+        CVarDef.Create("mono.grid_cleanup_max_value", 30000.0f, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Duration, in seconds, for how long a grid has to fulfill cleanup conditions to get cleaned up.
+    /// </summary>
+    public static readonly CVarDef<float> GridCleanupDuration =
+        CVarDef.Create("mono.grid_cleanup_duration", 60f * 30f, CVar.SERVERONLY);
+
+    #endregion
+
+    /// <summary>
     ///     Whether to play radio static/noise sounds when receiving radio messages on headsets.
     /// </summary>
     public static readonly CVarDef<bool> RadioNoiseEnabled =
         CVarDef.Create("mono.radio_noise_enabled", true, CVar.ARCHIVE | CVar.CLIENTONLY);
+
 
     #region Audio
 
