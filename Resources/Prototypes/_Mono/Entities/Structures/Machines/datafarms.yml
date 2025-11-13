@@ -6,12 +6,16 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: Structures/Machines/rndpointsource.rsi
+    sprite: _Mono\Structures\Machines\neapolitan_server.rsi
     layers:
-    - state: rndpointsource-off
-    - state: rndpointsource
+    - state: icon
+    - state: unlit
       shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+    - state: stripe
+      color: "#b3aa79"
+    - state: stripe2
+      color: "#5b0093"
   - type: Appearance
   - type: GenericVisualizer
     visuals:
