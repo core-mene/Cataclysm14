@@ -73,8 +73,6 @@ public sealed class FireControlNavControl : ShuttleNavControl
             return;
         }
 
-        UseCircleMaskShader(handle); // Mono
-
         base.Draw(handle);
 
         var mapPos = _transform.ToMapCoordinates(_coordinates.Value);
@@ -116,8 +114,6 @@ public sealed class FireControlNavControl : ShuttleNavControl
                 }
             }
         }
-
-        ClearShader(handle);
     }
 
     public void UpdateControllables(EntityUid console, FireControllableEntry[] controllables)

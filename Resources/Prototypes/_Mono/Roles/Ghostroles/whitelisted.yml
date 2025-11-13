@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 KiraZen_
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: ghostRole
   id: RedactedBorg
   name: ghost-role-information-redacted-borg
@@ -12,14 +18,6 @@
   description: ghost-role-information-redacted-core-description
   rules: ghost-role-information-silicon-rules
   entityPrototype: StationAiBrainRedacted
-  whitelisted: true
-
-- type: ghostRole
-  id: VesselAICore
-  name: ghost-role-information-vessel-core
-  description: ghost-role-information-vessel-core-description
-  rules: ghost-role-information-silicon-rules
-  entityPrototype: StationAiBrainVessel
   whitelisted: true
 
 - type: ghostRole

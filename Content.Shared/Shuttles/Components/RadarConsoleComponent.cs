@@ -51,7 +51,7 @@ public sealed partial class RadarConsoleComponent : Component
 
     // <Mono>
     [DataField]
-    public bool Pannable = false;
+    public bool Pannable = true;
 
     [DataField]
     public bool RelativePanning = false;

@@ -113,7 +113,6 @@
   - type: RadarConsole
     maxRange: 768
     followEntity: false
-    pannable: true
   - type: DeviceNetwork
     deviceNetId: Wireless
     receiveFrequencyId: CrewMonitor
@@ -321,6 +320,12 @@
     - RobotTalk
     - Draconic
     - Azaziba
+  - type: Access
+    groups:
+    - AllAccess
+    tags:
+    - NuclearOperative
+    - SyndicateAgent
   - type: GhostTakeoverAvailable
   - type: RandomMetadata
     nameSegments: [MonoRemnantCoreNameset]
@@ -396,6 +401,9 @@
     raffle:
       settings: default
     prototype: VesselAICore
+    requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 180000 # 50 hrs
   - type: GhostTakeoverAvailable
   - type: RandomMetadata
     nameSegments: [ VesselCoreNameset ]
