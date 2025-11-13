@@ -23,7 +23,6 @@ using Content.Shared.Weapons.Ranged.Components;
 using Robust.Shared.Prototypes;
 using Content.Server.Power.EntitySystems;
 using Content.Server.PowerCell; // Mono
-using Content.Shared.Weapons.Ranged.Events; // Mono
 
 namespace Content.Server.Weapons.Ranged.Systems;
 
