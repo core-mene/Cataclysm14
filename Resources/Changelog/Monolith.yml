@@ -14069,10 +14069,63 @@ Entries:
   id: 1556
   time: '2025-11-11T23:26:42.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2607
-- author: Ark
+- author: Ilya246
   changes:
     - type: Fix
-      message: Instruments should no longer sound the same.
-  id: 1557
-  time: '2025-11-12T01:29:38.0000000+00:00'
-  url: https://github.com/Monolith-Station/Monolith/pull/2608
+      message: Advanced laser drills can no longer be re-anchored once loose.
+  id: 1558
+  time: '2025-11-12T18:36:54.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2612
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: >-
+        Overhauled grid cleanup system. Report weirdness with shuttles/wreckage
+        being (not) deleted.
+  id: 1559
+  time: '2025-11-13T00:32:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2617
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: Safezone vendomats are now hackable.
+  id: 1560
+  time: '2025-11-13T00:33:48.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2616
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: Vessel AI cores are no longer whitelist-only.
+  id: 1561
+  time: '2025-11-13T00:34:57.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2614
+- author: Nope1356
+  changes:
+    - type: Tweak
+      message: >-
+        Removed fun! in the form of gutting the costs of subnukes, I hope you
+        went mining!
+  id: 1562
+  time: '2025-11-13T00:37:53.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2609
+- author: NazrinNya
+  changes:
+    - type: Tweak
+      message: Mining now gets you one stacked ore instead of spawning bunch of them.
+  id: 1563
+  time: '2025-11-13T16:06:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2615
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: PDV Spasaka ID card chameleon fixed.
+  id: 1564
+  time: '2025-11-13T16:24:06.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2627
+- author: NazrinNya
+  changes:
+    - type: Fix
+      message: 90mm APHE ammo drum is not infinite anymore.
+  id: 1565
+  time: '2025-11-13T18:12:18.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2628

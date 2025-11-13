@@ -8,12 +8,8 @@
 using Content.Server.Ghost.Roles.Components;
 using Content.Server.NPC.HTN;
 using Content.Shared._Mono.CCVar;
-using Content.Shared.Ghost;
-using Content.Shared.Mobs.Systems;
-using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Map;
-using Robust.Shared.Player;
 using Robust.Shared.Timing;
 
 namespace Content.Server._Mono.Cleanup;
@@ -23,10 +19,9 @@ namespace Content.Server._Mono.Cleanup;
 /// </summary>
 public sealed class MobCleanupSystem : EntitySystem
 {
+    [Dependency] private readonly CleanupHelperSystem _cleanup = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IPlayerManager _player = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
 
     private ISawmill _log = default!;
@@ -68,7 +63,7 @@ public sealed class MobCleanupSystem : EntitySystem
             if (xform.GridUid != null
                 || _immuneQuery.HasComp(uid)
                 || _ghostQuery.HasComp(uid)
-                || HasNearbyPlayers(xform.Coordinates, _maxDistance)
+                || _cleanup.HasNearbyPlayers(xform.Coordinates, _maxDistance)
             )
                 return;
 
@@ -96,28 +91,5 @@ public sealed class MobCleanupSystem : EntitySystem
         {
             _checkQueue.Enqueue(uid);
         }
-    }
-
-    public bool HasNearbyPlayers(EntityCoordinates coord, float radius) {
-        var allPlayerData = _player.GetAllPlayerData();
-        foreach (var playerData in allPlayerData)
-        {
-            var exists = _player.TryGetSessionById(playerData.UserId, out var session);
-
-            if (!exists
-                || session == null
-                || session.AttachedEntity is not { Valid: true } playerEnt
-                || HasComp<GhostComponent>(playerEnt)
-                || _mobState.IsDead(playerEnt))
-                continue;
-
-            var playerCoords = Transform(playerEnt).Coordinates;
-
-            if (coord.TryDistance(EntityManager, playerCoords, out var distance)
-                && distance <= radius
-            )
-                return true;
-        }
-        return false;
     }
 }
