@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 NazrinNya
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Server.Stack;
 using Content.Shared.Stacks;
 using Robust.Shared.Map;
