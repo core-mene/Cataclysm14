@@ -16,7 +16,7 @@
   minimumDistance: 6500
   maximumDistance: 9500
   spawnGroup: Required
-  gridPath: /Maps/_NF/POI/NuADDepot.yml
+  gridPath: /Maps/_Mono/POI/NuADDepot.yml
   hideWarp: true
   addComponents:
   - type: IFF
@@ -30,7 +30,7 @@
 - type: gameMap
   id: NuADDepot
   mapName: 'Nu Class Automated Defense Depot'
-  mapPath: /Maps/_NF/POI/NuADDepot.yml
+  mapPath: /Maps/_Mono/POI/NuADDepot.yml
   minPlayers: 0
   stations:
     NuADDepot:
