@@ -90,6 +90,17 @@
 
 - type: entity
   parent: ClothingHeadBase
+  id: ClothingHeadHatCapVizier
+  name: Vizier's Cap
+  description: 'The cap worn by the Vizier to denote his official status in the Phaethon dynasty above the rest of the Imperials.'
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/browncap.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/browncap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
   id: ClothingHeadHatBeret
   name: beret
   description: A beret, an artists favorite headwear.

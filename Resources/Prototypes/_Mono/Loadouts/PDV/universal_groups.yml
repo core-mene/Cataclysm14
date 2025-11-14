@@ -24,6 +24,9 @@
   loadouts:
   - PDVClothingNeckIFFOrange
   - PDVClothingNeckCloakCommander
+  - PDVClothingNeckCloakVizier
+  - PDVClothingNeckMantleVizier
+
 - type: loadoutGroup
   id: PDVOuterClothing
   name: loadout-group-contractor-outerclothing
@@ -91,6 +94,7 @@
   minLimit: 1
   loadouts:
   - PDVCommanderBeret
+  - PDVCapVizier
   fallbacks:
   - PDVCommanderBeret
 - type: loadoutGroup
