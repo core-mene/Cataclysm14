@@ -99,15 +99,15 @@
     disarmOnMapChange: true # no FTL divebombing
     disarmOnUnanchor: true # can't just ram with it
     announceSender: scuttle-device-razor-announcement-sender
-    timer: 30
-    minimumTime: 30
-    armDoaferLength: 1
+    timer: 20
+    minimumTime: 20
+    armDoafterLength: 1
     disarmDoafterLength: 1
-  # much weaker so you can't use it to blast POI wall
+  # calibrated to be able to blast capitals but not POI wall
   - type: Explosive
     explosionType: Default
-    maxIntensity: 1000
-    intensitySlope: 1000
+    maxIntensity: 800
+    intensitySlope: 20
     totalIntensity: 10000000
     deleteAfterExplosion: true
   - type: StaticPrice
@@ -117,4 +117,4 @@
   - type: PointLight
     color: "#FF6040"
   - type: RotatingLight
-    speed: 180
+    speed: 360 # weeee
