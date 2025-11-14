@@ -11,7 +11,7 @@
 - type: vessel
   id: Europa
   parent: BaseVesselAntag
-  name: ASR Europa
+  name: PDV Europa
   description: A multipurpose corvette, with a focus on broadside firepower and shields.
   price: 160750
   category: Large
@@ -27,7 +27,7 @@
 
 - type: gameMap
   id: Europa
-  mapName: 'ASR Europa'
+  mapName: 'PDV Europa'
   mapPath: /Maps/_Mono/Shuttles/BlackMarket/europa.yml
   minPlayers: 0
   stations:
@@ -35,7 +35,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Europa ASR{1}'
+          mapNameTemplate: 'Europa PDV{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

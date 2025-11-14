@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 kasature90
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: MPL-2.0
@@ -34,6 +38,8 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
+  - type: StaticPrice
+    price: 1
 
 - type: entity
   id: 20mmCartridge
@@ -73,3 +79,20 @@
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
+
+- type: entity
+  id: Magazine20mmWeak
+  name: "20x124mm ammo drum"
+  parent: Magazine20mmPiercing
+  components:
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: 20mmCartridgeWeak
+
+- type: entity
+  id: 20mmCartridgeWeak
+  name: "cartridge (20x124mm)"
+  parent: 20mmCartridge
+  components:
+  - type: CartridgeAmmo
+    proto: 20mmBulletWeak

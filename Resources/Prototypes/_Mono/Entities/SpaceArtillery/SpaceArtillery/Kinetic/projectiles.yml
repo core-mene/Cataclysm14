@@ -50,6 +50,22 @@
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
 
+- type: entity
+  id: ShipMiniRailgunProjectileWeak
+  name: stock M194 CHARONETTE 280mm 10.25 kg slug
+  parent: ShipMiniRailgunProjectile
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 44000
+        Blunt: 2400
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 2000
+    intensitySlope: 40
+    maxIntensity: 620
+
 # 20mm
 
 - type: entity
@@ -95,6 +111,18 @@
   - type: PointLight
     color: orange
 
+- type: entity
+  id: 20mmBulletWeak
+  name: 20mm bullet
+  parent: 20mmBulletArmorPiercing
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 240
+        Piercing: 100
+
 # 30mm
 
 - type: entity
@@ -119,6 +147,18 @@
     requireNoGrid: true
     shape: arrow
     radarColor: "#1df1f5"
+
+- type: entity
+  id: 30mmBulletWeak
+  parent: 30mmBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 280
+        Blunt: 80
+        Piercing: 100
 
 # 57mm Dravon
 
@@ -156,6 +196,24 @@
     intensitySlope: 5
     maxIntensity: 25
     maxTileBreak: 1
+
+- type: entity
+  id: ShipDravonProjectileWeak
+  name: stock DRAVON 57mm projectile
+  parent: ShipDravonProjectile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 656
+        Blunt: 96
+        Piercing: 168
+  - type: Explosive
+    explosionType: DefaultShipGun
+    totalIntensity: 32
+    intensitySlope: 4
+    maxIntensity: 20
 
 # 90mm
 
@@ -202,6 +260,21 @@
     maxTileBreak: 1
   - type: PointLight
     color: orange
+
+- type: entity
+  id: 90mmBulletWeak
+  parent: 90mmBulletArmorPiercing
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 1440
+        Blunt: 80
+        Piercing: 200
+  - type: Explosive
+    totalIntensity: 20
+    maxIntensity: 4
 
 # 90mm HE
 
@@ -253,6 +326,21 @@
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
 
+- type: entity
+  id: ShipLongbowProjectileWeak
+  name: longbow 140mm projectile
+  parent: ShipLongbowProjectile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 2160
+  - type: Explosive
+    totalIntensity: 320
+    intensitySlope: 15
+    maxIntensity: 1520
+
 # 220mm Cyrexa
 
 - type: entity
@@ -291,6 +379,22 @@
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
+
+- type: entity
+  id: ShipCyrexaProjectileWeak
+  name: stock CYREXA 220mm projectile
+  parent: ShipCyrexaProjectile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 5200
+        Blunt: 8000
+  - type: Explosive
+    totalIntensity: 1040
+    intensitySlope: 15
+    maxIntensity: 1520
 
 # 255mm Bofors
 
@@ -331,6 +435,22 @@
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
 
+- type: entity
+  id: ShipBoforsProjectileWeak
+  name: stock Bofors 255mm projectile
+  parent: ShipBoforsProjectile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 6800
+        Blunt: 9600
+  - type: Explosive
+    totalIntensity: 800
+    intensitySlope: 20
+    maxIntensity: 60
+
 # 203mm Kargil
 
 - type: entity
@@ -369,6 +489,22 @@
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
+
+- type: entity
+  id: ShipKargilProjectileWeak
+  name: stock Kargil 203mm projectile
+  parent: ShipKargilProjectile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 4800
+        Blunt: 6000
+  - type: Explosive
+    totalIntensity: 600
+    intensitySlope: 28
+    maxIntensity: 40
 
 # 305mm Hades
 
