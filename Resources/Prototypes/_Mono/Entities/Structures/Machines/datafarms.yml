@@ -29,9 +29,18 @@
           False: {visible: false}
   - type: ApcPowerReceiver
     powerLoad: 40000
+  - type: ContainerContainer
+  - type: AmbientSound
+    volume: -9
+    range: 5
+    sound:
+      path: /Audio/Ambience/Objects/server_fans.ogg
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
+  - type: PassiveThermalSignature
+    signature: 8000000 # ~8km
+  - type: ThermalSignature
 
 - type: entity
   id: BaseDataFarm
@@ -157,8 +166,8 @@
     color: "#009360"
   - type: ItemMiner
     proto: SpawnLootDatafarmBitcoin
-    interval: 600
-    minedSound: /Audio/Ambience/Objects/server_fans.ogg
-    needApcPower: false
+    interval: 6 #00
+    minedSound: /Audio/Effects/Cargo/ping.ogg
+    needApcPower: true
   - type: Machine
     board: DataFarmCryptoCircuitboard
