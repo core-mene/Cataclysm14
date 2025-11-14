@@ -28,8 +28,11 @@
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Avalon
 // SPDX-FileCopyrightText: 2025 Aviu00
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 ark1368
 // SPDX-FileCopyrightText: 2025 beck-thompson
+// SPDX-FileCopyrightText: 2025 bitcrushing
 // SPDX-FileCopyrightText: 2025 slarticodefast
 // SPDX-FileCopyrightText: 2025 sleepyyapril
 // SPDX-FileCopyrightText: 2025 starch
@@ -64,6 +67,7 @@ using Content.Shared.Weapons.Melee.Events;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Whitelist;
+using Content.Shared._RMC14.Weapons.Ranged.Prediction;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
@@ -71,6 +75,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
@@ -107,11 +112,13 @@ public abstract partial class SharedGunSystem : EntitySystem
     [Dependency] protected readonly ThrowingSystem ThrowingSystem = default!;
     [Dependency] private   readonly UseDelaySystem _useDelay = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
+    [Dependency] protected readonly SharedGunPredictionSystem? _gunPrediction = default!;
 
     private const float InteractNextFire = 0.3f;
     private const double SafetyNextFire = 0.5;
     private const float EjectOffset = 0.4f;
     protected const string AmmoExamineColor = "yellow";
+    protected const string AmmoExamineSpecialColor = "orange"; // Mono
     protected const string FireRateExamineColor = "yellow";
     public const string ModeExamineColor = "cyan";
 
@@ -192,6 +199,50 @@ public abstract partial class SharedGunSystem : EntitySystem
             gun.Target = potentialTarget;
         // Goob edit end
         AttemptShoot(user.Value, ent, gun);
+    }
+
+    public List<(EntityUid Entity, ProjectileComponent Component)>? ShootRequested(
+        NetEntity gun,
+        NetCoordinates coordinates,
+        NetEntity? target,
+        List<int>? shot,
+        ICommonSession session)
+    {
+        var gunUid = GetEntity(gun);
+        var user = session.AttachedEntity;
+
+        if (user == null ||
+            !_combatMode.IsInCombatMode(user) ||
+            !TryGetGun(user.Value, out var ent, out var gunComp))
+        {
+            return null;
+        }
+
+        if (ent != gunUid)
+            return null;
+
+        gunComp.ShootCoordinates = GetCoordinates(coordinates);
+        gunComp.Target = GetEntity(target);
+
+        AttemptShoot(user.Value, ent, gunComp);
+        
+        // Check if shooting was successful by checking if ammo was consumed
+        // This is a workaround since AttemptShoot returns void
+        if (gunComp.ShotCounter == 0)
+            return null;
+
+        var projectiles = new List<(EntityUid Entity, ProjectileComponent Component)>();
+        if (shot != null)
+        {
+            foreach (var id in shot)
+            {
+                var entity = new EntityUid(id);
+                if (TryComp<ProjectileComponent>(entity, out var projectile))
+                    projectiles.Add((entity, projectile));
+            }
+        }
+
+        return projectiles;
     }
 
     private void OnStopShootRequest(RequestStopShootEvent ev, EntitySessionEventArgs args)
@@ -509,7 +560,7 @@ public abstract partial class SharedGunSystem : EntitySystem
         EntityUid? user = null,
         bool throwItems = false);
 
-    public void ShootProjectile(EntityUid uid, Vector2 direction, Vector2 gunVelocity, EntityUid gunUid, EntityUid? user = null, float speed = 20f)
+    public virtual void ShootProjectile(EntityUid uid, Vector2 direction, Vector2 gunVelocity, EntityUid gunUid, EntityUid? user = null, float speed = 20f)
     {
         var physics = EnsureComp<PhysicsComponent>(uid);
         Physics.SetBodyStatus(uid, physics, BodyStatus.InAir);
@@ -721,7 +772,9 @@ public abstract partial class SharedGunSystem : EntitySystem
 
     protected abstract void CreateEffect(EntityUid gunUid, MuzzleFlashEvent message, EntityUid? user = null);
 
-    public abstract void PlayImpactSound(EntityUid otherEntity, DamageSpecifier? modifiedDamage, SoundSpecifier? weaponSound, bool forceWeaponSound);
+    public bool GunPrediction => _gunPrediction?.GunPrediction ?? false;
+
+    public abstract void PlayImpactSound(EntityUid otherEntity, DamageSpecifier? modifiedDamage, SoundSpecifier? weaponSound, bool forceWeaponSound, Robust.Shared.Player.Filter? filter = null, Entity<ProjectileComponent, PhysicsComponent>? projectile = null);
 
     /// <summary>
     /// Used for animated effects on the client.

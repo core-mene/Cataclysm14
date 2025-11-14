@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -94,6 +95,24 @@
   - SmugglingEventScheduler
   - FrontierRoundstartVariation
   - MonoChimeraSTCShuttleSpawnerScheduler
+
+- type: gamePreset
+  id: MonoMixed
+  name: mono-mixed-title
+  description: mono-mixed-description
+  showInVote: true
+  rules:
+  - NFAdventure
+  - BasicStationEventScheduler
+  - BluespaceEventScheduler
+  - BluespaceDungeonEventScheduler
+  - BluespaceSalvageEventScheduler
+  - SmugglingEventScheduler
+  - FrontierRoundstartVariation
+  - MonoChimeraSTCShuttleSpawnerSchedulerSlow
+  - MonoAISTCShuttleSpawnerSchedulerSlow
+  - MonoAISTCShuttleSpawnerSchedulerTier2Slow
+  - MonoAsakimSTCShuttleSpawnerSchedulerSlow
 
 - type: gamePreset
   id: MonoAllAtOnce

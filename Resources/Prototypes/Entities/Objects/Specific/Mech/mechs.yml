@@ -52,9 +52,9 @@
     - Ammonia
     - NitrousOxide
     - Frezon
-    - BZ #Funky
-    - Healium #Funky
-    - Nitrium #Funky
+    - BZ #Funky/Goob
+    - Healium #Funky/Goob
+    - Nitrium #Funky/Goob
     #- Helium3 TODO: fusion
     # remove everything except oxygen to maintain oxygen ratio
     overflowGases:
@@ -66,9 +66,10 @@
     - Ammonia
     - NitrousOxide
     - Frezon
-    - BZ #Funky
-    - Healium #Funky
-    - Nitrium #Funky
+    - BZ #Funky/Goob
+    - Healium #Funky/Goob
+    - Nitrium #Funky/Goob
+    - Pluoxium #Funky/Goob
     #- Helium3 TODO: fusion
   - type: AirIntake
   # for intake and filter to work
@@ -192,7 +193,6 @@
   - type: RadarConsole
     maxRange: 512
     followEntity: true
-    pannable: true
   - type: Magboots
   # </Mono>
 

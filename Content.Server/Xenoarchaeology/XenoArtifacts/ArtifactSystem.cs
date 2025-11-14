@@ -1,3 +1,26 @@
+// SPDX-FileCopyrightText: 2022 Alex Evgrashin
+// SPDX-FileCopyrightText: 2022 Alexander Evgrashin
+// SPDX-FileCopyrightText: 2022 Leon Friedrich
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2023 0x6273
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Kara
+// SPDX-FileCopyrightText: 2023 LankLTE
+// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 GreaseMonk
+// SPDX-FileCopyrightText: 2024 Hannah Giovanna Dawson
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2024 deltanedas
+// SPDX-FileCopyrightText: 2024 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 tonotom1
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Numerics;
@@ -151,11 +174,11 @@ public sealed partial class ArtifactSystem : EntitySystem
                 return;
         }
 
-        // Science should happen on shuttles or stations.
-        if (_station.GetOwningStation(xform.GridUid) == null)
-        {
-            disintegrateProb += disintegrateProbOffStationGrid;
-        }
+        // Science should happen on shuttles or stations. //MONO: disable anti fun
+        //if (_station.GetOwningStation(xform.GridUid) == null)
+        //{
+        //    disintegrateProb += disintegrateProbOffStationGrid;
+        //}
 
         if (_random.Prob(disintegrateProb))
         {
@@ -175,7 +198,7 @@ public sealed partial class ArtifactSystem : EntitySystem
         {
             // Activate the artifact, but consume any points from newly visited nodes.
             bool oldRemove = artifactComp.RemoveGainedPoints;
-            artifactComp.RemoveGainedPoints = true;
+            artifactComp.RemoveGainedPoints = false; //MONO: true >> false, restore fun
             TryActivateArtifact(uid, uid, artifactComp);
             artifactComp.RemoveGainedPoints = oldRemove;
         }
