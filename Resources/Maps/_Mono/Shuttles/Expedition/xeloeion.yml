@@ -1,27 +1,10 @@
-# SPDX-FileCopyrightText: 2023 Alexander Evgrashin
-# SPDX-FileCopyrightText: 2023 Cheackraze
-# SPDX-FileCopyrightText: 2023 Vera Aguilera Puerto
-# SPDX-FileCopyrightText: 2023 terezi4real
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2025 Alice "Arimah" Heurlin
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 TTBNC
-# SPDX-FileCopyrightText: 2025 kyres1
-# SPDX-FileCopyrightText: 2025 pathetic meowmeow
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: MPL-2.0
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/11/2025 16:13:25
+  time: 11/14/2025 21:21:56
   entityCount: 686
 maps: []
 grids:
@@ -2176,7 +2159,7 @@ entities:
       pos: -1.5,-9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -1565.3354
+      secondsUntilStateChange: -1739.002
       state: Opening
   - uid: 665
     components:
@@ -2184,7 +2167,7 @@ entities:
       pos: -0.5,-9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -1566.6022
+      secondsUntilStateChange: -1740.2687
       state: Opening
   - uid: 666
     components:
@@ -2192,7 +2175,7 @@ entities:
       pos: 0.5,-9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -1565.8354
+      secondsUntilStateChange: -1739.502
       state: Opening
 - proto: FirelockGlass
   entities:
@@ -3648,6 +3631,72 @@ entities:
       enabled: False
     - type: ApcPowerReceiver
       powerLoad: 1
+- proto: LockableButtonCaptain
+  entities:
+  - uid: 116
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -5.5,10.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        276:
+        - - Pressed
+          - Toggle
+        275:
+        - - Pressed
+          - Toggle
+        274:
+        - - Pressed
+          - Toggle
+        273:
+        - - Pressed
+          - Toggle
+        272:
+        - - Pressed
+          - Toggle
+        271:
+        - - Pressed
+          - Toggle
+        270:
+        - - Pressed
+          - Toggle
+        269:
+        - - Pressed
+          - Toggle
+  - uid: 118
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 4.5,10.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        280:
+        - - Pressed
+          - Toggle
+        279:
+        - - Pressed
+          - Toggle
+        278:
+        - - Pressed
+          - Toggle
+        277:
+        - - Pressed
+          - Toggle
+        35:
+        - - Pressed
+          - Toggle
+        281:
+        - - Pressed
+          - Toggle
+        282:
+        - - Pressed
+          - Toggle
+        283:
+        - - Pressed
+          - Toggle
 - proto: LockerWallMaterialsFuelAmeJarFilled
   entities:
   - uid: 322
@@ -3932,74 +3981,6 @@ entities:
     - type: Transform
       pos: 4.5,-4.5
       parent: 1
-- proto: SignalButtonExt1
-  entities:
-  - uid: 118
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -5.5,10.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        272:
-        - - Pressed
-          - Toggle
-        271:
-        - - Pressed
-          - Toggle
-        270:
-        - - Pressed
-          - Toggle
-        269:
-        - - Pressed
-          - Toggle
-        273:
-        - - Pressed
-          - Toggle
-        274:
-        - - Pressed
-          - Toggle
-        275:
-        - - Pressed
-          - Toggle
-        276:
-        - - Pressed
-          - Toggle
-- proto: SignalButtonExt2
-  entities:
-  - uid: 116
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,10.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        280:
-        - - Pressed
-          - Toggle
-        279:
-        - - Pressed
-          - Toggle
-        277:
-        - - Pressed
-          - Toggle
-        35:
-        - - Pressed
-          - Toggle
-        281:
-        - - Pressed
-          - Toggle
-        282:
-        - - Pressed
-          - Toggle
-        283:
-        - - Pressed
-          - Toggle
-        278:
-        - - Pressed
-          - Toggle
 - proto: SignalButtonWindows
   entities:
   - uid: 137
