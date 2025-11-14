@@ -1,0 +1,47 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# GitHub: starch70
+# Discord: _starch_
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Aulin
+  parent: BaseVessel
+  name: FDL Aulin
+  description: An expedition vessel competing with the Meteor, comes with a salvage bay and artifact lab. Has more utility while sacrificing firepower.
+  price: 107590
+  category: Large
+  group: Expedition
+  shuttlePath: /Maps/_Mono/Shuttles/Expedition/meteor.yml
+  guidebookPage: null
+  class:
+  - Expedition
+  - Science
+  - Salvage
+  engine:
+  - AME
+
+- type: gameMap
+  id: Aulin
+  mapName: 'FDL Aulin'
+  mapPath: /Maps/_Mono/Shuttles/Expedition/aulin.yml
+  minPlayers: 0
+  stations:
+    Aulin:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Aulin EXP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
