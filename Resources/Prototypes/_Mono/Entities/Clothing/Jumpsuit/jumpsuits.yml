@@ -80,6 +80,34 @@
 
 - type: entity
   parent: ClothingUniformBase
+  id: ClothingUniformTSFMCOfficer
+  name: TSFMC officer uniform
+  description: A military dress uniform for special occasions, complete with stripes and rank insignia.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmcofficer.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmcofficer.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformTSFMCEnlisted
+  name: TSFMC enlisted uniform
+  description: A military dress uniform for special occasions, complete with stripes and rank insignia.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmcenlisted.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmcenlisted.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
   id: ClothingUniformUSSP
   name: USSP uniform
   description: Standard fatigues of the USSP military.
