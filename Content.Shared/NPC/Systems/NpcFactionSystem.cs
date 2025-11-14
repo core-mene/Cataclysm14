@@ -333,7 +333,7 @@ public sealed partial class NpcFactionSystem : EntitySystem
     /// <summary>
     /// Mono edit - Gets hostile actions either from prototype or sets all factions to hostile except for friendly and neutral ones
     /// </summary>
-    private HashSet<ProtoId<NpcFactionPrototype>> GetHostileFactions(NpcFactionPrototype factionProto,
+    private HashSet<ProtoId<NpcFactionPrototype>> GetHostileFactions(NpcFactionPrototype iteratedFaction,
         bool defaultHostile,
         IEnumerable<NpcFactionPrototype> factionPrototypes)
     {
@@ -341,14 +341,14 @@ public sealed partial class NpcFactionSystem : EntitySystem
 
         if (!defaultHostile)
         {
-           return GetHostileFactions(factionProto);
+           return GetHostileFactions(iteratedFaction);
         }
 
         foreach (var faction in factionPrototypes)
         {
-            if (factionProto.Neutral.Contains(faction) ||
-                factionProto.Friendly.Contains(faction) ||
-                faction.ID == factionProto.ID)
+            if (iteratedFaction.Neutral.Contains(faction) ||
+                iteratedFaction.Friendly.Contains(faction) ||
+                faction.ID == iteratedFaction.ID)
                 continue;
 
             hostile.Add(faction);
