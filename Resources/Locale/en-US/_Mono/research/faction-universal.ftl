@@ -9,5 +9,5 @@ research-technology-universal-150mm-ammo = 150mm Shell Production
 research-technology-universal-light-fighter-ordinance = Light Fighter Ordinance Production
 research-technology-universal-advanced-light-fighter-ordinance = Advanced Fighter Ordinance Production
 
-research-technology-universal-armorplates-1 = Ballistic Composites
-research-technology-universal-armorplates-2 = Plasteel Hex-ply Stamping
+research-technology-universal-armorplates-1 = Ballistic Composites Reverse Engineering
+research-technology-universal-armorplates-2 = Plasteel Hex-ply Stamping Reverse Engineering
