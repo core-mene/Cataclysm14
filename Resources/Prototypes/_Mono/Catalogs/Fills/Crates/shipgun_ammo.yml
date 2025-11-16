@@ -28,17 +28,6 @@
 
 - type: entity
   parent: CrateAmmoSecureMercenary
-  id: CrateAmmoBoxKargil
-  name: 203mm Kargil shell box
-  description: Contains 1 reload of 12 203mm shells.
-  components:
-  - type: StorageFill
-    contents:
-    - id: 203mmCartridge
-      amount: 12
-
-- type: entity
-  parent: CrateAmmoSecureMercenary
   id: CrateAmmoBox150mm
   name: 150mm TARNYX shell box
   description: Contains 3 AP and 3 EMP shells.
