@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Ilya246
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared._Mono.CCVar;
 using Robust.Shared.Configuration;
 using Robust.Shared.Timing;
