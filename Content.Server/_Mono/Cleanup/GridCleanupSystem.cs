@@ -32,12 +32,14 @@ public sealed class GridCleanupSystem : BaseCleanupSystem<MapGridComponent>
     private HashSet<Entity<ApcComponent>> _apcList = new();
 
     private EntityQuery<BatteryComponent> _batteryQuery;
+    private EntityQuery<CleanupImmuneComponent> _immuneQuery;
 
     public override void Initialize()
     {
         base.Initialize();
 
         _batteryQuery = GetEntityQuery<BatteryComponent>();
+        _immuneQuery = GetEntityQuery<CleanupImmuneComponent>();
 
         Subs.CVar(_cfg, MonoCVars.GridCleanupDistance, val => _maxDistance = val, true);
         Subs.CVar(_cfg, MonoCVars.GridCleanupMaxValue, val => _maxValue = val, true);
@@ -54,6 +56,7 @@ public sealed class GridCleanupSystem : BaseCleanupSystem<MapGridComponent>
         if (HasComp<MapComponent>(uid) // if we're a planetmap ignore
             || !HasComp<MapGridComponent>(uid) // if we somehow lost MapGridComponent
             || HasComp<MapGridComponent>(parent) // do not delete anything on planetmaps either
+            || _immuneQuery.HasComp(uid)
             || TryComp<IFFComponent>(uid, out var iff) && (iff.Flags & IFFFlags.HideLabel) == 0 // delete only if IFF off
             || _cleanup.HasNearbyPlayers(xform.Coordinates, _maxDistance)
             || HasPoweredAPC((uid, xform)) // don't delete if it has powered APCs
