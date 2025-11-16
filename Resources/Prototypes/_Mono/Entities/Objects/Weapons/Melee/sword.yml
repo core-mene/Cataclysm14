@@ -262,30 +262,30 @@
       reflects:
         - Energy
   - type: Welder
-    fuelConsumption: 33
+    fuelConsumption: 50
   - type: SolutionContainerManager
     solutions:
       Welder:
         reagents:
         - ReagentId: WeldingFuel
-          Quantity: 99
-        maxVol: 99
+          Quantity: 100
+        maxVol: 100
   - type: SolutionRegeneration
     solution: Welder
     generated:
       reagents:
       - ReagentId: WeldingFuel
-        Quantity: 3
+        Quantity: 5
   - type: EnergySword
     activatedColor: LightBlue
     colorOptions: []
   - type: Tag # WD EDIT
     tags:
     - EnergySword
-  - type: RefillableSolution
-    solution: Welder
   - type: Sharp
   - type: DisarmMalus
     malus: 0.6
   - type: Execution
     doAfterDuration: 4.0
+  - type: UseDelay
+    delay: 5
