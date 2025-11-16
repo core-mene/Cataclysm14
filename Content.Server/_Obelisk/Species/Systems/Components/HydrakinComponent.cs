@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 sneb
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared.Atmos;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
