@@ -86,7 +86,8 @@ public abstract class BaseCleanupSystem<TComp> : EntitySystem
         {
             _checkQueue.Enqueue(uid);
         }
-        _cleanupDeferDuration = interval * 0.9 / _checkQueue.Count;
+        if (_checkQueue.Count != 0)
+            _cleanupDeferDuration = interval * 0.9 / _checkQueue.Count;
 
         Log.Debug($"Ran cleanup queue, found: {_checkQueue.Count}, deleting over {_cleanupDeferDuration}");
     }
