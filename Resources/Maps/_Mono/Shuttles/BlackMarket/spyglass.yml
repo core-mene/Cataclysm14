@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/17/2025 07:07:33
-  entityCount: 635
+  time: 11/17/2025 07:25:37
+  entityCount: 640
 maps: []
 grids:
 - 1
@@ -1013,11 +1013,11 @@ entities:
       parent: 1
 - proto: ButtonFrameCaution
   entities:
-  - uid: 425
+  - uid: 630
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 5.5,2.5
+      pos: 5.5,3.5
       parent: 1
 - proto: ButtonFrameCautionSecurity
   entities:
@@ -2929,10 +2929,10 @@ entities:
       parent: 1
 - proto: LockerScienceFilled
   entities:
-  - uid: 184
+  - uid: 640
     components:
     - type: Transform
-      pos: 4.5,1.5
+      pos: 4.5,2.5
       parent: 1
 - proto: LockerWallMaterialsFuelUraniumFilled
   entities:
@@ -3102,31 +3102,43 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 0.5,-0.5
       parent: 1
-- proto: PoweredStrobeOrange
+- proto: PoweredStrobeOrangeEnabled
   entities:
-  - uid: 628
+  - uid: 425
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -7.5,6.5
       parent: 1
-  - uid: 629
+  - uid: 501
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 6.5,6.5
       parent: 1
-  - uid: 630
+  - uid: 628
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 2.5,13.5
       parent: 1
-  - uid: 631
+  - uid: 629
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -3.5,13.5
+      parent: 1
+  - uid: 631
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 2.5,-8.5
+      parent: 1
+  - uid: 636
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -3.5,-8.5
       parent: 1
 - proto: PoweredWarmSmallLight
   entities:
@@ -3223,17 +3235,6 @@ entities:
       parent: 1
 - proto: SignalButtonDirectional
   entities:
-  - uid: 501
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 5.5,2.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        204:
-        - - Pressed
-          - Toggle
   - uid: 506
     components:
     - type: Transform
@@ -3248,6 +3249,25 @@ entities:
         217:
         - - Pressed
           - Toggle
+  - uid: 637
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 5.5,3.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        204:
+        - - Pressed
+          - Toggle
+- proto: SinkWide
+  entities:
+  - uid: 639
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 2.5,2.5
+      parent: 1
 - proto: SMESAdvanced
   entities:
   - uid: 120
@@ -3276,6 +3296,12 @@ entities:
       parent: 1
 - proto: TableReinforced
   entities:
+  - uid: 184
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 4.5,1.5
+      parent: 1
   - uid: 355
     components:
     - type: Transform
@@ -4312,6 +4338,14 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -3.5,-7.5
+      parent: 1
+- proto: WeaponCapacitorRecharger
+  entities:
+  - uid: 638
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 4.5,1.5
       parent: 1
 - proto: WeaponTurretDravon
   entities:
