@@ -20,10 +20,10 @@ public sealed partial class WeaponMeleeChargeComponent : Component
     public float Cooldown = 1f;
 
     [DataField]
-    public TimeSpan CurrentCooldown = TimeSpan.Zero;
+    public TimeSpan CooldownEndTime = TimeSpan.Zero;
 
     [DataField]
-    public TimeSpan CurrentActiveTime = TimeSpan.Zero;
+    public TimeSpan ActiveEndTime = TimeSpan.Zero;
 
     [DataField]
     public DamageSpecifier CooldownDamagePenalty =  new DamageSpecifier();
