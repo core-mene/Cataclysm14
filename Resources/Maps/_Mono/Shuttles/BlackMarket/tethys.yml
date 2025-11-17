@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/17/2025 10:06:38
-  entityCount: 523
+  time: 11/17/2025 20:10:28
+  entityCount: 532
 maps: []
 grids:
 - 1
@@ -518,56 +518,112 @@ entities:
     - type: NavMap
   - uid: 2
     components:
+    - type: MetaData
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.5,-5.5
       parent: 1
   - uid: 86
     components:
+    - type: MetaData
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 1.5,-2.5
       parent: 1
   - uid: 145
     components:
+    - type: MetaData
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.5,-2.5
       parent: 1
   - uid: 151
     components:
+    - type: MetaData
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -0.5,10.5
       parent: 1
   - uid: 172
     components:
+    - type: MetaData
     - type: Transform
       pos: -1.5,-3.5
       parent: 1
   - uid: 180
     components:
+    - type: MetaData
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -0.5,6.5
       parent: 1
   - uid: 219
     components:
+    - type: MetaData
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -0.5,0.5
       parent: 1
   - uid: 220
     components:
+    - type: MetaData
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -0.5,1.5
       parent: 1
   - uid: 253
     components:
+    - type: MetaData
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 1.5,2.5
+      parent: 1
+- proto: AirlockHatchRogueLocked
+  entities:
+  - uid: 524
+    components:
+    - type: Transform
+      pos: -0.5,10.5
+      parent: 1
+  - uid: 525
+    components:
+    - type: Transform
+      pos: -0.5,6.5
+      parent: 1
+  - uid: 526
+    components:
+    - type: Transform
+      pos: 1.5,2.5
+      parent: 1
+  - uid: 527
+    components:
+    - type: Transform
+      pos: -0.5,0.5
+      parent: 1
+  - uid: 528
+    components:
+    - type: Transform
+      pos: -0.5,1.5
+      parent: 1
+  - uid: 529
+    components:
+    - type: Transform
+      pos: 1.5,-2.5
+      parent: 1
+  - uid: 530
+    components:
+    - type: Transform
+      pos: 0.5,-2.5
+      parent: 1
+  - uid: 531
+    components:
+    - type: Transform
+      pos: -1.5,-3.5
+      parent: 1
+  - uid: 532
+    components:
+    - type: Transform
+      pos: 0.5,-5.5
       parent: 1
 - proto: AirlockShuttleSyndicateRogueLocked
   entities:
