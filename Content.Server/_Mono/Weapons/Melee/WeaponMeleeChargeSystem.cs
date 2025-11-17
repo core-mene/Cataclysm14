@@ -11,9 +11,6 @@ using Robust.Shared.Timing;
 
 namespace Content.Server._Mono.Weapons.Melee;
 
-/// <summary>
-/// This handles...
-/// </summary>
 public sealed class MeleeChargeSystem : EntitySystem
 {
     [Dependency] private readonly ItemToggleSystem _toggle = default!;
