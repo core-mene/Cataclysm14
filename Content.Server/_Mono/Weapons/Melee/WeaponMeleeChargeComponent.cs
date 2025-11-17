@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 NazrinNya
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared.Damage;
 using Robust.Shared.GameStates;
 
