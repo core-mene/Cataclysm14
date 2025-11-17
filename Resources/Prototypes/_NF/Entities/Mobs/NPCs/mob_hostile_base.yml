@@ -487,7 +487,7 @@
     - DoorBumpOpener
     - CannotSuicide
   - type: FTLKnockdownImmune
-
+# Mono edit - Faction overwriting fix
 # A simpler base for extending existing mobs (e.g. carp, kangaroos, snakes, xenos)
 - type: entity
   suffix: Frontier, Hostile
@@ -498,7 +498,7 @@
   - MobPrying
   - MobHumanoidHostileAISimpleMelee
   - BaseC3MobCreature
-  id: NFMobSimpleHostileBase
+  id: NFMobFactionlessBase
   components:
   - type: NPCRetaliation
     attackMemoryLength: 10
@@ -522,8 +522,19 @@
     group: GenericNumber
   - type: Puller
   - type: Hands
+  - type: Carriable # Kept for consistency with other mobs
+  - type: FTLKnockdownImmune
+
+
+- type: entity
+  suffix: Frontier, Hostile
+  abstract: true
+  parent:
+  - NFMobFactionlessBase
+  id: NFMobSimpleHostileBase
+  components:
   - type: NpcFactionMember
     factions:
     - SimpleHostile
-  - type: Carriable # Kept for consistency with other mobs
-  - type: FTLKnockdownImmune
+
+# Mono edit end
