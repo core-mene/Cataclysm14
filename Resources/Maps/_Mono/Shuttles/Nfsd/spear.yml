@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/18/2025 01:36:55
-  entityCount: 390
+  time: 11/18/2025 03:21:15
+  entityCount: 392
 maps: []
 grids:
 - 1
@@ -1499,7 +1499,6 @@ entities:
     - type: GasMixer
       inletTwoConcentration: 0.20999998
       inletOneConcentration: 0.79
-      enabled: True
     - type: AtmosPipeColor
       color: '#0055CCFF'
 - proto: GasPassiveGate
@@ -2106,6 +2105,13 @@ entities:
     - type: Transform
       pos: -2.5,-1.5
       parent: 1
+- proto: SpawnPointLatejoin
+  entities:
+  - uid: 392
+    components:
+    - type: Transform
+      pos: -1.5,2.5
+      parent: 1
 - proto: StairStageDark
   entities:
   - uid: 194
@@ -2701,6 +2707,13 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 1.5,-3.5
+      parent: 1
+- proto: WarpPoint
+  entities:
+  - uid: 391
+    components:
+    - type: Transform
+      pos: -1.5,2.5
       parent: 1
 - proto: WeaponLaserTurretL1Phalanx
   entities:
