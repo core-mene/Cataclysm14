@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/18/2025 01:23:39
-  entityCount: 372
+  time: 11/18/2025 01:36:55
+  entityCount: 390
 maps: []
 grids:
 - 1
@@ -1008,6 +1008,102 @@ entities:
     - type: Transform
       pos: 1.5,4.5
       parent: 1
+  - uid: 376
+    components:
+    - type: Transform
+      pos: -2.5,-0.5
+      parent: 1
+  - uid: 377
+    components:
+    - type: Transform
+      pos: -3.5,-0.5
+      parent: 1
+  - uid: 378
+    components:
+    - type: Transform
+      pos: -3.5,0.5
+      parent: 1
+  - uid: 379
+    components:
+    - type: Transform
+      pos: -3.5,1.5
+      parent: 1
+  - uid: 380
+    components:
+    - type: Transform
+      pos: -4.5,1.5
+      parent: 1
+- proto: CableHV
+  entities:
+  - uid: 364
+    components:
+    - type: Transform
+      pos: -1.5,-1.5
+      parent: 1
+  - uid: 365
+    components:
+    - type: Transform
+      pos: -2.5,-1.5
+      parent: 1
+  - uid: 366
+    components:
+    - type: Transform
+      pos: -2.5,-0.5
+      parent: 1
+- proto: CableMV
+  entities:
+  - uid: 367
+    components:
+    - type: Transform
+      pos: -0.5,5.5
+      parent: 1
+  - uid: 368
+    components:
+    - type: Transform
+      pos: -0.5,4.5
+      parent: 1
+  - uid: 369
+    components:
+    - type: Transform
+      pos: -0.5,3.5
+      parent: 1
+  - uid: 370
+    components:
+    - type: Transform
+      pos: -0.5,2.5
+      parent: 1
+  - uid: 371
+    components:
+    - type: Transform
+      pos: -0.5,1.5
+      parent: 1
+  - uid: 372
+    components:
+    - type: Transform
+      pos: -0.5,0.5
+      parent: 1
+  - uid: 373
+    components:
+    - type: Transform
+      pos: -0.5,-0.5
+      parent: 1
+  - uid: 374
+    components:
+    - type: Transform
+      pos: -1.5,-0.5
+      parent: 1
+  - uid: 375
+    components:
+    - type: Transform
+      pos: -1.5,-1.5
+      parent: 1
+- proto: CableTerminal
+  entities:
+  - uid: 363
+    components:
+    - type: Transform
+      pos: -2.5,-0.5
+      parent: 1
 - proto: Catwalk
   entities:
   - uid: 105
@@ -1943,35 +2039,35 @@ entities:
       parent: 1
 - proto: PoweredSmallLight
   entities:
-  - uid: 367
+  - uid: 385
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -2.5,4.5
       parent: 1
-  - uid: 368
+  - uid: 386
     components:
     - type: Transform
       pos: -3.5,1.5
       parent: 1
-  - uid: 369
+  - uid: 387
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -0.5,1.5
       parent: 1
-  - uid: 370
+  - uid: 388
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,1.5
       parent: 1
-  - uid: 371
+  - uid: 389
     components:
     - type: Transform
       pos: -2.5,7.5
       parent: 1
-  - uid: 372
+  - uid: 390
     components:
     - type: Transform
       pos: 0.5,7.5
@@ -2034,7 +2130,7 @@ entities:
       parent: 1
 - proto: SyringeBicaridine
   entities:
-  - uid: 365
+  - uid: 383
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -2042,7 +2138,7 @@ entities:
       parent: 1
 - proto: SyringeDermaline
   entities:
-  - uid: 366
+  - uid: 384
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -2050,7 +2146,7 @@ entities:
       parent: 1
 - proto: SyringeSaline
   entities:
-  - uid: 364
+  - uid: 382
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -2660,7 +2756,7 @@ entities:
       parent: 1
 - proto: WindoorSecurePlasma
   entities:
-  - uid: 363
+  - uid: 381
     components:
     - type: Transform
       rot: 3.141592653589793 rad
