@@ -95,3 +95,18 @@
     minPlayers: 60
   - type: LoadMapRule
     preloadedGrid: AIWyvern
+
+- type: entity
+  parent: BaseRandomShuttleRule
+  id: UnknownShuttleArchangel
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-ai-capital-detected
+    startAudio:
+      path: /Audio/Misc/delta_alt.ogg
+    weight: 4
+    maxOccurrences: 1
+  - type: GameRule
+    minPlayers: 40
+  - type: LoadMapRule
+    preloadedGrid: AIArchangel
