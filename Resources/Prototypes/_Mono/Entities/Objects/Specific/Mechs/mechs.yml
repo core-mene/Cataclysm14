@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 NazrinNya
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 starch
@@ -112,6 +113,7 @@
       components:
         - HumanoidAppearance
         - BorgChassis
+    zoom: 1.5, 1.5
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -221,6 +223,7 @@
       components:
         - HumanoidAppearance
         - BorgChassis
+    zoom: 1.75, 1.75
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -322,6 +325,7 @@
       components:
         - HumanoidAppearance
         - BorgChassis
+    zoom: 1.15, 1.15 # its a ground mech.
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -425,6 +429,7 @@
       components:
         - HumanoidAppearance
         - BorgChassis
+    zoom: 3, 3
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
