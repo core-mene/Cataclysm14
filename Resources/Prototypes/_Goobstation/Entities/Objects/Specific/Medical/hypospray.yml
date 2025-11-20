@@ -59,38 +59,6 @@
   - type: Tag
     tags: []
 
-# Actual hyposprays
-
-- type: entity
-  name: amnestic spray
-  parent: [BaseItem]
-  id: AmnestizineHypospray # Technically this is rather multi-use medipen but I'll put it here
-  suffix: DO NOT MAP
-  description: Prevents the subject from remembering anything prior or during the injection.
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Objects/Specific/Medical/amnestic_hypo.rsi
-    state: icon
-  - type: Item
-    sprite: _Goobstation/Objects/Specific/Medical/amnestic_hypo.rsi
-  - type: SolutionContainerManager
-    solutions:
-      hypospray:
-        maxVol: 100
-        reagents:
-        - ReagentId: Amnestizine
-          Quantity: 100
-  - type: ExaminableSolution
-    solution: hypospray
-  - type: Hypospray
-    solutionName: hypospray
-    transferAmount: 5
-    onlyAffectsMobs: false
-    injectOnly: true
-  - type: HyposprayBlockNonMobInjection
-  - type: UseDelay
-    delay: 0.1 # UseDelays are for LOSERs
-
 - type: entity
   name: centcomm hypospray
   parent: [BaseItem]

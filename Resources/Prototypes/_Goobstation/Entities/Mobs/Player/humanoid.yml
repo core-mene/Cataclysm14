@@ -254,10 +254,6 @@
   parent: EventHumanoidMindShielded
   randomizeName: false
   components:
-  - type: GrantImplant
-    implants: [ MindShieldImplant, FreedomImplant, BluespaceLifelineImplant ]
-  - type: GrantCqc
-    isBlocked: false
   - type: GhostRole
     name: ghost-role-information-navy-officer-name
     description: ghost-role-information-navy-officer-description
@@ -271,7 +267,15 @@
     nameSegments:
     - NamesFirstMilitaryLeader
     - NamesLastMilitary
+  - type: LanguageKnowledge
+    speaks:
+    - SolCommon
+    - TauCetiBasic
+    understands:
+    - SolCommon
+    - TauCetiBasic
 
+    
 # Navy Captain
 
 - type: entity
@@ -294,10 +298,6 @@
   parent: EventHumanoidMindShielded
   randomizeName: false
   components:
-  - type: GrantImplant
-    implants: [ MindShieldImplant, FreedomImplant, BluespaceLifelineImplant ]
-  - type: GrantCqc
-    isBlocked: false
   - type: GhostRole
     name: ghost-role-information-navy-captain-name
     description: ghost-role-information-navy-captain-description
@@ -311,6 +311,13 @@
     nameSegments:
     - NamesFirstMilitaryHighRank
     - NamesLastMilitary
+  - type: LanguageKnowledge
+    speaks:
+    - SolCommon
+    - TauCetiBasic
+    understands:
+    - SolCommon
+    - TauCetiBasic
 
 # Navy Undercover Officer
 
@@ -329,14 +336,11 @@
   - type: RandomHumanoidSpawner
     settings: NavyOfficerUndercover
 
-- type: randomHumanoidSettings
-  id: NavyOfficerUndercover
-  parent: EventHumanoidMindShielded
-  randomizeName: false
-  components:
-  - type: GrantImplant
-    implants: [ MindShieldImplant, FreedomImplant, BluespaceLifelineImplant, StorageImplant ]
-  - type: GrantCqc
+  - type: randomHumanoidSettings
+    id: NavyOfficerUndercover
+    parent: EventHumanoidMindShielded
+    randomizeName: false
+    components:
     isBlocked: false
   - type: GhostRole
     name: ghost-role-information-navy-officer-undercover-name
@@ -351,6 +355,15 @@
     nameSegments:
     - NamesFirstMilitaryLeader
     - NamesLastMilitary
+  - type: LanguageKnowledge
+    speaks:
+    - SolCommon
+    - TauCetiBasic
+    understands:
+    - SolCommon
+    - TauCetiBasic
+
+
 
 # Special Operations Officer
 
@@ -374,10 +387,6 @@
   parent: EventHumanoidMindShielded
   randomizeName: false
   components:
-  - type: GrantImplant
-    implants: [ MindShieldImplant, FreedomImplant, BluespaceLifelineImplant ]
-  - type: GrantCqc
-    isBlocked: false
   - type: GhostRole
     name: ghost-role-information-special-operations-officer-name
     description: ghost-role-information-special-operations-officer-description
@@ -391,6 +400,14 @@
     nameSegments:
     - NamesFirstMilitaryHighRank
     - NamesLastMilitary
+  - type: LanguageKnowledge
+    speaks:
+    - SolCommon
+    - TauCetiBasic
+    understands:
+    - SolCommon
+    - TauCetiBasic
+
 
 # Diplomat
 
@@ -414,8 +431,6 @@
   parent: EventHumanoidMindShielded
   randomizeName: false
   components:
-  - type: GrantImplant
-    implants: [ MindShieldImplant, FreedomImplant, BluespaceLifelineImplant ]
   - type: GhostRole
     name: ghost-role-information-diplomat-name
     description: ghost-role-information-diplomat-description
@@ -424,8 +439,14 @@
       settings: short
   - type: Loadout
     prototypes: [ DiplomatGear ]
-    roleLoadout: [ RoleSurvivalEVA ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirstMilitaryPolitical
     - names_last
+  - type: LanguageKnowledge
+    speaks:
+    - SolCommon
+    - TauCetiBasic
+    understands:
+    - SolCommon
+    - TauCetiBasic

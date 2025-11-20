@@ -415,14 +415,6 @@
   - type: AccessReader
     access: [["Armory"]]
 
-- type: entity
-  id: GunSafeBaseSecure
-  parent: GunSafe
-  suffix: Armory, Locked
-  components:
-  - type: AccessReader
-    access: [["Armory"]]
-
 # Detective
 - type: entity
   id: LockerDetective
