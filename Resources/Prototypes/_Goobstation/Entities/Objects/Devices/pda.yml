@@ -24,3 +24,51 @@
   - type: Icon
     sprite: _Goobstation/Objects/Devices/pda.rsi
     state: pda-chrono
+
+- type: entity
+  parent: CentcomPDA
+  id: NavyCaptainPDA
+  name: Winter Solstice HiCom's PDA
+  description: The devil's in the details.
+  components:
+  - type: Pda
+    id: CentcomIDCardNavyCaptain
+  - type: HealthAnalyzer
+    scanDelay: 0
+    silent: true
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    notificationsEnabled: false
+    diskSpace: 10 # DeltaV
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NewsReaderCartridge
+    - LogProbeCartridge
+    - MedTekCartridge
+    - AstroNavCartridge
+    - NanoChatCartridge # DeltaV
+
+- type: entity
+  parent: NavyCaptainPDA
+  id: NavyOfficerPDA
+  name: Winter Solstice Officer's PDA
+  components:
+  - type: Pda
+    id: CentcomIDCardNavyOfficer
+
+- type: entity
+  parent: NavyCaptainPDA
+  id: SpecialOperationsOfficerPDA
+  name: Special Operations Officer's PDA
+  components:
+  - type: Pda
+    id: CentcomIDCardSpecialOperationsOfficer
+
+- type: entity
+  parent: NavyCaptainPDA
+  id: DiplomatPDA
+  name: diplomat's PDA
+  components:
+  - type: Pda
+    id: CentcomIDCardDiplomat

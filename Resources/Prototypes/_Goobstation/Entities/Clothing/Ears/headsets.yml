@@ -1,0 +1,35 @@
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMagistrate
+  name: magistrate's headset
+  description: The headset used by the magistrate.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommand
+      - EncryptionKeyCentCom
+      - EncryptionKeyJustice
+      - EncryptionKeyPrison
+      - EncryptionKeySecurity
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: DeltaV/Clothing/Ears/Headsets/justice.rsi
+    state: icon_alt
+  - type: Clothing
+    sprite: DeltaV/Clothing/Ears/Headsets/justice.rsi
+
+- type: entity
+  parent: [ClothingHeadsetAlt]
+  id: ClothingHeadsetDeathsquad
+  name: deathsquad over-ear headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCentCom
+      - EncryptionKeyStationMaster
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Ears/Headsets/deathsquad.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Ears/Headsets/deathsquad.rsi
