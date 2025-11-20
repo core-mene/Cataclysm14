@@ -1,6 +1,6 @@
 - type: entity
   id: VesperaCartridge
-  name: ASM-417 HEAT missile
+  name: 50mm HEAT missile
   description: An individual ASM-417 HEAT missile for the Vespera.
   parent: BaseGrenade
   components:
@@ -37,12 +37,3 @@
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
-
-- type: entity
-  id: VesperaCartridgeWeak
-  name: ASM-417 missile
-  description: An individual ASM-417 missile.
-  parent: VesperaCartridge
-  components:
-  - type: CartridgeAmmo
-    proto: ShipMissileASM417Weak
