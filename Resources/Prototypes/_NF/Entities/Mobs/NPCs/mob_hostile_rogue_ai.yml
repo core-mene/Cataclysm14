@@ -929,7 +929,7 @@
   - type: Stamina
     critThreshold: 600
   - type: ProjectileBatteryAmmoProvider
-    proto: TeslaGunBullet
+    proto: TeslaGunBulletRogueSilicon # Mono
     fireCost: 100
   - type: BatterySelfRecharger
     autoRecharge: true
@@ -940,7 +940,7 @@
   - type: Gun
     projectileSpeed: 10
     showExamineText: false
-    fireRate: 0.75
+    fireRate: 0.55 # Mono 0.75 -> 0.55
     minAngle: 0
     maxAngle: 15
     soundGunshot:
