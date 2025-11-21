@@ -157,3 +157,21 @@
     - AllAccess
     tags:
     - CentralCommand
+
+# Halflife Stuff
+
+- type: entity
+  parent: IDCardStandard
+  id: GmanIDCard
+  name: strange ID card
+  description: The card that originally accessed everything in this universe
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Misc/id_cards.rsi
+    layers:
+    - state: future # Todo - Unique sprites?
+    - state: idchrono
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: GovernmentMan
