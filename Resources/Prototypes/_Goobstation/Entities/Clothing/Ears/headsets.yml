@@ -3,27 +3,6 @@
 # SPDX-License-Identifier: MPL-2.0
 
 - type: entity
-  parent: ClothingHeadset
-  id: ClothingHeadsetMagistrate
-  name: magistrate's headset
-  description: The headset used by the magistrate.
-  components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyCommand
-      - EncryptionKeyCentCom
-      - EncryptionKeyJustice
-      - EncryptionKeyPrison
-      - EncryptionKeySecurity
-      - EncryptionKeyCommon
-  - type: Sprite
-    sprite: DeltaV/Clothing/Ears/Headsets/justice.rsi
-    state: icon_alt
-  - type: Clothing
-    sprite: DeltaV/Clothing/Ears/Headsets/justice.rsi
-
-- type: entity
   parent: [ClothingHeadsetAlt]
   id: ClothingHeadsetDeathsquad
   name: deathsquad over-ear headset

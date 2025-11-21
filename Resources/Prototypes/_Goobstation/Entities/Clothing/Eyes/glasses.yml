@@ -3,20 +3,6 @@
 # SPDX-License-Identifier: MPL-2.0
 
 - type: entity
-  parent: [ClothingEyesBase, ShowSecurityIcons, ShowMedicalIcons]
-  id: ClothingEyesGlassesMedSec
-  name: blueshield glasses
-  description: Advanced Sunglasses with a deep blue hue and a built-in HUD capable of displaying Security, Medical, and Diagnostics information.
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Clothing/Eyes/Glasses/medglasses.rsi
-  - type: Clothing
-    sprite: _Goobstation/Clothing/Eyes/Glasses/medglasses.rsi
-  - type: Construction
-    graph: GlassesMedHUD
-    node: glassesMed
-
-- type: entity
   parent: [ClothingEyesHudOmni]
   id: ClothingEyesGlassesDeathsquad
   suffix: DO NOT MAP
