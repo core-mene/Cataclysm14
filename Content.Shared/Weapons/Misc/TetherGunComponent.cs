@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Robust.Shared.GameStates;
 
 namespace Content.Shared.Weapons.Misc;
@@ -11,12 +16,12 @@ public sealed partial class TetherGunComponent : BaseForceGunComponent
     /// <summary>
     /// The entity the tethered target has a joint to.
     /// </summary>
-    [DataField("tetherEntity"), AutoNetworkedField]
+    [DataField("tetherEntity")]
     public override EntityUid? TetherEntity { get; set; }
 
     /// <summary>
     /// The entity currently tethered.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("tethered"), AutoNetworkedField]
+    [ViewVariables(VVAccess.ReadWrite), DataField("tethered")]
     public override EntityUid? Tethered { get; set; }
 }

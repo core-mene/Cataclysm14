@@ -1,4 +1,19 @@
-﻿using Robust.Client.Graphics;
+// SPDX-FileCopyrightText: 2020 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2020 Rich
+// SPDX-FileCopyrightText: 2020 Tomeno
+// SPDX-FileCopyrightText: 2020 Tyler Young
+// SPDX-FileCopyrightText: 2020 Visne
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2022 DrSmugleaf
+// SPDX-FileCopyrightText: 2022 Jezithyr
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: MPL-2.0
+
+using System.Numerics;
+using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
@@ -34,7 +49,7 @@ namespace Content.Client.Cooldown
             if (Progress >= 0f)
             {
                 var hue = (5f / 18f) * lerp;
-                color = Color.FromHsv((hue, 0.75f, 0.75f, 0.50f));
+                color = Color.FromHsv(new Vector4(hue, 0.75f, 0.75f, 0.50f));
             }
             else
             {

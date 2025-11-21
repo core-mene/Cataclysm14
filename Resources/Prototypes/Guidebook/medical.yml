@@ -1,10 +1,24 @@
+# SPDX-FileCopyrightText: 2023 CrigCrag
+# SPDX-FileCopyrightText: 2023 Hebi
+# SPDX-FileCopyrightText: 2023 Sir Winters
+# SPDX-FileCopyrightText: 2023 end
+# SPDX-FileCopyrightText: 2024 Leon Friedrich
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 f0x-n3rd
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 bitcrushing
+# SPDX-FileCopyrightText: 2025 dustylens
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: guideEntry
   id: Medical
   name: guide-entry-medical
   text: "/ServerInfo/Guidebook/Medical/Medical.xml"
   children:
   - DirectorOfCare # Frontier
-  - Medical Doctor
+  - MedicalDoctor # Mono - No spaces in yaml allowed
   - Chemist
   - Cloning
   - Cryogenics # Note: Frontier changes inside
@@ -12,7 +26,7 @@
   - MedicalBounties # Frontier
 
 - type: guideEntry
-  id: Medical Doctor
+  id: MedicalDoctor # Mono - No spaces in yaml allowed
   name: guide-entry-medicaldoctor
   text: "/ServerInfo/Guidebook/Medical/MedicalDoctor.xml"
 
@@ -61,24 +75,24 @@
   name: guide-entry-surgery
   text: "/ServerInfo/_Shitmed/Guidebook/Medical/Surgery.xml"
   children:
-  - Part Manipulation
-  - Organ Manipulation
-  - Utility Surgeries
+  - PartManipulation # Mono - No spaces in yaml allowed
+  - OrganManipulation # Mono - No spaces in yaml allowed
+  - UtilitySurgeries # Mono - No spaces in yaml allowed
 
 - type: guideEntry
-  id: Part Manipulation
+  id: PartManipulation # Mono - No spaces in yaml allowed
   name: guide-entry-partmanipulation
   text: "/ServerInfo/_Shitmed/Guidebook/Medical/PartManipulation.xml"
   filterEnabled: true
 
 - type: guideEntry
-  id: Organ Manipulation
+  id: OrganManipulation # Mono - No spaces in yaml allowed
   name: guide-entry-organmanipulation
   text: "/ServerInfo/_Shitmed/Guidebook/Medical/OrganManipulation.xml"
   filterEnabled: true
 
 - type: guideEntry
-  id: Utility Surgeries
+  id: UtilitySurgeries # Mono - No spaces in yaml allowed
   name: guide-entry-utilitysurgeries
   text: "/ServerInfo/_Shitmed/Guidebook/Medical/UtilitySurgeries.xml"
   filterEnabled: true

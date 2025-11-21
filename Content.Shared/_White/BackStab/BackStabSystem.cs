@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Aviu00
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: MPL-2.0
+
+using System.Numerics;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.Mobs.Components;
@@ -67,7 +74,13 @@ public sealed class BackStabSystem : EntitySystem
         var userXform = Transform(user);
         var v1 = -_transform.GetWorldRotation(xform).ToWorldVec();
         var v2 = _transform.GetWorldPosition(userXform) - _transform.GetWorldPosition(xform);
-        var angle = Vector3.CalculateAngle(new Vector3(v1), new Vector3(v2));
+
+        // Mono Start - Removed vec3 method, calc using vec2 dot product and inverse cosine
+        var v1Normalized = v1.Normalized();
+        var v2Normalized = v2.Normalized();
+        var dotProduct = Vector2.Dot(v1Normalized, v2Normalized);
+        var angle = Math.Acos(Math.Clamp(dotProduct, -1.0, 1.0));
+        // Mono End
 
         if (angle > tolerance.Theta)
             return false;

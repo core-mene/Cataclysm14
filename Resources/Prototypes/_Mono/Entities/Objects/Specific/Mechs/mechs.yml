@@ -1,6 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 NazrinNya
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 starch
@@ -112,6 +114,7 @@
       components:
         - HumanoidAppearance
         - BorgChassis
+    zoom: 1.5, 1.5
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -221,6 +224,7 @@
       components:
         - HumanoidAppearance
         - BorgChassis
+    zoom: 1.75, 1.75
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -322,6 +326,7 @@
       components:
         - HumanoidAppearance
         - BorgChassis
+    zoom: 1.15, 1.15 # its a ground mech.
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -425,6 +430,7 @@
       components:
         - HumanoidAppearance
         - BorgChassis
+    zoom: 3, 3
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -446,7 +452,7 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: RadarConsole
-    maxRange: 512
+    maxRange: 1024
     followEntity: true
   - type: Appearance
   - type: GenericVisualizer
@@ -456,7 +462,7 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 0.1
     baseSprintSpeed: 1
-    baseWeightlessModifier: 25
+    baseWeightlessModifier: 35
   - type: RadarBlip
     radarColor: "#E3E3E3"
     scale: 3
@@ -547,7 +553,7 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: RadarConsole
-    maxRange: 1024 #It's a radar/EWAC platform.
+    maxRange: 2048 #It's a radar/EWAC platform.
     followEntity: true
   - type: DetectionRangeMultiplier
     infraredMultiplier: 1.5 # from 1
@@ -560,7 +566,7 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 0.25
     baseSprintSpeed: 0.5
-    baseWeightlessModifier: 20
+    baseWeightlessModifier: 30
   - type: RadarBlip
     radarColor: "#E3E3E3"
     scale: 3
@@ -651,7 +657,7 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: RadarConsole
-    maxRange: 512
+    maxRange: 1024
     followEntity: true
   - type: Appearance
   - type: GenericVisualizer
@@ -661,7 +667,7 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 0.1
     baseSprintSpeed: 1
-    baseWeightlessModifier: 30
+    baseWeightlessModifier: 50
   - type: RadarBlip
     radarColor: "#E3E3E3"
     scale: 3

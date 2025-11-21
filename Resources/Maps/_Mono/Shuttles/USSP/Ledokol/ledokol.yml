@@ -31,6 +31,7 @@
 # SPDX-FileCopyrightText: 2025 Cojoke
 # SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 starch
@@ -13065,90 +13066,12 @@ entities:
     - type: Transform
       pos: 15.5,25.5
       parent: 1
-- proto: SpawnPointUSSPCommissar
-  entities:
-  - uid: 1953
-    components:
-    - type: Transform
-      pos: 37.5,25.5
-      parent: 1
-  - uid: 1954
-    components:
-    - type: Transform
-      pos: 36.5,16.5
-      parent: 1
-  - uid: 1955
-    components:
-    - type: Transform
-      pos: 40.5,16.5
-      parent: 1
-- proto: SpawnPointUSSPCorporal
-  entities:
-  - uid: 1956
-    components:
-    - type: Transform
-      pos: 37.5,25.5
-      parent: 1
-  - uid: 1957
-    components:
-    - type: Transform
-      pos: 36.5,16.5
-      parent: 1
-  - uid: 1958
-    components:
-    - type: Transform
-      pos: 40.5,16.5
-      parent: 1
-- proto: SpawnPointUSSPMedic
-  entities:
-  - uid: 1959
-    components:
-    - type: Transform
-      pos: 37.5,25.5
-      parent: 1
-  - uid: 1960
-    components:
-    - type: Transform
-      pos: 36.5,16.5
-      parent: 1
-  - uid: 1961
-    components:
-    - type: Transform
-      pos: 40.5,16.5
-      parent: 1
-- proto: SpawnPointUSSPRifleman
-  entities:
-  - uid: 1962
-    components:
-    - type: Transform
-      pos: 37.5,25.5
-      parent: 1
-  - uid: 1963
-    components:
-    - type: Transform
-      pos: 36.5,16.5
-      parent: 1
-  - uid: 1964
-    components:
-    - type: Transform
-      pos: 40.5,16.5
-      parent: 1
-- proto: SpawnPointUSSPSergeant
+- proto: SpawnPointLatejoin
   entities:
   - uid: 1965
     components:
     - type: Transform
       pos: 37.5,25.5
-      parent: 1
-  - uid: 1966
-    components:
-    - type: Transform
-      pos: 36.5,16.5
-      parent: 1
-  - uid: 1967
-    components:
-    - type: Transform
-      pos: 40.5,16.5
       parent: 1
 - proto: StairDark
   entities:

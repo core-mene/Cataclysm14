@@ -34,6 +34,7 @@
 // SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 ark1368
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -125,6 +126,7 @@ namespace Content.Shared.Input
         public static readonly BoundKeyFunction ZoomIn = "ZoomIn";
         public static readonly BoundKeyFunction ResetZoom = "ResetZoom";
         public static readonly BoundKeyFunction ToggleStanding = "ToggleStanding"; // WD EDIT
+        public static readonly BoundKeyFunction ToggleFocus = "ToggleFocus"; // Mono
 
         // Shitmed Change Start
         public static readonly BoundKeyFunction TargetHead = "TargetHead";

@@ -28,6 +28,7 @@
 // SPDX-FileCopyrightText: 2025 ErhardSteinhauer
 // SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 ark1368
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -211,6 +212,7 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(ContentKeyFunctions.ZoomIn);
             AddButton(ContentKeyFunctions.ZoomOut);
             AddButton(ContentKeyFunctions.ResetZoom);
+            AddButton(ContentKeyFunctions.ToggleFocus); // Mono
 
             AddHeader("ui-options-header-interaction-basic");
             AddButton(EngineKeyFunctions.Use);

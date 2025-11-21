@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
-# SPDX-FileCopyrightText: 2025 monolith8319
+# SPDX-FileCopyrightText: 2025 Miranda
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -55,3 +55,18 @@
   solids:
     FoodButterSlice: 1
   recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeMacaroni
+  name: macaroni & cheese recipe
+  result: FoodMacaroni
+  time: 10
+  group: Pasta
+  reagents:
+    Milk: 1
+  solids:
+    FoodNoodlesBoiled: 1
+    FoodCheeseSlice: 2
+  recipeType:
+  - Oven # Frontier
+  - Microwave #Mono

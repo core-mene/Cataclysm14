@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: MPL-2.0
+
+using System.Numerics;
+
 namespace Content.Shared._White.Overlays;
 
 public abstract partial class BaseVisionOverlayComponent : Component

@@ -1,3 +1,12 @@
+// SPDX-FileCopyrightText: 2022 Morb
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Kara
+// SPDX-FileCopyrightText: 2024 MendaxxDev
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared.Whitelist;
 using Robust.Shared.GameStates;
 
@@ -6,7 +15,7 @@ namespace Content.Shared.Sound.Components;
 /// <summary>
 /// Simple sound emitter that emits sound on AfterActivatableUIOpenEvent
 /// </summary>
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class EmitSoundOnUIOpenComponent : BaseEmitSoundComponent
 {
     /// <summary>

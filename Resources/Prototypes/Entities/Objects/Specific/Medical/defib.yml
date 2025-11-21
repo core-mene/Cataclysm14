@@ -1,3 +1,22 @@
+# SPDX-FileCopyrightText: 2023 IProduceWidgets
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Sir Winters
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 AJCM-git
+# SPDX-FileCopyrightText: 2024 Alzore
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Nairod
+# SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2024 beck-thompson
+# SPDX-FileCopyrightText: 2024 deltanedas
+# SPDX-FileCopyrightText: 2024 themias
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ScyronX
+# SPDX-FileCopyrightText: 2025 bitcrushing
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: entity
   id: BaseDefibrillator
   parent: BaseItem
@@ -39,7 +58,7 @@
       price: 30
     - type: GuideHelp
       guides:
-      - Medical Doctor
+      - MedicalDoctor # Mono - No spaces in yaml allowed
     - type: LanguageSpeaker # Einstein Engines - Language
     - type: LanguageKnowledge # Einstein Engines - Language
       speaks:

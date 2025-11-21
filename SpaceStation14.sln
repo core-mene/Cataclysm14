@@ -38,8 +38,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Robust.Shared", "RobustTool
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content.IntegrationTests", "Content.IntegrationTests\Content.IntegrationTests.csproj", "{AB7AF1C8-30FF-4436-9DF0-179BE5B0C132}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content.Benchmarks", "Content.Benchmarks\Content.Benchmarks.csproj", "{7AC832A1-2461-4EB5-AC26-26F6AFFA9E46}"
-EndProject
+# Commented out benchmarks from automatically compiling, InternalsVisibileTo not in RT until 267
+# Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content.Benchmarks", "Content.Benchmarks\Content.Benchmarks.csproj", "{7AC832A1-2461-4EB5-AC26-26F6AFFA9E46}"
+# EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenToolkit.GraphicsLibraryFramework", "RobustToolbox\OpenToolkit.GraphicsLibraryFramework\OpenToolkit.GraphicsLibraryFramework.csproj", "{4809F412-3132-419E-BF9D-CCF7593C3533}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content.Server.Database", "Content.Server.Database\Content.Server.Database.csproj", "{45C9B43F-305D-4651-9863-F6384CBC847F}"

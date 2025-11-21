@@ -351,21 +351,6 @@
       - PirateUplink
 
 - type: listing
-  id: UplinkPirateAgentIDCard
-  name: uplink-pirate-agent-id-card-name
-  description: uplink-pirate-agent-id-card-desc
-  productEntity: AgentIDCard
-  cost:
-    Doubloon: 15
-  categories:
-  - UplinkPirateUtility
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
   id: UplinkPirateRadioJammer
   name: uplink-pirate-radio-jammer-name
   description: uplink-pirate-radio-jammer-desc
@@ -468,21 +453,6 @@
   productEntity: BorgModuleSecurity
   cost:
     Doubloon: 50
-  categories:
-  - UplinkPirateUtility
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
-  id: UplinkPirateVoicemask
-  name: uplink-pirate-voicemask-name
-  description: uplink-pirate-voicemask-desc
-  productEntity: ClothingMaskGasVoiceChameleon
-  cost:
-    Doubloon: 20
   categories:
   - UplinkPirateUtility
   conditions:

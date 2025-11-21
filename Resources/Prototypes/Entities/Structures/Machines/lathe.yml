@@ -165,8 +165,11 @@
 # SPDX-FileCopyrightText: 2025 deltanedas
 # SPDX-FileCopyrightText: 2025 deltanedas <@deltanedas:kde.org>
 # SPDX-FileCopyrightText: 2025 dustylens
+# SPDX-FileCopyrightText: 2025 kasature90
 # SPDX-FileCopyrightText: 2025 kosticia
 # SPDX-FileCopyrightText: 2025 mikus
+# SPDX-FileCopyrightText: 2025 prototypemeat
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 slarticodefast
 # SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 wewman222
@@ -723,9 +726,16 @@
     runningState: icon
     staticPacks:
     - StaticAmmoRecipePack
+    - RoundstartShipgunAmmo # Mono
     dynamicPacks:
     - DynamicAmmoRecipePack
-    - ResearchedExplosives # Mono
+    # Mono start
+    - ResearchedExplosives
+    - UniversalRailgunAmmo
+    - UniversalMissileAmmo
+    - UniversalShellAmmo
+    - UniversalOrdinance
+    # Mono end
   - type: MaterialStorage
     whitelist:
       tags:
@@ -921,6 +931,7 @@
     - RGlassSmelting
   - type: PlaceableSurface # DeltaV: Allow ore bags to dump into it directly
     isPlaceable: false # but not place on it if you just click it with a random item
+  - type: OreSiloClient #Gives silo access to ore holding
 
 - type: entity
   parent: OreProcessor

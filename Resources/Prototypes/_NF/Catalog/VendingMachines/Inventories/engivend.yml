@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 tonotom1
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: vendingMachineInventory
   id: EngiVendPOIInventory
   startingInventory:
@@ -7,7 +12,7 @@
     Multitool: 4294967295 # Infinite
     ClothingEyesGlassesMeson: 4294967295 # Infinite
     ClothingHeadHatWelding: 4294967295 # Infinite
-#    HolofanProjector: 10
+    HolofanProjector: 4294967295 # Mono: 10 >> Infinite
     InflatableWallStack1: 4294967295 # Infinite
     InflatableDoorStack1: 4294967295 # Infinite
     GeigerCounter: 4294967295 # Infinite

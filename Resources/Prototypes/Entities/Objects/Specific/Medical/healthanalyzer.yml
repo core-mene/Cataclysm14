@@ -1,3 +1,28 @@
+# SPDX-FileCopyrightText: 2022 EmoGarbage404
+# SPDX-FileCopyrightText: 2022 Fishfish458
+# SPDX-FileCopyrightText: 2022 Jessica M
+# SPDX-FileCopyrightText: 2022 Kara
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 fishfish458 <fishfish458>
+# SPDX-FileCopyrightText: 2022 theashtronaut
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Sir Winters
+# SPDX-FileCopyrightText: 2023 Vasilis
+# SPDX-FileCopyrightText: 2023 brainfood1183
+# SPDX-FileCopyrightText: 2023 crazybrain23
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2023 nmajask
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Ian
+# SPDX-FileCopyrightText: 2024 Leon Friedrich
+# SPDX-FileCopyrightText: 2024 Rainfey
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 deltanedas
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 bitcrushing
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: entity
   id: HandheldHealthAnalyzerUnpowered
   parent: [BaseItem, RecyclableItemDeviceSmall] # Frontier: added RecyclableItemDeviceSmall
@@ -38,7 +63,7 @@
           False: { visible: false }
   - type: GuideHelp
     guides:
-    - Medical Doctor
+    - MedicalDoctor # Mono - No spaces in yaml allowed
   - type: StaticPrice # Frontier
     price: 30 # Frontier
 

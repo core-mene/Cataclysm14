@@ -2,10 +2,13 @@
 // SPDX-FileCopyrightText: 2023 Nemanja
 // SPDX-FileCopyrightText: 2024 Errant
 // SPDX-FileCopyrightText: 2024 deathride58
+// SPDX-FileCopyrightText: 2025 Archylle
+// SPDX-FileCopyrightText: 2025 bitcrushing
 // SPDX-FileCopyrightText: 2025 inquisitor-star
 //
 // SPDX-License-Identifier: MPL-2.0
 
+using System.Numerics;
 using System.Security.Cryptography;
 using Microsoft.VisualBasic.CompilerServices;
 

@@ -1,3 +1,16 @@
+# SPDX-FileCopyrightText: 2022 Andreas Kämper
+# SPDX-FileCopyrightText: 2022 Fishfish458
+# SPDX-FileCopyrightText: 2022 dontbetank
+# SPDX-FileCopyrightText: 2022 fishfish458 <fishfish458>
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2023 Flareguy
+# SPDX-FileCopyrightText: 2023 eclips_e
+# SPDX-FileCopyrightText: 2024 AndresE55
+# SPDX-FileCopyrightText: 2025 Smith
+# SPDX-FileCopyrightText: 2025 tonotom1
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: vendingMachineInventory
   id: GoodCleanFunInventory
   startingInventory:
@@ -19,6 +32,6 @@
     CardBoxBlack: 5
   contrabandInventory:
     Basketball: 1
-    # FoodSnackBoritos: 3 # Frontier
+    FoodSnackBoritos: 3
     DrinkSpaceMountainWindCan: 3
     CardBoxNanotrasen: 1 # Frontier

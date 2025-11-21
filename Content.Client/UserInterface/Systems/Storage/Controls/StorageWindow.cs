@@ -1,4 +1,15 @@
-﻿using System.Diagnostics.CodeAnalysis;
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 deltanedas
+// SPDX-FileCopyrightText: 2024 exincore
+// SPDX-FileCopyrightText: 2025 Errant
+// SPDX-FileCopyrightText: 2025 bitcrushing
+// SPDX-FileCopyrightText: 2025 metalgearsloth
+//
+// SPDX-License-Identifier: MPL-2.0
+
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Numerics;
 using Content.Client.Hands.Systems;
@@ -614,7 +625,7 @@ public sealed class StorageWindow : BaseWindow
                         {
                             marked.Add(cell);
                             cell.ModulateSelfOverride = spotFree
-                                ? Color.FromHsv((0.18f, 1 / spot, 0.5f / spot + 0.5f, 1f))
+                                ? Color.FromHsv(new Vector4(0.18f, 1 / spot, 0.5f / spot + 0.5f, 1f))
                                 : Color.FromHex("#2222CC");
                         }
                     }

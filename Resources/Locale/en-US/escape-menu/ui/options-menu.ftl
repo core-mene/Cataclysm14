@@ -41,6 +41,10 @@ ui-options-admin-sounds = Play Admin Sounds
 ui-options-bwoink-sound = Play AHelp Notification Sound
 ui-options-volume-label = Volume
 
+## Mono Audio menu
+
+ui-options-combat-music = Combat Music
+
 ## Graphics menu
 
 ui-options-display-label = Display
@@ -135,6 +139,8 @@ ui-options-function-camera-reset = Reset
 ui-options-function-zoom-in = Zoom in
 ui-options-function-zoom-out = Zoom out
 ui-options-function-reset-zoom = Reset zoom
+## Mono
+ui-options-function-toggle-focus = Toggle focus
 
 ui-options-function-use = Use
 ui-options-function-use-secondary = Use secondary

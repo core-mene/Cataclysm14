@@ -17,6 +17,7 @@ using Content.Server.Shuttles.Components;
 using Content.Shared._NF.Shuttles.Events;
 using Content.Shared._NF.Shipyard.Components;
 using Content.Server._Mono.Shuttles.Components;
+using Robust.Shared.Physics; // Mono
 using Robust.Shared.Physics.Components;
 
 namespace Content.Server.Shuttles.Systems;
@@ -45,8 +46,8 @@ public sealed partial class ShuttleSystem
             return false;
         }
 
-        // Mono - remove shuttle deed requirement
-        if (EntityManager.HasComponent<StationDampeningComponent>(_station.GetOwningStation(transform.GridUid)))
+        // Mono - remove shuttle deed requirement, kill StationDampening
+        if ((physicsComponent.BodyType & BodyType.Static) != 0)
         {
             return false;
         }
@@ -109,8 +110,8 @@ public sealed partial class ShuttleSystem
         if (!EntityManager.TryGetComponent<TransformComponent>(entity, out var xform))
             return InertiaDampeningMode.Dampen;
 
-        // Not a shuttle, shouldn't be togglable // Mono - remove shuttle deed requirement
-        if (EntityManager.HasComponent<StationDampeningComponent>(_station.GetOwningStation(xform.GridUid)))
+        // Not a shuttle, shouldn't be togglable // Mono - remove shuttle deed requirement, kill StationDampening
+        if (TryComp<PhysicsComponent>(xform.GridUid, out var body) && (body.BodyType & BodyType.Static) != 0)
             return InertiaDampeningMode.Station;
 
         if (!EntityManager.TryGetComponent(xform.GridUid, out ShuttleComponent? shuttle))

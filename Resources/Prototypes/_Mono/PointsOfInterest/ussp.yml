@@ -1,6 +1,9 @@
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 BoskiYourk
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -21,7 +24,7 @@
   name: 'Camelot Station'
   minimumDistance: 10650
   maximumDistance: 12400
-  spawnGamePreset: [ NFAdventure, NFPirate, MonoStandard, MonoRogueUSSP, MonoTSFUSSP, MonoADS, MonoChimera, MonoAllAtOnce ]
+  spawnGamePreset: [ NFAdventure, NFPirate, MonoStandard, MonoRogueUSSP, MonoTSFUSSP, MonoADS, MonoChimera, MonoMixed, MonoAllAtOnce ]
   spawnGroup: Required
   gridPath: /Maps/_Mono/POI/camelot.yml
   addComponents:
@@ -46,11 +49,11 @@
           lobbySortOrder: 4
         - type: StationJobs
           availableJobs:
-            USSPCommissar: [1, 1]
-            USSPSergeant: [4, 4]
-            USSPCorporal: [6, 6]
-            USSPMedic: [4, 4]
-            USSPRifleman: [-1, -1]
+            # USSPCommissar: [1, 1]
+            # USSPSergeant: [4, 4]
+            # USSPCorporal: [6, 6]
+            # USSPMedic: [4, 4]
+            # USSPRifleman: [-1, -1]
             Contractor: [-1, -1]
             Pilot: [0, -1]
             Mercenary: [0, -1]
