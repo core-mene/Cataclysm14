@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -31,3 +32,38 @@
     Plastic: 500
     Plasma: 500
     Silver: 200
+
+#Armor Plates
+- type: latheRecipe
+  id: ArmorPlateLight
+  categories:
+  - ArmorNF
+  result: ArmorPlateLight
+  completetime: 5
+  materials:
+    Steel: 300
+    Durathread: 400
+    
+- type: latheRecipe
+  id: ArmorPlateMedium
+  categories:
+  - ArmorNF
+  result: ArmorPlateMedium
+  completetime: 5
+  materials:
+    Steel: 300
+    Durathread: 400
+    Plastic: 1000
+    
+- type: latheRecipe
+  id: ArmorPlateTactical
+  categories:
+  - ArmorNF
+  result: ArmorPlateTactical
+  completetime: 5
+  materials:
+    Steel: 300
+    Durathread: 400
+    Plastic: 400
+    Plasteel: 1000
+ 
