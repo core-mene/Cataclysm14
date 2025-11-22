@@ -65,9 +65,11 @@
 # SPDX-FileCopyrightText: 2024 slarticodefast
 # SPDX-FileCopyrightText: 2024 themias
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 NazrinNya
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -718,7 +720,7 @@
         - !type:OrganType # Goobstation - Yowie
           type: Yowie
           shouldHave: false
-        probability: 0.05
+        probability: 0.003 # Mono - Vomit shouldn't be that bad with such metabolism rate
 
 - type: reagent
   id: PolypyryliumOligomers
@@ -1182,12 +1184,12 @@
   color: "#283332"
   metabolisms:
     Medicine:
-      metabolismRate: 0.1
+      metabolismRate: 0.35 # Mono change - Chem rebalance
       effects:
       - !type:HealthChange
         damage:
           types:
-            Slash: -0.6 # 6 Per u
+            Slash: -2.1 # 6 Per u. Mono change - Chem rebalance
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -1197,7 +1199,7 @@
           min: 21
         damage:
           types:
-            Cold: 1.5 #15 per u
+            Cold: 2.5 # Mono change - Chem rebalance.
 
 - type: reagent
   id: Puncturase
@@ -1209,13 +1211,13 @@
   color: "#b9bf93"
   metabolisms:
     Medicine:
-      metabolismRate: 0.1
+      metabolismRate: 0.35 # Mono change - Chem rebalance
       effects:
       - !type:HealthChange
         damage:
           types:
-            Piercing: -0.6 # 6 per u
-            Blunt: 0.05 # 0.5 per u
+            Piercing: -2.1 # 6 per u. Mono change - Chem rebalance
+            Blunt: 0.15 # Mono change - Chem rebalance
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -1225,7 +1227,7 @@
           min: 21
         damage:
           types:
-            Blunt: 1 # 10 per u plus base effect
+            Blunt: 3.5 # 10 per u plus base effect
 
 - type: reagent
   id: Bruizine
@@ -1237,12 +1239,12 @@
   color: "#ff3636"
   metabolisms:
     Medicine:
-      metabolismRate: 0.1
+      metabolismRate: 0.35
       effects:
       - !type:HealthChange
         damage:
           types:
-            Blunt: -0.6 # 6 per u
+            Blunt: -2.1 # 6 per u. Mono change - Chem rebalance
       - !type:HealthChange
         conditions:
         - !type:OrganType # Goobstation - Yowie
@@ -1252,7 +1254,7 @@
           min: 19
         damage:
           types:
-            Poison: 1.5 # 15 per u
+            Poison: 2.5 # Mono change - Chem rebalance
 
 - type: reagent
   id: Holywater
