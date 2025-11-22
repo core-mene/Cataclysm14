@@ -218,6 +218,12 @@
     baseWalkSpeed: 0.2
     baseSprintSpeed: 1
     baseWeightlessModifier: 35
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - Halberd
+    - MilitaryMechBounty
 
 
 - type: entity
@@ -263,6 +269,12 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 3
     baseSprintSpeed: 6
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - Sabre
+    - MilitaryMechBounty
 
 #4x4 mechas
 - type: entity
@@ -409,6 +421,12 @@
     baseWalkSpeed: 0.25
     baseSprintSpeed: 0.5
     baseWeightlessModifier: 30
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - Spyglass
+    - MilitaryMechBounty
 
 - type: entity
   id: AFMace
@@ -445,3 +463,9 @@
     baseWalkSpeed: 0.1
     baseSprintSpeed: 1
     baseWeightlessModifier: 50
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - Mace
+    - MilitaryMechBounty
