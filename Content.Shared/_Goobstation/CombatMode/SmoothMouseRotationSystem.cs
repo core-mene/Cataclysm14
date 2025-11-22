@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Androidonator
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared.CombatMode;
 using Content.Shared.MouseRotator;
 
