@@ -123,24 +123,3 @@
     walkModifier: 0.8
     sprintModifier: 0.8
   - type: HeldSpeedModifier
-
-- type: entity
-  parent: ClothingBackpackStasisBattery
-  id: ClothingBackpackGman
-  name: strange backpack
-  description: A strange, unremovable, bag capable of containing an absurd amount of items. Seemingly invisible to the naked eye.
-  components:
-  - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 2.5
-    rechargeSound:
-      path: /Audio/_Goobstation/Weapons/ChronoLegionnaire/stasisgun_reload.ogg
-  - type: Item
-    size: Ginormous
-  - type: Storage
-    maxItemSize: Huge
-    grid:
-    - 0,0,8,5
-  - type: Tag
-    tags:
-    - StasisBattery
-    - WhitelistChameleon
