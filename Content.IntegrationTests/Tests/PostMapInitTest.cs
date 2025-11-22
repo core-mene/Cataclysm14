@@ -27,6 +27,7 @@
 // SPDX-FileCopyrightText: 2024 Southbridge
 // SPDX-FileCopyrightText: 2024 Tayrtahn
 // SPDX-FileCopyrightText: 2024 TytosB
+// SPDX-FileCopyrightText: 2025 AwareFoxy
 // SPDX-FileCopyrightText: 2025 Deerstop
 // SPDX-FileCopyrightText: 2025 ElectroJr
 // SPDX-FileCopyrightText: 2025 Killerqu00
