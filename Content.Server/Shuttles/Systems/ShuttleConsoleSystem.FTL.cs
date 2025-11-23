@@ -234,7 +234,7 @@ public sealed partial class ShuttleConsoleSystem
                 dockedGrids.Contains(consGrid.Value) || // Skip grids that are docked to us or to the same parent grid
                 !bodyQuery.TryGetComponent(consGrid, out var body) ||
                 body.Mass < ShuttleFTLMassThreshold
-                    && (_transform.GetWorldPosition(consGrid) - _transform.GetWorldPosition(consoleXform)).Length() > ShuttleFTLRange * body.Mass / ShuttleFTLMassThreshold ||
+                    && (_transform.GetWorldPosition(consGrid.Value) - _transform.GetWorldPosition(consoleXform)).Length() > ShuttleFTLRange * body.Mass / ShuttleFTLMassThreshold ||
                 !this.IsPowered(console, EntityManager))
             {
                 continue;
