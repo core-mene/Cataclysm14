@@ -22,11 +22,9 @@ namespace Content.Server._Mono.EntityEffects.Effects
         /// TRUST ME: the yaml for specifying this properly is ugly but it's better than having to fix this
         /// </summary>
         [DataField(required: true)]
-        [JsonPropertyName("healthscale")]
         public DamageSpecifier HealthScale;
 
         [DataField]
-        [JsonPropertyName("ignoreResistances")]
         public bool IgnoreResistances = true;
 
         protected override string ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
@@ -41,7 +39,7 @@ namespace Content.Server._Mono.EntityEffects.Effects
                 var relevantTypes = damageSpec.DamageDict
                     .Where(x => x.Value != FixedPoint2.Zero && group.DamageTypes.Contains(x.Key)).ToList();
 
-                //Skip types in group involved
+                //Skip incomplete types involved in group
                 if (relevantTypes.Count != group.DamageTypes.Count)
                     continue;
 
@@ -98,21 +96,16 @@ namespace Content.Server._Mono.EntityEffects.Effects
 
             var currentDamage = damageable.Damage;
 
-            //DEBUG: Log args of interest
-            //Logger.Info($"ReagentQuantityArg: {(reagentArgs != null ? reagentArgs.Quantity.ToString() : "N/A")}, ReagentScaleArg: {(reagentArgs != null ? reagentArgs.Scale.ToString() : "N/A")}");
-
             foreach (var (type, currentAmount) in currentDamage.DamageDict)
             {
                 if (HealthScale.DamageDict.TryGetValue(type, out var scaleCoeff))
                 {
-                    var applyscale = reagentArgs != null ? reagentArgs.Scale : 1.0f;
-                    var adjusted = currentAmount * (scaleCoeff - 1.0f) * applyscale;
+                    var applyScale = reagentArgs != null ? reagentArgs.Scale : 1.0f;
+                    var adjusted = currentAmount * (MathF.Pow(scaleCoeff.Float(), applyScale.Float()) - 1.0f);
 
                     if (adjusted != FixedPoint2.Zero)
                         deltaSpec.DamageDict[type] = adjusted;
 
-                    // DEBUG: Log damage scaling calculations
-                    //Logger.Info($"Type: {type}, Current: {currentAmount}, ScaleCoeff: {scaleCoeff}, Adjusted: {adjusted}");
                 }
             }
 

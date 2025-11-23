@@ -32,7 +32,7 @@
         - !type:Temperature
           max: 213.0
         - !type:TotalDamage
-          min: 1000
+          min: 200
         healthScale:
           types:
             Blunt: 0.98
@@ -67,7 +67,7 @@
         - !type:Temperature
           max: 213.0
         - !type:TotalDamage
-          min: 1000 #Mono start: RR reversal buff
+          min: 200 #Mono start: RR reversal buff
         healthScale:
           types:
             Poison: 0.98
