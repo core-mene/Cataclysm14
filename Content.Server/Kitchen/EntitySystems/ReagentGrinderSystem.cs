@@ -367,7 +367,7 @@ namespace Content.Server.Kitchen.EntitySystems
             if (storage.StoredItems.Count == 0)
                 return;
 			
-			_audioSystem.PlayPvs(new SoundPathSpecifier("/Audio/_Goobstation/Items/handling/backpack_equip.ogg"), comp.Owner, AudioParams.Default.WithVolume(-6f)); //Mono: Add sound for dumpinsert
+			_audioSystem.PlayPvs(new SoundPathSpecifier("/Audio/_Goobstation/Items/handling/backpack_equip.ogg"), comp.Owner, AudioParams.Default.WithVolume(-6f)); //Mono
 
             var inputContainer = _containerSystem.EnsureContainer<Container>(comp.Owner, SharedReagentGrinder.InputContainerId);
 
