@@ -1,8 +1,7 @@
+// SPDX-FileCopyrightText: 2025 imatsoup
 // SPDX-FileCopyrightText: 2025 tonotom1
 //
 // SPDX-License-Identifier: MPL-2.0
-
-// SPDX-FileCopyrightText: 2025 imatsoup
 
 
 using Content.Shared.DoAfter;
