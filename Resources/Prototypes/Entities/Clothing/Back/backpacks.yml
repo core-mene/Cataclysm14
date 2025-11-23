@@ -35,8 +35,10 @@
 # SPDX-FileCopyrightText: 2024 Winkarst
 # SPDX-FileCopyrightText: 2024 metalgearsloth
 # SPDX-FileCopyrightText: 2024 to4no_fix
+# SPDX-FileCopyrightText: 2025 AwareFoxy
 # SPDX-FileCopyrightText: 2025 BramvanZijp
 # SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
 # SPDX-FileCopyrightText: 2025 Dvir
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Redrover1760
@@ -274,6 +276,8 @@
   - type: Storage
     grid:
     - 0,0,10,3
+  - type: ExplosionResistance # Goobstation
+    damageCoefficient: 0.1
 
 - type: entity
   parent: ClothingBackpackERTLeader
