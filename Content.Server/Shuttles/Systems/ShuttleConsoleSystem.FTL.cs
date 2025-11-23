@@ -9,6 +9,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Server.Power.EntitySystems; // Mono
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Shared._Mono.Ships;
@@ -30,7 +31,7 @@ public sealed partial class ShuttleConsoleSystem
     [Dependency] private readonly SharedShuttleSystem _sharedShuttle = default!;
 
     private const float ShuttleFTLRange = 256f;
-    private const float ShuttleFTLMassThreshold = 100f;
+    private const float ShuttleFTLMassThreshold = 100f; // Mono: now a soft limit, ships under the limit just stop you from shorter distance
 
     private const float MassConstant = 50f; // Arbitrary, at this value massMultiplier = 0.65
     private const float MassMultiplierMin = 0.5f;
@@ -222,13 +223,18 @@ public sealed partial class ShuttleConsoleSystem
             }
         }
 
-        foreach (var other in _mapManager.FindGridsIntersecting(xform.MapID, bounds))
+        // Mono
+        foreach (var (console, consoleComp) in _lookup.GetEntitiesInRange<ShuttleConsoleComponent>(_transform.GetMapCoordinates(xform), ShuttleFTLRange))
         {
-            if (other.Owner == shuttleUid.Value ||
-                dockedGrids.Contains(other.Owner) || // Skip grids that are docked to us or to the same parent grid
-                !bodyQuery.TryGetComponent(other.Owner, out var body) ||
-                body.Mass < ShuttleFTLMassThreshold ||
-                !HasComp<StationMemberComponent>(other.Owner)) // Skip entities without a StationMember component
+            var consoleXform = Transform(console);
+            var consGrid = consoleXform.GridUid;
+            if (consGrid == null ||
+                consGrid == shuttleUid ||
+                dockedGrids.Contains(consGrid.Value) || // Skip grids that are docked to us or to the same parent grid
+                !bodyQuery.TryGetComponent(consGrid, out var body) ||
+                body.Mass < ShuttleFTLMassThreshold
+                    && (_transform.GetWorldPosition(consGrid) - _transform.GetWorldPosition(consoleXform)).Length() > ShuttleFTLRange * body.Mass / ShuttleFTLMassThreshold ||
+                !this.IsPowered(console, EntityManager))
             {
                 continue;
             }
