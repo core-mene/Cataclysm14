@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/06/2025 00:05:40
-  entityCount: 1698
+  time: 11/24/2025 07:53:02
+  entityCount: 1704
 maps:
 - 1
 grids:
@@ -368,9 +368,17 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           immutable: True
           moles:
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -3719,6 +3727,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 619
     components:
     - type: Transform
@@ -3732,6 +3744,10 @@ entities:
         moles:
         - 2.9923203
         - 11.2568245
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -3774,6 +3790,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 622
     components:
     - type: Transform
@@ -3797,6 +3817,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: ClothingBackpackDuffelNfsdTrackingBundle
   entities:
   - uid: 623
@@ -3804,7 +3828,6 @@ entities:
     - type: Transform
       pos: -2.1876638,-3.38657
       parent: 2
-    - type: Visibility
 - proto: ClothingBeltQuiverCrossbowFilledPlasma
   entities:
   - uid: 624
@@ -4310,18 +4333,6 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-    - type: DeviceLinkSource
-      linkedPorts: {}
-      lastSignals: {}
-      ports:
-      - device-button-1
-      - device-button-2
-      - device-button-3
-      - device-button-4
-      - device-button-5
-      - device-button-6
-      - device-button-7
-      - device-button-8
 - proto: ComputerStationRecords
   entities:
   - uid: 676
@@ -4645,6 +4656,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: CrateHydroponicsTools
   entities:
   - uid: 721
@@ -4660,6 +4675,10 @@ entities:
         moles:
         - 2.9923203
         - 11.2568245
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -4695,6 +4714,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 723
     components:
     - type: Transform
@@ -4708,6 +4731,10 @@ entities:
         moles:
         - 2.9923203
         - 11.2568245
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -5728,6 +5755,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: LockerChemistryFilled
   entities:
   - uid: 867
@@ -5743,6 +5774,10 @@ entities:
         moles:
         - 2.9923203
         - 11.2568245
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -5778,6 +5813,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: LockerElectricalSuppliesFilled
   entities:
   - uid: 869
@@ -5803,6 +5842,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: LockerEngineerFilled
   entities:
   - uid: 870
@@ -5818,6 +5861,10 @@ entities:
         moles:
         - 2.9923203
         - 11.2568245
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -5860,6 +5907,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 873
     components:
     - type: Transform
@@ -5873,6 +5924,10 @@ entities:
         moles:
         - 2.9923203
         - 11.2568245
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -5908,6 +5963,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: LockerMedicineFilled
   entities:
   - uid: 875
@@ -5923,6 +5982,10 @@ entities:
         moles:
         - 2.9923203
         - 11.2568245
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -5955,6 +6018,10 @@ entities:
         moles:
         - 2.9923203
         - 11.2568245
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -7776,6 +7843,13 @@ entities:
     components:
     - type: Transform
       pos: -4.5,4.5
+      parent: 2
+- proto: SpawnPointPDVDenasvar
+  entities:
+  - uid: 1703
+    components:
+    - type: Transform
+      pos: -4.5,2.5
       parent: 2
 - proto: SpawnPointPDVInfiltrator
   entities:
