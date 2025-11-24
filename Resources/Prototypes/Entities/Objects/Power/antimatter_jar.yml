@@ -10,6 +10,7 @@
 # SPDX-FileCopyrightText: 2023 metalgearsloth
 # SPDX-FileCopyrightText: 2024 ErhardSteinhauer
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -38,4 +39,21 @@
   - type: Tag # Frontier
     tags: # Frontier
     - Recyclable # Frontier
+  - type: Destructible # Mono
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+  - type: Explosive # Mono
+    explosionType: Default
+    maxIntensity: 50
+    intensitySlope: 2
+    totalIntensity: 375
+  - type: Damageable # Mono
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
 # End of modified code

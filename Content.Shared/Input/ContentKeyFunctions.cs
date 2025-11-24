@@ -29,9 +29,12 @@
 // SPDX-FileCopyrightText: 2024 slarticodefast
 // SPDX-FileCopyrightText: 2024 wafehling
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Daniel Lenrd
 // SPDX-FileCopyrightText: 2025 ErhardSteinhauer
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 Whatstone
-// SPDX-FileCopyrightText: 2025 monolith8319
+// SPDX-FileCopyrightText: 2025 ark1368
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -57,6 +60,7 @@ namespace Content.Shared.Input
         public static readonly BoundKeyFunction FocusOOC = "FocusOOCWindow";
         public static readonly BoundKeyFunction FocusAdminChat = "FocusAdminChatWindow";
         public static readonly BoundKeyFunction FocusDeadChat = "FocusDeadChatWindow";
+        public static readonly BoundKeyFunction FocusCollectiveMindChat = "FocusCollectiveMindChatWindow"; // Goobstation - Starlight collective mind port
         public static readonly BoundKeyFunction FocusConsoleChat = "FocusConsoleChatWindow";
         public static readonly BoundKeyFunction CycleChatChannelForward = "CycleChatChannelForward";
         public static readonly BoundKeyFunction CycleChatChannelBackward = "CycleChatChannelBackward";
@@ -69,10 +73,30 @@ namespace Content.Shared.Input
         public static readonly BoundKeyFunction OpenInventoryMenu = "OpenInventoryMenu";
         public static readonly BoundKeyFunction SmartEquipBackpack = "SmartEquipBackpack";
         public static readonly BoundKeyFunction SmartEquipBelt = "SmartEquipBelt";
+        public static readonly BoundKeyFunction SmartEquipPocket1 = "SmartEquipPocket1";
+        public static readonly BoundKeyFunction SmartEquipPocket2 = "SmartEquipPocket2";
+        public static readonly BoundKeyFunction SmartEquipSuitStorage = "SmartEquipSuitStorage";
         public static readonly BoundKeyFunction SmartEquipWallet = "SmartEquipWallet"; // Frontier
-        public static readonly BoundKeyFunction SmartEquipBack = "SmartEquipBack"; // Goobstation - Smart equip to back
+        // Mono Edit
+        public static readonly BoundKeyFunction SmartEquipID = "SmartEquipID"; // Mono - Smart equip to PDA slot
+        public static readonly BoundKeyFunction SmartEquipShoes = "SmartEquipShoes";
+        public static readonly BoundKeyFunction SmartEquipOuterClothing = "SmartEquipOuterClothing";
+        public static readonly BoundKeyFunction EquipBackpack = "EquipBackpack";
+        public static readonly BoundKeyFunction EquipBelt = "EquipBelt";
+        public static readonly BoundKeyFunction EquipPocket1 = "EquipPocket1";
+        public static readonly BoundKeyFunction EquipPocket2 = "EquipPocket2";
+        public static readonly BoundKeyFunction EquipSuitStorage = "EquipSuitStorage";
+        public static readonly BoundKeyFunction EquipWallet = "EquipWallet";
+        public static readonly BoundKeyFunction EquipID = "EquipID";
+        // Mono End
         public static readonly BoundKeyFunction OpenBackpack = "OpenBackpack";
         public static readonly BoundKeyFunction OpenBelt = "OpenBelt";
+        // Mono Edit
+        public static readonly BoundKeyFunction OpenPocket1 = "OpenPocket1";
+        public static readonly BoundKeyFunction OpenPocket2 = "OpenPocket2";
+        public static readonly BoundKeyFunction OpenSuitStorage = "OpenSuitStorage";
+        public static readonly BoundKeyFunction OpenOuterClothing = "OpenOuterClothing";
+        // Mono End
         public static readonly BoundKeyFunction OpenWallet = "OpenWallet"; // Frontier
         public static readonly BoundKeyFunction OpenAHelp = "OpenAHelp";
         public static readonly BoundKeyFunction SwapHands = "SwapHands";
@@ -102,6 +126,7 @@ namespace Content.Shared.Input
         public static readonly BoundKeyFunction ZoomIn = "ZoomIn";
         public static readonly BoundKeyFunction ResetZoom = "ResetZoom";
         public static readonly BoundKeyFunction ToggleStanding = "ToggleStanding"; // WD EDIT
+        public static readonly BoundKeyFunction ToggleFocus = "ToggleFocus"; // Mono
 
         // Shitmed Change Start
         public static readonly BoundKeyFunction TargetHead = "TargetHead";

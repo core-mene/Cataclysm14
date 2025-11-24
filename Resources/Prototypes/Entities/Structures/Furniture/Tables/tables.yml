@@ -1,3 +1,36 @@
+# SPDX-FileCopyrightText: 2020 Git-Nivrak
+# SPDX-FileCopyrightText: 2020 Peter Wedder
+# SPDX-FileCopyrightText: 2020 Ygg01
+# SPDX-FileCopyrightText: 2021 DrSmugleaf
+# SPDX-FileCopyrightText: 2021 Galactic Chimp
+# SPDX-FileCopyrightText: 2021 Metal Gear Sloth
+# SPDX-FileCopyrightText: 2021 ShadowCommander
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2022 Fishfish458
+# SPDX-FileCopyrightText: 2022 Jacob Tong
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2022 fishfish458 <fishfish458>
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2022 wrexbe
+# SPDX-FileCopyrightText: 2023 Ilya Chvilyov
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 PixelTK
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 Ilya246
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 MACMAN2003
+# SPDX-FileCopyrightText: 2024 deathride58
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Ps3Moira
+# SPDX-FileCopyrightText: 2025 SlamBamActionman
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: entity
   id: TableFrame
   # BaseStructure and not BaseTable, since these shouldn't be climbable/placeable.
@@ -612,6 +645,31 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepCarpet
+
+- type: entity
+  parent: TableBase
+  id: TableXeno
+  name: xeno table
+  description: I wouldn't put the silverware on it.
+  components:
+  - type: Sprite
+    sprite: Structures/Furniture/Tables/xeno.rsi
+  - type: Icon
+    sprite: Structures/Furniture/Tables/xeno.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: gib
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepFloor
 
 # Fancy tables
 

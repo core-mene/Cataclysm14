@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2024 Maxtone
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -22,7 +23,7 @@
 #T3
 - type: loadout
   id: MercenaryClothingMaskDrakeIndustriesWatchdog
-  price: 1000
+  price: 0 # Mono
   storage:
     back:
     - ClothingMaskDrakeIndustriesWatchdog

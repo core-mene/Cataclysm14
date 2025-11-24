@@ -351,21 +351,6 @@
       - PirateUplink
 
 - type: listing
-  id: UplinkPirateAgentIDCard
-  name: uplink-pirate-agent-id-card-name
-  description: uplink-pirate-agent-id-card-desc
-  productEntity: AgentIDCard
-  cost:
-    Doubloon: 15
-  categories:
-  - UplinkPirateUtility
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
   id: UplinkPirateRadioJammer
   name: uplink-pirate-radio-jammer-name
   description: uplink-pirate-radio-jammer-desc
@@ -477,21 +462,6 @@
       - PirateUplink
 
 - type: listing
-  id: UplinkPirateVoicemask
-  name: uplink-pirate-voicemask-name
-  description: uplink-pirate-voicemask-desc
-  productEntity: ClothingMaskGasVoiceChameleon
-  cost:
-    Doubloon: 20
-  categories:
-  - UplinkPirateUtility
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
   id: UplinkPirateCash10000
   name: uplink-pirate-cash10000-name
   description: uplink-pirate-cash10000-desc
@@ -515,6 +485,21 @@
   icon: { sprite: _NF/Objects/Economy/cash.rsi, state: cash_100000 }
   cost:
     Doubloon: 50
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateSyndicateApplicator
+  name: uplink-syndicate-applicator-name
+  description: uplink-syndicate-applicator-desc
+  productEntity: NaniteApplicatorSyndicate
+  cost:
+    Doubloon: 35
   categories:
   - UplinkPirateUtility
   conditions:

@@ -1,4 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Arcticular
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 AwareFoxy
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 DieselMohawk
 # SPDX-FileCopyrightText: 2025 Disguised Bear
@@ -13,6 +15,7 @@
 # SPDX-FileCopyrightText: 2025 Tmanzxd
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
 # SPDX-FileCopyrightText: 2025 gixer94
+# SPDX-FileCopyrightText: 2025 kasature90
 # SPDX-FileCopyrightText: 2025 marklyfie4
 # SPDX-FileCopyrightText: 2025 marklyfied
 # SPDX-FileCopyrightText: 2025 pumpkin-pwr
@@ -41,17 +44,10 @@
   disabled: true
 
 - type: company
-  id: Rogue
+  id: PDV
   form: Antagonist
-  name: Rogue
-  color: "#8B0000"
-  disabled: true
-
-- type: company
-  id: USSP
-  form: Antagonist
-  name: USSP
-  color: "#B01340"
+  name: PDV
+  color: "#D2B48C"
   disabled: true
 
 - type: company
@@ -76,15 +72,23 @@
   color: "#008CE3"
   disabled: true
   logins: # admins only here !!! or your PR will be CLOSED!!!! also serves as a example for ur whitelisted factions
-  - starch
-  - localhost@starch
   - localhost@Ark
   - Ark
-  - Tikibomb
   - DisguisedBear
   - JuneCat
-  - Erol509
-  - SuperJoelDood
+  - AwareFoxy
+  - Avalon_Proto
+  - Archylle
+  - Arcticular
+  - ArtemisYK
+  - NigelSugar
+  - Reverence
+  - BluHNT
+  - DrOktober
+  - Archylle
+  - neoscav
+  - UnhipPaladin
+  - Onezero0
 # DO NOT TOUCH
 
 # ====TSF / Protag. Companies====
@@ -123,6 +127,13 @@
   color: "#FF2E2E"
   image: /Textures/_Mono/Companies/MACo.png
 
+- type: company
+  id: USSP
+  form: Antagonist
+  name: USSP
+  color: "#B01340"
+  disabled: false # Mercs are now USSP-pilled.
+  description: ussp-description
 
 # Major companies
 

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 ark1368
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -16,7 +17,7 @@
   - ContractorSpecialGunVector9mm
   - ContractorSpecialGunVector45Acp
   - ContractorSpecialGunBandit
-  # USSP playtime guns
+  # USSP -> MERC/CIV playtime guns
   - ContractorSpecialGunAk502
   - ContractorSpecialGunBigLeady
   # Rogue playtime guns
@@ -100,14 +101,14 @@
   inhand:
   - WeaponCaseLongMR3CRegistered
 
-# USSP playtime weapons
+# USSP -> MERC/CIV playtime weapons
 
 - type: loadout
   id: ContractorSpecialGunAk502
   name: AK-502 gun case
   effects:
   - !type:GroupLoadoutEffect
-    proto: MonoCivUsspVet
+    proto: MonoCivVet
   price: 37500
   inhand:
   - WeaponCaseAk502Registered
@@ -117,7 +118,7 @@
   name: big leady gun case
   effects:
   - !type:GroupLoadoutEffect
-    proto: MonoCivUsspVet
+    proto: MonoCivVet
   price: 32500
   inhand:
   - WeaponCaseBigLeadyRegistered

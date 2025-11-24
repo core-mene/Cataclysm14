@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 Ilya246
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: entity
   abstract: true
   id: MobNarsieBase
@@ -71,7 +77,6 @@
   - type: IntrinsicRadioReceiver
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
     - Command
     - CentCom
@@ -83,6 +88,9 @@
     - Supply
     - Syndicate
     globalReceive: true
+  - type: CollectiveMind
+    channels:
+    - Binary
   - type: Physics
     bodyType: Dynamic
     bodyStatus: InAir

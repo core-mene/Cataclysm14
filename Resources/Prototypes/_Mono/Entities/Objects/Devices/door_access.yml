@@ -1,4 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Arcticular
 # SPDX-FileCopyrightText: 2025 Arcticular1
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -9,7 +11,7 @@
   suffix: USSP, Locked
   components:
   - type: AccessReader
-    access: [["USSP"]]
+    access: [["Mercenary"]]
 
 - type: entity
   parent: DoorElectronics
@@ -17,7 +19,7 @@
   suffix: USSP Secure, Locked
   components:
   - type: AccessReader
-    access: [["USSPHigh"]]
+    access: [["Mercenary"]]
 
 - type: entity
   parent: DoorElectronics
@@ -25,7 +27,7 @@
   suffix: USSP Command, Locked
   components:
   - type: AccessReader
-    access: [["USSPCommand"]]
+    access: [["Mercenary"]]
 
 - type: entity
   parent: DoorElectronics

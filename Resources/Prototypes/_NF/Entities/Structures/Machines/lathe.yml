@@ -9,6 +9,7 @@
 # SPDX-FileCopyrightText: 2025 GreaseMonk
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Milon
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 blackknight954
@@ -170,6 +171,7 @@
     staticPacks:
     - NFNfsdTechfabDeprecatedStatic
     - StaticAmmoRecipePack
+    - RoundstartShipgunAmmo # Mono
     dynamicPacks:
     - NFNfsdTechfabDeprecated
     - DynamicAmmoRecipePack
@@ -181,6 +183,7 @@
     - UniversalRailgunAmmo
     - UniversalMissileAmmo
     - UniversalOrdinance
+    - ResearchedExplosives
     # Mono end
   - type: EmagLatheRecipes
     emagStaticPacks:
@@ -216,6 +219,7 @@
     - NFMercenaryTechfabDeprecatedStatic
     - StaticAmmoRecipePack
     - MonoRestraintsStatic # Mono
+    - RoundstartShipgunAmmo # Mono
     dynamicPacks:
     - NFMercenaryTechfabDeprecated
     - DynamicAmmoRecipePack
@@ -281,6 +285,7 @@
     - NFHackedMercenaryTechfabDeprecatedStatic
     - StaticAmmoRecipePack
     - MonoRestraintsStatic
+    - RoundstartShipgunAmmo # Mono
     dynamicPacks:
     - NFHackedMercenaryTechfabDeprecated
     - DynamicAmmoRecipePack

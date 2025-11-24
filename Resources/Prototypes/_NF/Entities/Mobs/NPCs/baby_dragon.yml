@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2024 AndresE55
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: entity
   parent:
   - SimpleSpaceMobBase
@@ -178,7 +185,6 @@
     action: ActionDragonsBreath
     gunProto: BabyDragonsBreathGun
   - type: NightVision # Goobstation - Nigthvision - Mono
-    color: "#808080"
     activateSound: null
     deactivateSound: null
 

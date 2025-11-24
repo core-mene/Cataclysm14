@@ -28,6 +28,7 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 BramvanZijp
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 John
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 mikusssssss
@@ -290,42 +291,42 @@
     - state: crypt_red
     - state: synd_label
 
-- type: entity
-  parent: [EncryptionKey, RecyclableItemDeviceTiny] # Frontier: added RecyclableItemDeviceTiny, removed BaseSiliconScienceContraband
-  id: EncryptionKeyBinary
-  name: binary translator key
-  categories: [ DoNotMap ] # Frontier
-  description: An encryption key that translates binary signals used by silicons.
-  components:
-  - type: EncryptionKey
-    channels:
-    - Binary
-    defaultChannel: Binary
-  - type: Sprite
-    layers:
-    - state: crypt_silver
-    - state: ai_label
+#- type: entity
+#  parent: [EncryptionKey, RecyclableItemDeviceTiny] # Frontier: added RecyclableItemDeviceTiny, removed BaseSiliconScienceContraband
+#  id: EncryptionKeyBinary
+#  name: binary translator key
+#  categories: [ DoNotMap ] # Frontier
+#  description: An encryption key that translates binary signals used by silicons.
+#  components:
+#  - type: EncryptionKey
+#    channels:
+#    - Binary
+#    defaultChannel: Binary
+#  - type: Sprite
+#    layers:
+#    - state: crypt_silver
+#    - state: ai_label
 
-- type: entity
-  parent: [ EncryptionKey, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
-  id: EncryptionKeyBinarySyndicate
-  name: binary translator key
-  description: A syndicate encryption key that translates binary signals used by silicons.
-  components:
-  - type: EncryptionKey
-    channels:
-    - Binary
-    defaultChannel: Binary
-  - type: Sprite
-    layers:
-    - state: crypt_red
-    - state: ai_label
+#- type: entity
+#  parent: [ EncryptionKey, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
+#  id: EncryptionKeyBinarySyndicate
+#  name: binary translator key
+#  description: A syndicate encryption key that translates binary signals used by silicons.
+#  components:
+#  - type: EncryptionKey
+#    channels:
+#    - Binary
+#    defaultChannel: Binary
+#  - type: Sprite
+#    layers:
+#    - state: crypt_red
+#    - state: ai_label
 
 - type: entity
   parent: [EncryptionKey, BaseC3PirateContrabandHighValue] # Frontier: added BaseC3PirateContraband - Mono: Changed to HighValue
   id: EncryptionKeyFreelance
-  name: insurgency encryption key # mono
-  description: An encryption key used by insurgents. # Mono
+  name: Vanguard encryption key # mono
+  description: An encryption key used by imperials. # Mono
   components:
     - type: EncryptionKey
       channels:

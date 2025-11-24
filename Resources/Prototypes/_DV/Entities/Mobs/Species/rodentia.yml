@@ -11,7 +11,10 @@
 # SPDX-FileCopyrightText: 2024 Checkraze
 # SPDX-FileCopyrightText: 2024 Dvir
 # SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2025 DummeHytteOst
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 bitcrushing
 # SPDX-FileCopyrightText: 2025 core-mene
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -27,7 +30,7 @@
     species: Rodentia
   - type: Thirst
   - type: Hunger
-    baseDecayRate: 0.0467 # 33% faster than usual
+    baseDecayRate: 0.024 # 33% faster than usual #Mono 0.0467 > 0.024(rounded from 0.02394) 33% more than base 0.018
   - type: Carriable # Carrying system from nyanotrasen.
   - type: Inventory
     speciesId: rodentia
@@ -136,10 +139,6 @@
     shape:
       - 0, 0, 3, 2
       - 0, 2, 5, 4
-  - type: MouthStorage
-    mouthProto: CheekStorage
-    openStorageAction: ActionOpenMouthStorage
-    spitDamageThreshold: 3
   - type: CrawlUnderObjects
     actionProto: ActionToggleSneakMode
 

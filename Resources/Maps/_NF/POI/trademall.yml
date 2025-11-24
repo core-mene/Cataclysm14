@@ -24,11 +24,12 @@
 # SPDX-FileCopyrightText: 2025 Alkheemist
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 Checkraze
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Jakumba
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 starch
 #
-# SPDX-License-Identifier: AGPL-3.0-or-later
+# SPDX-License-Identifier: MPL-2.0
 
 meta:
   format: 7
@@ -36,8 +37,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/27/2025 22:37:50
-  entityCount: 6295
+  time: 11/01/2025 13:37:45
+  entityCount: 6298
 maps: []
 grids:
 - 1
@@ -83,7 +84,6 @@ entities:
     - type: MetaData
       name: Trade Mall
     - type: Transform
-      pos: 10000,0
       parent: invalid
     - type: MapGrid
       chunks:
@@ -10304,12 +10304,6 @@ entities:
       parent: 1
 - proto: BenchSteelMiddle
   entities:
-  - uid: 867
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 2.5,19.5
-      parent: 1
   - uid: 868
     components:
     - type: Transform
@@ -10334,14 +10328,14 @@ entities:
       rot: 3.141592653589793 rad
       pos: 12.5,-17.5
       parent: 1
-  - uid: 872
+- proto: BenchSteelRight
+  entities:
+  - uid: 867
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 2.5,18.5
+      pos: 2.5,19.5
       parent: 1
-- proto: BenchSteelRight
-  entities:
   - uid: 873
     components:
     - type: Transform
@@ -10353,12 +10347,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 10.5,-18.5
-      parent: 1
-  - uid: 875
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 2.5,17.5
       parent: 1
 - proto: BoozeDispenserEmpty
   entities:
@@ -10477,6 +10465,11 @@ entities:
       parent: 1
 - proto: CableApcExtension
   entities:
+  - uid: 875
+    components:
+    - type: Transform
+      pos: 6.5,21.5
+      parent: 1
   - uid: 894
     components:
     - type: Transform
@@ -13656,6 +13649,21 @@ entities:
     components:
     - type: Transform
       pos: -2.5,-40.5
+      parent: 1
+  - uid: 6003
+    components:
+    - type: Transform
+      pos: 8.5,21.5
+      parent: 1
+  - uid: 6296
+    components:
+    - type: Transform
+      pos: 9.5,21.5
+      parent: 1
+  - uid: 6297
+    components:
+    - type: Transform
+      pos: 7.5,21.5
       parent: 1
 - proto: CableApcStack
   entities:
@@ -29255,8 +29263,7 @@ entities:
   - uid: 3903
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.5,21.5
+      pos: 5.5,17.5
       parent: 1
 - proto: GravityGenerator
   entities:
@@ -31449,7 +31456,7 @@ entities:
     - type: Transform
       pos: -13.5,7.5
       parent: 1
-- proto: KitchenDeepFryerPOI
+- proto: KitchenDeepFryerCauldronPOI
   entities:
   - uid: 4299
     components:
@@ -32330,6 +32337,13 @@ entities:
     components:
     - type: Transform
       pos: 45.5,3.5
+      parent: 1
+- proto: PoweredDimSmallLight
+  entities:
+  - uid: 6298
+    components:
+    - type: Transform
+      pos: 4.5,20.5
       parent: 1
 - proto: Poweredlight
   entities:
@@ -34570,6 +34584,18 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -4.6519165,12.624256
+      parent: 1
+- proto: ScrapSteel
+  entities:
+  - uid: 872
+    components:
+    - type: Transform
+      pos: 2.9516072,18.584389
+      parent: 1
+  - uid: 6009
+    components:
+    - type: Transform
+      pos: 5.3332624,18.549835
       parent: 1
 - proto: SheetPlasma10
   entities:
@@ -41698,12 +41724,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.5,17.5
       parent: 1
-  - uid: 6003
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.5,18.5
-      parent: 1
   - uid: 6004
     components:
     - type: Transform
@@ -41733,12 +41753,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 3.5,23.5
-      parent: 1
-  - uid: 6009
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,20.5
       parent: 1
   - uid: 6010
     components:

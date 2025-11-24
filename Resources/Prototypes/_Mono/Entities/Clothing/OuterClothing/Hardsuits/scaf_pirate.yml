@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
@@ -7,8 +8,8 @@
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseC3SyndicateContraband]
   id: ClothingOuterHardsuitPirateScaf
-  name: ASR SCAF hardsuit
-  description: An old SCAF suit painted in an ASR tan color scheme. The armor feels degraded, but lighter.
+  name: PDV SCAF hardsuit
+  description: An old SCAF suit painted in an PDV tan color scheme. The armor feels degraded, but lighter.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/OuterClothing/Hardsuits/scaf_pirate.rsi
@@ -24,17 +25,17 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.5
-        Slash: 0.5
+        Blunt: 0.6
+        Slash: 0.6
         Piercing: 0.55
-        Heat: 0.6
+        Heat: 0.7
         Radiation: 0.5
-        Caustic: 0.65
+        Caustic: 0.9
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.3
   - type: ClothingSpeedModifier
-    walkModifier: 0.875
-    sprintModifier: 0.875
+    walkModifier: 0.9
+    sprintModifier: 0.9
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing

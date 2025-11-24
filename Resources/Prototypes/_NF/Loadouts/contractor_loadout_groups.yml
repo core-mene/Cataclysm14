@@ -9,7 +9,9 @@
 # SPDX-FileCopyrightText: 2024 immortalartisan
 # SPDX-FileCopyrightText: 2024 steinhauer.erhard
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Bonaout
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 Havaren
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Hyenh
@@ -17,6 +19,7 @@
 # SPDX-FileCopyrightText: 2025 Maxtone
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
+# SPDX-FileCopyrightText: 2025 Shy-ivy
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
@@ -327,6 +330,8 @@
   - ContractorClothingOuterHardsuitEVA
   - ContractorClothingOuterHardsuitBasic
   - ContractorClothingOuterHardsuitVoidParamed
+  - ContractorClothingOuterHardsuitUIEngineer
+  - ContractorClothingOuterHardsuitUIPilot
   - ContractorClothingOuterHoodieGrey
   - ContractorClothingOuterVestHazard
   - ContractorClothingOuterApron
@@ -670,6 +675,7 @@
   - ContractorClothingNeckPonchoSmallPurple # Monolith
   - ContractorClothingNeckPonchoSmallRed # Monolith
   - ContractorClothingNeckPonchoSmallPink # Monolith
+  - ContractorClothingNeckPonchoSmallOrange # Monolith
   - ContractorClothingNeckPonchoSmallBlack # Monolith
   - ContractorClothingNeckPonchoSmallWhite # Monolith
   - ContractorClothingNeckPonchoBlack # Monolith
@@ -712,6 +718,7 @@
   - ContractorClothingNeckArmbandUNSA
   - ContractorClothingNeckMantleBH # Mono
   - ContractorClothingNeckCloakSanabi # Mono
+  - ContractorClothingNeckUIOvercoat # Mono
 
 - type: loadoutGroup
   id: ContractorPDA
@@ -812,8 +819,8 @@
   - ContractorAcousticGuitarInstrument
   - ContractorCane
   - ContractorLGBTQHandyFlag
-  - ContractorNTHandyFlag
-  - ContractorBalloonNT
+  #- ContractorNTHandyFlag
+  #- ContractorBalloonNT
   - ContractorPonderingOrb
   - ContractorPlushieRGBee
   - ContractorMysterySpaceBladeBox
@@ -846,6 +853,13 @@
   - ContractorClothingMaskNeckGaiter
   - ContractorClothingMaskNeckGaiterRed
   - ContractorClothingMaskGasSecurity
+  - ClothingMaskJackal
+  - ClothingMaskRat
+  - ClothingMaskRaven
+  - ClothingMaskBear
+  - ClothingMaskBat
+  - ClothingMaskBee
+  - ClothingMaskFox
   fallbacks:
   - ContractorClothingMaskBreath
 
@@ -886,7 +900,7 @@
   - ContractorFootball
   - ContractorBeachBall
   - ContractorCrayonBox
-  - ContractorSoapNT
+  #- ContractorSoapNT
   # Frontier - try to mirror the upstream trinkets here, but only if they arent job role restricted in some weird way
   - PlushieLizard
   - ClothingNeckLGBTPin

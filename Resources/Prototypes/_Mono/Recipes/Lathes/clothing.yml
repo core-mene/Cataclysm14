@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 Hyenh
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -31,6 +32,11 @@
   parent: BaseNeckClothingRecipe
   id: ClothingNeckPonchoSmallPink
   result: ClothingNeckPonchoSmallPink
+
+- type: latheRecipe
+  parent: BaseNeckClothingRecipe
+  id: ClothingNeckPonchoSmallOrange
+  result: ClothingNeckPonchoSmallOrange
 
 - type: latheRecipe
   parent: BaseNeckClothingRecipe

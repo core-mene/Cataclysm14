@@ -46,6 +46,7 @@
 # SPDX-FileCopyrightText: 2024 Nemanja
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 wewman222
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -327,7 +328,7 @@
       autoRechargeRate: 40
     - type: MachinePart # Frontier
       part: PowerCell # Frontier
-      rating: 4 # Frontier: tier of this is arguable
+      rating: 6 # Frontier: tier of this is arguable # Mono: 4->6 - if you use this for a SMES it better work good
 
 # Power cage (big heavy power cell for big devices)
 

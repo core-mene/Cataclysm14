@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 dustylens
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 #T0
 - type: loadout
   id: ContractorEncryptionKeyTraffic
@@ -10,28 +17,28 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: NFNotDoc
-  price: 20
+  price: 0 # Mono
   storage:
     back:
     - EncryptionKeyMedical
 
 - type: loadout
   id: ContractorEncryptionKeyCargo
-  price: 20
+  price: 0 # Mono
   storage:
     back:
     - EncryptionKeyCargo
 
 - type: loadout
   id: ContractorEncryptionKeyEngineering
-  price: 20
+  price: 0 # Mono
   storage:
     back:
     - EncryptionKeyEngineering
 
 - type: loadout
   id: ContractorEncryptionKeyScience
-  price: 20
+  price: 0 # Mono
   storage:
     back:
     - EncryptionKeyScience

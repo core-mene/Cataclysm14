@@ -45,6 +45,7 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 UltimateJester
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 halycon
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -172,6 +173,9 @@
       gun_chamber: !type:ContainerSlot
   - type: StaticPrice # Mono - 200 from frontier 1k
     price: 200
+  - type: Gun # Mono change - Sound for viper
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/viper_fire.ogg
 
 - type: entity
   name: LWC PT-45C echis (9x19mm)
@@ -247,7 +251,7 @@
   name: CS PT-72 cobra (635x40mm)
   parent: [ BaseWeaponPistol, BaseC3SyndicateContraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponPistolCobra
-  description: A rugged, robust spec-ops handgun with an inbuilt silencer. Uses 6.35x40mm Caseless ammo. A common sight among Ashen Insurgents, they are the most commonly seen sidearm among boarding crews or agents.
+  description: A rugged, robust spec-ops handgun with an inbuilt silencer. Uses 6.35x40mm Caseless ammo. A common sight among Phaethon imperials, they are the most commonly seen sidearm among boarding crews or agents.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/cobra.rsi

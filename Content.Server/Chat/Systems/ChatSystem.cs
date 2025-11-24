@@ -51,6 +51,7 @@
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 Coenx-flex
 // SPDX-FileCopyrightText: 2025 Cojoke
+// SPDX-FileCopyrightText: 2025 Ilya246
 // SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 Winkarst
 // SPDX-FileCopyrightText: 2025 ark1368
@@ -79,7 +80,7 @@ using Content.Shared.ActionBlocker;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Chat;
-using Content.Shared.CollectiveMind;
+using Content.Shared._Starlight.CollectiveMind; // Goobstation - Starlight collective mind port
 using Content.Shared.Database;
 using Content.Shared.Examine;
 using Content.Shared.Ghost;
@@ -129,6 +130,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
     [Dependency] private readonly DiscordChatLink _discordLink = default!;
     [Dependency] private readonly LanguageSystem _language = default!; // Einstein Engines - Language
+    [Dependency] private readonly CollectiveMindUpdateSystem _collectiveMind = default!; // Goobstation - Starlight collective mind port
 
     public const int VoiceRange = 10; // how far voice goes in world units
     public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
@@ -253,6 +255,10 @@ public sealed partial class ChatSystem : SharedChatSystem
             return;
         }
 
+        // Goobstation - Starlight collective mind port
+        if (TryComp<CollectiveMindComponent>(source, out var collective))
+            _collectiveMind.UpdateCollectiveMind(source, collective);
+
         if (player != null && _chatManager.HandleRateLimit(player) != RateLimitStatus.Allowed)
             return;
 
@@ -330,6 +336,16 @@ public sealed partial class ChatSystem : SharedChatSystem
             }
         }
 
+        // Goobstation - Starlight collective mind port
+        if (desiredType == InGameICChatType.CollectiveMind)
+        {
+            if (TryProccessCollectiveMindMessage(source, message, out var modMessage, out var channel))
+            {
+                SendCollectiveMindChat(source, modMessage, channel);
+                return;
+            }
+        }
+
         // Otherwise, send whatever type.
         switch (desiredType)
         {
@@ -341,9 +357,6 @@ public sealed partial class ChatSystem : SharedChatSystem
                 break;
             case InGameICChatType.Emote:
                 SendEntityEmote(source, message, range, nameOverride, language, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker); // Einstein Engines - Language
-                break;
-            case InGameICChatType.CollectiveMind:
-                SendCollectiveMindChat(source, message, false);
                 break;
         }
     }
@@ -498,53 +511,79 @@ public sealed partial class ChatSystem : SharedChatSystem
 
     #region Private API
 
-    public void SendCollectiveMindChat(EntityUid source, string message, bool hideChat)
+    // Goobstation - Starlight collective mind port
+    private void SendCollectiveMindChat(EntityUid source, string message, CollectiveMindPrototype? collectiveMind)
     {
-        if (!TryComp<CollectiveMindComponent>(source, out var sourseCollectiveMindComp) || !_prototypeManager.TryIndex<RadioChannelPrototype>(sourseCollectiveMindComp.Channel, out var radioChannelProto))
+        if (_mobStateSystem.IsDead(source) || collectiveMind == null || message == "" || !TryComp<CollectiveMindComponent>(source, out var sourseCollectiveMindComp) || !sourseCollectiveMindComp.Minds.ContainsKey(collectiveMind.ID))
             return;
 
         var clients = Filter.Empty();
+        var clientsSeeNames = Filter.Empty();
         var mindQuery = EntityQueryEnumerator<CollectiveMindComponent, ActorComponent>();
         while (mindQuery.MoveNext(out var uid, out var collectMindComp, out var actorComp))
         {
-            if (collectMindComp.Channel == sourseCollectiveMindComp.Channel)
+            if (_mobStateSystem.IsDead(uid))
+                continue;
+
+            if (collectMindComp.Minds.ContainsKey(collectiveMind.ID) || collectMindComp.HearAll)
             {
-                clients.AddPlayer(actorComp.PlayerSession);
+                if (collectMindComp.SeeAllNames)
+                    clientsSeeNames.AddPlayer(actorComp.PlayerSession);
+                else
+                    clients.AddPlayer(actorComp.PlayerSession);
             }
         }
 
-        var admins = _adminManager.ActiveAdmins.Select(p => p.Channel);
-        string messageWrap;
-        string adminMessageWrap;
+        var Number = $"{sourseCollectiveMindComp.Minds[collectiveMind.ID]}";
 
-        messageWrap = Loc.GetString("chat-manager-send-collective-mind-chat-wrap-message",
+        var admins = _adminManager.ActiveAdmins
+            .Select(p => p.Channel);
+
+        string messageWrap = Loc.GetString("collective-mind-chat-wrap-message",
             ("message", message),
-            ("channel", sourseCollectiveMindComp.Channel));
-
-        adminMessageWrap = Loc.GetString("chat-manager-send-collective-mind-chat-wrap-message-admin",
+            ("channel", collectiveMind.LocalizedName),
+            ("number", Number));
+        string namedMessageWrap = Loc.GetString("collective-mind-chat-wrap-message-named",
             ("source", source),
             ("message", message),
-            ("channel", sourseCollectiveMindComp.Channel));
+            ("channel", collectiveMind.LocalizedName));
+        string adminMessageWrap = Loc.GetString("collective-mind-chat-wrap-message-admin",
+            ("source", source),
+            ("message", message),
+            ("channel", collectiveMind.LocalizedName),
+            ("number", Number));
 
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"CollectiveMind chat from {ToPrettyString(source):Player}: {message}");
 
+        // send to normal clients
         _chatManager.ChatMessageToManyFiltered(clients,
             ChatChannel.CollectiveMind,
             message,
-            messageWrap,
+            collectiveMind.ShowNames ? namedMessageWrap : messageWrap,
             source,
-            hideChat,
+            false,
             true,
-            radioChannelProto.Color);
+            collectiveMind.Color);
 
+        // send to normal clients that should always see names, aka ghosts
+        _chatManager.ChatMessageToManyFiltered(clientsSeeNames,
+            ChatChannel.CollectiveMind,
+            message,
+            namedMessageWrap,
+            source,
+            false,
+            true,
+            collectiveMind.Color);
+
+        // FOR ADMINS
         _chatManager.ChatMessageToMany(ChatChannel.CollectiveMind,
             message,
             adminMessageWrap,
             source,
-            hideChat,
+            false,
             true,
             admins,
-            radioChannelProto.Color);
+            collectiveMind.Color);
     }
 
     private void SendEntitySpeak(

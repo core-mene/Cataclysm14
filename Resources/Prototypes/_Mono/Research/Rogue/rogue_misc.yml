@@ -1,5 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -19,6 +21,19 @@
   position: 22, 11
 
 - type: technology
+  id: RogueGoliath
+  name: research-technology-rogue-saintie-voucher
+  entityIcon: ShipVoucherSaintie
+  discipline: RogueShipyard
+  tier: 1
+  cost: 50000
+  recipeUnlocks:
+  - SaintieVoucherRogue
+  technologyPrerequisites:
+  - UniversalMaterialResearchT2
+  position: 22, 5
+
+- type: technology
   id: RogueJaws
   name: research-technology-rogue-jaws
   entityIcon: JawsOfLife
@@ -27,6 +42,7 @@
   cost: 10000
   recipeUnlocks:
   - JawsOfLifeRogue
+  - NaniteApplicatorSyndicate
   technologyPrerequisites:
   - UniversalMaterialResearchT1
   position: 20, -1

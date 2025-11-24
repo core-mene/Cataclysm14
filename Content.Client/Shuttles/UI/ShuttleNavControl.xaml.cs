@@ -308,8 +308,6 @@ public partial class ShuttleNavControl : BaseShuttleControl // Mono
 
     protected override void Draw(DrawingHandleScreen handle)
     {
-        UseCircleMaskShader(handle);
-
         base.Draw(handle);
 
         DrawBacking(handle);
@@ -670,8 +668,6 @@ public partial class ShuttleNavControl : BaseShuttleControl // Mono
                 }
             }
         }
-
-        ClearShader(handle);
         #endregion
     }
 

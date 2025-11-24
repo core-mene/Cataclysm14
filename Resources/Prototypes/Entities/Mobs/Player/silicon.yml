@@ -15,7 +15,6 @@
 # SPDX-FileCopyrightText: 2023 778b
 # SPDX-FileCopyrightText: 2023 Checkraze
 # SPDX-FileCopyrightText: 2023 DrSmugleaf
-# SPDX-FileCopyrightText: 2023 Ilya246
 # SPDX-FileCopyrightText: 2023 Leon Friedrich
 # SPDX-FileCopyrightText: 2023 Nemanja
 # SPDX-FileCopyrightText: 2023 TemporalOroboros
@@ -48,6 +47,7 @@
 # SPDX-FileCopyrightText: 2025 Errant
 # SPDX-FileCopyrightText: 2025 GreaseMonk
 # SPDX-FileCopyrightText: 2025 Honestly101
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Killerqu00
 # SPDX-FileCopyrightText: 2025 KiraZen_
 # SPDX-FileCopyrightText: 2025 Myzumi
@@ -68,7 +68,6 @@
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
     - Common
     - Command
     - Engineering
@@ -79,7 +78,6 @@
     - Supply
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
     - Command
     - Engineering
@@ -88,6 +86,10 @@
     - Security
     - Service
     - Supply
+  - type: CollectiveMind
+    channels:
+    - Binary
+    defaultChannel: Binary
   - type: IgnoreUIRange
   - type: StationAiHeld
   - type: StationAiOverlay
@@ -127,7 +129,6 @@
     transmitFrequencyId: ShuttleTimer
   - type: RadarConsole
     followEntity: false
-    pannable: true # Mono
   - type: CommunicationsConsole
     canShuttle: false
     title: comms-console-announcement-title-station-ai
@@ -137,6 +138,7 @@
     - sprite: Mobs/Silicon/station_ai.rsi
       state: default
   - type: ShowJobIcons
+  - type: AdvancedPilot # can use both gunnery and shuttle console even on capitals
 
 - type: entity
   id: AiHeldIntellicard
@@ -144,13 +146,13 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: IntrinsicRadioReceiver
-  - type: IntrinsicRadioTransmitter
-    channels:
-    - Binary
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
+  - type: CollectiveMind
+    channels:
+    - Binary
+    defaultChannel: Binary
   - type: ActionGrant
     actions:
     - ActionAIViewLaws

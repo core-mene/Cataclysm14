@@ -1,3 +1,15 @@
+# SPDX-FileCopyrightText: 2022 Scribbles0
+# SPDX-FileCopyrightText: 2022 T-Stalker
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2023 Banshee
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2023 Nairod
+# SPDX-FileCopyrightText: 2023 csqrb
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2025 inquisitor-star
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: marking
   id: TattooHiveChest
   bodyPart: Chest
@@ -114,7 +126,7 @@
   id: TattooEyeRight
   bodyPart: Eyes
   markingCategory: Head
-  speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf, Goblin, Felinid, Vulpkanin, Oni, Harpy, Rodentia] # Delta V - Felinid, Vulpkanin, Oni, Harpy
+  speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf, Goblin, Felinid, Vulpkanin, Oni, Harpy, Rodentia, Tajaran] # Delta V - Felinid, Vulpkanin, Oni, Harpy; Goob - Tajaran
   coloring:
     default:
       type:
@@ -128,7 +140,7 @@
   id: TattooEyeLeft
   bodyPart: Eyes
   markingCategory: Head
-  speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf, Goblin, Felinid, Vulpkanin, Oni, Harpy, Rodentia] # Delta V - Felinid, Vulpkanin, Oni, Harpy
+  speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf, Goblin, Felinid, Vulpkanin, Oni, Harpy, Rodentia, Tajaran] # Delta V - Felinid, Vulpkanin, Oni, Harpy; Goob - Tajaran
   coloring:
     default:
       type:

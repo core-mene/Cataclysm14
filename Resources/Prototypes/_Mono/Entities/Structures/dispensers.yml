@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -13,7 +14,7 @@
     flags:
     - None
   - type: Dispenser
-    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    defaultItem: PaperWrittenDispenserOutageNote #PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
     inventory:
       WeaponRifleLecter: SpaceCash15000 # Example listing
   - type: Sprite
@@ -31,9 +32,22 @@
   parent: Paper
   components:
   - type: Paper
-    content: book-text-cargo-instructions
+    content: book-text-cargo-outage # Temporary until economy updates are merged.
   - type: TimedDespawn # So you cant spam it to lag the server.
     lifetime: 120
+
+- type: entity
+  id: PaperWrittenDispenserOutageNote # Placeholder vender item until economy updates are merged.
+  name: "cargo trade outage notice"
+  parent: Paper
+  components:
+  - type: Paper
+    content: book-text-cargo-outage
+  - type: TimedDespawn # So you cant spam it to lag the server.
+    lifetime: 120
+  - type: StaticPrice
+    price: 0
+    vendPrice: 10
 
 - type: entity
   parent: BaseCargoChute
@@ -42,7 +56,7 @@
   description: A machine with piping systems that lead into the bowels of the cargo depot, accepting export goods for trade deeds.
   components:
   - type: Dispenser
-    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    defaultItem: PaperWrittenDispenserOutageNote # PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
     inventory:
       TradeGoodSupplies: SpaceCash3000
       TradeGoodMedicalSupplies: SpaceCash5000
@@ -59,7 +73,7 @@
   description: A machine with piping systems that lead into the bowels of the cargo depot, accepting export goods for trade deeds.
   components:
   - type: Dispenser
-    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    defaultItem: PaperWrittenDispenserOutageNote # PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
     inventory:
       TradeGoodAmmo: SpaceCash10000
       TradeGoodFissionFuel: SpaceCash24000
@@ -76,7 +90,7 @@
   description: A machine with piping systems that lead into the bowels of the station, accepting export goods for trade deeds.
   components:
   - type: Dispenser
-    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    defaultItem: PaperWrittenDispenserOutageNote # PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
     inventory:
       TradeGoodAmmo: SpaceCash7000
       TradeGoodSupplies: SpaceCash6000
@@ -98,7 +112,7 @@
   description: A machine with piping systems that lead into the bowels of the station, accepting export goods for trade deeds.
   components:
   - type: Dispenser
-    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    defaultItem: PaperWrittenDispenserOutageNote # PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
     inventory:
       TradeGoodAmmo: SpaceCash8000
       TradeGoodSupplies: SpaceCash2500
@@ -119,7 +133,7 @@
   description: A machine with piping systems that lead into the bowels of the station, accepting export goods for trade deeds.
   components:
   - type: Dispenser
-    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    defaultItem: PaperWrittenDispenserOutageNote # PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
     inventory:
       TradeGoodAmmo: SpaceCash12000
       TradeGoodSupplies: SpaceCash2500
@@ -137,11 +151,11 @@
 - type: entity
   parent: BaseCargoChute
   id: CargoChuteHideout
-  name: ASR hideout cargo turn-in chute
+  name: PDV hideout cargo turn-in chute
   description: A machine with piping systems that lead into the bowels of the station, accepting export goods for trade deeds.
   components:
   - type: Dispenser
-    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    defaultItem: PaperWrittenDispenserOutageNote # PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
     inventory:
       TradeGoodAmmo: SpaceCash14000
       TradeGoodSupplies: SpaceCash5000
@@ -160,11 +174,11 @@
 - type: entity
   parent: BaseCargoChute
   id: CargoChuteJupiter
-  name: ASR jupiter cargo turn-in chute
+  name: PDV jupiter cargo turn-in chute
   description: A machine with piping systems that lead into the bowels of the carrier, accepting export goods for trade deeds.
   components:
   - type: Dispenser
-    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    defaultItem: PaperWrittenDispenserOutageNote # PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
     inventory:
       TradeGoodAmmo: SpaceCash18000
       TradeGoodSupplies: SpaceCash8000
@@ -187,7 +201,7 @@
   description: A machine with piping systems that lead into the bowels of the station, accepting export goods for trade deeds.
   components:
   - type: Dispenser
-    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    defaultItem: PaperWrittenDispenserOutageNote # PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
     inventory:
       TradeGoodSupplies: SpaceCash2000
       TradeGoodMedicalSupplies: SpaceCash4000
@@ -206,7 +220,7 @@
   description: A machine with piping systems that lead into the bowels of the station, accepting export goods for trade deeds.
   components:
   - type: Dispenser
-    defaultItem: PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
+    defaultItem: PaperWrittenDispenserOutageNote # PaperWrittenDispenserInstructions # Lol, dont put this as anything thats worth something, you can just get items by clicking with a empty hand.
     inventory:
       TradeGoodAmmo: SpaceCash7000
       TradeGoodSupplies: SpaceCash2750

@@ -35,6 +35,7 @@
     staticPacks:
     - StaticAmmoRecipePack
     - NFMercenaryTechfabDeprecatedStatic
+    - RoundstartShipgunAmmo
     dynamicPacks:
     # rogue start
     - MonoRogueWeaponsDynamicMelee
@@ -62,6 +63,8 @@
     - UniversalOrdinance
     - DynamicAmmoRecipePack
     - NFMercenaryTechfabDeprecated
+    # Civ military tech
+    - ResearchedExplosives
   - type: MaterialStorage
     whitelist:
       tags:

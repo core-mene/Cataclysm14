@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -77,13 +78,14 @@
     onAdd:
     - type: Stealth
       enabledOnDeath: false
-      maxVisibility: 1.2
+      minVisibility: 0.2
+      maxVisibility: 0.9
     - type: StealthOnMove
       passiveVisibilityRate: -0.25
       movementVisibilityRate: 0.28
     - type: PointLight # Mono
       radius: 1.2
-      energy: 1.5
+      energy: 5
       color: "#4faffb"
   - type: Sprite
     sprite: _Shitmed/Mobs/Species/Space/Cobra/organs.rsi

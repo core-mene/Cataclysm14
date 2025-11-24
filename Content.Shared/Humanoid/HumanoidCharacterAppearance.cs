@@ -15,6 +15,7 @@
 // SPDX-FileCopyrightText: 2024 Errant
 // SPDX-FileCopyrightText: 2024 metalgearsloth
 // SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 inquisitor-star
 // SPDX-FileCopyrightText: 2025 starch
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -140,6 +141,7 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
             HumanoidSkinColor.Hues => speciesPrototype.DefaultSkinTone,
             HumanoidSkinColor.TintedHues => Humanoid.SkinColor.TintedHues(speciesPrototype.DefaultSkinTone),
             HumanoidSkinColor.VoxFeathers => Humanoid.SkinColor.ClosestVoxColor(speciesPrototype.DefaultSkinTone),
+            HumanoidSkinColor.AnimalFur => Humanoid.SkinColor.ClosestAnimalFurColor(speciesPrototype.DefaultSkinTone), // Goobstation - Tajaran
             _ => Humanoid.SkinColor.ValidHumanSkinTone,
         };
 
@@ -206,6 +208,9 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
                 break;
             case HumanoidSkinColor.VoxFeathers:
                 newSkinColor = Humanoid.SkinColor.ProportionalVoxColor(newSkinColor);
+                break;
+            case HumanoidSkinColor.AnimalFur:
+                newSkinColor = Humanoid.SkinColor.ProportionalAnimalFurColor(newSkinColor); // Goobstation - Tajaran
                 break;
         }
 

@@ -1,3 +1,12 @@
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Vordenburg
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 inquisitor-star
+#
+# SPDX-License-Identifier: MPL-2.0
+
 #default species weights used for randomly selected species
 - type: weightedRandomSpecies
   id: SpeciesWeights
@@ -16,3 +25,4 @@
     #    Rodentia: 2 # DeltaV - Rodentia, see Prototypes/_DV/Entities/Mobs/Species/rodentia.yml
     Goblin: 2 # Frontier
     Harpy: 1 # Frontier
+    Tajaran: 3 # Goobstation

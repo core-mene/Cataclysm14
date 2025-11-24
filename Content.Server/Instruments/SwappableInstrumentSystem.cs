@@ -1,3 +1,13 @@
+// SPDX-FileCopyrightText: 2022 EmoGarbage404
+// SPDX-FileCopyrightText: 2022 Leon Friedrich
+// SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared.Instruments;
 using Content.Shared.Popups;
 using Content.Shared.Verbs;
@@ -24,9 +34,6 @@ public sealed class SwappableInstrumentSystem : EntitySystem
 
         if (!TryComp<InstrumentComponent>(uid, out var instrument))
             return;
-
-        if (component.OnlySetBySelf && uid != args.User) // Frontier: restrict instrument changes
-            return; // Frontier: restrict instrument changes
 
         var priority = 0;
         foreach (var entry in component.InstrumentList)

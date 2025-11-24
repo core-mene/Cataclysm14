@@ -1,7 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -14,7 +17,7 @@
   price: 85290
   category: Medium
   group: Ussp
-  access: USSP
+  access: Mercenary
   shuttlePath: /Maps/_Mono/Shuttles/USSP/drakon.yml
   guidebookPage: Null
   class:
@@ -33,13 +36,11 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Drakon USSP{1}'
+          mapNameTemplate: 'Drakon MIL{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            USSPSergeant: [0, 0]
-            USSPCorporal: [0, 0]
-            USSPMedic: [0, 0]
-            USSPRifleman: [0, 0]
+            Mercenary: [ 0, 0 ]
+            Pilot: [ 0, 0 ]

@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 LaCumbiaDelCoronavirus
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -65,7 +66,7 @@
       types:
         Structural: 2500
         Blunt: 150
-        Pierce: 500
+        Piercing: 500
         Heat: 50
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/mini_rocket.rsi
@@ -92,6 +93,7 @@
     launchSpeed: 10
     maxSpeed: 180
     trackDelay: 0
+    exposesTracking: false
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun

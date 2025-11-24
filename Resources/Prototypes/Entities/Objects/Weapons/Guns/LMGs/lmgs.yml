@@ -32,6 +32,7 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 UltimateJester
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 halycon
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -148,6 +149,9 @@
     steps: 4
     zeroVisible: true
   - type: Appearance
+  - type: Gun # Mono change - Sound for L6 saw
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/l6_fire.ogg
 
 - type: entity
   name: PA L6C ROW (7.62x39mm)

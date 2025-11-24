@@ -55,6 +55,7 @@
   - AirTank
 # Mercenary techfab
 ## Clothing / Armor
+  - ArmorPlateLight #Mono
   - RiotShield
   - ClothingNeckIFFNeutral
   - ClothingNeckIFFGreen
@@ -120,6 +121,8 @@
   - PowerCellMicroreactor
 # Mercenary techfab
 ## Armor
+  - ArmorPlateMedium #Mono
+  - ArmorPlateTactical #Mono
   - TelescopicShield
   - ClothingOuterArmorBulletproofNF
   - ClothingOuterCoatBHTrench
@@ -185,8 +188,7 @@
   - WeaponDisablerSMG
   - WeaponLaserCannon
   - WeaponXrayCannon
-## Weapons
-  #Mono start
+#Mono start
   - WeaponLMGRatel
   - WeaponShotgunBigBuddy
   - WeaponShotgunBigJohnny
@@ -197,8 +199,10 @@
   - WeaponSubMachineGunWt550
   - WeaponSubMachineGunFirestarter
   - WeaponSubMachineGunVector9x19mm
-  - WeaponSubMachineGunFirestarter # Mono
-  - WeaponSubMachineGunWt550 # Mono
+  - WeaponSubMachineGunFirestarter
+  - WeaponSubMachineGunWt550
+  - WeaponRifleNtsfLtr
+  - WeaponSubMachineGunVectorNtsfHclm
 #Mono end
 
 - type: latheRecipePack

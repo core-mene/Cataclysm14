@@ -1,3 +1,11 @@
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 Verm
+// SPDX-FileCopyrightText: 2024 nikthechampiongr
+// SPDX-FileCopyrightText: 2025 ScyronX
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Database;
@@ -71,24 +79,35 @@ public abstract partial class SharedToolSystem
     {
         using (args.PushGroup(nameof(WelderComponent)))
         {
-            if (ItemToggle.IsActivated(entity.Owner))
+            if (!entity.Comp.OnlyDisplayFuel)
             {
-                args.PushMarkup(Loc.GetString("welder-component-on-examine-welder-lit-message"));
-            }
-            else
-            {
-                args.PushMarkup(Loc.GetString("welder-component-on-examine-welder-not-lit-message"));
+                var lit = Loc.GetString("welder-component-on-examine-welder-not-lit-message");
+
+                if (ItemToggle.IsActivated(entity.Owner))
+                    lit = Loc.GetString("welder-component-on-examine-welder-lit-message");
+
+                args.PushMarkup(lit);
             }
 
             if (args.IsInDetailsRange)
             {
                 var (fuel, capacity) = GetWelderFuelAndCapacity(entity.Owner, entity.Comp);
 
-                args.PushMarkup(Loc.GetString("welder-component-on-examine-detailed-message",
+                var status = Loc.GetString("welder-component-on-examine-detailed-message",
                     ("colorName", fuel < capacity / FixedPoint2.New(4f) ? "darkorange" : "orange"),
                     ("fuelLeft", fuel),
                     ("fuelCapacity", capacity),
-                    ("status", string.Empty))); // Lit status is handled above
+                    ("status", string.Empty)); // Lit status is handled above
+
+                if (entity.Comp.OnlyDisplayFuel) // Monolith edit - Nanite applicator
+                {
+                    status = Loc.GetString("welder-component-on-examine-less-detailed-message",
+                        ("colorName", fuel < capacity / FixedPoint2.New(4f) ? "darkorange" : "orange"),
+                        ("fuelLeft", fuel),
+                        ("fuelCapacity", capacity));
+                }
+
+                args.PushMarkup(status); // Lit status is handled above
             }
         }
     }

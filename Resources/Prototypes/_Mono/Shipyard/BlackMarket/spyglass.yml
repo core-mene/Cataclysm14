@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2024 Dvir
 # SPDX-FileCopyrightText: 2024 Salvantrix
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 starch
 #
@@ -10,11 +11,12 @@
 - type: vessel
   id: Spyglass
   parent: BaseVesselAntag
-  name: ASR Spyglass
+  name: PDV Spyglass
   description: One of the more rare kinds of ships you'll see rogues with. A actual commercial one. Capable of Xenoarcheology and Robotics.
-  price: 53500
+  price: 55500
   category: Small
   group: BlackMarket
+  access: Pirate
   shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/spyglass.yml
   guidebookPage: Null
   class:
@@ -25,7 +27,7 @@
 
 - type: gameMap
   id: Spyglass
-  mapName: 'ASR Spyglass'
+  mapName: 'PDV Spyglass'
   mapPath: /Maps/_Mono/Shuttles/BlackMarket/spyglass.yml
   minPlayers: 0
   stations:
@@ -33,7 +35,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Spyglass ASR{1}'
+          mapNameTemplate: 'Spyglass PDV{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

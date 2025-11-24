@@ -6,6 +6,7 @@
 // SPDX-FileCopyrightText: 2023 DrSmugleaf
 // SPDX-FileCopyrightText: 2023 Kara
 // SPDX-FileCopyrightText: 2025 tonotom
+// SPDX-FileCopyrightText: 2025 tonotom1
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -41,9 +42,10 @@ public sealed partial class GasArtifactComponent : Component
         Gas.Ammonia,
         Gas.NitrousOxide,
         Gas.Frezon,
-        Gas.BZ, //Funky
-        Gas.Healium, //Funky
-		Gas.Nitrium, //Funky
+        Gas.BZ, //Funky/Goob
+        Gas.Healium, //Funky/Goob
+		Gas.Nitrium, //Funky/Goob
+		Gas.Pluoxium, //Funky/Goob
     };
 
     /// <summary>

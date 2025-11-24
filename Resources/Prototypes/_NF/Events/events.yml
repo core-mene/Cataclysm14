@@ -8,8 +8,12 @@
 # SPDX-FileCopyrightText: 2024 Shroomerian
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
 # SPDX-FileCopyrightText: 2025 GreaseMonk
+# SPDX-FileCopyrightText: 2025 NazrinNya
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 significant harassment
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -20,7 +24,7 @@
     # - id: AnomalySpawn
     # - id: BluespaceArtifact
     # - id: BluespaceLocker
-    - id: BreakerFlip
+    # - id: BreakerFlip
     # - id: BureaucraticError
     # - id: ClericalError
     - id: CockroachMigration
@@ -31,7 +35,7 @@
     # - id: MassHallucinations # Frontier
     # - id: MimicVendorRule
     - id: MouseMigration
-    - id: PowerGridCheck
+    # - id: PowerGridCheck
     - id: RandomSentience
     # - id: SlimesSpawn
     - id: SolarFlare
@@ -42,7 +46,7 @@
     - id: BluespaceCargoCrate # Frontier
     - id: BluespaceMcCargoCrate # Frontier
     - id: BluespaceSyndicateCrate # Frontier
-    - id: BluespaceBrokenMcDelivery # Frontier
+#   - id: BluespaceBrokenMcDelivery # Frontier. Mono edit - Disabled 
     - id: SmugglingFax # Frontier
     - id: SnailMigration # Mono
 
@@ -141,16 +145,16 @@
 #     duration: 1
 #   - type: BluespaceLockerRule
 
-- type: entity
-  id: BreakerFlip
-  parent: BaseGameRule
-  components:
-  - type: StationEvent
-    weight: 7
-    earliestStart: 15 # Frontier
-    duration: 1
-    minimumPlayers: 15
-  - type: BreakerFlipRule
+#- type: entity
+#  id: BreakerFlip
+#  parent: BaseGameRule
+#  components:
+#  - type: StationEvent
+#    weight: 7
+#    earliestStart: 15 # Frontier
+#    duration: 1
+#    minimumPlayers: 15
+#  - type: BreakerFlipRule
 
 # - type: entity
 #   id: BureaucraticError
@@ -351,22 +355,22 @@
 #     duration: 240
 #   - type: KudzuGrowthRule
 
-- type: entity
-  id: PowerGridCheck
-  parent: BaseStationEventShortDelay
-  components:
-  - type: StationEvent
-    weight: 5
-    earliestStart: 15 # Frontier
-    startAnnouncement: station-event-power-grid-check-nf-start-announcement # Frontier: add nf-
-    endAnnouncement: station-event-power-grid-check-nf-end-announcement # Frontier: add nf-
-    startAudio:
-      path: /Audio/Announcements/power_off.ogg
-      params:
-        volume: -4
-    duration: 60
-    maxDuration: 120
-  - type: PowerGridCheckRule
+#- type: entity
+#  id: PowerGridCheck
+#  parent: BaseStationEventShortDelay
+#  components:
+#  - type: StationEvent
+#    weight: 5
+#    earliestStart: 15 # Frontier
+#    startAnnouncement: station-event-power-grid-check-nf-start-announcement # Frontier: add nf-
+#    endAnnouncement: station-event-power-grid-check-nf-end-announcement # Frontier: add nf-
+#    startAudio:
+#      path: /Audio/Announcements/power_off.ogg
+#      params:
+#        volume: -4
+#    duration: 60
+#    maxDuration: 120
+#  - type: PowerGridCheckRule
 
 - type: entity
   parent: BaseGameRule
@@ -399,7 +403,7 @@
     - Syndicate # Mono
     - Freelance # Mono
     - Ussp # Mono
-    - UsspCommand # Mono
+    # - UsspCommand # Mono
     extraCount: 6
     lightBreakChancePerSecond: 0.0003
     doorToggleChancePerSecond: 0 # Mono

@@ -1,3 +1,18 @@
+# SPDX-FileCopyrightText: 2023 Emisse
+# SPDX-FileCopyrightText: 2023 I.K
+# SPDX-FileCopyrightText: 2023 JessePretendstoCode
+# SPDX-FileCopyrightText: 2023 Jessetriesagain
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2023 notquitehadouken <1isthisameme>
+# SPDX-FileCopyrightText: 2023 stopbreaking
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Ghost581
+# SPDX-FileCopyrightText: 2025 LemonBlemon
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: entity
   name: chainsaw
   parent: BaseItem
@@ -14,7 +29,7 @@
     sprite: Objects/Weapons/Melee/chainsaw.rsi
     state: icon
   - type: MeleeWeapon
-    heavyStaminaCost: 10 # goob edit
+    heavyStaminaCost: 2 # Mono reduced from 10 to 2 so you no longer hit stamcrit from 2 seconds of using the weapon
     autoAttack: true
     angle: 0
     wideAnimationRotation: -135
@@ -32,7 +47,7 @@
     damage:
       types:
         Slash: 6
-        Structural: 4
+        Structural: 6 # Mono increased damage from 4 to 6 for an even 10 struct, keep in mind a breaching hammer does 300 in one hit and that would be about 30 attacks from this
   - type: Item
     size: Normal
     sprite: Objects/Weapons/Melee/chainsaw.rsi

@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 halycon
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -99,7 +100,7 @@
     projectileSpeed: 45 # Mono
     fireRate: 7.5 # Mono, does nothing because its burst only but it makes it clear it can fire at this rate.
     soundGunshot:
-      path: /Audio/_Goobstation/Weapons/Guns/Gunshots/bwuh.ogg
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/wspr_fire.ogg # Mono change - Changed audio path
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -182,7 +183,7 @@
   name: CS Burner (12.7x99mm)
   parent: [BaseWeaponRifle, BaseC3PirateContrabandHighValue] # Mono - Changed to HighValue
   id: WeaponRifleBurner
-  description: A high caliber syndicate gun chambered in 127x99mm, capable of firing anti-material and high explosive rounds.
+  description: A high caliber syndicate gun chambered in 12.7x99mm, capable of firing anti-material and high explosive rounds.
   components:
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Rifles/burner.rsi

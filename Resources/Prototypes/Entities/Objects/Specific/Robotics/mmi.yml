@@ -12,6 +12,7 @@
 # SPDX-FileCopyrightText: 2025 BeeRobynn
 # SPDX-FileCopyrightText: 2025 Errant
 # SPDX-FileCopyrightText: 2025 Honestly101
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
 #
@@ -38,13 +39,13 @@
   - type: BlockMovement
   - type: Examiner
   - type: IntrinsicRadioReceiver
-  - type: IntrinsicRadioTransmitter
-    channels:
-    - Binary
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
+  - type: CollectiveMind
+    channels:
+    - Binary
+    defaultChannel: Binary
   - type: NameIdentifier
     group: MMI
   - type: DoAfter
@@ -130,13 +131,13 @@
     - type: Examiner
     - type: BorgBrain
     - type: IntrinsicRadioReceiver
-    - type: IntrinsicRadioTransmitter
-      channels:
-      - Binary
     - type: ActiveRadio
       channels:
-      - Binary
       - Common
+    - type: CollectiveMind
+      channels:
+      - Binary
+      defaultChannel: Binary
     - type: NameIdentifier
       group: PositronicBrain
     - type: DoAfter

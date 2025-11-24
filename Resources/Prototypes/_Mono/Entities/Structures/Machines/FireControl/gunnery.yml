@@ -1,5 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 LaCumbiaDelCoronavirus
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
@@ -254,7 +256,6 @@
           type: WiresBoundUserInterface
   - type: RadarConsole
     maxRange: 1024
-    pannable: true
     relativePanning: true
   - type: WorldLoader
     radius: 384 # Mono
@@ -264,3 +265,49 @@
     radius: 1.5
     energy: 1.6
     color: "#ff8400"
+  - type: TargetSeekerAlert
+    targetGainSound:
+      path: /Audio/_Mono/Effects/Alerts/rwr_beep.ogg
+    distanceAlertSettings:
+    - maximumDistance: 220 # curse of...
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/launchwarning.ogg
+        params:
+          loop: true
+          volume: 0.9
+          pitch: 1.05
+    - maximumDistance: 400
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
+        params:
+          loop: true
+          volume: 1.3
+          pitch: 1.15
+    - maximumDistance: 650
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
+        params:
+          loop: true
+          volume: 1.2
+          pitch: 1.05
+          variation: 0.05
+
+- type: entity
+  parent: [BaseStructureComputerTabletop, ComputerGunneryConsole]
+  id: ComputerTabletopGunneryConsole
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects
+    layers:
+    - map: ["computerLayerBody"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: computer_tabletop
+    - map: ["computerLayerKeyboard"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: generic_keyboard_tabletop
+    - map: ["computerLayerScreen"]
+      sprite: _Mono/Structures/Machines/computers.rsi
+      state: gunnery_screen
+    - map: ["computerLayerKeys"]
+      sprite: _Mono/Structures/Machines/computers.rsi
+      state: gunnery_keys

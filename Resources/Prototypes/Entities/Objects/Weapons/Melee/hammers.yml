@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 LemonBlemon
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 keronshb
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: entity
   name: sledgehammer
   parent: BaseItem
@@ -19,8 +25,8 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 10
-        Structural: 10
+        Blunt: 15 # Mono increased damage from 10 to 15 so its no longer worse than a combat knife
+        Structural: 30 # Mono increased damage from 10 to 30 so its actually usable as a structural weapon
   - type: Item
     size: Large
 

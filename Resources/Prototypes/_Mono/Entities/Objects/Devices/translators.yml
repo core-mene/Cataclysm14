@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
+- type: entity
+  id: GaryTranslator
+  parent: [ TranslatorPoweredBase ]
+  name: gary translator
+  description: Translates speech between Gary and Andromeda Standard. Haha, Gary!
+  components:
+  - type: HandheldTranslator
+    spoken:
+    - TauCetiBasic
+    - Gary
+    understood:
+    - TauCetiBasic
+    - Gary
+    requires:
+    - TauCetiBasic
+    - Gary

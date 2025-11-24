@@ -1,4 +1,6 @@
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -42,3 +44,14 @@
         - SmallMobMask
         layer:
         - MachineLayer
+
+- type: entity
+  parent: [ BaseC3SyndicateContraband, CrateGenericSteel ] # Frontier: Added BaseC3SyndicateContraband
+  id: CrateNanotrasen
+  name: Nanotrasen crate
+  description: A white and blue crate with the Nanotrasen Symbol.
+  components:
+  - type: Icon
+    sprite: _Mono/Structures/Storage/Crates/nanotrasen.rsi
+  - type: Sprite
+    sprite: _Mono/Structures/Storage/Crates/nanotrasen.rsi

@@ -40,7 +40,9 @@
 # SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 Ghost581
 # SPDX-FileCopyrightText: 2025 John
+# SPDX-FileCopyrightText: 2025 LemonBlemon
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 UltimateJester
 # SPDX-FileCopyrightText: 2025 keronshb
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -361,9 +363,9 @@
         variation: 0.250
     activatedDamage:
       types:
-        Slash: 10
+        Slash: 15 # Mono increased from 10 to 15 to be on-par with normal e-swords
         Heat: 20
-        Structural: 25
+        Structural: 75 # Mono increased from 25 to 75, keep in mind a breaching hammer does 300 a hit
   - type: ItemToggleActiveSound
     activeSound:
       path: /Audio/Weapons/ebladehum.ogg

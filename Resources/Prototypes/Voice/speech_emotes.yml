@@ -20,13 +20,15 @@
 # SPDX-FileCopyrightText: 2024 geraeumig
 # SPDX-FileCopyrightText: 2024 pocl v
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Dvir
 # SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 crasg
 # SPDX-FileCopyrightText: 2025 keronshb
 # SPDX-FileCopyrightText: 2025 lzk
 # SPDX-FileCopyrightText: 2025 mikusssssss
 #
-# SPDX-License-Identifier: MPL-2.0
+# SPDX-License-Identifier: AGPL-3.0-or-later
 
 # vocal emotes
 - type: emote
@@ -37,9 +39,6 @@
   whitelist:
     components:
     - Vocal
-  blacklist:
-    components:
-    - BorgChassis
   chatMessages: ["chat-emote-msg-scream"]
   chatTriggers:
     - scream
@@ -67,9 +66,6 @@
   whitelist:
     components:
     - Vocal
-  blacklist:
-    components:
-    - BorgChassis
   chatMessages: ["chat-emote-msg-laugh"]
   chatTriggers:
     - laugh
@@ -398,6 +394,15 @@
   category: Vocal
   icon: Interface/Emotes/weh.png
   chatMessages: ["chat-emote-msg-weh"]
+  whitelist:
+    tags:
+      - ReptilianEmotes # Goob - restrict wehs to the OG lizz
+  blacklist:
+    components:
+      - BorgChassis
+  chatTriggers: # Floof - you can weh now
+    - weh
+    - wehs
 
 - type: emote
   id: Hew

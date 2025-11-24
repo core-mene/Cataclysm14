@@ -23,6 +23,7 @@
 # SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 BeeRobynn
 # SPDX-FileCopyrightText: 2025 Havaren
+# SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
@@ -51,9 +52,9 @@
     - Ammonia
     - NitrousOxide
     - Frezon
-    - BZ #Funky
-    - Healium #Funky
-    - Nitrium #Funky
+    - BZ #Funky/Goob
+    - Healium #Funky/Goob
+    - Nitrium #Funky/Goob
     #- Helium3 TODO: fusion
     # remove everything except oxygen to maintain oxygen ratio
     overflowGases:
@@ -65,9 +66,10 @@
     - Ammonia
     - NitrousOxide
     - Frezon
-    - BZ #Funky
-    - Healium #Funky
-    - Nitrium #Funky
+    - BZ #Funky/Goob
+    - Healium #Funky/Goob
+    - Nitrium #Funky/Goob
+    - Pluoxium #Funky/Goob
     #- Helium3 TODO: fusion
   - type: AirIntake
   # for intake and filter to work
@@ -191,7 +193,6 @@
   - type: RadarConsole
     maxRange: 512
     followEntity: true
-    pannable: true
   - type: Magboots
   # </Mono>
 
@@ -233,6 +234,11 @@
     tags:
     - DoorBumpOpener
     - CivilianMechBounty # Mono
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   id: MechRipleyBattery
@@ -277,6 +283,11 @@
     tags:
     - DoorBumpOpener
     - CivilianMechBounty # Mono
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   parent: MechHonker
@@ -324,6 +335,11 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.4
     baseSprintSpeed: 3.7
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   parent: MechHamtr
@@ -397,6 +413,11 @@
     # - Maintenance # Frontier
   # TOOD: buzz / chime actions
   # TODO: builtin flashlight
+  - type: Prying # Mono
+    pryPowered: true
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/jaws_pry.ogg
 
 - type: entity
   parent: MechVim

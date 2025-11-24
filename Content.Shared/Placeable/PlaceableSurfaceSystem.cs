@@ -1,13 +1,30 @@
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 wrexbe
+// SPDX-FileCopyrightText: 2022 Leon Friedrich
+// SPDX-FileCopyrightText: 2022 Rane
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2024 ShadowCommander
+// SPDX-FileCopyrightText: 2024 TemporalOroboros
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: MIT
+
 using System.Numerics;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Storage;
 using Content.Shared.Storage.Components;
+using Robust.Shared.Random;
 
 namespace Content.Shared.Placeable;
 
 public sealed class PlaceableSurfaceSystem : EntitySystem
 {
+    [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
 
@@ -19,6 +36,8 @@ public sealed class PlaceableSurfaceSystem : EntitySystem
         SubscribeLocalEvent<PlaceableSurfaceComponent, StorageInteractUsingAttemptEvent>(OnStorageInteractUsingAttempt);
         SubscribeLocalEvent<PlaceableSurfaceComponent, StorageAfterOpenEvent>(OnStorageAfterOpen);
         SubscribeLocalEvent<PlaceableSurfaceComponent, StorageAfterCloseEvent>(OnStorageAfterClose);
+        SubscribeLocalEvent<PlaceableSurfaceComponent, GetDumpableVerbEvent>(OnGetDumpableVerb);
+        SubscribeLocalEvent<PlaceableSurfaceComponent, DumpEvent>(OnDump);
     }
 
     public void SetPlaceable(EntityUid uid, bool isPlaceable, PlaceableSurfaceComponent? surface = null)
@@ -86,5 +105,26 @@ public sealed class PlaceableSurfaceSystem : EntitySystem
     private void OnStorageAfterClose(Entity<PlaceableSurfaceComponent> ent, ref StorageAfterCloseEvent args)
     {
         SetPlaceable(ent.Owner, false, ent.Comp);
+    }
+
+    private void OnGetDumpableVerb(Entity<PlaceableSurfaceComponent> ent, ref GetDumpableVerbEvent args)
+    {
+        args.Verb = Loc.GetString("dump-placeable-verb-name", ("surface", ent));
+    }
+
+    private void OnDump(Entity<PlaceableSurfaceComponent> ent, ref DumpEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        args.Handled = true;
+        args.PlaySound = true;
+
+        var (targetPos, targetRot) = _transformSystem.GetWorldPositionRotation(ent);
+
+        foreach (var entity in args.DumpQueue)
+        {
+            _transformSystem.SetWorldPositionRotation(entity, targetPos + _random.NextVector2Box() / 4, targetRot);
+        }
     }
 }

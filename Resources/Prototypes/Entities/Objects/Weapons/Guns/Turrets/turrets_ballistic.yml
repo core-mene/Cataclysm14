@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2025 ScyronX
+# SPDX-FileCopyrightText: 2025 Whatstone
+# SPDX-FileCopyrightText: 2025 chromiumboy
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: entity
   parent: [BaseWeaponBallisticTurret, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponTurretSyndicate
@@ -45,7 +53,8 @@
     graph: WeaponTurretSyndicateDisposable
     node: disposableTurret
   - type: Repairable
-    qualityNeeded: "Anchoring"
+    qualities:
+    - Anchoring
     doAfterDelay: 3
   - type: TriggerWhenEmpty
   - type: ExplodeOnTrigger

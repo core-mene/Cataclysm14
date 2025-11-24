@@ -7,6 +7,8 @@
 # SPDX-FileCopyrightText: 2024 Dvir
 # SPDX-FileCopyrightText: 2024 Myra
 # SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -24,14 +26,14 @@ jobs:
     if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'FrontierATC' # Frontier
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3.6.0
+    - uses: actions/checkout@v4.2.2
     - name: Setup Submodule
       run: git submodule update --init
     - name: Pull engine updates
       uses: space-wizards/submodule-dependency@v0.1.5
     - uses: PaulRitter/yaml-schema-validator@v1
       with:
-        schema: RobustToolbox/Schemas/rga.yml
+        schema: .github/Schemas/rga.yml
         path_pattern: .*attributions.ya?ml$
-        validators_path: RobustToolbox/Schemas/rga_validators.py
-        validators_requirements: RobustToolbox/Schemas/rga_requirements.txt
+        validators_path: .github/Schemas/rga_validators.py
+        validators_requirements: .github/Schemas/rga_requirements.txt
