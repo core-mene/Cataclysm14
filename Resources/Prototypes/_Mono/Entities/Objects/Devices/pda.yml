@@ -1,13 +1,12 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 starch
-# SPDX-FileCopyrightText: 2025 thoughtlessuser
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 #PDV
 
 - type: entity
-  parent: BasePDA
+  parent: PiratePDA
   id: BasePDVPDA
   name: PDV denasvar PDA
   description: A basic Imperial PDA.
@@ -39,11 +38,16 @@
 
 - type: entity
   parent: BasePDVPDA
-  id: PirateBoatswainPDA
+  id: PDVDenasvarPDA
   name: PDV denasvar PDA
   components:
   - type: Pda
     id: PDVDenasvarIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-denasvar
   - type: Geiger # Mono
     showExamine: true
     showControl: true
@@ -77,7 +81,7 @@
     - state: "id_overlay"
       map: [ "enum.PdaVisualLayers.IdLight" ]
       shader: "unshaded"
-      visible: false
+      visible: false 
   - type: Icon
     sprite: Objects/Devices/pda.rsi
     state: pda
