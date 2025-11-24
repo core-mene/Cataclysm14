@@ -58,17 +58,6 @@
     state: banner-red
 
 - type: entity
-  id: SpawnPointPirateBoatswain
-  parent: SpawnPointJobBase
-  name: pirate boatswain
-  components:
-  - type: SpawnPoint
-    job_id: PirateBoatswain
-  - type: Sprite
-    sprite: Structures/Decoration/banner.rsi
-    state: banner-red
-
-- type: entity
   id: SpawnPointPirateFirstMate
   parent: SpawnPointJobBase
   name: pirate first mate

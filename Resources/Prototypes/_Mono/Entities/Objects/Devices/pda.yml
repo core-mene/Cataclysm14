@@ -3,6 +3,54 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+#PDV
+
+- type: entity
+  parent: BasePDA
+  id: BasePDVPDA
+  name: PDV denasvar PDA
+  description: A basic Imperial PDA.
+  abstract: true
+  components:
+  - type: Pda
+    id: PDVDenasvarIDCard
+  - type: Sprite
+    sprite: _Mono/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _Mono/Objects/Devices/pda.rsi
+    state: pda
+  - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
+
+- type: entity
+  parent: BasePDVPDA
+  id: PirateBoatswainPDA
+  name: PDV denasvar PDA
+  components:
+  - type: Pda
+    id: PDVDenasvarIDCard
+  - type: Geiger # Mono
+    showExamine: true
+    showControl: true
+    isEnabled: true
+    attachedToSuit: true # Mono
+
+#USSP
+
 - type: entity
   parent: BasePDA
   id: BaseUSSPPDA
@@ -154,6 +202,8 @@
   - type: Icon
     state: pda-hos
 
+#TSF
+
 - type: entity
   parent: BaseSecurityPDA
   id: TsfEngiPDA
@@ -234,3 +284,5 @@
     showControl: true
     isEnabled: true
     attachedToSuit: true # Mono
+
+

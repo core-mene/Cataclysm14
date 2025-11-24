@@ -251,19 +251,6 @@
     heldPrefix: pirate
 
 - type: entity
-  parent: PirateIDCard
-  id: PirateBoatswainIDCard
-  name: PDV Denasvar ID card
-  components:
-  - type: PresetIdCard
-    job: PirateBoatswain
-  - type: Sprite
-    sprite: _Mono/Objects/Misc/id_cards.rsi
-    layers:
-    - state: brass
-    - state: id_denasvar
-
-- type: entity
   parent: PirateNFIDCard
   id: PirateCaptainNFIDCard
   name: PDV grand vizier ID card

@@ -14,22 +14,22 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: job
-  id: PirateBoatswain
-  name: job-name-pirate-boatswain
-  description: job-description-pirate-boatswain
-  playTimeTracker: JobPirateBoatswain
+  id: PDVDenasvar
+  name: job-name-pdv-denasvar
+  description: job-description-pdv-denasvar
+  playTimeTracker: JobPDVDenasvar
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 180000 # 50 hours # mono
     - !type:RoleTimeRequirement
       role: JobPirate
       time: 90000 # 25 hours
-  startingGear: PirateBoatswainGear
+  startingGear: PDVDenasvarGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
   canBeAntag: true
-  icon: "JobIconPirateBoatswain"
-  supervisors: job-supervisors-pirate-boatswain
+  icon: "JobIconPDVDenasvar"
+  supervisors: job-supervisors-pdv-denasvar
   weight: 30
   displayWeight: 30
   setPreference: true
@@ -57,7 +57,7 @@
     prototype: FrontierBirthdayGift
 
 - type: startingGear
-  id: PirateBoatswainGear
+  id: PDVDenasvarGear
   equipment:
     ears: ClothingHeadsetAltFreelancer
     #belt: ClothingBeltUtility
