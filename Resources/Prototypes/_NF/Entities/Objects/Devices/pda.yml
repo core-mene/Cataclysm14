@@ -395,6 +395,7 @@
   parent: PiratePDA
   id: PirateNFPDA
   name: PDV rakhshan PDA
+  description: A PDA belonging to a front liner of the Phaethon Dynasty Vanguard.
   components:
   - type: Pda
     id: PirateNFIDCard
@@ -413,6 +414,7 @@
   parent: PiratePDA
   id: PirateCaptainNFPDA
   name: PDV grand vizier PDA
+  description: The PDA of one of the Vanguards elite commanders.
   components:
   - type: Pda
     id: PirateCaptainNFIDCard
@@ -431,6 +433,7 @@
   parent: PiratePDA
   id: PirateFirstMateNFPDA
   name: PDV asvaran PDA
+  description: The PDA of one of the closest in the ranks to Grand Vizier.
   components:
   - type: Pda
     id: PirateFirstMateNFIDCard
@@ -449,6 +452,7 @@
   parent: PiratePDA
   id: PDVSpasakaPDA
   name: PDV spasaka PDA
+  description: A PDA belonging to an imperial specialist. Should you really be holding this openly?
   components:
   - type: Pda
     id: PDVSpasakaIDCard

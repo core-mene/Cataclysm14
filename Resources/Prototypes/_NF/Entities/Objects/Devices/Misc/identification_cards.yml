@@ -239,6 +239,7 @@
   parent: PirateIDCard
   id: PirateNFIDCard
   name: PDV rakhshan ID card
+  description: An ID card belonging to one of the foot soldiers of the imperial dynasty.
   components:
   - type: PresetIdCard
     job: Pirate
@@ -254,6 +255,7 @@
   parent: PirateNFIDCard
   id: PirateCaptainNFIDCard
   name: PDV grand vizier ID card
+  description: The ID card of one of the the imperial elite, the Grand Vizier.
   components:
   - type: PresetIdCard
     job: PirateCaptain
@@ -267,6 +269,7 @@
   parent: PirateNFIDCard
   id: PirateFirstMateNFIDCard
   name: PDV asvaran ID card
+  description: An ID belonging to the Grand Viziers' second in command.
   components:
   - type: PresetIdCard
     job: PirateFirstMate
