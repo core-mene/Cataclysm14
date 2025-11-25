@@ -206,6 +206,7 @@
   parent: CCServiceWorkerIDCard
   id: CCServiceWorkerNFIDCard #Mono
   name: colossus sector service ID card
+  components:
   description: An identification card belonging to a service worker in the Colossus Sector.
   - type: PresetIdCard
     job: ServiceWorker
