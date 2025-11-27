@@ -193,6 +193,7 @@
     coefficient: 0.55 # slightly better than atmos hardsuit, cuz insulating plating or whatever
 
 #Spationaut Hardsuit
+# Mono edit start
 - type: entity
   parent: ClothingOuterHardsuitBase # Removed BaseCargoContraband
   id: ClothingOuterHardsuitSpatio
@@ -209,14 +210,15 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Radiation: 0.3 #salv is supposed to have radiation hazards in the future
-        Caustic: 0.8
+        Blunt: 0.70
+        Slash: 0.55
+        Piercing: 0.65
+        Radiation: 0.25 #salv is supposed to have radiation hazards in the future
+        Caustic: 0.45
+        Poison: 0.4
   - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.8
+    walkModifier: 0.95
+    sprintModifier: 0.87
   - type: HeldSpeedModifier
   - type: Tag
     tags:
