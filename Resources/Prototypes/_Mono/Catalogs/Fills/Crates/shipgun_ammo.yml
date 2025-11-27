@@ -6,41 +6,6 @@
 
 - type: entity
   parent: CrateAmmoSecureMercenary
-  id: CrateAmmoBoxCyrexa
-  name: 220mm auto CYREXA shell box
-  description: Contains 1 reload of 24 220mm auto shells.
-  components:
-  - type: StorageFill
-    contents:
-    - id: 220mmCartridge
-      amount: 24
-
-- type: entity
-  parent: CrateAmmoSecureMercenary
-  id: CrateAmmoBoxBofors
-  name: 255mm Bofors shell box
-  description: Contains 1 reload of 8 255mm shells.
-  components:
-  - type: StorageFill
-    contents:
-    - id: 255mmCartridge
-      amount: 8
-
-- type: entity
-  parent: CrateAmmoSecureMercenary
-  id: CrateAmmoBox150mm
-  name: 150mm TARNYX shell box
-  description: Contains 3 AP and 3 EMP shells.
-  components:
-  - type: StorageFill
-    contents:
-    - id: 150mmApShell
-      amount: 3
-    - id: 150mmEmpShell
-      amount: 3
-
-- type: entity
-  parent: CrateAmmoSecureMercenary
   id: CrateAmmoBoxCharon
   name: 280mm CHARON 26.5kg slug cartridge box
   description: Contains 3 slugs.
@@ -50,73 +15,7 @@
     - id: CharonSlugAmmo
       amount: 3
 
-- type: entity
-  parent: CrateAmmoSecureMercenary
-  id: CrateAmmoBoxCharonette
-  name: M194 CHARONETTE 280mm 10.25 kg slug cartridge box
-  description: Contains 5 slugs. Only 1/2 a full reload.
-  components:
-  - type: StorageFill
-    contents:
-    - id: CharonetteSlugAmmo
-      amount: 5
-
 # Magazines
-
-- type: entity
-  parent: CrateAmmoSecureMercenary
-  id: CrateAmmoBox20mm
-  name: 20x124mm L85 AP drum box
-  description: Contains 3 full drums.
-  components:
-  - type: StorageFill
-    contents:
-    - id: Magazine20mm
-      amount: 3
-
-- type: entity
-  parent: CrateAmmoSecureMercenary
-  id: CrateAmmoBox30mm
-  name: 30x173mm Draupnir AP drum box
-  description: Contains 2 full drums.
-  components:
-  - type: StorageFill
-    contents:
-    - id: Magazine30mm
-      amount: 2
-
-- type: entity
-  parent: CrateAmmoSecureMercenary
-  id: CrateAmmoBox57mm
-  name: 57x210mm Dravon APHE drum box
-  description: Contains 2 full drums.
-  components:
-  - type: StorageFill
-    contents:
-    - id: Magazine57mm
-      amount: 2
-
-- type: entity
-  parent: CrateAmmoSecureMercenary
-  id: CrateAmmoBox90mm
-  name: 90x427mm AK-570 HEAT drum box
-  description: Contains 2 full drums.
-  components:
-  - type: StorageFill
-    contents:
-    - id: Magazine90mm
-      amount: 2
-
-- type: entity
-  parent: CrateAmmoSecureMercenary
-  id: CrateAmmoBox140mm
-  name: 140mm Longbow HEAT drum box
-  description: Contains 1 full drum.
-  components:
-  - type: StorageFill
-    contents:
-    - id: Magazine140mm
-      amount: 1
 
 # Missiles
 

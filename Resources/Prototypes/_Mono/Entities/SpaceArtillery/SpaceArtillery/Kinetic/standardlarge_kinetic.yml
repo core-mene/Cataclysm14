@@ -5,7 +5,7 @@
 #
 # SPDX-License-Identifier: MPL-2.0
 
-# Cyrexa
+# Cyrexa 220mm
 
 - type: entity
   id: WeaponTurretCyrexa
@@ -84,7 +84,7 @@
   - type: ShipGunClass
     shipClass: Medium
 
-# Bofors
+# Bofors 255mm
 
 - type: entity
   id: WeaponTurretBofors
@@ -296,6 +296,7 @@
     slots:
       gun_magazine:
         name: Magazine
+        startingItem: Magazine90mm
         insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2
