@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Arcticular1
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: loadout
   id: TsfmcVestSlim
   equipment:
@@ -7,3 +12,13 @@
   id: TsfmcVestNormal
   equipment:
     outerClothing: ClothingOuterArmorBasic
+
+- type: loadout
+  id: TsfmcClothingOuterArmorBPVestLight
+  equipment:
+    outerClothing: ClothingOuterArmorBPVestLight
+
+- type: loadout
+  id: TsfmcClothingOuterArmorBPVestMedium
+  equipment:
+    outerClothing: ClothingOuterArmorBPVestMedium

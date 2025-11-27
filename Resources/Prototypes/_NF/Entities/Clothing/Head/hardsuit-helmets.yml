@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2024 Kesiath
 # SPDX-FileCopyrightText: 2024 Maxtone
 # SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2025 Arcticular
 # SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 BramvanZijp
 # SPDX-FileCopyrightText: 2025 LukeZurg22
@@ -187,7 +188,6 @@
   - type: NightVision
     flashDurationMultiplier: 2.75
     isEquipment: true
-    color: "#5e8bac"
 
 - type: entity
   parent: [NFClothingHeadHardsuitWithLightBaseNfsd, ShowMedicalIcons, ShowSecurityIcons]
@@ -212,7 +212,6 @@
   - type: NightVision
     flashDurationMultiplier: 2.75
     isEquipment: true
-    color: "#5e8bac"
   - type: Armor
     modifiers:
       coefficients:

@@ -76,9 +76,9 @@
   - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#C92BCC"
-    scale: 1
+    scale: 1.45
     requireNoGrid: true
-    shape: triangle
+    shape: arrow
   - type: TimedDespawn
     lifetime: 4.2
   - type: PointLight
@@ -86,7 +86,7 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun
-    totalIntensity: 20
+    totalIntensity: 25
     intensitySlope: 2
     maxIntensity: 40
     maxTileBreak: 1
@@ -226,7 +226,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 6
+    lifetime: 10
   - type: PointLight
     color: "#6BC1FF"
   - type: ExplodeOnTrigger
@@ -251,9 +251,9 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 1000
-        Structural: 1500
-        Heat: 400
+        Radiation: 1500
+        Structural: 5000
+        Heat: 1000
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_projectiles.rsi
     layers:
@@ -264,19 +264,19 @@
   - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#ffffff"
-    scale: 1.5
+    scale: 2.5
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 2.5
+    lifetime: 3
   - type: PointLight
     radarColor: "#ffffff"
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun
-    totalIntensity: 50
-    intensitySlope: 4
-    maxIntensity: 40
+    totalIntensity: 500
+    intensitySlope: 35
+    maxIntensity: 50
 
 # Harbringer
 
@@ -395,7 +395,7 @@
       sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
       state: impact_superheavy_prefrac
   - type: HitscanRadarSignature
-    radarColor: "#005829"
+    radarColor: "#1cd471"
   - type: HitscanBasicDamage
     damage:
      types:
@@ -424,7 +424,7 @@
       sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
       state: proton_impact
   - type: HitscanRadarSignature
-    radarColor: "#ff9d00"
+    radarColor: "#f29705"
   - type: HitscanBasicDamage
     damage:
      types:
@@ -453,6 +453,8 @@
       sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
       state: gauss_impact
   - type: HitscanRadarSignature
+    radarColor: "#FFFFFF"
+    lifeTime: 0.1
   - type: HitscanBasicDamage
     damage:
      types:

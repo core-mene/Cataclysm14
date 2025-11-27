@@ -12860,3 +12860,608 @@ Entries:
   id: 1424
   time: '2025-10-07T23:29:16.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2383
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: Takeaway got a Smart Fridge!
+  id: 1425
+  time: '2025-10-08T20:20:20.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2388
+- author: bitcrushing
+  changes:
+    - type: Fix
+      message: Not all instruments are bike horns now
+  id: 1426
+  time: '2025-10-09T01:32:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2386
+- author: Nope1356
+  changes:
+    - type: Tweak
+      message: ADS now engage all military ships (MIL, ASR, TSF, USSP) on sight
+  id: 1427
+  time: '2025-10-09T12:56:42.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2391
+- author: Arcticular1
+  changes:
+    - type: Add
+      message: >-
+        A new shipment of black market suits developed by Ullman Industries has
+        just hit the sector!
+  id: 1428
+  time: '2025-10-10T12:49:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2390
+- author: starch70
+  changes:
+    - type: Remove
+      message: Removed Asakim death acidifers. Kept armor slowdown.
+  id: 1429
+  time: '2025-10-10T13:34:50.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2387
+- author: starch70
+  changes:
+    - type: Add
+      message: MARSOC has new hardsuits.
+    - type: Tweak
+      message: Support for clothing-based energy shields.
+  id: 1430
+  time: '2025-10-10T16:23:27.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2389
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: You can now make combined filters properly.
+  id: 1431
+  time: '2025-10-10T19:58:46.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2397
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: Aghosts no longer inherently stealthy
+  id: 1432
+  time: '2025-10-11T14:20:44.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2399
+- author: Arcticular1
+  changes:
+    - type: Tweak
+      message: The Dagger has gotten layout, thrusters and armament improvements
+  id: 1433
+  time: '2025-10-11T14:23:21.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2394
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: Scythes now fire slower but hit harder
+    - type: Tweak
+      message: Turbolasers have been tuned to have a much longer range
+  id: 1434
+  time: '2025-10-12T22:22:43.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2403
+- author: starch70
+  changes:
+    - type: Add
+      message: >-
+        AMEs, AME jars, FTL drives, and shield generators will now explode when
+        taking excessive damage in one hit.
+    - type: Tweak
+      message: >-
+        Tweaked ship gun values and stuff to make stuff look really cool and
+        whatnot. Ship guns are also faster now.
+  id: 1435
+  time: '2025-10-13T14:09:40.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2406
+- author: OneZerooo0
+  changes:
+    - type: Add
+      message: >-
+        You can now print explosives (C4, EMP, explosive) after a new universal
+        faction research.
+  id: 1436
+  time: '2025-10-13T21:39:30.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2408
+- author: Arcticular1
+  changes:
+    - type: Tweak
+      message: >-
+        Buffed the Europa with better thrusters, better armor and two additional
+        90mms!
+  id: 1437
+  time: '2025-10-13T21:43:24.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2393
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Filled mechanical toolbox has welding protection and guaranteed
+        screwdriver
+    - type: Tweak
+      message: >-
+        Filled electrical toolbox has guaranteed HV cables, insuls and t-ray
+        scanner. Added multitool
+    - type: Tweak
+      message: Random chocolate was restored in filled emergency toolboxes
+  id: 1438
+  time: '2025-10-14T20:38:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2414
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: Fixed the broken Scythes
+  id: 1439
+  time: '2025-10-15T14:45:36.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2418
+- author: Ark
+  changes:
+    - type: Fix
+      message: Cortical Borers can no longer infest each other.
+    - type: Fix
+      message: Cortical Borers can no longer infest exped mobs to prevent abuse.
+    - type: Fix
+      message: Cortical Borers can no longer reform into dionas.
+    - type: Fix
+      message: Cortical Borers no longer reset your respawn (respool) timer.
+    - type: Fix
+      message: Disposals no longer annihilate you when destroyed.
+    - type: Fix
+      message: Wheelchair-bound users can use vehicles (and their wheelchair) again.
+    - type: Fix
+      message: Fixed missing locales under the Controls menu.
+    - type: Fix
+      message: Chimeras now revive properly.
+    - type: Fix
+      message: Parallax is no longer frozen on the main menu.
+    - type: Tweak
+      message: Alerts are now global.
+    - type: Tweak
+      message: Cobra gland glows brighter.
+  id: 1440
+  time: '2025-10-18T22:14:39.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2430
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Required portstrike time raised to 6 hours.
+  id: 1441
+  time: '2025-10-18T22:17:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2303
+- author: core-mene
+  changes:
+    - type: Fix
+      message: >-
+        ASMGT ammo boxes can now properly be printed and researched for all 4
+        calibers
+  id: 1442
+  time: '2025-10-20T05:14:35.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2437
+- author: Arcticular1
+  changes:
+    - type: Tweak
+      message: TSFMC now spawn with proper bulletproof vests.
+    - type: Add
+      message: 'Colonel and ASR Commander now spawn with eswords! '
+  id: 1443
+  time: '2025-10-20T05:16:14.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2431
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: >-
+        ADS laws have been rewritten to make more sense and encourage talking to
+        and not shooting weaker ships.
+  id: 1444
+  time: '2025-10-20T05:22:16.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2401
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: CDETs don't play nice anymore
+  id: 1445
+  time: '2025-10-20T05:52:37.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2428
+- author: Ghagliiarghii
+  changes:
+    - type: Tweak
+      message: M25 mining pulsars are now craftable.
+    - type: Tweak
+      message: M25 mining pulsars are now unlocked in the Salvage Weapons research
+    - type: Fix
+      message: >-
+        The PTK-1500e "Matter Dematerializers" are no longer unlocked in the
+        Salvage Weapons research; they have been printable without the research
+        for ~7 months
+  id: 1446
+  time: '2025-10-20T05:54:26.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2276
+- author: Archylle
+  changes:
+    - type: Add
+      message: Added Tajaran
+    - type: Remove
+      message: Removed Yowies
+    - type: Tweak
+      message: Added Felinid markings to humans.
+  id: 1447
+  time: '2025-10-20T06:25:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2434
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: >-
+        Borers now have some new rules, be sure to read it before getting das
+        boot for a day
+  id: 1448
+  time: '2025-10-20T06:29:08.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2429
+- author: Ark
+  changes:
+    - type: Remove
+      message: Yowie is now gone from the Guidebook.
+    - type: Fix
+      message: Rodentia now appears under Species in the Guidebook.
+  id: 1449
+  time: '2025-10-20T22:43:27.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2439
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        Manually reloaded ship turrets now display their live ammo count in the
+        Gunnery Control.
+  id: 1450
+  time: '2025-10-21T20:53:59.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2442
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: Corporate war era shuttle guns from the syndicate have emerged in sector
+    - type: Tweak
+      message: LPB and all Syndicate shuttles have been outfitted with these weapons
+  id: 1451
+  time: '2025-10-22T08:04:18.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2445
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: Sevastapol has upped its security after many heists on its techvault.
+  id: 1452
+  time: '2025-10-22T08:09:24.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2413
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: >-
+        Ulliman Industries has pushed its new overcoats to market, fitting over
+        most hardsuits
+    - type: Tweak
+      message: >-
+        Ulliman Industries Engineer Hardsuits and Pilot Voidsuits now available
+        in loadouts to Spacers, ASR, Mercs, Pilots, and a few others.
+  id: 1453
+  time: '2025-10-22T08:10:17.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2426
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: Asakim have been equipped with more fitting melee weapons
+  id: 1454
+  time: '2025-10-22T08:20:20.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2359
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: Added fun!
+    - type: Remove
+      message: Removed fun!
+    - type: Tweak
+      message: Changed fun!
+    - type: Fix
+      message: Fixed fun
+    - type: Tweak
+      message: The ASR Jupiter Carrier has received some updates and upgrades
+  id: 1455
+  time: '2025-10-22T09:51:24.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2425
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: >-
+        AI cores can now simultaneously use gunnery and shuttle consoles even on
+        capitals.
+    - type: Fix
+      message: TSFMC AIs can now speak Sol Common.
+  id: 1456
+  time: '2025-10-22T19:16:25.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2443
+- author: core-mene
+  changes:
+    - type: Add
+      message: new NT branded pre-corpowar lootboxes
+  id: 1457
+  time: '2025-10-22T19:35:28.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2448
+- author: Ark
+  changes:
+    - type: Fix
+      message: Footsteps (without shoes) should be silent now for Tajaran.
+  id: 1458
+  time: '2025-10-22T19:38:23.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2450
+- author: DummeHytteOst
+  changes:
+    - type: Fix
+      message: >-
+        Fixed Chitinids and Rodentia getting hungry faster than intended, they
+        now correctly get hungry 33% faster, instead of 160% faster.
+  id: 1459
+  time: '2025-10-22T23:55:04.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2451
+- author: ark1368
+  changes:
+    - type: Add
+      message: >-
+        Sounds in large areas now have an echo. This effect can be disabled in
+        settings. This is all client-side.
+  id: 1460
+  time: '2025-10-23T00:26:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2452
+- author: kyres1
+  changes:
+    - type: Add
+      message: Added the Acera bounty hunting ship
+  id: 1461
+  time: '2025-10-23T06:39:48.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2424
+- author: Onezero0
+  changes:
+    - type: Tweak
+      message: Stealth options can no longer become completely invisible.
+    - type: Tweak
+      message: ASR Elite hardsuit and TSF M92-X hardsuits now have shields!
+    - type: Tweak
+      message: M82, M86 and ASR Scaf stats are a bit more equalized now.
+    - type: Add
+      message: >-
+        There is now a guidebook entry detailing armor mechanics under
+        Miscellaneous.
+  id: 1462
+  time: '2025-10-23T06:41:48.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2398
+- author: Ark
+  changes:
+    - type: Fix
+      message: >-
+        Manually reloaded ship turrets should actually now display their live
+        ammo count in the Gunnery Control.
+  id: 1463
+  time: '2025-10-24T01:00:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2461
+- author: core-mene
+  changes:
+    - type: Tweak
+      message: >-
+        Expeder capable of finding NT loot crates and smugglers reduced chance
+        of finding one
+    - type: Tweak
+      message: Defrontierified exped armory crates spawner loot
+  id: 1464
+  time: '2025-10-24T01:01:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2459
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: BZ Cans now cost 75K at cargo terminals
+  id: 1465
+  time: '2025-10-24T23:02:13.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2472
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Hoverbike ground movement buffed.
+  id: 1466
+  time: '2025-10-24T23:49:08.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2471
+- author: Redrover1760
+  changes:
+    - type: Fix
+      message: Languages are properly transfered by cloning now.
+  id: 1467
+  time: '2025-10-24T23:49:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2469
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        Armor piercing is now available. Projectiles can now pierce through
+        compatible walls.
+  id: 1468
+  time: '2025-10-25T00:05:23.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2462
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: Cortical borers now may use hivemind while direct controlling.
+  id: 1469
+  time: '2025-10-25T00:11:34.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2465
+- author: Ark
+  changes:
+    - type: Add
+      message: Four types of armor plates have been added. Rook would be proud.
+  id: 1470
+  time: '2025-10-25T00:22:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2454
+- author: Onezero0
+  changes:
+    - type: Remove
+      message: Temporarily removed current implementation of trade goods.
+    - type: Fix
+      message: Hopefully fixed some lag
+  id: 1471
+  time: '2025-10-25T00:25:43.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2473
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: Added fun!
+    - type: Remove
+      message: Removed fun!
+    - type: Tweak
+      message: Changed fun!
+    - type: Fix
+      message: Fixed fun!
+    - type: Tweak
+      message: >-
+        Serpent Torpedos slightly tuned down, should now be able to shoot them
+        down too
+  id: 1472
+  time: '2025-10-26T06:14:10.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2479
+- author: core-mene
+  changes:
+    - type: Tweak
+      message: Rogue silicon no longer new player trap
+  id: 1473
+  time: '2025-10-26T06:18:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2476
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: New Hermes Shuttle for courier players
+    - type: Remove
+      message: The TM and CO no longer have mail teleporters
+    - type: Remove
+      message: The Letterbox is no more
+  id: 1474
+  time: '2025-10-26T06:22:17.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/1628
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: Missiles now obey their intended max speed.
+  id: 1475
+  time: '2025-10-26T07:48:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2482
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        Combat music has arrived. Time for epic combat! Please contribute better
+        songs, I beg you.
+  id: 1476
+  time: '2025-10-26T21:41:03.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2485
+- author: EckoAurum
+  changes:
+    - type: Add
+      message: Medical Cyborgs now start with the defibrillator module.
+    - type: Remove
+      message: Removed all lights from Cyborgs.
+    - type: Add
+      message: Cyborgs now have Nightvision.
+    - type: Tweak
+      message: Returned Cyborg sprites.
+  id: 1477
+  time: '2025-10-26T22:01:09.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2477
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: Fixed very-high-velocity projectiles having issues like not exploding.
+  id: 1479
+  time: '2025-10-26T22:04:50.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2486
+- author: Ark
+  changes:
+    - type: Fix
+      message: Smartgun laser no longer shows up on different maps.
+  id: 1480
+  time: '2025-10-26T23:23:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2488
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: >-
+        The Pantheon Collective apologizes for the delivery of faulty
+        Hermes-class courier shuttles. This has now been amended.
+  id: 1481
+  time: '2025-10-27T01:02:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2491
+- author: Primusirius
+  changes:
+    - type: Add
+      message: Added multiple new departments to a new Medical dispatch station.
+  id: 1482
+  time: '2025-10-27T01:09:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2490
+- author: bitcrushing
+  changes:
+    - type: Tweak
+      message: >-
+        Remove water vapor atmosphere expeditions, adds nitrous oxide ones
+        instead
+  id: 1483
+  time: '2025-10-27T01:11:50.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2489
+- author: OneZerooo0
+  changes:
+    - type: Remove
+      message: Removed fun! And the USSP's influence.
+    - type: Tweak
+      message: USSP content is now mercenary-accessible, and is a selectable company.
+  id: 1484
+  time: '2025-10-27T04:00:54.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2395
+- author: bebr3ght
+  changes:
+    - type: Add
+      message: >-
+        Makeshift defibrillator, contraband bag, tide flipper, makeshift id
+        card, grey toolbox, makeshift jammer, metal baseball bat and kitchen
+        knife crafting recipies.
+    - type: Add
+      message: Craftable armor, check out "makeshift" in the G menu.
+    - type: Tweak
+      message: syndicate jammer price reduced 20 -> 5
+    - type: Tweak
+      message: Weswords are now slightly harder to make and require tools.
+  id: 1485
+  time: '2025-10-27T04:02:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2337
+- author: kyres1
+  changes:
+    - type: Add
+      message: Added the Acera bounty hunting ship but fixed this time
+  id: 1486
+  time: '2025-10-27T04:20:33.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2456
+- author: Ark
+  changes:
+    - type: Tweak
+      message: Combat music now fades rather than ending abruptly. Rejoice!
+  id: 1487
+  time: '2025-10-27T04:41:32.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2494
+- author: kyres1
+  changes:
+    - type: Add
+      message: Added corner lattices for prettifying mapped ships
+  id: 1488
+  time: '2025-10-27T20:53:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2457
+- author: Primusirius
+  changes:
+    - type: Fix
+      message: >-
+        Made docs office more private and stopped people from overheating at new
+        MD.
+  id: 1489
+  time: '2025-10-27T23:32:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2500
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        You are now able to focus your vision ahead by pressing Space. It works
+        similarly to items like the Hristov scope and binoculars.
+  id: 1490
+  time: '2025-10-28T04:29:28.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2504

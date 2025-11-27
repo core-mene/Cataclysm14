@@ -40,4 +40,4 @@ lathe-category-guns-sidearms = Sidearms
 lathe-category-guns-smartguns = Smartguns
 lathe-category-guns-ballistic = Ballistic Weapons
 lathe-category-guns-energy = Energy Weapons
-lathe-category-guns-explosive = Explosive Weapons
+lathe-category-guns-explosive = Explosives

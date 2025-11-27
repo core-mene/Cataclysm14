@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Client.Chat.Managers;
 using Content.Shared._Starlight.CollectiveMind;
 using Robust.Client.Player;
@@ -16,7 +21,7 @@ namespace Content.Client.Chat
             SubscribeLocalEvent<CollectiveMindComponent, ComponentInit>(OnInit);
             SubscribeLocalEvent<CollectiveMindComponent, ComponentRemove>(OnRemove);
         }
-        
+
         public bool IsCollectiveMind => CompOrNull<CollectiveMindComponent>(_playerManager.LocalPlayer?.ControlledEntity) != null;
 
         private void OnInit(EntityUid uid, CollectiveMindComponent component, ComponentInit args)

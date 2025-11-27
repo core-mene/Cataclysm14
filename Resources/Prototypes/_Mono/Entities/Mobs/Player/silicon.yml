@@ -125,6 +125,7 @@
   - type: Tag
     tags:
     - CanPilot
+  - type: AdvancedPilot # can use both gunnery and shuttle console even on capitals
 
 - type: entity
   id: BaseBorgChassisRedacted
@@ -463,6 +464,15 @@
   - type: GhostTakeoverAvailable
   - type: RandomMetadata
     nameSegments: [ TSFMCCoreNameset ]
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - RobotTalk
+    - SolCommon
+    understands:
+    - TauCetiBasic
+    - RobotTalk
+    - SolCommon
 
 - type: entity
   id: AiHeldTSFMC
@@ -523,7 +533,7 @@
   components:
   - type: Sprite
   - type: SiliconLawProvider
-    laws: VesselLawset
+    laws: RogueLawset
   - type: GhostRole
     name: ghost-role-information-rogue-core
     description: ghost-role-information-rogue-core-description
@@ -534,6 +544,15 @@
   - type: GhostTakeoverAvailable
   - type: RandomMetadata
     nameSegments: [ RogueCoreNameset ]
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - RobotTalk
+    - Freespeak
+    understands:
+    - TauCetiBasic
+    - RobotTalk
+    - Freespeak
 
 - type: entity
   id: AiHeldRogue

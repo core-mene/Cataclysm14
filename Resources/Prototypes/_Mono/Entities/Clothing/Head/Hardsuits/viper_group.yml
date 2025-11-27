@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Ghost581
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -18,7 +19,6 @@
   - type: NightVision
     flashDurationMultiplier: 2
     isEquipment: true
-    color: "#FAA70F"
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
@@ -52,7 +52,6 @@
     flashDurationMultiplier: 2
     pulseTime: 4
     isEquipment: true
-    color: "#ED7B2D"
     toggleAction: PulseThermalVision
   - type: ShowHealthBars
   - type: PressureProtection

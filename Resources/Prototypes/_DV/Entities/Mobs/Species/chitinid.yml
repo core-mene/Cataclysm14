@@ -16,6 +16,7 @@
 # SPDX-FileCopyrightText: 2024 Plykiya
 # SPDX-FileCopyrightText: 2024 Ubaser
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 DummeHytteOst
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Tiniest Shark
 # SPDX-FileCopyrightText: 2025 Winkarst
@@ -37,7 +38,7 @@
     - HeadTop
 
   - type: Hunger
-    baseDecayRate: 0.0467 #needs to eat more to survive
+    baseDecayRate: 0.024 #needs to eat more to survive #Mono 0.0467 > 0.024(rounded from 0.02394) 33% more than base 0.018
   - type: Thirst
 
   - type: UnpoweredFlashlight

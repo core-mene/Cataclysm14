@@ -27,15 +27,16 @@
 # SPDX-FileCopyrightText: 2023 Tom Leys
 # SPDX-FileCopyrightText: 2023 chromiumboy
 # SPDX-FileCopyrightText: 2023 lzk
-# SPDX-FileCopyrightText: 2024 Ilya246
 # SPDX-FileCopyrightText: 2024 LordCarve
 # SPDX-FileCopyrightText: 2024 Plykiya
 # SPDX-FileCopyrightText: 2024 Sergey Dikiy
 # SPDX-FileCopyrightText: 2025 ArtisticRoomba
+# SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 MrTswe
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 significant harassment
+# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -204,6 +205,24 @@
     damageModifierSet: StructuralMetallicStrong
   - type: Destructible
     thresholds:
+    # Mono start
+    - trigger:
+        !type:DamageTrigger
+        damage: 2500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+      - !type:SpawnGasBehavior
+        gasMixture:
+          volume: 1000
+          moles:
+          - 194 # oxygen
+          - 0 # nitrogen
+          - 0 # carbon dioxide
+          - 6 # plasma
+          temperature: 752.48
+    # Mono end
     - trigger:
         !type:DamageTrigger
         damage: 1800 # Mono
@@ -215,6 +234,11 @@
             max: 2
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: Explosive # Mono
+    explosionType: Default
+    maxIntensity: 4000
+    intensitySlope: 4
+    totalIntensity: 3000
   - type: Transform
     anchored: true
   - type: IconSmooth

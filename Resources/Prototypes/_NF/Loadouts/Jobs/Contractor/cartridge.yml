@@ -1,10 +1,16 @@
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 #T1
 - type: loadout
   id: ContractorAppraisalCartridge
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 1000
+  price: 0 # Mono
   storage:
     back:
     - AppraisalCartridge
@@ -14,7 +20,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 1000
+  price: 0 # Mono
   storage:
     back:
     - MedTekCartridge
@@ -24,7 +30,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 1000
+  price: 0 # Mono
   storage:
     back:
     - NetProbeCartridge
@@ -34,7 +40,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 1000
+  price: 0 # Mono
   storage:
     back:
     - LogProbeCartridge

@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using System.Linq;
 using Content.Shared.Examine;
 using Content.Shared.GameTicking;
@@ -26,16 +32,6 @@ public abstract class SharedClockSystem : EntitySystem
     {
         var time = GetClockTime(ent);
         return time.ToString("hh\\:mm"); // Frontier: always 24-hour time (so 0:00 is 0:00, not 12:00)
-        /* // Frontier: 24 hour clock always
-        switch (ent.Comp.ClockType)
-        {
-            case ClockType.TwelveHour:
-                return time.ToString(@"h\:mm");
-            case ClockType.TwentyFourHour:
-                return time.ToString(@"hh\:mm");
-            default:
-                throw new ArgumentOutOfRangeException();
-        }*/
     }
 
     private TimeSpan GetGlobalTime()
@@ -51,21 +47,5 @@ public abstract class SharedClockSystem : EntitySystem
             return comp.StuckTime.Value;
 
         return GetGlobalTime(); // Frontier: all clocks are 24 hour clocks
-
-        /* // Frontier: 24 hour clocks only
-        var time = GetGlobalTime();
-
-        switch (comp.ClockType)
-        {
-            case ClockType.TwelveHour:
-                var adjustedHours = time.Hours % 12;
-                if (adjustedHours == 0)
-                    adjustedHours = 12;
-                return new TimeSpan(adjustedHours, time.Minutes, time.Seconds);
-            case ClockType.TwentyFourHour:
-                return time;
-            default:
-                throw new ArgumentOutOfRangeException();
-        }*/
     }
 }

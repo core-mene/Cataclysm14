@@ -13,6 +13,7 @@
 // SPDX-FileCopyrightText: 2024 deltanedas
 // SPDX-FileCopyrightText: 2024 neuPanda
 // SPDX-FileCopyrightText: 2025 HungryCuban
+// SPDX-FileCopyrightText: 2025 Onezero0
 // SPDX-FileCopyrightText: 2025 Whatstone
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -99,9 +100,9 @@ public sealed partial class IdCardConsoleComponent : Component
         "Sergeant", // Frontier
         "Service",
         "StationTrafficController", // Frontier
-        "USSP", // Mono
-        "USSPHigh", // Mono
-        "USSPCommand", // Mono
+        //"USSP", // Mono
+        //"USSPHigh", // Mono
+        //"USSPCommand", // Mono
         //"Theatre",
     };
 

@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Bonaout
+# SPDX-FileCopyrightText: 2025 LemonBlemon
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: entity
   name: plasteel arming sword
   parent: CaptainSabre
@@ -13,7 +21,7 @@
     attackRate: 1.5
     damage:
       types:
-        Slash: 15
+        Slash: 27 # Mono increased damage from 15 to 27 to no longer be the actual worst melee weapon in the game
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Reflect

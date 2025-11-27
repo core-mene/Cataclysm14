@@ -1,23 +1,31 @@
+# SPDX-FileCopyrightText: 2024 Checkraze
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: loadout
   id: MercenaryClothingBeltMercenaryWebbing
-  price: 500
+  price: 0 # Mono
   equipment:
     belt: ClothingBeltMercenaryWebbing
 
 - type: loadout
   id: MercenaryClothingBeltMilitaryWebbing
-  price: 500
+  price: 0 # Mono
   equipment:
     belt: ClothingBeltMilitaryWebbing
 
 - type: loadout
   id: MercenaryClothingBeltMilitaryWebbingMed
-  price: 500
+  price: 0 # Mono
   equipment:
     belt: ClothingBeltMilitaryWebbingMed
 
 - type: loadout
   id: MercenaryClothingBeltSecurity
-  price: 500
+  price: 0 # Mono
   equipment:
     belt: ClothingBeltSecurityFilled

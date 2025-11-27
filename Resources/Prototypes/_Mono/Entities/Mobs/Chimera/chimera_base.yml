@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 EctoplasmIsGood
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
@@ -168,7 +169,6 @@
     pryTimeMultiplier: 0.4
   - type: ThermalVision
     lightRadius: 15
-    color: "#f22e55"
     activateSound: null
     deactivateSound: null
   - type: GuideHelp
@@ -238,6 +238,7 @@
     - FootstepSound
     - DoorBumpOpener
     - Chimera
+    - Humanoid
   - type: Puller
     needsHands: false
   - type: Body

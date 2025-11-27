@@ -1,22 +1,10 @@
 # SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
-
-- type: latheRecipe
-  parent: BaseWeaponRecipeLong
-  id: WeaponLauncherRocket
-  result: WeaponLauncherRocket
-  categories:
-  - Explosive
-  - Weapons
-  materials:
-    Steel: 2250
-    Plasteel: 3500
-    Plastic: 500
-    Plasma: 1000
 
 # TSFMC basic ballistics
 
@@ -397,3 +385,45 @@
     Plasteel: 2000
     Plastic: 1500
     Wood: 1000
+
+#Blueprints
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponRifleNtsfLtr
+  result: WeaponRifleNtsfLtr
+  categories:
+  - Rifles
+  - Ballistic
+  - Weapons
+  materials:
+    Steel: 1200
+    Plasteel: 2000
+    Plastic: 1200
+    Uranium: 500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponSubMachineGunVectorNtsfHclm
+  result: WeaponSubMachineGunVectorNtsfHclm
+  categories:
+  - SMGs
+  - Ballistic
+  - Weapons
+  materials:
+    Steel: 800
+    Plasteel: 1500
+    Plastic: 800
+    Uranium: 300
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponLauncherRocket
+  result: WeaponLauncherRocket
+  categories:
+  - Explosive
+  - Weapons
+  materials:
+    Steel: 2250
+    Plasteel: 3500
+    Plastic: 500
+    Plasma: 1000

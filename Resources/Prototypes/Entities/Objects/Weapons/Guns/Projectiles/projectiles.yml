@@ -54,6 +54,7 @@
 # SPDX-FileCopyrightText: 2024 Winkarst
 # SPDX-FileCopyrightText: 2024 checkraze
 # SPDX-FileCopyrightText: 2025 DVDPlayerOfDiscordFame
+# SPDX-FileCopyrightText: 2025 Honestly101
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 cheetah1984
@@ -805,9 +806,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 2 # max 30 per tile
-    intensitySlope: 1
-    totalIntensity: 4 # 60 total damage to distribute over tiles
+    maxIntensity: 2
+    intensitySlope: 4
+    totalIntensity: 4
     maxTileBreak: 1
   - type: PointLight
     radius: 3.5

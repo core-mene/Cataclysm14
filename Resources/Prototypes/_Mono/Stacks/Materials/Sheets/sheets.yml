@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -8,6 +9,13 @@
   icon: { sprite: /Textures/_Mono/Objects/Materials/synthalloy.rsi, state: synthalloy }
   spawn: MaterialSynthalloy1
   maxCount: 50
+
+- type: stack
+  id: Pyrogel
+  name: pyrogel
+  icon: { sprite: _Mono/Objects/Materials/pyrogel.rsi, state: icon }
+  spawn: MaterialPyrogel1
+  maxCount: 150
 
 - type: stack
   id: Iridite

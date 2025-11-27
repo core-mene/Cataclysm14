@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Hyenh
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -17,3 +18,21 @@
     sprite: _Mono/Clothing/Neck/Misc/NS-leather-jacket.rsi
   - type: Item
     size: Normal
+
+# Ulliman Industries
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckUllimanOvercoat
+  name: U.I. overcoat
+  description: A speciallly made overcoat, able to fit over most hardsuits, made purely for style by Ulliman Industries. The synthetic fur even keeps your stone cold heart warm.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Misc/overcoat.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Neck/Misc/overcoat.rsi
+  - type: Item
+    size: Normal
+  - type: TemperatureProtection
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.5

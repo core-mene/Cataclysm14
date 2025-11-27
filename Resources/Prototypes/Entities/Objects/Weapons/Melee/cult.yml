@@ -1,3 +1,19 @@
+# SPDX-FileCopyrightText: 2023 Emisse
+# SPDX-FileCopyrightText: 2023 I.K
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 TaralGit
+# SPDX-FileCopyrightText: 2023 and_a
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2023 notquitehadouken <1isthisameme>
+# SPDX-FileCopyrightText: 2023 stopbreaking
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Mr. 27
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Ghost581
+# SPDX-FileCopyrightText: 2025 LemonBlemon
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: entity
   name: ritual dagger
   parent: [BaseItem, BaseC3CultContraband] # Frontier: added BaseC3CultContraband
@@ -38,8 +54,10 @@
     damage:
       types:
         Slash: 38
+    soundHit: # Mono nearly forgot, this weapon makes no noise so i gave it the slash sound, i had been planning on adding this but i forgot until i re-opened the file
+      collection: MetalThud 
   - type: Item
-    size: Normal
+    size: Large # Mono Increased from normal to large to make damage make more sense
   - type: Clothing
     sprite: Objects/Weapons/Melee/cult_blade.rsi
     slots:
@@ -75,9 +93,9 @@
       types:
         Blunt: 10
         Slash: 15
-        Structural: 10
+        Structural: 30 # Mono increased from 10 to 30 to be even remotely useable as a structural weapon
   - type: Item
-    size: Ginormous
+    size: Huge # Mono decreased size from Ginormous to Huge to be mildly more usable
   - type: Clothing
     sprite: Objects/Weapons/Melee/cult_halberd.rsi
     quickEquip: false

@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Disguised Bear
+# SPDX-FileCopyrightText: 2025 Ghagliiarghii
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
@@ -38,7 +39,9 @@
     range: 500
   - type: Gun
     fireRate: 0.5
-    projectileSpeed: 90
+    minAngle: 0
+    maxAngle: 0
+    projectileSpeed: 140
     shootThermalSignature: 4000000 # ~2.8km with continuous fire
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
@@ -105,8 +108,10 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 16
-    projectileSpeed: 145
+    fireRate: 20
+    minAngle: 0
+    maxAngle: 5
+    projectileSpeed: 185
     shootThermalSignature: 500000 # ~5.6km with continuous fire
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/autopulse_laser_fire_01.ogg
@@ -233,7 +238,7 @@
 - type: entity
   id: WeaponTurretM25
   name: M25 mining pulser
-  parent: BallisticArtillery
+  parent: [BallisticArtillery, ConstructibleMachine] #Could possibly create a ConstructibleTurret proto if more are added; comps currently do nothing upgrade wise
   description: Uses mechanisms to launch... something. Destroys rock easily.
   components:
   - type: StaticPrice
@@ -254,6 +259,8 @@
   - type: Gun
     fireRate: 4.0
     projectileSpeed: 40
+    minAngle: 0
+    maxAngle: 5
     shootThermalSignature: 10000 # 400m - intentionally relatively low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
@@ -287,6 +294,12 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
+  - type: Machine
+    board: WeaponTurretM25Circuitboard
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
   - type: RadarBlip
     radarColor: "#C92BCC"
     scale: 1
@@ -320,7 +333,7 @@
     range: 500
   - type: Gun
     fireRate: 0.2
-    projectileSpeed: 90
+    projectileSpeed: 140
     shootThermalSignature: 2000000 # ~1414m after firing - relatively low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
@@ -389,7 +402,7 @@
           bounds: "-0.75,-0.75,0.75,0.75"
         density: 1500
   - type: Gun
-    projectileSpeed: 150
+    projectileSpeed: 250
     fireRate: 0.75
     shootThermalSignature: 12000000 # ~6km after firing
     soundGunshot:
@@ -457,6 +470,8 @@
     range: 500
   - type: Gun
     fireRate: 20
+    minAngle: 0
+    maxAngle: 3
     shootThermalSignature: 2000000
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
@@ -508,7 +523,9 @@
     layers:
     - state: space_artillery
   - type: Gun
-    fireRate: .3
+    fireRate: 0.3
+    minAngle: 0
+    maxAngle: 0
     shootThermalSignature: 5000000
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
@@ -576,6 +593,8 @@
     range: 500
   - type: Gun
     fireRate: 0.04 # 25s
+    minAngle: 0
+    maxAngle: 0
     shootThermalSignature: 18000000 # ~8.5km after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/leviathan_fire.ogg
@@ -648,6 +667,8 @@
     range: 500
   - type: Gun
     fireRate: 0.025 # 40s
+    minAngle: 0
+    maxAngle: 0
     projectileSpeed: 750
     shootThermalSignature: 18000000 # ~8.5km after firing
     soundGunshot:
@@ -720,6 +741,8 @@
     range: 500
   - type: Gun
     fireRate: 1.2
+    minAngle: 0
+    maxAngle: 4
     shootThermalSignature: 4000000 # ~2.8km with continuous fire
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
@@ -786,8 +809,10 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 5
-    projectileSpeed: 400
+    fireRate: 1
+    projectileSpeed: 200
+    minAngle: 0
+    maxAngle: 6
     shootThermalSignature: 500000 # ~5.6km with continuous fire
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/autopulse_laser_fire_01.ogg
@@ -837,7 +862,7 @@
   name: Curio-183 auto-coil "Flayer"
   parent: BallisticArtillery
   suffix: ADS ONLY
-  description: A unique pre-fracture weapon, the Flayer fires a storm of tugnsten alloy darts at near the speed of light, barraging targets to pieces.
+  description: A unique pre-fracture weapon, the Flayer fires a storm of tungsten alloy darts at near the speed of light, barraging targets to pieces.
   components:
   - type: StaticPrice
     price: 25000
@@ -858,6 +883,8 @@
     range: 500
   - type: Gun
     fireRate: 25
+    minAngle: 0
+    maxAngle: 4
     shootThermalSignature: 2000000
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg

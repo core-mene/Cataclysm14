@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2025 EckoAurum
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: constructionGraph
+  id: PressurePlateGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: PressurePlateNode
+          steps:
+            - material: Cable
+              amount: 4
+              doAfter: 2
+            - material: Steel
+              amount: 2
+              doAfter: 1
+            - tag: RemoteSignaller
+              name: remote signaller
+              icon:
+                sprite: Objects/Devices/signaller.rsi
+                state: signaller
+              doAfter: 2
+    - node: PressurePlateNode
+      entity: PressurePlate
