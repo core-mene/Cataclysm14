@@ -14,7 +14,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 1500
+        Structural: 500
         Blunt: 50
         Heat: 25
   - type: Sprite
@@ -65,9 +65,8 @@
     damage:
       types:
         Structural: 2500
-        Blunt: 150
-        Piercing: 500
-        Heat: 50
+        Blunt: 35
+        Heat: 15
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/mini_rocket.rsi
     layers:
@@ -97,6 +96,6 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun
-    totalIntensity: 200
+    totalIntensity: 100
     intensitySlope: 80
-    maxIntensity: 1000
+    maxIntensity: 50

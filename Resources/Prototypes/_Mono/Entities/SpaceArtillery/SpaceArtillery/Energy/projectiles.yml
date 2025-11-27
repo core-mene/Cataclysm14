@@ -23,9 +23,9 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 1250
-        Structural: 4250
-        Heat: 350
+        Radiation: 25
+        Structural: 500
+        Heat: 50
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/plasmashot.rsi
     layers:
@@ -44,8 +44,8 @@
     color: "#FF0040"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: DefaultShipGun
-    totalIntensity: 250
+    explosionType: HardBombShipGun
+    totalIntensity: 100
     intensitySlope: 6
     maxIntensity: 25
     maxTileBreak: 1
@@ -61,9 +61,9 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 600
-        Structural: 900
-        Heat: 120
+        Radiation: 6
+        Structural: 65
+        Heat: 35
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/plasmashot.rsi
     layers:
@@ -100,9 +100,9 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 700
-        Structural: 4000
-        Heat: 5000
+        Radiation: 3
+        Structural: 70
+        Heat: 20
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/plasmashot.rsi
     layers:
@@ -123,10 +123,10 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun
-    totalIntensity: 120
+    totalIntensity: 50
     intensitySlope: 9
-    maxIntensity: 70
-    maxTileBreak: 5
+    maxIntensity: 20
+    maxTileBreak: 3
 
 # M25
 
@@ -173,8 +173,8 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 75
-        Heat: 115
+        Radiation: 5
+        Heat: 20
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
     layers:
@@ -207,8 +207,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 10000
-        Heat: 10000
+        Structural: 500
+        Heat: 100
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/turbolaser_shot.rsi
     layers:
@@ -228,9 +228,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBombShipGun
-    totalIntensity: 1250
+    totalIntensity: 400
     intensitySlope: 10
-    maxIntensity: 55
+    maxIntensity: 60
     maxTileBreak: 5
   - type: GatheringProjectile
   - type: MiningGatheringSoft
@@ -247,9 +247,9 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 1500
-        Structural: 5000
-        Heat: 1000
+        Radiation: 35
+        Structural: 2000
+        Heat: 35
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_projectiles.rsi
     layers:
@@ -270,11 +270,11 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun
-    totalIntensity: 500
+    totalIntensity: 200
     intensitySlope: 35
-    maxIntensity: 50
+    maxIntensity: 60
 
-# Harbringer
+# Harbinger
 
 - type: entity
   id: ShipIonProjectile
@@ -285,8 +285,8 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 750
-        Heat: 500
+        Radiation: 50
+        Heat: 35
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_projectiles.rsi
     layers:
@@ -339,8 +339,8 @@
   - type: HitscanBasicDamage
     damage:
      types:
-      Heat: 100
-      Structural: 100
+      Heat: 35
+      Structural: 50
   - type: HitscanBasicRaycast
     maxDistance: 400
 
@@ -366,8 +366,8 @@
   - type: HitscanBasicDamage
     damage:
      types:
-      Heat: 10000
-      Structural: 50000
+      Heat: 100
+      Structural: 2000
   - type: HitscanSpawnEntity
     spawnedEntity: ApolloExplosion
   - type: HitscanBasicRaycast
@@ -395,8 +395,8 @@
   - type: HitscanBasicDamage
     damage:
      types:
-      Heat: 30000
-      Structural: 100000
+      Heat: 150
+      Structural: 8000
   - type: HitscanSpawnEntity
     spawnedEntity: TachyonExplosion
   - type: HitscanBasicRaycast
@@ -424,12 +424,12 @@
   - type: HitscanBasicDamage
     damage:
      types:
-      Heat: 350
-      Structural: 2500
+      Heat: 35
+      Structural: 150
   - type: HitscanSpawnEntity
     spawnedEntity: SunderExplosion
   - type: HitscanBasicRaycast
-    maxDistance: 750
+    maxDistance: 700
 
 # Flayer
 
@@ -454,9 +454,9 @@
   - type: HitscanBasicDamage
     damage:
      types:
-      Piercing: 125
+      Piercing: 50
       Heat: 25
-      Structural: 200
+      Structural: 150
   - type: HitscanBasicRaycast
     maxDistance: 500
 
@@ -470,9 +470,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBombShipGun
-    totalIntensity: 120
+    totalIntensity: 100
     intensitySlope: 50
-    maxIntensity: 100
+    maxIntensity: 60
     maxTileBreak: 2
 
 - type: entity
@@ -483,9 +483,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBombShipGun
-    totalIntensity: 7000
-    intensitySlope: 100
-    maxIntensity: 2400
+    totalIntensity: 6000
+    intensitySlope: 35
+    maxIntensity: 700
 
 - type: entity
   id: SunderExplosion
