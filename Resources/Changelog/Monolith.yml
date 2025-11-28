@@ -14249,3 +14249,93 @@ Entries:
   id: 1580
   time: '2025-11-23T18:40:29.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2671
+- author: GOLDMASK990
+  changes:
+    - type: Add
+      message: Added AKM to arsenal T2 research, printable at Merc fabs
+  id: 1581
+  time: '2025-11-25T16:59:57.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2681
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: Fixed the AP system not working.
+  id: 1582
+  time: '2025-11-25T18:22:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2686
+- author: NazrinNya
+  changes:
+    - type: Fix
+      message: Sabre cannot fly in space now.
+    - type: Fix
+      message: >-
+        Cappy wont attack CDETs and TSFMC turrets anymore. TSFMC turrets wont
+        attack MD personel and CDETs anymore.
+  id: 1583
+  time: '2025-11-26T11:11:28.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2687
+- author: Avalon-Proto
+  changes:
+    - type: Remove
+      message: >-
+        The Jupiter no longer has a host of round start mechs, the PDV need to
+        work for them now
+  id: 1584
+  time: '2025-11-27T02:04:02.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2689
+- author: NazrinNya
+  changes:
+    - type: Add
+      message: Medical techfab has been returned to FlatpackVend!
+  id: 1585
+  time: '2025-11-27T17:23:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2692
+- author: NazrinNya
+  changes:
+    - type: Fix
+      message: >-
+        Laying down in weightless environment now gives you huge movement
+        penalty.
+  id: 1586
+  time: '2025-11-27T21:06:31.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2693
+- author: NazrinNya
+  changes:
+    - type: Fix
+      message: Chimeras can't revive themselfs by re-infection anymore.
+    - type: Fix
+      message: Chimeras can't be affected by cognizine now.
+  id: 1587
+  time: '2025-11-27T23:51:54.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2698
+- author: Durk
+  changes:
+    - type: Add
+      message: >-
+        Reworked player manifest in round end summary, now includes last words
+        and how players died.
+  id: 1588
+  time: '2025-11-28T03:11:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2668
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: >-
+        You can no longer FTL when near any powered shuttle console, instead of
+        near player-bought ships.
+    - type: Tweak
+      message: FTL blocking range 256m->512m.
+  id: 1589
+  time: '2025-11-28T03:13:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2676
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: >-
+        Fixed language implanters not working on all mobs, like baby space
+        dragon.
+    - type: Fix
+      message: Baby space dragon now understands Tau Ceti by default.
+  id: 1590
+  time: '2025-11-28T03:15:31.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2674
