@@ -93,15 +93,15 @@
     lowPressureMultiplier: 1000
   - type: Armor
     modifiers:
-      coefficients: # Mono edit - coefficient buffs
-        Blunt: 0.7
-        Slash: 0.7
-        Piercing: 0.75
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
         Radiation: 0.3
         Caustic: 0.8
   - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.8
+    walkModifier: 0.95 # Mono edit 0.9 -> 0.95
+    sprintModifier: 0.95 # Mono edit 0.9 -> 0.95
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing

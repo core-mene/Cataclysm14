@@ -410,15 +410,15 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/brigmedic.rsi
   - type: PressureProtection
-    highPressureMultiplier: 0.3
+    highPressureMultiplier: 0.06
     lowPressureMultiplier: 1000
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.6
-        Slash: 0.6
+        Blunt: 0.65
+        Slash: 0.65
         Piercing: 0.6
-        Caustic: 0.8
+        Caustic: 0.3
         Heat: 0.75 # Goobstation
   - type: ClothingSpeedModifier
     walkModifier: 0.9
@@ -610,7 +610,7 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.6
+        Blunt: 0.45
         Slash: 0.65 # Mono 0.65 < 0.8
         Piercing: 0.65 # Mono 0.65 < 0.9
         Heat: 0.3
