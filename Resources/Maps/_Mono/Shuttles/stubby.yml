@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/28/2025 05:33:05
-  entityCount: 228
+  time: 11/28/2025 05:41:45
+  entityCount: 227
 maps: []
 grids:
 - 1
@@ -299,7 +299,7 @@ entities:
     - type: NavMap
 - proto: AirAlarm
   entities:
-  - uid: 77
+  - uid: 9
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -485,27 +485,27 @@ entities:
       parent: 1
 - proto: BlastDoorOpen
   entities:
-  - uid: 9
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 2.5,2.5
-      parent: 1
   - uid: 15
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -1.5,2.5
-      parent: 1
-  - uid: 29
     components:
     - type: Transform
       pos: 1.5,4.5
       parent: 1
-  - uid: 47
+  - uid: 23
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 2.5,2.5
+      parent: 1
+  - uid: 29
     components:
     - type: Transform
       pos: 0.5,4.5
+      parent: 1
+  - uid: 47
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -1.5,2.5
       parent: 1
   - uid: 223
     components:
@@ -1085,7 +1085,7 @@ entities:
       configurators:
       - invalid
       deviceLists:
-      - 77
+      - 9
     - type: AtmosPipeColor
       color: '#0055CCFF'
 - proto: GasVentScrubber
@@ -1102,7 +1102,7 @@ entities:
       configurators:
       - invalid
       deviceLists:
-      - 77
+      - 9
     - type: AtmosPipeLayers
       pipeLayer: Secondary
   - uid: 131
@@ -1117,7 +1117,7 @@ entities:
       configurators:
       - invalid
       deviceLists:
-      - 77
+      - 9
     - type: AtmosPipeLayers
       pipeLayer: Secondary
 - proto: GravityGeneratorMini
@@ -1260,30 +1260,30 @@ entities:
       targetPower: 23000
 - proto: Poweredlight
   entities:
-  - uid: 142
+  - uid: 77
+    components:
+    - type: Transform
+      pos: 2.5,-1.5
+      parent: 1
+  - uid: 163
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -0.5,1.5
       parent: 1
-  - uid: 181
-    components:
-    - type: Transform
-      pos: 2.5,-1.5
-      parent: 1
 - proto: PoweredStrobeRed
   entities:
+  - uid: 142
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 1.5,1.5
+      parent: 1
   - uid: 148
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,-2.5
-      parent: 1
-  - uid: 237
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 1.5,0.5
       parent: 1
   - uid: 238
     components:
@@ -1311,28 +1311,35 @@ entities:
       rot: 3.141592653589793 rad
       pos: 3.5,2.5
       parent: 1
-- proto: RandomPosterAny
+- proto: SignalSwitchDirectional
   entities:
   - uid: 48
     components:
     - type: Transform
-      pos: 2.5,0.5
-      parent: 1
-- proto: SignalSwitchDirectional
-  entities:
-  - uid: 163
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 2.5,1.5
+      pos: -0.5,3.5
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        9:
+        148:
         - - On
-          - Close
+          - On
         - - Off
-          - Open
+          - Off
+        142:
+        - - On
+          - On
+        - - Off
+          - Off
+        163:
+        - - On
+          - Off
+        - - Off
+          - On
+        77:
+        - - On
+          - Off
+        - - Off
+          - On
         29:
         - - On
           - Close
@@ -1348,26 +1355,11 @@ entities:
           - Close
         - - Off
           - Open
-        142:
+        23:
         - - On
-          - Off
+          - Close
         - - Off
-          - On
-        181:
-        - - On
-          - Off
-        - - Off
-          - On
-        148:
-        - - On
-          - On
-        - - Off
-          - Off
-        237:
-        - - On
-          - On
-        - - Off
-          - Off
+          - Open
   - uid: 225
     components:
     - type: Transform
@@ -1843,7 +1835,7 @@ entities:
       parent: 1
 - proto: WallWeaponCapacitorRecharger
   entities:
-  - uid: 23
+  - uid: 181
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
