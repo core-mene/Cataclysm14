@@ -1527,22 +1527,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -1.5,-1.5
       parent: 1
-- proto: Magazine57mm
-  entities:
-  - uid: 302
-    components:
-    - type: Transform
-      parent: 57
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 303
-    components:
-    - type: Transform
-      parent: 57
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: NFHolopadShip
   entities:
   - uid: 164
@@ -2296,6 +2280,14 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 9.5,-1.5
+      parent: 1
+- proto: WeaponTurretBofors
+  entities:
+  - uid: 97
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 4.5,0.5
       parent: 1
 - proto: WeaponTurretVespera
   entities:
