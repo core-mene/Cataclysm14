@@ -37,10 +37,10 @@
     energy: 0.5
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: DefaultShipGun
-    totalIntensity: 30
+    explosionType: Default
+    totalIntensity: 8
     intensitySlope: 8
-    maxIntensity: 75
+    maxIntensity: 3
   - type: TargetSeeking
     acceleration: 170
     detectionRange: 1200
@@ -95,7 +95,7 @@
     exposesTracking: false
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: DefaultShipGun
-    totalIntensity: 100
+    explosionType: Default
+    totalIntensity: 25
     intensitySlope: 80
-    maxIntensity: 50
+    maxIntensity: 10

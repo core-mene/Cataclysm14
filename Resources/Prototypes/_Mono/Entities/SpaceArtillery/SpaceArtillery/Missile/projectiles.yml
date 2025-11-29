@@ -43,10 +43,10 @@
     energy: 0.5
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: DefaultShipGun
-    totalIntensity: 50
+    explosionType: Default
+    totalIntensity: 15
     intensitySlope: 8
-    maxIntensity: 50
+    maxIntensity: 8
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
@@ -92,10 +92,10 @@
     energy: 0.5
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: DefaultShipGun
-    totalIntensity: 100
+    explosionType: Default
+    totalIntensity: 25
     intensitySlope: 10
-    maxIntensity: 60
+    maxIntensity: 15
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
@@ -144,10 +144,10 @@
     disableDuration: 5
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: DefaultShipGun
-    totalIntensity: 80
+    explosionType: Default
+    totalIntensity: 20
     intensitySlope: 10
-    maxIntensity: 50
+    maxIntensity: 15
     maxTileBreak: 1
   - type: GatheringProjectile
   - type: MiningGatheringSoft
@@ -194,10 +194,10 @@
     energy: 2
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: DefaultShipGun
-    maxIntensity: 30
+    explosionType: Default
+    maxIntensity: 10
     intensitySlope: 3
-    totalIntensity: 300
+    totalIntensity: 75
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard

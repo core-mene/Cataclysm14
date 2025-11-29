@@ -36,10 +36,10 @@
     energy: 2
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: DefaultShipGun
-    totalIntensity: 200
+    explosionType: Default
+    totalIntensity: 50
     intensitySlope: 20
-    maxIntensity: 50
+    maxIntensity: 15
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard

@@ -84,10 +84,10 @@
     radarColor: "#FF0040"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: DefaultShipGun
-    totalIntensity: 25
+    explosionType: Default
+    totalIntensity: 7
     intensitySlope: 2
-    maxIntensity: 40
+    maxIntensity: 4
     maxTileBreak: 1
 
 # Type 241
@@ -123,10 +123,10 @@
     color: "#FF00AA"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: DefaultShipGun
-    totalIntensity: 50
+    explosionType: Default
+    totalIntensity: 15
     intensitySlope: 9
-    maxIntensity: 20
+    maxIntensity: 5
     maxTileBreak: 3
 
 # M25
@@ -270,10 +270,10 @@
     radarColor: "#ffffff"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: DefaultShipGun
-    totalIntensity: 200
+    explosionType: Default
+    totalIntensity: 50
     intensitySlope: 35
-    maxIntensity: 60
+    maxIntensity: 15
 
 # Harbinger
 
