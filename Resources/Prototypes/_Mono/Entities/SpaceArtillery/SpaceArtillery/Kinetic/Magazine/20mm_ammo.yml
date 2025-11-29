@@ -43,7 +43,7 @@
 
 - type: entity
   id: 20mmCartridge
-  name: cartridge (20x124mm AP)
+  name: cartridge (20mm Solid)
   parent: [ BaseCartridge, BaseC1Contraband ]
   components:
   - type: Tag
@@ -52,7 +52,7 @@
     - 20mmCartridge
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: 20mmBulletArmorPiercing
+    proto: 20mmBullet
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/generic_cartridges.rsi
     layers:

@@ -1412,7 +1412,7 @@
     node: reinforcedWallChitin
 
 - type: entity
-  parent: WallReinforced # Mono: Parents damage thresholds from WallReinforced
+  parent: BaseWall
   id: WallUranium
   name: uranium wall
   components:
@@ -1434,6 +1434,31 @@
         layer:
         - WallLayer
         density: 6000
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2000 # Mono - wall buff
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 1600 # Mono - wall buff
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
     base: uranium

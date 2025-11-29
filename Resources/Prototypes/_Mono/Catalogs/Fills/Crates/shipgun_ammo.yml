@@ -33,13 +33,13 @@
 - type: entity
   parent: CrateAmmoSecureMercenary
   id: CrateAmmoBoxVespera
-  name: ASM-417 Vespera HEAT missile box
-  description: Contains 1 burst of 28 missiles. 1/3 of a full load.
+  name: ASM-417 Vespera HE missile box
+  description: Contains 2 bursts of 13 missiles. One half of a load.
   components:
   - type: StorageFill
     contents:
-    - id: VesperaCartridge
-      amount: 28 # 1 reload, but its all that'll fit in a crate
+    - id: VesperaMagazine
+      amount: 1 # 1 reload, but its all that'll fit in a crate
 
 - type: entity
   parent: CrateAmmoSecureMercenary

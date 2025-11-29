@@ -20,11 +20,6 @@
   id: Magazine90mmAmmoRecipe
   result: Magazine90mm
 
-- type: latheRecipe
-  parent: BaseHeavyShipgunAmmoRecipe
-  id: Magazine140mmAmmoRecipe
-  result: Magazine140mm
-
 # Individual
 
 - type: latheRecipe
@@ -51,5 +46,5 @@
 
 - type: latheRecipe
   parent: BaseLightMissileShipgunAmmoRecipe
-  id: VesperaCartridgeAmmoRecipe
-  result: VesperaCartridge
+  id: VesperaMagazineAmmoRecipe
+  result: VesperaMagazine

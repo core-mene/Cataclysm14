@@ -49,16 +49,16 @@
         - BulletImpassable
 
 - type: entity
-  id: 20mmBulletArmorPiercing
-  name: 20mm AP bullet
+  id: 20mmBullet
+  name: 20mm bullet
   parent: 20mmBulletBase
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
     damage:
       types:
-        Structural: 50
-        Piercing: 30
+        Structural: 30
+        Piercing: 50
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/50_armorpiercing_machinegun_casing.rsi
     layers:

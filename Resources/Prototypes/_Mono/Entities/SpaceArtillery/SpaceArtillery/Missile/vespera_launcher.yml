@@ -26,7 +26,7 @@
     maxAngle: 1
     burstCooldown: 20
     burstFireRate: 16
-    shotsPerBurst: 28
+    shotsPerBurst: 13
     selectedMode: Burst
     availableModes: Burst
     shootThermalSignature: 2000000 # ~4.9km if firing continuously
@@ -43,9 +43,9 @@
     infiniteUnspawned: false
     whitelist:
       tags:
-      - VesperaCartridge
-    capacity: 13
-    proto: VesperaCartridge
+      - VesperaMagazine
+    capacity: 26
+    proto: VesperaMagazine
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
   - type: RadarBlip

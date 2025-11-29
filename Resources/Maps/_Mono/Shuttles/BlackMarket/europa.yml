@@ -4575,25 +4575,6 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-- proto: CrateAmmoBox90mm
-  entities:
-  - uid: 908
-    components:
-    - type: Transform
-      pos: -3.5,5.5
-      parent: 1
-- proto: CrateAmmoBoxCyrexa
-  entities:
-  - uid: 52
-    components:
-    - type: Transform
-      pos: -4.5,5.5
-      parent: 1
-  - uid: 184
-    components:
-    - type: Transform
-      pos: -5.5,5.5
-      parent: 1
 - proto: DefibrillatorCabinetFilled
   entities:
   - uid: 662

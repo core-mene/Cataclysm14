@@ -1694,13 +1694,6 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-- proto: CrateAmmoBox90mm
-  entities:
-  - uid: 340
-    components:
-    - type: Transform
-      pos: 0.5,8.5
-      parent: 1
 - proto: DefibrillatorCabinetFilled
   entities:
   - uid: 229
