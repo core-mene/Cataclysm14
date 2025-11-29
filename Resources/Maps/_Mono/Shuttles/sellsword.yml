@@ -921,37 +921,6 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-- proto: CrateAmmoGeneric
-  entities:
-  - uid: 57
-    components:
-    - type: Transform
-      pos: 5.5,-1.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 303
-          - 302
-          - 216
-          - 301
-          - 300
-          - 299
-          - 298
-          - 297
-          - 296
-          - 292
-          - 291
-          - 287
-          - 284
-          - 210
-        paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
     - type: EntityStorage
       air:
         volume: 200
