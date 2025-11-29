@@ -1,0 +1,167 @@
+- type: constructionGraph
+  id: SmallHardpointEmpty
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: SmallHardpointKinetic
+      completed:
+      - !type:SetAnchor
+        value: true
+      steps:
+      - material: Steel
+        amount: 5
+        doAfter: 2.5
+    - to: SmallHardpointEnergy
+      completed:
+      - !type:SetAnchor
+        value: true
+      steps:
+      - material: Glass
+        amount: 5
+        doAfter: 2.5
+    - to: SmallHardpointMissile
+      completed:
+      - !type:SetAnchor
+        value: true
+      steps:
+      - material: Plastic
+        amount: 5
+        doAfter: 2.5
+
+  - node: SmallHardpointKinetic
+    actions:
+    - !type:AppearanceChange
+    entity: SmallHardpointKinetic
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored {}
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 5
+      steps:
+      - tool: Screwing
+        doafter: 1.5
+      - tool: Prying
+        doAfter: 2.5
+    - to: SmallTurretKinetic
+      conditions:
+      - !type:EntityAnchored { }
+      steps:
+      - material: Steel
+        amount: 5
+        doAfter: 2.5
+      - tool: Screwing
+        doafter: 1.5
+
+  - node: SmallHardpointEnergy
+    actions:
+    - !type:AppearanceChange
+    entity: SmallHardpointEnergy
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored { }
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 5
+      steps:
+      - tool: Screwing
+        doafter: 1.5
+      - tool: Prying
+        doAfter: 2.5
+    - to: SmallTurretEnergy
+      conditions:
+      - !type:EntityAnchored { }
+      steps:
+      - material: Glass
+        amount: 5
+        doAfter: 2.5
+      - tool: Screwing
+        doafter: 1.5
+
+  - node: SmallHardpointMissile
+    actions:
+    - !type:AppearanceChange
+    entity: SmallHardpointMissile
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored { }
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 5
+      steps:
+      - tool: Screwing
+        doafter: 1.5
+      - tool: Prying
+        doAfter: 2.5
+    - to: SmallTurretMissile
+      conditions:
+      - !type:EntityAnchored { }
+      steps:
+      - material: Plastic
+        amount: 5
+        doAfter: 2.5
+      - tool: Screwing
+        doafter: 1.5
+
+# Turret caps start
+
+  - node: SmallTurretKinetic
+    actions:
+    - !type:AppearanceChange
+    entity: SmallTurretKinetic
+    edges:
+    - to: SmallHardpointKinetic
+      conditions:
+      - !type:EntityAnchored {}
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 5
+      steps:
+      - tool: Screwing
+        doafter: 1.5
+      - tool: Prying
+        doAfter: 2.5
+
+  - node: SmallTurretEnergy
+    actions:
+    - !type:AppearanceChange
+    entity: SmallTurretEnergy
+    edges:
+    - to: SmallHardpointEnergy
+      conditions:
+      - !type:EntityAnchored { }
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 5
+      steps:
+      - tool: Screwing
+        doafter: 1.5
+      - tool: Prying
+        doAfter: 2.5
+
+  - node: SmallTurretMissile
+    actions:
+    - !type:AppearanceChange
+    entity: SmallTurretMissile
+    edges:
+    - to: SmallHardpointMissile
+      conditions:
+      - !type:EntityAnchored { }
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 5
+      steps:
+      - tool: Screwing
+        doafter: 1.5
+      - tool: Prying
+        doAfter: 2.5

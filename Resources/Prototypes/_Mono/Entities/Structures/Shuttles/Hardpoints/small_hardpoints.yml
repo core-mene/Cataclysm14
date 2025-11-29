@@ -1,0 +1,121 @@
+
+
+- type: entity
+  parent: BaseStructure
+  id: BaseHardpointSmall
+  placement:
+    mode: SnapgridCenter
+  name: small hardpoint (empty)
+  description: An empty section of hull, capable of fitting a moounted weapon.
+  components:
+  - type: InteractionOutline
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.35,-0.35,0.35,0.35"
+        density: 60
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/small_hardpoints.rsi
+    state: empty_hardpoint
+  - type: Construction
+    graph: SmallHardpointEmpty
+    node: start
+
+- type: entity
+  parent: BaseHardpointSmall
+  id: SmallHardpointKinetic
+  placement:
+    mode: SnapgridCenter
+  name: small hardpoint (kinetic)
+  description: A prepared section of hull, capable of fitting a mounted weapon. This one is filled with autoloaders, fuze setters, and other gunnery interface equipment.
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/small_hardpoints.rsi
+    state: kinetic_hardpoint
+  - type: Construction
+    graph: SmallHardpointEmpty
+    node: SmallHardpointKinetic
+
+- type: entity
+  parent: BaseHardpointSmall
+  id: SmallHardpointEnergy
+  placement:
+    mode: SnapgridCenter
+  name: small hardpoint (energy)
+  description: A prepared section of hull, capable of fitting a mounted weapon. This one is filled with capacitors, high-energy cabling, and optical calibrators.
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/small_hardpoints.rsi
+    state: energy_hardpoint
+  - type: Construction
+    graph: SmallHardpointEmpty
+    node: SmallHardpointEnergy
+
+- type: entity
+  parent: BaseHardpointSmall
+  id: SmallHardpointMissile
+  placement:
+    mode: SnapgridCenter
+  name: small hardpoint (missile)
+  description: A prepared section of hull, capable of fitting a mounted weapon. This one is filled with racks of missiles, storage access, and fire control equipment.
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/small_hardpoints.rsi
+    state: missile_hardpoint
+  - type: Construction
+    graph: SmallHardpointEmpty
+    node: SmallHardpointMissile
+
+# Turret caps start
+
+- type: entity
+  parent: BaseHardpointSmall
+  id: SmallTurretKinetic
+  placement:
+    mode: SnapgridCenter
+  name: small turret (kinetic)
+  description: A prepared section of hull, capable of fitting a mounted weapon. This one is filled with autoloaders, fuze setters, and other gunnery interface equipment.
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/small_hardpoints.rsi
+    state: kinetic_turret
+  - type: Construction
+    graph: SmallHardpointEmpty
+    node: SmallTurretKinetic
+
+- type: entity
+  parent: BaseHardpointSmall
+  id: SmallTurretEnergy
+  placement:
+    mode: SnapgridCenter
+  name: small turret (energy)
+  description: A prepared section of hull, capable of fitting a mounted weapon. This one is filled with autoloaders, fuze setters, and other gunnery interface equipment.
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/small_hardpoints.rsi
+    state: energy_turret
+  - type: Construction
+    graph: SmallHardpointEmpty
+    node: SmallTurretEnergy
+
+- type: entity
+  parent: BaseHardpointSmall
+  id: SmallTurretMissile
+  placement:
+    mode: SnapgridCenter
+  name: small turret (missile)
+  description: A prepared section of hull, capable of fitting a mounted weapon. This one is filled with autoloaders, fuze setters, and other gunnery interface equipment.
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/small_hardpoints.rsi
+    state: missile_turret
+  - type: Construction
+    graph: SmallHardpointEmpty
+    node: SmallTurretMissile
