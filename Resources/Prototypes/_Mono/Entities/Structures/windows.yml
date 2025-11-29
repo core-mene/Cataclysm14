@@ -190,7 +190,7 @@
 #plastitanium but blocks rads 100% (industructible var.)
 
 - type: entity
-  id: PlasturaniumWindowDiagonalRadProof
+  id: PlasturaniumWindowDiagonalRadProofIndestructible
   parent: PlastitaniumWindowDiagonalIndestructible
   name: plasturanium window
   description: Don't smudge up the rads down there.
@@ -206,7 +206,7 @@
     state: state0
 
 - type: entity
-  id: PlasturaniumWindowRadProof
+  id: PlasturaniumWindowRadProofIndestructible
   parent: PlastitaniumWindowIndestructible
   name: plasturanium window
   description: Don't smudge up the rads down there.
