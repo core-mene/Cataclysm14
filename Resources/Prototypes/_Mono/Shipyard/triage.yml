@@ -1,16 +1,3 @@
-# SPDX-FileCopyrightText: 2023 IHAN <IHAN>
-# SPDX-FileCopyrightText: 2023 Kennedy
-# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 Long YM
-# SPDX-FileCopyrightText: 2024 Maxtone
-# SPDX-FileCopyrightText: 2024 Whatstone
-# SPDX-FileCopyrightText: 2025 Primus
-# SPDX-FileCopyrightText: 2025 kasature90
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: MPL-2.0
-
 # Author Info
 # GitHub: Primusirius
 # Discord: Primusirius
@@ -21,24 +8,24 @@
   id: Triage
   parent: BaseVessel
   name: Triage
-  description: A militia funded ship, used mainly for combat zone medical attention, get in, get out and carry a big gun.
+  description: A extremely compact medical ship that packs a punch.
   price: 42000
   category: Small
-  group: Shipyard
+  group: Medical
   shuttlePath: /Maps/_Mono/Shuttles/triage.yml
   guidebookPage: null
   class:
   - Medical
   engine:
-  - APU
+  - APU/RTG
 
 - type: gameMap
-  id: Triage
+  id: Taichi
   mapName: 'Triage'
   mapPath: /Maps/_Mono/Shuttles/triage.yml
   minPlayers: 0
   stations:
-    Victoria:
+    Taichi:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
@@ -49,5 +36,6 @@
         - type: StationJobs
           availableJobs:
             Contractor: [ 0, 0 ]
+            MdMedic: [ 0, 0 ]
             Pilot: [ 0, 0 ]
             Mercenary: [ 0, 0 ]
