@@ -8,8 +8,8 @@
 
 - type: entity
   id: Magazine20mm
-  name: "20mm solid ammo drum"
-  description: "An ammunition drum containing infinite 20mm solid rounds. Usable by vessel-mounted artillery pieces."
+  name: "20mm solid ammo loader"
+  description: "An ammunition loader containing infinite 20mm solid rounds. Usable by vessel-mounted artillery pieces."
   parent: [BaseItem, RecyclableItemSteelTiny]
   components:
   - type: Tag
@@ -29,7 +29,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/SmartGuns/magazine_smart_gun.rsi
+    sprite: _Mono\Objects\Weapons\Guns\Ammunition\Boxes\generic_shipgun_box.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -37,7 +37,7 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: mag
-    steps: 2
+    steps: 4
     zeroVisible: false
   - type: Appearance
   - type: StaticPrice
