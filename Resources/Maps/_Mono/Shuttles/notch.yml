@@ -1,34 +1,10 @@
-# SPDX-FileCopyrightText: 2022 20kdc
-# SPDX-FileCopyrightText: 2022 Nemanja
-# SPDX-FileCopyrightText: 2022 Peptide90
-# SPDX-FileCopyrightText: 2022 metalgearsloth
-# SPDX-FileCopyrightText: 2022 retequizzle
-# SPDX-FileCopyrightText: 2023 Dawid Bla
-# SPDX-FileCopyrightText: 2023 Leon Friedrich
-# SPDX-FileCopyrightText: 2024 Emisse
-# SPDX-FileCopyrightText: 2024 Kara
-# SPDX-FileCopyrightText: 2024 Mangohydra
-# SPDX-FileCopyrightText: 2024 Nairod
-# SPDX-FileCopyrightText: 2024 QueerNB
-# SPDX-FileCopyrightText: 2024 Ubaser
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Cojoke
-# SPDX-FileCopyrightText: 2025 RealSchepka
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 UnicornOnLSD
-# SPDX-FileCopyrightText: 2025 compilatron
-# SPDX-FileCopyrightText: 2025 significant harassment
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: MPL-2.0
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/28/2025 21:23:11
+  time: 11/29/2025 16:38:53
   entityCount: 226
 maps: []
 grids:
@@ -104,6 +80,7 @@ entities:
             id: BotLeft
           decals:
             17: 1,1
+            18: -4,-1
         - node:
             color: '#FFFFFFFF'
             id: BotRight
@@ -1275,19 +1252,19 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -1.5,2.5
       parent: 1
-- proto: MachineFTLDrive
-  entities:
-  - uid: 55
-    components:
-    - type: Transform
-      pos: -3.5,-0.5
-      parent: 1
 - proto: NFHolopadShip
   entities:
   - uid: 51
     components:
     - type: Transform
       pos: 3.5,2.5
+      parent: 1
+- proto: OreBox
+  entities:
+  - uid: 55
+    components:
+    - type: Transform
+      pos: -3.5,-0.5
       parent: 1
 - proto: OreProcessor
   entities:
