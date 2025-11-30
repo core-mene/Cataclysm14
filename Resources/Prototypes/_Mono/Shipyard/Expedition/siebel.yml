@@ -11,7 +11,7 @@
   id: siebel
   parent: BaseVessel
   name: Siebel 
-  description: A CIV-Twilight hull modified with ill-advised retrofits to be a combat capable ship. Mostly used by the desperate and the cheap. EVA protection is required. 
+  description: The Siebel is a militia owned and designed ship, designed with Chimera combat in mind, however; many use it for expeditionary exploration and combat. 
   price: 175000 # 
   category: Medium
   group: Expedition
@@ -25,12 +25,12 @@
   - AME
 
 - type: gameMap
-  id: siebel
+  id: Siebel
   mapName: 'Siebel'
   mapPath: /Maps/_Mono/Shuttles/Expedition/siebel.yml
   minPlayers: 0
   stations:
-    twilightmk2:
+    Siebel:
       stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup
