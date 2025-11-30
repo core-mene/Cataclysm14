@@ -32,6 +32,30 @@
     Steel: 1500
     Plastic: 100
 
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineSmartMagnum
+  categories:
+  - MiscAmmo
+  - Ammo
+  result: Magazine55_SAMPistol
+  materials:
+    Steel: 1000
+    Plastic: 1000
+    Plasteel: 500
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineSmartMagnumExt
+  categories:
+  - MiscAmmo
+  - Ammo
+  result: Magazine55_SAMPistolHighCapacity
+  materials:
+    Steel: 1500
+    Plastic: 1500
+    Plasteel: 750
+
 # NT-WS Ammo
 
 - type: latheRecipe
@@ -79,3 +103,4 @@
     Silver: 500
     Plasma: 750
     Uranium: 500
+
