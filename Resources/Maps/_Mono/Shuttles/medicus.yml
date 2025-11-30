@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/30/2025 05:45:56
+  time: 11/30/2025 06:02:41
   entityCount: 852
 maps: []
 grids:
@@ -147,7 +147,7 @@ entities:
             color: '#FFFFFFFF'
             id: BrickTileDarkInnerSw
           decals:
-            597: 5,-5
+            612: 5,-5
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkLineE
@@ -169,8 +169,8 @@ entities:
             color: '#FFFFFFFF'
             id: BrickTileDarkLineW
           decals:
-            496: 5,-7
-            497: 5,-6
+            610: 5,-7
+            611: 5,-6
         - node:
             color: '#78927DFF'
             id: BrickTileWhiteBox
@@ -406,6 +406,16 @@ entities:
           decals:
             395: 5,-18
         - node:
+            color: '#9FED58FF'
+            id: TrimlineCwNorth
+          decals:
+            601: 7,-6
+        - node:
+            color: '#1A394AFF'
+            id: TrimlineCwSouth
+          decals:
+            603: 8,-6
+        - node:
             color: '#1A394AFF'
             id: TrimlineCwWest
           decals:
@@ -433,14 +443,15 @@ entities:
             398: 4,-16
         - node:
             color: '#9FED58FF'
-            id: TrimlineEast
+            id: TrimlineNorth
           decals:
-            410: 5,-6
+            602: 8,-6
         - node:
             color: '#1A394AFF'
             id: TrimlineNorthEastCorner
           decals:
             588: 2,-10
+            605: 5,-7
         - node:
             color: '#334E6DFF'
             id: TrimlineNorthEastCorner
@@ -457,7 +468,7 @@ entities:
             id: TrimlineNorthEastCorner
           decals:
             269: 11,-10
-            409: 5,-7
+            599: 5,-6
         - node:
             color: '#AE6716FF'
             id: TrimlineNorthEastCorner
@@ -480,6 +491,7 @@ entities:
             id: TrimlineNorthWestCorner
           decals:
             587: 3,-10
+            607: 10,-7
         - node:
             color: '#334E6DFF'
             id: TrimlineNorthWestCorner
@@ -495,7 +507,7 @@ entities:
             id: TrimlineNorthWestCorner
           decals:
             270: 12,-10
-            412: 10,-7
+            600: 10,-6
         - node:
             color: '#FED83DFF'
             id: TrimlineNorthWestCorner
@@ -513,6 +525,11 @@ entities:
           decals:
             187: 13,-16
         - node:
+            color: '#1A394AFF'
+            id: TrimlineSouth
+          decals:
+            604: 7,-6
+        - node:
             color: '#3EB388FF'
             id: TrimlineSouth
           decals:
@@ -527,6 +544,7 @@ entities:
             id: TrimlineSouthEastCorner
           decals:
             590: 2,-8
+            606: 5,-6
         - node:
             color: '#3EB388FF'
             id: TrimlineSouthEastCorner
@@ -543,7 +561,7 @@ entities:
             id: TrimlineSouthEastCorner
           decals:
             272: 11,-8
-            596: 5,-5
+            609: 5,-5
         - node:
             color: '#AE6716FF'
             id: TrimlineSouthEastCorner
@@ -566,6 +584,7 @@ entities:
             id: TrimlineSouthWestCorner
           decals:
             589: 3,-8
+            608: 10,-6
         - node:
             color: '#3EB388FF'
             id: TrimlineSouthWestCorner
@@ -605,11 +624,6 @@ entities:
           decals:
             399: 11,-17
             400: 11,-16
-        - node:
-            color: '#9FED58FF'
-            id: TrimlineWest
-          decals:
-            540: 10,-6
         - node:
             color: '#52B4E9FF'
             id: WarnBoxGreyscale
@@ -2365,7 +2379,7 @@ entities:
       startingCharge: 0
 - proto: ComputerCrewMonitoring
   entities:
-  - uid: 345
+  - uid: 346
     components:
     - type: Transform
       pos: 5.5,-4.5
@@ -2388,7 +2402,7 @@ entities:
       startingCharge: 0
 - proto: ComputerRadar
   entities:
-  - uid: 346
+  - uid: 601
     components:
     - type: Transform
       pos: 4.5,-4.5
@@ -4839,16 +4853,16 @@ entities:
       parent: 1
 - proto: RailingCorner
   entities:
-  - uid: 549
-    components:
-    - type: Transform
-      pos: 3.5,2.5
-      parent: 1
-  - uid: 601
+  - uid: 345
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 4.5,-4.5
+      parent: 1
+  - uid: 549
+    components:
+    - type: Transform
+      pos: 3.5,2.5
       parent: 1
   - uid: 602
     components:
