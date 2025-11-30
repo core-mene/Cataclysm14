@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/30/2025 04:04:37
-  entityCount: 847
+  time: 11/30/2025 05:45:56
+  entityCount: 852
 maps: []
 grids:
 - 1
@@ -4268,6 +4268,11 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 12.5,-2.5
       parent: 1
+  - uid: 125
+    components:
+    - type: Transform
+      pos: 10.5,-9.5
+      parent: 1
   - uid: 237
     components:
     - type: Transform
@@ -4380,6 +4385,11 @@ entities:
     - type: Transform
       pos: 7.5,-2.5
       parent: 1
+  - uid: 692
+    components:
+    - type: Transform
+      pos: 5.5,-9.5
+      parent: 1
 - proto: GrilleDiagonal
   entities:
   - uid: 34
@@ -4439,6 +4449,28 @@ entities:
     components:
     - type: Transform
       pos: 5.5,-23.5
+      parent: 1
+- proto: HospitalCurtainsOpen
+  entities:
+  - uid: 849
+    components:
+    - type: Transform
+      pos: 10.5,-9.5
+      parent: 1
+  - uid: 850
+    components:
+    - type: Transform
+      pos: 5.5,-9.5
+      parent: 1
+  - uid: 851
+    components:
+    - type: Transform
+      pos: 1.5,-11.5
+      parent: 1
+  - uid: 852
+    components:
+    - type: Transform
+      pos: 1.5,-13.5
       parent: 1
 - proto: hydroponicsTray
   entities:
@@ -4910,6 +4942,11 @@ entities:
     - type: Transform
       pos: 7.5,-10.5
       parent: 1
+  - uid: 134
+    components:
+    - type: Transform
+      pos: 5.5,-9.5
+      parent: 1
   - uid: 143
     components:
     - type: Transform
@@ -4974,6 +5011,11 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 8.5,-2.5
+      parent: 1
+  - uid: 848
+    components:
+    - type: Transform
+      pos: 10.5,-9.5
       parent: 1
 - proto: RollerBed
   entities:
@@ -5928,11 +5970,6 @@ entities:
     - type: Transform
       pos: 5.5,-15.5
       parent: 1
-  - uid: 125
-    components:
-    - type: Transform
-      pos: 5.5,-9.5
-      parent: 1
   - uid: 126
     components:
     - type: Transform
@@ -5954,11 +5991,6 @@ entities:
     components:
     - type: Transform
       pos: 10.5,-8.5
-      parent: 1
-  - uid: 134
-    components:
-    - type: Transform
-      pos: 10.5,-9.5
       parent: 1
   - uid: 136
     components:
@@ -6428,12 +6460,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 13.5,-24.5
-      parent: 1
-  - uid: 692
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 5.5,-9.5
       parent: 1
 - proto: WarningN2
   entities:
