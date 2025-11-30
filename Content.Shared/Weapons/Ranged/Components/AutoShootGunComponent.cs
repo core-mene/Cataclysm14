@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 Ed
+// SPDX-FileCopyrightText: 2025 Ilya246
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Shared.Weapons.Ranged.Systems;
 using Robust.Shared.GameStates;
 
