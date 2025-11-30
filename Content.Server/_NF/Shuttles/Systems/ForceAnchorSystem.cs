@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 Whatstone
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using Content.Server._NF.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Shuttles.Systems;
@@ -39,25 +45,13 @@ public sealed partial class ForceAnchorSystem : EntitySystem
 
     private void OnForceAnchorMapInit(Entity<ForceAnchorComponent> ent, ref MapInitEvent args)
     {
-        if (TryComp<PhysicsComponent>(ent, out var physics))
-        {
-            _physics.SetBodyType(ent, BodyType.Static, body: physics);
-            _physics.SetBodyStatus(ent, physics, BodyStatus.OnGround);
-            _physics.SetFixedRotation(ent, true, body: physics);
-        }
-        _shuttle.Disable(ent);
+        _shuttle.Disable(ent, force: true); // Mono
         EnsureComp<PreventGridAnchorChangesComponent>(ent);
     }
 
     private void OnForceAnchorPostFTLCompleted(Entity<ForceAnchorPostFTLComponent> ent, ref FTLCompletedEvent args)
     {
-        if (TryComp<PhysicsComponent>(ent, out var physics))
-        {
-            _physics.SetBodyType(ent, BodyType.Static, body: physics);
-            _physics.SetBodyStatus(ent, physics, BodyStatus.OnGround);
-            _physics.SetFixedRotation(ent, true, body: physics);
-        }
-        _shuttle.Disable(ent);
+        _shuttle.Disable(ent, force: true); // Mono
         EnsureComp<PreventGridAnchorChangesComponent>(ent);
     }
 }

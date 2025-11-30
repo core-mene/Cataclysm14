@@ -13,7 +13,7 @@
 - type: vessel
   id: Scorpion
   parent: BaseVesselAntag
-  name: ASR Scorpion
+  name: PDV Scorpion
   description: An unusual variant from the same shipyards manufacturing Anacondas, using a mix of missile pods and 2 large-caliber cannons.
   price: 113200
   category: Medium
@@ -30,7 +30,7 @@
 
 - type: gameMap
   id: Scorpion
-  mapName: 'ASR Scorpion'
+  mapName: 'PDV Scorpion'
   mapPath: /Maps/_Mono/Shuttles/BlackMarket/scorpion.yml
   minPlayers: 0
   stations:
@@ -38,7 +38,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Scorpion ASR{1}'
+          mapNameTemplate: 'Scorpion PDV{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

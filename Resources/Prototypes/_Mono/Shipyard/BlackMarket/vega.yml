@@ -11,7 +11,7 @@
 - type: vessel
   id: Vega
   parent: BaseVesselAntag
-  name: ASR Vega
+  name: PDV Vega
   description: A frame manufactured from the remains of mothballed TSFMC ships. Carries a single CYREXA as its main armament.
   price: 71450
   category: Medium
@@ -26,7 +26,7 @@
 
 - type: gameMap
   id: Vega
-  mapName: 'ASR Vega'
+  mapName: 'PDV Vega'
   mapPath: /Maps/_Mono/Shuttles/BlackMarket/vega.yml
   minPlayers: 0
   stations:
@@ -34,7 +34,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Vega ASR{1}'
+          mapNameTemplate: 'Vega PDV{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

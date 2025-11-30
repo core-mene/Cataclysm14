@@ -58,6 +58,22 @@
     maxSpeed: 180
     trackDelay: 0.1
 
+- type: entity
+  id: ShipMissileASM417Weak
+  name: Stock ASM-417 Mini Missile
+  parent: ShipMissileASM417
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 360
+        Blunt: 52
+        Heat: 8
+  - type: Explosive
+    totalIntensity: 60
+    intensitySlope: 6
+    maxIntensity: 20
+
 # ASM-302
 
 - type: entity
@@ -106,6 +122,22 @@
     launchSpeed: 90
     maxSpeed: 210
     trackDelay: 0.2
+
+- type: entity
+  id: ShipMissileASM302Weak
+  name: Stock ASM-302 Missile
+  parent: ShipMissileASM302
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 800
+        Blunt: 140
+        Heat: 40
+  - type: Explosive
+    totalIntensity: 48
+    intensitySlope: 5
+    maxIntensity: 16
 
 # ASM-501
 
@@ -208,6 +240,25 @@
     launchSpeed: 50
     maxSpeed: 125
     trackDelay: 0.6
+
+- type: entity
+  id: ShipMissileASM557Weak
+  name: Stock ASM-557 Hybrid EMP Missile
+  parent: ShipMissileASM557
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 6000
+        Heat: 24
+  - type: Explosive
+    totalIntensity: 80
+    intensitySlope: 8
+    maxIntensity: 40
+  - type: EmpOnTrigger
+    range: 5
+    energyConsumption: 2300000
+    disableDuration: 4
 
 # Serpent Torpedo
 

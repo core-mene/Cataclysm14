@@ -16,6 +16,7 @@
 // SPDX-FileCopyrightText: 2025 Ark
 // SPDX-FileCopyrightText: 2025 BeeRobynn
 // SPDX-FileCopyrightText: 2025 Blu
+// SPDX-FileCopyrightText: 2025 NazrinNya
 // SPDX-FileCopyrightText: 2025 ScyronX
 // SPDX-FileCopyrightText: 2025 starch
 // SPDX-FileCopyrightText: 2025 wewman222
@@ -78,6 +79,7 @@ public abstract class SharedMechSystem : EntitySystem
     [Dependency] private readonly SharedHandsSystem _hands = default!; // Goobstation Change
     [Dependency] private readonly SharedVirtualItemSystem _virtualItem = default!; // Goobstation Change
     [Dependency] private readonly IConfigurationManager _config = default!; // Goobstation Change
+    [Dependency] private readonly SharedContentEyeSystem _eye = default!; // Mono edit - Pilot camera zoom on mech enter
 
     // Goobstation: Local variable for checking if mech guns can be used out of them.
     private bool _canUseMechGunOutside;
@@ -442,6 +444,7 @@ public abstract class SharedMechSystem : EntitySystem
         _container.Insert(toInsert.Value, component.PilotSlot);
         UpdateAppearance(uid, component);
         UpdateHands(toInsert.Value, uid, true); // Goobstation
+        UpdateMechZoom(toInsert.Value, component, false); // Mono
         return true;
     }
 
@@ -467,6 +470,7 @@ public abstract class SharedMechSystem : EntitySystem
         _container.RemoveEntity(uid, pilot.Value);
         UpdateAppearance(uid, component);
         UpdateHands(pilot.Value, uid, false); // Goobstation
+        UpdateMechZoom(pilot.Value, component, true); // Mono
         return true;
     }
 
@@ -588,6 +592,24 @@ public abstract class SharedMechSystem : EntitySystem
         _doAfter.TryStartDoAfter(doAfterEventArgs);
     }
 
+    // Mono edit - Update pilot zoom when inserting/ejecting pilot from mech
+    private void UpdateMechZoom(EntityUid uid, MechComponent component, bool eject)
+    {
+        if (!TryComp<EyeComponent>(uid, out var eye))
+            return;
+
+        if (eject)
+        {
+            _eye.ResetZoom(uid);
+            _eye.SetMaxZoom(uid, eye.Zoom);
+            return;
+        }
+
+        _eye.SetMaxZoom(uid, component.Zoom);
+        _eye.SetZoom(uid, component.Zoom);
+    }
+    // Mono edit end
+    
     private void OnCanDragDrop(EntityUid uid, MechComponent component, ref CanDropTargetEvent args)
     {
         args.Handled = true;

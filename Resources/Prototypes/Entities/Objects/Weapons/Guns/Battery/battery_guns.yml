@@ -59,6 +59,7 @@
 # SPDX-FileCopyrightText: 2024 degradka
 # SPDX-FileCopyrightText: 2024 vanx
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 BramvanZijp
@@ -362,7 +363,7 @@
   name: LWC pulse pistol
   parent: [BaseWeaponBatterySmall, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
   id: WeaponPulsePistol
-  description: A state of the art energy pistol favoured as a sidearm by the TSFN and TSFMC. On the handle is a label that says 'for authorized use only.'
+  description: A state of the art energy pistol favoured as a sidearm by the TSFN and TSFMC. # Mono
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/pulse_pistol.rsi
@@ -387,18 +388,25 @@
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
     proto: Pulse
-    fireCost: 200
+    fireCost: 100
   - type: Battery
     maxCharge: 2000
     startingCharge: 2000
   - type: PirateBountyItem # Mono
     id: ExperimentalFactionWeapon
+  # Mono Additions
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 200
+    autoRechargePause: true
+    autoRechargePauseTime: 30
+  # End Mono
 
 - type: entity
   name: LWC pulse carbine
   parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
   id: WeaponPulseCarbine
-  description: A high tech energy carbine favoured by The Agency and the ever-elusive Winter Solstice. On the handle is a label that says 'for authorized use only.'
+  description: A common sight in the hands of higher ranked TSF, the pulse carbine is a punchy laser weapon salvaged from the remnants of Nanotrasen. # Mono
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi
@@ -418,25 +426,35 @@
   - type: Gun
     selectedMode: SemiAuto
     fireRate: 3
+    burstFireRate: 12 # Mono
+    shotsPerBurst: 2
     availableModes:
     - SemiAuto
-    - FullAuto
+    # - FullAuto # Mono
+    - Burst # Mono
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
     proto: Pulse
-    fireCost: 200
+    fireCost: 100
   - type: Battery
-    maxCharge: 5000
-    startingCharge: 5000
+    maxCharge: 3000 # Mono
+    startingCharge: 3000
   - type: PirateBountyItem # Mono
     id: ExperimentalFactionWeapon
+  # Mono Additions
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 200
+    autoRechargePause: true
+    autoRechargePauseTime: 30
+  # End Mono
 
 - type: entity
   name: NT pulse rifle
   parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
   id: WeaponPulseRifle
-  description: A weapon that is almost as infamous as its users. On the handle is a label that says 'for authorized use only.'
+  description: A weapon that used to be used by the special operations units of NT, but now commonly seen in the hands of the TSF. # Mono
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
@@ -455,16 +473,29 @@
     sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
   - type: Gun
     fireRate: 1.5
+    availableModes:
+    - SemiAuto
+    - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
   - type: HitscanBatteryAmmoProvider
     proto: Pulse
     fireCost: 100
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 6000 # Mono
+    startingCharge: 6000 # Mono
   - type: PirateBountyItem # Mono
     id: ExperimentalFactionWeapon
+  # Mono Additions
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 200
+    autoRechargePause: true
+    autoRechargePauseTime: 30
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.90
+    sprintModifier: 0.85
+  # End Mono
 
 - type: entity
   name: laser cannon

@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2025 BeeRobynn
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 KiraZen_
+# SPDX-FileCopyrightText: 2025 NazrinNya
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 significant harassment
@@ -112,7 +113,6 @@
   - type: RadarConsole
     maxRange: 768
     followEntity: false
-    pannable: true
   - type: DeviceNetwork
     deviceNetId: Wireless
     receiveFrequencyId: CrewMonitor
@@ -135,6 +135,7 @@
   - type: NpcFactionMember
     factions:
     - Syndicate
+    - SiliconsExpeditionNF
   - type: Access
     tags:
     - NuclearOperative
@@ -319,6 +320,12 @@
     - RobotTalk
     - Draconic
     - Azaziba
+  - type: Access
+    groups:
+    - AllAccess
+    tags:
+    - NuclearOperative
+    - SyndicateAgent
   - type: GhostTakeoverAvailable
   - type: RandomMetadata
     nameSegments: [MonoRemnantCoreNameset]
@@ -394,6 +401,9 @@
     raffle:
       settings: default
     prototype: VesselAICore
+    requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 180000 # 50 hrs
   - type: GhostTakeoverAvailable
   - type: RandomMetadata
     nameSegments: [ VesselCoreNameset ]
