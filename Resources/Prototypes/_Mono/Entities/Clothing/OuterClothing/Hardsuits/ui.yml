@@ -81,11 +81,11 @@
     activeBlockFraction: 1.0
     isClothing: true
   - type: Battery
-    maxCharge: 35
-    startingCharge: 35
+    maxCharge: 15
+    startingCharge: 15
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 0.25
+    autoRechargeRate: 0.1
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 0.85 # Temporary till shield toggling doesnt break movement speed modifiers
