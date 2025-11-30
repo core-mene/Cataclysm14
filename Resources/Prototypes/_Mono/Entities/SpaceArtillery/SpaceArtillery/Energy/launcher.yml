@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2025 Arcticular
+# SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
@@ -239,7 +241,7 @@
   id: WeaponTurretM25
   name: M25 mining pulser
   parent: [BallisticArtillery, ConstructibleMachine] #Could possibly create a ConstructibleTurret proto if more are added; comps currently do nothing upgrade wise
-  description: Uses mechanisms to launch... something. Destroys rock easily.
+  description: Uses mechanisms to launch... something. Destroys rock easily. Limited range.
   components:
   - type: StaticPrice
     price: 1500
@@ -257,8 +259,8 @@
     range: 500
   - type: FireControlRotate
   - type: Gun
-    fireRate: 4.0
-    projectileSpeed: 40
+    fireRate: 5
+    projectileSpeed: 20
     minAngle: 0
     maxAngle: 5
     shootThermalSignature: 10000 # 400m - intentionally relatively low
@@ -512,7 +514,7 @@
 
 - type: entity
   id: WeaponLaserTurretApollo
-  parent: WeaponLaserTurretL1Phalanx
+  parent: BallisticArtilleryUnanchorable
   name: L-20 Apollo Heavy Laser Cannon
   description: One of the Pantheon Collective's top weapons, the Apollo is aptly named for its beams heating surfaces to beyond the temperature of nearby stars.
   components:
@@ -522,6 +524,17 @@
     sprite:  _Mono/Objects/ShuttleWeapons/apollo.rsi
     layers:
     - state: space_artillery
+  - type: Appearance
+  - type: AmmoCounter
+  - type: Battery
+    maxCharge: 50000
+    startingCharge: 50000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 500
+  - type: ExaminableBattery
+  - type: WirelessNetworkConnection
+    range: 500
   - type: Gun
     fireRate: 0.3
     minAngle: 0

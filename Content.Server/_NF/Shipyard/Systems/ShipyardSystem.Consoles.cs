@@ -862,6 +862,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             {
                 accesses.Tags = voucher.Access;
                 accesses.Groups = voucher.AccessGroups;
+                // if we're not access-based we must be vessel-based instead
+                initialHasAccess = voucher.Access.Any() || voucher.AccessGroups.Any();
             }
             else
             {

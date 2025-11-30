@@ -1,11 +1,22 @@
+# SPDX-FileCopyrightText: 2023 Cheackraze
+# SPDX-FileCopyrightText: 2023 Kennedy
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 dustylens
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: MPL-2.0
+
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 14:08:11
-  entityCount: 344
+  time: 10/28/2025 20:36:34
+  entityCount: 345
 maps: []
 grids:
 - 1
@@ -63,6 +74,7 @@ entities:
       id: Spear
     - type: OccluderTree
     - type: Shuttle
+      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -431,6 +443,21 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -7.5,1.5
       parent: 1
+- proto: AmmoLoader
+  entities:
+  - uid: 345
+    components:
+    - type: Transform
+      pos: 1.5,3.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        343:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
+        344:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
 - proto: APCBasic
   entities:
   - uid: 11
@@ -1064,11 +1091,6 @@ entities:
     - type: Transform
       pos: 0.5,-0.5
       parent: 1
-  - uid: 133
-    components:
-    - type: Transform
-      pos: 1.5,3.5
-      parent: 1
   - uid: 134
     components:
     - type: Transform
@@ -1222,18 +1244,6 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-    - type: DeviceLinkSource
-      linkedPorts: {}
-      lastSignals: {}
-      ports:
-      - device-button-1
-      - device-button-2
-      - device-button-3
-      - device-button-4
-      - device-button-5
-      - device-button-6
-      - device-button-7
-      - device-button-8
 - proto: ComputerStationRecords
   entities:
   - uid: 156
@@ -1246,6 +1256,13 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
+- proto: DarkCatwalkMono
+  entities:
+  - uid: 133
+    components:
+    - type: Transform
+      pos: 1.5,3.5
+      parent: 1
 - proto: DefibrillatorCabinetFilled
   entities:
   - uid: 157

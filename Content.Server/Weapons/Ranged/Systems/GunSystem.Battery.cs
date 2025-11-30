@@ -6,6 +6,7 @@
 // SPDX-FileCopyrightText: 2023 Slava0135
 // SPDX-FileCopyrightText: 2023 Ygg01
 // SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2025 NazrinNya
 // SPDX-FileCopyrightText: 2025 Redrover1760
 // SPDX-FileCopyrightText: 2025 SlamBamActionman
 // SPDX-FileCopyrightText: 2025 beck-thompson
@@ -75,7 +76,10 @@ public sealed partial class GunSystem
         if (_powerCell.TryGetBatteryFromSlot(uid, out var cellBattery))
         {
             UpdateShots(uid, component, cellBattery.CurrentCharge, cellBattery.MaxCharge);
-            return;
+        }
+        else
+        {
+            UpdateShots(uid, component, 0, component.Capacity * component.FireCost);
         }
     }
     // Mono End
