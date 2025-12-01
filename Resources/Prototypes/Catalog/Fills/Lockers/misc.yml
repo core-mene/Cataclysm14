@@ -163,7 +163,7 @@
     - id: WeaponSniperMosin
       weight: 2
 
-- type: entityTable #Mono note: Still used for POI maints lockers. Refer to _Mono\Catalogs\Fills\Lockers\misc.yml for salv maint locker.
+- type: entityTable #Mono note: Still used for certain holdover POI maints lockers. Refer to _Mono\Catalogs\Fills\Lockers\misc.yml for new salv maint locker.
   id: MaintenanceLockerLoot
   table: !type:AllSelector
     children:
