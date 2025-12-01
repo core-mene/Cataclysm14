@@ -72,8 +72,10 @@
 
 # S2 Mechas
 - type: entity
-  id: AFInterceptor
+  id: BaseAFInterceptor
   parent: [ BaseMech, LightMechMount, BaseRestrictedContraband ]
+  abstract: true
+  categories: [ HideSpawnMenu ]
   name: AF-28 "Broadsword"
   description: One of the first purpose built Armored Frames, made to engage light targets and other Armored Frames.
   components:
@@ -141,8 +143,6 @@
     followEntity: true
   - type: Appearance
   - type: GenericVisualizer
-  - type: CanMoveInAir
-  - type: MovementAlwaysTouching
   # EXTREMELY slow in gravity. Only really good to taxi, and that's about it.
   - type: MovementSpeedModifier
     baseWalkSpeed: 0.2
@@ -170,6 +170,13 @@
     speedModifier: 3
     useSound:
       path: /Audio/Items/jaws_pry.ogg
+
+- type: entity
+  id: AFInterceptor
+  parent: BaseAFInterceptor
+  components:
+  - type: CanMoveInAir
+  - type: MovementAlwaysTouching
 
 - type: entity
   id: AFInterceptorBattery
@@ -269,6 +276,7 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 3
     baseSprintSpeed: 6
+    baseWeightlessModifier: 0.3 # Barely usable in space.
   - type: Tag
     tags:
     - DoorBumpOpener
