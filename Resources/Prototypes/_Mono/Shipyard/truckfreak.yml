@@ -1,15 +1,4 @@
-# SPDX-FileCopyrightText: 2023 IHAN <IHAN>
-# SPDX-FileCopyrightText: 2023 Kennedy
-# SPDX-FileCopyrightText: 2023 RealIHaveANameOfficial
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 Long YM
-# SPDX-FileCopyrightText: 2024 Maxtone
-# SPDX-FileCopyrightText: 2024 Whatstone
-# SPDX-FileCopyrightText: 2025 Junerisms
 # SPDX-FileCopyrightText: 2025 LFMoth
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 kasature90
-# SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -17,14 +6,12 @@
 # GitHub: LFMoth
 # Discord: lfmoth
 
-# Shuttle Notes:
-#
 - type: vessel
   id: Truckfreak
   parent: BaseVessel
   name: UNSA Truckfreak
-  description: A compact Cargo shuttle that has more than enough free space in its dock. Comes with shutters for easy dock access!
-  price: 50000
+  description: A small Cargo shuttle tugging on a big and spacious container, perfect for all those boxes you have to carry!
+  price: 30000
   category: Small
   group: Shipyard
   shuttlePath: /Maps/_Mono/Shuttles/truckfreak.yml
@@ -32,7 +19,7 @@
   class:
   - Cargo
   engine:
-  - AME
+  - Uranium
 
 - type: gameMap
   id: Truckfreak
