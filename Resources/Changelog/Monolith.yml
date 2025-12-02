@@ -14205,3 +14205,306 @@ Entries:
   id: 1575
   time: '2025-11-21T05:49:39.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2660
+- author: NazrinNya
+  changes:
+    - type: Tweak
+      message: >-
+        Phalanximine vomit chance 5% -> 0.3%. Puncturase, Lacerinol and bruizine
+        metabolism rate 0.1 -> 0.35.
+  id: 1576
+  time: '2025-11-22T14:57:41.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2659
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Aloxadone, Stelloxadone, and Traumoxadone round removal reversal effect
+        is much more potent now, scaling based on the current damage of the
+        metabolizer.
+  id: 1577
+  time: '2025-11-23T08:06:27.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2669
+- author: Androidonator
+  changes:
+    - type: Add
+      message: >-
+        Now in combat mode the flashlights are pointing where your mouse cursor
+        is.
+  id: 1578
+  time: '2025-11-23T13:54:21.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2673
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Monkeys have received a dialect overhaul that should make them sound
+        more familiar
+  id: 1579
+  time: '2025-11-23T16:22:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2677
+- author: NazrinNya
+  changes:
+    - type: Tweak
+      message: Severely lowered Rogue AI mobs health.
+  id: 1580
+  time: '2025-11-23T18:40:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2671
+- author: GOLDMASK990
+  changes:
+    - type: Add
+      message: Added AKM to arsenal T2 research, printable at Merc fabs
+  id: 1581
+  time: '2025-11-25T16:59:57.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2681
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: Fixed the AP system not working.
+  id: 1582
+  time: '2025-11-25T18:22:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2686
+- author: NazrinNya
+  changes:
+    - type: Fix
+      message: Sabre cannot fly in space now.
+    - type: Fix
+      message: >-
+        Cappy wont attack CDETs and TSFMC turrets anymore. TSFMC turrets wont
+        attack MD personel and CDETs anymore.
+  id: 1583
+  time: '2025-11-26T11:11:28.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2687
+- author: Avalon-Proto
+  changes:
+    - type: Remove
+      message: >-
+        The Jupiter no longer has a host of round start mechs, the PDV need to
+        work for them now
+  id: 1584
+  time: '2025-11-27T02:04:02.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2689
+- author: NazrinNya
+  changes:
+    - type: Add
+      message: Medical techfab has been returned to FlatpackVend!
+  id: 1585
+  time: '2025-11-27T17:23:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2692
+- author: NazrinNya
+  changes:
+    - type: Fix
+      message: >-
+        Laying down in weightless environment now gives you huge movement
+        penalty.
+  id: 1586
+  time: '2025-11-27T21:06:31.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2693
+- author: NazrinNya
+  changes:
+    - type: Fix
+      message: Chimeras can't revive themselfs by re-infection anymore.
+    - type: Fix
+      message: Chimeras can't be affected by cognizine now.
+  id: 1587
+  time: '2025-11-27T23:51:54.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2698
+- author: Durk
+  changes:
+    - type: Add
+      message: >-
+        Reworked player manifest in round end summary, now includes last words
+        and how players died.
+  id: 1588
+  time: '2025-11-28T03:11:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2668
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: >-
+        You can no longer FTL when near any powered shuttle console, instead of
+        near player-bought ships.
+    - type: Tweak
+      message: FTL blocking range 256m->512m.
+  id: 1589
+  time: '2025-11-28T03:13:47.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2676
+- author: Ilya246
+  changes:
+    - type: Fix
+      message: >-
+        Fixed language implanters not working on all mobs, like baby space
+        dragon.
+    - type: Fix
+      message: Baby space dragon now understands Tau Ceti by default.
+  id: 1590
+  time: '2025-11-28T03:15:31.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2674
+- author: UnicornOnLSD
+  changes:
+    - type: Tweak
+      message: Tweaked DI's ingame description.
+  id: 1591
+  time: '2025-11-29T13:31:52.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2702
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: Natural Letoferol + Chimera Biomass are now both flammable
+  id: 1592
+  time: '2025-11-29T13:35:06.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2699
+- author: NazrinNya
+  changes:
+    - type: Tweak
+      message: Most of civilian hardsuits received significant buffs.
+  id: 1593
+  time: '2025-11-29T14:25:11.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2694
+- author: NazrinNya
+  changes:
+    - type: Add
+      message: >-
+        Added the salvage radar, allowing you to render asteroids and wrecks way
+        further than usual. You can buy it in the salvage vendor.
+  id: 1594
+  time: '2025-11-29T14:26:53.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2678
+- author: thoughtlessuser
+  changes:
+    - type: Add
+      message: Added a mapping only plastitanium grade window for you mapper needs!
+  id: 1595
+  time: '2025-11-29T21:34:37.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2704
+- author: Ilya246
+  changes:
+    - type: Add
+      message: Added Mite, a new military ship, to scrapyard consoles.
+  id: 1596
+  time: '2025-11-30T12:03:51.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2536
+- author: Ilya246
+  changes:
+    - type: Tweak
+      message: ADS laws changed to require to hail first for low-threat ships.
+  id: 1597
+  time: '2025-11-30T12:37:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2667
+- author: tonotom1
+  changes:
+    - type: Add
+      message: 'Added the UW Stubby: A small armored light-duty medical rescue ship.'
+  id: 1598
+  time: '2025-11-30T13:47:15.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2685
+- author: UnicornOnLSD
+  changes:
+    - type: Add
+      message: >-
+        Another opportunity for our freshest salvagers, the DIS Notch has made
+        it's way on the public shipyards.
+    - type: Remove
+      message: Sabine GONE.
+  id: 1599
+  time: '2025-11-30T14:25:22.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2701
+- author: tonotom1
+  changes:
+    - type: Add
+      message: >-
+        New medical medium ship: Medicus. A functional replacement to the
+        Skalpel.
+    - type: Remove
+      message: Skalpel was phased out at the author's request.
+  id: 1600
+  time: '2025-11-30T18:01:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2707
+- author: UnicornOnLSD
+  changes:
+    - type: Add
+      message: >-
+        The DIS Vaquita is available on the civilian market, a compact and
+        efficient salvage shuttle for solo salvagers !
+  id: 1601
+  time: '2025-11-30T19:29:12.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2708
+- author: Avalon-Proto
+  changes:
+    - type: Add
+      message: Three new pulse weapons have been produced by Ullman Industries
+    - type: Tweak
+      message: The U.I. Smart magnum is now available through tech
+    - type: Add
+      message: Ullman Industies unstable plasma blades have arrived in sector
+    - type: Tweak
+      message: U.I. Hardsuits are now available through research
+  id: 1602
+  time: '2025-11-30T19:42:49.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2640
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: DP-17 pulse pistols no longer take up disproportionate Bag space
+  id: 1603
+  time: '2025-11-30T23:09:09.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2718
+- author: NazrinNya
+  changes:
+    - type: Fix
+      message: Overwatch console at Camelot is unanchorable now.
+  id: 1604
+  time: '2025-11-30T23:10:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2716
+- author: Arcticular1
+  changes:
+    - type: Tweak
+      message: >-
+        The spear is now a medical ship called the Syringe. Rejoice corpsman of
+        the TSFMC!
+  id: 1605
+  time: '2025-12-01T14:52:05.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2651
+- author: Avalon-Proto
+  changes:
+    - type: Tweak
+      message: >-
+        DP-27 Pulse repeater changed from 3 to 2 shots, and can no longer be
+        full auto. It was worse than burst anyhow
+  id: 1606
+  time: '2025-12-01T15:22:58.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2720
+- author: Arcticular1
+  changes:
+    - type: Tweak
+      message: The Tethys is now a dedicated medical ship!
+  id: 1607
+  time: '2025-12-01T15:31:41.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2649
+- author: Primusirius
+  changes:
+    - type: Add
+      message: Added the Triage, a small medical themed mil ship that packs a punch.
+  id: 1608
+  time: '2025-12-01T18:23:59.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2696
+- author: UnicornOnLSD
+  changes:
+    - type: Tweak
+      message: The mite got even trashier, somehow...
+  id: 1609
+  time: '2025-12-02T01:48:17.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2724
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: Sawn-off PKA isn't unusable dogwater anymore
+  id: 1610
+  time: '2025-12-02T02:14:09.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2721
+- author: Primusirius
+  changes:
+    - type: Add
+      message: Added the sirius' big brother, the Sagittarius.
+  id: 1611
+  time: '2025-12-02T15:49:02.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2495
