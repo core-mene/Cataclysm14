@@ -9,41 +9,46 @@
 # CHARON
 
 - type: entity
+  parent: BasicHitscan
   id: ShipRailgunProjectile
-  name: M381 CHARON 280mm 26.5 kg slug
-  parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: Projectile
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: gauss_muzzle
+    travelFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: gauss_trail
+    impactFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: gauss_impact
+  - type: HitscanRadarSignature
+    radarColor: "#CF0E0E"
+    lifeTime: 0.3
+  - type: HitscanBasicDamage
     damage:
       types:
         Structural: 10000
-        Blunt: 600
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
-    layers:
-    - state: omnilaser
-  - type: Ammo
-    muzzleFlash: null
-  - type: ShipWeaponProjectile
-  - type: RadarBlip
-    radarColor: "#CF0E0E"
-    scale: 4
-    requireNoGrid: true
-    shape: triangle
-  - type: TimedDespawn
-    lifetime: 1.7
-  - type: PointLight
-    color: "#19AFFF"
+        Blunt: 1000
+  - type: HitscanBasicRaycast
+    maxDistance: 768
+  - type: HitscanSpawnEntity
+    spawnedEntity: CharonExplosion
+  #- type: Ammo
+  #  muzzleFlash: null
+
+- type: entity
+  id: CharonExplosion
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TriggerOnSpawn
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBombShipGun
-    totalIntensity: 5000
-    intensitySlope: 30
-    maxIntensity: 600
-  - type: GatheringProjectile
-  - type: MiningGatheringSoft
-  - type: MiningGatheringHard
+    explosionType: Default
+    totalIntensity: 1500
+    intensitySlope: 40
+    maxIntensity: 200
 
 - type: entity
   id: CharonSlugAmmo
@@ -66,45 +71,52 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
+  - type: HitscanAmmo
 
 # Subnuclear shells
 
 - type: entity
+  parent: BasicHitscan
   id: ShipRailgunProjectileSubnuclear
-  name: M381 CHARON 280mm 26.5 kg slug
-  parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: Projectile
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: gauss_muzzle
+    travelFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: gauss_trail
+    impactFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_lasers.rsi
+      state: gauss_impact
+  - type: HitscanRadarSignature
+    radarColor: "#11630d"
+    lifeTime: 0.3
+  - type: HitscanBasicDamage
     damage:
       types:
-        Structural: 200000
-        Blunt: 5000
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
-    layers:
-    - state: omnilaser
-  - type: Ammo
-    muzzleFlash: null
-  - type: ShipWeaponProjectile
-  - type: RadarBlip
-    radarColor: "#0DFF00"
-    scale: 4
-    requireNoGrid: true
-    shape: triangle
-  - type: TimedDespawn
-    lifetime: 1.7
-  - type: PointLight
-    color: "#19AFFF"
+        Structural: 90000
+        Blunt: 9001 # its over 9000...!
+  - type: HitscanBasicRaycast
+    maxDistance: 768
+  - type: HitscanSpawnEntity
+    spawnedEntity: CharonSubnuclearExplosion
+  #- type: Ammo
+  #  muzzleFlash: null
+  - type: HitscanAmmo
+
+- type: entity
+  id: CharonSubnuclearExplosion
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TriggerOnSpawn
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBombShipGun
+    explosionType: Default
     totalIntensity: 12000
-    intensitySlope: 5
-    maxIntensity: 1000
-  - type: GatheringProjectile
-  - type: MiningGatheringSoft
-  - type: MiningGatheringHard
+    intensitySlope: 4
+    maxIntensity: 500
 
 - type: entity
   id: CharonSubnuclearSlugAmmo
@@ -127,3 +139,4 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
+  - type: HitscanAmmo

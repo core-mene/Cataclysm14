@@ -473,7 +473,7 @@
   - type: Gun
     fireRate: 20
     minAngle: 0
-    maxAngle: 3
+    maxAngle: 0
     shootThermalSignature: 2000000
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
@@ -532,6 +532,7 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 500
+  - type: FireControlRotate
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
@@ -805,7 +806,7 @@
   name: Curio-1008 neutron repeater "Scythe"
   parent: BallisticArtillery
   suffix: ADS ONLY
-  description: A steadily firing neutron repeater, dealing solid damage to most targets. A pre-fracture marvel of weapons technology
+  description: A steadily firing neutron repeater, firing high-damage but slow balls of hell. A marvel of rapture weapons technology.
   components:
   - type: StaticPrice
     price: 40000
@@ -823,7 +824,7 @@
     range: 500
   - type: Gun
     fireRate: 1
-    projectileSpeed: 200
+    projectileSpeed: 100
     minAngle: 0
     maxAngle: 6
     shootThermalSignature: 500000 # ~5.6km with continuous fire

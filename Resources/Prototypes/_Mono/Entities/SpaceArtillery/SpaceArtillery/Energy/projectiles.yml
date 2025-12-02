@@ -45,9 +45,9 @@
     color: "#FF0040"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBombShipGun
-    totalIntensity: 100
-    intensitySlope: 6
+    explosionType: Default
+    totalIntensity: 50
+    intensitySlope: 12
     maxIntensity: 25
     maxTileBreak: 1
 
@@ -228,10 +228,10 @@
     color: "#6BC1FF"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBombShipGun
-    totalIntensity: 400
+    explosionType: Default
+    totalIntensity: 200
     intensitySlope: 10
-    maxIntensity: 60
+    maxIntensity: 100
     maxTileBreak: 5
   - type: GatheringProjectile
   - type: MiningGatheringSoft
@@ -265,13 +265,13 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 3
+    lifetime: 6
   - type: PointLight
     radarColor: "#ffffff"
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 50
+    totalIntensity: 75
     intensitySlope: 35
     maxIntensity: 15
 
@@ -457,7 +457,7 @@
      types:
       Piercing: 50
       Heat: 25
-      Structural: 150
+      Structural: 100
   - type: HitscanBasicRaycast
     maxDistance: 500
 
@@ -470,11 +470,11 @@
   - type: TriggerOnSpawn
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HardBombShipGun
-    totalIntensity: 100
+    explosionType: Default
+    totalIntensity: 25
     intensitySlope: 50
-    maxIntensity: 60
-    maxTileBreak: 2
+    maxIntensity: 10
+    maxTileBreak: 1
 
 - type: entity
   id: TachyonExplosion
