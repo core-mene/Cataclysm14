@@ -53,3 +53,51 @@
   flatReductions:
     Blunt: 3
     Structural: -1
+
+# mech armor
+
+- type: damageModifierSet
+  id: MechArmorLight
+  coefficients:
+    Blunt: 1.1
+    Slash: 1.1
+    Piercing: 1.1
+    Shock: 2
+    Heat: 1
+    Structural: 1
+  flatReductions:
+    Blunt: 2
+    Slash: 3
+
+- type: damageModifierSet
+  id: MechArmorMedium
+  coefficients:
+    Blunt: 0.7
+    Slash: 0.7
+    Cold: 0
+    Radiation: 0
+    Piercing: 0.7
+    Shock: 2
+    Heat: 0.7
+    Structural: 1
+  flatReductions:
+    Blunt: 5
+    Slash: 5
+    Piercing: 5
+
+- type: damageModifierSet
+  id: MechArmorHeavy
+  coefficients:
+    Blunt: 0.4
+    Slash: 0.4
+    Cold: 0
+    Radiation: 0
+    Piercing: 0.5
+    Shock: 2
+    Heat: 0.4
+    Structural: 1
+  flatReductions:
+    Blunt: 7
+    Slash: 7
+    Piercing: 7
+    Heat: 4

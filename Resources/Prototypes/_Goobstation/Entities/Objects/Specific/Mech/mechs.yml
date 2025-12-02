@@ -87,7 +87,7 @@
     baseWalkSpeed: 1
     baseSprintSpeed: 2
   - type: Damageable
-    damageModifierSet: MediumArmorNT
+    damageModifierSet: MechArmorMedium
   - type: StaticPrice
     price: 1000
   - type: Tag
@@ -201,7 +201,7 @@
   id: MechGygax
   parent: [ BaseMech, CombatMech, BaseRestrictedContraband ]
   name: Gygax
-  description: While lightly armored, the Gygax has incredible mobility thanks to its ability that lets it smash through walls at high speeds.
+  description: While lightly armored, the Gygax has incredible mobility thanks to its ability to punch through walls at high speeds.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -313,7 +313,7 @@
     baseSprintSpeed: 2
     baseWeightlessModifier: 3 # Mono
   - type: Damageable
-    damageModifierSet: MediumArmorNT
+    damageModifierSet: MechArmorHeavy
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: Repairable
@@ -394,7 +394,7 @@
     baseSprintSpeed: 1.5
     baseWeightlessModifier: 3 # Mono
   - type: Damageable
-    damageModifierSet: HeavyArmorNT
+    damageModifierSet: MechArmorHeavy
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: Repairable
@@ -484,7 +484,7 @@
     baseSprintSpeed: 3.7
     baseWeightlessModifier: 3 # Mono
   - type: Damageable
-    damageModifierSet: HeavyArmorNT
+    damageModifierSet: MechArmorHeavy
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: Repairable
@@ -538,7 +538,7 @@
   id: MechGygaxSyndie
   parent: [ BaseMech, CombatMech, BaseSyndicateContraband ]
   name: Dark Gygax
-  description: A modified Gygax used for nefarious purposes. On the back of the armor plate there is an inscription "Cybersun Inc."
+  description: A modified Gygax used for nefarious purposes.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -577,7 +577,7 @@
     baseSprintSpeed: 5.5 # Mono
     baseWeightlessModifier: 7 # Mono
   - type: Damageable
-    damageModifierSet: MediumArmorSyndi
+    damageModifierSet: MechArmorLight
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: Repairable
@@ -628,7 +628,7 @@
   id: MechMaulerSyndie
   parent: [ BaseMech, CombatMech, BaseSyndicateContraband ]
   name: Mauler
-  description: A modified Marauder used by the Syndicate that's not as maneuverable as the Dark Gygax, but it makes up for that in armor and sheer firepower. On the back of the armor plate there is an inscription "Cybersun Inc."
+  description: A modified Marauder once used by the Syndicate. Not as maneuverable as the Dark Gygax, but it makes up for its speed in armor and sheer firepower.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -666,7 +666,7 @@
     baseWalkSpeed: 1
     baseSprintSpeed: 1.5
   - type: Damageable
-    damageModifierSet: HeavyArmorSyndi
+    damageModifierSet: MechArmorHeavy
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: Repairable

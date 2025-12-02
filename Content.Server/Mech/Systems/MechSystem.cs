@@ -326,8 +326,10 @@ public sealed partial class MechSystem : SharedMechSystem
 
     private void OnEmpAttempt(EntityUid uid, MechComponent comp, EmpAttemptEvent args) // Monolith
     {
-        if (comp.Broken != true)
-            _damageable.TryChangeDamage(uid, comp.EMPdamage);
+        // Mono: Removed EMP damage
+        //if (comp.Broken != true)
+        //    _damageable.TryChangeDamage(uid, comp.EMPdamage);
+        // End mono
 
         if (TryComp<BatteryComponent>(comp.BatterySlot.ContainedEntity, out var battery))
         {

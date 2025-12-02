@@ -154,7 +154,7 @@
     requireNoGrid: true
     shape: square
   - type: Damageable
-    damageModifierSet: HeavyArmorNT
+    damageModifierSet: MechArmorMedium
   - type: Repairable
     fuelCost: 40
     doAfterDelay: 30
@@ -225,6 +225,8 @@
     baseWalkSpeed: 0.2
     baseSprintSpeed: 1
     baseWeightlessModifier: 35
+  - type: Damageable
+    damageModifierSet: MechArmorLight
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -368,7 +370,7 @@
     requireNoGrid: true
     shape: square
   - type: Damageable
-    damageModifierSet: HeavyArmorNT
+    damageModifierSet: MechArmorHeavy
   - type: Repairable
     fuelCost: 60
     doAfterDelay: 40
