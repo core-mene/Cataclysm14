@@ -27,6 +27,7 @@
 // SPDX-FileCopyrightText: 2024 Southbridge
 // SPDX-FileCopyrightText: 2024 Tayrtahn
 // SPDX-FileCopyrightText: 2024 TytosB
+// SPDX-FileCopyrightText: 2025 AwareFoxy
 // SPDX-FileCopyrightText: 2025 Deerstop
 // SPDX-FileCopyrightText: 2025 ElectroJr
 // SPDX-FileCopyrightText: 2025 Killerqu00
@@ -107,6 +108,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/_NF/POI/tinnia.yml", // Contains syndicate rubber stamp
             "/Maps/_NF/POI/lpbravo.yml", // Contains syndicate rubber stamp
             "/Maps/_NF/Shuttles/Admin/fishbowl.yml", // Contains CentComm folder
+            "/Maps/_Mono/Admin/minicentcomm.yml", // Admeme centcomm
             // End Frontier
         };
 
