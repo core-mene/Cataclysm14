@@ -283,6 +283,8 @@
     showControl: true
     isEnabled: true
     attachedToSuit: true # Mono
+  - type: PdaBorderColor
+    borderColor: "#9c8245"
 
 - type: entity
   parent: BasePDVPDA
@@ -304,6 +306,8 @@
   - type: CartridgeLoader
     preinstalled:
     - LedgerCartridge
+  - type: PdaBorderColor
+    borderColor: "#533980"
 
 
 - type: entity
@@ -323,6 +327,8 @@
     showControl: true
     isEnabled: true
     attachedToSuit: true # Mono
+  - type: PdaBorderColor
+    borderColor: "#9c8245"
 
 
 - type: entity
@@ -342,3 +348,5 @@
     showControl: true
     isEnabled: true
     attachedToSuit: true # Mono
+  - type: PdaBorderColor
+    borderColor: "#9c8245"
