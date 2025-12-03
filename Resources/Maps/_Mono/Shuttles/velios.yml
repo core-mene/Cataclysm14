@@ -1,27 +1,11 @@
-# SPDX-FileCopyrightText: 2023 Leon Friedrich
-# SPDX-FileCopyrightText: 2023 Nemanja
-# SPDX-FileCopyrightText: 2023 PuceTint
-# SPDX-FileCopyrightText: 2023 TsjipTsjip
-# SPDX-FileCopyrightText: 2023 deltanedas
-# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
-# SPDX-FileCopyrightText: 2024 Mr. 27
-# SPDX-FileCopyrightText: 2024 QueerNB
-# SPDX-FileCopyrightText: 2024 ScarKy0
-# SPDX-FileCopyrightText: 2024 Ubaser
-# SPDX-FileCopyrightText: 2024 lzk
-# SPDX-FileCopyrightText: 2024 metalgearsloth
-# SPDX-FileCopyrightText: 2025 whythelettuce
-#
-# SPDX-License-Identifier: MPL-2.0
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/29/2025 08:23:10
-  entityCount: 562
+  time: 12/03/2025 05:05:03
+  entityCount: 564
 maps: []
 grids:
 - 2
@@ -2344,6 +2328,13 @@ entities:
       color: '#0055CCFF'
 - proto: GasPipeStraightAlt1
   entities:
+  - uid: 1
+    components:
+    - type: Transform
+      pos: 3.5,5.5
+      parent: 2
+    - type: AtmosPipeColor
+      color: '#990000FF'
   - uid: 35
     components:
     - type: Transform
@@ -2733,13 +2724,13 @@ entities:
   - uid: 302
     components:
     - type: Transform
-      pos: 3.5,5.5
+      pos: 3.5,6.5
       parent: 2
+    - type: AtmosPipeColor
+      color: '#990000FF'
     - type: DeviceNetwork
       deviceLists:
       - 114
-    - type: AtmosPipeColor
-      color: '#990000FF'
     - type: Construction
       step: 1
       edge: 0
@@ -3054,6 +3045,13 @@ entities:
     components:
     - type: Transform
       pos: 9.321052,-3.2656791
+      parent: 2
+- proto: NFHolopadShip
+  entities:
+  - uid: 564
+    components:
+    - type: Transform
+      pos: 3.5,5.5
       parent: 2
 - proto: NitrogenCanister
   entities:
