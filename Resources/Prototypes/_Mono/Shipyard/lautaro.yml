@@ -1,18 +1,18 @@
 # Author Info
-# GitHub: starch70
-# Discord: _starch_
+# GitHub: whythelettuce
+# Discord: whythelettuce
 
 # Shuttle Notes:
 #
 - type: vessel
-  id: Taichi
+  id: Lautaro
   parent: BaseVessel
-  name: SKR Taichi
-  description: A extremely compact medical ship, with a full chemistry setup.
-  price: 33500
+  name: WLV Lautaro
+  description: A quick and compact medical ship with a medbay and full chemistry lab.
+  price: 37500 # Appraises 29996, x1.25
   category: Small
   group: Medical
-  shuttlePath: /Maps/_Mono/Shuttles/taichi.yml
+  shuttlePath: /Maps/_Mono/Shuttles/lautaro.yml
   guidebookPage: null
   class:
   - Medical
@@ -21,16 +21,16 @@
   - Uranium
 
 - type: gameMap
-  id: Taichi
-  mapName: 'SKR Taichi'
-  mapPath: /Maps/_Mono/Shuttles/taichi.yml
+  id: Lautaro
+  mapName: 'WLV Lautaro'
+  mapPath: /Maps/_Mono/Shuttles/lautaro.yml
   minPlayers: 0
   stations:
-    Taichi:
+    Lautaro:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Taichi MED{1}'
+          mapNameTemplate: 'Lautaro MED{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
