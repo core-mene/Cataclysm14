@@ -14,6 +14,9 @@ marking-LizardHornsAngler = Lizard Horns (Angler)
 marking-LizardHornsCurled-horns_curled = Lizard Horns (Curled)
 marking-LizardHornsCurled = Lizard Horns (Curled)
 
+marking-LizardHornsAntler-horns_antler = Lizard Horns (Antler)
+marking-LizardHornsAntler = Lizard Horns (Antler)
+
 marking-LizardHornsRam-horns_ram = Lizard Horns (Ram)
 marking-LizardHornsRam = Lizard Horns (Ram)
 

@@ -137,6 +137,17 @@
     state: horns_double_r
 
 - type: marking
+  id: LizardHornsAntler
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: _Mono/Mobs/Customization/reptilian_parts.rsi
+    state: horns_antler_l
+  - sprite: _Mono/Mobs/Customization/reptilian_parts.rsi
+    state: horns_antler_r
+
+- type: marking
   id: LizardTailSmooth
   bodyPart: Tail
   markingCategory: Tail

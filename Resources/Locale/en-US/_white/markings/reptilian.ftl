@@ -18,6 +18,9 @@ marking-LizardHeadCobraHood-cobra_hood_with_ears_overlay = Inner
 marking-LizardHornsCurled-horns_curled_l = Left horn
 marking-LizardHornsCurled-horns_curled_r = Right horn
 
+marking-LizardHornsAntler-horns_antler_l = Left horn
+marking-LizardHornsAntler-horns_antler_r = Right horn
+
 marking-LizardHornsRam-horns_ram_l = Left horn
 marking-LizardHornsRam-horns_ram_r = Right horn
 
