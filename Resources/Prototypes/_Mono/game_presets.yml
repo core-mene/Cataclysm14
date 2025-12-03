@@ -82,39 +82,6 @@
   - MonoAsakimSTCShuttleSpawnerScheduler
 
 - type: gamePreset
-  id: MonoChimera
-  name: mono-chimera-title
-  description: mono-chimera-description
-  showInVote: true
-  rules:
-  - NFAdventure
-  - BasicStationEventScheduler
-  - BluespaceEventScheduler
-  - BluespaceDungeonEventScheduler
-  - BluespaceSalvageEventScheduler
-  - SmugglingEventScheduler
-  - FrontierRoundstartVariation
-  - MonoChimeraSTCShuttleSpawnerScheduler
-
-- type: gamePreset
-  id: MonoMixed
-  name: mono-mixed-title
-  description: mono-mixed-description
-  showInVote: true
-  rules:
-  - NFAdventure
-  - BasicStationEventScheduler
-  - BluespaceEventScheduler
-  - BluespaceDungeonEventScheduler
-  - BluespaceSalvageEventScheduler
-  - SmugglingEventScheduler
-  - FrontierRoundstartVariation
-  - MonoChimeraSTCShuttleSpawnerSchedulerSlow
-  - MonoAISTCShuttleSpawnerSchedulerSlow
-  - MonoAISTCShuttleSpawnerSchedulerTier2Slow
-  - MonoAsakimSTCShuttleSpawnerSchedulerSlow
-
-- type: gamePreset
   id: MonoAllAtOnce
   name: mono-allatonce-title
   description: mono-allatonce-description
@@ -127,7 +94,6 @@
   - BluespaceSalvageEventScheduler
   - SmugglingEventScheduler
   - FrontierRoundstartVariation
-  - MonoChimeraSTCShuttleSpawnerSchedulerApocalypse
   - MonoAISTCShuttleSpawnerSchedulerApocalypse
   - MonoAsakimSTCShuttleSpawnerSchedulerApocalypse
 

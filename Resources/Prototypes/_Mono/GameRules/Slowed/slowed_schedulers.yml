@@ -38,14 +38,3 @@
       min: 5400 # 90 minutes between events
       max: 10800 # 180 minutes between events
 
-- type: entity
-  id: MonoChimeraSTCShuttleSpawnerSchedulerSlow
-  parent: BaseGameRule
-  components:
-  - type: BasicStationEventScheduler
-    scheduledGameRules: !type:NestedSelector
-      tableId: ChimeraShipsTable
-    minimumTimeUntilFirstEvent: 14400 # 240 minutes
-    minMaxEventTiming:
-      min: 5400 # 90 minutes between events
-      max: 5400 # 90 minutes between events

@@ -3,18 +3,6 @@
 # SPDX-License-Identifier: MPL-2.0
 
 - type: entity
-  id: MonoChimeraSTCShuttleSpawnerSchedulerApocalypse
-  parent: BaseGameRule
-  components:
-  - type: BasicStationEventScheduler
-    scheduledGameRules: !type:NestedSelector
-      tableId: ChimeraShipsTable
-    minimumTimeUntilFirstEvent: 3600 # 60 minutes
-    minMaxEventTiming:
-      min: 1800 # 30 minutes between events
-      max: 1800 # 30 minutes between events
-
-- type: entity
   id: MonoAISTCShuttleSpawnerSchedulerApocalypse
   parent: BaseGameRule
   components:
