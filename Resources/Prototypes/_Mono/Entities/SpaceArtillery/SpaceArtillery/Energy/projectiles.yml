@@ -315,6 +315,44 @@
     lightningProto: LightningEMP
     lightningEffects: false
 
+# Tartarus
+
+- type: entity
+  id: ShipAntiMatterProjectile
+  name: antimatter projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Heat: 8500
+        Structural: 20000
+  - type: ArmorPiercing
+    piercingThickness: 20
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Projectiles/ship_projectiles.rsi
+    layers:
+    - state: antimatter-particle
+  - type: Ammo
+    muzzleFlash: MuzzleFlashEffectTempHot
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    radarColor: "#ab0707"
+    scale: 3
+    requireNoGrid: true
+    shape: circle
+  - type: TimedDespawn
+    lifetime: 1.75
+  - type: PointLight
+    color: "#ab0707"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 2500
+    intensitySlope: 50
+    maxIntensity: 800
+
 
 # region Laser Hitscans
 
