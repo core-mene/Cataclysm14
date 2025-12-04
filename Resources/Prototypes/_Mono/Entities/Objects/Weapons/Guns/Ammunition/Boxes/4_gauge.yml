@@ -49,21 +49,6 @@
       - state: lethal
 
 - type: entity
-  name: shotgun shell box (4 gauge Dozd)
-  parent: AmmoProvider23x75mmShotgunShell
-  id: AmmoBox23x75mmDozd
-  components:
-    - type: BallisticAmmoProvider
-      proto: ShellShotgun23x75mmDozd
-    - type: Sprite
-      layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-1
-        map: ["enum.GunVisualLayers.Mag"]
-      - state: lethal
-
-- type: entity
   name: shotgun shell box (4 gauge slug)
   parent: AmmoProvider23x75mmShotgunShell
   id: AmmoBox23x75mmSlug

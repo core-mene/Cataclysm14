@@ -109,7 +109,7 @@
       types:
         Slash: 4
         Piercing: 32
-    armorPenetration: -0.7
+    armorPenetration: -1
 
 - type: entity
   id: Bullet45_ACPRIP
@@ -122,7 +122,7 @@
       types:
         Slash: 7
         Piercing: 42
-    armorPenetration: -0.95
+    armorPenetration: -2
 
 #armor-piercing:
 
@@ -135,5 +135,5 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 12
+        Piercing: 16
     armorPenetration: 0.7

@@ -55,20 +55,6 @@
     state: "beanbag"
 
 - type: entity
-  id: ShellShotgun23x75mmDozd
-  name: shotgun shell (4 gauge Dozd)
-  parent: BaseShellShotgun23x75mm
-  components:
-  - type: Sprite
-    layers:
-      - state: dozd
-        map: [ "enum.AmmoVisualLayers.Base" ]
-  - type: CartridgeAmmo
-    proto: Pellet23x75mmDozdSpread
-  - type: SpentAmmoVisuals
-    state: "dozd"
-
-- type: entity
   id: ShellShotgun23x75mmSlug
   name: shotgun shell (4 gauge slug)
   parent: BaseShellShotgun23x75mm

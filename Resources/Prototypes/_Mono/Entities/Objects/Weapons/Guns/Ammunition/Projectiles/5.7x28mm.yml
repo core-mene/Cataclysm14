@@ -91,7 +91,7 @@
   - type: Projectile
     damage:
       types:
-        Shock: 0
+        Shock: 1
 
 # Mono AP syst
 # + 0.05 base AP
@@ -133,5 +133,5 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 7
+        Piercing: 10
     armorPenetration: 0.7
