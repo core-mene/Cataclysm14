@@ -7,6 +7,7 @@
 # SPDX-FileCopyrightText: 2024 Whatstone
 # SPDX-FileCopyrightText: 2024 blueDev2
 # SPDX-FileCopyrightText: 2025 Arcticular
+# SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 Ark
 # SPDX-FileCopyrightText: 2025 BramvanZijp
 # SPDX-FileCopyrightText: 2025 GreaseMonk
@@ -390,82 +391,6 @@
     - AstroNavCartridge
     - LedgerCartridge
     - MailMetricsCartridge
-
-- type: entity
-  parent: PiratePDA
-  id: PirateNFPDA
-  name: PDV rakhshan PDA
-  description: A PDA belonging to a front liner of the Phaethon Dynasty Vanguard.
-  components:
-  - type: Pda
-    id: PirateNFIDCard
-  - type: Appearance
-    appearanceDataInit:
-      enum.PdaVisuals.PdaType:
-        !type:String
-        pda-syndi
-  - type: Geiger # Mono
-    showExamine: true
-    showControl: true
-    isEnabled: true
-    attachedToSuit: true # Mono
-
-- type: entity
-  parent: PiratePDA
-  id: PirateCaptainNFPDA
-  name: PDV grand vizier PDA
-  description: The PDA of one of the Vanguards elite commanders.
-  components:
-  - type: Pda
-    id: PirateCaptainNFIDCard
-  - type: Appearance
-    appearanceDataInit:
-      enum.PdaVisuals.PdaType:
-        !type:String
-        pda-syndi-agent
-  - type: Geiger # Mono
-    showExamine: true
-    showControl: true
-    isEnabled: true
-    attachedToSuit: true # Mono
-
-- type: entity
-  parent: PiratePDA
-  id: PirateFirstMateNFPDA
-  name: PDV asvaran PDA
-  description: The PDA of one of the closest in the ranks to Grand Vizier.
-  components:
-  - type: Pda
-    id: PirateFirstMateNFIDCard
-  - type: Appearance
-    appearanceDataInit:
-      enum.PdaVisuals.PdaType:
-        !type:String
-        pda-syndi
-  - type: Geiger # Mono
-    showExamine: true
-    showControl: true
-    isEnabled: true
-    attachedToSuit: true # Mono
-
-- type: entity
-  parent: PiratePDA
-  id: PDVSpasakaPDA
-  name: PDV spasaka PDA
-  description: A PDA belonging to an imperial specialist. Should you really be holding this openly?
-  components:
-  - type: Pda
-    id: PDVSpasakaIDCard
-  - type: Appearance
-    appearanceDataInit:
-      enum.PdaVisuals.PdaType:
-        !type:String
-        pda-syndi
-  - type: Geiger # Mono
-    showExamine: true
-    showControl: true
-    isEnabled: true
-    attachedToSuit: true # Mono
 
 - type: entity
   parent: PassengerPDA

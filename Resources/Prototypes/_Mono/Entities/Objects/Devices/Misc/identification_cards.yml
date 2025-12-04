@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 thoughtlessuser
@@ -148,7 +149,20 @@
   - type: Item
     heldPrefix: blue
 
- #MARK: PDV
+# MARK: PDV
+
+- type: entity
+  parent: PirateIDCard
+  id: PDVRakhshanIDCard
+  name: PDV rakhshan id card
+  components:
+  - type: PresetIdCard
+    job: Pirate
+  - type: Sprite
+    sprite: _Mono/Objects/Misc/id_cards.rsi
+    layers:
+    - state: base
+    - state: idrakhshan
 
 - type: entity
   parent: PirateIDCard
@@ -162,5 +176,68 @@
     sprite: _Mono/Objects/Misc/id_cards.rsi
     layers:
     - state: brass
-    - state: id_denasvar
+    - state: iddenasvar
 
+- type: entity
+  parent: PirateIDCard
+  id: PDVAsvaranIDCard
+  name: PDV asvaran ID card
+  components:
+  - type: PresetIdCard
+    job: PirateFirstMate
+  - type: Sprite
+    sprite: _Mono/Objects/Misc/id_cards.rsi
+    layers:
+    - state: base
+    - state: idasvaran
+
+- type: entity
+  parent: PirateIDCard
+  id: PDVGrandVizierIDCard
+  name: PDV grand vizier ID card
+  components:
+  - type: PresetIdCard
+    job: PirateCaptain
+  - type: Sprite
+    sprite: _Mono/Objects/Misc/id_cards.rsi
+    layers:
+    - state: vizierbase
+    - state: idvizier
+
+- type: entity
+  name: spasaka ID card # Frontier: passenger<contractor
+  parent: [IDCardStandard, BaseC3SyndicateContraband]
+  id: PDVSpasakaIDCard
+  suffix: Chameleon
+  components:
+  - type: PresetIdCard
+    job: PDVInfiltrator # Frontier: Passenger<Contractor
+  - type: Access
+    tags:
+    - Maintenance
+    - Pirate
+    - Mercenary
+  - type: Sprite
+    sprite: _Mono/Objects/Misc/id_cards.rsi
+    layers:
+    - state: base
+    - state: idrakhshan
+  - type: AgentIDCard
+  - type: ActivatableUI
+    key: enum.AgentIDCardUiKey.Key
+    inHandsOnly: true
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+  - type: ChameleonClothing
+    slot: [idcard]
+    default: PDVRakhshanIDCard # Frontier: PassengerIDCard<ContractorIDCard
+    requireTag: WhitelistChameleonIdCard
+  - type: UserInterface
+    interfaces:
+      enum.AgentIDCardUiKey.Key:
+        type: AgentIDCardBoundUserInterface
+      enum.ChameleonUiKey.Key:
+        type: ChameleonBoundUserInterface
+  - type: Contraband # Frontier
+    hideValues: true # Frontier
