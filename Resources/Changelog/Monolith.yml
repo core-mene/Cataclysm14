@@ -14555,3 +14555,65 @@ Entries:
   id: 1616
   time: '2025-12-03T11:13:17.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2675
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: Microwaves are now transportable by hand and weaponized.
+  id: 1617
+  time: '2025-12-04T12:24:22.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2739
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: >-
+        Civillian tech disk drops from salvage now spawn inside salvmaint
+        lockers instead of outside salv material crates
+    - type: Tweak
+      message: Salvage maints locker drop tables generally improved
+    - type: Tweak
+      message: >-
+        Scrap processor drop table touched up: you can now find AI cores and
+        some less-remarkable shuttle board components are more common
+  id: 1618
+  time: '2025-12-04T12:34:04.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2688
+- author: Scruq445
+  changes:
+    - type: Tweak
+      message: Added new sounds to instruments
+    - type: Fix
+      message: Hopefully fix the instrument bug
+  id: 1619
+  time: '2025-12-04T12:44:53.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2641
+- author: Ilya246
+  changes:
+    - type: Add
+      message: 'Added new rare ADS: Razor-N.'
+  id: 1620
+  time: '2025-12-04T12:45:55.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2637
+- author: Onezero0
+  changes:
+    - type: Remove
+      message: >-
+        Removed the Kargil, ASM-501 and Charonette. Ships that used these
+        (Scorpion, Vulture, Hourglass, Sellsword, etc) may be temporarily
+        under-armed.
+    - type: Tweak
+      message: Shipguns have been universally tweaked - TTK should be higher.
+    - type: Tweak
+      message: >-
+        Shipguns have infinite normal ammo. Expect special ammo types to make an
+        appearance sometime in the future.
+    - type: Tweak
+      message: Increased price of subnuclear Charon ammo.
+    - type: Fix
+      message: Mechs no longer take unblockable damage from EMP sources.
+    - type: Tweak
+      message: Mechs have new armor values, and can receive structural damage now.
+    - type: Tweak
+      message: AP ammo does structural damage now.
+  id: 1621
+  time: '2025-12-04T13:07:06.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2690
