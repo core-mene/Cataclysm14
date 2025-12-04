@@ -205,13 +205,13 @@
     - state: id_vizier
 
 - type: entity
-  name: spasaka ID card # Frontier: passenger<contractor
+  name: spasaka ID card
   parent: [IDCardStandard, BaseC3SyndicateContraband]
   id: PDVSpasakaIDCard
   suffix: Chameleon
   components:
   - type: PresetIdCard
-    job: PDVInfiltrator # Frontier: Passenger<Contractor
+    job: PDVInfiltrator
   - type: Access
     tags:
     - Maintenance
@@ -231,7 +231,7 @@
     - DoorBumpOpener
   - type: ChameleonClothing
     slot: [idcard]
-    default: PDVRakhshanIDCard # Frontier: PassengerIDCard<ContractorIDCard
+    default: PDVRakhshanIDCard
     requireTag: WhitelistChameleonIdCard
   - type: UserInterface
     interfaces:
