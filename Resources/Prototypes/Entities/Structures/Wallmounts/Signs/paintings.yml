@@ -5,6 +5,17 @@
   components:
   - type: WallMount
     arc: 360
+  - type: Destructible #Mono start
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:DoActsBehavior
+        acts: ["Destruction"] #Mono end
   - type: Sprite
     drawdepth: WallMountedItems
     sprite: Structures/Wallmounts/paintings.rsi
@@ -17,6 +28,9 @@
   components:
   - type: Sprite
     state: painting0
+  - type: Construction #Mono start: Constructible art
+    graph: RandomPainting
+    node: emptyPainting #Mono end
 
 - type: entity
   parent: PaintingBase
