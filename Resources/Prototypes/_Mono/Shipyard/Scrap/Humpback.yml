@@ -1,0 +1,43 @@
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Author Info
+# Discord: Bendego (with the help of friends)
+
+# Shuttle Notes:
+- type: vessel
+  id: Humpback
+  parent: BaseVessel
+  name: SKR Humpback
+  description: An oddly fitted ship, while lacking side guns, makes up for it with sheer frontal firepower, hence the hump.
+  price: 52821
+  category: Medium
+  group: Scrap
+  shuttlePath: /Maps/_Mono/Shuttles/Scrap/humpback.yml
+  guidebookPage: Null
+  class:
+  - Scrapyard
+  - Pursuit
+  engine:
+  - Uranium # Pinch fusion gen kind, not the pacman kind.
+
+- type: gameMap
+  id: Humpback
+  mapName: 'SKR Humpback'
+  mapPath: /Maps/_Mono/Shuttles/Scrap/humpback.yml
+  minPlayers: 0
+  stations:
+    Humpback:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Humpback SRP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
