@@ -15,7 +15,7 @@
 
 - type: loadoutGroup
   id: PirateJumpsuit
-  name: loadout-group-pirate-jumpsuit
+  name: loadout-group-contractor-jumpsuit
   loadouts:
   - PirateJumpsuit
   - PirateJumpskirt
@@ -26,7 +26,7 @@
 
 - type: loadoutGroup
   id: RakhshanPDA
-  name: loadout-group-pirate-id
+  name: loadout-group-contractor-id
   hidden: true # No point in showing this, it gets auto-selected.
   loadouts:
   - PDVRakhshanPDVRakhshanPDA
@@ -35,7 +35,7 @@
 
 - type: loadoutGroup
   id: PirateFace
-  name: loadout-group-pirate-face
+  name: loadout-group-contractor-face
   minLimit: 0
   loadouts:
   - ContractorClothingMaskBreath
@@ -47,7 +47,7 @@
 
 - type: loadoutGroup
   id: PirateShoes
-  name: loadout-group-pirate-shoes
+  name: loadout-group-contractor-shoes
   loadouts:
   - PirateClothingShoesBootsLaceup
   - PirateClothingShoesBootsPirateLuffy
@@ -58,7 +58,7 @@
 
 - type: loadoutGroup
   id: PirateHead
-  name: loadout-group-pirate-head
+  name: loadout-group-contractor-head
   minLimit: 0
   loadouts:
   - PirateClothingHeadBandBlack
@@ -72,7 +72,7 @@
 
 - type: loadoutGroup
   id: PirateTrinkets
-  name: loadout-group-pirate-trinkets
+  name: loadout-group-contractor-trinkets
   minLimit: 0
   maxLimit: 3
   loadouts:
@@ -84,7 +84,7 @@
 
 - type: loadoutGroup
   id: PirateCaptainHead
-  name: loadout-group-pirate-head
+  name: loadout-group-contractor-head
   minLimit: 0
   loadouts:
   - PirateClothingHeadHatPirate
@@ -96,7 +96,7 @@
 
 - type: loadoutGroup
   id: PirateCaptainOuterClothing
-  name: loadout-group-pirate-outerclothing
+  name: loadout-group-contractor-outerclothing
   hidden: false
   minLimit: 0
   loadouts:
@@ -108,7 +108,7 @@
 
 - type: loadoutGroup
   id: GrandVizierPDA
-  name: loadout-group-pirate-id
+  name: loadout-group-contractor-id
   hidden: true # No point in showing this, it gets auto-selected.
   loadouts:
   - PDVGrandVizierPDVGrandVizierPDA
@@ -117,7 +117,7 @@
 
 - type: loadoutGroup
   id: PirateCaptainWallet
-  name: loadout-group-pirate-wallet
+  name: loadout-group-contractor-wallet
   hidden: true # No point in showing this, it gets auto-selected.
   loadouts:
   - PirateCaptainClothingWalletLeatherPirate
@@ -126,7 +126,7 @@
 
 - type: loadoutGroup
   id: PirateCaptainTrinkets
-  name: loadout-group-pirate-trinkets
+  name: loadout-group-contractor-trinkets
   minLimit: 0
   maxLimit: 3
   loadouts:
@@ -138,7 +138,7 @@
 
 - type: loadoutGroup
   id: PirateFirstMateHead
-  name: loadout-group-pirate-head
+  name: loadout-group-contractor-head
   minLimit: 0
   loadouts:
   - PirateClothingHeadHatPirateTricord
@@ -150,7 +150,7 @@
 
 - type: loadoutGroup
   id: PirateFirstMateOuterClothing
-  name: loadout-group-pirate-outerclothing
+  name: loadout-group-contractor-outerclothing
   minLimit: 0
   loadouts:
   - PirateFirstMateClothingOuterCoatGentle
@@ -161,7 +161,7 @@
 
 - type: loadoutGroup
   id: AsvaranPDA
-  name: loadout-group-pirate-id
+  name: loadout-group-contractor-id
   hidden: true # No point in showing this, it gets auto-selected.
   loadouts:
   - PDVAsvaranPDVAsvaranPDA
@@ -172,7 +172,7 @@
 
 - type: loadoutGroup
   id: PDVInfiltratorPDA
-  name: loadout-group-pirate-id
+  name: loadout-group-contractor-id
   hidden: true # No point in showing this, it gets auto-selected.
   loadouts:
   - PDVSpasakaPDVSpasakaPDA
@@ -181,7 +181,7 @@
 
 - type: loadoutGroup
   id: PDVDenasvarPDA
-  name: loadout-group-pirate-id
+  name: loadout-group-contractor-id
   hidden: true # No point in showing this, it gets auto-selected.
   loadouts:
   - PDVDenasvarPDVDenasvarPDA
