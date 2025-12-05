@@ -32,8 +32,9 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 26
-    armorPenetration: 0.05
+        Piercing: 23
+        Structural: 10 # heavy SMG round
+    armorPenetration: 0.1
 
 - type: entity
   id: Bullet45_ACPPractice
@@ -93,7 +94,7 @@
   - type: Projectile
     damage:
       types:
-        Shock: 0
+        Shock: 2
 
 
 # Mono AP syst
@@ -136,4 +137,5 @@
     damage:
       types:
         Piercing: 12
+        Structural: 35
     armorPenetration: 1

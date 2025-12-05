@@ -134,5 +134,6 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 8
-    armorPenetration: 1
+        Piercing: 7
+        Structural: 20
+    armorPenetration: 0.8 # less pen because small smg round (balancing concerns)
