@@ -5,17 +5,31 @@
   components:
   - type: WallMount
     arc: 360
-  - type: Destructible #Mono start
+  - type: Destructible #Mono Start
     thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 15
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: WoodDestroy
     - trigger:
         !type:DamageTrigger
         damage: 5
       behaviors:
+      - !type:ChangeConstructionNodeBehavior
+        node: emptyPainting
       - !type:PlaySoundBehavior
         sound:
-          collection: WoodDestroy
+          path: /Audio/Effects/poster_broken.ogg
       - !type:DoActsBehavior
-        acts: ["Destruction"] #Mono end
+        acts: [ "Destruction" ] 
+  - type: Construction
+    graph: RandomPainting
+    node: finishedPainting #Mono end
   - type: Sprite
     drawdepth: WallMountedItems
     sprite: Structures/Wallmounts/paintings.rsi
@@ -28,7 +42,18 @@
   components:
   - type: Sprite
     state: painting0
-  - type: Construction #Mono start: Constructible art
+  - type: Destructible #Mono Start
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: WoodDestroy
+  - type: Construction #Constructible art
     graph: RandomPainting
     node: emptyPainting #Mono end
 

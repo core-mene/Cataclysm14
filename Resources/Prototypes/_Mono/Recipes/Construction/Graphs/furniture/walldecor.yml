@@ -44,3 +44,6 @@
           
   - node: randomPainting
     entity: RandomPaintingConstructed
+    
+  - node: finishedPainting #Used to make paintings break into empty frames
+    entity: PaintingBase
