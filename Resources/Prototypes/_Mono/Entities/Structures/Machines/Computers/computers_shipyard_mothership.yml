@@ -1,7 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Arcticular
 # SPDX-FileCopyrightText: 2025 BoskiYourk
 # SPDX-FileCopyrightText: 2025 UnicornOnLSD
 # SPDX-FileCopyrightText: 2025 crazy1112345
 # SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 thoughtlessuser
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -113,3 +115,25 @@
     - map: ["computerLayerKeys"]
       state: blackmarket_key
 
+
+- type: entity
+  id: PDVCarrierComputer
+  parent: BaseCarrierComputer
+  name: motley anne shipyard console
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Snakelet
+    - Inertia
+    - Mock
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_blackmarket
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_blackmarket
+    - map: ["computerLayerKeys"]
+      state: blackmarket_key
