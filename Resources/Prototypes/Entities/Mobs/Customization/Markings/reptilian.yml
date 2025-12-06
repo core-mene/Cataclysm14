@@ -1,3 +1,19 @@
+# SPDX-FileCopyrightText: 2022 Flipp Syder
+# SPDX-FileCopyrightText: 2022 Scribbles0
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2023 csqrb
+# SPDX-FileCopyrightText: 2024 Flareguy
+# SPDX-FileCopyrightText: 2024 KittenColony
+# SPDX-FileCopyrightText: 2024 Morb
+# SPDX-FileCopyrightText: 2024 Nairod
+# SPDX-FileCopyrightText: 2024 T-Stalker
+# SPDX-FileCopyrightText: 2024 Ubaser
+# SPDX-FileCopyrightText: 2024 pigeonpeas
+# SPDX-FileCopyrightText: 2025 Dragy Devi
+# SPDX-FileCopyrightText: 2025 SuperJoelDood
+#
+# SPDX-License-Identifier: MPL-2.0
+
 - type: marking
   id: LizardFrillsAquatic
   bodyPart: HeadSide
@@ -135,6 +151,17 @@
     state: horns_double_l
   - sprite: _White/Mobs/Customization/reptilian_parts.rsi # WWDP-Edit
     state: horns_double_r
+
+- type: marking
+  id: LizardHornsAntler
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: _Mono/Mobs/Customization/reptilian_parts.rsi
+    state: horns_antler_l
+  - sprite: _Mono/Mobs/Customization/reptilian_parts.rsi
+    state: horns_antler_r
 
 - type: marking
   id: LizardTailSmooth
