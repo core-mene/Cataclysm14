@@ -1,6 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
 # SPDX-FileCopyrightText: 2025 tonotom
+# SPDX-FileCopyrightText: 2025 tonotom1
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -53,20 +55,6 @@
     proto: Pellet23x75mmBeanbag
   - type: SpentAmmoVisuals
     state: "beanbag"
-
-- type: entity
-  id: ShellShotgun23x75mmDozd
-  name: shotgun shell (4 gauge Dozd)
-  parent: BaseShellShotgun23x75mm
-  components:
-  - type: Sprite
-    layers:
-      - state: dozd
-        map: [ "enum.AmmoVisualLayers.Base" ]
-  - type: CartridgeAmmo
-    proto: Pellet23x75mmDozdSpread
-  - type: SpentAmmoVisuals
-    state: "dozd"
 
 - type: entity
   id: ShellShotgun23x75mmSlug

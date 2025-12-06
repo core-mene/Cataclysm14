@@ -239,31 +239,6 @@
     count: 5
     spread: 6
 
-- type: entity
-  id: Pellet23x75mmDozd
-  name: pellet (4 gauge)
-  categories: [ HideSpawnMenu ]
-  parent: BaseBullet
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    state: Dozd
-  - type: Projectile
-    damage:
-      types:
-        Piercing: 8
-    armorPenetration: -0.2
-
-- type: entity
-  id: Pellet23x75mmDozdSpread
-  categories: [ HideSpawnMenu ]
-  parent: Pellet23x75mmDozd
-  components:
-  - type: ProjectileSpread
-    proto: Pellet23x75mmDozd
-    count: 12
-    spread: 30
-
 #Mono AP system
 #anti-flesh ammo
 - type: entity
@@ -279,7 +254,7 @@
     damage:
       types:
         Piercing: 40
-    armorPenetration: -0.2
+    armorPenetration: -1
 
 - type: entity
   id: Pellet23x75mmOOBuckshotSpread
@@ -322,7 +297,7 @@
       types:
         Piercing: 40
         Structural: 250
-    armorPenetration: 0.5
+    armorPenetration: 1
   - type: Tracer
     color: "#6f7c82ff"
     length: 3

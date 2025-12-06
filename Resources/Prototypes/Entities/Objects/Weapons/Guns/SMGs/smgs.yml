@@ -33,11 +33,13 @@
 # SPDX-FileCopyrightText: 2024 ThatGuyUSA
 # SPDX-FileCopyrightText: 2024 metalgearsloth
 # SPDX-FileCopyrightText: 2024 nikthechampiongr
+# SPDX-FileCopyrightText: 2025 Arcticular
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 BramvanZijp
 # SPDX-FileCopyrightText: 2025 Eden077
 # SPDX-FileCopyrightText: 2025 K-Dynamic
+# SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 UltimateJester
@@ -281,10 +283,10 @@
 
 
 - type: entity
-  name: UI WT550 (4.6x30mm)
+  name: UI WT550 (.45 ACP)
   parent: [ BaseWeaponSubMachineGun, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponSubMachineGunWt550
-  description: An excellent SMG, produced by a Black Market Arms Company known as Ullman Industries. Uses 4.6x30mm ammo. On the receiver is a label that says 'for authorized use only.'
+  description: An excellent SMG, produced by a Black Market Arms Company known as Ullman Industries. Uses .45 ACP ammo. On the receiver is a label that says 'for authorized use only.'
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/SMGs/wt550.rsi
@@ -323,21 +325,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine46x30mmSubMachineGunTopMountedFMJ
+        startingItem: Magazine45_ACPSubMachineGunTopMountedFMJ
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine46x30mmSubMachineGunTopMountedFMJ
+            - Magazine45_ACPSubMachineGunTopMountedFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge46x30mmFMJ
+        startingItem: Cartridge45_ACPFMJ
         priority: 1
         whitelist:
           tags:
-            - Cartridge46x30mmFMJ
+            - Cartridge45_ACPFMJ
   - type: MagazineVisuals
     magState: mag
     steps: 6

@@ -347,7 +347,7 @@
     damage:
       types:
         Piercing: 19
-    armorPenetration: -0.2
+    armorPenetration: -1
 
 - type: entity
   id: Pellet12_gaugeOOBuckshotSpread
@@ -373,7 +373,7 @@
       types:
         Piercing: 80
         Structural: 300
-    armorPenetration: -0.9
+    armorPenetration: -1
 
 #armor-piercing ammo
 - type: entity
@@ -390,7 +390,7 @@
       types:
         Piercing: 28
         Structural: 250
-    armorPenetration: 0.4
+    armorPenetration: 1
   - type: Tracer
     color: "#6f7c82ff"
     length: 3

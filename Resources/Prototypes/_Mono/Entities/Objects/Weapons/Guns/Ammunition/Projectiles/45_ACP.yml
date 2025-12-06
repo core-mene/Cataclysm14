@@ -32,9 +32,9 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 20
-        Structural: 20
-    armorPenetration: 0.2
+        Piercing: 23
+        Structural: 10 # heavy SMG round
+    armorPenetration: 0.1
 
 - type: entity
   id: Bullet45_ACPPractice
@@ -82,7 +82,6 @@
       types:
         Radiation: 9
         Piercing: 15
-        Structural: 20
     armorPenetration: -0.075
 
 # Upstream
@@ -111,7 +110,7 @@
       types:
         Slash: 4
         Piercing: 32
-    armorPenetration: -0.7
+    armorPenetration: -1
 
 - type: entity
   id: Bullet45_ACPRIP
@@ -124,7 +123,7 @@
       types:
         Slash: 7
         Piercing: 42
-    armorPenetration: -0.95
+    armorPenetration: -2
 
 #armor-piercing:
 
@@ -137,6 +136,6 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 16
-        Structural: 40
-    armorPenetration: 0.7
+        Piercing: 12
+        Structural: 35
+    armorPenetration: 1
