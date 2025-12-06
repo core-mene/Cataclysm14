@@ -1,0 +1,49 @@
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitScafAdvanced
+  parent: NFBaseEVASuitRecipe
+  completetime: 30
+  categories:
+  - CombatEva
+  - EVASuits
+  - ArmorNF
+  result: ClothingOuterHardsuitScafAdvanced
+  materials:
+    Glass: 1000
+    Steel: 6000
+    Plastic: 4000
+    Plasteel: 7000
+    Durathread: 4000
+    Silver: 1500
+    Gold: 1500
+  
+- type: latheRecipe
+  id: ClothingHeadHelmetHardsuitScafAdvanced
+  parent: NFBaseEVASuitRecipe
+  completetime: 30
+  categories:
+  - CombatEva
+  - EVASuits
+  - ArmorNF
+  result: ClothingHeadHelmetHardsuitScafAdvanced
+  materials:
+    Glass: 2000
+    Steel: 1500
+    Plastic: 1500
+    Plasteel: 3000
+    Durathread: 1500
+    Silver: 1000
+    Gold: 1000
+
+- type: latheRecipe
+  id: ClothingHeadHelmetHardsuitScafAdvancedClear
+  parent: ClothingHeadHelmetHardsuitScafAdvanced
+  result: ClothingHeadHelmetHardsuitScafAdvancedClear
+  
+- type: latheRecipe
+  id: ClothingHeadHelmetHardsuitScafAdvancedSkull
+  parent: ClothingHeadHelmetHardsuitScafAdvanced
+  result: ClothingHeadHelmetHardsuitScafAdvancedSkull

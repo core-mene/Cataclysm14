@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2025 Avalon
+# SPDX-FileCopyrightText: 2025 GOLDMASK990
 # SPDX-FileCopyrightText: 2025 Goldmask990
 # SPDX-FileCopyrightText: 2025 Onezero0
 # SPDX-FileCopyrightText: 2025 core-mene
@@ -12,7 +14,7 @@
   entityIcon: WeaponLMGRatel
   discipline: Arsenal
   tier: 2
-  cost: 25000
+  cost: 50000
   recipeUnlocks:
   - WeaponLMGRatel
   - WeaponShotgunBigBuddy
@@ -27,7 +29,7 @@
   entityIcon: WeaponSubMachineGunVector9x19mm
   discipline: Arsenal
   tier: 2
-  cost: 15000
+  cost: 30000
   recipeUnlocks:
   - WeaponShotgunBigJohnny
   - WeaponShotgunEnforcerMerc
@@ -45,7 +47,7 @@
   entityIcon: WeaponRiflePrometheus
   discipline: Arsenal
   tier: 1
-  cost: 7500
+  cost: 15000
   recipeUnlocks:
   - WeaponSubMachineGunWt550
   - WeaponRiflePrometheus
@@ -54,3 +56,20 @@
   technologyPrerequisites:
   - BasicParts
   position: 2, 1
+
+- type: technology
+  id: HardsuitMercenaryAdvanced
+  name: research-technology-merc-hardsuit-advanced
+  entityIcon: ClothingOuterHardsuitScafAdvanced
+  discipline: Arsenal
+  tier: 1
+  cost: 50000
+  recipeUnlocks:
+  - ClothingHeadHelmetHardsuitScafAdvanced
+  - ClothingHeadHelmetHardsuitScafAdvancedClear
+  - ClothingHeadHelmetHardsuitScafAdvancedSkull
+  - ClothingOuterHardsuitScafAdvanced
+  technologyPrerequisites:
+  - HardsuitsArmoredAdvanced
+  - SuperParts
+  position: 6, 8

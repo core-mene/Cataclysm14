@@ -1,3 +1,13 @@
+# SPDX-FileCopyrightText: 2024 Dmitri
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Maxtone
+# SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Tier 1
 
 - type: technology
@@ -51,7 +61,6 @@
   - ClothingOuterHardsuitPrivateSecurity
   technologyPrerequisites:
   - HardsuitsSpecialized
-  - HardsuitsAdvanced
   position: 4, 8
 
 - type: technology
@@ -94,11 +103,11 @@
   entityIcon: ClothingOuterHardsuitScaf
   discipline: Arsenal
   tier: 3
-  cost: 25000
+  cost: 30000
   recipeUnlocks:
   - ClothingOuterHardsuitScaf
   - BlueprintClothingOuterHardsuitScaf
   technologyPrerequisites:
   - HardsuitsArmored
-  - SuperParts
+  - AdvancedParts
   position: 5, 8

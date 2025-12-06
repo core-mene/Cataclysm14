@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2024 Kesiath
 # SPDX-FileCopyrightText: 2024 Maxtone
 # SPDX-FileCopyrightText: 2024 Salvantrix
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 BramvanZijp
@@ -37,15 +38,15 @@
   - type: Armor
     modifiers:
       coefficients: # Buffed to be more durable
-        Blunt: 0.65 #0.75->0.65
-        Slash: 0.6 #0.75->0.6
-        Piercing: 0.65 #0.75->0.65
-        Heat: 0.7 #0.80->0.7
-        Radiation: 0.75 # 0.6->0.75
-        Caustic: 0.8
+        Blunt: 0.5 #0.75->0.65-> 0.5
+        Slash: 0.5 #0.75->0.6-> 0.5
+        Piercing: 0.55 #0.75->0.65->.55
+        Heat: 0.55 #0.80->0.7-> 0.55
+        Radiation: 0.5 # 0.6->0.75-> 0.5
+        Caustic: 0.65 # 0.8-> 0.65
   - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.85 # 0.8->0.85
+    walkModifier: 0.95
+    sprintModifier: 0.95 # 0.8->0.85
   - type: HeldSpeedModifier
   - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
     requiredSlot: outerclothing

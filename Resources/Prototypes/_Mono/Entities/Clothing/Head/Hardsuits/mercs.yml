@@ -1,11 +1,14 @@
 # SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Coenx-flex
+# SPDX-FileCopyrightText: 2025 Cojoke
 # SPDX-FileCopyrightText: 2025 HungryCuban
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 core-mene
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: [ClothingHeadHardsuitBase, BaseC3SyndicateContraband, ClothingHeadSuitWithLightBase]
+  parent: [ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase]
   id: ClothingHelmetHardsuitMercenaryWarlord
   name: WL-01 helmet
   description: A heavy headgear piece accompanying the Warlord suit, it offers flash inmunity aswell mass scanner support.
@@ -49,3 +52,57 @@
     - Snout
     - HeadTop
     - HeadSide
+
+#advanced scaf for mercs
+- type: entity
+  parent: [ClothingHeadEVAHelmetBase, ClothingHeadSuitWithLightBase]
+  id: ClothingHeadHelmetHardsuitScafAdvanced
+  name: SCAF reinforced exosuit helmet
+  description: A robust, strong helmet. On the inside smells of pent up anger.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Mono/Clothing/Head/Hardsuits/merc_combat_advanced/normal.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Head/Hardsuits/merc_combat_advanced/normal.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.8
+  - type: PointLight
+    radius: 10 # 7->8->10 Mono
+    energy: 3 # 2->3 Mono
+    color: "#7ECDDD"
+  - type: ToggleableLightVisuals
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+    - HeadTop
+    - HeadSide
+  - type: Item
+    heldPrefix: off
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitScafAdvanced
+  id: ClothingHeadHelmetHardsuitScafAdvancedSkull
+  name: SCAF reinforced exosuit helmet (skullface)
+  description: A robust, strong helmet. On the inside smells of pent up anger.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Head/Hardsuits/merc_combat_advanced/skull.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Head/Hardsuits/merc_combat_advanced/skull.rsi
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitScafAdvanced
+  id: ClothingHeadHelmetHardsuitScafAdvancedClear
+  name: SCAF reinforced exosuit helmet (clear visor)
+  description: A robust, strong helmet. On the inside smells of pent up anger.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Head/Hardsuits/merc_combat_advanced/clear.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Head/Hardsuits/merc_combat_advanced/clear.rsi

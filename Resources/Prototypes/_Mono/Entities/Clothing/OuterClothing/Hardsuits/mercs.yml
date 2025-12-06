@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 HungryCuban
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
@@ -45,3 +46,45 @@
   - type: StaminaDamageResistance
     coefficient: 0.6
 
+#advanced scaf for mercs
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitScafAdvanced
+  name: SCAF reinforced exosuit 
+  description: A combat hardsuit made out of reinforced layered plasteel sheet on top of lead shielding and a pneumatic exoskeleton to help with mobility. Old but still sturdy due to its archaic yet reinforced components.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/merc_combat_advanced.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/merc_combat_advanced.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.35
+        Heat: 0.4
+        Radiation: 0.3
+        Caustic: 0.65
+  - type: ExplosionResistance
+    damageCoefficient: 0.2
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ClothingSpeedModifier # Mono - Armor Value Changes
+    walkModifier: 0.75
+    sprintModifier: 0.75
+  - type: HeldSpeedModifier
+  # no toggleable clothing due to exosuit + needed for helmet variants
+  # - type: ToggleableClothing # Goobstation - Modsuits change - Mono - this is a solution for helmet attachment/cover to not fit on hardsuits
+  #   requiredSlot: outerclothing
+  #   blockUnequipWhenAttached: false
+  #   replaceCurrentClothing: true
+  #   clothingPrototypes:
+  #     head:  ClothingHeadHelmetHardsuitScafAdvanced
+  #     helmetcover: ClothingHeadHelmetCoverBlock
+  #     helmetattachment: ClothingHeadHelmetAttachmentBlock
+  - type: PirateBountyItem # Mono
+    id: ClothingOuterHardsuitTacsuitHighValue
+  - type: StaminaDamageResistance # Mono - Stamres
+    coefficient: 0.45
