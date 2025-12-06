@@ -1,0 +1,48 @@
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 whythelettuce
+#
+# SPDX-License-Identifier: MPL-2.0
+
+# Author Info
+# GitHub: whythelettuce
+# Discord: whythelettuce
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Suspect
+  parent: BaseVessel
+  name: WLV Suspect
+  description: A combination of xenoarch research and salvage expeditions, the Suspect is equipped with all the salvage and science equipment a Mercenary will need.
+  price: 70050 # Appraises 56043, x1.25 rounded. can go higher.
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/_Mono/Shuttles/Expedition/suspect.yml
+  guidebookPage: null
+  class:
+  - Expedition
+  - Science
+  - Salvage
+  engine:
+  - Plasma # pinch generator
+
+- type: gameMap
+  id: Suspect
+  mapName: 'WLV Suspect'
+  mapPath: /Maps/_Mono/Shuttles/Expedition/suspect.yml
+  minPlayers: 0
+  stations:
+    Suspect:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Suspect EXP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
