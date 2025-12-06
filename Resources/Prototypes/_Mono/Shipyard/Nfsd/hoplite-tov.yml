@@ -1,0 +1,35 @@
+#ship by Eldritch_Pineapple
+- type: vessel
+  id: Hoplite-TOV
+  parent: BaseVesselAntag
+  name: TSF-PIN Hoplite-TOV
+  description: A patrol craft meant to intercept smugglers and light enemy craft with powerful engines and EMPs, this version posseses two TOV launchers for long-range disabling of fleeing craft.
+  price: 80000
+  category: Small
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_Mono/Shuttles/Nfsd/hoplite.yml
+  guidebookPage: Null
+  class:
+  - Patrol
+  - Pursuit
+  engine:
+  - Bananium
+
+- type: gameMap
+  id: Hoplite
+  mapName: 'Hoplite-TOV'
+  mapPath: /Maps/_Mono/Shuttles/Nfsd/hoplite-tov.yml
+  minPlayers: 0
+  stations:
+    Fracture:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Hoplite-TOV TSF{1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          Deputy: [ 0, 0 ]
