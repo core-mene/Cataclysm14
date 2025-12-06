@@ -60,6 +60,7 @@
 # SPDX-FileCopyrightText: 2024 strO0pwafel
 # SPDX-FileCopyrightText: 2025 Alkheemist
 # SPDX-FileCopyrightText: 2025 Arcticular
+# SPDX-FileCopyrightText: 2025 Arcticular1
 # SPDX-FileCopyrightText: 2025 Ilya246
 # SPDX-FileCopyrightText: 2025 ScarKy0
 # SPDX-FileCopyrightText: 2025 SlamBamActionman
@@ -699,44 +700,6 @@
   - type: ChameleonClothing
     slot: [idcard]
     default: ContractorIDCard # Frontier: PassengerIDCard<ContractorIDCard
-    requireTag: WhitelistChameleonIdCard
-  - type: UserInterface
-    interfaces:
-      enum.AgentIDCardUiKey.Key:
-        type: AgentIDCardBoundUserInterface
-      enum.ChameleonUiKey.Key:
-        type: ChameleonBoundUserInterface
-  - type: Contraband # Frontier
-    hideValues: true # Frontier
-
-- type: entity
-  name: spasaka ID card # Frontier: passenger<contractor
-  parent: [IDCardStandard, BaseC3SyndicateContraband]
-  id: PDVSpasakaIDCard
-  suffix: Chameleon
-  components:
-  - type: PresetIdCard
-    job: PDVInfiltrator # Frontier: Passenger<Contractor
-  - type: Access
-    tags:
-    - Maintenance
-    - Pirate
-    - Mercenary
-  - type: Sprite
-    layers:
-    - state: pirate
-    - state: idpirate
-      sprite: _NF/Objects/Misc/id_cards.rsi # Frontier
-  - type: AgentIDCard
-  - type: ActivatableUI
-    key: enum.AgentIDCardUiKey.Key
-    inHandsOnly: true
-  - type: Tag
-    tags:
-    - DoorBumpOpener
-  - type: ChameleonClothing
-    slot: [idcard]
-    default: PirateFirstMateNFIDCard # Frontier: PassengerIDCard<ContractorIDCard
     requireTag: WhitelistChameleonIdCard
   - type: UserInterface
     interfaces:

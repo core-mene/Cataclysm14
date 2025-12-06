@@ -16,6 +16,7 @@
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 core-mene
 # SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 thoughtlessuser
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -33,13 +34,6 @@
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
       time: 90000 # 25 hours # mono
-  alternateRequirementSets:
-    longerPlaytimeLessSec:
-    - !type:OverallPlaytimeRequirement
-      time: 108000 # 12 hours # mono
-    - !type:RoleTimeRequirement
-      role: JobSecurityOfficer
-      time: 21600 # 6 hours
   startingGear: SeniorOfficerGear
   icon: JobIconSergeant
   supervisors: job-supervisors-sheriff

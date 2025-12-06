@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2024 Qulibly
 # SPDX-FileCopyrightText: 2024 Salvantrix
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Arcticular
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
@@ -10,6 +11,7 @@
 # SPDX-FileCopyrightText: 2025 significant harassment
 # SPDX-FileCopyrightText: 2025 sleepyyapril
 # SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 thoughtlessuser
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -20,7 +22,7 @@
   playTimeTracker: JobPirate
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 90000 # 25 hrs - mono
+      time: 72000 # 20 hrs - mono
   startingGear: PirateNFGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
@@ -39,9 +41,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-    - type: MailDisabled
-    - type: SpecialSectorStationRecord
-      recordGeneration: FalseRecord
     - type: NpcFactionMember
       factions:
       - PirateNF

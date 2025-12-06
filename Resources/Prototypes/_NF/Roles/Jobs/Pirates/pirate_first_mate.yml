@@ -3,10 +3,13 @@
 # SPDX-FileCopyrightText: 2024 Qulibly
 # SPDX-FileCopyrightText: 2024 Salvantrix
 # SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 Arcticular
 # SPDX-FileCopyrightText: 2025 LukeZurg22
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 ScyronX
+# SPDX-FileCopyrightText: 2025 sleepyyapril
 # SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 thoughtlessuser
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -19,11 +22,8 @@
     - !type:OverallPlaytimeRequirement
       time: 180000 # 50 hours # mono
     - !type:RoleTimeRequirement
-      role: JobPirate
-      time: 72000 # 20 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 18000 # 5 hours # mono
+      role: JobPDVDenasvar
+      time: 28800 # 8 hours
   #whitelisted: true # mono - comment out
   startingGear: PirateFirstMateNFGear
   alwaysUseSpawner: true
@@ -31,8 +31,8 @@
   canBeAntag: true
   icon: "JobIconPirateFirstMate"
   supervisors: job-supervisors-captain
-  weight: 30
-  displayWeight: 30
+  weight: 40
+  displayWeight: 40
   setPreference: true
   guides: [ BasicLore, PhaethonDynasty] # Mono
   access:
@@ -43,9 +43,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-    - type: MailDisabled
-    - type: SpecialSectorStationRecord
-      recordGeneration: FalseRecord
     - type: NpcFactionMember
       factions:
       - PirateNF

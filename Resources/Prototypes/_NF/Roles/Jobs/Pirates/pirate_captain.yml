@@ -10,6 +10,7 @@
 # SPDX-FileCopyrightText: 2025 ScyronX
 # SPDX-FileCopyrightText: 2025 mikusssssss
 # SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 thoughtlessuser
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -24,9 +25,6 @@
     - !type:RoleTimeRequirement
       role: JobPirateFirstMate
       time: 3600 # 1 hour
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 36000 # 10 hours # mono end
   whitelisted: true
   startingGear: PirateCaptainNFGear
   alwaysUseSpawner: true
@@ -34,8 +32,8 @@
   canBeAntag: true
   icon: "JobIconPirateCaptain"
   supervisors: job-supervisors-nobody
-  weight: 40
-  displayWeight: 40
+  weight: 50
+  displayWeight: 50
   setPreference: true
   guides: [ BasicLore, PhaethonDynasty ] # Mono
   access:
@@ -47,9 +45,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-    - type: MailDisabled
-    - type: SpecialSectorStationRecord
-      recordGeneration: FalseRecord
     - type: NpcFactionMember
       factions:
       - PirateNF
