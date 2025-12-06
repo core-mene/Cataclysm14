@@ -1,0 +1,74 @@
+# SPDX-FileCopyrightText: 2025 sneb
+#
+# SPDX-License-Identifier: MPL-2.0
+
+- type: entity
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobHydrakin
+  name: Urist McHydra
+  abstract: true
+  components:
+  - type: UserInterface # Mono
+    interfaces:
+      enum.HumanoidMarkingModifierKey.Key:
+        type: HumanoidMarkingModifierBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+      enum.SurgeryUIKey.Key: # Shitmed
+        type: SurgeryBui
+  - type: Hunger
+  - type: Icon
+    sprite: _Obelisk/Mobs/Species/Hydrakin/parts.rsi
+    state: full
+  - type: BodyEmotes
+    soundsId: ReptilianBodyEmotes
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Hydrakin
+  - type: Thirst
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatHuman
+      amount: 5
+  - type: Bloodstream
+    bloodReagent: AmmoniaBlood
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    angle: 30
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 5
+  - type: Body
+    prototype: Hydrakin
+    requiredLegs: 2
+  - type: HumanoidAppearance
+    species: Hydrakin
+  - type: Inventory
+    speciesId: hydrakin
+  - type: Carriable # Frontier: Carrying system from nyanotrasen.
+  - type: Speech
+    speechSounds: Lizard
+    speechVerb: Reptilian
+    allowedEmotes: ['Thump']
+  - type: Vocal
+    sounds:
+      Male: MaleReptilian
+      Female: FemaleReptilian
+      Unsexed: MaleReptilian
+  - type: TypingIndicator
+    proto: robot
+  - type: Hydrakin
+    buildup: 2
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobHydrakinDummy
+  categories: [ HideSpawnMenu ]
+  components:
+  # - type: HumanoidAppearance
+  #   species: Hydrakin
+  - type: Inventory
+    speciesId: hydrakin
