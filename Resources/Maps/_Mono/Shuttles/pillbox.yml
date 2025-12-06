@@ -1,40 +1,11 @@
-# SPDX-FileCopyrightText: 2021 AJCM-git
-# SPDX-FileCopyrightText: 2021 Paul Ritter
-# SPDX-FileCopyrightText: 2021 wrexbe
-# SPDX-FileCopyrightText: 2022 20kdc
-# SPDX-FileCopyrightText: 2022 Kara
-# SPDX-FileCopyrightText: 2022 LittleBuilderJane
-# SPDX-FileCopyrightText: 2022 Peptide90
-# SPDX-FileCopyrightText: 2022 metalgearsloth
-# SPDX-FileCopyrightText: 2022 mirrorcult
-# SPDX-FileCopyrightText: 2023 Alexander Evgrashin
-# SPDX-FileCopyrightText: 2023 Cheackraze
-# SPDX-FileCopyrightText: 2023 Emisse
-# SPDX-FileCopyrightText: 2023 YumiGumi
-# SPDX-FileCopyrightText: 2023 crystalHex
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
-# SPDX-FileCopyrightText: 2024 Minty Moo
-# SPDX-FileCopyrightText: 2024 TsjipTsjip
-# SPDX-FileCopyrightText: 2024 dustylens
-# SPDX-FileCopyrightText: 2025 Alice "Arimah" Heurlin
-# SPDX-FileCopyrightText: 2025 Avalon
-# SPDX-FileCopyrightText: 2025 Checkraze
-# SPDX-FileCopyrightText: 2025 Whatstone
-# SPDX-FileCopyrightText: 2025 nathan736
-# SPDX-FileCopyrightText: 2025 starch
-# SPDX-FileCopyrightText: 2025 tonotom1
-#
-# SPDX-License-Identifier: MPL-2.0
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/03/2025 00:31:14
-  entityCount: 843
+  time: 12/06/2025 14:02:09
+  entityCount: 839
 maps: []
 grids:
 - 1
@@ -1110,12 +1081,11 @@ entities:
           1,0:
             1: 17152
             2: 12288
-            0: 142
+            0: 14
           1,-1:
             0: 61414
           2,0:
-            3: 1
-            0: 16
+            0: 1
             1: 512
           2,-1:
             0: 4096
@@ -1224,25 +1194,6 @@ entities:
           moles:
           - 0
           - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        - volume: 2500
-          temperature: 293.14996
-          moles:
-          - 20.078888
-          - 75.53487
           - 0
           - 0
           - 0
@@ -2607,11 +2558,6 @@ entities:
       parent: 1
 - proto: CableHV
   entities:
-  - uid: 292
-    components:
-    - type: Transform
-      pos: 7.5,2.5
-      parent: 1
   - uid: 301
     components:
     - type: Transform
@@ -2990,15 +2936,6 @@ entities:
     - type: Transform
       pos: 2.5,-6.5
       parent: 1
-- proto: ClothingOuterSuitRad
-  entities:
-  - uid: 428
-    components:
-    - type: Transform
-      parent: 251
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: ComputerTabletopGunneryConsole
   entities:
   - uid: 636
@@ -4854,12 +4791,11 @@ entities:
       - 6
       - 7
       - 4
-- proto: GeneratorCRPinchShuttle
+- proto: GeneratorWallmountAPU
   entities:
-  - uid: 116
+  - uid: 251
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
       pos: 8.5,1.5
       parent: 1
 - proto: GravityGeneratorMini
@@ -5291,47 +5227,6 @@ entities:
     - type: Transform
       pos: 7.5,-5.5
       parent: 1
-- proto: LockerWallMaterialsFuelPlasmaFilled2
-  entities:
-  - uid: 251
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 9.5,0.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 428
-        paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.14923
-        moles:
-        - 1.7459903
-        - 6.568249
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
 - proto: MachineCentrifuge
   entities:
   - uid: 74
@@ -5403,6 +5298,13 @@ entities:
       parent: 1
     - type: Paper
       content: Hello proud owner of the TPC Retrofitted Takeaway, the Pillbox! Please note that this shuttle comes with 2 Chemmasters, one for the bulk storage and one for use in pill making, to make your pharmacy work far easier than needing ot manage a single chemmaster!
+- proto: PortableGeneratorSuperPacmanShuttle
+  entities:
+  - uid: 292
+    components:
+    - type: Transform
+      pos: 8.5,0.5
+      parent: 1
 - proto: PosterContrabandKudzu
   entities:
   - uid: 643
@@ -6251,23 +6153,6 @@ entities:
       parent: 1
 - proto: UraniumReinforcedWindowDirectional
   entities:
-  - uid: 411
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 6.5,0.5
-      parent: 1
-  - uid: 489
-    components:
-    - type: Transform
-      pos: 7.5,1.5
-      parent: 1
-  - uid: 502
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 7.5,0.5
-      parent: 1
   - uid: 811
     components:
     - type: Transform
@@ -6428,6 +6313,16 @@ entities:
     components:
     - type: Transform
       pos: 7.5,-3.5
+      parent: 1
+  - uid: 116
+    components:
+    - type: Transform
+      pos: 8.5,1.5
+      parent: 1
+  - uid: 164
+    components:
+    - type: Transform
+      pos: 7.5,1.5
       parent: 1
   - uid: 306
     components:
@@ -7078,6 +6973,13 @@ entities:
     - type: Transform
       pos: 3.5,-4.5
       parent: 1
+- proto: WarpPoint
+  entities:
+  - uid: 411
+    components:
+    - type: Transform
+      pos: 1.5,-7.5
+      parent: 1
 - proto: WeaponLaserTurretL1Phalanx
   entities:
   - uid: 156
@@ -7142,19 +7044,6 @@ entities:
       parent: 1
     - type: DeviceLinkSink
       invokeCounter: 1
-- proto: WindoorSecurePlasma
-  entities:
-  - uid: 164
-    components:
-    - type: Transform
-      pos: 8.5,1.5
-      parent: 1
-  - uid: 439
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 8.5,0.5
-      parent: 1
 - proto: WindowFrostedDirectional
   entities:
   - uid: 609
