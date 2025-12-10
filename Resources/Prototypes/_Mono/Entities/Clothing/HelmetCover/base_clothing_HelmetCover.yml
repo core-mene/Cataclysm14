@@ -1,14 +1,14 @@
 - type: entity
   abstract: true
   parent: [Clothing, RecyclableItemClothSmall] # Frontier: added RecyclableItemClothSmall
-  id: ClothingHelmetCoverBase
+  id: ClothingfaceshieldBase
   components:
   - type: Item
     size: Small
   - type: Clothing
     quickEquip: true
     slots:
-    - FACESHIELD
+    - faceshield
   - type: Sprite
     state: icon
   - type: Tag
@@ -20,8 +20,8 @@
 
 #not that awful solution
 - type: entity
-  parent: ClothingHelmetCoverBase
-  id: ClothingHeadHelmetCoverBlock
+  parent: ClothingfaceshieldBase
+  id: ClothingHeadfaceshieldBlock
   name: Blocked
   description: Can't fit anything there
   components:

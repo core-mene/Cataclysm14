@@ -1,5 +1,5 @@
 #When adding new hardsuits, please try to keep the organization consistent with hardsuit-helmets.yml (if possible.)
-# Mono hardsuit overhaul - see https://github.com/Monolith-Station/Monolith/pull/2694 
+# Mono hardsuit overhaul - see https://github.com/Monolith-Station/Monolith/pull/2694
 
 #CREW HARDSUITS
 #Basic Hardsuit
@@ -37,7 +37,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitBasic
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Atmospherics Hardsuit
@@ -81,7 +81,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitAtmos
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Engineering Hardsuit
@@ -119,7 +119,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitEngineering
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.55 # slightly better than atmos hardsuit, cuz insulating plating or whatever
@@ -164,7 +164,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitSpatio
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Salvage Hardsuit
@@ -203,7 +203,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitSalvage
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Goliath Hardsuit
@@ -241,7 +241,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitGoliath
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: Construction
     graph: HardsuitGoliath
@@ -287,7 +287,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitMaxim
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Security Hardsuit
@@ -326,7 +326,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitSecurity
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Brigmedic Hardsuit
@@ -361,7 +361,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitBrigmedic
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.4
@@ -402,7 +402,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitWarden
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Captain's Hardsuit
@@ -442,7 +442,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitCap
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Chief Engineer's Hardsuit
@@ -484,7 +484,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitEngineeringWhite
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Chief Medical Officer's Hardsuit
@@ -521,7 +521,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitMedical
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Research Director's Hardsuit
@@ -567,7 +567,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitRd
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaticPrice
     price: 750
@@ -615,7 +615,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitSecurityRed
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Luxury Mining Hardsuit
@@ -652,7 +652,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitLuxury
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.5
@@ -695,7 +695,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitSyndie
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: Tag
     tags:
@@ -734,7 +734,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitSyndieMedic
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: Tag
     tags:
@@ -785,7 +785,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitSyndieElite
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Syndicate Commander Hardsuit
@@ -823,7 +823,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitSyndieCommander
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.3
@@ -866,7 +866,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitCybersun
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.4
@@ -906,7 +906,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitWizard
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.3
@@ -946,7 +946,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitLing
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Pirate EVA Suit (Deep Space EVA Suit)
@@ -982,7 +982,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitPirateEVA
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaticPrice
     price: 0
@@ -1023,7 +1023,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitPirateCap
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaticPrice
     price: 0
@@ -1048,7 +1048,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitERTLeader
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #ERT Chaplain Hardsuit
@@ -1068,7 +1068,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitERTChaplain
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #ERT Engineer Hardsuit
@@ -1088,7 +1088,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitERTEngineer
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 
@@ -1109,7 +1109,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitERTMedical
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #ERT Security Hardsuit
@@ -1129,7 +1129,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitERTSecurity
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: Tag
     tags:
@@ -1153,7 +1153,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitERTJanitor
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Deathsquad
@@ -1198,7 +1198,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitDeathsquad
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #CBURN Hardsuit
@@ -1243,7 +1243,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetCBURN
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #MISC. HARDSUITS
@@ -1285,7 +1285,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitClown
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Mime Hardsuit
@@ -1310,7 +1310,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitMime
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 #Santa's Hardsuit
@@ -1348,5 +1348,5 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitSanta
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock

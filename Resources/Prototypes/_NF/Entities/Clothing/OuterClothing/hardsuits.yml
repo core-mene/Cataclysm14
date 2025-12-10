@@ -33,7 +33,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitMercenary
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: PirateBountyItem # Mono
     id: ClothingOuterHardsuitTacsuit
@@ -56,7 +56,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitPrivateSecurity
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 # Pilot Hardsuit - Spationaut stats
@@ -91,7 +91,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitPilot
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.6
@@ -113,7 +113,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitERTMailCarrier
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 # MAXIM Nerfed: used best stats from spationaut, mining and luxury hardsuits, additionally increased caustic resistance
@@ -149,7 +149,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitMaximPrototype
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.45
@@ -201,7 +201,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdBronze
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: ExplosionResistance
     damageCoefficient: 0.5
@@ -237,7 +237,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdSilver
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 - type: entity
@@ -257,7 +257,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdGold
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 
 - type: entity
@@ -276,7 +276,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdSheriff
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: ExplosionResistance
     damageCoefficient: 0.5
@@ -315,7 +315,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdBrigmedic
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: Armor # Mono - Armor Value Changes
     modifiers:
@@ -346,7 +346,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdExperimental
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: PressureProtection
     highPressureMultiplier: 0.2
@@ -425,7 +425,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdCombat
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: ExplosionResistance
     damageCoefficient: 0.35
@@ -464,7 +464,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitNfsdCommand
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
 #  - type: ExplosionResistance # Mono - Inherents ClothingOuterHardsuitNfsdCombat
 #    damageCoefficient: 0.35
@@ -518,7 +518,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitScaf
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: PirateBountyItem # Mono
     id: ClothingOuterHardsuitTacsuitHighValue
@@ -562,7 +562,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitTacticalMaid
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.4
@@ -583,7 +583,7 @@
     replaceCurrentClothing: true
     clothingPrototypes:
       head:  ClothingHeadHelmetHardsuitPirateElite
-      helmetcover: ClothingHeadHelmetCoverBlock
+      faceshield: ClothingHeadfaceshieldBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: ExplosionResistance
     damageCoefficient: 0.4

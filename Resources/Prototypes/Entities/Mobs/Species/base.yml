@@ -19,6 +19,7 @@
     - map: [ "enum.HumanoidVisualLayers.LArm" ]
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+    - map: ["pants"] #cataclysm
     - map: ["jumpsuit"]
     - map: [ "balaclava" ]
     - map: ["enum.HumanoidVisualLayers.LFoot"]
@@ -42,7 +43,7 @@
     - map: [ "enum.HumanoidVisualLayers.Wings" ] # For IPC wings porting from SimpleStation
     - map: [ "mask" ]
     - map: [ "head" ]
-    - map: [ "helmetcover" ]
+    - map: [ "faceshield" ]
     - map: [ "helmetattachment" ]
     - map: [ "pocket1" ]
     - map: [ "pocket2" ]
@@ -331,6 +332,7 @@
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
     - map: ["jumpsuit"]
+    - map: ["pants"] #cataclysm
     - map: [ "balaclava" ]
     - map: ["enum.HumanoidVisualLayers.LFoot"]
     - map: ["enum.HumanoidVisualLayers.RFoot"]
@@ -355,7 +357,7 @@
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
     - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
-    - map: [ "helmetcover" ]
+    - map: [ "faceshield" ]
     - map: [ "helmetattachment" ]
     - map: [ "mask" ]
     - map: [ "head" ]
