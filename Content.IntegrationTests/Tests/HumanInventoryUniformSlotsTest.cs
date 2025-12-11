@@ -102,11 +102,12 @@ namespace Content.IntegrationTests.Tests
                 //Assert.That(invSystem.TryEquip(human, pocketItem, "pocket1"));
 #pragma warning restore NUnit2045
 
-                Assert.Multiple(() =>
-                {
-                    Assert.That(IsDescendant(idCard, human, entityMan));
-                    Assert.That(IsDescendant(pocketItem, human, entityMan));
-                });
+                // Cataclysm, pockets/ID not dependant on jumpsuit
+                // Assert.Multiple(() =>
+                // {
+                //     Assert.That(IsDescendant(idCard, human, entityMan));
+                //     Assert.That(IsDescendant(pocketItem, human, entityMan));
+                // });
 
                 // Now drop the jumpsuit.
                 Assert.That(invSystem.TryUnequip(human, "jumpsuit"));
