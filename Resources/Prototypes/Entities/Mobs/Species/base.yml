@@ -26,6 +26,7 @@
     - map: ["enum.HumanoidVisualLayers.LHand"]
     - map: ["enum.HumanoidVisualLayers.RHand"]
     - map: [ "gloves" ]
+    - map: ["pants"] #cataclysm
     - map: [ "shoes" ]
     - map: [ "ears" ]
     - map: [ "id" ] # Mono - move from between belt and back
@@ -42,7 +43,7 @@
     - map: [ "enum.HumanoidVisualLayers.Wings" ] # For IPC wings porting from SimpleStation
     - map: [ "mask" ]
     - map: [ "head" ]
-    - map: [ "helmetcover" ]
+    - map: [ "faceshield" ]
     - map: [ "helmetattachment" ]
     - map: [ "pocket1" ]
     - map: [ "pocket2" ]
@@ -342,6 +343,7 @@
       state: body-overlay-2
       visible: false
     - map: [ "gloves" ]
+    - map: ["pants"] #cataclysm
     - map: [ "shoes" ]
     - map: [ "ears" ]
     - map: [ "outerClothing" ] # mono - i hate you upstream
@@ -355,7 +357,7 @@
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
     - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
-    - map: [ "helmetcover" ]
+    - map: [ "faceshield" ]
     - map: [ "helmetattachment" ]
     - map: [ "mask" ]
     - map: [ "head" ]

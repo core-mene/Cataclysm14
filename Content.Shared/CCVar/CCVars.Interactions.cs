@@ -56,14 +56,15 @@ public sealed partial class CCVars
     /// Whether or not the storage window has a title of the entity name.
     /// </summary>
     public static readonly CVarDef<bool> StorageWindowTitle =
-        CVarDef.Create("control.storage_window_title", false, CVar.CLIENTONLY | CVar.ARCHIVE);
+        CVarDef.Create("control.storage_window_title", true, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
     /// How many storage windows are allowed to be open at once.
     /// Recommended that you utilise this in conjunction with <see cref="StaticStorageUI"/>
     /// </summary>
     public static readonly CVarDef<int> StorageLimit =
-        CVarDef.Create("control.storage_limit", 2, CVar.REPLICATED | CVar.SERVER); // Frontier: 1<2
+        CVarDef.Create("control.storage_limit", 10, CVar.REPLICATED | CVar.SERVER); // Frontier: 1<2
+         // Cataclysm: 2->10
 
     /// <summary>
     /// Whether or not storage can be opened recursively.

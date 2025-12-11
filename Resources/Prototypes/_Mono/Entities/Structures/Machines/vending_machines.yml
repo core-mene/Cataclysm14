@@ -135,7 +135,8 @@
   suffix: POI
   components:
   - type: VendingMachine
-    pack: PMCclothings
+    # pack: PMCclothings
+    pack: BaristaVendInventory #Cataclysm, replaced so it still works without PMC clothings, too lazy to delete the machine
     offState: off
     brokenState: broken
     normalState: normal-unshaded
