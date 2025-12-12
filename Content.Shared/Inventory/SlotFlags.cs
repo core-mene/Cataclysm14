@@ -23,15 +23,16 @@ public enum SlotFlags
     GLOVES = 1 << 10,
     IDCARD = 1 << 11,
     POCKET = 1 << 12,
-    PANTS = 1 << 13, // Cataclysm14, now used
-    FEET = 1 << 14,
-    SUITSTORAGE = 1 << 15,
-    WALLET = 1 << 16, // Frontier: using an unused slot, redefine to a new bit if/when it's used (goodbye ushort)
-    BALACLAVA = 1 << 17, // Mono start
-    ARMBANDRIGHT = 1 << 18,
-    ARMBANDLEFT = 1 << 19,
-    HELMETATTACHMENT = 1 << 20, //Mono end
-    FACESHIELD = 1 << 21, // Cataclysm14
+    FEET = 1 << 13,
+    SUITSTORAGE = 1 << 14,
+    WALLET = 1 << 15, // Frontier: using an unused slot, redefine to a new bit if/when it's used (goodbye ushort)
+    BALACLAVA = 1 << 16, // Mono start
+    ARMBANDRIGHT = 1 << 17,
+    ARMBANDLEFT = 1 << 18,
+    HELMETATTACHMENT = 1 << 19, //Mono end
+    FACESHIELD = 1 << 20, // Cataclysm14 start
+    PANTS = 1 << 21,
+    SLINGFRONT = 1 << 22, // Cataclysm14 end
     All = ~NONE,
 
     WITHOUT_POCKET = All & ~POCKET
