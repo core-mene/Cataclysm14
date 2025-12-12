@@ -1,0 +1,58 @@
+- type: entity
+  name: LWC AKM (7.62x39mm)
+  parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband
+  id: WeaponRifleAKM
+  description: An old Soviet Era rifle. Uses 7.62x39mm ammo. When the chaos began to spread across the Earth, few weapons were as reliable as the AKM.
+  components:
+  - type: Sprite
+    sprite: _Cataclysm14\Objects\Weapons\Guns\ARs\AKM_wielded_32x32.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item # Mono
+    sprite: _Cataclysm14\Objects\Weapons\Guns\ARs\AKM_item_64x32.rsi
+  - type: Clothing
+    sprite: _Cataclysm14\Objects\Weapons\Guns\ARs\AKM_sling_32x32.rsi
+    clothingVisuals:
+      frontsling:
+      - state: equipped-SLINGFRONT
+  - type: Gun
+    fireRate: 5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine762x39mmFMJ
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - Magazine762x39mmFMJ
+            - Magazine762x39mmLowCapacityFMJ
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge762x39mmFMJ
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge762x39mmFMJ
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: PirateBountyItem # Frontier
+    id: AKM # Frontier

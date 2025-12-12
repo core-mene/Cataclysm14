@@ -6,21 +6,12 @@
 #Version with pockets
 - type: entity
   abstract: true
-  parent: [Clothing, RecyclableItemClothBasic]
+  parent: [ClothingShirtBase, NFClothingBeltStorageBase, RecyclableItemClothBasic]
   id: ClothingShirtCargoBase
   components:
   - type: Storage
     maxItemSize: Normal
-    defaultStorageOrientation: Vertical
     grid:
     - 0,0,2,1
   - type: Item
     size: Huge
-  - type: ContainerContainer
-    containers:
-      storagebase: !type:Container
-        ents: []
-  - type: UserInterface
-    interfaces:
-      enum.StorageUiKey.Key:
-        type: StorageBoundUserInterface
