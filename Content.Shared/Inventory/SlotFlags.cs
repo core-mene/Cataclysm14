@@ -31,7 +31,8 @@ public enum SlotFlags
     ARMBANDRIGHT = 1 << 18,
     ARMBANDLEFT = 1 << 19,
     HELMETATTACHMENT = 1 << 20, //Mono end
-    FACESHIELD = 1 << 21, // Cataclysm14
+    FACESHIELD = 1 << 21, // Cataclysm14 start
+    SLINGFRONT = 1 << 22, // Cataclysm14 end
     All = ~NONE,
 
     WITHOUT_POCKET = All & ~POCKET

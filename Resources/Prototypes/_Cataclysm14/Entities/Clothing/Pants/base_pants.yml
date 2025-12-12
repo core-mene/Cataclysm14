@@ -1,0 +1,61 @@
+- type: entity
+  abstract: true
+  parent: [Clothing, RecyclableItemClothBasic]
+  id: ClothingPantsBase
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_Goobstation/Items/handling/cloth_pickup.ogg
+      params:
+        volume: -4
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_Goobstation/Items/handling/cloth_drop.ogg
+      params:
+        volume: -4
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Goobstation/Items/handling/cloth_drop.ogg
+      params:
+        volume: -4
+  - type: Sprite
+    state: icon
+  - type: Clothing
+    slots:
+    - PANTS
+    clothingVisuals:
+      pants:
+      - state: equipped-PANTS
+    equipSound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 3
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 30
+  - type: Tag
+    tags:
+    - ClothMade
+    # - WhitelistChameleon #Cataclysm, no chameleon
+
+#Version with pockets
+- type: entity
+  abstract: true
+  parent: [ClothingPantsBase, NFClothingBeltStorageBase, RecyclableItemClothBasic]
+  id: ClothingPantsCargoBase
+  components:
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,2,1
+  - type: Item
+    size: Huge

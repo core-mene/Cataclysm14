@@ -1,0 +1,17 @@
+- type: entity
+  abstract: true
+  parent: UnsensoredClothingUniformBase
+  id: ClothingShirtBase
+
+#Version with pockets
+- type: entity
+  abstract: true
+  parent: [ClothingShirtBase, NFClothingBeltStorageBase, RecyclableItemClothBasic]
+  id: ClothingShirtCargoBase
+  components:
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,2,1
+  - type: Item
+    size: Huge

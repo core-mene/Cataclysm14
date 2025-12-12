@@ -1,10 +1,21 @@
 - type: entity
   parent: ClothingPantsBase
-  id: ClothingPantsCombatCEECargo
-  name: CCE cargo combat pants
-  description: Ripstop combat pants with large pockets. It has a CCE central europe camo of the french army.
+  id: ClothingPantsCombatCEE
+  name: CCE  combat pants
+  description: Ripstop combat pants. It has the CCE central europe camo of the french army.
   components:
   - type: Sprite
     sprite: _Cataclysm14/Clothing/Pants/CCE_pants.rsi
   - type: Clothing
     sprite: _Cataclysm14/Clothing/Pants/CCE_pants.rsi
+
+- type: entity
+  parent: ClothingPantsCargoBase
+  id: ClothingPantsCombatCEECargo
+  name: CCE cargo combat pants
+  description: Ripstop combat pants with large pockets. It has the CCE central europe camo of the french army.
+  components:
+  - type: Sprite
+    sprite: _Cataclysm14/Clothing/Pants/CCE_pants_cargo.rsi
+  - type: Clothing
+    sprite: _Cataclysm14/Clothing/Pants/CCE_pants_cargo.rsi
