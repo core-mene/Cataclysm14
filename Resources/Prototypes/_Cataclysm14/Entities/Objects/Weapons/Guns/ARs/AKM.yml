@@ -5,18 +5,19 @@
   description: An old Soviet Era rifle. Uses 7.62x39mm ammo. When the chaos began to spread across the Earth, few weapons were as reliable as the AKM.
   components:
   - type: Sprite
-    sprite: _Cataclysm14\Objects\Weapons\Guns\ARs\AKM_wielded_32x32.rsi
+    sprite: _Cataclysm14/Objects/Weapons/Guns/ARs/AKM_64x32.rsi
+    scale: 0.75, 0.75
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Item # Mono
-    sprite: _Cataclysm14\Objects\Weapons\Guns\ARs\AKM_item_64x32.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/akm_inhands_32x.rsi
   - type: Clothing
-    sprite: _Cataclysm14\Objects\Weapons\Guns\ARs\AKM_sling_32x32.rsi
+    sprite: _Cataclysm14/Objects/Weapons/Guns/ARs/AKM_64x32.rsi
     clothingVisuals:
-      frontsling:
+      slingfront:
       - state: equipped-SLINGFRONT
   - type: Gun
     fireRate: 5
@@ -54,5 +55,7 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-  - type: PirateBountyItem # Frontier
-    id: AKM # Frontier
+  - type: WieldedCrosshair
+    rsi:
+      sprite: _RMC14/Interface/MousePointer/rifle_mouse.rsi
+      state: all

@@ -12,8 +12,9 @@
     sprite: Objects/Weapons/Guns/Rifles/ak.rsi
     quickEquip: false
     slots:
-    - Back
+    # - Back #Cataclysm14
     - suitStorage
+    - SLINGFRONT #Cataclysm14
   - type: AmmoCounter
   - type: Gun
     fireRate: 5
